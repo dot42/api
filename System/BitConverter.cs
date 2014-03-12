@@ -20,6 +20,26 @@ namespace System
 {
     public static class BitConverter
     {
+        private static ByteBuffer GetReversedBuffer(byte[] value, int startIndex, int length)
+        {
+            if (value == null)
+                throw new ArgumentNullException("value");
+
+            if (startIndex < 0 || (startIndex > value.Length - 1))
+                throw new ArgumentOutOfRangeException("startIndex", "Index was out of range. Must be non-negative and less than the size of the collection.");
+
+            if (length < 0 || (startIndex + length > value.Length ))
+                throw new ArgumentException("length", "Index was out of range. Collection does not contain enough data to process the request.");
+
+            byte[] newArray = new byte[length];
+            for (int i = 0 ; i < length ; i++)
+            {
+                newArray[i] = value[startIndex + length - i - 1];
+            }
+
+            return ByteBuffer.Wrap(newArray, 0, length);
+        }
+
         public static bool IsLittleEndian
         {
             get { return ByteOrder.NativeOrder() == ByteOrder.LITTLE_ENDIAN; }
@@ -30,15 +50,10 @@ namespace System
             return double.DoubleToLongBits(value);
         }
 
-        public static bool ToBoolean(byte[] value, int startIndex)
+        public static double Int64BitsToDouble(long value)
         {
-            if (value == null)
-                throw new ArgumentNullException("value");
-
-            if (startIndex < 0 || (startIndex > value.Length - 1))
-                throw new ArgumentOutOfRangeException("startIndex", "Index was out of range. Must be non-negative and less than the size of the collection.");
-
-            return value[startIndex] != 0;
+            byte[] b = BitConverter.GetBytes(value);
+            return BitConverter.ToDouble(b, 0);
         }
 
         public static byte[] GetBytes(bool value)
@@ -88,48 +103,70 @@ namespace System
             return buf.ToByteArray();
         }
 
-        public static short ToInt16(byte[] array, int startIndex)
+        public static bool ToBoolean(byte[] value, int startIndex)
         {
-            var buf = ByteBuffer.Wrap(array, startIndex, 2);
+            if (value == null)
+                throw new ArgumentNullException("value");
+
+            if (startIndex < 0 || (startIndex > value.Length - 1))
+                throw new ArgumentOutOfRangeException("startIndex", "Index was out of range. Must be non-negative and less than the size of the collection.");
+
+            return value[startIndex] != 0;
+        }
+
+        public static char ToChar(byte[] value, int startIndex)
+        {
+            if (value == null)
+                throw new ArgumentNullException("value");
+
+            if (startIndex < 0 || (startIndex > value.Length - 1))
+                throw new ArgumentOutOfRangeException("startIndex", "Index was out of range. Must be non-negative and less than the size of the collection.");
+
+            return (char)(value[startIndex]);
+        }
+
+        public static short ToInt16(byte[] value, int startIndex)
+        {
+            var buf = GetReversedBuffer(value, startIndex, 2);
             return buf.GetShort();
         }
 
-        public static int ToInt32(byte[] array, int startIndex)
+        public static int ToInt32(byte[] value, int startIndex)
         {
-            var buf = ByteBuffer.Wrap(array, startIndex, 4);
+            var buf = GetReversedBuffer(value, startIndex, 4);
             return buf.GetInt();
         }
 
-        public static long ToInt64(byte[] array, int startIndex)
+        public static long ToInt64(byte[] value, int startIndex)
         {
-            var buf = ByteBuffer.Wrap(array, startIndex, 8);
+            var buf = GetReversedBuffer(value, startIndex, 8);
             return buf.GetLong();
         }
 
-        public static ushort ToUInt16(byte[] array, int startIndex)
+        public static ushort ToUInt16(byte[] value, int startIndex)
         {
-            return (ushort)(((int) ToInt16(array, startIndex)) & 0xFFFF);
+            return (ushort)(((int) ToInt16(value, startIndex)) & 0xFFFF);
         }
 
-        public static uint ToUInt32(byte[] array, int startIndex)
+        public static uint ToUInt32(byte[] value, int startIndex)
         {
-            return (uint)(((long)ToInt32(array, startIndex)) & 0xFFFFFFFF);
+            return (uint)(((long)ToInt32(value, startIndex)) & 0xFFFFFFFF);
         }
 
-        public static ulong ToUInt64(byte[] array, int startIndex)
+        public static ulong ToUInt64(byte[] value, int startIndex)
         {
-            return (ulong)((ToInt64(array, startIndex)) & 0xFFFFFFFF);
+            return (ulong)(ToInt64(value, startIndex));
         }
 
-        public static double ToDouble(byte[] array, int startIndex)
+        public static double ToDouble(byte[] value, int startIndex)
         {
-            var buf = ByteBuffer.Wrap(array, startIndex, 8);
+            var buf = GetReversedBuffer(value, startIndex, 8);
             return buf.GetDouble();
         }
 
-        public static float ToSingle(byte[] array, int startIndex)
+        public static float ToSingle(byte[] value, int startIndex)
         {
-            var buf = ByteBuffer.Wrap(array, startIndex, 4);
+            var buf = GetReversedBuffer(value, startIndex, 4);
             return buf.GetFloat();
         }
 
@@ -146,32 +183,32 @@ namespace System
         /// <summary>
         /// Convert the numeric value of each array element to a hex string divided by '-'.
         /// </summary>
-        public static string ToString(byte[] value, int index)
+        public static string ToString(byte[] value, int startIndex)
         {
             if (value == null)
                 throw new ArgumentNullException("value");
-            return ToString(value, index, value.Length - index);
+            return ToString(value, startIndex, value.Length - startIndex);
         }
 
         /// <summary>
         /// Convert the numeric value of each array element to a hex string divided by '-'.
         /// </summary>
-        public static string ToString(byte[] value, int index, int length)
+        public static string ToString(byte[] value, int startIndex, int length)
         {
             if (value == null)
                 throw new ArgumentNullException("value");
-            if (index < 0)
+            if ((startIndex < 0) || (startIndex >= value.Length))
                 throw new ArgumentOutOfRangeException("index");
             if (length < 0)
                 throw new ArgumentOutOfRangeException("length");
-            if (index + length > value.Length)
+            if (startIndex + length > value.Length)
                 throw new ArgumentException("length");
             var buffer = new StringBuffer();
             for (var i = 0; i < length; i++)
             {
                 if (i > 0)
                     buffer.Append('-');
-                var hex = int.ToHexString((int) value[index + i]);
+                var hex = int.ToHexString((int) value[startIndex + i]).ToUpper();
                 if (hex.Length == 1)
                     buffer.Append('0');
                 buffer.Append(hex);
