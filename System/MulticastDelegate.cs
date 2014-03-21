@@ -17,8 +17,8 @@ using Dot42;
 
 namespace System
 {
-	partial class MulticastDelegate
-	{
+    partial class MulticastDelegate
+    {
         [Include]
 	    protected MulticastDelegate next;
 
@@ -27,7 +27,7 @@ namespace System
         /// </summary>
         protected override sealed void Add(Delegate other)
         {
-            var parent = this;
+            MulticastDelegate parent = this;
             while (parent.next != null)
             {
                 parent = parent.next;
@@ -36,30 +36,32 @@ namespace System
         }
 
         /// <summary>
-        /// Add the given delegate from my invocation list.
+        /// Remove the given delegate from my invocation list.
         /// </summary>
         protected override sealed Delegate Remove(Delegate other)
         {
-            if (ReferenceEquals(other, this))
+            if (this.Equals(other))
             {
                 // Front of the list
                 var result = next;
                 next = null;
                 return result;
             }
-            var parent = this;
-            while ((parent != null) && (!ReferenceEquals(parent.next, other)))
+
+            MulticastDelegate parent = this;
+            while ((parent != null) && (!other.Equals(parent.next)))
             {
                 parent = parent.next;
             }
+
             if (parent != null)
             {
-                var otherx = parent.next;
+                MulticastDelegate otherx = parent.next;
                 parent.next = otherx.next;
                 otherx.next = null;
             }
+
             return this;
         }
     }
 }
-
