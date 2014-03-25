@@ -122,7 +122,7 @@ namespace System
         }
 
         /// <summary>
-        /// are one or more attributes of the given type defined on this member.
+        /// Are one or more attributes of the given type defined on this member.
         /// </summary>
         /// <param name="attributeType">The type of the custom attribute</param>
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
@@ -140,7 +140,7 @@ namespace System
         }
 
         /// <summary>
-        /// Gets all fields of this type that match the given binding flags.
+        /// Gets all constructors of this type that match the given binding flags.
         /// </summary>
         public ConstructorInfo[] GetConstructors(BindingFlags flags)
         {

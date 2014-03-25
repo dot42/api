@@ -43,7 +43,7 @@ namespace System
 	    protected abstract void Add(Delegate other);
 
         /// <summary>
-        /// Add the given delegate from my invocation list.
+        /// Remove the given delegate from my invocation list.
         /// </summary>
         protected abstract Delegate Remove(Delegate other);
     }
