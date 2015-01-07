@@ -10,7 +10,7 @@
     <RootNamespace>
     </RootNamespace>
     <AssemblyName>dot42</AssemblyName>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <NoWarn>1591,114,108,659,628,693,1572,1573,1574,3021</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
@@ -22,7 +22,8 @@
     <NoWarn>108,114,649,659,628,693,1572,1573,1574,1591,3021</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Dot42Public.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <DelaySign>true</DelaySign>
     <FrameworksDirectory Condition=" '$(FrameworksDirectory)' == '' ">Generated</FrameworksDirectory>
     <AndroidVersion Condition=" '$(AndroidVersion)' == '' ">v4.0.3</AndroidVersion>
@@ -494,7 +495,6 @@
     <Compile Include="System\Xml\Serialization\XmlAnyAttributeAttribute.cs" />
     <Compile Include="System\Xml\XmlConvert.cs" />
     <Compile Include="System\Xml\XmlNodeType.cs" />
-    <None Include="Dot42Public.snk" />
     <None Include="ForwardAssemblies\corlib.cs" />
     <None Include="ForwardAssemblies\Microsoft.CSharp.cs" />
     <None Include="ForwardAssemblies\Microsoft.VisualBasic.cs" />
