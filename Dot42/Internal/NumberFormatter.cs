@@ -45,21 +45,29 @@ namespace Dot42.Internal
 
         internal static string Format(string format, int value, IFormatProvider provider)
         {
+            if (null == format)
+                return new DecimalFormat("0").Format((long)value);
             return GetFormat(format).Format((long)value);
         }
 
         internal static string Format(string format, long value, IFormatProvider provider)
         {
+            if (null == format)
+                return new DecimalFormat("0").Format(value);
             return GetFormat(format).Format(value);
         }
 
         internal static string Format(string format, float value, IFormatProvider provider)
         {
-            return GetFormat(format).Format((double)value);
+            if (null == format)
+                return new DecimalFormat("0.################").Format(value);
+            return GetFormat(format).Format(value);
         }
 
         internal static string Format(string format, double value, IFormatProvider provider)
         {
+            if (null == format)
+                return new DecimalFormat("0.################").Format(value);
             return GetFormat(format).Format(value);
         }
 
@@ -72,28 +80,111 @@ namespace Dot42.Internal
                 switch (char.ToUpper(format[0]))
                 {
                     case 'C':
-                        return NumberFormat.GetCurrencyInstance();
-                    case 'D':
-                        if(format.Length == 1) return NumberFormat.GetIntegerInstance();
-                        int decimalCount;
-                        if( int.TryParse(format.JavaSubstring(1), out decimalCount))
                         {
-                            var builder = new StringBuilder();
-                            for(int i=0; i<decimalCount; i++) builder.Append( '0' );
-                            //TODO: builder.Append( '0', decimalCount);
-                            return new DecimalFormat(builder.ToString());
+                            string javaFormat;
+                            NumberFormat nf = NumberFormat.GetCurrencyInstance();
+                            if (format.Length == 1)
+                            {
+                                javaFormat = "0.00";
+                            }
+                            else
+                            {
+                                int decimalCount;
+                                if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+                                {
+                                    javaFormat = "0." + new string('0', decimalCount);
+                                    if (0 == decimalCount)
+                                        javaFormat = "0";
+                                }
+                                else
+                                {
+                                    javaFormat = format;
+                                }
+                            }
+
+                            if (nf.IsGroupingUsed())
+                                javaFormat = "#,##" + javaFormat;
+
+                            javaFormat = nf.Currency.GetSymbol() + javaFormat;
+
+                            return new DecimalFormat(javaFormat);
+                        }
+                    case 'D':
+                        {
+                            if (format.Length == 1)
+                                return new DecimalFormat("0");
+                            int decimalCount;
+                            if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+                            {
+                                string javaFormat = new string('0', decimalCount);
+                                if (0 == decimalCount)
+                                    javaFormat = "0";
+                                return new DecimalFormat(javaFormat);
+                            }
                         }
                         break;
                     case 'E':
+                        {
+                            if (format.Length == 1)
+                                return new ScientificFormat("0.000000E000");
+                            int decimalCount;
+                            if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+                            {
+                                string javaFormat = "0." + new string('0', decimalCount);
+                                if (0 == decimalCount)
+                                    javaFormat = "0";
+                                return new ScientificFormat(javaFormat + "E000");
+                            }
+                        }
+                        break;
                     case 'F':
-                    case 'G':
-                    case 'N':
-                    case 'R':
-                        return NumberFormat.GetNumberInstance();
                     case 'P':
-                        return NumberFormat.GetPercentInstance();
+                        {
+                            string javaFormat;
+                            if (format.Length == 1)
+                            {
+                                javaFormat = "0.00";
+                            }
+                            else
+                            {
+                                int decimalCount;
+                                if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+                                {
+                                    javaFormat = "0." + new string('0', decimalCount);
+                                    if (0 == decimalCount)
+                                        javaFormat = "0";
+                                }
+                                else
+                                {
+                                    javaFormat = format;
+                                }
+                            }
+
+                            if ('P' == char.ToUpper(format[0]))
+                                return new DecimalFormat(javaFormat + " %");
+
+                            return new DecimalFormat(javaFormat);
+                        }
+                    case 'G':
+                    case 'R':
+                        return new DecimalFormat("0.################################");
+                    case 'N':
+                        {
+                            if (format.Length == 1)
+                                return new DecimalFormat("#,##0.00");
+                            int decimalCount;
+                            if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+                            {
+                                string javaFormat = "#,##0." + new string('0', decimalCount);
+                                if (0 == decimalCount)
+                                    javaFormat = "#,##0";
+                                return new DecimalFormat(javaFormat);
+                            }
+                        }
+                        break;
                     case 'X':
-                        if (format.Length == 1) return new HexFormat(8, char.IsUpper(format[0]));
+                        if (format.Length == 1)
+                            return new HexFormat(8, char.IsUpper(format[0]));
                         int numDigits;
                         if (int.TryParse(format.JavaSubstring(1), out numDigits))
                         {
@@ -124,7 +215,8 @@ namespace Dot42.Internal
             public override StringBuffer Format(long value, StringBuffer stringBuffer, FieldPosition fieldPosition)
             {
                 var l_hex = Int64.ToHexString(value);
-                if (upperCase) l_hex = l_hex.ToUpper();
+                if (upperCase)
+                    l_hex = l_hex.ToUpper();
                 int l_pad = numDigits - l_hex.Length;
                 l_pad = (0 < l_pad) ? l_pad : 0;
 
@@ -141,6 +233,35 @@ namespace Dot42.Internal
             public override Number Parse(string @string, ParsePosition position)
             {
                 return null;
+            }
+        }
+
+        private class ScientificFormat : DecimalFormat
+        {
+            public ScientificFormat(string format)
+                : base (format)
+            {
+            }
+
+            public override StringBuffer Format(double @double, StringBuffer stringBuffer, FieldPosition fieldPosition)
+            {
+                return CheckForPositiveExponent(base.Format(@double, stringBuffer, fieldPosition));
+            }
+
+            public override StringBuffer Format(long value, StringBuffer stringBuffer, FieldPosition fieldPosition)
+            {
+                return CheckForPositiveExponent(base.Format(value, stringBuffer, fieldPosition));
+            }
+
+            private StringBuffer CheckForPositiveExponent(StringBuffer number)
+            {
+                int i = number.IndexOf("E");
+                if ((i > -1) && (-1 == number.IndexOf("E-")))
+                {
+                    return number.Insert(i + 1, "+");
+                }
+
+                return number;
             }
         }
     }
