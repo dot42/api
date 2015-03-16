@@ -224,7 +224,7 @@ namespace System.Collections.Generic
 
 	    bool ICollection<T>.Remove(T item)
 	    {
-	        return list.Remove(item);
+            return list.Remove((object)item);
 	    }
 
 	    /// <summary>
@@ -232,7 +232,7 @@ namespace System.Collections.Generic
 	    /// </summary>
 	    public bool Remove(T element)
 	    {
-	        return list.Remove(element);
+	        return list.Remove((object)element);
 	    }
 
         /// <summary>
@@ -240,7 +240,7 @@ namespace System.Collections.Generic
         /// </summary>
         void IList<T>.Remove(T element)
         {
-            list.Remove(element);
+            list.Remove((object)element);
         }
 
 	    public int IndexOf(T element)
@@ -285,8 +285,17 @@ namespace System.Collections.Generic
 
 	    public void RemoveAt(int index)
 	    {
-	        list.Remove(list.Get(index));
+	        list.Remove(index);
 	    }
+
+        public void RemoveAll(Predicate<T> predicate)
+        {
+            for (int i = list.Count - 1; i >= 0; ++i)
+            {
+                if (predicate(list.Get(i)))
+                    list.Remove(i);
+            }
+        }
 
         /// <summary>
         /// Copy all elements into a new array.
