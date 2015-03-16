@@ -790,6 +790,11 @@ namespace System.Threading.Tasks
             return Task.Factory.StartNew(function, cancellationToken, TaskCreationOptions.DenyChildAttach, TaskScheduler.Default);
         }
 
+	    public static Task<T> FromResult<T>(T value)
+	    {
+	        return new Task<T>(value);
+	    }
+
         internal void ContinueWith(IContinuation continuation)
         {
             if (IsCompleted)

@@ -120,6 +120,13 @@ namespace System.Threading.Tasks
         {
         }
 
+        internal Task(TResult result)
+           :base(TaskActionInvoker.Empty, null, default (CancellationToken), TaskCreationOptions.None)
+        {
+            TrySetResult(result);
+        }
+
+
         #endregion
 
         internal bool TrySetResult(TResult result)
