@@ -23,7 +23,7 @@ namespace Dot42.Collections
     /// <summary>
     /// Wraps <see cref="Java.Util.ICollection{T}"/> such that is can be used as <see cref="System.Collections.Generic.ICollection{T}"/>.
     /// </summary>
-	public class JavaCollectionWrapper<T> : System.Collections.Generic.ICollection<T>
+    public class JavaCollectionWrapper<T> : System.Collections.Generic.ICollection<T>, System.Collections.ICollection
 	{
 	    private readonly Java.Util.ICollection<T> collection;
 

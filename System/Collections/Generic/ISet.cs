@@ -17,6 +17,7 @@ namespace System.Collections.Generic
 {
 	public interface ISet<T> : IEnumerable<T>
 	{
+	    void UnionWith(IEnumerable<T> other);
 	}
 }
 

@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Collections.ObjectModel;
+using System.Linq;
 using Dot42;
 using Dot42.Collections;
 using Java.Lang;
@@ -294,6 +295,14 @@ namespace System.Collections.Generic
         {
             var result = new T[list.Count];
             return list.ToArray(result);
+        }
+
+        public int FindIndex(Predicate<T> predicate)
+        {
+            for (int i = 0; i < list.Count; ++i)
+                if (predicate(list.Get(i)))
+                    return i;
+            return -1;
         }
 
         /// <summary>

@@ -15,7 +15,7 @@
 // limitations under the License.
 namespace System.Collections.Generic
 {
-    public interface ICollection<T> : ICollection, IEnumerable<T>
+    public interface ICollection<T> : IEnumerable<T>, IEnumerable
     {
         /// <summary>
         /// Gets the number of elements in the collection.

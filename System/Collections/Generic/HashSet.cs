@@ -13,9 +13,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42.Collections;
+using Java.Lang;
+
 namespace System.Collections.Generic
 {
-	public class HashSet<T>
+	public class HashSet<T> : ICollection<T>, ISet<T>
 	{
 	    private readonly Java.Util.HashSet<T> hset;
 
@@ -59,7 +63,10 @@ namespace System.Collections.Generic
             }
         }
 
-        /// <summary>
+	    public int Count { get; private set; }
+	    public bool IsReadOnly { get; private set; }
+
+	    /// <summary>
         /// Add the given item to this set.
         /// </summary>
         public bool Add(T item)
@@ -67,7 +74,12 @@ namespace System.Collections.Generic
             return hset.Add(item);
         }
 
-        /// <summary>
+	    void ICollection<T>.Add(T item)
+	    {
+	        Add(item);
+	    }
+
+	    /// <summary>
         /// Remove all items
         /// </summary>
         public void Clear()
@@ -91,6 +103,34 @@ namespace System.Collections.Generic
             return hset.Remove(item);
         }
 
+	    public void CopyTo(T[] array, int index)
+	    {
+            Dot42.Collections.Collections.CopyTo(hset, array, index);
+	    }
+
+        public void UnionWith(IEnumerable<T> other)
+        {
+            foreach (var e in other)
+                Add(e);
+        }
+
+	    public IEnumerator<T> GetEnumerator()
+	    {
+	        return new Enumerator<T>(hset);
+	    }
+
+	    IEnumerator IEnumerable.GetEnumerator()
+	    {
+	        return GetEnumerator();
+	    }
+
+        public class Enumerator<T> : IteratorWrapper<T>
+        {
+            public Enumerator(IIterable<T> iterable)
+                : base(iterable)
+            {
+            }
+        }
 	}
 }
 

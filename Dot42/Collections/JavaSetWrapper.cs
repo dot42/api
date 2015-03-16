@@ -37,7 +37,14 @@ namespace Dot42.Collections
 	        this.collection = collection;
 	    }
 
-	    /// <summary>
+        public void UnionWith(IEnumerable<T> other)
+        {
+            foreach (var e in other)
+                collection.Add(e);
+        }
+
+
+        /// <summary>
 	    /// Gets an enummerator to enumerate over all elements in this sequence.
 	    /// </summary>
 	    /// <returns></returns>
