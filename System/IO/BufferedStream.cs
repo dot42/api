@@ -87,6 +87,11 @@ namespace System.IO {
 				return m_stream.Length;
 			}
 		}
+
+        public override bool CanTimeout { get { return m_stream.CanTimeout; } }
+        public override int ReadTimeout { get { return m_stream.ReadTimeout; } set { m_stream.ReadTimeout = value; } }
+        public override int WriteTimeout { get { return m_stream.WriteTimeout; } set { m_stream.WriteTimeout = value; } }
+
 		
 		public override long Position {
 			get {

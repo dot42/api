@@ -134,6 +134,10 @@ namespace System.IO
         /// </summary>
         public abstract long Position { get; set; }
 
+        public virtual bool CanTimeout { get { return false; } }
+        public virtual int ReadTimeout { get { throw new InvalidOperationException(); } set { throw new InvalidOperationException(); } }
+        public virtual int WriteTimeout { get { throw new InvalidOperationException(); } set { throw new InvalidOperationException(); } }
+        
         /// <summary>
         /// Close this stream and any resources that it may hold.
         /// </summary>
