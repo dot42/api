@@ -710,6 +710,15 @@ namespace System
             return a.Equals(b);
         }
 
+        [Inline]
+	    public static bool Equals(string a, string b, StringComparison comparisonType)
+	    {
+            if (a == null) return b == null;
+            return Compare(a, b, comparisonType) == 0;
+	    }
+
+
+
         /// <summary>
         /// Return a new string in which all occurrences of the given old value have been replaced with the given new value.
         /// </summary>
