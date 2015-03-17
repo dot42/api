@@ -13,12 +13,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Android.Os;
 using Dot42.Collections;
 using Java.Util;
 
 namespace System.Collections.Generic
 {
-    public class Dictionary<TKey, TValue> : IEnumerable<KeyValuePair<TKey, TValue>>
+    public class Dictionary<TKey, TValue> : IDictionary<TKey,TValue>, IEnumerable<KeyValuePair<TKey, TValue>>
     {
         internal readonly HashMap<TKey, TValue> map;
 
@@ -52,6 +54,7 @@ namespace System.Collections.Generic
         /// </summary>
         public Dictionary(IEqualityComparer<TKey> comparer)
         {
+            throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.ctor(IEqualityComparer<TKey> comparer)");
             map = new HashMap<TKey, TValue>();
         }
 
@@ -59,6 +62,8 @@ namespace System.Collections.Generic
         /// Gets the number of elements
         /// </summary>
         public int Count { get { return map.Size(); } }
+
+        public bool IsReadOnly { get; private set; }
 
         /// <summary>
         /// Gets or sets the value associated with the specified key.
@@ -84,12 +89,24 @@ namespace System.Collections.Generic
             map.Put(key, value);
         }
 
+        bool IDictionary<TKey, TValue>.Remove(TKey key)
+        {
+            bool ret = map.ContainsKey(key);
+            Remove(key);
+            return ret;
+        }
+
         /// <summary>
         /// Removes the given key from the dictionary.
         /// </summary>
         public void Remove(TKey key)
         {
             map.Remove(key);
+        }
+
+        public void Add(KeyValuePair<TKey, TValue> item)
+        {
+            map.Put(item.Key, item.Value);
         }
 
         /// <summary>
@@ -99,6 +116,31 @@ namespace System.Collections.Generic
         {
             map.Clear();
         }
+
+        public bool Contains(KeyValuePair<TKey, TValue> item)
+        {
+            TValue current;
+            if (!TryGetValue(item.Key, out current))
+                return false;
+            return Equals(current, item.Value);
+        }
+
+        public bool Remove(KeyValuePair<TKey, TValue> item)
+        {
+            if (!Contains(item)) 
+                return false;
+            Remove(item.Key);
+            return true;
+        }
+
+        public void CopyTo(KeyValuePair<TKey, TValue>[] array, int index)
+        {
+            throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.CopyTo");
+        }
+
+        ICollection<TValue> IDictionary<TKey, TValue>.Values
+        {
+            get { return Values; } }
 
         /// <summary>
         /// Does this dictionary contain an element with given key?
@@ -166,6 +208,10 @@ namespace System.Collections.Generic
         {
             get { return new KeyCollection(this); }
         }
+
+        ICollection<TKey> IDictionary<TKey, TValue>.Keys
+        {
+            get { return Keys; } }
 
         /// <summary>
         /// Gets the values of the collection.

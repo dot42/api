@@ -272,6 +272,8 @@
     <Compile Include="System\Buffer.cs" />
     <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
     <Compile Include="System\Collections\DictionaryEntry.cs" />
+    <Compile Include="System\Collections\Generic\IDictionary.cs" />
+    <Compile Include="System\Collections\Generic\LinkedList.cs" />
     <Compile Include="System\Collections\Generic\SortedDictionary.cs" />
     <Compile Include="System\Collections\Generic\Stack.cs" />
     <Compile Include="System\Collections\IDictionaryEnumerator.cs" />
@@ -340,6 +342,7 @@
     <Compile Include="System\Reflection\AssemblyFlagsAttribute.cs" />
     <Compile Include="System\Reflection\AssemblyNameFlags.cs" />
     <Compile Include="System\Reflection\PropertyInfo.cs" />
+    <Compile Include="System\Reflection\RuntimeReflectionExtensions.cs" />
     <Compile Include="System\Runtime\CompilerServices\AsyncStateMachineAttribute.cs" />
     <Compile Include="System\Runtime\CompilerServices\AsyncTaskMethodBuilder.cs" />
     <Compile Include="System\Runtime\CompilerServices\AsyncTaskMethodBuilder_T.cs" />
@@ -455,6 +458,7 @@
     <Compile Include="System\Threading\Timeout.cs" />
     <Compile Include="System\TimeoutException.cs" />
     <Compile Include="System\TimeSpan.cs" />
+    <Compile Include="System\Tuple.cs" />
     <Compile Include="System\Uri.cs" />
     <Compile Include="System\UriBuilder.cs" />
     <Compile Include="System\UriFormatException.cs" />
