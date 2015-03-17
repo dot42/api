@@ -164,6 +164,7 @@
     <Compile Include="AssemblyInfo\Dot42.cs" />
     <Compile Include="Dot42\ApiEnhancementIgnoreMethodsAttribute.cs" />
     <Compile Include="Dot42\Collections\Null.cs" />
+    <Compile Include="Dot42\IncludeAttribute.cs" />
     <Compile Include="Dot42\Internal\AssertFailedException.cs" />
     <Compile Include="Dot42\Internal\IAttributesProvider.cs" />
     <Compile Include="Dot42\Internal\IProperties.cs" />
@@ -242,7 +243,7 @@
     <Compile Include="Dot42\NotImplementedAttribute.cs" />
     <Compile Include="Dot42\ResourceIdAttribute.cs" />
     <Compile Include="Dot42\Manifest\IntentFilterAttribute.cs" />
-    <Compile Include="Dot42\IncludeAttribute.cs" />
+    <Compile Include="Dot42\IncludeTypeAttribute.cs" />
     <Compile Include="Dot42\DexNameAttribute.cs" />
     <Compile Include="Dot42\DexNativeAttribute.cs" />
     <Compile Include="Dot42\IgnoreAttribute.cs" />

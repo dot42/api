@@ -28,6 +28,11 @@ namespace System
             this.validOn = validOn;
         }
 
+        public AttributeUsageAttribute()
+        {
+            validOn = AttributeTargets.All;
+        }
+
         public bool AllowMultiple { get; set; }
         public bool Inherited { get; set; }
         public AttributeTargets ValidOn { get { return validOn; } }
