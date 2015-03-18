@@ -117,21 +117,19 @@ namespace System.Reflection
 			return type.GetMethods (AllMembersBindingFlags);
 		}
 
-        public static PropertyInfo GetProperty(this Type type, string name)
-        {
-            if (type == null)
-                throw new ArgumentNullException("type");
-
-            return type.GetProperties()
-                       .First(p => p.Name == name && p.GetMethod.IsPublic || p.SetMethod.IsPublic);
-        }
-
+       
         public static IEnumerable<PropertyInfo> GetProperties(this Type type, BindingFlags flags)
         {
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return type.GetProperties().Where(p=>IsMatch(p, flags));
+            while (type != null)
+            {
+                var properties = type.GetProperties();
+                foreach (var prop in properties.Where(p => IsMatch(p, flags)))
+                    yield return prop;
+                type = type.GetSuperclass();
+            }
         }
 
 	    private static bool IsMatch(PropertyInfo propertyInfo, BindingFlags flags)
@@ -150,13 +148,21 @@ namespace System.Reflection
                 || (incInstance  && ((get != null && !get.IsStatic) || (set!=null && !set.IsStatic)));
 	    }
 
+        public static PropertyInfo GetProperty(this Type type, string name)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
+
+            return type.GetProperties(BindingFlags.Public)
+                       .First(p => p.Name == name);
+        }
 
 	    public static IEnumerable<PropertyInfo> GetRuntimeProperties (this Type type)
 		{
 			if (type == null)
 				throw new ArgumentNullException ("type");
 
-			return type.GetProperties();
+			return type.GetProperties(AllMembersBindingFlags);
 		}
 
 		public static PropertyInfo GetRuntimeProperty (this Type type, string name)
