@@ -271,10 +271,15 @@
     <Compile Include="System\AggregateException.cs" />
     <Compile Include="System\AsyncCallback.cs" />
     <Compile Include="System\Buffer.cs" />
+    <Compile Include="System\Collections\HashHelpers.cs" />
     <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
     <Compile Include="System\Collections\DictionaryEntry.cs" />
+    <Compile Include="System\Collections\Generic\DictionaryImplCSharp.cs" />
+    <Compile Include="System\Collections\Generic\Dictionary.cs" />
     <Compile Include="System\Collections\Generic\IDictionary.cs" />
     <Compile Include="System\Collections\Generic\LinkedList.cs" />
+    <Compile Include="System\Collections\Generic\Collection.cs" />
+    <Compile Include="System\Collections\Generic\Queue.cs" />
     <Compile Include="System\Collections\Generic\SortedDictionary.cs" />
     <Compile Include="System\Collections\Generic\Stack.cs" />
     <Compile Include="System\Collections\IDictionaryEnumerator.cs" />
@@ -342,6 +347,9 @@
     <Compile Include="System\Reflection\AssemblyKeyNameAttribute.cs" />
     <Compile Include="System\Reflection\AssemblyFlagsAttribute.cs" />
     <Compile Include="System\Reflection\AssemblyNameFlags.cs" />
+    <Compile Include="System\Reflection\EventInfo.cs" />
+    <Compile Include="System\Reflection\MethodBase.cs" />
+    <Compile Include="System\Reflection\ParameterInfo.cs" />
     <Compile Include="System\Reflection\PropertyInfo.cs" />
     <Compile Include="System\Reflection\RuntimeReflectionExtensions.cs" />
     <Compile Include="System\Runtime\CompilerServices\AsyncStateMachineAttribute.cs" />
@@ -400,6 +408,7 @@
     <Compile Include="System\ServiceModel\Web\WebMessageBodyStyle.cs" />
     <Compile Include="System\ServiceModel\Web\WebMessageFormat.cs" />
     <Compile Include="System\ServiceModel\XmlSerializerFormatAttribute.cs" />
+    <Compile Include="System\StringComparer.cs" />
     <Compile Include="System\Text\RegularExpressions\Capture.cs" />
     <Compile Include="System\Text\RegularExpressions\CaptureCollection.cs" />
     <Compile Include="System\Text\RegularExpressions\Group.cs" />
@@ -457,8 +466,10 @@
     <Compile Include="Dot42\Internal\ThreadPoolScheduler.cs" />
     <Compile Include="System\Threading\Tasks\UnobservedTaskExceptionEventArgs.cs" />
     <Compile Include="System\Threading\Timeout.cs" />
+    <Compile Include="System\ThrowHelper.cs" />
     <Compile Include="System\TimeoutException.cs" />
     <Compile Include="System\TimeSpan.cs" />
+    <Compile Include="System\TimeZoneInfo.cs" />
     <Compile Include="System\Tuple.cs" />
     <Compile Include="System\Uri.cs" />
     <Compile Include="System\UriBuilder.cs" />
@@ -624,7 +635,7 @@
     <Compile Include="System\Collections\Generic\Comparer.cs" />
     <Compile Include="System\Collections\Generic\IReadOnlyList.cs" />
     <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
-    <Compile Include="System\Collections\Generic\Dictionary.cs" />
+    <Compile Include="System\Collections\Generic\DictionaryImplHashMap.cs" />
     <Compile Include="System\Collections\Generic\EqualityComparer.cs" />
     <Compile Include="System\Collections\Generic\HashSet.cs" />
     <Compile Include="System\Collections\Generic\ICollection.cs" />

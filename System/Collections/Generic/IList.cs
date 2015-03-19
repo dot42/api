@@ -23,17 +23,6 @@ namespace System.Collections.Generic
         T this[int index] { get; set; }
 
         /// <summary>
-        /// Add ths given element to the end of this list.
-        /// </summary>
-        /// <returns>The index at which the element was added or -1 if the element was not added.</returns>
-        int Add(T element);
-
-        /// <summary>
-        /// Is the given element contained in this list?
-        /// </summary>
-        bool Contains(T element);
-
-        /// <summary>
         /// Gets the index of the given element in this list.
         /// </summary>
         /// <returns>-1 is the element was not found</returns>
@@ -43,12 +32,6 @@ namespace System.Collections.Generic
         /// Insert the given element at the given index into this list.
         /// </summary>
         void Insert(int index, T element);
-
-        /// <summary>
-        /// Removes the first occurrance of the given element from this list.
-        /// </summary>
-        /// <param name="element"></param>
-        void Remove(T element);
 
         /// <summary>
         /// Removes the element at the given index.

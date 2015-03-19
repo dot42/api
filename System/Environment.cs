@@ -121,10 +121,10 @@ namespace System
         /// <summary>
         /// Gets the number of milliseconds since the system started.
         /// </summary>
-        public static long TickCount
+        public static int TickCount
         {
             [Inline]
-            get { return SystemClock.UptimeMillis(); }
+            get { return unchecked ((int)SystemClock.UptimeMillis());} 
         }
 
         /// <summary>

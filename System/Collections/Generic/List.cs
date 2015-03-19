@@ -196,11 +196,9 @@ namespace System.Collections.Generic
 	        list.Add(item);
 	    }
 
-	    int IList<T>.Add(T element)
+	    void ICollection<T>.Add(T element)
 	    {
-            var rc = list.Size();
             list.Add(element);
-            return rc;
         }
 
         /// <summary>
@@ -234,14 +232,6 @@ namespace System.Collections.Generic
 	    {
 	        return list.Remove((object)element);
 	    }
-
-        /// <summary>
-        /// Removes the first occurrance of the given element from this list.
-        /// </summary>
-        void IList<T>.Remove(T element)
-        {
-            list.Remove((object)element);
-        }
 
 	    public int IndexOf(T element)
 	    {

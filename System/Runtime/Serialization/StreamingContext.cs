@@ -15,7 +15,7 @@
 // limitations under the License.
 namespace System.Runtime.Serialization
 {
-	public class StreamingContext
+	public struct StreamingContext
 	{
 	}
 }

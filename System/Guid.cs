@@ -34,11 +34,14 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
+#define NET_4_0
 
 using System.Runtime.InteropServices;
 using System.Text;
 using Dot42;
 using Java.Nio;
+
+
 
 namespace System {
 

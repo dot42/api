@@ -78,6 +78,7 @@ namespace System
             return Parse(s);
         }
 
+
         /// <summary>
         /// Try to parse the given string into a byte value.
         /// </summary>
@@ -105,6 +106,10 @@ namespace System
             }
         }
 
+        public int CompareTo(byte o)
+        {
+            return _IntValue().CompareTo(o._IntValue());
+        }
     }
 }
 

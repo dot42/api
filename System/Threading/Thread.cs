@@ -44,6 +44,13 @@ namespace System.Threading
         {
             Sleep((long) millisecondsTimeout);
         }
+
+        [Obsolete("check if the implementation works actually as expected")]
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.Synchronized)]
+        public static void MemoryBarrier()
+        {
+            // hopefully doesn't get optimized away...
+        }
 	}
 }
 

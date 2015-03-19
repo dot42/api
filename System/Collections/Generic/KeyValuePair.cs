@@ -20,6 +20,10 @@ namespace System.Collections.Generic
 	    private readonly TKey key;
 	    private readonly TValue value;
 
+	    public KeyValuePair()
+	    {
+	    }
+
 	    public KeyValuePair(TKey key, TValue value) /*: this()*/
 	    {
 	        this.key = key;

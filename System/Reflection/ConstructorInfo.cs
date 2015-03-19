@@ -22,13 +22,14 @@ namespace System.Reflection
         /// <summary>
         /// Gets the type that declares this member.
         /// </summary>
-        public Type DeclaringType
+        public override Type DeclaringType
         {
             [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
             get { return GetDeclaringClass(); }
         }
 
-        /*
+        public override string Name { get { return GetName(); } }
+
         /// <summary>
         /// Fix return type
         /// </summary>
@@ -36,7 +37,7 @@ namespace System.Reflection
         global::Java.Lang.Reflect.ITypeVariable<object>[] IGenericDeclaration.GetTypeParameters()
         {
             return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
-        }*/
+        }
 
         /// <summary>
         /// Is this an abstract method?
@@ -67,6 +68,28 @@ namespace System.Reflection
         /// Is this an virtual method?
         /// </summary>
         public bool IsVirtual { get { return !Modifier.IsFinal(GetModifiers()); } }
+
+        public bool ContainsGenericParameters { get { return GenericParameterTypes.Length > 0; } }
+
+        public ParameterInfo[] GetParameters()
+        {
+            var types = GetParameterTypes();
+            ParameterInfo[] ret = new ParameterInfo[types.Length];
+
+            for (int idx = 0; idx < types.Length; ++idx)
+                ret[idx] = new ParameterInfo(this, "arg" + (idx++), types[idx], idx);
+            return ret;
+        }
+
+        public object Invoke(params object[] args)
+        {
+            return NewInstance(args);
+        }
+
+        public static implicit operator MethodBase(ConstructorInfo i) 
+        {
+            return new MethodBase(i);
+        }
     }
 }
 

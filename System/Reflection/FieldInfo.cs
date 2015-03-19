@@ -22,11 +22,15 @@ namespace System.Reflection
         /// <summary>
         /// Gets the type that declares this member.
         /// </summary>
-        public Type DeclaringType
+        public override Type DeclaringType
         {
             [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
             get { return GetDeclaringClass(); }
         }
+
+        public override string Name { get { return GetName(); } }
+
+        public Type FieldType { get { return this.GetType(); } }
 
         /// <summary>
         /// Is this an abstract method?
@@ -57,6 +61,21 @@ namespace System.Reflection
         /// Is this an virtual method?
         /// </summary>
         public bool IsVirtual { get { return !Modifier.IsFinal(GetModifiers()); } }
+
+        /// <summary>
+        /// returns false, Literals are not supported by Java (i think)
+        /// </summary>
+        public bool IsLiteral { get { return false; } }
+
+        /// <summary>
+        /// returns IsFinal
+        /// </summary>
+        public bool IsInitOnly { get { return IsFinal; } }
+
+        public void SetValue(object instance, object value)
+        {
+            Set(instance, value);
+        }
 
     }
 }

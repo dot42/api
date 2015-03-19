@@ -13,10 +13,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Dot42;
 using Dot42.Internal;
 using Java.Lang.Reflect;
+using Java.Util;
 
 namespace System
 {
@@ -47,6 +51,17 @@ namespace System
             get { return GetSimpleName(); }
         }
 
+        public string Namespace
+        {
+            get
+            {
+                string name = FullName;
+                int idx = name.LastIndexOf('.');
+                if (idx == -1) return "";
+                return name.Substring(0, idx);
+            }
+        }
+
         /// <summary>
         /// Is the given type a value type.
         /// This will always return false, since Android does not support value types.
@@ -59,6 +74,42 @@ namespace System
 	    public bool IsGenericType
 	    {
             get { return this.GetTypeParameters().Length > 0; }
+	    }
+
+	    public bool IsClass
+	    {
+            get { return !IsPrimitive && !IsInterface && !IsEnum; }
+	    }
+
+        public Type BaseType
+        {
+            get { return GetSuperclass(); }
+        }
+
+        /// <summary>
+        /// return always false, since java does not support abstract classes.
+        /// </summary>
+        public bool IsAbstract
+        {
+            get { return Modifier.IsAbstract(GetModifiers()); }
+        }
+
+        /// <summary>
+        /// returns always false, since we do not support MakeGenericType atm.
+        /// </summary>
+        public bool IsGenericTypeDefinition { get { return false; } }
+
+	    public bool IsVisible
+	    {
+	        get
+	        {
+	            Type t = this;
+	            while (Modifier.IsPublic(GetModifiers())
+                    && (t = t.GetEnclosingClass()) != null)
+	            {
+	            }
+	            return t == null;
+	        }
 	    }
 
         /// <summary>
@@ -148,12 +199,27 @@ namespace System
             return ctors.Where(x => Matches(x.GetModifiers(), flags));
         }
 
+        public ConstructorInfo GetConstructor(Type[] parameters)
+        {
+            return JavaGetConstructor(parameters);
+        }
+
+	    public Type[] GetInterfaces()
+	    {
+	        return JavaGetInterfaces();
+	    }
+
         /// <summary>
         /// Gets all public fields of this type.
         /// </summary>
         public FieldInfo[] GetFields()
         {
             return JavaGetFields().Where(x => x.IsPublic);
+        }
+
+        public FieldInfo GetField(string name)
+        {
+            return JavaGetField(name);
         }
 
         /// <summary>
@@ -182,13 +248,99 @@ namespace System
             return methods.Where(x => Matches(x.GetModifiers(), flags));
         }
 
+        public MethodInfo GetMethod(string name, Type[] parameters)
+        {
+            return JavaGetMethod(name, parameters);
+        }
+
         /// <summary>
         /// Gets all public properties of this type.
         /// </summary>
-        public PropertyInfo[] GetProperties()
+        public PropertyInfo[] GetDeclaredProperties()
         {
             return PropertyInfoProvider.GetProperties(this);
         }
+
+	    public PropertyInfo[] GetProperties()
+	    {
+	        return GetProperties(BindingFlags.Public | BindingFlags.CreateInstance | BindingFlags.Static);
+	    }
+
+        public PropertyInfo[] GetProperties(BindingFlags flags)
+        {
+            List<PropertyInfo> ret = new List<PropertyInfo>();
+            Type type = this;
+            
+            // we have to walk all the ways up.
+            while (type != null)
+            {
+                foreach(var prop in type.GetDeclaredProperties())
+                    if (IsMatch(prop, flags))
+                        ret.Add(prop);
+
+                if ((flags & BindingFlags.DeclaredOnly) != 0)
+                    break;
+
+                type = type.GetSuperclass();
+            }
+            return ret.ToArray();
+        }
+
+        public PropertyInfo GetProperty(string name)
+        {
+            return GetProperties(BindingFlags.Public).First(p => p.Name == name);
+        }
+
+        private static bool IsMatch(PropertyInfo propertyInfo, BindingFlags flags)
+        {
+            bool incPublic = (flags & BindingFlags.Public) == BindingFlags.Public;
+            bool incNonPublic = (flags & BindingFlags.NonPublic) == BindingFlags.NonPublic;
+            bool incStatic = (flags & BindingFlags.Static) == BindingFlags.Static;
+            bool incInstance = (flags & BindingFlags.Instance) == BindingFlags.Instance;
+
+            var get = propertyInfo.GetGetMethod();
+            var set = propertyInfo.GetSetMethod();
+
+            return (incPublic && ((get != null && get.IsPublic) || (set != null && set.IsPublic)))
+                   || (incNonPublic && ((get != null && !get.IsPublic) || (set != null && !set.IsPublic)))
+                   || (incStatic && ((get != null && get.IsStatic) || (set != null && set.IsStatic)))
+                   || (incInstance && ((get != null && !get.IsStatic) || (set != null && !set.IsStatic)));
+        }
+
+        public MemberInfo[] GetMember(string memberName, BindingFlags flags)
+        {
+            List<MemberInfo> ret = new List<MemberInfo>();
+            if (memberName == ".cctor")
+                ret.AddRange(GetConstructors(flags));
+            ret.AddRange(GetFields(flags).Where(f => f.Name == memberName));
+            ret.AddRange(GetMethods(flags).Where(f => f.Name == memberName));
+            ret.AddRange(GetProperties(flags).Where(f => f.Name == memberName));
+            //ret.AddRange(GetEvents);
+            return ret.ToArray();
+        }
+
+        public MemberInfo[] GetMembers(BindingFlags flags)
+        {
+            List<MemberInfo> ret = new List<MemberInfo>();
+            ret.AddRange(GetFields(flags));
+            ret.AddRange(GetMethods(flags));
+            ret.AddRange(GetProperties(flags));
+            //ret.AddRange(GetEvents);
+            return ret.ToArray();
+        }
+
+
+        /// <summary>
+        /// this will return 1 for array types, as multidimensional arrays 
+        /// are not really supported.
+        /// </summary>
+        /// <returns></returns>
+	    public int GetArrayRank()
+	    {
+	        if(!IsArray )
+                throw new InvalidOperationException("not an array");
+	        return 1;
+	    }
 
         /// <summary>
         /// Do the given modifiers of a member match the given binding flags?
@@ -206,12 +358,25 @@ namespace System
             return true;
         }
 
+        
+        
+        
+
         public /*virtual*/ bool IsInstanceOfType(Object o)
         {
             if (o == null) return false;
             return IsAssignableFrom(o.Type);
         }
-        
+
+        public /*virtual*/ bool IsSubclassOf(Type other)
+        {
+            Type t;
+            while ((t = Type.GetSuperclass()) != null)
+            {
+                if (t == other) return true;
+            }
+            return false;
+        }
     }
 }
 

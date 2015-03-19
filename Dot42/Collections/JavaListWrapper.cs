@@ -111,7 +111,7 @@ namespace Java.Util
         /// </summary>
         bool System.Collections.IList.Contains(object element)
         {
-            return Contains((T) element);
+            return base.Contains((T) element);
         }
 
         /// <summary>
@@ -135,9 +135,9 @@ namespace Java.Util
         /// <summary>
         /// Is the given element contained in this list?
         /// </summary>
-        bool System.Collections.Generic.IList<T>.Contains(T element)
+        bool System.Collections.Generic.ICollection<T>.Contains(T element)
         {
-            return Contains(element);
+            return base.Contains(element);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Java.Util
         /// <summary>
         /// Gets the wapped list.
         /// </summary>
-        protected Java.Util.IList<T> List { get { return (IList<T>) Collection; } }
+        protected Java.Util.IList<T> List { get { return (IList<T>) base.Collection; } }
     }
 }
 

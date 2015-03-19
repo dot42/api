@@ -14,22 +14,30 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Android.Os;
-using Dot42.Collections;
-using Java.Util;
+using System.Linq;
+using Java.Io;
 
 namespace System.Collections.Generic
 {
-    public class Dictionary<TKey, TValue> : IDictionary<TKey,TValue>, IEnumerable<KeyValuePair<TKey, TValue>>
+    internal interface IDictionaryImpl<TKey, TValue> : IDictionary<TKey, TValue>
     {
-        internal readonly HashMap<TKey, TValue> map;
+        bool ContainsValue(TValue value);
+    }
 
+
+    // since we want both support the lightweight java-forwarding 
+    // and the full c# compatibility, this is a thin proxy around
+    // both types, depending on the called constructor.
+    public class Dictionary<TKey, TValue> : IDictionary<TKey,TValue>
+    {
+        internal readonly IDictionaryImpl<TKey, TValue> dict;
+        public IEqualityComparer<TKey> Comparer { get; private set; }
         /// <summary>
         /// Default ctor
         /// </summary>
         public Dictionary()
         {
-            map = new HashMap<TKey, TValue>(); 
+            dict = new DictionaryImplHashMap<TKey, TValue>();
         }
 
         /// <summary>
@@ -37,7 +45,7 @@ namespace System.Collections.Generic
         /// </summary>
         public Dictionary(int capacity)
         {
-            map = new HashMap<TKey, TValue>(capacity); 
+            dict = new DictionaryImplHashMap<TKey, TValue>(capacity);
         }
 
 
@@ -46,7 +54,9 @@ namespace System.Collections.Generic
         /// </summary>
         public Dictionary(Dictionary<TKey, TValue> source)
         {
-            map = new HashMap<TKey, TValue>(source.map);
+            if (source.dict is DictionaryImplHashMap<TKey, TValue>)
+                dict = new DictionaryImplHashMap<TKey, TValue>((DictionaryImplHashMap<TKey, TValue>)source.dict);
+            dict = new DictionaryImplCSharp<TKey, TValue>(source.dict, source.Comparer);
         }
 
         /// <summary>
@@ -54,339 +64,94 @@ namespace System.Collections.Generic
         /// </summary>
         public Dictionary(IEqualityComparer<TKey> comparer)
         {
-            throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.ctor(IEqualityComparer<TKey> comparer)");
-            map = new HashMap<TKey, TValue>();
+            Comparer = comparer;
+
+            if (comparer == null)
+                dict = new DictionaryImplHashMap<TKey, TValue>();
+            if(comparer == EqualityComparer<TKey>.Default)
+                dict = new DictionaryImplHashMap<TKey, TValue>();
+
+            // have to use the CSharp-Dictionary.
+            dict = new DictionaryImplCSharp<TKey, TValue>();
         }
 
-        /// <summary>
-        /// Gets the number of elements
-        /// </summary>
-        public int Count { get { return map.Size(); } }
 
-        public bool IsReadOnly { get; private set; }
-
-        /// <summary>
-        /// Gets or sets the value associated with the specified key.
-        /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public TValue this[TKey key]
+        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
         {
-            get
-            {
-                if (map.ContainsKey(key))
-                    return map.Get(key);
-                throw new KeyNotFoundException();
-            }
-            set { map.Put(key, value); }
+            return dict.GetEnumerator();
         }
 
-        /// <summary>
-        /// Add the given key and value to the dictionary.
-        /// </summary>
-        public void Add(TKey key, TValue value)
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            map.Put(key, value);
+            return ((IEnumerable) dict).GetEnumerator();
         }
 
-        bool IDictionary<TKey, TValue>.Remove(TKey key)
+        public bool ContainsValue(TValue value)
         {
-            bool ret = map.ContainsKey(key);
-            Remove(key);
-            return ret;
+            return dict.ContainsValue(value);
         }
 
-        /// <summary>
-        /// Removes the given key from the dictionary.
-        /// </summary>
-        public void Remove(TKey key)
+        public int Count
         {
-            map.Remove(key);
-        }
+            get { return dict.Count; } }
+
+        public bool IsReadOnly
+        {
+            get { return dict.IsReadOnly; } }
 
         public void Add(KeyValuePair<TKey, TValue> item)
         {
-            map.Put(item.Key, item.Value);
+            dict.Add(item);
         }
 
-        /// <summary>
-        /// Remove all entries
-        /// </summary>
         public void Clear()
         {
-            map.Clear();
+            dict.Clear();
         }
 
         public bool Contains(KeyValuePair<TKey, TValue> item)
         {
-            TValue current;
-            if (!TryGetValue(item.Key, out current))
-                return false;
-            return Equals(current, item.Value);
+            return dict.Contains(item);
         }
 
         public bool Remove(KeyValuePair<TKey, TValue> item)
         {
-            if (!Contains(item)) 
-                return false;
-            Remove(item.Key);
-            return true;
+            return dict.Remove(item);
         }
 
         public void CopyTo(KeyValuePair<TKey, TValue>[] array, int index)
         {
-            throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.CopyTo");
+            dict.CopyTo(array, index);
         }
 
-        ICollection<TValue> IDictionary<TKey, TValue>.Values
-        {
-            get { return Values; } }
+        public TValue this[TKey key] { get { return dict[key]; } set { dict[key] = value; } }
 
-        /// <summary>
-        /// Does this dictionary contain an element with given key?
-        /// </summary>
+        public ICollection<TKey> Keys
+        {
+            get { return dict.Keys; } }
+
+        public ICollection<TValue> Values
+        {
+            get { return dict.Values; } }
+
         public bool ContainsKey(TKey key)
         {
-            return map.ContainsKey(key);
+            return dict.ContainsKey(key);
         }
 
-        /// <summary>
-        /// Does this dictionary contain an element with given key?
-        /// </summary>
-        public bool ContainsValue(TValue value)
+        public void Add(TKey key, TValue value)
         {
-            return map.ContainsValue(value);
+            dict.Add(key, value);
         }
 
-        /// <summary>
-        /// Try to get a value from this dictionary.
-        /// </summary>
+        public bool Remove(TKey key)
+        {
+            return dict.Remove(key);
+        }
+
         public bool TryGetValue(TKey key, out TValue value)
         {
-            if (map.ContainsKey(key))
-            {
-                value = map.Get(key);
-                return true;
-            }
-            value = default(TValue);
-            return false;
-        }
-
-        /// <summary>
-        /// Gets the comparer used to compare keys.
-        /// </summary>
-        public IEqualityComparer<TKey> Comparer
-        {
-            get { throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.Comparer"); }
-        }
-
-        /// <summary>
-        /// Gets an enummerator to enumerate over all elements in this sequence.
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
-        {
-            foreach (var entry in new IterableWrapper<IMap_IEntry<TKey, TValue>>(map.EntrySet()))
-            {
-                yield return new KeyValuePair<TKey, TValue>(entry.GetKey(), entry.GetValue());
-            }
-        }
-
-        /// <summary>
-        /// Gets an enummerator to enumerate over all elements in this sequence.
-        /// </summary>
-        /// <returns></returns>
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
-
-        /// <summary>
-        /// Gets the keys of the collection.
-        /// </summary>
-        public KeyCollection Keys
-        {
-            get { return new KeyCollection(this); }
-        }
-
-        ICollection<TKey> IDictionary<TKey, TValue>.Keys
-        {
-            get { return Keys; } }
-
-        /// <summary>
-        /// Gets the values of the collection.
-        /// </summary>
-        public ValueCollection Values
-        {
-            get { return new ValueCollection(this); }
-        }
-
-        public sealed class KeyCollection : ICollection<TKey>
-        {
-            private readonly Java.Util.ICollection<TKey> keys;
-
-            /// <summary>
-            /// Default ctor
-            /// </summary>
-            public KeyCollection(Dictionary<TKey, TValue> dictionary)
-            {
-                keys = dictionary.map.KeySet();
-            }
-
-            /// <summary>
-            /// Gets an enummerator to enumerate over all elements in this sequence.
-            /// </summary>
-            /// <returns></returns>
-            public IEnumerator<TKey> GetEnumerator()
-            {
-                return new IteratorWrapper<TKey>(keys);
-            }
-
-            /// <summary>
-            /// Gets an enummerator to enumerate over all elements in this sequence.
-            /// </summary>
-            /// <returns></returns>
-            IEnumerator IEnumerable.GetEnumerator()
-            {
-                return GetEnumerator();
-            }
-
-            public int Count
-            {
-                get { return keys.Size(); }
-            }
-
-            public bool IsReadOnly
-            {
-                get { return true; }
-            }
-
-            public void Add(TKey item)
-            {
-                keys.Add(item);
-            }
-
-            public void Clear()
-            {
-                keys.Clear();
-            }
-
-            public bool Contains(TKey item)
-            {
-                return keys.Contains(item);
-            }
-
-            public bool Remove(TKey item)
-            {
-                return keys.Remove(item);
-            }
-
-            public void CopyTo(TKey[] array, int index)
-            {
-                var i = 0;
-                foreach (var key in this)
-                {
-                    array[index + i++] = key;
-                }
-            }
-
-
-            public bool IsSynchronized
-            {
-                get { return false; }
-            }
-
-            public object SyncRoot
-            {
-                get { throw new NotImplementedException("System.Collections.Generic.Dictionary<,>KeyCollection.SyncRoot"); }
-            }
-
-            public void CopyTo(Array array, int index)
-            {
-                throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.KeyCollection.CopyTo");
-            }
-        }
-
-        public sealed class ValueCollection : ICollection<TValue>
-        {
-            private readonly Java.Util.ICollection<TValue> values;
-
-            /// <summary>
-            /// Default ctor
-            /// </summary>
-            public ValueCollection(Dictionary<TKey, TValue> dictionary)
-            {
-                values = dictionary.map.Values();
-            }
-
-            /// <summary>
-            /// Gets an enummerator to enumerate over all elements in this sequence.
-            /// </summary>
-            /// <returns></returns>
-            public IEnumerator<TValue> GetEnumerator()
-            {
-                return new IteratorWrapper<TValue>(values);
-            }
-
-            /// <summary>
-            /// Gets an enummerator to enumerate over all elements in this sequence.
-            /// </summary>
-            /// <returns></returns>
-            IEnumerator IEnumerable.GetEnumerator()
-            {
-                return GetEnumerator();
-            }
-
-            public int Count
-            {
-                get { return values.Size(); }
-            }
-
-            public bool IsReadOnly
-            {
-                get { return true; }
-            }
-
-            public void Add(TValue item)
-            {
-                values.Add(item);
-            }
-
-            public void Clear()
-            {
-                values.Clear();
-            }
-
-            public bool Contains(TValue item)
-            {
-                return values.Contains(item);
-            }
-
-            public bool Remove(TValue item)
-            {
-                return values.Remove(item);
-            }
-
-            public void CopyTo(TValue[] array, int index)
-            {
-                throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.ValueCollection.CopyTo");
-            }
-
-
-            public bool IsSynchronized
-            {
-                get { return false; }
-            }
-
-            public object SyncRoot
-            {
-                get { throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.ValueCollection.SyncRoot"); }
-            }
-
-            public void CopyTo(Array array, int index)
-            {
-                throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.ValueCollection.CopyTo");
-            }
+            return dict.TryGetValue(key, out value);
         }
     }
 }

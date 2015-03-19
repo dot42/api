@@ -62,6 +62,7 @@ namespace System.Reflection
         /// <summary>
         /// Public and protected static members up the hierarchy are included.
         /// </summary>
+        [Obsolete("this is not supported atm.")]
         FlattenHierarchy = 0x00000040,
 
         /// <summary>

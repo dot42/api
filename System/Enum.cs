@@ -13,11 +13,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Globalization;
+using Java.Text;
 using Java.Util;
 
 namespace System
 {
-	public abstract partial class Enum 
+    public abstract partial class Enum : IFormattable
 	{
         /// <summary>
         /// Gets the name of the given enum constant or null if not found.
@@ -174,6 +177,53 @@ namespace System
             result = default(TEnum);
             return false;
         }
-    }
+
+	    public string ToString(string format)
+	    {
+	        return ToString(format, CultureInfo.InvariantCulture);
+	    }
+
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            if (string.IsNullOrEmpty(format) 
+                || format == "G" || format == "g" 
+                || format == "f" || format == "F")
+                return ToString();
+            
+            int val = ((Java.Lang.Enum<object>)(object)this).Ordinal();
+            
+            if (format == "X")
+                return val.ToString("X8");
+            if (format == "x")
+                return val.ToString("x8");
+            if (format == "d" || format == "D")
+                return val.ToString();
+
+            throw new ArgumentException("invalid format specifier: " + format);
+        }
+
+        public Type GetUnderlyingType(Type enumType)
+        {
+            if(!enumType.IsEnum)
+                throw new ArgumentException("enumType");
+            var vals = GetValues(enumType);
+            if (vals.Length == 0) 
+                return typeof (int);
+            return vals[0].GetType();
+        }
+
+        public static object ToObject(Type enumType, object value)
+        {
+            var vals = GetValues(enumType);
+            for(int i = 0; i < vals.Length; ++i)
+            {
+                int val = ((Java.Lang.Enum<object>)vals[i]).Ordinal();
+                if (val.Equals(value))
+                    return vals[i];
+            }
+
+            throw new InvalidOperationException("enum value not found: " + value);
+        }
+	}
 }
 

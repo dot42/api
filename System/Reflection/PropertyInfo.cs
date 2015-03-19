@@ -22,26 +22,31 @@ namespace System.Reflection
     /// </summary>
     public class PropertyInfo : MemberInfo, IAttributesProvider
     {
+        
         private readonly string name;
         private readonly MethodInfo getter;
         private readonly MethodInfo setter;
         private readonly IAttributes attributes;
+        private Type declaringType;
 
         /// <summary>
         /// Default ctor
         /// </summary>
-        internal PropertyInfo(string name, MethodInfo getter, MethodInfo setter, IAttributes attributes)
+        internal PropertyInfo(Type declaringType, string name, MethodInfo getter, MethodInfo setter, IAttributes attributes)
         {
+            this.declaringType = declaringType;
             this.name = name;
             this.getter = getter;
             this.setter = setter;
             this.attributes = attributes;
         }
 
+        public override Type DeclaringType { get { return declaringType; } }
+
         /// <summary>
         /// Gets the name of this property
         /// </summary>
-        public virtual string Name { get { return name; } }
+        public override string Name { get { return name; } }
 
         /// <summary>
         /// Gets this property be read from?
@@ -56,12 +61,25 @@ namespace System.Reflection
         /// <summary>
         /// Gets the get accessor method.
         /// </summary>
-        public virtual MethodInfo GetMethod { get { return getter; } }
+        public virtual MethodInfo GetGetMethod()  { return getter; }
+
+        public virtual MethodInfo GetGetMethod(bool nonPublic) { return getter!=null&&getter.IsPublic?getter:null; }
 
         /// <summary>
         /// Gets the set accessor method.
         /// </summary>
-        public virtual MethodInfo SetMethod { get { return setter; } }
+        public virtual MethodInfo GetSetMethod() { return setter; }
+
+        public virtual MethodInfo GetSetMethod(bool nonPublic) { return setter != null && setter.IsPublic ? getter : null; }
+
+        /// <summary>
+        /// this is not supported and always returns an empty array.
+        /// </summary>
+        /// <returns></returns>
+        public ParameterInfo[] GetIndexParameters()
+        {
+            return new ParameterInfo[0];
+        }
 
         /// <summary>
         /// Gets the type of this property

@@ -104,6 +104,47 @@ namespace System
             return Compare(strA, strB, StringComparison.Ordinal);
         }
 
+        /// <summary>
+        /// Compare strings
+        /// </summary>
+        public bool StartsWith(string other, StringComparison comparisonType)
+        {
+            if (Length < other.Length) 
+                return false;
+
+            var ignoreCase = (comparisonType == StringComparison.InvariantCultureIgnoreCase) ||
+                             (comparisonType == StringComparison.CurrentCultureIgnoreCase) ||
+                             (comparisonType == StringComparison.OrdinalIgnoreCase);
+            
+            if (!ignoreCase)
+                return StartsWith(other);
+            
+            var _this = this.JavaSubstring(0, other.Length);
+
+            return Compare(_this, other, ignoreCase) == 0;
+
+        }
+
+        /// <summary>
+        /// Compare strings
+        /// </summary>
+        public bool EndsWith(string other, StringComparison comparisonType)
+        {
+            if (Length < other.Length)
+                return false;
+
+            var ignoreCase = (comparisonType == StringComparison.InvariantCultureIgnoreCase) ||
+                             (comparisonType == StringComparison.CurrentCultureIgnoreCase) ||
+                             (comparisonType == StringComparison.OrdinalIgnoreCase);
+
+            if (!ignoreCase)
+                return EndsWith(other);
+
+            var _this = this.JavaSubstring(Length-other.Length, other.Length);
+
+            return Compare(_this, other, ignoreCase) == 0;
+
+        }
 
         /// <summary>
         /// Does this string contain the given sub string?

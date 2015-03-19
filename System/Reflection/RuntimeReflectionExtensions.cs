@@ -27,12 +27,11 @@
 
 
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 
 namespace System.Reflection
 {
-  
-	public static class RuntimeReflectionExtensions
+    public static class RuntimeReflectionExtensions
 	{
 		const BindingFlags AllMembersBindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
 
@@ -92,14 +91,7 @@ namespace System.Reflection
         //    return typeInfo.GetInterfaceMap (interfaceType);
         //}
 
-        public static MethodInfo GetMethod(this Type type, string name, Type[] parameters)
-        {
-            if (type == null)
-                throw new ArgumentNullException("type");
-
-            return type.JavaGetMethod(name, parameters);
-        }
-
+       
 
 		public static MethodInfo GetRuntimeMethod (this Type type, string name, Type[] parameters)
 		{
@@ -118,44 +110,7 @@ namespace System.Reflection
 		}
 
        
-        public static IEnumerable<PropertyInfo> GetProperties(this Type type, BindingFlags flags)
-        {
-            if (type == null)
-                throw new ArgumentNullException("type");
-
-            while (type != null)
-            {
-                var properties = type.GetProperties();
-                foreach (var prop in properties.Where(p => IsMatch(p, flags)))
-                    yield return prop;
-                type = type.GetSuperclass();
-            }
-        }
-
-	    private static bool IsMatch(PropertyInfo propertyInfo, BindingFlags flags)
-	    {
-	        bool incPublic = (flags & BindingFlags.Public) == BindingFlags.Public;
-            bool incNonPublic = (flags & BindingFlags.NonPublic) == BindingFlags.NonPublic;
-            bool incStatic = (flags & BindingFlags.Static) == BindingFlags.Static;
-            bool incInstance = (flags & BindingFlags.Instance) == BindingFlags.Instance;
-
-	        var get = propertyInfo.GetMethod;
-            var set = propertyInfo.SetMethod;
-
-	        return (incPublic    && ((get != null && get.IsPublic) || (set!=null && set.IsPublic)))
-                || (incNonPublic && ((get != null && !get.IsPublic) || (set!=null && !set.IsPublic)))
-                || (incStatic    && ((get != null && get.IsStatic) || (set!=null && set.IsStatic)))
-                || (incInstance  && ((get != null && !get.IsStatic) || (set!=null && !set.IsStatic)));
-	    }
-
-        public static PropertyInfo GetProperty(this Type type, string name)
-        {
-            if (type == null)
-                throw new ArgumentNullException("type");
-
-            return type.GetProperties(BindingFlags.Public)
-                       .First(p => p.Name == name);
-        }
+        
 
 	    public static IEnumerable<PropertyInfo> GetRuntimeProperties (this Type type)
 		{
@@ -180,6 +135,20 @@ namespace System.Reflection
             
         //    return type;
         //}
+
+        /// <summary>
+        /// this is not supported atm, though should probably be possible to implement.
+        /// </summary>
+        /// <param name="del"></param>
+        /// <returns></returns>
+        [Obsolete("doesn't work atm")]
+        public static MethodInfo GetMethodInfo(this Delegate del)
+        {
+            if (del == null)
+                throw new ArgumentNullException("del");
+            
+            throw new NotImplementedException();
+        }
 	}
 }
 

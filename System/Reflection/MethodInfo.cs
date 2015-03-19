@@ -17,22 +17,21 @@ using Java.Lang.Reflect;
 
 namespace System.Reflection
 {
-    partial class MethodInfo
+    partial class MethodInfo 
     {
-        /// <summary>
-        /// Gets the type that declares this member.
-        /// </summary>
-        public Type DeclaringType
-        {
-            [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
-            get { return GetDeclaringClass(); }
-        }
-
         [Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;")]
         global::Java.Lang.Reflect.ITypeVariable<object>[] IGenericDeclaration.GetTypeParameters()
         {
             return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
         }
+
+        public override Type DeclaringType
+        {
+            [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
+            get { return GetDeclaringClass(); }
+        }
+
+        public override string Name { get { return GetName(); } }
 
         /// <summary>
         /// Is this an abstract method?
@@ -63,6 +62,30 @@ namespace System.Reflection
         /// Is this an virtual method?
         /// </summary>
         public bool IsVirtual { get { return !Modifier.IsFinal(GetModifiers()); } }
+
+        public bool ContainsGenericParameters { get { return GenericParameterTypes.Length > 0; } }
+
+        public ParameterInfo[] GetParameters()
+        {
+            var types = GetParameterTypes();
+            ParameterInfo[] ret = new ParameterInfo[types.Length];
+
+            for (int idx = 0; idx < types.Length; ++idx)
+                ret[idx] = new ParameterInfo(this, "arg" + (idx++), types[idx], idx);
+            return ret;
+        }
+
+        //public MethodInfo GetBaseDefinition()
+        //{
+        //    if (this.IsAbstract) return this;
+        //    if (this.IsStatic) return this;
+        //    if (this.IsVirtual) return this;
+        //}
+
+        public static implicit operator MethodBase(MethodInfo i) 
+        {
+            return new MethodBase(i);
+        }
     }
 }
 

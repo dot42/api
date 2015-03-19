@@ -53,6 +53,18 @@ namespace System
         }
 
         /// <summary>
+        /// Gets the value of the array at the given indices.
+        /// </summary>
+        [Obsolete("this is not implememented for ranks > 0")]
+        public void SetValue(object value, int[] indices)
+        {
+            if(indices.Length != 1)
+                throw new NotImplementedException("indices");
+
+            Java.Lang.Reflect.Array.Set(this, indices[0], value);
+        }
+
+        /// <summary>
         /// Set a range of element in the given array starting at the given index to 0 or null.
         /// </summary>
         public static void Clear(Array source, int index, int length)
@@ -317,18 +329,29 @@ namespace System
 
             throw new NotImplementedException("System.Array.GetLength");
         }
-
-        /*
-        //Rank is missing, Java doesn't support multiple dimension arrays as far as I know like 
-        //var i = new int[1,2,3], however it does support
-        //var i = new int[1][2][3]
+       
+        // <summary>
+        // Rank is missing, Java doesn't support multiple dimension arrays as far as I know like 
+        //  var i = new int[1,2,3], however it does support
+        //  var i = new int[1][2][3]
+        // </summary>
         public int Rank
         {
             get { return 1; }
         }
-        */
 
-
+        public static Array CreateInstance(Type type, int length)
+        {
+            return (Array)Java.Lang.Reflect.Array.NewInstance(type, length);
+        }
+        /// <summary>
+        /// multidimensional arras are not really supported.
+        /// </summary>
+        [Obsolete("Java does not support true multidimensional arrays (i believe)")]
+        public static Array CreateInstance(Type type, int[] lengths)
+        {
+            return (Array)Java.Lang.Reflect.Array.NewInstance(type, lengths);
+        }
     }
 }
 
