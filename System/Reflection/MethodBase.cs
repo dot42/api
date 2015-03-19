@@ -1,44 +1,50 @@
-﻿namespace System.Reflection
+﻿
+namespace System.Reflection
 {
-    // (olaf, 19.03.2015) This is a workaround, since 
-    // ConstructorInfo and MethodInfo derive from 
-    // their java counterparts. Not sure if this was the right decision.
-    public class MethodBase
+    public abstract class MethodBase : JavaMemberInfo
     {
-        private readonly MethodInfo _method;
-        private readonly ConstructorInfo _ctor;
-        private readonly MemberInfo _member;
-
-        public MethodBase(ConstructorInfo ctor)
+        public MethodBase(JavaConstructor ctor):base(ctor)
         {
-            _ctor = ctor;
-            _member = ctor;
         }
 
-        public MethodBase(MethodInfo method)
+        public MethodBase(JavaMethod method) : base(method)
         {
-            _method = method;
-            _member = method;
         }
 
-        public object Invoke(object instance, params object[] args)
-        {
-            if (_method != null)
-                return _method.Invoke(instance, args);
-            if(instance != null)
-                throw new Exception("instance must be null for constructor call");
-            return _ctor.Invoke(args);
-        }
+        /// <summary>
+        /// Is this an abstract method?
+        /// </summary>
+        public abstract bool IsAbstract { get; }
 
-        public static explicit operator ConstructorInfo(MethodBase i)
-        {
-            return i._ctor;
-        }
+        /// <summary>
+        /// Is this an final method?
+        /// </summary>
+        public abstract bool IsFinal { get; }
 
-        public static explicit operator MethodInfo(MethodBase i)
-        {
-            return i._method;
-        }
+        /// <summary>
+        /// Is this an private method?
+        /// </summary>
+        public abstract bool IsPrivate { get; }
 
+        /// <summary>
+        /// Is this an public method?
+        /// </summary>
+        public abstract bool IsPublic { get; }
+
+        /// <summary>
+        /// Is this a static method?
+        /// </summary>
+        public abstract bool IsStatic { get; }
+
+        /// <summary>
+        /// Is this an virtual method?
+        /// </summary>
+        public abstract bool IsVirtual { get; }
+
+        public abstract bool ContainsGenericParameters { get; }
+
+        public abstract object Invoke(object instance, params object[] args);
+
+        public abstract ParameterInfo[] GetParameters();
     }
 }

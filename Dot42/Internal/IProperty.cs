@@ -34,14 +34,14 @@ namespace Dot42.Internal
         /// Returned array must be length 0 or 1
         /// </summary>
         [Include(TypeCondition = typeof(PropertyInfo))]
-        MethodInfo[] Get();
+        JavaMethod[] Get();
 
         /// <summary>
         /// Setter.
         /// Returned array must be length 0 or 1
         /// </summary>
         [Include(TypeCondition = typeof(PropertyInfo))]
-        MethodInfo[] Set();
+        JavaMethod[] Set();
 
         /// <summary>
         /// Custom attributes of this property.

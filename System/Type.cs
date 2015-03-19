@@ -86,18 +86,10 @@ namespace System
             get { return GetSuperclass(); }
         }
 
-        /// <summary>
-        /// return always false, since java does not support abstract classes.
-        /// </summary>
         public bool IsAbstract
         {
             get { return Modifier.IsAbstract(GetModifiers()); }
         }
-
-        /// <summary>
-        /// returns always false, since we do not support MakeGenericType atm.
-        /// </summary>
-        public bool IsGenericTypeDefinition { get { return false; } }
 
 	    public bool IsVisible
 	    {
@@ -146,6 +138,19 @@ namespace System
             throw new NotImplementedException("System.Type.MakeGenericType");
         }
 
+        /// <summary>
+        /// returns always false.
+        /// </summary>
+        public bool ContainsGenericParameters
+        {
+            get { return false; }
+        }
+
+        /// <summary>
+        /// returns always false, since we do not support MakeGenericType.
+        /// </summary>
+        public bool IsGenericTypeDefinition { get { return false; } }
+
         [DexNative]
         public static Type GetTypeFromHandle(RuntimeTypeHandle handle)
         {
@@ -187,7 +192,9 @@ namespace System
         /// </summary>
         public ConstructorInfo[] GetConstructors()
         {
-            return JavaGetConstructors().Where(x => x.IsPublic);
+            return JavaGetConstructors()
+                         .Where(x => Modifier.IsPublic(x.GetModifiers()))
+                         .Select(x => new ConstructorInfo(x));
         }
 
         /// <summary>
@@ -195,13 +202,17 @@ namespace System
         /// </summary>
         public ConstructorInfo[] GetConstructors(BindingFlags flags)
         {
-            var ctors = ((flags & BindingFlags.DeclaredOnly) != 0) ? GetDeclaredConstructors() : JavaGetConstructors();
-            return ctors.Where(x => Matches(x.GetModifiers(), flags));
+            var ctors = ((flags & BindingFlags.DeclaredOnly) != 0) ? JavaGetDeclaredConstructors() : JavaGetConstructors();
+            
+            return ctors.Where(x => Matches(x.GetModifiers(), flags))
+                        .Select(x => new ConstructorInfo(x));
         }
 
         public ConstructorInfo GetConstructor(Type[] parameters)
         {
-            return JavaGetConstructor(parameters);
+            var ret =  JavaGetConstructor(parameters);
+            if (ret == null) return null;
+            return new ConstructorInfo(ret);
         }
 
 	    public Type[] GetInterfaces()
@@ -214,12 +225,24 @@ namespace System
         /// </summary>
         public FieldInfo[] GetFields()
         {
-            return JavaGetFields().Where(x => x.IsPublic);
+            return JavaGetFields().Where(x => Modifier.IsPublic(x.GetModifiers()))
+                                  .Select(x => new FieldInfo(x));
         }
 
         public FieldInfo GetField(string name)
         {
-            return JavaGetField(name);
+            var ret = JavaGetField(name);
+            if (ret == null) return null;
+            return new FieldInfo(ret);
+        }
+
+        public FieldInfo GetField(string name, BindingFlags flags)
+        {
+            var fields = ((flags & BindingFlags.DeclaredOnly) != 0) ? JavaGetDeclaredFields() : JavaGetFields();
+            var ret = fields.Where(x => Matches(x.GetModifiers(), flags) && x.Name == name);
+            if(ret.Length > 1)
+                throw new AmbiguousMatchException();
+            return ret.Length == 0 ? null : new FieldInfo(ret[0]);
         }
 
         /// <summary>
@@ -227,8 +250,9 @@ namespace System
         /// </summary>
         public FieldInfo[] GetFields(BindingFlags flags)
         {
-            var fields = ((flags & BindingFlags.DeclaredOnly) != 0) ? GetDeclaredFields() : JavaGetFields();
-            return fields.Where(x => Matches(x.GetModifiers(), flags));
+            var fields = ((flags & BindingFlags.DeclaredOnly) != 0) ? JavaGetDeclaredFields() : JavaGetFields();
+            return fields.Where(x => Matches(x.GetModifiers(), flags))
+                         .Select(x => new FieldInfo(x));
         }
 
         /// <summary>
@@ -236,7 +260,8 @@ namespace System
         /// </summary>
         public MethodInfo[] GetMethods()
         {
-            return JavaGetMethods().Where(x => x.IsPublic);
+            return JavaGetMethods().Where(x => Modifier.IsPublic(x.GetModifiers()))
+                                   .Select(x=> new MethodInfo(x));
         }
 
         /// <summary>
@@ -244,13 +269,17 @@ namespace System
         /// </summary>
         public MethodInfo[] GetMethods(BindingFlags flags)
         {
-            var methods = ((flags & BindingFlags.DeclaredOnly) != 0) ? GetDeclaredMethods() : JavaGetMethods();
-            return methods.Where(x => Matches(x.GetModifiers(), flags));
+            var methods = ((flags & BindingFlags.DeclaredOnly) != 0) ? JavaGetDeclaredMethods() : JavaGetMethods();
+            return methods.Where(x => Matches(x.GetModifiers(), flags))
+                          .Select(x=> new MethodInfo(x));
         }
 
         public MethodInfo GetMethod(string name, Type[] parameters)
         {
-            return JavaGetMethod(name, parameters);
+            var ret = JavaGetMethod(name, parameters);
+            if(ret != null)
+                return new MethodInfo(ret);
+            return null;
         }
 
         /// <summary>

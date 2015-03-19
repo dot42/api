@@ -28,22 +28,16 @@
 
 using System.Collections.Generic;
 using System.Diagnostics;
+using Dot42;
 
 namespace System.Reflection
 {
     public static class RuntimeReflectionExtensions
 	{
 		const BindingFlags AllMembersBindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
+        const BindingFlags AllDeclaredMembersBindingFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
 
-        //public static MethodInfo GetMethodInfo (this Delegate del)
-        //{
-        //    if (del == null)
-        //        throw new ArgumentNullException ("del");
-
-        //    return del.Method;
-        //}
-
-        //public static MethodInfo GetRuntimeBaseDefinition(this MethodInfo method)
+       //public static MethodInfo GetRuntimeBaseDefinition(this MethodInfo method)
         //{
         //    if (method == null)
         //        throw new ArgumentNullException("method");
@@ -67,21 +61,33 @@ namespace System.Reflection
         //    return type.GetEvents(AllMembersBindingFlags);
         //}
 
-        //public static FieldInfo GetRuntimeField (this Type type, string name)
-        //{
-        //    if (type == null)
-        //        throw new ArgumentNullException ("type");
+        public static FieldInfo GetRuntimeField(this Type type, string name)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
 
-        //    return type.GetField (name);
-        //}
+            return type.GetField(name);
+        }
 
-		public static IEnumerable<FieldInfo> GetRuntimeFields (this Type type)
+		public static IEnumerable<FieldInfo> GetDeclaredFields (this Type type)
 		{
-			if (type == null)
-				throw new ArgumentNullException ("type");
-
-			return type.GetFields (AllMembersBindingFlags);
+			if (type == null) throw new ArgumentNullException ("type");
+		    return type.GetFields(AllDeclaredMembersBindingFlags);
 		}
+
+        public static FieldInfo GetDeclaredField(this Type type, string name)
+        {
+            if (type == null) throw new ArgumentNullException("type");
+            return type.GetField(name, AllDeclaredMembersBindingFlags);
+        }
+
+        public static IEnumerable<FieldInfo> GetRuntimeFields(this Type type)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
+
+            return type.GetFields(AllMembersBindingFlags);
+        }
 
         //public static InterfaceMapping GetRuntimeInterfaceMap (this TypeInfo typeInfo, Type interfaceType)
         //{
@@ -90,8 +96,6 @@ namespace System.Reflection
 
         //    return typeInfo.GetInterfaceMap (interfaceType);
         //}
-
-       
 
 		public static MethodInfo GetRuntimeMethod (this Type type, string name, Type[] parameters)
 		{
@@ -109,11 +113,25 @@ namespace System.Reflection
 			return type.GetMethods (AllMembersBindingFlags);
 		}
 
+        public static MethodInfo GetDeclaredMethod(this Type type, string name, Type[] parameters)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
+
+            var ret = type.JavaGetDeclaredMethod(name, parameters);
+            return ret == null ? null : new MethodInfo(ret);
+        }
+
+        public static IEnumerable<MethodInfo> GetDeclaredMethods(this Type type)
+        {
+            if (type == null) throw new ArgumentNullException("type");
+
+            return type.JavaGetDeclaredMethods().Select(x => new MethodInfo(x));
+        }
+
 	    public static IEnumerable<PropertyInfo> GetRuntimeProperties (this Type type)
 		{
-			if (type == null)
-				throw new ArgumentNullException ("type");
-
+			if (type == null) throw new ArgumentNullException ("type");
 			return type.GetProperties(AllMembersBindingFlags);
 		}
 
@@ -129,6 +147,28 @@ namespace System.Reflection
             if (type == null) throw new ArgumentNullException("type");
 
             return type.GetProperty(name, flags);
+        }
+
+        public static IEnumerable<PropertyInfo> GetDeclaredProperties(this Type type)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
+
+            return type.GetProperties(AllDeclaredMembersBindingFlags);
+        }
+
+        public static PropertyInfo GetDeclaredProperty(this Type type, string name)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
+            return type.GetProperty(name, BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static );
+        }
+
+        public static PropertyInfo GetDeclaredProperty(this Type type, string name, BindingFlags flags)
+        {
+            if (type == null) throw new ArgumentNullException("type");
+
+            return type.GetProperty(name, flags|BindingFlags.DeclaredOnly);
         }
 
         //public static TypeInfo GetTypeInfo(this Type type)

@@ -13,65 +13,72 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 using Java.Lang.Reflect;
 
 namespace System.Reflection
 {
-    partial class MethodInfo 
+    public class MethodInfo : MethodBase
     {
-        [Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;")]
-        global::Java.Lang.Reflect.ITypeVariable<object>[] IGenericDeclaration.GetTypeParameters()
+        private readonly JavaMethod _method;
+        public JavaMethod JavaMethod { get { return _method; } }
+
+
+        public MethodInfo(JavaMethod method) : base(method)
         {
-            return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
+            _method = method;
         }
 
-        public Type DeclaringType
+        //public override MemberTypes MemberType { get {return MemberTypes.Method; } }
+        public override Type DeclaringType { get { return _method.DeclaringClass; } }
+        public override string Name { get { return _method.Name; } }
+
+        public override bool ContainsGenericParameters { get { return JavaMethod.GenericParameterTypes.Length > 0; } }
+
+        public override ParameterInfo[] GetParameters()
         {
-            [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
-            get { return GetDeclaringClass(); }
+            var types = JavaMethod.GetParameterTypes();
+            ParameterInfo[] ret = new ParameterInfo[types.Length];
+
+            for (int idx = 0; idx < types.Length; ++idx)
+            {
+                // java doesn't support argument names.
+                ret[idx] = new ParameterInfo(this, "arg" + (idx++), types[idx], idx);
+            }
+            return ret;
         }
 
         /// <summary>
         /// Is this an abstract method?
         /// </summary>
-        public bool IsAbstract { get { return Modifier.IsAbstract(GetModifiers()); } }
+        public override bool IsAbstract { get { return Modifier.IsAbstract(_method.GetModifiers()); } }
 
         /// <summary>
         /// Is this an final method?
         /// </summary>
-        public bool IsFinal { get { return Modifier.IsFinal(GetModifiers()); } }
+        public override bool IsFinal { get { return Modifier.IsFinal(_method.GetModifiers()); } }
 
         /// <summary>
         /// Is this an private method?
         /// </summary>
-        public bool IsPrivate { get { return Modifier.IsPrivate(GetModifiers()); } }
+        public override bool IsPrivate { get { return Modifier.IsPrivate(_method.GetModifiers()); } }
 
         /// <summary>
         /// Is this an public method?
         /// </summary>
-        public bool IsPublic { get { return Modifier.IsPublic(GetModifiers()); } }
+        public override bool IsPublic { get { return Modifier.IsPublic(_method.GetModifiers()); } }
 
         /// <summary>
         /// Is this a static method?
         /// </summary>
-        public bool IsStatic { get { return Modifier.IsStatic(GetModifiers()); } }
+        public override bool IsStatic { get { return Modifier.IsStatic(_method.GetModifiers()); } }
 
         /// <summary>
         /// Is this an virtual method?
         /// </summary>
-        public bool IsVirtual { get { return !Modifier.IsFinal(GetModifiers()); } }
+        public override bool IsVirtual { get { return !Modifier.IsFinal(_method.GetModifiers()); } }
 
-        public bool ContainsGenericParameters { get { return GenericParameterTypes.Length > 0; } }
-
-        public ParameterInfo[] GetParameters()
-        {
-            var types = GetParameterTypes();
-            ParameterInfo[] ret = new ParameterInfo[types.Length];
-
-            for (int idx = 0; idx < types.Length; ++idx)
-                ret[idx] = new ParameterInfo(this, "arg" + (idx++), types[idx], idx);
-            return ret;
-        }
+        public Type ReturnType { get { return _method.ReturnType; } }
 
         //public MethodInfo GetBaseDefinition()
         //{
@@ -80,9 +87,9 @@ namespace System.Reflection
         //    if (this.IsVirtual) return this;
         //}
 
-        public static implicit operator MethodBase(MethodInfo i) 
+        public override object Invoke(object instance, params object[] args)
         {
-            return new MethodBase(i);
+            return _method.Invoke(instance, args);
         }
     }
 }

@@ -17,61 +17,56 @@ using Java.Lang.Reflect;
 
 namespace System.Reflection
 {
-    partial class ConstructorInfo 
+    public class ConstructorInfo : MethodBase
     {
-        /// <summary>
-        /// Gets the type that declares this member.
-        /// </summary>
-        public Type DeclaringType
+        private readonly JavaConstructor _ctor;
+
+        public JavaConstructor JavaConstructor { get { return _ctor; } }
+
+        public ConstructorInfo(JavaConstructor ctor) : base(ctor)
         {
-            [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
-            get { return GetDeclaringClass(); }
+            _ctor = ctor;
         }
 
-        ///// <summary>
-        ///// Fix return type
-        ///// </summary>
-        //[Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;")]
-        //global::Java.Lang.Reflect.ITypeVariable<object>[] IGenericDeclaration.GetTypeParameters()
-        //{
-        //    return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
-        //}
+        //public override MemberTypes MemberType { get { return MemberTypes.Constructor; } }
+        public override Type DeclaringType { get { return _ctor.DeclaringClass; } }
+        public override string Name { get { return _ctor.Name; } }
 
         /// <summary>
         /// Is this an abstract method?
         /// </summary>
-        public bool IsAbstract { get { return Modifier.IsAbstract(GetModifiers()); } }
+        public override bool IsAbstract { get { return Modifier.IsAbstract(_ctor.GetModifiers()); } }
 
         /// <summary>
         /// Is this an final method?
         /// </summary>
-        public bool IsFinal { get { return Modifier.IsFinal(GetModifiers()); } }
+        public override bool IsFinal { get { return Modifier.IsFinal(_ctor.GetModifiers()); } }
 
         /// <summary>
         /// Is this an private method?
         /// </summary>
-        public bool IsPrivate { get { return Modifier.IsPrivate(GetModifiers()); } }
+        public override bool IsPrivate { get { return Modifier.IsPrivate(_ctor.GetModifiers()); } }
 
         /// <summary>
         /// Is this an public method?
         /// </summary>
-        public bool IsPublic { get { return Modifier.IsPublic(GetModifiers()); } }
+        public override bool IsPublic { get { return Modifier.IsPublic(_ctor.GetModifiers()); } }
 
         /// <summary>
         /// Is this a static method?
         /// </summary>
-        public bool IsStatic { get { return Modifier.IsStatic(GetModifiers()); } }
+        public override bool IsStatic { get { return Modifier.IsStatic(_ctor.GetModifiers()); } }
 
         /// <summary>
         /// Is this an virtual method?
         /// </summary>
-        public bool IsVirtual { get { return !Modifier.IsFinal(GetModifiers()); } }
+        public override bool IsVirtual { get { return !Modifier.IsFinal(_ctor.GetModifiers()); } }
 
-        public bool ContainsGenericParameters { get { return GenericParameterTypes.Length > 0; } }
+        public override bool ContainsGenericParameters { get { return _ctor.GenericParameterTypes.Length > 0; } }
 
-        public ParameterInfo[] GetParameters()
+    public override ParameterInfo[] GetParameters()
         {
-            var types = GetParameterTypes();
+            var types = _ctor.GetParameterTypes();
             ParameterInfo[] ret = new ParameterInfo[types.Length];
 
             for (int idx = 0; idx < types.Length; ++idx)
@@ -81,13 +76,16 @@ namespace System.Reflection
 
         public object Invoke(params object[] args)
         {
-            return NewInstance(args);
+            return _ctor.NewInstance(args);
         }
 
-        public static implicit operator MethodBase(ConstructorInfo i) 
+        public override object Invoke(object instance, params object[] args)
         {
-            return new MethodBase(i);
+            if (instance != null)
+                throw new InvalidOperationException("instance must be null");
+            return Invoke(args);
         }
+
     }
 }
 

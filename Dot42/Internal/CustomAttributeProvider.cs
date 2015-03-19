@@ -35,6 +35,21 @@ namespace Dot42.Internal
         public static object[] GetCustomAttributes(IAnnotatedElement member, bool inherit)
         {
             var attributes = GetAttributes(member, inherit);
+            return GetCustomAttributes(attributes);
+        }
+
+        /// <summary>
+        /// Returns an array of all attributes defined on this member.
+        /// Returns an empty array if no attributes are defined on this member.
+        /// </summary>
+        /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
+        public static object[] GetCustomAttributes(IAttributesProvider member, bool inherit)
+        {
+            return GetCustomAttributes(member.Attributes());
+        }
+
+        private static object[] GetCustomAttributes(IAttributes attributes)
+        {
             if (attributes == null)
                 return new object[0];
             var list = new ArrayList<object>();
@@ -53,6 +68,22 @@ namespace Dot42.Internal
         public static object[] GetCustomAttributes(IAnnotatedElement member, Type attributeType, bool inherit)
         {
             var attributes = GetAttributes(member, inherit);
+            return GetCustomAttributes(attributeType, attributes);
+        }
+
+        /// <summary>
+        /// Returns an array of all attributes defined on this member of the given attribute type.
+        /// Returns an empty array if no attributes are defined on this member.
+        /// </summary>
+        /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
+        public static object[] GetCustomAttributes(IAttributesProvider member, Type attributeType, bool inherit)
+        {
+            var attributes = member.Attributes();
+            return GetCustomAttributes(attributeType, attributes);
+        }
+
+        private static object[] GetCustomAttributes(Type attributeType, IAttributes attributes)
+        {
             if (attributes == null)
                 return new object[0];
             var list = new ArrayList<object>();
@@ -74,6 +105,22 @@ namespace Dot42.Internal
         public static bool IsDefined(IAnnotatedElement member, Type attributeType, bool inherit)
         {
             var attributes = GetAttributes(member, inherit);
+            return IsDefined(attributeType, attributes);
+        }
+
+        /// <summary>
+        /// are one or more attributes of the given type defined on this member.
+        /// </summary>
+        /// <param name="attributeType">The type of the custom attribute</param>
+        /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
+        public static bool IsDefined(IAttributesProvider member, Type attributeType, bool inherit)
+        {
+            var attributes = member.Attributes();
+            return IsDefined(attributeType, attributes);
+        }
+
+        private static bool IsDefined(Type attributeType, IAttributes attributes)
+        {
             if (attributes == null)
                 return false;
             foreach (var attr in attributes.Attributes())
@@ -91,8 +138,6 @@ namespace Dot42.Internal
         /// </summary>
         private static IAttributes GetAttributes(IAnnotatedElement member, bool inherit)
         {
-            var provider = member as IAttributesProvider;
-            if (provider != null) return provider.Attributes();
             return member.GetAnnotation<IAttributes>(typeof(IAttributes));
         }
 

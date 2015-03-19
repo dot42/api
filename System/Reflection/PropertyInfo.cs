@@ -41,12 +41,12 @@ namespace System.Reflection
             this.attributes = attributes;
         }
 
-        public Type DeclaringType { get { return declaringType; } }
+        public override Type DeclaringType { get { return declaringType; } }
 
         /// <summary>
         /// Gets the name of this property
         /// </summary>
-        public string Name { get { return name; } }
+        public override string Name { get { return name; } }
 
         /// <summary>
         /// Gets this property be read from?
@@ -92,7 +92,7 @@ namespace System.Reflection
                     return getter.ReturnType;
                 if (setter != null)
                 {
-                    var paramTypes = setter.ParameterTypes;
+                    var paramTypes = setter.JavaMethod.ParameterTypes;
                     return paramTypes[paramTypes.Length - 1];
                 }
                 throw new NotSupportedException("PropertyType");
@@ -116,6 +116,21 @@ namespace System.Reflection
         {
             if (setter != null)
                 setter.Invoke(instance, value);
+        }
+
+        public override object[] GetCustomAttributes(bool inherit)
+        {
+            return CustomAttributeProvider.GetCustomAttributes(this, inherit);
+        }
+
+        public override object[] GetCustomAttributes(Type attributeType, bool inherit)
+        {
+            return CustomAttributeProvider.GetCustomAttributes(this, attributeType, inherit);
+        }
+
+        public override bool IsDefined(Type attributeType, bool inherit)
+        {
+            return CustomAttributeProvider.IsDefined(this, attributeType, inherit);
         }
 
         /// <summary>

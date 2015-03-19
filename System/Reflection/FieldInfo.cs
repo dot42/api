@@ -17,48 +17,50 @@ using Java.Lang.Reflect;
 
 namespace System.Reflection
 {
-    partial class FieldInfo
+    public class FieldInfo : JavaMemberInfo
     {
-        /// <summary>
-        /// Gets the type that declares this member.
-        /// </summary>
-        public Type DeclaringType
+        private readonly JavaField _field;
+
+        public FieldInfo(JavaField field)  :base(field)
         {
-            [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
-            get { return GetDeclaringClass(); }
+            _field = field;
         }
 
-        public Type FieldType { get { return this.GetType(); } }
+        //public override MemberTypes MemberType { get { return MemberTypes.Field; } }
+        public override Type DeclaringType { get { return _field.DeclaringClass; } }
+        public override string Name { get { return _field.Name; } }
+
+        public Type FieldType { get { return _field.GetType(); } }
 
         /// <summary>
         /// Is this an abstract method?
         /// </summary>
-        public bool IsAbstract { get { return Modifier.IsAbstract(GetModifiers()); } }
+        public bool IsAbstract { get { return Modifier.IsAbstract(_field.GetModifiers()); } }
 
         /// <summary>
         /// Is this an final method?
         /// </summary>
-        public bool IsFinal { get { return Modifier.IsFinal(GetModifiers()); } }
+        public bool IsFinal { get { return Modifier.IsFinal(_field.GetModifiers()); } }
 
         /// <summary>
         /// Is this an private method?
         /// </summary>
-        public bool IsPrivate { get { return Modifier.IsPrivate(GetModifiers()); } }
+        public bool IsPrivate { get { return Modifier.IsPrivate(_field.GetModifiers()); } }
 
         /// <summary>
         /// Is this an public method?
         /// </summary>
-        public bool IsPublic { get { return Modifier.IsPublic(GetModifiers()); } }
+        public bool IsPublic { get { return Modifier.IsPublic(_field.GetModifiers()); } }
 
         /// <summary>
         /// Is this a static method?
         /// </summary>
-        public bool IsStatic { get { return Modifier.IsStatic(GetModifiers()); } }
+        public bool IsStatic { get { return Modifier.IsStatic(_field.GetModifiers()); } }
 
         /// <summary>
         /// Is this an virtual method?
         /// </summary>
-        public bool IsVirtual { get { return !Modifier.IsFinal(GetModifiers()); } }
+        public bool IsVirtual { get { return !Modifier.IsFinal(_field.GetModifiers()); } }
 
         /// <summary>
         /// returns false, Literals are not supported by Java (i think)
@@ -72,7 +74,14 @@ namespace System.Reflection
 
         public void SetValue(object instance, object value)
         {
-            Set(instance, value);
+            // TODO: if this is a final field, we might want to
+            // consider to set the accessibility of the field.
+            _field.Set(instance, value);
+        }
+
+        public object GetValue(object instance)
+        {
+            return _field.GetValue(instance);
         }
 
     }

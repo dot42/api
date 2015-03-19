@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using System.Reflection;
 
 namespace Dot42.Internal
 {
@@ -53,7 +54,7 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Enum))]
         internal static Enum Get(System.Type enumType, int value)
         {
-            var infoField = enumType.GetDeclaredField("info__");
+            var infoField = enumType.JavaGetDeclaredField("info__");
             var infoInstance = (EnumInfo)infoField.GetValue(null);
             var result = infoInstance.GetValue(value);
             if (result == null)
@@ -64,7 +65,7 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Enum))]
         internal static Enum Get(System.Type enumType, long value)
         {
-            var infoField = enumType.GetDeclaredField("info__");
+            var infoField = enumType.JavaGetDeclaredField("info__");
             var infoInstance = (EnumInfo)infoField.GetValue(null);
             var result = infoInstance.GetValue(value);
             if (result == null)

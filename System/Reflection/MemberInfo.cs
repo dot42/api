@@ -14,40 +14,61 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using Dot42.Internal;
+using Java.Lang.Reflect;
 
 namespace System.Reflection
 {
-    abstract partial class MemberInfo : ICustomAttributeProvider
+    public abstract class JavaMemberInfo : MemberInfo
     {
+        protected readonly AccessibleObject Member;
+
+        public JavaMemberInfo(AccessibleObject member)
+        {
+            Member = member;
+        }
+
+        public override object[] GetCustomAttributes(bool inherit)
+        {
+            return CustomAttributeProvider.GetCustomAttributes(Member, inherit);
+        }
+
+        public override object[] GetCustomAttributes(Type attributeType, bool inherit)
+        {
+            return CustomAttributeProvider.GetCustomAttributes(Member, attributeType, inherit);
+        }
+
+        public override bool IsDefined(Type attributeType, bool inherit)
+        {
+            return CustomAttributeProvider.IsDefined(Member, attributeType, inherit);
+        }
+    }
+
+    public abstract class MemberInfo : ICustomAttributeProvider
+    {
+        //public abstract MemberTypes MemberType { get; }
+        public abstract Type DeclaringType { get; }
+        public abstract string Name { get; }
+
         /// <summary>
         /// Returns an array of all attributes defined on this member.
         /// Returns an empty array if no attributes are defined on this member.
         /// </summary>
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
-        public object[] GetCustomAttributes(bool inherit)
-        {
-            return CustomAttributeProvider.GetCustomAttributes(this, inherit);
-        }
+        public abstract object[] GetCustomAttributes(bool inherit);
 
         /// <summary>
         /// Returns an array of all attributes defined on this member of the given attribute type.
         /// Returns an empty array if no attributes are defined on this member.
         /// </summary>
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
-        public object[] GetCustomAttributes(Type attributeType, bool inherit)
-        {
-            return CustomAttributeProvider.GetCustomAttributes(this, attributeType, inherit);
-        }
+        public abstract object[] GetCustomAttributes(Type attributeType, bool inherit);
 
         /// <summary>
         /// are one or more attributes of the given type defined on this member.
         /// </summary>
         /// <param name="attributeType">The type of the custom attribute</param>
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
-        public bool IsDefined(Type attributeType, bool inherit)
-        {
-            return CustomAttributeProvider.IsDefined(this, attributeType, inherit);
-        }
+        public abstract bool IsDefined(Type attributeType, bool inherit);
     }
 }
 

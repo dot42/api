@@ -28,7 +28,7 @@ namespace Dot42.Internal
         /// Gets the method to build an attribute from an annotation.
         /// </summary>
         [Include]
-        MethodInfo AttributeBuilder();
+        JavaMethod AttributeBuilder();
 
         /// <summary>
         /// Gets the type of the attribute.

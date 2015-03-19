@@ -77,7 +77,10 @@ namespace Dot42.Internal
                 var setter = ((setArr != null) && (setArr.Length > 0)) ? setArr[0] : null;
                 var attributesArr = p.Attributes();
                 var attributes = ((attributesArr != null) && (attributesArr.Length > 0)) ? attributesArr[0] : null;
-                infos[i] = new PropertyInfo(type, p.Name(), getter, setter, attributes);
+                infos[i] = new PropertyInfo(type, p.Name(),
+                                            getter != null?new MethodInfo(getter):null, 
+                                            setter != null?new MethodInfo(setter):null, 
+                                            attributes);
             }
             return infos;
         }

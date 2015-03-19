@@ -45,6 +45,19 @@ namespace Dot42
             if (list == null) return (T[])Array.NewInstance(elementType, 0);
             return list.ToArray((T[])Array.NewInstance(elementType, list.Count));
         }
+
+        public static TOut[] Select<TIn,TOut>(this TIn[] array, Func<TIn, TOut> select)
+        {
+            if ((array == null) || (array.Length == 0))
+                return new TOut[0];
+
+            var ret = new TOut[array.Length];
+
+            for (int i = 0; i < array.Length; ++i)
+                ret[i] = select(array[i]);
+
+            return ret;
+        }
 	}
 }
 

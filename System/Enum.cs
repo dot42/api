@@ -15,6 +15,7 @@
 // limitations under the License.
 
 using System.Globalization;
+using Java.Lang.Reflect;
 using Java.Text;
 using Java.Util;
 
@@ -45,11 +46,11 @@ namespace System
         /// </summary>
         public static string[] GetNames(Type enumType)
         {
-            var fields = enumType.GetDeclaredFields();
+            var fields = enumType.JavaGetDeclaredFields();
             var names = new ArrayList<string>();
             foreach (var field in fields)
             {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
                 {
                     var name = field.Name;
                     if (name[name.Length - 1] != '$')
@@ -66,11 +67,11 @@ namespace System
         /// </summary>
         public static Array GetValues(Type enumType)
         {
-            var fields = enumType.GetDeclaredFields();
+            var fields = enumType.JavaGetDeclaredFields();
             var values = new ArrayList<object>();
             foreach (var field in fields)
             {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
                 {
                     var name = field.Name;
                     if (name[name.Length - 1] != '$')
@@ -91,10 +92,10 @@ namespace System
                 throw new ArgumentNullException("enumType");
             if (name == null)
                 throw new ArgumentNullException("name");
-            var fields = enumType.GetDeclaredFields();
+            var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
                 {
                     if (field.Name == name)
                     {
@@ -114,10 +115,10 @@ namespace System
                 throw new ArgumentNullException("enumType");
             if (name == null)
                 throw new ArgumentNullException("name");
-            var fields = enumType.GetDeclaredFields();
+            var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
                 {
                     if ((!ignoreCase && (field.Name == name)) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
                     {
@@ -137,10 +138,10 @@ namespace System
             if (name == null)
                 throw new ArgumentNullException("name");
             var enumType = typeof (TEnum);
-            var fields = enumType.GetDeclaredFields();
+            var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
                 {
                     if (field.Name == name)
                     {
@@ -162,10 +163,10 @@ namespace System
             if (name == null)
                 throw new ArgumentNullException("name");
             var enumType = typeof(TEnum);
-            var fields = enumType.GetDeclaredFields();
+            var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
                 {
                     if ((!ignoreCase && (field.Name == name)) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
                     {

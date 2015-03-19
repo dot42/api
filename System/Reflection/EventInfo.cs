@@ -1,13 +1,22 @@
-﻿namespace System.Reflection
+﻿using Java.Lang.Reflect;
+
+namespace System.Reflection
 {
     /// <summary>
-    /// events through reflection are not supported.
+    /// events through reflection are not supported, and will 
+    /// never be returned by the framework
     /// </summary>
-    public class EventInfo : MemberInfo
+    public class EventInfo : JavaMemberInfo
     {
-        public Type DeclaringType { get { throw new NotImplementedException(); } }
+        public EventInfo(AccessibleObject member) : base(member)
+        {
+        }
 
-        public string Name { get { throw new NotImplementedException(); } }
+        //public override MemberTypes MemberType { get { return MemberTypes.Event; } }
+
+        public override Type DeclaringType { get { throw new NotImplementedException(); } }
+
+        public override string Name { get { throw new NotImplementedException(); } }
 
         public Type EventHandlerType { get { throw new NotImplementedException(); } }
     }
