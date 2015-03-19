@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Reflection;
 using Java.Lang.Annotation;
 
 namespace Dot42.Internal
@@ -25,6 +27,7 @@ namespace Dot42.Internal
         /// <summary>
         /// Gets all attributes
         /// </summary>
+        [Include(TypeCondition = typeof(PropertyInfo))]
         IAttribute[] Attributes();
     }
 }
