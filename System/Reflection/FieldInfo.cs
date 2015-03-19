@@ -22,13 +22,11 @@ namespace System.Reflection
         /// <summary>
         /// Gets the type that declares this member.
         /// </summary>
-        public override Type DeclaringType
+        public Type DeclaringType
         {
             [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
             get { return GetDeclaringClass(); }
         }
-
-        public override string Name { get { return GetName(); } }
 
         public Type FieldType { get { return this.GetType(); } }
 

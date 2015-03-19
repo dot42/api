@@ -1,6 +1,199 @@
-﻿#pragma warning disable 1717
+// Copyright (C) 2014 dot42
+//
+// Original filename: Android.Telephony.Gsm.cs
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+#pragma warning disable 1717
 namespace Android.Telephony.Gsm
 {
+		/// <summary>
+		/// <para>Represents the cell location on a GSM phone. </para>    
+		/// </summary>
+		/// <java-name>
+		/// android/telephony/gsm/GsmCellLocation
+		/// </java-name>
+		[Dot42.DexImport("android/telephony/gsm/GsmCellLocation", AccessFlags = 33)]
+		public partial class GsmCellLocation : global::Android.Telephony.CellLocation
+ /* scope: __dot42__ */ 
+		{
+				/// <summary>
+				/// <para>Empty constructor. Initializes the LAC and CID to -1. </para>        
+				/// </summary>
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public GsmCellLocation() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				/// <para>Initialize the object from a bundle. </para>        
+				/// </summary>
+				[Dot42.DexImport("<init>", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+				public GsmCellLocation(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				/// <para></para>        
+				/// </summary>
+				/// <returns>
+				/// <para>gsm location area code, -1 if unknown, 0xffff max legal value </para>
+				/// </returns>
+				/// <java-name>
+				/// getLac
+				/// </java-name>
+				[Dot42.DexImport("getLac", "()I", AccessFlags = 1)]
+				public virtual int GetLac() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <summary>
+				/// <para></para>        
+				/// </summary>
+				/// <returns>
+				/// <para>gsm cell id, -1 if unknown, 0xffff max legal value </para>
+				/// </returns>
+				/// <java-name>
+				/// getCid
+				/// </java-name>
+				[Dot42.DexImport("getCid", "()I", AccessFlags = 1)]
+				public virtual int GetCid() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <summary>
+				/// <para>On a UMTS network, returns the primary scrambling code of the serving cell.</para><para></para>        
+				/// </summary>
+				/// <returns>
+				/// <para>primary scrambling code for UMTS, -1 if unknown or GSM </para>
+				/// </returns>
+				/// <java-name>
+				/// getPsc
+				/// </java-name>
+				[Dot42.DexImport("getPsc", "()I", AccessFlags = 1)]
+				public virtual int GetPsc() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <summary>
+				/// <para>Invalidate this object. The location area code and the cell id are set to -1. </para>        
+				/// </summary>
+				/// <java-name>
+				/// setStateInvalid
+				/// </java-name>
+				[Dot42.DexImport("setStateInvalid", "()V", AccessFlags = 1)]
+				public virtual void SetStateInvalid() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				/// <para>Set the location area code and the cell id. </para>        
+				/// </summary>
+				/// <java-name>
+				/// setLacAndCid
+				/// </java-name>
+				[Dot42.DexImport("setLacAndCid", "(II)V", AccessFlags = 1)]
+				public virtual void SetLacAndCid(int lac, int cid) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object o) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <summary>
+				/// <para>Set intent notifier Bundle based on service state</para><para></para>        
+				/// </summary>
+				/// <java-name>
+				/// fillInNotifierBundle
+				/// </java-name>
+				[Dot42.DexImport("fillInNotifierBundle", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+				public virtual void FillInNotifierBundle(global::Android.Os.Bundle m) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				/// <para></para>        
+				/// </summary>
+				/// <returns>
+				/// <para>gsm location area code, -1 if unknown, 0xffff max legal value </para>
+				/// </returns>
+				/// <java-name>
+				/// getLac
+				/// </java-name>
+				public int Lac
+				{
+				[Dot42.DexImport("getLac", "()I", AccessFlags = 1)]
+						get{ return GetLac(); }
+				}
+
+				/// <summary>
+				/// <para></para>        
+				/// </summary>
+				/// <returns>
+				/// <para>gsm cell id, -1 if unknown, 0xffff max legal value </para>
+				/// </returns>
+				/// <java-name>
+				/// getCid
+				/// </java-name>
+				public int Cid
+				{
+				[Dot42.DexImport("getCid", "()I", AccessFlags = 1)]
+						get{ return GetCid(); }
+				}
+
+				/// <summary>
+				/// <para>On a UMTS network, returns the primary scrambling code of the serving cell.</para><para></para>        
+				/// </summary>
+				/// <returns>
+				/// <para>primary scrambling code for UMTS, -1 if unknown or GSM </para>
+				/// </returns>
+				/// <java-name>
+				/// getPsc
+				/// </java-name>
+				public int Psc
+				{
+				[Dot42.DexImport("getPsc", "()I", AccessFlags = 1)]
+						get{ return GetPsc(); }
+				}
+
+		}
+
 		/// <java-name>
 		/// android/telephony/gsm/SmsManager
 		/// </java-name>
@@ -121,130 +314,6 @@ namespace Android.Telephony.Gsm
 				{
 				[Dot42.DexImport("getDefault", "()Landroid/telephony/gsm/SmsManager;", AccessFlags = 25)]
 						get{ return GetDefault(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/telephony/gsm/GsmCellLocation
-		/// </java-name>
-		[Dot42.DexImport("android/telephony/gsm/GsmCellLocation", AccessFlags = 33)]
-		public partial class GsmCellLocation : global::Android.Telephony.CellLocation
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public GsmCellLocation() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public GsmCellLocation(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLac
-				/// </java-name>
-				[Dot42.DexImport("getLac", "()I", AccessFlags = 1)]
-				public virtual int GetLac() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCid
-				/// </java-name>
-				[Dot42.DexImport("getCid", "()I", AccessFlags = 1)]
-				public virtual int GetCid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPsc
-				/// </java-name>
-				[Dot42.DexImport("getPsc", "()I", AccessFlags = 1)]
-				public virtual int GetPsc() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setStateInvalid
-				/// </java-name>
-				[Dot42.DexImport("setStateInvalid", "()V", AccessFlags = 1)]
-				public virtual void SetStateInvalid() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLacAndCid
-				/// </java-name>
-				[Dot42.DexImport("setLacAndCid", "(II)V", AccessFlags = 1)]
-				public virtual void SetLacAndCid(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// fillInNotifierBundle
-				/// </java-name>
-				[Dot42.DexImport("fillInNotifierBundle", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void FillInNotifierBundle(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLac
-				/// </java-name>
-				public int Lac
-				{
-				[Dot42.DexImport("getLac", "()I", AccessFlags = 1)]
-						get{ return GetLac(); }
-				}
-
-				/// <java-name>
-				/// getCid
-				/// </java-name>
-				public int Cid
-				{
-				[Dot42.DexImport("getCid", "()I", AccessFlags = 1)]
-						get{ return GetCid(); }
-				}
-
-				/// <java-name>
-				/// getPsc
-				/// </java-name>
-				public int Psc
-				{
-				[Dot42.DexImport("getPsc", "()I", AccessFlags = 1)]
-						get{ return GetPsc(); }
 				}
 
 		}
@@ -809,27 +878,10 @@ namespace Android.Telephony.Gsm
 						{
 						}
 
-						/// <java-name>
-						/// values
-						/// </java-name>
-						[Dot42.DexImport("values", "()[Landroid/telephony/gsm/SmsMessage$MessageClass;", AccessFlags = 9)]
-						public static MessageClass[] Values() /* MethodBuilder.Create */ 
-						{
-								return default(MessageClass[]);
-						}
-
-						/// <java-name>
-						/// valueOf
-						/// </java-name>
-						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Landroid/telephony/gsm/SmsMessage$MessageClass;", AccessFlags = 9)]
-						public static MessageClass ValueOf(string @string) /* MethodBuilder.Create */ 
-						{
-								return default(MessageClass);
-						}
-
 				}
 
 		}
 
 }
+
 

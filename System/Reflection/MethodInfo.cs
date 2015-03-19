@@ -25,13 +25,11 @@ namespace System.Reflection
             return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
         }
 
-        public override Type DeclaringType
+        public Type DeclaringType
         {
             [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
             get { return GetDeclaringClass(); }
         }
-
-        public override string Name { get { return GetName(); } }
 
         /// <summary>
         /// Is this an abstract method?

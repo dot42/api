@@ -1,6 +1,58 @@
-﻿#pragma warning disable 1717
+// Copyright (C) 2014 dot42
+//
+// Original filename: Javax.Microedition.Khronos.Egl.cs
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+#pragma warning disable 1717
 namespace Javax.Microedition.Khronos.Egl
 {
+		/// <java-name>
+		/// javax/microedition/khronos/egl/EGLConfig
+		/// </java-name>
+		[Dot42.DexImport("javax/microedition/khronos/egl/EGLConfig", AccessFlags = 1057)]
+		public abstract partial class EGLConfig
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public EGLConfig() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/microedition/khronos/egl/EGL
+		/// </java-name>
+		[Dot42.DexImport("javax/microedition/khronos/egl/EGL", AccessFlags = 1537)]
+		public partial interface IEGL
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// javax/microedition/khronos/egl/EGLSurface
+		/// </java-name>
+		[Dot42.DexImport("javax/microedition/khronos/egl/EGLSurface", AccessFlags = 1057)]
+		public abstract partial class EGLSurface
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public EGLSurface() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
 		/// <java-name>
 		/// javax/microedition/khronos/egl/EGL11
 		/// </java-name>
@@ -22,34 +74,6 @@ namespace Javax.Microedition.Khronos.Egl
 		public partial interface IEGL11 : global::Javax.Microedition.Khronos.Egl.IEGL10
  /* scope: __dot42__ */ 
 		{
-		}
-
-		/// <java-name>
-		/// javax/microedition/khronos/egl/EGLSurface
-		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/egl/EGLSurface", AccessFlags = 1057)]
-		public abstract partial class EGLSurface
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public EGLSurface() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/microedition/khronos/egl/EGLDisplay
-		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/egl/EGLDisplay", AccessFlags = 1057)]
-		public abstract partial class EGLDisplay
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public EGLDisplay() /* MethodBuilder.Create */ 
-				{
-				}
-
 		}
 
 		/// <java-name>
@@ -428,14 +452,14 @@ namespace Javax.Microedition.Khronos.Egl
 				/// </java-name>
 				[Dot42.DexImport("eglChooseConfig", "(Ljavax/microedition/khronos/egl/EGLDisplay;[I[Ljavax/microedition/khronos/egl/EG" +
     "LConfig;I[I)Z", AccessFlags = 1025)]
-				bool EglChooseConfig(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, int[] int32, global::Javax.Microedition.Khronos.Egl.EGLConfig[] eGLConfig, int int321, int[] int322) /* MethodBuilder.Create */ ;
+				bool EglChooseConfig(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, int[] attrib_list, global::Javax.Microedition.Khronos.Egl.EGLConfig[] configs, int config_size, int[] num_config) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglCopyBuffers
 				/// </java-name>
 				[Dot42.DexImport("eglCopyBuffers", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSu" +
     "rface;Ljava/lang/Object;)Z", AccessFlags = 1025)]
-				bool EglCopyBuffers(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLSurface eGLSurface, object @object) /* MethodBuilder.Create */ ;
+				bool EglCopyBuffers(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLSurface surface, object native_pixmap) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglCreateContext
@@ -443,56 +467,56 @@ namespace Javax.Microedition.Khronos.Egl
 				[Dot42.DexImport("eglCreateContext", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLCo" +
     "nfig;Ljavax/microedition/khronos/egl/EGLContext;[I)Ljavax/microedition/khronos/e" +
     "gl/EGLContext;", AccessFlags = 1025)]
-				global::Javax.Microedition.Khronos.Egl.EGLContext EglCreateContext(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLConfig eGLConfig, global::Javax.Microedition.Khronos.Egl.EGLContext eGLContext, int[] int32) /* MethodBuilder.Create */ ;
+				global::Javax.Microedition.Khronos.Egl.EGLContext EglCreateContext(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig config, global::Javax.Microedition.Khronos.Egl.EGLContext share_context, int[] attrib_list) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglCreatePbufferSurface
 				/// </java-name>
 				[Dot42.DexImport("eglCreatePbufferSurface", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLCo" +
     "nfig;[I)Ljavax/microedition/khronos/egl/EGLSurface;", AccessFlags = 1025)]
-				global::Javax.Microedition.Khronos.Egl.EGLSurface EglCreatePbufferSurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLConfig eGLConfig, int[] int32) /* MethodBuilder.Create */ ;
+				global::Javax.Microedition.Khronos.Egl.EGLSurface EglCreatePbufferSurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig config, int[] attrib_list) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglCreatePixmapSurface
 				/// </java-name>
 				[Dot42.DexImport("eglCreatePixmapSurface", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLCo" +
     "nfig;Ljava/lang/Object;[I)Ljavax/microedition/khronos/egl/EGLSurface;", AccessFlags = 1025)]
-				global::Javax.Microedition.Khronos.Egl.EGLSurface EglCreatePixmapSurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLConfig eGLConfig, object @object, int[] int32) /* MethodBuilder.Create */ ;
+				global::Javax.Microedition.Khronos.Egl.EGLSurface EglCreatePixmapSurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig config, object native_pixmap, int[] attrib_list) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglCreateWindowSurface
 				/// </java-name>
 				[Dot42.DexImport("eglCreateWindowSurface", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLCo" +
     "nfig;Ljava/lang/Object;[I)Ljavax/microedition/khronos/egl/EGLSurface;", AccessFlags = 1025)]
-				global::Javax.Microedition.Khronos.Egl.EGLSurface EglCreateWindowSurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLConfig eGLConfig, object @object, int[] int32) /* MethodBuilder.Create */ ;
+				global::Javax.Microedition.Khronos.Egl.EGLSurface EglCreateWindowSurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig config, object native_window, int[] attrib_list) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglDestroyContext
 				/// </java-name>
 				[Dot42.DexImport("eglDestroyContext", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLCo" +
     "ntext;)Z", AccessFlags = 1025)]
-				bool EglDestroyContext(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLContext eGLContext) /* MethodBuilder.Create */ ;
+				bool EglDestroyContext(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLContext context) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglDestroySurface
 				/// </java-name>
 				[Dot42.DexImport("eglDestroySurface", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSu" +
     "rface;)Z", AccessFlags = 1025)]
-				bool EglDestroySurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLSurface eGLSurface) /* MethodBuilder.Create */ ;
+				bool EglDestroySurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLSurface surface) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglGetConfigAttrib
 				/// </java-name>
 				[Dot42.DexImport("eglGetConfigAttrib", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLCo" +
     "nfig;I[I)Z", AccessFlags = 1025)]
-				bool EglGetConfigAttrib(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLConfig eGLConfig, int int32, int[] int321) /* MethodBuilder.Create */ ;
+				bool EglGetConfigAttrib(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig config, int attribute, int[] value) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglGetConfigs
 				/// </java-name>
 				[Dot42.DexImport("eglGetConfigs", "(Ljavax/microedition/khronos/egl/EGLDisplay;[Ljavax/microedition/khronos/egl/EGLC" +
     "onfig;I[I)Z", AccessFlags = 1025)]
-				bool EglGetConfigs(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLConfig[] eGLConfig, int int32, int[] int321) /* MethodBuilder.Create */ ;
+				bool EglGetConfigs(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig[] configs, int config_size, int[] num_config) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglGetCurrentContext
@@ -510,13 +534,13 @@ namespace Javax.Microedition.Khronos.Egl
 				/// eglGetCurrentSurface
 				/// </java-name>
 				[Dot42.DexImport("eglGetCurrentSurface", "(I)Ljavax/microedition/khronos/egl/EGLSurface;", AccessFlags = 1025)]
-				global::Javax.Microedition.Khronos.Egl.EGLSurface EglGetCurrentSurface(int int32) /* MethodBuilder.Create */ ;
+				global::Javax.Microedition.Khronos.Egl.EGLSurface EglGetCurrentSurface(int readdraw) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglGetDisplay
 				/// </java-name>
 				[Dot42.DexImport("eglGetDisplay", "(Ljava/lang/Object;)Ljavax/microedition/khronos/egl/EGLDisplay;", AccessFlags = 1025)]
-				global::Javax.Microedition.Khronos.Egl.EGLDisplay EglGetDisplay(object @object) /* MethodBuilder.Create */ ;
+				global::Javax.Microedition.Khronos.Egl.EGLDisplay EglGetDisplay(object native_display) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglGetError
@@ -528,7 +552,7 @@ namespace Javax.Microedition.Khronos.Egl
 				/// eglInitialize
 				/// </java-name>
 				[Dot42.DexImport("eglInitialize", "(Ljavax/microedition/khronos/egl/EGLDisplay;[I)Z", AccessFlags = 1025)]
-				bool EglInitialize(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, int[] int32) /* MethodBuilder.Create */ ;
+				bool EglInitialize(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, int[] major_minor) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglMakeCurrent
@@ -536,40 +560,40 @@ namespace Javax.Microedition.Khronos.Egl
 				[Dot42.DexImport("eglMakeCurrent", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSu" +
     "rface;Ljavax/microedition/khronos/egl/EGLSurface;Ljavax/microedition/khronos/egl" +
     "/EGLContext;)Z", AccessFlags = 1025)]
-				bool EglMakeCurrent(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLSurface eGLSurface, global::Javax.Microedition.Khronos.Egl.EGLSurface eGLSurface1, global::Javax.Microedition.Khronos.Egl.EGLContext eGLContext) /* MethodBuilder.Create */ ;
+				bool EglMakeCurrent(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLSurface draw, global::Javax.Microedition.Khronos.Egl.EGLSurface read, global::Javax.Microedition.Khronos.Egl.EGLContext context) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglQueryContext
 				/// </java-name>
 				[Dot42.DexImport("eglQueryContext", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLCo" +
     "ntext;I[I)Z", AccessFlags = 1025)]
-				bool EglQueryContext(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLContext eGLContext, int int32, int[] int321) /* MethodBuilder.Create */ ;
+				bool EglQueryContext(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLContext context, int attribute, int[] value) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglQueryString
 				/// </java-name>
 				[Dot42.DexImport("eglQueryString", "(Ljavax/microedition/khronos/egl/EGLDisplay;I)Ljava/lang/String;", AccessFlags = 1025)]
-				string EglQueryString(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, int int32) /* MethodBuilder.Create */ ;
+				string EglQueryString(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, int name) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglQuerySurface
 				/// </java-name>
 				[Dot42.DexImport("eglQuerySurface", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSu" +
     "rface;I[I)Z", AccessFlags = 1025)]
-				bool EglQuerySurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLSurface eGLSurface, int int32, int[] int321) /* MethodBuilder.Create */ ;
+				bool EglQuerySurface(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLSurface surface, int attribute, int[] value) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglSwapBuffers
 				/// </java-name>
 				[Dot42.DexImport("eglSwapBuffers", "(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSu" +
     "rface;)Z", AccessFlags = 1025)]
-				bool EglSwapBuffers(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay, global::Javax.Microedition.Khronos.Egl.EGLSurface eGLSurface) /* MethodBuilder.Create */ ;
+				bool EglSwapBuffers(global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLSurface surface) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglTerminate
 				/// </java-name>
 				[Dot42.DexImport("eglTerminate", "(Ljavax/microedition/khronos/egl/EGLDisplay;)Z", AccessFlags = 1025)]
-				bool EglTerminate(global::Javax.Microedition.Khronos.Egl.EGLDisplay eGLDisplay) /* MethodBuilder.Create */ ;
+				bool EglTerminate(global::Javax.Microedition.Khronos.Egl.EGLDisplay display) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// eglWaitGL
@@ -581,7 +605,7 @@ namespace Javax.Microedition.Khronos.Egl
 				/// eglWaitNative
 				/// </java-name>
 				[Dot42.DexImport("eglWaitNative", "(ILjava/lang/Object;)Z", AccessFlags = 1025)]
-				bool EglWaitNative(int int32, object @object) /* MethodBuilder.Create */ ;
+				bool EglWaitNative(int engine, object bindTarget) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -633,27 +657,19 @@ namespace Javax.Microedition.Khronos.Egl
 		}
 
 		/// <java-name>
-		/// javax/microedition/khronos/egl/EGL
+		/// javax/microedition/khronos/egl/EGLDisplay
 		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/egl/EGL", AccessFlags = 1537)]
-		public partial interface IEGL
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
-		/// javax/microedition/khronos/egl/EGLConfig
-		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/egl/EGLConfig", AccessFlags = 1057)]
-		public abstract partial class EGLConfig
+		[Dot42.DexImport("javax/microedition/khronos/egl/EGLDisplay", AccessFlags = 1057)]
+		public abstract partial class EGLDisplay
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public EGLConfig() /* MethodBuilder.Create */ 
+				public EGLDisplay() /* MethodBuilder.Create */ 
 				{
 				}
 
 		}
 
 }
+
 

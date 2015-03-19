@@ -20,13 +20,6 @@ namespace System.Reflection
     abstract partial class MemberInfo : ICustomAttributeProvider
     {
         /// <summary>
-        /// Gets the type that declares this member.
-        /// </summary>
-        public abstract Type DeclaringType { get; }
-
-        public abstract string Name { get; }
-
-        /// <summary>
         /// Returns an array of all attributes defined on this member.
         /// Returns an empty array if no attributes are defined on this member.
         /// </summary>

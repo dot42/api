@@ -22,22 +22,20 @@ namespace System.Reflection
         /// <summary>
         /// Gets the type that declares this member.
         /// </summary>
-        public override Type DeclaringType
+        public Type DeclaringType
         {
             [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
             get { return GetDeclaringClass(); }
         }
 
-        public override string Name { get { return GetName(); } }
-
-        /// <summary>
-        /// Fix return type
-        /// </summary>
-        [Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;")]
-        global::Java.Lang.Reflect.ITypeVariable<object>[] IGenericDeclaration.GetTypeParameters()
-        {
-            return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
-        }
+        ///// <summary>
+        ///// Fix return type
+        ///// </summary>
+        //[Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;")]
+        //global::Java.Lang.Reflect.ITypeVariable<object>[] IGenericDeclaration.GetTypeParameters()
+        //{
+        //    return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
+        //}
 
         /// <summary>
         /// Is this an abstract method?

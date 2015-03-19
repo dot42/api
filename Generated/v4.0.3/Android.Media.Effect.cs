@@ -1,21 +1,21 @@
-﻿#pragma warning disable 1717
+// Copyright (C) 2014 dot42
+//
+// Original filename: Android.Media.Effect.cs
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+#pragma warning disable 1717
 namespace Android.Media.Effect
 {
-		/// <java-name>
-		/// android/media/effect/EffectUpdateListener
-		/// </java-name>
-		[Dot42.DexImport("android/media/effect/EffectUpdateListener", AccessFlags = 1537)]
-		public partial interface IEffectUpdateListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// onEffectUpdated
-				/// </java-name>
-				[Dot42.DexImport("onEffectUpdated", "(Landroid/media/effect/Effect;Ljava/lang/Object;)V", AccessFlags = 1025)]
-				void OnEffectUpdated(global::Android.Media.Effect.Effect effect, object @object) /* MethodBuilder.Create */ ;
-
-		}
-
 		/// <java-name>
 		/// android/media/effect/EffectFactory
 		/// </java-name>
@@ -287,5 +287,21 @@ namespace Android.Media.Effect
 
 		}
 
+		/// <java-name>
+		/// android/media/effect/EffectUpdateListener
+		/// </java-name>
+		[Dot42.DexImport("android/media/effect/EffectUpdateListener", AccessFlags = 1537)]
+		public partial interface IEffectUpdateListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// onEffectUpdated
+				/// </java-name>
+				[Dot42.DexImport("onEffectUpdated", "(Landroid/media/effect/Effect;Ljava/lang/Object;)V", AccessFlags = 1025)]
+				void OnEffectUpdated(global::Android.Media.Effect.Effect effect, object @object) /* MethodBuilder.Create */ ;
+
+		}
+
 }
+
 

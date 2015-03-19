@@ -41,12 +41,12 @@ namespace System.Reflection
             this.attributes = attributes;
         }
 
-        public override Type DeclaringType { get { return declaringType; } }
+        public Type DeclaringType { get { return declaringType; } }
 
         /// <summary>
         /// Gets the name of this property
         /// </summary>
-        public override string Name { get { return name; } }
+        public string Name { get { return name; } }
 
         /// <summary>
         /// Gets this property be read from?
