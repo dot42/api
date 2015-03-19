@@ -288,7 +288,17 @@ namespace System
 
         public PropertyInfo GetProperty(string name)
         {
-            return GetProperties(BindingFlags.Public).First(p => p.Name == name);
+            return GetProperty(name, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
+        }
+
+        public PropertyInfo GetProperty(string name, BindingFlags flags)
+        {
+            var props = GetProperties(flags).Where(p => p.Name == name);
+
+            if (props.Length > 1)
+                throw new AmbiguousMatchException("not unique: " + name);
+
+            return props.Length == 0 ? null : props[0];
         }
 
         private static bool IsMatch(PropertyInfo propertyInfo, BindingFlags flags)
@@ -301,10 +311,10 @@ namespace System
             var get = propertyInfo.GetGetMethod();
             var set = propertyInfo.GetSetMethod();
 
-            return (incPublic && ((get != null && get.IsPublic) || (set != null && set.IsPublic)))
-                   || (incNonPublic && ((get != null && !get.IsPublic) || (set != null && !set.IsPublic)))
-                   || (incStatic && ((get != null && get.IsStatic) || (set != null && set.IsStatic)))
-                   || (incInstance && ((get != null && !get.IsStatic) || (set != null && !set.IsStatic)));
+            return    ((incPublic    && ((get != null && get.IsPublic)  || (set != null && set.IsPublic)))
+                    || (incNonPublic && ((get != null && !get.IsPublic) || (set != null && !set.IsPublic))))
+                &&    ((incStatic    && ((get != null && get.IsStatic)  || (set != null && set.IsStatic)))
+                    || (incInstance  && ((get != null && !get.IsStatic) || (set != null && !set.IsStatic))));
         }
 
         public MemberInfo[] GetMember(string memberName, BindingFlags flags)

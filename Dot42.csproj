@@ -268,6 +268,7 @@
     <Compile Include="Java\Util\Concurrent\ThreadPoolExecutor.cs" />
     <Compile Include="Junit\Framework\TestCase.cs" />
     <Compile Include="NUnit\Framework\Attributes\TearDownAttribute.cs" />
+    <Compile Include="System\AmbiguousMatchException.cs" />
     <Compile Include="System\AggregateException.cs" />
     <Compile Include="System\AsyncCallback.cs" />
     <Compile Include="System\Buffer.cs" />

@@ -109,9 +109,6 @@ namespace System.Reflection
 			return type.GetMethods (AllMembersBindingFlags);
 		}
 
-       
-        
-
 	    public static IEnumerable<PropertyInfo> GetRuntimeProperties (this Type type)
 		{
 			if (type == null)
@@ -124,16 +121,22 @@ namespace System.Reflection
 		{
 			if (type == null)
 				throw new ArgumentNullException ("type");
-
 			return type.GetProperty (name);
 		}
 
-        //public static Type GetTypeInfo(this Type type)
+        public static PropertyInfo GetRuntimeProperty(this Type type, string name, BindingFlags flags)
+        {
+            if (type == null) throw new ArgumentNullException("type");
+
+            return type.GetProperty(name, flags);
+        }
+
+        //public static TypeInfo GetTypeInfo(this Type type)
         //{
         //    if (type == null)
         //        throw new ArgumentNullException("type");
-            
-        //    return type;
+
+        //    return new TypeInfo(type);
         //}
 
         /// <summary>
