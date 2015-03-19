@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using Android.Util;
 using Java.Lang.Reflect;
 using Java.Util;
 
@@ -155,7 +156,17 @@ namespace Dot42.Internal
 
             // Not found, build it
             var builder = attr.AttributeBuilder();
-            result = (Attribute) builder.Invoke(null, new[] { attr.Annotation() });
+
+            try
+            {
+                result = (Attribute)builder.Invoke(null, new[] { attr.Annotation() });
+            }
+            catch (Exception ex)
+            {
+                Log.E("dot42", string.Format("unable create attribute from annotation. build class '{0}' / method '{1}'", 
+                                             builder.DeclaringClass.FullName,builder.Name), ex);
+                result = new Attribute();
+            }
 
             // Store in loaded map
             lock (dataLock)
