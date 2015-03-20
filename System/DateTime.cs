@@ -629,6 +629,7 @@ namespace System
         /// </summary>
         public static DateTime Parse(string s, IFormatProvider provider, DateTimeStyles styles)
         {
+            // TODO: respect provider.
             long millies = Java.Util.Date.Parse(s);
             return FromDate(new Java.Util.Date(millies), styles);
         }
@@ -698,13 +699,12 @@ namespace System
         //     the AM/PM designator in s do not agree.
         public static DateTime ParseExact(string s, string format, IFormatProvider provider)
         {
-            DateFormat formatter = new SimpleDateFormat(format);
+            DateFormat formatter = new SimpleDateFormat(format, provider.ToLocale());
             return FromDate(formatter.Parse(s));
         }
 
 	    public static DateTime ParseExact(string s, string format, IFormatProvider provider, DateTimeStyles style)
 	    {
-
 	        if ((style & DateTimeStyles.AllowLeadingWhite) != 0)
 	            s = s.TrimStart();
             if ((style & DateTimeStyles.AllowTrailingWhite) != 0)
@@ -712,7 +712,7 @@ namespace System
             if ((style & DateTimeStyles.AllowWhiteSpaces) != 0)
                 s = s.Trim();
 
-            DateFormat formatter = new SimpleDateFormat(format);
+            DateFormat formatter = new SimpleDateFormat(format, provider.ToLocale());
             formatter.SetLenient(false);
             
             var result = FromDate(formatter.Parse(s), style);
@@ -1052,7 +1052,7 @@ namespace System
         //     used by provider.
         public string ToString(string format, IFormatProvider provider)
         {
-            var sdf = new Java.Text.SimpleDateFormat(GetJavaFormat(format, provider), Locale.Default);
+            var sdf = new Java.Text.SimpleDateFormat(GetJavaFormat(format, provider), provider.ToLocale());
             sdf.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
             return sdf.Format(ToDate());
         }

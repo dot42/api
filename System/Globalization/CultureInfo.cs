@@ -56,7 +56,7 @@ namespace System.Globalization
 #if ANDROID_9P
                 return new CultureInfo(Locale.ROOT);
 #else
-                return new CultureInfo(Locale.Default);
+                return new CultureInfo(Locale.US); // TODO: check if this actually exists. else change back to Default.
 #endif
             }
         }
@@ -110,5 +110,16 @@ namespace System.Globalization
             }
         }
 	}
+
+    internal static class FormatProviderExtensions
+    {
+        public static Locale ToLocale(this IFormatProvider provider)
+        {
+            var cultureInfo = provider as CultureInfo;
+            var locale = cultureInfo == null ? Locale.Default : cultureInfo.Locale;
+            if (locale == null) locale = Locale.Default;
+            return locale;
+        }
+    }
 }
 

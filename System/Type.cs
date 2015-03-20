@@ -311,7 +311,7 @@ namespace System
 
 	    public PropertyInfo[] GetProperties()
 	    {
-	        return GetProperties(BindingFlags.Public | BindingFlags.CreateInstance | BindingFlags.Static);
+	        return GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
 	    }
 
         public PropertyInfo[] GetProperties(BindingFlags flags)

@@ -50,13 +50,15 @@ namespace System
             var names = new ArrayList<string>();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
+                if (!Modifier.IsStatic(field.GetModifiers()))
+                    continue;
+                if (field.Type != field.DeclaringClass)
+                    continue;
+                
+                var name = field.Name;
+                if (name[name.Length - 1] != '$')
                 {
-                    var name = field.Name;
-                    if (name[name.Length - 1] != '$')
-                    {
-                        names.Add(name);
-                    }
+                    names.Add(name);
                 }
             }
             return names.ToArray(new string[names.Count]);
@@ -71,7 +73,7 @@ namespace System
             var values = new ArrayList<object>();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
                 {
                     var name = field.Name;
                     if (name[name.Length - 1] != '$')
@@ -95,7 +97,7 @@ namespace System
             var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
                 {
                     if (field.Name == name)
                     {
@@ -118,7 +120,7 @@ namespace System
             var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
                 {
                     if ((!ignoreCase && (field.Name == name)) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
                     {
@@ -141,7 +143,7 @@ namespace System
             var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
                 {
                     if (field.Name == name)
                     {
@@ -166,9 +168,10 @@ namespace System
             var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.GetType() == field.DeclaringClass))
+                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
                 {
-                    if ((!ignoreCase && (field.Name == name)) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
+                    if ((!ignoreCase && (field.Name == name)) 
+                        || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
                     {
                         result = (TEnum)field.Get(null);
                         return true;
@@ -203,7 +206,7 @@ namespace System
         }
 	}
 
-    // this is a dirty workaround that pullutes since it pullutes
+    // this is a dirty workaround that pullutes 
     // all structs with this extensions. We can't use System.Enum directly
     // though, since the actual enum are of type Java.Lang.Enum.
     // calling such a method would result in the calling class to be rejected
