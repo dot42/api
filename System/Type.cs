@@ -28,11 +28,12 @@ namespace System
 	{
         /// <summary>
         /// Gets the assembly-qualified name of the Type, which includes the name of the assembly from which the Type was loaded.
-        /// Not implemented.
+        /// 
+        /// returns FullName
         /// </summary>
 	    public string AssemblyQualifiedName
 	    {
-            get { throw new NotImplementedException("System.Type.AssemblyQualifiedName"); }
+            get { return FullName; }
 	    }
 
         /// <summary>
@@ -151,12 +152,22 @@ namespace System
         /// </summary>
         public bool IsGenericTypeDefinition { get { return false; } }
 
+        /// <summary>
+        /// returns always false, since we do not support MakeGenericType.
+        /// </summary>
+        public bool IsGenericParameter { get { return false; } }
+
         [DexNative]
         public static Type GetTypeFromHandle(RuntimeTypeHandle handle)
         {
             return null;
         }
     
+        public Assembly Assembly
+	    {
+            get { return Assembly.GetAssembly(this); }
+	    }
+
         /// <summary>
         /// Returns an array of all attributes defined on this member.
         /// Returns an empty array if no attributes are defined on this member.
@@ -272,6 +283,14 @@ namespace System
             var methods = ((flags & BindingFlags.DeclaredOnly) != 0) ? JavaGetDeclaredMethods() : JavaGetMethods();
             return methods.Where(x => Matches(x.GetModifiers(), flags))
                           .Select(x=> new MethodInfo(x));
+        }
+
+        public MethodInfo GetMethod(string name)
+        {
+            var ret = JavaGetMethod(name);
+            if (ret != null)
+                return new MethodInfo(ret);
+            return null;
         }
 
         public MethodInfo GetMethod(string name, Type[] parameters)
@@ -396,25 +415,37 @@ namespace System
             if (((flags & BindingFlags.NonPublic) == 0) && !Modifier.IsPublic(modifiers)) return false;
             return true;
         }
-
         
-        
-        
-
         public /*virtual*/ bool IsInstanceOfType(Object o)
         {
             if (o == null) return false;
-            return IsAssignableFrom(o.Type);
+            return IsAssignableFrom(o.GetType());
         }
 
         public /*virtual*/ bool IsSubclassOf(Type other)
         {
             Type t;
-            while ((t = Type.GetSuperclass()) != null)
+            while ((t = GetType().GetSuperclass()) != null)
             {
                 if (t == other) return true;
             }
             return false;
+        }
+
+	    public static Type GetType(string typeName)
+	    {
+	        return typeof (Type).GetClassLoader().FindClass(typeName);
+	    }
+
+        /// <summary>
+        /// note that ignoreCase is not supported.
+        /// </summary>
+        /// <returns></returns>
+        public static Type GetType(string typeName, bool ignoreCase)
+        {
+            var classLoader = typeof(Type).GetClassLoader();
+            return classLoader.FindClass(typeName);
+            
         }
     }
 }

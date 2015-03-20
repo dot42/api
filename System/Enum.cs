@@ -203,7 +203,7 @@ namespace System
             throw new ArgumentException("invalid format specifier: " + format);
         }
 
-        public Type GetUnderlyingType(Type enumType)
+        public static Type GetUnderlyingType(Type enumType)
         {
             if(!enumType.IsEnum)
                 throw new ArgumentException("enumType");

@@ -50,7 +50,7 @@ namespace System
 				/// notify
 				/// </java-name>
 				[Dot42.DexImport("notify", "()V", AccessFlags = 273)]
-				public void Notify() /* MethodBuilder.Create */ 
+				public void JavaNotify() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -58,7 +58,7 @@ namespace System
 				/// notifyAll
 				/// </java-name>
 				[Dot42.DexImport("notifyAll", "()V", AccessFlags = 273)]
-				public void NotifyAll() /* MethodBuilder.Create */ 
+				public void JavaNotifyAll() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -93,15 +93,6 @@ namespace System
 				[Dot42.DexImport("wait", "(JI)V", AccessFlags = 273)]
 				public void JavaWait(long int64, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getClass
-				/// </java-name>
-				public global::System.Type Type
-				{
-				[Dot42.DexImport("getClass", "()Ljava/lang/Class;", AccessFlags = 273, Signature = "()Ljava/lang/Class<*>;")]
-						get{ return GetType(); }
 				}
 
 		}
@@ -3864,7 +3855,7 @@ namespace System
 				[Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;", AccessFlags = 33, Signature = "()[Ljava/lang/reflect/TypeVariable<Ljava/lang/Class<TT;>;>;")]
 				public global::Java.Lang.Reflect.ITypeVariable<object>[] GetTypeParameters() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
+						return null;
 				}
 
 				/// <java-name>

@@ -5601,7 +5601,7 @@ namespace Android.Renderscript
 						/// getType
 						/// </java-name>
 						[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
-						public new virtual global::Android.Renderscript.Type GetType() /* MethodBuilder.Create */ 
+						public virtual global::Android.Renderscript.Type GetType() /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Renderscript.Type);
 						}

@@ -48,7 +48,7 @@ namespace Java.Security.Cert
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-				public new string GetType() /* MethodBuilder.Create */ 
+				public string GetType() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -353,7 +353,7 @@ namespace Java.Security.Cert
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-				public new string GetType() /* MethodBuilder.Create */ 
+				public string GetType() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -2488,7 +2488,7 @@ namespace Java.Security.Cert
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-				public new string GetType() /* MethodBuilder.Create */ 
+				public string GetType() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -3268,7 +3268,7 @@ namespace Java.Security.Cert
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-				public new string GetType() /* MethodBuilder.Create */ 
+				public string GetType() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -3320,7 +3320,7 @@ namespace Java.Security.Cert
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public new virtual string GetType() /* MethodBuilder.Create */ 
+				public virtual string GetType() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}

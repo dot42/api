@@ -1462,7 +1462,7 @@ namespace Android.Animation
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1)]
-				public new virtual global::System.Type GetType() /* MethodBuilder.Create */ 
+				public virtual global::System.Type GetType() /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
 				}

@@ -19,19 +19,27 @@ namespace NUnit.Framework
 {
 	public class Assert : Junit.Framework.Assert
     {
+	    public static void Fail(string format, params object[] args)
+	    {
+            if(args.Length == 0)
+                Junit.Framework.Assert.Fail(format);
+            else
+                Junit.Framework.Assert.Fail(string.Format(format, args));
+	    }
+
 #region IsTrue/False
         /// <summary>
         /// Asserts that a condition is true. If the condition is false the method throws
         /// an <see cref="AssertionException"/>.
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
-        /// <param name="message">The message to display in case of failure</param>
+        /// <param name="message">The message to display in case of Junit.Framework.Assert.Failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
         public static void IsTrue(bool condition, string message, params object[] args)
         {
             if (!condition)
-            {                
-                Fail(string.Format(message, args));
+            {
+                Fail(message, args);
             }
         }
 
@@ -40,12 +48,12 @@ namespace NUnit.Framework
         /// an <see cref="AssertionException"/>.
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
-        /// <param name="message">The message to display in case of failure</param>
+        /// <param name="message">The message to display in case of Junit.Framework.Assert.Failure</param>
         public static void IsTrue(bool condition, string message)
         {
             if (!condition)
             {
-                Fail(message);
+                Junit.Framework.Assert.Fail(message);
             }
         }
 
@@ -57,7 +65,7 @@ namespace NUnit.Framework
         {
             if (!condition)
             {
-                Fail();
+                Junit.Framework.Assert.Fail();
             }
         }
 
@@ -66,13 +74,13 @@ namespace NUnit.Framework
         /// an <see cref="AssertionException"/>.
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
-        /// <param name="message">The message to display in case of failure</param>
+        /// <param name="message">The message to display in case of Junit.Framework.Assert.Failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
         public static void IsFalse(bool condition, string message, params object[] args)
         {
             if (condition)
             {
-                Fail(string.Format(message, args));
+                Fail(message, args);
             }
         }
 
@@ -81,12 +89,12 @@ namespace NUnit.Framework
         /// an <see cref="AssertionException"/>.
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
-        /// <param name="message">The message to display in case of failure</param>
+        /// <param name="message">The message to display in case of Junit.Framework.Assert.Failure</param>
         public static void IsFalse(bool condition, string message)
         {
             if (condition)
             {
-                Fail(message);
+                Junit.Framework.Assert.Fail(message);
             }
         }
 
@@ -98,7 +106,7 @@ namespace NUnit.Framework
         {
             if (condition)
             {
-                Fail();
+                Junit.Framework.Assert.Fail();
             }
         }
         #endregion

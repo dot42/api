@@ -181,6 +181,7 @@ namespace System.Collections.Generic
 	    /// Add ths given element to the end of this list.
 	    /// </summary>
 	    /// <returns>The index at which the element was added or -1 if the element was not added.</returns>
+        [DexName("Add$$O")]
 	    public int Add(object element)
 	    {
 	        var rc = list.Size();
@@ -253,21 +254,25 @@ namespace System.Collections.Generic
 	        Dot42.Collections.Collections.CopyTo(list, array, index);
 	    }
 
+        [DexName("Contains$$O")]
 	    public bool Contains(object element)
 	    {
 	        return list.Contains(element);
 	    }
 
+        [DexName("IndexOf$$O")]
 	    public int IndexOf(object element)
 	    {
             return list.IndexOf(element);
         }
 
+        [DexName("Insert$$_O")]
 	    public void Insert(int index, object element)
 	    {
 	        list.Add(index, (T) element);
 	    }
 
+        [DexName("Remove$$O")]
 	    public void Remove(object element)
 	    {
 	        list.Remove(element);

@@ -14,8 +14,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Globalization;
-using Java.Util;
+using Android.Text.Style;
+using Dot42;
+using Java.Text;
 using Calendar = Java.Util.Calendar;
+using Locale = Java.Util.Locale;
 
 namespace System
 {
@@ -218,6 +221,15 @@ namespace System
             calender.Add(Calendar.MONTH, months);
             return FromDate(calender.GetTime());
         }
+
+	    public static int DaysInMonth(int year, int month)
+	    {
+            // Create a calendar object and set year and month
+            Calendar mycal = new Java.Util.GregorianCalendar(year, month, 1);
+
+            // Get the number of days in that month
+            return  mycal.GetActualMaximum(Calendar.DAY_OF_MONTH);         
+	    }
 
         //
         // Summary:
@@ -611,6 +623,16 @@ namespace System
         {
             return Parse(s);
         }
+
+        /// <summary>
+        /// Parse the given date/time string into a DateTime.
+        /// </summary>
+        public static DateTime Parse(string s, IFormatProvider provider, DateTimeStyles styles)
+        {
+            long millies = Java.Util.Date.Parse(s);
+            return FromDate(new Java.Util.Date(millies), styles);
+        }
+
         //
         // Summary:
         //     Converts the specified string representation of a date and time to its System.DateTime
@@ -676,8 +698,29 @@ namespace System
         //     the AM/PM designator in s do not agree.
         public static DateTime ParseExact(string s, string format, IFormatProvider provider)
         {
-            return Parse(s, provider);
+            DateFormat formatter = new SimpleDateFormat(format);
+            return FromDate(formatter.Parse(s));
         }
+
+	    public static DateTime ParseExact(string s, string format, IFormatProvider provider, DateTimeStyles style)
+	    {
+
+	        if ((style & DateTimeStyles.AllowLeadingWhite) != 0)
+	            s = s.TrimStart();
+            if ((style & DateTimeStyles.AllowTrailingWhite) != 0)
+                s = s.TrimEnd();
+            if ((style & DateTimeStyles.AllowWhiteSpaces) != 0)
+                s = s.Trim();
+
+            DateFormat formatter = new SimpleDateFormat(format);
+            formatter.SetLenient(false);
+            
+            var result = FromDate(formatter.Parse(s), style);
+
+            return result;
+	    }
+    
+
 
         //
         // Summary:
@@ -1010,7 +1053,7 @@ namespace System
         public string ToString(string format, IFormatProvider provider)
         {
             var sdf = new Java.Text.SimpleDateFormat(GetJavaFormat(format, provider), Locale.Default);
-            sdf.TimeZone = TimeZone.GetTimeZone("UTC");
+            sdf.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
             return sdf.Format(ToDate());
         }
         //
@@ -1047,7 +1090,7 @@ namespace System
 
         internal static TimeSpan GetUtcOffset()
         {
-            var offsetInMs = TimeZone.GetDefault().GetRawOffset();
+            var offsetInMs = Java.Util.TimeZone.GetDefault().GetRawOffset();
 
             return new TimeSpan(offsetInMs * TimeSpan.TicksPerMillisecond);
         }
@@ -1088,6 +1131,21 @@ namespace System
                 return false; 
             }
         }
+
+        public static bool TryParse(string s, IFormatProvider provider, DateTimeStyles style, out DateTime result)
+        {
+            try
+            {
+                result = Parse(s, provider, style);
+                return true;
+            }
+            catch
+            {
+                result = MinValue;
+                return false;
+            }
+        }
+
         //
         // Summary:
         //     Converts the specified string representation of a date and time to its System.DateTime
@@ -1167,7 +1225,19 @@ namespace System
         //     styles is not a valid System.Globalization.DateTimeStyles value.-or-styles
         //     contains an invalid combination of System.Globalization.DateTimeStyles values
         //     (for example, both System.Globalization.DateTimeStyles.AssumeLocal and System.Globalization.DateTimeStyles.AssumeUniversal).
-        //public static bool TryParseExact(string s, string format, IFormatProvider provider, DateTimeStyles style, out DateTime result);
+	    public static bool TryParseExact(string s, string format, IFormatProvider provider, DateTimeStyles style, out DateTime result)
+	    {
+            try
+            {
+                result = ParseExact(s, format, provider, style);
+                return true;
+            }
+            catch
+            {
+                result = MinValue;
+                return false;
+            }
+	    }
         //
         // Summary:
         //     Converts the specified string representation of a date and time to its System.DateTime
@@ -1224,7 +1294,7 @@ namespace System
             var calender = new Java.Util.GregorianCalendar();
             if (Kind == DateTimeKind.Utc || Kind == DateTimeKind.Unspecified)
             {
-                calender.SetTimeZone(TimeZone.GetTimeZone("UTC"));
+                calender.SetTimeZone(Java.Util.TimeZone.GetTimeZone("UTC"));
             }
             calender.SetTimeInMillis(millis);
 
@@ -1240,6 +1310,39 @@ namespace System
             var millis = value.GetTime();
 
             return FromDate(millis - timezoneOffsetInMinutes * MillisecondsPerMinute);
+        }
+
+        /// <summary>
+        /// Convert from java based date to DateTime.
+        /// </summary>
+        public static DateTime FromDate(Java.Util.Date value, DateTimeStyles style)
+        {
+            bool assumeLocal = (style & DateTimeStyles.AssumeLocal) != 0;
+            bool assumeUtc = (style & DateTimeStyles.AssumeUniversal) != 0;
+
+            var millis = value.GetTime();
+            var ticks = (millis + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
+
+            DateTime result;
+
+            if (assumeLocal)
+            {
+                result = new DateTime(ticks, DateTimeKind.Local);
+            }
+            else if (assumeUtc)
+            {
+                result = new DateTime(ticks, DateTimeKind.Utc);
+            }
+            else
+            {
+                var timezoneOffsetInMinutes = value.GetTimezoneOffset();
+                result = FromDate(millis - timezoneOffsetInMinutes * MillisecondsPerMinute);
+            }
+            
+            if ((style & DateTimeStyles.AdjustToUniversal) != 0)
+                result = result.ToUniversalTime();
+
+            return result;
         }
 
         /// <summary>

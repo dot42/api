@@ -1121,7 +1121,7 @@ namespace Android.Nfc.Tech
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public new int GetType() /* MethodBuilder.Create */ 
+				public int GetType() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}

@@ -40,10 +40,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.Serialization;
 using Dot42;
-
 #if MSTEST
 using System.Runtime.InteropServices;
 #endif
+using Java.Math;
 
 
 namespace System
@@ -1354,7 +1354,88 @@ namespace System
 		}
 #endif
 
-#if !MSTEST
+#if DOT42
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static int decimal2UInt64(ref Decimal val, out ulong result)
+	    {
+            //result = unchecked((ulong)new BigDecimal(val.ToString()).LongValue());
+	        throw new NotImplementedException();
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static int decimal2Int64(ref Decimal val, out long result)
+	    {
+            throw new NotImplementedException();
+            //result = unchecked((ulong)new BigDecimal(val.ToString()).LongValue());
+            //return 0;
+	        
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static int double2decimal(out Decimal erg, double val, int digits)
+	    {
+            throw new NotImplementedException();
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static int decimalIncr(ref Decimal d1, ref Decimal d2)
+	    {
+            throw new NotImplementedException();
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    internal static int string2decimal(out Decimal val, String sDigits, uint decPos, int sign)
+	    {
+            throw new NotImplementedException();
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    internal static int decimalSetExponent(ref Decimal val, int exp)
+	    {
+            throw new NotImplementedException();
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static double decimal2double(ref Decimal val)
+	    {
+            throw new NotImplementedException();
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static void decimalFloorAndTrunc(ref Decimal val, int floorFlag)
+	    {
+            throw new NotImplementedException();
+	    }
+
+        //		[MethodImplAttribute(MethodImplOptions.InternalCall)]
+        //		private static  void decimalRound (ref Decimal val, int decimals);
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static int decimalMult(ref Decimal pd1, ref Decimal pd2)
+	    {
+            throw new NotImplementedException();
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static int decimalDiv(out Decimal pc, ref Decimal pa, ref Decimal pb)
+	    {
+            throw new NotImplementedException();
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static int decimalIntDiv(out Decimal pc, ref Decimal pa, ref Decimal pb)
+	    {
+            throw new NotImplementedException();
+	    }
+
+        //[MethodImplAttribute(MethodImplOptions.InternalCall)]
+	    private static int decimalCompare(ref Decimal d1, ref Decimal d2)
+	    {
+            throw new NotImplementedException();
+	    }
+#endif
+
+#if !(MSTEST || DOT42)
 		[MethodImplAttribute(MethodImplOptions.InternalCall)]
 		private static extern int decimal2UInt64 (ref Decimal val, out ulong result);
 
@@ -1393,7 +1474,7 @@ namespace System
 
 		[MethodImplAttribute(MethodImplOptions.InternalCall)]
 		private static extern int decimalCompare (ref Decimal d1, ref Decimal d2);
-#else
+#elif !DOT42
 		//![MethodImplAttribute(MethodImplOptions.InternalCall)]
 		[DllImport("libdec", EntryPoint="decimal2UInt64")]
 		private static extern int decimal2UInt64 (ref Decimal val, out ulong result);

@@ -14,10 +14,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Collections.Generic;
 using Dot42.Collections;
 using Java.Lang;
 
-namespace System.Collections.Generic
+namespace System.Collections.ObjectModel
 {
 	public class Collection<T> : ICollection<T>, IEnumerable<T>, IList<T>, IList, ICollection, IEnumerable
 	{

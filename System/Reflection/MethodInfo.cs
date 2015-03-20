@@ -37,7 +37,7 @@ namespace System.Reflection
 
         public override ParameterInfo[] GetParameters()
         {
-            var types = JavaMethod.GetParameterTypes();
+            var types = _method.GetParameterTypes();
             ParameterInfo[] ret = new ParameterInfo[types.Length];
 
             for (int idx = 0; idx < types.Length; ++idx)
@@ -80,12 +80,12 @@ namespace System.Reflection
 
         public Type ReturnType { get { return _method.ReturnType; } }
 
-        //public MethodInfo GetBaseDefinition()
-        //{
-        //    if (this.IsAbstract) return this;
-        //    if (this.IsStatic) return this;
-        //    if (this.IsVirtual) return this;
-        //}
+        public MethodInfo GetBaseDefinition()
+        {
+            var b = _method.GetDeclaringClass();
+            if (b == this.DeclaringType) return this;
+            return b.GetMethod(_method.Name, _method.GetParameterTypes());
+        }
 
         public override object Invoke(object instance, params object[] args)
         {

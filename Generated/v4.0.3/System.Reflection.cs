@@ -19,7 +19,7 @@ namespace System.Reflection
 				[Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;", AccessFlags = 1, Signature = "()[Ljava/lang/reflect/TypeVariable<Ljava/lang/reflect/Method;>;")]
 				public global::Java.Lang.Reflect.ITypeVariable<object>[] GetTypeParameters() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
+						return null;
 				}
 
 				/// <java-name>

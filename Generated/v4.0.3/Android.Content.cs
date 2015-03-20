@@ -2017,7 +2017,7 @@ namespace Android.Content
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public new virtual string GetType() /* MethodBuilder.Create */ 
+				public virtual string GetType() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}

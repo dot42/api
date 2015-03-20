@@ -1,16 +1,17 @@
 ﻿namespace System.Threading
 {
     /// <summary>
-    /// This class was mainly added to be used by PropertyChanged.Fody.
-    /// It is kept internal, so that the C# compiler doesn't use it when
-    /// producing event code.
+    /// This class is here to provide compatibility with existing implementations.
+    /// best would be to let the dot42 compiler detect all accesses to Interlocked,
+    /// and on-the-fly replace all usages of interlocked fields with their AtomicXXX
+    /// counterparts.
     /// </summary>
-    [Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the whole purpose of a lighweight Interlocked.")]
-    internal static class Interlocked
+    [Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the whole purpose of a lighweight Interlocked. please note that the compiler will make use of this class to implement events.")]
+    public static class Interlocked
     {
         private static readonly object _sync = new object();
 
-        [Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the purpose of a lighweight Interlocked.")]
+        //[Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the purpose of a lighweight Interlocked.")]
         public static T CompareExchange<T>(ref T location1, T value, T comparand) where T : class
         {
             lock (_sync)
@@ -22,7 +23,7 @@
             }
         }
 
-        [Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the purpose of a lighweight Interlocked.")]
+        //[Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the purpose of a lighweight Interlocked.")]
         public static int Increment(ref Int32 obj) 
         {
             lock (_sync)
@@ -31,7 +32,7 @@
             }
         }
 
-        [Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the purpose of a lighweight Interlocked.")]
+        //[Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the purpose of a lighweight Interlocked.")]
         public static int Decrement(ref Int32 obj)
         {
             lock (_sync)
@@ -40,7 +41,7 @@
             }
         }
 
-        [Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the purpose of a lighweight Interlocked.")]
+        //[Obsolete("please try not to use this class, since the implementation makes use of a global lock atm, which of course defeats the purpose of a lighweight Interlocked.")]
         public static Int64 Increment(ref Int64 obj)
         {
             lock (_sync)

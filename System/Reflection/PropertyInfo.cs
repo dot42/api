@@ -104,9 +104,35 @@ namespace System.Reflection
         /// </summary>
         public object GetValue(object instance)
         {
-            if (getter != null)
-                return getter.Invoke(instance);
-            return null;
+            if (getter == null)
+                throw new ArgumentException("instance"); 
+            
+            return getter.Invoke(instance);
+        }
+
+        /// <summary>
+        /// Gets a value of the property for a given instance.
+        /// </summary>
+        public object GetValue(object instance, object[] index)
+        {
+            if (index != null)
+                throw new ArgumentException("index");
+            if (getter == null)
+                throw new ArgumentException("instance");
+
+            return getter.Invoke(instance);
+        }
+
+        /// <summary>
+        /// Sets a value of the property for a given instance.
+        /// </summary>
+        public void SetValue(object instance, object value, object[] index)
+        {
+            if(index != null)
+                throw new ArgumentException("index");
+            if (setter == null)
+                throw new ArgumentException("not setter defined");
+            setter.Invoke(instance, value);
         }
 
         /// <summary>
@@ -114,8 +140,9 @@ namespace System.Reflection
         /// </summary>
         public void SetValue(object instance, object value)
         {
-            if (setter != null)
-                setter.Invoke(instance, value);
+            if (setter == null)
+                throw new ArgumentException("not setter defined");
+            setter.Invoke(instance, value);
         }
 
         public override object[] GetCustomAttributes(bool inherit)

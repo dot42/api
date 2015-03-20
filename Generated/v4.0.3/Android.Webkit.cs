@@ -1804,7 +1804,7 @@ namespace Android.Webkit
 						/// getType
 						/// </java-name>
 						[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						public new virtual int GetType() /* MethodBuilder.Create */ 
+						public virtual int GetType() /* MethodBuilder.Create */ 
 						{
 								return default(int);
 						}

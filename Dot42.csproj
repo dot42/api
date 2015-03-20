@@ -268,6 +268,7 @@
     <Compile Include="Java\Util\Concurrent\ThreadPoolExecutor.cs" />
     <Compile Include="Junit\Framework\TestCase.cs" />
     <Compile Include="NUnit\Framework\Attributes\TearDownAttribute.cs" />
+    <Compile Include="NUnit\Framework\CollectionAssert.cs" />
     <Compile Include="System\AmbiguousMatchException.cs" />
     <Compile Include="System\AggregateException.cs" />
     <Compile Include="System\AsyncCallback.cs" />
@@ -279,7 +280,7 @@
     <Compile Include="System\Collections\Generic\Dictionary.cs" />
     <Compile Include="System\Collections\Generic\IDictionary.cs" />
     <Compile Include="System\Collections\Generic\LinkedList.cs" />
-    <Compile Include="System\Collections\Generic\Collection.cs" />
+    <Compile Include="System\Collections\ObjectModel\Collection.cs" />
     <Compile Include="System\Collections\Generic\Queue.cs" />
     <Compile Include="System\Collections\Generic\SortedDictionary.cs" />
     <Compile Include="System\Collections\Generic\Stack.cs" />
@@ -304,6 +305,7 @@
     <Compile Include="System\Enum.cs" />
     <Compile Include="System\Exception.cs" />
     <Compile Include="System\GC.cs" />
+    <Compile Include="System\Globalization\DateTimeStyles.cs" />
     <Compile Include="System\ICloneable.cs" />
     <Compile Include="System\IO\BinaryReader.cs" />
     <Compile Include="System\IO\BinaryWriter.cs" />
@@ -319,6 +321,7 @@
     <Compile Include="System\IO\JavaOutputStreamWrapper.cs" />
     <Compile Include="System\IO\StreamReader.cs" />
     <Compile Include="System\IO\StreamWriter.cs" />
+    <Compile Include="System\IO\StringReader.cs" />
     <Compile Include="System\IO\StringWriter.cs" />
     <Compile Include="System\IO\TextReader.cs" />
     <Compile Include="System\IO\TextWriter.cs" />
@@ -348,6 +351,7 @@
     <Compile Include="System\Reflection\AssemblyKeyNameAttribute.cs" />
     <Compile Include="System\Reflection\AssemblyFlagsAttribute.cs" />
     <Compile Include="System\Reflection\AssemblyNameFlags.cs" />
+    <Compile Include="System\Reflection\TargetParameterCountException.cs" />
     <Compile Include="System\Reflection\EventInfo.cs" />
     <Compile Include="System\Reflection\MethodBase.cs" />
     <Compile Include="System\Reflection\ParameterInfo.cs" />
@@ -373,8 +377,14 @@
     <Compile Include="System\Runtime\InteropServices\FieldOffsetAttribute.cs" />
     <Compile Include="System\Runtime\InteropServices\GuidAttribute.cs" />
     <Compile Include="System\Runtime\InteropServices\InAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\IgnoreDataMemberAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\EnumMemberAttribute.cs" />
     <Compile Include="System\Runtime\Serialization\DataContractAttribute.cs" />
     <Compile Include="System\Runtime\Serialization\DataMemberAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\OnDeserializedAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\OnDeserializingAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\OnSerializedAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\OnSerializingAttribute.cs" />
     <Compile Include="System\Security\AllowPartiallyTrustedCallers.cs" />
     <Compile Include="System\Security\SecuritySafeCriticalAttribute.cs" />
     <Compile Include="System\Security\SecurityException.cs" />

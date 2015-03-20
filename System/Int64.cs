@@ -13,6 +13,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Globalization;
+using Android.Graphics;
 using Dot42.Internal;
 using Java.Lang;
 
@@ -49,6 +52,23 @@ namespace System
         {
             try
             {
+                result = Parse(s);
+                return true;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0L;
+                return false;
+            }
+        }
+
+        public static bool TryParse(string s, NumberStyles styles, IFormatProvider provider, out long result)
+        {
+            try
+            {
+                if((styles & NumberStyles.HexNumber) != 0)
+                    result = Parse(s, 16);
+
                 result = Parse(s);
                 return true;
             }

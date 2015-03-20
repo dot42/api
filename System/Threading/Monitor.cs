@@ -47,7 +47,7 @@ namespace System.Threading
         {
             if (obj == null)
                 throw new ArgumentNullException();
-            obj.Notify();
+            obj.JavaNotify();
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace System.Threading
         {
             if (obj == null)
                 throw new ArgumentNullException();
-            obj.NotifyAll();
+            obj.JavaNotifyAll();
         }
 
         /// <summary>
