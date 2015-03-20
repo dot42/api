@@ -7157,7 +7157,7 @@ namespace Java.Io
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<*>;")]
-				public virtual global::System.Type GetType() /* MethodBuilder.Create */ 
+				public virtual global::System.Type GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
 				}
@@ -7246,7 +7246,7 @@ namespace Java.Io
 				public global::System.Type Type
 				{
 				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<*>;")]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 				/// <java-name>

@@ -2921,7 +2921,7 @@ namespace Android.Hardware
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public virtual int GetType() /* MethodBuilder.Create */ 
+				public virtual int GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2995,7 +2995,7 @@ namespace Android.Hardware
 				public int Type
 				{
 				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 				/// <java-name>

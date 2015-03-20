@@ -1726,7 +1726,7 @@ namespace Android.Util
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<TV;>;")]
-				public virtual global::System.Type GetType() /* MethodBuilder.Create */ 
+				public virtual global::System.Type GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
 				}
@@ -1751,7 +1751,7 @@ namespace Android.Util
 				public global::System.Type Type
 				{
 				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<TV;>;")]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 		}

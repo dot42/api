@@ -30,7 +30,7 @@ namespace System.Reflection
         public override Type DeclaringType { get { return _field.DeclaringClass; } }
         public override string Name { get { return _field.Name; } }
 
-        public Type FieldType { get { return _field.GetType(); } }
+        public Type FieldType { get { return _field.Type; } }
 
         /// <summary>
         /// Is this an abstract method?
@@ -81,7 +81,7 @@ namespace System.Reflection
 
         public object GetValue(object instance)
         {
-            return _field.GetValue(instance);
+            return _field.Get(instance);
         }
 
     }

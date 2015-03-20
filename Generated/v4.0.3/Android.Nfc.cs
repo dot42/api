@@ -231,7 +231,7 @@ namespace Android.Nfc
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetType() /* MethodBuilder.Create */ 
+				public byte[] GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
 				}
@@ -354,7 +354,7 @@ namespace Android.Nfc
 				public byte[] Type
 				{
 				[Dot42.DexImport("getType", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 				/// <java-name>

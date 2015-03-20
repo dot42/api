@@ -128,7 +128,7 @@ namespace Android.Nfc.Tech
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public int GetType() /* MethodBuilder.Create */ 
+				public int GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -251,7 +251,7 @@ namespace Android.Nfc.Tech
 				public int Type
 				{
 				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 				/// <java-name>
@@ -344,7 +344,7 @@ namespace Android.Nfc.Tech
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetType() /* MethodBuilder.Create */ 
+				public string GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -451,7 +451,7 @@ namespace Android.Nfc.Tech
 				public string Type
 				{
 				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 				/// <java-name>
@@ -1121,7 +1121,7 @@ namespace Android.Nfc.Tech
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public int GetType() /* MethodBuilder.Create */ 
+				public int GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1366,7 +1366,7 @@ namespace Android.Nfc.Tech
 				public int Type
 				{
 				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 				/// <java-name>

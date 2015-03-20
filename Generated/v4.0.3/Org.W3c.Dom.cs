@@ -741,7 +741,7 @@ namespace Org.W3c.Dom
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetType() /* MethodBuilder.Create */ ;
+				string GetTypeJava() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getRelatedException

@@ -55,7 +55,7 @@ namespace Dot42.Internal
         internal static Enum Get(System.Type enumType, int value)
         {
             var infoField = enumType.JavaGetDeclaredField("info__");
-            var infoInstance = (EnumInfo)infoField.GetValue(null);
+            var infoInstance = (EnumInfo)infoField.Get(null);
             var result = infoInstance.GetValue(value);
             if (result == null)
                 throw new ArgumentException();
@@ -66,7 +66,7 @@ namespace Dot42.Internal
         internal static Enum Get(System.Type enumType, long value)
         {
             var infoField = enumType.JavaGetDeclaredField("info__");
-            var infoInstance = (EnumInfo)infoField.GetValue(null);
+            var infoInstance = (EnumInfo)infoField.Get(null);
             var result = infoInstance.GetValue(value);
             if (result == null)
                 throw new ArgumentException();

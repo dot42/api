@@ -2149,7 +2149,7 @@ namespace Android.Renderscript
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
-				public new virtual global::Android.Renderscript.Type GetType() /* MethodBuilder.Create */ 
+				public virtual global::Android.Renderscript.Type GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Renderscript.Type);
 				}
@@ -2628,7 +2628,7 @@ namespace Android.Renderscript
 				public global::Android.Renderscript.Type Type
 				{
 				[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 				/// <java-name>
@@ -5601,7 +5601,7 @@ namespace Android.Renderscript
 						/// getType
 						/// </java-name>
 						[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
-						public virtual global::Android.Renderscript.Type GetType() /* MethodBuilder.Create */ 
+						public virtual global::Android.Renderscript.Type GetTypeJava() /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Renderscript.Type);
 						}
@@ -5638,7 +5638,7 @@ namespace Android.Renderscript
 						public global::Android.Renderscript.Type Type
 						{
 						[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
-								get{ return GetType(); }
+								get{ return GetTypeJava(); }
 						}
 
 						/// <java-name>

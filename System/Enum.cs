@@ -76,7 +76,7 @@ namespace System
                     var name = field.Name;
                     if (name[name.Length - 1] != '$')
                     {
-                        values.Add(field.GetValue(null));
+                        values.Add(field.Get(null));
                     }
                 }
             }
@@ -99,7 +99,7 @@ namespace System
                 {
                     if (field.Name == name)
                     {
-                        return field.GetValue(null);
+                        return field.Get(null);
                     }
                 }
             }
@@ -122,7 +122,7 @@ namespace System
                 {
                     if ((!ignoreCase && (field.Name == name)) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
                     {
-                        return field.GetValue(null);
+                        return field.Get(null);
                     }
                 }
             }
@@ -145,7 +145,7 @@ namespace System
                 {
                     if (field.Name == name)
                     {
-                        result = (TEnum)field.GetValue(null);
+                        result = (TEnum)field.Get(null);
                         return true;
                     }
                 }
@@ -170,7 +170,7 @@ namespace System
                 {
                     if ((!ignoreCase && (field.Name == name)) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
                     {
-                        result = (TEnum)field.GetValue(null);
+                        result = (TEnum)field.Get(null);
                         return true;
                     }
                 }

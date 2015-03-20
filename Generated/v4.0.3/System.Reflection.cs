@@ -427,7 +427,7 @@ namespace System.Reflection
 				/// get
 				/// </java-name>
 				[Dot42.DexImport("get", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 1)]
-				public object GetValue(object @object) /* MethodBuilder.Create */ 
+				public object Get(object @object) /* MethodBuilder.Create */ 
 				{
 						return default(object);
 				}
@@ -544,7 +544,7 @@ namespace System.Reflection
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<*>;")]
-				public new global::System.Type GetType() /* MethodBuilder.Create */ 
+				public global::System.Type GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
 				}
@@ -698,7 +698,7 @@ namespace System.Reflection
 				public global::System.Type Type
 				{
 				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<*>;")]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 		}

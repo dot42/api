@@ -1737,7 +1737,7 @@ namespace Android.Os
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()I", AccessFlags = 17)]
-				public int GetType() /* MethodBuilder.Create */ 
+				public int GetTypeJava() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1797,7 +1797,7 @@ namespace Android.Os
 				public int Type
 				{
 				[Dot42.DexImport("getType", "()I", AccessFlags = 17)]
-						get{ return GetType(); }
+						get{ return GetTypeJava(); }
 				}
 
 		}

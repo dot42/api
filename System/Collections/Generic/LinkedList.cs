@@ -23,7 +23,7 @@
         internal LinkedListNode<T> head;
         internal int count;
         internal int version;
-        private Object _syncRoot;
+        //private Object _syncRoot;
 
 #if !SILVERLIGHT
         private SerializationInfo siInfo; //A temporary variable which we need during deserialization.        

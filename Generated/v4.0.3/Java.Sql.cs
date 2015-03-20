@@ -4464,7 +4464,7 @@ namespace Java.Sql
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()I", AccessFlags = 1025)]
-				int GetType() /* MethodBuilder.Create */ ;
+				int GetTypeJava() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getUnicodeStream
