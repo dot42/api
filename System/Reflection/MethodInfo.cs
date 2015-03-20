@@ -43,7 +43,7 @@ namespace System.Reflection
             for (int idx = 0; idx < types.Length; ++idx)
             {
                 // java doesn't support argument names.
-                ret[idx] = new ParameterInfo(this, "arg" + (idx++), types[idx], idx);
+                ret[idx] = new ParameterInfo(this, "arg" + idx, types[idx], idx);
             }
             return ret;
         }

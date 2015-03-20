@@ -434,7 +434,7 @@ namespace System
 
 	    public static Type GetType(string typeName)
 	    {
-	        return typeof (Type).GetClassLoader().FindClass(typeName);
+	        return typeof (Type).GetClassLoader().LoadClass(typeName);
 	    }
 
         /// <summary>
@@ -444,7 +444,7 @@ namespace System
         public static Type GetType(string typeName, bool ignoreCase)
         {
             var classLoader = typeof(Type).GetClassLoader();
-            return classLoader.FindClass(typeName);
+            return classLoader.LoadClass(typeName);
             
         }
     }

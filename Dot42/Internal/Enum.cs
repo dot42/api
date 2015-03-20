@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using System.Globalization;
 using System.Reflection;
 
 namespace Dot42.Internal
@@ -22,7 +23,7 @@ namespace Dot42.Internal
     /// Base class for enum implementations
     /// </summary>
     [Include(TypeCondition = typeof(System.Enum))]
-    internal abstract class Enum : Java.Lang.Enum<Enum>
+    internal abstract class Enum : Java.Lang.Enum<Enum>, IFormattable
 	{
         /// <summary>
         /// Default ctor
@@ -71,6 +72,30 @@ namespace Dot42.Internal
             if (result == null)
                 throw new ArgumentException();
             return result;
+        }
+
+        public string ToString(string format)
+	    {
+	        return ToString(format, CultureInfo.InvariantCulture);
+	    }
+
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            if (string.IsNullOrEmpty(format) 
+                || format == "G" || format == "g" 
+                || format == "f" || format == "F")
+                return ToString();
+
+            int val = base.Ordinal();
+            
+            if (format == "X")
+                return val.ToString("X8");
+            if (format == "x")
+                return val.ToString("x8");
+            if (format == "d" || format == "D")
+                return val.ToString();
+
+            throw new ArgumentException("invalid format specifier: " + format);
         }
     }
 }

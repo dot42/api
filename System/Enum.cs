@@ -21,7 +21,7 @@ using Java.Util;
 
 namespace System
 {
-    public abstract partial class Enum : IFormattable
+    public abstract partial class Enum 
 	{
         /// <summary>
         /// Gets the name of the given enum constant or null if not found.
@@ -179,30 +179,6 @@ namespace System
             return false;
         }
 
-	    public string ToString(string format)
-	    {
-	        return ToString(format, CultureInfo.InvariantCulture);
-	    }
-
-        public string ToString(string format, IFormatProvider formatProvider)
-        {
-            if (string.IsNullOrEmpty(format) 
-                || format == "G" || format == "g" 
-                || format == "f" || format == "F")
-                return ToString();
-            
-            int val = ((Java.Lang.Enum<object>)(object)this).Ordinal();
-            
-            if (format == "X")
-                return val.ToString("X8");
-            if (format == "x")
-                return val.ToString("x8");
-            if (format == "d" || format == "D")
-                return val.ToString();
-
-            throw new ArgumentException("invalid format specifier: " + format);
-        }
-
         public static Type GetUnderlyingType(Type enumType)
         {
             if(!enumType.IsEnum)
@@ -226,5 +202,27 @@ namespace System
             throw new InvalidOperationException("enum value not found: " + value);
         }
 	}
+
+    // this is a dirty workaround that pullutes since it pullutes
+    // all structs with this extensions. We can't use System.Enum directly
+    // though, since the actual enum are of type Java.Lang.Enum.
+    // calling such a method would result in the calling class to be rejected
+    // by the class loader verifyer.
+    // maybe best compromise is to hide it from intellisense.
+    public static class EnumExtensions
+    {
+        /// <summary>
+        /// This method is to be used with enums only. 
+        /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public static string ToString<TEnum>(this TEnum e, string format) where TEnum: struct
+        {
+            var formattable = e as IFormattable;
+            if (formattable != null)
+                return formattable.ToString(format, CultureInfo.InvariantCulture);
+
+            return e.ToString();
+        }
+    }
 }
 
