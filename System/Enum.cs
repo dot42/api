@@ -15,13 +15,14 @@
 // limitations under the License.
 
 using System.Globalization;
+using Dot42;
 using Java.Lang.Reflect;
 using Java.Text;
 using Java.Util;
 
 namespace System
 {
-    public abstract partial class Enum 
+    public abstract partial class Enum
 	{
         /// <summary>
         /// Gets the name of the given enum constant or null if not found.
@@ -204,28 +205,13 @@ namespace System
 
             throw new InvalidOperationException("enum value not found: " + value);
         }
-	}
 
-    // this is a dirty workaround that pullutes 
-    // all structs with this extensions. We can't use System.Enum directly
-    // though, since the actual enum are of type Java.Lang.Enum.
-    // calling such a method would result in the calling class to be rejected
-    // by the class loader verifyer.
-    // maybe best compromise is to hide it from intellisense.
-    public static class EnumExtensions
-    {
-        /// <summary>
-        /// This method is to be used with enums only. 
-        /// </summary>
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public static string ToString<TEnum>(this TEnum e, string format) where TEnum: struct
+        // this will actually direcly be redirected by a call to the method by the compiler.
+        public string ToString(string format)
         {
-            var formattable = e as IFormattable;
-            if (formattable != null)
-                return formattable.ToString(format, CultureInfo.InvariantCulture);
-
-            return e.ToString();
+            return ((Dot42.Internal.Enum) (object)this).ToString(format);
         }
-    }
+
+	}
 }
 

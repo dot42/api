@@ -75,27 +75,16 @@ namespace Dot42.Internal
         }
 
         public string ToString(string format)
-	    {
-	        return ToString(format, CultureInfo.InvariantCulture);
-	    }
+        {
+            // TODO: check if these casts can some how be removed.
+            return CompilerHelper.EnumToString((Java.Lang.Enum<object>)(object)this, format);
+        }
+
 
         public string ToString(string format, IFormatProvider formatProvider)
         {
-            if (string.IsNullOrEmpty(format) 
-                || format == "G" || format == "g" 
-                || format == "f" || format == "F")
-                return ToString();
-
-            int val = base.Ordinal();
-            
-            if (format == "X")
-                return val.ToString("X8");
-            if (format == "x")
-                return val.ToString("x8");
-            if (format == "d" || format == "D")
-                return val.ToString();
-
-            throw new ArgumentException("invalid format specifier: " + format);
+            // TODO: check if these casts can some how be removed.
+            return CompilerHelper.EnumToString((Java.Lang.Enum<object>)(object)this, format);
         }
     }
 }

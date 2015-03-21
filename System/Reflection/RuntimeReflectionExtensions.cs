@@ -74,7 +74,7 @@ namespace System.Reflection
 		public static IEnumerable<FieldInfo> GetDeclaredFields (this Type type)
 		{
 			if (type == null) throw new ArgumentNullException ("type");
-            return new ArrayIEnumerable<FieldInfo>(type.GetFields(AllDeclaredMembersBindingFlags));
+            return type.GetFields(AllDeclaredMembersBindingFlags);
 		}
 
         public static FieldInfo GetDeclaredField(this Type type, string name)
@@ -88,7 +88,7 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return new ArrayIEnumerable<FieldInfo>(type.GetFields(AllMembersBindingFlags));
+            return type.GetFields(AllMembersBindingFlags);
         }
 
         //public static InterfaceMapping GetRuntimeInterfaceMap (this TypeInfo typeInfo, Type interfaceType)
@@ -112,7 +112,7 @@ namespace System.Reflection
 			if (type == null)
 				throw new ArgumentNullException ("type");
 
-			return new ArrayIEnumerable<MethodInfo>(type.GetMethods(AllMembersBindingFlags));
+			return type.GetMethods(AllMembersBindingFlags);
 		}
 
         public static MethodInfo GetDeclaredMethod(this Type type, string name, Type[] parameters)
@@ -128,14 +128,13 @@ namespace System.Reflection
         {
             if (type == null) throw new ArgumentNullException("type");
 
-            return new ArrayIEnumerable<MethodInfo>(type.JavaGetDeclaredMethods()
-                                                        .Select(x => new MethodInfo(x)));
+            return type.JavaGetDeclaredMethods().Select(x => new MethodInfo(x));
         }
 
 	    public static IEnumerable<PropertyInfo> GetRuntimeProperties (this Type type)
 		{
 			if (type == null) throw new ArgumentNullException ("type");
-			return new ArrayIEnumerable<PropertyInfo>(type.GetProperties(AllMembersBindingFlags));
+			return type.GetProperties(AllMembersBindingFlags);
 		}
 
 		public static PropertyInfo GetRuntimeProperty (this Type type, string name)
@@ -157,7 +156,7 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return new ArrayIEnumerable<PropertyInfo>(type.GetProperties(AllDeclaredMembersBindingFlags));
+            return type.GetProperties(AllDeclaredMembersBindingFlags);
         }
 
         public static PropertyInfo GetDeclaredProperty(this Type type, string name)
@@ -192,8 +191,8 @@ namespace System.Reflection
         {
             if (del == null)
                 throw new ArgumentNullException("del");
-            
-            throw new NotImplementedException();
+
+            throw new NotImplementedException("Delegate.GetMethodInfo");
         }
 	}
 }
