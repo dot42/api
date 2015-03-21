@@ -152,6 +152,16 @@ namespace System
             return (T)nullable;            
         }
 
+        [Include]
+        internal static T GetValueOrDefault(object nullable, T defaultOnNull)
+        {
+            if (ReferenceEquals(nullable, null))
+            {
+                return defaultOnNull;
+            }
+            return (T)nullable;
+        }
+
         public /*override*/ int GetHashCode()
         {
             return !HasValue ? 0 : RawValue.GetHashCode();
@@ -163,6 +173,7 @@ namespace System
             return HasValue ? RawValue : default(T);
         }
 
+        [DexNative]
         public T GetValueOrDefault(T defaultValue)
         {
             return HasValue ? RawValue : defaultValue;
