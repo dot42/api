@@ -130,216 +130,101 @@ namespace Org.Apache.Http.Params
 		}
 
 		/// <java-name>
-		/// org/apache/http/params/HttpParams
+		/// org/apache/http/params/BasicHttpParams
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/params/HttpParams", AccessFlags = 1537)]
-		public partial interface IHttpParams
+		[Dot42.DexImport("org/apache/http/params/BasicHttpParams", AccessFlags = 49)]
+		public sealed partial class BasicHttpParams : global::Org.Apache.Http.Params.AbstractHttpParams, global::Java.Io.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BasicHttpParams() /* MethodBuilder.Create */ 
+				{
+				}
+
 				/// <java-name>
 				/// getParameter
 				/// </java-name>
-				[Dot42.DexImport("getParameter", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1025)]
-				object GetParameter(string @string) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getParameter", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1)]
+				public override object GetParameter(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
 
 				/// <java-name>
 				/// setParameter
 				/// </java-name>
-				[Dot42.DexImport("setParameter", "(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Params.IHttpParams SetParameter(string @string, object @object) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// copy
-				/// </java-name>
-				[Dot42.DexImport("copy", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Params.IHttpParams Copy() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("setParameter", "(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
+				public override global::Org.Apache.Http.Params.IHttpParams SetParameter(string @string, object @object) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Params.IHttpParams);
+				}
 
 				/// <java-name>
 				/// removeParameter
 				/// </java-name>
-				[Dot42.DexImport("removeParameter", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
-				bool RemoveParameter(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLongParameter
-				/// </java-name>
-				[Dot42.DexImport("getLongParameter", "(Ljava/lang/String;J)J", AccessFlags = 1025)]
-				long GetLongParameter(string @string, long int64) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setLongParameter
-				/// </java-name>
-				[Dot42.DexImport("setLongParameter", "(Ljava/lang/String;J)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Params.IHttpParams SetLongParameter(string @string, long int64) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getIntParameter
-				/// </java-name>
-				[Dot42.DexImport("getIntParameter", "(Ljava/lang/String;I)I", AccessFlags = 1025)]
-				int GetIntParameter(string @string, int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setIntParameter
-				/// </java-name>
-				[Dot42.DexImport("setIntParameter", "(Ljava/lang/String;I)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Params.IHttpParams SetIntParameter(string @string, int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDoubleParameter
-				/// </java-name>
-				[Dot42.DexImport("getDoubleParameter", "(Ljava/lang/String;D)D", AccessFlags = 1025)]
-				double GetDoubleParameter(string @string, double @double) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setDoubleParameter
-				/// </java-name>
-				[Dot42.DexImport("setDoubleParameter", "(Ljava/lang/String;D)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Params.IHttpParams SetDoubleParameter(string @string, double @double) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getBooleanParameter
-				/// </java-name>
-				[Dot42.DexImport("getBooleanParameter", "(Ljava/lang/String;Z)Z", AccessFlags = 1025)]
-				bool GetBooleanParameter(string @string, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setBooleanParameter
-				/// </java-name>
-				[Dot42.DexImport("setBooleanParameter", "(Ljava/lang/String;Z)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Params.IHttpParams SetBooleanParameter(string @string, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isParameterTrue
-				/// </java-name>
-				[Dot42.DexImport("isParameterTrue", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
-				bool IsParameterTrue(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isParameterFalse
-				/// </java-name>
-				[Dot42.DexImport("isParameterFalse", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
-				bool IsParameterFalse(string @string) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/params/HttpProtocolParams
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/params/HttpProtocolParams", AccessFlags = 49)]
-		public sealed partial class HttpProtocolParams : global::Org.Apache.Http.Params.ICoreProtocolPNames
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal HttpProtocolParams() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHttpElementCharset
-				/// </java-name>
-				[Dot42.DexImport("getHttpElementCharset", "(Lorg/apache/http/params/HttpParams;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetHttpElementCharset(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setHttpElementCharset
-				/// </java-name>
-				[Dot42.DexImport("setHttpElementCharset", "(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V", AccessFlags = 9)]
-				public static void SetHttpElementCharset(global::Org.Apache.Http.Params.IHttpParams httpParams, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentCharset
-				/// </java-name>
-				[Dot42.DexImport("getContentCharset", "(Lorg/apache/http/params/HttpParams;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetContentCharset(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setContentCharset
-				/// </java-name>
-				[Dot42.DexImport("setContentCharset", "(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V", AccessFlags = 9)]
-				public static void SetContentCharset(global::Org.Apache.Http.Params.IHttpParams httpParams, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/ProtocolVersion;", AccessFlags = 9)]
-				public static global::Org.Apache.Http.ProtocolVersion GetVersion(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.ProtocolVersion);
-				}
-
-				/// <java-name>
-				/// setVersion
-				/// </java-name>
-				[Dot42.DexImport("setVersion", "(Lorg/apache/http/params/HttpParams;Lorg/apache/http/ProtocolVersion;)V", AccessFlags = 9)]
-				public static void SetVersion(global::Org.Apache.Http.Params.IHttpParams httpParams, global::Org.Apache.Http.ProtocolVersion protocolVersion) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getUserAgent
-				/// </java-name>
-				[Dot42.DexImport("getUserAgent", "(Lorg/apache/http/params/HttpParams;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetUserAgent(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setUserAgent
-				/// </java-name>
-				[Dot42.DexImport("setUserAgent", "(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V", AccessFlags = 9)]
-				public static void SetUserAgent(global::Org.Apache.Http.Params.IHttpParams httpParams, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// useExpectContinue
-				/// </java-name>
-				[Dot42.DexImport("useExpectContinue", "(Lorg/apache/http/params/HttpParams;)Z", AccessFlags = 9)]
-				public static bool UseExpectContinue(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("removeParameter", "(Ljava/lang/String;)Z", AccessFlags = 1)]
+				public override bool RemoveParameter(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// setUseExpectContinue
+				/// setParameters
 				/// </java-name>
-				[Dot42.DexImport("setUseExpectContinue", "(Lorg/apache/http/params/HttpParams;Z)V", AccessFlags = 9)]
-				public static void SetUseExpectContinue(global::Org.Apache.Http.Params.IHttpParams httpParams, bool boolean) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("setParameters", "([Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1)]
+				public void SetParameters(string[] @string, object @object) /* MethodBuilder.Create */ 
 				{
 				}
 
-		}
-
-		/// <java-name>
-		/// org/apache/http/params/HttpAbstractParamBean
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/params/HttpAbstractParamBean", AccessFlags = 1057)]
-		public abstract partial class HttpAbstractParamBean
- /* scope: __dot42__ */ 
-		{
 				/// <java-name>
-				/// params
+				/// isParameterSet
 				/// </java-name>
-				[Dot42.DexImport("params", "Lorg/apache/http/params/HttpParams;", AccessFlags = 20)]
-				protected internal readonly global::Org.Apache.Http.Params.IHttpParams Params;
-				[Dot42.DexImport("<init>", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1)]
-				public HttpAbstractParamBean(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isParameterSet", "(Ljava/lang/String;)Z", AccessFlags = 1)]
+				public bool IsParameterSet(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isParameterSetLocally
+				/// </java-name>
+				[Dot42.DexImport("isParameterSetLocally", "(Ljava/lang/String;)Z", AccessFlags = 1)]
+				public bool IsParameterSetLocally(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// clear
+				/// </java-name>
+				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
+				public void Clear() /* MethodBuilder.Create */ 
 				{
 				}
 
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpAbstractParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				/// <java-name>
+				/// copy
+				/// </java-name>
+				[Dot42.DexImport("copy", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
+				public override global::Org.Apache.Http.Params.IHttpParams Copy() /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Params.IHttpParams);
+				}
+
+				/// <java-name>
+				/// clone
+				/// </java-name>
+				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
+				public object Clone() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// copyParams
+				/// </java-name>
+				[Dot42.DexImport("copyParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 4)]
+				internal void CopyParams(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -419,6 +304,30 @@ namespace Org.Apache.Http.Params
 		}
 
 		/// <java-name>
+		/// org/apache/http/params/HttpAbstractParamBean
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/params/HttpAbstractParamBean", AccessFlags = 1057)]
+		public abstract partial class HttpAbstractParamBean
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// params
+				/// </java-name>
+				[Dot42.DexImport("params", "Lorg/apache/http/params/HttpParams;", AccessFlags = 20)]
+				protected internal readonly global::Org.Apache.Http.Params.IHttpParams Params;
+				[Dot42.DexImport("<init>", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1)]
+				public HttpAbstractParamBean(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal HttpAbstractParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// org/apache/http/params/HttpConnectionParamBean
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/params/HttpConnectionParamBean", AccessFlags = 33)]
@@ -483,64 +392,6 @@ namespace Org.Apache.Http.Params
 				{
 				}
 
-		}
-
-		/// <java-name>
-		/// org/apache/http/params/CoreConnectionPNames
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/params/CoreConnectionPNames", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class ICoreConnectionPNamesConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// SO_TIMEOUT
-				/// </java-name>
-				[Dot42.DexImport("SO_TIMEOUT", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string SO_TIMEOUT = "http.socket.timeout";
-				/// <java-name>
-				/// TCP_NODELAY
-				/// </java-name>
-				[Dot42.DexImport("TCP_NODELAY", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string TCP_NODELAY = "http.tcp.nodelay";
-				/// <java-name>
-				/// SOCKET_BUFFER_SIZE
-				/// </java-name>
-				[Dot42.DexImport("SOCKET_BUFFER_SIZE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string SOCKET_BUFFER_SIZE = "http.socket.buffer-size";
-				/// <java-name>
-				/// SO_LINGER
-				/// </java-name>
-				[Dot42.DexImport("SO_LINGER", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string SO_LINGER = "http.socket.linger";
-				/// <java-name>
-				/// CONNECTION_TIMEOUT
-				/// </java-name>
-				[Dot42.DexImport("CONNECTION_TIMEOUT", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string CONNECTION_TIMEOUT = "http.connection.timeout";
-				/// <java-name>
-				/// STALE_CONNECTION_CHECK
-				/// </java-name>
-				[Dot42.DexImport("STALE_CONNECTION_CHECK", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string STALE_CONNECTION_CHECK = "http.connection.stalecheck";
-				/// <java-name>
-				/// MAX_LINE_LENGTH
-				/// </java-name>
-				[Dot42.DexImport("MAX_LINE_LENGTH", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MAX_LINE_LENGTH = "http.connection.max-line-length";
-				/// <java-name>
-				/// MAX_HEADER_COUNT
-				/// </java-name>
-				[Dot42.DexImport("MAX_HEADER_COUNT", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MAX_HEADER_COUNT = "http.connection.max-header-count";
-		}
-
-		/// <java-name>
-		/// org/apache/http/params/CoreConnectionPNames
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/params/CoreConnectionPNames", AccessFlags = 1537)]
-		public partial interface ICoreConnectionPNames
- /* scope: __dot42__ */ 
-		{
 		}
 
 		/// <java-name>
@@ -719,104 +570,169 @@ namespace Org.Apache.Http.Params
 		}
 
 		/// <java-name>
-		/// org/apache/http/params/BasicHttpParams
+		/// org/apache/http/params/HttpProtocolParams
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/params/BasicHttpParams", AccessFlags = 49)]
-		public sealed partial class BasicHttpParams : global::Org.Apache.Http.Params.AbstractHttpParams, global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		[Dot42.DexImport("org/apache/http/params/HttpProtocolParams", AccessFlags = 49)]
+		public sealed partial class HttpProtocolParams : global::Org.Apache.Http.Params.ICoreProtocolPNames
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BasicHttpParams() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal HttpProtocolParams() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getParameter
+				/// getHttpElementCharset
 				/// </java-name>
-				[Dot42.DexImport("getParameter", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1)]
-				public override object GetParameter(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getHttpElementCharset", "(Lorg/apache/http/params/HttpParams;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetHttpElementCharset(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
 				{
-						return default(object);
+						return default(string);
 				}
 
 				/// <java-name>
-				/// setParameter
+				/// setHttpElementCharset
 				/// </java-name>
-				[Dot42.DexImport("setParameter", "(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
-				public override global::Org.Apache.Http.Params.IHttpParams SetParameter(string @string, object @object) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("setHttpElementCharset", "(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V", AccessFlags = 9)]
+				public static void SetHttpElementCharset(global::Org.Apache.Http.Params.IHttpParams httpParams, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Org.Apache.Http.Params.IHttpParams);
 				}
 
 				/// <java-name>
-				/// removeParameter
+				/// getContentCharset
 				/// </java-name>
-				[Dot42.DexImport("removeParameter", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public override bool RemoveParameter(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getContentCharset", "(Lorg/apache/http/params/HttpParams;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetContentCharset(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// setContentCharset
+				/// </java-name>
+				[Dot42.DexImport("setContentCharset", "(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V", AccessFlags = 9)]
+				public static void SetContentCharset(global::Org.Apache.Http.Params.IHttpParams httpParams, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getVersion
+				/// </java-name>
+				[Dot42.DexImport("getVersion", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/ProtocolVersion;", AccessFlags = 9)]
+				public static global::Org.Apache.Http.ProtocolVersion GetVersion(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.ProtocolVersion);
+				}
+
+				/// <java-name>
+				/// setVersion
+				/// </java-name>
+				[Dot42.DexImport("setVersion", "(Lorg/apache/http/params/HttpParams;Lorg/apache/http/ProtocolVersion;)V", AccessFlags = 9)]
+				public static void SetVersion(global::Org.Apache.Http.Params.IHttpParams httpParams, global::Org.Apache.Http.ProtocolVersion protocolVersion) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getUserAgent
+				/// </java-name>
+				[Dot42.DexImport("getUserAgent", "(Lorg/apache/http/params/HttpParams;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetUserAgent(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// setUserAgent
+				/// </java-name>
+				[Dot42.DexImport("setUserAgent", "(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V", AccessFlags = 9)]
+				public static void SetUserAgent(global::Org.Apache.Http.Params.IHttpParams httpParams, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// useExpectContinue
+				/// </java-name>
+				[Dot42.DexImport("useExpectContinue", "(Lorg/apache/http/params/HttpParams;)Z", AccessFlags = 9)]
+				public static bool UseExpectContinue(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// setParameters
+				/// setUseExpectContinue
 				/// </java-name>
-				[Dot42.DexImport("setParameters", "([Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1)]
-				public void SetParameters(string[] @string, object @object) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("setUseExpectContinue", "(Lorg/apache/http/params/HttpParams;Z)V", AccessFlags = 9)]
+				public static void SetUseExpectContinue(global::Org.Apache.Http.Params.IHttpParams httpParams, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
+		}
+
+		/// <java-name>
+		/// org/apache/http/params/CoreConnectionPNames
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/params/CoreConnectionPNames", AccessFlags = 1537)]
+		public partial interface ICoreConnectionPNames
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// org/apache/http/params/CoreConnectionPNames
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/params/CoreConnectionPNames", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class ICoreConnectionPNamesConstants
+ /* scope: __dot42__ */ 
+		{
 				/// <java-name>
-				/// isParameterSet
+				/// SO_TIMEOUT
 				/// </java-name>
-				[Dot42.DexImport("isParameterSet", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public bool IsParameterSet(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
+				[Dot42.DexImport("SO_TIMEOUT", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string SO_TIMEOUT = "http.socket.timeout";
 				/// <java-name>
-				/// isParameterSetLocally
+				/// TCP_NODELAY
 				/// </java-name>
-				[Dot42.DexImport("isParameterSetLocally", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public bool IsParameterSetLocally(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
+				[Dot42.DexImport("TCP_NODELAY", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string TCP_NODELAY = "http.tcp.nodelay";
 				/// <java-name>
-				/// clear
+				/// SOCKET_BUFFER_SIZE
 				/// </java-name>
-				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
-				public void Clear() /* MethodBuilder.Create */ 
-				{
-				}
-
+				[Dot42.DexImport("SOCKET_BUFFER_SIZE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string SOCKET_BUFFER_SIZE = "http.socket.buffer-size";
 				/// <java-name>
-				/// copy
+				/// SO_LINGER
 				/// </java-name>
-				[Dot42.DexImport("copy", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
-				public override global::Org.Apache.Http.Params.IHttpParams Copy() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Params.IHttpParams);
-				}
-
+				[Dot42.DexImport("SO_LINGER", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string SO_LINGER = "http.socket.linger";
 				/// <java-name>
-				/// clone
+				/// CONNECTION_TIMEOUT
 				/// </java-name>
-				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public object Clone() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
+				[Dot42.DexImport("CONNECTION_TIMEOUT", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string CONNECTION_TIMEOUT = "http.connection.timeout";
 				/// <java-name>
-				/// copyParams
+				/// STALE_CONNECTION_CHECK
 				/// </java-name>
-				[Dot42.DexImport("copyParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 4)]
-				internal void CopyParams(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("STALE_CONNECTION_CHECK", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string STALE_CONNECTION_CHECK = "http.connection.stalecheck";
+				/// <java-name>
+				/// MAX_LINE_LENGTH
+				/// </java-name>
+				[Dot42.DexImport("MAX_LINE_LENGTH", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MAX_LINE_LENGTH = "http.connection.max-line-length";
+				/// <java-name>
+				/// MAX_HEADER_COUNT
+				/// </java-name>
+				[Dot42.DexImport("MAX_HEADER_COUNT", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MAX_HEADER_COUNT = "http.connection.max-header-count";
+		}
 
+		/// <java-name>
+		/// org/apache/http/params/CoreProtocolPNames
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/params/CoreProtocolPNames", AccessFlags = 1537)]
+		public partial interface ICoreProtocolPNames
+ /* scope: __dot42__ */ 
+		{
 		}
 
 		/// <java-name>
@@ -869,12 +785,96 @@ namespace Org.Apache.Http.Params
 		}
 
 		/// <java-name>
-		/// org/apache/http/params/CoreProtocolPNames
+		/// org/apache/http/params/HttpParams
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/params/CoreProtocolPNames", AccessFlags = 1537)]
-		public partial interface ICoreProtocolPNames
+		[Dot42.DexImport("org/apache/http/params/HttpParams", AccessFlags = 1537)]
+		public partial interface IHttpParams
  /* scope: __dot42__ */ 
 		{
+				/// <java-name>
+				/// getParameter
+				/// </java-name>
+				[Dot42.DexImport("getParameter", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1025)]
+				object GetParameter(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setParameter
+				/// </java-name>
+				[Dot42.DexImport("setParameter", "(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Params.IHttpParams SetParameter(string @string, object @object) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// copy
+				/// </java-name>
+				[Dot42.DexImport("copy", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Params.IHttpParams Copy() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// removeParameter
+				/// </java-name>
+				[Dot42.DexImport("removeParameter", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
+				bool RemoveParameter(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getLongParameter
+				/// </java-name>
+				[Dot42.DexImport("getLongParameter", "(Ljava/lang/String;J)J", AccessFlags = 1025)]
+				long GetLongParameter(string @string, long int64) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setLongParameter
+				/// </java-name>
+				[Dot42.DexImport("setLongParameter", "(Ljava/lang/String;J)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Params.IHttpParams SetLongParameter(string @string, long int64) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getIntParameter
+				/// </java-name>
+				[Dot42.DexImport("getIntParameter", "(Ljava/lang/String;I)I", AccessFlags = 1025)]
+				int GetIntParameter(string @string, int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setIntParameter
+				/// </java-name>
+				[Dot42.DexImport("setIntParameter", "(Ljava/lang/String;I)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Params.IHttpParams SetIntParameter(string @string, int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getDoubleParameter
+				/// </java-name>
+				[Dot42.DexImport("getDoubleParameter", "(Ljava/lang/String;D)D", AccessFlags = 1025)]
+				double GetDoubleParameter(string @string, double @double) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setDoubleParameter
+				/// </java-name>
+				[Dot42.DexImport("setDoubleParameter", "(Ljava/lang/String;D)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Params.IHttpParams SetDoubleParameter(string @string, double @double) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getBooleanParameter
+				/// </java-name>
+				[Dot42.DexImport("getBooleanParameter", "(Ljava/lang/String;Z)Z", AccessFlags = 1025)]
+				bool GetBooleanParameter(string @string, bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setBooleanParameter
+				/// </java-name>
+				[Dot42.DexImport("setBooleanParameter", "(Ljava/lang/String;Z)Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Params.IHttpParams SetBooleanParameter(string @string, bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isParameterTrue
+				/// </java-name>
+				[Dot42.DexImport("isParameterTrue", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
+				bool IsParameterTrue(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isParameterFalse
+				/// </java-name>
+				[Dot42.DexImport("isParameterFalse", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
+				bool IsParameterFalse(string @string) /* MethodBuilder.Create */ ;
+
 		}
 
 }

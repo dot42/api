@@ -2,17 +2,106 @@
 namespace Android.Media.Effect
 {
 		/// <java-name>
-		/// android/media/effect/EffectUpdateListener
+		/// android/media/effect/Effect
 		/// </java-name>
-		[Dot42.DexImport("android/media/effect/EffectUpdateListener", AccessFlags = 1537)]
-		public partial interface IEffectUpdateListener
+		[Dot42.DexImport("android/media/effect/Effect", AccessFlags = 1057)]
+		public abstract partial class Effect
  /* scope: __dot42__ */ 
 		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Effect() /* MethodBuilder.Create */ 
+				{
+				}
+
 				/// <java-name>
-				/// onEffectUpdated
+				/// getName
 				/// </java-name>
-				[Dot42.DexImport("onEffectUpdated", "(Landroid/media/effect/Effect;Ljava/lang/Object;)V", AccessFlags = 1025)]
-				void OnEffectUpdated(global::Android.Media.Effect.Effect effect, object @object) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+				public abstract string GetName() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// apply
+				/// </java-name>
+				[Dot42.DexImport("apply", "(IIII)V", AccessFlags = 1025)]
+				public abstract void Apply(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setParameter
+				/// </java-name>
+				[Dot42.DexImport("setParameter", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1025)]
+				public abstract void SetParameter(string @string, object @object) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setUpdateListener
+				/// </java-name>
+				[Dot42.DexImport("setUpdateListener", "(Landroid/media/effect/EffectUpdateListener;)V", AccessFlags = 1)]
+				public virtual void SetUpdateListener(global::Android.Media.Effect.IEffectUpdateListener effectUpdateListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// release
+				/// </java-name>
+				[Dot42.DexImport("release", "()V", AccessFlags = 1025)]
+				public abstract void Release() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				public string Name
+				{
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get{ return GetName(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/media/effect/EffectContext
+		/// </java-name>
+		[Dot42.DexImport("android/media/effect/EffectContext", AccessFlags = 33)]
+		public partial class EffectContext
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal EffectContext() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createWithCurrentGlContext
+				/// </java-name>
+				[Dot42.DexImport("createWithCurrentGlContext", "()Landroid/media/effect/EffectContext;", AccessFlags = 9)]
+				public static global::Android.Media.Effect.EffectContext CreateWithCurrentGlContext() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Media.Effect.EffectContext);
+				}
+
+				/// <java-name>
+				/// getFactory
+				/// </java-name>
+				[Dot42.DexImport("getFactory", "()Landroid/media/effect/EffectFactory;", AccessFlags = 1)]
+				public virtual global::Android.Media.Effect.EffectFactory GetFactory() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Media.Effect.EffectFactory);
+				}
+
+				/// <java-name>
+				/// release
+				/// </java-name>
+				[Dot42.DexImport("release", "()V", AccessFlags = 1)]
+				public virtual void Release() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getFactory
+				/// </java-name>
+				public global::Android.Media.Effect.EffectFactory Factory
+				{
+				[Dot42.DexImport("getFactory", "()Landroid/media/effect/EffectFactory;", AccessFlags = 1)]
+						get{ return GetFactory(); }
+				}
 
 		}
 
@@ -184,106 +273,17 @@ namespace Android.Media.Effect
 		}
 
 		/// <java-name>
-		/// android/media/effect/EffectContext
+		/// android/media/effect/EffectUpdateListener
 		/// </java-name>
-		[Dot42.DexImport("android/media/effect/EffectContext", AccessFlags = 33)]
-		public partial class EffectContext
+		[Dot42.DexImport("android/media/effect/EffectUpdateListener", AccessFlags = 1537)]
+		public partial interface IEffectUpdateListener
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal EffectContext() /* MethodBuilder.Create */ 
-				{
-				}
-
 				/// <java-name>
-				/// createWithCurrentGlContext
+				/// onEffectUpdated
 				/// </java-name>
-				[Dot42.DexImport("createWithCurrentGlContext", "()Landroid/media/effect/EffectContext;", AccessFlags = 9)]
-				public static global::Android.Media.Effect.EffectContext CreateWithCurrentGlContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Media.Effect.EffectContext);
-				}
-
-				/// <java-name>
-				/// getFactory
-				/// </java-name>
-				[Dot42.DexImport("getFactory", "()Landroid/media/effect/EffectFactory;", AccessFlags = 1)]
-				public virtual global::Android.Media.Effect.EffectFactory GetFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Media.Effect.EffectFactory);
-				}
-
-				/// <java-name>
-				/// release
-				/// </java-name>
-				[Dot42.DexImport("release", "()V", AccessFlags = 1)]
-				public virtual void Release() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getFactory
-				/// </java-name>
-				public global::Android.Media.Effect.EffectFactory Factory
-				{
-				[Dot42.DexImport("getFactory", "()Landroid/media/effect/EffectFactory;", AccessFlags = 1)]
-						get{ return GetFactory(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/media/effect/Effect
-		/// </java-name>
-		[Dot42.DexImport("android/media/effect/Effect", AccessFlags = 1057)]
-		public abstract partial class Effect
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Effect() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// apply
-				/// </java-name>
-				[Dot42.DexImport("apply", "(IIII)V", AccessFlags = 1025)]
-				public abstract void Apply(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setParameter
-				/// </java-name>
-				[Dot42.DexImport("setParameter", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1025)]
-				public abstract void SetParameter(string @string, object @object) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setUpdateListener
-				/// </java-name>
-				[Dot42.DexImport("setUpdateListener", "(Landroid/media/effect/EffectUpdateListener;)V", AccessFlags = 1)]
-				public virtual void SetUpdateListener(global::Android.Media.Effect.IEffectUpdateListener effectUpdateListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// release
-				/// </java-name>
-				[Dot42.DexImport("release", "()V", AccessFlags = 1025)]
-				public abstract void Release() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				public string Name
-				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetName(); }
-				}
+				[Dot42.DexImport("onEffectUpdated", "(Landroid/media/effect/Effect;Ljava/lang/Object;)V", AccessFlags = 1025)]
+				void OnEffectUpdated(global::Android.Media.Effect.Effect effect, object @object) /* MethodBuilder.Create */ ;
 
 		}
 

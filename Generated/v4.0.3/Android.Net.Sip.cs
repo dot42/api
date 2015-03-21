@@ -2,6 +2,451 @@
 namespace Android.Net.Sip
 {
 		/// <java-name>
+		/// android/net/sip/SipRegistrationListener
+		/// </java-name>
+		[Dot42.DexImport("android/net/sip/SipRegistrationListener", AccessFlags = 1537)]
+		public partial interface ISipRegistrationListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// onRegistering
+				/// </java-name>
+				[Dot42.DexImport("onRegistering", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void OnRegistering(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onRegistrationDone
+				/// </java-name>
+				[Dot42.DexImport("onRegistrationDone", "(Ljava/lang/String;J)V", AccessFlags = 1025)]
+				void OnRegistrationDone(string @string, long int64) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onRegistrationFailed
+				/// </java-name>
+				[Dot42.DexImport("onRegistrationFailed", "(Ljava/lang/String;ILjava/lang/String;)V", AccessFlags = 1025)]
+				void OnRegistrationFailed(string @string, int int32, string string1) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/net/sip/SipAudioCall
+		/// </java-name>
+		[Dot42.DexImport("android/net/sip/SipAudioCall", AccessFlags = 33)]
+		public partial class SipAudioCall
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/net/sip/SipProfile;)V", AccessFlags = 1)]
+				public SipAudioCall(global::Android.Content.Context context, global::Android.Net.Sip.SipProfile sipProfile) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setListener
+				/// </java-name>
+				[Dot42.DexImport("setListener", "(Landroid/net/sip/SipAudioCall$Listener;)V", AccessFlags = 1)]
+				public virtual void SetListener(global::Android.Net.Sip.SipAudioCall.Listener listener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setListener
+				/// </java-name>
+				[Dot42.DexImport("setListener", "(Landroid/net/sip/SipAudioCall$Listener;Z)V", AccessFlags = 1)]
+				public virtual void SetListener(global::Android.Net.Sip.SipAudioCall.Listener listener, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isInCall
+				/// </java-name>
+				[Dot42.DexImport("isInCall", "()Z", AccessFlags = 1)]
+				public virtual bool IsInCall() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isOnHold
+				/// </java-name>
+				[Dot42.DexImport("isOnHold", "()Z", AccessFlags = 1)]
+				public virtual bool IsOnHold() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public virtual void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLocalProfile
+				/// </java-name>
+				[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
+				public virtual global::Android.Net.Sip.SipProfile GetLocalProfile() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Net.Sip.SipProfile);
+				}
+
+				/// <java-name>
+				/// getPeerProfile
+				/// </java-name>
+				[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
+				public virtual global::Android.Net.Sip.SipProfile GetPeerProfile() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Net.Sip.SipProfile);
+				}
+
+				/// <java-name>
+				/// getState
+				/// </java-name>
+				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
+				public virtual int GetState() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// attachCall
+				/// </java-name>
+				[Dot42.DexImport("attachCall", "(Landroid/net/sip/SipSession;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void AttachCall(global::Android.Net.Sip.SipSession sipSession, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// makeCall
+				/// </java-name>
+				[Dot42.DexImport("makeCall", "(Landroid/net/sip/SipProfile;Landroid/net/sip/SipSession;I)V", AccessFlags = 1)]
+				public virtual void MakeCall(global::Android.Net.Sip.SipProfile sipProfile, global::Android.Net.Sip.SipSession sipSession, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// endCall
+				/// </java-name>
+				[Dot42.DexImport("endCall", "()V", AccessFlags = 1)]
+				public virtual void EndCall() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// holdCall
+				/// </java-name>
+				[Dot42.DexImport("holdCall", "(I)V", AccessFlags = 1)]
+				public virtual void HoldCall(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// answerCall
+				/// </java-name>
+				[Dot42.DexImport("answerCall", "(I)V", AccessFlags = 1)]
+				public virtual void AnswerCall(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// continueCall
+				/// </java-name>
+				[Dot42.DexImport("continueCall", "(I)V", AccessFlags = 1)]
+				public virtual void ContinueCall(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toggleMute
+				/// </java-name>
+				[Dot42.DexImport("toggleMute", "()V", AccessFlags = 1)]
+				public virtual void ToggleMute() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isMuted
+				/// </java-name>
+				[Dot42.DexImport("isMuted", "()Z", AccessFlags = 1)]
+				public virtual bool IsMuted() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setSpeakerMode
+				/// </java-name>
+				[Dot42.DexImport("setSpeakerMode", "(Z)V", AccessFlags = 1)]
+				public virtual void SetSpeakerMode(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendDtmf
+				/// </java-name>
+				[Dot42.DexImport("sendDtmf", "(I)V", AccessFlags = 1)]
+				public virtual void SendDtmf(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendDtmf
+				/// </java-name>
+				[Dot42.DexImport("sendDtmf", "(ILandroid/os/Message;)V", AccessFlags = 1)]
+				public virtual void SendDtmf(int int32, global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// startAudio
+				/// </java-name>
+				[Dot42.DexImport("startAudio", "()V", AccessFlags = 1)]
+				public virtual void StartAudio() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal SipAudioCall() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLocalProfile
+				/// </java-name>
+				public global::Android.Net.Sip.SipProfile LocalProfile
+				{
+				[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
+						get{ return GetLocalProfile(); }
+				}
+
+				/// <java-name>
+				/// getPeerProfile
+				/// </java-name>
+				public global::Android.Net.Sip.SipProfile PeerProfile
+				{
+				[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
+						get{ return GetPeerProfile(); }
+				}
+
+				/// <java-name>
+				/// getState
+				/// </java-name>
+				public int State
+				{
+				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
+						get{ return GetState(); }
+				}
+
+				/// <java-name>
+				/// android/net/sip/SipAudioCall$Listener
+				/// </java-name>
+				[Dot42.DexImport("android/net/sip/SipAudioCall$Listener", AccessFlags = 9)]
+				public partial class Listener
+ /* scope: __dot42__ */ 
+				{
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public Listener() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onReadyToCall
+						/// </java-name>
+						[Dot42.DexImport("onReadyToCall", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
+						public virtual void OnReadyToCall(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onCalling
+						/// </java-name>
+						[Dot42.DexImport("onCalling", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
+						public virtual void OnCalling(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onRinging
+						/// </java-name>
+						[Dot42.DexImport("onRinging", "(Landroid/net/sip/SipAudioCall;Landroid/net/sip/SipProfile;)V", AccessFlags = 1)]
+						public virtual void OnRinging(global::Android.Net.Sip.SipAudioCall sipAudioCall, global::Android.Net.Sip.SipProfile sipProfile) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onRingingBack
+						/// </java-name>
+						[Dot42.DexImport("onRingingBack", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
+						public virtual void OnRingingBack(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onCallEstablished
+						/// </java-name>
+						[Dot42.DexImport("onCallEstablished", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
+						public virtual void OnCallEstablished(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onCallEnded
+						/// </java-name>
+						[Dot42.DexImport("onCallEnded", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
+						public virtual void OnCallEnded(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onCallBusy
+						/// </java-name>
+						[Dot42.DexImport("onCallBusy", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
+						public virtual void OnCallBusy(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onCallHeld
+						/// </java-name>
+						[Dot42.DexImport("onCallHeld", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
+						public virtual void OnCallHeld(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onError
+						/// </java-name>
+						[Dot42.DexImport("onError", "(Landroid/net/sip/SipAudioCall;ILjava/lang/String;)V", AccessFlags = 1)]
+						public virtual void OnError(global::Android.Net.Sip.SipAudioCall sipAudioCall, int int32, string @string) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onChanged
+						/// </java-name>
+						[Dot42.DexImport("onChanged", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
+						public virtual void OnChanged(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/net/sip/SipErrorCode
+		/// </java-name>
+		[Dot42.DexImport("android/net/sip/SipErrorCode", AccessFlags = 33)]
+		public partial class SipErrorCode
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// NO_ERROR
+				/// </java-name>
+				[Dot42.DexImport("NO_ERROR", "I", AccessFlags = 25)]
+				public const int NO_ERROR = 0;
+				/// <java-name>
+				/// SOCKET_ERROR
+				/// </java-name>
+				[Dot42.DexImport("SOCKET_ERROR", "I", AccessFlags = 25)]
+				public const int SOCKET_ERROR = -1;
+				/// <java-name>
+				/// SERVER_ERROR
+				/// </java-name>
+				[Dot42.DexImport("SERVER_ERROR", "I", AccessFlags = 25)]
+				public const int SERVER_ERROR = -2;
+				/// <java-name>
+				/// TRANSACTION_TERMINTED
+				/// </java-name>
+				[Dot42.DexImport("TRANSACTION_TERMINTED", "I", AccessFlags = 25)]
+				public const int TRANSACTION_TERMINTED = -3;
+				/// <java-name>
+				/// CLIENT_ERROR
+				/// </java-name>
+				[Dot42.DexImport("CLIENT_ERROR", "I", AccessFlags = 25)]
+				public const int CLIENT_ERROR = -4;
+				/// <java-name>
+				/// TIME_OUT
+				/// </java-name>
+				[Dot42.DexImport("TIME_OUT", "I", AccessFlags = 25)]
+				public const int TIME_OUT = -5;
+				/// <java-name>
+				/// INVALID_REMOTE_URI
+				/// </java-name>
+				[Dot42.DexImport("INVALID_REMOTE_URI", "I", AccessFlags = 25)]
+				public const int INVALID_REMOTE_URI = -6;
+				/// <java-name>
+				/// PEER_NOT_REACHABLE
+				/// </java-name>
+				[Dot42.DexImport("PEER_NOT_REACHABLE", "I", AccessFlags = 25)]
+				public const int PEER_NOT_REACHABLE = -7;
+				/// <java-name>
+				/// INVALID_CREDENTIALS
+				/// </java-name>
+				[Dot42.DexImport("INVALID_CREDENTIALS", "I", AccessFlags = 25)]
+				public const int INVALID_CREDENTIALS = -8;
+				/// <java-name>
+				/// IN_PROGRESS
+				/// </java-name>
+				[Dot42.DexImport("IN_PROGRESS", "I", AccessFlags = 25)]
+				public const int IN_PROGRESS = -9;
+				/// <java-name>
+				/// DATA_CONNECTION_LOST
+				/// </java-name>
+				[Dot42.DexImport("DATA_CONNECTION_LOST", "I", AccessFlags = 25)]
+				public const int DATA_CONNECTION_LOST = -10;
+				/// <java-name>
+				/// CROSS_DOMAIN_AUTHENTICATION
+				/// </java-name>
+				[Dot42.DexImport("CROSS_DOMAIN_AUTHENTICATION", "I", AccessFlags = 25)]
+				public const int CROSS_DOMAIN_AUTHENTICATION = -11;
+				/// <java-name>
+				/// SERVER_UNREACHABLE
+				/// </java-name>
+				[Dot42.DexImport("SERVER_UNREACHABLE", "I", AccessFlags = 25)]
+				public const int SERVER_UNREACHABLE = -12;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal SipErrorCode() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "(I)Ljava/lang/String;", AccessFlags = 9)]
+				public static string ToString(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+		}
+
+		/// <java-name>
+		/// android/net/sip/SipException
+		/// </java-name>
+		[Dot42.DexImport("android/net/sip/SipException", AccessFlags = 33)]
+		public partial class SipException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SipException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SipException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public SipException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// android/net/sip/SipManager
 		/// </java-name>
 		[Dot42.DexImport("android/net/sip/SipManager", AccessFlags = 33)]
@@ -576,451 +1021,6 @@ namespace Android.Net.Sip
 						{
 						}
 
-				}
-
-		}
-
-		/// <java-name>
-		/// android/net/sip/SipAudioCall
-		/// </java-name>
-		[Dot42.DexImport("android/net/sip/SipAudioCall", AccessFlags = 33)]
-		public partial class SipAudioCall
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/net/sip/SipProfile;)V", AccessFlags = 1)]
-				public SipAudioCall(global::Android.Content.Context context, global::Android.Net.Sip.SipProfile sipProfile) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setListener
-				/// </java-name>
-				[Dot42.DexImport("setListener", "(Landroid/net/sip/SipAudioCall$Listener;)V", AccessFlags = 1)]
-				public virtual void SetListener(global::Android.Net.Sip.SipAudioCall.Listener listener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setListener
-				/// </java-name>
-				[Dot42.DexImport("setListener", "(Landroid/net/sip/SipAudioCall$Listener;Z)V", AccessFlags = 1)]
-				public virtual void SetListener(global::Android.Net.Sip.SipAudioCall.Listener listener, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isInCall
-				/// </java-name>
-				[Dot42.DexImport("isInCall", "()Z", AccessFlags = 1)]
-				public virtual bool IsInCall() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isOnHold
-				/// </java-name>
-				[Dot42.DexImport("isOnHold", "()Z", AccessFlags = 1)]
-				public virtual bool IsOnHold() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public virtual void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLocalProfile
-				/// </java-name>
-				[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-				public virtual global::Android.Net.Sip.SipProfile GetLocalProfile() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Sip.SipProfile);
-				}
-
-				/// <java-name>
-				/// getPeerProfile
-				/// </java-name>
-				[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-				public virtual global::Android.Net.Sip.SipProfile GetPeerProfile() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Sip.SipProfile);
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-				public virtual int GetState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// attachCall
-				/// </java-name>
-				[Dot42.DexImport("attachCall", "(Landroid/net/sip/SipSession;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void AttachCall(global::Android.Net.Sip.SipSession sipSession, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// makeCall
-				/// </java-name>
-				[Dot42.DexImport("makeCall", "(Landroid/net/sip/SipProfile;Landroid/net/sip/SipSession;I)V", AccessFlags = 1)]
-				public virtual void MakeCall(global::Android.Net.Sip.SipProfile sipProfile, global::Android.Net.Sip.SipSession sipSession, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// endCall
-				/// </java-name>
-				[Dot42.DexImport("endCall", "()V", AccessFlags = 1)]
-				public virtual void EndCall() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// holdCall
-				/// </java-name>
-				[Dot42.DexImport("holdCall", "(I)V", AccessFlags = 1)]
-				public virtual void HoldCall(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// answerCall
-				/// </java-name>
-				[Dot42.DexImport("answerCall", "(I)V", AccessFlags = 1)]
-				public virtual void AnswerCall(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// continueCall
-				/// </java-name>
-				[Dot42.DexImport("continueCall", "(I)V", AccessFlags = 1)]
-				public virtual void ContinueCall(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toggleMute
-				/// </java-name>
-				[Dot42.DexImport("toggleMute", "()V", AccessFlags = 1)]
-				public virtual void ToggleMute() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isMuted
-				/// </java-name>
-				[Dot42.DexImport("isMuted", "()Z", AccessFlags = 1)]
-				public virtual bool IsMuted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setSpeakerMode
-				/// </java-name>
-				[Dot42.DexImport("setSpeakerMode", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSpeakerMode(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendDtmf
-				/// </java-name>
-				[Dot42.DexImport("sendDtmf", "(I)V", AccessFlags = 1)]
-				public virtual void SendDtmf(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendDtmf
-				/// </java-name>
-				[Dot42.DexImport("sendDtmf", "(ILandroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void SendDtmf(int int32, global::Android.Os.Message message) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// startAudio
-				/// </java-name>
-				[Dot42.DexImport("startAudio", "()V", AccessFlags = 1)]
-				public virtual void StartAudio() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SipAudioCall() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLocalProfile
-				/// </java-name>
-				public global::Android.Net.Sip.SipProfile LocalProfile
-				{
-				[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-						get{ return GetLocalProfile(); }
-				}
-
-				/// <java-name>
-				/// getPeerProfile
-				/// </java-name>
-				public global::Android.Net.Sip.SipProfile PeerProfile
-				{
-				[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-						get{ return GetPeerProfile(); }
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				public int State
-				{
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-						get{ return GetState(); }
-				}
-
-				/// <java-name>
-				/// android/net/sip/SipAudioCall$Listener
-				/// </java-name>
-				[Dot42.DexImport("android/net/sip/SipAudioCall$Listener", AccessFlags = 9)]
-				public partial class Listener
- /* scope: __dot42__ */ 
-				{
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public Listener() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onReadyToCall
-						/// </java-name>
-						[Dot42.DexImport("onReadyToCall", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
-						public virtual void OnReadyToCall(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onCalling
-						/// </java-name>
-						[Dot42.DexImport("onCalling", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
-						public virtual void OnCalling(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onRinging
-						/// </java-name>
-						[Dot42.DexImport("onRinging", "(Landroid/net/sip/SipAudioCall;Landroid/net/sip/SipProfile;)V", AccessFlags = 1)]
-						public virtual void OnRinging(global::Android.Net.Sip.SipAudioCall sipAudioCall, global::Android.Net.Sip.SipProfile sipProfile) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onRingingBack
-						/// </java-name>
-						[Dot42.DexImport("onRingingBack", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
-						public virtual void OnRingingBack(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onCallEstablished
-						/// </java-name>
-						[Dot42.DexImport("onCallEstablished", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
-						public virtual void OnCallEstablished(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onCallEnded
-						/// </java-name>
-						[Dot42.DexImport("onCallEnded", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
-						public virtual void OnCallEnded(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onCallBusy
-						/// </java-name>
-						[Dot42.DexImport("onCallBusy", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
-						public virtual void OnCallBusy(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onCallHeld
-						/// </java-name>
-						[Dot42.DexImport("onCallHeld", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
-						public virtual void OnCallHeld(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onError
-						/// </java-name>
-						[Dot42.DexImport("onError", "(Landroid/net/sip/SipAudioCall;ILjava/lang/String;)V", AccessFlags = 1)]
-						public virtual void OnError(global::Android.Net.Sip.SipAudioCall sipAudioCall, int int32, string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onChanged
-						/// </java-name>
-						[Dot42.DexImport("onChanged", "(Landroid/net/sip/SipAudioCall;)V", AccessFlags = 1)]
-						public virtual void OnChanged(global::Android.Net.Sip.SipAudioCall sipAudioCall) /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/net/sip/SipException
-		/// </java-name>
-		[Dot42.DexImport("android/net/sip/SipException", AccessFlags = 33)]
-		public partial class SipException : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SipException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SipException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public SipException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/net/sip/SipRegistrationListener
-		/// </java-name>
-		[Dot42.DexImport("android/net/sip/SipRegistrationListener", AccessFlags = 1537)]
-		public partial interface ISipRegistrationListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// onRegistering
-				/// </java-name>
-				[Dot42.DexImport("onRegistering", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void OnRegistering(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onRegistrationDone
-				/// </java-name>
-				[Dot42.DexImport("onRegistrationDone", "(Ljava/lang/String;J)V", AccessFlags = 1025)]
-				void OnRegistrationDone(string @string, long int64) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onRegistrationFailed
-				/// </java-name>
-				[Dot42.DexImport("onRegistrationFailed", "(Ljava/lang/String;ILjava/lang/String;)V", AccessFlags = 1025)]
-				void OnRegistrationFailed(string @string, int int32, string string1) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/net/sip/SipErrorCode
-		/// </java-name>
-		[Dot42.DexImport("android/net/sip/SipErrorCode", AccessFlags = 33)]
-		public partial class SipErrorCode
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// NO_ERROR
-				/// </java-name>
-				[Dot42.DexImport("NO_ERROR", "I", AccessFlags = 25)]
-				public const int NO_ERROR = 0;
-				/// <java-name>
-				/// SOCKET_ERROR
-				/// </java-name>
-				[Dot42.DexImport("SOCKET_ERROR", "I", AccessFlags = 25)]
-				public const int SOCKET_ERROR = -1;
-				/// <java-name>
-				/// SERVER_ERROR
-				/// </java-name>
-				[Dot42.DexImport("SERVER_ERROR", "I", AccessFlags = 25)]
-				public const int SERVER_ERROR = -2;
-				/// <java-name>
-				/// TRANSACTION_TERMINTED
-				/// </java-name>
-				[Dot42.DexImport("TRANSACTION_TERMINTED", "I", AccessFlags = 25)]
-				public const int TRANSACTION_TERMINTED = -3;
-				/// <java-name>
-				/// CLIENT_ERROR
-				/// </java-name>
-				[Dot42.DexImport("CLIENT_ERROR", "I", AccessFlags = 25)]
-				public const int CLIENT_ERROR = -4;
-				/// <java-name>
-				/// TIME_OUT
-				/// </java-name>
-				[Dot42.DexImport("TIME_OUT", "I", AccessFlags = 25)]
-				public const int TIME_OUT = -5;
-				/// <java-name>
-				/// INVALID_REMOTE_URI
-				/// </java-name>
-				[Dot42.DexImport("INVALID_REMOTE_URI", "I", AccessFlags = 25)]
-				public const int INVALID_REMOTE_URI = -6;
-				/// <java-name>
-				/// PEER_NOT_REACHABLE
-				/// </java-name>
-				[Dot42.DexImport("PEER_NOT_REACHABLE", "I", AccessFlags = 25)]
-				public const int PEER_NOT_REACHABLE = -7;
-				/// <java-name>
-				/// INVALID_CREDENTIALS
-				/// </java-name>
-				[Dot42.DexImport("INVALID_CREDENTIALS", "I", AccessFlags = 25)]
-				public const int INVALID_CREDENTIALS = -8;
-				/// <java-name>
-				/// IN_PROGRESS
-				/// </java-name>
-				[Dot42.DexImport("IN_PROGRESS", "I", AccessFlags = 25)]
-				public const int IN_PROGRESS = -9;
-				/// <java-name>
-				/// DATA_CONNECTION_LOST
-				/// </java-name>
-				[Dot42.DexImport("DATA_CONNECTION_LOST", "I", AccessFlags = 25)]
-				public const int DATA_CONNECTION_LOST = -10;
-				/// <java-name>
-				/// CROSS_DOMAIN_AUTHENTICATION
-				/// </java-name>
-				[Dot42.DexImport("CROSS_DOMAIN_AUTHENTICATION", "I", AccessFlags = 25)]
-				public const int CROSS_DOMAIN_AUTHENTICATION = -11;
-				/// <java-name>
-				/// SERVER_UNREACHABLE
-				/// </java-name>
-				[Dot42.DexImport("SERVER_UNREACHABLE", "I", AccessFlags = 25)]
-				public const int SERVER_UNREACHABLE = -12;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SipErrorCode() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "(I)Ljava/lang/String;", AccessFlags = 9)]
-				public static string ToString(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 		}

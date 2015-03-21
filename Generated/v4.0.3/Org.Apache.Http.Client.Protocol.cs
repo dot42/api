@@ -2,116 +2,6 @@
 namespace Org.Apache.Http.Client.Protocol
 {
 		/// <java-name>
-		/// org/apache/http/client/protocol/RequestDefaultHeaders
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/protocol/RequestDefaultHeaders", AccessFlags = 33)]
-		public partial class RequestDefaultHeaders : global::Org.Apache.Http.IHttpRequestInterceptor
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RequestDefaultHeaders() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// process
-				/// </java-name>
-				[Dot42.DexImport("process", "(Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
-				public virtual void Process(global::Org.Apache.Http.IHttpRequest httpRequest, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/client/protocol/ResponseProcessCookies
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/protocol/ResponseProcessCookies", AccessFlags = 33)]
-		public partial class ResponseProcessCookies : global::Org.Apache.Http.IHttpResponseInterceptor
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ResponseProcessCookies() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// process
-				/// </java-name>
-				[Dot42.DexImport("process", "(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
-				public virtual void Process(global::Org.Apache.Http.IHttpResponse httpResponse, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/client/protocol/RequestProxyAuthentication
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/protocol/RequestProxyAuthentication", AccessFlags = 33)]
-		public partial class RequestProxyAuthentication : global::Org.Apache.Http.IHttpRequestInterceptor
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RequestProxyAuthentication() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// process
-				/// </java-name>
-				[Dot42.DexImport("process", "(Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
-				public virtual void Process(global::Org.Apache.Http.IHttpRequest httpRequest, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/client/protocol/RequestTargetAuthentication
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/protocol/RequestTargetAuthentication", AccessFlags = 33)]
-		public partial class RequestTargetAuthentication : global::Org.Apache.Http.IHttpRequestInterceptor
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RequestTargetAuthentication() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// process
-				/// </java-name>
-				[Dot42.DexImport("process", "(Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
-				public virtual void Process(global::Org.Apache.Http.IHttpRequest httpRequest, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/client/protocol/RequestAddCookies
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/protocol/RequestAddCookies", AccessFlags = 33)]
-		public partial class RequestAddCookies : global::Org.Apache.Http.IHttpRequestInterceptor
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RequestAddCookies() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// process
-				/// </java-name>
-				[Dot42.DexImport("process", "(Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
-				public virtual void Process(global::Org.Apache.Http.IHttpRequest httpRequest, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/client/protocol/ClientContextConfigurer
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/client/protocol/ClientContextConfigurer", AccessFlags = 33)]
@@ -168,6 +58,15 @@ namespace Org.Apache.Http.Client.Protocol
 				{
 				}
 
+		}
+
+		/// <java-name>
+		/// org/apache/http/client/protocol/ClientContext
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/client/protocol/ClientContext", AccessFlags = 1537)]
+		public partial interface IClientContext
+ /* scope: __dot42__ */ 
+		{
 		}
 
 		/// <java-name>
@@ -230,12 +129,113 @@ namespace Org.Apache.Http.Client.Protocol
 		}
 
 		/// <java-name>
-		/// org/apache/http/client/protocol/ClientContext
+		/// org/apache/http/client/protocol/RequestAddCookies
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/protocol/ClientContext", AccessFlags = 1537)]
-		public partial interface IClientContext
+		[Dot42.DexImport("org/apache/http/client/protocol/RequestAddCookies", AccessFlags = 33)]
+		public partial class RequestAddCookies : global::Org.Apache.Http.IHttpRequestInterceptor
  /* scope: __dot42__ */ 
 		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RequestAddCookies() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// process
+				/// </java-name>
+				[Dot42.DexImport("process", "(Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
+				public virtual void Process(global::Org.Apache.Http.IHttpRequest httpRequest, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/client/protocol/RequestDefaultHeaders
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/client/protocol/RequestDefaultHeaders", AccessFlags = 33)]
+		public partial class RequestDefaultHeaders : global::Org.Apache.Http.IHttpRequestInterceptor
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RequestDefaultHeaders() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// process
+				/// </java-name>
+				[Dot42.DexImport("process", "(Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
+				public virtual void Process(global::Org.Apache.Http.IHttpRequest httpRequest, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/client/protocol/RequestProxyAuthentication
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/client/protocol/RequestProxyAuthentication", AccessFlags = 33)]
+		public partial class RequestProxyAuthentication : global::Org.Apache.Http.IHttpRequestInterceptor
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RequestProxyAuthentication() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// process
+				/// </java-name>
+				[Dot42.DexImport("process", "(Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
+				public virtual void Process(global::Org.Apache.Http.IHttpRequest httpRequest, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/client/protocol/RequestTargetAuthentication
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/client/protocol/RequestTargetAuthentication", AccessFlags = 33)]
+		public partial class RequestTargetAuthentication : global::Org.Apache.Http.IHttpRequestInterceptor
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RequestTargetAuthentication() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// process
+				/// </java-name>
+				[Dot42.DexImport("process", "(Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
+				public virtual void Process(global::Org.Apache.Http.IHttpRequest httpRequest, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/client/protocol/ResponseProcessCookies
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/client/protocol/ResponseProcessCookies", AccessFlags = 33)]
+		public partial class ResponseProcessCookies : global::Org.Apache.Http.IHttpResponseInterceptor
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ResponseProcessCookies() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// process
+				/// </java-name>
+				[Dot42.DexImport("process", "(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
+				public virtual void Process(global::Org.Apache.Http.IHttpResponse httpResponse, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ 
+				{
+				}
+
 		}
 
 }

@@ -2,6 +2,144 @@
 namespace Android.Text.Util
 {
 		/// <java-name>
+		/// android/text/util/Linkify
+		/// </java-name>
+		[Dot42.DexImport("android/text/util/Linkify", AccessFlags = 33)]
+		public partial class Linkify
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// WEB_URLS
+				/// </java-name>
+				[Dot42.DexImport("WEB_URLS", "I", AccessFlags = 25)]
+				public const int WEB_URLS = 1;
+				/// <java-name>
+				/// EMAIL_ADDRESSES
+				/// </java-name>
+				[Dot42.DexImport("EMAIL_ADDRESSES", "I", AccessFlags = 25)]
+				public const int EMAIL_ADDRESSES = 2;
+				/// <java-name>
+				/// PHONE_NUMBERS
+				/// </java-name>
+				[Dot42.DexImport("PHONE_NUMBERS", "I", AccessFlags = 25)]
+				public const int PHONE_NUMBERS = 4;
+				/// <java-name>
+				/// MAP_ADDRESSES
+				/// </java-name>
+				[Dot42.DexImport("MAP_ADDRESSES", "I", AccessFlags = 25)]
+				public const int MAP_ADDRESSES = 8;
+				/// <java-name>
+				/// ALL
+				/// </java-name>
+				[Dot42.DexImport("ALL", "I", AccessFlags = 25)]
+				public const int ALL = 15;
+				/// <java-name>
+				/// sUrlMatchFilter
+				/// </java-name>
+				[Dot42.DexImport("sUrlMatchFilter", "Landroid/text/util/Linkify$MatchFilter;", AccessFlags = 25)]
+				public static readonly global::Android.Text.Util.Linkify.IMatchFilter SUrlMatchFilter;
+				/// <java-name>
+				/// sPhoneNumberMatchFilter
+				/// </java-name>
+				[Dot42.DexImport("sPhoneNumberMatchFilter", "Landroid/text/util/Linkify$MatchFilter;", AccessFlags = 25)]
+				public static readonly global::Android.Text.Util.Linkify.IMatchFilter SPhoneNumberMatchFilter;
+				/// <java-name>
+				/// sPhoneNumberTransformFilter
+				/// </java-name>
+				[Dot42.DexImport("sPhoneNumberTransformFilter", "Landroid/text/util/Linkify$TransformFilter;", AccessFlags = 25)]
+				public static readonly global::Android.Text.Util.Linkify.ITransformFilter SPhoneNumberTransformFilter;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Linkify() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addLinks
+				/// </java-name>
+				[Dot42.DexImport("addLinks", "(Landroid/text/Spannable;I)Z", AccessFlags = 25)]
+				public static bool AddLinks(global::Android.Text.ISpannable spannable, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// addLinks
+				/// </java-name>
+				[Dot42.DexImport("addLinks", "(Landroid/widget/TextView;I)Z", AccessFlags = 25)]
+				public static bool AddLinks(global::Android.Widget.TextView textView, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// addLinks
+				/// </java-name>
+				[Dot42.DexImport("addLinks", "(Landroid/widget/TextView;Ljava/util/regex/Pattern;Ljava/lang/String;)V", AccessFlags = 25)]
+				public static void AddLinks(global::Android.Widget.TextView textView, global::Java.Util.Regex.Pattern pattern, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addLinks
+				/// </java-name>
+				[Dot42.DexImport("addLinks", "(Landroid/widget/TextView;Ljava/util/regex/Pattern;Ljava/lang/String;Landroid/tex" +
+    "t/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V", AccessFlags = 25)]
+				public static void AddLinks(global::Android.Widget.TextView textView, global::Java.Util.Regex.Pattern pattern, string @string, global::Android.Text.Util.Linkify.IMatchFilter matchFilter, global::Android.Text.Util.Linkify.ITransformFilter transformFilter) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addLinks
+				/// </java-name>
+				[Dot42.DexImport("addLinks", "(Landroid/text/Spannable;Ljava/util/regex/Pattern;Ljava/lang/String;)Z", AccessFlags = 25)]
+				public static bool AddLinks(global::Android.Text.ISpannable spannable, global::Java.Util.Regex.Pattern pattern, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// addLinks
+				/// </java-name>
+				[Dot42.DexImport("addLinks", "(Landroid/text/Spannable;Ljava/util/regex/Pattern;Ljava/lang/String;Landroid/text" +
+    "/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)Z", AccessFlags = 25)]
+				public static bool AddLinks(global::Android.Text.ISpannable spannable, global::Java.Util.Regex.Pattern pattern, string @string, global::Android.Text.Util.Linkify.IMatchFilter matchFilter, global::Android.Text.Util.Linkify.ITransformFilter transformFilter) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// android/text/util/Linkify$TransformFilter
+				/// </java-name>
+				[Dot42.DexImport("android/text/util/Linkify$TransformFilter", AccessFlags = 1545)]
+				public partial interface ITransformFilter
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// transformUrl
+						/// </java-name>
+						[Dot42.DexImport("transformUrl", "(Ljava/util/regex/Matcher;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
+						string TransformUrl(global::Java.Util.Regex.Matcher matcher, string @string) /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/text/util/Linkify$MatchFilter
+				/// </java-name>
+				[Dot42.DexImport("android/text/util/Linkify$MatchFilter", AccessFlags = 1545)]
+				public partial interface IMatchFilter
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// acceptMatch
+						/// </java-name>
+						[Dot42.DexImport("acceptMatch", "(Ljava/lang/CharSequence;II)Z", AccessFlags = 1025)]
+						bool AcceptMatch(global::Java.Lang.ICharSequence charSequence, int int32, int int321) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
 		/// android/text/util/Rfc822Token
 		/// </java-name>
 		[Dot42.DexImport("android/text/util/Rfc822Token", AccessFlags = 33)]
@@ -154,144 +292,6 @@ namespace Android.Text.Util
 						get{ return GetComment(); }
 				[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
 						set{ SetComment(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/text/util/Linkify
-		/// </java-name>
-		[Dot42.DexImport("android/text/util/Linkify", AccessFlags = 33)]
-		public partial class Linkify
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// WEB_URLS
-				/// </java-name>
-				[Dot42.DexImport("WEB_URLS", "I", AccessFlags = 25)]
-				public const int WEB_URLS = 1;
-				/// <java-name>
-				/// EMAIL_ADDRESSES
-				/// </java-name>
-				[Dot42.DexImport("EMAIL_ADDRESSES", "I", AccessFlags = 25)]
-				public const int EMAIL_ADDRESSES = 2;
-				/// <java-name>
-				/// PHONE_NUMBERS
-				/// </java-name>
-				[Dot42.DexImport("PHONE_NUMBERS", "I", AccessFlags = 25)]
-				public const int PHONE_NUMBERS = 4;
-				/// <java-name>
-				/// MAP_ADDRESSES
-				/// </java-name>
-				[Dot42.DexImport("MAP_ADDRESSES", "I", AccessFlags = 25)]
-				public const int MAP_ADDRESSES = 8;
-				/// <java-name>
-				/// ALL
-				/// </java-name>
-				[Dot42.DexImport("ALL", "I", AccessFlags = 25)]
-				public const int ALL = 15;
-				/// <java-name>
-				/// sUrlMatchFilter
-				/// </java-name>
-				[Dot42.DexImport("sUrlMatchFilter", "Landroid/text/util/Linkify$MatchFilter;", AccessFlags = 25)]
-				public static readonly global::Android.Text.Util.Linkify.IMatchFilter SUrlMatchFilter;
-				/// <java-name>
-				/// sPhoneNumberMatchFilter
-				/// </java-name>
-				[Dot42.DexImport("sPhoneNumberMatchFilter", "Landroid/text/util/Linkify$MatchFilter;", AccessFlags = 25)]
-				public static readonly global::Android.Text.Util.Linkify.IMatchFilter SPhoneNumberMatchFilter;
-				/// <java-name>
-				/// sPhoneNumberTransformFilter
-				/// </java-name>
-				[Dot42.DexImport("sPhoneNumberTransformFilter", "Landroid/text/util/Linkify$TransformFilter;", AccessFlags = 25)]
-				public static readonly global::Android.Text.Util.Linkify.ITransformFilter SPhoneNumberTransformFilter;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Linkify() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addLinks
-				/// </java-name>
-				[Dot42.DexImport("addLinks", "(Landroid/text/Spannable;I)Z", AccessFlags = 25)]
-				public static bool AddLinks(global::Android.Text.ISpannable spannable, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// addLinks
-				/// </java-name>
-				[Dot42.DexImport("addLinks", "(Landroid/widget/TextView;I)Z", AccessFlags = 25)]
-				public static bool AddLinks(global::Android.Widget.TextView textView, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// addLinks
-				/// </java-name>
-				[Dot42.DexImport("addLinks", "(Landroid/widget/TextView;Ljava/util/regex/Pattern;Ljava/lang/String;)V", AccessFlags = 25)]
-				public static void AddLinks(global::Android.Widget.TextView textView, global::Java.Util.Regex.Pattern pattern, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addLinks
-				/// </java-name>
-				[Dot42.DexImport("addLinks", "(Landroid/widget/TextView;Ljava/util/regex/Pattern;Ljava/lang/String;Landroid/tex" +
-    "t/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V", AccessFlags = 25)]
-				public static void AddLinks(global::Android.Widget.TextView textView, global::Java.Util.Regex.Pattern pattern, string @string, global::Android.Text.Util.Linkify.IMatchFilter matchFilter, global::Android.Text.Util.Linkify.ITransformFilter transformFilter) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addLinks
-				/// </java-name>
-				[Dot42.DexImport("addLinks", "(Landroid/text/Spannable;Ljava/util/regex/Pattern;Ljava/lang/String;)Z", AccessFlags = 25)]
-				public static bool AddLinks(global::Android.Text.ISpannable spannable, global::Java.Util.Regex.Pattern pattern, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// addLinks
-				/// </java-name>
-				[Dot42.DexImport("addLinks", "(Landroid/text/Spannable;Ljava/util/regex/Pattern;Ljava/lang/String;Landroid/text" +
-    "/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)Z", AccessFlags = 25)]
-				public static bool AddLinks(global::Android.Text.ISpannable spannable, global::Java.Util.Regex.Pattern pattern, string @string, global::Android.Text.Util.Linkify.IMatchFilter matchFilter, global::Android.Text.Util.Linkify.ITransformFilter transformFilter) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// android/text/util/Linkify$TransformFilter
-				/// </java-name>
-				[Dot42.DexImport("android/text/util/Linkify$TransformFilter", AccessFlags = 1545)]
-				public partial interface ITransformFilter
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// transformUrl
-						/// </java-name>
-						[Dot42.DexImport("transformUrl", "(Ljava/util/regex/Matcher;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
-						string TransformUrl(global::Java.Util.Regex.Matcher matcher, string @string) /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/text/util/Linkify$MatchFilter
-				/// </java-name>
-				[Dot42.DexImport("android/text/util/Linkify$MatchFilter", AccessFlags = 1545)]
-				public partial interface IMatchFilter
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// acceptMatch
-						/// </java-name>
-						[Dot42.DexImport("acceptMatch", "(Ljava/lang/CharSequence;II)Z", AccessFlags = 1025)]
-						bool AcceptMatch(global::Java.Lang.ICharSequence charSequence, int int32, int int321) /* MethodBuilder.Create */ ;
-
 				}
 
 		}

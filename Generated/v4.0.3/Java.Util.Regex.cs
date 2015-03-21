@@ -343,88 +343,6 @@ namespace Java.Util.Regex
 		}
 
 		/// <java-name>
-		/// java/util/regex/PatternSyntaxException
-		/// </java-name>
-		[Dot42.DexImport("java/util/regex/PatternSyntaxException", AccessFlags = 33)]
-		public partial class PatternSyntaxException : global::System.ArgumentException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;I)V", AccessFlags = 1)]
-				public PatternSyntaxException(string @string, string string1, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPattern
-				/// </java-name>
-				[Dot42.DexImport("getPattern", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPattern() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMessage
-				/// </java-name>
-				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMessage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDescription
-				/// </java-name>
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDescription() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-				public virtual int GetIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PatternSyntaxException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPattern
-				/// </java-name>
-				public string Pattern
-				{
-				[Dot42.DexImport("getPattern", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPattern(); }
-				}
-
-				/// <java-name>
-				/// getDescription
-				/// </java-name>
-				public string Description
-				{
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDescription(); }
-				}
-
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				public int Index
-				{
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-						get{ return GetIndex(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// java/util/regex/Pattern
 		/// </java-name>
 		[Dot42.DexImport("java/util/regex/Pattern", AccessFlags = 49)]
@@ -571,6 +489,88 @@ namespace Java.Util.Regex
 				/// </java-name>
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
 				extern ~Pattern() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/util/regex/PatternSyntaxException
+		/// </java-name>
+		[Dot42.DexImport("java/util/regex/PatternSyntaxException", AccessFlags = 33)]
+		public partial class PatternSyntaxException : global::System.ArgumentException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;I)V", AccessFlags = 1)]
+				public PatternSyntaxException(string @string, string string1, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPattern
+				/// </java-name>
+				[Dot42.DexImport("getPattern", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetPattern() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getMessage
+				/// </java-name>
+				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetMessage() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getDescription
+				/// </java-name>
+				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetDescription() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getIndex
+				/// </java-name>
+				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
+				public virtual int GetIndex() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal PatternSyntaxException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPattern
+				/// </java-name>
+				public string Pattern
+				{
+				[Dot42.DexImport("getPattern", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetPattern(); }
+				}
+
+				/// <java-name>
+				/// getDescription
+				/// </java-name>
+				public string Description
+				{
+				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetDescription(); }
+				}
+
+				/// <java-name>
+				/// getIndex
+				/// </java-name>
+				public int Index
+				{
+				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
+						get{ return GetIndex(); }
+				}
 
 		}
 

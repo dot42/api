@@ -2,79 +2,40 @@
 namespace Android.Net.Wifi.P2p
 {
 		/// <java-name>
-		/// android/net/wifi/p2p/WifiP2pGroup
+		/// android/net/wifi/p2p/WifiP2pConfig
 		/// </java-name>
-		[Dot42.DexImport("android/net/wifi/p2p/WifiP2pGroup", AccessFlags = 33)]
-		public partial class WifiP2pGroup : global::Android.Os.IParcelable
+		[Dot42.DexImport("android/net/wifi/p2p/WifiP2pConfig", AccessFlags = 33)]
+		public partial class WifiP2pConfig : global::Android.Os.IParcelable
  /* scope: __dot42__ */ 
 		{
+				/// <java-name>
+				/// deviceAddress
+				/// </java-name>
+				[Dot42.DexImport("deviceAddress", "Ljava/lang/String;", AccessFlags = 1)]
+				public string DeviceAddress;
+				/// <java-name>
+				/// wps
+				/// </java-name>
+				[Dot42.DexImport("wps", "Landroid/net/wifi/WpsInfo;", AccessFlags = 1)]
+				public global::Android.Net.Wifi.WpsInfo Wps;
+				/// <java-name>
+				/// groupOwnerIntent
+				/// </java-name>
+				[Dot42.DexImport("groupOwnerIntent", "I", AccessFlags = 1)]
+				public int GroupOwnerIntent;
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Net.Wifi.P2p.WifiP2pGroup> CREATOR;
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Net.Wifi.P2p.WifiP2pConfig> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public WifiP2pGroup() /* MethodBuilder.Create */ 
+				public WifiP2pConfig() /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Landroid/net/wifi/p2p/WifiP2pGroup;)V", AccessFlags = 1)]
-				public WifiP2pGroup(global::Android.Net.Wifi.P2p.WifiP2pGroup wifiP2pGroup) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Landroid/net/wifi/p2p/WifiP2pConfig;)V", AccessFlags = 1)]
+				public WifiP2pConfig(global::Android.Net.Wifi.P2p.WifiP2pConfig wifiP2pConfig) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getNetworkName
-				/// </java-name>
-				[Dot42.DexImport("getNetworkName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetNetworkName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isGroupOwner
-				/// </java-name>
-				[Dot42.DexImport("isGroupOwner", "()Z", AccessFlags = 1)]
-				public virtual bool IsGroupOwner() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getOwner
-				/// </java-name>
-				[Dot42.DexImport("getOwner", "()Landroid/net/wifi/p2p/WifiP2pDevice;", AccessFlags = 1)]
-				public virtual global::Android.Net.Wifi.P2p.WifiP2pDevice GetOwner() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Wifi.P2p.WifiP2pDevice);
-				}
-
-				/// <java-name>
-				/// getClientList
-				/// </java-name>
-				[Dot42.DexImport("getClientList", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Landroid/net/wifi/p2p/WifiP2pDevice;>;")]
-				public virtual global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice> GetClientList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice>);
-				}
-
-				/// <java-name>
-				/// getPassphrase
-				/// </java-name>
-				[Dot42.DexImport("getPassphrase", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPassphrase() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getInterface
-				/// </java-name>
-				[Dot42.DexImport("getInterface", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetInterface() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -101,51 +62,6 @@ namespace Android.Net.Wifi.P2p
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getNetworkName
-				/// </java-name>
-				public string NetworkName
-				{
-				[Dot42.DexImport("getNetworkName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetNetworkName(); }
-				}
-
-				/// <java-name>
-				/// getOwner
-				/// </java-name>
-				public global::Android.Net.Wifi.P2p.WifiP2pDevice Owner
-				{
-				[Dot42.DexImport("getOwner", "()Landroid/net/wifi/p2p/WifiP2pDevice;", AccessFlags = 1)]
-						get{ return GetOwner(); }
-				}
-
-				/// <java-name>
-				/// getClientList
-				/// </java-name>
-				public global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice> ClientList
-				{
-				[Dot42.DexImport("getClientList", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Landroid/net/wifi/p2p/WifiP2pDevice;>;")]
-						get{ return GetClientList(); }
-				}
-
-				/// <java-name>
-				/// getPassphrase
-				/// </java-name>
-				public string Passphrase
-				{
-				[Dot42.DexImport("getPassphrase", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPassphrase(); }
-				}
-
-				/// <java-name>
-				/// getInterface
-				/// </java-name>
-				public string Interface
-				{
-				[Dot42.DexImport("getInterface", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetInterface(); }
 				}
 
 		}
@@ -300,6 +216,223 @@ namespace Android.Net.Wifi.P2p
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/net/wifi/p2p/WifiP2pDeviceList
+		/// </java-name>
+		[Dot42.DexImport("android/net/wifi/p2p/WifiP2pDeviceList", AccessFlags = 33)]
+		public partial class WifiP2pDeviceList : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Net.Wifi.P2p.WifiP2pDeviceList> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public WifiP2pDeviceList() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/net/wifi/p2p/WifiP2pDeviceList;)V", AccessFlags = 1)]
+				public WifiP2pDeviceList(global::Android.Net.Wifi.P2p.WifiP2pDeviceList wifiP2pDeviceList) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDeviceList
+				/// </java-name>
+				[Dot42.DexImport("getDeviceList", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Landroid/net/wifi/p2p/WifiP2pDevice;>;")]
+				public virtual global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice> GetDeviceList() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice>);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDeviceList
+				/// </java-name>
+				public global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice> DeviceList
+				{
+				[Dot42.DexImport("getDeviceList", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Landroid/net/wifi/p2p/WifiP2pDevice;>;")]
+						get{ return GetDeviceList(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/net/wifi/p2p/WifiP2pGroup
+		/// </java-name>
+		[Dot42.DexImport("android/net/wifi/p2p/WifiP2pGroup", AccessFlags = 33)]
+		public partial class WifiP2pGroup : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Net.Wifi.P2p.WifiP2pGroup> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public WifiP2pGroup() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/net/wifi/p2p/WifiP2pGroup;)V", AccessFlags = 1)]
+				public WifiP2pGroup(global::Android.Net.Wifi.P2p.WifiP2pGroup wifiP2pGroup) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getNetworkName
+				/// </java-name>
+				[Dot42.DexImport("getNetworkName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetNetworkName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// isGroupOwner
+				/// </java-name>
+				[Dot42.DexImport("isGroupOwner", "()Z", AccessFlags = 1)]
+				public virtual bool IsGroupOwner() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getOwner
+				/// </java-name>
+				[Dot42.DexImport("getOwner", "()Landroid/net/wifi/p2p/WifiP2pDevice;", AccessFlags = 1)]
+				public virtual global::Android.Net.Wifi.P2p.WifiP2pDevice GetOwner() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Net.Wifi.P2p.WifiP2pDevice);
+				}
+
+				/// <java-name>
+				/// getClientList
+				/// </java-name>
+				[Dot42.DexImport("getClientList", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Landroid/net/wifi/p2p/WifiP2pDevice;>;")]
+				public virtual global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice> GetClientList() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice>);
+				}
+
+				/// <java-name>
+				/// getPassphrase
+				/// </java-name>
+				[Dot42.DexImport("getPassphrase", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetPassphrase() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getInterface
+				/// </java-name>
+				[Dot42.DexImport("getInterface", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetInterface() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getNetworkName
+				/// </java-name>
+				public string NetworkName
+				{
+				[Dot42.DexImport("getNetworkName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetNetworkName(); }
+				}
+
+				/// <java-name>
+				/// getOwner
+				/// </java-name>
+				public global::Android.Net.Wifi.P2p.WifiP2pDevice Owner
+				{
+				[Dot42.DexImport("getOwner", "()Landroid/net/wifi/p2p/WifiP2pDevice;", AccessFlags = 1)]
+						get{ return GetOwner(); }
+				}
+
+				/// <java-name>
+				/// getClientList
+				/// </java-name>
+				public global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice> ClientList
+				{
+				[Dot42.DexImport("getClientList", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Landroid/net/wifi/p2p/WifiP2pDevice;>;")]
+						get{ return GetClientList(); }
+				}
+
+				/// <java-name>
+				/// getPassphrase
+				/// </java-name>
+				public string Passphrase
+				{
+				[Dot42.DexImport("getPassphrase", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetPassphrase(); }
+				}
+
+				/// <java-name>
+				/// getInterface
+				/// </java-name>
+				public string Interface
+				{
+				[Dot42.DexImport("getInterface", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetInterface(); }
 				}
 
 		}
@@ -621,139 +754,6 @@ namespace Android.Net.Wifi.P2p
 						[Dot42.DexImport("onChannelDisconnected", "()V", AccessFlags = 1025)]
 						void OnChannelDisconnected() /* MethodBuilder.Create */ ;
 
-				}
-
-		}
-
-		/// <java-name>
-		/// android/net/wifi/p2p/WifiP2pConfig
-		/// </java-name>
-		[Dot42.DexImport("android/net/wifi/p2p/WifiP2pConfig", AccessFlags = 33)]
-		public partial class WifiP2pConfig : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// deviceAddress
-				/// </java-name>
-				[Dot42.DexImport("deviceAddress", "Ljava/lang/String;", AccessFlags = 1)]
-				public string DeviceAddress;
-				/// <java-name>
-				/// wps
-				/// </java-name>
-				[Dot42.DexImport("wps", "Landroid/net/wifi/WpsInfo;", AccessFlags = 1)]
-				public global::Android.Net.Wifi.WpsInfo Wps;
-				/// <java-name>
-				/// groupOwnerIntent
-				/// </java-name>
-				[Dot42.DexImport("groupOwnerIntent", "I", AccessFlags = 1)]
-				public int GroupOwnerIntent;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Net.Wifi.P2p.WifiP2pConfig> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public WifiP2pConfig() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/net/wifi/p2p/WifiP2pConfig;)V", AccessFlags = 1)]
-				public WifiP2pConfig(global::Android.Net.Wifi.P2p.WifiP2pConfig wifiP2pConfig) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/net/wifi/p2p/WifiP2pDeviceList
-		/// </java-name>
-		[Dot42.DexImport("android/net/wifi/p2p/WifiP2pDeviceList", AccessFlags = 33)]
-		public partial class WifiP2pDeviceList : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Net.Wifi.P2p.WifiP2pDeviceList> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public WifiP2pDeviceList() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/net/wifi/p2p/WifiP2pDeviceList;)V", AccessFlags = 1)]
-				public WifiP2pDeviceList(global::Android.Net.Wifi.P2p.WifiP2pDeviceList wifiP2pDeviceList) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDeviceList
-				/// </java-name>
-				[Dot42.DexImport("getDeviceList", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Landroid/net/wifi/p2p/WifiP2pDevice;>;")]
-				public virtual global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice> GetDeviceList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice>);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDeviceList
-				/// </java-name>
-				public global::Java.Util.ICollection<global::Android.Net.Wifi.P2p.WifiP2pDevice> DeviceList
-				{
-				[Dot42.DexImport("getDeviceList", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Landroid/net/wifi/p2p/WifiP2pDevice;>;")]
-						get{ return GetDeviceList(); }
 				}
 
 		}

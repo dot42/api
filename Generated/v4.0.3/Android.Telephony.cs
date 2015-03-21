@@ -2,271 +2,146 @@
 namespace Android.Telephony
 {
 		/// <java-name>
-		/// android/telephony/SmsManager
+		/// android/telephony/CellLocation
 		/// </java-name>
-		[Dot42.DexImport("android/telephony/SmsManager", AccessFlags = 49)]
-		public sealed partial class SmsManager
+		[Dot42.DexImport("android/telephony/CellLocation", AccessFlags = 1057)]
+		public abstract partial class CellLocation
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// STATUS_ON_ICC_FREE
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_ICC_FREE", "I", AccessFlags = 25)]
-				public const int STATUS_ON_ICC_FREE = 0;
-				/// <java-name>
-				/// STATUS_ON_ICC_READ
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_ICC_READ", "I", AccessFlags = 25)]
-				public const int STATUS_ON_ICC_READ = 1;
-				/// <java-name>
-				/// STATUS_ON_ICC_UNREAD
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_ICC_UNREAD", "I", AccessFlags = 25)]
-				public const int STATUS_ON_ICC_UNREAD = 3;
-				/// <java-name>
-				/// STATUS_ON_ICC_SENT
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_ICC_SENT", "I", AccessFlags = 25)]
-				public const int STATUS_ON_ICC_SENT = 5;
-				/// <java-name>
-				/// STATUS_ON_ICC_UNSENT
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_ICC_UNSENT", "I", AccessFlags = 25)]
-				public const int STATUS_ON_ICC_UNSENT = 7;
-				/// <java-name>
-				/// RESULT_ERROR_GENERIC_FAILURE
-				/// </java-name>
-				[Dot42.DexImport("RESULT_ERROR_GENERIC_FAILURE", "I", AccessFlags = 25)]
-				public const int RESULT_ERROR_GENERIC_FAILURE = 1;
-				/// <java-name>
-				/// RESULT_ERROR_RADIO_OFF
-				/// </java-name>
-				[Dot42.DexImport("RESULT_ERROR_RADIO_OFF", "I", AccessFlags = 25)]
-				public const int RESULT_ERROR_RADIO_OFF = 2;
-				/// <java-name>
-				/// RESULT_ERROR_NULL_PDU
-				/// </java-name>
-				[Dot42.DexImport("RESULT_ERROR_NULL_PDU", "I", AccessFlags = 25)]
-				public const int RESULT_ERROR_NULL_PDU = 3;
-				/// <java-name>
-				/// RESULT_ERROR_NO_SERVICE
-				/// </java-name>
-				[Dot42.DexImport("RESULT_ERROR_NO_SERVICE", "I", AccessFlags = 25)]
-				public const int RESULT_ERROR_NO_SERVICE = 4;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SmsManager() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public CellLocation() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// sendTextMessage
+				/// requestLocationUpdate
 				/// </java-name>
-				[Dot42.DexImport("sendTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent" +
-    ";Landroid/app/PendingIntent;)V", AccessFlags = 1)]
-				public void SendTextMessage(string @string, string string1, string string2, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("requestLocationUpdate", "()V", AccessFlags = 9)]
+				public static void RequestLocationUpdate() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// divideMessage
+				/// getEmpty
 				/// </java-name>
-				[Dot42.DexImport("divideMessage", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;")]
-				public global::Java.Util.ArrayList<string> DivideMessage(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getEmpty", "()Landroid/telephony/CellLocation;", AccessFlags = 9)]
+				public static global::Android.Telephony.CellLocation GetEmpty() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.ArrayList<string>);
+						return default(global::Android.Telephony.CellLocation);
 				}
 
 				/// <java-name>
-				/// sendMultipartTextMessage
+				/// getEmpty
 				/// </java-name>
-				[Dot42.DexImport("sendMultipartTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Lj" +
-    "ava/util/ArrayList;)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;Lja" +
-    "va/util/ArrayList<Landroid/app/PendingIntent;>;Ljava/util/ArrayList<Landroid/app" +
-    "/PendingIntent;>;)V")]
-				public void SendMultipartTextMessage(string @string, string string1, global::Java.Util.ArrayList<string> arrayList, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList1, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList2) /* MethodBuilder.Create */ 
+				public static global::Android.Telephony.CellLocation Empty
 				{
-				}
-
-				/// <java-name>
-				/// sendDataMessage
-				/// </java-name>
-				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
-    "endingIntent;)V", AccessFlags = 1)]
-				public void SendDataMessage(string @string, string string1, short int16, sbyte[] sByte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendDataMessage
-				/// </java-name>
-				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
-    "endingIntent;)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public void SendDataMessage(string @string, string string1, short int16, byte[] @byte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Landroid/telephony/SmsManager;", AccessFlags = 9)]
-				public static global::Android.Telephony.SmsManager GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Telephony.SmsManager);
-				}
-
-				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				public static global::Android.Telephony.SmsManager Default
-				{
-				[Dot42.DexImport("getDefault", "()Landroid/telephony/SmsManager;", AccessFlags = 9)]
-						get{ return GetDefault(); }
+				[Dot42.DexImport("getEmpty", "()Landroid/telephony/CellLocation;", AccessFlags = 9)]
+						get{ return GetEmpty(); }
 				}
 
 		}
 
 		/// <java-name>
-		/// android/telephony/ServiceState
+		/// android/telephony/NeighboringCellInfo
 		/// </java-name>
-		[Dot42.DexImport("android/telephony/ServiceState", AccessFlags = 33)]
-		public partial class ServiceState : global::Android.Os.IParcelable
+		[Dot42.DexImport("android/telephony/NeighboringCellInfo", AccessFlags = 33)]
+		public partial class NeighboringCellInfo : global::Android.Os.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// STATE_IN_SERVICE
+				/// UNKNOWN_RSSI
 				/// </java-name>
-				[Dot42.DexImport("STATE_IN_SERVICE", "I", AccessFlags = 25)]
-				public const int STATE_IN_SERVICE = 0;
+				[Dot42.DexImport("UNKNOWN_RSSI", "I", AccessFlags = 25)]
+				public const int UNKNOWN_RSSI = 99;
 				/// <java-name>
-				/// STATE_OUT_OF_SERVICE
+				/// UNKNOWN_CID
 				/// </java-name>
-				[Dot42.DexImport("STATE_OUT_OF_SERVICE", "I", AccessFlags = 25)]
-				public const int STATE_OUT_OF_SERVICE = 1;
-				/// <java-name>
-				/// STATE_EMERGENCY_ONLY
-				/// </java-name>
-				[Dot42.DexImport("STATE_EMERGENCY_ONLY", "I", AccessFlags = 25)]
-				public const int STATE_EMERGENCY_ONLY = 2;
-				/// <java-name>
-				/// STATE_POWER_OFF
-				/// </java-name>
-				[Dot42.DexImport("STATE_POWER_OFF", "I", AccessFlags = 25)]
-				public const int STATE_POWER_OFF = 3;
+				[Dot42.DexImport("UNKNOWN_CID", "I", AccessFlags = 25)]
+				public const int UNKNOWN_CID = -1;
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Telephony.ServiceState> CREATOR;
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Telephony.NeighboringCellInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ServiceState() /* MethodBuilder.Create */ 
+				public NeighboringCellInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Landroid/telephony/ServiceState;)V", AccessFlags = 1)]
-				public ServiceState(global::Android.Telephony.ServiceState serviceState) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
+				public NeighboringCellInfo(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(ILjava/lang/String;I)V", AccessFlags = 1)]
+				public NeighboringCellInfo(int int32, string @string, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public ServiceState(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public NeighboringCellInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// copyFrom
+				/// getRssi
 				/// </java-name>
-				[Dot42.DexImport("copyFrom", "(Landroid/telephony/ServiceState;)V", AccessFlags = 4)]
-				protected internal virtual void CopyFrom(global::Android.Telephony.ServiceState serviceState) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getRssi", "()I", AccessFlags = 1)]
+				public virtual int GetRssi() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// getState
+				/// getLac
 				/// </java-name>
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-				public virtual int GetState() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getLac", "()I", AccessFlags = 1)]
+				public virtual int GetLac() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// getRoaming
+				/// getCid
 				/// </java-name>
-				[Dot42.DexImport("getRoaming", "()Z", AccessFlags = 1)]
-				public virtual bool GetRoaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getOperatorAlphaLong
-				/// </java-name>
-				[Dot42.DexImport("getOperatorAlphaLong", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetOperatorAlphaLong() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getOperatorAlphaShort
-				/// </java-name>
-				[Dot42.DexImport("getOperatorAlphaShort", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetOperatorAlphaShort() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getOperatorNumeric
-				/// </java-name>
-				[Dot42.DexImport("getOperatorNumeric", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetOperatorNumeric() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getIsManualSelection
-				/// </java-name>
-				[Dot42.DexImport("getIsManualSelection", "()Z", AccessFlags = 1)]
-				public virtual bool GetIsManualSelection() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getCid", "()I", AccessFlags = 1)]
+				public virtual int GetCid() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// equals
+				/// getPsc
 				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getPsc", "()I", AccessFlags = 1)]
+				public virtual int GetPsc() /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getNetworkType
+				/// </java-name>
+				[Dot42.DexImport("getNetworkType", "()I", AccessFlags = 1)]
+				public virtual int GetNetworkType() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setCid
+				/// </java-name>
+				[Dot42.DexImport("setCid", "(I)V", AccessFlags = 1)]
+				public virtual void SetCid(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setRssi
+				/// </java-name>
+				[Dot42.DexImport("setRssi", "(I)V", AccessFlags = 1)]
+				public virtual void SetRssi(int int32) /* MethodBuilder.Create */ 
+				{
 				}
 
 				/// <java-name>
@@ -279,254 +154,106 @@ namespace Android.Telephony
 				}
 
 				/// <java-name>
-				/// setStateOutOfService
+				/// describeContents
 				/// </java-name>
-				[Dot42.DexImport("setStateOutOfService", "()V", AccessFlags = 1)]
-				public virtual void SetStateOutOfService() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// setStateOff
+				/// getRssi
 				/// </java-name>
-				[Dot42.DexImport("setStateOff", "()V", AccessFlags = 1)]
-				public virtual void SetStateOff() /* MethodBuilder.Create */ 
+				public int Rssi
 				{
+				[Dot42.DexImport("getRssi", "()I", AccessFlags = 1)]
+						get{ return GetRssi(); }
+				[Dot42.DexImport("setRssi", "(I)V", AccessFlags = 1)]
+						set{ SetRssi(value); }
 				}
 
 				/// <java-name>
-				/// setState
+				/// getLac
 				/// </java-name>
-				[Dot42.DexImport("setState", "(I)V", AccessFlags = 1)]
-				public virtual void SetState(int int32) /* MethodBuilder.Create */ 
+				public int Lac
 				{
+				[Dot42.DexImport("getLac", "()I", AccessFlags = 1)]
+						get{ return GetLac(); }
 				}
 
 				/// <java-name>
-				/// setRoaming
+				/// getCid
 				/// </java-name>
-				[Dot42.DexImport("setRoaming", "(Z)V", AccessFlags = 1)]
-				public virtual void SetRoaming(bool boolean) /* MethodBuilder.Create */ 
+				public int Cid
 				{
+				[Dot42.DexImport("getCid", "()I", AccessFlags = 1)]
+						get{ return GetCid(); }
+				[Dot42.DexImport("setCid", "(I)V", AccessFlags = 1)]
+						set{ SetCid(value); }
 				}
 
 				/// <java-name>
-				/// setOperatorName
+				/// getPsc
 				/// </java-name>
-				[Dot42.DexImport("setOperatorName", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetOperatorName(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				public int Psc
 				{
+				[Dot42.DexImport("getPsc", "()I", AccessFlags = 1)]
+						get{ return GetPsc(); }
 				}
 
 				/// <java-name>
-				/// setIsManualSelection
+				/// getNetworkType
 				/// </java-name>
-				[Dot42.DexImport("setIsManualSelection", "(Z)V", AccessFlags = 1)]
-				public virtual void SetIsManualSelection(bool boolean) /* MethodBuilder.Create */ 
+				public int NetworkType
 				{
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				public int State
-				{
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-						get{ return GetState(); }
-				[Dot42.DexImport("setState", "(I)V", AccessFlags = 1)]
-						set{ SetState(value); }
-				}
-
-				/// <java-name>
-				/// getRoaming
-				/// </java-name>
-				public bool IsRoaming
-				{
-				[Dot42.DexImport("getRoaming", "()Z", AccessFlags = 1)]
-						get{ return GetRoaming(); }
-				[Dot42.DexImport("setRoaming", "(Z)V", AccessFlags = 1)]
-						set{ SetRoaming(value); }
-				}
-
-				/// <java-name>
-				/// getOperatorAlphaLong
-				/// </java-name>
-				public string OperatorAlphaLong
-				{
-				[Dot42.DexImport("getOperatorAlphaLong", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetOperatorAlphaLong(); }
-				}
-
-				/// <java-name>
-				/// getOperatorAlphaShort
-				/// </java-name>
-				public string OperatorAlphaShort
-				{
-				[Dot42.DexImport("getOperatorAlphaShort", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetOperatorAlphaShort(); }
-				}
-
-				/// <java-name>
-				/// getOperatorNumeric
-				/// </java-name>
-				public string OperatorNumeric
-				{
-				[Dot42.DexImport("getOperatorNumeric", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetOperatorNumeric(); }
-				}
-
-				/// <java-name>
-				/// getIsManualSelection
-				/// </java-name>
-				public bool IsManualSelection
-				{
-				[Dot42.DexImport("getIsManualSelection", "()Z", AccessFlags = 1)]
-						get{ return GetIsManualSelection(); }
-				[Dot42.DexImport("setIsManualSelection", "(Z)V", AccessFlags = 1)]
-						set{ SetIsManualSelection(value); }
+				[Dot42.DexImport("getNetworkType", "()I", AccessFlags = 1)]
+						get{ return GetNetworkType(); }
 				}
 
 		}
 
 		/// <java-name>
-		/// android/telephony/PhoneStateListener
+		/// android/telephony/PhoneNumberFormattingTextWatcher
 		/// </java-name>
-		[Dot42.DexImport("android/telephony/PhoneStateListener", AccessFlags = 33)]
-		public partial class PhoneStateListener
+		[Dot42.DexImport("android/telephony/PhoneNumberFormattingTextWatcher", AccessFlags = 33)]
+		public partial class PhoneNumberFormattingTextWatcher : global::Android.Text.ITextWatcher
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// LISTEN_NONE
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_NONE", "I", AccessFlags = 25)]
-				public const int LISTEN_NONE = 0;
-				/// <java-name>
-				/// LISTEN_SERVICE_STATE
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_SERVICE_STATE", "I", AccessFlags = 25)]
-				public const int LISTEN_SERVICE_STATE = 1;
-				/// <java-name>
-				/// LISTEN_SIGNAL_STRENGTH
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_SIGNAL_STRENGTH", "I", AccessFlags = 25)]
-				public const int LISTEN_SIGNAL_STRENGTH = 2;
-				/// <java-name>
-				/// LISTEN_MESSAGE_WAITING_INDICATOR
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_MESSAGE_WAITING_INDICATOR", "I", AccessFlags = 25)]
-				public const int LISTEN_MESSAGE_WAITING_INDICATOR = 4;
-				/// <java-name>
-				/// LISTEN_CALL_FORWARDING_INDICATOR
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_CALL_FORWARDING_INDICATOR", "I", AccessFlags = 25)]
-				public const int LISTEN_CALL_FORWARDING_INDICATOR = 8;
-				/// <java-name>
-				/// LISTEN_CELL_LOCATION
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_CELL_LOCATION", "I", AccessFlags = 25)]
-				public const int LISTEN_CELL_LOCATION = 16;
-				/// <java-name>
-				/// LISTEN_CALL_STATE
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_CALL_STATE", "I", AccessFlags = 25)]
-				public const int LISTEN_CALL_STATE = 32;
-				/// <java-name>
-				/// LISTEN_DATA_CONNECTION_STATE
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_DATA_CONNECTION_STATE", "I", AccessFlags = 25)]
-				public const int LISTEN_DATA_CONNECTION_STATE = 64;
-				/// <java-name>
-				/// LISTEN_DATA_ACTIVITY
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_DATA_ACTIVITY", "I", AccessFlags = 25)]
-				public const int LISTEN_DATA_ACTIVITY = 128;
-				/// <java-name>
-				/// LISTEN_SIGNAL_STRENGTHS
-				/// </java-name>
-				[Dot42.DexImport("LISTEN_SIGNAL_STRENGTHS", "I", AccessFlags = 25)]
-				public const int LISTEN_SIGNAL_STRENGTHS = 256;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public PhoneStateListener() /* MethodBuilder.Create */ 
+				public PhoneNumberFormattingTextWatcher() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// onServiceStateChanged
+				/// beforeTextChanged
 				/// </java-name>
-				[Dot42.DexImport("onServiceStateChanged", "(Landroid/telephony/ServiceState;)V", AccessFlags = 1)]
-				public virtual void OnServiceStateChanged(global::Android.Telephony.ServiceState serviceState) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("beforeTextChanged", "(Ljava/lang/CharSequence;III)V", AccessFlags = 1)]
+				public virtual void BeforeTextChanged(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// onSignalStrengthChanged
+				/// onTextChanged
 				/// </java-name>
-				[Dot42.DexImport("onSignalStrengthChanged", "(I)V", AccessFlags = 1)]
-				public virtual void OnSignalStrengthChanged(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onTextChanged", "(Ljava/lang/CharSequence;III)V", AccessFlags = 1)]
+				public virtual void OnTextChanged(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// onMessageWaitingIndicatorChanged
+				/// afterTextChanged
 				/// </java-name>
-				[Dot42.DexImport("onMessageWaitingIndicatorChanged", "(Z)V", AccessFlags = 1)]
-				public virtual void OnMessageWaitingIndicatorChanged(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCallForwardingIndicatorChanged
-				/// </java-name>
-				[Dot42.DexImport("onCallForwardingIndicatorChanged", "(Z)V", AccessFlags = 1)]
-				public virtual void OnCallForwardingIndicatorChanged(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCellLocationChanged
-				/// </java-name>
-				[Dot42.DexImport("onCellLocationChanged", "(Landroid/telephony/CellLocation;)V", AccessFlags = 1)]
-				public virtual void OnCellLocationChanged(global::Android.Telephony.CellLocation cellLocation) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCallStateChanged
-				/// </java-name>
-				[Dot42.DexImport("onCallStateChanged", "(ILjava/lang/String;)V", AccessFlags = 1)]
-				public virtual void OnCallStateChanged(int int32, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDataConnectionStateChanged
-				/// </java-name>
-				[Dot42.DexImport("onDataConnectionStateChanged", "(I)V", AccessFlags = 1)]
-				public virtual void OnDataConnectionStateChanged(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDataConnectionStateChanged
-				/// </java-name>
-				[Dot42.DexImport("onDataConnectionStateChanged", "(II)V", AccessFlags = 1)]
-				public virtual void OnDataConnectionStateChanged(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDataActivity
-				/// </java-name>
-				[Dot42.DexImport("onDataActivity", "(I)V", AccessFlags = 1)]
-				public virtual void OnDataActivity(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onSignalStrengthsChanged
-				/// </java-name>
-				[Dot42.DexImport("onSignalStrengthsChanged", "(Landroid/telephony/SignalStrength;)V", AccessFlags = 1)]
-				public virtual void OnSignalStrengthsChanged(global::Android.Telephony.SignalStrength signalStrength) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("afterTextChanged", "(Landroid/text/Editable;)V", AccessFlags = 33)]
+				public virtual void AfterTextChanged(global::Android.Text.IEditable editable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -899,41 +626,1348 @@ namespace Android.Telephony
 		}
 
 		/// <java-name>
-		/// android/telephony/CellLocation
+		/// android/telephony/PhoneStateListener
 		/// </java-name>
-		[Dot42.DexImport("android/telephony/CellLocation", AccessFlags = 1057)]
-		public abstract partial class CellLocation
+		[Dot42.DexImport("android/telephony/PhoneStateListener", AccessFlags = 33)]
+		public partial class PhoneStateListener
  /* scope: __dot42__ */ 
 		{
+				/// <java-name>
+				/// LISTEN_NONE
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_NONE", "I", AccessFlags = 25)]
+				public const int LISTEN_NONE = 0;
+				/// <java-name>
+				/// LISTEN_SERVICE_STATE
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_SERVICE_STATE", "I", AccessFlags = 25)]
+				public const int LISTEN_SERVICE_STATE = 1;
+				/// <java-name>
+				/// LISTEN_SIGNAL_STRENGTH
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_SIGNAL_STRENGTH", "I", AccessFlags = 25)]
+				public const int LISTEN_SIGNAL_STRENGTH = 2;
+				/// <java-name>
+				/// LISTEN_MESSAGE_WAITING_INDICATOR
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_MESSAGE_WAITING_INDICATOR", "I", AccessFlags = 25)]
+				public const int LISTEN_MESSAGE_WAITING_INDICATOR = 4;
+				/// <java-name>
+				/// LISTEN_CALL_FORWARDING_INDICATOR
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_CALL_FORWARDING_INDICATOR", "I", AccessFlags = 25)]
+				public const int LISTEN_CALL_FORWARDING_INDICATOR = 8;
+				/// <java-name>
+				/// LISTEN_CELL_LOCATION
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_CELL_LOCATION", "I", AccessFlags = 25)]
+				public const int LISTEN_CELL_LOCATION = 16;
+				/// <java-name>
+				/// LISTEN_CALL_STATE
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_CALL_STATE", "I", AccessFlags = 25)]
+				public const int LISTEN_CALL_STATE = 32;
+				/// <java-name>
+				/// LISTEN_DATA_CONNECTION_STATE
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_DATA_CONNECTION_STATE", "I", AccessFlags = 25)]
+				public const int LISTEN_DATA_CONNECTION_STATE = 64;
+				/// <java-name>
+				/// LISTEN_DATA_ACTIVITY
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_DATA_ACTIVITY", "I", AccessFlags = 25)]
+				public const int LISTEN_DATA_ACTIVITY = 128;
+				/// <java-name>
+				/// LISTEN_SIGNAL_STRENGTHS
+				/// </java-name>
+				[Dot42.DexImport("LISTEN_SIGNAL_STRENGTHS", "I", AccessFlags = 25)]
+				public const int LISTEN_SIGNAL_STRENGTHS = 256;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public CellLocation() /* MethodBuilder.Create */ 
+				public PhoneStateListener() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// requestLocationUpdate
+				/// onServiceStateChanged
 				/// </java-name>
-				[Dot42.DexImport("requestLocationUpdate", "()V", AccessFlags = 9)]
-				public static void RequestLocationUpdate() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onServiceStateChanged", "(Landroid/telephony/ServiceState;)V", AccessFlags = 1)]
+				public virtual void OnServiceStateChanged(global::Android.Telephony.ServiceState serviceState) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getEmpty
+				/// onSignalStrengthChanged
 				/// </java-name>
-				[Dot42.DexImport("getEmpty", "()Landroid/telephony/CellLocation;", AccessFlags = 9)]
-				public static global::Android.Telephony.CellLocation GetEmpty() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onSignalStrengthChanged", "(I)V", AccessFlags = 1)]
+				public virtual void OnSignalStrengthChanged(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Telephony.CellLocation);
 				}
 
 				/// <java-name>
-				/// getEmpty
+				/// onMessageWaitingIndicatorChanged
 				/// </java-name>
-				public static global::Android.Telephony.CellLocation Empty
+				[Dot42.DexImport("onMessageWaitingIndicatorChanged", "(Z)V", AccessFlags = 1)]
+				public virtual void OnMessageWaitingIndicatorChanged(bool boolean) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getEmpty", "()Landroid/telephony/CellLocation;", AccessFlags = 9)]
-						get{ return GetEmpty(); }
+				}
+
+				/// <java-name>
+				/// onCallForwardingIndicatorChanged
+				/// </java-name>
+				[Dot42.DexImport("onCallForwardingIndicatorChanged", "(Z)V", AccessFlags = 1)]
+				public virtual void OnCallForwardingIndicatorChanged(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCellLocationChanged
+				/// </java-name>
+				[Dot42.DexImport("onCellLocationChanged", "(Landroid/telephony/CellLocation;)V", AccessFlags = 1)]
+				public virtual void OnCellLocationChanged(global::Android.Telephony.CellLocation cellLocation) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCallStateChanged
+				/// </java-name>
+				[Dot42.DexImport("onCallStateChanged", "(ILjava/lang/String;)V", AccessFlags = 1)]
+				public virtual void OnCallStateChanged(int int32, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDataConnectionStateChanged
+				/// </java-name>
+				[Dot42.DexImport("onDataConnectionStateChanged", "(I)V", AccessFlags = 1)]
+				public virtual void OnDataConnectionStateChanged(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDataConnectionStateChanged
+				/// </java-name>
+				[Dot42.DexImport("onDataConnectionStateChanged", "(II)V", AccessFlags = 1)]
+				public virtual void OnDataConnectionStateChanged(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDataActivity
+				/// </java-name>
+				[Dot42.DexImport("onDataActivity", "(I)V", AccessFlags = 1)]
+				public virtual void OnDataActivity(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onSignalStrengthsChanged
+				/// </java-name>
+				[Dot42.DexImport("onSignalStrengthsChanged", "(Landroid/telephony/SignalStrength;)V", AccessFlags = 1)]
+				public virtual void OnSignalStrengthsChanged(global::Android.Telephony.SignalStrength signalStrength) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/telephony/ServiceState
+		/// </java-name>
+		[Dot42.DexImport("android/telephony/ServiceState", AccessFlags = 33)]
+		public partial class ServiceState : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// STATE_IN_SERVICE
+				/// </java-name>
+				[Dot42.DexImport("STATE_IN_SERVICE", "I", AccessFlags = 25)]
+				public const int STATE_IN_SERVICE = 0;
+				/// <java-name>
+				/// STATE_OUT_OF_SERVICE
+				/// </java-name>
+				[Dot42.DexImport("STATE_OUT_OF_SERVICE", "I", AccessFlags = 25)]
+				public const int STATE_OUT_OF_SERVICE = 1;
+				/// <java-name>
+				/// STATE_EMERGENCY_ONLY
+				/// </java-name>
+				[Dot42.DexImport("STATE_EMERGENCY_ONLY", "I", AccessFlags = 25)]
+				public const int STATE_EMERGENCY_ONLY = 2;
+				/// <java-name>
+				/// STATE_POWER_OFF
+				/// </java-name>
+				[Dot42.DexImport("STATE_POWER_OFF", "I", AccessFlags = 25)]
+				public const int STATE_POWER_OFF = 3;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Telephony.ServiceState> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ServiceState() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/telephony/ServiceState;)V", AccessFlags = 1)]
+				public ServiceState(global::Android.Telephony.ServiceState serviceState) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
+				public ServiceState(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// copyFrom
+				/// </java-name>
+				[Dot42.DexImport("copyFrom", "(Landroid/telephony/ServiceState;)V", AccessFlags = 4)]
+				protected internal virtual void CopyFrom(global::Android.Telephony.ServiceState serviceState) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getState
+				/// </java-name>
+				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
+				public virtual int GetState() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getRoaming
+				/// </java-name>
+				[Dot42.DexImport("getRoaming", "()Z", AccessFlags = 1)]
+				public virtual bool GetRoaming() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getOperatorAlphaLong
+				/// </java-name>
+				[Dot42.DexImport("getOperatorAlphaLong", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetOperatorAlphaLong() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getOperatorAlphaShort
+				/// </java-name>
+				[Dot42.DexImport("getOperatorAlphaShort", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetOperatorAlphaShort() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getOperatorNumeric
+				/// </java-name>
+				[Dot42.DexImport("getOperatorNumeric", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetOperatorNumeric() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getIsManualSelection
+				/// </java-name>
+				[Dot42.DexImport("getIsManualSelection", "()Z", AccessFlags = 1)]
+				public virtual bool GetIsManualSelection() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// setStateOutOfService
+				/// </java-name>
+				[Dot42.DexImport("setStateOutOfService", "()V", AccessFlags = 1)]
+				public virtual void SetStateOutOfService() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setStateOff
+				/// </java-name>
+				[Dot42.DexImport("setStateOff", "()V", AccessFlags = 1)]
+				public virtual void SetStateOff() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setState
+				/// </java-name>
+				[Dot42.DexImport("setState", "(I)V", AccessFlags = 1)]
+				public virtual void SetState(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setRoaming
+				/// </java-name>
+				[Dot42.DexImport("setRoaming", "(Z)V", AccessFlags = 1)]
+				public virtual void SetRoaming(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setOperatorName
+				/// </java-name>
+				[Dot42.DexImport("setOperatorName", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void SetOperatorName(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setIsManualSelection
+				/// </java-name>
+				[Dot42.DexImport("setIsManualSelection", "(Z)V", AccessFlags = 1)]
+				public virtual void SetIsManualSelection(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getState
+				/// </java-name>
+				public int State
+				{
+				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
+						get{ return GetState(); }
+				[Dot42.DexImport("setState", "(I)V", AccessFlags = 1)]
+						set{ SetState(value); }
+				}
+
+				/// <java-name>
+				/// getRoaming
+				/// </java-name>
+				public bool IsRoaming
+				{
+				[Dot42.DexImport("getRoaming", "()Z", AccessFlags = 1)]
+						get{ return GetRoaming(); }
+				[Dot42.DexImport("setRoaming", "(Z)V", AccessFlags = 1)]
+						set{ SetRoaming(value); }
+				}
+
+				/// <java-name>
+				/// getOperatorAlphaLong
+				/// </java-name>
+				public string OperatorAlphaLong
+				{
+				[Dot42.DexImport("getOperatorAlphaLong", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetOperatorAlphaLong(); }
+				}
+
+				/// <java-name>
+				/// getOperatorAlphaShort
+				/// </java-name>
+				public string OperatorAlphaShort
+				{
+				[Dot42.DexImport("getOperatorAlphaShort", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetOperatorAlphaShort(); }
+				}
+
+				/// <java-name>
+				/// getOperatorNumeric
+				/// </java-name>
+				public string OperatorNumeric
+				{
+				[Dot42.DexImport("getOperatorNumeric", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetOperatorNumeric(); }
+				}
+
+				/// <java-name>
+				/// getIsManualSelection
+				/// </java-name>
+				public bool IsManualSelection
+				{
+				[Dot42.DexImport("getIsManualSelection", "()Z", AccessFlags = 1)]
+						get{ return GetIsManualSelection(); }
+				[Dot42.DexImport("setIsManualSelection", "(Z)V", AccessFlags = 1)]
+						set{ SetIsManualSelection(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/telephony/SignalStrength
+		/// </java-name>
+		[Dot42.DexImport("android/telephony/SignalStrength", AccessFlags = 33)]
+		public partial class SignalStrength : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal SignalStrength() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getGsmSignalStrength
+				/// </java-name>
+				[Dot42.DexImport("getGsmSignalStrength", "()I", AccessFlags = 1)]
+				public virtual int GetGsmSignalStrength() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getGsmBitErrorRate
+				/// </java-name>
+				[Dot42.DexImport("getGsmBitErrorRate", "()I", AccessFlags = 1)]
+				public virtual int GetGsmBitErrorRate() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getCdmaDbm
+				/// </java-name>
+				[Dot42.DexImport("getCdmaDbm", "()I", AccessFlags = 1)]
+				public virtual int GetCdmaDbm() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getCdmaEcio
+				/// </java-name>
+				[Dot42.DexImport("getCdmaEcio", "()I", AccessFlags = 1)]
+				public virtual int GetCdmaEcio() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getEvdoDbm
+				/// </java-name>
+				[Dot42.DexImport("getEvdoDbm", "()I", AccessFlags = 1)]
+				public virtual int GetEvdoDbm() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getEvdoEcio
+				/// </java-name>
+				[Dot42.DexImport("getEvdoEcio", "()I", AccessFlags = 1)]
+				public virtual int GetEvdoEcio() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getEvdoSnr
+				/// </java-name>
+				[Dot42.DexImport("getEvdoSnr", "()I", AccessFlags = 1)]
+				public virtual int GetEvdoSnr() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isGsm
+				/// </java-name>
+				[Dot42.DexImport("isGsm", "()Z", AccessFlags = 1)]
+				public virtual bool IsGsm() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getGsmSignalStrength
+				/// </java-name>
+				public int GsmSignalStrength
+				{
+				[Dot42.DexImport("getGsmSignalStrength", "()I", AccessFlags = 1)]
+						get{ return GetGsmSignalStrength(); }
+				}
+
+				/// <java-name>
+				/// getGsmBitErrorRate
+				/// </java-name>
+				public int GsmBitErrorRate
+				{
+				[Dot42.DexImport("getGsmBitErrorRate", "()I", AccessFlags = 1)]
+						get{ return GetGsmBitErrorRate(); }
+				}
+
+				/// <java-name>
+				/// getCdmaDbm
+				/// </java-name>
+				public int CdmaDbm
+				{
+				[Dot42.DexImport("getCdmaDbm", "()I", AccessFlags = 1)]
+						get{ return GetCdmaDbm(); }
+				}
+
+				/// <java-name>
+				/// getCdmaEcio
+				/// </java-name>
+				public int CdmaEcio
+				{
+				[Dot42.DexImport("getCdmaEcio", "()I", AccessFlags = 1)]
+						get{ return GetCdmaEcio(); }
+				}
+
+				/// <java-name>
+				/// getEvdoDbm
+				/// </java-name>
+				public int EvdoDbm
+				{
+				[Dot42.DexImport("getEvdoDbm", "()I", AccessFlags = 1)]
+						get{ return GetEvdoDbm(); }
+				}
+
+				/// <java-name>
+				/// getEvdoEcio
+				/// </java-name>
+				public int EvdoEcio
+				{
+				[Dot42.DexImport("getEvdoEcio", "()I", AccessFlags = 1)]
+						get{ return GetEvdoEcio(); }
+				}
+
+				/// <java-name>
+				/// getEvdoSnr
+				/// </java-name>
+				public int EvdoSnr
+				{
+				[Dot42.DexImport("getEvdoSnr", "()I", AccessFlags = 1)]
+						get{ return GetEvdoSnr(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/telephony/SmsManager
+		/// </java-name>
+		[Dot42.DexImport("android/telephony/SmsManager", AccessFlags = 49)]
+		public sealed partial class SmsManager
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// STATUS_ON_ICC_FREE
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_ICC_FREE", "I", AccessFlags = 25)]
+				public const int STATUS_ON_ICC_FREE = 0;
+				/// <java-name>
+				/// STATUS_ON_ICC_READ
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_ICC_READ", "I", AccessFlags = 25)]
+				public const int STATUS_ON_ICC_READ = 1;
+				/// <java-name>
+				/// STATUS_ON_ICC_UNREAD
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_ICC_UNREAD", "I", AccessFlags = 25)]
+				public const int STATUS_ON_ICC_UNREAD = 3;
+				/// <java-name>
+				/// STATUS_ON_ICC_SENT
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_ICC_SENT", "I", AccessFlags = 25)]
+				public const int STATUS_ON_ICC_SENT = 5;
+				/// <java-name>
+				/// STATUS_ON_ICC_UNSENT
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_ICC_UNSENT", "I", AccessFlags = 25)]
+				public const int STATUS_ON_ICC_UNSENT = 7;
+				/// <java-name>
+				/// RESULT_ERROR_GENERIC_FAILURE
+				/// </java-name>
+				[Dot42.DexImport("RESULT_ERROR_GENERIC_FAILURE", "I", AccessFlags = 25)]
+				public const int RESULT_ERROR_GENERIC_FAILURE = 1;
+				/// <java-name>
+				/// RESULT_ERROR_RADIO_OFF
+				/// </java-name>
+				[Dot42.DexImport("RESULT_ERROR_RADIO_OFF", "I", AccessFlags = 25)]
+				public const int RESULT_ERROR_RADIO_OFF = 2;
+				/// <java-name>
+				/// RESULT_ERROR_NULL_PDU
+				/// </java-name>
+				[Dot42.DexImport("RESULT_ERROR_NULL_PDU", "I", AccessFlags = 25)]
+				public const int RESULT_ERROR_NULL_PDU = 3;
+				/// <java-name>
+				/// RESULT_ERROR_NO_SERVICE
+				/// </java-name>
+				[Dot42.DexImport("RESULT_ERROR_NO_SERVICE", "I", AccessFlags = 25)]
+				public const int RESULT_ERROR_NO_SERVICE = 4;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal SmsManager() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendTextMessage
+				/// </java-name>
+				[Dot42.DexImport("sendTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent" +
+    ";Landroid/app/PendingIntent;)V", AccessFlags = 1)]
+				public void SendTextMessage(string @string, string string1, string string2, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// divideMessage
+				/// </java-name>
+				[Dot42.DexImport("divideMessage", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;")]
+				public global::Java.Util.ArrayList<string> DivideMessage(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ArrayList<string>);
+				}
+
+				/// <java-name>
+				/// sendMultipartTextMessage
+				/// </java-name>
+				[Dot42.DexImport("sendMultipartTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Lj" +
+    "ava/util/ArrayList;)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;Lja" +
+    "va/util/ArrayList<Landroid/app/PendingIntent;>;Ljava/util/ArrayList<Landroid/app" +
+    "/PendingIntent;>;)V")]
+				public void SendMultipartTextMessage(string @string, string string1, global::Java.Util.ArrayList<string> arrayList, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList1, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendDataMessage
+				/// </java-name>
+				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
+    "endingIntent;)V", AccessFlags = 1)]
+				public void SendDataMessage(string @string, string string1, short int16, sbyte[] sByte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendDataMessage
+				/// </java-name>
+				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
+    "endingIntent;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public void SendDataMessage(string @string, string string1, short int16, byte[] @byte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDefault
+				/// </java-name>
+				[Dot42.DexImport("getDefault", "()Landroid/telephony/SmsManager;", AccessFlags = 9)]
+				public static global::Android.Telephony.SmsManager GetDefault() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Telephony.SmsManager);
+				}
+
+				/// <java-name>
+				/// getDefault
+				/// </java-name>
+				public static global::Android.Telephony.SmsManager Default
+				{
+				[Dot42.DexImport("getDefault", "()Landroid/telephony/SmsManager;", AccessFlags = 9)]
+						get{ return GetDefault(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/telephony/SmsMessage
+		/// </java-name>
+		[Dot42.DexImport("android/telephony/SmsMessage", AccessFlags = 33)]
+		public partial class SmsMessage
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// ENCODING_UNKNOWN
+				/// </java-name>
+				[Dot42.DexImport("ENCODING_UNKNOWN", "I", AccessFlags = 25)]
+				public const int ENCODING_UNKNOWN = 0;
+				/// <java-name>
+				/// ENCODING_7BIT
+				/// </java-name>
+				[Dot42.DexImport("ENCODING_7BIT", "I", AccessFlags = 25)]
+				public const int ENCODING_7BIT = 1;
+				/// <java-name>
+				/// ENCODING_8BIT
+				/// </java-name>
+				[Dot42.DexImport("ENCODING_8BIT", "I", AccessFlags = 25)]
+				public const int ENCODING_8BIT = 2;
+				/// <java-name>
+				/// ENCODING_16BIT
+				/// </java-name>
+				[Dot42.DexImport("ENCODING_16BIT", "I", AccessFlags = 25)]
+				public const int ENCODING_16BIT = 3;
+				/// <java-name>
+				/// MAX_USER_DATA_BYTES
+				/// </java-name>
+				[Dot42.DexImport("MAX_USER_DATA_BYTES", "I", AccessFlags = 25)]
+				public const int MAX_USER_DATA_BYTES = 140;
+				/// <java-name>
+				/// MAX_USER_DATA_BYTES_WITH_HEADER
+				/// </java-name>
+				[Dot42.DexImport("MAX_USER_DATA_BYTES_WITH_HEADER", "I", AccessFlags = 25)]
+				public const int MAX_USER_DATA_BYTES_WITH_HEADER = 134;
+				/// <java-name>
+				/// MAX_USER_DATA_SEPTETS
+				/// </java-name>
+				[Dot42.DexImport("MAX_USER_DATA_SEPTETS", "I", AccessFlags = 25)]
+				public const int MAX_USER_DATA_SEPTETS = 160;
+				/// <java-name>
+				/// MAX_USER_DATA_SEPTETS_WITH_HEADER
+				/// </java-name>
+				[Dot42.DexImport("MAX_USER_DATA_SEPTETS_WITH_HEADER", "I", AccessFlags = 25)]
+				public const int MAX_USER_DATA_SEPTETS_WITH_HEADER = 153;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal SmsMessage() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createFromPdu
+				/// </java-name>
+				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9)]
+				public static global::Android.Telephony.SmsMessage CreateFromPdu(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Telephony.SmsMessage);
+				}
+
+				/// <java-name>
+				/// createFromPdu
+				/// </java-name>
+				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9, IgnoreFromJava = true)]
+				public static global::Android.Telephony.SmsMessage CreateFromPdu(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Telephony.SmsMessage);
+				}
+
+				/// <java-name>
+				/// getTPLayerLengthForPDU
+				/// </java-name>
+				[Dot42.DexImport("getTPLayerLengthForPDU", "(Ljava/lang/String;)I", AccessFlags = 9)]
+				public static int GetTPLayerLengthForPDU(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// calculateLength
+				/// </java-name>
+				[Dot42.DexImport("calculateLength", "(Ljava/lang/CharSequence;Z)[I", AccessFlags = 9)]
+				public static int[] CalculateLength(global::Java.Lang.ICharSequence charSequence, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(int[]);
+				}
+
+				/// <java-name>
+				/// calculateLength
+				/// </java-name>
+				[Dot42.DexImport("calculateLength", "(Ljava/lang/String;Z)[I", AccessFlags = 9)]
+				public static int[] CalculateLength(string @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(int[]);
+				}
+
+				/// <java-name>
+				/// getSubmitPdu
+				/// </java-name>
+				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Landroid/telephony/SmsMe" +
+    "ssage$SubmitPdu;", AccessFlags = 9)]
+				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, string string2, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
+				}
+
+				/// <java-name>
+				/// getSubmitPdu
+				/// </java-name>
+				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/SmsMessage$SubmitPdu" +
+    ";", AccessFlags = 9)]
+				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, short int16, sbyte[] sByte, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
+				}
+
+				/// <java-name>
+				/// getSubmitPdu
+				/// </java-name>
+				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/SmsMessage$SubmitPdu" +
+    ";", AccessFlags = 9, IgnoreFromJava = true)]
+				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, short int16, byte[] @byte, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
+				}
+
+				/// <java-name>
+				/// getServiceCenterAddress
+				/// </java-name>
+				[Dot42.DexImport("getServiceCenterAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetServiceCenterAddress() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getOriginatingAddress
+				/// </java-name>
+				[Dot42.DexImport("getOriginatingAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetOriginatingAddress() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getDisplayOriginatingAddress
+				/// </java-name>
+				[Dot42.DexImport("getDisplayOriginatingAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetDisplayOriginatingAddress() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getMessageBody
+				/// </java-name>
+				[Dot42.DexImport("getMessageBody", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetMessageBody() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getMessageClass
+				/// </java-name>
+				[Dot42.DexImport("getMessageClass", "()Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 1)]
+				public virtual global::Android.Telephony.SmsMessage.MessageClass GetMessageClass() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Telephony.SmsMessage.MessageClass);
+				}
+
+				/// <java-name>
+				/// getDisplayMessageBody
+				/// </java-name>
+				[Dot42.DexImport("getDisplayMessageBody", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetDisplayMessageBody() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getPseudoSubject
+				/// </java-name>
+				[Dot42.DexImport("getPseudoSubject", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetPseudoSubject() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getTimestampMillis
+				/// </java-name>
+				[Dot42.DexImport("getTimestampMillis", "()J", AccessFlags = 1)]
+				public virtual long GetTimestampMillis() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// isEmail
+				/// </java-name>
+				[Dot42.DexImport("isEmail", "()Z", AccessFlags = 1)]
+				public virtual bool IsEmail() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getEmailBody
+				/// </java-name>
+				[Dot42.DexImport("getEmailBody", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetEmailBody() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getEmailFrom
+				/// </java-name>
+				[Dot42.DexImport("getEmailFrom", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetEmailFrom() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getProtocolIdentifier
+				/// </java-name>
+				[Dot42.DexImport("getProtocolIdentifier", "()I", AccessFlags = 1)]
+				public virtual int GetProtocolIdentifier() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isReplace
+				/// </java-name>
+				[Dot42.DexImport("isReplace", "()Z", AccessFlags = 1)]
+				public virtual bool IsReplace() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isCphsMwiMessage
+				/// </java-name>
+				[Dot42.DexImport("isCphsMwiMessage", "()Z", AccessFlags = 1)]
+				public virtual bool IsCphsMwiMessage() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isMWIClearMessage
+				/// </java-name>
+				[Dot42.DexImport("isMWIClearMessage", "()Z", AccessFlags = 1)]
+				public virtual bool IsMWIClearMessage() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isMWISetMessage
+				/// </java-name>
+				[Dot42.DexImport("isMWISetMessage", "()Z", AccessFlags = 1)]
+				public virtual bool IsMWISetMessage() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isMwiDontStore
+				/// </java-name>
+				[Dot42.DexImport("isMwiDontStore", "()Z", AccessFlags = 1)]
+				public virtual bool IsMwiDontStore() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getUserData
+				/// </java-name>
+				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1)]
+				public virtual sbyte[] JavaGetUserData() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getUserData
+				/// </java-name>
+				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual byte[] GetUserData() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getPdu
+				/// </java-name>
+				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1)]
+				public virtual sbyte[] JavaGetPdu() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getPdu
+				/// </java-name>
+				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual byte[] GetPdu() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getStatusOnSim
+				/// </java-name>
+				[Dot42.DexImport("getStatusOnSim", "()I", AccessFlags = 1)]
+				public virtual int GetStatusOnSim() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getStatusOnIcc
+				/// </java-name>
+				[Dot42.DexImport("getStatusOnIcc", "()I", AccessFlags = 1)]
+				public virtual int GetStatusOnIcc() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getIndexOnSim
+				/// </java-name>
+				[Dot42.DexImport("getIndexOnSim", "()I", AccessFlags = 1)]
+				public virtual int GetIndexOnSim() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getIndexOnIcc
+				/// </java-name>
+				[Dot42.DexImport("getIndexOnIcc", "()I", AccessFlags = 1)]
+				public virtual int GetIndexOnIcc() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getStatus
+				/// </java-name>
+				[Dot42.DexImport("getStatus", "()I", AccessFlags = 1)]
+				public virtual int GetStatus() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isStatusReportMessage
+				/// </java-name>
+				[Dot42.DexImport("isStatusReportMessage", "()Z", AccessFlags = 1)]
+				public virtual bool IsStatusReportMessage() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isReplyPathPresent
+				/// </java-name>
+				[Dot42.DexImport("isReplyPathPresent", "()Z", AccessFlags = 1)]
+				public virtual bool IsReplyPathPresent() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getServiceCenterAddress
+				/// </java-name>
+				public string ServiceCenterAddress
+				{
+				[Dot42.DexImport("getServiceCenterAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetServiceCenterAddress(); }
+				}
+
+				/// <java-name>
+				/// getOriginatingAddress
+				/// </java-name>
+				public string OriginatingAddress
+				{
+				[Dot42.DexImport("getOriginatingAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetOriginatingAddress(); }
+				}
+
+				/// <java-name>
+				/// getDisplayOriginatingAddress
+				/// </java-name>
+				public string DisplayOriginatingAddress
+				{
+				[Dot42.DexImport("getDisplayOriginatingAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetDisplayOriginatingAddress(); }
+				}
+
+				/// <java-name>
+				/// getMessageBody
+				/// </java-name>
+				public string MessageBody
+				{
+				[Dot42.DexImport("getMessageBody", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetMessageBody(); }
+				}
+
+				/// <java-name>
+				/// getDisplayMessageBody
+				/// </java-name>
+				public string DisplayMessageBody
+				{
+				[Dot42.DexImport("getDisplayMessageBody", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetDisplayMessageBody(); }
+				}
+
+				/// <java-name>
+				/// getPseudoSubject
+				/// </java-name>
+				public string PseudoSubject
+				{
+				[Dot42.DexImport("getPseudoSubject", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetPseudoSubject(); }
+				}
+
+				/// <java-name>
+				/// getTimestampMillis
+				/// </java-name>
+				public long TimestampMillis
+				{
+				[Dot42.DexImport("getTimestampMillis", "()J", AccessFlags = 1)]
+						get{ return GetTimestampMillis(); }
+				}
+
+				/// <java-name>
+				/// getEmailBody
+				/// </java-name>
+				public string EmailBody
+				{
+				[Dot42.DexImport("getEmailBody", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetEmailBody(); }
+				}
+
+				/// <java-name>
+				/// getEmailFrom
+				/// </java-name>
+				public string EmailFrom
+				{
+				[Dot42.DexImport("getEmailFrom", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetEmailFrom(); }
+				}
+
+				/// <java-name>
+				/// getProtocolIdentifier
+				/// </java-name>
+				public int ProtocolIdentifier
+				{
+				[Dot42.DexImport("getProtocolIdentifier", "()I", AccessFlags = 1)]
+						get{ return GetProtocolIdentifier(); }
+				}
+
+				/// <java-name>
+				/// getUserData
+				/// </java-name>
+				public byte[] UserData
+				{
+				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetUserData(); }
+				}
+
+				/// <java-name>
+				/// getPdu
+				/// </java-name>
+				public byte[] Pdu
+				{
+				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetPdu(); }
+				}
+
+				/// <java-name>
+				/// getStatusOnSim
+				/// </java-name>
+				public int StatusOnSim
+				{
+				[Dot42.DexImport("getStatusOnSim", "()I", AccessFlags = 1)]
+						get{ return GetStatusOnSim(); }
+				}
+
+				/// <java-name>
+				/// getStatusOnIcc
+				/// </java-name>
+				public int StatusOnIcc
+				{
+				[Dot42.DexImport("getStatusOnIcc", "()I", AccessFlags = 1)]
+						get{ return GetStatusOnIcc(); }
+				}
+
+				/// <java-name>
+				/// getIndexOnSim
+				/// </java-name>
+				public int IndexOnSim
+				{
+				[Dot42.DexImport("getIndexOnSim", "()I", AccessFlags = 1)]
+						get{ return GetIndexOnSim(); }
+				}
+
+				/// <java-name>
+				/// getIndexOnIcc
+				/// </java-name>
+				public int IndexOnIcc
+				{
+				[Dot42.DexImport("getIndexOnIcc", "()I", AccessFlags = 1)]
+						get{ return GetIndexOnIcc(); }
+				}
+
+				/// <java-name>
+				/// getStatus
+				/// </java-name>
+				public int Status
+				{
+				[Dot42.DexImport("getStatus", "()I", AccessFlags = 1)]
+						get{ return GetStatus(); }
+				}
+
+				/// <java-name>
+				/// android/telephony/SmsMessage$SubmitPdu
+				/// </java-name>
+				[Dot42.DexImport("android/telephony/SmsMessage$SubmitPdu", AccessFlags = 9)]
+				public partial class SubmitPdu
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// encodedScAddress
+						/// </java-name>
+						[Dot42.DexImport("encodedScAddress", "[B", AccessFlags = 1)]
+						public sbyte[] EncodedScAddress;
+						/// <java-name>
+						/// encodedMessage
+						/// </java-name>
+						[Dot42.DexImport("encodedMessage", "[B", AccessFlags = 1)]
+						public sbyte[] EncodedMessage;
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal SubmitPdu() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// toString
+						/// </java-name>
+						[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+						public override string ToString() /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+				}
+
+				/// <java-name>
+				/// android/telephony/SmsMessage$MessageClass
+				/// </java-name>
+				[Dot42.DexImport("android/telephony/SmsMessage$MessageClass", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/telephony/SmsMessage$MessageClass;>;")]
+				public sealed class MessageClass
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CLASS_0
+						/// </java-name>
+						[Dot42.DexImport("CLASS_0", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
+						public static readonly MessageClass CLASS_0;
+						/// <java-name>
+						/// CLASS_1
+						/// </java-name>
+						[Dot42.DexImport("CLASS_1", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
+						public static readonly MessageClass CLASS_1;
+						/// <java-name>
+						/// CLASS_2
+						/// </java-name>
+						[Dot42.DexImport("CLASS_2", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
+						public static readonly MessageClass CLASS_2;
+						/// <java-name>
+						/// CLASS_3
+						/// </java-name>
+						[Dot42.DexImport("CLASS_3", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
+						public static readonly MessageClass CLASS_3;
+						/// <java-name>
+						/// UNKNOWN
+						/// </java-name>
+						[Dot42.DexImport("UNKNOWN", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
+						public static readonly MessageClass UNKNOWN;
+						private MessageClass() /* TypeBuilder.AddPrivateDefaultCtor */ 
+						{
+						}
+
+						/// <java-name>
+						/// values
+						/// </java-name>
+						[Dot42.DexImport("values", "()[Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 9)]
+						public static MessageClass[] Values() /* MethodBuilder.Create */ 
+						{
+								return default(MessageClass[]);
+						}
+
+						/// <java-name>
+						/// valueOf
+						/// </java-name>
+						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 9)]
+						public static MessageClass ValueOf(string @string) /* MethodBuilder.Create */ 
+						{
+								return default(MessageClass);
+						}
+
 				}
 
 		}
@@ -1572,1040 +2606,6 @@ namespace Android.Telephony
 				{
 				[Dot42.DexImport("getDataState", "()I", AccessFlags = 1)]
 						get{ return GetDataState(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/telephony/PhoneNumberFormattingTextWatcher
-		/// </java-name>
-		[Dot42.DexImport("android/telephony/PhoneNumberFormattingTextWatcher", AccessFlags = 33)]
-		public partial class PhoneNumberFormattingTextWatcher : global::Android.Text.ITextWatcher
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public PhoneNumberFormattingTextWatcher() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// beforeTextChanged
-				/// </java-name>
-				[Dot42.DexImport("beforeTextChanged", "(Ljava/lang/CharSequence;III)V", AccessFlags = 1)]
-				public virtual void BeforeTextChanged(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onTextChanged
-				/// </java-name>
-				[Dot42.DexImport("onTextChanged", "(Ljava/lang/CharSequence;III)V", AccessFlags = 1)]
-				public virtual void OnTextChanged(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// afterTextChanged
-				/// </java-name>
-				[Dot42.DexImport("afterTextChanged", "(Landroid/text/Editable;)V", AccessFlags = 33)]
-				public virtual void AfterTextChanged(global::Android.Text.IEditable editable) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/telephony/SmsMessage
-		/// </java-name>
-		[Dot42.DexImport("android/telephony/SmsMessage", AccessFlags = 33)]
-		public partial class SmsMessage
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// ENCODING_UNKNOWN
-				/// </java-name>
-				[Dot42.DexImport("ENCODING_UNKNOWN", "I", AccessFlags = 25)]
-				public const int ENCODING_UNKNOWN = 0;
-				/// <java-name>
-				/// ENCODING_7BIT
-				/// </java-name>
-				[Dot42.DexImport("ENCODING_7BIT", "I", AccessFlags = 25)]
-				public const int ENCODING_7BIT = 1;
-				/// <java-name>
-				/// ENCODING_8BIT
-				/// </java-name>
-				[Dot42.DexImport("ENCODING_8BIT", "I", AccessFlags = 25)]
-				public const int ENCODING_8BIT = 2;
-				/// <java-name>
-				/// ENCODING_16BIT
-				/// </java-name>
-				[Dot42.DexImport("ENCODING_16BIT", "I", AccessFlags = 25)]
-				public const int ENCODING_16BIT = 3;
-				/// <java-name>
-				/// MAX_USER_DATA_BYTES
-				/// </java-name>
-				[Dot42.DexImport("MAX_USER_DATA_BYTES", "I", AccessFlags = 25)]
-				public const int MAX_USER_DATA_BYTES = 140;
-				/// <java-name>
-				/// MAX_USER_DATA_BYTES_WITH_HEADER
-				/// </java-name>
-				[Dot42.DexImport("MAX_USER_DATA_BYTES_WITH_HEADER", "I", AccessFlags = 25)]
-				public const int MAX_USER_DATA_BYTES_WITH_HEADER = 134;
-				/// <java-name>
-				/// MAX_USER_DATA_SEPTETS
-				/// </java-name>
-				[Dot42.DexImport("MAX_USER_DATA_SEPTETS", "I", AccessFlags = 25)]
-				public const int MAX_USER_DATA_SEPTETS = 160;
-				/// <java-name>
-				/// MAX_USER_DATA_SEPTETS_WITH_HEADER
-				/// </java-name>
-				[Dot42.DexImport("MAX_USER_DATA_SEPTETS_WITH_HEADER", "I", AccessFlags = 25)]
-				public const int MAX_USER_DATA_SEPTETS_WITH_HEADER = 153;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SmsMessage() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createFromPdu
-				/// </java-name>
-				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9)]
-				public static global::Android.Telephony.SmsMessage CreateFromPdu(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Telephony.SmsMessage);
-				}
-
-				/// <java-name>
-				/// createFromPdu
-				/// </java-name>
-				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9, IgnoreFromJava = true)]
-				public static global::Android.Telephony.SmsMessage CreateFromPdu(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Telephony.SmsMessage);
-				}
-
-				/// <java-name>
-				/// getTPLayerLengthForPDU
-				/// </java-name>
-				[Dot42.DexImport("getTPLayerLengthForPDU", "(Ljava/lang/String;)I", AccessFlags = 9)]
-				public static int GetTPLayerLengthForPDU(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// calculateLength
-				/// </java-name>
-				[Dot42.DexImport("calculateLength", "(Ljava/lang/CharSequence;Z)[I", AccessFlags = 9)]
-				public static int[] CalculateLength(global::Java.Lang.ICharSequence charSequence, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// calculateLength
-				/// </java-name>
-				[Dot42.DexImport("calculateLength", "(Ljava/lang/String;Z)[I", AccessFlags = 9)]
-				public static int[] CalculateLength(string @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// getSubmitPdu
-				/// </java-name>
-				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Landroid/telephony/SmsMe" +
-    "ssage$SubmitPdu;", AccessFlags = 9)]
-				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, string string2, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
-				}
-
-				/// <java-name>
-				/// getSubmitPdu
-				/// </java-name>
-				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/SmsMessage$SubmitPdu" +
-    ";", AccessFlags = 9)]
-				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, short int16, sbyte[] sByte, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
-				}
-
-				/// <java-name>
-				/// getSubmitPdu
-				/// </java-name>
-				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/SmsMessage$SubmitPdu" +
-    ";", AccessFlags = 9, IgnoreFromJava = true)]
-				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, short int16, byte[] @byte, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
-				}
-
-				/// <java-name>
-				/// getServiceCenterAddress
-				/// </java-name>
-				[Dot42.DexImport("getServiceCenterAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetServiceCenterAddress() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getOriginatingAddress
-				/// </java-name>
-				[Dot42.DexImport("getOriginatingAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetOriginatingAddress() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDisplayOriginatingAddress
-				/// </java-name>
-				[Dot42.DexImport("getDisplayOriginatingAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDisplayOriginatingAddress() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMessageBody
-				/// </java-name>
-				[Dot42.DexImport("getMessageBody", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMessageBody() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMessageClass
-				/// </java-name>
-				[Dot42.DexImport("getMessageClass", "()Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 1)]
-				public virtual global::Android.Telephony.SmsMessage.MessageClass GetMessageClass() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Telephony.SmsMessage.MessageClass);
-				}
-
-				/// <java-name>
-				/// getDisplayMessageBody
-				/// </java-name>
-				[Dot42.DexImport("getDisplayMessageBody", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDisplayMessageBody() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPseudoSubject
-				/// </java-name>
-				[Dot42.DexImport("getPseudoSubject", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPseudoSubject() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getTimestampMillis
-				/// </java-name>
-				[Dot42.DexImport("getTimestampMillis", "()J", AccessFlags = 1)]
-				public virtual long GetTimestampMillis() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// isEmail
-				/// </java-name>
-				[Dot42.DexImport("isEmail", "()Z", AccessFlags = 1)]
-				public virtual bool IsEmail() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getEmailBody
-				/// </java-name>
-				[Dot42.DexImport("getEmailBody", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEmailBody() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getEmailFrom
-				/// </java-name>
-				[Dot42.DexImport("getEmailFrom", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEmailFrom() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProtocolIdentifier
-				/// </java-name>
-				[Dot42.DexImport("getProtocolIdentifier", "()I", AccessFlags = 1)]
-				public virtual int GetProtocolIdentifier() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isReplace
-				/// </java-name>
-				[Dot42.DexImport("isReplace", "()Z", AccessFlags = 1)]
-				public virtual bool IsReplace() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isCphsMwiMessage
-				/// </java-name>
-				[Dot42.DexImport("isCphsMwiMessage", "()Z", AccessFlags = 1)]
-				public virtual bool IsCphsMwiMessage() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMWIClearMessage
-				/// </java-name>
-				[Dot42.DexImport("isMWIClearMessage", "()Z", AccessFlags = 1)]
-				public virtual bool IsMWIClearMessage() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMWISetMessage
-				/// </java-name>
-				[Dot42.DexImport("isMWISetMessage", "()Z", AccessFlags = 1)]
-				public virtual bool IsMWISetMessage() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMwiDontStore
-				/// </java-name>
-				[Dot42.DexImport("isMwiDontStore", "()Z", AccessFlags = 1)]
-				public virtual bool IsMwiDontStore() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getUserData
-				/// </java-name>
-				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1)]
-				public virtual sbyte[] JavaGetUserData() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getUserData
-				/// </java-name>
-				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetUserData() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getPdu
-				/// </java-name>
-				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1)]
-				public virtual sbyte[] JavaGetPdu() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getPdu
-				/// </java-name>
-				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetPdu() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getStatusOnSim
-				/// </java-name>
-				[Dot42.DexImport("getStatusOnSim", "()I", AccessFlags = 1)]
-				public virtual int GetStatusOnSim() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getStatusOnIcc
-				/// </java-name>
-				[Dot42.DexImport("getStatusOnIcc", "()I", AccessFlags = 1)]
-				public virtual int GetStatusOnIcc() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIndexOnSim
-				/// </java-name>
-				[Dot42.DexImport("getIndexOnSim", "()I", AccessFlags = 1)]
-				public virtual int GetIndexOnSim() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIndexOnIcc
-				/// </java-name>
-				[Dot42.DexImport("getIndexOnIcc", "()I", AccessFlags = 1)]
-				public virtual int GetIndexOnIcc() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getStatus
-				/// </java-name>
-				[Dot42.DexImport("getStatus", "()I", AccessFlags = 1)]
-				public virtual int GetStatus() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isStatusReportMessage
-				/// </java-name>
-				[Dot42.DexImport("isStatusReportMessage", "()Z", AccessFlags = 1)]
-				public virtual bool IsStatusReportMessage() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isReplyPathPresent
-				/// </java-name>
-				[Dot42.DexImport("isReplyPathPresent", "()Z", AccessFlags = 1)]
-				public virtual bool IsReplyPathPresent() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getServiceCenterAddress
-				/// </java-name>
-				public string ServiceCenterAddress
-				{
-				[Dot42.DexImport("getServiceCenterAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetServiceCenterAddress(); }
-				}
-
-				/// <java-name>
-				/// getOriginatingAddress
-				/// </java-name>
-				public string OriginatingAddress
-				{
-				[Dot42.DexImport("getOriginatingAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetOriginatingAddress(); }
-				}
-
-				/// <java-name>
-				/// getDisplayOriginatingAddress
-				/// </java-name>
-				public string DisplayOriginatingAddress
-				{
-				[Dot42.DexImport("getDisplayOriginatingAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDisplayOriginatingAddress(); }
-				}
-
-				/// <java-name>
-				/// getMessageBody
-				/// </java-name>
-				public string MessageBody
-				{
-				[Dot42.DexImport("getMessageBody", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMessageBody(); }
-				}
-
-				/// <java-name>
-				/// getDisplayMessageBody
-				/// </java-name>
-				public string DisplayMessageBody
-				{
-				[Dot42.DexImport("getDisplayMessageBody", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDisplayMessageBody(); }
-				}
-
-				/// <java-name>
-				/// getPseudoSubject
-				/// </java-name>
-				public string PseudoSubject
-				{
-				[Dot42.DexImport("getPseudoSubject", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPseudoSubject(); }
-				}
-
-				/// <java-name>
-				/// getTimestampMillis
-				/// </java-name>
-				public long TimestampMillis
-				{
-				[Dot42.DexImport("getTimestampMillis", "()J", AccessFlags = 1)]
-						get{ return GetTimestampMillis(); }
-				}
-
-				/// <java-name>
-				/// getEmailBody
-				/// </java-name>
-				public string EmailBody
-				{
-				[Dot42.DexImport("getEmailBody", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEmailBody(); }
-				}
-
-				/// <java-name>
-				/// getEmailFrom
-				/// </java-name>
-				public string EmailFrom
-				{
-				[Dot42.DexImport("getEmailFrom", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEmailFrom(); }
-				}
-
-				/// <java-name>
-				/// getProtocolIdentifier
-				/// </java-name>
-				public int ProtocolIdentifier
-				{
-				[Dot42.DexImport("getProtocolIdentifier", "()I", AccessFlags = 1)]
-						get{ return GetProtocolIdentifier(); }
-				}
-
-				/// <java-name>
-				/// getUserData
-				/// </java-name>
-				public byte[] UserData
-				{
-				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetUserData(); }
-				}
-
-				/// <java-name>
-				/// getPdu
-				/// </java-name>
-				public byte[] Pdu
-				{
-				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetPdu(); }
-				}
-
-				/// <java-name>
-				/// getStatusOnSim
-				/// </java-name>
-				public int StatusOnSim
-				{
-				[Dot42.DexImport("getStatusOnSim", "()I", AccessFlags = 1)]
-						get{ return GetStatusOnSim(); }
-				}
-
-				/// <java-name>
-				/// getStatusOnIcc
-				/// </java-name>
-				public int StatusOnIcc
-				{
-				[Dot42.DexImport("getStatusOnIcc", "()I", AccessFlags = 1)]
-						get{ return GetStatusOnIcc(); }
-				}
-
-				/// <java-name>
-				/// getIndexOnSim
-				/// </java-name>
-				public int IndexOnSim
-				{
-				[Dot42.DexImport("getIndexOnSim", "()I", AccessFlags = 1)]
-						get{ return GetIndexOnSim(); }
-				}
-
-				/// <java-name>
-				/// getIndexOnIcc
-				/// </java-name>
-				public int IndexOnIcc
-				{
-				[Dot42.DexImport("getIndexOnIcc", "()I", AccessFlags = 1)]
-						get{ return GetIndexOnIcc(); }
-				}
-
-				/// <java-name>
-				/// getStatus
-				/// </java-name>
-				public int Status
-				{
-				[Dot42.DexImport("getStatus", "()I", AccessFlags = 1)]
-						get{ return GetStatus(); }
-				}
-
-				/// <java-name>
-				/// android/telephony/SmsMessage$SubmitPdu
-				/// </java-name>
-				[Dot42.DexImport("android/telephony/SmsMessage$SubmitPdu", AccessFlags = 9)]
-				public partial class SubmitPdu
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// encodedScAddress
-						/// </java-name>
-						[Dot42.DexImport("encodedScAddress", "[B", AccessFlags = 1)]
-						public sbyte[] EncodedScAddress;
-						/// <java-name>
-						/// encodedMessage
-						/// </java-name>
-						[Dot42.DexImport("encodedMessage", "[B", AccessFlags = 1)]
-						public sbyte[] EncodedMessage;
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal SubmitPdu() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// toString
-						/// </java-name>
-						[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-						public override string ToString() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-				}
-
-				/// <java-name>
-				/// android/telephony/SmsMessage$MessageClass
-				/// </java-name>
-				[Dot42.DexImport("android/telephony/SmsMessage$MessageClass", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/telephony/SmsMessage$MessageClass;>;")]
-				public sealed class MessageClass
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CLASS_0
-						/// </java-name>
-						[Dot42.DexImport("CLASS_0", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
-						public static readonly MessageClass CLASS_0;
-						/// <java-name>
-						/// CLASS_1
-						/// </java-name>
-						[Dot42.DexImport("CLASS_1", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
-						public static readonly MessageClass CLASS_1;
-						/// <java-name>
-						/// CLASS_2
-						/// </java-name>
-						[Dot42.DexImport("CLASS_2", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
-						public static readonly MessageClass CLASS_2;
-						/// <java-name>
-						/// CLASS_3
-						/// </java-name>
-						[Dot42.DexImport("CLASS_3", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
-						public static readonly MessageClass CLASS_3;
-						/// <java-name>
-						/// UNKNOWN
-						/// </java-name>
-						[Dot42.DexImport("UNKNOWN", "Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 16409)]
-						public static readonly MessageClass UNKNOWN;
-						private MessageClass() /* TypeBuilder.AddPrivateDefaultCtor */ 
-						{
-						}
-
-						/// <java-name>
-						/// values
-						/// </java-name>
-						[Dot42.DexImport("values", "()[Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 9)]
-						public static MessageClass[] Values() /* MethodBuilder.Create */ 
-						{
-								return default(MessageClass[]);
-						}
-
-						/// <java-name>
-						/// valueOf
-						/// </java-name>
-						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Landroid/telephony/SmsMessage$MessageClass;", AccessFlags = 9)]
-						public static MessageClass ValueOf(string @string) /* MethodBuilder.Create */ 
-						{
-								return default(MessageClass);
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/telephony/NeighboringCellInfo
-		/// </java-name>
-		[Dot42.DexImport("android/telephony/NeighboringCellInfo", AccessFlags = 33)]
-		public partial class NeighboringCellInfo : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// UNKNOWN_RSSI
-				/// </java-name>
-				[Dot42.DexImport("UNKNOWN_RSSI", "I", AccessFlags = 25)]
-				public const int UNKNOWN_RSSI = 99;
-				/// <java-name>
-				/// UNKNOWN_CID
-				/// </java-name>
-				[Dot42.DexImport("UNKNOWN_CID", "I", AccessFlags = 25)]
-				public const int UNKNOWN_CID = -1;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Telephony.NeighboringCellInfo> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NeighboringCellInfo() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
-				public NeighboringCellInfo(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(ILjava/lang/String;I)V", AccessFlags = 1)]
-				public NeighboringCellInfo(int int32, string @string, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public NeighboringCellInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRssi
-				/// </java-name>
-				[Dot42.DexImport("getRssi", "()I", AccessFlags = 1)]
-				public virtual int GetRssi() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLac
-				/// </java-name>
-				[Dot42.DexImport("getLac", "()I", AccessFlags = 1)]
-				public virtual int GetLac() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCid
-				/// </java-name>
-				[Dot42.DexImport("getCid", "()I", AccessFlags = 1)]
-				public virtual int GetCid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPsc
-				/// </java-name>
-				[Dot42.DexImport("getPsc", "()I", AccessFlags = 1)]
-				public virtual int GetPsc() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNetworkType
-				/// </java-name>
-				[Dot42.DexImport("getNetworkType", "()I", AccessFlags = 1)]
-				public virtual int GetNetworkType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setCid
-				/// </java-name>
-				[Dot42.DexImport("setCid", "(I)V", AccessFlags = 1)]
-				public virtual void SetCid(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setRssi
-				/// </java-name>
-				[Dot42.DexImport("setRssi", "(I)V", AccessFlags = 1)]
-				public virtual void SetRssi(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRssi
-				/// </java-name>
-				public int Rssi
-				{
-				[Dot42.DexImport("getRssi", "()I", AccessFlags = 1)]
-						get{ return GetRssi(); }
-				[Dot42.DexImport("setRssi", "(I)V", AccessFlags = 1)]
-						set{ SetRssi(value); }
-				}
-
-				/// <java-name>
-				/// getLac
-				/// </java-name>
-				public int Lac
-				{
-				[Dot42.DexImport("getLac", "()I", AccessFlags = 1)]
-						get{ return GetLac(); }
-				}
-
-				/// <java-name>
-				/// getCid
-				/// </java-name>
-				public int Cid
-				{
-				[Dot42.DexImport("getCid", "()I", AccessFlags = 1)]
-						get{ return GetCid(); }
-				[Dot42.DexImport("setCid", "(I)V", AccessFlags = 1)]
-						set{ SetCid(value); }
-				}
-
-				/// <java-name>
-				/// getPsc
-				/// </java-name>
-				public int Psc
-				{
-				[Dot42.DexImport("getPsc", "()I", AccessFlags = 1)]
-						get{ return GetPsc(); }
-				}
-
-				/// <java-name>
-				/// getNetworkType
-				/// </java-name>
-				public int NetworkType
-				{
-				[Dot42.DexImport("getNetworkType", "()I", AccessFlags = 1)]
-						get{ return GetNetworkType(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/telephony/SignalStrength
-		/// </java-name>
-		[Dot42.DexImport("android/telephony/SignalStrength", AccessFlags = 33)]
-		public partial class SignalStrength : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SignalStrength() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGsmSignalStrength
-				/// </java-name>
-				[Dot42.DexImport("getGsmSignalStrength", "()I", AccessFlags = 1)]
-				public virtual int GetGsmSignalStrength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGsmBitErrorRate
-				/// </java-name>
-				[Dot42.DexImport("getGsmBitErrorRate", "()I", AccessFlags = 1)]
-				public virtual int GetGsmBitErrorRate() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCdmaDbm
-				/// </java-name>
-				[Dot42.DexImport("getCdmaDbm", "()I", AccessFlags = 1)]
-				public virtual int GetCdmaDbm() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCdmaEcio
-				/// </java-name>
-				[Dot42.DexImport("getCdmaEcio", "()I", AccessFlags = 1)]
-				public virtual int GetCdmaEcio() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEvdoDbm
-				/// </java-name>
-				[Dot42.DexImport("getEvdoDbm", "()I", AccessFlags = 1)]
-				public virtual int GetEvdoDbm() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEvdoEcio
-				/// </java-name>
-				[Dot42.DexImport("getEvdoEcio", "()I", AccessFlags = 1)]
-				public virtual int GetEvdoEcio() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEvdoSnr
-				/// </java-name>
-				[Dot42.DexImport("getEvdoSnr", "()I", AccessFlags = 1)]
-				public virtual int GetEvdoSnr() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isGsm
-				/// </java-name>
-				[Dot42.DexImport("isGsm", "()Z", AccessFlags = 1)]
-				public virtual bool IsGsm() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getGsmSignalStrength
-				/// </java-name>
-				public int GsmSignalStrength
-				{
-				[Dot42.DexImport("getGsmSignalStrength", "()I", AccessFlags = 1)]
-						get{ return GetGsmSignalStrength(); }
-				}
-
-				/// <java-name>
-				/// getGsmBitErrorRate
-				/// </java-name>
-				public int GsmBitErrorRate
-				{
-				[Dot42.DexImport("getGsmBitErrorRate", "()I", AccessFlags = 1)]
-						get{ return GetGsmBitErrorRate(); }
-				}
-
-				/// <java-name>
-				/// getCdmaDbm
-				/// </java-name>
-				public int CdmaDbm
-				{
-				[Dot42.DexImport("getCdmaDbm", "()I", AccessFlags = 1)]
-						get{ return GetCdmaDbm(); }
-				}
-
-				/// <java-name>
-				/// getCdmaEcio
-				/// </java-name>
-				public int CdmaEcio
-				{
-				[Dot42.DexImport("getCdmaEcio", "()I", AccessFlags = 1)]
-						get{ return GetCdmaEcio(); }
-				}
-
-				/// <java-name>
-				/// getEvdoDbm
-				/// </java-name>
-				public int EvdoDbm
-				{
-				[Dot42.DexImport("getEvdoDbm", "()I", AccessFlags = 1)]
-						get{ return GetEvdoDbm(); }
-				}
-
-				/// <java-name>
-				/// getEvdoEcio
-				/// </java-name>
-				public int EvdoEcio
-				{
-				[Dot42.DexImport("getEvdoEcio", "()I", AccessFlags = 1)]
-						get{ return GetEvdoEcio(); }
-				}
-
-				/// <java-name>
-				/// getEvdoSnr
-				/// </java-name>
-				public int EvdoSnr
-				{
-				[Dot42.DexImport("getEvdoSnr", "()I", AccessFlags = 1)]
-						get{ return GetEvdoSnr(); }
 				}
 
 		}

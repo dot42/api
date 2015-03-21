@@ -21,6 +21,25 @@ namespace System.IO
 		}
 
 		/// <java-name>
+		/// java/io/FileNotFoundException
+		/// </java-name>
+		[Dot42.DexImport("java/io/FileNotFoundException", AccessFlags = 33)]
+		public partial class FileNotFoundException : global::System.IO.IOException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public FileNotFoundException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public FileNotFoundException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// java/io/IOException
 		/// </java-name>
 		[Dot42.DexImport("java/io/IOException", AccessFlags = 33)]
@@ -44,25 +63,6 @@ namespace System.IO
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
 				public IOException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/io/FileNotFoundException
-		/// </java-name>
-		[Dot42.DexImport("java/io/FileNotFoundException", AccessFlags = 33)]
-		public partial class FileNotFoundException : global::System.IO.IOException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public FileNotFoundException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public FileNotFoundException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 

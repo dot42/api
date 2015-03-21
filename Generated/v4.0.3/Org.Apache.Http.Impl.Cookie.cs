@@ -2,22 +2,14 @@
 namespace Org.Apache.Http.Impl.Cookie
 {
 		/// <java-name>
-		/// org/apache/http/impl/cookie/RFC2965DiscardAttributeHandler
+		/// org/apache/http/impl/cookie/AbstractCookieAttributeHandler
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965DiscardAttributeHandler", AccessFlags = 33)]
-		public partial class RFC2965DiscardAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
+		[Dot42.DexImport("org/apache/http/impl/cookie/AbstractCookieAttributeHandler", AccessFlags = 1057)]
+		public abstract partial class AbstractCookieAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2965DiscardAttributeHandler() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
+				public AbstractCookieAttributeHandler() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -38,496 +30,116 @@ namespace Org.Apache.Http.Impl.Cookie
 						return default(bool);
 				}
 
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/RFC2965DomainAttributeHandler
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965DomainAttributeHandler", AccessFlags = 33)]
-		public partial class RFC2965DomainAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2965DomainAttributeHandler() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("org/apache/http/cookie/CookieAttributeHandler", "parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1025)]
+				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// domainMatch
-				/// </java-name>
-				[Dot42.DexImport("domainMatch", "(Ljava/lang/String;Ljava/lang/String;)Z", AccessFlags = 1)]
-				public virtual bool DomainMatch(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// validate
-				/// </java-name>
-				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// match
-				/// </java-name>
-				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
-				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/cookie/NetscapeDraftHeaderParser
+		/// org/apache/http/impl/cookie/AbstractCookieSpec
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/NetscapeDraftHeaderParser", AccessFlags = 33)]
-		public partial class NetscapeDraftHeaderParser
+		[Dot42.DexImport("org/apache/http/impl/cookie/AbstractCookieSpec", AccessFlags = 1057)]
+		public abstract partial class AbstractCookieSpec : global::Org.Apache.Http.Cookie.ICookieSpec
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// DEFAULT
-				/// </java-name>
-				[Dot42.DexImport("DEFAULT", "Lorg/apache/http/impl/cookie/NetscapeDraftHeaderParser;", AccessFlags = 25)]
-				public static readonly global::Org.Apache.Http.Impl.Cookie.NetscapeDraftHeaderParser DEFAULT;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NetscapeDraftHeaderParser() /* MethodBuilder.Create */ 
+				public AbstractCookieSpec() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// parseHeader
+				/// registerAttribHandler
 				/// </java-name>
-				[Dot42.DexImport("parseHeader", "(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/message/ParserCursor;)Lor" +
-    "g/apache/http/HeaderElement;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IHeaderElement ParseHeader(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, global::Org.Apache.Http.Message.ParserCursor parserCursor) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeaderElement);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/BestMatchSpec
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/BestMatchSpec", AccessFlags = 33)]
-		public partial class BestMatchSpec : global::Org.Apache.Http.Cookie.ICookieSpec
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "([Ljava/lang/String;Z)V", AccessFlags = 1)]
-				public BestMatchSpec(string[] @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BestMatchSpec() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("registerAttribHandler", "(Ljava/lang/String;Lorg/apache/http/cookie/CookieAttributeHandler;)V", AccessFlags = 1)]
+				public virtual void RegisterAttribHandler(string @string, global::Org.Apache.Http.Cookie.ICookieAttributeHandler cookieAttributeHandler) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// parse
+				/// findAttribHandler
 				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;", AccessFlags = 1, Signature = "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List<Lo" +
-    "rg/apache/http/cookie/Cookie;>;")]
-				public virtual global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeader header, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("findAttribHandler", "(Ljava/lang/String;)Lorg/apache/http/cookie/CookieAttributeHandler;", AccessFlags = 4)]
+				protected internal virtual global::Org.Apache.Http.Cookie.ICookieAttributeHandler FindAttribHandler(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
+						return default(global::Org.Apache.Http.Cookie.ICookieAttributeHandler);
 				}
 
 				/// <java-name>
-				/// validate
+				/// getAttribHandler
 				/// </java-name>
-				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getAttribHandler", "(Ljava/lang/String;)Lorg/apache/http/cookie/CookieAttributeHandler;", AccessFlags = 4)]
+				protected internal virtual global::Org.Apache.Http.Cookie.ICookieAttributeHandler GetAttribHandler(string @string) /* MethodBuilder.Create */ 
 				{
+						return default(global::Org.Apache.Http.Cookie.ICookieAttributeHandler);
 				}
 
 				/// <java-name>
-				/// match
+				/// getAttribHandlers
 				/// </java-name>
-				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
-				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getAttribHandlers", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Lorg/apache/http/cookie/CookieAttributeHandler;>;")]
+				protected internal virtual global::Java.Util.ICollection<global::Org.Apache.Http.Cookie.ICookieAttributeHandler> GetAttribHandlers() /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(global::Java.Util.ICollection<global::Org.Apache.Http.Cookie.ICookieAttributeHandler>);
 				}
 
-				/// <java-name>
-				/// formatCookies
-				/// </java-name>
-				[Dot42.DexImport("formatCookies", "(Ljava/util/List;)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;)Ljava/util/List<Lorg/apache/ht" +
-    "tp/Header;>;")]
-				public virtual global::Java.Util.IList<global::Org.Apache.Http.IHeader> FormatCookies(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> list) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Org.Apache.Http.IHeader>);
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-				public virtual int GetVersion() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "getVersion", "()I", AccessFlags = 1025)]
+				public virtual int GetVersion() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(int);
 				}
 
-				/// <java-name>
-				/// getVersionHeader
-				/// </java-name>
-				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IHeader GetVersionHeader() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "parse", "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;", AccessFlags = 1025, Signature = "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List<Lo" +
+    "rg/apache/http/cookie/Cookie;>;")]
+				public virtual global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeader header, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
+				}
+
+				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1025)]
+				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+				}
+
+				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1025)]
+				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+						return default(bool);
+				}
+
+				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "formatCookies", "(Ljava/util/List;)Ljava/util/List;", AccessFlags = 1025, Signature = "(Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;)Ljava/util/List<Lorg/apache/ht" +
+    "tp/Header;>;")]
+				public virtual global::Java.Util.IList<global::Org.Apache.Http.IHeader> FormatCookies(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> list) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+						return default(global::Java.Util.IList<global::Org.Apache.Http.IHeader>);
+				}
+
+				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1025)]
+				public virtual global::Org.Apache.Http.IHeader GetVersionHeader() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(global::Org.Apache.Http.IHeader);
 				}
 
 				/// <java-name>
-				/// getVersion
+				/// getAttribHandlers
 				/// </java-name>
+				protected internal global::Java.Util.ICollection<global::Org.Apache.Http.Cookie.ICookieAttributeHandler> AttribHandlers
+				{
+				[Dot42.DexImport("getAttribHandlers", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Lorg/apache/http/cookie/CookieAttributeHandler;>;")]
+						get{ return GetAttribHandlers(); }
+				}
+
 				public int Version
 				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "getVersion", "()I", AccessFlags = 1025)]
 						get{ return GetVersion(); }
 				}
 
-				/// <java-name>
-				/// getVersionHeader
-				/// </java-name>
 				public global::Org.Apache.Http.IHeader VersionHeader
 				{
-				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1025)]
 						get{ return GetVersionHeader(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/BasicPathHandler
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/BasicPathHandler", AccessFlags = 33)]
-		public partial class BasicPathHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BasicPathHandler() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// validate
-				/// </java-name>
-				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// match
-				/// </java-name>
-				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
-				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/DateUtils
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/DateUtils", AccessFlags = 49)]
-		public sealed partial class DateUtils
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// PATTERN_RFC1123
-				/// </java-name>
-				[Dot42.DexImport("PATTERN_RFC1123", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string PATTERN_RFC1123 = "EEE, dd MMM yyyy HH:mm:ss zzz";
-				/// <java-name>
-				/// PATTERN_RFC1036
-				/// </java-name>
-				[Dot42.DexImport("PATTERN_RFC1036", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string PATTERN_RFC1036 = "EEEE, dd-MMM-yy HH:mm:ss zzz";
-				/// <java-name>
-				/// PATTERN_ASCTIME
-				/// </java-name>
-				[Dot42.DexImport("PATTERN_ASCTIME", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string PATTERN_ASCTIME = "EEE MMM d HH:mm:ss yyyy";
-				/// <java-name>
-				/// GMT
-				/// </java-name>
-				[Dot42.DexImport("GMT", "Ljava/util/TimeZone;", AccessFlags = 25)]
-				public static readonly global::Java.Util.TimeZone GMT;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal DateUtils() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parseDate
-				/// </java-name>
-				[Dot42.DexImport("parseDate", "(Ljava/lang/String;)Ljava/util/Date;", AccessFlags = 9)]
-				public static global::Java.Util.Date ParseDate(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// parseDate
-				/// </java-name>
-				[Dot42.DexImport("parseDate", "(Ljava/lang/String;[Ljava/lang/String;)Ljava/util/Date;", AccessFlags = 9)]
-				public static global::Java.Util.Date ParseDate(string @string, string[] string1) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// parseDate
-				/// </java-name>
-				[Dot42.DexImport("parseDate", "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;", AccessFlags = 9)]
-				public static global::Java.Util.Date ParseDate(string @string, string[] string1, global::Java.Util.Date date) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// formatDate
-				/// </java-name>
-				[Dot42.DexImport("formatDate", "(Ljava/util/Date;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string FormatDate(global::Java.Util.Date date) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// formatDate
-				/// </java-name>
-				[Dot42.DexImport("formatDate", "(Ljava/util/Date;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string FormatDate(global::Java.Util.Date date, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/RFC2109Spec
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2109Spec", AccessFlags = 33)]
-		public partial class RFC2109Spec : global::Org.Apache.Http.Impl.Cookie.CookieSpecBase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "([Ljava/lang/String;Z)V", AccessFlags = 1)]
-				public RFC2109Spec(string[] @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2109Spec() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;", AccessFlags = 1, Signature = "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List<Lo" +
-    "rg/apache/http/cookie/Cookie;>;")]
-				public override global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeader header, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
-				}
-
-				/// <java-name>
-				/// validate
-				/// </java-name>
-				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public override void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// formatCookies
-				/// </java-name>
-				[Dot42.DexImport("formatCookies", "(Ljava/util/List;)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;)Ljava/util/List<Lorg/apache/ht" +
-    "tp/Header;>;")]
-				public override global::Java.Util.IList<global::Org.Apache.Http.IHeader> FormatCookies(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> list) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Org.Apache.Http.IHeader>);
-				}
-
-				/// <java-name>
-				/// formatParamAsVer
-				/// </java-name>
-				[Dot42.DexImport("formatParamAsVer", "(Lorg/apache/http/util/CharArrayBuffer;Ljava/lang/String;Ljava/lang/String;I)V", AccessFlags = 4)]
-				protected internal virtual void FormatParamAsVer(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, string @string, string string1, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// formatCookieAsVer
-				/// </java-name>
-				[Dot42.DexImport("formatCookieAsVer", "(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/cookie/Cookie;I)V", AccessFlags = 4)]
-				protected internal virtual void FormatCookieAsVer(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, global::Org.Apache.Http.Cookie.ICookie cookie, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-				public override int GetVersion() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getVersionHeader
-				/// </java-name>
-				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-				public override global::Org.Apache.Http.IHeader GetVersionHeader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				public int Version
-				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-						get{ return GetVersion(); }
-				}
-
-				/// <java-name>
-				/// getVersionHeader
-				/// </java-name>
-				public global::Org.Apache.Http.IHeader VersionHeader
-				{
-				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-						get{ return GetVersionHeader(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/BasicCommentHandler
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/BasicCommentHandler", AccessFlags = 33)]
-		public partial class BasicCommentHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BasicCommentHandler() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/BasicMaxAgeHandler
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/BasicMaxAgeHandler", AccessFlags = 33)]
-		public partial class BasicMaxAgeHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BasicMaxAgeHandler() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/RFC2965VersionAttributeHandler
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965VersionAttributeHandler", AccessFlags = 33)]
-		public partial class RFC2965VersionAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2965VersionAttributeHandler() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// validate
-				/// </java-name>
-				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// match
-				/// </java-name>
-				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
-				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/RFC2965SpecFactory
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965SpecFactory", AccessFlags = 33)]
-		public partial class RFC2965SpecFactory : global::Org.Apache.Http.Cookie.ICookieSpecFactory
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2965SpecFactory() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newInstance
-				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/cookie/CookieSpec;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Cookie.ICookieSpec NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Cookie.ICookieSpec);
 				}
 
 		}
@@ -1096,14 +708,14 @@ namespace Org.Apache.Http.Impl.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/cookie/RFC2109VersionHandler
+		/// org/apache/http/impl/cookie/BasicCommentHandler
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2109VersionHandler", AccessFlags = 33)]
-		public partial class RFC2109VersionHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
+		[Dot42.DexImport("org/apache/http/impl/cookie/BasicCommentHandler", AccessFlags = 33)]
+		public partial class BasicCommentHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2109VersionHandler() /* MethodBuilder.Create */ 
+				public BasicCommentHandler() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1115,25 +727,17 @@ namespace Org.Apache.Http.Impl.Cookie
 				{
 				}
 
-				/// <java-name>
-				/// validate
-				/// </java-name>
-				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public override void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-				}
-
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/cookie/RFC2965PortAttributeHandler
+		/// org/apache/http/impl/cookie/BasicDomainHandler
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965PortAttributeHandler", AccessFlags = 33)]
-		public partial class RFC2965PortAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
+		[Dot42.DexImport("org/apache/http/impl/cookie/BasicDomainHandler", AccessFlags = 33)]
+		public partial class BasicDomainHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2965PortAttributeHandler() /* MethodBuilder.Create */ 
+				public BasicDomainHandler() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1160,6 +764,217 @@ namespace Org.Apache.Http.Impl.Cookie
 				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/BasicExpiresHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/BasicExpiresHandler", AccessFlags = 33)]
+		public partial class BasicExpiresHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "([Ljava/lang/String;)V", AccessFlags = 1)]
+				public BasicExpiresHandler(string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal BasicExpiresHandler() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/BasicMaxAgeHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/BasicMaxAgeHandler", AccessFlags = 33)]
+		public partial class BasicMaxAgeHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BasicMaxAgeHandler() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/BasicPathHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/BasicPathHandler", AccessFlags = 33)]
+		public partial class BasicPathHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BasicPathHandler() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// validate
+				/// </java-name>
+				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
+				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// match
+				/// </java-name>
+				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
+				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/BasicSecureHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/BasicSecureHandler", AccessFlags = 33)]
+		public partial class BasicSecureHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BasicSecureHandler() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// match
+				/// </java-name>
+				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
+				public override bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/BestMatchSpec
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/BestMatchSpec", AccessFlags = 33)]
+		public partial class BestMatchSpec : global::Org.Apache.Http.Cookie.ICookieSpec
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "([Ljava/lang/String;Z)V", AccessFlags = 1)]
+				public BestMatchSpec(string[] @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BestMatchSpec() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;", AccessFlags = 1, Signature = "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List<Lo" +
+    "rg/apache/http/cookie/Cookie;>;")]
+				public virtual global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeader header, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
+				}
+
+				/// <java-name>
+				/// validate
+				/// </java-name>
+				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
+				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// match
+				/// </java-name>
+				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
+				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// formatCookies
+				/// </java-name>
+				[Dot42.DexImport("formatCookies", "(Ljava/util/List;)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;)Ljava/util/List<Lorg/apache/ht" +
+    "tp/Header;>;")]
+				public virtual global::Java.Util.IList<global::Org.Apache.Http.IHeader> FormatCookies(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> list) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Org.Apache.Http.IHeader>);
+				}
+
+				/// <java-name>
+				/// getVersion
+				/// </java-name>
+				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+				public virtual int GetVersion() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getVersionHeader
+				/// </java-name>
+				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+				public virtual global::Org.Apache.Http.IHeader GetVersionHeader() /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.IHeader);
+				}
+
+				/// <java-name>
+				/// getVersion
+				/// </java-name>
+				public int Version
+				{
+				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+						get{ return GetVersion(); }
+				}
+
+				/// <java-name>
+				/// getVersionHeader
+				/// </java-name>
+				public global::Org.Apache.Http.IHeader VersionHeader
+				{
+				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+						get{ return GetVersionHeader(); }
 				}
 
 		}
@@ -1188,30 +1003,154 @@ namespace Org.Apache.Http.Impl.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/cookie/RFC2109DomainHandler
+		/// org/apache/http/impl/cookie/BrowserCompatSpec
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2109DomainHandler", AccessFlags = 33)]
-		public partial class RFC2109DomainHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
+		[Dot42.DexImport("org/apache/http/impl/cookie/BrowserCompatSpec", AccessFlags = 33)]
+		public partial class BrowserCompatSpec : global::Org.Apache.Http.Impl.Cookie.CookieSpecBase
  /* scope: __dot42__ */ 
 		{
+				/// <java-name>
+				/// DATE_PATTERNS
+				/// </java-name>
+				[Dot42.DexImport("DATE_PATTERNS", "[Ljava/lang/String;", AccessFlags = 28)]
+				protected internal static readonly string[] DATE_PATTERNS;
+				[Dot42.DexImport("<init>", "([Ljava/lang/String;)V", AccessFlags = 1)]
+				public BrowserCompatSpec(string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2109DomainHandler() /* MethodBuilder.Create */ 
+				public BrowserCompatSpec() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// parse
 				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("parse", "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;", AccessFlags = 1, Signature = "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List<Lo" +
+    "rg/apache/http/cookie/Cookie;>;")]
+				public override global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeader header, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
 				{
+						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
+				}
+
+				/// <java-name>
+				/// formatCookies
+				/// </java-name>
+				[Dot42.DexImport("formatCookies", "(Ljava/util/List;)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;)Ljava/util/List<Lorg/apache/ht" +
+    "tp/Header;>;")]
+				public override global::Java.Util.IList<global::Org.Apache.Http.IHeader> FormatCookies(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> list) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Org.Apache.Http.IHeader>);
+				}
+
+				/// <java-name>
+				/// getVersion
+				/// </java-name>
+				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+				public override int GetVersion() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getVersionHeader
+				/// </java-name>
+				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+				public override global::Org.Apache.Http.IHeader GetVersionHeader() /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.IHeader);
+				}
+
+				/// <java-name>
+				/// getVersion
+				/// </java-name>
+				public int Version
+				{
+				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+						get{ return GetVersion(); }
+				}
+
+				/// <java-name>
+				/// getVersionHeader
+				/// </java-name>
+				public global::Org.Apache.Http.IHeader VersionHeader
+				{
+				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+						get{ return GetVersionHeader(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/BrowserCompatSpecFactory
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/BrowserCompatSpecFactory", AccessFlags = 33)]
+		public partial class BrowserCompatSpecFactory : global::Org.Apache.Http.Cookie.ICookieSpecFactory
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BrowserCompatSpecFactory() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/cookie/CookieSpec;", AccessFlags = 1)]
+				public virtual global::Org.Apache.Http.Cookie.ICookieSpec NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Cookie.ICookieSpec);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/CookieSpecBase
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/CookieSpecBase", AccessFlags = 1057)]
+		public abstract partial class CookieSpecBase : global::Org.Apache.Http.Impl.Cookie.AbstractCookieSpec
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public CookieSpecBase() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDefaultPath
+				/// </java-name>
+				[Dot42.DexImport("getDefaultPath", "(Lorg/apache/http/cookie/CookieOrigin;)Ljava/lang/String;", AccessFlags = 12)]
+				protected internal static string GetDefaultPath(global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getDefaultDomain
+				/// </java-name>
+				[Dot42.DexImport("getDefaultDomain", "(Lorg/apache/http/cookie/CookieOrigin;)Ljava/lang/String;", AccessFlags = 12)]
+				protected internal static string GetDefaultDomain(global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "([Lorg/apache/http/HeaderElement;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util" +
+    "/List;", AccessFlags = 4, Signature = "([Lorg/apache/http/HeaderElement;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util" +
+    "/List<Lorg/apache/http/cookie/Cookie;>;")]
+				protected internal virtual global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeaderElement[] headerElement, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
 				}
 
 				/// <java-name>
 				/// validate
 				/// </java-name>
 				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				public override void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1219,9 +1158,167 @@ namespace Org.Apache.Http.Impl.Cookie
 				/// match
 				/// </java-name>
 				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
-				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				public override bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/DateParseException
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/DateParseException", AccessFlags = 33)]
+		public partial class DateParseException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public DateParseException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public DateParseException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/DateUtils
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/DateUtils", AccessFlags = 49)]
+		public sealed partial class DateUtils
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// PATTERN_RFC1123
+				/// </java-name>
+				[Dot42.DexImport("PATTERN_RFC1123", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string PATTERN_RFC1123 = "EEE, dd MMM yyyy HH:mm:ss zzz";
+				/// <java-name>
+				/// PATTERN_RFC1036
+				/// </java-name>
+				[Dot42.DexImport("PATTERN_RFC1036", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string PATTERN_RFC1036 = "EEEE, dd-MMM-yy HH:mm:ss zzz";
+				/// <java-name>
+				/// PATTERN_ASCTIME
+				/// </java-name>
+				[Dot42.DexImport("PATTERN_ASCTIME", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string PATTERN_ASCTIME = "EEE MMM d HH:mm:ss yyyy";
+				/// <java-name>
+				/// GMT
+				/// </java-name>
+				[Dot42.DexImport("GMT", "Ljava/util/TimeZone;", AccessFlags = 25)]
+				public static readonly global::Java.Util.TimeZone GMT;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal DateUtils() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parseDate
+				/// </java-name>
+				[Dot42.DexImport("parseDate", "(Ljava/lang/String;)Ljava/util/Date;", AccessFlags = 9)]
+				public static global::Java.Util.Date ParseDate(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.Date);
+				}
+
+				/// <java-name>
+				/// parseDate
+				/// </java-name>
+				[Dot42.DexImport("parseDate", "(Ljava/lang/String;[Ljava/lang/String;)Ljava/util/Date;", AccessFlags = 9)]
+				public static global::Java.Util.Date ParseDate(string @string, string[] string1) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.Date);
+				}
+
+				/// <java-name>
+				/// parseDate
+				/// </java-name>
+				[Dot42.DexImport("parseDate", "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;", AccessFlags = 9)]
+				public static global::Java.Util.Date ParseDate(string @string, string[] string1, global::Java.Util.Date date) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.Date);
+				}
+
+				/// <java-name>
+				/// formatDate
+				/// </java-name>
+				[Dot42.DexImport("formatDate", "(Ljava/util/Date;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string FormatDate(global::Java.Util.Date date) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// formatDate
+				/// </java-name>
+				[Dot42.DexImport("formatDate", "(Ljava/util/Date;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string FormatDate(global::Java.Util.Date date, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/NetscapeDomainHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/NetscapeDomainHandler", AccessFlags = 33)]
+		public partial class NetscapeDomainHandler : global::Org.Apache.Http.Impl.Cookie.BasicDomainHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public NetscapeDomainHandler() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// validate
+				/// </java-name>
+				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
+				public override void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// match
+				/// </java-name>
+				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
+				public override bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/NetscapeDraftHeaderParser
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/NetscapeDraftHeaderParser", AccessFlags = 33)]
+		public partial class NetscapeDraftHeaderParser
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// DEFAULT
+				/// </java-name>
+				[Dot42.DexImport("DEFAULT", "Lorg/apache/http/impl/cookie/NetscapeDraftHeaderParser;", AccessFlags = 25)]
+				public static readonly global::Org.Apache.Http.Impl.Cookie.NetscapeDraftHeaderParser DEFAULT;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public NetscapeDraftHeaderParser() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parseHeader
+				/// </java-name>
+				[Dot42.DexImport("parseHeader", "(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/message/ParserCursor;)Lor" +
+    "g/apache/http/HeaderElement;", AccessFlags = 1)]
+				public virtual global::Org.Apache.Http.IHeaderElement ParseHeader(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, global::Org.Apache.Http.Message.ParserCursor parserCursor) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.IHeaderElement);
 				}
 
 		}
@@ -1307,14 +1404,198 @@ namespace Org.Apache.Http.Impl.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/cookie/BasicSecureHandler
+		/// org/apache/http/impl/cookie/NetscapeDraftSpecFactory
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/BasicSecureHandler", AccessFlags = 33)]
-		public partial class BasicSecureHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
+		[Dot42.DexImport("org/apache/http/impl/cookie/NetscapeDraftSpecFactory", AccessFlags = 33)]
+		public partial class NetscapeDraftSpecFactory : global::Org.Apache.Http.Cookie.ICookieSpecFactory
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BasicSecureHandler() /* MethodBuilder.Create */ 
+				public NetscapeDraftSpecFactory() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/cookie/CookieSpec;", AccessFlags = 1)]
+				public virtual global::Org.Apache.Http.Cookie.ICookieSpec NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Cookie.ICookieSpec);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/RFC2109DomainHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2109DomainHandler", AccessFlags = 33)]
+		public partial class RFC2109DomainHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RFC2109DomainHandler() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// validate
+				/// </java-name>
+				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
+				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// match
+				/// </java-name>
+				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
+				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/RFC2109Spec
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2109Spec", AccessFlags = 33)]
+		public partial class RFC2109Spec : global::Org.Apache.Http.Impl.Cookie.CookieSpecBase
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "([Ljava/lang/String;Z)V", AccessFlags = 1)]
+				public RFC2109Spec(string[] @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RFC2109Spec() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;", AccessFlags = 1, Signature = "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List<Lo" +
+    "rg/apache/http/cookie/Cookie;>;")]
+				public override global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeader header, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
+				}
+
+				/// <java-name>
+				/// validate
+				/// </java-name>
+				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
+				public override void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// formatCookies
+				/// </java-name>
+				[Dot42.DexImport("formatCookies", "(Ljava/util/List;)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;)Ljava/util/List<Lorg/apache/ht" +
+    "tp/Header;>;")]
+				public override global::Java.Util.IList<global::Org.Apache.Http.IHeader> FormatCookies(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> list) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Org.Apache.Http.IHeader>);
+				}
+
+				/// <java-name>
+				/// formatParamAsVer
+				/// </java-name>
+				[Dot42.DexImport("formatParamAsVer", "(Lorg/apache/http/util/CharArrayBuffer;Ljava/lang/String;Ljava/lang/String;I)V", AccessFlags = 4)]
+				protected internal virtual void FormatParamAsVer(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, string @string, string string1, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// formatCookieAsVer
+				/// </java-name>
+				[Dot42.DexImport("formatCookieAsVer", "(Lorg/apache/http/util/CharArrayBuffer;Lorg/apache/http/cookie/Cookie;I)V", AccessFlags = 4)]
+				protected internal virtual void FormatCookieAsVer(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, global::Org.Apache.Http.Cookie.ICookie cookie, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getVersion
+				/// </java-name>
+				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+				public override int GetVersion() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getVersionHeader
+				/// </java-name>
+				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+				public override global::Org.Apache.Http.IHeader GetVersionHeader() /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.IHeader);
+				}
+
+				/// <java-name>
+				/// getVersion
+				/// </java-name>
+				public int Version
+				{
+				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+						get{ return GetVersion(); }
+				}
+
+				/// <java-name>
+				/// getVersionHeader
+				/// </java-name>
+				public global::Org.Apache.Http.IHeader VersionHeader
+				{
+				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+						get{ return GetVersionHeader(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/RFC2109SpecFactory
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2109SpecFactory", AccessFlags = 33)]
+		public partial class RFC2109SpecFactory : global::Org.Apache.Http.Cookie.ICookieSpecFactory
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RFC2109SpecFactory() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/cookie/CookieSpec;", AccessFlags = 1)]
+				public virtual global::Org.Apache.Http.Cookie.ICookieSpec NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Cookie.ICookieSpec);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/RFC2109VersionHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2109VersionHandler", AccessFlags = 33)]
+		public partial class RFC2109VersionHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RFC2109VersionHandler() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1327,12 +1608,11 @@ namespace Org.Apache.Http.Impl.Cookie
 				}
 
 				/// <java-name>
-				/// match
+				/// validate
 				/// </java-name>
-				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
-				public override bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
+				public override void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
 				{
-						return default(bool);
 				}
 
 		}
@@ -1377,51 +1657,30 @@ namespace Org.Apache.Http.Impl.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/cookie/CookieSpecBase
+		/// org/apache/http/impl/cookie/RFC2965DiscardAttributeHandler
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/CookieSpecBase", AccessFlags = 1057)]
-		public abstract partial class CookieSpecBase : global::Org.Apache.Http.Impl.Cookie.AbstractCookieSpec
+		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965DiscardAttributeHandler", AccessFlags = 33)]
+		public partial class RFC2965DiscardAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public CookieSpecBase() /* MethodBuilder.Create */ 
+				public RFC2965DiscardAttributeHandler() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getDefaultPath
-				/// </java-name>
-				[Dot42.DexImport("getDefaultPath", "(Lorg/apache/http/cookie/CookieOrigin;)Ljava/lang/String;", AccessFlags = 12)]
-				protected internal static string GetDefaultPath(global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDefaultDomain
-				/// </java-name>
-				[Dot42.DexImport("getDefaultDomain", "(Lorg/apache/http/cookie/CookieOrigin;)Ljava/lang/String;", AccessFlags = 12)]
-				protected internal static string GetDefaultDomain(global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
 				/// parse
 				/// </java-name>
-				[Dot42.DexImport("parse", "([Lorg/apache/http/HeaderElement;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util" +
-    "/List;", AccessFlags = 4, Signature = "([Lorg/apache/http/HeaderElement;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util" +
-    "/List<Lorg/apache/http/cookie/Cookie;>;")]
-				protected internal virtual global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeaderElement[] headerElement, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
 				}
 
 				/// <java-name>
 				/// validate
 				/// </java-name>
 				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public override void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1429,7 +1688,94 @@ namespace Org.Apache.Http.Impl.Cookie
 				/// match
 				/// </java-name>
 				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
-				public override bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/RFC2965DomainAttributeHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965DomainAttributeHandler", AccessFlags = 33)]
+		public partial class RFC2965DomainAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RFC2965DomainAttributeHandler() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// domainMatch
+				/// </java-name>
+				[Dot42.DexImport("domainMatch", "(Ljava/lang/String;Ljava/lang/String;)Z", AccessFlags = 1)]
+				public virtual bool DomainMatch(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// validate
+				/// </java-name>
+				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
+				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// match
+				/// </java-name>
+				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
+				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/cookie/RFC2965PortAttributeHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965PortAttributeHandler", AccessFlags = 33)]
+		public partial class RFC2965PortAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RFC2965PortAttributeHandler() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// validate
+				/// </java-name>
+				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
+				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// match
+				/// </java-name>
+				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
+				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1527,41 +1873,14 @@ namespace Org.Apache.Http.Impl.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/cookie/BasicExpiresHandler
+		/// org/apache/http/impl/cookie/RFC2965SpecFactory
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/BasicExpiresHandler", AccessFlags = 33)]
-		public partial class BasicExpiresHandler : global::Org.Apache.Http.Impl.Cookie.AbstractCookieAttributeHandler
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public BasicExpiresHandler(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicExpiresHandler() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/RFC2109SpecFactory
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2109SpecFactory", AccessFlags = 33)]
-		public partial class RFC2109SpecFactory : global::Org.Apache.Http.Cookie.ICookieSpecFactory
+		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965SpecFactory", AccessFlags = 33)]
+		public partial class RFC2965SpecFactory : global::Org.Apache.Http.Cookie.ICookieSpecFactory
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2109SpecFactory() /* MethodBuilder.Create */ 
+				public RFC2965SpecFactory() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1577,232 +1896,14 @@ namespace Org.Apache.Http.Impl.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/cookie/NetscapeDomainHandler
+		/// org/apache/http/impl/cookie/RFC2965VersionAttributeHandler
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/NetscapeDomainHandler", AccessFlags = 33)]
-		public partial class NetscapeDomainHandler : global::Org.Apache.Http.Impl.Cookie.BasicDomainHandler
+		[Dot42.DexImport("org/apache/http/impl/cookie/RFC2965VersionAttributeHandler", AccessFlags = 33)]
+		public partial class RFC2965VersionAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NetscapeDomainHandler() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// validate
-				/// </java-name>
-				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public override void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// match
-				/// </java-name>
-				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
-				public override bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/BrowserCompatSpec
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/BrowserCompatSpec", AccessFlags = 33)]
-		public partial class BrowserCompatSpec : global::Org.Apache.Http.Impl.Cookie.CookieSpecBase
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// DATE_PATTERNS
-				/// </java-name>
-				[Dot42.DexImport("DATE_PATTERNS", "[Ljava/lang/String;", AccessFlags = 28)]
-				protected internal static readonly string[] DATE_PATTERNS;
-				[Dot42.DexImport("<init>", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public BrowserCompatSpec(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BrowserCompatSpec() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;", AccessFlags = 1, Signature = "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List<Lo" +
-    "rg/apache/http/cookie/Cookie;>;")]
-				public override global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeader header, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
-				}
-
-				/// <java-name>
-				/// formatCookies
-				/// </java-name>
-				[Dot42.DexImport("formatCookies", "(Ljava/util/List;)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;)Ljava/util/List<Lorg/apache/ht" +
-    "tp/Header;>;")]
-				public override global::Java.Util.IList<global::Org.Apache.Http.IHeader> FormatCookies(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> list) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Org.Apache.Http.IHeader>);
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-				public override int GetVersion() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getVersionHeader
-				/// </java-name>
-				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-				public override global::Org.Apache.Http.IHeader GetVersionHeader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				public int Version
-				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-						get{ return GetVersion(); }
-				}
-
-				/// <java-name>
-				/// getVersionHeader
-				/// </java-name>
-				public global::Org.Apache.Http.IHeader VersionHeader
-				{
-				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-						get{ return GetVersionHeader(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/AbstractCookieSpec
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/AbstractCookieSpec", AccessFlags = 1057)]
-		public abstract partial class AbstractCookieSpec : global::Org.Apache.Http.Cookie.ICookieSpec
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AbstractCookieSpec() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// registerAttribHandler
-				/// </java-name>
-				[Dot42.DexImport("registerAttribHandler", "(Ljava/lang/String;Lorg/apache/http/cookie/CookieAttributeHandler;)V", AccessFlags = 1)]
-				public virtual void RegisterAttribHandler(string @string, global::Org.Apache.Http.Cookie.ICookieAttributeHandler cookieAttributeHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// findAttribHandler
-				/// </java-name>
-				[Dot42.DexImport("findAttribHandler", "(Ljava/lang/String;)Lorg/apache/http/cookie/CookieAttributeHandler;", AccessFlags = 4)]
-				protected internal virtual global::Org.Apache.Http.Cookie.ICookieAttributeHandler FindAttribHandler(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Cookie.ICookieAttributeHandler);
-				}
-
-				/// <java-name>
-				/// getAttribHandler
-				/// </java-name>
-				[Dot42.DexImport("getAttribHandler", "(Ljava/lang/String;)Lorg/apache/http/cookie/CookieAttributeHandler;", AccessFlags = 4)]
-				protected internal virtual global::Org.Apache.Http.Cookie.ICookieAttributeHandler GetAttribHandler(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Cookie.ICookieAttributeHandler);
-				}
-
-				/// <java-name>
-				/// getAttribHandlers
-				/// </java-name>
-				[Dot42.DexImport("getAttribHandlers", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Lorg/apache/http/cookie/CookieAttributeHandler;>;")]
-				protected internal virtual global::Java.Util.ICollection<global::Org.Apache.Http.Cookie.ICookieAttributeHandler> GetAttribHandlers() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::Org.Apache.Http.Cookie.ICookieAttributeHandler>);
-				}
-
-				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "getVersion", "()I", AccessFlags = 1025)]
-				public virtual int GetVersion() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
-				}
-
-				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "parse", "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;", AccessFlags = 1025, Signature = "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List<Lo" +
-    "rg/apache/http/cookie/Cookie;>;")]
-				public virtual global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Parse(global::Org.Apache.Http.IHeader header, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie>);
-				}
-
-				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1025)]
-				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-				}
-
-				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1025)]
-				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "formatCookies", "(Ljava/util/List;)Ljava/util/List;", AccessFlags = 1025, Signature = "(Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;)Ljava/util/List<Lorg/apache/ht" +
-    "tp/Header;>;")]
-				public virtual global::Java.Util.IList<global::Org.Apache.Http.IHeader> FormatCookies(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> list) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Util.IList<global::Org.Apache.Http.IHeader>);
-				}
-
-				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1025)]
-				public virtual global::Org.Apache.Http.IHeader GetVersionHeader() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// getAttribHandlers
-				/// </java-name>
-				protected internal global::Java.Util.ICollection<global::Org.Apache.Http.Cookie.ICookieAttributeHandler> AttribHandlers
-				{
-				[Dot42.DexImport("getAttribHandlers", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Lorg/apache/http/cookie/CookieAttributeHandler;>;")]
-						get{ return GetAttribHandlers(); }
-				}
-
-				public int Version
-				{
-				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "getVersion", "()I", AccessFlags = 1025)]
-						get{ return GetVersion(); }
-				}
-
-				public global::Org.Apache.Http.IHeader VersionHeader
-				{
-				[Dot42.DexImport("org/apache/http/cookie/CookieSpec", "getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1025)]
-						get{ return GetVersionHeader(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/BasicDomainHandler
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/BasicDomainHandler", AccessFlags = 33)]
-		public partial class BasicDomainHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BasicDomainHandler() /* MethodBuilder.Create */ 
+				public RFC2965VersionAttributeHandler() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1829,107 +1930,6 @@ namespace Org.Apache.Http.Impl.Cookie
 				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/BrowserCompatSpecFactory
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/BrowserCompatSpecFactory", AccessFlags = 33)]
-		public partial class BrowserCompatSpecFactory : global::Org.Apache.Http.Cookie.ICookieSpecFactory
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BrowserCompatSpecFactory() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newInstance
-				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/cookie/CookieSpec;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Cookie.ICookieSpec NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Cookie.ICookieSpec);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/DateParseException
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/DateParseException", AccessFlags = 33)]
-		public partial class DateParseException : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public DateParseException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public DateParseException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/AbstractCookieAttributeHandler
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/AbstractCookieAttributeHandler", AccessFlags = 1057)]
-		public abstract partial class AbstractCookieAttributeHandler : global::Org.Apache.Http.Cookie.ICookieAttributeHandler
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AbstractCookieAttributeHandler() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// validate
-				/// </java-name>
-				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1)]
-				public virtual void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// match
-				/// </java-name>
-				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1)]
-				public virtual bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("org/apache/http/cookie/CookieAttributeHandler", "parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1025)]
-				public virtual void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/cookie/NetscapeDraftSpecFactory
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/cookie/NetscapeDraftSpecFactory", AccessFlags = 33)]
-		public partial class NetscapeDraftSpecFactory : global::Org.Apache.Http.Cookie.ICookieSpecFactory
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NetscapeDraftSpecFactory() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newInstance
-				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/cookie/CookieSpec;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Cookie.ICookieSpec NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Cookie.ICookieSpec);
 				}
 
 		}

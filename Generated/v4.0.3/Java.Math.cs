@@ -2,570 +2,6 @@
 namespace Java.Math
 {
 		/// <java-name>
-		/// java/math/RoundingMode
-		/// </java-name>
-		[Dot42.DexImport("java/math/RoundingMode", AccessFlags = 16433, Signature = "Ljava/lang/Enum<Ljava/math/RoundingMode;>;")]
-		public sealed class RoundingMode
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CEILING
-				/// </java-name>
-				[Dot42.DexImport("CEILING", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
-				public static readonly global::Java.Math.RoundingMode CEILING;
-				/// <java-name>
-				/// DOWN
-				/// </java-name>
-				[Dot42.DexImport("DOWN", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
-				public static readonly global::Java.Math.RoundingMode DOWN;
-				/// <java-name>
-				/// FLOOR
-				/// </java-name>
-				[Dot42.DexImport("FLOOR", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
-				public static readonly global::Java.Math.RoundingMode FLOOR;
-				/// <java-name>
-				/// HALF_DOWN
-				/// </java-name>
-				[Dot42.DexImport("HALF_DOWN", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
-				public static readonly global::Java.Math.RoundingMode HALF_DOWN;
-				/// <java-name>
-				/// HALF_EVEN
-				/// </java-name>
-				[Dot42.DexImport("HALF_EVEN", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
-				public static readonly global::Java.Math.RoundingMode HALF_EVEN;
-				/// <java-name>
-				/// HALF_UP
-				/// </java-name>
-				[Dot42.DexImport("HALF_UP", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
-				public static readonly global::Java.Math.RoundingMode HALF_UP;
-				/// <java-name>
-				/// UNNECESSARY
-				/// </java-name>
-				[Dot42.DexImport("UNNECESSARY", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
-				public static readonly global::Java.Math.RoundingMode UNNECESSARY;
-				/// <java-name>
-				/// UP
-				/// </java-name>
-				[Dot42.DexImport("UP", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
-				public static readonly global::Java.Math.RoundingMode UP;
-				private RoundingMode() /* TypeBuilder.AddPrivateDefaultCtor */ 
-				{
-				}
-
-				/// <java-name>
-				/// values
-				/// </java-name>
-				[Dot42.DexImport("values", "()[Ljava/math/RoundingMode;", AccessFlags = 9)]
-				public static global::Java.Math.RoundingMode[] Values() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.RoundingMode[]);
-				}
-
-				/// <java-name>
-				/// valueOf
-				/// </java-name>
-				[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Ljava/math/RoundingMode;", AccessFlags = 9)]
-				public static global::Java.Math.RoundingMode ValueOf(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.RoundingMode);
-				}
-
-				/// <java-name>
-				/// valueOf
-				/// </java-name>
-				[Dot42.DexImport("valueOf", "(I)Ljava/math/RoundingMode;", AccessFlags = 9)]
-				public static global::Java.Math.RoundingMode ValueOf(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.RoundingMode);
-				}
-
-		}
-
-		/// <java-name>
-		/// java/math/BigInteger
-		/// </java-name>
-		[Dot42.DexImport("java/math/BigInteger", AccessFlags = 33, Signature = "Ljava/lang/Number;Ljava/lang/Comparable<Ljava/math/BigInteger;>;Ljava/io/Serializ" +
-    "able;")]
-		public partial class BigInteger : global::Java.Lang.Number, global::System.IComparable<global::Java.Math.BigInteger>, global::Java.Io.ISerializable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// ZERO
-				/// </java-name>
-				[Dot42.DexImport("ZERO", "Ljava/math/BigInteger;", AccessFlags = 25)]
-				public static readonly global::Java.Math.BigInteger ZERO;
-				/// <java-name>
-				/// ONE
-				/// </java-name>
-				[Dot42.DexImport("ONE", "Ljava/math/BigInteger;", AccessFlags = 25)]
-				public static readonly global::Java.Math.BigInteger ONE;
-				/// <java-name>
-				/// TEN
-				/// </java-name>
-				[Dot42.DexImport("TEN", "Ljava/math/BigInteger;", AccessFlags = 25)]
-				public static readonly global::Java.Math.BigInteger TEN;
-				[Dot42.DexImport("<init>", "(ILjava/util/Random;)V", AccessFlags = 1)]
-				public BigInteger(int int32, global::System.Random random) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(IILjava/util/Random;)V", AccessFlags = 1)]
-				public BigInteger(int int32, int int321, global::System.Random random) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public BigInteger(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
-				public BigInteger(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
-				public BigInteger(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public BigInteger(int int32, byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
-				public BigInteger(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public BigInteger(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// valueOf
-				/// </java-name>
-				[Dot42.DexImport("valueOf", "(J)Ljava/math/BigInteger;", AccessFlags = 9)]
-				public static global::Java.Math.BigInteger ValueOf(long int64) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// toByteArray
-				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
-				public virtual sbyte[] JavaToByteArray() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// toByteArray
-				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] ToByteArray() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// abs
-				/// </java-name>
-				[Dot42.DexImport("abs", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Abs() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// negate
-				/// </java-name>
-				[Dot42.DexImport("negate", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Negate() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// add
-				/// </java-name>
-				[Dot42.DexImport("add", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Add(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// subtract
-				/// </java-name>
-				[Dot42.DexImport("subtract", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Subtract(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// signum
-				/// </java-name>
-				[Dot42.DexImport("signum", "()I", AccessFlags = 1)]
-				public virtual int Signum() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// shiftRight
-				/// </java-name>
-				[Dot42.DexImport("shiftRight", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ShiftRight(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// shiftLeft
-				/// </java-name>
-				[Dot42.DexImport("shiftLeft", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ShiftLeft(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// bitLength
-				/// </java-name>
-				[Dot42.DexImport("bitLength", "()I", AccessFlags = 1)]
-				public virtual int BitLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// testBit
-				/// </java-name>
-				[Dot42.DexImport("testBit", "(I)Z", AccessFlags = 1)]
-				public virtual bool TestBit(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setBit
-				/// </java-name>
-				[Dot42.DexImport("setBit", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger SetBit(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// clearBit
-				/// </java-name>
-				[Dot42.DexImport("clearBit", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ClearBit(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// flipBit
-				/// </java-name>
-				[Dot42.DexImport("flipBit", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger FlipBit(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getLowestSetBit
-				/// </java-name>
-				[Dot42.DexImport("getLowestSetBit", "()I", AccessFlags = 1)]
-				public virtual int GetLowestSetBit() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// bitCount
-				/// </java-name>
-				[Dot42.DexImport("bitCount", "()I", AccessFlags = 1)]
-				public virtual int BitCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// not
-				/// </java-name>
-				[Dot42.DexImport("not", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Not() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// and
-				/// </java-name>
-				[Dot42.DexImport("and", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger And(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// or
-				/// </java-name>
-				[Dot42.DexImport("or", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Or(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// xor
-				/// </java-name>
-				[Dot42.DexImport("xor", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Xor(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// andNot
-				/// </java-name>
-				[Dot42.DexImport("andNot", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger AndNot(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// intValue
-				/// </java-name>
-				[Dot42.DexImport("intValue", "()I", AccessFlags = 1)]
-				public override int IntValue() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// longValue
-				/// </java-name>
-				[Dot42.DexImport("longValue", "()J", AccessFlags = 1)]
-				public override long LongValue() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// floatValue
-				/// </java-name>
-				[Dot42.DexImport("floatValue", "()F", AccessFlags = 1)]
-				public override float FloatValue() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// doubleValue
-				/// </java-name>
-				[Dot42.DexImport("doubleValue", "()D", AccessFlags = 1)]
-				public override double DoubleValue() /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// compareTo
-				/// </java-name>
-				[Dot42.DexImport("compareTo", "(Ljava/math/BigInteger;)I", AccessFlags = 1)]
-				public virtual int CompareTo(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// min
-				/// </java-name>
-				[Dot42.DexImport("min", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Min(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// max
-				/// </java-name>
-				[Dot42.DexImport("max", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Max(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string ToString(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// gcd
-				/// </java-name>
-				[Dot42.DexImport("gcd", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Gcd(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// multiply
-				/// </java-name>
-				[Dot42.DexImport("multiply", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Multiply(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// pow
-				/// </java-name>
-				[Dot42.DexImport("pow", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Pow(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// divideAndRemainder
-				/// </java-name>
-				[Dot42.DexImport("divideAndRemainder", "(Ljava/math/BigInteger;)[Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger[] DivideAndRemainder(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger[]);
-				}
-
-				/// <java-name>
-				/// divide
-				/// </java-name>
-				[Dot42.DexImport("divide", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Divide(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// remainder
-				/// </java-name>
-				[Dot42.DexImport("remainder", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Remainder(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// modInverse
-				/// </java-name>
-				[Dot42.DexImport("modInverse", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ModInverse(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// modPow
-				/// </java-name>
-				[Dot42.DexImport("modPow", "(Ljava/math/BigInteger;Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ModPow(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// mod
-				/// </java-name>
-				[Dot42.DexImport("mod", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Mod(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// isProbablePrime
-				/// </java-name>
-				[Dot42.DexImport("isProbablePrime", "(I)Z", AccessFlags = 1)]
-				public virtual bool IsProbablePrime(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// nextProbablePrime
-				/// </java-name>
-				[Dot42.DexImport("nextProbablePrime", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger NextProbablePrime() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// probablePrime
-				/// </java-name>
-				[Dot42.DexImport("probablePrime", "(ILjava/util/Random;)Ljava/math/BigInteger;", AccessFlags = 9)]
-				public static global::Java.Math.BigInteger ProbablePrime(int int32, global::System.Random random) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BigInteger() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLowestSetBit
-				/// </java-name>
-				public int LowestSetBit
-				{
-				[Dot42.DexImport("getLowestSetBit", "()I", AccessFlags = 1)]
-						get{ return GetLowestSetBit(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// java/math/BigDecimal
 		/// </java-name>
 		[Dot42.DexImport("java/math/BigDecimal", AccessFlags = 33, Signature = "Ljava/lang/Number;Ljava/lang/Comparable<Ljava/math/BigDecimal;>;Ljava/io/Serializ" +
@@ -1265,6 +701,490 @@ namespace Java.Math
 		}
 
 		/// <java-name>
+		/// java/math/BigInteger
+		/// </java-name>
+		[Dot42.DexImport("java/math/BigInteger", AccessFlags = 33, Signature = "Ljava/lang/Number;Ljava/lang/Comparable<Ljava/math/BigInteger;>;Ljava/io/Serializ" +
+    "able;")]
+		public partial class BigInteger : global::Java.Lang.Number, global::System.IComparable<global::Java.Math.BigInteger>, global::Java.Io.ISerializable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// ZERO
+				/// </java-name>
+				[Dot42.DexImport("ZERO", "Ljava/math/BigInteger;", AccessFlags = 25)]
+				public static readonly global::Java.Math.BigInteger ZERO;
+				/// <java-name>
+				/// ONE
+				/// </java-name>
+				[Dot42.DexImport("ONE", "Ljava/math/BigInteger;", AccessFlags = 25)]
+				public static readonly global::Java.Math.BigInteger ONE;
+				/// <java-name>
+				/// TEN
+				/// </java-name>
+				[Dot42.DexImport("TEN", "Ljava/math/BigInteger;", AccessFlags = 25)]
+				public static readonly global::Java.Math.BigInteger TEN;
+				[Dot42.DexImport("<init>", "(ILjava/util/Random;)V", AccessFlags = 1)]
+				public BigInteger(int int32, global::System.Random random) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(IILjava/util/Random;)V", AccessFlags = 1)]
+				public BigInteger(int int32, int int321, global::System.Random random) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public BigInteger(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
+				public BigInteger(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
+				public BigInteger(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public BigInteger(int int32, byte[] @byte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				public BigInteger(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public BigInteger(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// valueOf
+				/// </java-name>
+				[Dot42.DexImport("valueOf", "(J)Ljava/math/BigInteger;", AccessFlags = 9)]
+				public static global::Java.Math.BigInteger ValueOf(long int64) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// toByteArray
+				/// </java-name>
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
+				public virtual sbyte[] JavaToByteArray() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// toByteArray
+				/// </java-name>
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual byte[] ToByteArray() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// abs
+				/// </java-name>
+				[Dot42.DexImport("abs", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Abs() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// negate
+				/// </java-name>
+				[Dot42.DexImport("negate", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Negate() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// add
+				/// </java-name>
+				[Dot42.DexImport("add", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Add(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// subtract
+				/// </java-name>
+				[Dot42.DexImport("subtract", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Subtract(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// signum
+				/// </java-name>
+				[Dot42.DexImport("signum", "()I", AccessFlags = 1)]
+				public virtual int Signum() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// shiftRight
+				/// </java-name>
+				[Dot42.DexImport("shiftRight", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger ShiftRight(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// shiftLeft
+				/// </java-name>
+				[Dot42.DexImport("shiftLeft", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger ShiftLeft(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// bitLength
+				/// </java-name>
+				[Dot42.DexImport("bitLength", "()I", AccessFlags = 1)]
+				public virtual int BitLength() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// testBit
+				/// </java-name>
+				[Dot42.DexImport("testBit", "(I)Z", AccessFlags = 1)]
+				public virtual bool TestBit(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setBit
+				/// </java-name>
+				[Dot42.DexImport("setBit", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger SetBit(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// clearBit
+				/// </java-name>
+				[Dot42.DexImport("clearBit", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger ClearBit(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// flipBit
+				/// </java-name>
+				[Dot42.DexImport("flipBit", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger FlipBit(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// getLowestSetBit
+				/// </java-name>
+				[Dot42.DexImport("getLowestSetBit", "()I", AccessFlags = 1)]
+				public virtual int GetLowestSetBit() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// bitCount
+				/// </java-name>
+				[Dot42.DexImport("bitCount", "()I", AccessFlags = 1)]
+				public virtual int BitCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// not
+				/// </java-name>
+				[Dot42.DexImport("not", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Not() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// and
+				/// </java-name>
+				[Dot42.DexImport("and", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger And(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// or
+				/// </java-name>
+				[Dot42.DexImport("or", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Or(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// xor
+				/// </java-name>
+				[Dot42.DexImport("xor", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Xor(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// andNot
+				/// </java-name>
+				[Dot42.DexImport("andNot", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger AndNot(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// intValue
+				/// </java-name>
+				[Dot42.DexImport("intValue", "()I", AccessFlags = 1)]
+				public override int IntValue() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// longValue
+				/// </java-name>
+				[Dot42.DexImport("longValue", "()J", AccessFlags = 1)]
+				public override long LongValue() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// floatValue
+				/// </java-name>
+				[Dot42.DexImport("floatValue", "()F", AccessFlags = 1)]
+				public override float FloatValue() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// doubleValue
+				/// </java-name>
+				[Dot42.DexImport("doubleValue", "()D", AccessFlags = 1)]
+				public override double DoubleValue() /* MethodBuilder.Create */ 
+				{
+						return default(double);
+				}
+
+				/// <java-name>
+				/// compareTo
+				/// </java-name>
+				[Dot42.DexImport("compareTo", "(Ljava/math/BigInteger;)I", AccessFlags = 1)]
+				public virtual int CompareTo(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// min
+				/// </java-name>
+				[Dot42.DexImport("min", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Min(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// max
+				/// </java-name>
+				[Dot42.DexImport("max", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Max(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string ToString(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// gcd
+				/// </java-name>
+				[Dot42.DexImport("gcd", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Gcd(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// multiply
+				/// </java-name>
+				[Dot42.DexImport("multiply", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Multiply(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// pow
+				/// </java-name>
+				[Dot42.DexImport("pow", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Pow(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// divideAndRemainder
+				/// </java-name>
+				[Dot42.DexImport("divideAndRemainder", "(Ljava/math/BigInteger;)[Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger[] DivideAndRemainder(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger[]);
+				}
+
+				/// <java-name>
+				/// divide
+				/// </java-name>
+				[Dot42.DexImport("divide", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Divide(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// remainder
+				/// </java-name>
+				[Dot42.DexImport("remainder", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Remainder(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// modInverse
+				/// </java-name>
+				[Dot42.DexImport("modInverse", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger ModInverse(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// modPow
+				/// </java-name>
+				[Dot42.DexImport("modPow", "(Ljava/math/BigInteger;Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger ModPow(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// mod
+				/// </java-name>
+				[Dot42.DexImport("mod", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger Mod(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// isProbablePrime
+				/// </java-name>
+				[Dot42.DexImport("isProbablePrime", "(I)Z", AccessFlags = 1)]
+				public virtual bool IsProbablePrime(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// nextProbablePrime
+				/// </java-name>
+				[Dot42.DexImport("nextProbablePrime", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger NextProbablePrime() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// probablePrime
+				/// </java-name>
+				[Dot42.DexImport("probablePrime", "(ILjava/util/Random;)Ljava/math/BigInteger;", AccessFlags = 9)]
+				public static global::Java.Math.BigInteger ProbablePrime(int int32, global::System.Random random) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal BigInteger() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLowestSetBit
+				/// </java-name>
+				public int LowestSetBit
+				{
+				[Dot42.DexImport("getLowestSetBit", "()I", AccessFlags = 1)]
+						get{ return GetLowestSetBit(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// java/math/MathContext
 		/// </java-name>
 		[Dot42.DexImport("java/math/MathContext", AccessFlags = 49)]
@@ -1372,6 +1292,86 @@ namespace Java.Math
 				{
 				[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
 						get{ return GetRoundingMode(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/math/RoundingMode
+		/// </java-name>
+		[Dot42.DexImport("java/math/RoundingMode", AccessFlags = 16433, Signature = "Ljava/lang/Enum<Ljava/math/RoundingMode;>;")]
+		public sealed class RoundingMode
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CEILING
+				/// </java-name>
+				[Dot42.DexImport("CEILING", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
+				public static readonly global::Java.Math.RoundingMode CEILING;
+				/// <java-name>
+				/// DOWN
+				/// </java-name>
+				[Dot42.DexImport("DOWN", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
+				public static readonly global::Java.Math.RoundingMode DOWN;
+				/// <java-name>
+				/// FLOOR
+				/// </java-name>
+				[Dot42.DexImport("FLOOR", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
+				public static readonly global::Java.Math.RoundingMode FLOOR;
+				/// <java-name>
+				/// HALF_DOWN
+				/// </java-name>
+				[Dot42.DexImport("HALF_DOWN", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
+				public static readonly global::Java.Math.RoundingMode HALF_DOWN;
+				/// <java-name>
+				/// HALF_EVEN
+				/// </java-name>
+				[Dot42.DexImport("HALF_EVEN", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
+				public static readonly global::Java.Math.RoundingMode HALF_EVEN;
+				/// <java-name>
+				/// HALF_UP
+				/// </java-name>
+				[Dot42.DexImport("HALF_UP", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
+				public static readonly global::Java.Math.RoundingMode HALF_UP;
+				/// <java-name>
+				/// UNNECESSARY
+				/// </java-name>
+				[Dot42.DexImport("UNNECESSARY", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
+				public static readonly global::Java.Math.RoundingMode UNNECESSARY;
+				/// <java-name>
+				/// UP
+				/// </java-name>
+				[Dot42.DexImport("UP", "Ljava/math/RoundingMode;", AccessFlags = 16409)]
+				public static readonly global::Java.Math.RoundingMode UP;
+				private RoundingMode() /* TypeBuilder.AddPrivateDefaultCtor */ 
+				{
+				}
+
+				/// <java-name>
+				/// values
+				/// </java-name>
+				[Dot42.DexImport("values", "()[Ljava/math/RoundingMode;", AccessFlags = 9)]
+				public static global::Java.Math.RoundingMode[] Values() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.RoundingMode[]);
+				}
+
+				/// <java-name>
+				/// valueOf
+				/// </java-name>
+				[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Ljava/math/RoundingMode;", AccessFlags = 9)]
+				public static global::Java.Math.RoundingMode ValueOf(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.RoundingMode);
+				}
+
+				/// <java-name>
+				/// valueOf
+				/// </java-name>
+				[Dot42.DexImport("valueOf", "(I)Ljava/math/RoundingMode;", AccessFlags = 9)]
+				public static global::Java.Math.RoundingMode ValueOf(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.RoundingMode);
 				}
 
 		}

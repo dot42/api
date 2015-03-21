@@ -2,6 +2,79 @@
 namespace Dalvik.System
 {
 		/// <java-name>
+		/// dalvik/system/BaseDexClassLoader
+		/// </java-name>
+		[Dot42.DexImport("dalvik/system/BaseDexClassLoader", AccessFlags = 33)]
+		public partial class BaseDexClassLoader : global::Java.Lang.ClassLoader
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
+				public BaseDexClassLoader(string @string, global::Java.Io.File file, string string1, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// findClass
+				/// </java-name>
+				[Dot42.DexImport("findClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 4, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
+				protected internal override global::System.Type FindClass(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// findResource
+				/// </java-name>
+				[Dot42.DexImport("findResource", "(Ljava/lang/String;)Ljava/net/URL;", AccessFlags = 4)]
+				protected internal override global::Java.Net.URL FindResource(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Net.URL);
+				}
+
+				/// <java-name>
+				/// findResources
+				/// </java-name>
+				[Dot42.DexImport("findResources", "(Ljava/lang/String;)Ljava/util/Enumeration;", AccessFlags = 4, Signature = "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;")]
+				protected internal override global::Java.Util.IEnumeration<global::Java.Net.URL> FindResources(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IEnumeration<global::Java.Net.URL>);
+				}
+
+				/// <java-name>
+				/// findLibrary
+				/// </java-name>
+				[Dot42.DexImport("findLibrary", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
+				public new virtual string FindLibrary(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getPackage
+				/// </java-name>
+				[Dot42.DexImport("getPackage", "(Ljava/lang/String;)Ljava/lang/Package;", AccessFlags = 36)]
+				protected internal override global::Java.Lang.Package GetPackage(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Package);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal BaseDexClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// dalvik/system/DexClassLoader
 		/// </java-name>
 		[Dot42.DexImport("dalvik/system/DexClassLoader", AccessFlags = 33)]
@@ -15,30 +88,6 @@ namespace Dalvik.System
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DexClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// dalvik/system/PathClassLoader
-		/// </java-name>
-		[Dot42.DexImport("dalvik/system/PathClassLoader", AccessFlags = 33)]
-		public partial class PathClassLoader : global::Dalvik.System.BaseDexClassLoader
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-				public PathClassLoader(string @string, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-				public PathClassLoader(string @string, string string1, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PathClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -137,73 +186,24 @@ namespace Dalvik.System
 		}
 
 		/// <java-name>
-		/// dalvik/system/BaseDexClassLoader
+		/// dalvik/system/PathClassLoader
 		/// </java-name>
-		[Dot42.DexImport("dalvik/system/BaseDexClassLoader", AccessFlags = 33)]
-		public partial class BaseDexClassLoader : global::Java.Lang.ClassLoader
+		[Dot42.DexImport("dalvik/system/PathClassLoader", AccessFlags = 33)]
+		public partial class PathClassLoader : global::Dalvik.System.BaseDexClassLoader
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-				public BaseDexClassLoader(string @string, global::Java.Io.File file, string string1, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
+				public PathClassLoader(string @string, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// findClass
-				/// </java-name>
-				[Dot42.DexImport("findClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 4, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
-				protected internal override global::System.Type FindClass(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
+				public PathClassLoader(string @string, string string1, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// findResource
-				/// </java-name>
-				[Dot42.DexImport("findResource", "(Ljava/lang/String;)Ljava/net/URL;", AccessFlags = 4)]
-				protected internal override global::Java.Net.URL FindResource(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.URL);
-				}
-
-				/// <java-name>
-				/// findResources
-				/// </java-name>
-				[Dot42.DexImport("findResources", "(Ljava/lang/String;)Ljava/util/Enumeration;", AccessFlags = 4, Signature = "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;")]
-				protected internal override global::Java.Util.IEnumeration<global::Java.Net.URL> FindResources(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<global::Java.Net.URL>);
-				}
-
-				/// <java-name>
-				/// findLibrary
-				/// </java-name>
-				[Dot42.DexImport("findLibrary", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
-				public new virtual string FindLibrary(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPackage
-				/// </java-name>
-				[Dot42.DexImport("getPackage", "(Ljava/lang/String;)Ljava/lang/Package;", AccessFlags = 36)]
-				protected internal override global::Java.Lang.Package GetPackage(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Package);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BaseDexClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
+				internal PathClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

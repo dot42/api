@@ -2,6 +2,58 @@
 namespace Org.W3c.Dom.Ls
 {
 		/// <java-name>
+		/// org/w3c/dom/ls/DOMImplementationLS
+		/// </java-name>
+		[Dot42.DexImport("org/w3c/dom/ls/DOMImplementationLS", AccessFlags = 1537)]
+		public partial interface IDOMImplementationLS
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// createLSParser
+				/// </java-name>
+				[Dot42.DexImport("createLSParser", "(SLjava/lang/String;)Lorg/w3c/dom/ls/LSParser;", AccessFlags = 1025)]
+				global::Org.W3c.Dom.Ls.ILSParser CreateLSParser(short int16, string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// createLSSerializer
+				/// </java-name>
+				[Dot42.DexImport("createLSSerializer", "()Lorg/w3c/dom/ls/LSSerializer;", AccessFlags = 1025)]
+				global::Org.W3c.Dom.Ls.ILSSerializer CreateLSSerializer() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// createLSInput
+				/// </java-name>
+				[Dot42.DexImport("createLSInput", "()Lorg/w3c/dom/ls/LSInput;", AccessFlags = 1025)]
+				global::Org.W3c.Dom.Ls.ILSInput CreateLSInput() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// createLSOutput
+				/// </java-name>
+				[Dot42.DexImport("createLSOutput", "()Lorg/w3c/dom/ls/LSOutput;", AccessFlags = 1025)]
+				global::Org.W3c.Dom.Ls.ILSOutput CreateLSOutput() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/w3c/dom/ls/DOMImplementationLS
+		/// </java-name>
+		[Dot42.DexImport("org/w3c/dom/ls/DOMImplementationLS", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IDOMImplementationLSConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// MODE_SYNCHRONOUS
+				/// </java-name>
+				[Dot42.DexImport("MODE_SYNCHRONOUS", "S", AccessFlags = 25)]
+				public const short MODE_SYNCHRONOUS = 1;
+				/// <java-name>
+				/// MODE_ASYNCHRONOUS
+				/// </java-name>
+				[Dot42.DexImport("MODE_ASYNCHRONOUS", "S", AccessFlags = 25)]
+				public const short MODE_ASYNCHRONOUS = 2;
+		}
+
+		/// <java-name>
 		/// org/w3c/dom/ls/LSInput
 		/// </java-name>
 		[Dot42.DexImport("org/w3c/dom/ls/LSInput", AccessFlags = 1537)]
@@ -107,37 +159,60 @@ namespace Org.W3c.Dom.Ls
 		}
 
 		/// <java-name>
-		/// org/w3c/dom/ls/LSParser
+		/// org/w3c/dom/ls/LSOutput
 		/// </java-name>
-		[Dot42.DexImport("org/w3c/dom/ls/LSParser", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class ILSParserConstants
+		[Dot42.DexImport("org/w3c/dom/ls/LSOutput", AccessFlags = 1537)]
+		public partial interface ILSOutput
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// ACTION_APPEND_AS_CHILDREN
+				/// getCharacterStream
 				/// </java-name>
-				[Dot42.DexImport("ACTION_APPEND_AS_CHILDREN", "S", AccessFlags = 25)]
-				public const short ACTION_APPEND_AS_CHILDREN = 1;
+				[Dot42.DexImport("getCharacterStream", "()Ljava/io/Writer;", AccessFlags = 1025)]
+				global::Java.Io.Writer GetCharacterStream() /* MethodBuilder.Create */ ;
+
 				/// <java-name>
-				/// ACTION_REPLACE_CHILDREN
+				/// setCharacterStream
 				/// </java-name>
-				[Dot42.DexImport("ACTION_REPLACE_CHILDREN", "S", AccessFlags = 25)]
-				public const short ACTION_REPLACE_CHILDREN = 2;
+				[Dot42.DexImport("setCharacterStream", "(Ljava/io/Writer;)V", AccessFlags = 1025)]
+				void SetCharacterStream(global::Java.Io.Writer writer) /* MethodBuilder.Create */ ;
+
 				/// <java-name>
-				/// ACTION_INSERT_BEFORE
+				/// getByteStream
 				/// </java-name>
-				[Dot42.DexImport("ACTION_INSERT_BEFORE", "S", AccessFlags = 25)]
-				public const short ACTION_INSERT_BEFORE = 3;
+				[Dot42.DexImport("getByteStream", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
+				global::Java.Io.OutputStream GetByteStream() /* MethodBuilder.Create */ ;
+
 				/// <java-name>
-				/// ACTION_INSERT_AFTER
+				/// setByteStream
 				/// </java-name>
-				[Dot42.DexImport("ACTION_INSERT_AFTER", "S", AccessFlags = 25)]
-				public const short ACTION_INSERT_AFTER = 4;
+				[Dot42.DexImport("setByteStream", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
+				void SetByteStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
+
 				/// <java-name>
-				/// ACTION_REPLACE
+				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("ACTION_REPLACE", "S", AccessFlags = 25)]
-				public const short ACTION_REPLACE = 5;
+				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+				string GetSystemId() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setSystemId
+				/// </java-name>
+				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void SetSystemId(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getEncoding
+				/// </java-name>
+				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
+				string GetEncoding() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setEncoding
+				/// </java-name>
+				[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void SetEncoding(string @string) /* MethodBuilder.Create */ ;
+
 		}
 
 		/// <java-name>
@@ -204,145 +279,108 @@ namespace Org.W3c.Dom.Ls
 		}
 
 		/// <java-name>
-		/// org/w3c/dom/ls/LSException
+		/// org/w3c/dom/ls/LSParser
 		/// </java-name>
-		[Dot42.DexImport("org/w3c/dom/ls/LSException", AccessFlags = 33)]
-		public partial class LSException : global::System.SystemException
+		[Dot42.DexImport("org/w3c/dom/ls/LSParser", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class ILSParserConstants
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// code
+				/// ACTION_APPEND_AS_CHILDREN
 				/// </java-name>
-				[Dot42.DexImport("code", "S", AccessFlags = 1)]
-				public short Code;
+				[Dot42.DexImport("ACTION_APPEND_AS_CHILDREN", "S", AccessFlags = 25)]
+				public const short ACTION_APPEND_AS_CHILDREN = 1;
 				/// <java-name>
-				/// PARSE_ERR
+				/// ACTION_REPLACE_CHILDREN
 				/// </java-name>
-				[Dot42.DexImport("PARSE_ERR", "S", AccessFlags = 25)]
-				public const short PARSE_ERR = 81;
+				[Dot42.DexImport("ACTION_REPLACE_CHILDREN", "S", AccessFlags = 25)]
+				public const short ACTION_REPLACE_CHILDREN = 2;
 				/// <java-name>
-				/// SERIALIZE_ERR
+				/// ACTION_INSERT_BEFORE
 				/// </java-name>
-				[Dot42.DexImport("SERIALIZE_ERR", "S", AccessFlags = 25)]
-				public const short SERIALIZE_ERR = 82;
-				[Dot42.DexImport("<init>", "(SLjava/lang/String;)V", AccessFlags = 1)]
-				public LSException(short int16, string @string) /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("ACTION_INSERT_BEFORE", "S", AccessFlags = 25)]
+				public const short ACTION_INSERT_BEFORE = 3;
+				/// <java-name>
+				/// ACTION_INSERT_AFTER
+				/// </java-name>
+				[Dot42.DexImport("ACTION_INSERT_AFTER", "S", AccessFlags = 25)]
+				public const short ACTION_INSERT_AFTER = 4;
+				/// <java-name>
+				/// ACTION_REPLACE
+				/// </java-name>
+				[Dot42.DexImport("ACTION_REPLACE", "S", AccessFlags = 25)]
+				public const short ACTION_REPLACE = 5;
+		}
 
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LSException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
+		/// <java-name>
+		/// org/w3c/dom/ls/LSParserFilter
+		/// </java-name>
+		[Dot42.DexImport("org/w3c/dom/ls/LSParserFilter", AccessFlags = 1537)]
+		public partial interface ILSParserFilter
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// startElement
+				/// </java-name>
+				[Dot42.DexImport("startElement", "(Lorg/w3c/dom/Element;)S", AccessFlags = 1025)]
+				short StartElement(global::Org.W3c.Dom.IElement element) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// acceptNode
+				/// </java-name>
+				[Dot42.DexImport("acceptNode", "(Lorg/w3c/dom/Node;)S", AccessFlags = 1025)]
+				short AcceptNode(global::Org.W3c.Dom.INode node) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getWhatToShow
+				/// </java-name>
+				[Dot42.DexImport("getWhatToShow", "()I", AccessFlags = 1025)]
+				int GetWhatToShow() /* MethodBuilder.Create */ ;
 
 		}
 
 		/// <java-name>
-		/// org/w3c/dom/ls/DOMImplementationLS
+		/// org/w3c/dom/ls/LSParserFilter
 		/// </java-name>
-		[Dot42.DexImport("org/w3c/dom/ls/DOMImplementationLS", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IDOMImplementationLSConstants
+		[Dot42.DexImport("org/w3c/dom/ls/LSParserFilter", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class ILSParserFilterConstants
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// MODE_SYNCHRONOUS
+				/// FILTER_ACCEPT
 				/// </java-name>
-				[Dot42.DexImport("MODE_SYNCHRONOUS", "S", AccessFlags = 25)]
-				public const short MODE_SYNCHRONOUS = 1;
+				[Dot42.DexImport("FILTER_ACCEPT", "S", AccessFlags = 25)]
+				public const short FILTER_ACCEPT = 1;
 				/// <java-name>
-				/// MODE_ASYNCHRONOUS
+				/// FILTER_REJECT
 				/// </java-name>
-				[Dot42.DexImport("MODE_ASYNCHRONOUS", "S", AccessFlags = 25)]
-				public const short MODE_ASYNCHRONOUS = 2;
+				[Dot42.DexImport("FILTER_REJECT", "S", AccessFlags = 25)]
+				public const short FILTER_REJECT = 2;
+				/// <java-name>
+				/// FILTER_SKIP
+				/// </java-name>
+				[Dot42.DexImport("FILTER_SKIP", "S", AccessFlags = 25)]
+				public const short FILTER_SKIP = 3;
+				/// <java-name>
+				/// FILTER_INTERRUPT
+				/// </java-name>
+				[Dot42.DexImport("FILTER_INTERRUPT", "S", AccessFlags = 25)]
+				public const short FILTER_INTERRUPT = 4;
 		}
 
 		/// <java-name>
-		/// org/w3c/dom/ls/DOMImplementationLS
+		/// org/w3c/dom/ls/LSResourceResolver
 		/// </java-name>
-		[Dot42.DexImport("org/w3c/dom/ls/DOMImplementationLS", AccessFlags = 1537)]
-		public partial interface IDOMImplementationLS
+		[Dot42.DexImport("org/w3c/dom/ls/LSResourceResolver", AccessFlags = 1537)]
+		public partial interface ILSResourceResolver
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// createLSParser
+				/// resolveResource
 				/// </java-name>
-				[Dot42.DexImport("createLSParser", "(SLjava/lang/String;)Lorg/w3c/dom/ls/LSParser;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.Ls.ILSParser CreateLSParser(short int16, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// createLSSerializer
-				/// </java-name>
-				[Dot42.DexImport("createLSSerializer", "()Lorg/w3c/dom/ls/LSSerializer;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.Ls.ILSSerializer CreateLSSerializer() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// createLSInput
-				/// </java-name>
-				[Dot42.DexImport("createLSInput", "()Lorg/w3c/dom/ls/LSInput;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.Ls.ILSInput CreateLSInput() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// createLSOutput
-				/// </java-name>
-				[Dot42.DexImport("createLSOutput", "()Lorg/w3c/dom/ls/LSOutput;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.Ls.ILSOutput CreateLSOutput() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/w3c/dom/ls/LSOutput
-		/// </java-name>
-		[Dot42.DexImport("org/w3c/dom/ls/LSOutput", AccessFlags = 1537)]
-		public partial interface ILSOutput
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getCharacterStream
-				/// </java-name>
-				[Dot42.DexImport("getCharacterStream", "()Ljava/io/Writer;", AccessFlags = 1025)]
-				global::Java.Io.Writer GetCharacterStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setCharacterStream
-				/// </java-name>
-				[Dot42.DexImport("setCharacterStream", "(Ljava/io/Writer;)V", AccessFlags = 1025)]
-				void SetCharacterStream(global::Java.Io.Writer writer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getByteStream
-				/// </java-name>
-				[Dot42.DexImport("getByteStream", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
-				global::Java.Io.OutputStream GetByteStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setByteStream
-				/// </java-name>
-				[Dot42.DexImport("setByteStream", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-				void SetByteStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSystemId
-				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetSystemId(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEncoding
-				/// </java-name>
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetEncoding() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEncoding
-				/// </java-name>
-				[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetEncoding(string @string) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("resolveResource", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/la" +
+    "ng/String;)Lorg/w3c/dom/ls/LSInput;", AccessFlags = 1025)]
+				global::Org.W3c.Dom.Ls.ILSInput ResolveResource(string @string, string string1, string string2, string string3, string string4) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -392,74 +430,36 @@ namespace Org.W3c.Dom.Ls
 		}
 
 		/// <java-name>
-		/// org/w3c/dom/ls/LSResourceResolver
+		/// org/w3c/dom/ls/LSException
 		/// </java-name>
-		[Dot42.DexImport("org/w3c/dom/ls/LSResourceResolver", AccessFlags = 1537)]
-		public partial interface ILSResourceResolver
+		[Dot42.DexImport("org/w3c/dom/ls/LSException", AccessFlags = 33)]
+		public partial class LSException : global::System.SystemException
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// resolveResource
+				/// code
 				/// </java-name>
-				[Dot42.DexImport("resolveResource", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/la" +
-    "ng/String;)Lorg/w3c/dom/ls/LSInput;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.Ls.ILSInput ResolveResource(string @string, string string1, string string2, string string3, string string4) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("code", "S", AccessFlags = 1)]
+				public short Code;
+				/// <java-name>
+				/// PARSE_ERR
+				/// </java-name>
+				[Dot42.DexImport("PARSE_ERR", "S", AccessFlags = 25)]
+				public const short PARSE_ERR = 81;
+				/// <java-name>
+				/// SERIALIZE_ERR
+				/// </java-name>
+				[Dot42.DexImport("SERIALIZE_ERR", "S", AccessFlags = 25)]
+				public const short SERIALIZE_ERR = 82;
+				[Dot42.DexImport("<init>", "(SLjava/lang/String;)V", AccessFlags = 1)]
+				public LSException(short int16, string @string) /* MethodBuilder.Create */ 
+				{
+				}
 
-		}
-
-		/// <java-name>
-		/// org/w3c/dom/ls/LSParserFilter
-		/// </java-name>
-		[Dot42.DexImport("org/w3c/dom/ls/LSParserFilter", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class ILSParserFilterConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// FILTER_ACCEPT
-				/// </java-name>
-				[Dot42.DexImport("FILTER_ACCEPT", "S", AccessFlags = 25)]
-				public const short FILTER_ACCEPT = 1;
-				/// <java-name>
-				/// FILTER_REJECT
-				/// </java-name>
-				[Dot42.DexImport("FILTER_REJECT", "S", AccessFlags = 25)]
-				public const short FILTER_REJECT = 2;
-				/// <java-name>
-				/// FILTER_SKIP
-				/// </java-name>
-				[Dot42.DexImport("FILTER_SKIP", "S", AccessFlags = 25)]
-				public const short FILTER_SKIP = 3;
-				/// <java-name>
-				/// FILTER_INTERRUPT
-				/// </java-name>
-				[Dot42.DexImport("FILTER_INTERRUPT", "S", AccessFlags = 25)]
-				public const short FILTER_INTERRUPT = 4;
-		}
-
-		/// <java-name>
-		/// org/w3c/dom/ls/LSParserFilter
-		/// </java-name>
-		[Dot42.DexImport("org/w3c/dom/ls/LSParserFilter", AccessFlags = 1537)]
-		public partial interface ILSParserFilter
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// startElement
-				/// </java-name>
-				[Dot42.DexImport("startElement", "(Lorg/w3c/dom/Element;)S", AccessFlags = 1025)]
-				short StartElement(global::Org.W3c.Dom.IElement element) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// acceptNode
-				/// </java-name>
-				[Dot42.DexImport("acceptNode", "(Lorg/w3c/dom/Node;)S", AccessFlags = 1025)]
-				short AcceptNode(global::Org.W3c.Dom.INode node) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getWhatToShow
-				/// </java-name>
-				[Dot42.DexImport("getWhatToShow", "()I", AccessFlags = 1025)]
-				int GetWhatToShow() /* MethodBuilder.Create */ ;
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal LSException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
 
 		}
 

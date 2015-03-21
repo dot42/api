@@ -2,130 +2,6 @@
 namespace Android.Telephony.Gsm
 {
 		/// <java-name>
-		/// android/telephony/gsm/SmsManager
-		/// </java-name>
-		[Dot42.DexImport("android/telephony/gsm/SmsManager", AccessFlags = 49)]
-		public sealed partial class SmsManager
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// STATUS_ON_SIM_FREE
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_SIM_FREE", "I", AccessFlags = 25)]
-				public const int STATUS_ON_SIM_FREE = 0;
-				/// <java-name>
-				/// STATUS_ON_SIM_READ
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_SIM_READ", "I", AccessFlags = 25)]
-				public const int STATUS_ON_SIM_READ = 1;
-				/// <java-name>
-				/// STATUS_ON_SIM_UNREAD
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_SIM_UNREAD", "I", AccessFlags = 25)]
-				public const int STATUS_ON_SIM_UNREAD = 3;
-				/// <java-name>
-				/// STATUS_ON_SIM_SENT
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_SIM_SENT", "I", AccessFlags = 25)]
-				public const int STATUS_ON_SIM_SENT = 5;
-				/// <java-name>
-				/// STATUS_ON_SIM_UNSENT
-				/// </java-name>
-				[Dot42.DexImport("STATUS_ON_SIM_UNSENT", "I", AccessFlags = 25)]
-				public const int STATUS_ON_SIM_UNSENT = 7;
-				/// <java-name>
-				/// RESULT_ERROR_GENERIC_FAILURE
-				/// </java-name>
-				[Dot42.DexImport("RESULT_ERROR_GENERIC_FAILURE", "I", AccessFlags = 25)]
-				public const int RESULT_ERROR_GENERIC_FAILURE = 1;
-				/// <java-name>
-				/// RESULT_ERROR_RADIO_OFF
-				/// </java-name>
-				[Dot42.DexImport("RESULT_ERROR_RADIO_OFF", "I", AccessFlags = 25)]
-				public const int RESULT_ERROR_RADIO_OFF = 2;
-				/// <java-name>
-				/// RESULT_ERROR_NULL_PDU
-				/// </java-name>
-				[Dot42.DexImport("RESULT_ERROR_NULL_PDU", "I", AccessFlags = 25)]
-				public const int RESULT_ERROR_NULL_PDU = 3;
-				/// <java-name>
-				/// RESULT_ERROR_NO_SERVICE
-				/// </java-name>
-				[Dot42.DexImport("RESULT_ERROR_NO_SERVICE", "I", AccessFlags = 25)]
-				public const int RESULT_ERROR_NO_SERVICE = 4;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SmsManager() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Landroid/telephony/gsm/SmsManager;", AccessFlags = 25)]
-				public static global::Android.Telephony.Gsm.SmsManager GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Telephony.Gsm.SmsManager);
-				}
-
-				/// <java-name>
-				/// sendTextMessage
-				/// </java-name>
-				[Dot42.DexImport("sendTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent" +
-    ";Landroid/app/PendingIntent;)V", AccessFlags = 17)]
-				public void SendTextMessage(string @string, string string1, string string2, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// divideMessage
-				/// </java-name>
-				[Dot42.DexImport("divideMessage", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 17, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;")]
-				public global::Java.Util.ArrayList<string> DivideMessage(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ArrayList<string>);
-				}
-
-				/// <java-name>
-				/// sendMultipartTextMessage
-				/// </java-name>
-				[Dot42.DexImport("sendMultipartTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Lj" +
-    "ava/util/ArrayList;)V", AccessFlags = 17, Signature = "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;Lja" +
-    "va/util/ArrayList<Landroid/app/PendingIntent;>;Ljava/util/ArrayList<Landroid/app" +
-    "/PendingIntent;>;)V")]
-				public void SendMultipartTextMessage(string @string, string string1, global::Java.Util.ArrayList<string> arrayList, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList1, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList2) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendDataMessage
-				/// </java-name>
-				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
-    "endingIntent;)V", AccessFlags = 17)]
-				public void SendDataMessage(string @string, string string1, short int16, sbyte[] sByte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendDataMessage
-				/// </java-name>
-				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
-    "endingIntent;)V", AccessFlags = 17, IgnoreFromJava = true)]
-				public void SendDataMessage(string @string, string string1, short int16, byte[] @byte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				public static global::Android.Telephony.Gsm.SmsManager Default
-				{
-				[Dot42.DexImport("getDefault", "()Landroid/telephony/gsm/SmsManager;", AccessFlags = 25)]
-						get{ return GetDefault(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// android/telephony/gsm/GsmCellLocation
 		/// </java-name>
 		[Dot42.DexImport("android/telephony/gsm/GsmCellLocation", AccessFlags = 33)]
@@ -245,6 +121,130 @@ namespace Android.Telephony.Gsm
 				{
 				[Dot42.DexImport("getPsc", "()I", AccessFlags = 1)]
 						get{ return GetPsc(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/telephony/gsm/SmsManager
+		/// </java-name>
+		[Dot42.DexImport("android/telephony/gsm/SmsManager", AccessFlags = 49)]
+		public sealed partial class SmsManager
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// STATUS_ON_SIM_FREE
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_SIM_FREE", "I", AccessFlags = 25)]
+				public const int STATUS_ON_SIM_FREE = 0;
+				/// <java-name>
+				/// STATUS_ON_SIM_READ
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_SIM_READ", "I", AccessFlags = 25)]
+				public const int STATUS_ON_SIM_READ = 1;
+				/// <java-name>
+				/// STATUS_ON_SIM_UNREAD
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_SIM_UNREAD", "I", AccessFlags = 25)]
+				public const int STATUS_ON_SIM_UNREAD = 3;
+				/// <java-name>
+				/// STATUS_ON_SIM_SENT
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_SIM_SENT", "I", AccessFlags = 25)]
+				public const int STATUS_ON_SIM_SENT = 5;
+				/// <java-name>
+				/// STATUS_ON_SIM_UNSENT
+				/// </java-name>
+				[Dot42.DexImport("STATUS_ON_SIM_UNSENT", "I", AccessFlags = 25)]
+				public const int STATUS_ON_SIM_UNSENT = 7;
+				/// <java-name>
+				/// RESULT_ERROR_GENERIC_FAILURE
+				/// </java-name>
+				[Dot42.DexImport("RESULT_ERROR_GENERIC_FAILURE", "I", AccessFlags = 25)]
+				public const int RESULT_ERROR_GENERIC_FAILURE = 1;
+				/// <java-name>
+				/// RESULT_ERROR_RADIO_OFF
+				/// </java-name>
+				[Dot42.DexImport("RESULT_ERROR_RADIO_OFF", "I", AccessFlags = 25)]
+				public const int RESULT_ERROR_RADIO_OFF = 2;
+				/// <java-name>
+				/// RESULT_ERROR_NULL_PDU
+				/// </java-name>
+				[Dot42.DexImport("RESULT_ERROR_NULL_PDU", "I", AccessFlags = 25)]
+				public const int RESULT_ERROR_NULL_PDU = 3;
+				/// <java-name>
+				/// RESULT_ERROR_NO_SERVICE
+				/// </java-name>
+				[Dot42.DexImport("RESULT_ERROR_NO_SERVICE", "I", AccessFlags = 25)]
+				public const int RESULT_ERROR_NO_SERVICE = 4;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal SmsManager() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDefault
+				/// </java-name>
+				[Dot42.DexImport("getDefault", "()Landroid/telephony/gsm/SmsManager;", AccessFlags = 25)]
+				public static global::Android.Telephony.Gsm.SmsManager GetDefault() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Telephony.Gsm.SmsManager);
+				}
+
+				/// <java-name>
+				/// sendTextMessage
+				/// </java-name>
+				[Dot42.DexImport("sendTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent" +
+    ";Landroid/app/PendingIntent;)V", AccessFlags = 17)]
+				public void SendTextMessage(string @string, string string1, string string2, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// divideMessage
+				/// </java-name>
+				[Dot42.DexImport("divideMessage", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 17, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;")]
+				public global::Java.Util.ArrayList<string> DivideMessage(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ArrayList<string>);
+				}
+
+				/// <java-name>
+				/// sendMultipartTextMessage
+				/// </java-name>
+				[Dot42.DexImport("sendMultipartTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Lj" +
+    "ava/util/ArrayList;)V", AccessFlags = 17, Signature = "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;Lja" +
+    "va/util/ArrayList<Landroid/app/PendingIntent;>;Ljava/util/ArrayList<Landroid/app" +
+    "/PendingIntent;>;)V")]
+				public void SendMultipartTextMessage(string @string, string string1, global::Java.Util.ArrayList<string> arrayList, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList1, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendDataMessage
+				/// </java-name>
+				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
+    "endingIntent;)V", AccessFlags = 17)]
+				public void SendDataMessage(string @string, string string1, short int16, sbyte[] sByte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendDataMessage
+				/// </java-name>
+				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
+    "endingIntent;)V", AccessFlags = 17, IgnoreFromJava = true)]
+				public void SendDataMessage(string @string, string string1, short int16, byte[] @byte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDefault
+				/// </java-name>
+				public static global::Android.Telephony.Gsm.SmsManager Default
+				{
+				[Dot42.DexImport("getDefault", "()Landroid/telephony/gsm/SmsManager;", AccessFlags = 25)]
+						get{ return GetDefault(); }
 				}
 
 		}

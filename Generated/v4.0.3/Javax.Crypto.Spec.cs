@@ -2,6 +2,325 @@
 namespace Javax.Crypto.Spec
 {
 		/// <java-name>
+		/// javax/crypto/spec/DESedeKeySpec
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/spec/DESedeKeySpec", AccessFlags = 33)]
+		public partial class DESedeKeySpec : global::Java.Security.Spec.IKeySpec
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// DES_EDE_KEY_LEN
+				/// </java-name>
+				[Dot42.DexImport("DES_EDE_KEY_LEN", "I", AccessFlags = 25)]
+				public const int DES_EDE_KEY_LEN = 24;
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				public DESedeKeySpec(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public DESedeKeySpec(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
+				public DESedeKeySpec(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public DESedeKeySpec(byte[] @byte, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getKey
+				/// </java-name>
+				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1)]
+				public virtual sbyte[] JavaGetKey() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getKey
+				/// </java-name>
+				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual byte[] GetKey() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// isParityAdjusted
+				/// </java-name>
+				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
+				public static bool IsParityAdjusted(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isParityAdjusted
+				/// </java-name>
+				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
+				public static bool IsParityAdjusted(byte[] @byte, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal DESedeKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getKey
+				/// </java-name>
+				public byte[] Key
+				{
+				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetKey(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/crypto/spec/DESKeySpec
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/spec/DESKeySpec", AccessFlags = 33)]
+		public partial class DESKeySpec : global::Java.Security.Spec.IKeySpec
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// DES_KEY_LEN
+				/// </java-name>
+				[Dot42.DexImport("DES_KEY_LEN", "I", AccessFlags = 25)]
+				public const int DES_KEY_LEN = 8;
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				public DESKeySpec(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public DESKeySpec(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
+				public DESKeySpec(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public DESKeySpec(byte[] @byte, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getKey
+				/// </java-name>
+				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1)]
+				public virtual sbyte[] JavaGetKey() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getKey
+				/// </java-name>
+				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual byte[] GetKey() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// isParityAdjusted
+				/// </java-name>
+				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
+				public static bool IsParityAdjusted(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isParityAdjusted
+				/// </java-name>
+				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
+				public static bool IsParityAdjusted(byte[] @byte, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isWeak
+				/// </java-name>
+				[Dot42.DexImport("isWeak", "([BI)Z", AccessFlags = 9)]
+				public static bool IsWeak(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isWeak
+				/// </java-name>
+				[Dot42.DexImport("isWeak", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
+				public static bool IsWeak(byte[] @byte, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal DESKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getKey
+				/// </java-name>
+				public byte[] Key
+				{
+				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetKey(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/crypto/spec/DHGenParameterSpec
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/spec/DHGenParameterSpec", AccessFlags = 33)]
+		public partial class DHGenParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
+				public DHGenParameterSpec(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPrimeSize
+				/// </java-name>
+				[Dot42.DexImport("getPrimeSize", "()I", AccessFlags = 1)]
+				public virtual int GetPrimeSize() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getExponentSize
+				/// </java-name>
+				[Dot42.DexImport("getExponentSize", "()I", AccessFlags = 1)]
+				public virtual int GetExponentSize() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal DHGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPrimeSize
+				/// </java-name>
+				public int PrimeSize
+				{
+				[Dot42.DexImport("getPrimeSize", "()I", AccessFlags = 1)]
+						get{ return GetPrimeSize(); }
+				}
+
+				/// <java-name>
+				/// getExponentSize
+				/// </java-name>
+				public int ExponentSize
+				{
+				[Dot42.DexImport("getExponentSize", "()I", AccessFlags = 1)]
+						get{ return GetExponentSize(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/crypto/spec/DHParameterSpec
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/spec/DHParameterSpec", AccessFlags = 33)]
+		public partial class DHParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;)V", AccessFlags = 1)]
+				public DHParameterSpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;I)V", AccessFlags = 1)]
+				public DHParameterSpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getP
+				/// </java-name>
+				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// getG
+				/// </java-name>
+				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+				public virtual global::Java.Math.BigInteger GetG() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Math.BigInteger);
+				}
+
+				/// <java-name>
+				/// getL
+				/// </java-name>
+				[Dot42.DexImport("getL", "()I", AccessFlags = 1)]
+				public virtual int GetL() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal DHParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getP
+				/// </java-name>
+				public global::Java.Math.BigInteger P
+				{
+				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return GetP(); }
+				}
+
+				/// <java-name>
+				/// getG
+				/// </java-name>
+				public global::Java.Math.BigInteger G
+				{
+				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return GetG(); }
+				}
+
+				/// <java-name>
+				/// getL
+				/// </java-name>
+				public int L
+				{
+				[Dot42.DexImport("getL", "()I", AccessFlags = 1)]
+						get{ return GetL(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// javax/crypto/spec/DHPrivateKeySpec
 		/// </java-name>
 		[Dot42.DexImport("javax/crypto/spec/DHPrivateKeySpec", AccessFlags = 33)]
@@ -70,130 +389,6 @@ namespace Javax.Crypto.Spec
 				{
 				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
 						get{ return GetG(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/crypto/spec/DHGenParameterSpec
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/spec/DHGenParameterSpec", AccessFlags = 33)]
-		public partial class DHGenParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
-				public DHGenParameterSpec(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPrimeSize
-				/// </java-name>
-				[Dot42.DexImport("getPrimeSize", "()I", AccessFlags = 1)]
-				public virtual int GetPrimeSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getExponentSize
-				/// </java-name>
-				[Dot42.DexImport("getExponentSize", "()I", AccessFlags = 1)]
-				public virtual int GetExponentSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DHGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPrimeSize
-				/// </java-name>
-				public int PrimeSize
-				{
-				[Dot42.DexImport("getPrimeSize", "()I", AccessFlags = 1)]
-						get{ return GetPrimeSize(); }
-				}
-
-				/// <java-name>
-				/// getExponentSize
-				/// </java-name>
-				public int ExponentSize
-				{
-				[Dot42.DexImport("getExponentSize", "()I", AccessFlags = 1)]
-						get{ return GetExponentSize(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/crypto/spec/PBEParameterSpec
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/spec/PBEParameterSpec", AccessFlags = 33)]
-		public partial class PBEParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
-				public PBEParameterSpec(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public PBEParameterSpec(byte[] @byte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSalt
-				/// </java-name>
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1)]
-				public virtual sbyte[] JavaGetSalt() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getSalt
-				/// </java-name>
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetSalt() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getIterationCount
-				/// </java-name>
-				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 1)]
-				public virtual int GetIterationCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PBEParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSalt
-				/// </java-name>
-				public byte[] Salt
-				{
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetSalt(); }
-				}
-
-				/// <java-name>
-				/// getIterationCount
-				/// </java-name>
-				public int IterationCount
-				{
-				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 1)]
-						get{ return GetIterationCount(); }
 				}
 
 		}
@@ -319,6 +514,495 @@ namespace Javax.Crypto.Spec
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal IvParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// getIV
+				/// </java-name>
+				public byte[] IV
+				{
+				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetIV(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/crypto/spec/OAEPParameterSpec
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/spec/OAEPParameterSpec", AccessFlags = 33)]
+		public partial class OAEPParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// DEFAULT
+				/// </java-name>
+				[Dot42.DexImport("DEFAULT", "Ljavax/crypto/spec/OAEPParameterSpec;", AccessFlags = 25)]
+				public static readonly global::Javax.Crypto.Spec.OAEPParameterSpec DEFAULT;
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;L" +
+    "javax/crypto/spec/PSource;)V", AccessFlags = 1)]
+				public OAEPParameterSpec(string @string, string string1, global::Java.Security.Spec.IAlgorithmParameterSpec algorithmParameterSpec, global::Javax.Crypto.Spec.PSource pSource) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDigestAlgorithm
+				/// </java-name>
+				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetDigestAlgorithm() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getMGFAlgorithm
+				/// </java-name>
+				[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetMGFAlgorithm() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getMGFParameters
+				/// </java-name>
+				[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
+				public virtual global::Java.Security.Spec.IAlgorithmParameterSpec GetMGFParameters() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Security.Spec.IAlgorithmParameterSpec);
+				}
+
+				/// <java-name>
+				/// getPSource
+				/// </java-name>
+				[Dot42.DexImport("getPSource", "()Ljavax/crypto/spec/PSource;", AccessFlags = 1)]
+				public virtual global::Javax.Crypto.Spec.PSource GetPSource() /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Crypto.Spec.PSource);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal OAEPParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDigestAlgorithm
+				/// </java-name>
+				public string DigestAlgorithm
+				{
+				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetDigestAlgorithm(); }
+				}
+
+				/// <java-name>
+				/// getMGFAlgorithm
+				/// </java-name>
+				public string MGFAlgorithm
+				{
+				[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetMGFAlgorithm(); }
+				}
+
+				/// <java-name>
+				/// getMGFParameters
+				/// </java-name>
+				public global::Java.Security.Spec.IAlgorithmParameterSpec MGFParameters
+				{
+				[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
+						get{ return GetMGFParameters(); }
+				}
+
+				/// <java-name>
+				/// getPSource
+				/// </java-name>
+				public global::Javax.Crypto.Spec.PSource PSource
+				{
+				[Dot42.DexImport("getPSource", "()Ljavax/crypto/spec/PSource;", AccessFlags = 1)]
+						get{ return GetPSource(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/crypto/spec/PBEKeySpec
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/spec/PBEKeySpec", AccessFlags = 33)]
+		public partial class PBEKeySpec : global::Java.Security.Spec.IKeySpec
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "([C)V", AccessFlags = 1)]
+				public PBEKeySpec(char[] @char) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([C[BII)V", AccessFlags = 1)]
+				public PBEKeySpec(char[] @char, sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([C[BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public PBEKeySpec(char[] @char, byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([C[BI)V", AccessFlags = 1)]
+				public PBEKeySpec(char[] @char, sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([C[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public PBEKeySpec(char[] @char, byte[] @byte, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clearPassword
+				/// </java-name>
+				[Dot42.DexImport("clearPassword", "()V", AccessFlags = 17)]
+				public void ClearPassword() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPassword
+				/// </java-name>
+				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 17)]
+				public char[] GetPassword() /* MethodBuilder.Create */ 
+				{
+						return default(char[]);
+				}
+
+				/// <java-name>
+				/// getSalt
+				/// </java-name>
+				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17)]
+				public sbyte[] JavaGetSalt() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getSalt
+				/// </java-name>
+				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+				public byte[] GetSalt() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getIterationCount
+				/// </java-name>
+				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 17)]
+				public int GetIterationCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getKeyLength
+				/// </java-name>
+				[Dot42.DexImport("getKeyLength", "()I", AccessFlags = 17)]
+				public int GetKeyLength() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal PBEKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPassword
+				/// </java-name>
+				public char[] Password
+				{
+				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 17)]
+						get{ return GetPassword(); }
+				}
+
+				/// <java-name>
+				/// getSalt
+				/// </java-name>
+				public byte[] Salt
+				{
+				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						get{ return GetSalt(); }
+				}
+
+				/// <java-name>
+				/// getIterationCount
+				/// </java-name>
+				public int IterationCount
+				{
+				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 17)]
+						get{ return GetIterationCount(); }
+				}
+
+				/// <java-name>
+				/// getKeyLength
+				/// </java-name>
+				public int KeyLength
+				{
+				[Dot42.DexImport("getKeyLength", "()I", AccessFlags = 17)]
+						get{ return GetKeyLength(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/crypto/spec/PBEParameterSpec
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/spec/PBEParameterSpec", AccessFlags = 33)]
+		public partial class PBEParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
+				public PBEParameterSpec(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public PBEParameterSpec(byte[] @byte, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSalt
+				/// </java-name>
+				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1)]
+				public virtual sbyte[] JavaGetSalt() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getSalt
+				/// </java-name>
+				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual byte[] GetSalt() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getIterationCount
+				/// </java-name>
+				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 1)]
+				public virtual int GetIterationCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal PBEParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSalt
+				/// </java-name>
+				public byte[] Salt
+				{
+				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetSalt(); }
+				}
+
+				/// <java-name>
+				/// getIterationCount
+				/// </java-name>
+				public int IterationCount
+				{
+				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 1)]
+						get{ return GetIterationCount(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/crypto/spec/PSource
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/spec/PSource", AccessFlags = 33)]
+		public partial class PSource
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 4)]
+				protected internal PSource(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAlgorithm
+				/// </java-name>
+				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetAlgorithm() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal PSource() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAlgorithm
+				/// </java-name>
+				public string Algorithm
+				{
+				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetAlgorithm(); }
+				}
+
+				/// <java-name>
+				/// javax/crypto/spec/PSource$PSpecified
+				/// </java-name>
+				[Dot42.DexImport("javax/crypto/spec/PSource$PSpecified", AccessFlags = 25)]
+				public sealed partial class PSpecified : global::Javax.Crypto.Spec.PSource
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// DEFAULT
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT", "Ljavax/crypto/spec/PSource$PSpecified;", AccessFlags = 25)]
+						public static readonly PSpecified DEFAULT;
+						[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+						public PSpecified(sbyte[] sByte) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						public PSpecified(byte[] @byte) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// getValue
+						/// </java-name>
+						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1)]
+						public sbyte[] JavaGetValue() /* MethodBuilder.Create */ 
+						{
+								return default(sbyte[]);
+						}
+
+						/// <java-name>
+						/// getValue
+						/// </java-name>
+						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						public byte[] GetValue() /* MethodBuilder.Create */ 
+						{
+								return default(byte[]);
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal PSpecified() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+						/// <java-name>
+						/// getValue
+						/// </java-name>
+						public byte[] Value
+						{
+						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+								get{ return GetValue(); }
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/crypto/spec/RC2ParameterSpec
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/spec/RC2ParameterSpec", AccessFlags = 33)]
+		public partial class RC2ParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
+				public RC2ParameterSpec(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
+				public RC2ParameterSpec(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public RC2ParameterSpec(int int32, byte[] @byte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1)]
+				public RC2ParameterSpec(int int32, sbyte[] sByte, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public RC2ParameterSpec(int int32, byte[] @byte, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getEffectiveKeyBits
+				/// </java-name>
+				[Dot42.DexImport("getEffectiveKeyBits", "()I", AccessFlags = 1)]
+				public virtual int GetEffectiveKeyBits() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getIV
+				/// </java-name>
+				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
+				public virtual sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getIV
+				/// </java-name>
+				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual byte[] GetIV() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal RC2ParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getEffectiveKeyBits
+				/// </java-name>
+				public int EffectiveKeyBits
+				{
+				[Dot42.DexImport("getEffectiveKeyBits", "()I", AccessFlags = 1)]
+						get{ return GetEffectiveKeyBits(); }
 				}
 
 				/// <java-name>
@@ -471,597 +1155,6 @@ namespace Javax.Crypto.Spec
 		}
 
 		/// <java-name>
-		/// javax/crypto/spec/PBEKeySpec
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/spec/PBEKeySpec", AccessFlags = 33)]
-		public partial class PBEKeySpec : global::Java.Security.Spec.IKeySpec
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "([C)V", AccessFlags = 1)]
-				public PBEKeySpec(char[] @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([C[BII)V", AccessFlags = 1)]
-				public PBEKeySpec(char[] @char, sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([C[BII)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public PBEKeySpec(char[] @char, byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([C[BI)V", AccessFlags = 1)]
-				public PBEKeySpec(char[] @char, sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([C[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public PBEKeySpec(char[] @char, byte[] @byte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clearPassword
-				/// </java-name>
-				[Dot42.DexImport("clearPassword", "()V", AccessFlags = 17)]
-				public void ClearPassword() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPassword
-				/// </java-name>
-				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 17)]
-				public char[] GetPassword() /* MethodBuilder.Create */ 
-				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// getSalt
-				/// </java-name>
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17)]
-				public sbyte[] JavaGetSalt() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getSalt
-				/// </java-name>
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-				public byte[] GetSalt() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getIterationCount
-				/// </java-name>
-				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 17)]
-				public int GetIterationCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getKeyLength
-				/// </java-name>
-				[Dot42.DexImport("getKeyLength", "()I", AccessFlags = 17)]
-				public int GetKeyLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PBEKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPassword
-				/// </java-name>
-				public char[] Password
-				{
-				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 17)]
-						get{ return GetPassword(); }
-				}
-
-				/// <java-name>
-				/// getSalt
-				/// </java-name>
-				public byte[] Salt
-				{
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-						get{ return GetSalt(); }
-				}
-
-				/// <java-name>
-				/// getIterationCount
-				/// </java-name>
-				public int IterationCount
-				{
-				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 17)]
-						get{ return GetIterationCount(); }
-				}
-
-				/// <java-name>
-				/// getKeyLength
-				/// </java-name>
-				public int KeyLength
-				{
-				[Dot42.DexImport("getKeyLength", "()I", AccessFlags = 17)]
-						get{ return GetKeyLength(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/crypto/spec/DESKeySpec
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/spec/DESKeySpec", AccessFlags = 33)]
-		public partial class DESKeySpec : global::Java.Security.Spec.IKeySpec
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// DES_KEY_LEN
-				/// </java-name>
-				[Dot42.DexImport("DES_KEY_LEN", "I", AccessFlags = 25)]
-				public const int DES_KEY_LEN = 8;
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
-				public DESKeySpec(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public DESKeySpec(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
-				public DESKeySpec(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public DESKeySpec(byte[] @byte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1)]
-				public virtual sbyte[] JavaGetKey() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetKey() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// isParityAdjusted
-				/// </java-name>
-				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
-				public static bool IsParityAdjusted(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isParityAdjusted
-				/// </java-name>
-				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
-				public static bool IsParityAdjusted(byte[] @byte, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isWeak
-				/// </java-name>
-				[Dot42.DexImport("isWeak", "([BI)Z", AccessFlags = 9)]
-				public static bool IsWeak(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isWeak
-				/// </java-name>
-				[Dot42.DexImport("isWeak", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
-				public static bool IsWeak(byte[] @byte, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DESKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				public byte[] Key
-				{
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetKey(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/crypto/spec/OAEPParameterSpec
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/spec/OAEPParameterSpec", AccessFlags = 33)]
-		public partial class OAEPParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// DEFAULT
-				/// </java-name>
-				[Dot42.DexImport("DEFAULT", "Ljavax/crypto/spec/OAEPParameterSpec;", AccessFlags = 25)]
-				public static readonly global::Javax.Crypto.Spec.OAEPParameterSpec DEFAULT;
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;L" +
-    "javax/crypto/spec/PSource;)V", AccessFlags = 1)]
-				public OAEPParameterSpec(string @string, string string1, global::Java.Security.Spec.IAlgorithmParameterSpec algorithmParameterSpec, global::Javax.Crypto.Spec.PSource pSource) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDigestAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDigestAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMGFAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMGFAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMGFParameters
-				/// </java-name>
-				[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.IAlgorithmParameterSpec GetMGFParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.IAlgorithmParameterSpec);
-				}
-
-				/// <java-name>
-				/// getPSource
-				/// </java-name>
-				[Dot42.DexImport("getPSource", "()Ljavax/crypto/spec/PSource;", AccessFlags = 1)]
-				public virtual global::Javax.Crypto.Spec.PSource GetPSource() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Crypto.Spec.PSource);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal OAEPParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDigestAlgorithm
-				/// </java-name>
-				public string DigestAlgorithm
-				{
-				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDigestAlgorithm(); }
-				}
-
-				/// <java-name>
-				/// getMGFAlgorithm
-				/// </java-name>
-				public string MGFAlgorithm
-				{
-				[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMGFAlgorithm(); }
-				}
-
-				/// <java-name>
-				/// getMGFParameters
-				/// </java-name>
-				public global::Java.Security.Spec.IAlgorithmParameterSpec MGFParameters
-				{
-				[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
-						get{ return GetMGFParameters(); }
-				}
-
-				/// <java-name>
-				/// getPSource
-				/// </java-name>
-				public global::Javax.Crypto.Spec.PSource PSource
-				{
-				[Dot42.DexImport("getPSource", "()Ljavax/crypto/spec/PSource;", AccessFlags = 1)]
-						get{ return GetPSource(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/crypto/spec/DESedeKeySpec
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/spec/DESedeKeySpec", AccessFlags = 33)]
-		public partial class DESedeKeySpec : global::Java.Security.Spec.IKeySpec
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// DES_EDE_KEY_LEN
-				/// </java-name>
-				[Dot42.DexImport("DES_EDE_KEY_LEN", "I", AccessFlags = 25)]
-				public const int DES_EDE_KEY_LEN = 24;
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
-				public DESedeKeySpec(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public DESedeKeySpec(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
-				public DESedeKeySpec(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public DESedeKeySpec(byte[] @byte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1)]
-				public virtual sbyte[] JavaGetKey() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetKey() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// isParityAdjusted
-				/// </java-name>
-				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
-				public static bool IsParityAdjusted(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isParityAdjusted
-				/// </java-name>
-				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
-				public static bool IsParityAdjusted(byte[] @byte, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DESedeKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				public byte[] Key
-				{
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetKey(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/crypto/spec/DHParameterSpec
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/spec/DHParameterSpec", AccessFlags = 33)]
-		public partial class DHParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;)V", AccessFlags = 1)]
-				public DHParameterSpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;I)V", AccessFlags = 1)]
-				public DHParameterSpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getP
-				/// </java-name>
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getG
-				/// </java-name>
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetG() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getL
-				/// </java-name>
-				[Dot42.DexImport("getL", "()I", AccessFlags = 1)]
-				public virtual int GetL() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DHParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getP
-				/// </java-name>
-				public global::Java.Math.BigInteger P
-				{
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetP(); }
-				}
-
-				/// <java-name>
-				/// getG
-				/// </java-name>
-				public global::Java.Math.BigInteger G
-				{
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetG(); }
-				}
-
-				/// <java-name>
-				/// getL
-				/// </java-name>
-				public int L
-				{
-				[Dot42.DexImport("getL", "()I", AccessFlags = 1)]
-						get{ return GetL(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/crypto/spec/RC2ParameterSpec
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/spec/RC2ParameterSpec", AccessFlags = 33)]
-		public partial class RC2ParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public RC2ParameterSpec(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
-				public RC2ParameterSpec(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public RC2ParameterSpec(int int32, byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1)]
-				public RC2ParameterSpec(int int32, sbyte[] sByte, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public RC2ParameterSpec(int int32, byte[] @byte, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEffectiveKeyBits
-				/// </java-name>
-				[Dot42.DexImport("getEffectiveKeyBits", "()I", AccessFlags = 1)]
-				public virtual int GetEffectiveKeyBits() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIV
-				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
-				public virtual sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getIV
-				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetIV() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RC2ParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEffectiveKeyBits
-				/// </java-name>
-				public int EffectiveKeyBits
-				{
-				[Dot42.DexImport("getEffectiveKeyBits", "()I", AccessFlags = 1)]
-						get{ return GetEffectiveKeyBits(); }
-				}
-
-				/// <java-name>
-				/// getIV
-				/// </java-name>
-				public byte[] IV
-				{
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetIV(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// javax/crypto/spec/SecretKeySpec
 		/// </java-name>
 		[Dot42.DexImport("javax/crypto/spec/SecretKeySpec", AccessFlags = 33)]
@@ -1172,99 +1265,6 @@ namespace Javax.Crypto.Spec
 				{
 				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 						get{ return GetEncoded(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/crypto/spec/PSource
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/spec/PSource", AccessFlags = 33)]
-		public partial class PSource
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal PSource(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PSource() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				public string Algorithm
-				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAlgorithm(); }
-				}
-
-				/// <java-name>
-				/// javax/crypto/spec/PSource$PSpecified
-				/// </java-name>
-				[Dot42.DexImport("javax/crypto/spec/PSource$PSpecified", AccessFlags = 25)]
-				public sealed partial class PSpecified : global::Javax.Crypto.Spec.PSource
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// DEFAULT
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT", "Ljavax/crypto/spec/PSource$PSpecified;", AccessFlags = 25)]
-						public static readonly PSpecified DEFAULT;
-						[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
-						public PSpecified(sbyte[] sByte) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-						public PSpecified(byte[] @byte) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getValue
-						/// </java-name>
-						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1)]
-						public sbyte[] JavaGetValue() /* MethodBuilder.Create */ 
-						{
-								return default(sbyte[]);
-						}
-
-						/// <java-name>
-						/// getValue
-						/// </java-name>
-						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						public byte[] GetValue() /* MethodBuilder.Create */ 
-						{
-								return default(byte[]);
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal PSpecified() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-						/// <java-name>
-						/// getValue
-						/// </java-name>
-						public byte[] Value
-						{
-						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-								get{ return GetValue(); }
-						}
-
 				}
 
 		}

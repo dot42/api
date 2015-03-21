@@ -2,19 +2,10 @@
 namespace Android.Test.Suitebuilder.Annotation
 {
 		/// <java-name>
-		/// android/test/suitebuilder/annotation/SmallTest
+		/// android/test/suitebuilder/annotation/LargeTest
 		/// </java-name>
-		[Dot42.DexImport("android/test/suitebuilder/annotation/SmallTest", AccessFlags = 9729)]
-		public partial interface ISmallTest : global::Java.Lang.Annotation.IAnnotation
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
-		/// android/test/suitebuilder/annotation/Suppress
-		/// </java-name>
-		[Dot42.DexImport("android/test/suitebuilder/annotation/Suppress", AccessFlags = 9729)]
-		public partial interface ISuppress : global::Java.Lang.Annotation.IAnnotation
+		[Dot42.DexImport("android/test/suitebuilder/annotation/LargeTest", AccessFlags = 9729)]
+		public partial interface ILargeTest : global::Java.Lang.Annotation.IAnnotation
  /* scope: __dot42__ */ 
 		{
 		}
@@ -29,6 +20,15 @@ namespace Android.Test.Suitebuilder.Annotation
 		}
 
 		/// <java-name>
+		/// android/test/suitebuilder/annotation/SmallTest
+		/// </java-name>
+		[Dot42.DexImport("android/test/suitebuilder/annotation/SmallTest", AccessFlags = 9729)]
+		public partial interface ISmallTest : global::Java.Lang.Annotation.IAnnotation
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
 		/// android/test/suitebuilder/annotation/Smoke
 		/// </java-name>
 		[Dot42.DexImport("android/test/suitebuilder/annotation/Smoke", AccessFlags = 9729)]
@@ -38,10 +38,10 @@ namespace Android.Test.Suitebuilder.Annotation
 		}
 
 		/// <java-name>
-		/// android/test/suitebuilder/annotation/LargeTest
+		/// android/test/suitebuilder/annotation/Suppress
 		/// </java-name>
-		[Dot42.DexImport("android/test/suitebuilder/annotation/LargeTest", AccessFlags = 9729)]
-		public partial interface ILargeTest : global::Java.Lang.Annotation.IAnnotation
+		[Dot42.DexImport("android/test/suitebuilder/annotation/Suppress", AccessFlags = 9729)]
+		public partial interface ISuppress : global::Java.Lang.Annotation.IAnnotation
  /* scope: __dot42__ */ 
 		{
 		}

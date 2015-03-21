@@ -2,66 +2,81 @@
 namespace Java.Util.Concurrent.Atomic
 {
 		/// <java-name>
-		/// java/util/concurrent/atomic/AtomicReferenceFieldUpdater
+		/// java/util/concurrent/atomic/AtomicBoolean
 		/// </java-name>
-		[Dot42.DexImport("java/util/concurrent/atomic/AtomicReferenceFieldUpdater", AccessFlags = 1057, Signature = "<T:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/lang/Object;")]
-		public abstract partial class AtomicReferenceFieldUpdater<T, V>
+		[Dot42.DexImport("java/util/concurrent/atomic/AtomicBoolean", AccessFlags = 33)]
+		public partial class AtomicBoolean : global::Java.Io.ISerializable
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal AtomicReferenceFieldUpdater() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Z)V", AccessFlags = 1)]
+				public AtomicBoolean(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AtomicBoolean() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// newUpdater
+				/// get
 				/// </java-name>
-				[Dot42.DexImport("newUpdater", "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomi" +
-    "c/AtomicReferenceFieldUpdater;", AccessFlags = 9, Signature = "<U:Ljava/lang/Object;W:Ljava/lang/Object;>(Ljava/lang/Class<TU;>;Ljava/lang/Class" +
-    "<TW;>;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdate" +
-    "r<TU;TW;>;")]
-				public static global::Java.Util.Concurrent.Atomic.AtomicReferenceFieldUpdater<U, W> NewUpdater<U, W>(global::System.Type type, global::System.Type type1, string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("get", "()Z", AccessFlags = 17)]
+				public bool Get() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.Concurrent.Atomic.AtomicReferenceFieldUpdater<U, W>);
+						return default(bool);
 				}
 
 				/// <java-name>
 				/// compareAndSet
 				/// </java-name>
-				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 1025, Signature = "(TT;TV;TV;)Z")]
-				public abstract bool CompareAndSet(T t, V v, V v1) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("compareAndSet", "(ZZ)Z", AccessFlags = 17)]
+				public bool CompareAndSet(bool boolean, bool boolean1) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
 
 				/// <java-name>
 				/// weakCompareAndSet
 				/// </java-name>
-				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 1025, Signature = "(TT;TV;TV;)Z")]
-				public abstract bool WeakCompareAndSet(T t, V v, V v1) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("weakCompareAndSet", "(ZZ)Z", AccessFlags = 1)]
+				public virtual bool WeakCompareAndSet(bool boolean, bool boolean1) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
 
 				/// <java-name>
 				/// set
 				/// </java-name>
-				[Dot42.DexImport("set", "(Ljava/lang/Object;Ljava/lang/Object;)V", AccessFlags = 1025, Signature = "(TT;TV;)V")]
-				public abstract void Set(T t, V v) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("set", "(Z)V", AccessFlags = 17)]
+				public void Set(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
 
 				/// <java-name>
 				/// lazySet
 				/// </java-name>
-				[Dot42.DexImport("lazySet", "(Ljava/lang/Object;Ljava/lang/Object;)V", AccessFlags = 1025, Signature = "(TT;TV;)V")]
-				public abstract void LazySet(T t, V v) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(TT;)TV;")]
-				public abstract V Get(T t) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("lazySet", "(Z)V", AccessFlags = 17)]
+				public void LazySet(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
 
 				/// <java-name>
 				/// getAndSet
 				/// </java-name>
-				[Dot42.DexImport("getAndSet", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 1, Signature = "(TT;TV;)TV;")]
-				public virtual V GetAndSet(T t, V v) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getAndSet", "(Z)Z", AccessFlags = 17)]
+				public bool GetAndSet(bool boolean) /* MethodBuilder.Create */ 
 				{
-						return default(V);
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
 				}
 
 		}
@@ -237,214 +252,6 @@ namespace Java.Util.Concurrent.Atomic
 		}
 
 		/// <java-name>
-		/// java/util/concurrent/atomic/AtomicIntegerFieldUpdater
-		/// </java-name>
-		[Dot42.DexImport("java/util/concurrent/atomic/AtomicIntegerFieldUpdater", AccessFlags = 1057, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
-		public abstract partial class AtomicIntegerFieldUpdater<T>
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal AtomicIntegerFieldUpdater() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newUpdater
-				/// </java-name>
-				[Dot42.DexImport("newUpdater", "(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFi" +
-    "eldUpdater;", AccessFlags = 9, Signature = "<U:Ljava/lang/Object;>(Ljava/lang/Class<TU;>;Ljava/lang/String;)Ljava/util/concur" +
-    "rent/atomic/AtomicIntegerFieldUpdater<TU;>;")]
-				public static global::Java.Util.Concurrent.Atomic.AtomicIntegerFieldUpdater<U> NewUpdater<U>(global::System.Type type, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Concurrent.Atomic.AtomicIntegerFieldUpdater<U>);
-				}
-
-				/// <java-name>
-				/// compareAndSet
-				/// </java-name>
-				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;II)Z", AccessFlags = 1025, Signature = "(TT;II)Z")]
-				public abstract bool CompareAndSet(T t, int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// weakCompareAndSet
-				/// </java-name>
-				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;II)Z", AccessFlags = 1025, Signature = "(TT;II)Z")]
-				public abstract bool WeakCompareAndSet(T t, int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// set
-				/// </java-name>
-				[Dot42.DexImport("set", "(Ljava/lang/Object;I)V", AccessFlags = 1025, Signature = "(TT;I)V")]
-				public abstract void Set(T t, int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// lazySet
-				/// </java-name>
-				[Dot42.DexImport("lazySet", "(Ljava/lang/Object;I)V", AccessFlags = 1025, Signature = "(TT;I)V")]
-				public abstract void LazySet(T t, int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(Ljava/lang/Object;)I", AccessFlags = 1025, Signature = "(TT;)I")]
-				public abstract int Get(T t) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAndSet
-				/// </java-name>
-				[Dot42.DexImport("getAndSet", "(Ljava/lang/Object;I)I", AccessFlags = 1, Signature = "(TT;I)I")]
-				public virtual int GetAndSet(T t, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAndIncrement
-				/// </java-name>
-				[Dot42.DexImport("getAndIncrement", "(Ljava/lang/Object;)I", AccessFlags = 1, Signature = "(TT;)I")]
-				public virtual int GetAndIncrement(T t) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAndDecrement
-				/// </java-name>
-				[Dot42.DexImport("getAndDecrement", "(Ljava/lang/Object;)I", AccessFlags = 1, Signature = "(TT;)I")]
-				public virtual int GetAndDecrement(T t) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAndAdd
-				/// </java-name>
-				[Dot42.DexImport("getAndAdd", "(Ljava/lang/Object;I)I", AccessFlags = 1, Signature = "(TT;I)I")]
-				public virtual int GetAndAdd(T t, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// incrementAndGet
-				/// </java-name>
-				[Dot42.DexImport("incrementAndGet", "(Ljava/lang/Object;)I", AccessFlags = 1, Signature = "(TT;)I")]
-				public virtual int IncrementAndGet(T t) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// decrementAndGet
-				/// </java-name>
-				[Dot42.DexImport("decrementAndGet", "(Ljava/lang/Object;)I", AccessFlags = 1, Signature = "(TT;)I")]
-				public virtual int DecrementAndGet(T t) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// addAndGet
-				/// </java-name>
-				[Dot42.DexImport("addAndGet", "(Ljava/lang/Object;I)I", AccessFlags = 1, Signature = "(TT;I)I")]
-				public virtual int AddAndGet(T t, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-		}
-
-		/// <java-name>
-		/// java/util/concurrent/atomic/AtomicMarkableReference
-		/// </java-name>
-		[Dot42.DexImport("java/util/concurrent/atomic/AtomicMarkableReference", AccessFlags = 33, Signature = "<V:Ljava/lang/Object;>Ljava/lang/Object;")]
-		public partial class AtomicMarkableReference<V>
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/Object;Z)V", AccessFlags = 1, Signature = "(TV;Z)V")]
-				public AtomicMarkableReference(V v, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReference
-				/// </java-name>
-				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
-				public virtual V GetReference() /* MethodBuilder.Create */ 
-				{
-						return default(V);
-				}
-
-				/// <java-name>
-				/// isMarked
-				/// </java-name>
-				[Dot42.DexImport("isMarked", "()Z", AccessFlags = 1)]
-				public virtual bool IsMarked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([Z)Ljava/lang/Object;", AccessFlags = 1, Signature = "([Z)TV;")]
-				public virtual V Get(bool[] boolean) /* MethodBuilder.Create */ 
-				{
-						return default(V);
-				}
-
-				/// <java-name>
-				/// weakCompareAndSet
-				/// </java-name>
-				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;ZZ)Z", AccessFlags = 1, Signature = "(TV;TV;ZZ)Z")]
-				public virtual bool WeakCompareAndSet(V v, V v1, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// compareAndSet
-				/// </java-name>
-				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;ZZ)Z", AccessFlags = 1, Signature = "(TV;TV;ZZ)Z")]
-				public virtual bool CompareAndSet(V v, V v1, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// set
-				/// </java-name>
-				[Dot42.DexImport("set", "(Ljava/lang/Object;Z)V", AccessFlags = 1, Signature = "(TV;Z)V")]
-				public virtual void Set(V v, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// attemptMark
-				/// </java-name>
-				[Dot42.DexImport("attemptMark", "(Ljava/lang/Object;Z)Z", AccessFlags = 1, Signature = "(TV;Z)Z")]
-				public virtual bool AttemptMark(V v, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AtomicMarkableReference() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReference
-				/// </java-name>
-				public V Reference
-				{
-				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
-						get{ return GetReference(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// java/util/concurrent/atomic/AtomicIntegerArray
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/atomic/AtomicIntegerArray", AccessFlags = 33)]
@@ -593,293 +400,119 @@ namespace Java.Util.Concurrent.Atomic
 		}
 
 		/// <java-name>
-		/// java/util/concurrent/atomic/AtomicReference
+		/// java/util/concurrent/atomic/AtomicIntegerFieldUpdater
 		/// </java-name>
-		[Dot42.DexImport("java/util/concurrent/atomic/AtomicReference", AccessFlags = 33, Signature = "<V:Ljava/lang/Object;>Ljava/lang/Object;Ljava/io/Serializable;")]
-		public partial class AtomicReference<V> : global::Java.Io.ISerializable
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TV;)V")]
-				public AtomicReference(V v) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AtomicReference() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "()Ljava/lang/Object;", AccessFlags = 17, Signature = "()TV;")]
-				public V Get() /* MethodBuilder.Create */ 
-				{
-						return default(V);
-				}
-
-				/// <java-name>
-				/// set
-				/// </java-name>
-				[Dot42.DexImport("set", "(Ljava/lang/Object;)V", AccessFlags = 17, Signature = "(TV;)V")]
-				public void Set(V v) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// lazySet
-				/// </java-name>
-				[Dot42.DexImport("lazySet", "(Ljava/lang/Object;)V", AccessFlags = 17, Signature = "(TV;)V")]
-				public void LazySet(V v) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// compareAndSet
-				/// </java-name>
-				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 17, Signature = "(TV;TV;)Z")]
-				public bool CompareAndSet(V v, V v1) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// weakCompareAndSet
-				/// </java-name>
-				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 17, Signature = "(TV;TV;)Z")]
-				public bool WeakCompareAndSet(V v, V v1) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getAndSet
-				/// </java-name>
-				[Dot42.DexImport("getAndSet", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 17, Signature = "(TV;)TV;")]
-				public V GetAndSet(V v) /* MethodBuilder.Create */ 
-				{
-						return default(V);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-		}
-
-		/// <java-name>
-		/// java/util/concurrent/atomic/AtomicLongFieldUpdater
-		/// </java-name>
-		[Dot42.DexImport("java/util/concurrent/atomic/AtomicLongFieldUpdater", AccessFlags = 1057, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
-		public abstract partial class AtomicLongFieldUpdater<T>
+		[Dot42.DexImport("java/util/concurrent/atomic/AtomicIntegerFieldUpdater", AccessFlags = 1057, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
+		public abstract partial class AtomicIntegerFieldUpdater<T>
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal AtomicLongFieldUpdater() /* MethodBuilder.Create */ 
+				protected internal AtomicIntegerFieldUpdater() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// newUpdater
 				/// </java-name>
-				[Dot42.DexImport("newUpdater", "(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongField" +
-    "Updater;", AccessFlags = 9, Signature = "<U:Ljava/lang/Object;>(Ljava/lang/Class<TU;>;Ljava/lang/String;)Ljava/util/concur" +
-    "rent/atomic/AtomicLongFieldUpdater<TU;>;")]
-				public static global::Java.Util.Concurrent.Atomic.AtomicLongFieldUpdater<U> NewUpdater<U>(global::System.Type type, string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("newUpdater", "(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFi" +
+    "eldUpdater;", AccessFlags = 9, Signature = "<U:Ljava/lang/Object;>(Ljava/lang/Class<TU;>;Ljava/lang/String;)Ljava/util/concur" +
+    "rent/atomic/AtomicIntegerFieldUpdater<TU;>;")]
+				public static global::Java.Util.Concurrent.Atomic.AtomicIntegerFieldUpdater<U> NewUpdater<U>(global::System.Type type, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.Concurrent.Atomic.AtomicLongFieldUpdater<U>);
+						return default(global::Java.Util.Concurrent.Atomic.AtomicIntegerFieldUpdater<U>);
 				}
 
 				/// <java-name>
 				/// compareAndSet
 				/// </java-name>
-				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;JJ)Z", AccessFlags = 1025, Signature = "(TT;JJ)Z")]
-				public abstract bool CompareAndSet(T t, long int64, long int641) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;II)Z", AccessFlags = 1025, Signature = "(TT;II)Z")]
+				public abstract bool CompareAndSet(T t, int int32, int int321) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// weakCompareAndSet
 				/// </java-name>
-				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;JJ)Z", AccessFlags = 1025, Signature = "(TT;JJ)Z")]
-				public abstract bool WeakCompareAndSet(T t, long int64, long int641) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;II)Z", AccessFlags = 1025, Signature = "(TT;II)Z")]
+				public abstract bool WeakCompareAndSet(T t, int int32, int int321) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// set
 				/// </java-name>
-				[Dot42.DexImport("set", "(Ljava/lang/Object;J)V", AccessFlags = 1025, Signature = "(TT;J)V")]
-				public abstract void Set(T t, long int64) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("set", "(Ljava/lang/Object;I)V", AccessFlags = 1025, Signature = "(TT;I)V")]
+				public abstract void Set(T t, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// lazySet
 				/// </java-name>
-				[Dot42.DexImport("lazySet", "(Ljava/lang/Object;J)V", AccessFlags = 1025, Signature = "(TT;J)V")]
-				public abstract void LazySet(T t, long int64) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("lazySet", "(Ljava/lang/Object;I)V", AccessFlags = 1025, Signature = "(TT;I)V")]
+				public abstract void LazySet(T t, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// get
 				/// </java-name>
-				[Dot42.DexImport("get", "(Ljava/lang/Object;)J", AccessFlags = 1025, Signature = "(TT;)J")]
-				public abstract long Get(T t) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("get", "(Ljava/lang/Object;)I", AccessFlags = 1025, Signature = "(TT;)I")]
+				public abstract int Get(T t) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getAndSet
 				/// </java-name>
-				[Dot42.DexImport("getAndSet", "(Ljava/lang/Object;J)J", AccessFlags = 1, Signature = "(TT;J)J")]
-				public virtual long GetAndSet(T t, long int64) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getAndIncrement
-				/// </java-name>
-				[Dot42.DexImport("getAndIncrement", "(Ljava/lang/Object;)J", AccessFlags = 1, Signature = "(TT;)J")]
-				public virtual long GetAndIncrement(T t) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getAndDecrement
-				/// </java-name>
-				[Dot42.DexImport("getAndDecrement", "(Ljava/lang/Object;)J", AccessFlags = 1, Signature = "(TT;)J")]
-				public virtual long GetAndDecrement(T t) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getAndAdd
-				/// </java-name>
-				[Dot42.DexImport("getAndAdd", "(Ljava/lang/Object;J)J", AccessFlags = 1, Signature = "(TT;J)J")]
-				public virtual long GetAndAdd(T t, long int64) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// incrementAndGet
-				/// </java-name>
-				[Dot42.DexImport("incrementAndGet", "(Ljava/lang/Object;)J", AccessFlags = 1, Signature = "(TT;)J")]
-				public virtual long IncrementAndGet(T t) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// decrementAndGet
-				/// </java-name>
-				[Dot42.DexImport("decrementAndGet", "(Ljava/lang/Object;)J", AccessFlags = 1, Signature = "(TT;)J")]
-				public virtual long DecrementAndGet(T t) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// addAndGet
-				/// </java-name>
-				[Dot42.DexImport("addAndGet", "(Ljava/lang/Object;J)J", AccessFlags = 1, Signature = "(TT;J)J")]
-				public virtual long AddAndGet(T t, long int64) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-		}
-
-		/// <java-name>
-		/// java/util/concurrent/atomic/AtomicReferenceArray
-		/// </java-name>
-		[Dot42.DexImport("java/util/concurrent/atomic/AtomicReferenceArray", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/lang/Object;Ljava/io/Serializable;")]
-		public partial class AtomicReferenceArray<E> : global::Java.Io.ISerializable
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public AtomicReferenceArray(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "([Ljava/lang/Object;)V", AccessFlags = 1, Signature = "([TE;)V")]
-				public AtomicReferenceArray(E[] p) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "()I", AccessFlags = 17)]
-				public int Length() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getAndSet", "(Ljava/lang/Object;I)I", AccessFlags = 1, Signature = "(TT;I)I")]
+				public virtual int GetAndSet(T t, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// get
+				/// getAndIncrement
 				/// </java-name>
-				[Dot42.DexImport("get", "(I)Ljava/lang/Object;", AccessFlags = 17, Signature = "(I)TE;")]
-				public E Get(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getAndIncrement", "(Ljava/lang/Object;)I", AccessFlags = 1, Signature = "(TT;)I")]
+				public virtual int GetAndIncrement(T t) /* MethodBuilder.Create */ 
 				{
-						return default(E);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// set
+				/// getAndDecrement
 				/// </java-name>
-				[Dot42.DexImport("set", "(ILjava/lang/Object;)V", AccessFlags = 17, Signature = "(ITE;)V")]
-				public void Set(int int32, E e) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getAndDecrement", "(Ljava/lang/Object;)I", AccessFlags = 1, Signature = "(TT;)I")]
+				public virtual int GetAndDecrement(T t) /* MethodBuilder.Create */ 
 				{
+						return default(int);
 				}
 
 				/// <java-name>
-				/// lazySet
+				/// getAndAdd
 				/// </java-name>
-				[Dot42.DexImport("lazySet", "(ILjava/lang/Object;)V", AccessFlags = 17, Signature = "(ITE;)V")]
-				public void LazySet(int int32, E e) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getAndAdd", "(Ljava/lang/Object;I)I", AccessFlags = 1, Signature = "(TT;I)I")]
+				public virtual int GetAndAdd(T t, int int32) /* MethodBuilder.Create */ 
 				{
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getAndSet
+				/// incrementAndGet
 				/// </java-name>
-				[Dot42.DexImport("getAndSet", "(ILjava/lang/Object;)Ljava/lang/Object;", AccessFlags = 17, Signature = "(ITE;)TE;")]
-				public E GetAndSet(int int32, E e) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("incrementAndGet", "(Ljava/lang/Object;)I", AccessFlags = 1, Signature = "(TT;)I")]
+				public virtual int IncrementAndGet(T t) /* MethodBuilder.Create */ 
 				{
-						return default(E);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// compareAndSet
+				/// decrementAndGet
 				/// </java-name>
-				[Dot42.DexImport("compareAndSet", "(ILjava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 17, Signature = "(ITE;TE;)Z")]
-				public bool CompareAndSet(int int32, E e, E e1) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("decrementAndGet", "(Ljava/lang/Object;)I", AccessFlags = 1, Signature = "(TT;)I")]
+				public virtual int DecrementAndGet(T t) /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// weakCompareAndSet
+				/// addAndGet
 				/// </java-name>
-				[Dot42.DexImport("weakCompareAndSet", "(ILjava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 17, Signature = "(ITE;TE;)Z")]
-				public bool WeakCompareAndSet(int int32, E e, E e1) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("addAndGet", "(Ljava/lang/Object;I)I", AccessFlags = 1, Signature = "(TT;I)I")]
+				public virtual int AddAndGet(T t, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AtomicReferenceArray() /* TypeBuilder.AddDefaultConstructor */ 
-				{
+						return default(int);
 				}
 
 		}
@@ -1055,105 +688,6 @@ namespace Java.Util.Concurrent.Atomic
 		}
 
 		/// <java-name>
-		/// java/util/concurrent/atomic/AtomicStampedReference
-		/// </java-name>
-		[Dot42.DexImport("java/util/concurrent/atomic/AtomicStampedReference", AccessFlags = 33, Signature = "<V:Ljava/lang/Object;>Ljava/lang/Object;")]
-		public partial class AtomicStampedReference<V>
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/Object;I)V", AccessFlags = 1, Signature = "(TV;I)V")]
-				public AtomicStampedReference(V v, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReference
-				/// </java-name>
-				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
-				public virtual V GetReference() /* MethodBuilder.Create */ 
-				{
-						return default(V);
-				}
-
-				/// <java-name>
-				/// getStamp
-				/// </java-name>
-				[Dot42.DexImport("getStamp", "()I", AccessFlags = 1)]
-				public virtual int GetStamp() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([I)Ljava/lang/Object;", AccessFlags = 1, Signature = "([I)TV;")]
-				public virtual V Get(int[] int32) /* MethodBuilder.Create */ 
-				{
-						return default(V);
-				}
-
-				/// <java-name>
-				/// weakCompareAndSet
-				/// </java-name>
-				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;II)Z", AccessFlags = 1, Signature = "(TV;TV;II)Z")]
-				public virtual bool WeakCompareAndSet(V v, V v1, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// compareAndSet
-				/// </java-name>
-				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;II)Z", AccessFlags = 1, Signature = "(TV;TV;II)Z")]
-				public virtual bool CompareAndSet(V v, V v1, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// set
-				/// </java-name>
-				[Dot42.DexImport("set", "(Ljava/lang/Object;I)V", AccessFlags = 1, Signature = "(TV;I)V")]
-				public virtual void Set(V v, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// attemptStamp
-				/// </java-name>
-				[Dot42.DexImport("attemptStamp", "(Ljava/lang/Object;I)Z", AccessFlags = 1, Signature = "(TV;I)Z")]
-				public virtual bool AttemptStamp(V v, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AtomicStampedReference() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReference
-				/// </java-name>
-				public V Reference
-				{
-				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
-						get{ return GetReference(); }
-				}
-
-				/// <java-name>
-				/// getStamp
-				/// </java-name>
-				public int Stamp
-				{
-				[Dot42.DexImport("getStamp", "()I", AccessFlags = 1)]
-						get{ return GetStamp(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// java/util/concurrent/atomic/AtomicLongArray
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/atomic/AtomicLongArray", AccessFlags = 33)]
@@ -1302,27 +836,167 @@ namespace Java.Util.Concurrent.Atomic
 		}
 
 		/// <java-name>
-		/// java/util/concurrent/atomic/AtomicBoolean
+		/// java/util/concurrent/atomic/AtomicLongFieldUpdater
 		/// </java-name>
-		[Dot42.DexImport("java/util/concurrent/atomic/AtomicBoolean", AccessFlags = 33)]
-		public partial class AtomicBoolean : global::Java.Io.ISerializable
+		[Dot42.DexImport("java/util/concurrent/atomic/AtomicLongFieldUpdater", AccessFlags = 1057, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
+		public abstract partial class AtomicLongFieldUpdater<T>
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Z)V", AccessFlags = 1)]
-				public AtomicBoolean(bool boolean) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal AtomicLongFieldUpdater() /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AtomicBoolean() /* MethodBuilder.Create */ 
+				/// <java-name>
+				/// newUpdater
+				/// </java-name>
+				[Dot42.DexImport("newUpdater", "(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongField" +
+    "Updater;", AccessFlags = 9, Signature = "<U:Ljava/lang/Object;>(Ljava/lang/Class<TU;>;Ljava/lang/String;)Ljava/util/concur" +
+    "rent/atomic/AtomicLongFieldUpdater<TU;>;")]
+				public static global::Java.Util.Concurrent.Atomic.AtomicLongFieldUpdater<U> NewUpdater<U>(global::System.Type type, string @string) /* MethodBuilder.Create */ 
 				{
+						return default(global::Java.Util.Concurrent.Atomic.AtomicLongFieldUpdater<U>);
+				}
+
+				/// <java-name>
+				/// compareAndSet
+				/// </java-name>
+				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;JJ)Z", AccessFlags = 1025, Signature = "(TT;JJ)Z")]
+				public abstract bool CompareAndSet(T t, long int64, long int641) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// weakCompareAndSet
+				/// </java-name>
+				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;JJ)Z", AccessFlags = 1025, Signature = "(TT;JJ)Z")]
+				public abstract bool WeakCompareAndSet(T t, long int64, long int641) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// set
+				/// </java-name>
+				[Dot42.DexImport("set", "(Ljava/lang/Object;J)V", AccessFlags = 1025, Signature = "(TT;J)V")]
+				public abstract void Set(T t, long int64) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// lazySet
+				/// </java-name>
+				[Dot42.DexImport("lazySet", "(Ljava/lang/Object;J)V", AccessFlags = 1025, Signature = "(TT;J)V")]
+				public abstract void LazySet(T t, long int64) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(Ljava/lang/Object;)J", AccessFlags = 1025, Signature = "(TT;)J")]
+				public abstract long Get(T t) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getAndSet
+				/// </java-name>
+				[Dot42.DexImport("getAndSet", "(Ljava/lang/Object;J)J", AccessFlags = 1, Signature = "(TT;J)J")]
+				public virtual long GetAndSet(T t, long int64) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getAndIncrement
+				/// </java-name>
+				[Dot42.DexImport("getAndIncrement", "(Ljava/lang/Object;)J", AccessFlags = 1, Signature = "(TT;)J")]
+				public virtual long GetAndIncrement(T t) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getAndDecrement
+				/// </java-name>
+				[Dot42.DexImport("getAndDecrement", "(Ljava/lang/Object;)J", AccessFlags = 1, Signature = "(TT;)J")]
+				public virtual long GetAndDecrement(T t) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getAndAdd
+				/// </java-name>
+				[Dot42.DexImport("getAndAdd", "(Ljava/lang/Object;J)J", AccessFlags = 1, Signature = "(TT;J)J")]
+				public virtual long GetAndAdd(T t, long int64) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// incrementAndGet
+				/// </java-name>
+				[Dot42.DexImport("incrementAndGet", "(Ljava/lang/Object;)J", AccessFlags = 1, Signature = "(TT;)J")]
+				public virtual long IncrementAndGet(T t) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// decrementAndGet
+				/// </java-name>
+				[Dot42.DexImport("decrementAndGet", "(Ljava/lang/Object;)J", AccessFlags = 1, Signature = "(TT;)J")]
+				public virtual long DecrementAndGet(T t) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// addAndGet
+				/// </java-name>
+				[Dot42.DexImport("addAndGet", "(Ljava/lang/Object;J)J", AccessFlags = 1, Signature = "(TT;J)J")]
+				public virtual long AddAndGet(T t, long int64) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+		}
+
+		/// <java-name>
+		/// java/util/concurrent/atomic/AtomicMarkableReference
+		/// </java-name>
+		[Dot42.DexImport("java/util/concurrent/atomic/AtomicMarkableReference", AccessFlags = 33, Signature = "<V:Ljava/lang/Object;>Ljava/lang/Object;")]
+		public partial class AtomicMarkableReference<V>
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/Object;Z)V", AccessFlags = 1, Signature = "(TV;Z)V")]
+				public AtomicMarkableReference(V v, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getReference
+				/// </java-name>
+				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
+				public virtual V GetReference() /* MethodBuilder.Create */ 
+				{
+						return default(V);
+				}
+
+				/// <java-name>
+				/// isMarked
+				/// </java-name>
+				[Dot42.DexImport("isMarked", "()Z", AccessFlags = 1)]
+				public virtual bool IsMarked() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
 				}
 
 				/// <java-name>
 				/// get
 				/// </java-name>
-				[Dot42.DexImport("get", "()Z", AccessFlags = 17)]
-				public bool Get() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("get", "([Z)Ljava/lang/Object;", AccessFlags = 1, Signature = "([Z)TV;")]
+				public virtual V Get(bool[] boolean) /* MethodBuilder.Create */ 
+				{
+						return default(V);
+				}
+
+				/// <java-name>
+				/// weakCompareAndSet
+				/// </java-name>
+				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;ZZ)Z", AccessFlags = 1, Signature = "(TV;TV;ZZ)Z")]
+				public virtual bool WeakCompareAndSet(V v, V v1, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1330,17 +1004,8 @@ namespace Java.Util.Concurrent.Atomic
 				/// <java-name>
 				/// compareAndSet
 				/// </java-name>
-				[Dot42.DexImport("compareAndSet", "(ZZ)Z", AccessFlags = 17)]
-				public bool CompareAndSet(bool boolean, bool boolean1) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// weakCompareAndSet
-				/// </java-name>
-				[Dot42.DexImport("weakCompareAndSet", "(ZZ)Z", AccessFlags = 1)]
-				public virtual bool WeakCompareAndSet(bool boolean, bool boolean1) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;ZZ)Z", AccessFlags = 1, Signature = "(TV;TV;ZZ)Z")]
+				public virtual bool CompareAndSet(V v, V v1, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1348,24 +1013,190 @@ namespace Java.Util.Concurrent.Atomic
 				/// <java-name>
 				/// set
 				/// </java-name>
-				[Dot42.DexImport("set", "(Z)V", AccessFlags = 17)]
-				public void Set(bool boolean) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("set", "(Ljava/lang/Object;Z)V", AccessFlags = 1, Signature = "(TV;Z)V")]
+				public virtual void Set(V v, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// attemptMark
+				/// </java-name>
+				[Dot42.DexImport("attemptMark", "(Ljava/lang/Object;Z)Z", AccessFlags = 1, Signature = "(TV;Z)Z")]
+				public virtual bool AttemptMark(V v, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal AtomicMarkableReference() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getReference
+				/// </java-name>
+				public V Reference
+				{
+				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
+						get{ return GetReference(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/util/concurrent/atomic/AtomicReference
+		/// </java-name>
+		[Dot42.DexImport("java/util/concurrent/atomic/AtomicReference", AccessFlags = 33, Signature = "<V:Ljava/lang/Object;>Ljava/lang/Object;Ljava/io/Serializable;")]
+		public partial class AtomicReference<V> : global::Java.Io.ISerializable
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TV;)V")]
+				public AtomicReference(V v) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AtomicReference() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "()Ljava/lang/Object;", AccessFlags = 17, Signature = "()TV;")]
+				public V Get() /* MethodBuilder.Create */ 
+				{
+						return default(V);
+				}
+
+				/// <java-name>
+				/// set
+				/// </java-name>
+				[Dot42.DexImport("set", "(Ljava/lang/Object;)V", AccessFlags = 17, Signature = "(TV;)V")]
+				public void Set(V v) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// lazySet
 				/// </java-name>
-				[Dot42.DexImport("lazySet", "(Z)V", AccessFlags = 17)]
-				public void LazySet(bool boolean) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("lazySet", "(Ljava/lang/Object;)V", AccessFlags = 17, Signature = "(TV;)V")]
+				public void LazySet(V v) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// compareAndSet
+				/// </java-name>
+				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 17, Signature = "(TV;TV;)Z")]
+				public bool CompareAndSet(V v, V v1) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// weakCompareAndSet
+				/// </java-name>
+				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 17, Signature = "(TV;TV;)Z")]
+				public bool WeakCompareAndSet(V v, V v1) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getAndSet
+				/// </java-name>
+				[Dot42.DexImport("getAndSet", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 17, Signature = "(TV;)TV;")]
+				public V GetAndSet(V v) /* MethodBuilder.Create */ 
+				{
+						return default(V);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+		}
+
+		/// <java-name>
+		/// java/util/concurrent/atomic/AtomicReferenceArray
+		/// </java-name>
+		[Dot42.DexImport("java/util/concurrent/atomic/AtomicReferenceArray", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/lang/Object;Ljava/io/Serializable;")]
+		public partial class AtomicReferenceArray<E> : global::Java.Io.ISerializable
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
+				public AtomicReferenceArray(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "([Ljava/lang/Object;)V", AccessFlags = 1, Signature = "([TE;)V")]
+				public AtomicReferenceArray(E[] p) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "()I", AccessFlags = 17)]
+				public int Length() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(I)Ljava/lang/Object;", AccessFlags = 17, Signature = "(I)TE;")]
+				public E Get(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(E);
+				}
+
+				/// <java-name>
+				/// set
+				/// </java-name>
+				[Dot42.DexImport("set", "(ILjava/lang/Object;)V", AccessFlags = 17, Signature = "(ITE;)V")]
+				public void Set(int int32, E e) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// lazySet
+				/// </java-name>
+				[Dot42.DexImport("lazySet", "(ILjava/lang/Object;)V", AccessFlags = 17, Signature = "(ITE;)V")]
+				public void LazySet(int int32, E e) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// getAndSet
 				/// </java-name>
-				[Dot42.DexImport("getAndSet", "(Z)Z", AccessFlags = 17)]
-				public bool GetAndSet(bool boolean) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getAndSet", "(ILjava/lang/Object;)Ljava/lang/Object;", AccessFlags = 17, Signature = "(ITE;)TE;")]
+				public E GetAndSet(int int32, E e) /* MethodBuilder.Create */ 
+				{
+						return default(E);
+				}
+
+				/// <java-name>
+				/// compareAndSet
+				/// </java-name>
+				[Dot42.DexImport("compareAndSet", "(ILjava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 17, Signature = "(ITE;TE;)Z")]
+				public bool CompareAndSet(int int32, E e, E e1) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// weakCompareAndSet
+				/// </java-name>
+				[Dot42.DexImport("weakCompareAndSet", "(ILjava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 17, Signature = "(ITE;TE;)Z")]
+				public bool WeakCompareAndSet(int int32, E e, E e1) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1377,6 +1208,175 @@ namespace Java.Util.Concurrent.Atomic
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal AtomicReferenceArray() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/util/concurrent/atomic/AtomicReferenceFieldUpdater
+		/// </java-name>
+		[Dot42.DexImport("java/util/concurrent/atomic/AtomicReferenceFieldUpdater", AccessFlags = 1057, Signature = "<T:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/lang/Object;")]
+		public abstract partial class AtomicReferenceFieldUpdater<T, V>
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal AtomicReferenceFieldUpdater() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newUpdater
+				/// </java-name>
+				[Dot42.DexImport("newUpdater", "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomi" +
+    "c/AtomicReferenceFieldUpdater;", AccessFlags = 9, Signature = "<U:Ljava/lang/Object;W:Ljava/lang/Object;>(Ljava/lang/Class<TU;>;Ljava/lang/Class" +
+    "<TW;>;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdate" +
+    "r<TU;TW;>;")]
+				public static global::Java.Util.Concurrent.Atomic.AtomicReferenceFieldUpdater<U, W> NewUpdater<U, W>(global::System.Type type, global::System.Type type1, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.Concurrent.Atomic.AtomicReferenceFieldUpdater<U, W>);
+				}
+
+				/// <java-name>
+				/// compareAndSet
+				/// </java-name>
+				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 1025, Signature = "(TT;TV;TV;)Z")]
+				public abstract bool CompareAndSet(T t, V v, V v1) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// weakCompareAndSet
+				/// </java-name>
+				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z", AccessFlags = 1025, Signature = "(TT;TV;TV;)Z")]
+				public abstract bool WeakCompareAndSet(T t, V v, V v1) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// set
+				/// </java-name>
+				[Dot42.DexImport("set", "(Ljava/lang/Object;Ljava/lang/Object;)V", AccessFlags = 1025, Signature = "(TT;TV;)V")]
+				public abstract void Set(T t, V v) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// lazySet
+				/// </java-name>
+				[Dot42.DexImport("lazySet", "(Ljava/lang/Object;Ljava/lang/Object;)V", AccessFlags = 1025, Signature = "(TT;TV;)V")]
+				public abstract void LazySet(T t, V v) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(TT;)TV;")]
+				public abstract V Get(T t) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getAndSet
+				/// </java-name>
+				[Dot42.DexImport("getAndSet", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 1, Signature = "(TT;TV;)TV;")]
+				public virtual V GetAndSet(T t, V v) /* MethodBuilder.Create */ 
+				{
+						return default(V);
+				}
+
+		}
+
+		/// <java-name>
+		/// java/util/concurrent/atomic/AtomicStampedReference
+		/// </java-name>
+		[Dot42.DexImport("java/util/concurrent/atomic/AtomicStampedReference", AccessFlags = 33, Signature = "<V:Ljava/lang/Object;>Ljava/lang/Object;")]
+		public partial class AtomicStampedReference<V>
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/Object;I)V", AccessFlags = 1, Signature = "(TV;I)V")]
+				public AtomicStampedReference(V v, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getReference
+				/// </java-name>
+				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
+				public virtual V GetReference() /* MethodBuilder.Create */ 
+				{
+						return default(V);
+				}
+
+				/// <java-name>
+				/// getStamp
+				/// </java-name>
+				[Dot42.DexImport("getStamp", "()I", AccessFlags = 1)]
+				public virtual int GetStamp() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "([I)Ljava/lang/Object;", AccessFlags = 1, Signature = "([I)TV;")]
+				public virtual V Get(int[] int32) /* MethodBuilder.Create */ 
+				{
+						return default(V);
+				}
+
+				/// <java-name>
+				/// weakCompareAndSet
+				/// </java-name>
+				[Dot42.DexImport("weakCompareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;II)Z", AccessFlags = 1, Signature = "(TV;TV;II)Z")]
+				public virtual bool WeakCompareAndSet(V v, V v1, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// compareAndSet
+				/// </java-name>
+				[Dot42.DexImport("compareAndSet", "(Ljava/lang/Object;Ljava/lang/Object;II)Z", AccessFlags = 1, Signature = "(TV;TV;II)Z")]
+				public virtual bool CompareAndSet(V v, V v1, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// set
+				/// </java-name>
+				[Dot42.DexImport("set", "(Ljava/lang/Object;I)V", AccessFlags = 1, Signature = "(TV;I)V")]
+				public virtual void Set(V v, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// attemptStamp
+				/// </java-name>
+				[Dot42.DexImport("attemptStamp", "(Ljava/lang/Object;I)Z", AccessFlags = 1, Signature = "(TV;I)Z")]
+				public virtual bool AttemptStamp(V v, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal AtomicStampedReference() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getReference
+				/// </java-name>
+				public V Reference
+				{
+				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
+						get{ return GetReference(); }
+				}
+
+				/// <java-name>
+				/// getStamp
+				/// </java-name>
+				public int Stamp
+				{
+				[Dot42.DexImport("getStamp", "()I", AccessFlags = 1)]
+						get{ return GetStamp(); }
 				}
 
 		}

@@ -2,6 +2,217 @@
 namespace Java.Awt.Font
 {
 		/// <java-name>
+		/// java/awt/font/NumericShaper
+		/// </java-name>
+		[Dot42.DexImport("java/awt/font/NumericShaper", AccessFlags = 49)]
+		public sealed partial class NumericShaper : global::Java.Io.ISerializable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// EUROPEAN
+				/// </java-name>
+				[Dot42.DexImport("EUROPEAN", "I", AccessFlags = 25)]
+				public const int EUROPEAN = 1;
+				/// <java-name>
+				/// ARABIC
+				/// </java-name>
+				[Dot42.DexImport("ARABIC", "I", AccessFlags = 25)]
+				public const int ARABIC = 2;
+				/// <java-name>
+				/// EASTERN_ARABIC
+				/// </java-name>
+				[Dot42.DexImport("EASTERN_ARABIC", "I", AccessFlags = 25)]
+				public const int EASTERN_ARABIC = 4;
+				/// <java-name>
+				/// DEVANAGARI
+				/// </java-name>
+				[Dot42.DexImport("DEVANAGARI", "I", AccessFlags = 25)]
+				public const int DEVANAGARI = 8;
+				/// <java-name>
+				/// BENGALI
+				/// </java-name>
+				[Dot42.DexImport("BENGALI", "I", AccessFlags = 25)]
+				public const int BENGALI = 16;
+				/// <java-name>
+				/// GURMUKHI
+				/// </java-name>
+				[Dot42.DexImport("GURMUKHI", "I", AccessFlags = 25)]
+				public const int GURMUKHI = 32;
+				/// <java-name>
+				/// GUJARATI
+				/// </java-name>
+				[Dot42.DexImport("GUJARATI", "I", AccessFlags = 25)]
+				public const int GUJARATI = 64;
+				/// <java-name>
+				/// ORIYA
+				/// </java-name>
+				[Dot42.DexImport("ORIYA", "I", AccessFlags = 25)]
+				public const int ORIYA = 128;
+				/// <java-name>
+				/// TAMIL
+				/// </java-name>
+				[Dot42.DexImport("TAMIL", "I", AccessFlags = 25)]
+				public const int TAMIL = 256;
+				/// <java-name>
+				/// TELUGU
+				/// </java-name>
+				[Dot42.DexImport("TELUGU", "I", AccessFlags = 25)]
+				public const int TELUGU = 512;
+				/// <java-name>
+				/// KANNADA
+				/// </java-name>
+				[Dot42.DexImport("KANNADA", "I", AccessFlags = 25)]
+				public const int KANNADA = 1024;
+				/// <java-name>
+				/// MALAYALAM
+				/// </java-name>
+				[Dot42.DexImport("MALAYALAM", "I", AccessFlags = 25)]
+				public const int MALAYALAM = 2048;
+				/// <java-name>
+				/// THAI
+				/// </java-name>
+				[Dot42.DexImport("THAI", "I", AccessFlags = 25)]
+				public const int THAI = 4096;
+				/// <java-name>
+				/// LAO
+				/// </java-name>
+				[Dot42.DexImport("LAO", "I", AccessFlags = 25)]
+				public const int LAO = 8192;
+				/// <java-name>
+				/// TIBETAN
+				/// </java-name>
+				[Dot42.DexImport("TIBETAN", "I", AccessFlags = 25)]
+				public const int TIBETAN = 16384;
+				/// <java-name>
+				/// MYANMAR
+				/// </java-name>
+				[Dot42.DexImport("MYANMAR", "I", AccessFlags = 25)]
+				public const int MYANMAR = 32768;
+				/// <java-name>
+				/// ETHIOPIC
+				/// </java-name>
+				[Dot42.DexImport("ETHIOPIC", "I", AccessFlags = 25)]
+				public const int ETHIOPIC = 65536;
+				/// <java-name>
+				/// KHMER
+				/// </java-name>
+				[Dot42.DexImport("KHMER", "I", AccessFlags = 25)]
+				public const int KHMER = 131072;
+				/// <java-name>
+				/// MONGOLIAN
+				/// </java-name>
+				[Dot42.DexImport("MONGOLIAN", "I", AccessFlags = 25)]
+				public const int MONGOLIAN = 262144;
+				/// <java-name>
+				/// ALL_RANGES
+				/// </java-name>
+				[Dot42.DexImport("ALL_RANGES", "I", AccessFlags = 25)]
+				public const int ALL_RANGES = 524287;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal NumericShaper() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getContextualShaper
+				/// </java-name>
+				[Dot42.DexImport("getContextualShaper", "(II)Ljava/awt/font/NumericShaper;", AccessFlags = 9)]
+				public static global::Java.Awt.Font.NumericShaper GetContextualShaper(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Awt.Font.NumericShaper);
+				}
+
+				/// <java-name>
+				/// getContextualShaper
+				/// </java-name>
+				[Dot42.DexImport("getContextualShaper", "(I)Ljava/awt/font/NumericShaper;", AccessFlags = 9)]
+				public static global::Java.Awt.Font.NumericShaper GetContextualShaper(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Awt.Font.NumericShaper);
+				}
+
+				/// <java-name>
+				/// getRanges
+				/// </java-name>
+				[Dot42.DexImport("getRanges", "()I", AccessFlags = 1)]
+				public int GetRanges() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getShaper
+				/// </java-name>
+				[Dot42.DexImport("getShaper", "(I)Ljava/awt/font/NumericShaper;", AccessFlags = 9)]
+				public static global::Java.Awt.Font.NumericShaper GetShaper(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Awt.Font.NumericShaper);
+				}
+
+				/// <java-name>
+				/// isContextual
+				/// </java-name>
+				[Dot42.DexImport("isContextual", "()Z", AccessFlags = 1)]
+				public bool IsContextual() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// shape
+				/// </java-name>
+				[Dot42.DexImport("shape", "([CIII)V", AccessFlags = 1)]
+				public void Shape(char[] @char, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// shape
+				/// </java-name>
+				[Dot42.DexImport("shape", "([CII)V", AccessFlags = 1)]
+				public void Shape(char[] @char, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRanges
+				/// </java-name>
+				public int Ranges
+				{
+				[Dot42.DexImport("getRanges", "()I", AccessFlags = 1)]
+						get{ return GetRanges(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// java/awt/font/TextAttribute
 		/// </java-name>
 		[Dot42.DexImport("java/awt/font/TextAttribute", AccessFlags = 49)]
@@ -311,217 +522,6 @@ namespace Java.Awt.Font
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal TextAttribute() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/awt/font/NumericShaper
-		/// </java-name>
-		[Dot42.DexImport("java/awt/font/NumericShaper", AccessFlags = 49)]
-		public sealed partial class NumericShaper : global::Java.Io.ISerializable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// EUROPEAN
-				/// </java-name>
-				[Dot42.DexImport("EUROPEAN", "I", AccessFlags = 25)]
-				public const int EUROPEAN = 1;
-				/// <java-name>
-				/// ARABIC
-				/// </java-name>
-				[Dot42.DexImport("ARABIC", "I", AccessFlags = 25)]
-				public const int ARABIC = 2;
-				/// <java-name>
-				/// EASTERN_ARABIC
-				/// </java-name>
-				[Dot42.DexImport("EASTERN_ARABIC", "I", AccessFlags = 25)]
-				public const int EASTERN_ARABIC = 4;
-				/// <java-name>
-				/// DEVANAGARI
-				/// </java-name>
-				[Dot42.DexImport("DEVANAGARI", "I", AccessFlags = 25)]
-				public const int DEVANAGARI = 8;
-				/// <java-name>
-				/// BENGALI
-				/// </java-name>
-				[Dot42.DexImport("BENGALI", "I", AccessFlags = 25)]
-				public const int BENGALI = 16;
-				/// <java-name>
-				/// GURMUKHI
-				/// </java-name>
-				[Dot42.DexImport("GURMUKHI", "I", AccessFlags = 25)]
-				public const int GURMUKHI = 32;
-				/// <java-name>
-				/// GUJARATI
-				/// </java-name>
-				[Dot42.DexImport("GUJARATI", "I", AccessFlags = 25)]
-				public const int GUJARATI = 64;
-				/// <java-name>
-				/// ORIYA
-				/// </java-name>
-				[Dot42.DexImport("ORIYA", "I", AccessFlags = 25)]
-				public const int ORIYA = 128;
-				/// <java-name>
-				/// TAMIL
-				/// </java-name>
-				[Dot42.DexImport("TAMIL", "I", AccessFlags = 25)]
-				public const int TAMIL = 256;
-				/// <java-name>
-				/// TELUGU
-				/// </java-name>
-				[Dot42.DexImport("TELUGU", "I", AccessFlags = 25)]
-				public const int TELUGU = 512;
-				/// <java-name>
-				/// KANNADA
-				/// </java-name>
-				[Dot42.DexImport("KANNADA", "I", AccessFlags = 25)]
-				public const int KANNADA = 1024;
-				/// <java-name>
-				/// MALAYALAM
-				/// </java-name>
-				[Dot42.DexImport("MALAYALAM", "I", AccessFlags = 25)]
-				public const int MALAYALAM = 2048;
-				/// <java-name>
-				/// THAI
-				/// </java-name>
-				[Dot42.DexImport("THAI", "I", AccessFlags = 25)]
-				public const int THAI = 4096;
-				/// <java-name>
-				/// LAO
-				/// </java-name>
-				[Dot42.DexImport("LAO", "I", AccessFlags = 25)]
-				public const int LAO = 8192;
-				/// <java-name>
-				/// TIBETAN
-				/// </java-name>
-				[Dot42.DexImport("TIBETAN", "I", AccessFlags = 25)]
-				public const int TIBETAN = 16384;
-				/// <java-name>
-				/// MYANMAR
-				/// </java-name>
-				[Dot42.DexImport("MYANMAR", "I", AccessFlags = 25)]
-				public const int MYANMAR = 32768;
-				/// <java-name>
-				/// ETHIOPIC
-				/// </java-name>
-				[Dot42.DexImport("ETHIOPIC", "I", AccessFlags = 25)]
-				public const int ETHIOPIC = 65536;
-				/// <java-name>
-				/// KHMER
-				/// </java-name>
-				[Dot42.DexImport("KHMER", "I", AccessFlags = 25)]
-				public const int KHMER = 131072;
-				/// <java-name>
-				/// MONGOLIAN
-				/// </java-name>
-				[Dot42.DexImport("MONGOLIAN", "I", AccessFlags = 25)]
-				public const int MONGOLIAN = 262144;
-				/// <java-name>
-				/// ALL_RANGES
-				/// </java-name>
-				[Dot42.DexImport("ALL_RANGES", "I", AccessFlags = 25)]
-				public const int ALL_RANGES = 524287;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal NumericShaper() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getContextualShaper
-				/// </java-name>
-				[Dot42.DexImport("getContextualShaper", "(II)Ljava/awt/font/NumericShaper;", AccessFlags = 9)]
-				public static global::Java.Awt.Font.NumericShaper GetContextualShaper(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Awt.Font.NumericShaper);
-				}
-
-				/// <java-name>
-				/// getContextualShaper
-				/// </java-name>
-				[Dot42.DexImport("getContextualShaper", "(I)Ljava/awt/font/NumericShaper;", AccessFlags = 9)]
-				public static global::Java.Awt.Font.NumericShaper GetContextualShaper(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Awt.Font.NumericShaper);
-				}
-
-				/// <java-name>
-				/// getRanges
-				/// </java-name>
-				[Dot42.DexImport("getRanges", "()I", AccessFlags = 1)]
-				public int GetRanges() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getShaper
-				/// </java-name>
-				[Dot42.DexImport("getShaper", "(I)Ljava/awt/font/NumericShaper;", AccessFlags = 9)]
-				public static global::Java.Awt.Font.NumericShaper GetShaper(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Awt.Font.NumericShaper);
-				}
-
-				/// <java-name>
-				/// isContextual
-				/// </java-name>
-				[Dot42.DexImport("isContextual", "()Z", AccessFlags = 1)]
-				public bool IsContextual() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// shape
-				/// </java-name>
-				[Dot42.DexImport("shape", "([CIII)V", AccessFlags = 1)]
-				public void Shape(char[] @char, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// shape
-				/// </java-name>
-				[Dot42.DexImport("shape", "([CII)V", AccessFlags = 1)]
-				public void Shape(char[] @char, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRanges
-				/// </java-name>
-				public int Ranges
-				{
-				[Dot42.DexImport("getRanges", "()I", AccessFlags = 1)]
-						get{ return GetRanges(); }
 				}
 
 		}

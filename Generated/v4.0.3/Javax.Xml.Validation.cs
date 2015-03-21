@@ -2,6 +2,210 @@
 namespace Javax.Xml.Validation
 {
 		/// <java-name>
+		/// javax/xml/validation/Schema
+		/// </java-name>
+		[Dot42.DexImport("javax/xml/validation/Schema", AccessFlags = 1057)]
+		public abstract partial class Schema
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal Schema() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newValidator
+				/// </java-name>
+				[Dot42.DexImport("newValidator", "()Ljavax/xml/validation/Validator;", AccessFlags = 1025)]
+				public abstract global::Javax.Xml.Validation.Validator NewValidator() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// newValidatorHandler
+				/// </java-name>
+				[Dot42.DexImport("newValidatorHandler", "()Ljavax/xml/validation/ValidatorHandler;", AccessFlags = 1025)]
+				public abstract global::Javax.Xml.Validation.ValidatorHandler NewValidatorHandler() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/xml/validation/SchemaFactory
+		/// </java-name>
+		[Dot42.DexImport("javax/xml/validation/SchemaFactory", AccessFlags = 1057)]
+		public abstract partial class SchemaFactory
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal SchemaFactory() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", AccessFlags = 9)]
+				public static global::Javax.Xml.Validation.SchemaFactory NewInstance(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Xml.Validation.SchemaFactory);
+				}
+
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/validatio" +
+    "n/SchemaFactory;", AccessFlags = 9)]
+				public static global::Javax.Xml.Validation.SchemaFactory NewInstance(string @string, string string1, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Xml.Validation.SchemaFactory);
+				}
+
+				/// <java-name>
+				/// isSchemaLanguageSupported
+				/// </java-name>
+				[Dot42.DexImport("isSchemaLanguageSupported", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
+				public abstract bool IsSchemaLanguageSupported(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getFeature
+				/// </java-name>
+				[Dot42.DexImport("getFeature", "(Ljava/lang/String;)Z", AccessFlags = 1)]
+				public virtual bool GetFeature(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setFeature
+				/// </java-name>
+				[Dot42.DexImport("setFeature", "(Ljava/lang/String;Z)V", AccessFlags = 1)]
+				public virtual void SetFeature(string @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setProperty
+				/// </java-name>
+				[Dot42.DexImport("setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1)]
+				public virtual void SetProperty(string @string, object @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getProperty
+				/// </java-name>
+				[Dot42.DexImport("getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object GetProperty(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// setErrorHandler
+				/// </java-name>
+				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1025)]
+				public abstract void SetErrorHandler(global::Org.Xml.Sax.IErrorHandler errorHandler) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getErrorHandler
+				/// </java-name>
+				[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1025)]
+				public abstract global::Org.Xml.Sax.IErrorHandler GetErrorHandler() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setResourceResolver
+				/// </java-name>
+				[Dot42.DexImport("setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", AccessFlags = 1025)]
+				public abstract void SetResourceResolver(global::Org.W3c.Dom.Ls.ILSResourceResolver lSResourceResolver) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getResourceResolver
+				/// </java-name>
+				[Dot42.DexImport("getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", AccessFlags = 1025)]
+				public abstract global::Org.W3c.Dom.Ls.ILSResourceResolver GetResourceResolver() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// newSchema
+				/// </java-name>
+				[Dot42.DexImport("newSchema", "(Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+				public virtual global::Javax.Xml.Validation.Schema NewSchema(global::Javax.Xml.Transform.ISource source) /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Xml.Validation.Schema);
+				}
+
+				/// <java-name>
+				/// newSchema
+				/// </java-name>
+				[Dot42.DexImport("newSchema", "(Ljava/io/File;)Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+				public virtual global::Javax.Xml.Validation.Schema NewSchema(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Xml.Validation.Schema);
+				}
+
+				/// <java-name>
+				/// newSchema
+				/// </java-name>
+				[Dot42.DexImport("newSchema", "(Ljava/net/URL;)Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+				public virtual global::Javax.Xml.Validation.Schema NewSchema(global::Java.Net.URL uRL) /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Xml.Validation.Schema);
+				}
+
+				/// <java-name>
+				/// newSchema
+				/// </java-name>
+				[Dot42.DexImport("newSchema", "([Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", AccessFlags = 1025)]
+				public abstract global::Javax.Xml.Validation.Schema NewSchema(global::Javax.Xml.Transform.ISource[] source) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// newSchema
+				/// </java-name>
+				[Dot42.DexImport("newSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1025)]
+				public abstract global::Javax.Xml.Validation.Schema NewSchema() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getErrorHandler
+				/// </java-name>
+				public global::Org.Xml.Sax.IErrorHandler ErrorHandler
+				{
+				[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1025)]
+						get{ return GetErrorHandler(); }
+				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1025)]
+						set{ SetErrorHandler(value); }
+				}
+
+				/// <java-name>
+				/// getResourceResolver
+				/// </java-name>
+				public global::Org.W3c.Dom.Ls.ILSResourceResolver ResourceResolver
+				{
+				[Dot42.DexImport("getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", AccessFlags = 1025)]
+						get{ return GetResourceResolver(); }
+				[Dot42.DexImport("setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", AccessFlags = 1025)]
+						set{ SetResourceResolver(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/xml/validation/SchemaFactoryLoader
+		/// </java-name>
+		[Dot42.DexImport("javax/xml/validation/SchemaFactoryLoader", AccessFlags = 1057)]
+		public abstract partial class SchemaFactoryLoader
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal SchemaFactoryLoader() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newFactory
+				/// </java-name>
+				[Dot42.DexImport("newFactory", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", AccessFlags = 1025)]
+				public abstract global::Javax.Xml.Validation.SchemaFactory NewFactory(string @string) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
 		/// javax/xml/validation/TypeInfoProvider
 		/// </java-name>
 		[Dot42.DexImport("javax/xml/validation/TypeInfoProvider", AccessFlags = 1057)]
@@ -45,32 +249,6 @@ namespace Javax.Xml.Validation
 				[Dot42.DexImport("getElementTypeInfo", "()Lorg/w3c/dom/TypeInfo;", AccessFlags = 1025)]
 						get{ return GetElementTypeInfo(); }
 				}
-
-		}
-
-		/// <java-name>
-		/// javax/xml/validation/Schema
-		/// </java-name>
-		[Dot42.DexImport("javax/xml/validation/Schema", AccessFlags = 1057)]
-		public abstract partial class Schema
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal Schema() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newValidator
-				/// </java-name>
-				[Dot42.DexImport("newValidator", "()Ljavax/xml/validation/Validator;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Validation.Validator NewValidator() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// newValidatorHandler
-				/// </java-name>
-				[Dot42.DexImport("newValidatorHandler", "()Ljavax/xml/validation/ValidatorHandler;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Validation.ValidatorHandler NewValidatorHandler() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -185,26 +363,6 @@ namespace Javax.Xml.Validation
 				[Dot42.DexImport("setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", AccessFlags = 1025)]
 						set{ SetResourceResolver(value); }
 				}
-
-		}
-
-		/// <java-name>
-		/// javax/xml/validation/SchemaFactoryLoader
-		/// </java-name>
-		[Dot42.DexImport("javax/xml/validation/SchemaFactoryLoader", AccessFlags = 1057)]
-		public abstract partial class SchemaFactoryLoader
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal SchemaFactoryLoader() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newFactory
-				/// </java-name>
-				[Dot42.DexImport("newFactory", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Validation.SchemaFactory NewFactory(string @string) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -392,164 +550,6 @@ namespace Javax.Xml.Validation
 				{
 				[Dot42.DexImport("getTypeInfoProvider", "()Ljavax/xml/validation/TypeInfoProvider;", AccessFlags = 1025)]
 						get{ return GetTypeInfoProvider(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/xml/validation/SchemaFactory
-		/// </java-name>
-		[Dot42.DexImport("javax/xml/validation/SchemaFactory", AccessFlags = 1057)]
-		public abstract partial class SchemaFactory
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal SchemaFactory() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newInstance
-				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", AccessFlags = 9)]
-				public static global::Javax.Xml.Validation.SchemaFactory NewInstance(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.SchemaFactory);
-				}
-
-				/// <java-name>
-				/// newInstance
-				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/validatio" +
-    "n/SchemaFactory;", AccessFlags = 9)]
-				public static global::Javax.Xml.Validation.SchemaFactory NewInstance(string @string, string string1, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.SchemaFactory);
-				}
-
-				/// <java-name>
-				/// isSchemaLanguageSupported
-				/// </java-name>
-				[Dot42.DexImport("isSchemaLanguageSupported", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
-				public abstract bool IsSchemaLanguageSupported(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFeature
-				/// </java-name>
-				[Dot42.DexImport("getFeature", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public virtual bool GetFeature(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setFeature
-				/// </java-name>
-				[Dot42.DexImport("setFeature", "(Ljava/lang/String;Z)V", AccessFlags = 1)]
-				public virtual void SetFeature(string @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setProperty
-				/// </java-name>
-				[Dot42.DexImport("setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1)]
-				public virtual void SetProperty(string @string, object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProperty
-				/// </java-name>
-				[Dot42.DexImport("getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetProperty(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// setErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1025)]
-				public abstract void SetErrorHandler(global::Org.Xml.Sax.IErrorHandler errorHandler) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1025)]
-				public abstract global::Org.Xml.Sax.IErrorHandler GetErrorHandler() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setResourceResolver
-				/// </java-name>
-				[Dot42.DexImport("setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", AccessFlags = 1025)]
-				public abstract void SetResourceResolver(global::Org.W3c.Dom.Ls.ILSResourceResolver lSResourceResolver) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResourceResolver
-				/// </java-name>
-				[Dot42.DexImport("getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", AccessFlags = 1025)]
-				public abstract global::Org.W3c.Dom.Ls.ILSResourceResolver GetResourceResolver() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// newSchema
-				/// </java-name>
-				[Dot42.DexImport("newSchema", "(Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema NewSchema(global::Javax.Xml.Transform.ISource source) /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.Schema);
-				}
-
-				/// <java-name>
-				/// newSchema
-				/// </java-name>
-				[Dot42.DexImport("newSchema", "(Ljava/io/File;)Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema NewSchema(global::Java.Io.File file) /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.Schema);
-				}
-
-				/// <java-name>
-				/// newSchema
-				/// </java-name>
-				[Dot42.DexImport("newSchema", "(Ljava/net/URL;)Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema NewSchema(global::Java.Net.URL uRL) /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.Schema);
-				}
-
-				/// <java-name>
-				/// newSchema
-				/// </java-name>
-				[Dot42.DexImport("newSchema", "([Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Validation.Schema NewSchema(global::Javax.Xml.Transform.ISource[] source) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// newSchema
-				/// </java-name>
-				[Dot42.DexImport("newSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Validation.Schema NewSchema() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getErrorHandler
-				/// </java-name>
-				public global::Org.Xml.Sax.IErrorHandler ErrorHandler
-				{
-				[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1025)]
-						get{ return GetErrorHandler(); }
-				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1025)]
-						set{ SetErrorHandler(value); }
-				}
-
-				/// <java-name>
-				/// getResourceResolver
-				/// </java-name>
-				public global::Org.W3c.Dom.Ls.ILSResourceResolver ResourceResolver
-				{
-				[Dot42.DexImport("getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", AccessFlags = 1025)]
-						get{ return GetResourceResolver(); }
-				[Dot42.DexImport("setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", AccessFlags = 1025)]
-						set{ SetResourceResolver(value); }
 				}
 
 		}

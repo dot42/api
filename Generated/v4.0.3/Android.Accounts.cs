@@ -2,6 +2,222 @@
 namespace Android.Accounts
 {
 		/// <java-name>
+		/// android/accounts/AbstractAccountAuthenticator
+		/// </java-name>
+		[Dot42.DexImport("android/accounts/AbstractAccountAuthenticator", AccessFlags = 1057)]
+		public abstract partial class AbstractAccountAuthenticator
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public AbstractAccountAuthenticator(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getIBinder
+				/// </java-name>
+				[Dot42.DexImport("getIBinder", "()Landroid/os/IBinder;", AccessFlags = 17)]
+				public global::Android.Os.IBinder GetIBinder() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IBinder);
+				}
+
+				/// <java-name>
+				/// editProperties
+				/// </java-name>
+				[Dot42.DexImport("editProperties", "(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;)Landroid/os/Bu" +
+    "ndle;", AccessFlags = 1025)]
+				public abstract global::Android.Os.Bundle EditProperties(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addAccount
+				/// </java-name>
+				[Dot42.DexImport("addAccount", "(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;Ljava/lang/Stri" +
+    "ng;[Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
+				public abstract global::Android.Os.Bundle AddAccount(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, string @string, string string1, string[] string2, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// confirmCredentials
+				/// </java-name>
+				[Dot42.DexImport("confirmCredentials", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Landroi" +
+    "d/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
+				public abstract global::Android.Os.Bundle ConfirmCredentials(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getAuthToken
+				/// </java-name>
+				[Dot42.DexImport("getAuthToken", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/l" +
+    "ang/String;Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
+				public abstract global::Android.Os.Bundle GetAuthToken(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getAuthTokenLabel
+				/// </java-name>
+				[Dot42.DexImport("getAuthTokenLabel", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
+				public abstract string GetAuthTokenLabel(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// updateCredentials
+				/// </java-name>
+				[Dot42.DexImport("updateCredentials", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/l" +
+    "ang/String;Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
+				public abstract global::Android.Os.Bundle UpdateCredentials(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasFeatures
+				/// </java-name>
+				[Dot42.DexImport("hasFeatures", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;[Ljava/" +
+    "lang/String;)Landroid/os/Bundle;", AccessFlags = 1025)]
+				public abstract global::Android.Os.Bundle HasFeatures(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string[] @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getAccountRemovalAllowed
+				/// </java-name>
+				[Dot42.DexImport("getAccountRemovalAllowed", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;)Landro" +
+    "id/os/Bundle;", AccessFlags = 1)]
+				public virtual global::Android.Os.Bundle GetAccountRemovalAllowed(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Bundle);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal AbstractAccountAuthenticator() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getIBinder
+				/// </java-name>
+				public global::Android.Os.IBinder IBinder
+				{
+				[Dot42.DexImport("getIBinder", "()Landroid/os/IBinder;", AccessFlags = 17)]
+						get{ return GetIBinder(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/accounts/Account
+		/// </java-name>
+		[Dot42.DexImport("android/accounts/Account", AccessFlags = 33)]
+		public partial class Account : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// name
+				/// </java-name>
+				[Dot42.DexImport("name", "Ljava/lang/String;", AccessFlags = 17)]
+				public readonly string Name;
+				/// <java-name>
+				/// type
+				/// </java-name>
+				[Dot42.DexImport("type", "Ljava/lang/String;", AccessFlags = 17)]
+				public readonly string Type;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Accounts.Account> CREATOR;
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public Account(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
+				public Account(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal Account() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/accounts/AccountAuthenticatorActivity
+		/// </java-name>
+		[Dot42.DexImport("android/accounts/AccountAuthenticatorActivity", AccessFlags = 33)]
+		public partial class AccountAuthenticatorActivity : global::Android.App.Activity
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AccountAuthenticatorActivity() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setAccountAuthenticatorResult
+				/// </java-name>
+				[Dot42.DexImport("setAccountAuthenticatorResult", "(Landroid/os/Bundle;)V", AccessFlags = 17)]
+				public void SetAccountAuthenticatorResult(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCreate
+				/// </java-name>
+				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
+				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// finish
+				/// </java-name>
+				[Dot42.DexImport("finish", "()V", AccessFlags = 1)]
+				public override void Finish() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// android/accounts/AccountAuthenticatorResponse
 		/// </java-name>
 		[Dot42.DexImport("android/accounts/AccountAuthenticatorResponse", AccessFlags = 33)]
@@ -63,45 +279,6 @@ namespace Android.Accounts
 				internal AccountAuthenticatorResponse() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
-
-		}
-
-		/// <java-name>
-		/// android/accounts/AccountManagerFuture
-		/// </java-name>
-		[Dot42.DexImport("android/accounts/AccountManagerFuture", AccessFlags = 1537, Signature = "<V:Ljava/lang/Object;>Ljava/lang/Object;")]
-		public partial interface IAccountManagerFuture<V>
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// cancel
-				/// </java-name>
-				[Dot42.DexImport("cancel", "(Z)Z", AccessFlags = 1025)]
-				bool Cancel(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isCancelled
-				/// </java-name>
-				[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 1025)]
-				bool IsCancelled() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isDone
-				/// </java-name>
-				[Dot42.DexImport("isDone", "()Z", AccessFlags = 1025)]
-				bool IsDone() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResult
-				/// </java-name>
-				[Dot42.DexImport("getResult", "()Ljava/lang/Object;", AccessFlags = 1025, Signature = "()TV;")]
-				V GetResult() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResult
-				/// </java-name>
-				[Dot42.DexImport("getResult", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(JLjava/util/concurrent/TimeUnit;)TV;")]
-				V GetResult(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -569,87 +746,29 @@ namespace Android.Accounts
 		}
 
 		/// <java-name>
-		/// android/accounts/NetworkErrorException
+		/// android/accounts/AccountsException
 		/// </java-name>
-		[Dot42.DexImport("android/accounts/NetworkErrorException", AccessFlags = 33)]
-		public partial class NetworkErrorException : global::Android.Accounts.AccountsException
+		[Dot42.DexImport("android/accounts/AccountsException", AccessFlags = 33)]
+		public partial class AccountsException : global::System.Exception
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NetworkErrorException() /* MethodBuilder.Create */ 
+				public AccountsException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public NetworkErrorException(string @string) /* MethodBuilder.Create */ 
+				public AccountsException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public NetworkErrorException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				public AccountsException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public NetworkErrorException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/accounts/AuthenticatorException
-		/// </java-name>
-		[Dot42.DexImport("android/accounts/AuthenticatorException", AccessFlags = 33)]
-		public partial class AuthenticatorException : global::Android.Accounts.AccountsException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AuthenticatorException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public AuthenticatorException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public AuthenticatorException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public AuthenticatorException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/accounts/OperationCanceledException
-		/// </java-name>
-		[Dot42.DexImport("android/accounts/OperationCanceledException", AccessFlags = 33)]
-		public partial class OperationCanceledException : global::Android.Accounts.AccountsException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public OperationCanceledException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public OperationCanceledException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public OperationCanceledException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public OperationCanceledException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				public AccountsException(global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -773,217 +892,30 @@ namespace Android.Accounts
 		}
 
 		/// <java-name>
-		/// android/accounts/Account
+		/// android/accounts/AuthenticatorException
 		/// </java-name>
-		[Dot42.DexImport("android/accounts/Account", AccessFlags = 33)]
-		public partial class Account : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// name
-				/// </java-name>
-				[Dot42.DexImport("name", "Ljava/lang/String;", AccessFlags = 17)]
-				public readonly string Name;
-				/// <java-name>
-				/// type
-				/// </java-name>
-				[Dot42.DexImport("type", "Ljava/lang/String;", AccessFlags = 17)]
-				public readonly string Type;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Accounts.Account> CREATOR;
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public Account(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public Account(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Account() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/accounts/AccountAuthenticatorActivity
-		/// </java-name>
-		[Dot42.DexImport("android/accounts/AccountAuthenticatorActivity", AccessFlags = 33)]
-		public partial class AccountAuthenticatorActivity : global::Android.App.Activity
+		[Dot42.DexImport("android/accounts/AuthenticatorException", AccessFlags = 33)]
+		public partial class AuthenticatorException : global::Android.Accounts.AccountsException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AccountAuthenticatorActivity() /* MethodBuilder.Create */ 
+				public AuthenticatorException() /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// setAccountAuthenticatorResult
-				/// </java-name>
-				[Dot42.DexImport("setAccountAuthenticatorResult", "(Landroid/os/Bundle;)V", AccessFlags = 17)]
-				public void SetAccountAuthenticatorResult(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public AuthenticatorException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// onCreate
-				/// </java-name>
-				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public AuthenticatorException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// finish
-				/// </java-name>
-				[Dot42.DexImport("finish", "()V", AccessFlags = 1)]
-				public override void Finish() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public AuthenticatorException(global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/accounts/AbstractAccountAuthenticator
-		/// </java-name>
-		[Dot42.DexImport("android/accounts/AbstractAccountAuthenticator", AccessFlags = 1057)]
-		public abstract partial class AbstractAccountAuthenticator
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public AbstractAccountAuthenticator(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getIBinder
-				/// </java-name>
-				[Dot42.DexImport("getIBinder", "()Landroid/os/IBinder;", AccessFlags = 17)]
-				public global::Android.Os.IBinder GetIBinder() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IBinder);
-				}
-
-				/// <java-name>
-				/// editProperties
-				/// </java-name>
-				[Dot42.DexImport("editProperties", "(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;)Landroid/os/Bu" +
-    "ndle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle EditProperties(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// addAccount
-				/// </java-name>
-				[Dot42.DexImport("addAccount", "(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;Ljava/lang/Stri" +
-    "ng;[Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle AddAccount(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, string @string, string string1, string[] string2, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// confirmCredentials
-				/// </java-name>
-				[Dot42.DexImport("confirmCredentials", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Landroi" +
-    "d/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle ConfirmCredentials(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAuthToken
-				/// </java-name>
-				[Dot42.DexImport("getAuthToken", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/l" +
-    "ang/String;Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle GetAuthToken(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAuthTokenLabel
-				/// </java-name>
-				[Dot42.DexImport("getAuthTokenLabel", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetAuthTokenLabel(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// updateCredentials
-				/// </java-name>
-				[Dot42.DexImport("updateCredentials", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/l" +
-    "ang/String;Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle UpdateCredentials(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// hasFeatures
-				/// </java-name>
-				[Dot42.DexImport("hasFeatures", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;[Ljava/" +
-    "lang/String;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle HasFeatures(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAccountRemovalAllowed
-				/// </java-name>
-				[Dot42.DexImport("getAccountRemovalAllowed", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;)Landro" +
-    "id/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetAccountRemovalAllowed(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Bundle);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractAccountAuthenticator() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getIBinder
-				/// </java-name>
-				public global::Android.Os.IBinder IBinder
-				{
-				[Dot42.DexImport("getIBinder", "()Landroid/os/IBinder;", AccessFlags = 17)]
-						get{ return GetIBinder(); }
 				}
 
 		}
@@ -1004,6 +936,45 @@ namespace Android.Accounts
 		}
 
 		/// <java-name>
+		/// android/accounts/AccountManagerFuture
+		/// </java-name>
+		[Dot42.DexImport("android/accounts/AccountManagerFuture", AccessFlags = 1537, Signature = "<V:Ljava/lang/Object;>Ljava/lang/Object;")]
+		public partial interface IAccountManagerFuture<V>
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// cancel
+				/// </java-name>
+				[Dot42.DexImport("cancel", "(Z)Z", AccessFlags = 1025)]
+				bool Cancel(bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isCancelled
+				/// </java-name>
+				[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 1025)]
+				bool IsCancelled() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isDone
+				/// </java-name>
+				[Dot42.DexImport("isDone", "()Z", AccessFlags = 1025)]
+				bool IsDone() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getResult
+				/// </java-name>
+				[Dot42.DexImport("getResult", "()Ljava/lang/Object;", AccessFlags = 1025, Signature = "()TV;")]
+				V GetResult() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getResult
+				/// </java-name>
+				[Dot42.DexImport("getResult", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(JLjava/util/concurrent/TimeUnit;)TV;")]
+				V GetResult(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
 		/// android/accounts/OnAccountsUpdateListener
 		/// </java-name>
 		[Dot42.DexImport("android/accounts/OnAccountsUpdateListener", AccessFlags = 1537)]
@@ -1019,29 +990,58 @@ namespace Android.Accounts
 		}
 
 		/// <java-name>
-		/// android/accounts/AccountsException
+		/// android/accounts/NetworkErrorException
 		/// </java-name>
-		[Dot42.DexImport("android/accounts/AccountsException", AccessFlags = 33)]
-		public partial class AccountsException : global::System.Exception
+		[Dot42.DexImport("android/accounts/NetworkErrorException", AccessFlags = 33)]
+		public partial class NetworkErrorException : global::Android.Accounts.AccountsException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AccountsException() /* MethodBuilder.Create */ 
+				public NetworkErrorException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public AccountsException(string @string) /* MethodBuilder.Create */ 
+				public NetworkErrorException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public AccountsException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				public NetworkErrorException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public AccountsException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				public NetworkErrorException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/accounts/OperationCanceledException
+		/// </java-name>
+		[Dot42.DexImport("android/accounts/OperationCanceledException", AccessFlags = 33)]
+		public partial class OperationCanceledException : global::Android.Accounts.AccountsException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public OperationCanceledException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public OperationCanceledException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public OperationCanceledException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public OperationCanceledException(global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 

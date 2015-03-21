@@ -2,6 +2,436 @@
 namespace Android.View.Accessibility
 {
 		/// <java-name>
+		/// android/view/accessibility/AccessibilityEvent
+		/// </java-name>
+		[Dot42.DexImport("android/view/accessibility/AccessibilityEvent", AccessFlags = 49)]
+		public sealed partial class AccessibilityEvent : global::Android.View.Accessibility.AccessibilityRecord, global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// INVALID_POSITION
+				/// </java-name>
+				[Dot42.DexImport("INVALID_POSITION", "I", AccessFlags = 25)]
+				public const int INVALID_POSITION = -1;
+				/// <java-name>
+				/// MAX_TEXT_LENGTH
+				/// </java-name>
+				[Dot42.DexImport("MAX_TEXT_LENGTH", "I", AccessFlags = 25)]
+				public const int MAX_TEXT_LENGTH = 500;
+				/// <java-name>
+				/// TYPE_VIEW_CLICKED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_VIEW_CLICKED", "I", AccessFlags = 25)]
+				public const int TYPE_VIEW_CLICKED = 1;
+				/// <java-name>
+				/// TYPE_VIEW_LONG_CLICKED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_VIEW_LONG_CLICKED", "I", AccessFlags = 25)]
+				public const int TYPE_VIEW_LONG_CLICKED = 2;
+				/// <java-name>
+				/// TYPE_VIEW_SELECTED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_VIEW_SELECTED", "I", AccessFlags = 25)]
+				public const int TYPE_VIEW_SELECTED = 4;
+				/// <java-name>
+				/// TYPE_VIEW_FOCUSED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_VIEW_FOCUSED", "I", AccessFlags = 25)]
+				public const int TYPE_VIEW_FOCUSED = 8;
+				/// <java-name>
+				/// TYPE_VIEW_TEXT_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_VIEW_TEXT_CHANGED", "I", AccessFlags = 25)]
+				public const int TYPE_VIEW_TEXT_CHANGED = 16;
+				/// <java-name>
+				/// TYPE_WINDOW_STATE_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_WINDOW_STATE_CHANGED", "I", AccessFlags = 25)]
+				public const int TYPE_WINDOW_STATE_CHANGED = 32;
+				/// <java-name>
+				/// TYPE_NOTIFICATION_STATE_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_NOTIFICATION_STATE_CHANGED", "I", AccessFlags = 25)]
+				public const int TYPE_NOTIFICATION_STATE_CHANGED = 64;
+				/// <java-name>
+				/// TYPE_VIEW_HOVER_ENTER
+				/// </java-name>
+				[Dot42.DexImport("TYPE_VIEW_HOVER_ENTER", "I", AccessFlags = 25)]
+				public const int TYPE_VIEW_HOVER_ENTER = 128;
+				/// <java-name>
+				/// TYPE_VIEW_HOVER_EXIT
+				/// </java-name>
+				[Dot42.DexImport("TYPE_VIEW_HOVER_EXIT", "I", AccessFlags = 25)]
+				public const int TYPE_VIEW_HOVER_EXIT = 256;
+				/// <java-name>
+				/// TYPE_TOUCH_EXPLORATION_GESTURE_START
+				/// </java-name>
+				[Dot42.DexImport("TYPE_TOUCH_EXPLORATION_GESTURE_START", "I", AccessFlags = 25)]
+				public const int TYPE_TOUCH_EXPLORATION_GESTURE_START = 512;
+				/// <java-name>
+				/// TYPE_TOUCH_EXPLORATION_GESTURE_END
+				/// </java-name>
+				[Dot42.DexImport("TYPE_TOUCH_EXPLORATION_GESTURE_END", "I", AccessFlags = 25)]
+				public const int TYPE_TOUCH_EXPLORATION_GESTURE_END = 1024;
+				/// <java-name>
+				/// TYPE_WINDOW_CONTENT_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_WINDOW_CONTENT_CHANGED", "I", AccessFlags = 25)]
+				public const int TYPE_WINDOW_CONTENT_CHANGED = 2048;
+				/// <java-name>
+				/// TYPE_VIEW_SCROLLED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_VIEW_SCROLLED", "I", AccessFlags = 25)]
+				public const int TYPE_VIEW_SCROLLED = 4096;
+				/// <java-name>
+				/// TYPE_VIEW_TEXT_SELECTION_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("TYPE_VIEW_TEXT_SELECTION_CHANGED", "I", AccessFlags = 25)]
+				public const int TYPE_VIEW_TEXT_SELECTION_CHANGED = 8192;
+				/// <java-name>
+				/// TYPES_ALL_MASK
+				/// </java-name>
+				[Dot42.DexImport("TYPES_ALL_MASK", "I", AccessFlags = 25)]
+				public const int TYPES_ALL_MASK = -1;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Accessibility.AccessibilityEvent> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal AccessibilityEvent() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRecordCount
+				/// </java-name>
+				[Dot42.DexImport("getRecordCount", "()I", AccessFlags = 1)]
+				public int GetRecordCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// appendRecord
+				/// </java-name>
+				[Dot42.DexImport("appendRecord", "(Landroid/view/accessibility/AccessibilityRecord;)V", AccessFlags = 1)]
+				public void AppendRecord(global::Android.View.Accessibility.AccessibilityRecord accessibilityRecord) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRecord
+				/// </java-name>
+				[Dot42.DexImport("getRecord", "(I)Landroid/view/accessibility/AccessibilityRecord;", AccessFlags = 1)]
+				public global::Android.View.Accessibility.AccessibilityRecord GetRecord(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.Accessibility.AccessibilityRecord);
+				}
+
+				/// <java-name>
+				/// getEventType
+				/// </java-name>
+				[Dot42.DexImport("getEventType", "()I", AccessFlags = 1)]
+				public int GetEventType() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setEventType
+				/// </java-name>
+				[Dot42.DexImport("setEventType", "(I)V", AccessFlags = 1)]
+				public void SetEventType(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getEventTime
+				/// </java-name>
+				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
+				public long GetEventTime() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// setEventTime
+				/// </java-name>
+				[Dot42.DexImport("setEventTime", "(J)V", AccessFlags = 1)]
+				public void SetEventTime(long int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPackageName
+				/// </java-name>
+				[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public global::Java.Lang.ICharSequence GetPackageName() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// setPackageName
+				/// </java-name>
+				[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public void SetPackageName(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(I)Landroid/view/accessibility/AccessibilityEvent;", AccessFlags = 9)]
+				public static global::Android.View.Accessibility.AccessibilityEvent Obtain(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.Accessibility.AccessibilityEvent);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(Landroid/view/accessibility/AccessibilityEvent;)Landroid/view/accessibility/Acce" +
+    "ssibilityEvent;", AccessFlags = 9)]
+				public static global::Android.View.Accessibility.AccessibilityEvent Obtain(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.Accessibility.AccessibilityEvent);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "()Landroid/view/accessibility/AccessibilityEvent;", AccessFlags = 9)]
+				public static global::Android.View.Accessibility.AccessibilityEvent Obtain() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.Accessibility.AccessibilityEvent);
+				}
+
+				/// <java-name>
+				/// recycle
+				/// </java-name>
+				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
+				public override void Recycle() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// initFromParcel
+				/// </java-name>
+				[Dot42.DexImport("initFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
+				public void InitFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// eventTypeToString
+				/// </java-name>
+				[Dot42.DexImport("eventTypeToString", "(I)Ljava/lang/String;", AccessFlags = 9)]
+				public static string EventTypeToString(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getRecordCount
+				/// </java-name>
+				public int RecordCount
+				{
+				[Dot42.DexImport("getRecordCount", "()I", AccessFlags = 1)]
+						get{ return GetRecordCount(); }
+				}
+
+				/// <java-name>
+				/// getEventType
+				/// </java-name>
+				public int EventType
+				{
+				[Dot42.DexImport("getEventType", "()I", AccessFlags = 1)]
+						get{ return GetEventType(); }
+				[Dot42.DexImport("setEventType", "(I)V", AccessFlags = 1)]
+						set{ SetEventType(value); }
+				}
+
+				/// <java-name>
+				/// getEventTime
+				/// </java-name>
+				public long EventTime
+				{
+				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
+						get{ return GetEventTime(); }
+				[Dot42.DexImport("setEventTime", "(J)V", AccessFlags = 1)]
+						set{ SetEventTime(value); }
+				}
+
+				/// <java-name>
+				/// getPackageName
+				/// </java-name>
+				public global::Java.Lang.ICharSequence PackageName
+				{
+				[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return GetPackageName(); }
+				[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ SetPackageName(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/accessibility/AccessibilityManager
+		/// </java-name>
+		[Dot42.DexImport("android/view/accessibility/AccessibilityManager", AccessFlags = 49)]
+		public sealed partial class AccessibilityManager
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal AccessibilityManager() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isEnabled
+				/// </java-name>
+				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
+				public bool IsEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isTouchExplorationEnabled
+				/// </java-name>
+				[Dot42.DexImport("isTouchExplorationEnabled", "()Z", AccessFlags = 1)]
+				public bool IsTouchExplorationEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// sendAccessibilityEvent
+				/// </java-name>
+				[Dot42.DexImport("sendAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
+				public void SendAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// interrupt
+				/// </java-name>
+				[Dot42.DexImport("interrupt", "()V", AccessFlags = 1)]
+				public void Interrupt() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAccessibilityServiceList
+				/// </java-name>
+				[Dot42.DexImport("getAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/pm/ServiceInfo;>;")]
+				public global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo> GetAccessibilityServiceList() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo>);
+				}
+
+				/// <java-name>
+				/// getInstalledAccessibilityServiceList
+				/// </java-name>
+				[Dot42.DexImport("getInstalledAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
+				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> GetInstalledAccessibilityServiceList() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo>);
+				}
+
+				/// <java-name>
+				/// getEnabledAccessibilityServiceList
+				/// </java-name>
+				[Dot42.DexImport("getEnabledAccessibilityServiceList", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
+				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> GetEnabledAccessibilityServiceList(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo>);
+				}
+
+				/// <java-name>
+				/// addAccessibilityStateChangeListener
+				/// </java-name>
+				[Dot42.DexImport("addAccessibilityStateChangeListener", "(Landroid/view/accessibility/AccessibilityManager$AccessibilityStateChangeListene" +
+    "r;)Z", AccessFlags = 1)]
+				public bool AddAccessibilityStateChangeListener(global::Android.View.Accessibility.AccessibilityManager.IAccessibilityStateChangeListener accessibilityStateChangeListener) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// removeAccessibilityStateChangeListener
+				/// </java-name>
+				[Dot42.DexImport("removeAccessibilityStateChangeListener", "(Landroid/view/accessibility/AccessibilityManager$AccessibilityStateChangeListene" +
+    "r;)Z", AccessFlags = 1)]
+				public bool RemoveAccessibilityStateChangeListener(global::Android.View.Accessibility.AccessibilityManager.IAccessibilityStateChangeListener accessibilityStateChangeListener) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getAccessibilityServiceList
+				/// </java-name>
+				public global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo> AccessibilityServiceList
+				{
+				[Dot42.DexImport("getAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/pm/ServiceInfo;>;")]
+						get{ return GetAccessibilityServiceList(); }
+				}
+
+				/// <java-name>
+				/// getInstalledAccessibilityServiceList
+				/// </java-name>
+				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> InstalledAccessibilityServiceList
+				{
+				[Dot42.DexImport("getInstalledAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
+						get{ return GetInstalledAccessibilityServiceList(); }
+				}
+
+				/// <java-name>
+				/// android/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener", AccessFlags = 1545)]
+				public partial interface IAccessibilityStateChangeListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onAccessibilityStateChanged
+						/// </java-name>
+						[Dot42.DexImport("onAccessibilityStateChanged", "(Z)V", AccessFlags = 1025)]
+						void OnAccessibilityStateChanged(bool boolean) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
 		/// android/view/accessibility/AccessibilityNodeInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/accessibility/AccessibilityNodeInfo", AccessFlags = 33)]
@@ -1151,436 +1581,6 @@ namespace Android.View.Accessibility
 						get{ return GetParcelableData(); }
 				[Dot42.DexImport("setParcelableData", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
 						set{ SetParcelableData(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/accessibility/AccessibilityEvent
-		/// </java-name>
-		[Dot42.DexImport("android/view/accessibility/AccessibilityEvent", AccessFlags = 49)]
-		public sealed partial class AccessibilityEvent : global::Android.View.Accessibility.AccessibilityRecord, global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// INVALID_POSITION
-				/// </java-name>
-				[Dot42.DexImport("INVALID_POSITION", "I", AccessFlags = 25)]
-				public const int INVALID_POSITION = -1;
-				/// <java-name>
-				/// MAX_TEXT_LENGTH
-				/// </java-name>
-				[Dot42.DexImport("MAX_TEXT_LENGTH", "I", AccessFlags = 25)]
-				public const int MAX_TEXT_LENGTH = 500;
-				/// <java-name>
-				/// TYPE_VIEW_CLICKED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_VIEW_CLICKED", "I", AccessFlags = 25)]
-				public const int TYPE_VIEW_CLICKED = 1;
-				/// <java-name>
-				/// TYPE_VIEW_LONG_CLICKED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_VIEW_LONG_CLICKED", "I", AccessFlags = 25)]
-				public const int TYPE_VIEW_LONG_CLICKED = 2;
-				/// <java-name>
-				/// TYPE_VIEW_SELECTED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_VIEW_SELECTED", "I", AccessFlags = 25)]
-				public const int TYPE_VIEW_SELECTED = 4;
-				/// <java-name>
-				/// TYPE_VIEW_FOCUSED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_VIEW_FOCUSED", "I", AccessFlags = 25)]
-				public const int TYPE_VIEW_FOCUSED = 8;
-				/// <java-name>
-				/// TYPE_VIEW_TEXT_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_VIEW_TEXT_CHANGED", "I", AccessFlags = 25)]
-				public const int TYPE_VIEW_TEXT_CHANGED = 16;
-				/// <java-name>
-				/// TYPE_WINDOW_STATE_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_WINDOW_STATE_CHANGED", "I", AccessFlags = 25)]
-				public const int TYPE_WINDOW_STATE_CHANGED = 32;
-				/// <java-name>
-				/// TYPE_NOTIFICATION_STATE_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_NOTIFICATION_STATE_CHANGED", "I", AccessFlags = 25)]
-				public const int TYPE_NOTIFICATION_STATE_CHANGED = 64;
-				/// <java-name>
-				/// TYPE_VIEW_HOVER_ENTER
-				/// </java-name>
-				[Dot42.DexImport("TYPE_VIEW_HOVER_ENTER", "I", AccessFlags = 25)]
-				public const int TYPE_VIEW_HOVER_ENTER = 128;
-				/// <java-name>
-				/// TYPE_VIEW_HOVER_EXIT
-				/// </java-name>
-				[Dot42.DexImport("TYPE_VIEW_HOVER_EXIT", "I", AccessFlags = 25)]
-				public const int TYPE_VIEW_HOVER_EXIT = 256;
-				/// <java-name>
-				/// TYPE_TOUCH_EXPLORATION_GESTURE_START
-				/// </java-name>
-				[Dot42.DexImport("TYPE_TOUCH_EXPLORATION_GESTURE_START", "I", AccessFlags = 25)]
-				public const int TYPE_TOUCH_EXPLORATION_GESTURE_START = 512;
-				/// <java-name>
-				/// TYPE_TOUCH_EXPLORATION_GESTURE_END
-				/// </java-name>
-				[Dot42.DexImport("TYPE_TOUCH_EXPLORATION_GESTURE_END", "I", AccessFlags = 25)]
-				public const int TYPE_TOUCH_EXPLORATION_GESTURE_END = 1024;
-				/// <java-name>
-				/// TYPE_WINDOW_CONTENT_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_WINDOW_CONTENT_CHANGED", "I", AccessFlags = 25)]
-				public const int TYPE_WINDOW_CONTENT_CHANGED = 2048;
-				/// <java-name>
-				/// TYPE_VIEW_SCROLLED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_VIEW_SCROLLED", "I", AccessFlags = 25)]
-				public const int TYPE_VIEW_SCROLLED = 4096;
-				/// <java-name>
-				/// TYPE_VIEW_TEXT_SELECTION_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("TYPE_VIEW_TEXT_SELECTION_CHANGED", "I", AccessFlags = 25)]
-				public const int TYPE_VIEW_TEXT_SELECTION_CHANGED = 8192;
-				/// <java-name>
-				/// TYPES_ALL_MASK
-				/// </java-name>
-				[Dot42.DexImport("TYPES_ALL_MASK", "I", AccessFlags = 25)]
-				public const int TYPES_ALL_MASK = -1;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Accessibility.AccessibilityEvent> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal AccessibilityEvent() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRecordCount
-				/// </java-name>
-				[Dot42.DexImport("getRecordCount", "()I", AccessFlags = 1)]
-				public int GetRecordCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// appendRecord
-				/// </java-name>
-				[Dot42.DexImport("appendRecord", "(Landroid/view/accessibility/AccessibilityRecord;)V", AccessFlags = 1)]
-				public void AppendRecord(global::Android.View.Accessibility.AccessibilityRecord accessibilityRecord) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRecord
-				/// </java-name>
-				[Dot42.DexImport("getRecord", "(I)Landroid/view/accessibility/AccessibilityRecord;", AccessFlags = 1)]
-				public global::Android.View.Accessibility.AccessibilityRecord GetRecord(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.Accessibility.AccessibilityRecord);
-				}
-
-				/// <java-name>
-				/// getEventType
-				/// </java-name>
-				[Dot42.DexImport("getEventType", "()I", AccessFlags = 1)]
-				public int GetEventType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setEventType
-				/// </java-name>
-				[Dot42.DexImport("setEventType", "(I)V", AccessFlags = 1)]
-				public void SetEventType(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEventTime
-				/// </java-name>
-				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
-				public long GetEventTime() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setEventTime
-				/// </java-name>
-				[Dot42.DexImport("setEventTime", "(J)V", AccessFlags = 1)]
-				public void SetEventTime(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPackageName
-				/// </java-name>
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence GetPackageName() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setPackageName
-				/// </java-name>
-				[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public void SetPackageName(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "(I)Landroid/view/accessibility/AccessibilityEvent;", AccessFlags = 9)]
-				public static global::Android.View.Accessibility.AccessibilityEvent Obtain(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.Accessibility.AccessibilityEvent);
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "(Landroid/view/accessibility/AccessibilityEvent;)Landroid/view/accessibility/Acce" +
-    "ssibilityEvent;", AccessFlags = 9)]
-				public static global::Android.View.Accessibility.AccessibilityEvent Obtain(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.Accessibility.AccessibilityEvent);
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "()Landroid/view/accessibility/AccessibilityEvent;", AccessFlags = 9)]
-				public static global::Android.View.Accessibility.AccessibilityEvent Obtain() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.Accessibility.AccessibilityEvent);
-				}
-
-				/// <java-name>
-				/// recycle
-				/// </java-name>
-				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
-				public override void Recycle() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// initFromParcel
-				/// </java-name>
-				[Dot42.DexImport("initFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public void InitFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// eventTypeToString
-				/// </java-name>
-				[Dot42.DexImport("eventTypeToString", "(I)Ljava/lang/String;", AccessFlags = 9)]
-				public static string EventTypeToString(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRecordCount
-				/// </java-name>
-				public int RecordCount
-				{
-				[Dot42.DexImport("getRecordCount", "()I", AccessFlags = 1)]
-						get{ return GetRecordCount(); }
-				}
-
-				/// <java-name>
-				/// getEventType
-				/// </java-name>
-				public int EventType
-				{
-				[Dot42.DexImport("getEventType", "()I", AccessFlags = 1)]
-						get{ return GetEventType(); }
-				[Dot42.DexImport("setEventType", "(I)V", AccessFlags = 1)]
-						set{ SetEventType(value); }
-				}
-
-				/// <java-name>
-				/// getEventTime
-				/// </java-name>
-				public long EventTime
-				{
-				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
-						get{ return GetEventTime(); }
-				[Dot42.DexImport("setEventTime", "(J)V", AccessFlags = 1)]
-						set{ SetEventTime(value); }
-				}
-
-				/// <java-name>
-				/// getPackageName
-				/// </java-name>
-				public global::Java.Lang.ICharSequence PackageName
-				{
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetPackageName(); }
-				[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetPackageName(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/accessibility/AccessibilityManager
-		/// </java-name>
-		[Dot42.DexImport("android/view/accessibility/AccessibilityManager", AccessFlags = 49)]
-		public sealed partial class AccessibilityManager
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal AccessibilityManager() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isEnabled
-				/// </java-name>
-				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
-				public bool IsEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isTouchExplorationEnabled
-				/// </java-name>
-				[Dot42.DexImport("isTouchExplorationEnabled", "()Z", AccessFlags = 1)]
-				public bool IsTouchExplorationEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// sendAccessibilityEvent
-				/// </java-name>
-				[Dot42.DexImport("sendAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public void SendAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// interrupt
-				/// </java-name>
-				[Dot42.DexImport("interrupt", "()V", AccessFlags = 1)]
-				public void Interrupt() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAccessibilityServiceList
-				/// </java-name>
-				[Dot42.DexImport("getAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/pm/ServiceInfo;>;")]
-				public global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo> GetAccessibilityServiceList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo>);
-				}
-
-				/// <java-name>
-				/// getInstalledAccessibilityServiceList
-				/// </java-name>
-				[Dot42.DexImport("getInstalledAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
-				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> GetInstalledAccessibilityServiceList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo>);
-				}
-
-				/// <java-name>
-				/// getEnabledAccessibilityServiceList
-				/// </java-name>
-				[Dot42.DexImport("getEnabledAccessibilityServiceList", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
-				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> GetEnabledAccessibilityServiceList(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo>);
-				}
-
-				/// <java-name>
-				/// addAccessibilityStateChangeListener
-				/// </java-name>
-				[Dot42.DexImport("addAccessibilityStateChangeListener", "(Landroid/view/accessibility/AccessibilityManager$AccessibilityStateChangeListene" +
-    "r;)Z", AccessFlags = 1)]
-				public bool AddAccessibilityStateChangeListener(global::Android.View.Accessibility.AccessibilityManager.IAccessibilityStateChangeListener accessibilityStateChangeListener) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// removeAccessibilityStateChangeListener
-				/// </java-name>
-				[Dot42.DexImport("removeAccessibilityStateChangeListener", "(Landroid/view/accessibility/AccessibilityManager$AccessibilityStateChangeListene" +
-    "r;)Z", AccessFlags = 1)]
-				public bool RemoveAccessibilityStateChangeListener(global::Android.View.Accessibility.AccessibilityManager.IAccessibilityStateChangeListener accessibilityStateChangeListener) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getAccessibilityServiceList
-				/// </java-name>
-				public global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo> AccessibilityServiceList
-				{
-				[Dot42.DexImport("getAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/pm/ServiceInfo;>;")]
-						get{ return GetAccessibilityServiceList(); }
-				}
-
-				/// <java-name>
-				/// getInstalledAccessibilityServiceList
-				/// </java-name>
-				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> InstalledAccessibilityServiceList
-				{
-				[Dot42.DexImport("getInstalledAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
-						get{ return GetInstalledAccessibilityServiceList(); }
-				}
-
-				/// <java-name>
-				/// android/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener", AccessFlags = 1545)]
-				public partial interface IAccessibilityStateChangeListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onAccessibilityStateChanged
-						/// </java-name>
-						[Dot42.DexImport("onAccessibilityStateChanged", "(Z)V", AccessFlags = 1025)]
-						void OnAccessibilityStateChanged(bool boolean) /* MethodBuilder.Create */ ;
-
 				}
 
 		}

@@ -2,412 +2,6 @@
 namespace Android.Content.Res
 {
 		/// <java-name>
-		/// android/content/res/TypedArray
-		/// </java-name>
-		[Dot42.DexImport("android/content/res/TypedArray", AccessFlags = 33)]
-		public partial class TypedArray
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal TypedArray() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public virtual int Length() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIndexCount
-				/// </java-name>
-				[Dot42.DexImport("getIndexCount", "()I", AccessFlags = 1)]
-				public virtual int GetIndexCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				[Dot42.DexImport("getIndex", "(I)I", AccessFlags = 1)]
-				public virtual int GetIndex(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getResources
-				/// </java-name>
-				[Dot42.DexImport("getResources", "()Landroid/content/res/Resources;", AccessFlags = 1)]
-				public virtual global::Android.Content.Res.Resources GetResources() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.Resources);
-				}
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "(I)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetText(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getString
-				/// </java-name>
-				[Dot42.DexImport("getString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetString(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getNonResourceString
-				/// </java-name>
-				[Dot42.DexImport("getNonResourceString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetNonResourceString(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getBoolean
-				/// </java-name>
-				[Dot42.DexImport("getBoolean", "(IZ)Z", AccessFlags = 1)]
-				public virtual bool GetBoolean(int int32, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getInt
-				/// </java-name>
-				[Dot42.DexImport("getInt", "(II)I", AccessFlags = 1)]
-				public virtual int GetInt(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFloat
-				/// </java-name>
-				[Dot42.DexImport("getFloat", "(IF)F", AccessFlags = 1)]
-				public virtual float GetFloat(int int32, float single) /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getColor
-				/// </java-name>
-				[Dot42.DexImport("getColor", "(II)I", AccessFlags = 1)]
-				public virtual int GetColor(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getColorStateList
-				/// </java-name>
-				[Dot42.DexImport("getColorStateList", "(I)Landroid/content/res/ColorStateList;", AccessFlags = 1)]
-				public virtual global::Android.Content.Res.ColorStateList GetColorStateList(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.ColorStateList);
-				}
-
-				/// <java-name>
-				/// getInteger
-				/// </java-name>
-				[Dot42.DexImport("getInteger", "(II)I", AccessFlags = 1)]
-				public virtual int GetInteger(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDimension
-				/// </java-name>
-				[Dot42.DexImport("getDimension", "(IF)F", AccessFlags = 1)]
-				public virtual float GetDimension(int int32, float single) /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getDimensionPixelOffset
-				/// </java-name>
-				[Dot42.DexImport("getDimensionPixelOffset", "(II)I", AccessFlags = 1)]
-				public virtual int GetDimensionPixelOffset(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDimensionPixelSize
-				/// </java-name>
-				[Dot42.DexImport("getDimensionPixelSize", "(II)I", AccessFlags = 1)]
-				public virtual int GetDimensionPixelSize(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLayoutDimension
-				/// </java-name>
-				[Dot42.DexImport("getLayoutDimension", "(ILjava/lang/String;)I", AccessFlags = 1)]
-				public virtual int GetLayoutDimension(int int32, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLayoutDimension
-				/// </java-name>
-				[Dot42.DexImport("getLayoutDimension", "(II)I", AccessFlags = 1)]
-				public virtual int GetLayoutDimension(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFraction
-				/// </java-name>
-				[Dot42.DexImport("getFraction", "(IIIF)F", AccessFlags = 1)]
-				public virtual float GetFraction(int int32, int int321, int int322, float single) /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getResourceId
-				/// </java-name>
-				[Dot42.DexImport("getResourceId", "(II)I", AccessFlags = 1)]
-				public virtual int GetResourceId(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDrawable
-				/// </java-name>
-				[Dot42.DexImport("getDrawable", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getTextArray
-				/// </java-name>
-				[Dot42.DexImport("getTextArray", "(I)[Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence[] GetTextArray(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence[]);
-				}
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "(ILandroid/util/TypedValue;)Z", AccessFlags = 1)]
-				public virtual bool GetValue(int int32, global::Android.Util.TypedValue typedValue) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasValue
-				/// </java-name>
-				[Dot42.DexImport("hasValue", "(I)Z", AccessFlags = 1)]
-				public virtual bool HasValue(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// peekValue
-				/// </java-name>
-				[Dot42.DexImport("peekValue", "(I)Landroid/util/TypedValue;", AccessFlags = 1)]
-				public virtual global::Android.Util.TypedValue PeekValue(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Util.TypedValue);
-				}
-
-				/// <java-name>
-				/// getPositionDescription
-				/// </java-name>
-				[Dot42.DexImport("getPositionDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPositionDescription() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// recycle
-				/// </java-name>
-				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
-				public virtual void Recycle() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getIndexCount
-				/// </java-name>
-				public int IndexCount
-				{
-				[Dot42.DexImport("getIndexCount", "()I", AccessFlags = 1)]
-						get{ return GetIndexCount(); }
-				}
-
-				/// <java-name>
-				/// getResources
-				/// </java-name>
-				public global::Android.Content.Res.Resources Resources
-				{
-				[Dot42.DexImport("getResources", "()Landroid/content/res/Resources;", AccessFlags = 1)]
-						get{ return GetResources(); }
-				}
-
-				/// <java-name>
-				/// getPositionDescription
-				/// </java-name>
-				public string PositionDescription
-				{
-				[Dot42.DexImport("getPositionDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPositionDescription(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/content/res/ColorStateList
-		/// </java-name>
-		[Dot42.DexImport("android/content/res/ColorStateList", AccessFlags = 33)]
-		public partial class ColorStateList : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Res.ColorStateList> CREATOR;
-				[Dot42.DexImport("<init>", "([[I[I)V", AccessFlags = 1)]
-				public ColorStateList(int[][] int32, int[] int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// valueOf
-				/// </java-name>
-				[Dot42.DexImport("valueOf", "(I)Landroid/content/res/ColorStateList;", AccessFlags = 9)]
-				public static global::Android.Content.Res.ColorStateList ValueOf(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.ColorStateList);
-				}
-
-				/// <java-name>
-				/// createFromXml
-				/// </java-name>
-				[Dot42.DexImport("createFromXml", "(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;)Landroid/content/r" +
-    "es/ColorStateList;", AccessFlags = 9)]
-				public static global::Android.Content.Res.ColorStateList CreateFromXml(global::Android.Content.Res.Resources resources, global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.ColorStateList);
-				}
-
-				/// <java-name>
-				/// withAlpha
-				/// </java-name>
-				[Dot42.DexImport("withAlpha", "(I)Landroid/content/res/ColorStateList;", AccessFlags = 1)]
-				public virtual global::Android.Content.Res.ColorStateList WithAlpha(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.ColorStateList);
-				}
-
-				/// <java-name>
-				/// isStateful
-				/// </java-name>
-				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
-				public virtual bool IsStateful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getColorForState
-				/// </java-name>
-				[Dot42.DexImport("getColorForState", "([II)I", AccessFlags = 1)]
-				public virtual int GetColorForState(int[] int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDefaultColor
-				/// </java-name>
-				[Dot42.DexImport("getDefaultColor", "()I", AccessFlags = 1)]
-				public virtual int GetDefaultColor() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ColorStateList() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefaultColor
-				/// </java-name>
-				public int DefaultColor
-				{
-				[Dot42.DexImport("getDefaultColor", "()I", AccessFlags = 1)]
-						get{ return GetDefaultColor(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// android/content/res/AssetFileDescriptor
 		/// </java-name>
 		[Dot42.DexImport("android/content/res/AssetFileDescriptor", AccessFlags = 33)]
@@ -740,6 +334,402 @@ namespace Android.Content.Res
 						{
 						}
 
+				}
+
+		}
+
+		/// <java-name>
+		/// android/content/res/AssetManager
+		/// </java-name>
+		[Dot42.DexImport("android/content/res/AssetManager", AccessFlags = 49)]
+		public sealed partial class AssetManager
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// ACCESS_UNKNOWN
+				/// </java-name>
+				[Dot42.DexImport("ACCESS_UNKNOWN", "I", AccessFlags = 25)]
+				public const int ACCESS_UNKNOWN = 0;
+				/// <java-name>
+				/// ACCESS_RANDOM
+				/// </java-name>
+				[Dot42.DexImport("ACCESS_RANDOM", "I", AccessFlags = 25)]
+				public const int ACCESS_RANDOM = 1;
+				/// <java-name>
+				/// ACCESS_STREAMING
+				/// </java-name>
+				[Dot42.DexImport("ACCESS_STREAMING", "I", AccessFlags = 25)]
+				public const int ACCESS_STREAMING = 2;
+				/// <java-name>
+				/// ACCESS_BUFFER
+				/// </java-name>
+				[Dot42.DexImport("ACCESS_BUFFER", "I", AccessFlags = 25)]
+				public const int ACCESS_BUFFER = 3;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal AssetManager() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// open
+				/// </java-name>
+				[Dot42.DexImport("open", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 17)]
+				public global::Java.Io.InputStream Open(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// open
+				/// </java-name>
+				[Dot42.DexImport("open", "(Ljava/lang/String;I)Ljava/io/InputStream;", AccessFlags = 17)]
+				public global::Java.Io.InputStream Open(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// openFd
+				/// </java-name>
+				[Dot42.DexImport("openFd", "(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;", AccessFlags = 17)]
+				public global::Android.Content.Res.AssetFileDescriptor OpenFd(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.AssetFileDescriptor);
+				}
+
+				/// <java-name>
+				/// list
+				/// </java-name>
+				[Dot42.DexImport("list", "(Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 273)]
+				public string[] List(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string[]);
+				}
+
+				/// <java-name>
+				/// openNonAssetFd
+				/// </java-name>
+				[Dot42.DexImport("openNonAssetFd", "(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;", AccessFlags = 17)]
+				public global::Android.Content.Res.AssetFileDescriptor OpenNonAssetFd(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.AssetFileDescriptor);
+				}
+
+				/// <java-name>
+				/// openNonAssetFd
+				/// </java-name>
+				[Dot42.DexImport("openNonAssetFd", "(ILjava/lang/String;)Landroid/content/res/AssetFileDescriptor;", AccessFlags = 17)]
+				public global::Android.Content.Res.AssetFileDescriptor OpenNonAssetFd(int int32, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.AssetFileDescriptor);
+				}
+
+				/// <java-name>
+				/// openXmlResourceParser
+				/// </java-name>
+				[Dot42.DexImport("openXmlResourceParser", "(Ljava/lang/String;)Landroid/content/res/XmlResourceParser;", AccessFlags = 17)]
+				public global::Android.Content.Res.IXmlResourceParser OpenXmlResourceParser(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.IXmlResourceParser);
+				}
+
+				/// <java-name>
+				/// openXmlResourceParser
+				/// </java-name>
+				[Dot42.DexImport("openXmlResourceParser", "(ILjava/lang/String;)Landroid/content/res/XmlResourceParser;", AccessFlags = 17)]
+				public global::Android.Content.Res.IXmlResourceParser OpenXmlResourceParser(int int32, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.IXmlResourceParser);
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~AssetManager() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getLocales
+				/// </java-name>
+				[Dot42.DexImport("getLocales", "()[Ljava/lang/String;", AccessFlags = 273)]
+				public string[] GetLocales() /* MethodBuilder.Create */ 
+				{
+						return default(string[]);
+				}
+
+				/// <java-name>
+				/// getLocales
+				/// </java-name>
+				public string[] Locales
+				{
+				[Dot42.DexImport("getLocales", "()[Ljava/lang/String;", AccessFlags = 273)]
+						get{ return GetLocales(); }
+				}
+
+				/// <java-name>
+				/// android/content/res/AssetManager$AssetInputStream
+				/// </java-name>
+				[Dot42.DexImport("android/content/res/AssetManager$AssetInputStream", AccessFlags = 17)]
+				public sealed partial class AssetInputStream : global::Java.Io.InputStream
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// this$0
+						/// </java-name>
+						[Dot42.DexImport("this$0", "Landroid/content/res/AssetManager;", AccessFlags = 4112)]
+						internal readonly global::Android.Content.Res.AssetManager This_0;
+						[Dot42.DexImport("<init>", "(Landroid/content/res/AssetManager;)V", AccessFlags = 0)]
+						internal AssetInputStream(global::Android.Content.Res.AssetManager assetManager) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// getAssetInt
+						/// </java-name>
+						[Dot42.DexImport("getAssetInt", "()I", AccessFlags = 17)]
+						public int GetAssetInt() /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// read
+						/// </java-name>
+						[Dot42.DexImport("read", "()I", AccessFlags = 17)]
+						public override int Read() /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// markSupported
+						/// </java-name>
+						[Dot42.DexImport("markSupported", "()Z", AccessFlags = 17)]
+						public override bool MarkSupported() /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// available
+						/// </java-name>
+						[Dot42.DexImport("available", "()I", AccessFlags = 17)]
+						public override int Available() /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// close
+						/// </java-name>
+						[Dot42.DexImport("close", "()V", AccessFlags = 17)]
+						public override void Close() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// mark
+						/// </java-name>
+						[Dot42.DexImport("mark", "(I)V", AccessFlags = 17)]
+						public override void Mark(int int32) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// reset
+						/// </java-name>
+						[Dot42.DexImport("reset", "()V", AccessFlags = 17)]
+						public override void Reset() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// read
+						/// </java-name>
+						[Dot42.DexImport("read", "([B)I", AccessFlags = 17)]
+						public override int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// read
+						/// </java-name>
+						[Dot42.DexImport("read", "([B)I", AccessFlags = 17, IgnoreFromJava = true)]
+						public override int Read(byte[] @byte) /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// read
+						/// </java-name>
+						[Dot42.DexImport("read", "([BII)I", AccessFlags = 17)]
+						public override int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// read
+						/// </java-name>
+						[Dot42.DexImport("read", "([BII)I", AccessFlags = 17, IgnoreFromJava = true)]
+						public override int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// skip
+						/// </java-name>
+						[Dot42.DexImport("skip", "(J)J", AccessFlags = 17)]
+						public override long Skip(long int64) /* MethodBuilder.Create */ 
+						{
+								return default(long);
+						}
+
+						/// <java-name>
+						/// finalize
+						/// </java-name>
+						[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+						extern ~AssetInputStream() /* MethodBuilder.Create */ ;
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal AssetInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+						/// <java-name>
+						/// getAssetInt
+						/// </java-name>
+						public int AssetInt
+						{
+						[Dot42.DexImport("getAssetInt", "()I", AccessFlags = 17)]
+								get{ return GetAssetInt(); }
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/content/res/ColorStateList
+		/// </java-name>
+		[Dot42.DexImport("android/content/res/ColorStateList", AccessFlags = 33)]
+		public partial class ColorStateList : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Res.ColorStateList> CREATOR;
+				[Dot42.DexImport("<init>", "([[I[I)V", AccessFlags = 1)]
+				public ColorStateList(int[][] int32, int[] int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// valueOf
+				/// </java-name>
+				[Dot42.DexImport("valueOf", "(I)Landroid/content/res/ColorStateList;", AccessFlags = 9)]
+				public static global::Android.Content.Res.ColorStateList ValueOf(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.ColorStateList);
+				}
+
+				/// <java-name>
+				/// createFromXml
+				/// </java-name>
+				[Dot42.DexImport("createFromXml", "(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;)Landroid/content/r" +
+    "es/ColorStateList;", AccessFlags = 9)]
+				public static global::Android.Content.Res.ColorStateList CreateFromXml(global::Android.Content.Res.Resources resources, global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.ColorStateList);
+				}
+
+				/// <java-name>
+				/// withAlpha
+				/// </java-name>
+				[Dot42.DexImport("withAlpha", "(I)Landroid/content/res/ColorStateList;", AccessFlags = 1)]
+				public virtual global::Android.Content.Res.ColorStateList WithAlpha(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.ColorStateList);
+				}
+
+				/// <java-name>
+				/// isStateful
+				/// </java-name>
+				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
+				public virtual bool IsStateful() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getColorForState
+				/// </java-name>
+				[Dot42.DexImport("getColorForState", "([II)I", AccessFlags = 1)]
+				public virtual int GetColorForState(int[] int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getDefaultColor
+				/// </java-name>
+				[Dot42.DexImport("getDefaultColor", "()I", AccessFlags = 1)]
+				public virtual int GetDefaultColor() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ColorStateList() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDefaultColor
+				/// </java-name>
+				public int DefaultColor
+				{
+				[Dot42.DexImport("getDefaultColor", "()I", AccessFlags = 1)]
+						get{ return GetDefaultColor(); }
 				}
 
 		}
@@ -1217,6 +1207,114 @@ namespace Android.Content.Res
 		}
 
 		/// <java-name>
+		/// android/content/res/XmlResourceParser
+		/// </java-name>
+		[Dot42.DexImport("android/content/res/XmlResourceParser", AccessFlags = 1537)]
+		public partial interface IXmlResourceParser : global::Org.Xmlpull.V1.IXmlPullParser, global::Android.Util.IAttributeSet
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
+				void Close() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/content/res/ObbInfo
+		/// </java-name>
+		[Dot42.DexImport("android/content/res/ObbInfo", AccessFlags = 33)]
+		public partial class ObbInfo : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// OBB_OVERLAY
+				/// </java-name>
+				[Dot42.DexImport("OBB_OVERLAY", "I", AccessFlags = 25)]
+				public const int OBB_OVERLAY = 1;
+				/// <java-name>
+				/// filename
+				/// </java-name>
+				[Dot42.DexImport("filename", "Ljava/lang/String;", AccessFlags = 1)]
+				public string Filename;
+				/// <java-name>
+				/// packageName
+				/// </java-name>
+				[Dot42.DexImport("packageName", "Ljava/lang/String;", AccessFlags = 1)]
+				public string PackageName;
+				/// <java-name>
+				/// version
+				/// </java-name>
+				[Dot42.DexImport("version", "I", AccessFlags = 1)]
+				public int Version;
+				/// <java-name>
+				/// flags
+				/// </java-name>
+				[Dot42.DexImport("flags", "I", AccessFlags = 1)]
+				public int Flags;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Res.ObbInfo> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal ObbInfo() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/content/res/ObbScanner
+		/// </java-name>
+		[Dot42.DexImport("android/content/res/ObbScanner", AccessFlags = 33)]
+		public partial class ObbScanner
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal ObbScanner() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getObbInfo
+				/// </java-name>
+				[Dot42.DexImport("getObbInfo", "(Ljava/lang/String;)Landroid/content/res/ObbInfo;", AccessFlags = 9)]
+				public static global::Android.Content.Res.ObbInfo GetObbInfo(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.ObbInfo);
+				}
+
+		}
+
+		/// <java-name>
 		/// android/content/res/Resources
 		/// </java-name>
 		[Dot42.DexImport("android/content/res/Resources", AccessFlags = 33)]
@@ -1383,6 +1481,15 @@ namespace Android.Content.Res
 				}
 
 				/// <java-name>
+				/// getDrawableForDensity
+				/// </java-name>
+				[Dot42.DexImport("getDrawableForDensity", "(II)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Drawable.Drawable GetDrawableForDensity(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
 				/// getMovie
 				/// </java-name>
 				[Dot42.DexImport("getMovie", "(I)Landroid/graphics/Movie;", AccessFlags = 1)]
@@ -1486,6 +1593,14 @@ namespace Android.Content.Res
 				/// </java-name>
 				[Dot42.DexImport("getValue", "(ILandroid/util/TypedValue;Z)V", AccessFlags = 1)]
 				public virtual void GetValue(int int32, global::Android.Util.TypedValue typedValue, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getValueForDensity
+				/// </java-name>
+				[Dot42.DexImport("getValueForDensity", "(IILandroid/util/TypedValue;Z)V", AccessFlags = 1)]
+				public virtual void GetValueForDensity(int int32, int int321, global::Android.Util.TypedValue typedValue, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1780,44 +1895,256 @@ namespace Android.Content.Res
 		}
 
 		/// <java-name>
-		/// android/content/res/ObbInfo
+		/// android/content/res/TypedArray
 		/// </java-name>
-		[Dot42.DexImport("android/content/res/ObbInfo", AccessFlags = 33)]
-		public partial class ObbInfo : global::Android.Os.IParcelable
+		[Dot42.DexImport("android/content/res/TypedArray", AccessFlags = 33)]
+		public partial class TypedArray
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// OBB_OVERLAY
-				/// </java-name>
-				[Dot42.DexImport("OBB_OVERLAY", "I", AccessFlags = 25)]
-				public const int OBB_OVERLAY = 1;
-				/// <java-name>
-				/// filename
-				/// </java-name>
-				[Dot42.DexImport("filename", "Ljava/lang/String;", AccessFlags = 1)]
-				public string Filename;
-				/// <java-name>
-				/// packageName
-				/// </java-name>
-				[Dot42.DexImport("packageName", "Ljava/lang/String;", AccessFlags = 1)]
-				public string PackageName;
-				/// <java-name>
-				/// version
-				/// </java-name>
-				[Dot42.DexImport("version", "I", AccessFlags = 1)]
-				public int Version;
-				/// <java-name>
-				/// flags
-				/// </java-name>
-				[Dot42.DexImport("flags", "I", AccessFlags = 1)]
-				public int Flags;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Res.ObbInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal ObbInfo() /* MethodBuilder.Create */ 
+				internal TypedArray() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
+				public virtual int Length() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getIndexCount
+				/// </java-name>
+				[Dot42.DexImport("getIndexCount", "()I", AccessFlags = 1)]
+				public virtual int GetIndexCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getIndex
+				/// </java-name>
+				[Dot42.DexImport("getIndex", "(I)I", AccessFlags = 1)]
+				public virtual int GetIndex(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getResources
+				/// </java-name>
+				[Dot42.DexImport("getResources", "()Landroid/content/res/Resources;", AccessFlags = 1)]
+				public virtual global::Android.Content.Res.Resources GetResources() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.Resources);
+				}
+
+				/// <java-name>
+				/// getText
+				/// </java-name>
+				[Dot42.DexImport("getText", "(I)Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence GetText(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// getString
+				/// </java-name>
+				[Dot42.DexImport("getString", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetString(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getNonResourceString
+				/// </java-name>
+				[Dot42.DexImport("getNonResourceString", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetNonResourceString(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getBoolean
+				/// </java-name>
+				[Dot42.DexImport("getBoolean", "(IZ)Z", AccessFlags = 1)]
+				public virtual bool GetBoolean(int int32, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getInt
+				/// </java-name>
+				[Dot42.DexImport("getInt", "(II)I", AccessFlags = 1)]
+				public virtual int GetInt(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getFloat
+				/// </java-name>
+				[Dot42.DexImport("getFloat", "(IF)F", AccessFlags = 1)]
+				public virtual float GetFloat(int int32, float single) /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getColor
+				/// </java-name>
+				[Dot42.DexImport("getColor", "(II)I", AccessFlags = 1)]
+				public virtual int GetColor(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getColorStateList
+				/// </java-name>
+				[Dot42.DexImport("getColorStateList", "(I)Landroid/content/res/ColorStateList;", AccessFlags = 1)]
+				public virtual global::Android.Content.Res.ColorStateList GetColorStateList(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.ColorStateList);
+				}
+
+				/// <java-name>
+				/// getInteger
+				/// </java-name>
+				[Dot42.DexImport("getInteger", "(II)I", AccessFlags = 1)]
+				public virtual int GetInteger(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getDimension
+				/// </java-name>
+				[Dot42.DexImport("getDimension", "(IF)F", AccessFlags = 1)]
+				public virtual float GetDimension(int int32, float single) /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getDimensionPixelOffset
+				/// </java-name>
+				[Dot42.DexImport("getDimensionPixelOffset", "(II)I", AccessFlags = 1)]
+				public virtual int GetDimensionPixelOffset(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getDimensionPixelSize
+				/// </java-name>
+				[Dot42.DexImport("getDimensionPixelSize", "(II)I", AccessFlags = 1)]
+				public virtual int GetDimensionPixelSize(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getLayoutDimension
+				/// </java-name>
+				[Dot42.DexImport("getLayoutDimension", "(ILjava/lang/String;)I", AccessFlags = 1)]
+				public virtual int GetLayoutDimension(int int32, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getLayoutDimension
+				/// </java-name>
+				[Dot42.DexImport("getLayoutDimension", "(II)I", AccessFlags = 1)]
+				public virtual int GetLayoutDimension(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getFraction
+				/// </java-name>
+				[Dot42.DexImport("getFraction", "(IIIF)F", AccessFlags = 1)]
+				public virtual float GetFraction(int int32, int int321, int int322, float single) /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getResourceId
+				/// </java-name>
+				[Dot42.DexImport("getResourceId", "(II)I", AccessFlags = 1)]
+				public virtual int GetResourceId(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getDrawable
+				/// </java-name>
+				[Dot42.DexImport("getDrawable", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Drawable.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getTextArray
+				/// </java-name>
+				[Dot42.DexImport("getTextArray", "(I)[Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence[] GetTextArray(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence[]);
+				}
+
+				/// <java-name>
+				/// getValue
+				/// </java-name>
+				[Dot42.DexImport("getValue", "(ILandroid/util/TypedValue;)Z", AccessFlags = 1)]
+				public virtual bool GetValue(int int32, global::Android.Util.TypedValue typedValue) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hasValue
+				/// </java-name>
+				[Dot42.DexImport("hasValue", "(I)Z", AccessFlags = 1)]
+				public virtual bool HasValue(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// peekValue
+				/// </java-name>
+				[Dot42.DexImport("peekValue", "(I)Landroid/util/TypedValue;", AccessFlags = 1)]
+				public virtual global::Android.Util.TypedValue PeekValue(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Util.TypedValue);
+				}
+
+				/// <java-name>
+				/// getPositionDescription
+				/// </java-name>
+				[Dot42.DexImport("getPositionDescription", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetPositionDescription() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// recycle
+				/// </java-name>
+				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
+				public virtual void Recycle() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1831,341 +2158,31 @@ namespace Android.Content.Res
 				}
 
 				/// <java-name>
-				/// describeContents
+				/// getIndexCount
 				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				public int IndexCount
 				{
-						return default(int);
+				[Dot42.DexImport("getIndexCount", "()I", AccessFlags = 1)]
+						get{ return GetIndexCount(); }
 				}
 
 				/// <java-name>
-				/// writeToParcel
+				/// getResources
 				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public global::Android.Content.Res.Resources Resources
 				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/content/res/AssetManager
-		/// </java-name>
-		[Dot42.DexImport("android/content/res/AssetManager", AccessFlags = 49)]
-		public sealed partial class AssetManager
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// ACCESS_UNKNOWN
-				/// </java-name>
-				[Dot42.DexImport("ACCESS_UNKNOWN", "I", AccessFlags = 25)]
-				public const int ACCESS_UNKNOWN = 0;
-				/// <java-name>
-				/// ACCESS_RANDOM
-				/// </java-name>
-				[Dot42.DexImport("ACCESS_RANDOM", "I", AccessFlags = 25)]
-				public const int ACCESS_RANDOM = 1;
-				/// <java-name>
-				/// ACCESS_STREAMING
-				/// </java-name>
-				[Dot42.DexImport("ACCESS_STREAMING", "I", AccessFlags = 25)]
-				public const int ACCESS_STREAMING = 2;
-				/// <java-name>
-				/// ACCESS_BUFFER
-				/// </java-name>
-				[Dot42.DexImport("ACCESS_BUFFER", "I", AccessFlags = 25)]
-				public const int ACCESS_BUFFER = 3;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal AssetManager() /* MethodBuilder.Create */ 
-				{
+				[Dot42.DexImport("getResources", "()Landroid/content/res/Resources;", AccessFlags = 1)]
+						get{ return GetResources(); }
 				}
 
 				/// <java-name>
-				/// close
+				/// getPositionDescription
 				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public void Close() /* MethodBuilder.Create */ 
+				public string PositionDescription
 				{
+				[Dot42.DexImport("getPositionDescription", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetPositionDescription(); }
 				}
-
-				/// <java-name>
-				/// open
-				/// </java-name>
-				[Dot42.DexImport("open", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 17)]
-				public global::Java.Io.InputStream Open(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// open
-				/// </java-name>
-				[Dot42.DexImport("open", "(Ljava/lang/String;I)Ljava/io/InputStream;", AccessFlags = 17)]
-				public global::Java.Io.InputStream Open(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// openFd
-				/// </java-name>
-				[Dot42.DexImport("openFd", "(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;", AccessFlags = 17)]
-				public global::Android.Content.Res.AssetFileDescriptor OpenFd(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.AssetFileDescriptor);
-				}
-
-				/// <java-name>
-				/// list
-				/// </java-name>
-				[Dot42.DexImport("list", "(Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 273)]
-				public string[] List(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// openNonAssetFd
-				/// </java-name>
-				[Dot42.DexImport("openNonAssetFd", "(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;", AccessFlags = 17)]
-				public global::Android.Content.Res.AssetFileDescriptor OpenNonAssetFd(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.AssetFileDescriptor);
-				}
-
-				/// <java-name>
-				/// openNonAssetFd
-				/// </java-name>
-				[Dot42.DexImport("openNonAssetFd", "(ILjava/lang/String;)Landroid/content/res/AssetFileDescriptor;", AccessFlags = 17)]
-				public global::Android.Content.Res.AssetFileDescriptor OpenNonAssetFd(int int32, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.AssetFileDescriptor);
-				}
-
-				/// <java-name>
-				/// openXmlResourceParser
-				/// </java-name>
-				[Dot42.DexImport("openXmlResourceParser", "(Ljava/lang/String;)Landroid/content/res/XmlResourceParser;", AccessFlags = 17)]
-				public global::Android.Content.Res.IXmlResourceParser OpenXmlResourceParser(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.IXmlResourceParser);
-				}
-
-				/// <java-name>
-				/// openXmlResourceParser
-				/// </java-name>
-				[Dot42.DexImport("openXmlResourceParser", "(ILjava/lang/String;)Landroid/content/res/XmlResourceParser;", AccessFlags = 17)]
-				public global::Android.Content.Res.IXmlResourceParser OpenXmlResourceParser(int int32, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.IXmlResourceParser);
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~AssetManager() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLocales
-				/// </java-name>
-				[Dot42.DexImport("getLocales", "()[Ljava/lang/String;", AccessFlags = 273)]
-				public string[] GetLocales() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getLocales
-				/// </java-name>
-				public string[] Locales
-				{
-				[Dot42.DexImport("getLocales", "()[Ljava/lang/String;", AccessFlags = 273)]
-						get{ return GetLocales(); }
-				}
-
-				/// <java-name>
-				/// android/content/res/AssetManager$AssetInputStream
-				/// </java-name>
-				[Dot42.DexImport("android/content/res/AssetManager$AssetInputStream", AccessFlags = 17)]
-				public sealed partial class AssetInputStream : global::Java.Io.InputStream
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// this$0
-						/// </java-name>
-						[Dot42.DexImport("this$0", "Landroid/content/res/AssetManager;", AccessFlags = 4112)]
-						internal readonly global::Android.Content.Res.AssetManager This_0;
-						[Dot42.DexImport("<init>", "(Landroid/content/res/AssetManager;)V", AccessFlags = 0)]
-						internal AssetInputStream(global::Android.Content.Res.AssetManager assetManager) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getAssetInt
-						/// </java-name>
-						[Dot42.DexImport("getAssetInt", "()I", AccessFlags = 17)]
-						public int GetAssetInt() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// read
-						/// </java-name>
-						[Dot42.DexImport("read", "()I", AccessFlags = 17)]
-						public override int Read() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// markSupported
-						/// </java-name>
-						[Dot42.DexImport("markSupported", "()Z", AccessFlags = 17)]
-						public override bool MarkSupported() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// available
-						/// </java-name>
-						[Dot42.DexImport("available", "()I", AccessFlags = 17)]
-						public override int Available() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// close
-						/// </java-name>
-						[Dot42.DexImport("close", "()V", AccessFlags = 17)]
-						public override void Close() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// mark
-						/// </java-name>
-						[Dot42.DexImport("mark", "(I)V", AccessFlags = 17)]
-						public override void Mark(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// reset
-						/// </java-name>
-						[Dot42.DexImport("reset", "()V", AccessFlags = 17)]
-						public override void Reset() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// read
-						/// </java-name>
-						[Dot42.DexImport("read", "([B)I", AccessFlags = 17)]
-						public override int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// read
-						/// </java-name>
-						[Dot42.DexImport("read", "([B)I", AccessFlags = 17, IgnoreFromJava = true)]
-						public override int Read(byte[] @byte) /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// read
-						/// </java-name>
-						[Dot42.DexImport("read", "([BII)I", AccessFlags = 17)]
-						public override int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// read
-						/// </java-name>
-						[Dot42.DexImport("read", "([BII)I", AccessFlags = 17, IgnoreFromJava = true)]
-						public override int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// skip
-						/// </java-name>
-						[Dot42.DexImport("skip", "(J)J", AccessFlags = 17)]
-						public override long Skip(long int64) /* MethodBuilder.Create */ 
-						{
-								return default(long);
-						}
-
-						/// <java-name>
-						/// finalize
-						/// </java-name>
-						[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-						extern ~AssetInputStream() /* MethodBuilder.Create */ ;
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AssetInputStream() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-						/// <java-name>
-						/// getAssetInt
-						/// </java-name>
-						public int AssetInt
-						{
-						[Dot42.DexImport("getAssetInt", "()I", AccessFlags = 17)]
-								get{ return GetAssetInt(); }
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/content/res/ObbScanner
-		/// </java-name>
-		[Dot42.DexImport("android/content/res/ObbScanner", AccessFlags = 33)]
-		public partial class ObbScanner
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal ObbScanner() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getObbInfo
-				/// </java-name>
-				[Dot42.DexImport("getObbInfo", "(Ljava/lang/String;)Landroid/content/res/ObbInfo;", AccessFlags = 9)]
-				public static global::Android.Content.Res.ObbInfo GetObbInfo(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.ObbInfo);
-				}
-
-		}
-
-		/// <java-name>
-		/// android/content/res/XmlResourceParser
-		/// </java-name>
-		[Dot42.DexImport("android/content/res/XmlResourceParser", AccessFlags = 1537)]
-		public partial interface IXmlResourceParser : global::Org.Xmlpull.V1.IXmlPullParser, global::Android.Util.IAttributeSet
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
-				void Close() /* MethodBuilder.Create */ ;
 
 		}
 

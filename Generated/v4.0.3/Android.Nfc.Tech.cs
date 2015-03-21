@@ -2,40 +2,161 @@
 namespace Android.Nfc.Tech
 {
 		/// <java-name>
-		/// android/nfc/tech/NdefFormatable
+		/// android/nfc/tech/BasicTagTechnology
 		/// </java-name>
-		[Dot42.DexImport("android/nfc/tech/NdefFormatable", AccessFlags = 49)]
-		public sealed partial class NdefFormatable : global::Android.Nfc.Tech.ITagTechnology
+		[Dot42.DexImport("android/nfc/tech/BasicTagTechnology", AccessFlags = 1056)]
+		internal abstract partial class BasicTagTechnology : global::Android.Nfc.Tech.ITagTechnology
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal NdefFormatable() /* MethodBuilder.Create */ 
+				internal BasicTagTechnology() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+				public virtual global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Nfc.Tag);
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+				public virtual bool IsConnected() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// connect
+				/// </java-name>
+				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
+				public virtual void Connect() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public virtual void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				public global::Android.Nfc.Tag Tag
+				{
+				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return GetTag(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/nfc/tech/IsoDep
+		/// </java-name>
+		[Dot42.DexImport("android/nfc/tech/IsoDep", AccessFlags = 49)]
+		public sealed partial class IsoDep : global::Android.Nfc.Tech.ITagTechnology
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal IsoDep() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// get
 				/// </java-name>
-				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/NdefFormatable;", AccessFlags = 9)]
-				public static global::Android.Nfc.Tech.NdefFormatable Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/IsoDep;", AccessFlags = 9)]
+				public static global::Android.Nfc.Tech.IsoDep Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Nfc.Tech.NdefFormatable);
+						return default(global::Android.Nfc.Tech.IsoDep);
 				}
 
 				/// <java-name>
-				/// format
+				/// setTimeout
 				/// </java-name>
-				[Dot42.DexImport("format", "(Landroid/nfc/NdefMessage;)V", AccessFlags = 1)]
-				public void Format(global::Android.Nfc.NdefMessage ndefMessage) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
+				public void SetTimeout(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// formatReadOnly
+				/// getTimeout
 				/// </java-name>
-				[Dot42.DexImport("formatReadOnly", "(Landroid/nfc/NdefMessage;)V", AccessFlags = 1)]
-				public void FormatReadOnly(global::Android.Nfc.NdefMessage ndefMessage) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
+				public int GetTimeout() /* MethodBuilder.Create */ 
 				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getHistoricalBytes
+				/// </java-name>
+				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1)]
+				public sbyte[] JavaGetHistoricalBytes() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getHistoricalBytes
+				/// </java-name>
+				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] GetHistoricalBytes() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getHiLayerResponse
+				/// </java-name>
+				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1)]
+				public sbyte[] JavaGetHiLayerResponse() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getHiLayerResponse
+				/// </java-name>
+				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] GetHiLayerResponse() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// transceive
+				/// </java-name>
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				public sbyte[] Transceive(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// transceive
+				/// </java-name>
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getMaxTransceiveLength
+				/// </java-name>
+				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
+				{
+						return default(int);
 				}
 
 				/// <java-name>
@@ -70,6 +191,468 @@ namespace Android.Nfc.Tech
 				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
 				public void Close() /* MethodBuilder.Create */ 
 				{
+				}
+
+				/// <java-name>
+				/// getTimeout
+				/// </java-name>
+				public int Timeout
+				{
+				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
+						get{ return GetTimeout(); }
+				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
+						set{ SetTimeout(value); }
+				}
+
+				/// <java-name>
+				/// getHistoricalBytes
+				/// </java-name>
+				public byte[] HistoricalBytes
+				{
+				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetHistoricalBytes(); }
+				}
+
+				/// <java-name>
+				/// getHiLayerResponse
+				/// </java-name>
+				public byte[] HiLayerResponse
+				{
+				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetHiLayerResponse(); }
+				}
+
+				/// <java-name>
+				/// getMaxTransceiveLength
+				/// </java-name>
+				public int MaxTransceiveLength
+				{
+				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return GetMaxTransceiveLength(); }
+				}
+
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				public global::Android.Nfc.Tag Tag
+				{
+				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return GetTag(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/nfc/tech/TagTechnology
+		/// </java-name>
+		[Dot42.DexImport("android/nfc/tech/TagTechnology", AccessFlags = 1537)]
+		public partial interface ITagTechnology : global::Java.Io.ICloseable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1025)]
+				global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// connect
+				/// </java-name>
+				[Dot42.DexImport("connect", "()V", AccessFlags = 1025)]
+				void Connect() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
+				void Close() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1025)]
+				bool IsConnected() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/nfc/tech/MifareClassic
+		/// </java-name>
+		[Dot42.DexImport("android/nfc/tech/MifareClassic", AccessFlags = 49)]
+		public sealed partial class MifareClassic : global::Android.Nfc.Tech.ITagTechnology
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// KEY_DEFAULT
+				/// </java-name>
+				[Dot42.DexImport("KEY_DEFAULT", "[B", AccessFlags = 25)]
+				public static readonly sbyte[] KEY_DEFAULT;
+				/// <java-name>
+				/// KEY_MIFARE_APPLICATION_DIRECTORY
+				/// </java-name>
+				[Dot42.DexImport("KEY_MIFARE_APPLICATION_DIRECTORY", "[B", AccessFlags = 25)]
+				public static readonly sbyte[] KEY_MIFARE_APPLICATION_DIRECTORY;
+				/// <java-name>
+				/// KEY_NFC_FORUM
+				/// </java-name>
+				[Dot42.DexImport("KEY_NFC_FORUM", "[B", AccessFlags = 25)]
+				public static readonly sbyte[] KEY_NFC_FORUM;
+				/// <java-name>
+				/// TYPE_UNKNOWN
+				/// </java-name>
+				[Dot42.DexImport("TYPE_UNKNOWN", "I", AccessFlags = 25)]
+				public const int TYPE_UNKNOWN = -1;
+				/// <java-name>
+				/// TYPE_CLASSIC
+				/// </java-name>
+				[Dot42.DexImport("TYPE_CLASSIC", "I", AccessFlags = 25)]
+				public const int TYPE_CLASSIC = 0;
+				/// <java-name>
+				/// TYPE_PLUS
+				/// </java-name>
+				[Dot42.DexImport("TYPE_PLUS", "I", AccessFlags = 25)]
+				public const int TYPE_PLUS = 1;
+				/// <java-name>
+				/// TYPE_PRO
+				/// </java-name>
+				[Dot42.DexImport("TYPE_PRO", "I", AccessFlags = 25)]
+				public const int TYPE_PRO = 2;
+				/// <java-name>
+				/// SIZE_1K
+				/// </java-name>
+				[Dot42.DexImport("SIZE_1K", "I", AccessFlags = 25)]
+				public const int SIZE_1K = 1024;
+				/// <java-name>
+				/// SIZE_2K
+				/// </java-name>
+				[Dot42.DexImport("SIZE_2K", "I", AccessFlags = 25)]
+				public const int SIZE_2K = 2048;
+				/// <java-name>
+				/// SIZE_4K
+				/// </java-name>
+				[Dot42.DexImport("SIZE_4K", "I", AccessFlags = 25)]
+				public const int SIZE_4K = 4096;
+				/// <java-name>
+				/// SIZE_MINI
+				/// </java-name>
+				[Dot42.DexImport("SIZE_MINI", "I", AccessFlags = 25)]
+				public const int SIZE_MINI = 320;
+				/// <java-name>
+				/// BLOCK_SIZE
+				/// </java-name>
+				[Dot42.DexImport("BLOCK_SIZE", "I", AccessFlags = 25)]
+				public const int BLOCK_SIZE = 16;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal MifareClassic() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/MifareClassic;", AccessFlags = 9)]
+				public static global::Android.Nfc.Tech.MifareClassic Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Nfc.Tech.MifareClassic);
+				}
+
+				/// <java-name>
+				/// getType
+				/// </java-name>
+				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
+				public int GetTypeJava() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getSize
+				/// </java-name>
+				[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
+				public int GetSize() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getSectorCount
+				/// </java-name>
+				[Dot42.DexImport("getSectorCount", "()I", AccessFlags = 1)]
+				public int GetSectorCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getBlockCount
+				/// </java-name>
+				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 1)]
+				public int GetBlockCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getBlockCountInSector
+				/// </java-name>
+				[Dot42.DexImport("getBlockCountInSector", "(I)I", AccessFlags = 1)]
+				public int GetBlockCountInSector(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// blockToSector
+				/// </java-name>
+				[Dot42.DexImport("blockToSector", "(I)I", AccessFlags = 1)]
+				public int BlockToSector(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// sectorToBlock
+				/// </java-name>
+				[Dot42.DexImport("sectorToBlock", "(I)I", AccessFlags = 1)]
+				public int SectorToBlock(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// authenticateSectorWithKeyA
+				/// </java-name>
+				[Dot42.DexImport("authenticateSectorWithKeyA", "(I[B)Z", AccessFlags = 1)]
+				public bool AuthenticateSectorWithKeyA(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// authenticateSectorWithKeyA
+				/// </java-name>
+				[Dot42.DexImport("authenticateSectorWithKeyA", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				public bool AuthenticateSectorWithKeyA(int int32, byte[] @byte) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// authenticateSectorWithKeyB
+				/// </java-name>
+				[Dot42.DexImport("authenticateSectorWithKeyB", "(I[B)Z", AccessFlags = 1)]
+				public bool AuthenticateSectorWithKeyB(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// authenticateSectorWithKeyB
+				/// </java-name>
+				[Dot42.DexImport("authenticateSectorWithKeyB", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				public bool AuthenticateSectorWithKeyB(int int32, byte[] @byte) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// readBlock
+				/// </java-name>
+				[Dot42.DexImport("readBlock", "(I)[B", AccessFlags = 1)]
+				public sbyte[] JavaReadBlock(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// readBlock
+				/// </java-name>
+				[Dot42.DexImport("readBlock", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] ReadBlock(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// writeBlock
+				/// </java-name>
+				[Dot42.DexImport("writeBlock", "(I[B)V", AccessFlags = 1)]
+				public void WriteBlock(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeBlock
+				/// </java-name>
+				[Dot42.DexImport("writeBlock", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public void WriteBlock(int int32, byte[] @byte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// increment
+				/// </java-name>
+				[Dot42.DexImport("increment", "(II)V", AccessFlags = 1)]
+				public void Increment(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// decrement
+				/// </java-name>
+				[Dot42.DexImport("decrement", "(II)V", AccessFlags = 1)]
+				public void Decrement(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// transfer
+				/// </java-name>
+				[Dot42.DexImport("transfer", "(I)V", AccessFlags = 1)]
+				public void Transfer(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// restore
+				/// </java-name>
+				[Dot42.DexImport("restore", "(I)V", AccessFlags = 1)]
+				public void Restore(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// transceive
+				/// </java-name>
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				public sbyte[] Transceive(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// transceive
+				/// </java-name>
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getMaxTransceiveLength
+				/// </java-name>
+				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setTimeout
+				/// </java-name>
+				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
+				public void SetTimeout(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTimeout
+				/// </java-name>
+				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
+				public int GetTimeout() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Nfc.Tag);
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+				public bool IsConnected() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// connect
+				/// </java-name>
+				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
+				public void Connect() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getType
+				/// </java-name>
+				public int Type
+				{
+				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
+						get{ return GetTypeJava(); }
+				}
+
+				/// <java-name>
+				/// getSize
+				/// </java-name>
+				public int Size
+				{
+				[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
+						get{ return GetSize(); }
+				}
+
+				/// <java-name>
+				/// getSectorCount
+				/// </java-name>
+				public int SectorCount
+				{
+				[Dot42.DexImport("getSectorCount", "()I", AccessFlags = 1)]
+						get{ return GetSectorCount(); }
+				}
+
+				/// <java-name>
+				/// getBlockCount
+				/// </java-name>
+				public int BlockCount
+				{
+				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 1)]
+						get{ return GetBlockCount(); }
+				}
+
+				/// <java-name>
+				/// getMaxTransceiveLength
+				/// </java-name>
+				public int MaxTransceiveLength
+				{
+				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return GetMaxTransceiveLength(); }
+				}
+
+				/// <java-name>
+				/// getTimeout
+				/// </java-name>
+				public int Timeout
+				{
+				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
+						get{ return GetTimeout(); }
+				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
+						set{ SetTimeout(value); }
 				}
 
 				/// <java-name>
@@ -484,87 +1067,40 @@ namespace Android.Nfc.Tech
 		}
 
 		/// <java-name>
-		/// android/nfc/tech/NfcB
+		/// android/nfc/tech/NdefFormatable
 		/// </java-name>
-		[Dot42.DexImport("android/nfc/tech/NfcB", AccessFlags = 49)]
-		public sealed partial class NfcB : global::Android.Nfc.Tech.ITagTechnology
+		[Dot42.DexImport("android/nfc/tech/NdefFormatable", AccessFlags = 49)]
+		public sealed partial class NdefFormatable : global::Android.Nfc.Tech.ITagTechnology
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal NfcB() /* MethodBuilder.Create */ 
+				internal NdefFormatable() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// get
 				/// </java-name>
-				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/NfcB;", AccessFlags = 9)]
-				public static global::Android.Nfc.Tech.NfcB Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/NdefFormatable;", AccessFlags = 9)]
+				public static global::Android.Nfc.Tech.NdefFormatable Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Nfc.Tech.NfcB);
+						return default(global::Android.Nfc.Tech.NdefFormatable);
 				}
 
 				/// <java-name>
-				/// getApplicationData
+				/// format
 				/// </java-name>
-				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1)]
-				public sbyte[] JavaGetApplicationData() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("format", "(Landroid/nfc/NdefMessage;)V", AccessFlags = 1)]
+				public void Format(global::Android.Nfc.NdefMessage ndefMessage) /* MethodBuilder.Create */ 
 				{
-						return default(sbyte[]);
 				}
 
 				/// <java-name>
-				/// getApplicationData
+				/// formatReadOnly
 				/// </java-name>
-				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetApplicationData() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("formatReadOnly", "(Landroid/nfc/NdefMessage;)V", AccessFlags = 1)]
+				public void FormatReadOnly(global::Android.Nfc.NdefMessage ndefMessage) /* MethodBuilder.Create */ 
 				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getProtocolInfo
-				/// </java-name>
-				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1)]
-				public sbyte[] JavaGetProtocolInfo() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getProtocolInfo
-				/// </java-name>
-				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetProtocolInfo() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// transceive
-				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
-				public sbyte[] Transceive(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// transceive
-				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -599,821 +1135,6 @@ namespace Android.Nfc.Tech
 				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
 				public void Close() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getApplicationData
-				/// </java-name>
-				public byte[] ApplicationData
-				{
-				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetApplicationData(); }
-				}
-
-				/// <java-name>
-				/// getProtocolInfo
-				/// </java-name>
-				public byte[] ProtocolInfo
-				{
-				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetProtocolInfo(); }
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				public int MaxTransceiveLength
-				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				public global::Android.Nfc.Tag Tag
-				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/nfc/tech/NfcV
-		/// </java-name>
-		[Dot42.DexImport("android/nfc/tech/NfcV", AccessFlags = 49)]
-		public sealed partial class NfcV : global::Android.Nfc.Tech.ITagTechnology
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal NfcV() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/NfcV;", AccessFlags = 9)]
-				public static global::Android.Nfc.Tech.NfcV Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tech.NfcV);
-				}
-
-				/// <java-name>
-				/// getResponseFlags
-				/// </java-name>
-				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1)]
-				public sbyte JavaGetResponseFlags() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte);
-				}
-
-				/// <java-name>
-				/// getResponseFlags
-				/// </java-name>
-				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte GetResponseFlags() /* MethodBuilder.Create */ 
-				{
-						return default(byte);
-				}
-
-				/// <java-name>
-				/// getDsfId
-				/// </java-name>
-				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1)]
-				public sbyte JavaGetDsfId() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte);
-				}
-
-				/// <java-name>
-				/// getDsfId
-				/// </java-name>
-				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte GetDsfId() /* MethodBuilder.Create */ 
-				{
-						return default(byte);
-				}
-
-				/// <java-name>
-				/// transceive
-				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
-				public sbyte[] Transceive(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// transceive
-				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// connect
-				/// </java-name>
-				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
-				public void Connect() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getResponseFlags
-				/// </java-name>
-				public byte ResponseFlags
-				{
-				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetResponseFlags(); }
-				}
-
-				/// <java-name>
-				/// getDsfId
-				/// </java-name>
-				public byte DsfId
-				{
-				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetDsfId(); }
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				public int MaxTransceiveLength
-				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				public global::Android.Nfc.Tag Tag
-				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/nfc/tech/BasicTagTechnology
-		/// </java-name>
-		[Dot42.DexImport("android/nfc/tech/BasicTagTechnology", AccessFlags = 1056)]
-		internal abstract partial class BasicTagTechnology : global::Android.Nfc.Tech.ITagTechnology
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal BasicTagTechnology() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public virtual global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public virtual bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// connect
-				/// </java-name>
-				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
-				public virtual void Connect() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public virtual void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				public global::Android.Nfc.Tag Tag
-				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/nfc/tech/IsoDep
-		/// </java-name>
-		[Dot42.DexImport("android/nfc/tech/IsoDep", AccessFlags = 49)]
-		public sealed partial class IsoDep : global::Android.Nfc.Tech.ITagTechnology
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal IsoDep() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/IsoDep;", AccessFlags = 9)]
-				public static global::Android.Nfc.Tech.IsoDep Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tech.IsoDep);
-				}
-
-				/// <java-name>
-				/// setTimeout
-				/// </java-name>
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-				public void SetTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTimeout
-				/// </java-name>
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-				public int GetTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHistoricalBytes
-				/// </java-name>
-				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1)]
-				public sbyte[] JavaGetHistoricalBytes() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getHistoricalBytes
-				/// </java-name>
-				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetHistoricalBytes() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getHiLayerResponse
-				/// </java-name>
-				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1)]
-				public sbyte[] JavaGetHiLayerResponse() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getHiLayerResponse
-				/// </java-name>
-				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetHiLayerResponse() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// transceive
-				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
-				public sbyte[] Transceive(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// transceive
-				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// connect
-				/// </java-name>
-				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
-				public void Connect() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTimeout
-				/// </java-name>
-				public int Timeout
-				{
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-						get{ return GetTimeout(); }
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetTimeout(value); }
-				}
-
-				/// <java-name>
-				/// getHistoricalBytes
-				/// </java-name>
-				public byte[] HistoricalBytes
-				{
-				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetHistoricalBytes(); }
-				}
-
-				/// <java-name>
-				/// getHiLayerResponse
-				/// </java-name>
-				public byte[] HiLayerResponse
-				{
-				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetHiLayerResponse(); }
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				public int MaxTransceiveLength
-				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				public global::Android.Nfc.Tag Tag
-				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/nfc/tech/MifareClassic
-		/// </java-name>
-		[Dot42.DexImport("android/nfc/tech/MifareClassic", AccessFlags = 49)]
-		public sealed partial class MifareClassic : global::Android.Nfc.Tech.ITagTechnology
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// KEY_DEFAULT
-				/// </java-name>
-				[Dot42.DexImport("KEY_DEFAULT", "[B", AccessFlags = 25)]
-				public static readonly sbyte[] KEY_DEFAULT;
-				/// <java-name>
-				/// KEY_MIFARE_APPLICATION_DIRECTORY
-				/// </java-name>
-				[Dot42.DexImport("KEY_MIFARE_APPLICATION_DIRECTORY", "[B", AccessFlags = 25)]
-				public static readonly sbyte[] KEY_MIFARE_APPLICATION_DIRECTORY;
-				/// <java-name>
-				/// KEY_NFC_FORUM
-				/// </java-name>
-				[Dot42.DexImport("KEY_NFC_FORUM", "[B", AccessFlags = 25)]
-				public static readonly sbyte[] KEY_NFC_FORUM;
-				/// <java-name>
-				/// TYPE_UNKNOWN
-				/// </java-name>
-				[Dot42.DexImport("TYPE_UNKNOWN", "I", AccessFlags = 25)]
-				public const int TYPE_UNKNOWN = -1;
-				/// <java-name>
-				/// TYPE_CLASSIC
-				/// </java-name>
-				[Dot42.DexImport("TYPE_CLASSIC", "I", AccessFlags = 25)]
-				public const int TYPE_CLASSIC = 0;
-				/// <java-name>
-				/// TYPE_PLUS
-				/// </java-name>
-				[Dot42.DexImport("TYPE_PLUS", "I", AccessFlags = 25)]
-				public const int TYPE_PLUS = 1;
-				/// <java-name>
-				/// TYPE_PRO
-				/// </java-name>
-				[Dot42.DexImport("TYPE_PRO", "I", AccessFlags = 25)]
-				public const int TYPE_PRO = 2;
-				/// <java-name>
-				/// SIZE_1K
-				/// </java-name>
-				[Dot42.DexImport("SIZE_1K", "I", AccessFlags = 25)]
-				public const int SIZE_1K = 1024;
-				/// <java-name>
-				/// SIZE_2K
-				/// </java-name>
-				[Dot42.DexImport("SIZE_2K", "I", AccessFlags = 25)]
-				public const int SIZE_2K = 2048;
-				/// <java-name>
-				/// SIZE_4K
-				/// </java-name>
-				[Dot42.DexImport("SIZE_4K", "I", AccessFlags = 25)]
-				public const int SIZE_4K = 4096;
-				/// <java-name>
-				/// SIZE_MINI
-				/// </java-name>
-				[Dot42.DexImport("SIZE_MINI", "I", AccessFlags = 25)]
-				public const int SIZE_MINI = 320;
-				/// <java-name>
-				/// BLOCK_SIZE
-				/// </java-name>
-				[Dot42.DexImport("BLOCK_SIZE", "I", AccessFlags = 25)]
-				public const int BLOCK_SIZE = 16;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal MifareClassic() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/MifareClassic;", AccessFlags = 9)]
-				public static global::Android.Nfc.Tech.MifareClassic Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tech.MifareClassic);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public int GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSize
-				/// </java-name>
-				[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
-				public int GetSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSectorCount
-				/// </java-name>
-				[Dot42.DexImport("getSectorCount", "()I", AccessFlags = 1)]
-				public int GetSectorCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBlockCount
-				/// </java-name>
-				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 1)]
-				public int GetBlockCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBlockCountInSector
-				/// </java-name>
-				[Dot42.DexImport("getBlockCountInSector", "(I)I", AccessFlags = 1)]
-				public int GetBlockCountInSector(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// blockToSector
-				/// </java-name>
-				[Dot42.DexImport("blockToSector", "(I)I", AccessFlags = 1)]
-				public int BlockToSector(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// sectorToBlock
-				/// </java-name>
-				[Dot42.DexImport("sectorToBlock", "(I)I", AccessFlags = 1)]
-				public int SectorToBlock(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// authenticateSectorWithKeyA
-				/// </java-name>
-				[Dot42.DexImport("authenticateSectorWithKeyA", "(I[B)Z", AccessFlags = 1)]
-				public bool AuthenticateSectorWithKeyA(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// authenticateSectorWithKeyA
-				/// </java-name>
-				[Dot42.DexImport("authenticateSectorWithKeyA", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
-				public bool AuthenticateSectorWithKeyA(int int32, byte[] @byte) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// authenticateSectorWithKeyB
-				/// </java-name>
-				[Dot42.DexImport("authenticateSectorWithKeyB", "(I[B)Z", AccessFlags = 1)]
-				public bool AuthenticateSectorWithKeyB(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// authenticateSectorWithKeyB
-				/// </java-name>
-				[Dot42.DexImport("authenticateSectorWithKeyB", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
-				public bool AuthenticateSectorWithKeyB(int int32, byte[] @byte) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// readBlock
-				/// </java-name>
-				[Dot42.DexImport("readBlock", "(I)[B", AccessFlags = 1)]
-				public sbyte[] JavaReadBlock(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// readBlock
-				/// </java-name>
-				[Dot42.DexImport("readBlock", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] ReadBlock(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// writeBlock
-				/// </java-name>
-				[Dot42.DexImport("writeBlock", "(I[B)V", AccessFlags = 1)]
-				public void WriteBlock(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeBlock
-				/// </java-name>
-				[Dot42.DexImport("writeBlock", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public void WriteBlock(int int32, byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// increment
-				/// </java-name>
-				[Dot42.DexImport("increment", "(II)V", AccessFlags = 1)]
-				public void Increment(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// decrement
-				/// </java-name>
-				[Dot42.DexImport("decrement", "(II)V", AccessFlags = 1)]
-				public void Decrement(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// transfer
-				/// </java-name>
-				[Dot42.DexImport("transfer", "(I)V", AccessFlags = 1)]
-				public void Transfer(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// restore
-				/// </java-name>
-				[Dot42.DexImport("restore", "(I)V", AccessFlags = 1)]
-				public void Restore(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// transceive
-				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
-				public sbyte[] Transceive(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// transceive
-				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setTimeout
-				/// </java-name>
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-				public void SetTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTimeout
-				/// </java-name>
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-				public int GetTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// connect
-				/// </java-name>
-				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
-				public void Connect() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				public int Type
-				{
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
-				}
-
-				/// <java-name>
-				/// getSize
-				/// </java-name>
-				public int Size
-				{
-				[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
-						get{ return GetSize(); }
-				}
-
-				/// <java-name>
-				/// getSectorCount
-				/// </java-name>
-				public int SectorCount
-				{
-				[Dot42.DexImport("getSectorCount", "()I", AccessFlags = 1)]
-						get{ return GetSectorCount(); }
-				}
-
-				/// <java-name>
-				/// getBlockCount
-				/// </java-name>
-				public int BlockCount
-				{
-				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 1)]
-						get{ return GetBlockCount(); }
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				public int MaxTransceiveLength
-				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
-				}
-
-				/// <java-name>
-				/// getTimeout
-				/// </java-name>
-				public int Timeout
-				{
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-						get{ return GetTimeout(); }
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetTimeout(value); }
 				}
 
 				/// <java-name>
@@ -1603,35 +1324,158 @@ namespace Android.Nfc.Tech
 		}
 
 		/// <java-name>
-		/// android/nfc/tech/TagTechnology
+		/// android/nfc/tech/NfcB
 		/// </java-name>
-		[Dot42.DexImport("android/nfc/tech/TagTechnology", AccessFlags = 1537)]
-		public partial interface ITagTechnology : global::Java.Io.ICloseable
+		[Dot42.DexImport("android/nfc/tech/NfcB", AccessFlags = 49)]
+		public sealed partial class NfcB : global::Android.Nfc.Tech.ITagTechnology
  /* scope: __dot42__ */ 
 		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal NfcB() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/NfcB;", AccessFlags = 9)]
+				public static global::Android.Nfc.Tech.NfcB Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Nfc.Tech.NfcB);
+				}
+
+				/// <java-name>
+				/// getApplicationData
+				/// </java-name>
+				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1)]
+				public sbyte[] JavaGetApplicationData() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getApplicationData
+				/// </java-name>
+				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] GetApplicationData() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getProtocolInfo
+				/// </java-name>
+				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1)]
+				public sbyte[] JavaGetProtocolInfo() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getProtocolInfo
+				/// </java-name>
+				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] GetProtocolInfo() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// transceive
+				/// </java-name>
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				public sbyte[] Transceive(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// transceive
+				/// </java-name>
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getMaxTransceiveLength
+				/// </java-name>
+				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
 				/// <java-name>
 				/// getTag
 				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1025)]
-				global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// connect
-				/// </java-name>
-				[Dot42.DexImport("connect", "()V", AccessFlags = 1025)]
-				void Connect() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
-				void Close() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Nfc.Tag);
+				}
 
 				/// <java-name>
 				/// isConnected
 				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1025)]
-				bool IsConnected() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+				public bool IsConnected() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// connect
+				/// </java-name>
+				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
+				public void Connect() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getApplicationData
+				/// </java-name>
+				public byte[] ApplicationData
+				{
+				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetApplicationData(); }
+				}
+
+				/// <java-name>
+				/// getProtocolInfo
+				/// </java-name>
+				public byte[] ProtocolInfo
+				{
+				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetProtocolInfo(); }
+				}
+
+				/// <java-name>
+				/// getMaxTransceiveLength
+				/// </java-name>
+				public int MaxTransceiveLength
+				{
+				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return GetMaxTransceiveLength(); }
+				}
+
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				public global::Android.Nfc.Tag Tag
+				{
+				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return GetTag(); }
+				}
 
 		}
 
@@ -1806,6 +1650,162 @@ namespace Android.Nfc.Tech
 						get{ return GetTimeout(); }
 				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
 						set{ SetTimeout(value); }
+				}
+
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				public global::Android.Nfc.Tag Tag
+				{
+				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return GetTag(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/nfc/tech/NfcV
+		/// </java-name>
+		[Dot42.DexImport("android/nfc/tech/NfcV", AccessFlags = 49)]
+		public sealed partial class NfcV : global::Android.Nfc.Tech.ITagTechnology
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal NfcV() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(Landroid/nfc/Tag;)Landroid/nfc/tech/NfcV;", AccessFlags = 9)]
+				public static global::Android.Nfc.Tech.NfcV Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Nfc.Tech.NfcV);
+				}
+
+				/// <java-name>
+				/// getResponseFlags
+				/// </java-name>
+				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1)]
+				public sbyte JavaGetResponseFlags() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte);
+				}
+
+				/// <java-name>
+				/// getResponseFlags
+				/// </java-name>
+				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte GetResponseFlags() /* MethodBuilder.Create */ 
+				{
+						return default(byte);
+				}
+
+				/// <java-name>
+				/// getDsfId
+				/// </java-name>
+				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1)]
+				public sbyte JavaGetDsfId() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte);
+				}
+
+				/// <java-name>
+				/// getDsfId
+				/// </java-name>
+				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte GetDsfId() /* MethodBuilder.Create */ 
+				{
+						return default(byte);
+				}
+
+				/// <java-name>
+				/// transceive
+				/// </java-name>
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				public sbyte[] Transceive(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// transceive
+				/// </java-name>
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getMaxTransceiveLength
+				/// </java-name>
+				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Nfc.Tag);
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+				public bool IsConnected() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// connect
+				/// </java-name>
+				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
+				public void Connect() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getResponseFlags
+				/// </java-name>
+				public byte ResponseFlags
+				{
+				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetResponseFlags(); }
+				}
+
+				/// <java-name>
+				/// getDsfId
+				/// </java-name>
+				public byte DsfId
+				{
+				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetDsfId(); }
+				}
+
+				/// <java-name>
+				/// getMaxTransceiveLength
+				/// </java-name>
+				public int MaxTransceiveLength
+				{
+				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return GetMaxTransceiveLength(); }
 				}
 
 				/// <java-name>

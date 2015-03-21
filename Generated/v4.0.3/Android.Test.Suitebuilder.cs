@@ -2,6 +2,134 @@
 namespace Android.Test.Suitebuilder
 {
 		/// <java-name>
+		/// android/test/suitebuilder/TestMethod
+		/// </java-name>
+		[Dot42.DexImport("android/test/suitebuilder/TestMethod", AccessFlags = 33)]
+		public partial class TestMethod
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/reflect/Method;Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/reflect/Method;Ljava/lang/Class<+Ljunit/framework/TestCase;>;)V")]
+				public TestMethod(global::System.Reflection.JavaMethod javaMethod, global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/Class<+Ljunit/framework/TestCase;>;)V")]
+				public TestMethod(string @string, global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljunit/framework/TestCase;)V", AccessFlags = 1)]
+				public TestMethod(global::Junit.Framework.TestCase testCase) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getEnclosingClassname
+				/// </java-name>
+				[Dot42.DexImport("getEnclosingClassname", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetEnclosingClassname() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getAnnotation
+				/// </java-name>
+				[Dot42.DexImport("getAnnotation", "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", AccessFlags = 1, Signature = "<T::Ljava/lang/annotation/Annotation;>(Ljava/lang/Class<TT;>;)TT;")]
+				public virtual T GetAnnotation<T>(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// getEnclosingClass
+				/// </java-name>
+				[Dot42.DexImport("getEnclosingClass", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<+Ljunit/framework/TestCase;>;")]
+				public virtual global::System.Type GetEnclosingClass() /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// createTest
+				/// </java-name>
+				[Dot42.DexImport("createTest", "()Ljunit/framework/TestCase;", AccessFlags = 1)]
+				public virtual global::Junit.Framework.TestCase CreateTest() /* MethodBuilder.Create */ 
+				{
+						return default(global::Junit.Framework.TestCase);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal TestMethod() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				public string Name
+				{
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetName(); }
+				}
+
+				/// <java-name>
+				/// getEnclosingClassname
+				/// </java-name>
+				public string EnclosingClassname
+				{
+				[Dot42.DexImport("getEnclosingClassname", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetEnclosingClassname(); }
+				}
+
+				/// <java-name>
+				/// getEnclosingClass
+				/// </java-name>
+				public global::System.Type EnclosingClass
+				{
+				[Dot42.DexImport("getEnclosingClass", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<+Ljunit/framework/TestCase;>;")]
+						get{ return GetEnclosingClass(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// android/test/suitebuilder/TestSuiteBuilder
 		/// </java-name>
 		[Dot42.DexImport("android/test/suitebuilder/TestSuiteBuilder", AccessFlags = 33)]
@@ -132,134 +260,6 @@ namespace Android.Test.Suitebuilder
 						{
 						}
 
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/suitebuilder/TestMethod
-		/// </java-name>
-		[Dot42.DexImport("android/test/suitebuilder/TestMethod", AccessFlags = 33)]
-		public partial class TestMethod
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/reflect/Method;Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/reflect/Method;Ljava/lang/Class<+Ljunit/framework/TestCase;>;)V")]
-				public TestMethod(global::System.Reflection.JavaMethod javaMethod, global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/Class<+Ljunit/framework/TestCase;>;)V")]
-				public TestMethod(string @string, global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljunit/framework/TestCase;)V", AccessFlags = 1)]
-				public TestMethod(global::Junit.Framework.TestCase testCase) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getEnclosingClassname
-				/// </java-name>
-				[Dot42.DexImport("getEnclosingClassname", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEnclosingClassname() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAnnotation
-				/// </java-name>
-				[Dot42.DexImport("getAnnotation", "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", AccessFlags = 1, Signature = "<T::Ljava/lang/annotation/Annotation;>(Ljava/lang/Class<TT;>;)TT;")]
-				public virtual T GetAnnotation<T>(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// getEnclosingClass
-				/// </java-name>
-				[Dot42.DexImport("getEnclosingClass", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<+Ljunit/framework/TestCase;>;")]
-				public virtual global::System.Type GetEnclosingClass() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// createTest
-				/// </java-name>
-				[Dot42.DexImport("createTest", "()Ljunit/framework/TestCase;", AccessFlags = 1)]
-				public virtual global::Junit.Framework.TestCase CreateTest() /* MethodBuilder.Create */ 
-				{
-						return default(global::Junit.Framework.TestCase);
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TestMethod() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				public string Name
-				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				}
-
-				/// <java-name>
-				/// getEnclosingClassname
-				/// </java-name>
-				public string EnclosingClassname
-				{
-				[Dot42.DexImport("getEnclosingClassname", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEnclosingClassname(); }
-				}
-
-				/// <java-name>
-				/// getEnclosingClass
-				/// </java-name>
-				public global::System.Type EnclosingClass
-				{
-				[Dot42.DexImport("getEnclosingClass", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<+Ljunit/framework/TestCase;>;")]
-						get{ return GetEnclosingClass(); }
 				}
 
 		}

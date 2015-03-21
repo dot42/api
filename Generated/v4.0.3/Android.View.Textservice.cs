@@ -272,6 +272,129 @@ namespace Android.View.Textservice
 		}
 
 		/// <java-name>
+		/// android/view/textservice/SpellCheckerSubtype
+		/// </java-name>
+		[Dot42.DexImport("android/view/textservice/SpellCheckerSubtype", AccessFlags = 49)]
+		public sealed partial class SpellCheckerSubtype : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Textservice.SpellCheckerSubtype> CREATOR;
+				[Dot42.DexImport("<init>", "(ILjava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public SpellCheckerSubtype(int int32, string @string, string string1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getNameResId
+				/// </java-name>
+				[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
+				public int GetNameResId() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getLocale
+				/// </java-name>
+				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetLocale() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getExtraValue
+				/// </java-name>
+				[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetExtraValue() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getDisplayName
+				/// </java-name>
+				[Dot42.DexImport("getDisplayName", "(Landroid/content/Context;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)" +
+    "Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public global::Java.Lang.ICharSequence GetDisplayName(global::Android.Content.Context context, string @string, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal SpellCheckerSubtype() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getNameResId
+				/// </java-name>
+				public int NameResId
+				{
+				[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
+						get{ return GetNameResId(); }
+				}
+
+				/// <java-name>
+				/// getLocale
+				/// </java-name>
+				public string Locale
+				{
+				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetLocale(); }
+				}
+
+				/// <java-name>
+				/// getExtraValue
+				/// </java-name>
+				public string ExtraValue
+				{
+				[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetExtraValue(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// android/view/textservice/SuggestionsInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/textservice/SuggestionsInfo", AccessFlags = 49)]
@@ -427,153 +550,6 @@ namespace Android.View.Textservice
 		}
 
 		/// <java-name>
-		/// android/view/textservice/SpellCheckerSubtype
-		/// </java-name>
-		[Dot42.DexImport("android/view/textservice/SpellCheckerSubtype", AccessFlags = 49)]
-		public sealed partial class SpellCheckerSubtype : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Textservice.SpellCheckerSubtype> CREATOR;
-				[Dot42.DexImport("<init>", "(ILjava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public SpellCheckerSubtype(int int32, string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getNameResId
-				/// </java-name>
-				[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
-				public int GetNameResId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLocale
-				/// </java-name>
-				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetLocale() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getExtraValue
-				/// </java-name>
-				[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetExtraValue() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getDisplayName
-				/// </java-name>
-				[Dot42.DexImport("getDisplayName", "(Landroid/content/Context;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)" +
-    "Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence GetDisplayName(global::Android.Content.Context context, string @string, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SpellCheckerSubtype() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getNameResId
-				/// </java-name>
-				public int NameResId
-				{
-				[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
-						get{ return GetNameResId(); }
-				}
-
-				/// <java-name>
-				/// getLocale
-				/// </java-name>
-				public string Locale
-				{
-				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocale(); }
-				}
-
-				/// <java-name>
-				/// getExtraValue
-				/// </java-name>
-				public string ExtraValue
-				{
-				[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetExtraValue(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/textservice/TextServicesManager
-		/// </java-name>
-		[Dot42.DexImport("android/view/textservice/TextServicesManager", AccessFlags = 49)]
-		public sealed partial class TextServicesManager
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal TextServicesManager() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newSpellCheckerSession
-				/// </java-name>
-				[Dot42.DexImport("newSpellCheckerSession", "(Landroid/os/Bundle;Ljava/util/Locale;Landroid/view/textservice/SpellCheckerSessi" +
-    "on$SpellCheckerSessionListener;Z)Landroid/view/textservice/SpellCheckerSession;", AccessFlags = 1)]
-				public global::Android.View.Textservice.SpellCheckerSession NewSpellCheckerSession(global::Android.Os.Bundle bundle, global::Java.Util.Locale locale, global::Android.View.Textservice.SpellCheckerSession.ISpellCheckerSessionListener spellCheckerSessionListener, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.Textservice.SpellCheckerSession);
-				}
-
-		}
-
-		/// <java-name>
 		/// android/view/textservice/TextInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/textservice/TextInfo", AccessFlags = 49)]
@@ -674,6 +650,30 @@ namespace Android.View.Textservice
 				{
 				[Dot42.DexImport("getSequence", "()I", AccessFlags = 1)]
 						get{ return GetSequence(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/textservice/TextServicesManager
+		/// </java-name>
+		[Dot42.DexImport("android/view/textservice/TextServicesManager", AccessFlags = 49)]
+		public sealed partial class TextServicesManager
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal TextServicesManager() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newSpellCheckerSession
+				/// </java-name>
+				[Dot42.DexImport("newSpellCheckerSession", "(Landroid/os/Bundle;Ljava/util/Locale;Landroid/view/textservice/SpellCheckerSessi" +
+    "on$SpellCheckerSessionListener;Z)Landroid/view/textservice/SpellCheckerSession;", AccessFlags = 1)]
+				public global::Android.View.Textservice.SpellCheckerSession NewSpellCheckerSession(global::Android.Os.Bundle bundle, global::Java.Util.Locale locale, global::Android.View.Textservice.SpellCheckerSession.ISpellCheckerSessionListener spellCheckerSessionListener, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.Textservice.SpellCheckerSession);
 				}
 
 		}

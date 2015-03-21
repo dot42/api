@@ -2,29 +2,6 @@
 namespace Org.Apache.Http.Impl.Auth
 {
 		/// <java-name>
-		/// org/apache/http/impl/auth/BasicSchemeFactory
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/auth/BasicSchemeFactory", AccessFlags = 33)]
-		public partial class BasicSchemeFactory : global::Org.Apache.Http.Auth.IAuthSchemeFactory
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BasicSchemeFactory() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newInstance
-				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/auth/AuthScheme;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Auth.IAuthScheme NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Auth.IAuthScheme);
-				}
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/impl/auth/AuthSchemeBase
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/auth/AuthSchemeBase", AccessFlags = 1057)]
@@ -111,68 +88,209 @@ namespace Org.Apache.Http.Impl.Auth
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/auth/RFC2617Scheme
+		/// org/apache/http/impl/auth/BasicScheme
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/auth/RFC2617Scheme", AccessFlags = 1057)]
-		public abstract partial class RFC2617Scheme : global::Org.Apache.Http.Impl.Auth.AuthSchemeBase
+		[Dot42.DexImport("org/apache/http/impl/auth/BasicScheme", AccessFlags = 33)]
+		public partial class BasicScheme : global::Org.Apache.Http.Impl.Auth.RFC2617Scheme
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RFC2617Scheme() /* MethodBuilder.Create */ 
+				public BasicScheme() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// parseChallenge
+				/// getSchemeName
 				/// </java-name>
-				[Dot42.DexImport("parseChallenge", "(Lorg/apache/http/util/CharArrayBuffer;II)V", AccessFlags = 4)]
-				protected internal override void ParseChallenge(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getParameters
-				/// </java-name>
-				[Dot42.DexImport("getParameters", "()Ljava/util/Map;", AccessFlags = 4, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-				protected internal virtual global::Java.Util.IMap<string, string> GetParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<string, string>);
-				}
-
-				/// <java-name>
-				/// getParameter
-				/// </java-name>
-				[Dot42.DexImport("getParameter", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetParameter(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetSchemeName() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
 				/// <java-name>
-				/// getRealm
+				/// processChallenge
 				/// </java-name>
-				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetRealm() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("processChallenge", "(Lorg/apache/http/Header;)V", AccessFlags = 1)]
+				public override void ProcessChallenge(global::Org.Apache.Http.IHeader header) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isComplete
+				/// </java-name>
+				[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
+				public override bool IsComplete() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isConnectionBased
+				/// </java-name>
+				[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
+				public override bool IsConnectionBased() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// authenticate
+				/// </java-name>
+				[Dot42.DexImport("authenticate", "(Lorg/apache/http/auth/Credentials;Lorg/apache/http/HttpRequest;)Lorg/apache/http" +
+    "/Header;", AccessFlags = 1)]
+				public override global::Org.Apache.Http.IHeader Authenticate(global::Org.Apache.Http.Auth.ICredentials credentials, global::Org.Apache.Http.IHttpRequest httpRequest) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.IHeader);
+				}
+
+				/// <java-name>
+				/// authenticate
+				/// </java-name>
+				[Dot42.DexImport("authenticate", "(Lorg/apache/http/auth/Credentials;Ljava/lang/String;Z)Lorg/apache/http/Header;", AccessFlags = 9)]
+				public static global::Org.Apache.Http.IHeader Authenticate(global::Org.Apache.Http.Auth.ICredentials credentials, string @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.IHeader);
+				}
+
+				/// <java-name>
+				/// getSchemeName
+				/// </java-name>
+				public string SchemeName
+				{
+				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetSchemeName(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/auth/BasicSchemeFactory
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/auth/BasicSchemeFactory", AccessFlags = 33)]
+		public partial class BasicSchemeFactory : global::Org.Apache.Http.Auth.IAuthSchemeFactory
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BasicSchemeFactory() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/auth/AuthScheme;", AccessFlags = 1)]
+				public virtual global::Org.Apache.Http.Auth.IAuthScheme NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Auth.IAuthScheme);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/auth/DigestScheme
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/auth/DigestScheme", AccessFlags = 33)]
+		public partial class DigestScheme : global::Org.Apache.Http.Impl.Auth.RFC2617Scheme
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public DigestScheme() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// processChallenge
+				/// </java-name>
+				[Dot42.DexImport("processChallenge", "(Lorg/apache/http/Header;)V", AccessFlags = 1)]
+				public override void ProcessChallenge(global::Org.Apache.Http.IHeader header) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isComplete
+				/// </java-name>
+				[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
+				public override bool IsComplete() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getSchemeName
+				/// </java-name>
+				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetSchemeName() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
 				/// <java-name>
-				/// getParameters
+				/// isConnectionBased
 				/// </java-name>
-				protected internal global::Java.Util.IMap<string, string> Parameters
+				[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
+				public override bool IsConnectionBased() /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getParameters", "()Ljava/util/Map;", AccessFlags = 4, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-						get{ return GetParameters(); }
+						return default(bool);
 				}
 
 				/// <java-name>
-				/// getRealm
+				/// overrideParamter
 				/// </java-name>
-				public string Realm
+				[Dot42.DexImport("overrideParamter", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void OverrideParamter(string @string, string string1) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRealm(); }
+				}
+
+				/// <java-name>
+				/// authenticate
+				/// </java-name>
+				[Dot42.DexImport("authenticate", "(Lorg/apache/http/auth/Credentials;Lorg/apache/http/HttpRequest;)Lorg/apache/http" +
+    "/Header;", AccessFlags = 1)]
+				public override global::Org.Apache.Http.IHeader Authenticate(global::Org.Apache.Http.Auth.ICredentials credentials, global::Org.Apache.Http.IHttpRequest httpRequest) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.IHeader);
+				}
+
+				/// <java-name>
+				/// createCnonce
+				/// </java-name>
+				[Dot42.DexImport("createCnonce", "()Ljava/lang/String;", AccessFlags = 9)]
+				public static string CreateCnonce() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getSchemeName
+				/// </java-name>
+				public string SchemeName
+				{
+				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetSchemeName(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/auth/DigestSchemeFactory
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/auth/DigestSchemeFactory", AccessFlags = 33)]
+		public partial class DigestSchemeFactory : global::Org.Apache.Http.Auth.IAuthSchemeFactory
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public DigestSchemeFactory() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/auth/AuthScheme;", AccessFlags = 1)]
+				public virtual global::Org.Apache.Http.Auth.IAuthScheme NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Auth.IAuthScheme);
 				}
 
 		}
@@ -218,30 +336,6 @@ namespace Org.Apache.Http.Impl.Auth
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
 				public NTLMEngineException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/auth/UnsupportedDigestAlgorithmException
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/auth/UnsupportedDigestAlgorithmException", AccessFlags = 33)]
-		public partial class UnsupportedDigestAlgorithmException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public UnsupportedDigestAlgorithmException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public UnsupportedDigestAlgorithmException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public UnsupportedDigestAlgorithmException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -348,186 +442,92 @@ namespace Org.Apache.Http.Impl.Auth
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/auth/DigestSchemeFactory
+		/// org/apache/http/impl/auth/RFC2617Scheme
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/auth/DigestSchemeFactory", AccessFlags = 33)]
-		public partial class DigestSchemeFactory : global::Org.Apache.Http.Auth.IAuthSchemeFactory
+		[Dot42.DexImport("org/apache/http/impl/auth/RFC2617Scheme", AccessFlags = 1057)]
+		public abstract partial class RFC2617Scheme : global::Org.Apache.Http.Impl.Auth.AuthSchemeBase
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public DigestSchemeFactory() /* MethodBuilder.Create */ 
+				public RFC2617Scheme() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// newInstance
+				/// parseChallenge
 				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/auth/AuthScheme;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Auth.IAuthScheme NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("parseChallenge", "(Lorg/apache/http/util/CharArrayBuffer;II)V", AccessFlags = 4)]
+				protected internal override void ParseChallenge(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, int int32, int int321) /* MethodBuilder.Create */ 
 				{
-						return default(global::Org.Apache.Http.Auth.IAuthScheme);
+				}
+
+				/// <java-name>
+				/// getParameters
+				/// </java-name>
+				[Dot42.DexImport("getParameters", "()Ljava/util/Map;", AccessFlags = 4, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
+				protected internal virtual global::Java.Util.IMap<string, string> GetParameters() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IMap<string, string>);
+				}
+
+				/// <java-name>
+				/// getParameter
+				/// </java-name>
+				[Dot42.DexImport("getParameter", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetParameter(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getRealm
+				/// </java-name>
+				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetRealm() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getParameters
+				/// </java-name>
+				protected internal global::Java.Util.IMap<string, string> Parameters
+				{
+				[Dot42.DexImport("getParameters", "()Ljava/util/Map;", AccessFlags = 4, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
+						get{ return GetParameters(); }
+				}
+
+				/// <java-name>
+				/// getRealm
+				/// </java-name>
+				public string Realm
+				{
+				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetRealm(); }
 				}
 
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/auth/BasicScheme
+		/// org/apache/http/impl/auth/UnsupportedDigestAlgorithmException
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/auth/BasicScheme", AccessFlags = 33)]
-		public partial class BasicScheme : global::Org.Apache.Http.Impl.Auth.RFC2617Scheme
+		[Dot42.DexImport("org/apache/http/impl/auth/UnsupportedDigestAlgorithmException", AccessFlags = 33)]
+		public partial class UnsupportedDigestAlgorithmException : global::System.SystemException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BasicScheme() /* MethodBuilder.Create */ 
+				public UnsupportedDigestAlgorithmException() /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// getSchemeName
-				/// </java-name>
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetSchemeName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// processChallenge
-				/// </java-name>
-				[Dot42.DexImport("processChallenge", "(Lorg/apache/http/Header;)V", AccessFlags = 1)]
-				public override void ProcessChallenge(global::Org.Apache.Http.IHeader header) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public UnsupportedDigestAlgorithmException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// isComplete
-				/// </java-name>
-				[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
-				public override bool IsComplete() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public UnsupportedDigestAlgorithmException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isConnectionBased
-				/// </java-name>
-				[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
-				public override bool IsConnectionBased() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// authenticate
-				/// </java-name>
-				[Dot42.DexImport("authenticate", "(Lorg/apache/http/auth/Credentials;Lorg/apache/http/HttpRequest;)Lorg/apache/http" +
-    "/Header;", AccessFlags = 1)]
-				public override global::Org.Apache.Http.IHeader Authenticate(global::Org.Apache.Http.Auth.ICredentials credentials, global::Org.Apache.Http.IHttpRequest httpRequest) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// authenticate
-				/// </java-name>
-				[Dot42.DexImport("authenticate", "(Lorg/apache/http/auth/Credentials;Ljava/lang/String;Z)Lorg/apache/http/Header;", AccessFlags = 9)]
-				public static global::Org.Apache.Http.IHeader Authenticate(global::Org.Apache.Http.Auth.ICredentials credentials, string @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// getSchemeName
-				/// </java-name>
-				public string SchemeName
-				{
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSchemeName(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/auth/DigestScheme
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/auth/DigestScheme", AccessFlags = 33)]
-		public partial class DigestScheme : global::Org.Apache.Http.Impl.Auth.RFC2617Scheme
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public DigestScheme() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// processChallenge
-				/// </java-name>
-				[Dot42.DexImport("processChallenge", "(Lorg/apache/http/Header;)V", AccessFlags = 1)]
-				public override void ProcessChallenge(global::Org.Apache.Http.IHeader header) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isComplete
-				/// </java-name>
-				[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
-				public override bool IsComplete() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getSchemeName
-				/// </java-name>
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetSchemeName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isConnectionBased
-				/// </java-name>
-				[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
-				public override bool IsConnectionBased() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// overrideParamter
-				/// </java-name>
-				[Dot42.DexImport("overrideParamter", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void OverrideParamter(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// authenticate
-				/// </java-name>
-				[Dot42.DexImport("authenticate", "(Lorg/apache/http/auth/Credentials;Lorg/apache/http/HttpRequest;)Lorg/apache/http" +
-    "/Header;", AccessFlags = 1)]
-				public override global::Org.Apache.Http.IHeader Authenticate(global::Org.Apache.Http.Auth.ICredentials credentials, global::Org.Apache.Http.IHttpRequest httpRequest) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// createCnonce
-				/// </java-name>
-				[Dot42.DexImport("createCnonce", "()Ljava/lang/String;", AccessFlags = 9)]
-				public static string CreateCnonce() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSchemeName
-				/// </java-name>
-				public string SchemeName
-				{
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSchemeName(); }
 				}
 
 		}

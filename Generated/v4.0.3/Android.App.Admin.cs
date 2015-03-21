@@ -2,148 +2,6 @@
 namespace Android.App.Admin
 {
 		/// <java-name>
-		/// android/app/admin/DeviceAdminReceiver
-		/// </java-name>
-		[Dot42.DexImport("android/app/admin/DeviceAdminReceiver", AccessFlags = 33)]
-		public partial class DeviceAdminReceiver : global::Android.Content.BroadcastReceiver
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// ACTION_DEVICE_ADMIN_ENABLED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_DEVICE_ADMIN_ENABLED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_DEVICE_ADMIN_ENABLED = "android.app.action.DEVICE_ADMIN_ENABLED";
-				/// <java-name>
-				/// ACTION_DEVICE_ADMIN_DISABLE_REQUESTED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_DEVICE_ADMIN_DISABLE_REQUESTED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_DEVICE_ADMIN_DISABLE_REQUESTED = "android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED";
-				/// <java-name>
-				/// EXTRA_DISABLE_WARNING
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_DISABLE_WARNING", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_DISABLE_WARNING = "android.app.extra.DISABLE_WARNING";
-				/// <java-name>
-				/// ACTION_DEVICE_ADMIN_DISABLED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_DEVICE_ADMIN_DISABLED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_DEVICE_ADMIN_DISABLED = "android.app.action.DEVICE_ADMIN_DISABLED";
-				/// <java-name>
-				/// ACTION_PASSWORD_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_PASSWORD_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_PASSWORD_CHANGED = "android.app.action.ACTION_PASSWORD_CHANGED";
-				/// <java-name>
-				/// ACTION_PASSWORD_FAILED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_PASSWORD_FAILED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_PASSWORD_FAILED = "android.app.action.ACTION_PASSWORD_FAILED";
-				/// <java-name>
-				/// ACTION_PASSWORD_SUCCEEDED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_PASSWORD_SUCCEEDED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_PASSWORD_SUCCEEDED = "android.app.action.ACTION_PASSWORD_SUCCEEDED";
-				/// <java-name>
-				/// ACTION_PASSWORD_EXPIRING
-				/// </java-name>
-				[Dot42.DexImport("ACTION_PASSWORD_EXPIRING", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_PASSWORD_EXPIRING = "android.app.action.ACTION_PASSWORD_EXPIRING";
-				/// <java-name>
-				/// DEVICE_ADMIN_META_DATA
-				/// </java-name>
-				[Dot42.DexImport("DEVICE_ADMIN_META_DATA", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string DEVICE_ADMIN_META_DATA = "android.app.device_admin";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public DeviceAdminReceiver() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getManager
-				/// </java-name>
-				[Dot42.DexImport("getManager", "(Landroid/content/Context;)Landroid/app/admin/DevicePolicyManager;", AccessFlags = 1)]
-				public virtual global::Android.App.Admin.DevicePolicyManager GetManager(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.App.Admin.DevicePolicyManager);
-				}
-
-				/// <java-name>
-				/// getWho
-				/// </java-name>
-				[Dot42.DexImport("getWho", "(Landroid/content/Context;)Landroid/content/ComponentName;", AccessFlags = 1)]
-				public virtual global::Android.Content.ComponentName GetWho(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ComponentName);
-				}
-
-				/// <java-name>
-				/// onEnabled
-				/// </java-name>
-				[Dot42.DexImport("onEnabled", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
-				public virtual void OnEnabled(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDisableRequested
-				/// </java-name>
-				[Dot42.DexImport("onDisableRequested", "(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence OnDisableRequested(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// onDisabled
-				/// </java-name>
-				[Dot42.DexImport("onDisabled", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
-				public virtual void OnDisabled(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPasswordChanged
-				/// </java-name>
-				[Dot42.DexImport("onPasswordChanged", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
-				public virtual void OnPasswordChanged(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPasswordFailed
-				/// </java-name>
-				[Dot42.DexImport("onPasswordFailed", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
-				public virtual void OnPasswordFailed(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPasswordSucceeded
-				/// </java-name>
-				[Dot42.DexImport("onPasswordSucceeded", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
-				public virtual void OnPasswordSucceeded(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPasswordExpiring
-				/// </java-name>
-				[Dot42.DexImport("onPasswordExpiring", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
-				public virtual void OnPasswordExpiring(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onReceive
-				/// </java-name>
-				[Dot42.DexImport("onReceive", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
-				public override void OnReceive(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// android/app/admin/DeviceAdminInfo
 		/// </java-name>
 		[Dot42.DexImport("android/app/admin/DeviceAdminInfo", AccessFlags = 49)]
@@ -363,6 +221,148 @@ namespace Android.App.Admin
 				{
 				[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
 						get{ return GetComponent(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/app/admin/DeviceAdminReceiver
+		/// </java-name>
+		[Dot42.DexImport("android/app/admin/DeviceAdminReceiver", AccessFlags = 33)]
+		public partial class DeviceAdminReceiver : global::Android.Content.BroadcastReceiver
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// ACTION_DEVICE_ADMIN_ENABLED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DEVICE_ADMIN_ENABLED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_DEVICE_ADMIN_ENABLED = "android.app.action.DEVICE_ADMIN_ENABLED";
+				/// <java-name>
+				/// ACTION_DEVICE_ADMIN_DISABLE_REQUESTED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DEVICE_ADMIN_DISABLE_REQUESTED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_DEVICE_ADMIN_DISABLE_REQUESTED = "android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED";
+				/// <java-name>
+				/// EXTRA_DISABLE_WARNING
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_DISABLE_WARNING", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_DISABLE_WARNING = "android.app.extra.DISABLE_WARNING";
+				/// <java-name>
+				/// ACTION_DEVICE_ADMIN_DISABLED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DEVICE_ADMIN_DISABLED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_DEVICE_ADMIN_DISABLED = "android.app.action.DEVICE_ADMIN_DISABLED";
+				/// <java-name>
+				/// ACTION_PASSWORD_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_PASSWORD_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_PASSWORD_CHANGED = "android.app.action.ACTION_PASSWORD_CHANGED";
+				/// <java-name>
+				/// ACTION_PASSWORD_FAILED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_PASSWORD_FAILED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_PASSWORD_FAILED = "android.app.action.ACTION_PASSWORD_FAILED";
+				/// <java-name>
+				/// ACTION_PASSWORD_SUCCEEDED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_PASSWORD_SUCCEEDED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_PASSWORD_SUCCEEDED = "android.app.action.ACTION_PASSWORD_SUCCEEDED";
+				/// <java-name>
+				/// ACTION_PASSWORD_EXPIRING
+				/// </java-name>
+				[Dot42.DexImport("ACTION_PASSWORD_EXPIRING", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_PASSWORD_EXPIRING = "android.app.action.ACTION_PASSWORD_EXPIRING";
+				/// <java-name>
+				/// DEVICE_ADMIN_META_DATA
+				/// </java-name>
+				[Dot42.DexImport("DEVICE_ADMIN_META_DATA", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string DEVICE_ADMIN_META_DATA = "android.app.device_admin";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public DeviceAdminReceiver() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getManager
+				/// </java-name>
+				[Dot42.DexImport("getManager", "(Landroid/content/Context;)Landroid/app/admin/DevicePolicyManager;", AccessFlags = 1)]
+				public virtual global::Android.App.Admin.DevicePolicyManager GetManager(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.App.Admin.DevicePolicyManager);
+				}
+
+				/// <java-name>
+				/// getWho
+				/// </java-name>
+				[Dot42.DexImport("getWho", "(Landroid/content/Context;)Landroid/content/ComponentName;", AccessFlags = 1)]
+				public virtual global::Android.Content.ComponentName GetWho(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.ComponentName);
+				}
+
+				/// <java-name>
+				/// onEnabled
+				/// </java-name>
+				[Dot42.DexImport("onEnabled", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
+				public virtual void OnEnabled(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDisableRequested
+				/// </java-name>
+				[Dot42.DexImport("onDisableRequested", "(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence OnDisableRequested(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// onDisabled
+				/// </java-name>
+				[Dot42.DexImport("onDisabled", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
+				public virtual void OnDisabled(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onPasswordChanged
+				/// </java-name>
+				[Dot42.DexImport("onPasswordChanged", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
+				public virtual void OnPasswordChanged(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onPasswordFailed
+				/// </java-name>
+				[Dot42.DexImport("onPasswordFailed", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
+				public virtual void OnPasswordFailed(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onPasswordSucceeded
+				/// </java-name>
+				[Dot42.DexImport("onPasswordSucceeded", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
+				public virtual void OnPasswordSucceeded(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onPasswordExpiring
+				/// </java-name>
+				[Dot42.DexImport("onPasswordExpiring", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
+				public virtual void OnPasswordExpiring(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onReceive
+				/// </java-name>
+				[Dot42.DexImport("onReceive", "(Landroid/content/Context;Landroid/content/Intent;)V", AccessFlags = 1)]
+				public override void OnReceive(global::Android.Content.Context context, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
 				}
 
 		}

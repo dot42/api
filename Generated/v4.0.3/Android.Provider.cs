@@ -2,34 +2,6 @@
 namespace Android.Provider
 {
 		/// <java-name>
-		/// android/provider/BaseColumns
-		/// </java-name>
-		[Dot42.DexImport("android/provider/BaseColumns", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IBaseColumnsConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// _ID
-				/// </java-name>
-				[Dot42.DexImport("_ID", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string _ID = "_id";
-				/// <java-name>
-				/// _COUNT
-				/// </java-name>
-				[Dot42.DexImport("_COUNT", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string _COUNT = "_count";
-		}
-
-		/// <java-name>
-		/// android/provider/BaseColumns
-		/// </java-name>
-		[Dot42.DexImport("android/provider/BaseColumns", AccessFlags = 1537)]
-		public partial interface IBaseColumns
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
 		/// android/provider/AlarmClock
 		/// </java-name>
 		[Dot42.DexImport("android/provider/AlarmClock", AccessFlags = 49)]
@@ -64,6 +36,306 @@ namespace Android.Provider
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public AlarmClock() /* MethodBuilder.Create */ 
 				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/provider/Browser
+		/// </java-name>
+		[Dot42.DexImport("android/provider/Browser", AccessFlags = 33)]
+		public partial class Browser
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// BOOKMARKS_URI
+				/// </java-name>
+				[Dot42.DexImport("BOOKMARKS_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+				public static readonly global::Android.Net.Uri BOOKMARKS_URI;
+				/// <java-name>
+				/// INITIAL_ZOOM_LEVEL
+				/// </java-name>
+				[Dot42.DexImport("INITIAL_ZOOM_LEVEL", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string INITIAL_ZOOM_LEVEL = "browser.initialZoomLevel";
+				/// <java-name>
+				/// EXTRA_APPLICATION_ID
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_APPLICATION_ID", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_APPLICATION_ID = "com.android.browser.application_id";
+				/// <java-name>
+				/// EXTRA_HEADERS
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_HEADERS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_HEADERS = "com.android.browser.headers";
+				/// <java-name>
+				/// HISTORY_PROJECTION
+				/// </java-name>
+				[Dot42.DexImport("HISTORY_PROJECTION", "[Ljava/lang/String;", AccessFlags = 25)]
+				public static readonly string[] HISTORY_PROJECTION;
+				/// <java-name>
+				/// HISTORY_PROJECTION_ID_INDEX
+				/// </java-name>
+				[Dot42.DexImport("HISTORY_PROJECTION_ID_INDEX", "I", AccessFlags = 25)]
+				public const int HISTORY_PROJECTION_ID_INDEX = 0;
+				/// <java-name>
+				/// HISTORY_PROJECTION_URL_INDEX
+				/// </java-name>
+				[Dot42.DexImport("HISTORY_PROJECTION_URL_INDEX", "I", AccessFlags = 25)]
+				public const int HISTORY_PROJECTION_URL_INDEX = 1;
+				/// <java-name>
+				/// HISTORY_PROJECTION_VISITS_INDEX
+				/// </java-name>
+				[Dot42.DexImport("HISTORY_PROJECTION_VISITS_INDEX", "I", AccessFlags = 25)]
+				public const int HISTORY_PROJECTION_VISITS_INDEX = 2;
+				/// <java-name>
+				/// HISTORY_PROJECTION_DATE_INDEX
+				/// </java-name>
+				[Dot42.DexImport("HISTORY_PROJECTION_DATE_INDEX", "I", AccessFlags = 25)]
+				public const int HISTORY_PROJECTION_DATE_INDEX = 3;
+				/// <java-name>
+				/// HISTORY_PROJECTION_BOOKMARK_INDEX
+				/// </java-name>
+				[Dot42.DexImport("HISTORY_PROJECTION_BOOKMARK_INDEX", "I", AccessFlags = 25)]
+				public const int HISTORY_PROJECTION_BOOKMARK_INDEX = 4;
+				/// <java-name>
+				/// HISTORY_PROJECTION_TITLE_INDEX
+				/// </java-name>
+				[Dot42.DexImport("HISTORY_PROJECTION_TITLE_INDEX", "I", AccessFlags = 25)]
+				public const int HISTORY_PROJECTION_TITLE_INDEX = 5;
+				/// <java-name>
+				/// HISTORY_PROJECTION_FAVICON_INDEX
+				/// </java-name>
+				[Dot42.DexImport("HISTORY_PROJECTION_FAVICON_INDEX", "I", AccessFlags = 25)]
+				public const int HISTORY_PROJECTION_FAVICON_INDEX = 6;
+				/// <java-name>
+				/// TRUNCATE_HISTORY_PROJECTION
+				/// </java-name>
+				[Dot42.DexImport("TRUNCATE_HISTORY_PROJECTION", "[Ljava/lang/String;", AccessFlags = 25)]
+				public static readonly string[] TRUNCATE_HISTORY_PROJECTION;
+				/// <java-name>
+				/// TRUNCATE_HISTORY_PROJECTION_ID_INDEX
+				/// </java-name>
+				[Dot42.DexImport("TRUNCATE_HISTORY_PROJECTION_ID_INDEX", "I", AccessFlags = 25)]
+				public const int TRUNCATE_HISTORY_PROJECTION_ID_INDEX = 0;
+				/// <java-name>
+				/// TRUNCATE_N_OLDEST
+				/// </java-name>
+				[Dot42.DexImport("TRUNCATE_N_OLDEST", "I", AccessFlags = 25)]
+				public const int TRUNCATE_N_OLDEST = 5;
+				/// <java-name>
+				/// SEARCHES_URI
+				/// </java-name>
+				[Dot42.DexImport("SEARCHES_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+				public static readonly global::Android.Net.Uri SEARCHES_URI;
+				/// <java-name>
+				/// SEARCHES_PROJECTION
+				/// </java-name>
+				[Dot42.DexImport("SEARCHES_PROJECTION", "[Ljava/lang/String;", AccessFlags = 25)]
+				public static readonly string[] SEARCHES_PROJECTION;
+				/// <java-name>
+				/// SEARCHES_PROJECTION_SEARCH_INDEX
+				/// </java-name>
+				[Dot42.DexImport("SEARCHES_PROJECTION_SEARCH_INDEX", "I", AccessFlags = 25)]
+				public const int SEARCHES_PROJECTION_SEARCH_INDEX = 1;
+				/// <java-name>
+				/// SEARCHES_PROJECTION_DATE_INDEX
+				/// </java-name>
+				[Dot42.DexImport("SEARCHES_PROJECTION_DATE_INDEX", "I", AccessFlags = 25)]
+				public const int SEARCHES_PROJECTION_DATE_INDEX = 2;
+				/// <java-name>
+				/// EXTRA_CREATE_NEW_TAB
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_CREATE_NEW_TAB", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_CREATE_NEW_TAB = "create_new_tab";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Browser() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// saveBookmark
+				/// </java-name>
+				[Dot42.DexImport("saveBookmark", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 25)]
+				public static void SaveBookmark(global::Android.Content.Context context, string @string, string string1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendString
+				/// </java-name>
+				[Dot42.DexImport("sendString", "(Landroid/content/Context;Ljava/lang/String;)V", AccessFlags = 25)]
+				public static void SendString(global::Android.Content.Context context, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAllBookmarks
+				/// </java-name>
+				[Dot42.DexImport("getAllBookmarks", "(Landroid/content/ContentResolver;)Landroid/database/Cursor;", AccessFlags = 25)]
+				public static global::Android.Database.ICursor GetAllBookmarks(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Database.ICursor);
+				}
+
+				/// <java-name>
+				/// getAllVisitedUrls
+				/// </java-name>
+				[Dot42.DexImport("getAllVisitedUrls", "(Landroid/content/ContentResolver;)Landroid/database/Cursor;", AccessFlags = 25)]
+				public static global::Android.Database.ICursor GetAllVisitedUrls(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Database.ICursor);
+				}
+
+				/// <java-name>
+				/// updateVisitedHistory
+				/// </java-name>
+				[Dot42.DexImport("updateVisitedHistory", "(Landroid/content/ContentResolver;Ljava/lang/String;Z)V", AccessFlags = 25)]
+				public static void UpdateVisitedHistory(global::Android.Content.ContentResolver contentResolver, string @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// truncateHistory
+				/// </java-name>
+				[Dot42.DexImport("truncateHistory", "(Landroid/content/ContentResolver;)V", AccessFlags = 25)]
+				public static void TruncateHistory(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// canClearHistory
+				/// </java-name>
+				[Dot42.DexImport("canClearHistory", "(Landroid/content/ContentResolver;)Z", AccessFlags = 25)]
+				public static bool CanClearHistory(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// clearHistory
+				/// </java-name>
+				[Dot42.DexImport("clearHistory", "(Landroid/content/ContentResolver;)V", AccessFlags = 25)]
+				public static void ClearHistory(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// deleteHistoryTimeFrame
+				/// </java-name>
+				[Dot42.DexImport("deleteHistoryTimeFrame", "(Landroid/content/ContentResolver;JJ)V", AccessFlags = 25)]
+				public static void DeleteHistoryTimeFrame(global::Android.Content.ContentResolver contentResolver, long int64, long int641) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// deleteFromHistory
+				/// </java-name>
+				[Dot42.DexImport("deleteFromHistory", "(Landroid/content/ContentResolver;Ljava/lang/String;)V", AccessFlags = 25)]
+				public static void DeleteFromHistory(global::Android.Content.ContentResolver contentResolver, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addSearchUrl
+				/// </java-name>
+				[Dot42.DexImport("addSearchUrl", "(Landroid/content/ContentResolver;Ljava/lang/String;)V", AccessFlags = 25)]
+				public static void AddSearchUrl(global::Android.Content.ContentResolver contentResolver, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clearSearches
+				/// </java-name>
+				[Dot42.DexImport("clearSearches", "(Landroid/content/ContentResolver;)V", AccessFlags = 25)]
+				public static void ClearSearches(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// requestAllIcons
+				/// </java-name>
+				[Dot42.DexImport("requestAllIcons", "(Landroid/content/ContentResolver;Ljava/lang/String;Landroid/webkit/WebIconDataba" +
+    "se$IconListener;)V", AccessFlags = 25)]
+				public static void RequestAllIcons(global::Android.Content.ContentResolver contentResolver, string @string, global::Android.Webkit.WebIconDatabase.IIconListener iconListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Browser$SearchColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Browser$SearchColumns", AccessFlags = 9)]
+				public partial class SearchColumns : global::Android.Provider.IBaseColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// URL
+						/// </java-name>
+						[Dot42.DexImport("URL", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string URL = "url";
+						/// <java-name>
+						/// SEARCH
+						/// </java-name>
+						[Dot42.DexImport("SEARCH", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SEARCH = "search";
+						/// <java-name>
+						/// DATE
+						/// </java-name>
+						[Dot42.DexImport("DATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DATE = "date";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public SearchColumns() /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Browser$BookmarkColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Browser$BookmarkColumns", AccessFlags = 9)]
+				public partial class BookmarkColumns : global::Android.Provider.IBaseColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// URL
+						/// </java-name>
+						[Dot42.DexImport("URL", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string URL = "url";
+						/// <java-name>
+						/// VISITS
+						/// </java-name>
+						[Dot42.DexImport("VISITS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string VISITS = "visits";
+						/// <java-name>
+						/// DATE
+						/// </java-name>
+						[Dot42.DexImport("DATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DATE = "date";
+						/// <java-name>
+						/// BOOKMARK
+						/// </java-name>
+						[Dot42.DexImport("BOOKMARK", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BOOKMARK = "bookmark";
+						/// <java-name>
+						/// TITLE
+						/// </java-name>
+						[Dot42.DexImport("TITLE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string TITLE = "title";
+						/// <java-name>
+						/// CREATED
+						/// </java-name>
+						[Dot42.DexImport("CREATED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CREATED = "created";
+						/// <java-name>
+						/// FAVICON
+						/// </java-name>
+						[Dot42.DexImport("FAVICON", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string FAVICON = "favicon";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public BookmarkColumns() /* MethodBuilder.Create */ 
+						{
+						}
+
 				}
 
 		}
@@ -1468,6 +1740,1689 @@ namespace Android.Provider
 				/// </java-name>
 				[Dot42.DexImport("android/provider/CalendarContract$CalendarSyncColumns", AccessFlags = 1548)]
 				protected internal partial interface ICalendarSyncColumns
+ /* scope: __dot42__ */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/provider/CallLog
+		/// </java-name>
+		[Dot42.DexImport("android/provider/CallLog", AccessFlags = 33)]
+		public partial class CallLog
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// AUTHORITY
+				/// </java-name>
+				[Dot42.DexImport("AUTHORITY", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string AUTHORITY = "call_log";
+				/// <java-name>
+				/// CONTENT_URI
+				/// </java-name>
+				[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+				public static readonly global::Android.Net.Uri CONTENT_URI;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public CallLog() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/CallLog$Calls
+				/// </java-name>
+				[Dot42.DexImport("android/provider/CallLog$Calls", AccessFlags = 9)]
+				public partial class Calls : global::Android.Provider.IBaseColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_FILTER_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_FILTER_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_FILTER_URI;
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "date DESC";
+						/// <java-name>
+						/// CONTENT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_TYPE = "vnd.android.cursor.dir/calls";
+						/// <java-name>
+						/// CONTENT_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/calls";
+						/// <java-name>
+						/// TYPE
+						/// </java-name>
+						[Dot42.DexImport("TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string TYPE = "type";
+						/// <java-name>
+						/// INCOMING_TYPE
+						/// </java-name>
+						[Dot42.DexImport("INCOMING_TYPE", "I", AccessFlags = 25)]
+						public const int INCOMING_TYPE = 1;
+						/// <java-name>
+						/// OUTGOING_TYPE
+						/// </java-name>
+						[Dot42.DexImport("OUTGOING_TYPE", "I", AccessFlags = 25)]
+						public const int OUTGOING_TYPE = 2;
+						/// <java-name>
+						/// MISSED_TYPE
+						/// </java-name>
+						[Dot42.DexImport("MISSED_TYPE", "I", AccessFlags = 25)]
+						public const int MISSED_TYPE = 3;
+						/// <java-name>
+						/// NUMBER
+						/// </java-name>
+						[Dot42.DexImport("NUMBER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NUMBER = "number";
+						/// <java-name>
+						/// DATE
+						/// </java-name>
+						[Dot42.DexImport("DATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DATE = "date";
+						/// <java-name>
+						/// DURATION
+						/// </java-name>
+						[Dot42.DexImport("DURATION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DURATION = "duration";
+						/// <java-name>
+						/// NEW
+						/// </java-name>
+						[Dot42.DexImport("NEW", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NEW = "new";
+						/// <java-name>
+						/// CACHED_NAME
+						/// </java-name>
+						[Dot42.DexImport("CACHED_NAME", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CACHED_NAME = "name";
+						/// <java-name>
+						/// CACHED_NUMBER_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CACHED_NUMBER_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CACHED_NUMBER_TYPE = "numbertype";
+						/// <java-name>
+						/// CACHED_NUMBER_LABEL
+						/// </java-name>
+						[Dot42.DexImport("CACHED_NUMBER_LABEL", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CACHED_NUMBER_LABEL = "numberlabel";
+						/// <java-name>
+						/// IS_READ
+						/// </java-name>
+						[Dot42.DexImport("IS_READ", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string IS_READ = "is_read";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public Calls() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// getLastOutgoingCall
+						/// </java-name>
+						[Dot42.DexImport("getLastOutgoingCall", "(Landroid/content/Context;)Ljava/lang/String;", AccessFlags = 9)]
+						public static string GetLastOutgoingCall(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/provider/Contacts
+		/// </java-name>
+		[Dot42.DexImport("android/provider/Contacts", AccessFlags = 33)]
+		public partial class Contacts
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// AUTHORITY
+				/// </java-name>
+				[Dot42.DexImport("AUTHORITY", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string AUTHORITY = "contacts";
+				/// <java-name>
+				/// CONTENT_URI
+				/// </java-name>
+				[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+				public static readonly global::Android.Net.Uri CONTENT_URI;
+				/// <java-name>
+				/// KIND_EMAIL
+				/// </java-name>
+				[Dot42.DexImport("KIND_EMAIL", "I", AccessFlags = 25)]
+				public const int KIND_EMAIL = 1;
+				/// <java-name>
+				/// KIND_POSTAL
+				/// </java-name>
+				[Dot42.DexImport("KIND_POSTAL", "I", AccessFlags = 25)]
+				public const int KIND_POSTAL = 2;
+				/// <java-name>
+				/// KIND_IM
+				/// </java-name>
+				[Dot42.DexImport("KIND_IM", "I", AccessFlags = 25)]
+				public const int KIND_IM = 3;
+				/// <java-name>
+				/// KIND_ORGANIZATION
+				/// </java-name>
+				[Dot42.DexImport("KIND_ORGANIZATION", "I", AccessFlags = 25)]
+				public const int KIND_ORGANIZATION = 4;
+				/// <java-name>
+				/// KIND_PHONE
+				/// </java-name>
+				[Dot42.DexImport("KIND_PHONE", "I", AccessFlags = 25)]
+				public const int KIND_PHONE = 5;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Contacts() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$Intents
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$Intents", AccessFlags = 25)]
+				public sealed partial class Intents
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// SEARCH_SUGGESTION_CLICKED
+						/// </java-name>
+						[Dot42.DexImport("SEARCH_SUGGESTION_CLICKED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SEARCH_SUGGESTION_CLICKED = "android.provider.Contacts.SEARCH_SUGGESTION_CLICKED";
+						/// <java-name>
+						/// SEARCH_SUGGESTION_DIAL_NUMBER_CLICKED
+						/// </java-name>
+						[Dot42.DexImport("SEARCH_SUGGESTION_DIAL_NUMBER_CLICKED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SEARCH_SUGGESTION_DIAL_NUMBER_CLICKED = "android.provider.Contacts.SEARCH_SUGGESTION_DIAL_NUMBER_CLICKED";
+						/// <java-name>
+						/// SEARCH_SUGGESTION_CREATE_CONTACT_CLICKED
+						/// </java-name>
+						[Dot42.DexImport("SEARCH_SUGGESTION_CREATE_CONTACT_CLICKED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SEARCH_SUGGESTION_CREATE_CONTACT_CLICKED = "android.provider.Contacts.SEARCH_SUGGESTION_CREATE_CONTACT_CLICKED";
+						/// <java-name>
+						/// ATTACH_IMAGE
+						/// </java-name>
+						[Dot42.DexImport("ATTACH_IMAGE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ATTACH_IMAGE = "com.android.contacts.action.ATTACH_IMAGE";
+						/// <java-name>
+						/// SHOW_OR_CREATE_CONTACT
+						/// </java-name>
+						[Dot42.DexImport("SHOW_OR_CREATE_CONTACT", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SHOW_OR_CREATE_CONTACT = "com.android.contacts.action.SHOW_OR_CREATE_CONTACT";
+						/// <java-name>
+						/// EXTRA_FORCE_CREATE
+						/// </java-name>
+						[Dot42.DexImport("EXTRA_FORCE_CREATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string EXTRA_FORCE_CREATE = "com.android.contacts.action.FORCE_CREATE";
+						/// <java-name>
+						/// EXTRA_CREATE_DESCRIPTION
+						/// </java-name>
+						[Dot42.DexImport("EXTRA_CREATE_DESCRIPTION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string EXTRA_CREATE_DESCRIPTION = "com.android.contacts.action.CREATE_DESCRIPTION";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public Intents() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// android/provider/Contacts$Intents$Insert
+						/// </java-name>
+						[Dot42.DexImport("android/provider/Contacts$Intents$Insert", AccessFlags = 25)]
+						public sealed partial class Insert
+ /* scope: __dot42__ */ 
+						{
+								/// <java-name>
+								/// ACTION
+								/// </java-name>
+								[Dot42.DexImport("ACTION", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string ACTION = "android.intent.action.INSERT";
+								/// <java-name>
+								/// FULL_MODE
+								/// </java-name>
+								[Dot42.DexImport("FULL_MODE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string FULL_MODE = "full_mode";
+								/// <java-name>
+								/// NAME
+								/// </java-name>
+								[Dot42.DexImport("NAME", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string NAME = "name";
+								/// <java-name>
+								/// PHONETIC_NAME
+								/// </java-name>
+								[Dot42.DexImport("PHONETIC_NAME", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string PHONETIC_NAME = "phonetic_name";
+								/// <java-name>
+								/// COMPANY
+								/// </java-name>
+								[Dot42.DexImport("COMPANY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string COMPANY = "company";
+								/// <java-name>
+								/// JOB_TITLE
+								/// </java-name>
+								[Dot42.DexImport("JOB_TITLE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string JOB_TITLE = "job_title";
+								/// <java-name>
+								/// NOTES
+								/// </java-name>
+								[Dot42.DexImport("NOTES", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string NOTES = "notes";
+								/// <java-name>
+								/// PHONE
+								/// </java-name>
+								[Dot42.DexImport("PHONE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string PHONE = "phone";
+								/// <java-name>
+								/// PHONE_TYPE
+								/// </java-name>
+								[Dot42.DexImport("PHONE_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string PHONE_TYPE = "phone_type";
+								/// <java-name>
+								/// PHONE_ISPRIMARY
+								/// </java-name>
+								[Dot42.DexImport("PHONE_ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string PHONE_ISPRIMARY = "phone_isprimary";
+								/// <java-name>
+								/// SECONDARY_PHONE
+								/// </java-name>
+								[Dot42.DexImport("SECONDARY_PHONE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string SECONDARY_PHONE = "secondary_phone";
+								/// <java-name>
+								/// SECONDARY_PHONE_TYPE
+								/// </java-name>
+								[Dot42.DexImport("SECONDARY_PHONE_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string SECONDARY_PHONE_TYPE = "secondary_phone_type";
+								/// <java-name>
+								/// TERTIARY_PHONE
+								/// </java-name>
+								[Dot42.DexImport("TERTIARY_PHONE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string TERTIARY_PHONE = "tertiary_phone";
+								/// <java-name>
+								/// TERTIARY_PHONE_TYPE
+								/// </java-name>
+								[Dot42.DexImport("TERTIARY_PHONE_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string TERTIARY_PHONE_TYPE = "tertiary_phone_type";
+								/// <java-name>
+								/// EMAIL
+								/// </java-name>
+								[Dot42.DexImport("EMAIL", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string EMAIL = "email";
+								/// <java-name>
+								/// EMAIL_TYPE
+								/// </java-name>
+								[Dot42.DexImport("EMAIL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string EMAIL_TYPE = "email_type";
+								/// <java-name>
+								/// EMAIL_ISPRIMARY
+								/// </java-name>
+								[Dot42.DexImport("EMAIL_ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string EMAIL_ISPRIMARY = "email_isprimary";
+								/// <java-name>
+								/// SECONDARY_EMAIL
+								/// </java-name>
+								[Dot42.DexImport("SECONDARY_EMAIL", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string SECONDARY_EMAIL = "secondary_email";
+								/// <java-name>
+								/// SECONDARY_EMAIL_TYPE
+								/// </java-name>
+								[Dot42.DexImport("SECONDARY_EMAIL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string SECONDARY_EMAIL_TYPE = "secondary_email_type";
+								/// <java-name>
+								/// TERTIARY_EMAIL
+								/// </java-name>
+								[Dot42.DexImport("TERTIARY_EMAIL", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string TERTIARY_EMAIL = "tertiary_email";
+								/// <java-name>
+								/// TERTIARY_EMAIL_TYPE
+								/// </java-name>
+								[Dot42.DexImport("TERTIARY_EMAIL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string TERTIARY_EMAIL_TYPE = "tertiary_email_type";
+								/// <java-name>
+								/// POSTAL
+								/// </java-name>
+								[Dot42.DexImport("POSTAL", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string POSTAL = "postal";
+								/// <java-name>
+								/// POSTAL_TYPE
+								/// </java-name>
+								[Dot42.DexImport("POSTAL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string POSTAL_TYPE = "postal_type";
+								/// <java-name>
+								/// POSTAL_ISPRIMARY
+								/// </java-name>
+								[Dot42.DexImport("POSTAL_ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string POSTAL_ISPRIMARY = "postal_isprimary";
+								/// <java-name>
+								/// IM_HANDLE
+								/// </java-name>
+								[Dot42.DexImport("IM_HANDLE", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string IM_HANDLE = "im_handle";
+								/// <java-name>
+								/// IM_PROTOCOL
+								/// </java-name>
+								[Dot42.DexImport("IM_PROTOCOL", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string IM_PROTOCOL = "im_protocol";
+								/// <java-name>
+								/// IM_ISPRIMARY
+								/// </java-name>
+								[Dot42.DexImport("IM_ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string IM_ISPRIMARY = "im_isprimary";
+								[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+								public Insert() /* MethodBuilder.Create */ 
+								{
+								}
+
+						}
+
+						/// <java-name>
+						/// android/provider/Contacts$Intents$UI
+						/// </java-name>
+						[Dot42.DexImport("android/provider/Contacts$Intents$UI", AccessFlags = 25)]
+						public sealed partial class UI
+ /* scope: __dot42__ */ 
+						{
+								/// <java-name>
+								/// LIST_DEFAULT
+								/// </java-name>
+								[Dot42.DexImport("LIST_DEFAULT", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string LIST_DEFAULT = "com.android.contacts.action.LIST_DEFAULT";
+								/// <java-name>
+								/// LIST_GROUP_ACTION
+								/// </java-name>
+								[Dot42.DexImport("LIST_GROUP_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string LIST_GROUP_ACTION = "com.android.contacts.action.LIST_GROUP";
+								/// <java-name>
+								/// GROUP_NAME_EXTRA_KEY
+								/// </java-name>
+								[Dot42.DexImport("GROUP_NAME_EXTRA_KEY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string GROUP_NAME_EXTRA_KEY = "com.android.contacts.extra.GROUP";
+								/// <java-name>
+								/// LIST_ALL_CONTACTS_ACTION
+								/// </java-name>
+								[Dot42.DexImport("LIST_ALL_CONTACTS_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string LIST_ALL_CONTACTS_ACTION = "com.android.contacts.action.LIST_ALL_CONTACTS";
+								/// <java-name>
+								/// LIST_CONTACTS_WITH_PHONES_ACTION
+								/// </java-name>
+								[Dot42.DexImport("LIST_CONTACTS_WITH_PHONES_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string LIST_CONTACTS_WITH_PHONES_ACTION = "com.android.contacts.action.LIST_CONTACTS_WITH_PHONES";
+								/// <java-name>
+								/// LIST_STARRED_ACTION
+								/// </java-name>
+								[Dot42.DexImport("LIST_STARRED_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string LIST_STARRED_ACTION = "com.android.contacts.action.LIST_STARRED";
+								/// <java-name>
+								/// LIST_FREQUENT_ACTION
+								/// </java-name>
+								[Dot42.DexImport("LIST_FREQUENT_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string LIST_FREQUENT_ACTION = "com.android.contacts.action.LIST_FREQUENT";
+								/// <java-name>
+								/// LIST_STREQUENT_ACTION
+								/// </java-name>
+								[Dot42.DexImport("LIST_STREQUENT_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string LIST_STREQUENT_ACTION = "com.android.contacts.action.LIST_STREQUENT";
+								/// <java-name>
+								/// TITLE_EXTRA_KEY
+								/// </java-name>
+								[Dot42.DexImport("TITLE_EXTRA_KEY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string TITLE_EXTRA_KEY = "com.android.contacts.extra.TITLE_EXTRA";
+								/// <java-name>
+								/// FILTER_CONTACTS_ACTION
+								/// </java-name>
+								[Dot42.DexImport("FILTER_CONTACTS_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string FILTER_CONTACTS_ACTION = "com.android.contacts.action.FILTER_CONTACTS";
+								/// <java-name>
+								/// FILTER_TEXT_EXTRA_KEY
+								/// </java-name>
+								[Dot42.DexImport("FILTER_TEXT_EXTRA_KEY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string FILTER_TEXT_EXTRA_KEY = "com.android.contacts.extra.FILTER_TEXT";
+								[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+								public UI() /* MethodBuilder.Create */ 
+								{
+								}
+
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$Extensions
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$Extensions", AccessFlags = 25)]
+				public sealed partial class Extensions : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IExtensionsColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_TYPE = "vnd.android.cursor.dir/contact_extensions";
+						/// <java-name>
+						/// CONTENT_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/contact_extensions";
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "person, name ASC";
+						/// <java-name>
+						/// PERSON_ID
+						/// </java-name>
+						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PERSON_ID = "person";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal Extensions() /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$ExtensionsColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$ExtensionsColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
+				public static partial class IExtensionsColumnsConstants
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// NAME
+						/// </java-name>
+						[Dot42.DexImport("NAME", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NAME = "name";
+						/// <java-name>
+						/// VALUE
+						/// </java-name>
+						[Dot42.DexImport("VALUE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string VALUE = "value";
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$ExtensionsColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$ExtensionsColumns", AccessFlags = 1545)]
+				public partial interface IExtensionsColumns
+ /* scope: __dot42__ */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$Photos
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$Photos", AccessFlags = 25)]
+				public sealed partial class Photos : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IPhotosColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_DIRECTORY
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_DIRECTORY = "photo";
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "person ASC";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal Photos() /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$PhotosColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$PhotosColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
+				public static partial class IPhotosColumnsConstants
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// LOCAL_VERSION
+						/// </java-name>
+						[Dot42.DexImport("LOCAL_VERSION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string LOCAL_VERSION = "local_version";
+						/// <java-name>
+						/// PERSON_ID
+						/// </java-name>
+						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PERSON_ID = "person";
+						/// <java-name>
+						/// DOWNLOAD_REQUIRED
+						/// </java-name>
+						[Dot42.DexImport("DOWNLOAD_REQUIRED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DOWNLOAD_REQUIRED = "download_required";
+						/// <java-name>
+						/// EXISTS_ON_SERVER
+						/// </java-name>
+						[Dot42.DexImport("EXISTS_ON_SERVER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string EXISTS_ON_SERVER = "exists_on_server";
+						/// <java-name>
+						/// SYNC_ERROR
+						/// </java-name>
+						[Dot42.DexImport("SYNC_ERROR", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SYNC_ERROR = "sync_error";
+						/// <java-name>
+						/// DATA
+						/// </java-name>
+						[Dot42.DexImport("DATA", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DATA = "data";
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$PhotosColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$PhotosColumns", AccessFlags = 1545)]
+				public partial interface IPhotosColumns
+ /* scope: __dot42__ */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$Organizations
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$Organizations", AccessFlags = 25)]
+				public sealed partial class Organizations : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IOrganizationColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_DIRECTORY
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_DIRECTORY = "organizations";
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "company, title, isprimary ASC";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal Organizations() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// getDisplayLabel
+						/// </java-name>
+						[Dot42.DexImport("getDisplayLabel", "(Landroid/content/Context;ILjava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 25)]
+						public static global::Java.Lang.ICharSequence GetDisplayLabel(global::Android.Content.Context context, int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+						{
+								return default(global::Java.Lang.ICharSequence);
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$OrganizationColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$OrganizationColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
+				public static partial class IOrganizationColumnsConstants
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// TYPE
+						/// </java-name>
+						[Dot42.DexImport("TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string TYPE = "type";
+						/// <java-name>
+						/// TYPE_CUSTOM
+						/// </java-name>
+						[Dot42.DexImport("TYPE_CUSTOM", "I", AccessFlags = 25)]
+						public const int TYPE_CUSTOM = 0;
+						/// <java-name>
+						/// TYPE_WORK
+						/// </java-name>
+						[Dot42.DexImport("TYPE_WORK", "I", AccessFlags = 25)]
+						public const int TYPE_WORK = 1;
+						/// <java-name>
+						/// TYPE_OTHER
+						/// </java-name>
+						[Dot42.DexImport("TYPE_OTHER", "I", AccessFlags = 25)]
+						public const int TYPE_OTHER = 2;
+						/// <java-name>
+						/// LABEL
+						/// </java-name>
+						[Dot42.DexImport("LABEL", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string LABEL = "label";
+						/// <java-name>
+						/// COMPANY
+						/// </java-name>
+						[Dot42.DexImport("COMPANY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string COMPANY = "company";
+						/// <java-name>
+						/// TITLE
+						/// </java-name>
+						[Dot42.DexImport("TITLE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string TITLE = "title";
+						/// <java-name>
+						/// PERSON_ID
+						/// </java-name>
+						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PERSON_ID = "person";
+						/// <java-name>
+						/// ISPRIMARY
+						/// </java-name>
+						[Dot42.DexImport("ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ISPRIMARY = "isprimary";
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$OrganizationColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$OrganizationColumns", AccessFlags = 1545)]
+				public partial interface IOrganizationColumns
+ /* scope: __dot42__ */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$PresenceColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$PresenceColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
+				public static partial class IPresenceColumnsConstants
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// PRIORITY
+						/// </java-name>
+						[Dot42.DexImport("PRIORITY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PRIORITY = "priority";
+						/// <java-name>
+						/// PRESENCE_STATUS
+						/// </java-name>
+						[Dot42.DexImport("PRESENCE_STATUS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PRESENCE_STATUS = "mode";
+						/// <java-name>
+						/// OFFLINE
+						/// </java-name>
+						[Dot42.DexImport("OFFLINE", "I", AccessFlags = 25)]
+						public const int OFFLINE = 0;
+						/// <java-name>
+						/// INVISIBLE
+						/// </java-name>
+						[Dot42.DexImport("INVISIBLE", "I", AccessFlags = 25)]
+						public const int INVISIBLE = 1;
+						/// <java-name>
+						/// AWAY
+						/// </java-name>
+						[Dot42.DexImport("AWAY", "I", AccessFlags = 25)]
+						public const int AWAY = 2;
+						/// <java-name>
+						/// IDLE
+						/// </java-name>
+						[Dot42.DexImport("IDLE", "I", AccessFlags = 25)]
+						public const int IDLE = 3;
+						/// <java-name>
+						/// DO_NOT_DISTURB
+						/// </java-name>
+						[Dot42.DexImport("DO_NOT_DISTURB", "I", AccessFlags = 25)]
+						public const int DO_NOT_DISTURB = 4;
+						/// <java-name>
+						/// AVAILABLE
+						/// </java-name>
+						[Dot42.DexImport("AVAILABLE", "I", AccessFlags = 25)]
+						public const int AVAILABLE = 5;
+						/// <java-name>
+						/// PRESENCE_CUSTOM_STATUS
+						/// </java-name>
+						[Dot42.DexImport("PRESENCE_CUSTOM_STATUS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PRESENCE_CUSTOM_STATUS = "status";
+						/// <java-name>
+						/// IM_PROTOCOL
+						/// </java-name>
+						[Dot42.DexImport("IM_PROTOCOL", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string IM_PROTOCOL = "im_protocol";
+						/// <java-name>
+						/// IM_HANDLE
+						/// </java-name>
+						[Dot42.DexImport("IM_HANDLE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string IM_HANDLE = "im_handle";
+						/// <java-name>
+						/// IM_ACCOUNT
+						/// </java-name>
+						[Dot42.DexImport("IM_ACCOUNT", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string IM_ACCOUNT = "im_account";
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$PresenceColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$PresenceColumns", AccessFlags = 1545)]
+				public partial interface IPresenceColumns
+ /* scope: __dot42__ */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$ContactMethods
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$ContactMethods", AccessFlags = 25)]
+				public sealed partial class ContactMethods : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IContactMethodsColumns, global::Android.Provider.Contacts.IPeopleColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// POSTAL_LOCATION_LATITUDE
+						/// </java-name>
+						[Dot42.DexImport("POSTAL_LOCATION_LATITUDE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string POSTAL_LOCATION_LATITUDE = "data";
+						/// <java-name>
+						/// POSTAL_LOCATION_LONGITUDE
+						/// </java-name>
+						[Dot42.DexImport("POSTAL_LOCATION_LONGITUDE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string POSTAL_LOCATION_LONGITUDE = "aux_data";
+						/// <java-name>
+						/// PROTOCOL_AIM
+						/// </java-name>
+						[Dot42.DexImport("PROTOCOL_AIM", "I", AccessFlags = 25)]
+						public const int PROTOCOL_AIM = 0;
+						/// <java-name>
+						/// PROTOCOL_MSN
+						/// </java-name>
+						[Dot42.DexImport("PROTOCOL_MSN", "I", AccessFlags = 25)]
+						public const int PROTOCOL_MSN = 1;
+						/// <java-name>
+						/// PROTOCOL_YAHOO
+						/// </java-name>
+						[Dot42.DexImport("PROTOCOL_YAHOO", "I", AccessFlags = 25)]
+						public const int PROTOCOL_YAHOO = 2;
+						/// <java-name>
+						/// PROTOCOL_SKYPE
+						/// </java-name>
+						[Dot42.DexImport("PROTOCOL_SKYPE", "I", AccessFlags = 25)]
+						public const int PROTOCOL_SKYPE = 3;
+						/// <java-name>
+						/// PROTOCOL_QQ
+						/// </java-name>
+						[Dot42.DexImport("PROTOCOL_QQ", "I", AccessFlags = 25)]
+						public const int PROTOCOL_QQ = 4;
+						/// <java-name>
+						/// PROTOCOL_GOOGLE_TALK
+						/// </java-name>
+						[Dot42.DexImport("PROTOCOL_GOOGLE_TALK", "I", AccessFlags = 25)]
+						public const int PROTOCOL_GOOGLE_TALK = 5;
+						/// <java-name>
+						/// PROTOCOL_ICQ
+						/// </java-name>
+						[Dot42.DexImport("PROTOCOL_ICQ", "I", AccessFlags = 25)]
+						public const int PROTOCOL_ICQ = 6;
+						/// <java-name>
+						/// PROTOCOL_JABBER
+						/// </java-name>
+						[Dot42.DexImport("PROTOCOL_JABBER", "I", AccessFlags = 25)]
+						public const int PROTOCOL_JABBER = 7;
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_EMAIL_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_EMAIL_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_EMAIL_URI;
+						/// <java-name>
+						/// CONTENT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_TYPE = "vnd.android.cursor.dir/contact-methods";
+						/// <java-name>
+						/// CONTENT_EMAIL_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_EMAIL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_EMAIL_TYPE = "vnd.android.cursor.dir/email";
+						/// <java-name>
+						/// CONTENT_POSTAL_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_POSTAL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_POSTAL_TYPE = "vnd.android.cursor.dir/postal-address";
+						/// <java-name>
+						/// CONTENT_EMAIL_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_EMAIL_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_EMAIL_ITEM_TYPE = "vnd.android.cursor.item/email";
+						/// <java-name>
+						/// CONTENT_POSTAL_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_POSTAL_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_POSTAL_ITEM_TYPE = "vnd.android.cursor.item/postal-address";
+						/// <java-name>
+						/// CONTENT_IM_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_IM_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_IM_ITEM_TYPE = "vnd.android.cursor.item/jabber-im";
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "name ASC";
+						/// <java-name>
+						/// PERSON_ID
+						/// </java-name>
+						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PERSON_ID = "person";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal ContactMethods() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// encodePredefinedImProtocol
+						/// </java-name>
+						[Dot42.DexImport("encodePredefinedImProtocol", "(I)Ljava/lang/String;", AccessFlags = 9)]
+						public static string EncodePredefinedImProtocol(int int32) /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+						/// <java-name>
+						/// encodeCustomImProtocol
+						/// </java-name>
+						[Dot42.DexImport("encodeCustomImProtocol", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+						public static string EncodeCustomImProtocol(string @string) /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+						/// <java-name>
+						/// decodeImProtocol
+						/// </java-name>
+						[Dot42.DexImport("decodeImProtocol", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 9)]
+						public static object DecodeImProtocol(string @string) /* MethodBuilder.Create */ 
+						{
+								return default(object);
+						}
+
+						/// <java-name>
+						/// getDisplayLabel
+						/// </java-name>
+						[Dot42.DexImport("getDisplayLabel", "(Landroid/content/Context;IILjava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 25)]
+						public static global::Java.Lang.ICharSequence GetDisplayLabel(global::Android.Content.Context context, int int32, int int321, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+						{
+								return default(global::Java.Lang.ICharSequence);
+						}
+
+						/// <java-name>
+						/// addPostalLocation
+						/// </java-name>
+						[Dot42.DexImport("addPostalLocation", "(Landroid/content/Context;JDD)V", AccessFlags = 1)]
+						public void AddPostalLocation(global::Android.Content.Context context, long int64, double @double, double double1) /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$ContactMethodsColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$ContactMethodsColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
+				public static partial class IContactMethodsColumnsConstants
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// KIND
+						/// </java-name>
+						[Dot42.DexImport("KIND", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string KIND = "kind";
+						/// <java-name>
+						/// TYPE
+						/// </java-name>
+						[Dot42.DexImport("TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string TYPE = "type";
+						/// <java-name>
+						/// TYPE_CUSTOM
+						/// </java-name>
+						[Dot42.DexImport("TYPE_CUSTOM", "I", AccessFlags = 25)]
+						public const int TYPE_CUSTOM = 0;
+						/// <java-name>
+						/// TYPE_HOME
+						/// </java-name>
+						[Dot42.DexImport("TYPE_HOME", "I", AccessFlags = 25)]
+						public const int TYPE_HOME = 1;
+						/// <java-name>
+						/// TYPE_WORK
+						/// </java-name>
+						[Dot42.DexImport("TYPE_WORK", "I", AccessFlags = 25)]
+						public const int TYPE_WORK = 2;
+						/// <java-name>
+						/// TYPE_OTHER
+						/// </java-name>
+						[Dot42.DexImport("TYPE_OTHER", "I", AccessFlags = 25)]
+						public const int TYPE_OTHER = 3;
+						/// <java-name>
+						/// LABEL
+						/// </java-name>
+						[Dot42.DexImport("LABEL", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string LABEL = "label";
+						/// <java-name>
+						/// DATA
+						/// </java-name>
+						[Dot42.DexImport("DATA", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DATA = "data";
+						/// <java-name>
+						/// AUX_DATA
+						/// </java-name>
+						[Dot42.DexImport("AUX_DATA", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string AUX_DATA = "aux_data";
+						/// <java-name>
+						/// ISPRIMARY
+						/// </java-name>
+						[Dot42.DexImport("ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ISPRIMARY = "isprimary";
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$ContactMethodsColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$ContactMethodsColumns", AccessFlags = 1545)]
+				public partial interface IContactMethodsColumns
+ /* scope: __dot42__ */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$GroupMembership
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$GroupMembership", AccessFlags = 25)]
+				public sealed partial class GroupMembership : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IGroupsColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// RAW_CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("RAW_CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri RAW_CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_DIRECTORY
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_DIRECTORY = "groupmembership";
+						/// <java-name>
+						/// CONTENT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_TYPE = "vnd.android.cursor.dir/contactsgroupmembership";
+						/// <java-name>
+						/// CONTENT_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/contactsgroupmembership";
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "group_id ASC";
+						/// <java-name>
+						/// GROUP_ID
+						/// </java-name>
+						[Dot42.DexImport("GROUP_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GROUP_ID = "group_id";
+						/// <java-name>
+						/// GROUP_SYNC_ID
+						/// </java-name>
+						[Dot42.DexImport("GROUP_SYNC_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GROUP_SYNC_ID = "group_sync_id";
+						/// <java-name>
+						/// GROUP_SYNC_ACCOUNT
+						/// </java-name>
+						[Dot42.DexImport("GROUP_SYNC_ACCOUNT", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GROUP_SYNC_ACCOUNT = "group_sync_account";
+						/// <java-name>
+						/// GROUP_SYNC_ACCOUNT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("GROUP_SYNC_ACCOUNT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GROUP_SYNC_ACCOUNT_TYPE = "group_sync_account_type";
+						/// <java-name>
+						/// PERSON_ID
+						/// </java-name>
+						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PERSON_ID = "person";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal GroupMembership() /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$Phones
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$Phones", AccessFlags = 25)]
+				public sealed partial class Phones : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IPhonesColumns, global::Android.Provider.Contacts.IPeopleColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_FILTER_URL
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_FILTER_URL", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_FILTER_URL;
+						/// <java-name>
+						/// CONTENT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_TYPE = "vnd.android.cursor.dir/phone";
+						/// <java-name>
+						/// CONTENT_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/phone";
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "name ASC";
+						/// <java-name>
+						/// PERSON_ID
+						/// </java-name>
+						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PERSON_ID = "person";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal Phones() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// getDisplayLabel
+						/// </java-name>
+						[Dot42.DexImport("getDisplayLabel", "(Landroid/content/Context;ILjava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljav" +
+    "a/lang/CharSequence;", AccessFlags = 25)]
+						public static global::Java.Lang.ICharSequence GetDisplayLabel(global::Android.Content.Context context, int int32, global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence[] charSequence1) /* MethodBuilder.Create */ 
+						{
+								return default(global::Java.Lang.ICharSequence);
+						}
+
+						/// <java-name>
+						/// getDisplayLabel
+						/// </java-name>
+						[Dot42.DexImport("getDisplayLabel", "(Landroid/content/Context;ILjava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 25)]
+						public static global::Java.Lang.ICharSequence GetDisplayLabel(global::Android.Content.Context context, int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+						{
+								return default(global::Java.Lang.ICharSequence);
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$PhonesColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$PhonesColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
+				public static partial class IPhonesColumnsConstants
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// TYPE
+						/// </java-name>
+						[Dot42.DexImport("TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string TYPE = "type";
+						/// <java-name>
+						/// TYPE_CUSTOM
+						/// </java-name>
+						[Dot42.DexImport("TYPE_CUSTOM", "I", AccessFlags = 25)]
+						public const int TYPE_CUSTOM = 0;
+						/// <java-name>
+						/// TYPE_HOME
+						/// </java-name>
+						[Dot42.DexImport("TYPE_HOME", "I", AccessFlags = 25)]
+						public const int TYPE_HOME = 1;
+						/// <java-name>
+						/// TYPE_MOBILE
+						/// </java-name>
+						[Dot42.DexImport("TYPE_MOBILE", "I", AccessFlags = 25)]
+						public const int TYPE_MOBILE = 2;
+						/// <java-name>
+						/// TYPE_WORK
+						/// </java-name>
+						[Dot42.DexImport("TYPE_WORK", "I", AccessFlags = 25)]
+						public const int TYPE_WORK = 3;
+						/// <java-name>
+						/// TYPE_FAX_WORK
+						/// </java-name>
+						[Dot42.DexImport("TYPE_FAX_WORK", "I", AccessFlags = 25)]
+						public const int TYPE_FAX_WORK = 4;
+						/// <java-name>
+						/// TYPE_FAX_HOME
+						/// </java-name>
+						[Dot42.DexImport("TYPE_FAX_HOME", "I", AccessFlags = 25)]
+						public const int TYPE_FAX_HOME = 5;
+						/// <java-name>
+						/// TYPE_PAGER
+						/// </java-name>
+						[Dot42.DexImport("TYPE_PAGER", "I", AccessFlags = 25)]
+						public const int TYPE_PAGER = 6;
+						/// <java-name>
+						/// TYPE_OTHER
+						/// </java-name>
+						[Dot42.DexImport("TYPE_OTHER", "I", AccessFlags = 25)]
+						public const int TYPE_OTHER = 7;
+						/// <java-name>
+						/// LABEL
+						/// </java-name>
+						[Dot42.DexImport("LABEL", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string LABEL = "label";
+						/// <java-name>
+						/// NUMBER
+						/// </java-name>
+						[Dot42.DexImport("NUMBER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NUMBER = "number";
+						/// <java-name>
+						/// NUMBER_KEY
+						/// </java-name>
+						[Dot42.DexImport("NUMBER_KEY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NUMBER_KEY = "number_key";
+						/// <java-name>
+						/// ISPRIMARY
+						/// </java-name>
+						[Dot42.DexImport("ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ISPRIMARY = "isprimary";
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$PhonesColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$PhonesColumns", AccessFlags = 1545)]
+				public partial interface IPhonesColumns
+ /* scope: __dot42__ */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$Groups
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$Groups", AccessFlags = 25)]
+				public sealed partial class Groups : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IGroupsColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// DELETED_CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("DELETED_CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri DELETED_CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_TYPE = "vnd.android.cursor.dir/contactsgroup";
+						/// <java-name>
+						/// CONTENT_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/contactsgroup";
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "name ASC";
+						/// <java-name>
+						/// GROUP_ANDROID_STARRED
+						/// </java-name>
+						[Dot42.DexImport("GROUP_ANDROID_STARRED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GROUP_ANDROID_STARRED = "Starred in Android";
+						/// <java-name>
+						/// GROUP_MY_CONTACTS
+						/// </java-name>
+						[Dot42.DexImport("GROUP_MY_CONTACTS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GROUP_MY_CONTACTS = "Contacts";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal Groups() /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$GroupsColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$GroupsColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
+				public static partial class IGroupsColumnsConstants
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// NAME
+						/// </java-name>
+						[Dot42.DexImport("NAME", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NAME = "name";
+						/// <java-name>
+						/// NOTES
+						/// </java-name>
+						[Dot42.DexImport("NOTES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NOTES = "notes";
+						/// <java-name>
+						/// SHOULD_SYNC
+						/// </java-name>
+						[Dot42.DexImport("SHOULD_SYNC", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SHOULD_SYNC = "should_sync";
+						/// <java-name>
+						/// SYSTEM_ID
+						/// </java-name>
+						[Dot42.DexImport("SYSTEM_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SYSTEM_ID = "system_id";
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$GroupsColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$GroupsColumns", AccessFlags = 1545)]
+				public partial interface IGroupsColumns
+ /* scope: __dot42__ */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$People
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$People", AccessFlags = 25)]
+				public sealed partial class People : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IPeopleColumns, global::Android.Provider.Contacts.IPhonesColumns, global::Android.Provider.Contacts.IPresenceColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_FILTER_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_FILTER_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_FILTER_URI;
+						/// <java-name>
+						/// DELETED_CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("DELETED_CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri DELETED_CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_TYPE = "vnd.android.cursor.dir/person";
+						/// <java-name>
+						/// CONTENT_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/person";
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "name ASC";
+						/// <java-name>
+						/// PRIMARY_PHONE_ID
+						/// </java-name>
+						[Dot42.DexImport("PRIMARY_PHONE_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PRIMARY_PHONE_ID = "primary_phone";
+						/// <java-name>
+						/// PRIMARY_EMAIL_ID
+						/// </java-name>
+						[Dot42.DexImport("PRIMARY_EMAIL_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PRIMARY_EMAIL_ID = "primary_email";
+						/// <java-name>
+						/// PRIMARY_ORGANIZATION_ID
+						/// </java-name>
+						[Dot42.DexImport("PRIMARY_ORGANIZATION_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PRIMARY_ORGANIZATION_ID = "primary_organization";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal People() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// markAsContacted
+						/// </java-name>
+						[Dot42.DexImport("markAsContacted", "(Landroid/content/ContentResolver;J)V", AccessFlags = 9)]
+						public static void MarkAsContacted(global::Android.Content.ContentResolver contentResolver, long int64) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// addToMyContactsGroup
+						/// </java-name>
+						[Dot42.DexImport("addToMyContactsGroup", "(Landroid/content/ContentResolver;J)Landroid/net/Uri;", AccessFlags = 9)]
+						public static global::Android.Net.Uri AddToMyContactsGroup(global::Android.Content.ContentResolver contentResolver, long int64) /* MethodBuilder.Create */ 
+						{
+								return default(global::Android.Net.Uri);
+						}
+
+						/// <java-name>
+						/// addToGroup
+						/// </java-name>
+						[Dot42.DexImport("addToGroup", "(Landroid/content/ContentResolver;JLjava/lang/String;)Landroid/net/Uri;", AccessFlags = 9)]
+						public static global::Android.Net.Uri AddToGroup(global::Android.Content.ContentResolver contentResolver, long int64, string @string) /* MethodBuilder.Create */ 
+						{
+								return default(global::Android.Net.Uri);
+						}
+
+						/// <java-name>
+						/// addToGroup
+						/// </java-name>
+						[Dot42.DexImport("addToGroup", "(Landroid/content/ContentResolver;JJ)Landroid/net/Uri;", AccessFlags = 9)]
+						public static global::Android.Net.Uri AddToGroup(global::Android.Content.ContentResolver contentResolver, long int64, long int641) /* MethodBuilder.Create */ 
+						{
+								return default(global::Android.Net.Uri);
+						}
+
+						/// <java-name>
+						/// createPersonInMyContactsGroup
+						/// </java-name>
+						[Dot42.DexImport("createPersonInMyContactsGroup", "(Landroid/content/ContentResolver;Landroid/content/ContentValues;)Landroid/net/Ur" +
+    "i;", AccessFlags = 9)]
+						public static global::Android.Net.Uri CreatePersonInMyContactsGroup(global::Android.Content.ContentResolver contentResolver, global::Android.Content.ContentValues contentValues) /* MethodBuilder.Create */ 
+						{
+								return default(global::Android.Net.Uri);
+						}
+
+						/// <java-name>
+						/// queryGroups
+						/// </java-name>
+						[Dot42.DexImport("queryGroups", "(Landroid/content/ContentResolver;J)Landroid/database/Cursor;", AccessFlags = 9)]
+						public static global::Android.Database.ICursor QueryGroups(global::Android.Content.ContentResolver contentResolver, long int64) /* MethodBuilder.Create */ 
+						{
+								return default(global::Android.Database.ICursor);
+						}
+
+						/// <java-name>
+						/// setPhotoData
+						/// </java-name>
+						[Dot42.DexImport("setPhotoData", "(Landroid/content/ContentResolver;Landroid/net/Uri;[B)V", AccessFlags = 9)]
+						public static void SetPhotoData(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri, sbyte[] sByte) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// setPhotoData
+						/// </java-name>
+						[Dot42.DexImport("setPhotoData", "(Landroid/content/ContentResolver;Landroid/net/Uri;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
+						public static void SetPhotoData(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri, byte[] @byte) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// openContactPhotoInputStream
+						/// </java-name>
+						[Dot42.DexImport("openContactPhotoInputStream", "(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/io/InputStream;", AccessFlags = 9)]
+						public static global::Java.Io.InputStream OpenContactPhotoInputStream(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
+						{
+								return default(global::Java.Io.InputStream);
+						}
+
+						/// <java-name>
+						/// loadContactPhoto
+						/// </java-name>
+						[Dot42.DexImport("loadContactPhoto", "(Landroid/content/Context;Landroid/net/Uri;ILandroid/graphics/BitmapFactory$Optio" +
+    "ns;)Landroid/graphics/Bitmap;", AccessFlags = 9)]
+						public static global::Android.Graphics.Bitmap LoadContactPhoto(global::Android.Content.Context context, global::Android.Net.Uri uri, int int32, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
+						{
+								return default(global::Android.Graphics.Bitmap);
+						}
+
+						/// <java-name>
+						/// android/provider/Contacts$People$Extensions
+						/// </java-name>
+						[Dot42.DexImport("android/provider/Contacts$People$Extensions", AccessFlags = 9)]
+						public partial class Extensions : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IExtensionsColumns
+ /* scope: __dot42__ */ 
+						{
+								/// <java-name>
+								/// CONTENT_DIRECTORY
+								/// </java-name>
+								[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string CONTENT_DIRECTORY = "extensions";
+								/// <java-name>
+								/// DEFAULT_SORT_ORDER
+								/// </java-name>
+								[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string DEFAULT_SORT_ORDER = "name ASC";
+								/// <java-name>
+								/// PERSON_ID
+								/// </java-name>
+								[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string PERSON_ID = "person";
+								[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+								internal Extensions() /* MethodBuilder.Create */ 
+								{
+								}
+
+						}
+
+						/// <java-name>
+						/// android/provider/Contacts$People$ContactMethods
+						/// </java-name>
+						[Dot42.DexImport("android/provider/Contacts$People$ContactMethods", AccessFlags = 25)]
+						public sealed partial class ContactMethods : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IContactMethodsColumns, global::Android.Provider.Contacts.IPeopleColumns
+ /* scope: __dot42__ */ 
+						{
+								/// <java-name>
+								/// CONTENT_DIRECTORY
+								/// </java-name>
+								[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string CONTENT_DIRECTORY = "contact_methods";
+								/// <java-name>
+								/// DEFAULT_SORT_ORDER
+								/// </java-name>
+								[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string DEFAULT_SORT_ORDER = "data ASC";
+								[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+								internal ContactMethods() /* MethodBuilder.Create */ 
+								{
+								}
+
+						}
+
+						/// <java-name>
+						/// android/provider/Contacts$People$Phones
+						/// </java-name>
+						[Dot42.DexImport("android/provider/Contacts$People$Phones", AccessFlags = 25)]
+						public sealed partial class Phones : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IPhonesColumns, global::Android.Provider.Contacts.IPeopleColumns
+ /* scope: __dot42__ */ 
+						{
+								/// <java-name>
+								/// CONTENT_DIRECTORY
+								/// </java-name>
+								[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string CONTENT_DIRECTORY = "phones";
+								/// <java-name>
+								/// DEFAULT_SORT_ORDER
+								/// </java-name>
+								[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+								public const string DEFAULT_SORT_ORDER = "number ASC";
+								[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+								internal Phones() /* MethodBuilder.Create */ 
+								{
+								}
+
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$PeopleColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$PeopleColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
+				public static partial class IPeopleColumnsConstants
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// NAME
+						/// </java-name>
+						[Dot42.DexImport("NAME", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NAME = "name";
+						/// <java-name>
+						/// PHONETIC_NAME
+						/// </java-name>
+						[Dot42.DexImport("PHONETIC_NAME", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PHONETIC_NAME = "phonetic_name";
+						/// <java-name>
+						/// DISPLAY_NAME
+						/// </java-name>
+						[Dot42.DexImport("DISPLAY_NAME", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DISPLAY_NAME = "display_name";
+						/// <java-name>
+						/// NOTES
+						/// </java-name>
+						[Dot42.DexImport("NOTES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NOTES = "notes";
+						/// <java-name>
+						/// TIMES_CONTACTED
+						/// </java-name>
+						[Dot42.DexImport("TIMES_CONTACTED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string TIMES_CONTACTED = "times_contacted";
+						/// <java-name>
+						/// LAST_TIME_CONTACTED
+						/// </java-name>
+						[Dot42.DexImport("LAST_TIME_CONTACTED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string LAST_TIME_CONTACTED = "last_time_contacted";
+						/// <java-name>
+						/// CUSTOM_RINGTONE
+						/// </java-name>
+						[Dot42.DexImport("CUSTOM_RINGTONE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CUSTOM_RINGTONE = "custom_ringtone";
+						/// <java-name>
+						/// SEND_TO_VOICEMAIL
+						/// </java-name>
+						[Dot42.DexImport("SEND_TO_VOICEMAIL", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SEND_TO_VOICEMAIL = "send_to_voicemail";
+						/// <java-name>
+						/// STARRED
+						/// </java-name>
+						[Dot42.DexImport("STARRED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string STARRED = "starred";
+						/// <java-name>
+						/// PHOTO_VERSION
+						/// </java-name>
+						[Dot42.DexImport("PHOTO_VERSION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PHOTO_VERSION = "photo_version";
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$PeopleColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$PeopleColumns", AccessFlags = 1545)]
+				public partial interface IPeopleColumns
+ /* scope: __dot42__ */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$Settings
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$Settings", AccessFlags = 25)]
+				public sealed partial class Settings : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.ISettingsColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_DIRECTORY
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_DIRECTORY = "settings";
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "key ASC";
+						/// <java-name>
+						/// SYNC_EVERYTHING
+						/// </java-name>
+						[Dot42.DexImport("SYNC_EVERYTHING", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SYNC_EVERYTHING = "syncEverything";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal Settings() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// getSetting
+						/// </java-name>
+						[Dot42.DexImport("getSetting", "(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang" +
+    "/String;", AccessFlags = 9)]
+						public static string GetSetting(global::Android.Content.ContentResolver contentResolver, string @string, string string1) /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+						/// <java-name>
+						/// setSetting
+						/// </java-name>
+						[Dot42.DexImport("setSetting", "(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/" +
+    "String;)V", AccessFlags = 9)]
+						public static void SetSetting(global::Android.Content.ContentResolver contentResolver, string @string, string string1, string string2) /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$SettingsColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$SettingsColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
+				public static partial class ISettingsColumnsConstants
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// _SYNC_ACCOUNT
+						/// </java-name>
+						[Dot42.DexImport("_SYNC_ACCOUNT", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string _SYNC_ACCOUNT = "_sync_account";
+						/// <java-name>
+						/// _SYNC_ACCOUNT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("_SYNC_ACCOUNT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string _SYNC_ACCOUNT_TYPE = "_sync_account_type";
+						/// <java-name>
+						/// KEY
+						/// </java-name>
+						[Dot42.DexImport("KEY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string KEY = "key";
+						/// <java-name>
+						/// VALUE
+						/// </java-name>
+						[Dot42.DexImport("VALUE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string VALUE = "value";
+				}
+
+				/// <java-name>
+				/// android/provider/Contacts$SettingsColumns
+				/// </java-name>
+				[Dot42.DexImport("android/provider/Contacts$SettingsColumns", AccessFlags = 1545)]
+				public partial interface ISettingsColumns
  /* scope: __dot42__ */ 
 				{
 				}
@@ -5220,135 +7175,59 @@ namespace Android.Provider
 		}
 
 		/// <java-name>
-		/// android/provider/CallLog
+		/// android/provider/BaseColumns
 		/// </java-name>
-		[Dot42.DexImport("android/provider/CallLog", AccessFlags = 33)]
-		public partial class CallLog
+		[Dot42.DexImport("android/provider/BaseColumns", AccessFlags = 1537)]
+		public partial interface IBaseColumns
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// android/provider/BaseColumns
+		/// </java-name>
+		[Dot42.DexImport("android/provider/BaseColumns", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IBaseColumnsConstants
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// AUTHORITY
+				/// _ID
 				/// </java-name>
-				[Dot42.DexImport("AUTHORITY", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string AUTHORITY = "call_log";
+				[Dot42.DexImport("_ID", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string _ID = "_id";
 				/// <java-name>
-				/// CONTENT_URI
+				/// _COUNT
 				/// </java-name>
-				[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-				public static readonly global::Android.Net.Uri CONTENT_URI;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public CallLog() /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("_COUNT", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string _COUNT = "_count";
+		}
 
-				/// <java-name>
-				/// android/provider/CallLog$Calls
-				/// </java-name>
-				[Dot42.DexImport("android/provider/CallLog$Calls", AccessFlags = 9)]
-				public partial class Calls : global::Android.Provider.IBaseColumns
+		/// <java-name>
+		/// android/provider/OpenableColumns
+		/// </java-name>
+		[Dot42.DexImport("android/provider/OpenableColumns", AccessFlags = 1537)]
+		public partial interface IOpenableColumns
  /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_FILTER_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_FILTER_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_FILTER_URI;
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "date DESC";
-						/// <java-name>
-						/// CONTENT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_TYPE = "vnd.android.cursor.dir/calls";
-						/// <java-name>
-						/// CONTENT_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/calls";
-						/// <java-name>
-						/// TYPE
-						/// </java-name>
-						[Dot42.DexImport("TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string TYPE = "type";
-						/// <java-name>
-						/// INCOMING_TYPE
-						/// </java-name>
-						[Dot42.DexImport("INCOMING_TYPE", "I", AccessFlags = 25)]
-						public const int INCOMING_TYPE = 1;
-						/// <java-name>
-						/// OUTGOING_TYPE
-						/// </java-name>
-						[Dot42.DexImport("OUTGOING_TYPE", "I", AccessFlags = 25)]
-						public const int OUTGOING_TYPE = 2;
-						/// <java-name>
-						/// MISSED_TYPE
-						/// </java-name>
-						[Dot42.DexImport("MISSED_TYPE", "I", AccessFlags = 25)]
-						public const int MISSED_TYPE = 3;
-						/// <java-name>
-						/// NUMBER
-						/// </java-name>
-						[Dot42.DexImport("NUMBER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NUMBER = "number";
-						/// <java-name>
-						/// DATE
-						/// </java-name>
-						[Dot42.DexImport("DATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DATE = "date";
-						/// <java-name>
-						/// DURATION
-						/// </java-name>
-						[Dot42.DexImport("DURATION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DURATION = "duration";
-						/// <java-name>
-						/// NEW
-						/// </java-name>
-						[Dot42.DexImport("NEW", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NEW = "new";
-						/// <java-name>
-						/// CACHED_NAME
-						/// </java-name>
-						[Dot42.DexImport("CACHED_NAME", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CACHED_NAME = "name";
-						/// <java-name>
-						/// CACHED_NUMBER_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CACHED_NUMBER_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CACHED_NUMBER_TYPE = "numbertype";
-						/// <java-name>
-						/// CACHED_NUMBER_LABEL
-						/// </java-name>
-						[Dot42.DexImport("CACHED_NUMBER_LABEL", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CACHED_NUMBER_LABEL = "numberlabel";
-						/// <java-name>
-						/// IS_READ
-						/// </java-name>
-						[Dot42.DexImport("IS_READ", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string IS_READ = "is_read";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public Calls() /* MethodBuilder.Create */ 
-						{
-						}
+		{
+		}
 
-						/// <java-name>
-						/// getLastOutgoingCall
-						/// </java-name>
-						[Dot42.DexImport("getLastOutgoingCall", "(Landroid/content/Context;)Ljava/lang/String;", AccessFlags = 9)]
-						public static string GetLastOutgoingCall(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-				}
-
+		/// <java-name>
+		/// android/provider/OpenableColumns
+		/// </java-name>
+		[Dot42.DexImport("android/provider/OpenableColumns", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IOpenableColumnsConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// DISPLAY_NAME
+				/// </java-name>
+				[Dot42.DexImport("DISPLAY_NAME", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string DISPLAY_NAME = "_display_name";
+				/// <java-name>
+				/// SIZE
+				/// </java-name>
+				[Dot42.DexImport("SIZE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string SIZE = "_size";
 		}
 
 		/// <java-name>
@@ -5425,304 +7304,6 @@ namespace Android.Provider
 				public const string ACTION_CREATE_LIVE_FOLDER = "android.intent.action.CREATE_LIVE_FOLDER";
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal LiveFolders() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/provider/VoicemailContract
-		/// </java-name>
-		[Dot42.DexImport("android/provider/VoicemailContract", AccessFlags = 33)]
-		public partial class VoicemailContract
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// AUTHORITY
-				/// </java-name>
-				[Dot42.DexImport("AUTHORITY", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string AUTHORITY = "com.android.voicemail";
-				/// <java-name>
-				/// PARAM_KEY_SOURCE_PACKAGE
-				/// </java-name>
-				[Dot42.DexImport("PARAM_KEY_SOURCE_PACKAGE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string PARAM_KEY_SOURCE_PACKAGE = "source_package";
-				/// <java-name>
-				/// ACTION_NEW_VOICEMAIL
-				/// </java-name>
-				[Dot42.DexImport("ACTION_NEW_VOICEMAIL", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_NEW_VOICEMAIL = "android.intent.action.NEW_VOICEMAIL";
-				/// <java-name>
-				/// ACTION_FETCH_VOICEMAIL
-				/// </java-name>
-				[Dot42.DexImport("ACTION_FETCH_VOICEMAIL", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_FETCH_VOICEMAIL = "android.intent.action.FETCH_VOICEMAIL";
-				/// <java-name>
-				/// EXTRA_SELF_CHANGE
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_SELF_CHANGE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_SELF_CHANGE = "com.android.voicemail.extra.SELF_CHANGE";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal VoicemailContract() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/provider/VoicemailContract$Status
-				/// </java-name>
-				[Dot42.DexImport("android/provider/VoicemailContract$Status", AccessFlags = 25)]
-				public sealed partial class Status : global::Android.Provider.IBaseColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// DIR_TYPE
-						/// </java-name>
-						[Dot42.DexImport("DIR_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DIR_TYPE = "vnd.android.cursor.dir/voicemail.source.status";
-						/// <java-name>
-						/// ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ITEM_TYPE = "vnd.android.cursor.item/voicemail.source.status";
-						/// <java-name>
-						/// SOURCE_PACKAGE
-						/// </java-name>
-						[Dot42.DexImport("SOURCE_PACKAGE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SOURCE_PACKAGE = "source_package";
-						/// <java-name>
-						/// SETTINGS_URI
-						/// </java-name>
-						[Dot42.DexImport("SETTINGS_URI", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SETTINGS_URI = "settings_uri";
-						/// <java-name>
-						/// VOICEMAIL_ACCESS_URI
-						/// </java-name>
-						[Dot42.DexImport("VOICEMAIL_ACCESS_URI", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string VOICEMAIL_ACCESS_URI = "voicemail_access_uri";
-						/// <java-name>
-						/// CONFIGURATION_STATE
-						/// </java-name>
-						[Dot42.DexImport("CONFIGURATION_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONFIGURATION_STATE = "configuration_state";
-						/// <java-name>
-						/// CONFIGURATION_STATE_OK
-						/// </java-name>
-						[Dot42.DexImport("CONFIGURATION_STATE_OK", "I", AccessFlags = 25)]
-						public const int CONFIGURATION_STATE_OK = 0;
-						/// <java-name>
-						/// CONFIGURATION_STATE_NOT_CONFIGURED
-						/// </java-name>
-						[Dot42.DexImport("CONFIGURATION_STATE_NOT_CONFIGURED", "I", AccessFlags = 25)]
-						public const int CONFIGURATION_STATE_NOT_CONFIGURED = 1;
-						/// <java-name>
-						/// CONFIGURATION_STATE_CAN_BE_CONFIGURED
-						/// </java-name>
-						[Dot42.DexImport("CONFIGURATION_STATE_CAN_BE_CONFIGURED", "I", AccessFlags = 25)]
-						public const int CONFIGURATION_STATE_CAN_BE_CONFIGURED = 2;
-						/// <java-name>
-						/// DATA_CHANNEL_STATE
-						/// </java-name>
-						[Dot42.DexImport("DATA_CHANNEL_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DATA_CHANNEL_STATE = "data_channel_state";
-						/// <java-name>
-						/// DATA_CHANNEL_STATE_OK
-						/// </java-name>
-						[Dot42.DexImport("DATA_CHANNEL_STATE_OK", "I", AccessFlags = 25)]
-						public const int DATA_CHANNEL_STATE_OK = 0;
-						/// <java-name>
-						/// DATA_CHANNEL_STATE_NO_CONNECTION
-						/// </java-name>
-						[Dot42.DexImport("DATA_CHANNEL_STATE_NO_CONNECTION", "I", AccessFlags = 25)]
-						public const int DATA_CHANNEL_STATE_NO_CONNECTION = 1;
-						/// <java-name>
-						/// NOTIFICATION_CHANNEL_STATE
-						/// </java-name>
-						[Dot42.DexImport("NOTIFICATION_CHANNEL_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NOTIFICATION_CHANNEL_STATE = "notification_channel_state";
-						/// <java-name>
-						/// NOTIFICATION_CHANNEL_STATE_OK
-						/// </java-name>
-						[Dot42.DexImport("NOTIFICATION_CHANNEL_STATE_OK", "I", AccessFlags = 25)]
-						public const int NOTIFICATION_CHANNEL_STATE_OK = 0;
-						/// <java-name>
-						/// NOTIFICATION_CHANNEL_STATE_NO_CONNECTION
-						/// </java-name>
-						[Dot42.DexImport("NOTIFICATION_CHANNEL_STATE_NO_CONNECTION", "I", AccessFlags = 25)]
-						public const int NOTIFICATION_CHANNEL_STATE_NO_CONNECTION = 1;
-						/// <java-name>
-						/// NOTIFICATION_CHANNEL_STATE_MESSAGE_WAITING
-						/// </java-name>
-						[Dot42.DexImport("NOTIFICATION_CHANNEL_STATE_MESSAGE_WAITING", "I", AccessFlags = 25)]
-						public const int NOTIFICATION_CHANNEL_STATE_MESSAGE_WAITING = 2;
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal Status() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// buildSourceUri
-						/// </java-name>
-						[Dot42.DexImport("buildSourceUri", "(Ljava/lang/String;)Landroid/net/Uri;", AccessFlags = 9)]
-						public static global::Android.Net.Uri BuildSourceUri(string @string) /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Net.Uri);
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/VoicemailContract$Voicemails
-				/// </java-name>
-				[Dot42.DexImport("android/provider/VoicemailContract$Voicemails", AccessFlags = 25)]
-				public sealed partial class Voicemails : global::Android.Provider.IBaseColumns, global::Android.Provider.IOpenableColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// DIR_TYPE
-						/// </java-name>
-						[Dot42.DexImport("DIR_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DIR_TYPE = "vnd.android.cursor.dir/voicemails";
-						/// <java-name>
-						/// ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ITEM_TYPE = "vnd.android.cursor.item/voicemail";
-						/// <java-name>
-						/// NUMBER
-						/// </java-name>
-						[Dot42.DexImport("NUMBER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NUMBER = "number";
-						/// <java-name>
-						/// DATE
-						/// </java-name>
-						[Dot42.DexImport("DATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DATE = "date";
-						/// <java-name>
-						/// DURATION
-						/// </java-name>
-						[Dot42.DexImport("DURATION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DURATION = "duration";
-						/// <java-name>
-						/// IS_READ
-						/// </java-name>
-						[Dot42.DexImport("IS_READ", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string IS_READ = "is_read";
-						/// <java-name>
-						/// SOURCE_PACKAGE
-						/// </java-name>
-						[Dot42.DexImport("SOURCE_PACKAGE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SOURCE_PACKAGE = "source_package";
-						/// <java-name>
-						/// SOURCE_DATA
-						/// </java-name>
-						[Dot42.DexImport("SOURCE_DATA", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SOURCE_DATA = "source_data";
-						/// <java-name>
-						/// HAS_CONTENT
-						/// </java-name>
-						[Dot42.DexImport("HAS_CONTENT", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string HAS_CONTENT = "has_content";
-						/// <java-name>
-						/// MIME_TYPE
-						/// </java-name>
-						[Dot42.DexImport("MIME_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string MIME_TYPE = "mime_type";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal Voicemails() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// buildSourceUri
-						/// </java-name>
-						[Dot42.DexImport("buildSourceUri", "(Ljava/lang/String;)Landroid/net/Uri;", AccessFlags = 9)]
-						public static global::Android.Net.Uri BuildSourceUri(string @string) /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Net.Uri);
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/provider/SearchRecentSuggestions
-		/// </java-name>
-		[Dot42.DexImport("android/provider/SearchRecentSuggestions", AccessFlags = 33)]
-		public partial class SearchRecentSuggestions
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// QUERIES_PROJECTION_1LINE
-				/// </java-name>
-				[Dot42.DexImport("QUERIES_PROJECTION_1LINE", "[Ljava/lang/String;", AccessFlags = 25)]
-				public static readonly string[] QUERIES_PROJECTION_1LINE;
-				/// <java-name>
-				/// QUERIES_PROJECTION_2LINE
-				/// </java-name>
-				[Dot42.DexImport("QUERIES_PROJECTION_2LINE", "[Ljava/lang/String;", AccessFlags = 25)]
-				public static readonly string[] QUERIES_PROJECTION_2LINE;
-				/// <java-name>
-				/// QUERIES_PROJECTION_DATE_INDEX
-				/// </java-name>
-				[Dot42.DexImport("QUERIES_PROJECTION_DATE_INDEX", "I", AccessFlags = 25)]
-				public const int QUERIES_PROJECTION_DATE_INDEX = 1;
-				/// <java-name>
-				/// QUERIES_PROJECTION_QUERY_INDEX
-				/// </java-name>
-				[Dot42.DexImport("QUERIES_PROJECTION_QUERY_INDEX", "I", AccessFlags = 25)]
-				public const int QUERIES_PROJECTION_QUERY_INDEX = 2;
-				/// <java-name>
-				/// QUERIES_PROJECTION_DISPLAY1_INDEX
-				/// </java-name>
-				[Dot42.DexImport("QUERIES_PROJECTION_DISPLAY1_INDEX", "I", AccessFlags = 25)]
-				public const int QUERIES_PROJECTION_DISPLAY1_INDEX = 3;
-				/// <java-name>
-				/// QUERIES_PROJECTION_DISPLAY2_INDEX
-				/// </java-name>
-				[Dot42.DexImport("QUERIES_PROJECTION_DISPLAY2_INDEX", "I", AccessFlags = 25)]
-				public const int QUERIES_PROJECTION_DISPLAY2_INDEX = 4;
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/lang/String;I)V", AccessFlags = 1)]
-				public SearchRecentSuggestions(global::Android.Content.Context context, string @string, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// saveRecentQuery
-				/// </java-name>
-				[Dot42.DexImport("saveRecentQuery", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SaveRecentQuery(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clearHistory
-				/// </java-name>
-				[Dot42.DexImport("clearHistory", "()V", AccessFlags = 1)]
-				public virtual void ClearHistory() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// truncateHistory
-				/// </java-name>
-				[Dot42.DexImport("truncateHistory", "(Landroid/content/ContentResolver;I)V", AccessFlags = 4)]
-				protected internal virtual void TruncateHistory(global::Android.Content.ContentResolver contentResolver, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SearchRecentSuggestions() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7329,1582 +8910,76 @@ namespace Android.Provider
 		}
 
 		/// <java-name>
-		/// android/provider/Contacts
+		/// android/provider/SearchRecentSuggestions
 		/// </java-name>
-		[Dot42.DexImport("android/provider/Contacts", AccessFlags = 33)]
-		public partial class Contacts
+		[Dot42.DexImport("android/provider/SearchRecentSuggestions", AccessFlags = 33)]
+		public partial class SearchRecentSuggestions
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// AUTHORITY
+				/// QUERIES_PROJECTION_1LINE
 				/// </java-name>
-				[Dot42.DexImport("AUTHORITY", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string AUTHORITY = "contacts";
+				[Dot42.DexImport("QUERIES_PROJECTION_1LINE", "[Ljava/lang/String;", AccessFlags = 25)]
+				public static readonly string[] QUERIES_PROJECTION_1LINE;
 				/// <java-name>
-				/// CONTENT_URI
+				/// QUERIES_PROJECTION_2LINE
 				/// </java-name>
-				[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-				public static readonly global::Android.Net.Uri CONTENT_URI;
+				[Dot42.DexImport("QUERIES_PROJECTION_2LINE", "[Ljava/lang/String;", AccessFlags = 25)]
+				public static readonly string[] QUERIES_PROJECTION_2LINE;
 				/// <java-name>
-				/// KIND_EMAIL
+				/// QUERIES_PROJECTION_DATE_INDEX
 				/// </java-name>
-				[Dot42.DexImport("KIND_EMAIL", "I", AccessFlags = 25)]
-				public const int KIND_EMAIL = 1;
+				[Dot42.DexImport("QUERIES_PROJECTION_DATE_INDEX", "I", AccessFlags = 25)]
+				public const int QUERIES_PROJECTION_DATE_INDEX = 1;
 				/// <java-name>
-				/// KIND_POSTAL
+				/// QUERIES_PROJECTION_QUERY_INDEX
 				/// </java-name>
-				[Dot42.DexImport("KIND_POSTAL", "I", AccessFlags = 25)]
-				public const int KIND_POSTAL = 2;
+				[Dot42.DexImport("QUERIES_PROJECTION_QUERY_INDEX", "I", AccessFlags = 25)]
+				public const int QUERIES_PROJECTION_QUERY_INDEX = 2;
 				/// <java-name>
-				/// KIND_IM
+				/// QUERIES_PROJECTION_DISPLAY1_INDEX
 				/// </java-name>
-				[Dot42.DexImport("KIND_IM", "I", AccessFlags = 25)]
-				public const int KIND_IM = 3;
+				[Dot42.DexImport("QUERIES_PROJECTION_DISPLAY1_INDEX", "I", AccessFlags = 25)]
+				public const int QUERIES_PROJECTION_DISPLAY1_INDEX = 3;
 				/// <java-name>
-				/// KIND_ORGANIZATION
+				/// QUERIES_PROJECTION_DISPLAY2_INDEX
 				/// </java-name>
-				[Dot42.DexImport("KIND_ORGANIZATION", "I", AccessFlags = 25)]
-				public const int KIND_ORGANIZATION = 4;
-				/// <java-name>
-				/// KIND_PHONE
-				/// </java-name>
-				[Dot42.DexImport("KIND_PHONE", "I", AccessFlags = 25)]
-				public const int KIND_PHONE = 5;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Contacts() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("QUERIES_PROJECTION_DISPLAY2_INDEX", "I", AccessFlags = 25)]
+				public const int QUERIES_PROJECTION_DISPLAY2_INDEX = 4;
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/lang/String;I)V", AccessFlags = 1)]
+				public SearchRecentSuggestions(global::Android.Content.Context context, string @string, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// android/provider/Contacts$Intents
+				/// saveRecentQuery
 				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$Intents", AccessFlags = 25)]
-				public sealed partial class Intents
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// SEARCH_SUGGESTION_CLICKED
-						/// </java-name>
-						[Dot42.DexImport("SEARCH_SUGGESTION_CLICKED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SEARCH_SUGGESTION_CLICKED = "android.provider.Contacts.SEARCH_SUGGESTION_CLICKED";
-						/// <java-name>
-						/// SEARCH_SUGGESTION_DIAL_NUMBER_CLICKED
-						/// </java-name>
-						[Dot42.DexImport("SEARCH_SUGGESTION_DIAL_NUMBER_CLICKED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SEARCH_SUGGESTION_DIAL_NUMBER_CLICKED = "android.provider.Contacts.SEARCH_SUGGESTION_DIAL_NUMBER_CLICKED";
-						/// <java-name>
-						/// SEARCH_SUGGESTION_CREATE_CONTACT_CLICKED
-						/// </java-name>
-						[Dot42.DexImport("SEARCH_SUGGESTION_CREATE_CONTACT_CLICKED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SEARCH_SUGGESTION_CREATE_CONTACT_CLICKED = "android.provider.Contacts.SEARCH_SUGGESTION_CREATE_CONTACT_CLICKED";
-						/// <java-name>
-						/// ATTACH_IMAGE
-						/// </java-name>
-						[Dot42.DexImport("ATTACH_IMAGE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ATTACH_IMAGE = "com.android.contacts.action.ATTACH_IMAGE";
-						/// <java-name>
-						/// SHOW_OR_CREATE_CONTACT
-						/// </java-name>
-						[Dot42.DexImport("SHOW_OR_CREATE_CONTACT", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SHOW_OR_CREATE_CONTACT = "com.android.contacts.action.SHOW_OR_CREATE_CONTACT";
-						/// <java-name>
-						/// EXTRA_FORCE_CREATE
-						/// </java-name>
-						[Dot42.DexImport("EXTRA_FORCE_CREATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string EXTRA_FORCE_CREATE = "com.android.contacts.action.FORCE_CREATE";
-						/// <java-name>
-						/// EXTRA_CREATE_DESCRIPTION
-						/// </java-name>
-						[Dot42.DexImport("EXTRA_CREATE_DESCRIPTION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string EXTRA_CREATE_DESCRIPTION = "com.android.contacts.action.CREATE_DESCRIPTION";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public Intents() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// android/provider/Contacts$Intents$Insert
-						/// </java-name>
-						[Dot42.DexImport("android/provider/Contacts$Intents$Insert", AccessFlags = 25)]
-						public sealed partial class Insert
- /* scope: __dot42__ */ 
-						{
-								/// <java-name>
-								/// ACTION
-								/// </java-name>
-								[Dot42.DexImport("ACTION", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string ACTION = "android.intent.action.INSERT";
-								/// <java-name>
-								/// FULL_MODE
-								/// </java-name>
-								[Dot42.DexImport("FULL_MODE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string FULL_MODE = "full_mode";
-								/// <java-name>
-								/// NAME
-								/// </java-name>
-								[Dot42.DexImport("NAME", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string NAME = "name";
-								/// <java-name>
-								/// PHONETIC_NAME
-								/// </java-name>
-								[Dot42.DexImport("PHONETIC_NAME", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string PHONETIC_NAME = "phonetic_name";
-								/// <java-name>
-								/// COMPANY
-								/// </java-name>
-								[Dot42.DexImport("COMPANY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string COMPANY = "company";
-								/// <java-name>
-								/// JOB_TITLE
-								/// </java-name>
-								[Dot42.DexImport("JOB_TITLE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string JOB_TITLE = "job_title";
-								/// <java-name>
-								/// NOTES
-								/// </java-name>
-								[Dot42.DexImport("NOTES", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string NOTES = "notes";
-								/// <java-name>
-								/// PHONE
-								/// </java-name>
-								[Dot42.DexImport("PHONE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string PHONE = "phone";
-								/// <java-name>
-								/// PHONE_TYPE
-								/// </java-name>
-								[Dot42.DexImport("PHONE_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string PHONE_TYPE = "phone_type";
-								/// <java-name>
-								/// PHONE_ISPRIMARY
-								/// </java-name>
-								[Dot42.DexImport("PHONE_ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string PHONE_ISPRIMARY = "phone_isprimary";
-								/// <java-name>
-								/// SECONDARY_PHONE
-								/// </java-name>
-								[Dot42.DexImport("SECONDARY_PHONE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string SECONDARY_PHONE = "secondary_phone";
-								/// <java-name>
-								/// SECONDARY_PHONE_TYPE
-								/// </java-name>
-								[Dot42.DexImport("SECONDARY_PHONE_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string SECONDARY_PHONE_TYPE = "secondary_phone_type";
-								/// <java-name>
-								/// TERTIARY_PHONE
-								/// </java-name>
-								[Dot42.DexImport("TERTIARY_PHONE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string TERTIARY_PHONE = "tertiary_phone";
-								/// <java-name>
-								/// TERTIARY_PHONE_TYPE
-								/// </java-name>
-								[Dot42.DexImport("TERTIARY_PHONE_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string TERTIARY_PHONE_TYPE = "tertiary_phone_type";
-								/// <java-name>
-								/// EMAIL
-								/// </java-name>
-								[Dot42.DexImport("EMAIL", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string EMAIL = "email";
-								/// <java-name>
-								/// EMAIL_TYPE
-								/// </java-name>
-								[Dot42.DexImport("EMAIL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string EMAIL_TYPE = "email_type";
-								/// <java-name>
-								/// EMAIL_ISPRIMARY
-								/// </java-name>
-								[Dot42.DexImport("EMAIL_ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string EMAIL_ISPRIMARY = "email_isprimary";
-								/// <java-name>
-								/// SECONDARY_EMAIL
-								/// </java-name>
-								[Dot42.DexImport("SECONDARY_EMAIL", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string SECONDARY_EMAIL = "secondary_email";
-								/// <java-name>
-								/// SECONDARY_EMAIL_TYPE
-								/// </java-name>
-								[Dot42.DexImport("SECONDARY_EMAIL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string SECONDARY_EMAIL_TYPE = "secondary_email_type";
-								/// <java-name>
-								/// TERTIARY_EMAIL
-								/// </java-name>
-								[Dot42.DexImport("TERTIARY_EMAIL", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string TERTIARY_EMAIL = "tertiary_email";
-								/// <java-name>
-								/// TERTIARY_EMAIL_TYPE
-								/// </java-name>
-								[Dot42.DexImport("TERTIARY_EMAIL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string TERTIARY_EMAIL_TYPE = "tertiary_email_type";
-								/// <java-name>
-								/// POSTAL
-								/// </java-name>
-								[Dot42.DexImport("POSTAL", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string POSTAL = "postal";
-								/// <java-name>
-								/// POSTAL_TYPE
-								/// </java-name>
-								[Dot42.DexImport("POSTAL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string POSTAL_TYPE = "postal_type";
-								/// <java-name>
-								/// POSTAL_ISPRIMARY
-								/// </java-name>
-								[Dot42.DexImport("POSTAL_ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string POSTAL_ISPRIMARY = "postal_isprimary";
-								/// <java-name>
-								/// IM_HANDLE
-								/// </java-name>
-								[Dot42.DexImport("IM_HANDLE", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string IM_HANDLE = "im_handle";
-								/// <java-name>
-								/// IM_PROTOCOL
-								/// </java-name>
-								[Dot42.DexImport("IM_PROTOCOL", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string IM_PROTOCOL = "im_protocol";
-								/// <java-name>
-								/// IM_ISPRIMARY
-								/// </java-name>
-								[Dot42.DexImport("IM_ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string IM_ISPRIMARY = "im_isprimary";
-								[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-								public Insert() /* MethodBuilder.Create */ 
-								{
-								}
-
-						}
-
-						/// <java-name>
-						/// android/provider/Contacts$Intents$UI
-						/// </java-name>
-						[Dot42.DexImport("android/provider/Contacts$Intents$UI", AccessFlags = 25)]
-						public sealed partial class UI
- /* scope: __dot42__ */ 
-						{
-								/// <java-name>
-								/// LIST_DEFAULT
-								/// </java-name>
-								[Dot42.DexImport("LIST_DEFAULT", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string LIST_DEFAULT = "com.android.contacts.action.LIST_DEFAULT";
-								/// <java-name>
-								/// LIST_GROUP_ACTION
-								/// </java-name>
-								[Dot42.DexImport("LIST_GROUP_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string LIST_GROUP_ACTION = "com.android.contacts.action.LIST_GROUP";
-								/// <java-name>
-								/// GROUP_NAME_EXTRA_KEY
-								/// </java-name>
-								[Dot42.DexImport("GROUP_NAME_EXTRA_KEY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string GROUP_NAME_EXTRA_KEY = "com.android.contacts.extra.GROUP";
-								/// <java-name>
-								/// LIST_ALL_CONTACTS_ACTION
-								/// </java-name>
-								[Dot42.DexImport("LIST_ALL_CONTACTS_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string LIST_ALL_CONTACTS_ACTION = "com.android.contacts.action.LIST_ALL_CONTACTS";
-								/// <java-name>
-								/// LIST_CONTACTS_WITH_PHONES_ACTION
-								/// </java-name>
-								[Dot42.DexImport("LIST_CONTACTS_WITH_PHONES_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string LIST_CONTACTS_WITH_PHONES_ACTION = "com.android.contacts.action.LIST_CONTACTS_WITH_PHONES";
-								/// <java-name>
-								/// LIST_STARRED_ACTION
-								/// </java-name>
-								[Dot42.DexImport("LIST_STARRED_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string LIST_STARRED_ACTION = "com.android.contacts.action.LIST_STARRED";
-								/// <java-name>
-								/// LIST_FREQUENT_ACTION
-								/// </java-name>
-								[Dot42.DexImport("LIST_FREQUENT_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string LIST_FREQUENT_ACTION = "com.android.contacts.action.LIST_FREQUENT";
-								/// <java-name>
-								/// LIST_STREQUENT_ACTION
-								/// </java-name>
-								[Dot42.DexImport("LIST_STREQUENT_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string LIST_STREQUENT_ACTION = "com.android.contacts.action.LIST_STREQUENT";
-								/// <java-name>
-								/// TITLE_EXTRA_KEY
-								/// </java-name>
-								[Dot42.DexImport("TITLE_EXTRA_KEY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string TITLE_EXTRA_KEY = "com.android.contacts.extra.TITLE_EXTRA";
-								/// <java-name>
-								/// FILTER_CONTACTS_ACTION
-								/// </java-name>
-								[Dot42.DexImport("FILTER_CONTACTS_ACTION", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string FILTER_CONTACTS_ACTION = "com.android.contacts.action.FILTER_CONTACTS";
-								/// <java-name>
-								/// FILTER_TEXT_EXTRA_KEY
-								/// </java-name>
-								[Dot42.DexImport("FILTER_TEXT_EXTRA_KEY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string FILTER_TEXT_EXTRA_KEY = "com.android.contacts.extra.FILTER_TEXT";
-								[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-								public UI() /* MethodBuilder.Create */ 
-								{
-								}
-
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$Extensions
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$Extensions", AccessFlags = 25)]
-				public sealed partial class Extensions : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IExtensionsColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_TYPE = "vnd.android.cursor.dir/contact_extensions";
-						/// <java-name>
-						/// CONTENT_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/contact_extensions";
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "person, name ASC";
-						/// <java-name>
-						/// PERSON_ID
-						/// </java-name>
-						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PERSON_ID = "person";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal Extensions() /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$ExtensionsColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$ExtensionsColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
-				public static partial class IExtensionsColumnsConstants
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// NAME
-						/// </java-name>
-						[Dot42.DexImport("NAME", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NAME = "name";
-						/// <java-name>
-						/// VALUE
-						/// </java-name>
-						[Dot42.DexImport("VALUE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string VALUE = "value";
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$ExtensionsColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$ExtensionsColumns", AccessFlags = 1545)]
-				public partial interface IExtensionsColumns
- /* scope: __dot42__ */ 
+				[Dot42.DexImport("saveRecentQuery", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void SaveRecentQuery(string @string, string string1) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// android/provider/Contacts$Photos
+				/// clearHistory
 				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$Photos", AccessFlags = 25)]
-				public sealed partial class Photos : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IPhotosColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_DIRECTORY
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_DIRECTORY = "photo";
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "person ASC";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal Photos() /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$PhotosColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$PhotosColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
-				public static partial class IPhotosColumnsConstants
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// LOCAL_VERSION
-						/// </java-name>
-						[Dot42.DexImport("LOCAL_VERSION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string LOCAL_VERSION = "local_version";
-						/// <java-name>
-						/// PERSON_ID
-						/// </java-name>
-						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PERSON_ID = "person";
-						/// <java-name>
-						/// DOWNLOAD_REQUIRED
-						/// </java-name>
-						[Dot42.DexImport("DOWNLOAD_REQUIRED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DOWNLOAD_REQUIRED = "download_required";
-						/// <java-name>
-						/// EXISTS_ON_SERVER
-						/// </java-name>
-						[Dot42.DexImport("EXISTS_ON_SERVER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string EXISTS_ON_SERVER = "exists_on_server";
-						/// <java-name>
-						/// SYNC_ERROR
-						/// </java-name>
-						[Dot42.DexImport("SYNC_ERROR", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SYNC_ERROR = "sync_error";
-						/// <java-name>
-						/// DATA
-						/// </java-name>
-						[Dot42.DexImport("DATA", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DATA = "data";
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$PhotosColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$PhotosColumns", AccessFlags = 1545)]
-				public partial interface IPhotosColumns
- /* scope: __dot42__ */ 
+				[Dot42.DexImport("clearHistory", "()V", AccessFlags = 1)]
+				public virtual void ClearHistory() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// android/provider/Contacts$Organizations
+				/// truncateHistory
 				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$Organizations", AccessFlags = 25)]
-				public sealed partial class Organizations : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IOrganizationColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_DIRECTORY
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_DIRECTORY = "organizations";
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "company, title, isprimary ASC";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal Organizations() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getDisplayLabel
-						/// </java-name>
-						[Dot42.DexImport("getDisplayLabel", "(Landroid/content/Context;ILjava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 25)]
-						public static global::Java.Lang.ICharSequence GetDisplayLabel(global::Android.Content.Context context, int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Lang.ICharSequence);
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$OrganizationColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$OrganizationColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
-				public static partial class IOrganizationColumnsConstants
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// TYPE
-						/// </java-name>
-						[Dot42.DexImport("TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string TYPE = "type";
-						/// <java-name>
-						/// TYPE_CUSTOM
-						/// </java-name>
-						[Dot42.DexImport("TYPE_CUSTOM", "I", AccessFlags = 25)]
-						public const int TYPE_CUSTOM = 0;
-						/// <java-name>
-						/// TYPE_WORK
-						/// </java-name>
-						[Dot42.DexImport("TYPE_WORK", "I", AccessFlags = 25)]
-						public const int TYPE_WORK = 1;
-						/// <java-name>
-						/// TYPE_OTHER
-						/// </java-name>
-						[Dot42.DexImport("TYPE_OTHER", "I", AccessFlags = 25)]
-						public const int TYPE_OTHER = 2;
-						/// <java-name>
-						/// LABEL
-						/// </java-name>
-						[Dot42.DexImport("LABEL", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string LABEL = "label";
-						/// <java-name>
-						/// COMPANY
-						/// </java-name>
-						[Dot42.DexImport("COMPANY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string COMPANY = "company";
-						/// <java-name>
-						/// TITLE
-						/// </java-name>
-						[Dot42.DexImport("TITLE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string TITLE = "title";
-						/// <java-name>
-						/// PERSON_ID
-						/// </java-name>
-						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PERSON_ID = "person";
-						/// <java-name>
-						/// ISPRIMARY
-						/// </java-name>
-						[Dot42.DexImport("ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ISPRIMARY = "isprimary";
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$OrganizationColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$OrganizationColumns", AccessFlags = 1545)]
-				public partial interface IOrganizationColumns
- /* scope: __dot42__ */ 
+				[Dot42.DexImport("truncateHistory", "(Landroid/content/ContentResolver;I)V", AccessFlags = 4)]
+				protected internal virtual void TruncateHistory(global::Android.Content.ContentResolver contentResolver, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// android/provider/Contacts$PresenceColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$PresenceColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
-				public static partial class IPresenceColumnsConstants
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// PRIORITY
-						/// </java-name>
-						[Dot42.DexImport("PRIORITY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PRIORITY = "priority";
-						/// <java-name>
-						/// PRESENCE_STATUS
-						/// </java-name>
-						[Dot42.DexImport("PRESENCE_STATUS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PRESENCE_STATUS = "mode";
-						/// <java-name>
-						/// OFFLINE
-						/// </java-name>
-						[Dot42.DexImport("OFFLINE", "I", AccessFlags = 25)]
-						public const int OFFLINE = 0;
-						/// <java-name>
-						/// INVISIBLE
-						/// </java-name>
-						[Dot42.DexImport("INVISIBLE", "I", AccessFlags = 25)]
-						public const int INVISIBLE = 1;
-						/// <java-name>
-						/// AWAY
-						/// </java-name>
-						[Dot42.DexImport("AWAY", "I", AccessFlags = 25)]
-						public const int AWAY = 2;
-						/// <java-name>
-						/// IDLE
-						/// </java-name>
-						[Dot42.DexImport("IDLE", "I", AccessFlags = 25)]
-						public const int IDLE = 3;
-						/// <java-name>
-						/// DO_NOT_DISTURB
-						/// </java-name>
-						[Dot42.DexImport("DO_NOT_DISTURB", "I", AccessFlags = 25)]
-						public const int DO_NOT_DISTURB = 4;
-						/// <java-name>
-						/// AVAILABLE
-						/// </java-name>
-						[Dot42.DexImport("AVAILABLE", "I", AccessFlags = 25)]
-						public const int AVAILABLE = 5;
-						/// <java-name>
-						/// PRESENCE_CUSTOM_STATUS
-						/// </java-name>
-						[Dot42.DexImport("PRESENCE_CUSTOM_STATUS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PRESENCE_CUSTOM_STATUS = "status";
-						/// <java-name>
-						/// IM_PROTOCOL
-						/// </java-name>
-						[Dot42.DexImport("IM_PROTOCOL", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string IM_PROTOCOL = "im_protocol";
-						/// <java-name>
-						/// IM_HANDLE
-						/// </java-name>
-						[Dot42.DexImport("IM_HANDLE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string IM_HANDLE = "im_handle";
-						/// <java-name>
-						/// IM_ACCOUNT
-						/// </java-name>
-						[Dot42.DexImport("IM_ACCOUNT", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string IM_ACCOUNT = "im_account";
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$PresenceColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$PresenceColumns", AccessFlags = 1545)]
-				public partial interface IPresenceColumns
- /* scope: __dot42__ */ 
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal SearchRecentSuggestions() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
-				/// <java-name>
-				/// android/provider/Contacts$ContactMethods
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$ContactMethods", AccessFlags = 25)]
-				public sealed partial class ContactMethods : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IContactMethodsColumns, global::Android.Provider.Contacts.IPeopleColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// POSTAL_LOCATION_LATITUDE
-						/// </java-name>
-						[Dot42.DexImport("POSTAL_LOCATION_LATITUDE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string POSTAL_LOCATION_LATITUDE = "data";
-						/// <java-name>
-						/// POSTAL_LOCATION_LONGITUDE
-						/// </java-name>
-						[Dot42.DexImport("POSTAL_LOCATION_LONGITUDE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string POSTAL_LOCATION_LONGITUDE = "aux_data";
-						/// <java-name>
-						/// PROTOCOL_AIM
-						/// </java-name>
-						[Dot42.DexImport("PROTOCOL_AIM", "I", AccessFlags = 25)]
-						public const int PROTOCOL_AIM = 0;
-						/// <java-name>
-						/// PROTOCOL_MSN
-						/// </java-name>
-						[Dot42.DexImport("PROTOCOL_MSN", "I", AccessFlags = 25)]
-						public const int PROTOCOL_MSN = 1;
-						/// <java-name>
-						/// PROTOCOL_YAHOO
-						/// </java-name>
-						[Dot42.DexImport("PROTOCOL_YAHOO", "I", AccessFlags = 25)]
-						public const int PROTOCOL_YAHOO = 2;
-						/// <java-name>
-						/// PROTOCOL_SKYPE
-						/// </java-name>
-						[Dot42.DexImport("PROTOCOL_SKYPE", "I", AccessFlags = 25)]
-						public const int PROTOCOL_SKYPE = 3;
-						/// <java-name>
-						/// PROTOCOL_QQ
-						/// </java-name>
-						[Dot42.DexImport("PROTOCOL_QQ", "I", AccessFlags = 25)]
-						public const int PROTOCOL_QQ = 4;
-						/// <java-name>
-						/// PROTOCOL_GOOGLE_TALK
-						/// </java-name>
-						[Dot42.DexImport("PROTOCOL_GOOGLE_TALK", "I", AccessFlags = 25)]
-						public const int PROTOCOL_GOOGLE_TALK = 5;
-						/// <java-name>
-						/// PROTOCOL_ICQ
-						/// </java-name>
-						[Dot42.DexImport("PROTOCOL_ICQ", "I", AccessFlags = 25)]
-						public const int PROTOCOL_ICQ = 6;
-						/// <java-name>
-						/// PROTOCOL_JABBER
-						/// </java-name>
-						[Dot42.DexImport("PROTOCOL_JABBER", "I", AccessFlags = 25)]
-						public const int PROTOCOL_JABBER = 7;
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_EMAIL_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_EMAIL_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_EMAIL_URI;
-						/// <java-name>
-						/// CONTENT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_TYPE = "vnd.android.cursor.dir/contact-methods";
-						/// <java-name>
-						/// CONTENT_EMAIL_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_EMAIL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_EMAIL_TYPE = "vnd.android.cursor.dir/email";
-						/// <java-name>
-						/// CONTENT_POSTAL_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_POSTAL_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_POSTAL_TYPE = "vnd.android.cursor.dir/postal-address";
-						/// <java-name>
-						/// CONTENT_EMAIL_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_EMAIL_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_EMAIL_ITEM_TYPE = "vnd.android.cursor.item/email";
-						/// <java-name>
-						/// CONTENT_POSTAL_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_POSTAL_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_POSTAL_ITEM_TYPE = "vnd.android.cursor.item/postal-address";
-						/// <java-name>
-						/// CONTENT_IM_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_IM_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_IM_ITEM_TYPE = "vnd.android.cursor.item/jabber-im";
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "name ASC";
-						/// <java-name>
-						/// PERSON_ID
-						/// </java-name>
-						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PERSON_ID = "person";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal ContactMethods() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// encodePredefinedImProtocol
-						/// </java-name>
-						[Dot42.DexImport("encodePredefinedImProtocol", "(I)Ljava/lang/String;", AccessFlags = 9)]
-						public static string EncodePredefinedImProtocol(int int32) /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// encodeCustomImProtocol
-						/// </java-name>
-						[Dot42.DexImport("encodeCustomImProtocol", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-						public static string EncodeCustomImProtocol(string @string) /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// decodeImProtocol
-						/// </java-name>
-						[Dot42.DexImport("decodeImProtocol", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 9)]
-						public static object DecodeImProtocol(string @string) /* MethodBuilder.Create */ 
-						{
-								return default(object);
-						}
-
-						/// <java-name>
-						/// getDisplayLabel
-						/// </java-name>
-						[Dot42.DexImport("getDisplayLabel", "(Landroid/content/Context;IILjava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 25)]
-						public static global::Java.Lang.ICharSequence GetDisplayLabel(global::Android.Content.Context context, int int32, int int321, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Lang.ICharSequence);
-						}
-
-						/// <java-name>
-						/// addPostalLocation
-						/// </java-name>
-						[Dot42.DexImport("addPostalLocation", "(Landroid/content/Context;JDD)V", AccessFlags = 1)]
-						public void AddPostalLocation(global::Android.Content.Context context, long int64, double @double, double double1) /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$ContactMethodsColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$ContactMethodsColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
-				public static partial class IContactMethodsColumnsConstants
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// KIND
-						/// </java-name>
-						[Dot42.DexImport("KIND", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string KIND = "kind";
-						/// <java-name>
-						/// TYPE
-						/// </java-name>
-						[Dot42.DexImport("TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string TYPE = "type";
-						/// <java-name>
-						/// TYPE_CUSTOM
-						/// </java-name>
-						[Dot42.DexImport("TYPE_CUSTOM", "I", AccessFlags = 25)]
-						public const int TYPE_CUSTOM = 0;
-						/// <java-name>
-						/// TYPE_HOME
-						/// </java-name>
-						[Dot42.DexImport("TYPE_HOME", "I", AccessFlags = 25)]
-						public const int TYPE_HOME = 1;
-						/// <java-name>
-						/// TYPE_WORK
-						/// </java-name>
-						[Dot42.DexImport("TYPE_WORK", "I", AccessFlags = 25)]
-						public const int TYPE_WORK = 2;
-						/// <java-name>
-						/// TYPE_OTHER
-						/// </java-name>
-						[Dot42.DexImport("TYPE_OTHER", "I", AccessFlags = 25)]
-						public const int TYPE_OTHER = 3;
-						/// <java-name>
-						/// LABEL
-						/// </java-name>
-						[Dot42.DexImport("LABEL", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string LABEL = "label";
-						/// <java-name>
-						/// DATA
-						/// </java-name>
-						[Dot42.DexImport("DATA", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DATA = "data";
-						/// <java-name>
-						/// AUX_DATA
-						/// </java-name>
-						[Dot42.DexImport("AUX_DATA", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string AUX_DATA = "aux_data";
-						/// <java-name>
-						/// ISPRIMARY
-						/// </java-name>
-						[Dot42.DexImport("ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ISPRIMARY = "isprimary";
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$ContactMethodsColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$ContactMethodsColumns", AccessFlags = 1545)]
-				public partial interface IContactMethodsColumns
- /* scope: __dot42__ */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$GroupMembership
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$GroupMembership", AccessFlags = 25)]
-				public sealed partial class GroupMembership : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IGroupsColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// RAW_CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("RAW_CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri RAW_CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_DIRECTORY
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_DIRECTORY = "groupmembership";
-						/// <java-name>
-						/// CONTENT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_TYPE = "vnd.android.cursor.dir/contactsgroupmembership";
-						/// <java-name>
-						/// CONTENT_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/contactsgroupmembership";
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "group_id ASC";
-						/// <java-name>
-						/// GROUP_ID
-						/// </java-name>
-						[Dot42.DexImport("GROUP_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GROUP_ID = "group_id";
-						/// <java-name>
-						/// GROUP_SYNC_ID
-						/// </java-name>
-						[Dot42.DexImport("GROUP_SYNC_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GROUP_SYNC_ID = "group_sync_id";
-						/// <java-name>
-						/// GROUP_SYNC_ACCOUNT
-						/// </java-name>
-						[Dot42.DexImport("GROUP_SYNC_ACCOUNT", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GROUP_SYNC_ACCOUNT = "group_sync_account";
-						/// <java-name>
-						/// GROUP_SYNC_ACCOUNT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("GROUP_SYNC_ACCOUNT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GROUP_SYNC_ACCOUNT_TYPE = "group_sync_account_type";
-						/// <java-name>
-						/// PERSON_ID
-						/// </java-name>
-						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PERSON_ID = "person";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal GroupMembership() /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$Phones
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$Phones", AccessFlags = 25)]
-				public sealed partial class Phones : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IPhonesColumns, global::Android.Provider.Contacts.IPeopleColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_FILTER_URL
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_FILTER_URL", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_FILTER_URL;
-						/// <java-name>
-						/// CONTENT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_TYPE = "vnd.android.cursor.dir/phone";
-						/// <java-name>
-						/// CONTENT_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/phone";
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "name ASC";
-						/// <java-name>
-						/// PERSON_ID
-						/// </java-name>
-						[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PERSON_ID = "person";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal Phones() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getDisplayLabel
-						/// </java-name>
-						[Dot42.DexImport("getDisplayLabel", "(Landroid/content/Context;ILjava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljav" +
-    "a/lang/CharSequence;", AccessFlags = 25)]
-						public static global::Java.Lang.ICharSequence GetDisplayLabel(global::Android.Content.Context context, int int32, global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence[] charSequence1) /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Lang.ICharSequence);
-						}
-
-						/// <java-name>
-						/// getDisplayLabel
-						/// </java-name>
-						[Dot42.DexImport("getDisplayLabel", "(Landroid/content/Context;ILjava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 25)]
-						public static global::Java.Lang.ICharSequence GetDisplayLabel(global::Android.Content.Context context, int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Lang.ICharSequence);
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$PhonesColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$PhonesColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
-				public static partial class IPhonesColumnsConstants
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// TYPE
-						/// </java-name>
-						[Dot42.DexImport("TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string TYPE = "type";
-						/// <java-name>
-						/// TYPE_CUSTOM
-						/// </java-name>
-						[Dot42.DexImport("TYPE_CUSTOM", "I", AccessFlags = 25)]
-						public const int TYPE_CUSTOM = 0;
-						/// <java-name>
-						/// TYPE_HOME
-						/// </java-name>
-						[Dot42.DexImport("TYPE_HOME", "I", AccessFlags = 25)]
-						public const int TYPE_HOME = 1;
-						/// <java-name>
-						/// TYPE_MOBILE
-						/// </java-name>
-						[Dot42.DexImport("TYPE_MOBILE", "I", AccessFlags = 25)]
-						public const int TYPE_MOBILE = 2;
-						/// <java-name>
-						/// TYPE_WORK
-						/// </java-name>
-						[Dot42.DexImport("TYPE_WORK", "I", AccessFlags = 25)]
-						public const int TYPE_WORK = 3;
-						/// <java-name>
-						/// TYPE_FAX_WORK
-						/// </java-name>
-						[Dot42.DexImport("TYPE_FAX_WORK", "I", AccessFlags = 25)]
-						public const int TYPE_FAX_WORK = 4;
-						/// <java-name>
-						/// TYPE_FAX_HOME
-						/// </java-name>
-						[Dot42.DexImport("TYPE_FAX_HOME", "I", AccessFlags = 25)]
-						public const int TYPE_FAX_HOME = 5;
-						/// <java-name>
-						/// TYPE_PAGER
-						/// </java-name>
-						[Dot42.DexImport("TYPE_PAGER", "I", AccessFlags = 25)]
-						public const int TYPE_PAGER = 6;
-						/// <java-name>
-						/// TYPE_OTHER
-						/// </java-name>
-						[Dot42.DexImport("TYPE_OTHER", "I", AccessFlags = 25)]
-						public const int TYPE_OTHER = 7;
-						/// <java-name>
-						/// LABEL
-						/// </java-name>
-						[Dot42.DexImport("LABEL", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string LABEL = "label";
-						/// <java-name>
-						/// NUMBER
-						/// </java-name>
-						[Dot42.DexImport("NUMBER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NUMBER = "number";
-						/// <java-name>
-						/// NUMBER_KEY
-						/// </java-name>
-						[Dot42.DexImport("NUMBER_KEY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NUMBER_KEY = "number_key";
-						/// <java-name>
-						/// ISPRIMARY
-						/// </java-name>
-						[Dot42.DexImport("ISPRIMARY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ISPRIMARY = "isprimary";
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$PhonesColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$PhonesColumns", AccessFlags = 1545)]
-				public partial interface IPhonesColumns
- /* scope: __dot42__ */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$Groups
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$Groups", AccessFlags = 25)]
-				public sealed partial class Groups : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IGroupsColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// DELETED_CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("DELETED_CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri DELETED_CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_TYPE = "vnd.android.cursor.dir/contactsgroup";
-						/// <java-name>
-						/// CONTENT_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/contactsgroup";
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "name ASC";
-						/// <java-name>
-						/// GROUP_ANDROID_STARRED
-						/// </java-name>
-						[Dot42.DexImport("GROUP_ANDROID_STARRED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GROUP_ANDROID_STARRED = "Starred in Android";
-						/// <java-name>
-						/// GROUP_MY_CONTACTS
-						/// </java-name>
-						[Dot42.DexImport("GROUP_MY_CONTACTS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GROUP_MY_CONTACTS = "Contacts";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal Groups() /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$GroupsColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$GroupsColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
-				public static partial class IGroupsColumnsConstants
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// NAME
-						/// </java-name>
-						[Dot42.DexImport("NAME", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NAME = "name";
-						/// <java-name>
-						/// NOTES
-						/// </java-name>
-						[Dot42.DexImport("NOTES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NOTES = "notes";
-						/// <java-name>
-						/// SHOULD_SYNC
-						/// </java-name>
-						[Dot42.DexImport("SHOULD_SYNC", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SHOULD_SYNC = "should_sync";
-						/// <java-name>
-						/// SYSTEM_ID
-						/// </java-name>
-						[Dot42.DexImport("SYSTEM_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SYSTEM_ID = "system_id";
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$GroupsColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$GroupsColumns", AccessFlags = 1545)]
-				public partial interface IGroupsColumns
- /* scope: __dot42__ */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$People
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$People", AccessFlags = 25)]
-				public sealed partial class People : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IPeopleColumns, global::Android.Provider.Contacts.IPhonesColumns, global::Android.Provider.Contacts.IPresenceColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_FILTER_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_FILTER_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_FILTER_URI;
-						/// <java-name>
-						/// DELETED_CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("DELETED_CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri DELETED_CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_TYPE = "vnd.android.cursor.dir/person";
-						/// <java-name>
-						/// CONTENT_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/person";
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "name ASC";
-						/// <java-name>
-						/// PRIMARY_PHONE_ID
-						/// </java-name>
-						[Dot42.DexImport("PRIMARY_PHONE_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PRIMARY_PHONE_ID = "primary_phone";
-						/// <java-name>
-						/// PRIMARY_EMAIL_ID
-						/// </java-name>
-						[Dot42.DexImport("PRIMARY_EMAIL_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PRIMARY_EMAIL_ID = "primary_email";
-						/// <java-name>
-						/// PRIMARY_ORGANIZATION_ID
-						/// </java-name>
-						[Dot42.DexImport("PRIMARY_ORGANIZATION_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PRIMARY_ORGANIZATION_ID = "primary_organization";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal People() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// markAsContacted
-						/// </java-name>
-						[Dot42.DexImport("markAsContacted", "(Landroid/content/ContentResolver;J)V", AccessFlags = 9)]
-						public static void MarkAsContacted(global::Android.Content.ContentResolver contentResolver, long int64) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// addToMyContactsGroup
-						/// </java-name>
-						[Dot42.DexImport("addToMyContactsGroup", "(Landroid/content/ContentResolver;J)Landroid/net/Uri;", AccessFlags = 9)]
-						public static global::Android.Net.Uri AddToMyContactsGroup(global::Android.Content.ContentResolver contentResolver, long int64) /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Net.Uri);
-						}
-
-						/// <java-name>
-						/// addToGroup
-						/// </java-name>
-						[Dot42.DexImport("addToGroup", "(Landroid/content/ContentResolver;JLjava/lang/String;)Landroid/net/Uri;", AccessFlags = 9)]
-						public static global::Android.Net.Uri AddToGroup(global::Android.Content.ContentResolver contentResolver, long int64, string @string) /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Net.Uri);
-						}
-
-						/// <java-name>
-						/// addToGroup
-						/// </java-name>
-						[Dot42.DexImport("addToGroup", "(Landroid/content/ContentResolver;JJ)Landroid/net/Uri;", AccessFlags = 9)]
-						public static global::Android.Net.Uri AddToGroup(global::Android.Content.ContentResolver contentResolver, long int64, long int641) /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Net.Uri);
-						}
-
-						/// <java-name>
-						/// createPersonInMyContactsGroup
-						/// </java-name>
-						[Dot42.DexImport("createPersonInMyContactsGroup", "(Landroid/content/ContentResolver;Landroid/content/ContentValues;)Landroid/net/Ur" +
-    "i;", AccessFlags = 9)]
-						public static global::Android.Net.Uri CreatePersonInMyContactsGroup(global::Android.Content.ContentResolver contentResolver, global::Android.Content.ContentValues contentValues) /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Net.Uri);
-						}
-
-						/// <java-name>
-						/// queryGroups
-						/// </java-name>
-						[Dot42.DexImport("queryGroups", "(Landroid/content/ContentResolver;J)Landroid/database/Cursor;", AccessFlags = 9)]
-						public static global::Android.Database.ICursor QueryGroups(global::Android.Content.ContentResolver contentResolver, long int64) /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Database.ICursor);
-						}
-
-						/// <java-name>
-						/// setPhotoData
-						/// </java-name>
-						[Dot42.DexImport("setPhotoData", "(Landroid/content/ContentResolver;Landroid/net/Uri;[B)V", AccessFlags = 9)]
-						public static void SetPhotoData(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri, sbyte[] sByte) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// setPhotoData
-						/// </java-name>
-						[Dot42.DexImport("setPhotoData", "(Landroid/content/ContentResolver;Landroid/net/Uri;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
-						public static void SetPhotoData(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri, byte[] @byte) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// openContactPhotoInputStream
-						/// </java-name>
-						[Dot42.DexImport("openContactPhotoInputStream", "(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/io/InputStream;", AccessFlags = 9)]
-						public static global::Java.Io.InputStream OpenContactPhotoInputStream(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Io.InputStream);
-						}
-
-						/// <java-name>
-						/// loadContactPhoto
-						/// </java-name>
-						[Dot42.DexImport("loadContactPhoto", "(Landroid/content/Context;Landroid/net/Uri;ILandroid/graphics/BitmapFactory$Optio" +
-    "ns;)Landroid/graphics/Bitmap;", AccessFlags = 9)]
-						public static global::Android.Graphics.Bitmap LoadContactPhoto(global::Android.Content.Context context, global::Android.Net.Uri uri, int int32, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Graphics.Bitmap);
-						}
-
-						/// <java-name>
-						/// android/provider/Contacts$People$Extensions
-						/// </java-name>
-						[Dot42.DexImport("android/provider/Contacts$People$Extensions", AccessFlags = 9)]
-						public partial class Extensions : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IExtensionsColumns
- /* scope: __dot42__ */ 
-						{
-								/// <java-name>
-								/// CONTENT_DIRECTORY
-								/// </java-name>
-								[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string CONTENT_DIRECTORY = "extensions";
-								/// <java-name>
-								/// DEFAULT_SORT_ORDER
-								/// </java-name>
-								[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string DEFAULT_SORT_ORDER = "name ASC";
-								/// <java-name>
-								/// PERSON_ID
-								/// </java-name>
-								[Dot42.DexImport("PERSON_ID", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string PERSON_ID = "person";
-								[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-								internal Extensions() /* MethodBuilder.Create */ 
-								{
-								}
-
-						}
-
-						/// <java-name>
-						/// android/provider/Contacts$People$ContactMethods
-						/// </java-name>
-						[Dot42.DexImport("android/provider/Contacts$People$ContactMethods", AccessFlags = 25)]
-						public sealed partial class ContactMethods : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IContactMethodsColumns, global::Android.Provider.Contacts.IPeopleColumns
- /* scope: __dot42__ */ 
-						{
-								/// <java-name>
-								/// CONTENT_DIRECTORY
-								/// </java-name>
-								[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string CONTENT_DIRECTORY = "contact_methods";
-								/// <java-name>
-								/// DEFAULT_SORT_ORDER
-								/// </java-name>
-								[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string DEFAULT_SORT_ORDER = "data ASC";
-								[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-								internal ContactMethods() /* MethodBuilder.Create */ 
-								{
-								}
-
-						}
-
-						/// <java-name>
-						/// android/provider/Contacts$People$Phones
-						/// </java-name>
-						[Dot42.DexImport("android/provider/Contacts$People$Phones", AccessFlags = 25)]
-						public sealed partial class Phones : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.IPhonesColumns, global::Android.Provider.Contacts.IPeopleColumns
- /* scope: __dot42__ */ 
-						{
-								/// <java-name>
-								/// CONTENT_DIRECTORY
-								/// </java-name>
-								[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string CONTENT_DIRECTORY = "phones";
-								/// <java-name>
-								/// DEFAULT_SORT_ORDER
-								/// </java-name>
-								[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-								public const string DEFAULT_SORT_ORDER = "number ASC";
-								[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-								internal Phones() /* MethodBuilder.Create */ 
-								{
-								}
-
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$PeopleColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$PeopleColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
-				public static partial class IPeopleColumnsConstants
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// NAME
-						/// </java-name>
-						[Dot42.DexImport("NAME", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NAME = "name";
-						/// <java-name>
-						/// PHONETIC_NAME
-						/// </java-name>
-						[Dot42.DexImport("PHONETIC_NAME", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PHONETIC_NAME = "phonetic_name";
-						/// <java-name>
-						/// DISPLAY_NAME
-						/// </java-name>
-						[Dot42.DexImport("DISPLAY_NAME", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DISPLAY_NAME = "display_name";
-						/// <java-name>
-						/// NOTES
-						/// </java-name>
-						[Dot42.DexImport("NOTES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NOTES = "notes";
-						/// <java-name>
-						/// TIMES_CONTACTED
-						/// </java-name>
-						[Dot42.DexImport("TIMES_CONTACTED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string TIMES_CONTACTED = "times_contacted";
-						/// <java-name>
-						/// LAST_TIME_CONTACTED
-						/// </java-name>
-						[Dot42.DexImport("LAST_TIME_CONTACTED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string LAST_TIME_CONTACTED = "last_time_contacted";
-						/// <java-name>
-						/// CUSTOM_RINGTONE
-						/// </java-name>
-						[Dot42.DexImport("CUSTOM_RINGTONE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CUSTOM_RINGTONE = "custom_ringtone";
-						/// <java-name>
-						/// SEND_TO_VOICEMAIL
-						/// </java-name>
-						[Dot42.DexImport("SEND_TO_VOICEMAIL", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SEND_TO_VOICEMAIL = "send_to_voicemail";
-						/// <java-name>
-						/// STARRED
-						/// </java-name>
-						[Dot42.DexImport("STARRED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string STARRED = "starred";
-						/// <java-name>
-						/// PHOTO_VERSION
-						/// </java-name>
-						[Dot42.DexImport("PHOTO_VERSION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PHOTO_VERSION = "photo_version";
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$PeopleColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$PeopleColumns", AccessFlags = 1545)]
-				public partial interface IPeopleColumns
- /* scope: __dot42__ */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$Settings
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$Settings", AccessFlags = 25)]
-				public sealed partial class Settings : global::Android.Provider.IBaseColumns, global::Android.Provider.Contacts.ISettingsColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_DIRECTORY
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_DIRECTORY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_DIRECTORY = "settings";
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "key ASC";
-						/// <java-name>
-						/// SYNC_EVERYTHING
-						/// </java-name>
-						[Dot42.DexImport("SYNC_EVERYTHING", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SYNC_EVERYTHING = "syncEverything";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal Settings() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getSetting
-						/// </java-name>
-						[Dot42.DexImport("getSetting", "(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang" +
-    "/String;", AccessFlags = 9)]
-						public static string GetSetting(global::Android.Content.ContentResolver contentResolver, string @string, string string1) /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// setSetting
-						/// </java-name>
-						[Dot42.DexImport("setSetting", "(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/" +
-    "String;)V", AccessFlags = 9)]
-						public static void SetSetting(global::Android.Content.ContentResolver contentResolver, string @string, string string1, string string2) /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$SettingsColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$SettingsColumns", AccessFlags = 1545, IgnoreFromJava = true, Priority = 1)]
-				public static partial class ISettingsColumnsConstants
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// _SYNC_ACCOUNT
-						/// </java-name>
-						[Dot42.DexImport("_SYNC_ACCOUNT", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string _SYNC_ACCOUNT = "_sync_account";
-						/// <java-name>
-						/// _SYNC_ACCOUNT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("_SYNC_ACCOUNT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string _SYNC_ACCOUNT_TYPE = "_sync_account_type";
-						/// <java-name>
-						/// KEY
-						/// </java-name>
-						[Dot42.DexImport("KEY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string KEY = "key";
-						/// <java-name>
-						/// VALUE
-						/// </java-name>
-						[Dot42.DexImport("VALUE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string VALUE = "value";
-				}
-
-				/// <java-name>
-				/// android/provider/Contacts$SettingsColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Contacts$SettingsColumns", AccessFlags = 1545)]
-				public partial interface ISettingsColumns
- /* scope: __dot42__ */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/provider/OpenableColumns
-		/// </java-name>
-		[Dot42.DexImport("android/provider/OpenableColumns", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IOpenableColumnsConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// DISPLAY_NAME
-				/// </java-name>
-				[Dot42.DexImport("DISPLAY_NAME", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string DISPLAY_NAME = "_display_name";
-				/// <java-name>
-				/// SIZE
-				/// </java-name>
-				[Dot42.DexImport("SIZE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string SIZE = "_size";
-		}
-
-		/// <java-name>
-		/// android/provider/OpenableColumns
-		/// </java-name>
-		[Dot42.DexImport("android/provider/OpenableColumns", AccessFlags = 1537)]
-		public partial interface IOpenableColumns
- /* scope: __dot42__ */ 
-		{
 		}
 
 		/// <java-name>
@@ -10289,407 +10364,6 @@ namespace Android.Provider
 		}
 
 		/// <java-name>
-		/// android/provider/UserDictionary
-		/// </java-name>
-		[Dot42.DexImport("android/provider/UserDictionary", AccessFlags = 33)]
-		public partial class UserDictionary
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// AUTHORITY
-				/// </java-name>
-				[Dot42.DexImport("AUTHORITY", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string AUTHORITY = "user_dictionary";
-				/// <java-name>
-				/// CONTENT_URI
-				/// </java-name>
-				[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-				public static readonly global::Android.Net.Uri CONTENT_URI;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public UserDictionary() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/provider/UserDictionary$Words
-				/// </java-name>
-				[Dot42.DexImport("android/provider/UserDictionary$Words", AccessFlags = 9)]
-				public partial class Words : global::Android.Provider.IBaseColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CONTENT_URI
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-						public static readonly global::Android.Net.Uri CONTENT_URI;
-						/// <java-name>
-						/// CONTENT_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_TYPE = "vnd.android.cursor.dir/vnd.google.userword";
-						/// <java-name>
-						/// CONTENT_ITEM_TYPE
-						/// </java-name>
-						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.google.userword";
-						/// <java-name>
-						/// _ID
-						/// </java-name>
-						[Dot42.DexImport("_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string _ID = "_id";
-						/// <java-name>
-						/// WORD
-						/// </java-name>
-						[Dot42.DexImport("WORD", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WORD = "word";
-						/// <java-name>
-						/// FREQUENCY
-						/// </java-name>
-						[Dot42.DexImport("FREQUENCY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string FREQUENCY = "frequency";
-						/// <java-name>
-						/// LOCALE
-						/// </java-name>
-						[Dot42.DexImport("LOCALE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string LOCALE = "locale";
-						/// <java-name>
-						/// APP_ID
-						/// </java-name>
-						[Dot42.DexImport("APP_ID", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string APP_ID = "appid";
-						/// <java-name>
-						/// LOCALE_TYPE_ALL
-						/// </java-name>
-						[Dot42.DexImport("LOCALE_TYPE_ALL", "I", AccessFlags = 25)]
-						public const int LOCALE_TYPE_ALL = 0;
-						/// <java-name>
-						/// LOCALE_TYPE_CURRENT
-						/// </java-name>
-						[Dot42.DexImport("LOCALE_TYPE_CURRENT", "I", AccessFlags = 25)]
-						public const int LOCALE_TYPE_CURRENT = 1;
-						/// <java-name>
-						/// DEFAULT_SORT_ORDER
-						/// </java-name>
-						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEFAULT_SORT_ORDER = "frequency DESC";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public Words() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// addWord
-						/// </java-name>
-						[Dot42.DexImport("addWord", "(Landroid/content/Context;Ljava/lang/String;II)V", AccessFlags = 9)]
-						public static void AddWord(global::Android.Content.Context context, string @string, int int32, int int321) /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/provider/Browser
-		/// </java-name>
-		[Dot42.DexImport("android/provider/Browser", AccessFlags = 33)]
-		public partial class Browser
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// BOOKMARKS_URI
-				/// </java-name>
-				[Dot42.DexImport("BOOKMARKS_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-				public static readonly global::Android.Net.Uri BOOKMARKS_URI;
-				/// <java-name>
-				/// INITIAL_ZOOM_LEVEL
-				/// </java-name>
-				[Dot42.DexImport("INITIAL_ZOOM_LEVEL", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string INITIAL_ZOOM_LEVEL = "browser.initialZoomLevel";
-				/// <java-name>
-				/// EXTRA_APPLICATION_ID
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_APPLICATION_ID", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_APPLICATION_ID = "com.android.browser.application_id";
-				/// <java-name>
-				/// EXTRA_HEADERS
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_HEADERS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_HEADERS = "com.android.browser.headers";
-				/// <java-name>
-				/// HISTORY_PROJECTION
-				/// </java-name>
-				[Dot42.DexImport("HISTORY_PROJECTION", "[Ljava/lang/String;", AccessFlags = 25)]
-				public static readonly string[] HISTORY_PROJECTION;
-				/// <java-name>
-				/// HISTORY_PROJECTION_ID_INDEX
-				/// </java-name>
-				[Dot42.DexImport("HISTORY_PROJECTION_ID_INDEX", "I", AccessFlags = 25)]
-				public const int HISTORY_PROJECTION_ID_INDEX = 0;
-				/// <java-name>
-				/// HISTORY_PROJECTION_URL_INDEX
-				/// </java-name>
-				[Dot42.DexImport("HISTORY_PROJECTION_URL_INDEX", "I", AccessFlags = 25)]
-				public const int HISTORY_PROJECTION_URL_INDEX = 1;
-				/// <java-name>
-				/// HISTORY_PROJECTION_VISITS_INDEX
-				/// </java-name>
-				[Dot42.DexImport("HISTORY_PROJECTION_VISITS_INDEX", "I", AccessFlags = 25)]
-				public const int HISTORY_PROJECTION_VISITS_INDEX = 2;
-				/// <java-name>
-				/// HISTORY_PROJECTION_DATE_INDEX
-				/// </java-name>
-				[Dot42.DexImport("HISTORY_PROJECTION_DATE_INDEX", "I", AccessFlags = 25)]
-				public const int HISTORY_PROJECTION_DATE_INDEX = 3;
-				/// <java-name>
-				/// HISTORY_PROJECTION_BOOKMARK_INDEX
-				/// </java-name>
-				[Dot42.DexImport("HISTORY_PROJECTION_BOOKMARK_INDEX", "I", AccessFlags = 25)]
-				public const int HISTORY_PROJECTION_BOOKMARK_INDEX = 4;
-				/// <java-name>
-				/// HISTORY_PROJECTION_TITLE_INDEX
-				/// </java-name>
-				[Dot42.DexImport("HISTORY_PROJECTION_TITLE_INDEX", "I", AccessFlags = 25)]
-				public const int HISTORY_PROJECTION_TITLE_INDEX = 5;
-				/// <java-name>
-				/// HISTORY_PROJECTION_FAVICON_INDEX
-				/// </java-name>
-				[Dot42.DexImport("HISTORY_PROJECTION_FAVICON_INDEX", "I", AccessFlags = 25)]
-				public const int HISTORY_PROJECTION_FAVICON_INDEX = 6;
-				/// <java-name>
-				/// TRUNCATE_HISTORY_PROJECTION
-				/// </java-name>
-				[Dot42.DexImport("TRUNCATE_HISTORY_PROJECTION", "[Ljava/lang/String;", AccessFlags = 25)]
-				public static readonly string[] TRUNCATE_HISTORY_PROJECTION;
-				/// <java-name>
-				/// TRUNCATE_HISTORY_PROJECTION_ID_INDEX
-				/// </java-name>
-				[Dot42.DexImport("TRUNCATE_HISTORY_PROJECTION_ID_INDEX", "I", AccessFlags = 25)]
-				public const int TRUNCATE_HISTORY_PROJECTION_ID_INDEX = 0;
-				/// <java-name>
-				/// TRUNCATE_N_OLDEST
-				/// </java-name>
-				[Dot42.DexImport("TRUNCATE_N_OLDEST", "I", AccessFlags = 25)]
-				public const int TRUNCATE_N_OLDEST = 5;
-				/// <java-name>
-				/// SEARCHES_URI
-				/// </java-name>
-				[Dot42.DexImport("SEARCHES_URI", "Landroid/net/Uri;", AccessFlags = 25)]
-				public static readonly global::Android.Net.Uri SEARCHES_URI;
-				/// <java-name>
-				/// SEARCHES_PROJECTION
-				/// </java-name>
-				[Dot42.DexImport("SEARCHES_PROJECTION", "[Ljava/lang/String;", AccessFlags = 25)]
-				public static readonly string[] SEARCHES_PROJECTION;
-				/// <java-name>
-				/// SEARCHES_PROJECTION_SEARCH_INDEX
-				/// </java-name>
-				[Dot42.DexImport("SEARCHES_PROJECTION_SEARCH_INDEX", "I", AccessFlags = 25)]
-				public const int SEARCHES_PROJECTION_SEARCH_INDEX = 1;
-				/// <java-name>
-				/// SEARCHES_PROJECTION_DATE_INDEX
-				/// </java-name>
-				[Dot42.DexImport("SEARCHES_PROJECTION_DATE_INDEX", "I", AccessFlags = 25)]
-				public const int SEARCHES_PROJECTION_DATE_INDEX = 2;
-				/// <java-name>
-				/// EXTRA_CREATE_NEW_TAB
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_CREATE_NEW_TAB", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_CREATE_NEW_TAB = "create_new_tab";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Browser() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// saveBookmark
-				/// </java-name>
-				[Dot42.DexImport("saveBookmark", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 25)]
-				public static void SaveBookmark(global::Android.Content.Context context, string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendString
-				/// </java-name>
-				[Dot42.DexImport("sendString", "(Landroid/content/Context;Ljava/lang/String;)V", AccessFlags = 25)]
-				public static void SendString(global::Android.Content.Context context, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAllBookmarks
-				/// </java-name>
-				[Dot42.DexImport("getAllBookmarks", "(Landroid/content/ContentResolver;)Landroid/database/Cursor;", AccessFlags = 25)]
-				public static global::Android.Database.ICursor GetAllBookmarks(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.ICursor);
-				}
-
-				/// <java-name>
-				/// getAllVisitedUrls
-				/// </java-name>
-				[Dot42.DexImport("getAllVisitedUrls", "(Landroid/content/ContentResolver;)Landroid/database/Cursor;", AccessFlags = 25)]
-				public static global::Android.Database.ICursor GetAllVisitedUrls(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.ICursor);
-				}
-
-				/// <java-name>
-				/// updateVisitedHistory
-				/// </java-name>
-				[Dot42.DexImport("updateVisitedHistory", "(Landroid/content/ContentResolver;Ljava/lang/String;Z)V", AccessFlags = 25)]
-				public static void UpdateVisitedHistory(global::Android.Content.ContentResolver contentResolver, string @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// truncateHistory
-				/// </java-name>
-				[Dot42.DexImport("truncateHistory", "(Landroid/content/ContentResolver;)V", AccessFlags = 25)]
-				public static void TruncateHistory(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// canClearHistory
-				/// </java-name>
-				[Dot42.DexImport("canClearHistory", "(Landroid/content/ContentResolver;)Z", AccessFlags = 25)]
-				public static bool CanClearHistory(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// clearHistory
-				/// </java-name>
-				[Dot42.DexImport("clearHistory", "(Landroid/content/ContentResolver;)V", AccessFlags = 25)]
-				public static void ClearHistory(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// deleteHistoryTimeFrame
-				/// </java-name>
-				[Dot42.DexImport("deleteHistoryTimeFrame", "(Landroid/content/ContentResolver;JJ)V", AccessFlags = 25)]
-				public static void DeleteHistoryTimeFrame(global::Android.Content.ContentResolver contentResolver, long int64, long int641) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// deleteFromHistory
-				/// </java-name>
-				[Dot42.DexImport("deleteFromHistory", "(Landroid/content/ContentResolver;Ljava/lang/String;)V", AccessFlags = 25)]
-				public static void DeleteFromHistory(global::Android.Content.ContentResolver contentResolver, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addSearchUrl
-				/// </java-name>
-				[Dot42.DexImport("addSearchUrl", "(Landroid/content/ContentResolver;Ljava/lang/String;)V", AccessFlags = 25)]
-				public static void AddSearchUrl(global::Android.Content.ContentResolver contentResolver, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clearSearches
-				/// </java-name>
-				[Dot42.DexImport("clearSearches", "(Landroid/content/ContentResolver;)V", AccessFlags = 25)]
-				public static void ClearSearches(global::Android.Content.ContentResolver contentResolver) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// requestAllIcons
-				/// </java-name>
-				[Dot42.DexImport("requestAllIcons", "(Landroid/content/ContentResolver;Ljava/lang/String;Landroid/webkit/WebIconDataba" +
-    "se$IconListener;)V", AccessFlags = 25)]
-				public static void RequestAllIcons(global::Android.Content.ContentResolver contentResolver, string @string, global::Android.Webkit.WebIconDatabase.IIconListener iconListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/provider/Browser$SearchColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Browser$SearchColumns", AccessFlags = 9)]
-				public partial class SearchColumns : global::Android.Provider.IBaseColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// URL
-						/// </java-name>
-						[Dot42.DexImport("URL", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string URL = "url";
-						/// <java-name>
-						/// SEARCH
-						/// </java-name>
-						[Dot42.DexImport("SEARCH", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SEARCH = "search";
-						/// <java-name>
-						/// DATE
-						/// </java-name>
-						[Dot42.DexImport("DATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DATE = "date";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public SearchColumns() /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/provider/Browser$BookmarkColumns
-				/// </java-name>
-				[Dot42.DexImport("android/provider/Browser$BookmarkColumns", AccessFlags = 9)]
-				public partial class BookmarkColumns : global::Android.Provider.IBaseColumns
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// URL
-						/// </java-name>
-						[Dot42.DexImport("URL", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string URL = "url";
-						/// <java-name>
-						/// VISITS
-						/// </java-name>
-						[Dot42.DexImport("VISITS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string VISITS = "visits";
-						/// <java-name>
-						/// DATE
-						/// </java-name>
-						[Dot42.DexImport("DATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DATE = "date";
-						/// <java-name>
-						/// BOOKMARK
-						/// </java-name>
-						[Dot42.DexImport("BOOKMARK", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BOOKMARK = "bookmark";
-						/// <java-name>
-						/// TITLE
-						/// </java-name>
-						[Dot42.DexImport("TITLE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string TITLE = "title";
-						/// <java-name>
-						/// CREATED
-						/// </java-name>
-						[Dot42.DexImport("CREATED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CREATED = "created";
-						/// <java-name>
-						/// FAVICON
-						/// </java-name>
-						[Dot42.DexImport("FAVICON", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string FAVICON = "favicon";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public BookmarkColumns() /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-		}
-
-		/// <java-name>
 		/// android/provider/SyncStateContract
 		/// </java-name>
 		[Dot42.DexImport("android/provider/SyncStateContract", AccessFlags = 33)]
@@ -10888,6 +10562,332 @@ namespace Android.Provider
 				public partial interface IColumns : global::Android.Provider.IBaseColumns
  /* scope: __dot42__ */ 
 				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/provider/UserDictionary
+		/// </java-name>
+		[Dot42.DexImport("android/provider/UserDictionary", AccessFlags = 33)]
+		public partial class UserDictionary
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// AUTHORITY
+				/// </java-name>
+				[Dot42.DexImport("AUTHORITY", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string AUTHORITY = "user_dictionary";
+				/// <java-name>
+				/// CONTENT_URI
+				/// </java-name>
+				[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+				public static readonly global::Android.Net.Uri CONTENT_URI;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public UserDictionary() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/UserDictionary$Words
+				/// </java-name>
+				[Dot42.DexImport("android/provider/UserDictionary$Words", AccessFlags = 9)]
+				public partial class Words : global::Android.Provider.IBaseColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// CONTENT_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_TYPE = "vnd.android.cursor.dir/vnd.google.userword";
+						/// <java-name>
+						/// CONTENT_ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.google.userword";
+						/// <java-name>
+						/// _ID
+						/// </java-name>
+						[Dot42.DexImport("_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string _ID = "_id";
+						/// <java-name>
+						/// WORD
+						/// </java-name>
+						[Dot42.DexImport("WORD", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WORD = "word";
+						/// <java-name>
+						/// FREQUENCY
+						/// </java-name>
+						[Dot42.DexImport("FREQUENCY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string FREQUENCY = "frequency";
+						/// <java-name>
+						/// LOCALE
+						/// </java-name>
+						[Dot42.DexImport("LOCALE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string LOCALE = "locale";
+						/// <java-name>
+						/// APP_ID
+						/// </java-name>
+						[Dot42.DexImport("APP_ID", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string APP_ID = "appid";
+						/// <java-name>
+						/// LOCALE_TYPE_ALL
+						/// </java-name>
+						[Dot42.DexImport("LOCALE_TYPE_ALL", "I", AccessFlags = 25)]
+						public const int LOCALE_TYPE_ALL = 0;
+						/// <java-name>
+						/// LOCALE_TYPE_CURRENT
+						/// </java-name>
+						[Dot42.DexImport("LOCALE_TYPE_CURRENT", "I", AccessFlags = 25)]
+						public const int LOCALE_TYPE_CURRENT = 1;
+						/// <java-name>
+						/// DEFAULT_SORT_ORDER
+						/// </java-name>
+						[Dot42.DexImport("DEFAULT_SORT_ORDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEFAULT_SORT_ORDER = "frequency DESC";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public Words() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// addWord
+						/// </java-name>
+						[Dot42.DexImport("addWord", "(Landroid/content/Context;Ljava/lang/String;II)V", AccessFlags = 9)]
+						public static void AddWord(global::Android.Content.Context context, string @string, int int32, int int321) /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/provider/VoicemailContract
+		/// </java-name>
+		[Dot42.DexImport("android/provider/VoicemailContract", AccessFlags = 33)]
+		public partial class VoicemailContract
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// AUTHORITY
+				/// </java-name>
+				[Dot42.DexImport("AUTHORITY", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string AUTHORITY = "com.android.voicemail";
+				/// <java-name>
+				/// PARAM_KEY_SOURCE_PACKAGE
+				/// </java-name>
+				[Dot42.DexImport("PARAM_KEY_SOURCE_PACKAGE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string PARAM_KEY_SOURCE_PACKAGE = "source_package";
+				/// <java-name>
+				/// ACTION_NEW_VOICEMAIL
+				/// </java-name>
+				[Dot42.DexImport("ACTION_NEW_VOICEMAIL", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_NEW_VOICEMAIL = "android.intent.action.NEW_VOICEMAIL";
+				/// <java-name>
+				/// ACTION_FETCH_VOICEMAIL
+				/// </java-name>
+				[Dot42.DexImport("ACTION_FETCH_VOICEMAIL", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_FETCH_VOICEMAIL = "android.intent.action.FETCH_VOICEMAIL";
+				/// <java-name>
+				/// EXTRA_SELF_CHANGE
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_SELF_CHANGE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_SELF_CHANGE = "com.android.voicemail.extra.SELF_CHANGE";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal VoicemailContract() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/provider/VoicemailContract$Status
+				/// </java-name>
+				[Dot42.DexImport("android/provider/VoicemailContract$Status", AccessFlags = 25)]
+				public sealed partial class Status : global::Android.Provider.IBaseColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// DIR_TYPE
+						/// </java-name>
+						[Dot42.DexImport("DIR_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DIR_TYPE = "vnd.android.cursor.dir/voicemail.source.status";
+						/// <java-name>
+						/// ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ITEM_TYPE = "vnd.android.cursor.item/voicemail.source.status";
+						/// <java-name>
+						/// SOURCE_PACKAGE
+						/// </java-name>
+						[Dot42.DexImport("SOURCE_PACKAGE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SOURCE_PACKAGE = "source_package";
+						/// <java-name>
+						/// SETTINGS_URI
+						/// </java-name>
+						[Dot42.DexImport("SETTINGS_URI", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SETTINGS_URI = "settings_uri";
+						/// <java-name>
+						/// VOICEMAIL_ACCESS_URI
+						/// </java-name>
+						[Dot42.DexImport("VOICEMAIL_ACCESS_URI", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string VOICEMAIL_ACCESS_URI = "voicemail_access_uri";
+						/// <java-name>
+						/// CONFIGURATION_STATE
+						/// </java-name>
+						[Dot42.DexImport("CONFIGURATION_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONFIGURATION_STATE = "configuration_state";
+						/// <java-name>
+						/// CONFIGURATION_STATE_OK
+						/// </java-name>
+						[Dot42.DexImport("CONFIGURATION_STATE_OK", "I", AccessFlags = 25)]
+						public const int CONFIGURATION_STATE_OK = 0;
+						/// <java-name>
+						/// CONFIGURATION_STATE_NOT_CONFIGURED
+						/// </java-name>
+						[Dot42.DexImport("CONFIGURATION_STATE_NOT_CONFIGURED", "I", AccessFlags = 25)]
+						public const int CONFIGURATION_STATE_NOT_CONFIGURED = 1;
+						/// <java-name>
+						/// CONFIGURATION_STATE_CAN_BE_CONFIGURED
+						/// </java-name>
+						[Dot42.DexImport("CONFIGURATION_STATE_CAN_BE_CONFIGURED", "I", AccessFlags = 25)]
+						public const int CONFIGURATION_STATE_CAN_BE_CONFIGURED = 2;
+						/// <java-name>
+						/// DATA_CHANNEL_STATE
+						/// </java-name>
+						[Dot42.DexImport("DATA_CHANNEL_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DATA_CHANNEL_STATE = "data_channel_state";
+						/// <java-name>
+						/// DATA_CHANNEL_STATE_OK
+						/// </java-name>
+						[Dot42.DexImport("DATA_CHANNEL_STATE_OK", "I", AccessFlags = 25)]
+						public const int DATA_CHANNEL_STATE_OK = 0;
+						/// <java-name>
+						/// DATA_CHANNEL_STATE_NO_CONNECTION
+						/// </java-name>
+						[Dot42.DexImport("DATA_CHANNEL_STATE_NO_CONNECTION", "I", AccessFlags = 25)]
+						public const int DATA_CHANNEL_STATE_NO_CONNECTION = 1;
+						/// <java-name>
+						/// NOTIFICATION_CHANNEL_STATE
+						/// </java-name>
+						[Dot42.DexImport("NOTIFICATION_CHANNEL_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NOTIFICATION_CHANNEL_STATE = "notification_channel_state";
+						/// <java-name>
+						/// NOTIFICATION_CHANNEL_STATE_OK
+						/// </java-name>
+						[Dot42.DexImport("NOTIFICATION_CHANNEL_STATE_OK", "I", AccessFlags = 25)]
+						public const int NOTIFICATION_CHANNEL_STATE_OK = 0;
+						/// <java-name>
+						/// NOTIFICATION_CHANNEL_STATE_NO_CONNECTION
+						/// </java-name>
+						[Dot42.DexImport("NOTIFICATION_CHANNEL_STATE_NO_CONNECTION", "I", AccessFlags = 25)]
+						public const int NOTIFICATION_CHANNEL_STATE_NO_CONNECTION = 1;
+						/// <java-name>
+						/// NOTIFICATION_CHANNEL_STATE_MESSAGE_WAITING
+						/// </java-name>
+						[Dot42.DexImport("NOTIFICATION_CHANNEL_STATE_MESSAGE_WAITING", "I", AccessFlags = 25)]
+						public const int NOTIFICATION_CHANNEL_STATE_MESSAGE_WAITING = 2;
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal Status() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// buildSourceUri
+						/// </java-name>
+						[Dot42.DexImport("buildSourceUri", "(Ljava/lang/String;)Landroid/net/Uri;", AccessFlags = 9)]
+						public static global::Android.Net.Uri BuildSourceUri(string @string) /* MethodBuilder.Create */ 
+						{
+								return default(global::Android.Net.Uri);
+						}
+
+				}
+
+				/// <java-name>
+				/// android/provider/VoicemailContract$Voicemails
+				/// </java-name>
+				[Dot42.DexImport("android/provider/VoicemailContract$Voicemails", AccessFlags = 25)]
+				public sealed partial class Voicemails : global::Android.Provider.IBaseColumns, global::Android.Provider.IOpenableColumns
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// CONTENT_URI
+						/// </java-name>
+						[Dot42.DexImport("CONTENT_URI", "Landroid/net/Uri;", AccessFlags = 25)]
+						public static readonly global::Android.Net.Uri CONTENT_URI;
+						/// <java-name>
+						/// DIR_TYPE
+						/// </java-name>
+						[Dot42.DexImport("DIR_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DIR_TYPE = "vnd.android.cursor.dir/voicemails";
+						/// <java-name>
+						/// ITEM_TYPE
+						/// </java-name>
+						[Dot42.DexImport("ITEM_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ITEM_TYPE = "vnd.android.cursor.item/voicemail";
+						/// <java-name>
+						/// NUMBER
+						/// </java-name>
+						[Dot42.DexImport("NUMBER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NUMBER = "number";
+						/// <java-name>
+						/// DATE
+						/// </java-name>
+						[Dot42.DexImport("DATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DATE = "date";
+						/// <java-name>
+						/// DURATION
+						/// </java-name>
+						[Dot42.DexImport("DURATION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DURATION = "duration";
+						/// <java-name>
+						/// IS_READ
+						/// </java-name>
+						[Dot42.DexImport("IS_READ", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string IS_READ = "is_read";
+						/// <java-name>
+						/// SOURCE_PACKAGE
+						/// </java-name>
+						[Dot42.DexImport("SOURCE_PACKAGE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SOURCE_PACKAGE = "source_package";
+						/// <java-name>
+						/// SOURCE_DATA
+						/// </java-name>
+						[Dot42.DexImport("SOURCE_DATA", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SOURCE_DATA = "source_data";
+						/// <java-name>
+						/// HAS_CONTENT
+						/// </java-name>
+						[Dot42.DexImport("HAS_CONTENT", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string HAS_CONTENT = "has_content";
+						/// <java-name>
+						/// MIME_TYPE
+						/// </java-name>
+						[Dot42.DexImport("MIME_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string MIME_TYPE = "mime_type";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal Voicemails() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// buildSourceUri
+						/// </java-name>
+						[Dot42.DexImport("buildSourceUri", "(Ljava/lang/String;)Landroid/net/Uri;", AccessFlags = 9)]
+						public static global::Android.Net.Uri BuildSourceUri(string @string) /* MethodBuilder.Create */ 
+						{
+								return default(global::Android.Net.Uri);
+						}
+
 				}
 
 		}

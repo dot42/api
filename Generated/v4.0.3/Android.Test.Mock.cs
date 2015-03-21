@@ -2,652 +2,196 @@
 namespace Android.Test.Mock
 {
 		/// <java-name>
-		/// android/test/mock/MockPackageManager
+		/// android/test/mock/MockApplication
 		/// </java-name>
-		[Dot42.DexImport("android/test/mock/MockPackageManager", AccessFlags = 33)]
-		public partial class MockPackageManager : global::Android.Content.Pm.PackageManager
+		[Dot42.DexImport("android/test/mock/MockApplication", AccessFlags = 33)]
+		public partial class MockApplication : global::Android.App.Application
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public MockPackageManager() /* MethodBuilder.Create */ 
+				public MockApplication() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getPackageInfo
+				/// onCreate
 				/// </java-name>
-				[Dot42.DexImport("getPackageInfo", "(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.PackageInfo GetPackageInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onCreate", "()V", AccessFlags = 1)]
+				public override void OnCreate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Content.Pm.PackageInfo);
 				}
 
 				/// <java-name>
-				/// currentToCanonicalPackageNames
+				/// onTerminate
 				/// </java-name>
-				[Dot42.DexImport("currentToCanonicalPackageNames", "([Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] CurrentToCanonicalPackageNames(string[] @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onTerminate", "()V", AccessFlags = 1)]
+				public override void OnTerminate() /* MethodBuilder.Create */ 
 				{
-						return default(string[]);
 				}
 
 				/// <java-name>
-				/// canonicalToCurrentPackageNames
+				/// onConfigurationChanged
 				/// </java-name>
-				[Dot42.DexImport("canonicalToCurrentPackageNames", "([Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] CanonicalToCurrentPackageNames(string[] @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onConfigurationChanged", "(Landroid/content/res/Configuration;)V", AccessFlags = 1)]
+				public override void OnConfigurationChanged(global::Android.Content.Res.Configuration configuration) /* MethodBuilder.Create */ 
 				{
-						return default(string[]);
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/mock/MockContentProvider
+		/// </java-name>
+		[Dot42.DexImport("android/test/mock/MockContentProvider", AccessFlags = 33)]
+		public partial class MockContentProvider : global::Android.Content.ContentProvider
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal MockContentProvider() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public MockContentProvider(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Landroid/content/p" +
+    "m/PathPermission;)V", AccessFlags = 1)]
+				public MockContentProvider(global::Android.Content.Context context, string @string, string string1, global::Android.Content.Pm.PathPermission[] pathPermission) /* MethodBuilder.Create */ 
+				{
 				}
 
 				/// <java-name>
-				/// getLaunchIntentForPackage
+				/// delete
 				/// </java-name>
-				[Dot42.DexImport("getLaunchIntentForPackage", "(Ljava/lang/String;)Landroid/content/Intent;", AccessFlags = 1)]
-				public override global::Android.Content.Intent GetLaunchIntentForPackage(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Intent);
-				}
-
-				/// <java-name>
-				/// getPackageGids
-				/// </java-name>
-				[Dot42.DexImport("getPackageGids", "(Ljava/lang/String;)[I", AccessFlags = 1)]
-				public override int[] GetPackageGids(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// getPermissionInfo
-				/// </java-name>
-				[Dot42.DexImport("getPermissionInfo", "(Ljava/lang/String;I)Landroid/content/pm/PermissionInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.PermissionInfo GetPermissionInfo(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.PermissionInfo);
-				}
-
-				/// <java-name>
-				/// queryPermissionsByGroup
-				/// </java-name>
-				[Dot42.DexImport("queryPermissionsByGroup", "(Ljava/lang/String;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;I)Ljava/util/List<Landroid/content/pm/PermissionInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.PermissionInfo> QueryPermissionsByGroup(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.PermissionInfo>);
-				}
-
-				/// <java-name>
-				/// getPermissionGroupInfo
-				/// </java-name>
-				[Dot42.DexImport("getPermissionGroupInfo", "(Ljava/lang/String;I)Landroid/content/pm/PermissionGroupInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.PermissionGroupInfo GetPermissionGroupInfo(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.PermissionGroupInfo);
-				}
-
-				/// <java-name>
-				/// getAllPermissionGroups
-				/// </java-name>
-				[Dot42.DexImport("getAllPermissionGroups", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/PermissionGroupInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.PermissionGroupInfo> GetAllPermissionGroups(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.PermissionGroupInfo>);
-				}
-
-				/// <java-name>
-				/// getApplicationInfo
-				/// </java-name>
-				[Dot42.DexImport("getApplicationInfo", "(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.ApplicationInfo GetApplicationInfo(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ApplicationInfo);
-				}
-
-				/// <java-name>
-				/// getActivityInfo
-				/// </java-name>
-				[Dot42.DexImport("getActivityInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.ActivityInfo GetActivityInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ActivityInfo);
-				}
-
-				/// <java-name>
-				/// getReceiverInfo
-				/// </java-name>
-				[Dot42.DexImport("getReceiverInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.ActivityInfo GetReceiverInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ActivityInfo);
-				}
-
-				/// <java-name>
-				/// getServiceInfo
-				/// </java-name>
-				[Dot42.DexImport("getServiceInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.ServiceInfo GetServiceInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ServiceInfo);
-				}
-
-				/// <java-name>
-				/// getProviderInfo
-				/// </java-name>
-				[Dot42.DexImport("getProviderInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ProviderInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.ProviderInfo GetProviderInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ProviderInfo);
-				}
-
-				/// <java-name>
-				/// getInstalledPackages
-				/// </java-name>
-				[Dot42.DexImport("getInstalledPackages", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/PackageInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.PackageInfo> GetInstalledPackages(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.PackageInfo>);
-				}
-
-				/// <java-name>
-				/// checkPermission
-				/// </java-name>
-				[Dot42.DexImport("checkPermission", "(Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int CheckPermission(string @string, string string1) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("delete", "(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I", AccessFlags = 1)]
+				public override int Delete(global::Android.Net.Uri uri, string @string, string[] string1) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// addPermission
+				/// getType
 				/// </java-name>
-				[Dot42.DexImport("addPermission", "(Landroid/content/pm/PermissionInfo;)Z", AccessFlags = 1)]
-				public override bool AddPermission(global::Android.Content.Pm.PermissionInfo permissionInfo) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// addPermissionAsync
-				/// </java-name>
-				[Dot42.DexImport("addPermissionAsync", "(Landroid/content/pm/PermissionInfo;)Z", AccessFlags = 1)]
-				public override bool AddPermissionAsync(global::Android.Content.Pm.PermissionInfo permissionInfo) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// removePermission
-				/// </java-name>
-				[Dot42.DexImport("removePermission", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void RemovePermission(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// checkSignatures
-				/// </java-name>
-				[Dot42.DexImport("checkSignatures", "(Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int CheckSignatures(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// checkSignatures
-				/// </java-name>
-				[Dot42.DexImport("checkSignatures", "(II)I", AccessFlags = 1)]
-				public override int CheckSignatures(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPackagesForUid
-				/// </java-name>
-				[Dot42.DexImport("getPackagesForUid", "(I)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetPackagesForUid(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getNameForUid
-				/// </java-name>
-				[Dot42.DexImport("getNameForUid", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetNameForUid(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getType", "(Landroid/net/Uri;)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetType(global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
 				/// <java-name>
-				/// getInstalledApplications
+				/// insert
 				/// </java-name>
-				[Dot42.DexImport("getInstalledApplications", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.ApplicationInfo> GetInstalledApplications(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("insert", "(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;", AccessFlags = 1)]
+				public override global::Android.Net.Uri Insert(global::Android.Net.Uri uri, global::Android.Content.ContentValues contentValues) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.ApplicationInfo>);
+						return default(global::Android.Net.Uri);
 				}
 
 				/// <java-name>
-				/// resolveActivity
+				/// onCreate
 				/// </java-name>
-				[Dot42.DexImport("resolveActivity", "(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.ResolveInfo ResolveActivity(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onCreate", "()Z", AccessFlags = 1)]
+				public override bool OnCreate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Content.Pm.ResolveInfo);
+						return default(bool);
 				}
 
 				/// <java-name>
-				/// queryIntentActivities
+				/// query
 				/// </java-name>
-				[Dot42.DexImport("queryIntentActivities", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryIntentActivities(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("query", "(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/l" +
+    "ang/String;)Landroid/database/Cursor;", AccessFlags = 1)]
+				public override global::Android.Database.ICursor Query(global::Android.Net.Uri uri, string[] @string, string string1, string[] string2, string string3) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo>);
+						return default(global::Android.Database.ICursor);
 				}
 
 				/// <java-name>
-				/// queryIntentActivityOptions
+				/// update
 				/// </java-name>
-				[Dot42.DexImport("queryIntentActivityOptions", "(Landroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;" +
-    "I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;" +
-    "I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryIntentActivityOptions(global::Android.Content.ComponentName componentName, global::Android.Content.Intent[] intent, global::Android.Content.Intent intent1, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo>);
-				}
-
-				/// <java-name>
-				/// queryBroadcastReceivers
-				/// </java-name>
-				[Dot42.DexImport("queryBroadcastReceivers", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryBroadcastReceivers(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo>);
-				}
-
-				/// <java-name>
-				/// resolveService
-				/// </java-name>
-				[Dot42.DexImport("resolveService", "(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.ResolveInfo ResolveService(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ResolveInfo);
-				}
-
-				/// <java-name>
-				/// queryIntentServices
-				/// </java-name>
-				[Dot42.DexImport("queryIntentServices", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryIntentServices(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo>);
-				}
-
-				/// <java-name>
-				/// resolveContentProvider
-				/// </java-name>
-				[Dot42.DexImport("resolveContentProvider", "(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.ProviderInfo ResolveContentProvider(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ProviderInfo);
-				}
-
-				/// <java-name>
-				/// queryContentProviders
-				/// </java-name>
-				[Dot42.DexImport("queryContentProviders", "(Ljava/lang/String;II)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;II)Ljava/util/List<Landroid/content/pm/ProviderInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.ProviderInfo> QueryContentProviders(string @string, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.ProviderInfo>);
-				}
-
-				/// <java-name>
-				/// getInstrumentationInfo
-				/// </java-name>
-				[Dot42.DexImport("getInstrumentationInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/InstrumentationInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.InstrumentationInfo GetInstrumentationInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.InstrumentationInfo);
-				}
-
-				/// <java-name>
-				/// queryInstrumentation
-				/// </java-name>
-				[Dot42.DexImport("queryInstrumentation", "(Ljava/lang/String;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;I)Ljava/util/List<Landroid/content/pm/InstrumentationInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.InstrumentationInfo> QueryInstrumentation(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.InstrumentationInfo>);
-				}
-
-				/// <java-name>
-				/// getDrawable
-				/// </java-name>
-				[Dot42.DexImport("getDrawable", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawab" +
-    "le/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetDrawable(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getActivityIcon
-				/// </java-name>
-				[Dot42.DexImport("getActivityIcon", "(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetActivityIcon(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getActivityIcon
-				/// </java-name>
-				[Dot42.DexImport("getActivityIcon", "(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetActivityIcon(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getDefaultActivityIcon
-				/// </java-name>
-				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetDefaultActivityIcon() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getApplicationIcon
-				/// </java-name>
-				[Dot42.DexImport("getApplicationIcon", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetApplicationIcon(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getApplicationIcon
-				/// </java-name>
-				[Dot42.DexImport("getApplicationIcon", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetApplicationIcon(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getActivityLogo
-				/// </java-name>
-				[Dot42.DexImport("getActivityLogo", "(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetActivityLogo(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getActivityLogo
-				/// </java-name>
-				[Dot42.DexImport("getActivityLogo", "(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetActivityLogo(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getApplicationLogo
-				/// </java-name>
-				[Dot42.DexImport("getApplicationLogo", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetApplicationLogo(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getApplicationLogo
-				/// </java-name>
-				[Dot42.DexImport("getApplicationLogo", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetApplicationLogo(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;" +
-    "", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetText(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getXml
-				/// </java-name>
-				[Dot42.DexImport("getXml", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/content/res/Xml" +
-    "ResourceParser;", AccessFlags = 1)]
-				public override global::Android.Content.Res.IXmlResourceParser GetXml(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.IXmlResourceParser);
-				}
-
-				/// <java-name>
-				/// getApplicationLabel
-				/// </java-name>
-				[Dot42.DexImport("getApplicationLabel", "(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetApplicationLabel(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getResourcesForActivity
-				/// </java-name>
-				[Dot42.DexImport("getResourcesForActivity", "(Landroid/content/ComponentName;)Landroid/content/res/Resources;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Resources GetResourcesForActivity(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.Resources);
-				}
-
-				/// <java-name>
-				/// getResourcesForApplication
-				/// </java-name>
-				[Dot42.DexImport("getResourcesForApplication", "(Landroid/content/pm/ApplicationInfo;)Landroid/content/res/Resources;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Resources GetResourcesForApplication(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.Resources);
-				}
-
-				/// <java-name>
-				/// getResourcesForApplication
-				/// </java-name>
-				[Dot42.DexImport("getResourcesForApplication", "(Ljava/lang/String;)Landroid/content/res/Resources;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Resources GetResourcesForApplication(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.Resources);
-				}
-
-				/// <java-name>
-				/// getPackageArchiveInfo
-				/// </java-name>
-				[Dot42.DexImport("getPackageArchiveInfo", "(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.PackageInfo GetPackageArchiveInfo(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.PackageInfo);
-				}
-
-				/// <java-name>
-				/// setInstallerPackageName
-				/// </java-name>
-				[Dot42.DexImport("setInstallerPackageName", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void SetInstallerPackageName(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInstallerPackageName
-				/// </java-name>
-				[Dot42.DexImport("getInstallerPackageName", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetInstallerPackageName(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// addPackageToPreferred
-				/// </java-name>
-				[Dot42.DexImport("addPackageToPreferred", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void AddPackageToPreferred(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removePackageFromPreferred
-				/// </java-name>
-				[Dot42.DexImport("removePackageFromPreferred", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void RemovePackageFromPreferred(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPreferredPackages
-				/// </java-name>
-				[Dot42.DexImport("getPreferredPackages", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/PackageInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.Pm.PackageInfo> GetPreferredPackages(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.PackageInfo>);
-				}
-
-				/// <java-name>
-				/// setComponentEnabledSetting
-				/// </java-name>
-				[Dot42.DexImport("setComponentEnabledSetting", "(Landroid/content/ComponentName;II)V", AccessFlags = 1)]
-				public override void SetComponentEnabledSetting(global::Android.Content.ComponentName componentName, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getComponentEnabledSetting
-				/// </java-name>
-				[Dot42.DexImport("getComponentEnabledSetting", "(Landroid/content/ComponentName;)I", AccessFlags = 1)]
-				public override int GetComponentEnabledSetting(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("update", "(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/St" +
+    "ring;)I", AccessFlags = 1)]
+				public override int Update(global::Android.Net.Uri uri, global::Android.Content.ContentValues contentValues, string @string, string[] string1) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// setApplicationEnabledSetting
+				/// bulkInsert
 				/// </java-name>
-				[Dot42.DexImport("setApplicationEnabledSetting", "(Ljava/lang/String;II)V", AccessFlags = 1)]
-				public override void SetApplicationEnabledSetting(string @string, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getApplicationEnabledSetting
-				/// </java-name>
-				[Dot42.DexImport("getApplicationEnabledSetting", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int GetApplicationEnabledSetting(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("bulkInsert", "(Landroid/net/Uri;[Landroid/content/ContentValues;)I", AccessFlags = 1)]
+				public override int BulkInsert(global::Android.Net.Uri uri, global::Android.Content.ContentValues[] contentValues) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// addPreferredActivity
+				/// attachInfo
 				/// </java-name>
-				[Dot42.DexImport("addPreferredActivity", "(Landroid/content/IntentFilter;I[Landroid/content/ComponentName;Landroid/content/" +
-    "ComponentName;)V", AccessFlags = 1)]
-				public override void AddPreferredActivity(global::Android.Content.IntentFilter intentFilter, int int32, global::Android.Content.ComponentName[] componentName, global::Android.Content.ComponentName componentName1) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("attachInfo", "(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V", AccessFlags = 1)]
+				public override void AttachInfo(global::Android.Content.Context context, global::Android.Content.Pm.ProviderInfo providerInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// clearPackagePreferredActivities
+				/// applyBatch
 				/// </java-name>
-				[Dot42.DexImport("clearPackagePreferredActivities", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void ClearPackagePreferredActivities(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("applyBatch", "(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;)[Landroid/cont" +
+    "ent/ContentProviderResult;")]
+				public override global::Android.Content.ContentProviderResult[] ApplyBatch(global::Java.Util.ArrayList<global::Android.Content.ContentProviderOperation> arrayList) /* MethodBuilder.Create */ 
 				{
+						return default(global::Android.Content.ContentProviderResult[]);
 				}
 
 				/// <java-name>
-				/// getPreferredActivities
+				/// getStreamTypes
 				/// </java-name>
-				[Dot42.DexImport("getPreferredActivities", "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)I", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/content/IntentFilter;>;Ljava/util/List<Landroid/content" +
-    "/ComponentName;>;Ljava/lang/String;)I")]
-				public override int GetPreferredActivities(global::Java.Util.IList<global::Android.Content.IntentFilter> list, global::Java.Util.IList<global::Android.Content.ComponentName> list1, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSystemSharedLibraryNames
-				/// </java-name>
-				[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetSystemSharedLibraryNames() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getStreamTypes", "(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 1)]
+				public override string[] GetStreamTypes(global::Android.Net.Uri uri, string @string) /* MethodBuilder.Create */ 
 				{
 						return default(string[]);
 				}
 
 				/// <java-name>
-				/// getSystemAvailableFeatures
+				/// openTypedAssetFile
 				/// </java-name>
-				[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.FeatureInfo[] GetSystemAvailableFeatures() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("openTypedAssetFile", "(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/Asse" +
+    "tFileDescriptor;", AccessFlags = 1)]
+				public override global::Android.Content.Res.AssetFileDescriptor OpenTypedAssetFile(global::Android.Net.Uri uri, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Content.Pm.FeatureInfo[]);
+						return default(global::Android.Content.Res.AssetFileDescriptor);
 				}
 
-				/// <java-name>
-				/// hasSystemFeature
-				/// </java-name>
-				[Dot42.DexImport("hasSystemFeature", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public override bool HasSystemFeature(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
+		}
 
-				/// <java-name>
-				/// isSafeMode
-				/// </java-name>
-				[Dot42.DexImport("isSafeMode", "()Z", AccessFlags = 1)]
-				public override bool IsSafeMode() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// verifyPendingInstall
-				/// </java-name>
-				[Dot42.DexImport("verifyPendingInstall", "(II)V", AccessFlags = 1)]
-				public override void VerifyPendingInstall(int int32, int int321) /* MethodBuilder.Create */ 
+		/// <java-name>
+		/// android/test/mock/MockContentResolver
+		/// </java-name>
+		[Dot42.DexImport("android/test/mock/MockContentResolver", AccessFlags = 33)]
+		public partial class MockContentResolver : global::Android.Content.ContentResolver
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public MockContentResolver() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getDefaultActivityIcon
+				/// addProvider
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable DefaultActivityIcon
+				[Dot42.DexImport("addProvider", "(Ljava/lang/String;Landroid/content/ContentProvider;)V", AccessFlags = 1)]
+				public virtual void AddProvider(string @string, global::Android.Content.ContentProvider contentProvider) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						get{ return GetDefaultActivityIcon(); }
 				}
 
 				/// <java-name>
-				/// getSystemSharedLibraryNames
+				/// notifyChange
 				/// </java-name>
-				public string[] SystemSharedLibraryNames
+				[Dot42.DexImport("notifyChange", "(Landroid/net/Uri;Landroid/database/ContentObserver;Z)V", AccessFlags = 1)]
+				public override void NotifyChange(global::Android.Net.Uri uri, global::Android.Database.ContentObserver contentObserver, bool boolean) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSystemSharedLibraryNames(); }
-				}
-
-				/// <java-name>
-				/// getSystemAvailableFeatures
-				/// </java-name>
-				public global::Android.Content.Pm.FeatureInfo[] SystemAvailableFeatures
-				{
-				[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1)]
-						get{ return GetSystemAvailableFeatures(); }
 				}
 
 		}
@@ -1485,448 +1029,6 @@ namespace Android.Test.Mock
 		}
 
 		/// <java-name>
-		/// android/test/mock/MockApplication
-		/// </java-name>
-		[Dot42.DexImport("android/test/mock/MockApplication", AccessFlags = 33)]
-		public partial class MockApplication : global::Android.App.Application
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public MockApplication() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCreate
-				/// </java-name>
-				[Dot42.DexImport("onCreate", "()V", AccessFlags = 1)]
-				public override void OnCreate() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onTerminate
-				/// </java-name>
-				[Dot42.DexImport("onTerminate", "()V", AccessFlags = 1)]
-				public override void OnTerminate() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onConfigurationChanged
-				/// </java-name>
-				[Dot42.DexImport("onConfigurationChanged", "(Landroid/content/res/Configuration;)V", AccessFlags = 1)]
-				public override void OnConfigurationChanged(global::Android.Content.Res.Configuration configuration) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/mock/MockDialogInterface
-		/// </java-name>
-		[Dot42.DexImport("android/test/mock/MockDialogInterface", AccessFlags = 33)]
-		public partial class MockDialogInterface : global::Android.Content.IDialogInterface
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public MockDialogInterface() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// cancel
-				/// </java-name>
-				[Dot42.DexImport("cancel", "()V", AccessFlags = 1)]
-				public virtual void Cancel() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dismiss
-				/// </java-name>
-				[Dot42.DexImport("dismiss", "()V", AccessFlags = 1)]
-				public virtual void Dismiss() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/mock/MockContentResolver
-		/// </java-name>
-		[Dot42.DexImport("android/test/mock/MockContentResolver", AccessFlags = 33)]
-		public partial class MockContentResolver : global::Android.Content.ContentResolver
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public MockContentResolver() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addProvider
-				/// </java-name>
-				[Dot42.DexImport("addProvider", "(Ljava/lang/String;Landroid/content/ContentProvider;)V", AccessFlags = 1)]
-				public virtual void AddProvider(string @string, global::Android.Content.ContentProvider contentProvider) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// notifyChange
-				/// </java-name>
-				[Dot42.DexImport("notifyChange", "(Landroid/net/Uri;Landroid/database/ContentObserver;Z)V", AccessFlags = 1)]
-				public override void NotifyChange(global::Android.Net.Uri uri, global::Android.Database.ContentObserver contentObserver, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/mock/MockResources
-		/// </java-name>
-		[Dot42.DexImport("android/test/mock/MockResources", AccessFlags = 33)]
-		public partial class MockResources : global::Android.Content.Res.Resources
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public MockResources() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// updateConfiguration
-				/// </java-name>
-				[Dot42.DexImport("updateConfiguration", "(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V", AccessFlags = 1)]
-				public override void UpdateConfiguration(global::Android.Content.Res.Configuration configuration, global::Android.Util.DisplayMetrics displayMetrics) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "(I)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetText(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getQuantityText
-				/// </java-name>
-				[Dot42.DexImport("getQuantityText", "(II)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetQuantityText(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getString
-				/// </java-name>
-				[Dot42.DexImport("getString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetString(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getString
-				/// </java-name>
-				[Dot42.DexImport("getString", "(I[Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 129)]
-				public override string GetString(int int32, params object[] @object) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getQuantityString
-				/// </java-name>
-				[Dot42.DexImport("getQuantityString", "(II[Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 129)]
-				public override string GetQuantityString(int int32, int int321, params object[] @object) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getQuantityString
-				/// </java-name>
-				[Dot42.DexImport("getQuantityString", "(II)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetQuantityString(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetText(int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getTextArray
-				/// </java-name>
-				[Dot42.DexImport("getTextArray", "(I)[Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence[] GetTextArray(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence[]);
-				}
-
-				/// <java-name>
-				/// getStringArray
-				/// </java-name>
-				[Dot42.DexImport("getStringArray", "(I)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetStringArray(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getIntArray
-				/// </java-name>
-				[Dot42.DexImport("getIntArray", "(I)[I", AccessFlags = 1)]
-				public override int[] GetIntArray(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// obtainTypedArray
-				/// </java-name>
-				[Dot42.DexImport("obtainTypedArray", "(I)Landroid/content/res/TypedArray;", AccessFlags = 1)]
-				public override global::Android.Content.Res.TypedArray ObtainTypedArray(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.TypedArray);
-				}
-
-				/// <java-name>
-				/// getDimension
-				/// </java-name>
-				[Dot42.DexImport("getDimension", "(I)F", AccessFlags = 1)]
-				public override float GetDimension(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getDimensionPixelOffset
-				/// </java-name>
-				[Dot42.DexImport("getDimensionPixelOffset", "(I)I", AccessFlags = 1)]
-				public override int GetDimensionPixelOffset(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDimensionPixelSize
-				/// </java-name>
-				[Dot42.DexImport("getDimensionPixelSize", "(I)I", AccessFlags = 1)]
-				public override int GetDimensionPixelSize(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDrawable
-				/// </java-name>
-				[Dot42.DexImport("getDrawable", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawable.Drawable);
-				}
-
-				/// <java-name>
-				/// getMovie
-				/// </java-name>
-				[Dot42.DexImport("getMovie", "(I)Landroid/graphics/Movie;", AccessFlags = 1)]
-				public override global::Android.Graphics.Movie GetMovie(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Movie);
-				}
-
-				/// <java-name>
-				/// getColor
-				/// </java-name>
-				[Dot42.DexImport("getColor", "(I)I", AccessFlags = 1)]
-				public override int GetColor(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getColorStateList
-				/// </java-name>
-				[Dot42.DexImport("getColorStateList", "(I)Landroid/content/res/ColorStateList;", AccessFlags = 1)]
-				public override global::Android.Content.Res.ColorStateList GetColorStateList(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.ColorStateList);
-				}
-
-				/// <java-name>
-				/// getInteger
-				/// </java-name>
-				[Dot42.DexImport("getInteger", "(I)I", AccessFlags = 1)]
-				public override int GetInteger(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLayout
-				/// </java-name>
-				[Dot42.DexImport("getLayout", "(I)Landroid/content/res/XmlResourceParser;", AccessFlags = 1)]
-				public override global::Android.Content.Res.IXmlResourceParser GetLayout(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.IXmlResourceParser);
-				}
-
-				/// <java-name>
-				/// getAnimation
-				/// </java-name>
-				[Dot42.DexImport("getAnimation", "(I)Landroid/content/res/XmlResourceParser;", AccessFlags = 1)]
-				public override global::Android.Content.Res.IXmlResourceParser GetAnimation(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.IXmlResourceParser);
-				}
-
-				/// <java-name>
-				/// getXml
-				/// </java-name>
-				[Dot42.DexImport("getXml", "(I)Landroid/content/res/XmlResourceParser;", AccessFlags = 1)]
-				public override global::Android.Content.Res.IXmlResourceParser GetXml(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.IXmlResourceParser);
-				}
-
-				/// <java-name>
-				/// openRawResource
-				/// </java-name>
-				[Dot42.DexImport("openRawResource", "(I)Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream OpenRawResource(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// openRawResourceFd
-				/// </java-name>
-				[Dot42.DexImport("openRawResourceFd", "(I)Landroid/content/res/AssetFileDescriptor;", AccessFlags = 1)]
-				public override global::Android.Content.Res.AssetFileDescriptor OpenRawResourceFd(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.AssetFileDescriptor);
-				}
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "(ILandroid/util/TypedValue;Z)V", AccessFlags = 1)]
-				public override void GetValue(int int32, global::Android.Util.TypedValue typedValue, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "(Ljava/lang/String;Landroid/util/TypedValue;Z)V", AccessFlags = 1)]
-				public override void GetValue(string @string, global::Android.Util.TypedValue typedValue, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// obtainAttributes
-				/// </java-name>
-				[Dot42.DexImport("obtainAttributes", "(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;", AccessFlags = 1)]
-				public override global::Android.Content.Res.TypedArray ObtainAttributes(global::Android.Util.IAttributeSet attributeSet, int[] int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.TypedArray);
-				}
-
-				/// <java-name>
-				/// getDisplayMetrics
-				/// </java-name>
-				[Dot42.DexImport("getDisplayMetrics", "()Landroid/util/DisplayMetrics;", AccessFlags = 1)]
-				public override global::Android.Util.DisplayMetrics GetDisplayMetrics() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Util.DisplayMetrics);
-				}
-
-				/// <java-name>
-				/// getConfiguration
-				/// </java-name>
-				[Dot42.DexImport("getConfiguration", "()Landroid/content/res/Configuration;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Configuration GetConfiguration() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.Configuration);
-				}
-
-				/// <java-name>
-				/// getIdentifier
-				/// </java-name>
-				[Dot42.DexImport("getIdentifier", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int GetIdentifier(string @string, string string1, string string2) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getResourceName
-				/// </java-name>
-				[Dot42.DexImport("getResourceName", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetResourceName(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getResourcePackageName
-				/// </java-name>
-				[Dot42.DexImport("getResourcePackageName", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetResourcePackageName(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getResourceTypeName
-				/// </java-name>
-				[Dot42.DexImport("getResourceTypeName", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetResourceTypeName(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getResourceEntryName
-				/// </java-name>
-				[Dot42.DexImport("getResourceEntryName", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetResourceEntryName(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDisplayMetrics
-				/// </java-name>
-				public global::Android.Util.DisplayMetrics DisplayMetrics
-				{
-				[Dot42.DexImport("getDisplayMetrics", "()Landroid/util/DisplayMetrics;", AccessFlags = 1)]
-						get{ return GetDisplayMetrics(); }
-				}
-
-				/// <java-name>
-				/// getConfiguration
-				/// </java-name>
-				public global::Android.Content.Res.Configuration Configuration
-				{
-				[Dot42.DexImport("getConfiguration", "()Landroid/content/res/Configuration;", AccessFlags = 1)]
-						get{ return GetConfiguration(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// android/test/mock/MockCursor
 		/// </java-name>
 		[Dot42.DexImport("android/test/mock/MockCursor", AccessFlags = 33)]
@@ -2347,128 +1449,1026 @@ namespace Android.Test.Mock
 		}
 
 		/// <java-name>
-		/// android/test/mock/MockContentProvider
+		/// android/test/mock/MockDialogInterface
 		/// </java-name>
-		[Dot42.DexImport("android/test/mock/MockContentProvider", AccessFlags = 33)]
-		public partial class MockContentProvider : global::Android.Content.ContentProvider
+		[Dot42.DexImport("android/test/mock/MockDialogInterface", AccessFlags = 33)]
+		public partial class MockDialogInterface : global::Android.Content.IDialogInterface
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal MockContentProvider() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public MockContentProvider(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Landroid/content/p" +
-    "m/PathPermission;)V", AccessFlags = 1)]
-				public MockContentProvider(global::Android.Content.Context context, string @string, string string1, global::Android.Content.Pm.PathPermission[] pathPermission) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public MockDialogInterface() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// delete
+				/// cancel
 				/// </java-name>
-				[Dot42.DexImport("delete", "(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int Delete(global::Android.Net.Uri uri, string @string, string[] string1) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "(Landroid/net/Uri;)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetType(global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;", AccessFlags = 1)]
-				public override global::Android.Net.Uri Insert(global::Android.Net.Uri uri, global::Android.Content.ContentValues contentValues) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Uri);
-				}
-
-				/// <java-name>
-				/// onCreate
-				/// </java-name>
-				[Dot42.DexImport("onCreate", "()Z", AccessFlags = 1)]
-				public override bool OnCreate() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// query
-				/// </java-name>
-				[Dot42.DexImport("query", "(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/l" +
-    "ang/String;)Landroid/database/Cursor;", AccessFlags = 1)]
-				public override global::Android.Database.ICursor Query(global::Android.Net.Uri uri, string[] @string, string string1, string[] string2, string string3) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.ICursor);
-				}
-
-				/// <java-name>
-				/// update
-				/// </java-name>
-				[Dot42.DexImport("update", "(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/St" +
-    "ring;)I", AccessFlags = 1)]
-				public override int Update(global::Android.Net.Uri uri, global::Android.Content.ContentValues contentValues, string @string, string[] string1) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// bulkInsert
-				/// </java-name>
-				[Dot42.DexImport("bulkInsert", "(Landroid/net/Uri;[Landroid/content/ContentValues;)I", AccessFlags = 1)]
-				public override int BulkInsert(global::Android.Net.Uri uri, global::Android.Content.ContentValues[] contentValues) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// attachInfo
-				/// </java-name>
-				[Dot42.DexImport("attachInfo", "(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V", AccessFlags = 1)]
-				public override void AttachInfo(global::Android.Content.Context context, global::Android.Content.Pm.ProviderInfo providerInfo) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("cancel", "()V", AccessFlags = 1)]
+				public virtual void Cancel() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// applyBatch
+				/// dismiss
 				/// </java-name>
-				[Dot42.DexImport("applyBatch", "(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;)[Landroid/cont" +
-    "ent/ContentProviderResult;")]
-				public override global::Android.Content.ContentProviderResult[] ApplyBatch(global::Java.Util.ArrayList<global::Android.Content.ContentProviderOperation> arrayList) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("dismiss", "()V", AccessFlags = 1)]
+				public virtual void Dismiss() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Content.ContentProviderResult[]);
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/mock/MockPackageManager
+		/// </java-name>
+		[Dot42.DexImport("android/test/mock/MockPackageManager", AccessFlags = 33)]
+		public partial class MockPackageManager : global::Android.Content.Pm.PackageManager
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public MockPackageManager() /* MethodBuilder.Create */ 
+				{
 				}
 
 				/// <java-name>
-				/// getStreamTypes
+				/// getPackageInfo
 				/// </java-name>
-				[Dot42.DexImport("getStreamTypes", "(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetStreamTypes(global::Android.Net.Uri uri, string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getPackageInfo", "(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.PackageInfo GetPackageInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.PackageInfo);
+				}
+
+				/// <java-name>
+				/// currentToCanonicalPackageNames
+				/// </java-name>
+				[Dot42.DexImport("currentToCanonicalPackageNames", "([Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 1)]
+				public override string[] CurrentToCanonicalPackageNames(string[] @string) /* MethodBuilder.Create */ 
 				{
 						return default(string[]);
 				}
 
 				/// <java-name>
-				/// openTypedAssetFile
+				/// canonicalToCurrentPackageNames
 				/// </java-name>
-				[Dot42.DexImport("openTypedAssetFile", "(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/Asse" +
-    "tFileDescriptor;", AccessFlags = 1)]
-				public override global::Android.Content.Res.AssetFileDescriptor OpenTypedAssetFile(global::Android.Net.Uri uri, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("canonicalToCurrentPackageNames", "([Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 1)]
+				public override string[] CanonicalToCurrentPackageNames(string[] @string) /* MethodBuilder.Create */ 
+				{
+						return default(string[]);
+				}
+
+				/// <java-name>
+				/// getLaunchIntentForPackage
+				/// </java-name>
+				[Dot42.DexImport("getLaunchIntentForPackage", "(Ljava/lang/String;)Landroid/content/Intent;", AccessFlags = 1)]
+				public override global::Android.Content.Intent GetLaunchIntentForPackage(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Intent);
+				}
+
+				/// <java-name>
+				/// getPackageGids
+				/// </java-name>
+				[Dot42.DexImport("getPackageGids", "(Ljava/lang/String;)[I", AccessFlags = 1)]
+				public override int[] GetPackageGids(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int[]);
+				}
+
+				/// <java-name>
+				/// getPermissionInfo
+				/// </java-name>
+				[Dot42.DexImport("getPermissionInfo", "(Ljava/lang/String;I)Landroid/content/pm/PermissionInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.PermissionInfo GetPermissionInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.PermissionInfo);
+				}
+
+				/// <java-name>
+				/// queryPermissionsByGroup
+				/// </java-name>
+				[Dot42.DexImport("queryPermissionsByGroup", "(Ljava/lang/String;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;I)Ljava/util/List<Landroid/content/pm/PermissionInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.PermissionInfo> QueryPermissionsByGroup(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.PermissionInfo>);
+				}
+
+				/// <java-name>
+				/// getPermissionGroupInfo
+				/// </java-name>
+				[Dot42.DexImport("getPermissionGroupInfo", "(Ljava/lang/String;I)Landroid/content/pm/PermissionGroupInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.PermissionGroupInfo GetPermissionGroupInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.PermissionGroupInfo);
+				}
+
+				/// <java-name>
+				/// getAllPermissionGroups
+				/// </java-name>
+				[Dot42.DexImport("getAllPermissionGroups", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/PermissionGroupInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.PermissionGroupInfo> GetAllPermissionGroups(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.PermissionGroupInfo>);
+				}
+
+				/// <java-name>
+				/// getApplicationInfo
+				/// </java-name>
+				[Dot42.DexImport("getApplicationInfo", "(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.ApplicationInfo GetApplicationInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.ApplicationInfo);
+				}
+
+				/// <java-name>
+				/// getActivityInfo
+				/// </java-name>
+				[Dot42.DexImport("getActivityInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.ActivityInfo GetActivityInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.ActivityInfo);
+				}
+
+				/// <java-name>
+				/// getReceiverInfo
+				/// </java-name>
+				[Dot42.DexImport("getReceiverInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.ActivityInfo GetReceiverInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.ActivityInfo);
+				}
+
+				/// <java-name>
+				/// getServiceInfo
+				/// </java-name>
+				[Dot42.DexImport("getServiceInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.ServiceInfo GetServiceInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.ServiceInfo);
+				}
+
+				/// <java-name>
+				/// getProviderInfo
+				/// </java-name>
+				[Dot42.DexImport("getProviderInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ProviderInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.ProviderInfo GetProviderInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.ProviderInfo);
+				}
+
+				/// <java-name>
+				/// getInstalledPackages
+				/// </java-name>
+				[Dot42.DexImport("getInstalledPackages", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/PackageInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.PackageInfo> GetInstalledPackages(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.PackageInfo>);
+				}
+
+				/// <java-name>
+				/// checkPermission
+				/// </java-name>
+				[Dot42.DexImport("checkPermission", "(Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
+				public override int CheckPermission(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// addPermission
+				/// </java-name>
+				[Dot42.DexImport("addPermission", "(Landroid/content/pm/PermissionInfo;)Z", AccessFlags = 1)]
+				public override bool AddPermission(global::Android.Content.Pm.PermissionInfo permissionInfo) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// addPermissionAsync
+				/// </java-name>
+				[Dot42.DexImport("addPermissionAsync", "(Landroid/content/pm/PermissionInfo;)Z", AccessFlags = 1)]
+				public override bool AddPermissionAsync(global::Android.Content.Pm.PermissionInfo permissionInfo) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// removePermission
+				/// </java-name>
+				[Dot42.DexImport("removePermission", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void RemovePermission(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// checkSignatures
+				/// </java-name>
+				[Dot42.DexImport("checkSignatures", "(Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
+				public override int CheckSignatures(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// checkSignatures
+				/// </java-name>
+				[Dot42.DexImport("checkSignatures", "(II)I", AccessFlags = 1)]
+				public override int CheckSignatures(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getPackagesForUid
+				/// </java-name>
+				[Dot42.DexImport("getPackagesForUid", "(I)[Ljava/lang/String;", AccessFlags = 1)]
+				public override string[] GetPackagesForUid(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string[]);
+				}
+
+				/// <java-name>
+				/// getNameForUid
+				/// </java-name>
+				[Dot42.DexImport("getNameForUid", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetNameForUid(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getInstalledApplications
+				/// </java-name>
+				[Dot42.DexImport("getInstalledApplications", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.ApplicationInfo> GetInstalledApplications(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.ApplicationInfo>);
+				}
+
+				/// <java-name>
+				/// resolveActivity
+				/// </java-name>
+				[Dot42.DexImport("resolveActivity", "(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.ResolveInfo ResolveActivity(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.ResolveInfo);
+				}
+
+				/// <java-name>
+				/// queryIntentActivities
+				/// </java-name>
+				[Dot42.DexImport("queryIntentActivities", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryIntentActivities(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo>);
+				}
+
+				/// <java-name>
+				/// queryIntentActivityOptions
+				/// </java-name>
+				[Dot42.DexImport("queryIntentActivityOptions", "(Landroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;" +
+    "I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;" +
+    "I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryIntentActivityOptions(global::Android.Content.ComponentName componentName, global::Android.Content.Intent[] intent, global::Android.Content.Intent intent1, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo>);
+				}
+
+				/// <java-name>
+				/// queryBroadcastReceivers
+				/// </java-name>
+				[Dot42.DexImport("queryBroadcastReceivers", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryBroadcastReceivers(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo>);
+				}
+
+				/// <java-name>
+				/// resolveService
+				/// </java-name>
+				[Dot42.DexImport("resolveService", "(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.ResolveInfo ResolveService(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.ResolveInfo);
+				}
+
+				/// <java-name>
+				/// queryIntentServices
+				/// </java-name>
+				[Dot42.DexImport("queryIntentServices", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryIntentServices(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo>);
+				}
+
+				/// <java-name>
+				/// resolveContentProvider
+				/// </java-name>
+				[Dot42.DexImport("resolveContentProvider", "(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.ProviderInfo ResolveContentProvider(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.ProviderInfo);
+				}
+
+				/// <java-name>
+				/// queryContentProviders
+				/// </java-name>
+				[Dot42.DexImport("queryContentProviders", "(Ljava/lang/String;II)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;II)Ljava/util/List<Landroid/content/pm/ProviderInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.ProviderInfo> QueryContentProviders(string @string, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.ProviderInfo>);
+				}
+
+				/// <java-name>
+				/// getInstrumentationInfo
+				/// </java-name>
+				[Dot42.DexImport("getInstrumentationInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/InstrumentationInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.InstrumentationInfo GetInstrumentationInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.InstrumentationInfo);
+				}
+
+				/// <java-name>
+				/// queryInstrumentation
+				/// </java-name>
+				[Dot42.DexImport("queryInstrumentation", "(Ljava/lang/String;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;I)Ljava/util/List<Landroid/content/pm/InstrumentationInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.InstrumentationInfo> QueryInstrumentation(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.InstrumentationInfo>);
+				}
+
+				/// <java-name>
+				/// getDrawable
+				/// </java-name>
+				[Dot42.DexImport("getDrawable", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawab" +
+    "le/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetDrawable(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getActivityIcon
+				/// </java-name>
+				[Dot42.DexImport("getActivityIcon", "(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetActivityIcon(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getActivityIcon
+				/// </java-name>
+				[Dot42.DexImport("getActivityIcon", "(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetActivityIcon(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getDefaultActivityIcon
+				/// </java-name>
+				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetDefaultActivityIcon() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getApplicationIcon
+				/// </java-name>
+				[Dot42.DexImport("getApplicationIcon", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetApplicationIcon(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getApplicationIcon
+				/// </java-name>
+				[Dot42.DexImport("getApplicationIcon", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetApplicationIcon(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getActivityLogo
+				/// </java-name>
+				[Dot42.DexImport("getActivityLogo", "(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetActivityLogo(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getActivityLogo
+				/// </java-name>
+				[Dot42.DexImport("getActivityLogo", "(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetActivityLogo(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getApplicationLogo
+				/// </java-name>
+				[Dot42.DexImport("getApplicationLogo", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetApplicationLogo(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getApplicationLogo
+				/// </java-name>
+				[Dot42.DexImport("getApplicationLogo", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetApplicationLogo(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getText
+				/// </java-name>
+				[Dot42.DexImport("getText", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;" +
+    "", AccessFlags = 1)]
+				public override global::Java.Lang.ICharSequence GetText(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// getXml
+				/// </java-name>
+				[Dot42.DexImport("getXml", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/content/res/Xml" +
+    "ResourceParser;", AccessFlags = 1)]
+				public override global::Android.Content.Res.IXmlResourceParser GetXml(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.IXmlResourceParser);
+				}
+
+				/// <java-name>
+				/// getApplicationLabel
+				/// </java-name>
+				[Dot42.DexImport("getApplicationLabel", "(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public override global::Java.Lang.ICharSequence GetApplicationLabel(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// getResourcesForActivity
+				/// </java-name>
+				[Dot42.DexImport("getResourcesForActivity", "(Landroid/content/ComponentName;)Landroid/content/res/Resources;", AccessFlags = 1)]
+				public override global::Android.Content.Res.Resources GetResourcesForActivity(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.Resources);
+				}
+
+				/// <java-name>
+				/// getResourcesForApplication
+				/// </java-name>
+				[Dot42.DexImport("getResourcesForApplication", "(Landroid/content/pm/ApplicationInfo;)Landroid/content/res/Resources;", AccessFlags = 1)]
+				public override global::Android.Content.Res.Resources GetResourcesForApplication(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.Resources);
+				}
+
+				/// <java-name>
+				/// getResourcesForApplication
+				/// </java-name>
+				[Dot42.DexImport("getResourcesForApplication", "(Ljava/lang/String;)Landroid/content/res/Resources;", AccessFlags = 1)]
+				public override global::Android.Content.Res.Resources GetResourcesForApplication(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.Resources);
+				}
+
+				/// <java-name>
+				/// getPackageArchiveInfo
+				/// </java-name>
+				[Dot42.DexImport("getPackageArchiveInfo", "(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.PackageInfo GetPackageArchiveInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.PackageInfo);
+				}
+
+				/// <java-name>
+				/// setInstallerPackageName
+				/// </java-name>
+				[Dot42.DexImport("setInstallerPackageName", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void SetInstallerPackageName(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getInstallerPackageName
+				/// </java-name>
+				[Dot42.DexImport("getInstallerPackageName", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetInstallerPackageName(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// addPackageToPreferred
+				/// </java-name>
+				[Dot42.DexImport("addPackageToPreferred", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void AddPackageToPreferred(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removePackageFromPreferred
+				/// </java-name>
+				[Dot42.DexImport("removePackageFromPreferred", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void RemovePackageFromPreferred(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPreferredPackages
+				/// </java-name>
+				[Dot42.DexImport("getPreferredPackages", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/PackageInfo;>;")]
+				public override global::Java.Util.IList<global::Android.Content.Pm.PackageInfo> GetPreferredPackages(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Content.Pm.PackageInfo>);
+				}
+
+				/// <java-name>
+				/// setComponentEnabledSetting
+				/// </java-name>
+				[Dot42.DexImport("setComponentEnabledSetting", "(Landroid/content/ComponentName;II)V", AccessFlags = 1)]
+				public override void SetComponentEnabledSetting(global::Android.Content.ComponentName componentName, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getComponentEnabledSetting
+				/// </java-name>
+				[Dot42.DexImport("getComponentEnabledSetting", "(Landroid/content/ComponentName;)I", AccessFlags = 1)]
+				public override int GetComponentEnabledSetting(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setApplicationEnabledSetting
+				/// </java-name>
+				[Dot42.DexImport("setApplicationEnabledSetting", "(Ljava/lang/String;II)V", AccessFlags = 1)]
+				public override void SetApplicationEnabledSetting(string @string, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getApplicationEnabledSetting
+				/// </java-name>
+				[Dot42.DexImport("getApplicationEnabledSetting", "(Ljava/lang/String;)I", AccessFlags = 1)]
+				public override int GetApplicationEnabledSetting(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// addPreferredActivity
+				/// </java-name>
+				[Dot42.DexImport("addPreferredActivity", "(Landroid/content/IntentFilter;I[Landroid/content/ComponentName;Landroid/content/" +
+    "ComponentName;)V", AccessFlags = 1)]
+				public override void AddPreferredActivity(global::Android.Content.IntentFilter intentFilter, int int32, global::Android.Content.ComponentName[] componentName, global::Android.Content.ComponentName componentName1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clearPackagePreferredActivities
+				/// </java-name>
+				[Dot42.DexImport("clearPackagePreferredActivities", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void ClearPackagePreferredActivities(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPreferredActivities
+				/// </java-name>
+				[Dot42.DexImport("getPreferredActivities", "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)I", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/content/IntentFilter;>;Ljava/util/List<Landroid/content" +
+    "/ComponentName;>;Ljava/lang/String;)I")]
+				public override int GetPreferredActivities(global::Java.Util.IList<global::Android.Content.IntentFilter> list, global::Java.Util.IList<global::Android.Content.ComponentName> list1, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getSystemSharedLibraryNames
+				/// </java-name>
+				[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1)]
+				public override string[] GetSystemSharedLibraryNames() /* MethodBuilder.Create */ 
+				{
+						return default(string[]);
+				}
+
+				/// <java-name>
+				/// getSystemAvailableFeatures
+				/// </java-name>
+				[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1)]
+				public override global::Android.Content.Pm.FeatureInfo[] GetSystemAvailableFeatures() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Pm.FeatureInfo[]);
+				}
+
+				/// <java-name>
+				/// hasSystemFeature
+				/// </java-name>
+				[Dot42.DexImport("hasSystemFeature", "(Ljava/lang/String;)Z", AccessFlags = 1)]
+				public override bool HasSystemFeature(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isSafeMode
+				/// </java-name>
+				[Dot42.DexImport("isSafeMode", "()Z", AccessFlags = 1)]
+				public override bool IsSafeMode() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// verifyPendingInstall
+				/// </java-name>
+				[Dot42.DexImport("verifyPendingInstall", "(II)V", AccessFlags = 1)]
+				public override void VerifyPendingInstall(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDefaultActivityIcon
+				/// </java-name>
+				public global::Android.Graphics.Drawable.Drawable DefaultActivityIcon
+				{
+				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						get{ return GetDefaultActivityIcon(); }
+				}
+
+				/// <java-name>
+				/// getSystemSharedLibraryNames
+				/// </java-name>
+				public string[] SystemSharedLibraryNames
+				{
+				[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetSystemSharedLibraryNames(); }
+				}
+
+				/// <java-name>
+				/// getSystemAvailableFeatures
+				/// </java-name>
+				public global::Android.Content.Pm.FeatureInfo[] SystemAvailableFeatures
+				{
+				[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1)]
+						get{ return GetSystemAvailableFeatures(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/mock/MockResources
+		/// </java-name>
+		[Dot42.DexImport("android/test/mock/MockResources", AccessFlags = 33)]
+		public partial class MockResources : global::Android.Content.Res.Resources
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public MockResources() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// updateConfiguration
+				/// </java-name>
+				[Dot42.DexImport("updateConfiguration", "(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V", AccessFlags = 1)]
+				public override void UpdateConfiguration(global::Android.Content.Res.Configuration configuration, global::Android.Util.DisplayMetrics displayMetrics) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getText
+				/// </java-name>
+				[Dot42.DexImport("getText", "(I)Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public override global::Java.Lang.ICharSequence GetText(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// getQuantityText
+				/// </java-name>
+				[Dot42.DexImport("getQuantityText", "(II)Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public override global::Java.Lang.ICharSequence GetQuantityText(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// getString
+				/// </java-name>
+				[Dot42.DexImport("getString", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetString(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getString
+				/// </java-name>
+				[Dot42.DexImport("getString", "(I[Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 129)]
+				public override string GetString(int int32, params object[] @object) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getQuantityString
+				/// </java-name>
+				[Dot42.DexImport("getQuantityString", "(II[Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 129)]
+				public override string GetQuantityString(int int32, int int321, params object[] @object) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getQuantityString
+				/// </java-name>
+				[Dot42.DexImport("getQuantityString", "(II)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetQuantityString(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getText
+				/// </java-name>
+				[Dot42.DexImport("getText", "(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public override global::Java.Lang.ICharSequence GetText(int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// getTextArray
+				/// </java-name>
+				[Dot42.DexImport("getTextArray", "(I)[Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public override global::Java.Lang.ICharSequence[] GetTextArray(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence[]);
+				}
+
+				/// <java-name>
+				/// getStringArray
+				/// </java-name>
+				[Dot42.DexImport("getStringArray", "(I)[Ljava/lang/String;", AccessFlags = 1)]
+				public override string[] GetStringArray(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string[]);
+				}
+
+				/// <java-name>
+				/// getIntArray
+				/// </java-name>
+				[Dot42.DexImport("getIntArray", "(I)[I", AccessFlags = 1)]
+				public override int[] GetIntArray(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int[]);
+				}
+
+				/// <java-name>
+				/// obtainTypedArray
+				/// </java-name>
+				[Dot42.DexImport("obtainTypedArray", "(I)Landroid/content/res/TypedArray;", AccessFlags = 1)]
+				public override global::Android.Content.Res.TypedArray ObtainTypedArray(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.TypedArray);
+				}
+
+				/// <java-name>
+				/// getDimension
+				/// </java-name>
+				[Dot42.DexImport("getDimension", "(I)F", AccessFlags = 1)]
+				public override float GetDimension(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getDimensionPixelOffset
+				/// </java-name>
+				[Dot42.DexImport("getDimensionPixelOffset", "(I)I", AccessFlags = 1)]
+				public override int GetDimensionPixelOffset(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getDimensionPixelSize
+				/// </java-name>
+				[Dot42.DexImport("getDimensionPixelSize", "(I)I", AccessFlags = 1)]
+				public override int GetDimensionPixelSize(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getDrawable
+				/// </java-name>
+				[Dot42.DexImport("getDrawable", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+				public override global::Android.Graphics.Drawable.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Drawable.Drawable);
+				}
+
+				/// <java-name>
+				/// getMovie
+				/// </java-name>
+				[Dot42.DexImport("getMovie", "(I)Landroid/graphics/Movie;", AccessFlags = 1)]
+				public override global::Android.Graphics.Movie GetMovie(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Movie);
+				}
+
+				/// <java-name>
+				/// getColor
+				/// </java-name>
+				[Dot42.DexImport("getColor", "(I)I", AccessFlags = 1)]
+				public override int GetColor(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getColorStateList
+				/// </java-name>
+				[Dot42.DexImport("getColorStateList", "(I)Landroid/content/res/ColorStateList;", AccessFlags = 1)]
+				public override global::Android.Content.Res.ColorStateList GetColorStateList(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.ColorStateList);
+				}
+
+				/// <java-name>
+				/// getInteger
+				/// </java-name>
+				[Dot42.DexImport("getInteger", "(I)I", AccessFlags = 1)]
+				public override int GetInteger(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getLayout
+				/// </java-name>
+				[Dot42.DexImport("getLayout", "(I)Landroid/content/res/XmlResourceParser;", AccessFlags = 1)]
+				public override global::Android.Content.Res.IXmlResourceParser GetLayout(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.IXmlResourceParser);
+				}
+
+				/// <java-name>
+				/// getAnimation
+				/// </java-name>
+				[Dot42.DexImport("getAnimation", "(I)Landroid/content/res/XmlResourceParser;", AccessFlags = 1)]
+				public override global::Android.Content.Res.IXmlResourceParser GetAnimation(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.IXmlResourceParser);
+				}
+
+				/// <java-name>
+				/// getXml
+				/// </java-name>
+				[Dot42.DexImport("getXml", "(I)Landroid/content/res/XmlResourceParser;", AccessFlags = 1)]
+				public override global::Android.Content.Res.IXmlResourceParser GetXml(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.IXmlResourceParser);
+				}
+
+				/// <java-name>
+				/// openRawResource
+				/// </java-name>
+				[Dot42.DexImport("openRawResource", "(I)Ljava/io/InputStream;", AccessFlags = 1)]
+				public override global::Java.Io.InputStream OpenRawResource(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// openRawResourceFd
+				/// </java-name>
+				[Dot42.DexImport("openRawResourceFd", "(I)Landroid/content/res/AssetFileDescriptor;", AccessFlags = 1)]
+				public override global::Android.Content.Res.AssetFileDescriptor OpenRawResourceFd(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.AssetFileDescriptor);
+				}
+
+				/// <java-name>
+				/// getValue
+				/// </java-name>
+				[Dot42.DexImport("getValue", "(ILandroid/util/TypedValue;Z)V", AccessFlags = 1)]
+				public override void GetValue(int int32, global::Android.Util.TypedValue typedValue, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getValue
+				/// </java-name>
+				[Dot42.DexImport("getValue", "(Ljava/lang/String;Landroid/util/TypedValue;Z)V", AccessFlags = 1)]
+				public override void GetValue(string @string, global::Android.Util.TypedValue typedValue, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// obtainAttributes
+				/// </java-name>
+				[Dot42.DexImport("obtainAttributes", "(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;", AccessFlags = 1)]
+				public override global::Android.Content.Res.TypedArray ObtainAttributes(global::Android.Util.IAttributeSet attributeSet, int[] int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.TypedArray);
+				}
+
+				/// <java-name>
+				/// getDisplayMetrics
+				/// </java-name>
+				[Dot42.DexImport("getDisplayMetrics", "()Landroid/util/DisplayMetrics;", AccessFlags = 1)]
+				public override global::Android.Util.DisplayMetrics GetDisplayMetrics() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Util.DisplayMetrics);
+				}
+
+				/// <java-name>
+				/// getConfiguration
+				/// </java-name>
+				[Dot42.DexImport("getConfiguration", "()Landroid/content/res/Configuration;", AccessFlags = 1)]
+				public override global::Android.Content.Res.Configuration GetConfiguration() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.Configuration);
+				}
+
+				/// <java-name>
+				/// getIdentifier
+				/// </java-name>
+				[Dot42.DexImport("getIdentifier", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
+				public override int GetIdentifier(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getResourceName
+				/// </java-name>
+				[Dot42.DexImport("getResourceName", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetResourceName(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getResourcePackageName
+				/// </java-name>
+				[Dot42.DexImport("getResourcePackageName", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetResourcePackageName(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getResourceTypeName
+				/// </java-name>
+				[Dot42.DexImport("getResourceTypeName", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetResourceTypeName(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getResourceEntryName
+				/// </java-name>
+				[Dot42.DexImport("getResourceEntryName", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetResourceEntryName(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getDisplayMetrics
+				/// </java-name>
+				public global::Android.Util.DisplayMetrics DisplayMetrics
+				{
+				[Dot42.DexImport("getDisplayMetrics", "()Landroid/util/DisplayMetrics;", AccessFlags = 1)]
+						get{ return GetDisplayMetrics(); }
+				}
+
+				/// <java-name>
+				/// getConfiguration
+				/// </java-name>
+				public global::Android.Content.Res.Configuration Configuration
+				{
+				[Dot42.DexImport("getConfiguration", "()Landroid/content/res/Configuration;", AccessFlags = 1)]
+						get{ return GetConfiguration(); }
 				}
 
 		}

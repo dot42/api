@@ -2,50 +2,6 @@
 namespace Junit.Runner
 {
 		/// <java-name>
-		/// junit/runner/TestSuiteLoader
-		/// </java-name>
-		[Dot42.DexImport("junit/runner/TestSuiteLoader", AccessFlags = 1537)]
-		public partial interface ITestSuiteLoader
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// load
-				/// </java-name>
-				[Dot42.DexImport("load", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 1025)]
-				global::System.Type Load(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// reload
-				/// </java-name>
-				[Dot42.DexImport("reload", "(Ljava/lang/Class;)Ljava/lang/Class;", AccessFlags = 1025)]
-				global::System.Type Reload(global::System.Type type) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// junit/runner/Version
-		/// </java-name>
-		[Dot42.DexImport("junit/runner/Version", AccessFlags = 33)]
-		public partial class Version
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Version() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// id
-				/// </java-name>
-				[Dot42.DexImport("id", "()Ljava/lang/String;", AccessFlags = 9)]
-				public static string Id() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-		}
-
-		/// <java-name>
 		/// junit/runner/BaseTestRunner
 		/// </java-name>
 		[Dot42.DexImport("junit/runner/BaseTestRunner", AccessFlags = 1057)]
@@ -311,6 +267,50 @@ namespace Junit.Runner
 				{
 				[Dot42.DexImport("getLoader", "()Ljunit/runner/TestSuiteLoader;", AccessFlags = 1)]
 						get{ return GetLoader(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// junit/runner/TestSuiteLoader
+		/// </java-name>
+		[Dot42.DexImport("junit/runner/TestSuiteLoader", AccessFlags = 1537)]
+		public partial interface ITestSuiteLoader
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// load
+				/// </java-name>
+				[Dot42.DexImport("load", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 1025)]
+				global::System.Type Load(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// reload
+				/// </java-name>
+				[Dot42.DexImport("reload", "(Ljava/lang/Class;)Ljava/lang/Class;", AccessFlags = 1025)]
+				global::System.Type Reload(global::System.Type type) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// junit/runner/Version
+		/// </java-name>
+		[Dot42.DexImport("junit/runner/Version", AccessFlags = 33)]
+		public partial class Version
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Version() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// id
+				/// </java-name>
+				[Dot42.DexImport("id", "()Ljava/lang/String;", AccessFlags = 9)]
+				public static string Id() /* MethodBuilder.Create */ 
+				{
+						return default(string);
 				}
 
 		}

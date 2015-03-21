@@ -2,6 +2,764 @@
 namespace Android.View
 {
 		/// <java-name>
+		/// android/view/AbsSavedState
+		/// </java-name>
+		[Dot42.DexImport("android/view/AbsSavedState", AccessFlags = 1057)]
+		public abstract partial class AbsSavedState : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// EMPTY_STATE
+				/// </java-name>
+				[Dot42.DexImport("EMPTY_STATE", "Landroid/view/AbsSavedState;", AccessFlags = 25)]
+				public static readonly global::Android.View.AbsSavedState EMPTY_STATE;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.AbsSavedState> CREATOR;
+				[Dot42.DexImport("<init>", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
+				protected internal AbsSavedState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 4)]
+				protected internal AbsSavedState(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSuperState
+				/// </java-name>
+				[Dot42.DexImport("getSuperState", "()Landroid/os/Parcelable;", AccessFlags = 17)]
+				public global::Android.Os.IParcelable GetSuperState() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IParcelable);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal AbsSavedState() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSuperState
+				/// </java-name>
+				public global::Android.Os.IParcelable SuperState
+				{
+				[Dot42.DexImport("getSuperState", "()Landroid/os/Parcelable;", AccessFlags = 17)]
+						get{ return GetSuperState(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/ActionMode
+		/// </java-name>
+		[Dot42.DexImport("android/view/ActionMode", AccessFlags = 1057)]
+		public abstract partial class ActionMode
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ActionMode() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setTag
+				/// </java-name>
+				[Dot42.DexImport("setTag", "(Ljava/lang/Object;)V", AccessFlags = 1)]
+				public virtual void SetTag(object @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				[Dot42.DexImport("getTag", "()Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object GetTag() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// setTitle
+				/// </java-name>
+				[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
+				public abstract void SetTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setTitle
+				/// </java-name>
+				[Dot42.DexImport("setTitle", "(I)V", AccessFlags = 1025)]
+				public abstract void SetTitle(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setSubtitle
+				/// </java-name>
+				[Dot42.DexImport("setSubtitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
+				public abstract void SetSubtitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setSubtitle
+				/// </java-name>
+				[Dot42.DexImport("setSubtitle", "(I)V", AccessFlags = 1025)]
+				public abstract void SetSubtitle(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setCustomView
+				/// </java-name>
+				[Dot42.DexImport("setCustomView", "(Landroid/view/View;)V", AccessFlags = 1025)]
+				public abstract void SetCustomView(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// invalidate
+				/// </java-name>
+				[Dot42.DexImport("invalidate", "()V", AccessFlags = 1025)]
+				public abstract void Invalidate() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// finish
+				/// </java-name>
+				[Dot42.DexImport("finish", "()V", AccessFlags = 1025)]
+				public abstract void Finish() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getMenu
+				/// </java-name>
+				[Dot42.DexImport("getMenu", "()Landroid/view/Menu;", AccessFlags = 1025)]
+				public abstract global::Android.View.IMenu GetMenu() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getTitle
+				/// </java-name>
+				[Dot42.DexImport("getTitle", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
+				public abstract global::Java.Lang.ICharSequence GetTitle() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getSubtitle
+				/// </java-name>
+				[Dot42.DexImport("getSubtitle", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
+				public abstract global::Java.Lang.ICharSequence GetSubtitle() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getCustomView
+				/// </java-name>
+				[Dot42.DexImport("getCustomView", "()Landroid/view/View;", AccessFlags = 1025)]
+				public abstract global::Android.View.View GetCustomView() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getMenuInflater
+				/// </java-name>
+				[Dot42.DexImport("getMenuInflater", "()Landroid/view/MenuInflater;", AccessFlags = 1025)]
+				public abstract global::Android.View.MenuInflater GetMenuInflater() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getTag
+				/// </java-name>
+				public object Tag
+				{
+				[Dot42.DexImport("getTag", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return GetTag(); }
+				[Dot42.DexImport("setTag", "(Ljava/lang/Object;)V", AccessFlags = 1)]
+						set{ SetTag(value); }
+				}
+
+				/// <java-name>
+				/// getMenu
+				/// </java-name>
+				public global::Android.View.IMenu Menu
+				{
+				[Dot42.DexImport("getMenu", "()Landroid/view/Menu;", AccessFlags = 1025)]
+						get{ return GetMenu(); }
+				}
+
+				/// <java-name>
+				/// getTitle
+				/// </java-name>
+				public global::Java.Lang.ICharSequence Title
+				{
+				[Dot42.DexImport("getTitle", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
+						get{ return GetTitle(); }
+				[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
+						set{ SetTitle(value); }
+				}
+
+				/// <java-name>
+				/// getSubtitle
+				/// </java-name>
+				public global::Java.Lang.ICharSequence Subtitle
+				{
+				[Dot42.DexImport("getSubtitle", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
+						get{ return GetSubtitle(); }
+				[Dot42.DexImport("setSubtitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
+						set{ SetSubtitle(value); }
+				}
+
+				/// <java-name>
+				/// getCustomView
+				/// </java-name>
+				public global::Android.View.View CustomView
+				{
+				[Dot42.DexImport("getCustomView", "()Landroid/view/View;", AccessFlags = 1025)]
+						get{ return GetCustomView(); }
+				[Dot42.DexImport("setCustomView", "(Landroid/view/View;)V", AccessFlags = 1025)]
+						set{ SetCustomView(value); }
+				}
+
+				/// <java-name>
+				/// getMenuInflater
+				/// </java-name>
+				public global::Android.View.MenuInflater MenuInflater
+				{
+				[Dot42.DexImport("getMenuInflater", "()Landroid/view/MenuInflater;", AccessFlags = 1025)]
+						get{ return GetMenuInflater(); }
+				}
+
+				/// <java-name>
+				/// android/view/ActionMode$Callback
+				/// </java-name>
+				[Dot42.DexImport("android/view/ActionMode$Callback", AccessFlags = 1545)]
+				public partial interface ICallback
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onCreateActionMode
+						/// </java-name>
+						[Dot42.DexImport("onCreateActionMode", "(Landroid/view/ActionMode;Landroid/view/Menu;)Z", AccessFlags = 1025)]
+						bool OnCreateActionMode(global::Android.View.ActionMode actionMode, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onPrepareActionMode
+						/// </java-name>
+						[Dot42.DexImport("onPrepareActionMode", "(Landroid/view/ActionMode;Landroid/view/Menu;)Z", AccessFlags = 1025)]
+						bool OnPrepareActionMode(global::Android.View.ActionMode actionMode, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onActionItemClicked
+						/// </java-name>
+						[Dot42.DexImport("onActionItemClicked", "(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z", AccessFlags = 1025)]
+						bool OnActionItemClicked(global::Android.View.ActionMode actionMode, global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onDestroyActionMode
+						/// </java-name>
+						[Dot42.DexImport("onDestroyActionMode", "(Landroid/view/ActionMode;)V", AccessFlags = 1025)]
+						void OnDestroyActionMode(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/ActionProvider
+		/// </java-name>
+		[Dot42.DexImport("android/view/ActionProvider", AccessFlags = 1057)]
+		public abstract partial class ActionProvider
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public ActionProvider(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCreateActionView
+				/// </java-name>
+				[Dot42.DexImport("onCreateActionView", "()Landroid/view/View;", AccessFlags = 1025)]
+				public abstract global::Android.View.View OnCreateActionView() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onPerformDefaultAction
+				/// </java-name>
+				[Dot42.DexImport("onPerformDefaultAction", "()Z", AccessFlags = 1)]
+				public virtual bool OnPerformDefaultAction() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hasSubMenu
+				/// </java-name>
+				[Dot42.DexImport("hasSubMenu", "()Z", AccessFlags = 1)]
+				public virtual bool HasSubMenu() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onPrepareSubMenu
+				/// </java-name>
+				[Dot42.DexImport("onPrepareSubMenu", "(Landroid/view/SubMenu;)V", AccessFlags = 1)]
+				public virtual void OnPrepareSubMenu(global::Android.View.ISubMenu subMenu) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ActionProvider() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/ContextThemeWrapper
+		/// </java-name>
+		[Dot42.DexImport("android/view/ContextThemeWrapper", AccessFlags = 33)]
+		public partial class ContextThemeWrapper : global::Android.Content.ContextWrapper
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ContextThemeWrapper() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
+				public ContextThemeWrapper(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// attachBaseContext
+				/// </java-name>
+				[Dot42.DexImport("attachBaseContext", "(Landroid/content/Context;)V", AccessFlags = 4)]
+				protected internal override void AttachBaseContext(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setTheme
+				/// </java-name>
+				[Dot42.DexImport("setTheme", "(I)V", AccessFlags = 1)]
+				public override void SetTheme(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTheme
+				/// </java-name>
+				[Dot42.DexImport("getTheme", "()Landroid/content/res/Resources$Theme;", AccessFlags = 1)]
+				public override global::Android.Content.Res.Resources.Theme GetTheme() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.Resources.Theme);
+				}
+
+				/// <java-name>
+				/// getSystemService
+				/// </java-name>
+				[Dot42.DexImport("getSystemService", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1)]
+				public override object GetSystemService(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// onApplyThemeResource
+				/// </java-name>
+				[Dot42.DexImport("onApplyThemeResource", "(Landroid/content/res/Resources$Theme;IZ)V", AccessFlags = 4)]
+				protected internal virtual void OnApplyThemeResource(global::Android.Content.Res.Resources.Theme theme, int int32, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTheme
+				/// </java-name>
+				public global::Android.Content.Res.Resources.Theme Theme
+				{
+				[Dot42.DexImport("getTheme", "()Landroid/content/res/Resources$Theme;", AccessFlags = 1)]
+						get{ return GetTheme(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/Display
+		/// </java-name>
+		[Dot42.DexImport("android/view/Display", AccessFlags = 33)]
+		public partial class Display
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// DEFAULT_DISPLAY
+				/// </java-name>
+				[Dot42.DexImport("DEFAULT_DISPLAY", "I", AccessFlags = 25)]
+				public const int DEFAULT_DISPLAY = 0;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Display() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDisplayId
+				/// </java-name>
+				[Dot42.DexImport("getDisplayId", "()I", AccessFlags = 1)]
+				public virtual int GetDisplayId() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getSize
+				/// </java-name>
+				[Dot42.DexImport("getSize", "(Landroid/graphics/Point;)V", AccessFlags = 1)]
+				public virtual void GetSize(global::Android.Graphics.Point point) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRectSize
+				/// </java-name>
+				[Dot42.DexImport("getRectSize", "(Landroid/graphics/Rect;)V", AccessFlags = 1)]
+				public virtual void GetRectSize(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getWidth
+				/// </java-name>
+				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
+				public virtual int GetWidth() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getHeight
+				/// </java-name>
+				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+				public virtual int GetHeight() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getRotation
+				/// </java-name>
+				[Dot42.DexImport("getRotation", "()I", AccessFlags = 1)]
+				public virtual int GetRotation() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getOrientation
+				/// </java-name>
+				[Dot42.DexImport("getOrientation", "()I", AccessFlags = 257)]
+				public virtual int GetOrientation() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getPixelFormat
+				/// </java-name>
+				[Dot42.DexImport("getPixelFormat", "()I", AccessFlags = 1)]
+				public virtual int GetPixelFormat() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getRefreshRate
+				/// </java-name>
+				[Dot42.DexImport("getRefreshRate", "()F", AccessFlags = 1)]
+				public virtual float GetRefreshRate() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getMetrics
+				/// </java-name>
+				[Dot42.DexImport("getMetrics", "(Landroid/util/DisplayMetrics;)V", AccessFlags = 1)]
+				public virtual void GetMetrics(global::Android.Util.DisplayMetrics displayMetrics) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDisplayId
+				/// </java-name>
+				public int DisplayId
+				{
+				[Dot42.DexImport("getDisplayId", "()I", AccessFlags = 1)]
+						get{ return GetDisplayId(); }
+				}
+
+				/// <java-name>
+				/// getWidth
+				/// </java-name>
+				public int Width
+				{
+				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
+						get{ return GetWidth(); }
+				}
+
+				/// <java-name>
+				/// getHeight
+				/// </java-name>
+				public int Height
+				{
+				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+						get{ return GetHeight(); }
+				}
+
+				/// <java-name>
+				/// getRotation
+				/// </java-name>
+				public int Rotation
+				{
+				[Dot42.DexImport("getRotation", "()I", AccessFlags = 1)]
+						get{ return GetRotation(); }
+				}
+
+				/// <java-name>
+				/// getOrientation
+				/// </java-name>
+				public int Orientation
+				{
+				[Dot42.DexImport("getOrientation", "()I", AccessFlags = 257)]
+						get{ return GetOrientation(); }
+				}
+
+				/// <java-name>
+				/// getPixelFormat
+				/// </java-name>
+				public int PixelFormat
+				{
+				[Dot42.DexImport("getPixelFormat", "()I", AccessFlags = 1)]
+						get{ return GetPixelFormat(); }
+				}
+
+				/// <java-name>
+				/// getRefreshRate
+				/// </java-name>
+				public float RefreshRate
+				{
+				[Dot42.DexImport("getRefreshRate", "()F", AccessFlags = 1)]
+						get{ return GetRefreshRate(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/DragEvent
+		/// </java-name>
+		[Dot42.DexImport("android/view/DragEvent", AccessFlags = 33)]
+		public partial class DragEvent : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// ACTION_DRAG_STARTED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DRAG_STARTED", "I", AccessFlags = 25)]
+				public const int ACTION_DRAG_STARTED = 1;
+				/// <java-name>
+				/// ACTION_DRAG_LOCATION
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DRAG_LOCATION", "I", AccessFlags = 25)]
+				public const int ACTION_DRAG_LOCATION = 2;
+				/// <java-name>
+				/// ACTION_DROP
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DROP", "I", AccessFlags = 25)]
+				public const int ACTION_DROP = 3;
+				/// <java-name>
+				/// ACTION_DRAG_ENDED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DRAG_ENDED", "I", AccessFlags = 25)]
+				public const int ACTION_DRAG_ENDED = 4;
+				/// <java-name>
+				/// ACTION_DRAG_ENTERED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DRAG_ENTERED", "I", AccessFlags = 25)]
+				public const int ACTION_DRAG_ENTERED = 5;
+				/// <java-name>
+				/// ACTION_DRAG_EXITED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DRAG_EXITED", "I", AccessFlags = 25)]
+				public const int ACTION_DRAG_EXITED = 6;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.DragEvent> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal DragEvent() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAction
+				/// </java-name>
+				[Dot42.DexImport("getAction", "()I", AccessFlags = 1)]
+				public virtual int GetAction() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getX
+				/// </java-name>
+				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
+				public virtual float GetX() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getY
+				/// </java-name>
+				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
+				public virtual float GetY() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getClipData
+				/// </java-name>
+				[Dot42.DexImport("getClipData", "()Landroid/content/ClipData;", AccessFlags = 1)]
+				public virtual global::Android.Content.ClipData GetClipData() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.ClipData);
+				}
+
+				/// <java-name>
+				/// getClipDescription
+				/// </java-name>
+				[Dot42.DexImport("getClipDescription", "()Landroid/content/ClipDescription;", AccessFlags = 1)]
+				public virtual global::Android.Content.ClipDescription GetClipDescription() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.ClipDescription);
+				}
+
+				/// <java-name>
+				/// getLocalState
+				/// </java-name>
+				[Dot42.DexImport("getLocalState", "()Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object GetLocalState() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// getResult
+				/// </java-name>
+				[Dot42.DexImport("getResult", "()Z", AccessFlags = 1)]
+				public virtual bool GetResult() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAction
+				/// </java-name>
+				public int Action
+				{
+				[Dot42.DexImport("getAction", "()I", AccessFlags = 1)]
+						get{ return GetAction(); }
+				}
+
+				/// <java-name>
+				/// getX
+				/// </java-name>
+				public float X
+				{
+				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
+						get{ return GetX(); }
+				}
+
+				/// <java-name>
+				/// getY
+				/// </java-name>
+				public float Y
+				{
+				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
+						get{ return GetY(); }
+				}
+
+				/// <java-name>
+				/// getClipData
+				/// </java-name>
+				public global::Android.Content.ClipData ClipData
+				{
+				[Dot42.DexImport("getClipData", "()Landroid/content/ClipData;", AccessFlags = 1)]
+						get{ return GetClipData(); }
+				}
+
+				/// <java-name>
+				/// getClipDescription
+				/// </java-name>
+				public global::Android.Content.ClipDescription ClipDescription
+				{
+				[Dot42.DexImport("getClipDescription", "()Landroid/content/ClipDescription;", AccessFlags = 1)]
+						get{ return GetClipDescription(); }
+				}
+
+				/// <java-name>
+				/// getLocalState
+				/// </java-name>
+				public object LocalState
+				{
+				[Dot42.DexImport("getLocalState", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return GetLocalState(); }
+				}
+
+				/// <java-name>
+				/// getResult
+				/// </java-name>
+				public bool IsResult
+				{
+				[Dot42.DexImport("getResult", "()Z", AccessFlags = 1)]
+						get{ return GetResult(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// android/view/FocusFinder
 		/// </java-name>
 		[Dot42.DexImport("android/view/FocusFinder", AccessFlags = 33)]
@@ -61,1087 +819,241 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/TextureView
+		/// android/view/GestureDetector
 		/// </java-name>
-		[Dot42.DexImport("android/view/TextureView", AccessFlags = 33)]
-		public partial class TextureView : global::Android.View.View
+		[Dot42.DexImport("android/view/GestureDetector", AccessFlags = 33)]
+		public partial class GestureDetector
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public TextureView(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;)V", AccessFlags = 1)]
+				public GestureDetector(global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public TextureView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Landroid/view/GestureDetector$OnGestureListener;)V", AccessFlags = 1)]
+				public GestureDetector(global::Android.View.GestureDetector.IOnGestureListener onGestureListener) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public TextureView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V", AccessFlags = 1)]
+				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroi" +
+    "d/os/Handler;)V", AccessFlags = 1)]
+				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroi" +
+    "d/os/Handler;Z)V", AccessFlags = 1)]
+				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.Os.Handler handler, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// isOpaque
+				/// setOnDoubleTapListener
 				/// </java-name>
-				[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 1)]
-				public override bool IsOpaque() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("setOnDoubleTapListener", "(Landroid/view/GestureDetector$OnDoubleTapListener;)V", AccessFlags = 1)]
+				public virtual void SetOnDoubleTapListener(global::Android.View.GestureDetector.IOnDoubleTapListener onDoubleTapListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setIsLongpressEnabled
+				/// </java-name>
+				[Dot42.DexImport("setIsLongpressEnabled", "(Z)V", AccessFlags = 1)]
+				public virtual void SetIsLongpressEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isLongpressEnabled
+				/// </java-name>
+				[Dot42.DexImport("isLongpressEnabled", "()Z", AccessFlags = 1)]
+				public virtual bool IsLongpressEnabled() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// setOpaque
+				/// onTouchEvent
 				/// </java-name>
-				[Dot42.DexImport("setOpaque", "(Z)V", AccessFlags = 1)]
-				public virtual void SetOpaque(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onAttachedToWindow
-				/// </java-name>
-				[Dot42.DexImport("onAttachedToWindow", "()V", AccessFlags = 4)]
-				protected internal override void OnAttachedToWindow() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDetachedFromWindow
-				/// </java-name>
-				[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 4)]
-				protected internal override void OnDetachedFromWindow() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLayerType
-				/// </java-name>
-				[Dot42.DexImport("setLayerType", "(ILandroid/graphics/Paint;)V", AccessFlags = 1)]
-				public override void SetLayerType(int int32, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLayerType
-				/// </java-name>
-				[Dot42.DexImport("getLayerType", "()I", AccessFlags = 1)]
-				public override int GetLayerType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// buildLayer
-				/// </java-name>
-				[Dot42.DexImport("buildLayer", "()V", AccessFlags = 1)]
-				public override void BuildLayer() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// draw
-				/// </java-name>
-				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 17)]
-				public override void Draw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDraw
-				/// </java-name>
-				[Dot42.DexImport("onDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 20)]
-				protected internal override void OnDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onSizeChanged
-				/// </java-name>
-				[Dot42.DexImport("onSizeChanged", "(IIII)V", AccessFlags = 4)]
-				protected internal override void OnSizeChanged(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onVisibilityChanged
-				/// </java-name>
-				[Dot42.DexImport("onVisibilityChanged", "(Landroid/view/View;I)V", AccessFlags = 4)]
-				protected internal override void OnVisibilityChanged(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTransform
-				/// </java-name>
-				[Dot42.DexImport("setTransform", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
-				public virtual void SetTransform(global::Android.Graphics.Matrix matrix) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTransform
-				/// </java-name>
-				[Dot42.DexImport("getTransform", "(Landroid/graphics/Matrix;)Landroid/graphics/Matrix;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Matrix GetTransform(global::Android.Graphics.Matrix matrix) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Matrix);
-				}
-
-				/// <java-name>
-				/// getBitmap
-				/// </java-name>
-				[Dot42.DexImport("getBitmap", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Bitmap GetBitmap() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Bitmap);
-				}
-
-				/// <java-name>
-				/// getBitmap
-				/// </java-name>
-				[Dot42.DexImport("getBitmap", "(II)Landroid/graphics/Bitmap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Bitmap GetBitmap(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Bitmap);
-				}
-
-				/// <java-name>
-				/// getBitmap
-				/// </java-name>
-				[Dot42.DexImport("getBitmap", "(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Bitmap GetBitmap(global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Bitmap);
-				}
-
-				/// <java-name>
-				/// isAvailable
-				/// </java-name>
-				[Dot42.DexImport("isAvailable", "()Z", AccessFlags = 1)]
-				public virtual bool IsAvailable() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+				public virtual bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// lockCanvas
-				/// </java-name>
-				[Dot42.DexImport("lockCanvas", "()Landroid/graphics/Canvas;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Canvas LockCanvas() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Canvas);
-				}
-
-				/// <java-name>
-				/// lockCanvas
-				/// </java-name>
-				[Dot42.DexImport("lockCanvas", "(Landroid/graphics/Rect;)Landroid/graphics/Canvas;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Canvas LockCanvas(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Canvas);
-				}
-
-				/// <java-name>
-				/// unlockCanvasAndPost
-				/// </java-name>
-				[Dot42.DexImport("unlockCanvasAndPost", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
-				public virtual void UnlockCanvasAndPost(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSurfaceTexture
-				/// </java-name>
-				[Dot42.DexImport("getSurfaceTexture", "()Landroid/graphics/SurfaceTexture;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.SurfaceTexture GetSurfaceTexture() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.SurfaceTexture);
-				}
-
-				/// <java-name>
-				/// getSurfaceTextureListener
-				/// </java-name>
-				[Dot42.DexImport("getSurfaceTextureListener", "()Landroid/view/TextureView$SurfaceTextureListener;", AccessFlags = 1)]
-				public virtual global::Android.View.TextureView.ISurfaceTextureListener GetSurfaceTextureListener() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.TextureView.ISurfaceTextureListener);
-				}
-
-				/// <java-name>
-				/// setSurfaceTextureListener
-				/// </java-name>
-				[Dot42.DexImport("setSurfaceTextureListener", "(Landroid/view/TextureView$SurfaceTextureListener;)V", AccessFlags = 1)]
-				public virtual void SetSurfaceTextureListener(global::Android.View.TextureView.ISurfaceTextureListener surfaceTextureListener) /* MethodBuilder.Create */ 
-				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TextureView() /* TypeBuilder.AddDefaultConstructor */ 
+				internal GestureDetector() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
-				/// getLayerType
+				/// android/view/GestureDetector$SimpleOnGestureListener
 				/// </java-name>
-				public int LayerType
+				[Dot42.DexImport("android/view/GestureDetector$SimpleOnGestureListener", AccessFlags = 9)]
+				public partial class SimpleOnGestureListener : global::Android.View.GestureDetector.IOnGestureListener, global::Android.View.GestureDetector.IOnDoubleTapListener
+ /* scope: __dot42__ */ 
 				{
-				[Dot42.DexImport("getLayerType", "()I", AccessFlags = 1)]
-						get{ return GetLayerType(); }
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public SimpleOnGestureListener() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onSingleTapUp
+						/// </java-name>
+						[Dot42.DexImport("onSingleTapUp", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+						public virtual bool OnSingleTapUp(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// onLongPress
+						/// </java-name>
+						[Dot42.DexImport("onLongPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
+						public virtual void OnLongPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onScroll
+						/// </java-name>
+						[Dot42.DexImport("onScroll", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1)]
+						public virtual bool OnScroll(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// onFling
+						/// </java-name>
+						[Dot42.DexImport("onFling", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1)]
+						public virtual bool OnFling(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// onShowPress
+						/// </java-name>
+						[Dot42.DexImport("onShowPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
+						public virtual void OnShowPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onDown
+						/// </java-name>
+						[Dot42.DexImport("onDown", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+						public virtual bool OnDown(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// onDoubleTap
+						/// </java-name>
+						[Dot42.DexImport("onDoubleTap", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+						public virtual bool OnDoubleTap(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// onDoubleTapEvent
+						/// </java-name>
+						[Dot42.DexImport("onDoubleTapEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+						public virtual bool OnDoubleTapEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// onSingleTapConfirmed
+						/// </java-name>
+						[Dot42.DexImport("onSingleTapConfirmed", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+						public virtual bool OnSingleTapConfirmed(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
 				}
 
 				/// <java-name>
-				/// getBitmap
+				/// android/view/GestureDetector$OnDoubleTapListener
 				/// </java-name>
-				public global::Android.Graphics.Bitmap Bitmap
-				{
-				[Dot42.DexImport("getBitmap", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-						get{ return GetBitmap(); }
-				}
-
-				/// <java-name>
-				/// getSurfaceTexture
-				/// </java-name>
-				public global::Android.Graphics.SurfaceTexture SurfaceTexture
-				{
-				[Dot42.DexImport("getSurfaceTexture", "()Landroid/graphics/SurfaceTexture;", AccessFlags = 1)]
-						get{ return GetSurfaceTexture(); }
-				}
-
-				/// <java-name>
-				/// getSurfaceTextureListener
-				/// </java-name>
-				public global::Android.View.TextureView.ISurfaceTextureListener SurfaceTextureListener
-				{
-				[Dot42.DexImport("getSurfaceTextureListener", "()Landroid/view/TextureView$SurfaceTextureListener;", AccessFlags = 1)]
-						get{ return GetSurfaceTextureListener(); }
-				[Dot42.DexImport("setSurfaceTextureListener", "(Landroid/view/TextureView$SurfaceTextureListener;)V", AccessFlags = 1)]
-						set{ SetSurfaceTextureListener(value); }
-				}
-
-				/// <java-name>
-				/// android/view/TextureView$SurfaceTextureListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/TextureView$SurfaceTextureListener", AccessFlags = 1545)]
-				public partial interface ISurfaceTextureListener
+				[Dot42.DexImport("android/view/GestureDetector$OnDoubleTapListener", AccessFlags = 1545)]
+				public partial interface IOnDoubleTapListener
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
-						/// onSurfaceTextureAvailable
+						/// onSingleTapConfirmed
 						/// </java-name>
-						[Dot42.DexImport("onSurfaceTextureAvailable", "(Landroid/graphics/SurfaceTexture;II)V", AccessFlags = 1025)]
-						void OnSurfaceTextureAvailable(global::Android.Graphics.SurfaceTexture surfaceTexture, int int32, int int321) /* MethodBuilder.Create */ ;
+						[Dot42.DexImport("onSingleTapConfirmed", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+						bool OnSingleTapConfirmed(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
-						/// onSurfaceTextureSizeChanged
+						/// onDoubleTap
 						/// </java-name>
-						[Dot42.DexImport("onSurfaceTextureSizeChanged", "(Landroid/graphics/SurfaceTexture;II)V", AccessFlags = 1025)]
-						void OnSurfaceTextureSizeChanged(global::Android.Graphics.SurfaceTexture surfaceTexture, int int32, int int321) /* MethodBuilder.Create */ ;
+						[Dot42.DexImport("onDoubleTap", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+						bool OnDoubleTap(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
-						/// onSurfaceTextureDestroyed
+						/// onDoubleTapEvent
 						/// </java-name>
-						[Dot42.DexImport("onSurfaceTextureDestroyed", "(Landroid/graphics/SurfaceTexture;)Z", AccessFlags = 1025)]
-						bool OnSurfaceTextureDestroyed(global::Android.Graphics.SurfaceTexture surfaceTexture) /* MethodBuilder.Create */ ;
+						[Dot42.DexImport("onDoubleTapEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+						bool OnDoubleTapEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
-						/// <java-name>
-						/// onSurfaceTextureUpdated
-						/// </java-name>
-						[Dot42.DexImport("onSurfaceTextureUpdated", "(Landroid/graphics/SurfaceTexture;)V", AccessFlags = 1025)]
-						void OnSurfaceTextureUpdated(global::Android.Graphics.SurfaceTexture surfaceTexture) /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/ViewConfiguration
-		/// </java-name>
-		[Dot42.DexImport("android/view/ViewConfiguration", AccessFlags = 33)]
-		public partial class ViewConfiguration
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ViewConfiguration() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(Landroid/content/Context;)Landroid/view/ViewConfiguration;", AccessFlags = 9)]
-				public static global::Android.View.ViewConfiguration Get(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewConfiguration);
-				}
-
-				/// <java-name>
-				/// getScrollBarSize
-				/// </java-name>
-				[Dot42.DexImport("getScrollBarSize", "()I", AccessFlags = 9)]
-				public static int GetScrollBarSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledScrollBarSize
-				/// </java-name>
-				[Dot42.DexImport("getScaledScrollBarSize", "()I", AccessFlags = 1)]
-				public virtual int GetScaledScrollBarSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScrollBarFadeDuration
-				/// </java-name>
-				[Dot42.DexImport("getScrollBarFadeDuration", "()I", AccessFlags = 9)]
-				public static int GetScrollBarFadeDuration() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScrollDefaultDelay
-				/// </java-name>
-				[Dot42.DexImport("getScrollDefaultDelay", "()I", AccessFlags = 9)]
-				public static int GetScrollDefaultDelay() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFadingEdgeLength
-				/// </java-name>
-				[Dot42.DexImport("getFadingEdgeLength", "()I", AccessFlags = 9)]
-				public static int GetFadingEdgeLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledFadingEdgeLength
-				/// </java-name>
-				[Dot42.DexImport("getScaledFadingEdgeLength", "()I", AccessFlags = 1)]
-				public virtual int GetScaledFadingEdgeLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPressedStateDuration
-				/// </java-name>
-				[Dot42.DexImport("getPressedStateDuration", "()I", AccessFlags = 9)]
-				public static int GetPressedStateDuration() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLongPressTimeout
-				/// </java-name>
-				[Dot42.DexImport("getLongPressTimeout", "()I", AccessFlags = 9)]
-				public static int GetLongPressTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getKeyRepeatTimeout
-				/// </java-name>
-				[Dot42.DexImport("getKeyRepeatTimeout", "()I", AccessFlags = 9)]
-				public static int GetKeyRepeatTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getKeyRepeatDelay
-				/// </java-name>
-				[Dot42.DexImport("getKeyRepeatDelay", "()I", AccessFlags = 9)]
-				public static int GetKeyRepeatDelay() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTapTimeout
-				/// </java-name>
-				[Dot42.DexImport("getTapTimeout", "()I", AccessFlags = 9)]
-				public static int GetTapTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getJumpTapTimeout
-				/// </java-name>
-				[Dot42.DexImport("getJumpTapTimeout", "()I", AccessFlags = 9)]
-				public static int GetJumpTapTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDoubleTapTimeout
-				/// </java-name>
-				[Dot42.DexImport("getDoubleTapTimeout", "()I", AccessFlags = 9)]
-				public static int GetDoubleTapTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEdgeSlop
-				/// </java-name>
-				[Dot42.DexImport("getEdgeSlop", "()I", AccessFlags = 9)]
-				public static int GetEdgeSlop() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledEdgeSlop
-				/// </java-name>
-				[Dot42.DexImport("getScaledEdgeSlop", "()I", AccessFlags = 1)]
-				public virtual int GetScaledEdgeSlop() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTouchSlop
-				/// </java-name>
-				[Dot42.DexImport("getTouchSlop", "()I", AccessFlags = 9)]
-				public static int GetTouchSlop() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledTouchSlop
-				/// </java-name>
-				[Dot42.DexImport("getScaledTouchSlop", "()I", AccessFlags = 1)]
-				public virtual int GetScaledTouchSlop() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledPagingTouchSlop
-				/// </java-name>
-				[Dot42.DexImport("getScaledPagingTouchSlop", "()I", AccessFlags = 1)]
-				public virtual int GetScaledPagingTouchSlop() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledDoubleTapSlop
-				/// </java-name>
-				[Dot42.DexImport("getScaledDoubleTapSlop", "()I", AccessFlags = 1)]
-				public virtual int GetScaledDoubleTapSlop() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getWindowTouchSlop
-				/// </java-name>
-				[Dot42.DexImport("getWindowTouchSlop", "()I", AccessFlags = 9)]
-				public static int GetWindowTouchSlop() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledWindowTouchSlop
-				/// </java-name>
-				[Dot42.DexImport("getScaledWindowTouchSlop", "()I", AccessFlags = 1)]
-				public virtual int GetScaledWindowTouchSlop() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinimumFlingVelocity
-				/// </java-name>
-				[Dot42.DexImport("getMinimumFlingVelocity", "()I", AccessFlags = 9)]
-				public static int GetMinimumFlingVelocity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledMinimumFlingVelocity
-				/// </java-name>
-				[Dot42.DexImport("getScaledMinimumFlingVelocity", "()I", AccessFlags = 1)]
-				public virtual int GetScaledMinimumFlingVelocity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMaximumFlingVelocity
-				/// </java-name>
-				[Dot42.DexImport("getMaximumFlingVelocity", "()I", AccessFlags = 9)]
-				public static int GetMaximumFlingVelocity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledMaximumFlingVelocity
-				/// </java-name>
-				[Dot42.DexImport("getScaledMaximumFlingVelocity", "()I", AccessFlags = 1)]
-				public virtual int GetScaledMaximumFlingVelocity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMaximumDrawingCacheSize
-				/// </java-name>
-				[Dot42.DexImport("getMaximumDrawingCacheSize", "()I", AccessFlags = 9)]
-				public static int GetMaximumDrawingCacheSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledMaximumDrawingCacheSize
-				/// </java-name>
-				[Dot42.DexImport("getScaledMaximumDrawingCacheSize", "()I", AccessFlags = 1)]
-				public virtual int GetScaledMaximumDrawingCacheSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledOverscrollDistance
-				/// </java-name>
-				[Dot42.DexImport("getScaledOverscrollDistance", "()I", AccessFlags = 1)]
-				public virtual int GetScaledOverscrollDistance() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScaledOverflingDistance
-				/// </java-name>
-				[Dot42.DexImport("getScaledOverflingDistance", "()I", AccessFlags = 1)]
-				public virtual int GetScaledOverflingDistance() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getZoomControlsTimeout
-				/// </java-name>
-				[Dot42.DexImport("getZoomControlsTimeout", "()J", AccessFlags = 9)]
-				public static long GetZoomControlsTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getGlobalActionKeyTimeout
-				/// </java-name>
-				[Dot42.DexImport("getGlobalActionKeyTimeout", "()J", AccessFlags = 9)]
-				public static long GetGlobalActionKeyTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getScrollFriction
-				/// </java-name>
-				[Dot42.DexImport("getScrollFriction", "()F", AccessFlags = 9)]
-				public static float GetScrollFriction() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// hasPermanentMenuKey
-				/// </java-name>
-				[Dot42.DexImport("hasPermanentMenuKey", "()Z", AccessFlags = 1)]
-				public virtual bool HasPermanentMenuKey() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getScrollBarSize
-				/// </java-name>
-				public static int ScrollBarSize
-				{
-				[Dot42.DexImport("getScrollBarSize", "()I", AccessFlags = 9)]
-						get{ return GetScrollBarSize(); }
-				}
-
-				/// <java-name>
-				/// getScaledScrollBarSize
-				/// </java-name>
-				public int ScaledScrollBarSize
-				{
-				[Dot42.DexImport("getScaledScrollBarSize", "()I", AccessFlags = 1)]
-						get{ return GetScaledScrollBarSize(); }
-				}
-
-				/// <java-name>
-				/// getScrollBarFadeDuration
-				/// </java-name>
-				public static int ScrollBarFadeDuration
-				{
-				[Dot42.DexImport("getScrollBarFadeDuration", "()I", AccessFlags = 9)]
-						get{ return GetScrollBarFadeDuration(); }
-				}
-
-				/// <java-name>
-				/// getScrollDefaultDelay
-				/// </java-name>
-				public static int ScrollDefaultDelay
-				{
-				[Dot42.DexImport("getScrollDefaultDelay", "()I", AccessFlags = 9)]
-						get{ return GetScrollDefaultDelay(); }
-				}
-
-				/// <java-name>
-				/// getFadingEdgeLength
-				/// </java-name>
-				public static int FadingEdgeLength
-				{
-				[Dot42.DexImport("getFadingEdgeLength", "()I", AccessFlags = 9)]
-						get{ return GetFadingEdgeLength(); }
-				}
-
-				/// <java-name>
-				/// getScaledFadingEdgeLength
-				/// </java-name>
-				public int ScaledFadingEdgeLength
-				{
-				[Dot42.DexImport("getScaledFadingEdgeLength", "()I", AccessFlags = 1)]
-						get{ return GetScaledFadingEdgeLength(); }
-				}
-
-				/// <java-name>
-				/// getPressedStateDuration
-				/// </java-name>
-				public static int PressedStateDuration
-				{
-				[Dot42.DexImport("getPressedStateDuration", "()I", AccessFlags = 9)]
-						get{ return GetPressedStateDuration(); }
-				}
-
-				/// <java-name>
-				/// getLongPressTimeout
-				/// </java-name>
-				public static int LongPressTimeout
-				{
-				[Dot42.DexImport("getLongPressTimeout", "()I", AccessFlags = 9)]
-						get{ return GetLongPressTimeout(); }
-				}
-
-				/// <java-name>
-				/// getKeyRepeatTimeout
-				/// </java-name>
-				public static int KeyRepeatTimeout
-				{
-				[Dot42.DexImport("getKeyRepeatTimeout", "()I", AccessFlags = 9)]
-						get{ return GetKeyRepeatTimeout(); }
-				}
-
-				/// <java-name>
-				/// getKeyRepeatDelay
-				/// </java-name>
-				public static int KeyRepeatDelay
-				{
-				[Dot42.DexImport("getKeyRepeatDelay", "()I", AccessFlags = 9)]
-						get{ return GetKeyRepeatDelay(); }
-				}
-
-				/// <java-name>
-				/// getTapTimeout
-				/// </java-name>
-				public static int TapTimeout
-				{
-				[Dot42.DexImport("getTapTimeout", "()I", AccessFlags = 9)]
-						get{ return GetTapTimeout(); }
-				}
-
-				/// <java-name>
-				/// getJumpTapTimeout
-				/// </java-name>
-				public static int JumpTapTimeout
-				{
-				[Dot42.DexImport("getJumpTapTimeout", "()I", AccessFlags = 9)]
-						get{ return GetJumpTapTimeout(); }
-				}
-
-				/// <java-name>
-				/// getDoubleTapTimeout
-				/// </java-name>
-				public static int DoubleTapTimeout
-				{
-				[Dot42.DexImport("getDoubleTapTimeout", "()I", AccessFlags = 9)]
-						get{ return GetDoubleTapTimeout(); }
-				}
-
-				/// <java-name>
-				/// getEdgeSlop
-				/// </java-name>
-				public static int EdgeSlop
-				{
-				[Dot42.DexImport("getEdgeSlop", "()I", AccessFlags = 9)]
-						get{ return GetEdgeSlop(); }
-				}
-
-				/// <java-name>
-				/// getScaledEdgeSlop
-				/// </java-name>
-				public int ScaledEdgeSlop
-				{
-				[Dot42.DexImport("getScaledEdgeSlop", "()I", AccessFlags = 1)]
-						get{ return GetScaledEdgeSlop(); }
-				}
-
-				/// <java-name>
-				/// getTouchSlop
-				/// </java-name>
-				public static int TouchSlop
-				{
-				[Dot42.DexImport("getTouchSlop", "()I", AccessFlags = 9)]
-						get{ return GetTouchSlop(); }
-				}
-
-				/// <java-name>
-				/// getScaledTouchSlop
-				/// </java-name>
-				public int ScaledTouchSlop
-				{
-				[Dot42.DexImport("getScaledTouchSlop", "()I", AccessFlags = 1)]
-						get{ return GetScaledTouchSlop(); }
-				}
-
-				/// <java-name>
-				/// getScaledPagingTouchSlop
-				/// </java-name>
-				public int ScaledPagingTouchSlop
-				{
-				[Dot42.DexImport("getScaledPagingTouchSlop", "()I", AccessFlags = 1)]
-						get{ return GetScaledPagingTouchSlop(); }
-				}
-
-				/// <java-name>
-				/// getScaledDoubleTapSlop
-				/// </java-name>
-				public int ScaledDoubleTapSlop
-				{
-				[Dot42.DexImport("getScaledDoubleTapSlop", "()I", AccessFlags = 1)]
-						get{ return GetScaledDoubleTapSlop(); }
-				}
-
-				/// <java-name>
-				/// getWindowTouchSlop
-				/// </java-name>
-				public static int WindowTouchSlop
-				{
-				[Dot42.DexImport("getWindowTouchSlop", "()I", AccessFlags = 9)]
-						get{ return GetWindowTouchSlop(); }
-				}
-
-				/// <java-name>
-				/// getScaledWindowTouchSlop
-				/// </java-name>
-				public int ScaledWindowTouchSlop
-				{
-				[Dot42.DexImport("getScaledWindowTouchSlop", "()I", AccessFlags = 1)]
-						get{ return GetScaledWindowTouchSlop(); }
-				}
-
-				/// <java-name>
-				/// getMinimumFlingVelocity
-				/// </java-name>
-				public static int MinimumFlingVelocity
-				{
-				[Dot42.DexImport("getMinimumFlingVelocity", "()I", AccessFlags = 9)]
-						get{ return GetMinimumFlingVelocity(); }
-				}
-
-				/// <java-name>
-				/// getScaledMinimumFlingVelocity
-				/// </java-name>
-				public int ScaledMinimumFlingVelocity
-				{
-				[Dot42.DexImport("getScaledMinimumFlingVelocity", "()I", AccessFlags = 1)]
-						get{ return GetScaledMinimumFlingVelocity(); }
-				}
-
-				/// <java-name>
-				/// getMaximumFlingVelocity
-				/// </java-name>
-				public static int MaximumFlingVelocity
-				{
-				[Dot42.DexImport("getMaximumFlingVelocity", "()I", AccessFlags = 9)]
-						get{ return GetMaximumFlingVelocity(); }
-				}
-
-				/// <java-name>
-				/// getScaledMaximumFlingVelocity
-				/// </java-name>
-				public int ScaledMaximumFlingVelocity
-				{
-				[Dot42.DexImport("getScaledMaximumFlingVelocity", "()I", AccessFlags = 1)]
-						get{ return GetScaledMaximumFlingVelocity(); }
-				}
-
-				/// <java-name>
-				/// getMaximumDrawingCacheSize
-				/// </java-name>
-				public static int MaximumDrawingCacheSize
-				{
-				[Dot42.DexImport("getMaximumDrawingCacheSize", "()I", AccessFlags = 9)]
-						get{ return GetMaximumDrawingCacheSize(); }
-				}
-
-				/// <java-name>
-				/// getScaledMaximumDrawingCacheSize
-				/// </java-name>
-				public int ScaledMaximumDrawingCacheSize
-				{
-				[Dot42.DexImport("getScaledMaximumDrawingCacheSize", "()I", AccessFlags = 1)]
-						get{ return GetScaledMaximumDrawingCacheSize(); }
-				}
-
-				/// <java-name>
-				/// getScaledOverscrollDistance
-				/// </java-name>
-				public int ScaledOverscrollDistance
-				{
-				[Dot42.DexImport("getScaledOverscrollDistance", "()I", AccessFlags = 1)]
-						get{ return GetScaledOverscrollDistance(); }
-				}
-
-				/// <java-name>
-				/// getScaledOverflingDistance
-				/// </java-name>
-				public int ScaledOverflingDistance
-				{
-				[Dot42.DexImport("getScaledOverflingDistance", "()I", AccessFlags = 1)]
-						get{ return GetScaledOverflingDistance(); }
-				}
-
-				/// <java-name>
-				/// getZoomControlsTimeout
-				/// </java-name>
-				public static long ZoomControlsTimeout
-				{
-				[Dot42.DexImport("getZoomControlsTimeout", "()J", AccessFlags = 9)]
-						get{ return GetZoomControlsTimeout(); }
-				}
-
-				/// <java-name>
-				/// getGlobalActionKeyTimeout
-				/// </java-name>
-				public static long GlobalActionKeyTimeout
-				{
-				[Dot42.DexImport("getGlobalActionKeyTimeout", "()J", AccessFlags = 9)]
-						get{ return GetGlobalActionKeyTimeout(); }
-				}
-
-				/// <java-name>
-				/// getScrollFriction
-				/// </java-name>
-				public static float ScrollFriction
-				{
-				[Dot42.DexImport("getScrollFriction", "()F", AccessFlags = 9)]
-						get{ return GetScrollFriction(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/ViewStub
-		/// </java-name>
-		[Dot42.DexImport("android/view/ViewStub", AccessFlags = 49)]
-		public sealed partial class ViewStub : global::Android.View.View
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public ViewStub(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
-				public ViewStub(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public ViewStub(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public ViewStub(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInflatedId
-				/// </java-name>
-				[Dot42.DexImport("getInflatedId", "()I", AccessFlags = 1)]
-				public int GetInflatedId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setInflatedId
-				/// </java-name>
-				[Dot42.DexImport("setInflatedId", "(I)V", AccessFlags = 1)]
-				public void SetInflatedId(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLayoutResource
-				/// </java-name>
-				[Dot42.DexImport("getLayoutResource", "()I", AccessFlags = 1)]
-				public int GetLayoutResource() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setLayoutResource
-				/// </java-name>
-				[Dot42.DexImport("setLayoutResource", "(I)V", AccessFlags = 1)]
-				public void SetLayoutResource(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onMeasure
-				/// </java-name>
-				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 4)]
-				protected internal override void OnMeasure(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// draw
-				/// </java-name>
-				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
-				public override void Draw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchDraw
-				/// </java-name>
-				[Dot42.DexImport("dispatchDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 4)]
-				protected internal override void DispatchDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setVisibility
-				/// </java-name>
-				[Dot42.DexImport("setVisibility", "(I)V", AccessFlags = 1)]
-				public override void SetVisibility(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// inflate
-				/// </java-name>
-				[Dot42.DexImport("inflate", "()Landroid/view/View;", AccessFlags = 1)]
-				public global::Android.View.View Inflate() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// setOnInflateListener
-				/// </java-name>
-				[Dot42.DexImport("setOnInflateListener", "(Landroid/view/ViewStub$OnInflateListener;)V", AccessFlags = 1)]
-				public void SetOnInflateListener(global::Android.View.ViewStub.IOnInflateListener onInflateListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ViewStub() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInflatedId
-				/// </java-name>
-				public int InflatedId
-				{
-				[Dot42.DexImport("getInflatedId", "()I", AccessFlags = 1)]
-						get{ return GetInflatedId(); }
-				[Dot42.DexImport("setInflatedId", "(I)V", AccessFlags = 1)]
-						set{ SetInflatedId(value); }
-				}
-
-				/// <java-name>
-				/// getLayoutResource
-				/// </java-name>
-				public int LayoutResource
-				{
-				[Dot42.DexImport("getLayoutResource", "()I", AccessFlags = 1)]
-						get{ return GetLayoutResource(); }
-				[Dot42.DexImport("setLayoutResource", "(I)V", AccessFlags = 1)]
-						set{ SetLayoutResource(value); }
 				}
 
 				/// <java-name>
-				/// android/view/ViewStub$OnInflateListener
+				/// android/view/GestureDetector$OnGestureListener
 				/// </java-name>
-				[Dot42.DexImport("android/view/ViewStub$OnInflateListener", AccessFlags = 1545)]
-				public partial interface IOnInflateListener
+				[Dot42.DexImport("android/view/GestureDetector$OnGestureListener", AccessFlags = 1545)]
+				public partial interface IOnGestureListener
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
-						/// onInflate
+						/// onDown
 						/// </java-name>
-						[Dot42.DexImport("onInflate", "(Landroid/view/ViewStub;Landroid/view/View;)V", AccessFlags = 1025)]
-						void OnInflate(global::Android.View.ViewStub viewStub, global::Android.View.View view) /* MethodBuilder.Create */ ;
+						[Dot42.DexImport("onDown", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+						bool OnDown(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
-				}
+						/// <java-name>
+						/// onShowPress
+						/// </java-name>
+						[Dot42.DexImport("onShowPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
+						void OnShowPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
-		}
+						/// <java-name>
+						/// onSingleTapUp
+						/// </java-name>
+						[Dot42.DexImport("onSingleTapUp", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+						bool OnSingleTapUp(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
-		/// <java-name>
-		/// android/view/InflateException
-		/// </java-name>
-		[Dot42.DexImport("android/view/InflateException", AccessFlags = 33)]
-		public partial class InflateException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public InflateException() /* MethodBuilder.Create */ 
-				{
-				}
+						/// <java-name>
+						/// onScroll
+						/// </java-name>
+						[Dot42.DexImport("onScroll", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1025)]
+						bool OnScroll(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ ;
 
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public InflateException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
+						/// <java-name>
+						/// onLongPress
+						/// </java-name>
+						[Dot42.DexImport("onLongPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
+						void OnLongPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public InflateException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
+						/// <java-name>
+						/// onFling
+						/// </java-name>
+						[Dot42.DexImport("onFling", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1025)]
+						bool OnFling(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ ;
 
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public InflateException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
 				}
 
 		}
@@ -1347,1943 +1259,325 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/ViewGroup
+		/// android/view/HapticFeedbackConstants
 		/// </java-name>
-		[Dot42.DexImport("android/view/ViewGroup", AccessFlags = 1057)]
-		public abstract partial class ViewGroup : global::Android.View.View, global::Android.View.IViewParent, global::Android.View.IViewManager
+		[Dot42.DexImport("android/view/HapticFeedbackConstants", AccessFlags = 33)]
+		public partial class HapticFeedbackConstants
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// FOCUS_BEFORE_DESCENDANTS
+				/// LONG_PRESS
 				/// </java-name>
-				[Dot42.DexImport("FOCUS_BEFORE_DESCENDANTS", "I", AccessFlags = 25)]
-				public const int FOCUS_BEFORE_DESCENDANTS = 131072;
+				[Dot42.DexImport("LONG_PRESS", "I", AccessFlags = 25)]
+				public const int LONG_PRESS = 0;
 				/// <java-name>
-				/// FOCUS_AFTER_DESCENDANTS
+				/// VIRTUAL_KEY
 				/// </java-name>
-				[Dot42.DexImport("FOCUS_AFTER_DESCENDANTS", "I", AccessFlags = 25)]
-				public const int FOCUS_AFTER_DESCENDANTS = 262144;
+				[Dot42.DexImport("VIRTUAL_KEY", "I", AccessFlags = 25)]
+				public const int VIRTUAL_KEY = 1;
 				/// <java-name>
-				/// FOCUS_BLOCK_DESCENDANTS
+				/// KEYBOARD_TAP
 				/// </java-name>
-				[Dot42.DexImport("FOCUS_BLOCK_DESCENDANTS", "I", AccessFlags = 25)]
-				public const int FOCUS_BLOCK_DESCENDANTS = 393216;
+				[Dot42.DexImport("KEYBOARD_TAP", "I", AccessFlags = 25)]
+				public const int KEYBOARD_TAP = 3;
 				/// <java-name>
-				/// PERSISTENT_NO_CACHE
+				/// FLAG_IGNORE_VIEW_SETTING
 				/// </java-name>
-				[Dot42.DexImport("PERSISTENT_NO_CACHE", "I", AccessFlags = 25)]
-				public const int PERSISTENT_NO_CACHE = 0;
+				[Dot42.DexImport("FLAG_IGNORE_VIEW_SETTING", "I", AccessFlags = 25)]
+				public const int FLAG_IGNORE_VIEW_SETTING = 1;
 				/// <java-name>
-				/// PERSISTENT_ANIMATION_CACHE
+				/// FLAG_IGNORE_GLOBAL_SETTING
 				/// </java-name>
-				[Dot42.DexImport("PERSISTENT_ANIMATION_CACHE", "I", AccessFlags = 25)]
-				public const int PERSISTENT_ANIMATION_CACHE = 1;
-				/// <java-name>
-				/// PERSISTENT_SCROLLING_CACHE
-				/// </java-name>
-				[Dot42.DexImport("PERSISTENT_SCROLLING_CACHE", "I", AccessFlags = 25)]
-				public const int PERSISTENT_SCROLLING_CACHE = 2;
-				/// <java-name>
-				/// PERSISTENT_ALL_CACHES
-				/// </java-name>
-				[Dot42.DexImport("PERSISTENT_ALL_CACHES", "I", AccessFlags = 25)]
-				public const int PERSISTENT_ALL_CACHES = 3;
-				/// <java-name>
-				/// CLIP_TO_PADDING_MASK
-				/// </java-name>
-				[Dot42.DexImport("CLIP_TO_PADDING_MASK", "I", AccessFlags = 28)]
-				protected internal const int CLIP_TO_PADDING_MASK = 34;
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public ViewGroup(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public ViewGroup(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public ViewGroup(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDescendantFocusability
-				/// </java-name>
-				[Dot42.DexImport("getDescendantFocusability", "()I", AccessFlags = 1)]
-				public virtual int GetDescendantFocusability() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDescendantFocusability
-				/// </java-name>
-				[Dot42.DexImport("setDescendantFocusability", "(I)V", AccessFlags = 1)]
-				public virtual void SetDescendantFocusability(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// requestChildFocus
-				/// </java-name>
-				[Dot42.DexImport("requestChildFocus", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void RequestChildFocus(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// focusableViewAvailable
-				/// </java-name>
-				[Dot42.DexImport("focusableViewAvailable", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void FocusableViewAvailable(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// showContextMenuForChild
-				/// </java-name>
-				[Dot42.DexImport("showContextMenuForChild", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public virtual bool ShowContextMenuForChild(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// startActionModeForChild
-				/// </java-name>
-				[Dot42.DexImport("startActionModeForChild", "(Landroid/view/View;Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;", AccessFlags = 1)]
-				public virtual global::Android.View.ActionMode StartActionModeForChild(global::Android.View.View view, global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ActionMode);
-				}
-
-				/// <java-name>
-				/// focusSearch
-				/// </java-name>
-				[Dot42.DexImport("focusSearch", "(Landroid/view/View;I)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View FocusSearch(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// requestChildRectangleOnScreen
-				/// </java-name>
-				[Dot42.DexImport("requestChildRectangleOnScreen", "(Landroid/view/View;Landroid/graphics/Rect;Z)Z", AccessFlags = 1)]
-				public virtual bool RequestChildRectangleOnScreen(global::Android.View.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// requestSendAccessibilityEvent
-				/// </java-name>
-				[Dot42.DexImport("requestSendAccessibilityEvent", "(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public virtual bool RequestSendAccessibilityEvent(global::Android.View.View view, global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// onRequestSendAccessibilityEvent
-				/// </java-name>
-				[Dot42.DexImport("onRequestSendAccessibilityEvent", "(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnRequestSendAccessibilityEvent(global::Android.View.View view, global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchUnhandledMove
-				/// </java-name>
-				[Dot42.DexImport("dispatchUnhandledMove", "(Landroid/view/View;I)Z", AccessFlags = 1)]
-				public override bool DispatchUnhandledMove(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// clearChildFocus
-				/// </java-name>
-				[Dot42.DexImport("clearChildFocus", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void ClearChildFocus(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clearFocus
-				/// </java-name>
-				[Dot42.DexImport("clearFocus", "()V", AccessFlags = 1)]
-				public override void ClearFocus() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getFocusedChild
-				/// </java-name>
-				[Dot42.DexImport("getFocusedChild", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetFocusedChild() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// hasFocus
-				/// </java-name>
-				[Dot42.DexImport("hasFocus", "()Z", AccessFlags = 1)]
-				public override bool HasFocus() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// findFocus
-				/// </java-name>
-				[Dot42.DexImport("findFocus", "()Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View FindFocus() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// hasFocusable
-				/// </java-name>
-				[Dot42.DexImport("hasFocusable", "()Z", AccessFlags = 1)]
-				public override bool HasFocusable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// addFocusables
-				/// </java-name>
-				[Dot42.DexImport("addFocusables", "(Ljava/util/ArrayList;I)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;I)V")]
-				public override void AddFocusables(global::Java.Util.ArrayList<global::Android.View.View> arrayList, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addFocusables
-				/// </java-name>
-				[Dot42.DexImport("addFocusables", "(Ljava/util/ArrayList;II)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;II)V")]
-				public override void AddFocusables(global::Java.Util.ArrayList<global::Android.View.View> arrayList, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// findViewsWithText
-				/// </java-name>
-				[Dot42.DexImport("findViewsWithText", "(Ljava/util/ArrayList;Ljava/lang/CharSequence;I)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;Ljava/lang/CharSequence;I)V")]
-				public override void FindViewsWithText(global::Java.Util.ArrayList<global::Android.View.View> arrayList, global::Java.Lang.ICharSequence charSequence, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchWindowFocusChanged
-				/// </java-name>
-				[Dot42.DexImport("dispatchWindowFocusChanged", "(Z)V", AccessFlags = 1)]
-				public override void DispatchWindowFocusChanged(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addTouchables
-				/// </java-name>
-				[Dot42.DexImport("addTouchables", "(Ljava/util/ArrayList;)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;)V")]
-				public override void AddTouchables(global::Java.Util.ArrayList<global::Android.View.View> arrayList) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchDisplayHint
-				/// </java-name>
-				[Dot42.DexImport("dispatchDisplayHint", "(I)V", AccessFlags = 1)]
-				public override void DispatchDisplayHint(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchVisibilityChanged
-				/// </java-name>
-				[Dot42.DexImport("dispatchVisibilityChanged", "(Landroid/view/View;I)V", AccessFlags = 4)]
-				protected internal override void DispatchVisibilityChanged(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchWindowVisibilityChanged
-				/// </java-name>
-				[Dot42.DexImport("dispatchWindowVisibilityChanged", "(I)V", AccessFlags = 1)]
-				public override void DispatchWindowVisibilityChanged(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchConfigurationChanged
-				/// </java-name>
-				[Dot42.DexImport("dispatchConfigurationChanged", "(Landroid/content/res/Configuration;)V", AccessFlags = 1)]
-				public override void DispatchConfigurationChanged(global::Android.Content.Res.Configuration configuration) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// recomputeViewAttributes
-				/// </java-name>
-				[Dot42.DexImport("recomputeViewAttributes", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void RecomputeViewAttributes(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// bringChildToFront
-				/// </java-name>
-				[Dot42.DexImport("bringChildToFront", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void BringChildToFront(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchDragEvent
-				/// </java-name>
-				[Dot42.DexImport("dispatchDragEvent", "(Landroid/view/DragEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchDragEvent(global::Android.View.DragEvent dragEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchSystemUiVisibilityChanged
-				/// </java-name>
-				[Dot42.DexImport("dispatchSystemUiVisibilityChanged", "(I)V", AccessFlags = 1)]
-				public override void DispatchSystemUiVisibilityChanged(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchKeyEventPreIme
-				/// </java-name>
-				[Dot42.DexImport("dispatchKeyEventPreIme", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEventPreIme(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchKeyEvent
-				/// </java-name>
-				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchKeyShortcutEvent
-				/// </java-name>
-				[Dot42.DexImport("dispatchKeyShortcutEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyShortcutEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchTrackballEvent
-				/// </java-name>
-				[Dot42.DexImport("dispatchTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchHoverEvent
-				/// </java-name>
-				[Dot42.DexImport("dispatchHoverEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 4)]
-				protected internal override bool DispatchHoverEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// onInterceptHoverEvent
-				/// </java-name>
-				[Dot42.DexImport("onInterceptHoverEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnInterceptHoverEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchGenericPointerEvent
-				/// </java-name>
-				[Dot42.DexImport("dispatchGenericPointerEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 4)]
-				protected internal override bool DispatchGenericPointerEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchGenericFocusedEvent
-				/// </java-name>
-				[Dot42.DexImport("dispatchGenericFocusedEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 4)]
-				protected internal override bool DispatchGenericFocusedEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchTouchEvent
-				/// </java-name>
-				[Dot42.DexImport("dispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setMotionEventSplittingEnabled
-				/// </java-name>
-				[Dot42.DexImport("setMotionEventSplittingEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetMotionEventSplittingEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isMotionEventSplittingEnabled
-				/// </java-name>
-				[Dot42.DexImport("isMotionEventSplittingEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsMotionEventSplittingEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// requestDisallowInterceptTouchEvent
-				/// </java-name>
-				[Dot42.DexImport("requestDisallowInterceptTouchEvent", "(Z)V", AccessFlags = 1)]
-				public virtual void RequestDisallowInterceptTouchEvent(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onInterceptTouchEvent
-				/// </java-name>
-				[Dot42.DexImport("onInterceptTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnInterceptTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// requestFocus
-				/// </java-name>
-				[Dot42.DexImport("requestFocus", "(ILandroid/graphics/Rect;)Z", AccessFlags = 1)]
-				public override bool RequestFocus(int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// onRequestFocusInDescendants
-				/// </java-name>
-				[Dot42.DexImport("onRequestFocusInDescendants", "(ILandroid/graphics/Rect;)Z", AccessFlags = 4)]
-				protected internal virtual bool OnRequestFocusInDescendants(int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setPadding
-				/// </java-name>
-				[Dot42.DexImport("setPadding", "(IIII)V", AccessFlags = 1)]
-				public override void SetPadding(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchSaveInstanceState
-				/// </java-name>
-				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal override void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchFreezeSelfOnly
-				/// </java-name>
-				[Dot42.DexImport("dispatchFreezeSelfOnly", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal virtual void DispatchFreezeSelfOnly(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchRestoreInstanceState
-				/// </java-name>
-				[Dot42.DexImport("dispatchRestoreInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchThawSelfOnly
-				/// </java-name>
-				[Dot42.DexImport("dispatchThawSelfOnly", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal virtual void DispatchThawSelfOnly(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setChildrenDrawingCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("setChildrenDrawingCacheEnabled", "(Z)V", AccessFlags = 4)]
-				protected internal virtual void SetChildrenDrawingCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onAnimationStart
-				/// </java-name>
-				[Dot42.DexImport("onAnimationStart", "()V", AccessFlags = 4)]
-				protected internal override void OnAnimationStart() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onAnimationEnd
-				/// </java-name>
-				[Dot42.DexImport("onAnimationEnd", "()V", AccessFlags = 4)]
-				protected internal override void OnAnimationEnd() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchDraw
-				/// </java-name>
-				[Dot42.DexImport("dispatchDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 4)]
-				protected internal override void DispatchDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getChildDrawingOrder
-				/// </java-name>
-				[Dot42.DexImport("getChildDrawingOrder", "(II)I", AccessFlags = 4)]
-				protected internal virtual int GetChildDrawingOrder(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// drawChild
-				/// </java-name>
-				[Dot42.DexImport("drawChild", "(Landroid/graphics/Canvas;Landroid/view/View;J)Z", AccessFlags = 4)]
-				protected internal virtual bool DrawChild(global::Android.Graphics.Canvas canvas, global::Android.View.View view, long int64) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setClipChildren
-				/// </java-name>
-				[Dot42.DexImport("setClipChildren", "(Z)V", AccessFlags = 1)]
-				public virtual void SetClipChildren(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setClipToPadding
-				/// </java-name>
-				[Dot42.DexImport("setClipToPadding", "(Z)V", AccessFlags = 1)]
-				public virtual void SetClipToPadding(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchSetSelected
-				/// </java-name>
-				[Dot42.DexImport("dispatchSetSelected", "(Z)V", AccessFlags = 1)]
-				public new virtual void DispatchSetSelected(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchSetActivated
-				/// </java-name>
-				[Dot42.DexImport("dispatchSetActivated", "(Z)V", AccessFlags = 1)]
-				public new virtual void DispatchSetActivated(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchSetPressed
-				/// </java-name>
-				[Dot42.DexImport("dispatchSetPressed", "(Z)V", AccessFlags = 4)]
-				protected internal override void DispatchSetPressed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setStaticTransformationsEnabled
-				/// </java-name>
-				[Dot42.DexImport("setStaticTransformationsEnabled", "(Z)V", AccessFlags = 4)]
-				protected internal virtual void SetStaticTransformationsEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getChildStaticTransformation
-				/// </java-name>
-				[Dot42.DexImport("getChildStaticTransformation", "(Landroid/view/View;Landroid/view/animation/Transformation;)Z", AccessFlags = 4)]
-				protected internal virtual bool GetChildStaticTransformation(global::Android.View.View view, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// addView
-				/// </java-name>
-				[Dot42.DexImport("addView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void AddView(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addView
-				/// </java-name>
-				[Dot42.DexImport("addView", "(Landroid/view/View;I)V", AccessFlags = 1)]
-				public virtual void AddView(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addView
-				/// </java-name>
-				[Dot42.DexImport("addView", "(Landroid/view/View;II)V", AccessFlags = 1)]
-				public virtual void AddView(global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addView
-				/// </java-name>
-				[Dot42.DexImport("addView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void AddView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addView
-				/// </java-name>
-				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// updateViewLayout
-				/// </java-name>
-				[Dot42.DexImport("updateViewLayout", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void UpdateViewLayout(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// checkLayoutParams
-				/// </java-name>
-				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal virtual bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setOnHierarchyChangeListener
-				/// </java-name>
-				[Dot42.DexImport("setOnHierarchyChangeListener", "(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V", AccessFlags = 1)]
-				public virtual void SetOnHierarchyChangeListener(global::Android.View.ViewGroup.IOnHierarchyChangeListener onHierarchyChangeListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addViewInLayout
-				/// </java-name>
-				[Dot42.DexImport("addViewInLayout", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal virtual bool AddViewInLayout(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// addViewInLayout
-				/// </java-name>
-				[Dot42.DexImport("addViewInLayout", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;Z)Z", AccessFlags = 4)]
-				protected internal virtual bool AddViewInLayout(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// cleanupLayoutState
-				/// </java-name>
-				[Dot42.DexImport("cleanupLayoutState", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal virtual void CleanupLayoutState(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// attachLayoutAnimationParameters
-				/// </java-name>
-				[Dot42.DexImport("attachLayoutAnimationParameters", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;II)V", AccessFlags = 4)]
-				protected internal virtual void AttachLayoutAnimationParameters(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeView
-				/// </java-name>
-				[Dot42.DexImport("removeView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void RemoveView(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeViewInLayout
-				/// </java-name>
-				[Dot42.DexImport("removeViewInLayout", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void RemoveViewInLayout(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeViewsInLayout
-				/// </java-name>
-				[Dot42.DexImport("removeViewsInLayout", "(II)V", AccessFlags = 1)]
-				public virtual void RemoveViewsInLayout(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeViewAt
-				/// </java-name>
-				[Dot42.DexImport("removeViewAt", "(I)V", AccessFlags = 1)]
-				public virtual void RemoveViewAt(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeViews
-				/// </java-name>
-				[Dot42.DexImport("removeViews", "(II)V", AccessFlags = 1)]
-				public virtual void RemoveViews(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLayoutTransition
-				/// </java-name>
-				[Dot42.DexImport("setLayoutTransition", "(Landroid/animation/LayoutTransition;)V", AccessFlags = 1)]
-				public virtual void SetLayoutTransition(global::Android.Animation.LayoutTransition layoutTransition) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLayoutTransition
-				/// </java-name>
-				[Dot42.DexImport("getLayoutTransition", "()Landroid/animation/LayoutTransition;", AccessFlags = 1)]
-				public virtual global::Android.Animation.LayoutTransition GetLayoutTransition() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Animation.LayoutTransition);
-				}
-
-				/// <java-name>
-				/// removeAllViews
-				/// </java-name>
-				[Dot42.DexImport("removeAllViews", "()V", AccessFlags = 1)]
-				public virtual void RemoveAllViews() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeAllViewsInLayout
-				/// </java-name>
-				[Dot42.DexImport("removeAllViewsInLayout", "()V", AccessFlags = 1)]
-				public virtual void RemoveAllViewsInLayout() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeDetachedView
-				/// </java-name>
-				[Dot42.DexImport("removeDetachedView", "(Landroid/view/View;Z)V", AccessFlags = 4)]
-				protected internal virtual void RemoveDetachedView(global::Android.View.View view, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// attachViewToParent
-				/// </java-name>
-				[Dot42.DexImport("attachViewToParent", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 4)]
-				protected internal virtual void AttachViewToParent(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// detachViewFromParent
-				/// </java-name>
-				[Dot42.DexImport("detachViewFromParent", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal virtual void DetachViewFromParent(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// detachViewFromParent
-				/// </java-name>
-				[Dot42.DexImport("detachViewFromParent", "(I)V", AccessFlags = 4)]
-				protected internal virtual void DetachViewFromParent(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// detachViewsFromParent
-				/// </java-name>
-				[Dot42.DexImport("detachViewsFromParent", "(II)V", AccessFlags = 4)]
-				protected internal virtual void DetachViewsFromParent(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// detachAllViewsFromParent
-				/// </java-name>
-				[Dot42.DexImport("detachAllViewsFromParent", "()V", AccessFlags = 4)]
-				protected internal virtual void DetachAllViewsFromParent() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// invalidateChild
-				/// </java-name>
-				[Dot42.DexImport("invalidateChild", "(Landroid/view/View;Landroid/graphics/Rect;)V", AccessFlags = 17)]
-				public void InvalidateChild(global::Android.View.View view, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// invalidateChildInParent
-				/// </java-name>
-				[Dot42.DexImport("invalidateChildInParent", "([ILandroid/graphics/Rect;)Landroid/view/ViewParent;", AccessFlags = 1)]
-				public virtual global::Android.View.IViewParent InvalidateChildInParent(int[] int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.IViewParent);
-				}
-
-				/// <java-name>
-				/// offsetDescendantRectToMyCoords
-				/// </java-name>
-				[Dot42.DexImport("offsetDescendantRectToMyCoords", "(Landroid/view/View;Landroid/graphics/Rect;)V", AccessFlags = 17)]
-				public void OffsetDescendantRectToMyCoords(global::Android.View.View view, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// offsetRectIntoDescendantCoords
-				/// </java-name>
-				[Dot42.DexImport("offsetRectIntoDescendantCoords", "(Landroid/view/View;Landroid/graphics/Rect;)V", AccessFlags = 17)]
-				public void OffsetRectIntoDescendantCoords(global::Android.View.View view, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getChildVisibleRect
-				/// </java-name>
-				[Dot42.DexImport("getChildVisibleRect", "(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Point;)Z", AccessFlags = 1)]
-				public virtual bool GetChildVisibleRect(global::Android.View.View view, global::Android.Graphics.Rect rect, global::Android.Graphics.Point point) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// layout
-				/// </java-name>
-				[Dot42.DexImport("layout", "(IIII)V", AccessFlags = 17)]
-				public override void Layout(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onLayout
-				/// </java-name>
-				[Dot42.DexImport("onLayout", "(ZIIII)V", AccessFlags = 1028)]
-				protected internal override void OnLayout(bool boolean, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// canAnimate
-				/// </java-name>
-				[Dot42.DexImport("canAnimate", "()Z", AccessFlags = 4)]
-				protected internal virtual bool CanAnimate() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// startLayoutAnimation
-				/// </java-name>
-				[Dot42.DexImport("startLayoutAnimation", "()V", AccessFlags = 1)]
-				public virtual void StartLayoutAnimation() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// scheduleLayoutAnimation
-				/// </java-name>
-				[Dot42.DexImport("scheduleLayoutAnimation", "()V", AccessFlags = 1)]
-				public virtual void ScheduleLayoutAnimation() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLayoutAnimation
-				/// </java-name>
-				[Dot42.DexImport("setLayoutAnimation", "(Landroid/view/animation/LayoutAnimationController;)V", AccessFlags = 1)]
-				public virtual void SetLayoutAnimation(global::Android.View.Animation.LayoutAnimationController layoutAnimationController) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLayoutAnimation
-				/// </java-name>
-				[Dot42.DexImport("getLayoutAnimation", "()Landroid/view/animation/LayoutAnimationController;", AccessFlags = 1)]
-				public virtual global::Android.View.Animation.LayoutAnimationController GetLayoutAnimation() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.Animation.LayoutAnimationController);
-				}
-
-				/// <java-name>
-				/// isAnimationCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("isAnimationCacheEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsAnimationCacheEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setAnimationCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("setAnimationCacheEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAnimationCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isAlwaysDrawnWithCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("isAlwaysDrawnWithCacheEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsAlwaysDrawnWithCacheEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setAlwaysDrawnWithCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("setAlwaysDrawnWithCacheEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAlwaysDrawnWithCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isChildrenDrawnWithCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("isChildrenDrawnWithCacheEnabled", "()Z", AccessFlags = 4)]
-				protected internal virtual bool IsChildrenDrawnWithCacheEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setChildrenDrawnWithCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("setChildrenDrawnWithCacheEnabled", "(Z)V", AccessFlags = 4)]
-				protected internal virtual void SetChildrenDrawnWithCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isChildrenDrawingOrderEnabled
-				/// </java-name>
-				[Dot42.DexImport("isChildrenDrawingOrderEnabled", "()Z", AccessFlags = 4)]
-				protected internal virtual bool IsChildrenDrawingOrderEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setChildrenDrawingOrderEnabled
-				/// </java-name>
-				[Dot42.DexImport("setChildrenDrawingOrderEnabled", "(Z)V", AccessFlags = 4)]
-				protected internal virtual void SetChildrenDrawingOrderEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPersistentDrawingCache
-				/// </java-name>
-				[Dot42.DexImport("getPersistentDrawingCache", "()I", AccessFlags = 1)]
-				public virtual int GetPersistentDrawingCache() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setPersistentDrawingCache
-				/// </java-name>
-				[Dot42.DexImport("setPersistentDrawingCache", "(I)V", AccessFlags = 1)]
-				public virtual void SetPersistentDrawingCache(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// generateLayoutParams
-				/// </java-name>
-				[Dot42.DexImport("generateLayoutParams", "(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
-				}
-
-				/// <java-name>
-				/// generateLayoutParams
-				/// </java-name>
-				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
-				}
-
-				/// <java-name>
-				/// generateDefaultLayoutParams
-				/// </java-name>
-				[Dot42.DexImport("generateDefaultLayoutParams", "()Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
-				}
-
-				/// <java-name>
-				/// debug
-				/// </java-name>
-				[Dot42.DexImport("debug", "(I)V", AccessFlags = 4)]
-				protected internal virtual void Debug(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// indexOfChild
-				/// </java-name>
-				[Dot42.DexImport("indexOfChild", "(Landroid/view/View;)I", AccessFlags = 1)]
-				public virtual int IndexOfChild(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getChildCount
-				/// </java-name>
-				[Dot42.DexImport("getChildCount", "()I", AccessFlags = 1)]
-				public virtual int GetChildCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getChildAt
-				/// </java-name>
-				[Dot42.DexImport("getChildAt", "(I)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetChildAt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// measureChildren
-				/// </java-name>
-				[Dot42.DexImport("measureChildren", "(II)V", AccessFlags = 4)]
-				protected internal virtual void MeasureChildren(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// measureChild
-				/// </java-name>
-				[Dot42.DexImport("measureChild", "(Landroid/view/View;II)V", AccessFlags = 4)]
-				protected internal virtual void MeasureChild(global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// measureChildWithMargins
-				/// </java-name>
-				[Dot42.DexImport("measureChildWithMargins", "(Landroid/view/View;IIII)V", AccessFlags = 4)]
-				protected internal virtual void MeasureChildWithMargins(global::Android.View.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getChildMeasureSpec
-				/// </java-name>
-				[Dot42.DexImport("getChildMeasureSpec", "(III)I", AccessFlags = 9)]
-				public static int GetChildMeasureSpec(int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// clearDisappearingChildren
-				/// </java-name>
-				[Dot42.DexImport("clearDisappearingChildren", "()V", AccessFlags = 1)]
-				public virtual void ClearDisappearingChildren() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// startViewTransition
-				/// </java-name>
-				[Dot42.DexImport("startViewTransition", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void StartViewTransition(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// endViewTransition
-				/// </java-name>
-				[Dot42.DexImport("endViewTransition", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void EndViewTransition(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// gatherTransparentRegion
-				/// </java-name>
-				[Dot42.DexImport("gatherTransparentRegion", "(Landroid/graphics/Region;)Z", AccessFlags = 1)]
-				public virtual bool GatherTransparentRegion(global::Android.Graphics.Region region) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// requestTransparentRegion
-				/// </java-name>
-				[Dot42.DexImport("requestTransparentRegion", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void RequestTransparentRegion(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// fitSystemWindows
-				/// </java-name>
-				[Dot42.DexImport("fitSystemWindows", "(Landroid/graphics/Rect;)Z", AccessFlags = 4)]
-				protected internal override bool FitSystemWindows(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getLayoutAnimationListener
-				/// </java-name>
-				[Dot42.DexImport("getLayoutAnimationListener", "()Landroid/view/animation/Animation$AnimationListener;", AccessFlags = 1)]
-				public virtual global::Android.View.Animation.Animation.IAnimationListener GetLayoutAnimationListener() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.Animation.Animation.IAnimationListener);
-				}
-
-				/// <java-name>
-				/// drawableStateChanged
-				/// </java-name>
-				[Dot42.DexImport("drawableStateChanged", "()V", AccessFlags = 4)]
-				protected internal override void DrawableStateChanged() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// jumpDrawablesToCurrentState
-				/// </java-name>
-				[Dot42.DexImport("jumpDrawablesToCurrentState", "()V", AccessFlags = 1)]
-				public override void JumpDrawablesToCurrentState() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCreateDrawableState
-				/// </java-name>
-				[Dot42.DexImport("onCreateDrawableState", "(I)[I", AccessFlags = 4)]
-				protected internal override int[] OnCreateDrawableState(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// setAddStatesFromChildren
-				/// </java-name>
-				[Dot42.DexImport("setAddStatesFromChildren", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAddStatesFromChildren(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addStatesFromChildren
-				/// </java-name>
-				[Dot42.DexImport("addStatesFromChildren", "()Z", AccessFlags = 1)]
-				public virtual bool AddStatesFromChildren() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// childDrawableStateChanged
-				/// </java-name>
-				[Dot42.DexImport("childDrawableStateChanged", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void ChildDrawableStateChanged(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLayoutAnimationListener
-				/// </java-name>
-				[Dot42.DexImport("setLayoutAnimationListener", "(Landroid/view/animation/Animation$AnimationListener;)V", AccessFlags = 1)]
-				public virtual void SetLayoutAnimationListener(global::Android.View.Animation.Animation.IAnimationListener animationListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// resetResolvedLayoutDirection
-				/// </java-name>
-				[Dot42.DexImport("resetResolvedLayoutDirection", "()V", AccessFlags = 4)]
-				protected internal virtual void ResetResolvedLayoutDirection() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// resetResolvedTextDirection
-				/// </java-name>
-				[Dot42.DexImport("resetResolvedTextDirection", "()V", AccessFlags = 4)]
-				protected internal virtual void ResetResolvedTextDirection() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// shouldDelayChildPressedState
-				/// </java-name>
-				[Dot42.DexImport("shouldDelayChildPressedState", "()Z", AccessFlags = 1)]
-				public virtual bool ShouldDelayChildPressedState() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ViewGroup() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				[Dot42.DexImport("android/view/ViewParent", "requestLayout", "()V", AccessFlags = 1025)]
-				public override void RequestLayout() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-				}
-
-				[Dot42.DexImport("android/view/ViewParent", "isLayoutRequested", "()Z", AccessFlags = 1025)]
-				public override bool IsLayoutRequested() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("android/view/ViewParent", "getParent", "()Landroid/view/ViewParent;", AccessFlags = 1025)]
-				public new virtual global::Android.View.IViewParent GetParent() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Android.View.IViewParent);
-				}
-
-				[Dot42.DexImport("android/view/ViewParent", "createContextMenu", "(Landroid/view/ContextMenu;)V", AccessFlags = 1025)]
-				public override void CreateContextMenu(global::Android.View.IContextMenu contextMenu) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDescendantFocusability
-				/// </java-name>
-				public int DescendantFocusability
-				{
-				[Dot42.DexImport("getDescendantFocusability", "()I", AccessFlags = 1)]
-						get{ return GetDescendantFocusability(); }
-				[Dot42.DexImport("setDescendantFocusability", "(I)V", AccessFlags = 1)]
-						set{ SetDescendantFocusability(value); }
-				}
-
-				/// <java-name>
-				/// getFocusedChild
-				/// </java-name>
-				public global::Android.View.View FocusedChild
-				{
-				[Dot42.DexImport("getFocusedChild", "()Landroid/view/View;", AccessFlags = 1)]
-						get{ return GetFocusedChild(); }
-				}
-
-				/// <java-name>
-				/// getLayoutTransition
-				/// </java-name>
-				public global::Android.Animation.LayoutTransition LayoutTransition
-				{
-				[Dot42.DexImport("getLayoutTransition", "()Landroid/animation/LayoutTransition;", AccessFlags = 1)]
-						get{ return GetLayoutTransition(); }
-				[Dot42.DexImport("setLayoutTransition", "(Landroid/animation/LayoutTransition;)V", AccessFlags = 1)]
-						set{ SetLayoutTransition(value); }
-				}
-
-				/// <java-name>
-				/// getLayoutAnimation
-				/// </java-name>
-				public global::Android.View.Animation.LayoutAnimationController LayoutAnimation
-				{
-				[Dot42.DexImport("getLayoutAnimation", "()Landroid/view/animation/LayoutAnimationController;", AccessFlags = 1)]
-						get{ return GetLayoutAnimation(); }
-				[Dot42.DexImport("setLayoutAnimation", "(Landroid/view/animation/LayoutAnimationController;)V", AccessFlags = 1)]
-						set{ SetLayoutAnimation(value); }
-				}
-
-				/// <java-name>
-				/// getPersistentDrawingCache
-				/// </java-name>
-				public int PersistentDrawingCache
-				{
-				[Dot42.DexImport("getPersistentDrawingCache", "()I", AccessFlags = 1)]
-						get{ return GetPersistentDrawingCache(); }
-				[Dot42.DexImport("setPersistentDrawingCache", "(I)V", AccessFlags = 1)]
-						set{ SetPersistentDrawingCache(value); }
-				}
-
-				/// <java-name>
-				/// getChildCount
-				/// </java-name>
-				public int ChildCount
-				{
-				[Dot42.DexImport("getChildCount", "()I", AccessFlags = 1)]
-						get{ return GetChildCount(); }
-				}
-
-				/// <java-name>
-				/// getLayoutAnimationListener
-				/// </java-name>
-				public global::Android.View.Animation.Animation.IAnimationListener LayoutAnimationListener
-				{
-				[Dot42.DexImport("getLayoutAnimationListener", "()Landroid/view/animation/Animation$AnimationListener;", AccessFlags = 1)]
-						get{ return GetLayoutAnimationListener(); }
-				[Dot42.DexImport("setLayoutAnimationListener", "(Landroid/view/animation/Animation$AnimationListener;)V", AccessFlags = 1)]
-						set{ SetLayoutAnimationListener(value); }
-				}
-
-				public global::Android.View.IViewParent Parent
-				{
-				[Dot42.DexImport("android/view/ViewParent", "getParent", "()Landroid/view/ViewParent;", AccessFlags = 1025)]
-						get{ return GetParent(); }
-				}
-
-				/// <java-name>
-				/// android/view/ViewGroup$MarginLayoutParams
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewGroup$MarginLayoutParams", AccessFlags = 9)]
-				public partial class MarginLayoutParams : global::Android.View.ViewGroup.LayoutParams
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// leftMargin
-						/// </java-name>
-						[Dot42.DexImport("leftMargin", "I", AccessFlags = 1)]
-						public int LeftMargin;
-						/// <java-name>
-						/// topMargin
-						/// </java-name>
-						[Dot42.DexImport("topMargin", "I", AccessFlags = 1)]
-						public int TopMargin;
-						/// <java-name>
-						/// rightMargin
-						/// </java-name>
-						[Dot42.DexImport("rightMargin", "I", AccessFlags = 1)]
-						public int RightMargin;
-						/// <java-name>
-						/// bottomMargin
-						/// </java-name>
-						[Dot42.DexImport("bottomMargin", "I", AccessFlags = 1)]
-						public int BottomMargin;
-						[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-						public MarginLayoutParams(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
-						public MarginLayoutParams(int int32, int int321) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$MarginLayoutParams;)V", AccessFlags = 1)]
-						public MarginLayoutParams(MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public MarginLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// setMargins
-						/// </java-name>
-						[Dot42.DexImport("setMargins", "(IIII)V", AccessFlags = 1)]
-						public virtual void SetMargins(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal MarginLayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewGroup$LayoutParams
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewGroup$LayoutParams", AccessFlags = 9)]
-				public partial class LayoutParams
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// FILL_PARENT
-						/// </java-name>
-						[Dot42.DexImport("FILL_PARENT", "I", AccessFlags = 25)]
-						public const int FILL_PARENT = -1;
-						/// <java-name>
-						/// MATCH_PARENT
-						/// </java-name>
-						[Dot42.DexImport("MATCH_PARENT", "I", AccessFlags = 25)]
-						public const int MATCH_PARENT = -1;
-						/// <java-name>
-						/// WRAP_CONTENT
-						/// </java-name>
-						[Dot42.DexImport("WRAP_CONTENT", "I", AccessFlags = 25)]
-						public const int WRAP_CONTENT = -2;
-						/// <java-name>
-						/// width
-						/// </java-name>
-						[Dot42.DexImport("width", "I", AccessFlags = 1)]
-						public int Width;
-						/// <java-name>
-						/// height
-						/// </java-name>
-						[Dot42.DexImport("height", "I", AccessFlags = 1)]
-						public int Height;
-						/// <java-name>
-						/// layoutAnimationParameters
-						/// </java-name>
-						[Dot42.DexImport("layoutAnimationParameters", "Landroid/view/animation/LayoutAnimationController$AnimationParameters;", AccessFlags = 1)]
-						public global::Android.View.Animation.LayoutAnimationController.AnimationParameters LayoutAnimationParameters;
-						[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
-						public LayoutParams(int int32, int int321) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(LayoutParams layoutParams) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// setBaseAttributes
-						/// </java-name>
-						[Dot42.DexImport("setBaseAttributes", "(Landroid/content/res/TypedArray;II)V", AccessFlags = 4)]
-						protected internal virtual void SetBaseAttributes(global::Android.Content.Res.TypedArray typedArray, int int32, int int321) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewGroup$OnHierarchyChangeListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewGroup$OnHierarchyChangeListener", AccessFlags = 1545)]
-				public partial interface IOnHierarchyChangeListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onChildViewAdded
-						/// </java-name>
-						[Dot42.DexImport("onChildViewAdded", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1025)]
-						void OnChildViewAdded(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onChildViewRemoved
-						/// </java-name>
-						[Dot42.DexImport("onChildViewRemoved", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1025)]
-						void OnChildViewRemoved(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/LayoutInflater
-		/// </java-name>
-		[Dot42.DexImport("android/view/LayoutInflater", AccessFlags = 1057)]
-		public abstract partial class LayoutInflater
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 4)]
-				protected internal LayoutInflater(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/view/LayoutInflater;Landroid/content/Context;)V", AccessFlags = 4)]
-				protected internal LayoutInflater(global::Android.View.LayoutInflater layoutInflater, global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// from
-				/// </java-name>
-				[Dot42.DexImport("from", "(Landroid/content/Context;)Landroid/view/LayoutInflater;", AccessFlags = 9)]
-				public static global::Android.View.LayoutInflater From(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.LayoutInflater);
-				}
-
-				/// <java-name>
-				/// cloneInContext
-				/// </java-name>
-				[Dot42.DexImport("cloneInContext", "(Landroid/content/Context;)Landroid/view/LayoutInflater;", AccessFlags = 1025)]
-				public abstract global::Android.View.LayoutInflater CloneInContext(global::Android.Content.Context context) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getContext
-				/// </java-name>
-				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 1)]
-				public virtual global::Android.Content.Context GetContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Context);
-				}
-
-				/// <java-name>
-				/// getFactory
-				/// </java-name>
-				[Dot42.DexImport("getFactory", "()Landroid/view/LayoutInflater$Factory;", AccessFlags = 17)]
-				public global::Android.View.LayoutInflater.IFactory GetFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.LayoutInflater.IFactory);
-				}
-
-				/// <java-name>
-				/// getFactory2
-				/// </java-name>
-				[Dot42.DexImport("getFactory2", "()Landroid/view/LayoutInflater$Factory2;", AccessFlags = 17)]
-				public global::Android.View.LayoutInflater.IFactory2 GetFactory2() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.LayoutInflater.IFactory2);
-				}
-
-				/// <java-name>
-				/// setFactory
-				/// </java-name>
-				[Dot42.DexImport("setFactory", "(Landroid/view/LayoutInflater$Factory;)V", AccessFlags = 1)]
-				public virtual void SetFactory(global::Android.View.LayoutInflater.IFactory factory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFactory2
-				/// </java-name>
-				[Dot42.DexImport("setFactory2", "(Landroid/view/LayoutInflater$Factory2;)V", AccessFlags = 1)]
-				public virtual void SetFactory2(global::Android.View.LayoutInflater.IFactory2 factory2) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getFilter
-				/// </java-name>
-				[Dot42.DexImport("getFilter", "()Landroid/view/LayoutInflater$Filter;", AccessFlags = 1)]
-				public virtual global::Android.View.LayoutInflater.IFilter GetFilter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.LayoutInflater.IFilter);
-				}
-
-				/// <java-name>
-				/// setFilter
-				/// </java-name>
-				[Dot42.DexImport("setFilter", "(Landroid/view/LayoutInflater$Filter;)V", AccessFlags = 1)]
-				public virtual void SetFilter(global::Android.View.LayoutInflater.IFilter filter) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// inflate
-				/// </java-name>
-				[Dot42.DexImport("inflate", "(ILandroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View Inflate(int int32, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// inflate
-				/// </java-name>
-				[Dot42.DexImport("inflate", "(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View Inflate(global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// inflate
-				/// </java-name>
-				[Dot42.DexImport("inflate", "(ILandroid/view/ViewGroup;Z)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View Inflate(int int32, global::Android.View.ViewGroup viewGroup, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// inflate
-				/// </java-name>
-				[Dot42.DexImport("inflate", "(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;Z)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View Inflate(global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser, global::Android.View.ViewGroup viewGroup, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// createView
-				/// </java-name>
-				[Dot42.DexImport("createView", "(Ljava/lang/String;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/Vi" +
-    "ew;", AccessFlags = 17)]
-				public global::Android.View.View CreateView(string @string, string string1, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// onCreateView
-				/// </java-name>
-				[Dot42.DexImport("onCreateView", "(Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.View OnCreateView(string @string, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// onCreateView
-				/// </java-name>
-				[Dot42.DexImport("onCreateView", "(Landroid/view/View;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/V" +
-    "iew;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.View OnCreateView(global::Android.View.View view, string @string, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LayoutInflater() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContext
-				/// </java-name>
-				public global::Android.Content.Context Context
-				{
-				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 1)]
-						get{ return GetContext(); }
-				}
-
-				/// <java-name>
-				/// getFactory
-				/// </java-name>
-				public global::Android.View.LayoutInflater.IFactory Factory
-				{
-				[Dot42.DexImport("getFactory", "()Landroid/view/LayoutInflater$Factory;", AccessFlags = 17)]
-						get{ return GetFactory(); }
-				[Dot42.DexImport("setFactory", "(Landroid/view/LayoutInflater$Factory;)V", AccessFlags = 1)]
-						set{ SetFactory(value); }
-				}
-
-				/// <java-name>
-				/// getFactory2
-				/// </java-name>
-				public global::Android.View.LayoutInflater.IFactory2 Factory2
-				{
-				[Dot42.DexImport("getFactory2", "()Landroid/view/LayoutInflater$Factory2;", AccessFlags = 17)]
-						get{ return GetFactory2(); }
-				[Dot42.DexImport("setFactory2", "(Landroid/view/LayoutInflater$Factory2;)V", AccessFlags = 1)]
-						set{ SetFactory2(value); }
-				}
-
-				/// <java-name>
-				/// getFilter
-				/// </java-name>
-				public global::Android.View.LayoutInflater.IFilter Filter
-				{
-				[Dot42.DexImport("getFilter", "()Landroid/view/LayoutInflater$Filter;", AccessFlags = 1)]
-						get{ return GetFilter(); }
-				[Dot42.DexImport("setFilter", "(Landroid/view/LayoutInflater$Filter;)V", AccessFlags = 1)]
-						set{ SetFilter(value); }
-				}
-
-				/// <java-name>
-				/// android/view/LayoutInflater$Factory2
-				/// </java-name>
-				[Dot42.DexImport("android/view/LayoutInflater$Factory2", AccessFlags = 1545)]
-				public partial interface IFactory2 : global::Android.View.LayoutInflater.IFactory
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onCreateView
-						/// </java-name>
-						[Dot42.DexImport("onCreateView", "(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/Attr" +
-    "ibuteSet;)Landroid/view/View;", AccessFlags = 1025)]
-						global::Android.View.View OnCreateView(global::Android.View.View view, string @string, global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/LayoutInflater$Factory
-				/// </java-name>
-				[Dot42.DexImport("android/view/LayoutInflater$Factory", AccessFlags = 1545)]
-				public partial interface IFactory
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onCreateView
-						/// </java-name>
-						[Dot42.DexImport("onCreateView", "(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/" +
-    "view/View;", AccessFlags = 1025)]
-						global::Android.View.View OnCreateView(string @string, global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/LayoutInflater$Filter
-				/// </java-name>
-				[Dot42.DexImport("android/view/LayoutInflater$Filter", AccessFlags = 1545)]
-				public partial interface IFilter
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onLoadClass
-						/// </java-name>
-						[Dot42.DexImport("onLoadClass", "(Ljava/lang/Class;)Z", AccessFlags = 1025)]
-						bool OnLoadClass(global::System.Type type) /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/InputQueue
-		/// </java-name>
-		[Dot42.DexImport("android/view/InputQueue", AccessFlags = 49)]
-		public sealed partial class InputQueue
- /* scope: __dot42__ */ 
-		{
+				[Dot42.DexImport("FLAG_IGNORE_GLOBAL_SETTING", "I", AccessFlags = 25)]
+				public const int FLAG_IGNORE_GLOBAL_SETTING = 2;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal InputQueue() /* MethodBuilder.Create */ 
+				internal HapticFeedbackConstants() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// android/view/InputQueue$Callback
-				/// </java-name>
-				[Dot42.DexImport("android/view/InputQueue$Callback", AccessFlags = 1545)]
-				public partial interface ICallback
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onInputQueueCreated
-						/// </java-name>
-						[Dot42.DexImport("onInputQueueCreated", "(Landroid/view/InputQueue;)V", AccessFlags = 1025)]
-						void OnInputQueueCreated(global::Android.View.InputQueue inputQueue) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onInputQueueDestroyed
-						/// </java-name>
-						[Dot42.DexImport("onInputQueueDestroyed", "(Landroid/view/InputQueue;)V", AccessFlags = 1025)]
-						void OnInputQueueDestroyed(global::Android.View.InputQueue inputQueue) /* MethodBuilder.Create */ ;
-
 				}
 
 		}
 
 		/// <java-name>
-		/// android/view/VelocityTracker
+		/// android/view/CollapsibleActionView
 		/// </java-name>
-		[Dot42.DexImport("android/view/VelocityTracker", AccessFlags = 49)]
-		public sealed partial class VelocityTracker
+		[Dot42.DexImport("android/view/CollapsibleActionView", AccessFlags = 1537)]
+		public partial interface ICollapsibleActionView
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal VelocityTracker() /* MethodBuilder.Create */ 
-				{
-				}
+				/// <java-name>
+				/// onActionViewExpanded
+				/// </java-name>
+				[Dot42.DexImport("onActionViewExpanded", "()V", AccessFlags = 1025)]
+				void OnActionViewExpanded() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// obtain
+				/// onActionViewCollapsed
 				/// </java-name>
-				[Dot42.DexImport("obtain", "()Landroid/view/VelocityTracker;", AccessFlags = 9)]
-				public static global::Android.View.VelocityTracker Obtain() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.VelocityTracker);
-				}
+				[Dot42.DexImport("onActionViewCollapsed", "()V", AccessFlags = 1025)]
+				void OnActionViewCollapsed() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/view/ContextMenu
+		/// </java-name>
+		[Dot42.DexImport("android/view/ContextMenu", AccessFlags = 1537)]
+		public partial interface IContextMenu : global::Android.View.IMenu
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// setHeaderTitle
+				/// </java-name>
+				[Dot42.DexImport("setHeaderTitle", "(I)Landroid/view/ContextMenu;", AccessFlags = 1025)]
+				global::Android.View.IContextMenu SetHeaderTitle(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// recycle
+				/// setHeaderTitle
 				/// </java-name>
-				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
-				public void Recycle() /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("setHeaderTitle", "(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;", AccessFlags = 1025)]
+				global::Android.View.IContextMenu SetHeaderTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// finalize
+				/// setHeaderIcon
 				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~VelocityTracker() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("setHeaderIcon", "(I)Landroid/view/ContextMenu;", AccessFlags = 1025)]
+				global::Android.View.IContextMenu SetHeaderIcon(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setHeaderIcon
+				/// </java-name>
+				[Dot42.DexImport("setHeaderIcon", "(Landroid/graphics/drawable/Drawable;)Landroid/view/ContextMenu;", AccessFlags = 1025)]
+				global::Android.View.IContextMenu SetHeaderIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setHeaderView
+				/// </java-name>
+				[Dot42.DexImport("setHeaderView", "(Landroid/view/View;)Landroid/view/ContextMenu;", AccessFlags = 1025)]
+				global::Android.View.IContextMenu SetHeaderView(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// clearHeader
+				/// </java-name>
+				[Dot42.DexImport("clearHeader", "()V", AccessFlags = 1025)]
+				void ClearHeader() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/view/ContextMenu$ContextMenuInfo
+		/// </java-name>
+		[Dot42.DexImport("android/view/ContextMenu$ContextMenuInfo", AccessFlags = 1545)]
+		public partial interface IContextMenu_IContextMenuInfo
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// android/view/Menu
+		/// </java-name>
+		[Dot42.DexImport("android/view/Menu", AccessFlags = 1537)]
+		public partial interface IMenu
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// add
+				/// </java-name>
+				[Dot42.DexImport("add", "(Ljava/lang/CharSequence;)Landroid/view/MenuItem;", AccessFlags = 1025)]
+				global::Android.View.IMenuItem Add(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// add
+				/// </java-name>
+				[Dot42.DexImport("add", "(I)Landroid/view/MenuItem;", AccessFlags = 1025)]
+				global::Android.View.IMenuItem Add(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// add
+				/// </java-name>
+				[Dot42.DexImport("add", "(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;", AccessFlags = 1025)]
+				global::Android.View.IMenuItem Add(int int32, int int321, int int322, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// add
+				/// </java-name>
+				[Dot42.DexImport("add", "(IIII)Landroid/view/MenuItem;", AccessFlags = 1025)]
+				global::Android.View.IMenuItem Add(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addSubMenu
+				/// </java-name>
+				[Dot42.DexImport("addSubMenu", "(Ljava/lang/CharSequence;)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu AddSubMenu(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addSubMenu
+				/// </java-name>
+				[Dot42.DexImport("addSubMenu", "(I)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu AddSubMenu(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addSubMenu
+				/// </java-name>
+				[Dot42.DexImport("addSubMenu", "(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu AddSubMenu(int int32, int int321, int int322, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addSubMenu
+				/// </java-name>
+				[Dot42.DexImport("addSubMenu", "(IIII)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu AddSubMenu(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addIntentOptions
+				/// </java-name>
+				[Dot42.DexImport("addIntentOptions", "(IIILandroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Inte" +
+    "nt;I[Landroid/view/MenuItem;)I", AccessFlags = 1025)]
+				int AddIntentOptions(int int32, int int321, int int322, global::Android.Content.ComponentName componentName, global::Android.Content.Intent[] intent, global::Android.Content.Intent intent1, int int323, global::Android.View.IMenuItem[] menuItem) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// removeItem
+				/// </java-name>
+				[Dot42.DexImport("removeItem", "(I)V", AccessFlags = 1025)]
+				void RemoveItem(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// removeGroup
+				/// </java-name>
+				[Dot42.DexImport("removeGroup", "(I)V", AccessFlags = 1025)]
+				void RemoveGroup(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// clear
 				/// </java-name>
-				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
-				public void Clear() /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("clear", "()V", AccessFlags = 1025)]
+				void Clear() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// addMovement
+				/// setGroupCheckable
 				/// </java-name>
-				[Dot42.DexImport("addMovement", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
-				public void AddMovement(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("setGroupCheckable", "(IZZ)V", AccessFlags = 1025)]
+				void SetGroupCheckable(int int32, bool boolean, bool boolean1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// computeCurrentVelocity
+				/// setGroupVisible
 				/// </java-name>
-				[Dot42.DexImport("computeCurrentVelocity", "(I)V", AccessFlags = 1)]
-				public void ComputeCurrentVelocity(int int32) /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("setGroupVisible", "(IZ)V", AccessFlags = 1025)]
+				void SetGroupVisible(int int32, bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// computeCurrentVelocity
+				/// setGroupEnabled
 				/// </java-name>
-				[Dot42.DexImport("computeCurrentVelocity", "(IF)V", AccessFlags = 1)]
-				public void ComputeCurrentVelocity(int int32, float single) /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("setGroupEnabled", "(IZ)V", AccessFlags = 1025)]
+				void SetGroupEnabled(int int32, bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getXVelocity
+				/// hasVisibleItems
 				/// </java-name>
-				[Dot42.DexImport("getXVelocity", "()F", AccessFlags = 1)]
-				public float GetXVelocity() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
+				[Dot42.DexImport("hasVisibleItems", "()Z", AccessFlags = 1025)]
+				bool HasVisibleItems() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getYVelocity
+				/// findItem
 				/// </java-name>
-				[Dot42.DexImport("getYVelocity", "()F", AccessFlags = 1)]
-				public float GetYVelocity() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
+				[Dot42.DexImport("findItem", "(I)Landroid/view/MenuItem;", AccessFlags = 1025)]
+				global::Android.View.IMenuItem FindItem(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getXVelocity
+				/// size
 				/// </java-name>
-				[Dot42.DexImport("getXVelocity", "(I)F", AccessFlags = 1)]
-				public float GetXVelocity(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
+				[Dot42.DexImport("size", "()I", AccessFlags = 1025)]
+				int Size() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getYVelocity
+				/// getItem
 				/// </java-name>
-				[Dot42.DexImport("getYVelocity", "(I)F", AccessFlags = 1)]
-				public float GetYVelocity(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
+				[Dot42.DexImport("getItem", "(I)Landroid/view/MenuItem;", AccessFlags = 1025)]
+				global::Android.View.IMenuItem GetItem(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getXVelocity
+				/// close
 				/// </java-name>
-				public float XVelocity
-				{
-				[Dot42.DexImport("getXVelocity", "()F", AccessFlags = 1)]
-						get{ return GetXVelocity(); }
-				}
+				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
+				void Close() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getYVelocity
+				/// performShortcut
 				/// </java-name>
-				public float YVelocity
-				{
-				[Dot42.DexImport("getYVelocity", "()F", AccessFlags = 1)]
-						get{ return GetYVelocity(); }
-				}
+				[Dot42.DexImport("performShortcut", "(ILandroid/view/KeyEvent;I)Z", AccessFlags = 1025)]
+				bool PerformShortcut(int int32, global::Android.View.KeyEvent keyEvent, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isShortcutKey
+				/// </java-name>
+				[Dot42.DexImport("isShortcutKey", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
+				bool IsShortcutKey(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// performIdentifierAction
+				/// </java-name>
+				[Dot42.DexImport("performIdentifierAction", "(II)Z", AccessFlags = 1025)]
+				bool PerformIdentifierAction(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setQwertyMode
+				/// </java-name>
+				[Dot42.DexImport("setQwertyMode", "(Z)V", AccessFlags = 1025)]
+				void SetQwertyMode(bool boolean) /* MethodBuilder.Create */ ;
 
 		}
 
 		/// <java-name>
-		/// android/view/MenuItem
+		/// android/view/Menu
 		/// </java-name>
-		[Dot42.DexImport("android/view/MenuItem", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IMenuItemConstants
+		[Dot42.DexImport("android/view/Menu", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IMenuConstants
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// SHOW_AS_ACTION_NEVER
+				/// NONE
 				/// </java-name>
-				[Dot42.DexImport("SHOW_AS_ACTION_NEVER", "I", AccessFlags = 25)]
-				public const int SHOW_AS_ACTION_NEVER = 0;
+				[Dot42.DexImport("NONE", "I", AccessFlags = 25)]
+				public const int NONE = 0;
 				/// <java-name>
-				/// SHOW_AS_ACTION_IF_ROOM
+				/// FIRST
 				/// </java-name>
-				[Dot42.DexImport("SHOW_AS_ACTION_IF_ROOM", "I", AccessFlags = 25)]
-				public const int SHOW_AS_ACTION_IF_ROOM = 1;
+				[Dot42.DexImport("FIRST", "I", AccessFlags = 25)]
+				public const int FIRST = 1;
 				/// <java-name>
-				/// SHOW_AS_ACTION_ALWAYS
+				/// CATEGORY_CONTAINER
 				/// </java-name>
-				[Dot42.DexImport("SHOW_AS_ACTION_ALWAYS", "I", AccessFlags = 25)]
-				public const int SHOW_AS_ACTION_ALWAYS = 2;
+				[Dot42.DexImport("CATEGORY_CONTAINER", "I", AccessFlags = 25)]
+				public const int CATEGORY_CONTAINER = 65536;
 				/// <java-name>
-				/// SHOW_AS_ACTION_WITH_TEXT
+				/// CATEGORY_SYSTEM
 				/// </java-name>
-				[Dot42.DexImport("SHOW_AS_ACTION_WITH_TEXT", "I", AccessFlags = 25)]
-				public const int SHOW_AS_ACTION_WITH_TEXT = 4;
+				[Dot42.DexImport("CATEGORY_SYSTEM", "I", AccessFlags = 25)]
+				public const int CATEGORY_SYSTEM = 131072;
 				/// <java-name>
-				/// SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW
+				/// CATEGORY_SECONDARY
 				/// </java-name>
-				[Dot42.DexImport("SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW", "I", AccessFlags = 25)]
-				public const int SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW = 8;
+				[Dot42.DexImport("CATEGORY_SECONDARY", "I", AccessFlags = 25)]
+				public const int CATEGORY_SECONDARY = 196608;
+				/// <java-name>
+				/// CATEGORY_ALTERNATIVE
+				/// </java-name>
+				[Dot42.DexImport("CATEGORY_ALTERNATIVE", "I", AccessFlags = 25)]
+				public const int CATEGORY_ALTERNATIVE = 262144;
+				/// <java-name>
+				/// FLAG_APPEND_TO_GROUP
+				/// </java-name>
+				[Dot42.DexImport("FLAG_APPEND_TO_GROUP", "I", AccessFlags = 25)]
+				public const int FLAG_APPEND_TO_GROUP = 1;
+				/// <java-name>
+				/// FLAG_PERFORM_NO_CLOSE
+				/// </java-name>
+				[Dot42.DexImport("FLAG_PERFORM_NO_CLOSE", "I", AccessFlags = 25)]
+				public const int FLAG_PERFORM_NO_CLOSE = 1;
+				/// <java-name>
+				/// FLAG_ALWAYS_PERFORM_CLOSE
+				/// </java-name>
+				[Dot42.DexImport("FLAG_ALWAYS_PERFORM_CLOSE", "I", AccessFlags = 25)]
+				public const int FLAG_ALWAYS_PERFORM_CLOSE = 2;
 		}
 
 		/// <java-name>
@@ -3578,160 +1872,728 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/SurfaceView
+		/// android/view/MenuItem
 		/// </java-name>
-		[Dot42.DexImport("android/view/SurfaceView", AccessFlags = 33)]
-		public partial class SurfaceView : global::Android.View.View
+		[Dot42.DexImport("android/view/MenuItem", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IMenuItemConstants
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public SurfaceView(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public SurfaceView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public SurfaceView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
 				/// <java-name>
-				/// getHolder
+				/// SHOW_AS_ACTION_NEVER
 				/// </java-name>
-				[Dot42.DexImport("getHolder", "()Landroid/view/SurfaceHolder;", AccessFlags = 1)]
-				public virtual global::Android.View.ISurfaceHolder GetHolder() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ISurfaceHolder);
-				}
-
+				[Dot42.DexImport("SHOW_AS_ACTION_NEVER", "I", AccessFlags = 25)]
+				public const int SHOW_AS_ACTION_NEVER = 0;
 				/// <java-name>
-				/// onAttachedToWindow
+				/// SHOW_AS_ACTION_IF_ROOM
 				/// </java-name>
-				[Dot42.DexImport("onAttachedToWindow", "()V", AccessFlags = 4)]
-				protected internal override void OnAttachedToWindow() /* MethodBuilder.Create */ 
-				{
-				}
-
+				[Dot42.DexImport("SHOW_AS_ACTION_IF_ROOM", "I", AccessFlags = 25)]
+				public const int SHOW_AS_ACTION_IF_ROOM = 1;
 				/// <java-name>
-				/// onWindowVisibilityChanged
+				/// SHOW_AS_ACTION_ALWAYS
 				/// </java-name>
-				[Dot42.DexImport("onWindowVisibilityChanged", "(I)V", AccessFlags = 4)]
-				protected internal override void OnWindowVisibilityChanged(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
+				[Dot42.DexImport("SHOW_AS_ACTION_ALWAYS", "I", AccessFlags = 25)]
+				public const int SHOW_AS_ACTION_ALWAYS = 2;
 				/// <java-name>
-				/// setVisibility
+				/// SHOW_AS_ACTION_WITH_TEXT
 				/// </java-name>
-				[Dot42.DexImport("setVisibility", "(I)V", AccessFlags = 1)]
-				public override void SetVisibility(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
+				[Dot42.DexImport("SHOW_AS_ACTION_WITH_TEXT", "I", AccessFlags = 25)]
+				public const int SHOW_AS_ACTION_WITH_TEXT = 4;
 				/// <java-name>
-				/// onDetachedFromWindow
+				/// SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW
 				/// </java-name>
-				[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 4)]
-				protected internal override void OnDetachedFromWindow() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW", "I", AccessFlags = 25)]
+				public const int SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW = 8;
+		}
+
+		/// <java-name>
+		/// android/view/InflateException
+		/// </java-name>
+		[Dot42.DexImport("android/view/InflateException", AccessFlags = 33)]
+		public partial class InflateException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public InflateException() /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// onMeasure
-				/// </java-name>
-				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 4)]
-				protected internal override void OnMeasure(int int32, int int321) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public InflateException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// gatherTransparentRegion
-				/// </java-name>
-				[Dot42.DexImport("gatherTransparentRegion", "(Landroid/graphics/Region;)Z", AccessFlags = 1)]
-				public virtual bool GatherTransparentRegion(global::Android.Graphics.Region region) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// draw
-				/// </java-name>
-				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
-				public override void Draw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public InflateException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// dispatchDraw
-				/// </java-name>
-				[Dot42.DexImport("dispatchDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 4)]
-				protected internal override void DispatchDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public InflateException(global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// setZOrderMediaOverlay
-				/// </java-name>
-				[Dot42.DexImport("setZOrderMediaOverlay", "(Z)V", AccessFlags = 1)]
-				public virtual void SetZOrderMediaOverlay(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setZOrderOnTop
-				/// </java-name>
-				[Dot42.DexImport("setZOrderOnTop", "(Z)V", AccessFlags = 1)]
-				public virtual void SetZOrderOnTop(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHolder
-				/// </java-name>
-				public global::Android.View.ISurfaceHolder Holder
-				{
-				[Dot42.DexImport("getHolder", "()Landroid/view/SurfaceHolder;", AccessFlags = 1)]
-						get{ return GetHolder(); }
 				}
 
 		}
 
 		/// <java-name>
-		/// android/view/SurfaceHolder
+		/// android/view/InputDevice
 		/// </java-name>
-		[Dot42.DexImport("android/view/SurfaceHolder", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class ISurfaceHolderConstants
+		[Dot42.DexImport("android/view/InputDevice", AccessFlags = 49)]
+		public sealed partial class InputDevice : global::Android.Os.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// SURFACE_TYPE_NORMAL
+				/// SOURCE_CLASS_MASK
 				/// </java-name>
-				[Dot42.DexImport("SURFACE_TYPE_NORMAL", "I", AccessFlags = 25)]
-				public const int SURFACE_TYPE_NORMAL = 0;
+				[Dot42.DexImport("SOURCE_CLASS_MASK", "I", AccessFlags = 25)]
+				public const int SOURCE_CLASS_MASK = 255;
 				/// <java-name>
-				/// SURFACE_TYPE_HARDWARE
+				/// SOURCE_CLASS_BUTTON
 				/// </java-name>
-				[Dot42.DexImport("SURFACE_TYPE_HARDWARE", "I", AccessFlags = 25)]
-				public const int SURFACE_TYPE_HARDWARE = 1;
+				[Dot42.DexImport("SOURCE_CLASS_BUTTON", "I", AccessFlags = 25)]
+				public const int SOURCE_CLASS_BUTTON = 1;
 				/// <java-name>
-				/// SURFACE_TYPE_GPU
+				/// SOURCE_CLASS_POINTER
 				/// </java-name>
-				[Dot42.DexImport("SURFACE_TYPE_GPU", "I", AccessFlags = 25)]
-				public const int SURFACE_TYPE_GPU = 2;
+				[Dot42.DexImport("SOURCE_CLASS_POINTER", "I", AccessFlags = 25)]
+				public const int SOURCE_CLASS_POINTER = 2;
 				/// <java-name>
-				/// SURFACE_TYPE_PUSH_BUFFERS
+				/// SOURCE_CLASS_TRACKBALL
 				/// </java-name>
-				[Dot42.DexImport("SURFACE_TYPE_PUSH_BUFFERS", "I", AccessFlags = 25)]
-				public const int SURFACE_TYPE_PUSH_BUFFERS = 3;
+				[Dot42.DexImport("SOURCE_CLASS_TRACKBALL", "I", AccessFlags = 25)]
+				public const int SOURCE_CLASS_TRACKBALL = 4;
+				/// <java-name>
+				/// SOURCE_CLASS_POSITION
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_CLASS_POSITION", "I", AccessFlags = 25)]
+				public const int SOURCE_CLASS_POSITION = 8;
+				/// <java-name>
+				/// SOURCE_CLASS_JOYSTICK
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_CLASS_JOYSTICK", "I", AccessFlags = 25)]
+				public const int SOURCE_CLASS_JOYSTICK = 16;
+				/// <java-name>
+				/// SOURCE_UNKNOWN
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_UNKNOWN", "I", AccessFlags = 25)]
+				public const int SOURCE_UNKNOWN = 0;
+				/// <java-name>
+				/// SOURCE_KEYBOARD
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_KEYBOARD", "I", AccessFlags = 25)]
+				public const int SOURCE_KEYBOARD = 257;
+				/// <java-name>
+				/// SOURCE_DPAD
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_DPAD", "I", AccessFlags = 25)]
+				public const int SOURCE_DPAD = 513;
+				/// <java-name>
+				/// SOURCE_GAMEPAD
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_GAMEPAD", "I", AccessFlags = 25)]
+				public const int SOURCE_GAMEPAD = 1025;
+				/// <java-name>
+				/// SOURCE_TOUCHSCREEN
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_TOUCHSCREEN", "I", AccessFlags = 25)]
+				public const int SOURCE_TOUCHSCREEN = 4098;
+				/// <java-name>
+				/// SOURCE_MOUSE
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_MOUSE", "I", AccessFlags = 25)]
+				public const int SOURCE_MOUSE = 8194;
+				/// <java-name>
+				/// SOURCE_STYLUS
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_STYLUS", "I", AccessFlags = 25)]
+				public const int SOURCE_STYLUS = 16386;
+				/// <java-name>
+				/// SOURCE_TRACKBALL
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_TRACKBALL", "I", AccessFlags = 25)]
+				public const int SOURCE_TRACKBALL = 65540;
+				/// <java-name>
+				/// SOURCE_TOUCHPAD
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_TOUCHPAD", "I", AccessFlags = 25)]
+				public const int SOURCE_TOUCHPAD = 1048584;
+				/// <java-name>
+				/// SOURCE_JOYSTICK
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_JOYSTICK", "I", AccessFlags = 25)]
+				public const int SOURCE_JOYSTICK = 16777232;
+				/// <java-name>
+				/// SOURCE_ANY
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_ANY", "I", AccessFlags = 25)]
+				public const int SOURCE_ANY = -256;
+				/// <java-name>
+				/// MOTION_RANGE_X
+				/// </java-name>
+				[Dot42.DexImport("MOTION_RANGE_X", "I", AccessFlags = 25)]
+				public const int MOTION_RANGE_X = 0;
+				/// <java-name>
+				/// MOTION_RANGE_Y
+				/// </java-name>
+				[Dot42.DexImport("MOTION_RANGE_Y", "I", AccessFlags = 25)]
+				public const int MOTION_RANGE_Y = 1;
+				/// <java-name>
+				/// MOTION_RANGE_PRESSURE
+				/// </java-name>
+				[Dot42.DexImport("MOTION_RANGE_PRESSURE", "I", AccessFlags = 25)]
+				public const int MOTION_RANGE_PRESSURE = 2;
+				/// <java-name>
+				/// MOTION_RANGE_SIZE
+				/// </java-name>
+				[Dot42.DexImport("MOTION_RANGE_SIZE", "I", AccessFlags = 25)]
+				public const int MOTION_RANGE_SIZE = 3;
+				/// <java-name>
+				/// MOTION_RANGE_TOUCH_MAJOR
+				/// </java-name>
+				[Dot42.DexImport("MOTION_RANGE_TOUCH_MAJOR", "I", AccessFlags = 25)]
+				public const int MOTION_RANGE_TOUCH_MAJOR = 4;
+				/// <java-name>
+				/// MOTION_RANGE_TOUCH_MINOR
+				/// </java-name>
+				[Dot42.DexImport("MOTION_RANGE_TOUCH_MINOR", "I", AccessFlags = 25)]
+				public const int MOTION_RANGE_TOUCH_MINOR = 5;
+				/// <java-name>
+				/// MOTION_RANGE_TOOL_MAJOR
+				/// </java-name>
+				[Dot42.DexImport("MOTION_RANGE_TOOL_MAJOR", "I", AccessFlags = 25)]
+				public const int MOTION_RANGE_TOOL_MAJOR = 6;
+				/// <java-name>
+				/// MOTION_RANGE_TOOL_MINOR
+				/// </java-name>
+				[Dot42.DexImport("MOTION_RANGE_TOOL_MINOR", "I", AccessFlags = 25)]
+				public const int MOTION_RANGE_TOOL_MINOR = 7;
+				/// <java-name>
+				/// MOTION_RANGE_ORIENTATION
+				/// </java-name>
+				[Dot42.DexImport("MOTION_RANGE_ORIENTATION", "I", AccessFlags = 25)]
+				public const int MOTION_RANGE_ORIENTATION = 8;
+				/// <java-name>
+				/// KEYBOARD_TYPE_NONE
+				/// </java-name>
+				[Dot42.DexImport("KEYBOARD_TYPE_NONE", "I", AccessFlags = 25)]
+				public const int KEYBOARD_TYPE_NONE = 0;
+				/// <java-name>
+				/// KEYBOARD_TYPE_NON_ALPHABETIC
+				/// </java-name>
+				[Dot42.DexImport("KEYBOARD_TYPE_NON_ALPHABETIC", "I", AccessFlags = 25)]
+				public const int KEYBOARD_TYPE_NON_ALPHABETIC = 1;
+				/// <java-name>
+				/// KEYBOARD_TYPE_ALPHABETIC
+				/// </java-name>
+				[Dot42.DexImport("KEYBOARD_TYPE_ALPHABETIC", "I", AccessFlags = 25)]
+				public const int KEYBOARD_TYPE_ALPHABETIC = 2;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.InputDevice> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal InputDevice() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDevice
+				/// </java-name>
+				[Dot42.DexImport("getDevice", "(I)Landroid/view/InputDevice;", AccessFlags = 9)]
+				public static global::Android.View.InputDevice GetDevice(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.InputDevice);
+				}
+
+				/// <java-name>
+				/// getDeviceIds
+				/// </java-name>
+				[Dot42.DexImport("getDeviceIds", "()[I", AccessFlags = 9)]
+				public static int[] GetDeviceIds() /* MethodBuilder.Create */ 
+				{
+						return default(int[]);
+				}
+
+				/// <java-name>
+				/// getId
+				/// </java-name>
+				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
+				public int GetId() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getSources
+				/// </java-name>
+				[Dot42.DexImport("getSources", "()I", AccessFlags = 1)]
+				public int GetSources() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getKeyboardType
+				/// </java-name>
+				[Dot42.DexImport("getKeyboardType", "()I", AccessFlags = 1)]
+				public int GetKeyboardType() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getKeyCharacterMap
+				/// </java-name>
+				[Dot42.DexImport("getKeyCharacterMap", "()Landroid/view/KeyCharacterMap;", AccessFlags = 1)]
+				public global::Android.View.KeyCharacterMap GetKeyCharacterMap() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.KeyCharacterMap);
+				}
+
+				/// <java-name>
+				/// getMotionRange
+				/// </java-name>
+				[Dot42.DexImport("getMotionRange", "(I)Landroid/view/InputDevice$MotionRange;", AccessFlags = 1)]
+				public global::Android.View.InputDevice.MotionRange GetMotionRange(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.InputDevice.MotionRange);
+				}
+
+				/// <java-name>
+				/// getMotionRange
+				/// </java-name>
+				[Dot42.DexImport("getMotionRange", "(II)Landroid/view/InputDevice$MotionRange;", AccessFlags = 1)]
+				public global::Android.View.InputDevice.MotionRange GetMotionRange(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.InputDevice.MotionRange);
+				}
+
+				/// <java-name>
+				/// getMotionRanges
+				/// </java-name>
+				[Dot42.DexImport("getMotionRanges", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/InputDevice$MotionRange;>;")]
+				public global::Java.Util.IList<global::Android.View.InputDevice.MotionRange> GetMotionRanges() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.View.InputDevice.MotionRange>);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getDeviceIds
+				/// </java-name>
+				public static int[] DeviceIds
+				{
+				[Dot42.DexImport("getDeviceIds", "()[I", AccessFlags = 9)]
+						get{ return GetDeviceIds(); }
+				}
+
+				/// <java-name>
+				/// getId
+				/// </java-name>
+				public int Id
+				{
+				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
+						get{ return GetId(); }
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				public string Name
+				{
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetName(); }
+				}
+
+				/// <java-name>
+				/// getSources
+				/// </java-name>
+				public int Sources
+				{
+				[Dot42.DexImport("getSources", "()I", AccessFlags = 1)]
+						get{ return GetSources(); }
+				}
+
+				/// <java-name>
+				/// getKeyboardType
+				/// </java-name>
+				public int KeyboardType
+				{
+				[Dot42.DexImport("getKeyboardType", "()I", AccessFlags = 1)]
+						get{ return GetKeyboardType(); }
+				}
+
+				/// <java-name>
+				/// getKeyCharacterMap
+				/// </java-name>
+				public global::Android.View.KeyCharacterMap KeyCharacterMap
+				{
+				[Dot42.DexImport("getKeyCharacterMap", "()Landroid/view/KeyCharacterMap;", AccessFlags = 1)]
+						get{ return GetKeyCharacterMap(); }
+				}
+
+				/// <java-name>
+				/// getMotionRanges
+				/// </java-name>
+				public global::Java.Util.IList<global::Android.View.InputDevice.MotionRange> MotionRanges
+				{
+				[Dot42.DexImport("getMotionRanges", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/InputDevice$MotionRange;>;")]
+						get{ return GetMotionRanges(); }
+				}
+
+				/// <java-name>
+				/// android/view/InputDevice$MotionRange
+				/// </java-name>
+				[Dot42.DexImport("android/view/InputDevice$MotionRange", AccessFlags = 25)]
+				public sealed partial class MotionRange
+ /* scope: __dot42__ */ 
+				{
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal MotionRange() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// getAxis
+						/// </java-name>
+						[Dot42.DexImport("getAxis", "()I", AccessFlags = 1)]
+						public int GetAxis() /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// getSource
+						/// </java-name>
+						[Dot42.DexImport("getSource", "()I", AccessFlags = 1)]
+						public int GetSource() /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// getMin
+						/// </java-name>
+						[Dot42.DexImport("getMin", "()F", AccessFlags = 1)]
+						public float GetMin() /* MethodBuilder.Create */ 
+						{
+								return default(float);
+						}
+
+						/// <java-name>
+						/// getMax
+						/// </java-name>
+						[Dot42.DexImport("getMax", "()F", AccessFlags = 1)]
+						public float GetMax() /* MethodBuilder.Create */ 
+						{
+								return default(float);
+						}
+
+						/// <java-name>
+						/// getRange
+						/// </java-name>
+						[Dot42.DexImport("getRange", "()F", AccessFlags = 1)]
+						public float GetRange() /* MethodBuilder.Create */ 
+						{
+								return default(float);
+						}
+
+						/// <java-name>
+						/// getFlat
+						/// </java-name>
+						[Dot42.DexImport("getFlat", "()F", AccessFlags = 1)]
+						public float GetFlat() /* MethodBuilder.Create */ 
+						{
+								return default(float);
+						}
+
+						/// <java-name>
+						/// getFuzz
+						/// </java-name>
+						[Dot42.DexImport("getFuzz", "()F", AccessFlags = 1)]
+						public float GetFuzz() /* MethodBuilder.Create */ 
+						{
+								return default(float);
+						}
+
+						/// <java-name>
+						/// getAxis
+						/// </java-name>
+						public int Axis
+						{
+						[Dot42.DexImport("getAxis", "()I", AccessFlags = 1)]
+								get{ return GetAxis(); }
+						}
+
+						/// <java-name>
+						/// getSource
+						/// </java-name>
+						public int Source
+						{
+						[Dot42.DexImport("getSource", "()I", AccessFlags = 1)]
+								get{ return GetSource(); }
+						}
+
+						/// <java-name>
+						/// getMin
+						/// </java-name>
+						public float Min
+						{
+						[Dot42.DexImport("getMin", "()F", AccessFlags = 1)]
+								get{ return GetMin(); }
+						}
+
+						/// <java-name>
+						/// getMax
+						/// </java-name>
+						public float Max
+						{
+						[Dot42.DexImport("getMax", "()F", AccessFlags = 1)]
+								get{ return GetMax(); }
+						}
+
+						/// <java-name>
+						/// getRange
+						/// </java-name>
+						public float Range
+						{
+						[Dot42.DexImport("getRange", "()F", AccessFlags = 1)]
+								get{ return GetRange(); }
+						}
+
+						/// <java-name>
+						/// getFlat
+						/// </java-name>
+						public float Flat
+						{
+						[Dot42.DexImport("getFlat", "()F", AccessFlags = 1)]
+								get{ return GetFlat(); }
+						}
+
+						/// <java-name>
+						/// getFuzz
+						/// </java-name>
+						public float Fuzz
+						{
+						[Dot42.DexImport("getFuzz", "()F", AccessFlags = 1)]
+								get{ return GetFuzz(); }
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/InputEvent
+		/// </java-name>
+		[Dot42.DexImport("android/view/InputEvent", AccessFlags = 1057)]
+		public abstract partial class InputEvent : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.InputEvent> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal InputEvent() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDeviceId
+				/// </java-name>
+				[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1025)]
+				public abstract int GetDeviceId() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getDevice
+				/// </java-name>
+				[Dot42.DexImport("getDevice", "()Landroid/view/InputDevice;", AccessFlags = 17)]
+				public global::Android.View.InputDevice GetDevice() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.InputDevice);
+				}
+
+				/// <java-name>
+				/// getSource
+				/// </java-name>
+				[Dot42.DexImport("getSource", "()I", AccessFlags = 1025)]
+				public abstract int GetSource() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[Dot42.DexImport("android/os/Parcelable", "writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1025)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDeviceId
+				/// </java-name>
+				public int DeviceId
+				{
+				[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1025)]
+						get{ return GetDeviceId(); }
+				}
+
+				/// <java-name>
+				/// getDevice
+				/// </java-name>
+				public global::Android.View.InputDevice Device
+				{
+				[Dot42.DexImport("getDevice", "()Landroid/view/InputDevice;", AccessFlags = 17)]
+						get{ return GetDevice(); }
+				}
+
+				/// <java-name>
+				/// getSource
+				/// </java-name>
+				public int Source
+				{
+				[Dot42.DexImport("getSource", "()I", AccessFlags = 1025)]
+						get{ return GetSource(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/InputQueue
+		/// </java-name>
+		[Dot42.DexImport("android/view/InputQueue", AccessFlags = 49)]
+		public sealed partial class InputQueue
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal InputQueue() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/view/InputQueue$Callback
+				/// </java-name>
+				[Dot42.DexImport("android/view/InputQueue$Callback", AccessFlags = 1545)]
+				public partial interface ICallback
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onInputQueueCreated
+						/// </java-name>
+						[Dot42.DexImport("onInputQueueCreated", "(Landroid/view/InputQueue;)V", AccessFlags = 1025)]
+						void OnInputQueueCreated(global::Android.View.InputQueue inputQueue) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onInputQueueDestroyed
+						/// </java-name>
+						[Dot42.DexImport("onInputQueueDestroyed", "(Landroid/view/InputQueue;)V", AccessFlags = 1025)]
+						void OnInputQueueDestroyed(global::Android.View.InputQueue inputQueue) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/SubMenu
+		/// </java-name>
+		[Dot42.DexImport("android/view/SubMenu", AccessFlags = 1537)]
+		public partial interface ISubMenu : global::Android.View.IMenu
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// setHeaderTitle
+				/// </java-name>
+				[Dot42.DexImport("setHeaderTitle", "(I)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu SetHeaderTitle(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setHeaderTitle
+				/// </java-name>
+				[Dot42.DexImport("setHeaderTitle", "(Ljava/lang/CharSequence;)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu SetHeaderTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setHeaderIcon
+				/// </java-name>
+				[Dot42.DexImport("setHeaderIcon", "(I)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu SetHeaderIcon(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setHeaderIcon
+				/// </java-name>
+				[Dot42.DexImport("setHeaderIcon", "(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu SetHeaderIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setHeaderView
+				/// </java-name>
+				[Dot42.DexImport("setHeaderView", "(Landroid/view/View;)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu SetHeaderView(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// clearHeader
+				/// </java-name>
+				[Dot42.DexImport("clearHeader", "()V", AccessFlags = 1025)]
+				void ClearHeader() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setIcon
+				/// </java-name>
+				[Dot42.DexImport("setIcon", "(I)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu SetIcon(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setIcon
+				/// </java-name>
+				[Dot42.DexImport("setIcon", "(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;", AccessFlags = 1025)]
+				global::Android.View.ISubMenu SetIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getItem
+				/// </java-name>
+				[Dot42.DexImport("getItem", "()Landroid/view/MenuItem;", AccessFlags = 1025)]
+				global::Android.View.IMenuItem GetItem() /* MethodBuilder.Create */ ;
+
 		}
 
 		/// <java-name>
@@ -3822,17 +2684,21 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/SurfaceHolder$Callback2
+		/// android/view/SurfaceHolder$BadSurfaceTypeException
 		/// </java-name>
-		[Dot42.DexImport("android/view/SurfaceHolder$Callback2", AccessFlags = 1545)]
-		public partial interface ISurfaceHolder_ICallback2 : global::Android.View.ISurfaceHolder_ICallback
+		[Dot42.DexImport("android/view/SurfaceHolder$BadSurfaceTypeException", AccessFlags = 9)]
+		public partial class ISurfaceHolder_BadSurfaceTypeException : global::System.SystemException
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// surfaceRedrawNeeded
-				/// </java-name>
-				[Dot42.DexImport("surfaceRedrawNeeded", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1025)]
-				void SurfaceRedrawNeeded(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ISurfaceHolder_BadSurfaceTypeException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ISurfaceHolder_BadSurfaceTypeException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
 
 		}
 
@@ -3864,91 +2730,202 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/SurfaceHolder$BadSurfaceTypeException
+		/// android/view/SurfaceHolder$Callback2
 		/// </java-name>
-		[Dot42.DexImport("android/view/SurfaceHolder$BadSurfaceTypeException", AccessFlags = 9)]
-		public partial class ISurfaceHolder_BadSurfaceTypeException : global::System.SystemException
+		[Dot42.DexImport("android/view/SurfaceHolder$Callback2", AccessFlags = 1545)]
+		public partial interface ISurfaceHolder_ICallback2 : global::Android.View.ISurfaceHolder_ICallback
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ISurfaceHolder_BadSurfaceTypeException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ISurfaceHolder_BadSurfaceTypeException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
+				/// <java-name>
+				/// surfaceRedrawNeeded
+				/// </java-name>
+				[Dot42.DexImport("surfaceRedrawNeeded", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1025)]
+				void SurfaceRedrawNeeded(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ ;
 
 		}
 
 		/// <java-name>
-		/// android/view/ContextThemeWrapper
+		/// android/view/SurfaceHolder
 		/// </java-name>
-		[Dot42.DexImport("android/view/ContextThemeWrapper", AccessFlags = 33)]
-		public partial class ContextThemeWrapper : global::Android.Content.ContextWrapper
+		[Dot42.DexImport("android/view/SurfaceHolder", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class ISurfaceHolderConstants
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ContextThemeWrapper() /* MethodBuilder.Create */ 
-				{
-				}
+				/// <java-name>
+				/// SURFACE_TYPE_NORMAL
+				/// </java-name>
+				[Dot42.DexImport("SURFACE_TYPE_NORMAL", "I", AccessFlags = 25)]
+				public const int SURFACE_TYPE_NORMAL = 0;
+				/// <java-name>
+				/// SURFACE_TYPE_HARDWARE
+				/// </java-name>
+				[Dot42.DexImport("SURFACE_TYPE_HARDWARE", "I", AccessFlags = 25)]
+				public const int SURFACE_TYPE_HARDWARE = 1;
+				/// <java-name>
+				/// SURFACE_TYPE_GPU
+				/// </java-name>
+				[Dot42.DexImport("SURFACE_TYPE_GPU", "I", AccessFlags = 25)]
+				public const int SURFACE_TYPE_GPU = 2;
+				/// <java-name>
+				/// SURFACE_TYPE_PUSH_BUFFERS
+				/// </java-name>
+				[Dot42.DexImport("SURFACE_TYPE_PUSH_BUFFERS", "I", AccessFlags = 25)]
+				public const int SURFACE_TYPE_PUSH_BUFFERS = 3;
+		}
 
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
-				public ContextThemeWrapper(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
-				{
-				}
+		/// <java-name>
+		/// android/view/ViewManager
+		/// </java-name>
+		[Dot42.DexImport("android/view/ViewManager", AccessFlags = 1537)]
+		public partial interface IViewManager
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// addView
+				/// </java-name>
+				[Dot42.DexImport("addView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1025)]
+				void AddView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// attachBaseContext
+				/// updateViewLayout
 				/// </java-name>
-				[Dot42.DexImport("attachBaseContext", "(Landroid/content/Context;)V", AccessFlags = 4)]
-				protected internal override void AttachBaseContext(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("updateViewLayout", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1025)]
+				void UpdateViewLayout(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setTheme
+				/// removeView
 				/// </java-name>
-				[Dot42.DexImport("setTheme", "(I)V", AccessFlags = 1)]
-				public override void SetTheme(int int32) /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("removeView", "(Landroid/view/View;)V", AccessFlags = 1025)]
+				void RemoveView(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/view/ViewParent
+		/// </java-name>
+		[Dot42.DexImport("android/view/ViewParent", AccessFlags = 1537)]
+		public partial interface IViewParent
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// requestLayout
+				/// </java-name>
+				[Dot42.DexImport("requestLayout", "()V", AccessFlags = 1025)]
+				void RequestLayout() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getTheme
+				/// isLayoutRequested
 				/// </java-name>
-				[Dot42.DexImport("getTheme", "()Landroid/content/res/Resources$Theme;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Resources.Theme GetTheme() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.Resources.Theme);
-				}
+				[Dot42.DexImport("isLayoutRequested", "()Z", AccessFlags = 1025)]
+				bool IsLayoutRequested() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSystemService
+				/// requestTransparentRegion
 				/// </java-name>
-				[Dot42.DexImport("getSystemService", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1)]
-				public override object GetSystemService(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
+				[Dot42.DexImport("requestTransparentRegion", "(Landroid/view/View;)V", AccessFlags = 1025)]
+				void RequestTransparentRegion(global::Android.View.View view) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// onApplyThemeResource
+				/// invalidateChild
 				/// </java-name>
-				[Dot42.DexImport("onApplyThemeResource", "(Landroid/content/res/Resources$Theme;IZ)V", AccessFlags = 4)]
-				protected internal virtual void OnApplyThemeResource(global::Android.Content.Res.Resources.Theme theme, int int32, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
+				[Dot42.DexImport("invalidateChild", "(Landroid/view/View;Landroid/graphics/Rect;)V", AccessFlags = 1025)]
+				void InvalidateChild(global::Android.View.View view, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getTheme
+				/// invalidateChildInParent
 				/// </java-name>
-				public global::Android.Content.Res.Resources.Theme Theme
-				{
-				[Dot42.DexImport("getTheme", "()Landroid/content/res/Resources$Theme;", AccessFlags = 1)]
-						get{ return GetTheme(); }
-				}
+				[Dot42.DexImport("invalidateChildInParent", "([ILandroid/graphics/Rect;)Landroid/view/ViewParent;", AccessFlags = 1025)]
+				global::Android.View.IViewParent InvalidateChildInParent(int[] int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getParent
+				/// </java-name>
+				[Dot42.DexImport("getParent", "()Landroid/view/ViewParent;", AccessFlags = 1025)]
+				global::Android.View.IViewParent GetParent() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// requestChildFocus
+				/// </java-name>
+				[Dot42.DexImport("requestChildFocus", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1025)]
+				void RequestChildFocus(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// recomputeViewAttributes
+				/// </java-name>
+				[Dot42.DexImport("recomputeViewAttributes", "(Landroid/view/View;)V", AccessFlags = 1025)]
+				void RecomputeViewAttributes(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// clearChildFocus
+				/// </java-name>
+				[Dot42.DexImport("clearChildFocus", "(Landroid/view/View;)V", AccessFlags = 1025)]
+				void ClearChildFocus(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getChildVisibleRect
+				/// </java-name>
+				[Dot42.DexImport("getChildVisibleRect", "(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Point;)Z", AccessFlags = 1025)]
+				bool GetChildVisibleRect(global::Android.View.View view, global::Android.Graphics.Rect rect, global::Android.Graphics.Point point) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// focusSearch
+				/// </java-name>
+				[Dot42.DexImport("focusSearch", "(Landroid/view/View;I)Landroid/view/View;", AccessFlags = 1025)]
+				global::Android.View.View FocusSearch(global::Android.View.View view, int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// bringChildToFront
+				/// </java-name>
+				[Dot42.DexImport("bringChildToFront", "(Landroid/view/View;)V", AccessFlags = 1025)]
+				void BringChildToFront(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// focusableViewAvailable
+				/// </java-name>
+				[Dot42.DexImport("focusableViewAvailable", "(Landroid/view/View;)V", AccessFlags = 1025)]
+				void FocusableViewAvailable(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// showContextMenuForChild
+				/// </java-name>
+				[Dot42.DexImport("showContextMenuForChild", "(Landroid/view/View;)Z", AccessFlags = 1025)]
+				bool ShowContextMenuForChild(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// createContextMenu
+				/// </java-name>
+				[Dot42.DexImport("createContextMenu", "(Landroid/view/ContextMenu;)V", AccessFlags = 1025)]
+				void CreateContextMenu(global::Android.View.IContextMenu contextMenu) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// startActionModeForChild
+				/// </java-name>
+				[Dot42.DexImport("startActionModeForChild", "(Landroid/view/View;Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;", AccessFlags = 1025)]
+				global::Android.View.ActionMode StartActionModeForChild(global::Android.View.View view, global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// childDrawableStateChanged
+				/// </java-name>
+				[Dot42.DexImport("childDrawableStateChanged", "(Landroid/view/View;)V", AccessFlags = 1025)]
+				void ChildDrawableStateChanged(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// requestDisallowInterceptTouchEvent
+				/// </java-name>
+				[Dot42.DexImport("requestDisallowInterceptTouchEvent", "(Z)V", AccessFlags = 1025)]
+				void RequestDisallowInterceptTouchEvent(bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// requestChildRectangleOnScreen
+				/// </java-name>
+				[Dot42.DexImport("requestChildRectangleOnScreen", "(Landroid/view/View;Landroid/graphics/Rect;Z)Z", AccessFlags = 1025)]
+				bool RequestChildRectangleOnScreen(global::Android.View.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// requestSendAccessibilityEvent
+				/// </java-name>
+				[Dot42.DexImport("requestSendAccessibilityEvent", "(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1025)]
+				bool RequestSendAccessibilityEvent(global::Android.View.View view, global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -3970,6 +2947,25 @@ namespace Android.View
 				/// </java-name>
 				[Dot42.DexImport("removeViewImmediate", "(Landroid/view/View;)V", AccessFlags = 1025)]
 				void RemoveViewImmediate(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/view/WindowManager$BadTokenException
+		/// </java-name>
+		[Dot42.DexImport("android/view/WindowManager$BadTokenException", AccessFlags = 9)]
+		public partial class IWindowManager_BadTokenException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public IWindowManager_BadTokenException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public IWindowManager_BadTokenException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
 
 		}
 
@@ -4634,617 +3630,283 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/WindowManager$BadTokenException
+		/// android/view/KeyCharacterMap
 		/// </java-name>
-		[Dot42.DexImport("android/view/WindowManager$BadTokenException", AccessFlags = 9)]
-		public partial class IWindowManager_BadTokenException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public IWindowManager_BadTokenException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public IWindowManager_BadTokenException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/HapticFeedbackConstants
-		/// </java-name>
-		[Dot42.DexImport("android/view/HapticFeedbackConstants", AccessFlags = 33)]
-		public partial class HapticFeedbackConstants
+		[Dot42.DexImport("android/view/KeyCharacterMap", AccessFlags = 33)]
+		public partial class KeyCharacterMap
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// LONG_PRESS
+				/// BUILT_IN_KEYBOARD
 				/// </java-name>
-				[Dot42.DexImport("LONG_PRESS", "I", AccessFlags = 25)]
-				public const int LONG_PRESS = 0;
+				[Dot42.DexImport("BUILT_IN_KEYBOARD", "I", AccessFlags = 25)]
+				public const int BUILT_IN_KEYBOARD = 0;
 				/// <java-name>
-				/// VIRTUAL_KEY
+				/// VIRTUAL_KEYBOARD
 				/// </java-name>
-				[Dot42.DexImport("VIRTUAL_KEY", "I", AccessFlags = 25)]
-				public const int VIRTUAL_KEY = 1;
+				[Dot42.DexImport("VIRTUAL_KEYBOARD", "I", AccessFlags = 25)]
+				public const int VIRTUAL_KEYBOARD = -1;
 				/// <java-name>
-				/// KEYBOARD_TAP
+				/// NUMERIC
 				/// </java-name>
-				[Dot42.DexImport("KEYBOARD_TAP", "I", AccessFlags = 25)]
-				public const int KEYBOARD_TAP = 3;
+				[Dot42.DexImport("NUMERIC", "I", AccessFlags = 25)]
+				public const int NUMERIC = 1;
 				/// <java-name>
-				/// FLAG_IGNORE_VIEW_SETTING
+				/// PREDICTIVE
 				/// </java-name>
-				[Dot42.DexImport("FLAG_IGNORE_VIEW_SETTING", "I", AccessFlags = 25)]
-				public const int FLAG_IGNORE_VIEW_SETTING = 1;
+				[Dot42.DexImport("PREDICTIVE", "I", AccessFlags = 25)]
+				public const int PREDICTIVE = 2;
 				/// <java-name>
-				/// FLAG_IGNORE_GLOBAL_SETTING
+				/// ALPHA
 				/// </java-name>
-				[Dot42.DexImport("FLAG_IGNORE_GLOBAL_SETTING", "I", AccessFlags = 25)]
-				public const int FLAG_IGNORE_GLOBAL_SETTING = 2;
+				[Dot42.DexImport("ALPHA", "I", AccessFlags = 25)]
+				public const int ALPHA = 3;
+				/// <java-name>
+				/// FULL
+				/// </java-name>
+				[Dot42.DexImport("FULL", "I", AccessFlags = 25)]
+				public const int FULL = 4;
+				/// <java-name>
+				/// SPECIAL_FUNCTION
+				/// </java-name>
+				[Dot42.DexImport("SPECIAL_FUNCTION", "I", AccessFlags = 25)]
+				public const int SPECIAL_FUNCTION = 5;
+				/// <java-name>
+				/// HEX_INPUT
+				/// </java-name>
+				[Dot42.DexImport("HEX_INPUT", "C", AccessFlags = 25)]
+				public const char HEX_INPUT = '';
+				/// <java-name>
+				/// PICKER_DIALOG_INPUT
+				/// </java-name>
+				[Dot42.DexImport("PICKER_DIALOG_INPUT", "C", AccessFlags = 25)]
+				public const char PICKER_DIALOG_INPUT = '';
+				/// <java-name>
+				/// MODIFIER_BEHAVIOR_CHORDED
+				/// </java-name>
+				[Dot42.DexImport("MODIFIER_BEHAVIOR_CHORDED", "I", AccessFlags = 25)]
+				public const int MODIFIER_BEHAVIOR_CHORDED = 0;
+				/// <java-name>
+				/// MODIFIER_BEHAVIOR_CHORDED_OR_TOGGLED
+				/// </java-name>
+				[Dot42.DexImport("MODIFIER_BEHAVIOR_CHORDED_OR_TOGGLED", "I", AccessFlags = 25)]
+				public const int MODIFIER_BEHAVIOR_CHORDED_OR_TOGGLED = 1;
+				/// <java-name>
+				/// COMBINING_ACCENT
+				/// </java-name>
+				[Dot42.DexImport("COMBINING_ACCENT", "I", AccessFlags = 25)]
+				public const int COMBINING_ACCENT = -2147483648;
+				/// <java-name>
+				/// COMBINING_ACCENT_MASK
+				/// </java-name>
+				[Dot42.DexImport("COMBINING_ACCENT_MASK", "I", AccessFlags = 25)]
+				public const int COMBINING_ACCENT_MASK = 2147483647;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal HapticFeedbackConstants() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/ContextMenu
-		/// </java-name>
-		[Dot42.DexImport("android/view/ContextMenu", AccessFlags = 1537)]
-		public partial interface IContextMenu : global::Android.View.IMenu
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// setHeaderTitle
-				/// </java-name>
-				[Dot42.DexImport("setHeaderTitle", "(I)Landroid/view/ContextMenu;", AccessFlags = 1025)]
-				global::Android.View.IContextMenu SetHeaderTitle(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setHeaderTitle
-				/// </java-name>
-				[Dot42.DexImport("setHeaderTitle", "(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;", AccessFlags = 1025)]
-				global::Android.View.IContextMenu SetHeaderTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setHeaderIcon
-				/// </java-name>
-				[Dot42.DexImport("setHeaderIcon", "(I)Landroid/view/ContextMenu;", AccessFlags = 1025)]
-				global::Android.View.IContextMenu SetHeaderIcon(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setHeaderIcon
-				/// </java-name>
-				[Dot42.DexImport("setHeaderIcon", "(Landroid/graphics/drawable/Drawable;)Landroid/view/ContextMenu;", AccessFlags = 1025)]
-				global::Android.View.IContextMenu SetHeaderIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setHeaderView
-				/// </java-name>
-				[Dot42.DexImport("setHeaderView", "(Landroid/view/View;)Landroid/view/ContextMenu;", AccessFlags = 1025)]
-				global::Android.View.IContextMenu SetHeaderView(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// clearHeader
-				/// </java-name>
-				[Dot42.DexImport("clearHeader", "()V", AccessFlags = 1025)]
-				void ClearHeader() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/view/ContextMenu$ContextMenuInfo
-		/// </java-name>
-		[Dot42.DexImport("android/view/ContextMenu$ContextMenuInfo", AccessFlags = 1545)]
-		public partial interface IContextMenu_IContextMenuInfo
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
-		/// android/view/ViewTreeObserver
-		/// </java-name>
-		[Dot42.DexImport("android/view/ViewTreeObserver", AccessFlags = 49)]
-		public sealed partial class ViewTreeObserver
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal ViewTreeObserver() /* MethodBuilder.Create */ 
+				internal KeyCharacterMap() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// addOnGlobalFocusChangeListener
+				/// finalize
 				/// </java-name>
-				[Dot42.DexImport("addOnGlobalFocusChangeListener", "(Landroid/view/ViewTreeObserver$OnGlobalFocusChangeListener;)V", AccessFlags = 1)]
-				public void AddOnGlobalFocusChangeListener(global::Android.View.ViewTreeObserver.IOnGlobalFocusChangeListener onGlobalFocusChangeListener) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~KeyCharacterMap() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// load
+				/// </java-name>
+				[Dot42.DexImport("load", "(I)Landroid/view/KeyCharacterMap;", AccessFlags = 9)]
+				public static global::Android.View.KeyCharacterMap Load(int int32) /* MethodBuilder.Create */ 
 				{
+						return default(global::Android.View.KeyCharacterMap);
 				}
 
 				/// <java-name>
-				/// removeOnGlobalFocusChangeListener
+				/// get
 				/// </java-name>
-				[Dot42.DexImport("removeOnGlobalFocusChangeListener", "(Landroid/view/ViewTreeObserver$OnGlobalFocusChangeListener;)V", AccessFlags = 1)]
-				public void RemoveOnGlobalFocusChangeListener(global::Android.View.ViewTreeObserver.IOnGlobalFocusChangeListener onGlobalFocusChangeListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addOnGlobalLayoutListener
-				/// </java-name>
-				[Dot42.DexImport("addOnGlobalLayoutListener", "(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V", AccessFlags = 1)]
-				public void AddOnGlobalLayoutListener(global::Android.View.ViewTreeObserver.IOnGlobalLayoutListener onGlobalLayoutListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeGlobalOnLayoutListener
-				/// </java-name>
-				[Dot42.DexImport("removeGlobalOnLayoutListener", "(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V", AccessFlags = 1)]
-				public void RemoveGlobalOnLayoutListener(global::Android.View.ViewTreeObserver.IOnGlobalLayoutListener onGlobalLayoutListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addOnPreDrawListener
-				/// </java-name>
-				[Dot42.DexImport("addOnPreDrawListener", "(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V", AccessFlags = 1)]
-				public void AddOnPreDrawListener(global::Android.View.ViewTreeObserver.IOnPreDrawListener onPreDrawListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeOnPreDrawListener
-				/// </java-name>
-				[Dot42.DexImport("removeOnPreDrawListener", "(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V", AccessFlags = 1)]
-				public void RemoveOnPreDrawListener(global::Android.View.ViewTreeObserver.IOnPreDrawListener onPreDrawListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addOnScrollChangedListener
-				/// </java-name>
-				[Dot42.DexImport("addOnScrollChangedListener", "(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V", AccessFlags = 1)]
-				public void AddOnScrollChangedListener(global::Android.View.ViewTreeObserver.IOnScrollChangedListener onScrollChangedListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeOnScrollChangedListener
-				/// </java-name>
-				[Dot42.DexImport("removeOnScrollChangedListener", "(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V", AccessFlags = 1)]
-				public void RemoveOnScrollChangedListener(global::Android.View.ViewTreeObserver.IOnScrollChangedListener onScrollChangedListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addOnTouchModeChangeListener
-				/// </java-name>
-				[Dot42.DexImport("addOnTouchModeChangeListener", "(Landroid/view/ViewTreeObserver$OnTouchModeChangeListener;)V", AccessFlags = 1)]
-				public void AddOnTouchModeChangeListener(global::Android.View.ViewTreeObserver.IOnTouchModeChangeListener onTouchModeChangeListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeOnTouchModeChangeListener
-				/// </java-name>
-				[Dot42.DexImport("removeOnTouchModeChangeListener", "(Landroid/view/ViewTreeObserver$OnTouchModeChangeListener;)V", AccessFlags = 1)]
-				public void RemoveOnTouchModeChangeListener(global::Android.View.ViewTreeObserver.IOnTouchModeChangeListener onTouchModeChangeListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isAlive
-				/// </java-name>
-				[Dot42.DexImport("isAlive", "()Z", AccessFlags = 1)]
-				public bool IsAlive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dispatchOnGlobalLayout
-				/// </java-name>
-				[Dot42.DexImport("dispatchOnGlobalLayout", "()V", AccessFlags = 17)]
-				public void DispatchOnGlobalLayout() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchOnPreDraw
-				/// </java-name>
-				[Dot42.DexImport("dispatchOnPreDraw", "()Z", AccessFlags = 17)]
-				public bool DispatchOnPreDraw() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// android/view/ViewTreeObserver$OnScrollChangedListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewTreeObserver$OnScrollChangedListener", AccessFlags = 1545)]
-				public partial interface IOnScrollChangedListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onScrollChanged
-						/// </java-name>
-						[Dot42.DexImport("onScrollChanged", "()V", AccessFlags = 1025)]
-						void OnScrollChanged() /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewTreeObserver$OnTouchModeChangeListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewTreeObserver$OnTouchModeChangeListener", AccessFlags = 1545)]
-				public partial interface IOnTouchModeChangeListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onTouchModeChanged
-						/// </java-name>
-						[Dot42.DexImport("onTouchModeChanged", "(Z)V", AccessFlags = 1025)]
-						void OnTouchModeChanged(bool boolean) /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewTreeObserver$OnPreDrawListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewTreeObserver$OnPreDrawListener", AccessFlags = 1545)]
-				public partial interface IOnPreDrawListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onPreDraw
-						/// </java-name>
-						[Dot42.DexImport("onPreDraw", "()Z", AccessFlags = 1025)]
-						bool OnPreDraw() /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewTreeObserver$OnGlobalLayoutListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewTreeObserver$OnGlobalLayoutListener", AccessFlags = 1545)]
-				public partial interface IOnGlobalLayoutListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onGlobalLayout
-						/// </java-name>
-						[Dot42.DexImport("onGlobalLayout", "()V", AccessFlags = 1025)]
-						void OnGlobalLayout() /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewTreeObserver$OnGlobalFocusChangeListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewTreeObserver$OnGlobalFocusChangeListener", AccessFlags = 1545)]
-				public partial interface IOnGlobalFocusChangeListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onGlobalFocusChanged
-						/// </java-name>
-						[Dot42.DexImport("onGlobalFocusChanged", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1025)]
-						void OnGlobalFocusChanged(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/GestureDetector
-		/// </java-name>
-		[Dot42.DexImport("android/view/GestureDetector", AccessFlags = 33)]
-		public partial class GestureDetector
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;)V", AccessFlags = 1)]
-				public GestureDetector(global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/view/GestureDetector$OnGestureListener;)V", AccessFlags = 1)]
-				public GestureDetector(global::Android.View.GestureDetector.IOnGestureListener onGestureListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V", AccessFlags = 1)]
-				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroi" +
-    "d/os/Handler;)V", AccessFlags = 1)]
-				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroi" +
-    "d/os/Handler;Z)V", AccessFlags = 1)]
-				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.Os.Handler handler, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setOnDoubleTapListener
-				/// </java-name>
-				[Dot42.DexImport("setOnDoubleTapListener", "(Landroid/view/GestureDetector$OnDoubleTapListener;)V", AccessFlags = 1)]
-				public virtual void SetOnDoubleTapListener(global::Android.View.GestureDetector.IOnDoubleTapListener onDoubleTapListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIsLongpressEnabled
-				/// </java-name>
-				[Dot42.DexImport("setIsLongpressEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetIsLongpressEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isLongpressEnabled
-				/// </java-name>
-				[Dot42.DexImport("isLongpressEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsLongpressEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// onTouchEvent
-				/// </java-name>
-				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GestureDetector() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/view/GestureDetector$SimpleOnGestureListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/GestureDetector$SimpleOnGestureListener", AccessFlags = 9)]
-				public partial class SimpleOnGestureListener : global::Android.View.GestureDetector.IOnGestureListener, global::Android.View.GestureDetector.IOnDoubleTapListener
- /* scope: __dot42__ */ 
-				{
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public SimpleOnGestureListener() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onSingleTapUp
-						/// </java-name>
-						[Dot42.DexImport("onSingleTapUp", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-						public virtual bool OnSingleTapUp(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// onLongPress
-						/// </java-name>
-						[Dot42.DexImport("onLongPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
-						public virtual void OnLongPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onScroll
-						/// </java-name>
-						[Dot42.DexImport("onScroll", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1)]
-						public virtual bool OnScroll(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// onFling
-						/// </java-name>
-						[Dot42.DexImport("onFling", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1)]
-						public virtual bool OnFling(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// onShowPress
-						/// </java-name>
-						[Dot42.DexImport("onShowPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
-						public virtual void OnShowPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onDown
-						/// </java-name>
-						[Dot42.DexImport("onDown", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-						public virtual bool OnDown(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// onDoubleTap
-						/// </java-name>
-						[Dot42.DexImport("onDoubleTap", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-						public virtual bool OnDoubleTap(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// onDoubleTapEvent
-						/// </java-name>
-						[Dot42.DexImport("onDoubleTapEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-						public virtual bool OnDoubleTapEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// onSingleTapConfirmed
-						/// </java-name>
-						[Dot42.DexImport("onSingleTapConfirmed", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-						public virtual bool OnSingleTapConfirmed(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-				}
-
-				/// <java-name>
-				/// android/view/GestureDetector$OnDoubleTapListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/GestureDetector$OnDoubleTapListener", AccessFlags = 1545)]
-				public partial interface IOnDoubleTapListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onSingleTapConfirmed
-						/// </java-name>
-						[Dot42.DexImport("onSingleTapConfirmed", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-						bool OnSingleTapConfirmed(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onDoubleTap
-						/// </java-name>
-						[Dot42.DexImport("onDoubleTap", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-						bool OnDoubleTap(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onDoubleTapEvent
-						/// </java-name>
-						[Dot42.DexImport("onDoubleTapEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-						bool OnDoubleTapEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/GestureDetector$OnGestureListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/GestureDetector$OnGestureListener", AccessFlags = 1545)]
-				public partial interface IOnGestureListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onDown
-						/// </java-name>
-						[Dot42.DexImport("onDown", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-						bool OnDown(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onShowPress
-						/// </java-name>
-						[Dot42.DexImport("onShowPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnShowPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onSingleTapUp
-						/// </java-name>
-						[Dot42.DexImport("onSingleTapUp", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-						bool OnSingleTapUp(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onScroll
-						/// </java-name>
-						[Dot42.DexImport("onScroll", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1025)]
-						bool OnScroll(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onLongPress
-						/// </java-name>
-						[Dot42.DexImport("onLongPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnLongPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onFling
-						/// </java-name>
-						[Dot42.DexImport("onFling", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1025)]
-						bool OnFling(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/AbsSavedState
-		/// </java-name>
-		[Dot42.DexImport("android/view/AbsSavedState", AccessFlags = 1057)]
-		public abstract partial class AbsSavedState : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// EMPTY_STATE
-				/// </java-name>
-				[Dot42.DexImport("EMPTY_STATE", "Landroid/view/AbsSavedState;", AccessFlags = 25)]
-				public static readonly global::Android.View.AbsSavedState EMPTY_STATE;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.AbsSavedState> CREATOR;
-				[Dot42.DexImport("<init>", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
-				protected internal AbsSavedState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 4)]
-				protected internal AbsSavedState(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSuperState
-				/// </java-name>
-				[Dot42.DexImport("getSuperState", "()Landroid/os/Parcelable;", AccessFlags = 17)]
-				public global::Android.Os.IParcelable GetSuperState() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IParcelable);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("get", "(II)I", AccessFlags = 1)]
+				public virtual int Get(int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// writeToParcel
+				/// getNumber
 				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getNumber", "(I)C", AccessFlags = 1)]
+				public virtual char GetNumber(int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbsSavedState() /* TypeBuilder.AddDefaultConstructor */ 
-				{
+						return default(char);
 				}
 
 				/// <java-name>
-				/// getSuperState
+				/// getMatch
 				/// </java-name>
-				public global::Android.Os.IParcelable SuperState
+				[Dot42.DexImport("getMatch", "(I[C)C", AccessFlags = 1)]
+				public virtual char GetMatch(int int32, char[] @char) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getSuperState", "()Landroid/os/Parcelable;", AccessFlags = 17)]
-						get{ return GetSuperState(); }
+						return default(char);
+				}
+
+				/// <java-name>
+				/// getMatch
+				/// </java-name>
+				[Dot42.DexImport("getMatch", "(I[CI)C", AccessFlags = 1)]
+				public virtual char GetMatch(int int32, char[] @char, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(char);
+				}
+
+				/// <java-name>
+				/// getDisplayLabel
+				/// </java-name>
+				[Dot42.DexImport("getDisplayLabel", "(I)C", AccessFlags = 1)]
+				public virtual char GetDisplayLabel(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(char);
+				}
+
+				/// <java-name>
+				/// getDeadChar
+				/// </java-name>
+				[Dot42.DexImport("getDeadChar", "(II)I", AccessFlags = 9)]
+				public static int GetDeadChar(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getKeyData
+				/// </java-name>
+				[Dot42.DexImport("getKeyData", "(ILandroid/view/KeyCharacterMap$KeyData;)Z", AccessFlags = 1)]
+				public virtual bool GetKeyData(int int32, global::Android.View.KeyCharacterMap.KeyData keyData) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getEvents
+				/// </java-name>
+				[Dot42.DexImport("getEvents", "([C)[Landroid/view/KeyEvent;", AccessFlags = 1)]
+				public virtual global::Android.View.KeyEvent[] GetEvents(char[] @char) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.KeyEvent[]);
+				}
+
+				/// <java-name>
+				/// isPrintingKey
+				/// </java-name>
+				[Dot42.DexImport("isPrintingKey", "(I)Z", AccessFlags = 1)]
+				public virtual bool IsPrintingKey(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getKeyboardType
+				/// </java-name>
+				[Dot42.DexImport("getKeyboardType", "()I", AccessFlags = 1)]
+				public virtual int GetKeyboardType() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getModifierBehavior
+				/// </java-name>
+				[Dot42.DexImport("getModifierBehavior", "()I", AccessFlags = 1)]
+				public virtual int GetModifierBehavior() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// deviceHasKey
+				/// </java-name>
+				[Dot42.DexImport("deviceHasKey", "(I)Z", AccessFlags = 9)]
+				public static bool DeviceHasKey(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// deviceHasKeys
+				/// </java-name>
+				[Dot42.DexImport("deviceHasKeys", "([I)[Z", AccessFlags = 9)]
+				public static bool[] DeviceHasKeys(int[] int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool[]);
+				}
+
+				/// <java-name>
+				/// getKeyboardType
+				/// </java-name>
+				public int KeyboardType
+				{
+				[Dot42.DexImport("getKeyboardType", "()I", AccessFlags = 1)]
+						get{ return GetKeyboardType(); }
+				}
+
+				/// <java-name>
+				/// getModifierBehavior
+				/// </java-name>
+				public int ModifierBehavior
+				{
+				[Dot42.DexImport("getModifierBehavior", "()I", AccessFlags = 1)]
+						get{ return GetModifierBehavior(); }
+				}
+
+				/// <java-name>
+				/// android/view/KeyCharacterMap$UnavailableException
+				/// </java-name>
+				[Dot42.DexImport("android/view/KeyCharacterMap$UnavailableException", AccessFlags = 9)]
+				public partial class UnavailableException : global::Android.Util.AndroidRuntimeException
+ /* scope: __dot42__ */ 
+				{
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						public UnavailableException(string @string) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal UnavailableException() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/view/KeyCharacterMap$KeyData
+				/// </java-name>
+				[Dot42.DexImport("android/view/KeyCharacterMap$KeyData", AccessFlags = 9)]
+				public partial class KeyData
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// META_LENGTH
+						/// </java-name>
+						[Dot42.DexImport("META_LENGTH", "I", AccessFlags = 25)]
+						public const int META_LENGTH = 4;
+						/// <java-name>
+						/// displayLabel
+						/// </java-name>
+						[Dot42.DexImport("displayLabel", "C", AccessFlags = 1)]
+						public char DisplayLabel;
+						/// <java-name>
+						/// number
+						/// </java-name>
+						[Dot42.DexImport("number", "C", AccessFlags = 1)]
+						public char Number;
+						/// <java-name>
+						/// meta
+						/// </java-name>
+						[Dot42.DexImport("meta", "[C", AccessFlags = 1)]
+						public char[] Meta;
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public KeyData() /* MethodBuilder.Create */ 
+						{
+						}
+
 				}
 
 		}
@@ -7315,689 +5977,253 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/TouchDelegate
+		/// android/view/LayoutInflater
 		/// </java-name>
-		[Dot42.DexImport("android/view/TouchDelegate", AccessFlags = 33)]
-		public partial class TouchDelegate
+		[Dot42.DexImport("android/view/LayoutInflater", AccessFlags = 1057)]
+		public abstract partial class LayoutInflater
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// ABOVE
-				/// </java-name>
-				[Dot42.DexImport("ABOVE", "I", AccessFlags = 25)]
-				public const int ABOVE = 1;
-				/// <java-name>
-				/// BELOW
-				/// </java-name>
-				[Dot42.DexImport("BELOW", "I", AccessFlags = 25)]
-				public const int BELOW = 2;
-				/// <java-name>
-				/// TO_LEFT
-				/// </java-name>
-				[Dot42.DexImport("TO_LEFT", "I", AccessFlags = 25)]
-				public const int TO_LEFT = 4;
-				/// <java-name>
-				/// TO_RIGHT
-				/// </java-name>
-				[Dot42.DexImport("TO_RIGHT", "I", AccessFlags = 25)]
-				public const int TO_RIGHT = 8;
-				[Dot42.DexImport("<init>", "(Landroid/graphics/Rect;Landroid/view/View;)V", AccessFlags = 1)]
-				public TouchDelegate(global::Android.Graphics.Rect rect, global::Android.View.View view) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 4)]
+				protected internal LayoutInflater(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/view/LayoutInflater;Landroid/content/Context;)V", AccessFlags = 4)]
+				protected internal LayoutInflater(global::Android.View.LayoutInflater layoutInflater, global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// onTouchEvent
+				/// from
 				/// </java-name>
-				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("from", "(Landroid/content/Context;)Landroid/view/LayoutInflater;", AccessFlags = 9)]
+				public static global::Android.View.LayoutInflater From(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(global::Android.View.LayoutInflater);
+				}
+
+				/// <java-name>
+				/// cloneInContext
+				/// </java-name>
+				[Dot42.DexImport("cloneInContext", "(Landroid/content/Context;)Landroid/view/LayoutInflater;", AccessFlags = 1025)]
+				public abstract global::Android.View.LayoutInflater CloneInContext(global::Android.Content.Context context) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getContext
+				/// </java-name>
+				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 1)]
+				public virtual global::Android.Content.Context GetContext() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Context);
+				}
+
+				/// <java-name>
+				/// getFactory
+				/// </java-name>
+				[Dot42.DexImport("getFactory", "()Landroid/view/LayoutInflater$Factory;", AccessFlags = 17)]
+				public global::Android.View.LayoutInflater.IFactory GetFactory() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.LayoutInflater.IFactory);
+				}
+
+				/// <java-name>
+				/// getFactory2
+				/// </java-name>
+				[Dot42.DexImport("getFactory2", "()Landroid/view/LayoutInflater$Factory2;", AccessFlags = 17)]
+				public global::Android.View.LayoutInflater.IFactory2 GetFactory2() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.LayoutInflater.IFactory2);
+				}
+
+				/// <java-name>
+				/// setFactory
+				/// </java-name>
+				[Dot42.DexImport("setFactory", "(Landroid/view/LayoutInflater$Factory;)V", AccessFlags = 1)]
+				public virtual void SetFactory(global::Android.View.LayoutInflater.IFactory factory) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setFactory2
+				/// </java-name>
+				[Dot42.DexImport("setFactory2", "(Landroid/view/LayoutInflater$Factory2;)V", AccessFlags = 1)]
+				public virtual void SetFactory2(global::Android.View.LayoutInflater.IFactory2 factory2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getFilter
+				/// </java-name>
+				[Dot42.DexImport("getFilter", "()Landroid/view/LayoutInflater$Filter;", AccessFlags = 1)]
+				public virtual global::Android.View.LayoutInflater.IFilter GetFilter() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.LayoutInflater.IFilter);
+				}
+
+				/// <java-name>
+				/// setFilter
+				/// </java-name>
+				[Dot42.DexImport("setFilter", "(Landroid/view/LayoutInflater$Filter;)V", AccessFlags = 1)]
+				public virtual void SetFilter(global::Android.View.LayoutInflater.IFilter filter) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// inflate
+				/// </java-name>
+				[Dot42.DexImport("inflate", "(ILandroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
+				public virtual global::Android.View.View Inflate(int int32, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// inflate
+				/// </java-name>
+				[Dot42.DexImport("inflate", "(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
+				public virtual global::Android.View.View Inflate(global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// inflate
+				/// </java-name>
+				[Dot42.DexImport("inflate", "(ILandroid/view/ViewGroup;Z)Landroid/view/View;", AccessFlags = 1)]
+				public virtual global::Android.View.View Inflate(int int32, global::Android.View.ViewGroup viewGroup, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// inflate
+				/// </java-name>
+				[Dot42.DexImport("inflate", "(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;Z)Landroid/view/View;", AccessFlags = 1)]
+				public virtual global::Android.View.View Inflate(global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser, global::Android.View.ViewGroup viewGroup, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// createView
+				/// </java-name>
+				[Dot42.DexImport("createView", "(Ljava/lang/String;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/Vi" +
+    "ew;", AccessFlags = 17)]
+				public global::Android.View.View CreateView(string @string, string string1, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// onCreateView
+				/// </java-name>
+				[Dot42.DexImport("onCreateView", "(Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;", AccessFlags = 4)]
+				protected internal virtual global::Android.View.View OnCreateView(string @string, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// onCreateView
+				/// </java-name>
+				[Dot42.DexImport("onCreateView", "(Landroid/view/View;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/V" +
+    "iew;", AccessFlags = 4)]
+				protected internal virtual global::Android.View.View OnCreateView(global::Android.View.View view, string @string, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TouchDelegate() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/KeyCharacterMap
-		/// </java-name>
-		[Dot42.DexImport("android/view/KeyCharacterMap", AccessFlags = 33)]
-		public partial class KeyCharacterMap
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// BUILT_IN_KEYBOARD
-				/// </java-name>
-				[Dot42.DexImport("BUILT_IN_KEYBOARD", "I", AccessFlags = 25)]
-				public const int BUILT_IN_KEYBOARD = 0;
-				/// <java-name>
-				/// VIRTUAL_KEYBOARD
-				/// </java-name>
-				[Dot42.DexImport("VIRTUAL_KEYBOARD", "I", AccessFlags = 25)]
-				public const int VIRTUAL_KEYBOARD = -1;
-				/// <java-name>
-				/// NUMERIC
-				/// </java-name>
-				[Dot42.DexImport("NUMERIC", "I", AccessFlags = 25)]
-				public const int NUMERIC = 1;
-				/// <java-name>
-				/// PREDICTIVE
-				/// </java-name>
-				[Dot42.DexImport("PREDICTIVE", "I", AccessFlags = 25)]
-				public const int PREDICTIVE = 2;
-				/// <java-name>
-				/// ALPHA
-				/// </java-name>
-				[Dot42.DexImport("ALPHA", "I", AccessFlags = 25)]
-				public const int ALPHA = 3;
-				/// <java-name>
-				/// FULL
-				/// </java-name>
-				[Dot42.DexImport("FULL", "I", AccessFlags = 25)]
-				public const int FULL = 4;
-				/// <java-name>
-				/// SPECIAL_FUNCTION
-				/// </java-name>
-				[Dot42.DexImport("SPECIAL_FUNCTION", "I", AccessFlags = 25)]
-				public const int SPECIAL_FUNCTION = 5;
-				/// <java-name>
-				/// HEX_INPUT
-				/// </java-name>
-				[Dot42.DexImport("HEX_INPUT", "C", AccessFlags = 25)]
-				public const char HEX_INPUT = '';
-				/// <java-name>
-				/// PICKER_DIALOG_INPUT
-				/// </java-name>
-				[Dot42.DexImport("PICKER_DIALOG_INPUT", "C", AccessFlags = 25)]
-				public const char PICKER_DIALOG_INPUT = '';
-				/// <java-name>
-				/// MODIFIER_BEHAVIOR_CHORDED
-				/// </java-name>
-				[Dot42.DexImport("MODIFIER_BEHAVIOR_CHORDED", "I", AccessFlags = 25)]
-				public const int MODIFIER_BEHAVIOR_CHORDED = 0;
-				/// <java-name>
-				/// MODIFIER_BEHAVIOR_CHORDED_OR_TOGGLED
-				/// </java-name>
-				[Dot42.DexImport("MODIFIER_BEHAVIOR_CHORDED_OR_TOGGLED", "I", AccessFlags = 25)]
-				public const int MODIFIER_BEHAVIOR_CHORDED_OR_TOGGLED = 1;
-				/// <java-name>
-				/// COMBINING_ACCENT
-				/// </java-name>
-				[Dot42.DexImport("COMBINING_ACCENT", "I", AccessFlags = 25)]
-				public const int COMBINING_ACCENT = -2147483648;
-				/// <java-name>
-				/// COMBINING_ACCENT_MASK
-				/// </java-name>
-				[Dot42.DexImport("COMBINING_ACCENT_MASK", "I", AccessFlags = 25)]
-				public const int COMBINING_ACCENT_MASK = 2147483647;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal KeyCharacterMap() /* MethodBuilder.Create */ 
+				internal LayoutInflater() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
-				/// finalize
+				/// getContext
 				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~KeyCharacterMap() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// load
-				/// </java-name>
-				[Dot42.DexImport("load", "(I)Landroid/view/KeyCharacterMap;", AccessFlags = 9)]
-				public static global::Android.View.KeyCharacterMap Load(int int32) /* MethodBuilder.Create */ 
+				public global::Android.Content.Context Context
 				{
-						return default(global::Android.View.KeyCharacterMap);
+				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 1)]
+						get{ return GetContext(); }
 				}
 
 				/// <java-name>
-				/// get
+				/// getFactory
 				/// </java-name>
-				[Dot42.DexImport("get", "(II)I", AccessFlags = 1)]
-				public virtual int Get(int int32, int int321) /* MethodBuilder.Create */ 
+				public global::Android.View.LayoutInflater.IFactory Factory
 				{
-						return default(int);
+				[Dot42.DexImport("getFactory", "()Landroid/view/LayoutInflater$Factory;", AccessFlags = 17)]
+						get{ return GetFactory(); }
+				[Dot42.DexImport("setFactory", "(Landroid/view/LayoutInflater$Factory;)V", AccessFlags = 1)]
+						set{ SetFactory(value); }
 				}
 
 				/// <java-name>
-				/// getNumber
+				/// getFactory2
 				/// </java-name>
-				[Dot42.DexImport("getNumber", "(I)C", AccessFlags = 1)]
-				public virtual char GetNumber(int int32) /* MethodBuilder.Create */ 
+				public global::Android.View.LayoutInflater.IFactory2 Factory2
 				{
-						return default(char);
+				[Dot42.DexImport("getFactory2", "()Landroid/view/LayoutInflater$Factory2;", AccessFlags = 17)]
+						get{ return GetFactory2(); }
+				[Dot42.DexImport("setFactory2", "(Landroid/view/LayoutInflater$Factory2;)V", AccessFlags = 1)]
+						set{ SetFactory2(value); }
 				}
 
 				/// <java-name>
-				/// getMatch
+				/// getFilter
 				/// </java-name>
-				[Dot42.DexImport("getMatch", "(I[C)C", AccessFlags = 1)]
-				public virtual char GetMatch(int int32, char[] @char) /* MethodBuilder.Create */ 
+				public global::Android.View.LayoutInflater.IFilter Filter
 				{
-						return default(char);
+				[Dot42.DexImport("getFilter", "()Landroid/view/LayoutInflater$Filter;", AccessFlags = 1)]
+						get{ return GetFilter(); }
+				[Dot42.DexImport("setFilter", "(Landroid/view/LayoutInflater$Filter;)V", AccessFlags = 1)]
+						set{ SetFilter(value); }
 				}
 
 				/// <java-name>
-				/// getMatch
+				/// android/view/LayoutInflater$Factory2
 				/// </java-name>
-				[Dot42.DexImport("getMatch", "(I[CI)C", AccessFlags = 1)]
-				public virtual char GetMatch(int int32, char[] @char, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getDisplayLabel
-				/// </java-name>
-				[Dot42.DexImport("getDisplayLabel", "(I)C", AccessFlags = 1)]
-				public virtual char GetDisplayLabel(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getDeadChar
-				/// </java-name>
-				[Dot42.DexImport("getDeadChar", "(II)I", AccessFlags = 9)]
-				public static int GetDeadChar(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getKeyData
-				/// </java-name>
-				[Dot42.DexImport("getKeyData", "(ILandroid/view/KeyCharacterMap$KeyData;)Z", AccessFlags = 1)]
-				public virtual bool GetKeyData(int int32, global::Android.View.KeyCharacterMap.KeyData keyData) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getEvents
-				/// </java-name>
-				[Dot42.DexImport("getEvents", "([C)[Landroid/view/KeyEvent;", AccessFlags = 1)]
-				public virtual global::Android.View.KeyEvent[] GetEvents(char[] @char) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.KeyEvent[]);
-				}
-
-				/// <java-name>
-				/// isPrintingKey
-				/// </java-name>
-				[Dot42.DexImport("isPrintingKey", "(I)Z", AccessFlags = 1)]
-				public virtual bool IsPrintingKey(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getKeyboardType
-				/// </java-name>
-				[Dot42.DexImport("getKeyboardType", "()I", AccessFlags = 1)]
-				public virtual int GetKeyboardType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getModifierBehavior
-				/// </java-name>
-				[Dot42.DexImport("getModifierBehavior", "()I", AccessFlags = 1)]
-				public virtual int GetModifierBehavior() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// deviceHasKey
-				/// </java-name>
-				[Dot42.DexImport("deviceHasKey", "(I)Z", AccessFlags = 9)]
-				public static bool DeviceHasKey(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// deviceHasKeys
-				/// </java-name>
-				[Dot42.DexImport("deviceHasKeys", "([I)[Z", AccessFlags = 9)]
-				public static bool[] DeviceHasKeys(int[] int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool[]);
-				}
-
-				/// <java-name>
-				/// getKeyboardType
-				/// </java-name>
-				public int KeyboardType
-				{
-				[Dot42.DexImport("getKeyboardType", "()I", AccessFlags = 1)]
-						get{ return GetKeyboardType(); }
-				}
-
-				/// <java-name>
-				/// getModifierBehavior
-				/// </java-name>
-				public int ModifierBehavior
-				{
-				[Dot42.DexImport("getModifierBehavior", "()I", AccessFlags = 1)]
-						get{ return GetModifierBehavior(); }
-				}
-
-				/// <java-name>
-				/// android/view/KeyCharacterMap$UnavailableException
-				/// </java-name>
-				[Dot42.DexImport("android/view/KeyCharacterMap$UnavailableException", AccessFlags = 9)]
-				public partial class UnavailableException : global::Android.Util.AndroidRuntimeException
- /* scope: __dot42__ */ 
-				{
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						public UnavailableException(string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal UnavailableException() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/view/KeyCharacterMap$KeyData
-				/// </java-name>
-				[Dot42.DexImport("android/view/KeyCharacterMap$KeyData", AccessFlags = 9)]
-				public partial class KeyData
+				[Dot42.DexImport("android/view/LayoutInflater$Factory2", AccessFlags = 1545)]
+				public partial interface IFactory2 : global::Android.View.LayoutInflater.IFactory
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
-						/// META_LENGTH
+						/// onCreateView
 						/// </java-name>
-						[Dot42.DexImport("META_LENGTH", "I", AccessFlags = 25)]
-						public const int META_LENGTH = 4;
-						/// <java-name>
-						/// displayLabel
-						/// </java-name>
-						[Dot42.DexImport("displayLabel", "C", AccessFlags = 1)]
-						public char DisplayLabel;
-						/// <java-name>
-						/// number
-						/// </java-name>
-						[Dot42.DexImport("number", "C", AccessFlags = 1)]
-						public char Number;
-						/// <java-name>
-						/// meta
-						/// </java-name>
-						[Dot42.DexImport("meta", "[C", AccessFlags = 1)]
-						public char[] Meta;
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public KeyData() /* MethodBuilder.Create */ 
-						{
-						}
+						[Dot42.DexImport("onCreateView", "(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/Attr" +
+    "ibuteSet;)Landroid/view/View;", AccessFlags = 1025)]
+						global::Android.View.View OnCreateView(global::Android.View.View view, string @string, global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ ;
 
 				}
 
-		}
-
-		/// <java-name>
-		/// android/view/ViewManager
-		/// </java-name>
-		[Dot42.DexImport("android/view/ViewManager", AccessFlags = 1537)]
-		public partial interface IViewManager
- /* scope: __dot42__ */ 
-		{
 				/// <java-name>
-				/// addView
+				/// android/view/LayoutInflater$Factory
 				/// </java-name>
-				[Dot42.DexImport("addView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1025)]
-				void AddView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// updateViewLayout
-				/// </java-name>
-				[Dot42.DexImport("updateViewLayout", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1025)]
-				void UpdateViewLayout(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// removeView
-				/// </java-name>
-				[Dot42.DexImport("removeView", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				void RemoveView(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/view/ViewDebug
-		/// </java-name>
-		[Dot42.DexImport("android/view/ViewDebug", AccessFlags = 33)]
-		public partial class ViewDebug
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// TRACE_HIERARCHY
-				/// </java-name>
-				[Dot42.DexImport("TRACE_HIERARCHY", "Z", AccessFlags = 25)]
-				public const bool TRACE_HIERARCHY = false;
-				/// <java-name>
-				/// TRACE_RECYCLER
-				/// </java-name>
-				[Dot42.DexImport("TRACE_RECYCLER", "Z", AccessFlags = 25)]
-				public const bool TRACE_RECYCLER = false;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ViewDebug() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// trace
-				/// </java-name>
-				[Dot42.DexImport("trace", "(Landroid/view/View;Landroid/view/ViewDebug$RecyclerTraceType;[I)V", AccessFlags = 137)]
-				public static void Trace(global::Android.View.View view, global::Android.View.ViewDebug.RecyclerTraceType recyclerTraceType, params int[] int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// startRecyclerTracing
-				/// </java-name>
-				[Dot42.DexImport("startRecyclerTracing", "(Ljava/lang/String;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void StartRecyclerTracing(string @string, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// stopRecyclerTracing
-				/// </java-name>
-				[Dot42.DexImport("stopRecyclerTracing", "()V", AccessFlags = 9)]
-				public static void StopRecyclerTracing() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// trace
-				/// </java-name>
-				[Dot42.DexImport("trace", "(Landroid/view/View;Landroid/view/ViewDebug$HierarchyTraceType;)V", AccessFlags = 9)]
-				public static void Trace(global::Android.View.View view, global::Android.View.ViewDebug.HierarchyTraceType hierarchyTraceType) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// startHierarchyTracing
-				/// </java-name>
-				[Dot42.DexImport("startHierarchyTracing", "(Ljava/lang/String;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void StartHierarchyTracing(string @string, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// stopHierarchyTracing
-				/// </java-name>
-				[Dot42.DexImport("stopHierarchyTracing", "()V", AccessFlags = 9)]
-				public static void StopHierarchyTracing() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dumpCapturedView
-				/// </java-name>
-				[Dot42.DexImport("dumpCapturedView", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 9)]
-				public static void DumpCapturedView(string @string, object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/view/ViewDebug$RecyclerTraceType
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewDebug$RecyclerTraceType", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/view/ViewDebug$RecyclerTraceType;>;")]
-				public sealed class RecyclerTraceType
+				[Dot42.DexImport("android/view/LayoutInflater$Factory", AccessFlags = 1545)]
+				public partial interface IFactory
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
-						/// BIND_VIEW
+						/// onCreateView
 						/// </java-name>
-						[Dot42.DexImport("BIND_VIEW", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
-						public static readonly RecyclerTraceType BIND_VIEW;
-						/// <java-name>
-						/// MOVE_FROM_ACTIVE_TO_SCRAP_HEAP
-						/// </java-name>
-						[Dot42.DexImport("MOVE_FROM_ACTIVE_TO_SCRAP_HEAP", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
-						public static readonly RecyclerTraceType MOVE_FROM_ACTIVE_TO_SCRAP_HEAP;
-						/// <java-name>
-						/// MOVE_TO_SCRAP_HEAP
-						/// </java-name>
-						[Dot42.DexImport("MOVE_TO_SCRAP_HEAP", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
-						public static readonly RecyclerTraceType MOVE_TO_SCRAP_HEAP;
-						/// <java-name>
-						/// NEW_VIEW
-						/// </java-name>
-						[Dot42.DexImport("NEW_VIEW", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
-						public static readonly RecyclerTraceType NEW_VIEW;
-						/// <java-name>
-						/// RECYCLE_FROM_ACTIVE_HEAP
-						/// </java-name>
-						[Dot42.DexImport("RECYCLE_FROM_ACTIVE_HEAP", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
-						public static readonly RecyclerTraceType RECYCLE_FROM_ACTIVE_HEAP;
-						/// <java-name>
-						/// RECYCLE_FROM_SCRAP_HEAP
-						/// </java-name>
-						[Dot42.DexImport("RECYCLE_FROM_SCRAP_HEAP", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
-						public static readonly RecyclerTraceType RECYCLE_FROM_SCRAP_HEAP;
-						private RecyclerTraceType() /* TypeBuilder.AddPrivateDefaultCtor */ 
-						{
-						}
-
-						/// <java-name>
-						/// values
-						/// </java-name>
-						[Dot42.DexImport("values", "()[Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 9)]
-						public static RecyclerTraceType[] Values() /* MethodBuilder.Create */ 
-						{
-								return default(RecyclerTraceType[]);
-						}
-
-						/// <java-name>
-						/// valueOf
-						/// </java-name>
-						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 9)]
-						public static RecyclerTraceType ValueOf(string @string) /* MethodBuilder.Create */ 
-						{
-								return default(RecyclerTraceType);
-						}
+						[Dot42.DexImport("onCreateView", "(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/" +
+    "view/View;", AccessFlags = 1025)]
+						global::Android.View.View OnCreateView(string @string, global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ ;
 
 				}
 
 				/// <java-name>
-				/// android/view/ViewDebug$HierarchyTraceType
+				/// android/view/LayoutInflater$Filter
 				/// </java-name>
-				[Dot42.DexImport("android/view/ViewDebug$HierarchyTraceType", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/view/ViewDebug$HierarchyTraceType;>;")]
-				public sealed class HierarchyTraceType
+				[Dot42.DexImport("android/view/LayoutInflater$Filter", AccessFlags = 1545)]
+				public partial interface IFilter
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
-						/// BUILD_CACHE
+						/// onLoadClass
 						/// </java-name>
-						[Dot42.DexImport("BUILD_CACHE", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
-						public static readonly HierarchyTraceType BUILD_CACHE;
-						/// <java-name>
-						/// DRAW
-						/// </java-name>
-						[Dot42.DexImport("DRAW", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
-						public static readonly HierarchyTraceType DRAW;
-						/// <java-name>
-						/// INVALIDATE
-						/// </java-name>
-						[Dot42.DexImport("INVALIDATE", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
-						public static readonly HierarchyTraceType INVALIDATE;
-						/// <java-name>
-						/// INVALIDATE_CHILD
-						/// </java-name>
-						[Dot42.DexImport("INVALIDATE_CHILD", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
-						public static readonly HierarchyTraceType INVALIDATE_CHILD;
-						/// <java-name>
-						/// INVALIDATE_CHILD_IN_PARENT
-						/// </java-name>
-						[Dot42.DexImport("INVALIDATE_CHILD_IN_PARENT", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
-						public static readonly HierarchyTraceType INVALIDATE_CHILD_IN_PARENT;
-						/// <java-name>
-						/// ON_LAYOUT
-						/// </java-name>
-						[Dot42.DexImport("ON_LAYOUT", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
-						public static readonly HierarchyTraceType ON_LAYOUT;
-						/// <java-name>
-						/// ON_MEASURE
-						/// </java-name>
-						[Dot42.DexImport("ON_MEASURE", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
-						public static readonly HierarchyTraceType ON_MEASURE;
-						/// <java-name>
-						/// REQUEST_LAYOUT
-						/// </java-name>
-						[Dot42.DexImport("REQUEST_LAYOUT", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
-						public static readonly HierarchyTraceType REQUEST_LAYOUT;
-						private HierarchyTraceType() /* TypeBuilder.AddPrivateDefaultCtor */ 
-						{
-						}
-
-						/// <java-name>
-						/// values
-						/// </java-name>
-						[Dot42.DexImport("values", "()[Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 9)]
-						public static HierarchyTraceType[] Values() /* MethodBuilder.Create */ 
-						{
-								return default(HierarchyTraceType[]);
-						}
-
-						/// <java-name>
-						/// valueOf
-						/// </java-name>
-						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 9)]
-						public static HierarchyTraceType ValueOf(string @string) /* MethodBuilder.Create */ 
-						{
-								return default(HierarchyTraceType);
-						}
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewDebug$CapturedViewProperty
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewDebug$CapturedViewProperty", AccessFlags = 9737)]
-				public partial interface ICapturedViewProperty : global::Java.Lang.Annotation.IAnnotation
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// retrieveReturn
-						/// </java-name>
-						[Dot42.DexImport("retrieveReturn", "()Z", AccessFlags = 1025)]
-						bool RetrieveReturn() /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewDebug$FlagToString
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewDebug$FlagToString", AccessFlags = 9737)]
-				public partial interface IFlagToString : global::Java.Lang.Annotation.IAnnotation
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// mask
-						/// </java-name>
-						[Dot42.DexImport("mask", "()I", AccessFlags = 1025)]
-						int Mask() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// equals
-						/// </java-name>
-						[Dot42.DexImport("equals", "()I", AccessFlags = 1025)]
-						int Equals() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// name
-						/// </java-name>
-						[Dot42.DexImport("name", "()Ljava/lang/String;", AccessFlags = 1025)]
-						string Name() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// outputIf
-						/// </java-name>
-						[Dot42.DexImport("outputIf", "()Z", AccessFlags = 1025)]
-						bool OutputIf() /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewDebug$IntToString
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewDebug$IntToString", AccessFlags = 9737)]
-				public partial interface IIntToString : global::Java.Lang.Annotation.IAnnotation
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// from
-						/// </java-name>
-						[Dot42.DexImport("from", "()I", AccessFlags = 1025)]
-						int From() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// to
-						/// </java-name>
-						[Dot42.DexImport("to", "()Ljava/lang/String;", AccessFlags = 1025)]
-						string To() /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/view/ViewDebug$ExportedProperty
-				/// </java-name>
-				[Dot42.DexImport("android/view/ViewDebug$ExportedProperty", AccessFlags = 9737)]
-				public partial interface IExportedProperty : global::Java.Lang.Annotation.IAnnotation
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// resolveId
-						/// </java-name>
-						[Dot42.DexImport("resolveId", "()Z", AccessFlags = 1025)]
-						bool ResolveId() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// mapping
-						/// </java-name>
-						[Dot42.DexImport("mapping", "()[Landroid/view/ViewDebug$IntToString;", AccessFlags = 1025)]
-						global::Android.View.ViewDebug.IIntToString[] Mapping() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// indexMapping
-						/// </java-name>
-						[Dot42.DexImport("indexMapping", "()[Landroid/view/ViewDebug$IntToString;", AccessFlags = 1025)]
-						global::Android.View.ViewDebug.IIntToString[] IndexMapping() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// flagMapping
-						/// </java-name>
-						[Dot42.DexImport("flagMapping", "()[Landroid/view/ViewDebug$FlagToString;", AccessFlags = 1025)]
-						global::Android.View.ViewDebug.IFlagToString[] FlagMapping() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// deepExport
-						/// </java-name>
-						[Dot42.DexImport("deepExport", "()Z", AccessFlags = 1025)]
-						bool DeepExport() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// prefix
-						/// </java-name>
-						[Dot42.DexImport("prefix", "()Ljava/lang/String;", AccessFlags = 1025)]
-						string Prefix() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// category
-						/// </java-name>
-						[Dot42.DexImport("category", "()Ljava/lang/String;", AccessFlags = 1025)]
-						string Category() /* MethodBuilder.Create */ ;
+						[Dot42.DexImport("onLoadClass", "(Ljava/lang/Class;)Z", AccessFlags = 1025)]
+						bool OnLoadClass(global::System.Type type) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -8026,440 +6252,6 @@ namespace Android.View
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal MenuInflater() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/ActionMode
-		/// </java-name>
-		[Dot42.DexImport("android/view/ActionMode", AccessFlags = 1057)]
-		public abstract partial class ActionMode
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ActionMode() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTag
-				/// </java-name>
-				[Dot42.DexImport("setTag", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-				public virtual void SetTag(object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// setTitle
-				/// </java-name>
-				[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
-				public abstract void SetTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setTitle
-				/// </java-name>
-				[Dot42.DexImport("setTitle", "(I)V", AccessFlags = 1025)]
-				public abstract void SetTitle(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSubtitle
-				/// </java-name>
-				[Dot42.DexImport("setSubtitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
-				public abstract void SetSubtitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSubtitle
-				/// </java-name>
-				[Dot42.DexImport("setSubtitle", "(I)V", AccessFlags = 1025)]
-				public abstract void SetSubtitle(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setCustomView
-				/// </java-name>
-				[Dot42.DexImport("setCustomView", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				public abstract void SetCustomView(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// invalidate
-				/// </java-name>
-				[Dot42.DexImport("invalidate", "()V", AccessFlags = 1025)]
-				public abstract void Invalidate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// finish
-				/// </java-name>
-				[Dot42.DexImport("finish", "()V", AccessFlags = 1025)]
-				public abstract void Finish() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMenu
-				/// </java-name>
-				[Dot42.DexImport("getMenu", "()Landroid/view/Menu;", AccessFlags = 1025)]
-				public abstract global::Android.View.IMenu GetMenu() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTitle
-				/// </java-name>
-				[Dot42.DexImport("getTitle", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
-				public abstract global::Java.Lang.ICharSequence GetTitle() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSubtitle
-				/// </java-name>
-				[Dot42.DexImport("getSubtitle", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
-				public abstract global::Java.Lang.ICharSequence GetSubtitle() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCustomView
-				/// </java-name>
-				[Dot42.DexImport("getCustomView", "()Landroid/view/View;", AccessFlags = 1025)]
-				public abstract global::Android.View.View GetCustomView() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMenuInflater
-				/// </java-name>
-				[Dot42.DexImport("getMenuInflater", "()Landroid/view/MenuInflater;", AccessFlags = 1025)]
-				public abstract global::Android.View.MenuInflater GetMenuInflater() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				public object Tag
-				{
-				[Dot42.DexImport("getTag", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetTag(); }
-				[Dot42.DexImport("setTag", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-						set{ SetTag(value); }
-				}
-
-				/// <java-name>
-				/// getMenu
-				/// </java-name>
-				public global::Android.View.IMenu Menu
-				{
-				[Dot42.DexImport("getMenu", "()Landroid/view/Menu;", AccessFlags = 1025)]
-						get{ return GetMenu(); }
-				}
-
-				/// <java-name>
-				/// getTitle
-				/// </java-name>
-				public global::Java.Lang.ICharSequence Title
-				{
-				[Dot42.DexImport("getTitle", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
-						get{ return GetTitle(); }
-				[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
-						set{ SetTitle(value); }
-				}
-
-				/// <java-name>
-				/// getSubtitle
-				/// </java-name>
-				public global::Java.Lang.ICharSequence Subtitle
-				{
-				[Dot42.DexImport("getSubtitle", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
-						get{ return GetSubtitle(); }
-				[Dot42.DexImport("setSubtitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
-						set{ SetSubtitle(value); }
-				}
-
-				/// <java-name>
-				/// getCustomView
-				/// </java-name>
-				public global::Android.View.View CustomView
-				{
-				[Dot42.DexImport("getCustomView", "()Landroid/view/View;", AccessFlags = 1025)]
-						get{ return GetCustomView(); }
-				[Dot42.DexImport("setCustomView", "(Landroid/view/View;)V", AccessFlags = 1025)]
-						set{ SetCustomView(value); }
-				}
-
-				/// <java-name>
-				/// getMenuInflater
-				/// </java-name>
-				public global::Android.View.MenuInflater MenuInflater
-				{
-				[Dot42.DexImport("getMenuInflater", "()Landroid/view/MenuInflater;", AccessFlags = 1025)]
-						get{ return GetMenuInflater(); }
-				}
-
-				/// <java-name>
-				/// android/view/ActionMode$Callback
-				/// </java-name>
-				[Dot42.DexImport("android/view/ActionMode$Callback", AccessFlags = 1545)]
-				public partial interface ICallback
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onCreateActionMode
-						/// </java-name>
-						[Dot42.DexImport("onCreateActionMode", "(Landroid/view/ActionMode;Landroid/view/Menu;)Z", AccessFlags = 1025)]
-						bool OnCreateActionMode(global::Android.View.ActionMode actionMode, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onPrepareActionMode
-						/// </java-name>
-						[Dot42.DexImport("onPrepareActionMode", "(Landroid/view/ActionMode;Landroid/view/Menu;)Z", AccessFlags = 1025)]
-						bool OnPrepareActionMode(global::Android.View.ActionMode actionMode, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onActionItemClicked
-						/// </java-name>
-						[Dot42.DexImport("onActionItemClicked", "(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z", AccessFlags = 1025)]
-						bool OnActionItemClicked(global::Android.View.ActionMode actionMode, global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onDestroyActionMode
-						/// </java-name>
-						[Dot42.DexImport("onDestroyActionMode", "(Landroid/view/ActionMode;)V", AccessFlags = 1025)]
-						void OnDestroyActionMode(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/OrientationListener
-		/// </java-name>
-		[Dot42.DexImport("android/view/OrientationListener", AccessFlags = 1057)]
-		public abstract partial class OrientationListener : global::Android.Hardware.ISensorListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// ORIENTATION_UNKNOWN
-				/// </java-name>
-				[Dot42.DexImport("ORIENTATION_UNKNOWN", "I", AccessFlags = 25)]
-				public const int ORIENTATION_UNKNOWN = -1;
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public OrientationListener(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
-				public OrientationListener(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// enable
-				/// </java-name>
-				[Dot42.DexImport("enable", "()V", AccessFlags = 1)]
-				public virtual void Enable() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// disable
-				/// </java-name>
-				[Dot42.DexImport("disable", "()V", AccessFlags = 1)]
-				public virtual void Disable() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onAccuracyChanged
-				/// </java-name>
-				[Dot42.DexImport("onAccuracyChanged", "(II)V", AccessFlags = 1)]
-				public virtual void OnAccuracyChanged(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onSensorChanged
-				/// </java-name>
-				[Dot42.DexImport("onSensorChanged", "(I[F)V", AccessFlags = 1)]
-				public virtual void OnSensorChanged(int int32, float[] single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onOrientationChanged
-				/// </java-name>
-				[Dot42.DexImport("onOrientationChanged", "(I)V", AccessFlags = 1025)]
-				public abstract void OnOrientationChanged(int int32) /* MethodBuilder.Create */ ;
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal OrientationListener() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/Display
-		/// </java-name>
-		[Dot42.DexImport("android/view/Display", AccessFlags = 33)]
-		public partial class Display
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// DEFAULT_DISPLAY
-				/// </java-name>
-				[Dot42.DexImport("DEFAULT_DISPLAY", "I", AccessFlags = 25)]
-				public const int DEFAULT_DISPLAY = 0;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Display() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDisplayId
-				/// </java-name>
-				[Dot42.DexImport("getDisplayId", "()I", AccessFlags = 1)]
-				public virtual int GetDisplayId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSize
-				/// </java-name>
-				[Dot42.DexImport("getSize", "(Landroid/graphics/Point;)V", AccessFlags = 1)]
-				public virtual void GetSize(global::Android.Graphics.Point point) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRectSize
-				/// </java-name>
-				[Dot42.DexImport("getRectSize", "(Landroid/graphics/Rect;)V", AccessFlags = 1)]
-				public virtual void GetRectSize(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-				public virtual int GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-				public virtual int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRotation
-				/// </java-name>
-				[Dot42.DexImport("getRotation", "()I", AccessFlags = 1)]
-				public virtual int GetRotation() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOrientation
-				/// </java-name>
-				[Dot42.DexImport("getOrientation", "()I", AccessFlags = 257)]
-				public virtual int GetOrientation() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPixelFormat
-				/// </java-name>
-				[Dot42.DexImport("getPixelFormat", "()I", AccessFlags = 1)]
-				public virtual int GetPixelFormat() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRefreshRate
-				/// </java-name>
-				[Dot42.DexImport("getRefreshRate", "()F", AccessFlags = 1)]
-				public virtual float GetRefreshRate() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getMetrics
-				/// </java-name>
-				[Dot42.DexImport("getMetrics", "(Landroid/util/DisplayMetrics;)V", AccessFlags = 1)]
-				public virtual void GetMetrics(global::Android.Util.DisplayMetrics displayMetrics) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDisplayId
-				/// </java-name>
-				public int DisplayId
-				{
-				[Dot42.DexImport("getDisplayId", "()I", AccessFlags = 1)]
-						get{ return GetDisplayId(); }
-				}
-
-				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				public int Width
-				{
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-						get{ return GetWidth(); }
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				public int Height
-				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						get{ return GetHeight(); }
-				}
-
-				/// <java-name>
-				/// getRotation
-				/// </java-name>
-				public int Rotation
-				{
-				[Dot42.DexImport("getRotation", "()I", AccessFlags = 1)]
-						get{ return GetRotation(); }
-				}
-
-				/// <java-name>
-				/// getOrientation
-				/// </java-name>
-				public int Orientation
-				{
-				[Dot42.DexImport("getOrientation", "()I", AccessFlags = 257)]
-						get{ return GetOrientation(); }
-				}
-
-				/// <java-name>
-				/// getPixelFormat
-				/// </java-name>
-				public int PixelFormat
-				{
-				[Dot42.DexImport("getPixelFormat", "()I", AccessFlags = 1)]
-						get{ return GetPixelFormat(); }
-				}
-
-				/// <java-name>
-				/// getRefreshRate
-				/// </java-name>
-				public float RefreshRate
-				{
-				[Dot42.DexImport("getRefreshRate", "()F", AccessFlags = 1)]
-						get{ return GetRefreshRate(); }
 				}
 
 		}
@@ -10021,485 +7813,479 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/DragEvent
+		/// android/view/OrientationEventListener
 		/// </java-name>
-		[Dot42.DexImport("android/view/DragEvent", AccessFlags = 33)]
-		public partial class DragEvent : global::Android.Os.IParcelable
+		[Dot42.DexImport("android/view/OrientationEventListener", AccessFlags = 1057)]
+		public abstract partial class OrientationEventListener
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// ACTION_DRAG_STARTED
+				/// ORIENTATION_UNKNOWN
 				/// </java-name>
-				[Dot42.DexImport("ACTION_DRAG_STARTED", "I", AccessFlags = 25)]
-				public const int ACTION_DRAG_STARTED = 1;
-				/// <java-name>
-				/// ACTION_DRAG_LOCATION
-				/// </java-name>
-				[Dot42.DexImport("ACTION_DRAG_LOCATION", "I", AccessFlags = 25)]
-				public const int ACTION_DRAG_LOCATION = 2;
-				/// <java-name>
-				/// ACTION_DROP
-				/// </java-name>
-				[Dot42.DexImport("ACTION_DROP", "I", AccessFlags = 25)]
-				public const int ACTION_DROP = 3;
-				/// <java-name>
-				/// ACTION_DRAG_ENDED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_DRAG_ENDED", "I", AccessFlags = 25)]
-				public const int ACTION_DRAG_ENDED = 4;
-				/// <java-name>
-				/// ACTION_DRAG_ENTERED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_DRAG_ENTERED", "I", AccessFlags = 25)]
-				public const int ACTION_DRAG_ENTERED = 5;
-				/// <java-name>
-				/// ACTION_DRAG_EXITED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_DRAG_EXITED", "I", AccessFlags = 25)]
-				public const int ACTION_DRAG_EXITED = 6;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.DragEvent> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal DragEvent() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("ORIENTATION_UNKNOWN", "I", AccessFlags = 25)]
+				public const int ORIENTATION_UNKNOWN = -1;
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public OrientationEventListener(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
+				public OrientationEventListener(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getAction
+				/// enable
 				/// </java-name>
-				[Dot42.DexImport("getAction", "()I", AccessFlags = 1)]
-				public virtual int GetAction() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("enable", "()V", AccessFlags = 1)]
+				public virtual void Enable() /* MethodBuilder.Create */ 
 				{
-						return default(int);
 				}
 
 				/// <java-name>
-				/// getX
+				/// disable
 				/// </java-name>
-				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
-				public virtual float GetX() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("disable", "()V", AccessFlags = 1)]
+				public virtual void Disable() /* MethodBuilder.Create */ 
 				{
-						return default(float);
 				}
 
 				/// <java-name>
-				/// getY
+				/// canDetectOrientation
 				/// </java-name>
-				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
-				public virtual float GetY() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getClipData
-				/// </java-name>
-				[Dot42.DexImport("getClipData", "()Landroid/content/ClipData;", AccessFlags = 1)]
-				public virtual global::Android.Content.ClipData GetClipData() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ClipData);
-				}
-
-				/// <java-name>
-				/// getClipDescription
-				/// </java-name>
-				[Dot42.DexImport("getClipDescription", "()Landroid/content/ClipDescription;", AccessFlags = 1)]
-				public virtual global::Android.Content.ClipDescription GetClipDescription() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ClipDescription);
-				}
-
-				/// <java-name>
-				/// getLocalState
-				/// </java-name>
-				[Dot42.DexImport("getLocalState", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetLocalState() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// getResult
-				/// </java-name>
-				[Dot42.DexImport("getResult", "()Z", AccessFlags = 1)]
-				public virtual bool GetResult() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("canDetectOrientation", "()Z", AccessFlags = 1)]
+				public virtual bool CanDetectOrientation() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// toString
+				/// onOrientationChanged
 				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
+				[Dot42.DexImport("onOrientationChanged", "(I)V", AccessFlags = 1025)]
+				public abstract void OnOrientationChanged(int int32) /* MethodBuilder.Create */ ;
 
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal OrientationEventListener() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAction
-				/// </java-name>
-				public int Action
-				{
-				[Dot42.DexImport("getAction", "()I", AccessFlags = 1)]
-						get{ return GetAction(); }
-				}
-
-				/// <java-name>
-				/// getX
-				/// </java-name>
-				public float X
-				{
-				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
-						get{ return GetX(); }
-				}
-
-				/// <java-name>
-				/// getY
-				/// </java-name>
-				public float Y
-				{
-				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
-						get{ return GetY(); }
-				}
-
-				/// <java-name>
-				/// getClipData
-				/// </java-name>
-				public global::Android.Content.ClipData ClipData
-				{
-				[Dot42.DexImport("getClipData", "()Landroid/content/ClipData;", AccessFlags = 1)]
-						get{ return GetClipData(); }
-				}
-
-				/// <java-name>
-				/// getClipDescription
-				/// </java-name>
-				public global::Android.Content.ClipDescription ClipDescription
-				{
-				[Dot42.DexImport("getClipDescription", "()Landroid/content/ClipDescription;", AccessFlags = 1)]
-						get{ return GetClipDescription(); }
-				}
-
-				/// <java-name>
-				/// getLocalState
-				/// </java-name>
-				public object LocalState
-				{
-				[Dot42.DexImport("getLocalState", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetLocalState(); }
-				}
-
-				/// <java-name>
-				/// getResult
-				/// </java-name>
-				public bool IsResult
-				{
-				[Dot42.DexImport("getResult", "()Z", AccessFlags = 1)]
-						get{ return GetResult(); }
 				}
 
 		}
 
 		/// <java-name>
-		/// android/view/ViewPropertyAnimator
+		/// android/view/OrientationListener
 		/// </java-name>
-		[Dot42.DexImport("android/view/ViewPropertyAnimator", AccessFlags = 33)]
-		public partial class ViewPropertyAnimator
+		[Dot42.DexImport("android/view/OrientationListener", AccessFlags = 1057)]
+		public abstract partial class OrientationListener : global::Android.Hardware.ISensorListener
  /* scope: __dot42__ */ 
 		{
+				/// <java-name>
+				/// ORIENTATION_UNKNOWN
+				/// </java-name>
+				[Dot42.DexImport("ORIENTATION_UNKNOWN", "I", AccessFlags = 25)]
+				public const int ORIENTATION_UNKNOWN = -1;
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public OrientationListener(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
+				public OrientationListener(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// enable
+				/// </java-name>
+				[Dot42.DexImport("enable", "()V", AccessFlags = 1)]
+				public virtual void Enable() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// disable
+				/// </java-name>
+				[Dot42.DexImport("disable", "()V", AccessFlags = 1)]
+				public virtual void Disable() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onAccuracyChanged
+				/// </java-name>
+				[Dot42.DexImport("onAccuracyChanged", "(II)V", AccessFlags = 1)]
+				public virtual void OnAccuracyChanged(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onSensorChanged
+				/// </java-name>
+				[Dot42.DexImport("onSensorChanged", "(I[F)V", AccessFlags = 1)]
+				public virtual void OnSensorChanged(int int32, float[] single) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onOrientationChanged
+				/// </java-name>
+				[Dot42.DexImport("onOrientationChanged", "(I)V", AccessFlags = 1025)]
+				public abstract void OnOrientationChanged(int int32) /* MethodBuilder.Create */ ;
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal OrientationListener() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/ScaleGestureDetector
+		/// </java-name>
+		[Dot42.DexImport("android/view/ScaleGestureDetector", AccessFlags = 33)]
+		public partial class ScaleGestureDetector
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/ScaleGestureDetector$OnScaleGestureListen" +
+    "er;)V", AccessFlags = 1)]
+				public ScaleGestureDetector(global::Android.Content.Context context, global::Android.View.ScaleGestureDetector.IOnScaleGestureListener onScaleGestureListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onTouchEvent
+				/// </java-name>
+				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+				public virtual bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isInProgress
+				/// </java-name>
+				[Dot42.DexImport("isInProgress", "()Z", AccessFlags = 1)]
+				public virtual bool IsInProgress() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getFocusX
+				/// </java-name>
+				[Dot42.DexImport("getFocusX", "()F", AccessFlags = 1)]
+				public virtual float GetFocusX() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getFocusY
+				/// </java-name>
+				[Dot42.DexImport("getFocusY", "()F", AccessFlags = 1)]
+				public virtual float GetFocusY() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getCurrentSpan
+				/// </java-name>
+				[Dot42.DexImport("getCurrentSpan", "()F", AccessFlags = 1)]
+				public virtual float GetCurrentSpan() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getCurrentSpanX
+				/// </java-name>
+				[Dot42.DexImport("getCurrentSpanX", "()F", AccessFlags = 1)]
+				public virtual float GetCurrentSpanX() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getCurrentSpanY
+				/// </java-name>
+				[Dot42.DexImport("getCurrentSpanY", "()F", AccessFlags = 1)]
+				public virtual float GetCurrentSpanY() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getPreviousSpan
+				/// </java-name>
+				[Dot42.DexImport("getPreviousSpan", "()F", AccessFlags = 1)]
+				public virtual float GetPreviousSpan() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getPreviousSpanX
+				/// </java-name>
+				[Dot42.DexImport("getPreviousSpanX", "()F", AccessFlags = 1)]
+				public virtual float GetPreviousSpanX() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getPreviousSpanY
+				/// </java-name>
+				[Dot42.DexImport("getPreviousSpanY", "()F", AccessFlags = 1)]
+				public virtual float GetPreviousSpanY() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getScaleFactor
+				/// </java-name>
+				[Dot42.DexImport("getScaleFactor", "()F", AccessFlags = 1)]
+				public virtual float GetScaleFactor() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getTimeDelta
+				/// </java-name>
+				[Dot42.DexImport("getTimeDelta", "()J", AccessFlags = 1)]
+				public virtual long GetTimeDelta() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getEventTime
+				/// </java-name>
+				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
+				public virtual long GetEventTime() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ScaleGestureDetector() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getFocusX
+				/// </java-name>
+				public float FocusX
+				{
+				[Dot42.DexImport("getFocusX", "()F", AccessFlags = 1)]
+						get{ return GetFocusX(); }
+				}
+
+				/// <java-name>
+				/// getFocusY
+				/// </java-name>
+				public float FocusY
+				{
+				[Dot42.DexImport("getFocusY", "()F", AccessFlags = 1)]
+						get{ return GetFocusY(); }
+				}
+
+				/// <java-name>
+				/// getCurrentSpan
+				/// </java-name>
+				public float CurrentSpan
+				{
+				[Dot42.DexImport("getCurrentSpan", "()F", AccessFlags = 1)]
+						get{ return GetCurrentSpan(); }
+				}
+
+				/// <java-name>
+				/// getCurrentSpanX
+				/// </java-name>
+				public float CurrentSpanX
+				{
+				[Dot42.DexImport("getCurrentSpanX", "()F", AccessFlags = 1)]
+						get{ return GetCurrentSpanX(); }
+				}
+
+				/// <java-name>
+				/// getCurrentSpanY
+				/// </java-name>
+				public float CurrentSpanY
+				{
+				[Dot42.DexImport("getCurrentSpanY", "()F", AccessFlags = 1)]
+						get{ return GetCurrentSpanY(); }
+				}
+
+				/// <java-name>
+				/// getPreviousSpan
+				/// </java-name>
+				public float PreviousSpan
+				{
+				[Dot42.DexImport("getPreviousSpan", "()F", AccessFlags = 1)]
+						get{ return GetPreviousSpan(); }
+				}
+
+				/// <java-name>
+				/// getPreviousSpanX
+				/// </java-name>
+				public float PreviousSpanX
+				{
+				[Dot42.DexImport("getPreviousSpanX", "()F", AccessFlags = 1)]
+						get{ return GetPreviousSpanX(); }
+				}
+
+				/// <java-name>
+				/// getPreviousSpanY
+				/// </java-name>
+				public float PreviousSpanY
+				{
+				[Dot42.DexImport("getPreviousSpanY", "()F", AccessFlags = 1)]
+						get{ return GetPreviousSpanY(); }
+				}
+
+				/// <java-name>
+				/// getScaleFactor
+				/// </java-name>
+				public float ScaleFactor
+				{
+				[Dot42.DexImport("getScaleFactor", "()F", AccessFlags = 1)]
+						get{ return GetScaleFactor(); }
+				}
+
+				/// <java-name>
+				/// getTimeDelta
+				/// </java-name>
+				public long TimeDelta
+				{
+				[Dot42.DexImport("getTimeDelta", "()J", AccessFlags = 1)]
+						get{ return GetTimeDelta(); }
+				}
+
+				/// <java-name>
+				/// getEventTime
+				/// </java-name>
+				public long EventTime
+				{
+				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
+						get{ return GetEventTime(); }
+				}
+
+				/// <java-name>
+				/// android/view/ScaleGestureDetector$SimpleOnScaleGestureListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/ScaleGestureDetector$SimpleOnScaleGestureListener", AccessFlags = 9)]
+				public partial class SimpleOnScaleGestureListener : global::Android.View.ScaleGestureDetector.IOnScaleGestureListener
+ /* scope: __dot42__ */ 
+				{
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public SimpleOnScaleGestureListener() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onScale
+						/// </java-name>
+						[Dot42.DexImport("onScale", "(Landroid/view/ScaleGestureDetector;)Z", AccessFlags = 1)]
+						public virtual bool OnScale(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// onScaleBegin
+						/// </java-name>
+						[Dot42.DexImport("onScaleBegin", "(Landroid/view/ScaleGestureDetector;)Z", AccessFlags = 1)]
+						public virtual bool OnScaleBegin(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// onScaleEnd
+						/// </java-name>
+						[Dot42.DexImport("onScaleEnd", "(Landroid/view/ScaleGestureDetector;)V", AccessFlags = 1)]
+						public virtual void OnScaleEnd(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/view/ScaleGestureDetector$OnScaleGestureListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/ScaleGestureDetector$OnScaleGestureListener", AccessFlags = 1545)]
+				public partial interface IOnScaleGestureListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onScale
+						/// </java-name>
+						[Dot42.DexImport("onScale", "(Landroid/view/ScaleGestureDetector;)Z", AccessFlags = 1025)]
+						bool OnScale(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onScaleBegin
+						/// </java-name>
+						[Dot42.DexImport("onScaleBegin", "(Landroid/view/ScaleGestureDetector;)Z", AccessFlags = 1025)]
+						bool OnScaleBegin(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onScaleEnd
+						/// </java-name>
+						[Dot42.DexImport("onScaleEnd", "(Landroid/view/ScaleGestureDetector;)V", AccessFlags = 1025)]
+						void OnScaleEnd(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/SoundEffectConstants
+		/// </java-name>
+		[Dot42.DexImport("android/view/SoundEffectConstants", AccessFlags = 33)]
+		public partial class SoundEffectConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CLICK
+				/// </java-name>
+				[Dot42.DexImport("CLICK", "I", AccessFlags = 25)]
+				public const int CLICK = 0;
+				/// <java-name>
+				/// NAVIGATION_LEFT
+				/// </java-name>
+				[Dot42.DexImport("NAVIGATION_LEFT", "I", AccessFlags = 25)]
+				public const int NAVIGATION_LEFT = 1;
+				/// <java-name>
+				/// NAVIGATION_UP
+				/// </java-name>
+				[Dot42.DexImport("NAVIGATION_UP", "I", AccessFlags = 25)]
+				public const int NAVIGATION_UP = 2;
+				/// <java-name>
+				/// NAVIGATION_RIGHT
+				/// </java-name>
+				[Dot42.DexImport("NAVIGATION_RIGHT", "I", AccessFlags = 25)]
+				public const int NAVIGATION_RIGHT = 3;
+				/// <java-name>
+				/// NAVIGATION_DOWN
+				/// </java-name>
+				[Dot42.DexImport("NAVIGATION_DOWN", "I", AccessFlags = 25)]
+				public const int NAVIGATION_DOWN = 4;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal ViewPropertyAnimator() /* MethodBuilder.Create */ 
+				internal SoundEffectConstants() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// setDuration
+				/// getContantForFocusDirection
 				/// </java-name>
-				[Dot42.DexImport("setDuration", "(J)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator SetDuration(long int64) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getContantForFocusDirection", "(I)I", AccessFlags = 9)]
+				public static int GetContantForFocusDirection(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// getDuration
-				/// </java-name>
-				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
-				public virtual long GetDuration() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getStartDelay
-				/// </java-name>
-				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
-				public virtual long GetStartDelay() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setStartDelay
-				/// </java-name>
-				[Dot42.DexImport("setStartDelay", "(J)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator SetStartDelay(long int64) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// setInterpolator
-				/// </java-name>
-				[Dot42.DexImport("setInterpolator", "(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator SetInterpolator(global::Android.Animation.ITimeInterpolator timeInterpolator) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// setListener
-				/// </java-name>
-				[Dot42.DexImport("setListener", "(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator" +
-    ";", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator SetListener(global::Android.Animation.Animator.IAnimatorListener animatorListener) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// start
-				/// </java-name>
-				[Dot42.DexImport("start", "()V", AccessFlags = 1)]
-				public virtual void Start() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// cancel
-				/// </java-name>
-				[Dot42.DexImport("cancel", "()V", AccessFlags = 1)]
-				public virtual void Cancel() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// x
-				/// </java-name>
-				[Dot42.DexImport("x", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator X(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// xBy
-				/// </java-name>
-				[Dot42.DexImport("xBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator XBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// y
-				/// </java-name>
-				[Dot42.DexImport("y", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator Y(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// yBy
-				/// </java-name>
-				[Dot42.DexImport("yBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator YBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// rotation
-				/// </java-name>
-				[Dot42.DexImport("rotation", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator Rotation(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// rotationBy
-				/// </java-name>
-				[Dot42.DexImport("rotationBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator RotationBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// rotationX
-				/// </java-name>
-				[Dot42.DexImport("rotationX", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator RotationX(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// rotationXBy
-				/// </java-name>
-				[Dot42.DexImport("rotationXBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator RotationXBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// rotationY
-				/// </java-name>
-				[Dot42.DexImport("rotationY", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator RotationY(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// rotationYBy
-				/// </java-name>
-				[Dot42.DexImport("rotationYBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator RotationYBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// translationX
-				/// </java-name>
-				[Dot42.DexImport("translationX", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator TranslationX(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// translationXBy
-				/// </java-name>
-				[Dot42.DexImport("translationXBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator TranslationXBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// translationY
-				/// </java-name>
-				[Dot42.DexImport("translationY", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator TranslationY(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// translationYBy
-				/// </java-name>
-				[Dot42.DexImport("translationYBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator TranslationYBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// scaleX
-				/// </java-name>
-				[Dot42.DexImport("scaleX", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator ScaleX(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// scaleXBy
-				/// </java-name>
-				[Dot42.DexImport("scaleXBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator ScaleXBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// scaleY
-				/// </java-name>
-				[Dot42.DexImport("scaleY", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator ScaleY(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// scaleYBy
-				/// </java-name>
-				[Dot42.DexImport("scaleYBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator ScaleYBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// alpha
-				/// </java-name>
-				[Dot42.DexImport("alpha", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator Alpha(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// alphaBy
-				/// </java-name>
-				[Dot42.DexImport("alphaBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewPropertyAnimator AlphaBy(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.ViewPropertyAnimator);
-				}
-
-				/// <java-name>
-				/// getDuration
-				/// </java-name>
-				public long Duration
-				{
-				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
-						get{ return GetDuration(); }
-				}
-
-				/// <java-name>
-				/// getStartDelay
-				/// </java-name>
-				public long StartDelay
-				{
-				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
-						get{ return GetStartDelay(); }
+						return default(int);
 				}
 
 		}
@@ -10650,2028 +8436,595 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/CollapsibleActionView
+		/// android/view/SurfaceView
 		/// </java-name>
-		[Dot42.DexImport("android/view/CollapsibleActionView", AccessFlags = 1537)]
-		public partial interface ICollapsibleActionView
+		[Dot42.DexImport("android/view/SurfaceView", AccessFlags = 33)]
+		public partial class SurfaceView : global::Android.View.View
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// onActionViewExpanded
-				/// </java-name>
-				[Dot42.DexImport("onActionViewExpanded", "()V", AccessFlags = 1025)]
-				void OnActionViewExpanded() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onActionViewCollapsed
-				/// </java-name>
-				[Dot42.DexImport("onActionViewCollapsed", "()V", AccessFlags = 1025)]
-				void OnActionViewCollapsed() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/view/OrientationEventListener
-		/// </java-name>
-		[Dot42.DexImport("android/view/OrientationEventListener", AccessFlags = 1057)]
-		public abstract partial class OrientationEventListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// ORIENTATION_UNKNOWN
-				/// </java-name>
-				[Dot42.DexImport("ORIENTATION_UNKNOWN", "I", AccessFlags = 25)]
-				public const int ORIENTATION_UNKNOWN = -1;
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public OrientationEventListener(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				public SurfaceView(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
-				public OrientationEventListener(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public SurfaceView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// enable
-				/// </java-name>
-				[Dot42.DexImport("enable", "()V", AccessFlags = 1)]
-				public virtual void Enable() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// disable
-				/// </java-name>
-				[Dot42.DexImport("disable", "()V", AccessFlags = 1)]
-				public virtual void Disable() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public SurfaceView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// canDetectOrientation
+				/// getHolder
 				/// </java-name>
-				[Dot42.DexImport("canDetectOrientation", "()Z", AccessFlags = 1)]
-				public virtual bool CanDetectOrientation() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getHolder", "()Landroid/view/SurfaceHolder;", AccessFlags = 1)]
+				public virtual global::Android.View.ISurfaceHolder GetHolder() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ISurfaceHolder);
+				}
+
+				/// <java-name>
+				/// onAttachedToWindow
+				/// </java-name>
+				[Dot42.DexImport("onAttachedToWindow", "()V", AccessFlags = 4)]
+				protected internal override void OnAttachedToWindow() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onWindowVisibilityChanged
+				/// </java-name>
+				[Dot42.DexImport("onWindowVisibilityChanged", "(I)V", AccessFlags = 4)]
+				protected internal override void OnWindowVisibilityChanged(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setVisibility
+				/// </java-name>
+				[Dot42.DexImport("setVisibility", "(I)V", AccessFlags = 1)]
+				public override void SetVisibility(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDetachedFromWindow
+				/// </java-name>
+				[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 4)]
+				protected internal override void OnDetachedFromWindow() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onMeasure
+				/// </java-name>
+				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 4)]
+				protected internal override void OnMeasure(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// gatherTransparentRegion
+				/// </java-name>
+				[Dot42.DexImport("gatherTransparentRegion", "(Landroid/graphics/Region;)Z", AccessFlags = 1)]
+				public virtual bool GatherTransparentRegion(global::Android.Graphics.Region region) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// onOrientationChanged
+				/// draw
 				/// </java-name>
-				[Dot42.DexImport("onOrientationChanged", "(I)V", AccessFlags = 1025)]
-				public abstract void OnOrientationChanged(int int32) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
+				public override void Draw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchDraw
+				/// </java-name>
+				[Dot42.DexImport("dispatchDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 4)]
+				protected internal override void DispatchDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setZOrderMediaOverlay
+				/// </java-name>
+				[Dot42.DexImport("setZOrderMediaOverlay", "(Z)V", AccessFlags = 1)]
+				public virtual void SetZOrderMediaOverlay(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setZOrderOnTop
+				/// </java-name>
+				[Dot42.DexImport("setZOrderOnTop", "(Z)V", AccessFlags = 1)]
+				public virtual void SetZOrderOnTop(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal OrientationEventListener() /* TypeBuilder.AddDefaultConstructor */ 
+				internal SurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getHolder
+				/// </java-name>
+				public global::Android.View.ISurfaceHolder Holder
+				{
+				[Dot42.DexImport("getHolder", "()Landroid/view/SurfaceHolder;", AccessFlags = 1)]
+						get{ return GetHolder(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/TextureView
+		/// </java-name>
+		[Dot42.DexImport("android/view/TextureView", AccessFlags = 33)]
+		public partial class TextureView : global::Android.View.View
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public TextureView(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public TextureView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public TextureView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isOpaque
+				/// </java-name>
+				[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 1)]
+				public override bool IsOpaque() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setOpaque
+				/// </java-name>
+				[Dot42.DexImport("setOpaque", "(Z)V", AccessFlags = 1)]
+				public virtual void SetOpaque(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onAttachedToWindow
+				/// </java-name>
+				[Dot42.DexImport("onAttachedToWindow", "()V", AccessFlags = 4)]
+				protected internal override void OnAttachedToWindow() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDetachedFromWindow
+				/// </java-name>
+				[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 4)]
+				protected internal override void OnDetachedFromWindow() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setLayerType
+				/// </java-name>
+				[Dot42.DexImport("setLayerType", "(ILandroid/graphics/Paint;)V", AccessFlags = 1)]
+				public override void SetLayerType(int int32, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLayerType
+				/// </java-name>
+				[Dot42.DexImport("getLayerType", "()I", AccessFlags = 1)]
+				public override int GetLayerType() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// buildLayer
+				/// </java-name>
+				[Dot42.DexImport("buildLayer", "()V", AccessFlags = 1)]
+				public override void BuildLayer() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// draw
+				/// </java-name>
+				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 17)]
+				public override void Draw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDraw
+				/// </java-name>
+				[Dot42.DexImport("onDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 20)]
+				protected internal override void OnDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onSizeChanged
+				/// </java-name>
+				[Dot42.DexImport("onSizeChanged", "(IIII)V", AccessFlags = 4)]
+				protected internal override void OnSizeChanged(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onVisibilityChanged
+				/// </java-name>
+				[Dot42.DexImport("onVisibilityChanged", "(Landroid/view/View;I)V", AccessFlags = 4)]
+				protected internal override void OnVisibilityChanged(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setTransform
+				/// </java-name>
+				[Dot42.DexImport("setTransform", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
+				public virtual void SetTransform(global::Android.Graphics.Matrix matrix) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTransform
+				/// </java-name>
+				[Dot42.DexImport("getTransform", "(Landroid/graphics/Matrix;)Landroid/graphics/Matrix;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Matrix GetTransform(global::Android.Graphics.Matrix matrix) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Matrix);
+				}
+
+				/// <java-name>
+				/// getBitmap
+				/// </java-name>
+				[Dot42.DexImport("getBitmap", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Bitmap GetBitmap() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Bitmap);
+				}
+
+				/// <java-name>
+				/// getBitmap
+				/// </java-name>
+				[Dot42.DexImport("getBitmap", "(II)Landroid/graphics/Bitmap;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Bitmap GetBitmap(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Bitmap);
+				}
+
+				/// <java-name>
+				/// getBitmap
+				/// </java-name>
+				[Dot42.DexImport("getBitmap", "(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Bitmap GetBitmap(global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Bitmap);
+				}
+
+				/// <java-name>
+				/// isAvailable
+				/// </java-name>
+				[Dot42.DexImport("isAvailable", "()Z", AccessFlags = 1)]
+				public virtual bool IsAvailable() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// lockCanvas
+				/// </java-name>
+				[Dot42.DexImport("lockCanvas", "()Landroid/graphics/Canvas;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Canvas LockCanvas() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Canvas);
+				}
+
+				/// <java-name>
+				/// lockCanvas
+				/// </java-name>
+				[Dot42.DexImport("lockCanvas", "(Landroid/graphics/Rect;)Landroid/graphics/Canvas;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Canvas LockCanvas(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Canvas);
+				}
+
+				/// <java-name>
+				/// unlockCanvasAndPost
+				/// </java-name>
+				[Dot42.DexImport("unlockCanvasAndPost", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
+				public virtual void UnlockCanvasAndPost(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSurfaceTexture
+				/// </java-name>
+				[Dot42.DexImport("getSurfaceTexture", "()Landroid/graphics/SurfaceTexture;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.SurfaceTexture GetSurfaceTexture() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.SurfaceTexture);
+				}
+
+				/// <java-name>
+				/// getSurfaceTextureListener
+				/// </java-name>
+				[Dot42.DexImport("getSurfaceTextureListener", "()Landroid/view/TextureView$SurfaceTextureListener;", AccessFlags = 1)]
+				public virtual global::Android.View.TextureView.ISurfaceTextureListener GetSurfaceTextureListener() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.TextureView.ISurfaceTextureListener);
+				}
+
+				/// <java-name>
+				/// setSurfaceTextureListener
+				/// </java-name>
+				[Dot42.DexImport("setSurfaceTextureListener", "(Landroid/view/TextureView$SurfaceTextureListener;)V", AccessFlags = 1)]
+				public virtual void SetSurfaceTextureListener(global::Android.View.TextureView.ISurfaceTextureListener surfaceTextureListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal TextureView() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLayerType
+				/// </java-name>
+				public int LayerType
+				{
+				[Dot42.DexImport("getLayerType", "()I", AccessFlags = 1)]
+						get{ return GetLayerType(); }
+				}
+
+				/// <java-name>
+				/// getBitmap
+				/// </java-name>
+				public global::Android.Graphics.Bitmap Bitmap
+				{
+				[Dot42.DexImport("getBitmap", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
+						get{ return GetBitmap(); }
+				}
+
+				/// <java-name>
+				/// getSurfaceTexture
+				/// </java-name>
+				public global::Android.Graphics.SurfaceTexture SurfaceTexture
+				{
+				[Dot42.DexImport("getSurfaceTexture", "()Landroid/graphics/SurfaceTexture;", AccessFlags = 1)]
+						get{ return GetSurfaceTexture(); }
+				}
+
+				/// <java-name>
+				/// getSurfaceTextureListener
+				/// </java-name>
+				public global::Android.View.TextureView.ISurfaceTextureListener SurfaceTextureListener
+				{
+				[Dot42.DexImport("getSurfaceTextureListener", "()Landroid/view/TextureView$SurfaceTextureListener;", AccessFlags = 1)]
+						get{ return GetSurfaceTextureListener(); }
+				[Dot42.DexImport("setSurfaceTextureListener", "(Landroid/view/TextureView$SurfaceTextureListener;)V", AccessFlags = 1)]
+						set{ SetSurfaceTextureListener(value); }
+				}
+
+				/// <java-name>
+				/// android/view/TextureView$SurfaceTextureListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/TextureView$SurfaceTextureListener", AccessFlags = 1545)]
+				public partial interface ISurfaceTextureListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onSurfaceTextureAvailable
+						/// </java-name>
+						[Dot42.DexImport("onSurfaceTextureAvailable", "(Landroid/graphics/SurfaceTexture;II)V", AccessFlags = 1025)]
+						void OnSurfaceTextureAvailable(global::Android.Graphics.SurfaceTexture surfaceTexture, int int32, int int321) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onSurfaceTextureSizeChanged
+						/// </java-name>
+						[Dot42.DexImport("onSurfaceTextureSizeChanged", "(Landroid/graphics/SurfaceTexture;II)V", AccessFlags = 1025)]
+						void OnSurfaceTextureSizeChanged(global::Android.Graphics.SurfaceTexture surfaceTexture, int int32, int int321) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onSurfaceTextureDestroyed
+						/// </java-name>
+						[Dot42.DexImport("onSurfaceTextureDestroyed", "(Landroid/graphics/SurfaceTexture;)Z", AccessFlags = 1025)]
+						bool OnSurfaceTextureDestroyed(global::Android.Graphics.SurfaceTexture surfaceTexture) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onSurfaceTextureUpdated
+						/// </java-name>
+						[Dot42.DexImport("onSurfaceTextureUpdated", "(Landroid/graphics/SurfaceTexture;)V", AccessFlags = 1025)]
+						void OnSurfaceTextureUpdated(global::Android.Graphics.SurfaceTexture surfaceTexture) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/TouchDelegate
+		/// </java-name>
+		[Dot42.DexImport("android/view/TouchDelegate", AccessFlags = 33)]
+		public partial class TouchDelegate
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// ABOVE
+				/// </java-name>
+				[Dot42.DexImport("ABOVE", "I", AccessFlags = 25)]
+				public const int ABOVE = 1;
+				/// <java-name>
+				/// BELOW
+				/// </java-name>
+				[Dot42.DexImport("BELOW", "I", AccessFlags = 25)]
+				public const int BELOW = 2;
+				/// <java-name>
+				/// TO_LEFT
+				/// </java-name>
+				[Dot42.DexImport("TO_LEFT", "I", AccessFlags = 25)]
+				public const int TO_LEFT = 4;
+				/// <java-name>
+				/// TO_RIGHT
+				/// </java-name>
+				[Dot42.DexImport("TO_RIGHT", "I", AccessFlags = 25)]
+				public const int TO_RIGHT = 8;
+				[Dot42.DexImport("<init>", "(Landroid/graphics/Rect;Landroid/view/View;)V", AccessFlags = 1)]
+				public TouchDelegate(global::Android.Graphics.Rect rect, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onTouchEvent
+				/// </java-name>
+				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+				public virtual bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal TouchDelegate() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 		}
 
 		/// <java-name>
-		/// android/view/InputDevice
+		/// android/view/VelocityTracker
 		/// </java-name>
-		[Dot42.DexImport("android/view/InputDevice", AccessFlags = 49)]
-		public sealed partial class InputDevice : global::Android.Os.IParcelable
+		[Dot42.DexImport("android/view/VelocityTracker", AccessFlags = 49)]
+		public sealed partial class VelocityTracker
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// SOURCE_CLASS_MASK
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_CLASS_MASK", "I", AccessFlags = 25)]
-				public const int SOURCE_CLASS_MASK = 255;
-				/// <java-name>
-				/// SOURCE_CLASS_BUTTON
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_CLASS_BUTTON", "I", AccessFlags = 25)]
-				public const int SOURCE_CLASS_BUTTON = 1;
-				/// <java-name>
-				/// SOURCE_CLASS_POINTER
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_CLASS_POINTER", "I", AccessFlags = 25)]
-				public const int SOURCE_CLASS_POINTER = 2;
-				/// <java-name>
-				/// SOURCE_CLASS_TRACKBALL
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_CLASS_TRACKBALL", "I", AccessFlags = 25)]
-				public const int SOURCE_CLASS_TRACKBALL = 4;
-				/// <java-name>
-				/// SOURCE_CLASS_POSITION
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_CLASS_POSITION", "I", AccessFlags = 25)]
-				public const int SOURCE_CLASS_POSITION = 8;
-				/// <java-name>
-				/// SOURCE_CLASS_JOYSTICK
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_CLASS_JOYSTICK", "I", AccessFlags = 25)]
-				public const int SOURCE_CLASS_JOYSTICK = 16;
-				/// <java-name>
-				/// SOURCE_UNKNOWN
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_UNKNOWN", "I", AccessFlags = 25)]
-				public const int SOURCE_UNKNOWN = 0;
-				/// <java-name>
-				/// SOURCE_KEYBOARD
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_KEYBOARD", "I", AccessFlags = 25)]
-				public const int SOURCE_KEYBOARD = 257;
-				/// <java-name>
-				/// SOURCE_DPAD
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_DPAD", "I", AccessFlags = 25)]
-				public const int SOURCE_DPAD = 513;
-				/// <java-name>
-				/// SOURCE_GAMEPAD
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_GAMEPAD", "I", AccessFlags = 25)]
-				public const int SOURCE_GAMEPAD = 1025;
-				/// <java-name>
-				/// SOURCE_TOUCHSCREEN
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_TOUCHSCREEN", "I", AccessFlags = 25)]
-				public const int SOURCE_TOUCHSCREEN = 4098;
-				/// <java-name>
-				/// SOURCE_MOUSE
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_MOUSE", "I", AccessFlags = 25)]
-				public const int SOURCE_MOUSE = 8194;
-				/// <java-name>
-				/// SOURCE_STYLUS
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_STYLUS", "I", AccessFlags = 25)]
-				public const int SOURCE_STYLUS = 16386;
-				/// <java-name>
-				/// SOURCE_TRACKBALL
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_TRACKBALL", "I", AccessFlags = 25)]
-				public const int SOURCE_TRACKBALL = 65540;
-				/// <java-name>
-				/// SOURCE_TOUCHPAD
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_TOUCHPAD", "I", AccessFlags = 25)]
-				public const int SOURCE_TOUCHPAD = 1048584;
-				/// <java-name>
-				/// SOURCE_JOYSTICK
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_JOYSTICK", "I", AccessFlags = 25)]
-				public const int SOURCE_JOYSTICK = 16777232;
-				/// <java-name>
-				/// SOURCE_ANY
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_ANY", "I", AccessFlags = 25)]
-				public const int SOURCE_ANY = -256;
-				/// <java-name>
-				/// MOTION_RANGE_X
-				/// </java-name>
-				[Dot42.DexImport("MOTION_RANGE_X", "I", AccessFlags = 25)]
-				public const int MOTION_RANGE_X = 0;
-				/// <java-name>
-				/// MOTION_RANGE_Y
-				/// </java-name>
-				[Dot42.DexImport("MOTION_RANGE_Y", "I", AccessFlags = 25)]
-				public const int MOTION_RANGE_Y = 1;
-				/// <java-name>
-				/// MOTION_RANGE_PRESSURE
-				/// </java-name>
-				[Dot42.DexImport("MOTION_RANGE_PRESSURE", "I", AccessFlags = 25)]
-				public const int MOTION_RANGE_PRESSURE = 2;
-				/// <java-name>
-				/// MOTION_RANGE_SIZE
-				/// </java-name>
-				[Dot42.DexImport("MOTION_RANGE_SIZE", "I", AccessFlags = 25)]
-				public const int MOTION_RANGE_SIZE = 3;
-				/// <java-name>
-				/// MOTION_RANGE_TOUCH_MAJOR
-				/// </java-name>
-				[Dot42.DexImport("MOTION_RANGE_TOUCH_MAJOR", "I", AccessFlags = 25)]
-				public const int MOTION_RANGE_TOUCH_MAJOR = 4;
-				/// <java-name>
-				/// MOTION_RANGE_TOUCH_MINOR
-				/// </java-name>
-				[Dot42.DexImport("MOTION_RANGE_TOUCH_MINOR", "I", AccessFlags = 25)]
-				public const int MOTION_RANGE_TOUCH_MINOR = 5;
-				/// <java-name>
-				/// MOTION_RANGE_TOOL_MAJOR
-				/// </java-name>
-				[Dot42.DexImport("MOTION_RANGE_TOOL_MAJOR", "I", AccessFlags = 25)]
-				public const int MOTION_RANGE_TOOL_MAJOR = 6;
-				/// <java-name>
-				/// MOTION_RANGE_TOOL_MINOR
-				/// </java-name>
-				[Dot42.DexImport("MOTION_RANGE_TOOL_MINOR", "I", AccessFlags = 25)]
-				public const int MOTION_RANGE_TOOL_MINOR = 7;
-				/// <java-name>
-				/// MOTION_RANGE_ORIENTATION
-				/// </java-name>
-				[Dot42.DexImport("MOTION_RANGE_ORIENTATION", "I", AccessFlags = 25)]
-				public const int MOTION_RANGE_ORIENTATION = 8;
-				/// <java-name>
-				/// KEYBOARD_TYPE_NONE
-				/// </java-name>
-				[Dot42.DexImport("KEYBOARD_TYPE_NONE", "I", AccessFlags = 25)]
-				public const int KEYBOARD_TYPE_NONE = 0;
-				/// <java-name>
-				/// KEYBOARD_TYPE_NON_ALPHABETIC
-				/// </java-name>
-				[Dot42.DexImport("KEYBOARD_TYPE_NON_ALPHABETIC", "I", AccessFlags = 25)]
-				public const int KEYBOARD_TYPE_NON_ALPHABETIC = 1;
-				/// <java-name>
-				/// KEYBOARD_TYPE_ALPHABETIC
-				/// </java-name>
-				[Dot42.DexImport("KEYBOARD_TYPE_ALPHABETIC", "I", AccessFlags = 25)]
-				public const int KEYBOARD_TYPE_ALPHABETIC = 2;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.InputDevice> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal InputDevice() /* MethodBuilder.Create */ 
+				internal VelocityTracker() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getDevice
+				/// obtain
 				/// </java-name>
-				[Dot42.DexImport("getDevice", "(I)Landroid/view/InputDevice;", AccessFlags = 9)]
-				public static global::Android.View.InputDevice GetDevice(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("obtain", "()Landroid/view/VelocityTracker;", AccessFlags = 9)]
+				public static global::Android.View.VelocityTracker Obtain() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.InputDevice);
+						return default(global::Android.View.VelocityTracker);
 				}
 
 				/// <java-name>
-				/// getDeviceIds
+				/// recycle
 				/// </java-name>
-				[Dot42.DexImport("getDeviceIds", "()[I", AccessFlags = 9)]
-				public static int[] GetDeviceIds() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
+				public void Recycle() /* MethodBuilder.Create */ 
 				{
-						return default(int[]);
 				}
 
 				/// <java-name>
-				/// getId
+				/// finalize
 				/// </java-name>
-				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-				public int GetId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSources
-				/// </java-name>
-				[Dot42.DexImport("getSources", "()I", AccessFlags = 1)]
-				public int GetSources() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getKeyboardType
-				/// </java-name>
-				[Dot42.DexImport("getKeyboardType", "()I", AccessFlags = 1)]
-				public int GetKeyboardType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getKeyCharacterMap
-				/// </java-name>
-				[Dot42.DexImport("getKeyCharacterMap", "()Landroid/view/KeyCharacterMap;", AccessFlags = 1)]
-				public global::Android.View.KeyCharacterMap GetKeyCharacterMap() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.KeyCharacterMap);
-				}
-
-				/// <java-name>
-				/// getMotionRange
-				/// </java-name>
-				[Dot42.DexImport("getMotionRange", "(I)Landroid/view/InputDevice$MotionRange;", AccessFlags = 1)]
-				public global::Android.View.InputDevice.MotionRange GetMotionRange(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.InputDevice.MotionRange);
-				}
-
-				/// <java-name>
-				/// getMotionRange
-				/// </java-name>
-				[Dot42.DexImport("getMotionRange", "(II)Landroid/view/InputDevice$MotionRange;", AccessFlags = 1)]
-				public global::Android.View.InputDevice.MotionRange GetMotionRange(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.InputDevice.MotionRange);
-				}
-
-				/// <java-name>
-				/// getMotionRanges
-				/// </java-name>
-				[Dot42.DexImport("getMotionRanges", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/InputDevice$MotionRange;>;")]
-				public global::Java.Util.IList<global::Android.View.InputDevice.MotionRange> GetMotionRanges() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.View.InputDevice.MotionRange>);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDeviceIds
-				/// </java-name>
-				public static int[] DeviceIds
-				{
-				[Dot42.DexImport("getDeviceIds", "()[I", AccessFlags = 9)]
-						get{ return GetDeviceIds(); }
-				}
-
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				public int Id
-				{
-				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-						get{ return GetId(); }
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				public string Name
-				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				}
-
-				/// <java-name>
-				/// getSources
-				/// </java-name>
-				public int Sources
-				{
-				[Dot42.DexImport("getSources", "()I", AccessFlags = 1)]
-						get{ return GetSources(); }
-				}
-
-				/// <java-name>
-				/// getKeyboardType
-				/// </java-name>
-				public int KeyboardType
-				{
-				[Dot42.DexImport("getKeyboardType", "()I", AccessFlags = 1)]
-						get{ return GetKeyboardType(); }
-				}
-
-				/// <java-name>
-				/// getKeyCharacterMap
-				/// </java-name>
-				public global::Android.View.KeyCharacterMap KeyCharacterMap
-				{
-				[Dot42.DexImport("getKeyCharacterMap", "()Landroid/view/KeyCharacterMap;", AccessFlags = 1)]
-						get{ return GetKeyCharacterMap(); }
-				}
-
-				/// <java-name>
-				/// getMotionRanges
-				/// </java-name>
-				public global::Java.Util.IList<global::Android.View.InputDevice.MotionRange> MotionRanges
-				{
-				[Dot42.DexImport("getMotionRanges", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/InputDevice$MotionRange;>;")]
-						get{ return GetMotionRanges(); }
-				}
-
-				/// <java-name>
-				/// android/view/InputDevice$MotionRange
-				/// </java-name>
-				[Dot42.DexImport("android/view/InputDevice$MotionRange", AccessFlags = 25)]
-				public sealed partial class MotionRange
- /* scope: __dot42__ */ 
-				{
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal MotionRange() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getAxis
-						/// </java-name>
-						[Dot42.DexImport("getAxis", "()I", AccessFlags = 1)]
-						public int GetAxis() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getSource
-						/// </java-name>
-						[Dot42.DexImport("getSource", "()I", AccessFlags = 1)]
-						public int GetSource() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getMin
-						/// </java-name>
-						[Dot42.DexImport("getMin", "()F", AccessFlags = 1)]
-						public float GetMin() /* MethodBuilder.Create */ 
-						{
-								return default(float);
-						}
-
-						/// <java-name>
-						/// getMax
-						/// </java-name>
-						[Dot42.DexImport("getMax", "()F", AccessFlags = 1)]
-						public float GetMax() /* MethodBuilder.Create */ 
-						{
-								return default(float);
-						}
-
-						/// <java-name>
-						/// getRange
-						/// </java-name>
-						[Dot42.DexImport("getRange", "()F", AccessFlags = 1)]
-						public float GetRange() /* MethodBuilder.Create */ 
-						{
-								return default(float);
-						}
-
-						/// <java-name>
-						/// getFlat
-						/// </java-name>
-						[Dot42.DexImport("getFlat", "()F", AccessFlags = 1)]
-						public float GetFlat() /* MethodBuilder.Create */ 
-						{
-								return default(float);
-						}
-
-						/// <java-name>
-						/// getFuzz
-						/// </java-name>
-						[Dot42.DexImport("getFuzz", "()F", AccessFlags = 1)]
-						public float GetFuzz() /* MethodBuilder.Create */ 
-						{
-								return default(float);
-						}
-
-						/// <java-name>
-						/// getAxis
-						/// </java-name>
-						public int Axis
-						{
-						[Dot42.DexImport("getAxis", "()I", AccessFlags = 1)]
-								get{ return GetAxis(); }
-						}
-
-						/// <java-name>
-						/// getSource
-						/// </java-name>
-						public int Source
-						{
-						[Dot42.DexImport("getSource", "()I", AccessFlags = 1)]
-								get{ return GetSource(); }
-						}
-
-						/// <java-name>
-						/// getMin
-						/// </java-name>
-						public float Min
-						{
-						[Dot42.DexImport("getMin", "()F", AccessFlags = 1)]
-								get{ return GetMin(); }
-						}
-
-						/// <java-name>
-						/// getMax
-						/// </java-name>
-						public float Max
-						{
-						[Dot42.DexImport("getMax", "()F", AccessFlags = 1)]
-								get{ return GetMax(); }
-						}
-
-						/// <java-name>
-						/// getRange
-						/// </java-name>
-						public float Range
-						{
-						[Dot42.DexImport("getRange", "()F", AccessFlags = 1)]
-								get{ return GetRange(); }
-						}
-
-						/// <java-name>
-						/// getFlat
-						/// </java-name>
-						public float Flat
-						{
-						[Dot42.DexImport("getFlat", "()F", AccessFlags = 1)]
-								get{ return GetFlat(); }
-						}
-
-						/// <java-name>
-						/// getFuzz
-						/// </java-name>
-						public float Fuzz
-						{
-						[Dot42.DexImport("getFuzz", "()F", AccessFlags = 1)]
-								get{ return GetFuzz(); }
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/ViewParent
-		/// </java-name>
-		[Dot42.DexImport("android/view/ViewParent", AccessFlags = 1537)]
-		public partial interface IViewParent
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// requestLayout
-				/// </java-name>
-				[Dot42.DexImport("requestLayout", "()V", AccessFlags = 1025)]
-				void RequestLayout() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isLayoutRequested
-				/// </java-name>
-				[Dot42.DexImport("isLayoutRequested", "()Z", AccessFlags = 1025)]
-				bool IsLayoutRequested() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// requestTransparentRegion
-				/// </java-name>
-				[Dot42.DexImport("requestTransparentRegion", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				void RequestTransparentRegion(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// invalidateChild
-				/// </java-name>
-				[Dot42.DexImport("invalidateChild", "(Landroid/view/View;Landroid/graphics/Rect;)V", AccessFlags = 1025)]
-				void InvalidateChild(global::Android.View.View view, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// invalidateChildInParent
-				/// </java-name>
-				[Dot42.DexImport("invalidateChildInParent", "([ILandroid/graphics/Rect;)Landroid/view/ViewParent;", AccessFlags = 1025)]
-				global::Android.View.IViewParent InvalidateChildInParent(int[] int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getParent
-				/// </java-name>
-				[Dot42.DexImport("getParent", "()Landroid/view/ViewParent;", AccessFlags = 1025)]
-				global::Android.View.IViewParent GetParent() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// requestChildFocus
-				/// </java-name>
-				[Dot42.DexImport("requestChildFocus", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1025)]
-				void RequestChildFocus(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// recomputeViewAttributes
-				/// </java-name>
-				[Dot42.DexImport("recomputeViewAttributes", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				void RecomputeViewAttributes(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// clearChildFocus
-				/// </java-name>
-				[Dot42.DexImport("clearChildFocus", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				void ClearChildFocus(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getChildVisibleRect
-				/// </java-name>
-				[Dot42.DexImport("getChildVisibleRect", "(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Point;)Z", AccessFlags = 1025)]
-				bool GetChildVisibleRect(global::Android.View.View view, global::Android.Graphics.Rect rect, global::Android.Graphics.Point point) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// focusSearch
-				/// </java-name>
-				[Dot42.DexImport("focusSearch", "(Landroid/view/View;I)Landroid/view/View;", AccessFlags = 1025)]
-				global::Android.View.View FocusSearch(global::Android.View.View view, int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// bringChildToFront
-				/// </java-name>
-				[Dot42.DexImport("bringChildToFront", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				void BringChildToFront(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// focusableViewAvailable
-				/// </java-name>
-				[Dot42.DexImport("focusableViewAvailable", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				void FocusableViewAvailable(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// showContextMenuForChild
-				/// </java-name>
-				[Dot42.DexImport("showContextMenuForChild", "(Landroid/view/View;)Z", AccessFlags = 1025)]
-				bool ShowContextMenuForChild(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// createContextMenu
-				/// </java-name>
-				[Dot42.DexImport("createContextMenu", "(Landroid/view/ContextMenu;)V", AccessFlags = 1025)]
-				void CreateContextMenu(global::Android.View.IContextMenu contextMenu) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// startActionModeForChild
-				/// </java-name>
-				[Dot42.DexImport("startActionModeForChild", "(Landroid/view/View;Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;", AccessFlags = 1025)]
-				global::Android.View.ActionMode StartActionModeForChild(global::Android.View.View view, global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// childDrawableStateChanged
-				/// </java-name>
-				[Dot42.DexImport("childDrawableStateChanged", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				void ChildDrawableStateChanged(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// requestDisallowInterceptTouchEvent
-				/// </java-name>
-				[Dot42.DexImport("requestDisallowInterceptTouchEvent", "(Z)V", AccessFlags = 1025)]
-				void RequestDisallowInterceptTouchEvent(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// requestChildRectangleOnScreen
-				/// </java-name>
-				[Dot42.DexImport("requestChildRectangleOnScreen", "(Landroid/view/View;Landroid/graphics/Rect;Z)Z", AccessFlags = 1025)]
-				bool RequestChildRectangleOnScreen(global::Android.View.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// requestSendAccessibilityEvent
-				/// </java-name>
-				[Dot42.DexImport("requestSendAccessibilityEvent", "(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1025)]
-				bool RequestSendAccessibilityEvent(global::Android.View.View view, global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/view/ActionProvider
-		/// </java-name>
-		[Dot42.DexImport("android/view/ActionProvider", AccessFlags = 1057)]
-		public abstract partial class ActionProvider
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public ActionProvider(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCreateActionView
-				/// </java-name>
-				[Dot42.DexImport("onCreateActionView", "()Landroid/view/View;", AccessFlags = 1025)]
-				public abstract global::Android.View.View OnCreateActionView() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onPerformDefaultAction
-				/// </java-name>
-				[Dot42.DexImport("onPerformDefaultAction", "()Z", AccessFlags = 1)]
-				public virtual bool OnPerformDefaultAction() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasSubMenu
-				/// </java-name>
-				[Dot42.DexImport("hasSubMenu", "()Z", AccessFlags = 1)]
-				public virtual bool HasSubMenu() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// onPrepareSubMenu
-				/// </java-name>
-				[Dot42.DexImport("onPrepareSubMenu", "(Landroid/view/SubMenu;)V", AccessFlags = 1)]
-				public virtual void OnPrepareSubMenu(global::Android.View.ISubMenu subMenu) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ActionProvider() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/SubMenu
-		/// </java-name>
-		[Dot42.DexImport("android/view/SubMenu", AccessFlags = 1537)]
-		public partial interface ISubMenu : global::Android.View.IMenu
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// setHeaderTitle
-				/// </java-name>
-				[Dot42.DexImport("setHeaderTitle", "(I)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu SetHeaderTitle(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setHeaderTitle
-				/// </java-name>
-				[Dot42.DexImport("setHeaderTitle", "(Ljava/lang/CharSequence;)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu SetHeaderTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setHeaderIcon
-				/// </java-name>
-				[Dot42.DexImport("setHeaderIcon", "(I)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu SetHeaderIcon(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setHeaderIcon
-				/// </java-name>
-				[Dot42.DexImport("setHeaderIcon", "(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu SetHeaderIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setHeaderView
-				/// </java-name>
-				[Dot42.DexImport("setHeaderView", "(Landroid/view/View;)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu SetHeaderView(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// clearHeader
-				/// </java-name>
-				[Dot42.DexImport("clearHeader", "()V", AccessFlags = 1025)]
-				void ClearHeader() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setIcon
-				/// </java-name>
-				[Dot42.DexImport("setIcon", "(I)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu SetIcon(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setIcon
-				/// </java-name>
-				[Dot42.DexImport("setIcon", "(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu SetIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getItem
-				/// </java-name>
-				[Dot42.DexImport("getItem", "()Landroid/view/MenuItem;", AccessFlags = 1025)]
-				global::Android.View.IMenuItem GetItem() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/view/Window
-		/// </java-name>
-		[Dot42.DexImport("android/view/Window", AccessFlags = 1057)]
-		public abstract partial class Window
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// FEATURE_OPTIONS_PANEL
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_OPTIONS_PANEL", "I", AccessFlags = 25)]
-				public const int FEATURE_OPTIONS_PANEL = 0;
-				/// <java-name>
-				/// FEATURE_NO_TITLE
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_NO_TITLE", "I", AccessFlags = 25)]
-				public const int FEATURE_NO_TITLE = 1;
-				/// <java-name>
-				/// FEATURE_PROGRESS
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_PROGRESS", "I", AccessFlags = 25)]
-				public const int FEATURE_PROGRESS = 2;
-				/// <java-name>
-				/// FEATURE_LEFT_ICON
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_LEFT_ICON", "I", AccessFlags = 25)]
-				public const int FEATURE_LEFT_ICON = 3;
-				/// <java-name>
-				/// FEATURE_RIGHT_ICON
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_RIGHT_ICON", "I", AccessFlags = 25)]
-				public const int FEATURE_RIGHT_ICON = 4;
-				/// <java-name>
-				/// FEATURE_INDETERMINATE_PROGRESS
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_INDETERMINATE_PROGRESS", "I", AccessFlags = 25)]
-				public const int FEATURE_INDETERMINATE_PROGRESS = 5;
-				/// <java-name>
-				/// FEATURE_CONTEXT_MENU
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_CONTEXT_MENU", "I", AccessFlags = 25)]
-				public const int FEATURE_CONTEXT_MENU = 6;
-				/// <java-name>
-				/// FEATURE_CUSTOM_TITLE
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_CUSTOM_TITLE", "I", AccessFlags = 25)]
-				public const int FEATURE_CUSTOM_TITLE = 7;
-				/// <java-name>
-				/// FEATURE_ACTION_BAR
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_ACTION_BAR", "I", AccessFlags = 25)]
-				public const int FEATURE_ACTION_BAR = 8;
-				/// <java-name>
-				/// FEATURE_ACTION_BAR_OVERLAY
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_ACTION_BAR_OVERLAY", "I", AccessFlags = 25)]
-				public const int FEATURE_ACTION_BAR_OVERLAY = 9;
-				/// <java-name>
-				/// FEATURE_ACTION_MODE_OVERLAY
-				/// </java-name>
-				[Dot42.DexImport("FEATURE_ACTION_MODE_OVERLAY", "I", AccessFlags = 25)]
-				public const int FEATURE_ACTION_MODE_OVERLAY = 10;
-				/// <java-name>
-				/// PROGRESS_VISIBILITY_ON
-				/// </java-name>
-				[Dot42.DexImport("PROGRESS_VISIBILITY_ON", "I", AccessFlags = 25)]
-				public const int PROGRESS_VISIBILITY_ON = -1;
-				/// <java-name>
-				/// PROGRESS_VISIBILITY_OFF
-				/// </java-name>
-				[Dot42.DexImport("PROGRESS_VISIBILITY_OFF", "I", AccessFlags = 25)]
-				public const int PROGRESS_VISIBILITY_OFF = -2;
-				/// <java-name>
-				/// PROGRESS_INDETERMINATE_ON
-				/// </java-name>
-				[Dot42.DexImport("PROGRESS_INDETERMINATE_ON", "I", AccessFlags = 25)]
-				public const int PROGRESS_INDETERMINATE_ON = -3;
-				/// <java-name>
-				/// PROGRESS_INDETERMINATE_OFF
-				/// </java-name>
-				[Dot42.DexImport("PROGRESS_INDETERMINATE_OFF", "I", AccessFlags = 25)]
-				public const int PROGRESS_INDETERMINATE_OFF = -4;
-				/// <java-name>
-				/// PROGRESS_START
-				/// </java-name>
-				[Dot42.DexImport("PROGRESS_START", "I", AccessFlags = 25)]
-				public const int PROGRESS_START = 0;
-				/// <java-name>
-				/// PROGRESS_END
-				/// </java-name>
-				[Dot42.DexImport("PROGRESS_END", "I", AccessFlags = 25)]
-				public const int PROGRESS_END = 10000;
-				/// <java-name>
-				/// PROGRESS_SECONDARY_START
-				/// </java-name>
-				[Dot42.DexImport("PROGRESS_SECONDARY_START", "I", AccessFlags = 25)]
-				public const int PROGRESS_SECONDARY_START = 20000;
-				/// <java-name>
-				/// PROGRESS_SECONDARY_END
-				/// </java-name>
-				[Dot42.DexImport("PROGRESS_SECONDARY_END", "I", AccessFlags = 25)]
-				public const int PROGRESS_SECONDARY_END = 30000;
-				/// <java-name>
-				/// DEFAULT_FEATURES
-				/// </java-name>
-				[Dot42.DexImport("DEFAULT_FEATURES", "I", AccessFlags = 28)]
-				protected internal const int DEFAULT_FEATURES = 65;
-				/// <java-name>
-				/// ID_ANDROID_CONTENT
-				/// </java-name>
-				[Dot42.DexImport("ID_ANDROID_CONTENT", "I", AccessFlags = 25)]
-				public const int ID_ANDROID_CONTENT = 16908290;
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public Window(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContext
-				/// </java-name>
-				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 17)]
-				public global::Android.Content.Context GetContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Context);
-				}
-
-				/// <java-name>
-				/// getWindowStyle
-				/// </java-name>
-				[Dot42.DexImport("getWindowStyle", "()Landroid/content/res/TypedArray;", AccessFlags = 17)]
-				public global::Android.Content.Res.TypedArray GetWindowStyle() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.TypedArray);
-				}
-
-				/// <java-name>
-				/// setContainer
-				/// </java-name>
-				[Dot42.DexImport("setContainer", "(Landroid/view/Window;)V", AccessFlags = 1)]
-				public virtual void SetContainer(global::Android.View.Window window) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContainer
-				/// </java-name>
-				[Dot42.DexImport("getContainer", "()Landroid/view/Window;", AccessFlags = 17)]
-				public global::Android.View.Window GetContainer() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.Window);
-				}
-
-				/// <java-name>
-				/// hasChildren
-				/// </java-name>
-				[Dot42.DexImport("hasChildren", "()Z", AccessFlags = 17)]
-				public bool HasChildren() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setWindowManager
-				/// </java-name>
-				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetWindowManager(global::Android.View.IWindowManager windowManager, global::Android.Os.IBinder binder, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setWindowManager
-				/// </java-name>
-				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;Z)V", AccessFlags = 1)]
-				public virtual void SetWindowManager(global::Android.View.IWindowManager windowManager, global::Android.Os.IBinder binder, string @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getWindowManager
-				/// </java-name>
-				[Dot42.DexImport("getWindowManager", "()Landroid/view/WindowManager;", AccessFlags = 1)]
-				public virtual global::Android.View.IWindowManager GetWindowManager() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.IWindowManager);
-				}
-
-				/// <java-name>
-				/// setCallback
-				/// </java-name>
-				[Dot42.DexImport("setCallback", "(Landroid/view/Window$Callback;)V", AccessFlags = 1)]
-				public virtual void SetCallback(global::Android.View.Window.ICallback callback) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCallback
-				/// </java-name>
-				[Dot42.DexImport("getCallback", "()Landroid/view/Window$Callback;", AccessFlags = 17)]
-				public global::Android.View.Window.ICallback GetCallback() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.Window.ICallback);
-				}
-
-				/// <java-name>
-				/// takeSurface
-				/// </java-name>
-				[Dot42.DexImport("takeSurface", "(Landroid/view/SurfaceHolder$Callback2;)V", AccessFlags = 1025)]
-				public abstract void TakeSurface(global::Android.View.ISurfaceHolder_ICallback2 surfaceHolder_ICallback2) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// takeInputQueue
-				/// </java-name>
-				[Dot42.DexImport("takeInputQueue", "(Landroid/view/InputQueue$Callback;)V", AccessFlags = 1025)]
-				public abstract void TakeInputQueue(global::Android.View.InputQueue.ICallback callback) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isFloating
-				/// </java-name>
-				[Dot42.DexImport("isFloating", "()Z", AccessFlags = 1025)]
-				public abstract bool IsFloating() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setLayout
-				/// </java-name>
-				[Dot42.DexImport("setLayout", "(II)V", AccessFlags = 1)]
-				public virtual void SetLayout(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setGravity
-				/// </java-name>
-				[Dot42.DexImport("setGravity", "(I)V", AccessFlags = 1)]
-				public virtual void SetGravity(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setType
-				/// </java-name>
-				[Dot42.DexImport("setType", "(I)V", AccessFlags = 1)]
-				public virtual void SetType(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFormat
-				/// </java-name>
-				[Dot42.DexImport("setFormat", "(I)V", AccessFlags = 1)]
-				public virtual void SetFormat(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setWindowAnimations
-				/// </java-name>
-				[Dot42.DexImport("setWindowAnimations", "(I)V", AccessFlags = 1)]
-				public virtual void SetWindowAnimations(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSoftInputMode
-				/// </java-name>
-				[Dot42.DexImport("setSoftInputMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetSoftInputMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addFlags
-				/// </java-name>
-				[Dot42.DexImport("addFlags", "(I)V", AccessFlags = 1)]
-				public virtual void AddFlags(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clearFlags
-				/// </java-name>
-				[Dot42.DexImport("clearFlags", "(I)V", AccessFlags = 1)]
-				public virtual void ClearFlags(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFlags
-				/// </java-name>
-				[Dot42.DexImport("setFlags", "(II)V", AccessFlags = 1)]
-				public virtual void SetFlags(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDimAmount
-				/// </java-name>
-				[Dot42.DexImport("setDimAmount", "(F)V", AccessFlags = 1)]
-				public virtual void SetDimAmount(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setAttributes
-				/// </java-name>
-				[Dot42.DexImport("setAttributes", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void SetAttributes(global::Android.View.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAttributes
-				/// </java-name>
-				[Dot42.DexImport("getAttributes", "()Landroid/view/WindowManager$LayoutParams;", AccessFlags = 17)]
-				public global::Android.View.IWindowManager_LayoutParams GetAttributes() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.IWindowManager_LayoutParams);
-				}
-
-				/// <java-name>
-				/// getForcedWindowFlags
-				/// </java-name>
-				[Dot42.DexImport("getForcedWindowFlags", "()I", AccessFlags = 20)]
-				protected internal int GetForcedWindowFlags() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// hasSoftInputMode
-				/// </java-name>
-				[Dot42.DexImport("hasSoftInputMode", "()Z", AccessFlags = 20)]
-				protected internal bool HasSoftInputMode() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// requestFeature
-				/// </java-name>
-				[Dot42.DexImport("requestFeature", "(I)Z", AccessFlags = 1)]
-				public virtual bool RequestFeature(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// makeActive
-				/// </java-name>
-				[Dot42.DexImport("makeActive", "()V", AccessFlags = 17)]
-				public void MakeActive() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isActive
-				/// </java-name>
-				[Dot42.DexImport("isActive", "()Z", AccessFlags = 17)]
-				public bool IsActive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// findViewById
-				/// </java-name>
-				[Dot42.DexImport("findViewById", "(I)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View FindViewById(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// setContentView
-				/// </java-name>
-				[Dot42.DexImport("setContentView", "(I)V", AccessFlags = 1025)]
-				public abstract void SetContentView(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setContentView
-				/// </java-name>
-				[Dot42.DexImport("setContentView", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				public abstract void SetContentView(global::Android.View.View view) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setContentView
-				/// </java-name>
-				[Dot42.DexImport("setContentView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1025)]
-				public abstract void SetContentView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// addContentView
-				/// </java-name>
-				[Dot42.DexImport("addContentView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1025)]
-				public abstract void AddContentView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCurrentFocus
-				/// </java-name>
-				[Dot42.DexImport("getCurrentFocus", "()Landroid/view/View;", AccessFlags = 1025)]
-				public abstract global::Android.View.View GetCurrentFocus() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLayoutInflater
-				/// </java-name>
-				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1025)]
-				public abstract global::Android.View.LayoutInflater GetLayoutInflater() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setTitle
-				/// </java-name>
-				[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
-				public abstract void SetTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setTitleColor
-				/// </java-name>
-				[Dot42.DexImport("setTitleColor", "(I)V", AccessFlags = 1025)]
-				public abstract void SetTitleColor(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// openPanel
-				/// </java-name>
-				[Dot42.DexImport("openPanel", "(ILandroid/view/KeyEvent;)V", AccessFlags = 1025)]
-				public abstract void OpenPanel(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// closePanel
-				/// </java-name>
-				[Dot42.DexImport("closePanel", "(I)V", AccessFlags = 1025)]
-				public abstract void ClosePanel(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// togglePanel
-				/// </java-name>
-				[Dot42.DexImport("togglePanel", "(ILandroid/view/KeyEvent;)V", AccessFlags = 1025)]
-				public abstract void TogglePanel(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// invalidatePanelMenu
-				/// </java-name>
-				[Dot42.DexImport("invalidatePanelMenu", "(I)V", AccessFlags = 1025)]
-				public abstract void InvalidatePanelMenu(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// performPanelShortcut
-				/// </java-name>
-				[Dot42.DexImport("performPanelShortcut", "(IILandroid/view/KeyEvent;I)Z", AccessFlags = 1025)]
-				public abstract bool PerformPanelShortcut(int int32, int int321, global::Android.View.KeyEvent keyEvent, int int322) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// performPanelIdentifierAction
-				/// </java-name>
-				[Dot42.DexImport("performPanelIdentifierAction", "(III)Z", AccessFlags = 1025)]
-				public abstract bool PerformPanelIdentifierAction(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// closeAllPanels
-				/// </java-name>
-				[Dot42.DexImport("closeAllPanels", "()V", AccessFlags = 1025)]
-				public abstract void CloseAllPanels() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// performContextMenuIdentifierAction
-				/// </java-name>
-				[Dot42.DexImport("performContextMenuIdentifierAction", "(II)Z", AccessFlags = 1025)]
-				public abstract bool PerformContextMenuIdentifierAction(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onConfigurationChanged
-				/// </java-name>
-				[Dot42.DexImport("onConfigurationChanged", "(Landroid/content/res/Configuration;)V", AccessFlags = 1025)]
-				public abstract void OnConfigurationChanged(global::Android.Content.Res.Configuration configuration) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setBackgroundDrawableResource
-				/// </java-name>
-				[Dot42.DexImport("setBackgroundDrawableResource", "(I)V", AccessFlags = 1)]
-				public virtual void SetBackgroundDrawableResource(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setBackgroundDrawable
-				/// </java-name>
-				[Dot42.DexImport("setBackgroundDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
-				public abstract void SetBackgroundDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFeatureDrawableResource
-				/// </java-name>
-				[Dot42.DexImport("setFeatureDrawableResource", "(II)V", AccessFlags = 1025)]
-				public abstract void SetFeatureDrawableResource(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFeatureDrawableUri
-				/// </java-name>
-				[Dot42.DexImport("setFeatureDrawableUri", "(ILandroid/net/Uri;)V", AccessFlags = 1025)]
-				public abstract void SetFeatureDrawableUri(int int32, global::Android.Net.Uri uri) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFeatureDrawable
-				/// </java-name>
-				[Dot42.DexImport("setFeatureDrawable", "(ILandroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
-				public abstract void SetFeatureDrawable(int int32, global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFeatureDrawableAlpha
-				/// </java-name>
-				[Dot42.DexImport("setFeatureDrawableAlpha", "(II)V", AccessFlags = 1025)]
-				public abstract void SetFeatureDrawableAlpha(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFeatureInt
-				/// </java-name>
-				[Dot42.DexImport("setFeatureInt", "(II)V", AccessFlags = 1025)]
-				public abstract void SetFeatureInt(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// takeKeyEvents
-				/// </java-name>
-				[Dot42.DexImport("takeKeyEvents", "(Z)V", AccessFlags = 1025)]
-				public abstract void TakeKeyEvents(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// superDispatchKeyEvent
-				/// </java-name>
-				[Dot42.DexImport("superDispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public abstract bool SuperDispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// superDispatchKeyShortcutEvent
-				/// </java-name>
-				[Dot42.DexImport("superDispatchKeyShortcutEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public abstract bool SuperDispatchKeyShortcutEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// superDispatchTouchEvent
-				/// </java-name>
-				[Dot42.DexImport("superDispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				public abstract bool SuperDispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// superDispatchTrackballEvent
-				/// </java-name>
-				[Dot42.DexImport("superDispatchTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				public abstract bool SuperDispatchTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// superDispatchGenericMotionEvent
-				/// </java-name>
-				[Dot42.DexImport("superDispatchGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				public abstract bool SuperDispatchGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDecorView
-				/// </java-name>
-				[Dot42.DexImport("getDecorView", "()Landroid/view/View;", AccessFlags = 1025)]
-				public abstract global::Android.View.View GetDecorView() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// peekDecorView
-				/// </java-name>
-				[Dot42.DexImport("peekDecorView", "()Landroid/view/View;", AccessFlags = 1025)]
-				public abstract global::Android.View.View PeekDecorView() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// saveHierarchyState
-				/// </java-name>
-				[Dot42.DexImport("saveHierarchyState", "()Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle SaveHierarchyState() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// restoreHierarchyState
-				/// </java-name>
-				[Dot42.DexImport("restoreHierarchyState", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
-				public abstract void RestoreHierarchyState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onActive
-				/// </java-name>
-				[Dot42.DexImport("onActive", "()V", AccessFlags = 1028)]
-				protected internal abstract void OnActive() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFeatures
-				/// </java-name>
-				[Dot42.DexImport("getFeatures", "()I", AccessFlags = 20)]
-				protected internal int GetFeatures() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// hasFeature
-				/// </java-name>
-				[Dot42.DexImport("hasFeature", "(I)Z", AccessFlags = 1)]
-				public virtual bool HasFeature(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getLocalFeatures
-				/// </java-name>
-				[Dot42.DexImport("getLocalFeatures", "()I", AccessFlags = 20)]
-				protected internal int GetLocalFeatures() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDefaultWindowFormat
-				/// </java-name>
-				[Dot42.DexImport("setDefaultWindowFormat", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetDefaultWindowFormat(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setChildDrawable
-				/// </java-name>
-				[Dot42.DexImport("setChildDrawable", "(ILandroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
-				public abstract void SetChildDrawable(int int32, global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setChildInt
-				/// </java-name>
-				[Dot42.DexImport("setChildInt", "(II)V", AccessFlags = 1025)]
-				public abstract void SetChildInt(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isShortcutKey
-				/// </java-name>
-				[Dot42.DexImport("isShortcutKey", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public abstract bool IsShortcutKey(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setVolumeControlStream
-				/// </java-name>
-				[Dot42.DexImport("setVolumeControlStream", "(I)V", AccessFlags = 1025)]
-				public abstract void SetVolumeControlStream(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getVolumeControlStream
-				/// </java-name>
-				[Dot42.DexImport("getVolumeControlStream", "()I", AccessFlags = 1025)]
-				public abstract int GetVolumeControlStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setUiOptions
-				/// </java-name>
-				[Dot42.DexImport("setUiOptions", "(I)V", AccessFlags = 1)]
-				public virtual void SetUiOptions(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setUiOptions
-				/// </java-name>
-				[Dot42.DexImport("setUiOptions", "(II)V", AccessFlags = 1)]
-				public virtual void SetUiOptions(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Window() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContext
-				/// </java-name>
-				public global::Android.Content.Context Context
-				{
-				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 17)]
-						get{ return GetContext(); }
-				}
-
-				/// <java-name>
-				/// getWindowStyle
-				/// </java-name>
-				public global::Android.Content.Res.TypedArray WindowStyle
-				{
-				[Dot42.DexImport("getWindowStyle", "()Landroid/content/res/TypedArray;", AccessFlags = 17)]
-						get{ return GetWindowStyle(); }
-				}
-
-				/// <java-name>
-				/// getContainer
-				/// </java-name>
-				public global::Android.View.Window Container
-				{
-				[Dot42.DexImport("getContainer", "()Landroid/view/Window;", AccessFlags = 17)]
-						get{ return GetContainer(); }
-				[Dot42.DexImport("setContainer", "(Landroid/view/Window;)V", AccessFlags = 1)]
-						set{ SetContainer(value); }
-				}
-
-				/// <java-name>
-				/// getWindowManager
-				/// </java-name>
-				public global::Android.View.IWindowManager WindowManager
-				{
-				[Dot42.DexImport("getWindowManager", "()Landroid/view/WindowManager;", AccessFlags = 1)]
-						get{ return GetWindowManager(); }
-				}
-
-				/// <java-name>
-				/// getCallback
-				/// </java-name>
-				public global::Android.View.Window.ICallback Callback
-				{
-				[Dot42.DexImport("getCallback", "()Landroid/view/Window$Callback;", AccessFlags = 17)]
-						get{ return GetCallback(); }
-				[Dot42.DexImport("setCallback", "(Landroid/view/Window$Callback;)V", AccessFlags = 1)]
-						set{ SetCallback(value); }
-				}
-
-				/// <java-name>
-				/// getAttributes
-				/// </java-name>
-				public global::Android.View.IWindowManager_LayoutParams Attributes
-				{
-				[Dot42.DexImport("getAttributes", "()Landroid/view/WindowManager$LayoutParams;", AccessFlags = 17)]
-						get{ return GetAttributes(); }
-				[Dot42.DexImport("setAttributes", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
-						set{ SetAttributes(value); }
-				}
-
-				/// <java-name>
-				/// getForcedWindowFlags
-				/// </java-name>
-				protected internal int ForcedWindowFlags
-				{
-				[Dot42.DexImport("getForcedWindowFlags", "()I", AccessFlags = 20)]
-						get{ return GetForcedWindowFlags(); }
-				}
-
-				/// <java-name>
-				/// getCurrentFocus
-				/// </java-name>
-				public global::Android.View.View CurrentFocus
-				{
-				[Dot42.DexImport("getCurrentFocus", "()Landroid/view/View;", AccessFlags = 1025)]
-						get{ return GetCurrentFocus(); }
-				}
-
-				/// <java-name>
-				/// getLayoutInflater
-				/// </java-name>
-				public global::Android.View.LayoutInflater LayoutInflater
-				{
-				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1025)]
-						get{ return GetLayoutInflater(); }
-				}
-
-				/// <java-name>
-				/// getDecorView
-				/// </java-name>
-				public global::Android.View.View DecorView
-				{
-				[Dot42.DexImport("getDecorView", "()Landroid/view/View;", AccessFlags = 1025)]
-						get{ return GetDecorView(); }
-				}
-
-				/// <java-name>
-				/// getFeatures
-				/// </java-name>
-				protected internal int Features
-				{
-				[Dot42.DexImport("getFeatures", "()I", AccessFlags = 20)]
-						get{ return GetFeatures(); }
-				}
-
-				/// <java-name>
-				/// getLocalFeatures
-				/// </java-name>
-				protected internal int LocalFeatures
-				{
-				[Dot42.DexImport("getLocalFeatures", "()I", AccessFlags = 20)]
-						get{ return GetLocalFeatures(); }
-				}
-
-				/// <java-name>
-				/// getVolumeControlStream
-				/// </java-name>
-				public int VolumeControlStream
-				{
-				[Dot42.DexImport("getVolumeControlStream", "()I", AccessFlags = 1025)]
-						get{ return GetVolumeControlStream(); }
-				[Dot42.DexImport("setVolumeControlStream", "(I)V", AccessFlags = 1025)]
-						set{ SetVolumeControlStream(value); }
-				}
-
-				/// <java-name>
-				/// android/view/Window$Callback
-				/// </java-name>
-				[Dot42.DexImport("android/view/Window$Callback", AccessFlags = 1545)]
-				public partial interface ICallback
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// dispatchKeyEvent
-						/// </java-name>
-						[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-						bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// dispatchKeyShortcutEvent
-						/// </java-name>
-						[Dot42.DexImport("dispatchKeyShortcutEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-						bool DispatchKeyShortcutEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// dispatchTouchEvent
-						/// </java-name>
-						[Dot42.DexImport("dispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-						bool DispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// dispatchTrackballEvent
-						/// </java-name>
-						[Dot42.DexImport("dispatchTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-						bool DispatchTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// dispatchGenericMotionEvent
-						/// </java-name>
-						[Dot42.DexImport("dispatchGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-						bool DispatchGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// dispatchPopulateAccessibilityEvent
-						/// </java-name>
-						[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1025)]
-						bool DispatchPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onCreatePanelView
-						/// </java-name>
-						[Dot42.DexImport("onCreatePanelView", "(I)Landroid/view/View;", AccessFlags = 1025)]
-						global::Android.View.View OnCreatePanelView(int int32) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onCreatePanelMenu
-						/// </java-name>
-						[Dot42.DexImport("onCreatePanelMenu", "(ILandroid/view/Menu;)Z", AccessFlags = 1025)]
-						bool OnCreatePanelMenu(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onPreparePanel
-						/// </java-name>
-						[Dot42.DexImport("onPreparePanel", "(ILandroid/view/View;Landroid/view/Menu;)Z", AccessFlags = 1025)]
-						bool OnPreparePanel(int int32, global::Android.View.View view, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onMenuOpened
-						/// </java-name>
-						[Dot42.DexImport("onMenuOpened", "(ILandroid/view/Menu;)Z", AccessFlags = 1025)]
-						bool OnMenuOpened(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onMenuItemSelected
-						/// </java-name>
-						[Dot42.DexImport("onMenuItemSelected", "(ILandroid/view/MenuItem;)Z", AccessFlags = 1025)]
-						bool OnMenuItemSelected(int int32, global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onWindowAttributesChanged
-						/// </java-name>
-						[Dot42.DexImport("onWindowAttributesChanged", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1025)]
-						void OnWindowAttributesChanged(global::Android.View.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onContentChanged
-						/// </java-name>
-						[Dot42.DexImport("onContentChanged", "()V", AccessFlags = 1025)]
-						void OnContentChanged() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onWindowFocusChanged
-						/// </java-name>
-						[Dot42.DexImport("onWindowFocusChanged", "(Z)V", AccessFlags = 1025)]
-						void OnWindowFocusChanged(bool boolean) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onAttachedToWindow
-						/// </java-name>
-						[Dot42.DexImport("onAttachedToWindow", "()V", AccessFlags = 1025)]
-						void OnAttachedToWindow() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onDetachedFromWindow
-						/// </java-name>
-						[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 1025)]
-						void OnDetachedFromWindow() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onPanelClosed
-						/// </java-name>
-						[Dot42.DexImport("onPanelClosed", "(ILandroid/view/Menu;)V", AccessFlags = 1025)]
-						void OnPanelClosed(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onSearchRequested
-						/// </java-name>
-						[Dot42.DexImport("onSearchRequested", "()Z", AccessFlags = 1025)]
-						bool OnSearchRequested() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onWindowStartingActionMode
-						/// </java-name>
-						[Dot42.DexImport("onWindowStartingActionMode", "(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;", AccessFlags = 1025)]
-						global::Android.View.ActionMode OnWindowStartingActionMode(global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onActionModeStarted
-						/// </java-name>
-						[Dot42.DexImport("onActionModeStarted", "(Landroid/view/ActionMode;)V", AccessFlags = 1025)]
-						void OnActionModeStarted(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onActionModeFinished
-						/// </java-name>
-						[Dot42.DexImport("onActionModeFinished", "(Landroid/view/ActionMode;)V", AccessFlags = 1025)]
-						void OnActionModeFinished(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/view/Menu
-		/// </java-name>
-		[Dot42.DexImport("android/view/Menu", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IMenuConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// NONE
-				/// </java-name>
-				[Dot42.DexImport("NONE", "I", AccessFlags = 25)]
-				public const int NONE = 0;
-				/// <java-name>
-				/// FIRST
-				/// </java-name>
-				[Dot42.DexImport("FIRST", "I", AccessFlags = 25)]
-				public const int FIRST = 1;
-				/// <java-name>
-				/// CATEGORY_CONTAINER
-				/// </java-name>
-				[Dot42.DexImport("CATEGORY_CONTAINER", "I", AccessFlags = 25)]
-				public const int CATEGORY_CONTAINER = 65536;
-				/// <java-name>
-				/// CATEGORY_SYSTEM
-				/// </java-name>
-				[Dot42.DexImport("CATEGORY_SYSTEM", "I", AccessFlags = 25)]
-				public const int CATEGORY_SYSTEM = 131072;
-				/// <java-name>
-				/// CATEGORY_SECONDARY
-				/// </java-name>
-				[Dot42.DexImport("CATEGORY_SECONDARY", "I", AccessFlags = 25)]
-				public const int CATEGORY_SECONDARY = 196608;
-				/// <java-name>
-				/// CATEGORY_ALTERNATIVE
-				/// </java-name>
-				[Dot42.DexImport("CATEGORY_ALTERNATIVE", "I", AccessFlags = 25)]
-				public const int CATEGORY_ALTERNATIVE = 262144;
-				/// <java-name>
-				/// FLAG_APPEND_TO_GROUP
-				/// </java-name>
-				[Dot42.DexImport("FLAG_APPEND_TO_GROUP", "I", AccessFlags = 25)]
-				public const int FLAG_APPEND_TO_GROUP = 1;
-				/// <java-name>
-				/// FLAG_PERFORM_NO_CLOSE
-				/// </java-name>
-				[Dot42.DexImport("FLAG_PERFORM_NO_CLOSE", "I", AccessFlags = 25)]
-				public const int FLAG_PERFORM_NO_CLOSE = 1;
-				/// <java-name>
-				/// FLAG_ALWAYS_PERFORM_CLOSE
-				/// </java-name>
-				[Dot42.DexImport("FLAG_ALWAYS_PERFORM_CLOSE", "I", AccessFlags = 25)]
-				public const int FLAG_ALWAYS_PERFORM_CLOSE = 2;
-		}
-
-		/// <java-name>
-		/// android/view/Menu
-		/// </java-name>
-		[Dot42.DexImport("android/view/Menu", AccessFlags = 1537)]
-		public partial interface IMenu
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// add
-				/// </java-name>
-				[Dot42.DexImport("add", "(Ljava/lang/CharSequence;)Landroid/view/MenuItem;", AccessFlags = 1025)]
-				global::Android.View.IMenuItem Add(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// add
-				/// </java-name>
-				[Dot42.DexImport("add", "(I)Landroid/view/MenuItem;", AccessFlags = 1025)]
-				global::Android.View.IMenuItem Add(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// add
-				/// </java-name>
-				[Dot42.DexImport("add", "(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;", AccessFlags = 1025)]
-				global::Android.View.IMenuItem Add(int int32, int int321, int int322, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// add
-				/// </java-name>
-				[Dot42.DexImport("add", "(IIII)Landroid/view/MenuItem;", AccessFlags = 1025)]
-				global::Android.View.IMenuItem Add(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// addSubMenu
-				/// </java-name>
-				[Dot42.DexImport("addSubMenu", "(Ljava/lang/CharSequence;)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu AddSubMenu(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// addSubMenu
-				/// </java-name>
-				[Dot42.DexImport("addSubMenu", "(I)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu AddSubMenu(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// addSubMenu
-				/// </java-name>
-				[Dot42.DexImport("addSubMenu", "(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu AddSubMenu(int int32, int int321, int int322, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// addSubMenu
-				/// </java-name>
-				[Dot42.DexImport("addSubMenu", "(IIII)Landroid/view/SubMenu;", AccessFlags = 1025)]
-				global::Android.View.ISubMenu AddSubMenu(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// addIntentOptions
-				/// </java-name>
-				[Dot42.DexImport("addIntentOptions", "(IIILandroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Inte" +
-    "nt;I[Landroid/view/MenuItem;)I", AccessFlags = 1025)]
-				int AddIntentOptions(int int32, int int321, int int322, global::Android.Content.ComponentName componentName, global::Android.Content.Intent[] intent, global::Android.Content.Intent intent1, int int323, global::Android.View.IMenuItem[] menuItem) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// removeItem
-				/// </java-name>
-				[Dot42.DexImport("removeItem", "(I)V", AccessFlags = 1025)]
-				void RemoveItem(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// removeGroup
-				/// </java-name>
-				[Dot42.DexImport("removeGroup", "(I)V", AccessFlags = 1025)]
-				void RemoveGroup(int int32) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~VelocityTracker() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// clear
 				/// </java-name>
-				[Dot42.DexImport("clear", "()V", AccessFlags = 1025)]
-				void Clear() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setGroupCheckable
-				/// </java-name>
-				[Dot42.DexImport("setGroupCheckable", "(IZZ)V", AccessFlags = 1025)]
-				void SetGroupCheckable(int int32, bool boolean, bool boolean1) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setGroupVisible
-				/// </java-name>
-				[Dot42.DexImport("setGroupVisible", "(IZ)V", AccessFlags = 1025)]
-				void SetGroupVisible(int int32, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setGroupEnabled
-				/// </java-name>
-				[Dot42.DexImport("setGroupEnabled", "(IZ)V", AccessFlags = 1025)]
-				void SetGroupEnabled(int int32, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// hasVisibleItems
-				/// </java-name>
-				[Dot42.DexImport("hasVisibleItems", "()Z", AccessFlags = 1025)]
-				bool HasVisibleItems() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// findItem
-				/// </java-name>
-				[Dot42.DexImport("findItem", "(I)Landroid/view/MenuItem;", AccessFlags = 1025)]
-				global::Android.View.IMenuItem FindItem(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// size
-				/// </java-name>
-				[Dot42.DexImport("size", "()I", AccessFlags = 1025)]
-				int Size() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getItem
-				/// </java-name>
-				[Dot42.DexImport("getItem", "(I)Landroid/view/MenuItem;", AccessFlags = 1025)]
-				global::Android.View.IMenuItem GetItem(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
-				void Close() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// performShortcut
-				/// </java-name>
-				[Dot42.DexImport("performShortcut", "(ILandroid/view/KeyEvent;I)Z", AccessFlags = 1025)]
-				bool PerformShortcut(int int32, global::Android.View.KeyEvent keyEvent, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isShortcutKey
-				/// </java-name>
-				[Dot42.DexImport("isShortcutKey", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				bool IsShortcutKey(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// performIdentifierAction
-				/// </java-name>
-				[Dot42.DexImport("performIdentifierAction", "(II)Z", AccessFlags = 1025)]
-				bool PerformIdentifierAction(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setQwertyMode
-				/// </java-name>
-				[Dot42.DexImport("setQwertyMode", "(Z)V", AccessFlags = 1025)]
-				void SetQwertyMode(bool boolean) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/view/InputEvent
-		/// </java-name>
-		[Dot42.DexImport("android/view/InputEvent", AccessFlags = 1057)]
-		public abstract partial class InputEvent : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.InputEvent> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal InputEvent() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
+				public void Clear() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getDeviceId
+				/// addMovement
 				/// </java-name>
-				[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1025)]
-				public abstract int GetDeviceId() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDevice
-				/// </java-name>
-				[Dot42.DexImport("getDevice", "()Landroid/view/InputDevice;", AccessFlags = 17)]
-				public global::Android.View.InputDevice GetDevice() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.InputDevice);
-				}
-
-				/// <java-name>
-				/// getSource
-				/// </java-name>
-				[Dot42.DexImport("getSource", "()I", AccessFlags = 1025)]
-				public abstract int GetSource() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[Dot42.DexImport("android/os/Parcelable", "writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1025)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				[Dot42.DexImport("addMovement", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
+				public void AddMovement(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getDeviceId
+				/// computeCurrentVelocity
 				/// </java-name>
-				public int DeviceId
+				[Dot42.DexImport("computeCurrentVelocity", "(I)V", AccessFlags = 1)]
+				public void ComputeCurrentVelocity(int int32) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1025)]
-						get{ return GetDeviceId(); }
 				}
 
 				/// <java-name>
-				/// getDevice
+				/// computeCurrentVelocity
 				/// </java-name>
-				public global::Android.View.InputDevice Device
+				[Dot42.DexImport("computeCurrentVelocity", "(IF)V", AccessFlags = 1)]
+				public void ComputeCurrentVelocity(int int32, float single) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getDevice", "()Landroid/view/InputDevice;", AccessFlags = 17)]
-						get{ return GetDevice(); }
 				}
 
 				/// <java-name>
-				/// getSource
+				/// getXVelocity
 				/// </java-name>
-				public int Source
+				[Dot42.DexImport("getXVelocity", "()F", AccessFlags = 1)]
+				public float GetXVelocity() /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getSource", "()I", AccessFlags = 1025)]
-						get{ return GetSource(); }
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getYVelocity
+				/// </java-name>
+				[Dot42.DexImport("getYVelocity", "()F", AccessFlags = 1)]
+				public float GetYVelocity() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getXVelocity
+				/// </java-name>
+				[Dot42.DexImport("getXVelocity", "(I)F", AccessFlags = 1)]
+				public float GetXVelocity(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getYVelocity
+				/// </java-name>
+				[Dot42.DexImport("getYVelocity", "(I)F", AccessFlags = 1)]
+				public float GetYVelocity(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getXVelocity
+				/// </java-name>
+				public float XVelocity
+				{
+				[Dot42.DexImport("getXVelocity", "()F", AccessFlags = 1)]
+						get{ return GetXVelocity(); }
+				}
+
+				/// <java-name>
+				/// getYVelocity
+				/// </java-name>
+				public float YVelocity
+				{
+				[Dot42.DexImport("getYVelocity", "()F", AccessFlags = 1)]
+						get{ return GetYVelocity(); }
 				}
 
 		}
@@ -17572,352 +13925,3999 @@ namespace Android.View
 		}
 
 		/// <java-name>
-		/// android/view/ScaleGestureDetector
+		/// android/view/ViewConfiguration
 		/// </java-name>
-		[Dot42.DexImport("android/view/ScaleGestureDetector", AccessFlags = 33)]
-		public partial class ScaleGestureDetector
+		[Dot42.DexImport("android/view/ViewConfiguration", AccessFlags = 33)]
+		public partial class ViewConfiguration
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/ScaleGestureDetector$OnScaleGestureListen" +
-    "er;)V", AccessFlags = 1)]
-				public ScaleGestureDetector(global::Android.Content.Context context, global::Android.View.ScaleGestureDetector.IOnScaleGestureListener onScaleGestureListener) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ViewConfiguration() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// onTouchEvent
+				/// get
 				/// </java-name>
-				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("get", "(Landroid/content/Context;)Landroid/view/ViewConfiguration;", AccessFlags = 9)]
+				public static global::Android.View.ViewConfiguration Get(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(global::Android.View.ViewConfiguration);
 				}
 
 				/// <java-name>
-				/// isInProgress
+				/// getScrollBarSize
 				/// </java-name>
-				[Dot42.DexImport("isInProgress", "()Z", AccessFlags = 1)]
-				public virtual bool IsInProgress() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getScrollBarSize", "()I", AccessFlags = 9)]
+				public static int GetScrollBarSize() /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getFocusX
+				/// getScaledScrollBarSize
 				/// </java-name>
-				[Dot42.DexImport("getFocusX", "()F", AccessFlags = 1)]
-				public virtual float GetFocusX() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getScaledScrollBarSize", "()I", AccessFlags = 1)]
+				public virtual int GetScaledScrollBarSize() /* MethodBuilder.Create */ 
 				{
-						return default(float);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getFocusY
+				/// getScrollBarFadeDuration
 				/// </java-name>
-				[Dot42.DexImport("getFocusY", "()F", AccessFlags = 1)]
-				public virtual float GetFocusY() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getScrollBarFadeDuration", "()I", AccessFlags = 9)]
+				public static int GetScrollBarFadeDuration() /* MethodBuilder.Create */ 
 				{
-						return default(float);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getCurrentSpan
+				/// getScrollDefaultDelay
 				/// </java-name>
-				[Dot42.DexImport("getCurrentSpan", "()F", AccessFlags = 1)]
-				public virtual float GetCurrentSpan() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getScrollDefaultDelay", "()I", AccessFlags = 9)]
+				public static int GetScrollDefaultDelay() /* MethodBuilder.Create */ 
 				{
-						return default(float);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getCurrentSpanX
+				/// getFadingEdgeLength
 				/// </java-name>
-				[Dot42.DexImport("getCurrentSpanX", "()F", AccessFlags = 1)]
-				public virtual float GetCurrentSpanX() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getFadingEdgeLength", "()I", AccessFlags = 9)]
+				public static int GetFadingEdgeLength() /* MethodBuilder.Create */ 
 				{
-						return default(float);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getCurrentSpanY
+				/// getScaledFadingEdgeLength
 				/// </java-name>
-				[Dot42.DexImport("getCurrentSpanY", "()F", AccessFlags = 1)]
-				public virtual float GetCurrentSpanY() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getScaledFadingEdgeLength", "()I", AccessFlags = 1)]
+				public virtual int GetScaledFadingEdgeLength() /* MethodBuilder.Create */ 
 				{
-						return default(float);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getPreviousSpan
+				/// getPressedStateDuration
 				/// </java-name>
-				[Dot42.DexImport("getPreviousSpan", "()F", AccessFlags = 1)]
-				public virtual float GetPreviousSpan() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getPressedStateDuration", "()I", AccessFlags = 9)]
+				public static int GetPressedStateDuration() /* MethodBuilder.Create */ 
 				{
-						return default(float);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getPreviousSpanX
+				/// getLongPressTimeout
 				/// </java-name>
-				[Dot42.DexImport("getPreviousSpanX", "()F", AccessFlags = 1)]
-				public virtual float GetPreviousSpanX() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getLongPressTimeout", "()I", AccessFlags = 9)]
+				public static int GetLongPressTimeout() /* MethodBuilder.Create */ 
 				{
-						return default(float);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getPreviousSpanY
+				/// getKeyRepeatTimeout
 				/// </java-name>
-				[Dot42.DexImport("getPreviousSpanY", "()F", AccessFlags = 1)]
-				public virtual float GetPreviousSpanY() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getKeyRepeatTimeout", "()I", AccessFlags = 9)]
+				public static int GetKeyRepeatTimeout() /* MethodBuilder.Create */ 
 				{
-						return default(float);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getScaleFactor
+				/// getKeyRepeatDelay
 				/// </java-name>
-				[Dot42.DexImport("getScaleFactor", "()F", AccessFlags = 1)]
-				public virtual float GetScaleFactor() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getKeyRepeatDelay", "()I", AccessFlags = 9)]
+				public static int GetKeyRepeatDelay() /* MethodBuilder.Create */ 
 				{
-						return default(float);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getTimeDelta
+				/// getTapTimeout
 				/// </java-name>
-				[Dot42.DexImport("getTimeDelta", "()J", AccessFlags = 1)]
-				public virtual long GetTimeDelta() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getTapTimeout", "()I", AccessFlags = 9)]
+				public static int GetTapTimeout() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getJumpTapTimeout
+				/// </java-name>
+				[Dot42.DexImport("getJumpTapTimeout", "()I", AccessFlags = 9)]
+				public static int GetJumpTapTimeout() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getDoubleTapTimeout
+				/// </java-name>
+				[Dot42.DexImport("getDoubleTapTimeout", "()I", AccessFlags = 9)]
+				public static int GetDoubleTapTimeout() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getEdgeSlop
+				/// </java-name>
+				[Dot42.DexImport("getEdgeSlop", "()I", AccessFlags = 9)]
+				public static int GetEdgeSlop() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledEdgeSlop
+				/// </java-name>
+				[Dot42.DexImport("getScaledEdgeSlop", "()I", AccessFlags = 1)]
+				public virtual int GetScaledEdgeSlop() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getTouchSlop
+				/// </java-name>
+				[Dot42.DexImport("getTouchSlop", "()I", AccessFlags = 9)]
+				public static int GetTouchSlop() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledTouchSlop
+				/// </java-name>
+				[Dot42.DexImport("getScaledTouchSlop", "()I", AccessFlags = 1)]
+				public virtual int GetScaledTouchSlop() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledPagingTouchSlop
+				/// </java-name>
+				[Dot42.DexImport("getScaledPagingTouchSlop", "()I", AccessFlags = 1)]
+				public virtual int GetScaledPagingTouchSlop() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledDoubleTapSlop
+				/// </java-name>
+				[Dot42.DexImport("getScaledDoubleTapSlop", "()I", AccessFlags = 1)]
+				public virtual int GetScaledDoubleTapSlop() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getWindowTouchSlop
+				/// </java-name>
+				[Dot42.DexImport("getWindowTouchSlop", "()I", AccessFlags = 9)]
+				public static int GetWindowTouchSlop() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledWindowTouchSlop
+				/// </java-name>
+				[Dot42.DexImport("getScaledWindowTouchSlop", "()I", AccessFlags = 1)]
+				public virtual int GetScaledWindowTouchSlop() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getMinimumFlingVelocity
+				/// </java-name>
+				[Dot42.DexImport("getMinimumFlingVelocity", "()I", AccessFlags = 9)]
+				public static int GetMinimumFlingVelocity() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledMinimumFlingVelocity
+				/// </java-name>
+				[Dot42.DexImport("getScaledMinimumFlingVelocity", "()I", AccessFlags = 1)]
+				public virtual int GetScaledMinimumFlingVelocity() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getMaximumFlingVelocity
+				/// </java-name>
+				[Dot42.DexImport("getMaximumFlingVelocity", "()I", AccessFlags = 9)]
+				public static int GetMaximumFlingVelocity() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledMaximumFlingVelocity
+				/// </java-name>
+				[Dot42.DexImport("getScaledMaximumFlingVelocity", "()I", AccessFlags = 1)]
+				public virtual int GetScaledMaximumFlingVelocity() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getMaximumDrawingCacheSize
+				/// </java-name>
+				[Dot42.DexImport("getMaximumDrawingCacheSize", "()I", AccessFlags = 9)]
+				public static int GetMaximumDrawingCacheSize() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledMaximumDrawingCacheSize
+				/// </java-name>
+				[Dot42.DexImport("getScaledMaximumDrawingCacheSize", "()I", AccessFlags = 1)]
+				public virtual int GetScaledMaximumDrawingCacheSize() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledOverscrollDistance
+				/// </java-name>
+				[Dot42.DexImport("getScaledOverscrollDistance", "()I", AccessFlags = 1)]
+				public virtual int GetScaledOverscrollDistance() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getScaledOverflingDistance
+				/// </java-name>
+				[Dot42.DexImport("getScaledOverflingDistance", "()I", AccessFlags = 1)]
+				public virtual int GetScaledOverflingDistance() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getZoomControlsTimeout
+				/// </java-name>
+				[Dot42.DexImport("getZoomControlsTimeout", "()J", AccessFlags = 9)]
+				public static long GetZoomControlsTimeout() /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
 
 				/// <java-name>
-				/// getEventTime
+				/// getGlobalActionKeyTimeout
 				/// </java-name>
-				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
-				public virtual long GetEventTime() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getGlobalActionKeyTimeout", "()J", AccessFlags = 9)]
+				public static long GetGlobalActionKeyTimeout() /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
 
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ScaleGestureDetector() /* TypeBuilder.AddDefaultConstructor */ 
+				/// <java-name>
+				/// getScrollFriction
+				/// </java-name>
+				[Dot42.DexImport("getScrollFriction", "()F", AccessFlags = 9)]
+				public static float GetScrollFriction() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// hasPermanentMenuKey
+				/// </java-name>
+				[Dot42.DexImport("hasPermanentMenuKey", "()Z", AccessFlags = 1)]
+				public virtual bool HasPermanentMenuKey() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getScrollBarSize
+				/// </java-name>
+				public static int ScrollBarSize
+				{
+				[Dot42.DexImport("getScrollBarSize", "()I", AccessFlags = 9)]
+						get{ return GetScrollBarSize(); }
+				}
+
+				/// <java-name>
+				/// getScaledScrollBarSize
+				/// </java-name>
+				public int ScaledScrollBarSize
+				{
+				[Dot42.DexImport("getScaledScrollBarSize", "()I", AccessFlags = 1)]
+						get{ return GetScaledScrollBarSize(); }
+				}
+
+				/// <java-name>
+				/// getScrollBarFadeDuration
+				/// </java-name>
+				public static int ScrollBarFadeDuration
+				{
+				[Dot42.DexImport("getScrollBarFadeDuration", "()I", AccessFlags = 9)]
+						get{ return GetScrollBarFadeDuration(); }
+				}
+
+				/// <java-name>
+				/// getScrollDefaultDelay
+				/// </java-name>
+				public static int ScrollDefaultDelay
+				{
+				[Dot42.DexImport("getScrollDefaultDelay", "()I", AccessFlags = 9)]
+						get{ return GetScrollDefaultDelay(); }
+				}
+
+				/// <java-name>
+				/// getFadingEdgeLength
+				/// </java-name>
+				public static int FadingEdgeLength
+				{
+				[Dot42.DexImport("getFadingEdgeLength", "()I", AccessFlags = 9)]
+						get{ return GetFadingEdgeLength(); }
+				}
+
+				/// <java-name>
+				/// getScaledFadingEdgeLength
+				/// </java-name>
+				public int ScaledFadingEdgeLength
+				{
+				[Dot42.DexImport("getScaledFadingEdgeLength", "()I", AccessFlags = 1)]
+						get{ return GetScaledFadingEdgeLength(); }
+				}
+
+				/// <java-name>
+				/// getPressedStateDuration
+				/// </java-name>
+				public static int PressedStateDuration
+				{
+				[Dot42.DexImport("getPressedStateDuration", "()I", AccessFlags = 9)]
+						get{ return GetPressedStateDuration(); }
+				}
+
+				/// <java-name>
+				/// getLongPressTimeout
+				/// </java-name>
+				public static int LongPressTimeout
+				{
+				[Dot42.DexImport("getLongPressTimeout", "()I", AccessFlags = 9)]
+						get{ return GetLongPressTimeout(); }
+				}
+
+				/// <java-name>
+				/// getKeyRepeatTimeout
+				/// </java-name>
+				public static int KeyRepeatTimeout
+				{
+				[Dot42.DexImport("getKeyRepeatTimeout", "()I", AccessFlags = 9)]
+						get{ return GetKeyRepeatTimeout(); }
+				}
+
+				/// <java-name>
+				/// getKeyRepeatDelay
+				/// </java-name>
+				public static int KeyRepeatDelay
+				{
+				[Dot42.DexImport("getKeyRepeatDelay", "()I", AccessFlags = 9)]
+						get{ return GetKeyRepeatDelay(); }
+				}
+
+				/// <java-name>
+				/// getTapTimeout
+				/// </java-name>
+				public static int TapTimeout
+				{
+				[Dot42.DexImport("getTapTimeout", "()I", AccessFlags = 9)]
+						get{ return GetTapTimeout(); }
+				}
+
+				/// <java-name>
+				/// getJumpTapTimeout
+				/// </java-name>
+				public static int JumpTapTimeout
+				{
+				[Dot42.DexImport("getJumpTapTimeout", "()I", AccessFlags = 9)]
+						get{ return GetJumpTapTimeout(); }
+				}
+
+				/// <java-name>
+				/// getDoubleTapTimeout
+				/// </java-name>
+				public static int DoubleTapTimeout
+				{
+				[Dot42.DexImport("getDoubleTapTimeout", "()I", AccessFlags = 9)]
+						get{ return GetDoubleTapTimeout(); }
+				}
+
+				/// <java-name>
+				/// getEdgeSlop
+				/// </java-name>
+				public static int EdgeSlop
+				{
+				[Dot42.DexImport("getEdgeSlop", "()I", AccessFlags = 9)]
+						get{ return GetEdgeSlop(); }
+				}
+
+				/// <java-name>
+				/// getScaledEdgeSlop
+				/// </java-name>
+				public int ScaledEdgeSlop
+				{
+				[Dot42.DexImport("getScaledEdgeSlop", "()I", AccessFlags = 1)]
+						get{ return GetScaledEdgeSlop(); }
+				}
+
+				/// <java-name>
+				/// getTouchSlop
+				/// </java-name>
+				public static int TouchSlop
+				{
+				[Dot42.DexImport("getTouchSlop", "()I", AccessFlags = 9)]
+						get{ return GetTouchSlop(); }
+				}
+
+				/// <java-name>
+				/// getScaledTouchSlop
+				/// </java-name>
+				public int ScaledTouchSlop
+				{
+				[Dot42.DexImport("getScaledTouchSlop", "()I", AccessFlags = 1)]
+						get{ return GetScaledTouchSlop(); }
+				}
+
+				/// <java-name>
+				/// getScaledPagingTouchSlop
+				/// </java-name>
+				public int ScaledPagingTouchSlop
+				{
+				[Dot42.DexImport("getScaledPagingTouchSlop", "()I", AccessFlags = 1)]
+						get{ return GetScaledPagingTouchSlop(); }
+				}
+
+				/// <java-name>
+				/// getScaledDoubleTapSlop
+				/// </java-name>
+				public int ScaledDoubleTapSlop
+				{
+				[Dot42.DexImport("getScaledDoubleTapSlop", "()I", AccessFlags = 1)]
+						get{ return GetScaledDoubleTapSlop(); }
+				}
+
+				/// <java-name>
+				/// getWindowTouchSlop
+				/// </java-name>
+				public static int WindowTouchSlop
+				{
+				[Dot42.DexImport("getWindowTouchSlop", "()I", AccessFlags = 9)]
+						get{ return GetWindowTouchSlop(); }
+				}
+
+				/// <java-name>
+				/// getScaledWindowTouchSlop
+				/// </java-name>
+				public int ScaledWindowTouchSlop
+				{
+				[Dot42.DexImport("getScaledWindowTouchSlop", "()I", AccessFlags = 1)]
+						get{ return GetScaledWindowTouchSlop(); }
+				}
+
+				/// <java-name>
+				/// getMinimumFlingVelocity
+				/// </java-name>
+				public static int MinimumFlingVelocity
+				{
+				[Dot42.DexImport("getMinimumFlingVelocity", "()I", AccessFlags = 9)]
+						get{ return GetMinimumFlingVelocity(); }
+				}
+
+				/// <java-name>
+				/// getScaledMinimumFlingVelocity
+				/// </java-name>
+				public int ScaledMinimumFlingVelocity
+				{
+				[Dot42.DexImport("getScaledMinimumFlingVelocity", "()I", AccessFlags = 1)]
+						get{ return GetScaledMinimumFlingVelocity(); }
+				}
+
+				/// <java-name>
+				/// getMaximumFlingVelocity
+				/// </java-name>
+				public static int MaximumFlingVelocity
+				{
+				[Dot42.DexImport("getMaximumFlingVelocity", "()I", AccessFlags = 9)]
+						get{ return GetMaximumFlingVelocity(); }
+				}
+
+				/// <java-name>
+				/// getScaledMaximumFlingVelocity
+				/// </java-name>
+				public int ScaledMaximumFlingVelocity
+				{
+				[Dot42.DexImport("getScaledMaximumFlingVelocity", "()I", AccessFlags = 1)]
+						get{ return GetScaledMaximumFlingVelocity(); }
+				}
+
+				/// <java-name>
+				/// getMaximumDrawingCacheSize
+				/// </java-name>
+				public static int MaximumDrawingCacheSize
+				{
+				[Dot42.DexImport("getMaximumDrawingCacheSize", "()I", AccessFlags = 9)]
+						get{ return GetMaximumDrawingCacheSize(); }
+				}
+
+				/// <java-name>
+				/// getScaledMaximumDrawingCacheSize
+				/// </java-name>
+				public int ScaledMaximumDrawingCacheSize
+				{
+				[Dot42.DexImport("getScaledMaximumDrawingCacheSize", "()I", AccessFlags = 1)]
+						get{ return GetScaledMaximumDrawingCacheSize(); }
+				}
+
+				/// <java-name>
+				/// getScaledOverscrollDistance
+				/// </java-name>
+				public int ScaledOverscrollDistance
+				{
+				[Dot42.DexImport("getScaledOverscrollDistance", "()I", AccessFlags = 1)]
+						get{ return GetScaledOverscrollDistance(); }
+				}
+
+				/// <java-name>
+				/// getScaledOverflingDistance
+				/// </java-name>
+				public int ScaledOverflingDistance
+				{
+				[Dot42.DexImport("getScaledOverflingDistance", "()I", AccessFlags = 1)]
+						get{ return GetScaledOverflingDistance(); }
+				}
+
+				/// <java-name>
+				/// getZoomControlsTimeout
+				/// </java-name>
+				public static long ZoomControlsTimeout
+				{
+				[Dot42.DexImport("getZoomControlsTimeout", "()J", AccessFlags = 9)]
+						get{ return GetZoomControlsTimeout(); }
+				}
+
+				/// <java-name>
+				/// getGlobalActionKeyTimeout
+				/// </java-name>
+				public static long GlobalActionKeyTimeout
+				{
+				[Dot42.DexImport("getGlobalActionKeyTimeout", "()J", AccessFlags = 9)]
+						get{ return GetGlobalActionKeyTimeout(); }
+				}
+
+				/// <java-name>
+				/// getScrollFriction
+				/// </java-name>
+				public static float ScrollFriction
+				{
+				[Dot42.DexImport("getScrollFriction", "()F", AccessFlags = 9)]
+						get{ return GetScrollFriction(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/ViewDebug
+		/// </java-name>
+		[Dot42.DexImport("android/view/ViewDebug", AccessFlags = 33)]
+		public partial class ViewDebug
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// TRACE_HIERARCHY
+				/// </java-name>
+				[Dot42.DexImport("TRACE_HIERARCHY", "Z", AccessFlags = 25)]
+				public const bool TRACE_HIERARCHY = false;
+				/// <java-name>
+				/// TRACE_RECYCLER
+				/// </java-name>
+				[Dot42.DexImport("TRACE_RECYCLER", "Z", AccessFlags = 25)]
+				public const bool TRACE_RECYCLER = false;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ViewDebug() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getFocusX
+				/// trace
 				/// </java-name>
-				public float FocusX
+				[Dot42.DexImport("trace", "(Landroid/view/View;Landroid/view/ViewDebug$RecyclerTraceType;[I)V", AccessFlags = 137)]
+				public static void Trace(global::Android.View.View view, global::Android.View.ViewDebug.RecyclerTraceType recyclerTraceType, params int[] int32) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getFocusX", "()F", AccessFlags = 1)]
-						get{ return GetFocusX(); }
 				}
 
 				/// <java-name>
-				/// getFocusY
+				/// startRecyclerTracing
 				/// </java-name>
-				public float FocusY
+				[Dot42.DexImport("startRecyclerTracing", "(Ljava/lang/String;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void StartRecyclerTracing(string @string, global::Android.View.View view) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getFocusY", "()F", AccessFlags = 1)]
-						get{ return GetFocusY(); }
 				}
 
 				/// <java-name>
-				/// getCurrentSpan
+				/// stopRecyclerTracing
 				/// </java-name>
-				public float CurrentSpan
+				[Dot42.DexImport("stopRecyclerTracing", "()V", AccessFlags = 9)]
+				public static void StopRecyclerTracing() /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getCurrentSpan", "()F", AccessFlags = 1)]
-						get{ return GetCurrentSpan(); }
 				}
 
 				/// <java-name>
-				/// getCurrentSpanX
+				/// trace
 				/// </java-name>
-				public float CurrentSpanX
+				[Dot42.DexImport("trace", "(Landroid/view/View;Landroid/view/ViewDebug$HierarchyTraceType;)V", AccessFlags = 9)]
+				public static void Trace(global::Android.View.View view, global::Android.View.ViewDebug.HierarchyTraceType hierarchyTraceType) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getCurrentSpanX", "()F", AccessFlags = 1)]
-						get{ return GetCurrentSpanX(); }
 				}
 
 				/// <java-name>
-				/// getCurrentSpanY
+				/// startHierarchyTracing
 				/// </java-name>
-				public float CurrentSpanY
+				[Dot42.DexImport("startHierarchyTracing", "(Ljava/lang/String;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void StartHierarchyTracing(string @string, global::Android.View.View view) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getCurrentSpanY", "()F", AccessFlags = 1)]
-						get{ return GetCurrentSpanY(); }
 				}
 
 				/// <java-name>
-				/// getPreviousSpan
+				/// stopHierarchyTracing
 				/// </java-name>
-				public float PreviousSpan
+				[Dot42.DexImport("stopHierarchyTracing", "()V", AccessFlags = 9)]
+				public static void StopHierarchyTracing() /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getPreviousSpan", "()F", AccessFlags = 1)]
-						get{ return GetPreviousSpan(); }
 				}
 
 				/// <java-name>
-				/// getPreviousSpanX
+				/// dumpCapturedView
 				/// </java-name>
-				public float PreviousSpanX
+				[Dot42.DexImport("dumpCapturedView", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 9)]
+				public static void DumpCapturedView(string @string, object @object) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getPreviousSpanX", "()F", AccessFlags = 1)]
-						get{ return GetPreviousSpanX(); }
 				}
 
 				/// <java-name>
-				/// getPreviousSpanY
+				/// android/view/ViewDebug$RecyclerTraceType
 				/// </java-name>
-				public float PreviousSpanY
-				{
-				[Dot42.DexImport("getPreviousSpanY", "()F", AccessFlags = 1)]
-						get{ return GetPreviousSpanY(); }
-				}
-
-				/// <java-name>
-				/// getScaleFactor
-				/// </java-name>
-				public float ScaleFactor
-				{
-				[Dot42.DexImport("getScaleFactor", "()F", AccessFlags = 1)]
-						get{ return GetScaleFactor(); }
-				}
-
-				/// <java-name>
-				/// getTimeDelta
-				/// </java-name>
-				public long TimeDelta
-				{
-				[Dot42.DexImport("getTimeDelta", "()J", AccessFlags = 1)]
-						get{ return GetTimeDelta(); }
-				}
-
-				/// <java-name>
-				/// getEventTime
-				/// </java-name>
-				public long EventTime
-				{
-				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
-						get{ return GetEventTime(); }
-				}
-
-				/// <java-name>
-				/// android/view/ScaleGestureDetector$SimpleOnScaleGestureListener
-				/// </java-name>
-				[Dot42.DexImport("android/view/ScaleGestureDetector$SimpleOnScaleGestureListener", AccessFlags = 9)]
-				public partial class SimpleOnScaleGestureListener : global::Android.View.ScaleGestureDetector.IOnScaleGestureListener
+				[Dot42.DexImport("android/view/ViewDebug$RecyclerTraceType", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/view/ViewDebug$RecyclerTraceType;>;")]
+				public sealed class RecyclerTraceType
  /* scope: __dot42__ */ 
 				{
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public SimpleOnScaleGestureListener() /* MethodBuilder.Create */ 
+						/// <java-name>
+						/// BIND_VIEW
+						/// </java-name>
+						[Dot42.DexImport("BIND_VIEW", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
+						public static readonly RecyclerTraceType BIND_VIEW;
+						/// <java-name>
+						/// MOVE_FROM_ACTIVE_TO_SCRAP_HEAP
+						/// </java-name>
+						[Dot42.DexImport("MOVE_FROM_ACTIVE_TO_SCRAP_HEAP", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
+						public static readonly RecyclerTraceType MOVE_FROM_ACTIVE_TO_SCRAP_HEAP;
+						/// <java-name>
+						/// MOVE_TO_SCRAP_HEAP
+						/// </java-name>
+						[Dot42.DexImport("MOVE_TO_SCRAP_HEAP", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
+						public static readonly RecyclerTraceType MOVE_TO_SCRAP_HEAP;
+						/// <java-name>
+						/// NEW_VIEW
+						/// </java-name>
+						[Dot42.DexImport("NEW_VIEW", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
+						public static readonly RecyclerTraceType NEW_VIEW;
+						/// <java-name>
+						/// RECYCLE_FROM_ACTIVE_HEAP
+						/// </java-name>
+						[Dot42.DexImport("RECYCLE_FROM_ACTIVE_HEAP", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
+						public static readonly RecyclerTraceType RECYCLE_FROM_ACTIVE_HEAP;
+						/// <java-name>
+						/// RECYCLE_FROM_SCRAP_HEAP
+						/// </java-name>
+						[Dot42.DexImport("RECYCLE_FROM_SCRAP_HEAP", "Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 16409)]
+						public static readonly RecyclerTraceType RECYCLE_FROM_SCRAP_HEAP;
+						private RecyclerTraceType() /* TypeBuilder.AddPrivateDefaultCtor */ 
 						{
 						}
 
 						/// <java-name>
-						/// onScale
+						/// values
 						/// </java-name>
-						[Dot42.DexImport("onScale", "(Landroid/view/ScaleGestureDetector;)Z", AccessFlags = 1)]
-						public virtual bool OnScale(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ 
+						[Dot42.DexImport("values", "()[Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 9)]
+						public static RecyclerTraceType[] Values() /* MethodBuilder.Create */ 
 						{
-								return default(bool);
+								return default(RecyclerTraceType[]);
 						}
 
 						/// <java-name>
-						/// onScaleBegin
+						/// valueOf
 						/// </java-name>
-						[Dot42.DexImport("onScaleBegin", "(Landroid/view/ScaleGestureDetector;)Z", AccessFlags = 1)]
-						public virtual bool OnScaleBegin(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ 
+						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Landroid/view/ViewDebug$RecyclerTraceType;", AccessFlags = 9)]
+						public static RecyclerTraceType ValueOf(string @string) /* MethodBuilder.Create */ 
 						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// onScaleEnd
-						/// </java-name>
-						[Dot42.DexImport("onScaleEnd", "(Landroid/view/ScaleGestureDetector;)V", AccessFlags = 1)]
-						public virtual void OnScaleEnd(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ 
-						{
+								return default(RecyclerTraceType);
 						}
 
 				}
 
 				/// <java-name>
-				/// android/view/ScaleGestureDetector$OnScaleGestureListener
+				/// android/view/ViewDebug$HierarchyTraceType
 				/// </java-name>
-				[Dot42.DexImport("android/view/ScaleGestureDetector$OnScaleGestureListener", AccessFlags = 1545)]
-				public partial interface IOnScaleGestureListener
+				[Dot42.DexImport("android/view/ViewDebug$HierarchyTraceType", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/view/ViewDebug$HierarchyTraceType;>;")]
+				public sealed class HierarchyTraceType
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
-						/// onScale
+						/// BUILD_CACHE
 						/// </java-name>
-						[Dot42.DexImport("onScale", "(Landroid/view/ScaleGestureDetector;)Z", AccessFlags = 1025)]
-						bool OnScale(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ ;
+						[Dot42.DexImport("BUILD_CACHE", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
+						public static readonly HierarchyTraceType BUILD_CACHE;
+						/// <java-name>
+						/// DRAW
+						/// </java-name>
+						[Dot42.DexImport("DRAW", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
+						public static readonly HierarchyTraceType DRAW;
+						/// <java-name>
+						/// INVALIDATE
+						/// </java-name>
+						[Dot42.DexImport("INVALIDATE", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
+						public static readonly HierarchyTraceType INVALIDATE;
+						/// <java-name>
+						/// INVALIDATE_CHILD
+						/// </java-name>
+						[Dot42.DexImport("INVALIDATE_CHILD", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
+						public static readonly HierarchyTraceType INVALIDATE_CHILD;
+						/// <java-name>
+						/// INVALIDATE_CHILD_IN_PARENT
+						/// </java-name>
+						[Dot42.DexImport("INVALIDATE_CHILD_IN_PARENT", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
+						public static readonly HierarchyTraceType INVALIDATE_CHILD_IN_PARENT;
+						/// <java-name>
+						/// ON_LAYOUT
+						/// </java-name>
+						[Dot42.DexImport("ON_LAYOUT", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
+						public static readonly HierarchyTraceType ON_LAYOUT;
+						/// <java-name>
+						/// ON_MEASURE
+						/// </java-name>
+						[Dot42.DexImport("ON_MEASURE", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
+						public static readonly HierarchyTraceType ON_MEASURE;
+						/// <java-name>
+						/// REQUEST_LAYOUT
+						/// </java-name>
+						[Dot42.DexImport("REQUEST_LAYOUT", "Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 16409)]
+						public static readonly HierarchyTraceType REQUEST_LAYOUT;
+						private HierarchyTraceType() /* TypeBuilder.AddPrivateDefaultCtor */ 
+						{
+						}
 
 						/// <java-name>
-						/// onScaleBegin
+						/// values
 						/// </java-name>
-						[Dot42.DexImport("onScaleBegin", "(Landroid/view/ScaleGestureDetector;)Z", AccessFlags = 1025)]
-						bool OnScaleBegin(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ ;
+						[Dot42.DexImport("values", "()[Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 9)]
+						public static HierarchyTraceType[] Values() /* MethodBuilder.Create */ 
+						{
+								return default(HierarchyTraceType[]);
+						}
 
 						/// <java-name>
-						/// onScaleEnd
+						/// valueOf
 						/// </java-name>
-						[Dot42.DexImport("onScaleEnd", "(Landroid/view/ScaleGestureDetector;)V", AccessFlags = 1025)]
-						void OnScaleEnd(global::Android.View.ScaleGestureDetector scaleGestureDetector) /* MethodBuilder.Create */ ;
+						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Landroid/view/ViewDebug$HierarchyTraceType;", AccessFlags = 9)]
+						public static HierarchyTraceType ValueOf(string @string) /* MethodBuilder.Create */ 
+						{
+								return default(HierarchyTraceType);
+						}
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewDebug$CapturedViewProperty
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewDebug$CapturedViewProperty", AccessFlags = 9737)]
+				public partial interface ICapturedViewProperty : global::Java.Lang.Annotation.IAnnotation
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// retrieveReturn
+						/// </java-name>
+						[Dot42.DexImport("retrieveReturn", "()Z", AccessFlags = 1025)]
+						bool RetrieveReturn() /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewDebug$FlagToString
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewDebug$FlagToString", AccessFlags = 9737)]
+				public partial interface IFlagToString : global::Java.Lang.Annotation.IAnnotation
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// mask
+						/// </java-name>
+						[Dot42.DexImport("mask", "()I", AccessFlags = 1025)]
+						int Mask() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// equals
+						/// </java-name>
+						[Dot42.DexImport("equals", "()I", AccessFlags = 1025)]
+						int Equals() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// name
+						/// </java-name>
+						[Dot42.DexImport("name", "()Ljava/lang/String;", AccessFlags = 1025)]
+						string Name() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// outputIf
+						/// </java-name>
+						[Dot42.DexImport("outputIf", "()Z", AccessFlags = 1025)]
+						bool OutputIf() /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewDebug$IntToString
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewDebug$IntToString", AccessFlags = 9737)]
+				public partial interface IIntToString : global::Java.Lang.Annotation.IAnnotation
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// from
+						/// </java-name>
+						[Dot42.DexImport("from", "()I", AccessFlags = 1025)]
+						int From() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// to
+						/// </java-name>
+						[Dot42.DexImport("to", "()Ljava/lang/String;", AccessFlags = 1025)]
+						string To() /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewDebug$ExportedProperty
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewDebug$ExportedProperty", AccessFlags = 9737)]
+				public partial interface IExportedProperty : global::Java.Lang.Annotation.IAnnotation
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// resolveId
+						/// </java-name>
+						[Dot42.DexImport("resolveId", "()Z", AccessFlags = 1025)]
+						bool ResolveId() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// mapping
+						/// </java-name>
+						[Dot42.DexImport("mapping", "()[Landroid/view/ViewDebug$IntToString;", AccessFlags = 1025)]
+						global::Android.View.ViewDebug.IIntToString[] Mapping() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// indexMapping
+						/// </java-name>
+						[Dot42.DexImport("indexMapping", "()[Landroid/view/ViewDebug$IntToString;", AccessFlags = 1025)]
+						global::Android.View.ViewDebug.IIntToString[] IndexMapping() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// flagMapping
+						/// </java-name>
+						[Dot42.DexImport("flagMapping", "()[Landroid/view/ViewDebug$FlagToString;", AccessFlags = 1025)]
+						global::Android.View.ViewDebug.IFlagToString[] FlagMapping() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// deepExport
+						/// </java-name>
+						[Dot42.DexImport("deepExport", "()Z", AccessFlags = 1025)]
+						bool DeepExport() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// prefix
+						/// </java-name>
+						[Dot42.DexImport("prefix", "()Ljava/lang/String;", AccessFlags = 1025)]
+						string Prefix() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// category
+						/// </java-name>
+						[Dot42.DexImport("category", "()Ljava/lang/String;", AccessFlags = 1025)]
+						string Category() /* MethodBuilder.Create */ ;
 
 				}
 
 		}
 
 		/// <java-name>
-		/// android/view/SoundEffectConstants
+		/// android/view/ViewGroup
 		/// </java-name>
-		[Dot42.DexImport("android/view/SoundEffectConstants", AccessFlags = 33)]
-		public partial class SoundEffectConstants
+		[Dot42.DexImport("android/view/ViewGroup", AccessFlags = 1057)]
+		public abstract partial class ViewGroup : global::Android.View.View, global::Android.View.IViewParent, global::Android.View.IViewManager
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// CLICK
+				/// FOCUS_BEFORE_DESCENDANTS
 				/// </java-name>
-				[Dot42.DexImport("CLICK", "I", AccessFlags = 25)]
-				public const int CLICK = 0;
+				[Dot42.DexImport("FOCUS_BEFORE_DESCENDANTS", "I", AccessFlags = 25)]
+				public const int FOCUS_BEFORE_DESCENDANTS = 131072;
 				/// <java-name>
-				/// NAVIGATION_LEFT
+				/// FOCUS_AFTER_DESCENDANTS
 				/// </java-name>
-				[Dot42.DexImport("NAVIGATION_LEFT", "I", AccessFlags = 25)]
-				public const int NAVIGATION_LEFT = 1;
+				[Dot42.DexImport("FOCUS_AFTER_DESCENDANTS", "I", AccessFlags = 25)]
+				public const int FOCUS_AFTER_DESCENDANTS = 262144;
 				/// <java-name>
-				/// NAVIGATION_UP
+				/// FOCUS_BLOCK_DESCENDANTS
 				/// </java-name>
-				[Dot42.DexImport("NAVIGATION_UP", "I", AccessFlags = 25)]
-				public const int NAVIGATION_UP = 2;
+				[Dot42.DexImport("FOCUS_BLOCK_DESCENDANTS", "I", AccessFlags = 25)]
+				public const int FOCUS_BLOCK_DESCENDANTS = 393216;
 				/// <java-name>
-				/// NAVIGATION_RIGHT
+				/// PERSISTENT_NO_CACHE
 				/// </java-name>
-				[Dot42.DexImport("NAVIGATION_RIGHT", "I", AccessFlags = 25)]
-				public const int NAVIGATION_RIGHT = 3;
+				[Dot42.DexImport("PERSISTENT_NO_CACHE", "I", AccessFlags = 25)]
+				public const int PERSISTENT_NO_CACHE = 0;
 				/// <java-name>
-				/// NAVIGATION_DOWN
+				/// PERSISTENT_ANIMATION_CACHE
 				/// </java-name>
-				[Dot42.DexImport("NAVIGATION_DOWN", "I", AccessFlags = 25)]
-				public const int NAVIGATION_DOWN = 4;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SoundEffectConstants() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("PERSISTENT_ANIMATION_CACHE", "I", AccessFlags = 25)]
+				public const int PERSISTENT_ANIMATION_CACHE = 1;
+				/// <java-name>
+				/// PERSISTENT_SCROLLING_CACHE
+				/// </java-name>
+				[Dot42.DexImport("PERSISTENT_SCROLLING_CACHE", "I", AccessFlags = 25)]
+				public const int PERSISTENT_SCROLLING_CACHE = 2;
+				/// <java-name>
+				/// PERSISTENT_ALL_CACHES
+				/// </java-name>
+				[Dot42.DexImport("PERSISTENT_ALL_CACHES", "I", AccessFlags = 25)]
+				public const int PERSISTENT_ALL_CACHES = 3;
+				/// <java-name>
+				/// CLIP_TO_PADDING_MASK
+				/// </java-name>
+				[Dot42.DexImport("CLIP_TO_PADDING_MASK", "I", AccessFlags = 28)]
+				protected internal const int CLIP_TO_PADDING_MASK = 34;
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public ViewGroup(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public ViewGroup(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public ViewGroup(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getContantForFocusDirection
+				/// getDescendantFocusability
 				/// </java-name>
-				[Dot42.DexImport("getContantForFocusDirection", "(I)I", AccessFlags = 9)]
-				public static int GetContantForFocusDirection(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getDescendantFocusability", "()I", AccessFlags = 1)]
+				public virtual int GetDescendantFocusability() /* MethodBuilder.Create */ 
 				{
 						return default(int);
+				}
+
+				/// <java-name>
+				/// setDescendantFocusability
+				/// </java-name>
+				[Dot42.DexImport("setDescendantFocusability", "(I)V", AccessFlags = 1)]
+				public virtual void SetDescendantFocusability(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// requestChildFocus
+				/// </java-name>
+				[Dot42.DexImport("requestChildFocus", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void RequestChildFocus(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// focusableViewAvailable
+				/// </java-name>
+				[Dot42.DexImport("focusableViewAvailable", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void FocusableViewAvailable(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// showContextMenuForChild
+				/// </java-name>
+				[Dot42.DexImport("showContextMenuForChild", "(Landroid/view/View;)Z", AccessFlags = 1)]
+				public virtual bool ShowContextMenuForChild(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// startActionModeForChild
+				/// </java-name>
+				[Dot42.DexImport("startActionModeForChild", "(Landroid/view/View;Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;", AccessFlags = 1)]
+				public virtual global::Android.View.ActionMode StartActionModeForChild(global::Android.View.View view, global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ActionMode);
+				}
+
+				/// <java-name>
+				/// focusSearch
+				/// </java-name>
+				[Dot42.DexImport("focusSearch", "(Landroid/view/View;I)Landroid/view/View;", AccessFlags = 1)]
+				public virtual global::Android.View.View FocusSearch(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// requestChildRectangleOnScreen
+				/// </java-name>
+				[Dot42.DexImport("requestChildRectangleOnScreen", "(Landroid/view/View;Landroid/graphics/Rect;Z)Z", AccessFlags = 1)]
+				public virtual bool RequestChildRectangleOnScreen(global::Android.View.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// requestSendAccessibilityEvent
+				/// </java-name>
+				[Dot42.DexImport("requestSendAccessibilityEvent", "(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
+				public virtual bool RequestSendAccessibilityEvent(global::Android.View.View view, global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onRequestSendAccessibilityEvent
+				/// </java-name>
+				[Dot42.DexImport("onRequestSendAccessibilityEvent", "(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
+				public virtual bool OnRequestSendAccessibilityEvent(global::Android.View.View view, global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchUnhandledMove
+				/// </java-name>
+				[Dot42.DexImport("dispatchUnhandledMove", "(Landroid/view/View;I)Z", AccessFlags = 1)]
+				public override bool DispatchUnhandledMove(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// clearChildFocus
+				/// </java-name>
+				[Dot42.DexImport("clearChildFocus", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void ClearChildFocus(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clearFocus
+				/// </java-name>
+				[Dot42.DexImport("clearFocus", "()V", AccessFlags = 1)]
+				public override void ClearFocus() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getFocusedChild
+				/// </java-name>
+				[Dot42.DexImport("getFocusedChild", "()Landroid/view/View;", AccessFlags = 1)]
+				public virtual global::Android.View.View GetFocusedChild() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// hasFocus
+				/// </java-name>
+				[Dot42.DexImport("hasFocus", "()Z", AccessFlags = 1)]
+				public override bool HasFocus() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// findFocus
+				/// </java-name>
+				[Dot42.DexImport("findFocus", "()Landroid/view/View;", AccessFlags = 1)]
+				public override global::Android.View.View FindFocus() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// hasFocusable
+				/// </java-name>
+				[Dot42.DexImport("hasFocusable", "()Z", AccessFlags = 1)]
+				public override bool HasFocusable() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// addFocusables
+				/// </java-name>
+				[Dot42.DexImport("addFocusables", "(Ljava/util/ArrayList;I)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;I)V")]
+				public override void AddFocusables(global::Java.Util.ArrayList<global::Android.View.View> arrayList, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addFocusables
+				/// </java-name>
+				[Dot42.DexImport("addFocusables", "(Ljava/util/ArrayList;II)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;II)V")]
+				public override void AddFocusables(global::Java.Util.ArrayList<global::Android.View.View> arrayList, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// findViewsWithText
+				/// </java-name>
+				[Dot42.DexImport("findViewsWithText", "(Ljava/util/ArrayList;Ljava/lang/CharSequence;I)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;Ljava/lang/CharSequence;I)V")]
+				public override void FindViewsWithText(global::Java.Util.ArrayList<global::Android.View.View> arrayList, global::Java.Lang.ICharSequence charSequence, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchWindowFocusChanged
+				/// </java-name>
+				[Dot42.DexImport("dispatchWindowFocusChanged", "(Z)V", AccessFlags = 1)]
+				public override void DispatchWindowFocusChanged(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addTouchables
+				/// </java-name>
+				[Dot42.DexImport("addTouchables", "(Ljava/util/ArrayList;)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;)V")]
+				public override void AddTouchables(global::Java.Util.ArrayList<global::Android.View.View> arrayList) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchDisplayHint
+				/// </java-name>
+				[Dot42.DexImport("dispatchDisplayHint", "(I)V", AccessFlags = 1)]
+				public override void DispatchDisplayHint(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchVisibilityChanged
+				/// </java-name>
+				[Dot42.DexImport("dispatchVisibilityChanged", "(Landroid/view/View;I)V", AccessFlags = 4)]
+				protected internal override void DispatchVisibilityChanged(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchWindowVisibilityChanged
+				/// </java-name>
+				[Dot42.DexImport("dispatchWindowVisibilityChanged", "(I)V", AccessFlags = 1)]
+				public override void DispatchWindowVisibilityChanged(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchConfigurationChanged
+				/// </java-name>
+				[Dot42.DexImport("dispatchConfigurationChanged", "(Landroid/content/res/Configuration;)V", AccessFlags = 1)]
+				public override void DispatchConfigurationChanged(global::Android.Content.Res.Configuration configuration) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// recomputeViewAttributes
+				/// </java-name>
+				[Dot42.DexImport("recomputeViewAttributes", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void RecomputeViewAttributes(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// bringChildToFront
+				/// </java-name>
+				[Dot42.DexImport("bringChildToFront", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void BringChildToFront(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchDragEvent
+				/// </java-name>
+				[Dot42.DexImport("dispatchDragEvent", "(Landroid/view/DragEvent;)Z", AccessFlags = 1)]
+				public override bool DispatchDragEvent(global::Android.View.DragEvent dragEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchSystemUiVisibilityChanged
+				/// </java-name>
+				[Dot42.DexImport("dispatchSystemUiVisibilityChanged", "(I)V", AccessFlags = 1)]
+				public override void DispatchSystemUiVisibilityChanged(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchKeyEventPreIme
+				/// </java-name>
+				[Dot42.DexImport("dispatchKeyEventPreIme", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
+				public override bool DispatchKeyEventPreIme(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchKeyEvent
+				/// </java-name>
+				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
+				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchKeyShortcutEvent
+				/// </java-name>
+				[Dot42.DexImport("dispatchKeyShortcutEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
+				public override bool DispatchKeyShortcutEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchTrackballEvent
+				/// </java-name>
+				[Dot42.DexImport("dispatchTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+				public override bool DispatchTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchHoverEvent
+				/// </java-name>
+				[Dot42.DexImport("dispatchHoverEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 4)]
+				protected internal override bool DispatchHoverEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onInterceptHoverEvent
+				/// </java-name>
+				[Dot42.DexImport("onInterceptHoverEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+				public virtual bool OnInterceptHoverEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchGenericPointerEvent
+				/// </java-name>
+				[Dot42.DexImport("dispatchGenericPointerEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 4)]
+				protected internal override bool DispatchGenericPointerEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchGenericFocusedEvent
+				/// </java-name>
+				[Dot42.DexImport("dispatchGenericFocusedEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 4)]
+				protected internal override bool DispatchGenericFocusedEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchTouchEvent
+				/// </java-name>
+				[Dot42.DexImport("dispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+				public override bool DispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setMotionEventSplittingEnabled
+				/// </java-name>
+				[Dot42.DexImport("setMotionEventSplittingEnabled", "(Z)V", AccessFlags = 1)]
+				public virtual void SetMotionEventSplittingEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isMotionEventSplittingEnabled
+				/// </java-name>
+				[Dot42.DexImport("isMotionEventSplittingEnabled", "()Z", AccessFlags = 1)]
+				public virtual bool IsMotionEventSplittingEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// requestDisallowInterceptTouchEvent
+				/// </java-name>
+				[Dot42.DexImport("requestDisallowInterceptTouchEvent", "(Z)V", AccessFlags = 1)]
+				public virtual void RequestDisallowInterceptTouchEvent(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onInterceptTouchEvent
+				/// </java-name>
+				[Dot42.DexImport("onInterceptTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+				public virtual bool OnInterceptTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// requestFocus
+				/// </java-name>
+				[Dot42.DexImport("requestFocus", "(ILandroid/graphics/Rect;)Z", AccessFlags = 1)]
+				public override bool RequestFocus(int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onRequestFocusInDescendants
+				/// </java-name>
+				[Dot42.DexImport("onRequestFocusInDescendants", "(ILandroid/graphics/Rect;)Z", AccessFlags = 4)]
+				protected internal virtual bool OnRequestFocusInDescendants(int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setPadding
+				/// </java-name>
+				[Dot42.DexImport("setPadding", "(IIII)V", AccessFlags = 1)]
+				public override void SetPadding(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchSaveInstanceState
+				/// </java-name>
+				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
+				protected internal override void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchFreezeSelfOnly
+				/// </java-name>
+				[Dot42.DexImport("dispatchFreezeSelfOnly", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
+				protected internal virtual void DispatchFreezeSelfOnly(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchRestoreInstanceState
+				/// </java-name>
+				[Dot42.DexImport("dispatchRestoreInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
+				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchThawSelfOnly
+				/// </java-name>
+				[Dot42.DexImport("dispatchThawSelfOnly", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
+				protected internal virtual void DispatchThawSelfOnly(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setChildrenDrawingCacheEnabled
+				/// </java-name>
+				[Dot42.DexImport("setChildrenDrawingCacheEnabled", "(Z)V", AccessFlags = 4)]
+				protected internal virtual void SetChildrenDrawingCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onAnimationStart
+				/// </java-name>
+				[Dot42.DexImport("onAnimationStart", "()V", AccessFlags = 4)]
+				protected internal override void OnAnimationStart() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onAnimationEnd
+				/// </java-name>
+				[Dot42.DexImport("onAnimationEnd", "()V", AccessFlags = 4)]
+				protected internal override void OnAnimationEnd() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchDraw
+				/// </java-name>
+				[Dot42.DexImport("dispatchDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 4)]
+				protected internal override void DispatchDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getChildDrawingOrder
+				/// </java-name>
+				[Dot42.DexImport("getChildDrawingOrder", "(II)I", AccessFlags = 4)]
+				protected internal virtual int GetChildDrawingOrder(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// drawChild
+				/// </java-name>
+				[Dot42.DexImport("drawChild", "(Landroid/graphics/Canvas;Landroid/view/View;J)Z", AccessFlags = 4)]
+				protected internal virtual bool DrawChild(global::Android.Graphics.Canvas canvas, global::Android.View.View view, long int64) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setClipChildren
+				/// </java-name>
+				[Dot42.DexImport("setClipChildren", "(Z)V", AccessFlags = 1)]
+				public virtual void SetClipChildren(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setClipToPadding
+				/// </java-name>
+				[Dot42.DexImport("setClipToPadding", "(Z)V", AccessFlags = 1)]
+				public virtual void SetClipToPadding(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchSetSelected
+				/// </java-name>
+				[Dot42.DexImport("dispatchSetSelected", "(Z)V", AccessFlags = 1)]
+				public new virtual void DispatchSetSelected(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchSetActivated
+				/// </java-name>
+				[Dot42.DexImport("dispatchSetActivated", "(Z)V", AccessFlags = 1)]
+				public new virtual void DispatchSetActivated(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchSetPressed
+				/// </java-name>
+				[Dot42.DexImport("dispatchSetPressed", "(Z)V", AccessFlags = 4)]
+				protected internal override void DispatchSetPressed(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setStaticTransformationsEnabled
+				/// </java-name>
+				[Dot42.DexImport("setStaticTransformationsEnabled", "(Z)V", AccessFlags = 4)]
+				protected internal virtual void SetStaticTransformationsEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getChildStaticTransformation
+				/// </java-name>
+				[Dot42.DexImport("getChildStaticTransformation", "(Landroid/view/View;Landroid/view/animation/Transformation;)Z", AccessFlags = 4)]
+				protected internal virtual bool GetChildStaticTransformation(global::Android.View.View view, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// addView
+				/// </java-name>
+				[Dot42.DexImport("addView", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void AddView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addView
+				/// </java-name>
+				[Dot42.DexImport("addView", "(Landroid/view/View;I)V", AccessFlags = 1)]
+				public virtual void AddView(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addView
+				/// </java-name>
+				[Dot42.DexImport("addView", "(Landroid/view/View;II)V", AccessFlags = 1)]
+				public virtual void AddView(global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addView
+				/// </java-name>
+				[Dot42.DexImport("addView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
+				public virtual void AddView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addView
+				/// </java-name>
+				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
+				public virtual void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// updateViewLayout
+				/// </java-name>
+				[Dot42.DexImport("updateViewLayout", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
+				public virtual void UpdateViewLayout(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// checkLayoutParams
+				/// </java-name>
+				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
+				protected internal virtual bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setOnHierarchyChangeListener
+				/// </java-name>
+				[Dot42.DexImport("setOnHierarchyChangeListener", "(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V", AccessFlags = 1)]
+				public virtual void SetOnHierarchyChangeListener(global::Android.View.ViewGroup.IOnHierarchyChangeListener onHierarchyChangeListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addViewInLayout
+				/// </java-name>
+				[Dot42.DexImport("addViewInLayout", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
+				protected internal virtual bool AddViewInLayout(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// addViewInLayout
+				/// </java-name>
+				[Dot42.DexImport("addViewInLayout", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;Z)Z", AccessFlags = 4)]
+				protected internal virtual bool AddViewInLayout(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// cleanupLayoutState
+				/// </java-name>
+				[Dot42.DexImport("cleanupLayoutState", "(Landroid/view/View;)V", AccessFlags = 4)]
+				protected internal virtual void CleanupLayoutState(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// attachLayoutAnimationParameters
+				/// </java-name>
+				[Dot42.DexImport("attachLayoutAnimationParameters", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;II)V", AccessFlags = 4)]
+				protected internal virtual void AttachLayoutAnimationParameters(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeView
+				/// </java-name>
+				[Dot42.DexImport("removeView", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void RemoveView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeViewInLayout
+				/// </java-name>
+				[Dot42.DexImport("removeViewInLayout", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void RemoveViewInLayout(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeViewsInLayout
+				/// </java-name>
+				[Dot42.DexImport("removeViewsInLayout", "(II)V", AccessFlags = 1)]
+				public virtual void RemoveViewsInLayout(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeViewAt
+				/// </java-name>
+				[Dot42.DexImport("removeViewAt", "(I)V", AccessFlags = 1)]
+				public virtual void RemoveViewAt(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeViews
+				/// </java-name>
+				[Dot42.DexImport("removeViews", "(II)V", AccessFlags = 1)]
+				public virtual void RemoveViews(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setLayoutTransition
+				/// </java-name>
+				[Dot42.DexImport("setLayoutTransition", "(Landroid/animation/LayoutTransition;)V", AccessFlags = 1)]
+				public virtual void SetLayoutTransition(global::Android.Animation.LayoutTransition layoutTransition) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLayoutTransition
+				/// </java-name>
+				[Dot42.DexImport("getLayoutTransition", "()Landroid/animation/LayoutTransition;", AccessFlags = 1)]
+				public virtual global::Android.Animation.LayoutTransition GetLayoutTransition() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Animation.LayoutTransition);
+				}
+
+				/// <java-name>
+				/// removeAllViews
+				/// </java-name>
+				[Dot42.DexImport("removeAllViews", "()V", AccessFlags = 1)]
+				public virtual void RemoveAllViews() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeAllViewsInLayout
+				/// </java-name>
+				[Dot42.DexImport("removeAllViewsInLayout", "()V", AccessFlags = 1)]
+				public virtual void RemoveAllViewsInLayout() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeDetachedView
+				/// </java-name>
+				[Dot42.DexImport("removeDetachedView", "(Landroid/view/View;Z)V", AccessFlags = 4)]
+				protected internal virtual void RemoveDetachedView(global::Android.View.View view, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// attachViewToParent
+				/// </java-name>
+				[Dot42.DexImport("attachViewToParent", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 4)]
+				protected internal virtual void AttachViewToParent(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// detachViewFromParent
+				/// </java-name>
+				[Dot42.DexImport("detachViewFromParent", "(Landroid/view/View;)V", AccessFlags = 4)]
+				protected internal virtual void DetachViewFromParent(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// detachViewFromParent
+				/// </java-name>
+				[Dot42.DexImport("detachViewFromParent", "(I)V", AccessFlags = 4)]
+				protected internal virtual void DetachViewFromParent(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// detachViewsFromParent
+				/// </java-name>
+				[Dot42.DexImport("detachViewsFromParent", "(II)V", AccessFlags = 4)]
+				protected internal virtual void DetachViewsFromParent(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// detachAllViewsFromParent
+				/// </java-name>
+				[Dot42.DexImport("detachAllViewsFromParent", "()V", AccessFlags = 4)]
+				protected internal virtual void DetachAllViewsFromParent() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// invalidateChild
+				/// </java-name>
+				[Dot42.DexImport("invalidateChild", "(Landroid/view/View;Landroid/graphics/Rect;)V", AccessFlags = 17)]
+				public void InvalidateChild(global::Android.View.View view, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// invalidateChildInParent
+				/// </java-name>
+				[Dot42.DexImport("invalidateChildInParent", "([ILandroid/graphics/Rect;)Landroid/view/ViewParent;", AccessFlags = 1)]
+				public virtual global::Android.View.IViewParent InvalidateChildInParent(int[] int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.IViewParent);
+				}
+
+				/// <java-name>
+				/// offsetDescendantRectToMyCoords
+				/// </java-name>
+				[Dot42.DexImport("offsetDescendantRectToMyCoords", "(Landroid/view/View;Landroid/graphics/Rect;)V", AccessFlags = 17)]
+				public void OffsetDescendantRectToMyCoords(global::Android.View.View view, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// offsetRectIntoDescendantCoords
+				/// </java-name>
+				[Dot42.DexImport("offsetRectIntoDescendantCoords", "(Landroid/view/View;Landroid/graphics/Rect;)V", AccessFlags = 17)]
+				public void OffsetRectIntoDescendantCoords(global::Android.View.View view, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getChildVisibleRect
+				/// </java-name>
+				[Dot42.DexImport("getChildVisibleRect", "(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Point;)Z", AccessFlags = 1)]
+				public virtual bool GetChildVisibleRect(global::Android.View.View view, global::Android.Graphics.Rect rect, global::Android.Graphics.Point point) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// layout
+				/// </java-name>
+				[Dot42.DexImport("layout", "(IIII)V", AccessFlags = 17)]
+				public override void Layout(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onLayout
+				/// </java-name>
+				[Dot42.DexImport("onLayout", "(ZIIII)V", AccessFlags = 1028)]
+				protected internal override void OnLayout(bool boolean, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// canAnimate
+				/// </java-name>
+				[Dot42.DexImport("canAnimate", "()Z", AccessFlags = 4)]
+				protected internal virtual bool CanAnimate() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// startLayoutAnimation
+				/// </java-name>
+				[Dot42.DexImport("startLayoutAnimation", "()V", AccessFlags = 1)]
+				public virtual void StartLayoutAnimation() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// scheduleLayoutAnimation
+				/// </java-name>
+				[Dot42.DexImport("scheduleLayoutAnimation", "()V", AccessFlags = 1)]
+				public virtual void ScheduleLayoutAnimation() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setLayoutAnimation
+				/// </java-name>
+				[Dot42.DexImport("setLayoutAnimation", "(Landroid/view/animation/LayoutAnimationController;)V", AccessFlags = 1)]
+				public virtual void SetLayoutAnimation(global::Android.View.Animation.LayoutAnimationController layoutAnimationController) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLayoutAnimation
+				/// </java-name>
+				[Dot42.DexImport("getLayoutAnimation", "()Landroid/view/animation/LayoutAnimationController;", AccessFlags = 1)]
+				public virtual global::Android.View.Animation.LayoutAnimationController GetLayoutAnimation() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.Animation.LayoutAnimationController);
+				}
+
+				/// <java-name>
+				/// isAnimationCacheEnabled
+				/// </java-name>
+				[Dot42.DexImport("isAnimationCacheEnabled", "()Z", AccessFlags = 1)]
+				public virtual bool IsAnimationCacheEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setAnimationCacheEnabled
+				/// </java-name>
+				[Dot42.DexImport("setAnimationCacheEnabled", "(Z)V", AccessFlags = 1)]
+				public virtual void SetAnimationCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isAlwaysDrawnWithCacheEnabled
+				/// </java-name>
+				[Dot42.DexImport("isAlwaysDrawnWithCacheEnabled", "()Z", AccessFlags = 1)]
+				public virtual bool IsAlwaysDrawnWithCacheEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setAlwaysDrawnWithCacheEnabled
+				/// </java-name>
+				[Dot42.DexImport("setAlwaysDrawnWithCacheEnabled", "(Z)V", AccessFlags = 1)]
+				public virtual void SetAlwaysDrawnWithCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isChildrenDrawnWithCacheEnabled
+				/// </java-name>
+				[Dot42.DexImport("isChildrenDrawnWithCacheEnabled", "()Z", AccessFlags = 4)]
+				protected internal virtual bool IsChildrenDrawnWithCacheEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setChildrenDrawnWithCacheEnabled
+				/// </java-name>
+				[Dot42.DexImport("setChildrenDrawnWithCacheEnabled", "(Z)V", AccessFlags = 4)]
+				protected internal virtual void SetChildrenDrawnWithCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isChildrenDrawingOrderEnabled
+				/// </java-name>
+				[Dot42.DexImport("isChildrenDrawingOrderEnabled", "()Z", AccessFlags = 4)]
+				protected internal virtual bool IsChildrenDrawingOrderEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setChildrenDrawingOrderEnabled
+				/// </java-name>
+				[Dot42.DexImport("setChildrenDrawingOrderEnabled", "(Z)V", AccessFlags = 4)]
+				protected internal virtual void SetChildrenDrawingOrderEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPersistentDrawingCache
+				/// </java-name>
+				[Dot42.DexImport("getPersistentDrawingCache", "()I", AccessFlags = 1)]
+				public virtual int GetPersistentDrawingCache() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setPersistentDrawingCache
+				/// </java-name>
+				[Dot42.DexImport("setPersistentDrawingCache", "(I)V", AccessFlags = 1)]
+				public virtual void SetPersistentDrawingCache(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// generateLayoutParams
+				/// </java-name>
+				[Dot42.DexImport("generateLayoutParams", "(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewGroup.LayoutParams);
+				}
+
+				/// <java-name>
+				/// generateLayoutParams
+				/// </java-name>
+				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
+				protected internal virtual global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewGroup.LayoutParams);
+				}
+
+				/// <java-name>
+				/// generateDefaultLayoutParams
+				/// </java-name>
+				[Dot42.DexImport("generateDefaultLayoutParams", "()Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
+				protected internal virtual global::Android.View.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewGroup.LayoutParams);
+				}
+
+				/// <java-name>
+				/// debug
+				/// </java-name>
+				[Dot42.DexImport("debug", "(I)V", AccessFlags = 4)]
+				protected internal virtual void Debug(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// indexOfChild
+				/// </java-name>
+				[Dot42.DexImport("indexOfChild", "(Landroid/view/View;)I", AccessFlags = 1)]
+				public virtual int IndexOfChild(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getChildCount
+				/// </java-name>
+				[Dot42.DexImport("getChildCount", "()I", AccessFlags = 1)]
+				public virtual int GetChildCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getChildAt
+				/// </java-name>
+				[Dot42.DexImport("getChildAt", "(I)Landroid/view/View;", AccessFlags = 1)]
+				public virtual global::Android.View.View GetChildAt(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// measureChildren
+				/// </java-name>
+				[Dot42.DexImport("measureChildren", "(II)V", AccessFlags = 4)]
+				protected internal virtual void MeasureChildren(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// measureChild
+				/// </java-name>
+				[Dot42.DexImport("measureChild", "(Landroid/view/View;II)V", AccessFlags = 4)]
+				protected internal virtual void MeasureChild(global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// measureChildWithMargins
+				/// </java-name>
+				[Dot42.DexImport("measureChildWithMargins", "(Landroid/view/View;IIII)V", AccessFlags = 4)]
+				protected internal virtual void MeasureChildWithMargins(global::Android.View.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getChildMeasureSpec
+				/// </java-name>
+				[Dot42.DexImport("getChildMeasureSpec", "(III)I", AccessFlags = 9)]
+				public static int GetChildMeasureSpec(int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// clearDisappearingChildren
+				/// </java-name>
+				[Dot42.DexImport("clearDisappearingChildren", "()V", AccessFlags = 1)]
+				public virtual void ClearDisappearingChildren() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// startViewTransition
+				/// </java-name>
+				[Dot42.DexImport("startViewTransition", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void StartViewTransition(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// endViewTransition
+				/// </java-name>
+				[Dot42.DexImport("endViewTransition", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void EndViewTransition(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// gatherTransparentRegion
+				/// </java-name>
+				[Dot42.DexImport("gatherTransparentRegion", "(Landroid/graphics/Region;)Z", AccessFlags = 1)]
+				public virtual bool GatherTransparentRegion(global::Android.Graphics.Region region) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// requestTransparentRegion
+				/// </java-name>
+				[Dot42.DexImport("requestTransparentRegion", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void RequestTransparentRegion(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// fitSystemWindows
+				/// </java-name>
+				[Dot42.DexImport("fitSystemWindows", "(Landroid/graphics/Rect;)Z", AccessFlags = 4)]
+				protected internal override bool FitSystemWindows(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getLayoutAnimationListener
+				/// </java-name>
+				[Dot42.DexImport("getLayoutAnimationListener", "()Landroid/view/animation/Animation$AnimationListener;", AccessFlags = 1)]
+				public virtual global::Android.View.Animation.Animation.IAnimationListener GetLayoutAnimationListener() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.Animation.Animation.IAnimationListener);
+				}
+
+				/// <java-name>
+				/// drawableStateChanged
+				/// </java-name>
+				[Dot42.DexImport("drawableStateChanged", "()V", AccessFlags = 4)]
+				protected internal override void DrawableStateChanged() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// jumpDrawablesToCurrentState
+				/// </java-name>
+				[Dot42.DexImport("jumpDrawablesToCurrentState", "()V", AccessFlags = 1)]
+				public override void JumpDrawablesToCurrentState() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCreateDrawableState
+				/// </java-name>
+				[Dot42.DexImport("onCreateDrawableState", "(I)[I", AccessFlags = 4)]
+				protected internal override int[] OnCreateDrawableState(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int[]);
+				}
+
+				/// <java-name>
+				/// setAddStatesFromChildren
+				/// </java-name>
+				[Dot42.DexImport("setAddStatesFromChildren", "(Z)V", AccessFlags = 1)]
+				public virtual void SetAddStatesFromChildren(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addStatesFromChildren
+				/// </java-name>
+				[Dot42.DexImport("addStatesFromChildren", "()Z", AccessFlags = 1)]
+				public virtual bool AddStatesFromChildren() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// childDrawableStateChanged
+				/// </java-name>
+				[Dot42.DexImport("childDrawableStateChanged", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void ChildDrawableStateChanged(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setLayoutAnimationListener
+				/// </java-name>
+				[Dot42.DexImport("setLayoutAnimationListener", "(Landroid/view/animation/Animation$AnimationListener;)V", AccessFlags = 1)]
+				public virtual void SetLayoutAnimationListener(global::Android.View.Animation.Animation.IAnimationListener animationListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// resetResolvedLayoutDirection
+				/// </java-name>
+				[Dot42.DexImport("resetResolvedLayoutDirection", "()V", AccessFlags = 4)]
+				protected internal virtual void ResetResolvedLayoutDirection() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// resetResolvedTextDirection
+				/// </java-name>
+				[Dot42.DexImport("resetResolvedTextDirection", "()V", AccessFlags = 4)]
+				protected internal virtual void ResetResolvedTextDirection() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// shouldDelayChildPressedState
+				/// </java-name>
+				[Dot42.DexImport("shouldDelayChildPressedState", "()Z", AccessFlags = 1)]
+				public virtual bool ShouldDelayChildPressedState() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ViewGroup() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				[Dot42.DexImport("android/view/ViewParent", "requestLayout", "()V", AccessFlags = 1025)]
+				public override void RequestLayout() /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+				}
+
+				[Dot42.DexImport("android/view/ViewParent", "isLayoutRequested", "()Z", AccessFlags = 1025)]
+				public override bool IsLayoutRequested() /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+						return default(bool);
+				}
+
+				[Dot42.DexImport("android/view/ViewParent", "getParent", "()Landroid/view/ViewParent;", AccessFlags = 1025)]
+				public new virtual global::Android.View.IViewParent GetParent() /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+						return default(global::Android.View.IViewParent);
+				}
+
+				[Dot42.DexImport("android/view/ViewParent", "createContextMenu", "(Landroid/view/ContextMenu;)V", AccessFlags = 1025)]
+				public override void CreateContextMenu(global::Android.View.IContextMenu contextMenu) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDescendantFocusability
+				/// </java-name>
+				public int DescendantFocusability
+				{
+				[Dot42.DexImport("getDescendantFocusability", "()I", AccessFlags = 1)]
+						get{ return GetDescendantFocusability(); }
+				[Dot42.DexImport("setDescendantFocusability", "(I)V", AccessFlags = 1)]
+						set{ SetDescendantFocusability(value); }
+				}
+
+				/// <java-name>
+				/// getFocusedChild
+				/// </java-name>
+				public global::Android.View.View FocusedChild
+				{
+				[Dot42.DexImport("getFocusedChild", "()Landroid/view/View;", AccessFlags = 1)]
+						get{ return GetFocusedChild(); }
+				}
+
+				/// <java-name>
+				/// getLayoutTransition
+				/// </java-name>
+				public global::Android.Animation.LayoutTransition LayoutTransition
+				{
+				[Dot42.DexImport("getLayoutTransition", "()Landroid/animation/LayoutTransition;", AccessFlags = 1)]
+						get{ return GetLayoutTransition(); }
+				[Dot42.DexImport("setLayoutTransition", "(Landroid/animation/LayoutTransition;)V", AccessFlags = 1)]
+						set{ SetLayoutTransition(value); }
+				}
+
+				/// <java-name>
+				/// getLayoutAnimation
+				/// </java-name>
+				public global::Android.View.Animation.LayoutAnimationController LayoutAnimation
+				{
+				[Dot42.DexImport("getLayoutAnimation", "()Landroid/view/animation/LayoutAnimationController;", AccessFlags = 1)]
+						get{ return GetLayoutAnimation(); }
+				[Dot42.DexImport("setLayoutAnimation", "(Landroid/view/animation/LayoutAnimationController;)V", AccessFlags = 1)]
+						set{ SetLayoutAnimation(value); }
+				}
+
+				/// <java-name>
+				/// getPersistentDrawingCache
+				/// </java-name>
+				public int PersistentDrawingCache
+				{
+				[Dot42.DexImport("getPersistentDrawingCache", "()I", AccessFlags = 1)]
+						get{ return GetPersistentDrawingCache(); }
+				[Dot42.DexImport("setPersistentDrawingCache", "(I)V", AccessFlags = 1)]
+						set{ SetPersistentDrawingCache(value); }
+				}
+
+				/// <java-name>
+				/// getChildCount
+				/// </java-name>
+				public int ChildCount
+				{
+				[Dot42.DexImport("getChildCount", "()I", AccessFlags = 1)]
+						get{ return GetChildCount(); }
+				}
+
+				/// <java-name>
+				/// getLayoutAnimationListener
+				/// </java-name>
+				public global::Android.View.Animation.Animation.IAnimationListener LayoutAnimationListener
+				{
+				[Dot42.DexImport("getLayoutAnimationListener", "()Landroid/view/animation/Animation$AnimationListener;", AccessFlags = 1)]
+						get{ return GetLayoutAnimationListener(); }
+				[Dot42.DexImport("setLayoutAnimationListener", "(Landroid/view/animation/Animation$AnimationListener;)V", AccessFlags = 1)]
+						set{ SetLayoutAnimationListener(value); }
+				}
+
+				public global::Android.View.IViewParent Parent
+				{
+				[Dot42.DexImport("android/view/ViewParent", "getParent", "()Landroid/view/ViewParent;", AccessFlags = 1025)]
+						get{ return GetParent(); }
+				}
+
+				/// <java-name>
+				/// android/view/ViewGroup$MarginLayoutParams
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewGroup$MarginLayoutParams", AccessFlags = 9)]
+				public partial class MarginLayoutParams : global::Android.View.ViewGroup.LayoutParams
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// leftMargin
+						/// </java-name>
+						[Dot42.DexImport("leftMargin", "I", AccessFlags = 1)]
+						public int LeftMargin;
+						/// <java-name>
+						/// topMargin
+						/// </java-name>
+						[Dot42.DexImport("topMargin", "I", AccessFlags = 1)]
+						public int TopMargin;
+						/// <java-name>
+						/// rightMargin
+						/// </java-name>
+						[Dot42.DexImport("rightMargin", "I", AccessFlags = 1)]
+						public int RightMargin;
+						/// <java-name>
+						/// bottomMargin
+						/// </java-name>
+						[Dot42.DexImport("bottomMargin", "I", AccessFlags = 1)]
+						public int BottomMargin;
+						[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+						public MarginLayoutParams(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
+						public MarginLayoutParams(int int32, int int321) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$MarginLayoutParams;)V", AccessFlags = 1)]
+						public MarginLayoutParams(MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
+						public MarginLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// setMargins
+						/// </java-name>
+						[Dot42.DexImport("setMargins", "(IIII)V", AccessFlags = 1)]
+						public virtual void SetMargins(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal MarginLayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewGroup$LayoutParams
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewGroup$LayoutParams", AccessFlags = 9)]
+				public partial class LayoutParams
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// FILL_PARENT
+						/// </java-name>
+						[Dot42.DexImport("FILL_PARENT", "I", AccessFlags = 25)]
+						public const int FILL_PARENT = -1;
+						/// <java-name>
+						/// MATCH_PARENT
+						/// </java-name>
+						[Dot42.DexImport("MATCH_PARENT", "I", AccessFlags = 25)]
+						public const int MATCH_PARENT = -1;
+						/// <java-name>
+						/// WRAP_CONTENT
+						/// </java-name>
+						[Dot42.DexImport("WRAP_CONTENT", "I", AccessFlags = 25)]
+						public const int WRAP_CONTENT = -2;
+						/// <java-name>
+						/// width
+						/// </java-name>
+						[Dot42.DexImport("width", "I", AccessFlags = 1)]
+						public int Width;
+						/// <java-name>
+						/// height
+						/// </java-name>
+						[Dot42.DexImport("height", "I", AccessFlags = 1)]
+						public int Height;
+						/// <java-name>
+						/// layoutAnimationParameters
+						/// </java-name>
+						[Dot42.DexImport("layoutAnimationParameters", "Landroid/view/animation/LayoutAnimationController$AnimationParameters;", AccessFlags = 1)]
+						public global::Android.View.Animation.LayoutAnimationController.AnimationParameters LayoutAnimationParameters;
+						[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+						public LayoutParams(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
+						public LayoutParams(int int32, int int321) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
+						public LayoutParams(LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// setBaseAttributes
+						/// </java-name>
+						[Dot42.DexImport("setBaseAttributes", "(Landroid/content/res/TypedArray;II)V", AccessFlags = 4)]
+						protected internal virtual void SetBaseAttributes(global::Android.Content.Res.TypedArray typedArray, int int32, int int321) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewGroup$OnHierarchyChangeListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewGroup$OnHierarchyChangeListener", AccessFlags = 1545)]
+				public partial interface IOnHierarchyChangeListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onChildViewAdded
+						/// </java-name>
+						[Dot42.DexImport("onChildViewAdded", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1025)]
+						void OnChildViewAdded(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onChildViewRemoved
+						/// </java-name>
+						[Dot42.DexImport("onChildViewRemoved", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1025)]
+						void OnChildViewRemoved(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/ViewPropertyAnimator
+		/// </java-name>
+		[Dot42.DexImport("android/view/ViewPropertyAnimator", AccessFlags = 33)]
+		public partial class ViewPropertyAnimator
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal ViewPropertyAnimator() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setDuration
+				/// </java-name>
+				[Dot42.DexImport("setDuration", "(J)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator SetDuration(long int64) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// getDuration
+				/// </java-name>
+				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
+				public virtual long GetDuration() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getStartDelay
+				/// </java-name>
+				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
+				public virtual long GetStartDelay() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// setStartDelay
+				/// </java-name>
+				[Dot42.DexImport("setStartDelay", "(J)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator SetStartDelay(long int64) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// setInterpolator
+				/// </java-name>
+				[Dot42.DexImport("setInterpolator", "(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator SetInterpolator(global::Android.Animation.ITimeInterpolator timeInterpolator) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// setListener
+				/// </java-name>
+				[Dot42.DexImport("setListener", "(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator" +
+    ";", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator SetListener(global::Android.Animation.Animator.IAnimatorListener animatorListener) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// start
+				/// </java-name>
+				[Dot42.DexImport("start", "()V", AccessFlags = 1)]
+				public virtual void Start() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// cancel
+				/// </java-name>
+				[Dot42.DexImport("cancel", "()V", AccessFlags = 1)]
+				public virtual void Cancel() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// x
+				/// </java-name>
+				[Dot42.DexImport("x", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator X(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// xBy
+				/// </java-name>
+				[Dot42.DexImport("xBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator XBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// y
+				/// </java-name>
+				[Dot42.DexImport("y", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator Y(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// yBy
+				/// </java-name>
+				[Dot42.DexImport("yBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator YBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// rotation
+				/// </java-name>
+				[Dot42.DexImport("rotation", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator Rotation(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// rotationBy
+				/// </java-name>
+				[Dot42.DexImport("rotationBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator RotationBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// rotationX
+				/// </java-name>
+				[Dot42.DexImport("rotationX", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator RotationX(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// rotationXBy
+				/// </java-name>
+				[Dot42.DexImport("rotationXBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator RotationXBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// rotationY
+				/// </java-name>
+				[Dot42.DexImport("rotationY", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator RotationY(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// rotationYBy
+				/// </java-name>
+				[Dot42.DexImport("rotationYBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator RotationYBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// translationX
+				/// </java-name>
+				[Dot42.DexImport("translationX", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator TranslationX(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// translationXBy
+				/// </java-name>
+				[Dot42.DexImport("translationXBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator TranslationXBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// translationY
+				/// </java-name>
+				[Dot42.DexImport("translationY", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator TranslationY(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// translationYBy
+				/// </java-name>
+				[Dot42.DexImport("translationYBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator TranslationYBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// scaleX
+				/// </java-name>
+				[Dot42.DexImport("scaleX", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator ScaleX(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// scaleXBy
+				/// </java-name>
+				[Dot42.DexImport("scaleXBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator ScaleXBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// scaleY
+				/// </java-name>
+				[Dot42.DexImport("scaleY", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator ScaleY(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// scaleYBy
+				/// </java-name>
+				[Dot42.DexImport("scaleYBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator ScaleYBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// alpha
+				/// </java-name>
+				[Dot42.DexImport("alpha", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator Alpha(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// alphaBy
+				/// </java-name>
+				[Dot42.DexImport("alphaBy", "(F)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1)]
+				public virtual global::Android.View.ViewPropertyAnimator AlphaBy(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.ViewPropertyAnimator);
+				}
+
+				/// <java-name>
+				/// getDuration
+				/// </java-name>
+				public long Duration
+				{
+				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
+						get{ return GetDuration(); }
+				}
+
+				/// <java-name>
+				/// getStartDelay
+				/// </java-name>
+				public long StartDelay
+				{
+				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
+						get{ return GetStartDelay(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/ViewStub
+		/// </java-name>
+		[Dot42.DexImport("android/view/ViewStub", AccessFlags = 49)]
+		public sealed partial class ViewStub : global::Android.View.View
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public ViewStub(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
+				public ViewStub(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public ViewStub(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public ViewStub(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getInflatedId
+				/// </java-name>
+				[Dot42.DexImport("getInflatedId", "()I", AccessFlags = 1)]
+				public int GetInflatedId() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setInflatedId
+				/// </java-name>
+				[Dot42.DexImport("setInflatedId", "(I)V", AccessFlags = 1)]
+				public void SetInflatedId(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLayoutResource
+				/// </java-name>
+				[Dot42.DexImport("getLayoutResource", "()I", AccessFlags = 1)]
+				public int GetLayoutResource() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setLayoutResource
+				/// </java-name>
+				[Dot42.DexImport("setLayoutResource", "(I)V", AccessFlags = 1)]
+				public void SetLayoutResource(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onMeasure
+				/// </java-name>
+				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 4)]
+				protected internal override void OnMeasure(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// draw
+				/// </java-name>
+				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
+				public override void Draw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchDraw
+				/// </java-name>
+				[Dot42.DexImport("dispatchDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 4)]
+				protected internal override void DispatchDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setVisibility
+				/// </java-name>
+				[Dot42.DexImport("setVisibility", "(I)V", AccessFlags = 1)]
+				public override void SetVisibility(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// inflate
+				/// </java-name>
+				[Dot42.DexImport("inflate", "()Landroid/view/View;", AccessFlags = 1)]
+				public global::Android.View.View Inflate() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// setOnInflateListener
+				/// </java-name>
+				[Dot42.DexImport("setOnInflateListener", "(Landroid/view/ViewStub$OnInflateListener;)V", AccessFlags = 1)]
+				public void SetOnInflateListener(global::Android.View.ViewStub.IOnInflateListener onInflateListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ViewStub() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getInflatedId
+				/// </java-name>
+				public int InflatedId
+				{
+				[Dot42.DexImport("getInflatedId", "()I", AccessFlags = 1)]
+						get{ return GetInflatedId(); }
+				[Dot42.DexImport("setInflatedId", "(I)V", AccessFlags = 1)]
+						set{ SetInflatedId(value); }
+				}
+
+				/// <java-name>
+				/// getLayoutResource
+				/// </java-name>
+				public int LayoutResource
+				{
+				[Dot42.DexImport("getLayoutResource", "()I", AccessFlags = 1)]
+						get{ return GetLayoutResource(); }
+				[Dot42.DexImport("setLayoutResource", "(I)V", AccessFlags = 1)]
+						set{ SetLayoutResource(value); }
+				}
+
+				/// <java-name>
+				/// android/view/ViewStub$OnInflateListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewStub$OnInflateListener", AccessFlags = 1545)]
+				public partial interface IOnInflateListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onInflate
+						/// </java-name>
+						[Dot42.DexImport("onInflate", "(Landroid/view/ViewStub;Landroid/view/View;)V", AccessFlags = 1025)]
+						void OnInflate(global::Android.View.ViewStub viewStub, global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/ViewTreeObserver
+		/// </java-name>
+		[Dot42.DexImport("android/view/ViewTreeObserver", AccessFlags = 49)]
+		public sealed partial class ViewTreeObserver
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal ViewTreeObserver() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addOnGlobalFocusChangeListener
+				/// </java-name>
+				[Dot42.DexImport("addOnGlobalFocusChangeListener", "(Landroid/view/ViewTreeObserver$OnGlobalFocusChangeListener;)V", AccessFlags = 1)]
+				public void AddOnGlobalFocusChangeListener(global::Android.View.ViewTreeObserver.IOnGlobalFocusChangeListener onGlobalFocusChangeListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeOnGlobalFocusChangeListener
+				/// </java-name>
+				[Dot42.DexImport("removeOnGlobalFocusChangeListener", "(Landroid/view/ViewTreeObserver$OnGlobalFocusChangeListener;)V", AccessFlags = 1)]
+				public void RemoveOnGlobalFocusChangeListener(global::Android.View.ViewTreeObserver.IOnGlobalFocusChangeListener onGlobalFocusChangeListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addOnGlobalLayoutListener
+				/// </java-name>
+				[Dot42.DexImport("addOnGlobalLayoutListener", "(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V", AccessFlags = 1)]
+				public void AddOnGlobalLayoutListener(global::Android.View.ViewTreeObserver.IOnGlobalLayoutListener onGlobalLayoutListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeGlobalOnLayoutListener
+				/// </java-name>
+				[Dot42.DexImport("removeGlobalOnLayoutListener", "(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V", AccessFlags = 1)]
+				public void RemoveGlobalOnLayoutListener(global::Android.View.ViewTreeObserver.IOnGlobalLayoutListener onGlobalLayoutListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addOnPreDrawListener
+				/// </java-name>
+				[Dot42.DexImport("addOnPreDrawListener", "(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V", AccessFlags = 1)]
+				public void AddOnPreDrawListener(global::Android.View.ViewTreeObserver.IOnPreDrawListener onPreDrawListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeOnPreDrawListener
+				/// </java-name>
+				[Dot42.DexImport("removeOnPreDrawListener", "(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V", AccessFlags = 1)]
+				public void RemoveOnPreDrawListener(global::Android.View.ViewTreeObserver.IOnPreDrawListener onPreDrawListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addOnScrollChangedListener
+				/// </java-name>
+				[Dot42.DexImport("addOnScrollChangedListener", "(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V", AccessFlags = 1)]
+				public void AddOnScrollChangedListener(global::Android.View.ViewTreeObserver.IOnScrollChangedListener onScrollChangedListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeOnScrollChangedListener
+				/// </java-name>
+				[Dot42.DexImport("removeOnScrollChangedListener", "(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V", AccessFlags = 1)]
+				public void RemoveOnScrollChangedListener(global::Android.View.ViewTreeObserver.IOnScrollChangedListener onScrollChangedListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addOnTouchModeChangeListener
+				/// </java-name>
+				[Dot42.DexImport("addOnTouchModeChangeListener", "(Landroid/view/ViewTreeObserver$OnTouchModeChangeListener;)V", AccessFlags = 1)]
+				public void AddOnTouchModeChangeListener(global::Android.View.ViewTreeObserver.IOnTouchModeChangeListener onTouchModeChangeListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeOnTouchModeChangeListener
+				/// </java-name>
+				[Dot42.DexImport("removeOnTouchModeChangeListener", "(Landroid/view/ViewTreeObserver$OnTouchModeChangeListener;)V", AccessFlags = 1)]
+				public void RemoveOnTouchModeChangeListener(global::Android.View.ViewTreeObserver.IOnTouchModeChangeListener onTouchModeChangeListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isAlive
+				/// </java-name>
+				[Dot42.DexImport("isAlive", "()Z", AccessFlags = 1)]
+				public bool IsAlive() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dispatchOnGlobalLayout
+				/// </java-name>
+				[Dot42.DexImport("dispatchOnGlobalLayout", "()V", AccessFlags = 17)]
+				public void DispatchOnGlobalLayout() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchOnPreDraw
+				/// </java-name>
+				[Dot42.DexImport("dispatchOnPreDraw", "()Z", AccessFlags = 17)]
+				public bool DispatchOnPreDraw() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// android/view/ViewTreeObserver$OnScrollChangedListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewTreeObserver$OnScrollChangedListener", AccessFlags = 1545)]
+				public partial interface IOnScrollChangedListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onScrollChanged
+						/// </java-name>
+						[Dot42.DexImport("onScrollChanged", "()V", AccessFlags = 1025)]
+						void OnScrollChanged() /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewTreeObserver$OnTouchModeChangeListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewTreeObserver$OnTouchModeChangeListener", AccessFlags = 1545)]
+				public partial interface IOnTouchModeChangeListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onTouchModeChanged
+						/// </java-name>
+						[Dot42.DexImport("onTouchModeChanged", "(Z)V", AccessFlags = 1025)]
+						void OnTouchModeChanged(bool boolean) /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewTreeObserver$OnPreDrawListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewTreeObserver$OnPreDrawListener", AccessFlags = 1545)]
+				public partial interface IOnPreDrawListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onPreDraw
+						/// </java-name>
+						[Dot42.DexImport("onPreDraw", "()Z", AccessFlags = 1025)]
+						bool OnPreDraw() /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewTreeObserver$OnGlobalLayoutListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewTreeObserver$OnGlobalLayoutListener", AccessFlags = 1545)]
+				public partial interface IOnGlobalLayoutListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onGlobalLayout
+						/// </java-name>
+						[Dot42.DexImport("onGlobalLayout", "()V", AccessFlags = 1025)]
+						void OnGlobalLayout() /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/view/ViewTreeObserver$OnGlobalFocusChangeListener
+				/// </java-name>
+				[Dot42.DexImport("android/view/ViewTreeObserver$OnGlobalFocusChangeListener", AccessFlags = 1545)]
+				public partial interface IOnGlobalFocusChangeListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onGlobalFocusChanged
+						/// </java-name>
+						[Dot42.DexImport("onGlobalFocusChanged", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1025)]
+						void OnGlobalFocusChanged(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/view/Window
+		/// </java-name>
+		[Dot42.DexImport("android/view/Window", AccessFlags = 1057)]
+		public abstract partial class Window
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// FEATURE_OPTIONS_PANEL
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_OPTIONS_PANEL", "I", AccessFlags = 25)]
+				public const int FEATURE_OPTIONS_PANEL = 0;
+				/// <java-name>
+				/// FEATURE_NO_TITLE
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_NO_TITLE", "I", AccessFlags = 25)]
+				public const int FEATURE_NO_TITLE = 1;
+				/// <java-name>
+				/// FEATURE_PROGRESS
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_PROGRESS", "I", AccessFlags = 25)]
+				public const int FEATURE_PROGRESS = 2;
+				/// <java-name>
+				/// FEATURE_LEFT_ICON
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_LEFT_ICON", "I", AccessFlags = 25)]
+				public const int FEATURE_LEFT_ICON = 3;
+				/// <java-name>
+				/// FEATURE_RIGHT_ICON
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_RIGHT_ICON", "I", AccessFlags = 25)]
+				public const int FEATURE_RIGHT_ICON = 4;
+				/// <java-name>
+				/// FEATURE_INDETERMINATE_PROGRESS
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_INDETERMINATE_PROGRESS", "I", AccessFlags = 25)]
+				public const int FEATURE_INDETERMINATE_PROGRESS = 5;
+				/// <java-name>
+				/// FEATURE_CONTEXT_MENU
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_CONTEXT_MENU", "I", AccessFlags = 25)]
+				public const int FEATURE_CONTEXT_MENU = 6;
+				/// <java-name>
+				/// FEATURE_CUSTOM_TITLE
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_CUSTOM_TITLE", "I", AccessFlags = 25)]
+				public const int FEATURE_CUSTOM_TITLE = 7;
+				/// <java-name>
+				/// FEATURE_ACTION_BAR
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_ACTION_BAR", "I", AccessFlags = 25)]
+				public const int FEATURE_ACTION_BAR = 8;
+				/// <java-name>
+				/// FEATURE_ACTION_BAR_OVERLAY
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_ACTION_BAR_OVERLAY", "I", AccessFlags = 25)]
+				public const int FEATURE_ACTION_BAR_OVERLAY = 9;
+				/// <java-name>
+				/// FEATURE_ACTION_MODE_OVERLAY
+				/// </java-name>
+				[Dot42.DexImport("FEATURE_ACTION_MODE_OVERLAY", "I", AccessFlags = 25)]
+				public const int FEATURE_ACTION_MODE_OVERLAY = 10;
+				/// <java-name>
+				/// PROGRESS_VISIBILITY_ON
+				/// </java-name>
+				[Dot42.DexImport("PROGRESS_VISIBILITY_ON", "I", AccessFlags = 25)]
+				public const int PROGRESS_VISIBILITY_ON = -1;
+				/// <java-name>
+				/// PROGRESS_VISIBILITY_OFF
+				/// </java-name>
+				[Dot42.DexImport("PROGRESS_VISIBILITY_OFF", "I", AccessFlags = 25)]
+				public const int PROGRESS_VISIBILITY_OFF = -2;
+				/// <java-name>
+				/// PROGRESS_INDETERMINATE_ON
+				/// </java-name>
+				[Dot42.DexImport("PROGRESS_INDETERMINATE_ON", "I", AccessFlags = 25)]
+				public const int PROGRESS_INDETERMINATE_ON = -3;
+				/// <java-name>
+				/// PROGRESS_INDETERMINATE_OFF
+				/// </java-name>
+				[Dot42.DexImport("PROGRESS_INDETERMINATE_OFF", "I", AccessFlags = 25)]
+				public const int PROGRESS_INDETERMINATE_OFF = -4;
+				/// <java-name>
+				/// PROGRESS_START
+				/// </java-name>
+				[Dot42.DexImport("PROGRESS_START", "I", AccessFlags = 25)]
+				public const int PROGRESS_START = 0;
+				/// <java-name>
+				/// PROGRESS_END
+				/// </java-name>
+				[Dot42.DexImport("PROGRESS_END", "I", AccessFlags = 25)]
+				public const int PROGRESS_END = 10000;
+				/// <java-name>
+				/// PROGRESS_SECONDARY_START
+				/// </java-name>
+				[Dot42.DexImport("PROGRESS_SECONDARY_START", "I", AccessFlags = 25)]
+				public const int PROGRESS_SECONDARY_START = 20000;
+				/// <java-name>
+				/// PROGRESS_SECONDARY_END
+				/// </java-name>
+				[Dot42.DexImport("PROGRESS_SECONDARY_END", "I", AccessFlags = 25)]
+				public const int PROGRESS_SECONDARY_END = 30000;
+				/// <java-name>
+				/// DEFAULT_FEATURES
+				/// </java-name>
+				[Dot42.DexImport("DEFAULT_FEATURES", "I", AccessFlags = 28)]
+				protected internal const int DEFAULT_FEATURES = 65;
+				/// <java-name>
+				/// ID_ANDROID_CONTENT
+				/// </java-name>
+				[Dot42.DexImport("ID_ANDROID_CONTENT", "I", AccessFlags = 25)]
+				public const int ID_ANDROID_CONTENT = 16908290;
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public Window(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContext
+				/// </java-name>
+				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 17)]
+				public global::Android.Content.Context GetContext() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Context);
+				}
+
+				/// <java-name>
+				/// getWindowStyle
+				/// </java-name>
+				[Dot42.DexImport("getWindowStyle", "()Landroid/content/res/TypedArray;", AccessFlags = 17)]
+				public global::Android.Content.Res.TypedArray GetWindowStyle() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Res.TypedArray);
+				}
+
+				/// <java-name>
+				/// setContainer
+				/// </java-name>
+				[Dot42.DexImport("setContainer", "(Landroid/view/Window;)V", AccessFlags = 1)]
+				public virtual void SetContainer(global::Android.View.Window window) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContainer
+				/// </java-name>
+				[Dot42.DexImport("getContainer", "()Landroid/view/Window;", AccessFlags = 17)]
+				public global::Android.View.Window GetContainer() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.Window);
+				}
+
+				/// <java-name>
+				/// hasChildren
+				/// </java-name>
+				[Dot42.DexImport("hasChildren", "()Z", AccessFlags = 17)]
+				public bool HasChildren() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setWindowManager
+				/// </java-name>
+				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void SetWindowManager(global::Android.View.IWindowManager windowManager, global::Android.Os.IBinder binder, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setWindowManager
+				/// </java-name>
+				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;Z)V", AccessFlags = 1)]
+				public virtual void SetWindowManager(global::Android.View.IWindowManager windowManager, global::Android.Os.IBinder binder, string @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getWindowManager
+				/// </java-name>
+				[Dot42.DexImport("getWindowManager", "()Landroid/view/WindowManager;", AccessFlags = 1)]
+				public virtual global::Android.View.IWindowManager GetWindowManager() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.IWindowManager);
+				}
+
+				/// <java-name>
+				/// setCallback
+				/// </java-name>
+				[Dot42.DexImport("setCallback", "(Landroid/view/Window$Callback;)V", AccessFlags = 1)]
+				public virtual void SetCallback(global::Android.View.Window.ICallback callback) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getCallback
+				/// </java-name>
+				[Dot42.DexImport("getCallback", "()Landroid/view/Window$Callback;", AccessFlags = 17)]
+				public global::Android.View.Window.ICallback GetCallback() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.Window.ICallback);
+				}
+
+				/// <java-name>
+				/// takeSurface
+				/// </java-name>
+				[Dot42.DexImport("takeSurface", "(Landroid/view/SurfaceHolder$Callback2;)V", AccessFlags = 1025)]
+				public abstract void TakeSurface(global::Android.View.ISurfaceHolder_ICallback2 surfaceHolder_ICallback2) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// takeInputQueue
+				/// </java-name>
+				[Dot42.DexImport("takeInputQueue", "(Landroid/view/InputQueue$Callback;)V", AccessFlags = 1025)]
+				public abstract void TakeInputQueue(global::Android.View.InputQueue.ICallback callback) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isFloating
+				/// </java-name>
+				[Dot42.DexImport("isFloating", "()Z", AccessFlags = 1025)]
+				public abstract bool IsFloating() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setLayout
+				/// </java-name>
+				[Dot42.DexImport("setLayout", "(II)V", AccessFlags = 1)]
+				public virtual void SetLayout(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setGravity
+				/// </java-name>
+				[Dot42.DexImport("setGravity", "(I)V", AccessFlags = 1)]
+				public virtual void SetGravity(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setType
+				/// </java-name>
+				[Dot42.DexImport("setType", "(I)V", AccessFlags = 1)]
+				public virtual void SetType(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setFormat
+				/// </java-name>
+				[Dot42.DexImport("setFormat", "(I)V", AccessFlags = 1)]
+				public virtual void SetFormat(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setWindowAnimations
+				/// </java-name>
+				[Dot42.DexImport("setWindowAnimations", "(I)V", AccessFlags = 1)]
+				public virtual void SetWindowAnimations(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setSoftInputMode
+				/// </java-name>
+				[Dot42.DexImport("setSoftInputMode", "(I)V", AccessFlags = 1)]
+				public virtual void SetSoftInputMode(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addFlags
+				/// </java-name>
+				[Dot42.DexImport("addFlags", "(I)V", AccessFlags = 1)]
+				public virtual void AddFlags(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clearFlags
+				/// </java-name>
+				[Dot42.DexImport("clearFlags", "(I)V", AccessFlags = 1)]
+				public virtual void ClearFlags(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setFlags
+				/// </java-name>
+				[Dot42.DexImport("setFlags", "(II)V", AccessFlags = 1)]
+				public virtual void SetFlags(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setDimAmount
+				/// </java-name>
+				[Dot42.DexImport("setDimAmount", "(F)V", AccessFlags = 1)]
+				public virtual void SetDimAmount(float single) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setAttributes
+				/// </java-name>
+				[Dot42.DexImport("setAttributes", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
+				public virtual void SetAttributes(global::Android.View.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAttributes
+				/// </java-name>
+				[Dot42.DexImport("getAttributes", "()Landroid/view/WindowManager$LayoutParams;", AccessFlags = 17)]
+				public global::Android.View.IWindowManager_LayoutParams GetAttributes() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.IWindowManager_LayoutParams);
+				}
+
+				/// <java-name>
+				/// getForcedWindowFlags
+				/// </java-name>
+				[Dot42.DexImport("getForcedWindowFlags", "()I", AccessFlags = 20)]
+				protected internal int GetForcedWindowFlags() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// hasSoftInputMode
+				/// </java-name>
+				[Dot42.DexImport("hasSoftInputMode", "()Z", AccessFlags = 20)]
+				protected internal bool HasSoftInputMode() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// requestFeature
+				/// </java-name>
+				[Dot42.DexImport("requestFeature", "(I)Z", AccessFlags = 1)]
+				public virtual bool RequestFeature(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// makeActive
+				/// </java-name>
+				[Dot42.DexImport("makeActive", "()V", AccessFlags = 17)]
+				public void MakeActive() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isActive
+				/// </java-name>
+				[Dot42.DexImport("isActive", "()Z", AccessFlags = 17)]
+				public bool IsActive() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// findViewById
+				/// </java-name>
+				[Dot42.DexImport("findViewById", "(I)Landroid/view/View;", AccessFlags = 1)]
+				public virtual global::Android.View.View FindViewById(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// setContentView
+				/// </java-name>
+				[Dot42.DexImport("setContentView", "(I)V", AccessFlags = 1025)]
+				public abstract void SetContentView(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setContentView
+				/// </java-name>
+				[Dot42.DexImport("setContentView", "(Landroid/view/View;)V", AccessFlags = 1025)]
+				public abstract void SetContentView(global::Android.View.View view) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setContentView
+				/// </java-name>
+				[Dot42.DexImport("setContentView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1025)]
+				public abstract void SetContentView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addContentView
+				/// </java-name>
+				[Dot42.DexImport("addContentView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1025)]
+				public abstract void AddContentView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getCurrentFocus
+				/// </java-name>
+				[Dot42.DexImport("getCurrentFocus", "()Landroid/view/View;", AccessFlags = 1025)]
+				public abstract global::Android.View.View GetCurrentFocus() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getLayoutInflater
+				/// </java-name>
+				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1025)]
+				public abstract global::Android.View.LayoutInflater GetLayoutInflater() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setTitle
+				/// </java-name>
+				[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
+				public abstract void SetTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setTitleColor
+				/// </java-name>
+				[Dot42.DexImport("setTitleColor", "(I)V", AccessFlags = 1025)]
+				public abstract void SetTitleColor(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// openPanel
+				/// </java-name>
+				[Dot42.DexImport("openPanel", "(ILandroid/view/KeyEvent;)V", AccessFlags = 1025)]
+				public abstract void OpenPanel(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// closePanel
+				/// </java-name>
+				[Dot42.DexImport("closePanel", "(I)V", AccessFlags = 1025)]
+				public abstract void ClosePanel(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// togglePanel
+				/// </java-name>
+				[Dot42.DexImport("togglePanel", "(ILandroid/view/KeyEvent;)V", AccessFlags = 1025)]
+				public abstract void TogglePanel(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// invalidatePanelMenu
+				/// </java-name>
+				[Dot42.DexImport("invalidatePanelMenu", "(I)V", AccessFlags = 1025)]
+				public abstract void InvalidatePanelMenu(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// performPanelShortcut
+				/// </java-name>
+				[Dot42.DexImport("performPanelShortcut", "(IILandroid/view/KeyEvent;I)Z", AccessFlags = 1025)]
+				public abstract bool PerformPanelShortcut(int int32, int int321, global::Android.View.KeyEvent keyEvent, int int322) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// performPanelIdentifierAction
+				/// </java-name>
+				[Dot42.DexImport("performPanelIdentifierAction", "(III)Z", AccessFlags = 1025)]
+				public abstract bool PerformPanelIdentifierAction(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// closeAllPanels
+				/// </java-name>
+				[Dot42.DexImport("closeAllPanels", "()V", AccessFlags = 1025)]
+				public abstract void CloseAllPanels() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// performContextMenuIdentifierAction
+				/// </java-name>
+				[Dot42.DexImport("performContextMenuIdentifierAction", "(II)Z", AccessFlags = 1025)]
+				public abstract bool PerformContextMenuIdentifierAction(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onConfigurationChanged
+				/// </java-name>
+				[Dot42.DexImport("onConfigurationChanged", "(Landroid/content/res/Configuration;)V", AccessFlags = 1025)]
+				public abstract void OnConfigurationChanged(global::Android.Content.Res.Configuration configuration) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setBackgroundDrawableResource
+				/// </java-name>
+				[Dot42.DexImport("setBackgroundDrawableResource", "(I)V", AccessFlags = 1)]
+				public virtual void SetBackgroundDrawableResource(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setBackgroundDrawable
+				/// </java-name>
+				[Dot42.DexImport("setBackgroundDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
+				public abstract void SetBackgroundDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setFeatureDrawableResource
+				/// </java-name>
+				[Dot42.DexImport("setFeatureDrawableResource", "(II)V", AccessFlags = 1025)]
+				public abstract void SetFeatureDrawableResource(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setFeatureDrawableUri
+				/// </java-name>
+				[Dot42.DexImport("setFeatureDrawableUri", "(ILandroid/net/Uri;)V", AccessFlags = 1025)]
+				public abstract void SetFeatureDrawableUri(int int32, global::Android.Net.Uri uri) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setFeatureDrawable
+				/// </java-name>
+				[Dot42.DexImport("setFeatureDrawable", "(ILandroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
+				public abstract void SetFeatureDrawable(int int32, global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setFeatureDrawableAlpha
+				/// </java-name>
+				[Dot42.DexImport("setFeatureDrawableAlpha", "(II)V", AccessFlags = 1025)]
+				public abstract void SetFeatureDrawableAlpha(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setFeatureInt
+				/// </java-name>
+				[Dot42.DexImport("setFeatureInt", "(II)V", AccessFlags = 1025)]
+				public abstract void SetFeatureInt(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// takeKeyEvents
+				/// </java-name>
+				[Dot42.DexImport("takeKeyEvents", "(Z)V", AccessFlags = 1025)]
+				public abstract void TakeKeyEvents(bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// superDispatchKeyEvent
+				/// </java-name>
+				[Dot42.DexImport("superDispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
+				public abstract bool SuperDispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// superDispatchKeyShortcutEvent
+				/// </java-name>
+				[Dot42.DexImport("superDispatchKeyShortcutEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
+				public abstract bool SuperDispatchKeyShortcutEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// superDispatchTouchEvent
+				/// </java-name>
+				[Dot42.DexImport("superDispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+				public abstract bool SuperDispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// superDispatchTrackballEvent
+				/// </java-name>
+				[Dot42.DexImport("superDispatchTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+				public abstract bool SuperDispatchTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// superDispatchGenericMotionEvent
+				/// </java-name>
+				[Dot42.DexImport("superDispatchGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+				public abstract bool SuperDispatchGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getDecorView
+				/// </java-name>
+				[Dot42.DexImport("getDecorView", "()Landroid/view/View;", AccessFlags = 1025)]
+				public abstract global::Android.View.View GetDecorView() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// peekDecorView
+				/// </java-name>
+				[Dot42.DexImport("peekDecorView", "()Landroid/view/View;", AccessFlags = 1025)]
+				public abstract global::Android.View.View PeekDecorView() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// saveHierarchyState
+				/// </java-name>
+				[Dot42.DexImport("saveHierarchyState", "()Landroid/os/Bundle;", AccessFlags = 1025)]
+				public abstract global::Android.Os.Bundle SaveHierarchyState() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// restoreHierarchyState
+				/// </java-name>
+				[Dot42.DexImport("restoreHierarchyState", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
+				public abstract void RestoreHierarchyState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onActive
+				/// </java-name>
+				[Dot42.DexImport("onActive", "()V", AccessFlags = 1028)]
+				protected internal abstract void OnActive() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getFeatures
+				/// </java-name>
+				[Dot42.DexImport("getFeatures", "()I", AccessFlags = 20)]
+				protected internal int GetFeatures() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// hasFeature
+				/// </java-name>
+				[Dot42.DexImport("hasFeature", "(I)Z", AccessFlags = 1)]
+				public virtual bool HasFeature(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getLocalFeatures
+				/// </java-name>
+				[Dot42.DexImport("getLocalFeatures", "()I", AccessFlags = 20)]
+				protected internal int GetLocalFeatures() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setDefaultWindowFormat
+				/// </java-name>
+				[Dot42.DexImport("setDefaultWindowFormat", "(I)V", AccessFlags = 4)]
+				protected internal virtual void SetDefaultWindowFormat(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setChildDrawable
+				/// </java-name>
+				[Dot42.DexImport("setChildDrawable", "(ILandroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
+				public abstract void SetChildDrawable(int int32, global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setChildInt
+				/// </java-name>
+				[Dot42.DexImport("setChildInt", "(II)V", AccessFlags = 1025)]
+				public abstract void SetChildInt(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isShortcutKey
+				/// </java-name>
+				[Dot42.DexImport("isShortcutKey", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
+				public abstract bool IsShortcutKey(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setVolumeControlStream
+				/// </java-name>
+				[Dot42.DexImport("setVolumeControlStream", "(I)V", AccessFlags = 1025)]
+				public abstract void SetVolumeControlStream(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getVolumeControlStream
+				/// </java-name>
+				[Dot42.DexImport("getVolumeControlStream", "()I", AccessFlags = 1025)]
+				public abstract int GetVolumeControlStream() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setUiOptions
+				/// </java-name>
+				[Dot42.DexImport("setUiOptions", "(I)V", AccessFlags = 1)]
+				public virtual void SetUiOptions(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setUiOptions
+				/// </java-name>
+				[Dot42.DexImport("setUiOptions", "(II)V", AccessFlags = 1)]
+				public virtual void SetUiOptions(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal Window() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContext
+				/// </java-name>
+				public global::Android.Content.Context Context
+				{
+				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 17)]
+						get{ return GetContext(); }
+				}
+
+				/// <java-name>
+				/// getWindowStyle
+				/// </java-name>
+				public global::Android.Content.Res.TypedArray WindowStyle
+				{
+				[Dot42.DexImport("getWindowStyle", "()Landroid/content/res/TypedArray;", AccessFlags = 17)]
+						get{ return GetWindowStyle(); }
+				}
+
+				/// <java-name>
+				/// getContainer
+				/// </java-name>
+				public global::Android.View.Window Container
+				{
+				[Dot42.DexImport("getContainer", "()Landroid/view/Window;", AccessFlags = 17)]
+						get{ return GetContainer(); }
+				[Dot42.DexImport("setContainer", "(Landroid/view/Window;)V", AccessFlags = 1)]
+						set{ SetContainer(value); }
+				}
+
+				/// <java-name>
+				/// getWindowManager
+				/// </java-name>
+				public global::Android.View.IWindowManager WindowManager
+				{
+				[Dot42.DexImport("getWindowManager", "()Landroid/view/WindowManager;", AccessFlags = 1)]
+						get{ return GetWindowManager(); }
+				}
+
+				/// <java-name>
+				/// getCallback
+				/// </java-name>
+				public global::Android.View.Window.ICallback Callback
+				{
+				[Dot42.DexImport("getCallback", "()Landroid/view/Window$Callback;", AccessFlags = 17)]
+						get{ return GetCallback(); }
+				[Dot42.DexImport("setCallback", "(Landroid/view/Window$Callback;)V", AccessFlags = 1)]
+						set{ SetCallback(value); }
+				}
+
+				/// <java-name>
+				/// getAttributes
+				/// </java-name>
+				public global::Android.View.IWindowManager_LayoutParams Attributes
+				{
+				[Dot42.DexImport("getAttributes", "()Landroid/view/WindowManager$LayoutParams;", AccessFlags = 17)]
+						get{ return GetAttributes(); }
+				[Dot42.DexImport("setAttributes", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
+						set{ SetAttributes(value); }
+				}
+
+				/// <java-name>
+				/// getForcedWindowFlags
+				/// </java-name>
+				protected internal int ForcedWindowFlags
+				{
+				[Dot42.DexImport("getForcedWindowFlags", "()I", AccessFlags = 20)]
+						get{ return GetForcedWindowFlags(); }
+				}
+
+				/// <java-name>
+				/// getCurrentFocus
+				/// </java-name>
+				public global::Android.View.View CurrentFocus
+				{
+				[Dot42.DexImport("getCurrentFocus", "()Landroid/view/View;", AccessFlags = 1025)]
+						get{ return GetCurrentFocus(); }
+				}
+
+				/// <java-name>
+				/// getLayoutInflater
+				/// </java-name>
+				public global::Android.View.LayoutInflater LayoutInflater
+				{
+				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1025)]
+						get{ return GetLayoutInflater(); }
+				}
+
+				/// <java-name>
+				/// getDecorView
+				/// </java-name>
+				public global::Android.View.View DecorView
+				{
+				[Dot42.DexImport("getDecorView", "()Landroid/view/View;", AccessFlags = 1025)]
+						get{ return GetDecorView(); }
+				}
+
+				/// <java-name>
+				/// getFeatures
+				/// </java-name>
+				protected internal int Features
+				{
+				[Dot42.DexImport("getFeatures", "()I", AccessFlags = 20)]
+						get{ return GetFeatures(); }
+				}
+
+				/// <java-name>
+				/// getLocalFeatures
+				/// </java-name>
+				protected internal int LocalFeatures
+				{
+				[Dot42.DexImport("getLocalFeatures", "()I", AccessFlags = 20)]
+						get{ return GetLocalFeatures(); }
+				}
+
+				/// <java-name>
+				/// getVolumeControlStream
+				/// </java-name>
+				public int VolumeControlStream
+				{
+				[Dot42.DexImport("getVolumeControlStream", "()I", AccessFlags = 1025)]
+						get{ return GetVolumeControlStream(); }
+				[Dot42.DexImport("setVolumeControlStream", "(I)V", AccessFlags = 1025)]
+						set{ SetVolumeControlStream(value); }
+				}
+
+				/// <java-name>
+				/// android/view/Window$Callback
+				/// </java-name>
+				[Dot42.DexImport("android/view/Window$Callback", AccessFlags = 1545)]
+				public partial interface ICallback
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// dispatchKeyEvent
+						/// </java-name>
+						[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
+						bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// dispatchKeyShortcutEvent
+						/// </java-name>
+						[Dot42.DexImport("dispatchKeyShortcutEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
+						bool DispatchKeyShortcutEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// dispatchTouchEvent
+						/// </java-name>
+						[Dot42.DexImport("dispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+						bool DispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// dispatchTrackballEvent
+						/// </java-name>
+						[Dot42.DexImport("dispatchTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+						bool DispatchTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// dispatchGenericMotionEvent
+						/// </java-name>
+						[Dot42.DexImport("dispatchGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
+						bool DispatchGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// dispatchPopulateAccessibilityEvent
+						/// </java-name>
+						[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1025)]
+						bool DispatchPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onCreatePanelView
+						/// </java-name>
+						[Dot42.DexImport("onCreatePanelView", "(I)Landroid/view/View;", AccessFlags = 1025)]
+						global::Android.View.View OnCreatePanelView(int int32) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onCreatePanelMenu
+						/// </java-name>
+						[Dot42.DexImport("onCreatePanelMenu", "(ILandroid/view/Menu;)Z", AccessFlags = 1025)]
+						bool OnCreatePanelMenu(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onPreparePanel
+						/// </java-name>
+						[Dot42.DexImport("onPreparePanel", "(ILandroid/view/View;Landroid/view/Menu;)Z", AccessFlags = 1025)]
+						bool OnPreparePanel(int int32, global::Android.View.View view, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onMenuOpened
+						/// </java-name>
+						[Dot42.DexImport("onMenuOpened", "(ILandroid/view/Menu;)Z", AccessFlags = 1025)]
+						bool OnMenuOpened(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onMenuItemSelected
+						/// </java-name>
+						[Dot42.DexImport("onMenuItemSelected", "(ILandroid/view/MenuItem;)Z", AccessFlags = 1025)]
+						bool OnMenuItemSelected(int int32, global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onWindowAttributesChanged
+						/// </java-name>
+						[Dot42.DexImport("onWindowAttributesChanged", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1025)]
+						void OnWindowAttributesChanged(global::Android.View.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onContentChanged
+						/// </java-name>
+						[Dot42.DexImport("onContentChanged", "()V", AccessFlags = 1025)]
+						void OnContentChanged() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onWindowFocusChanged
+						/// </java-name>
+						[Dot42.DexImport("onWindowFocusChanged", "(Z)V", AccessFlags = 1025)]
+						void OnWindowFocusChanged(bool boolean) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onAttachedToWindow
+						/// </java-name>
+						[Dot42.DexImport("onAttachedToWindow", "()V", AccessFlags = 1025)]
+						void OnAttachedToWindow() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onDetachedFromWindow
+						/// </java-name>
+						[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 1025)]
+						void OnDetachedFromWindow() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onPanelClosed
+						/// </java-name>
+						[Dot42.DexImport("onPanelClosed", "(ILandroid/view/Menu;)V", AccessFlags = 1025)]
+						void OnPanelClosed(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onSearchRequested
+						/// </java-name>
+						[Dot42.DexImport("onSearchRequested", "()Z", AccessFlags = 1025)]
+						bool OnSearchRequested() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onWindowStartingActionMode
+						/// </java-name>
+						[Dot42.DexImport("onWindowStartingActionMode", "(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;", AccessFlags = 1025)]
+						global::Android.View.ActionMode OnWindowStartingActionMode(global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onActionModeStarted
+						/// </java-name>
+						[Dot42.DexImport("onActionModeStarted", "(Landroid/view/ActionMode;)V", AccessFlags = 1025)]
+						void OnActionModeStarted(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onActionModeFinished
+						/// </java-name>
+						[Dot42.DexImport("onActionModeFinished", "(Landroid/view/ActionMode;)V", AccessFlags = 1025)]
+						void OnActionModeFinished(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ ;
+
 				}
 
 		}

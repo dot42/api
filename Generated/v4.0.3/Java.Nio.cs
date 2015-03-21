@@ -2,20 +2,6 @@
 namespace Java.Nio
 {
 		/// <java-name>
-		/// java/nio/InvalidMarkException
-		/// </java-name>
-		[Dot42.DexImport("java/nio/InvalidMarkException", AccessFlags = 33)]
-		public partial class InvalidMarkException : global::Java.Lang.IllegalStateException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public InvalidMarkException() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// java/nio/Buffer
 		/// </java-name>
 		[Dot42.DexImport("java/nio/Buffer", AccessFlags = 1057)]
@@ -177,205 +163,30 @@ namespace Java.Nio
 		}
 
 		/// <java-name>
-		/// java/nio/FloatBuffer
+		/// java/nio/BufferOverflowException
 		/// </java-name>
-		[Dot42.DexImport("java/nio/FloatBuffer", AccessFlags = 1057, Signature = "Ljava/nio/Buffer;Ljava/lang/Comparable<Ljava/nio/FloatBuffer;>;")]
-		public abstract partial class FloatBuffer : global::Java.Nio.Buffer, global::System.IComparable<global::Java.Nio.FloatBuffer>
+		[Dot42.DexImport("java/nio/BufferOverflowException", AccessFlags = 33)]
+		public partial class BufferOverflowException : global::System.SystemException
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal FloatBuffer() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BufferOverflowException() /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// allocate
-				/// </java-name>
-				[Dot42.DexImport("allocate", "(I)Ljava/nio/FloatBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.FloatBuffer Allocate(int int32) /* MethodBuilder.Create */ 
+		}
+
+		/// <java-name>
+		/// java/nio/BufferUnderflowException
+		/// </java-name>
+		[Dot42.DexImport("java/nio/BufferUnderflowException", AccessFlags = 33)]
+		public partial class BufferUnderflowException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BufferUnderflowException() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Nio.FloatBuffer);
 				}
-
-				/// <java-name>
-				/// wrap
-				/// </java-name>
-				[Dot42.DexImport("wrap", "([F)Ljava/nio/FloatBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.FloatBuffer Wrap(float[] single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.FloatBuffer);
-				}
-
-				/// <java-name>
-				/// wrap
-				/// </java-name>
-				[Dot42.DexImport("wrap", "([FII)Ljava/nio/FloatBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.FloatBuffer Wrap(float[] single, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.FloatBuffer);
-				}
-
-				/// <java-name>
-				/// array
-				/// </java-name>
-				[Dot42.DexImport("array", "()[F", AccessFlags = 17)]
-				public override object Array() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// arrayOffset
-				/// </java-name>
-				[Dot42.DexImport("arrayOffset", "()I", AccessFlags = 17)]
-				public override int ArrayOffset() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// asReadOnlyBuffer
-				/// </java-name>
-				[Dot42.DexImport("asReadOnlyBuffer", "()Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.FloatBuffer AsReadOnlyBuffer() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// compact
-				/// </java-name>
-				[Dot42.DexImport("compact", "()Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.FloatBuffer Compact() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// compareTo
-				/// </java-name>
-				[Dot42.DexImport("compareTo", "(Ljava/nio/FloatBuffer;)I", AccessFlags = 1)]
-				public virtual int CompareTo(global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// duplicate
-				/// </java-name>
-				[Dot42.DexImport("duplicate", "()Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.FloatBuffer Duplicate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "()F", AccessFlags = 1025)]
-				public abstract float Get() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([F)Ljava/nio/FloatBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.FloatBuffer Get(float[] single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.FloatBuffer);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([FII)Ljava/nio/FloatBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.FloatBuffer Get(float[] single, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.FloatBuffer);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(I)F", AccessFlags = 1025)]
-				public abstract float Get(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// order
-				/// </java-name>
-				[Dot42.DexImport("order", "()Ljava/nio/ByteOrder;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ByteOrder Order() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(F)Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.FloatBuffer Put(float single) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "([F)Ljava/nio/FloatBuffer;", AccessFlags = 17)]
-				public global::Java.Nio.FloatBuffer Put(float[] single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.FloatBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "([FII)Ljava/nio/FloatBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.FloatBuffer Put(float[] single, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.FloatBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(Ljava/nio/FloatBuffer;)Ljava/nio/FloatBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.FloatBuffer Put(global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.FloatBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(IF)Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.FloatBuffer Put(int int32, float single) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// slice
-				/// </java-name>
-				[Dot42.DexImport("slice", "()Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.FloatBuffer Slice() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -916,680 +727,44 @@ namespace Java.Nio
 		}
 
 		/// <java-name>
-		/// java/nio/BufferOverflowException
+		/// java/nio/ByteOrder
 		/// </java-name>
-		[Dot42.DexImport("java/nio/BufferOverflowException", AccessFlags = 33)]
-		public partial class BufferOverflowException : global::System.SystemException
+		[Dot42.DexImport("java/nio/ByteOrder", AccessFlags = 49)]
+		public sealed partial class ByteOrder
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BufferOverflowException() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/nio/DoubleBuffer
-		/// </java-name>
-		[Dot42.DexImport("java/nio/DoubleBuffer", AccessFlags = 1057, Signature = "Ljava/nio/Buffer;Ljava/lang/Comparable<Ljava/nio/DoubleBuffer;>;")]
-		public abstract partial class DoubleBuffer : global::Java.Nio.Buffer, global::System.IComparable<global::Java.Nio.DoubleBuffer>
- /* scope: __dot42__ */ 
-		{
+				/// <java-name>
+				/// BIG_ENDIAN
+				/// </java-name>
+				[Dot42.DexImport("BIG_ENDIAN", "Ljava/nio/ByteOrder;", AccessFlags = 25)]
+				public static readonly global::Java.Nio.ByteOrder BIG_ENDIAN;
+				/// <java-name>
+				/// LITTLE_ENDIAN
+				/// </java-name>
+				[Dot42.DexImport("LITTLE_ENDIAN", "Ljava/nio/ByteOrder;", AccessFlags = 25)]
+				public static readonly global::Java.Nio.ByteOrder LITTLE_ENDIAN;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal DoubleBuffer() /* MethodBuilder.Create */ 
+				internal ByteOrder() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// allocate
+				/// nativeOrder
 				/// </java-name>
-				[Dot42.DexImport("allocate", "(I)Ljava/nio/DoubleBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.DoubleBuffer Allocate(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("nativeOrder", "()Ljava/nio/ByteOrder;", AccessFlags = 9)]
+				public static global::Java.Nio.ByteOrder NativeOrder() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Nio.DoubleBuffer);
+						return default(global::Java.Nio.ByteOrder);
 				}
 
 				/// <java-name>
-				/// wrap
+				/// toString
 				/// </java-name>
-				[Dot42.DexImport("wrap", "([D)Ljava/nio/DoubleBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.DoubleBuffer Wrap(double[] @double) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Nio.DoubleBuffer);
+						return default(string);
 				}
-
-				/// <java-name>
-				/// wrap
-				/// </java-name>
-				[Dot42.DexImport("wrap", "([DII)Ljava/nio/DoubleBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.DoubleBuffer Wrap(double[] @double, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.DoubleBuffer);
-				}
-
-				/// <java-name>
-				/// array
-				/// </java-name>
-				[Dot42.DexImport("array", "()[D", AccessFlags = 17)]
-				public override object Array() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// arrayOffset
-				/// </java-name>
-				[Dot42.DexImport("arrayOffset", "()I", AccessFlags = 17)]
-				public override int ArrayOffset() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// asReadOnlyBuffer
-				/// </java-name>
-				[Dot42.DexImport("asReadOnlyBuffer", "()Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.DoubleBuffer AsReadOnlyBuffer() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// compact
-				/// </java-name>
-				[Dot42.DexImport("compact", "()Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.DoubleBuffer Compact() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// compareTo
-				/// </java-name>
-				[Dot42.DexImport("compareTo", "(Ljava/nio/DoubleBuffer;)I", AccessFlags = 1)]
-				public virtual int CompareTo(global::Java.Nio.DoubleBuffer doubleBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// duplicate
-				/// </java-name>
-				[Dot42.DexImport("duplicate", "()Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.DoubleBuffer Duplicate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "()D", AccessFlags = 1025)]
-				public abstract double Get() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([D)Ljava/nio/DoubleBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.DoubleBuffer Get(double[] @double) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.DoubleBuffer);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([DII)Ljava/nio/DoubleBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.DoubleBuffer Get(double[] @double, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.DoubleBuffer);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(I)D", AccessFlags = 1025)]
-				public abstract double Get(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// order
-				/// </java-name>
-				[Dot42.DexImport("order", "()Ljava/nio/ByteOrder;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ByteOrder Order() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(D)Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.DoubleBuffer Put(double @double) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "([D)Ljava/nio/DoubleBuffer;", AccessFlags = 17)]
-				public global::Java.Nio.DoubleBuffer Put(double[] @double) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.DoubleBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "([DII)Ljava/nio/DoubleBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.DoubleBuffer Put(double[] @double, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.DoubleBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(Ljava/nio/DoubleBuffer;)Ljava/nio/DoubleBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.DoubleBuffer Put(global::Java.Nio.DoubleBuffer doubleBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.DoubleBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(ID)Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.DoubleBuffer Put(int int32, double @double) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// slice
-				/// </java-name>
-				[Dot42.DexImport("slice", "()Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.DoubleBuffer Slice() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// java/nio/MappedByteBuffer
-		/// </java-name>
-		[Dot42.DexImport("java/nio/MappedByteBuffer", AccessFlags = 1057)]
-		public abstract partial class MappedByteBuffer : global::Java.Nio.ByteBuffer
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal MappedByteBuffer() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isLoaded
-				/// </java-name>
-				[Dot42.DexImport("isLoaded", "()Z", AccessFlags = 17)]
-				public bool IsLoaded() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// load
-				/// </java-name>
-				[Dot42.DexImport("load", "()Ljava/nio/MappedByteBuffer;", AccessFlags = 17)]
-				public global::Java.Nio.MappedByteBuffer Load() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.MappedByteBuffer);
-				}
-
-				/// <java-name>
-				/// force
-				/// </java-name>
-				[Dot42.DexImport("force", "()Ljava/nio/MappedByteBuffer;", AccessFlags = 17)]
-				public global::Java.Nio.MappedByteBuffer Force() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.MappedByteBuffer);
-				}
-
-		}
-
-		/// <java-name>
-		/// java/nio/BufferUnderflowException
-		/// </java-name>
-		[Dot42.DexImport("java/nio/BufferUnderflowException", AccessFlags = 33)]
-		public partial class BufferUnderflowException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BufferUnderflowException() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/nio/ShortBuffer
-		/// </java-name>
-		[Dot42.DexImport("java/nio/ShortBuffer", AccessFlags = 1057, Signature = "Ljava/nio/Buffer;Ljava/lang/Comparable<Ljava/nio/ShortBuffer;>;")]
-		public abstract partial class ShortBuffer : global::Java.Nio.Buffer, global::System.IComparable<global::Java.Nio.ShortBuffer>
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal ShortBuffer() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// allocate
-				/// </java-name>
-				[Dot42.DexImport("allocate", "(I)Ljava/nio/ShortBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.ShortBuffer Allocate(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.ShortBuffer);
-				}
-
-				/// <java-name>
-				/// wrap
-				/// </java-name>
-				[Dot42.DexImport("wrap", "([S)Ljava/nio/ShortBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.ShortBuffer Wrap(short[] int16) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.ShortBuffer);
-				}
-
-				/// <java-name>
-				/// wrap
-				/// </java-name>
-				[Dot42.DexImport("wrap", "([SII)Ljava/nio/ShortBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.ShortBuffer Wrap(short[] int16, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.ShortBuffer);
-				}
-
-				/// <java-name>
-				/// array
-				/// </java-name>
-				[Dot42.DexImport("array", "()[S", AccessFlags = 17)]
-				public override object Array() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// arrayOffset
-				/// </java-name>
-				[Dot42.DexImport("arrayOffset", "()I", AccessFlags = 17)]
-				public override int ArrayOffset() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// asReadOnlyBuffer
-				/// </java-name>
-				[Dot42.DexImport("asReadOnlyBuffer", "()Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ShortBuffer AsReadOnlyBuffer() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// compact
-				/// </java-name>
-				[Dot42.DexImport("compact", "()Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ShortBuffer Compact() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// compareTo
-				/// </java-name>
-				[Dot42.DexImport("compareTo", "(Ljava/nio/ShortBuffer;)I", AccessFlags = 1)]
-				public virtual int CompareTo(global::Java.Nio.ShortBuffer shortBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// duplicate
-				/// </java-name>
-				[Dot42.DexImport("duplicate", "()Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ShortBuffer Duplicate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "()S", AccessFlags = 1025)]
-				public abstract short Get() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([S)Ljava/nio/ShortBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.ShortBuffer Get(short[] int16) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.ShortBuffer);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([SII)Ljava/nio/ShortBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.ShortBuffer Get(short[] int16, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.ShortBuffer);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(I)S", AccessFlags = 1025)]
-				public abstract short Get(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// order
-				/// </java-name>
-				[Dot42.DexImport("order", "()Ljava/nio/ByteOrder;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ByteOrder Order() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(S)Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ShortBuffer Put(short int16) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "([S)Ljava/nio/ShortBuffer;", AccessFlags = 17)]
-				public global::Java.Nio.ShortBuffer Put(short[] int16) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.ShortBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "([SII)Ljava/nio/ShortBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.ShortBuffer Put(short[] int16, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.ShortBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(Ljava/nio/ShortBuffer;)Ljava/nio/ShortBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.ShortBuffer Put(global::Java.Nio.ShortBuffer shortBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.ShortBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(IS)Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ShortBuffer Put(int int32, short int16) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// slice
-				/// </java-name>
-				[Dot42.DexImport("slice", "()Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ShortBuffer Slice() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// java/nio/IntBuffer
-		/// </java-name>
-		[Dot42.DexImport("java/nio/IntBuffer", AccessFlags = 1057, Signature = "Ljava/nio/Buffer;Ljava/lang/Comparable<Ljava/nio/IntBuffer;>;")]
-		public abstract partial class IntBuffer : global::Java.Nio.Buffer, global::System.IComparable<global::Java.Nio.IntBuffer>
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal IntBuffer() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// allocate
-				/// </java-name>
-				[Dot42.DexImport("allocate", "(I)Ljava/nio/IntBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.IntBuffer Allocate(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.IntBuffer);
-				}
-
-				/// <java-name>
-				/// wrap
-				/// </java-name>
-				[Dot42.DexImport("wrap", "([I)Ljava/nio/IntBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.IntBuffer Wrap(int[] int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.IntBuffer);
-				}
-
-				/// <java-name>
-				/// wrap
-				/// </java-name>
-				[Dot42.DexImport("wrap", "([III)Ljava/nio/IntBuffer;", AccessFlags = 9)]
-				public static global::Java.Nio.IntBuffer Wrap(int[] int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.IntBuffer);
-				}
-
-				/// <java-name>
-				/// array
-				/// </java-name>
-				[Dot42.DexImport("array", "()[I", AccessFlags = 17)]
-				public override object Array() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// arrayOffset
-				/// </java-name>
-				[Dot42.DexImport("arrayOffset", "()I", AccessFlags = 17)]
-				public override int ArrayOffset() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// asReadOnlyBuffer
-				/// </java-name>
-				[Dot42.DexImport("asReadOnlyBuffer", "()Ljava/nio/IntBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.IntBuffer AsReadOnlyBuffer() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// compact
-				/// </java-name>
-				[Dot42.DexImport("compact", "()Ljava/nio/IntBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.IntBuffer Compact() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// compareTo
-				/// </java-name>
-				[Dot42.DexImport("compareTo", "(Ljava/nio/IntBuffer;)I", AccessFlags = 1)]
-				public virtual int CompareTo(global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// duplicate
-				/// </java-name>
-				[Dot42.DexImport("duplicate", "()Ljava/nio/IntBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.IntBuffer Duplicate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "()I", AccessFlags = 1025)]
-				public abstract int Get() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([I)Ljava/nio/IntBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.IntBuffer Get(int[] int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.IntBuffer);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "([III)Ljava/nio/IntBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.IntBuffer Get(int[] int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.IntBuffer);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(I)I", AccessFlags = 1025)]
-				public abstract int Get(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// order
-				/// </java-name>
-				[Dot42.DexImport("order", "()Ljava/nio/ByteOrder;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ByteOrder Order() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(I)Ljava/nio/IntBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.IntBuffer Put(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "([I)Ljava/nio/IntBuffer;", AccessFlags = 17)]
-				public global::Java.Nio.IntBuffer Put(int[] int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.IntBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "([III)Ljava/nio/IntBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.IntBuffer Put(int[] int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.IntBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(Ljava/nio/IntBuffer;)Ljava/nio/IntBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Nio.IntBuffer Put(global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.IntBuffer);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(II)Ljava/nio/IntBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.IntBuffer Put(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// slice
-				/// </java-name>
-				[Dot42.DexImport("slice", "()Ljava/nio/IntBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.IntBuffer Slice() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -1933,56 +1108,623 @@ namespace Java.Nio
 		}
 
 		/// <java-name>
-		/// java/nio/ByteOrder
+		/// java/nio/DoubleBuffer
 		/// </java-name>
-		[Dot42.DexImport("java/nio/ByteOrder", AccessFlags = 49)]
-		public sealed partial class ByteOrder
+		[Dot42.DexImport("java/nio/DoubleBuffer", AccessFlags = 1057, Signature = "Ljava/nio/Buffer;Ljava/lang/Comparable<Ljava/nio/DoubleBuffer;>;")]
+		public abstract partial class DoubleBuffer : global::Java.Nio.Buffer, global::System.IComparable<global::Java.Nio.DoubleBuffer>
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// BIG_ENDIAN
-				/// </java-name>
-				[Dot42.DexImport("BIG_ENDIAN", "Ljava/nio/ByteOrder;", AccessFlags = 25)]
-				public static readonly global::Java.Nio.ByteOrder BIG_ENDIAN;
-				/// <java-name>
-				/// LITTLE_ENDIAN
-				/// </java-name>
-				[Dot42.DexImport("LITTLE_ENDIAN", "Ljava/nio/ByteOrder;", AccessFlags = 25)]
-				public static readonly global::Java.Nio.ByteOrder LITTLE_ENDIAN;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal ByteOrder() /* MethodBuilder.Create */ 
+				internal DoubleBuffer() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// nativeOrder
+				/// allocate
 				/// </java-name>
-				[Dot42.DexImport("nativeOrder", "()Ljava/nio/ByteOrder;", AccessFlags = 9)]
-				public static global::Java.Nio.ByteOrder NativeOrder() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("allocate", "(I)Ljava/nio/DoubleBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.DoubleBuffer Allocate(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Nio.ByteOrder);
+						return default(global::Java.Nio.DoubleBuffer);
 				}
 
 				/// <java-name>
-				/// toString
+				/// wrap
 				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("wrap", "([D)Ljava/nio/DoubleBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.DoubleBuffer Wrap(double[] @double) /* MethodBuilder.Create */ 
 				{
-						return default(string);
+						return default(global::Java.Nio.DoubleBuffer);
 				}
+
+				/// <java-name>
+				/// wrap
+				/// </java-name>
+				[Dot42.DexImport("wrap", "([DII)Ljava/nio/DoubleBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.DoubleBuffer Wrap(double[] @double, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.DoubleBuffer);
+				}
+
+				/// <java-name>
+				/// array
+				/// </java-name>
+				[Dot42.DexImport("array", "()[D", AccessFlags = 17)]
+				public override object Array() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// arrayOffset
+				/// </java-name>
+				[Dot42.DexImport("arrayOffset", "()I", AccessFlags = 17)]
+				public override int ArrayOffset() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// asReadOnlyBuffer
+				/// </java-name>
+				[Dot42.DexImport("asReadOnlyBuffer", "()Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.DoubleBuffer AsReadOnlyBuffer() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// compact
+				/// </java-name>
+				[Dot42.DexImport("compact", "()Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.DoubleBuffer Compact() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// compareTo
+				/// </java-name>
+				[Dot42.DexImport("compareTo", "(Ljava/nio/DoubleBuffer;)I", AccessFlags = 1)]
+				public virtual int CompareTo(global::Java.Nio.DoubleBuffer doubleBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// duplicate
+				/// </java-name>
+				[Dot42.DexImport("duplicate", "()Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.DoubleBuffer Duplicate() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "()D", AccessFlags = 1025)]
+				public abstract double Get() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "([D)Ljava/nio/DoubleBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.DoubleBuffer Get(double[] @double) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.DoubleBuffer);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "([DII)Ljava/nio/DoubleBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.DoubleBuffer Get(double[] @double, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.DoubleBuffer);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(I)D", AccessFlags = 1025)]
+				public abstract double Get(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+				public override bool HasArray() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+				public override bool IsDirect() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// order
+				/// </java-name>
+				[Dot42.DexImport("order", "()Ljava/nio/ByteOrder;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ByteOrder Order() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(D)Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.DoubleBuffer Put(double @double) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "([D)Ljava/nio/DoubleBuffer;", AccessFlags = 17)]
+				public global::Java.Nio.DoubleBuffer Put(double[] @double) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.DoubleBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "([DII)Ljava/nio/DoubleBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.DoubleBuffer Put(double[] @double, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.DoubleBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(Ljava/nio/DoubleBuffer;)Ljava/nio/DoubleBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.DoubleBuffer Put(global::Java.Nio.DoubleBuffer doubleBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.DoubleBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(ID)Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.DoubleBuffer Put(int int32, double @double) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// slice
+				/// </java-name>
+				[Dot42.DexImport("slice", "()Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.DoubleBuffer Slice() /* MethodBuilder.Create */ ;
 
 		}
 
 		/// <java-name>
-		/// java/nio/ReadOnlyBufferException
+		/// java/nio/FloatBuffer
 		/// </java-name>
-		[Dot42.DexImport("java/nio/ReadOnlyBufferException", AccessFlags = 33)]
-		public partial class ReadOnlyBufferException : global::Java.Lang.UnsupportedOperationException
+		[Dot42.DexImport("java/nio/FloatBuffer", AccessFlags = 1057, Signature = "Ljava/nio/Buffer;Ljava/lang/Comparable<Ljava/nio/FloatBuffer;>;")]
+		public abstract partial class FloatBuffer : global::Java.Nio.Buffer, global::System.IComparable<global::Java.Nio.FloatBuffer>
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal FloatBuffer() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// allocate
+				/// </java-name>
+				[Dot42.DexImport("allocate", "(I)Ljava/nio/FloatBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.FloatBuffer Allocate(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.FloatBuffer);
+				}
+
+				/// <java-name>
+				/// wrap
+				/// </java-name>
+				[Dot42.DexImport("wrap", "([F)Ljava/nio/FloatBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.FloatBuffer Wrap(float[] single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.FloatBuffer);
+				}
+
+				/// <java-name>
+				/// wrap
+				/// </java-name>
+				[Dot42.DexImport("wrap", "([FII)Ljava/nio/FloatBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.FloatBuffer Wrap(float[] single, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.FloatBuffer);
+				}
+
+				/// <java-name>
+				/// array
+				/// </java-name>
+				[Dot42.DexImport("array", "()[F", AccessFlags = 17)]
+				public override object Array() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// arrayOffset
+				/// </java-name>
+				[Dot42.DexImport("arrayOffset", "()I", AccessFlags = 17)]
+				public override int ArrayOffset() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// asReadOnlyBuffer
+				/// </java-name>
+				[Dot42.DexImport("asReadOnlyBuffer", "()Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.FloatBuffer AsReadOnlyBuffer() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// compact
+				/// </java-name>
+				[Dot42.DexImport("compact", "()Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.FloatBuffer Compact() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// compareTo
+				/// </java-name>
+				[Dot42.DexImport("compareTo", "(Ljava/nio/FloatBuffer;)I", AccessFlags = 1)]
+				public virtual int CompareTo(global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// duplicate
+				/// </java-name>
+				[Dot42.DexImport("duplicate", "()Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.FloatBuffer Duplicate() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "()F", AccessFlags = 1025)]
+				public abstract float Get() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "([F)Ljava/nio/FloatBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.FloatBuffer Get(float[] single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.FloatBuffer);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "([FII)Ljava/nio/FloatBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.FloatBuffer Get(float[] single, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.FloatBuffer);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(I)F", AccessFlags = 1025)]
+				public abstract float Get(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+				public override bool HasArray() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+				public override bool IsDirect() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// order
+				/// </java-name>
+				[Dot42.DexImport("order", "()Ljava/nio/ByteOrder;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ByteOrder Order() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(F)Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.FloatBuffer Put(float single) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "([F)Ljava/nio/FloatBuffer;", AccessFlags = 17)]
+				public global::Java.Nio.FloatBuffer Put(float[] single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.FloatBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "([FII)Ljava/nio/FloatBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.FloatBuffer Put(float[] single, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.FloatBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(Ljava/nio/FloatBuffer;)Ljava/nio/FloatBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.FloatBuffer Put(global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.FloatBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(IF)Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.FloatBuffer Put(int int32, float single) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// slice
+				/// </java-name>
+				[Dot42.DexImport("slice", "()Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.FloatBuffer Slice() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/nio/IntBuffer
+		/// </java-name>
+		[Dot42.DexImport("java/nio/IntBuffer", AccessFlags = 1057, Signature = "Ljava/nio/Buffer;Ljava/lang/Comparable<Ljava/nio/IntBuffer;>;")]
+		public abstract partial class IntBuffer : global::Java.Nio.Buffer, global::System.IComparable<global::Java.Nio.IntBuffer>
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal IntBuffer() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// allocate
+				/// </java-name>
+				[Dot42.DexImport("allocate", "(I)Ljava/nio/IntBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.IntBuffer Allocate(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.IntBuffer);
+				}
+
+				/// <java-name>
+				/// wrap
+				/// </java-name>
+				[Dot42.DexImport("wrap", "([I)Ljava/nio/IntBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.IntBuffer Wrap(int[] int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.IntBuffer);
+				}
+
+				/// <java-name>
+				/// wrap
+				/// </java-name>
+				[Dot42.DexImport("wrap", "([III)Ljava/nio/IntBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.IntBuffer Wrap(int[] int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.IntBuffer);
+				}
+
+				/// <java-name>
+				/// array
+				/// </java-name>
+				[Dot42.DexImport("array", "()[I", AccessFlags = 17)]
+				public override object Array() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// arrayOffset
+				/// </java-name>
+				[Dot42.DexImport("arrayOffset", "()I", AccessFlags = 17)]
+				public override int ArrayOffset() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// asReadOnlyBuffer
+				/// </java-name>
+				[Dot42.DexImport("asReadOnlyBuffer", "()Ljava/nio/IntBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.IntBuffer AsReadOnlyBuffer() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// compact
+				/// </java-name>
+				[Dot42.DexImport("compact", "()Ljava/nio/IntBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.IntBuffer Compact() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// compareTo
+				/// </java-name>
+				[Dot42.DexImport("compareTo", "(Ljava/nio/IntBuffer;)I", AccessFlags = 1)]
+				public virtual int CompareTo(global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// duplicate
+				/// </java-name>
+				[Dot42.DexImport("duplicate", "()Ljava/nio/IntBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.IntBuffer Duplicate() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "()I", AccessFlags = 1025)]
+				public abstract int Get() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "([I)Ljava/nio/IntBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.IntBuffer Get(int[] int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.IntBuffer);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "([III)Ljava/nio/IntBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.IntBuffer Get(int[] int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.IntBuffer);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(I)I", AccessFlags = 1025)]
+				public abstract int Get(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+				public override bool HasArray() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+				public override bool IsDirect() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// order
+				/// </java-name>
+				[Dot42.DexImport("order", "()Ljava/nio/ByteOrder;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ByteOrder Order() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(I)Ljava/nio/IntBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.IntBuffer Put(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "([I)Ljava/nio/IntBuffer;", AccessFlags = 17)]
+				public global::Java.Nio.IntBuffer Put(int[] int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.IntBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "([III)Ljava/nio/IntBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.IntBuffer Put(int[] int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.IntBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(Ljava/nio/IntBuffer;)Ljava/nio/IntBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.IntBuffer Put(global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.IntBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(II)Ljava/nio/IntBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.IntBuffer Put(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// slice
+				/// </java-name>
+				[Dot42.DexImport("slice", "()Ljava/nio/IntBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.IntBuffer Slice() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/nio/InvalidMarkException
+		/// </java-name>
+		[Dot42.DexImport("java/nio/InvalidMarkException", AccessFlags = 33)]
+		public partial class InvalidMarkException : global::Java.Lang.IllegalStateException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ReadOnlyBufferException() /* MethodBuilder.Create */ 
+				public InvalidMarkException() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2188,6 +1930,264 @@ namespace Java.Nio
 				/// </java-name>
 				[Dot42.DexImport("slice", "()Ljava/nio/LongBuffer;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.LongBuffer Slice() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/nio/MappedByteBuffer
+		/// </java-name>
+		[Dot42.DexImport("java/nio/MappedByteBuffer", AccessFlags = 1057)]
+		public abstract partial class MappedByteBuffer : global::Java.Nio.ByteBuffer
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal MappedByteBuffer() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isLoaded
+				/// </java-name>
+				[Dot42.DexImport("isLoaded", "()Z", AccessFlags = 17)]
+				public bool IsLoaded() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// load
+				/// </java-name>
+				[Dot42.DexImport("load", "()Ljava/nio/MappedByteBuffer;", AccessFlags = 17)]
+				public global::Java.Nio.MappedByteBuffer Load() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.MappedByteBuffer);
+				}
+
+				/// <java-name>
+				/// force
+				/// </java-name>
+				[Dot42.DexImport("force", "()Ljava/nio/MappedByteBuffer;", AccessFlags = 17)]
+				public global::Java.Nio.MappedByteBuffer Force() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.MappedByteBuffer);
+				}
+
+		}
+
+		/// <java-name>
+		/// java/nio/ReadOnlyBufferException
+		/// </java-name>
+		[Dot42.DexImport("java/nio/ReadOnlyBufferException", AccessFlags = 33)]
+		public partial class ReadOnlyBufferException : global::Java.Lang.UnsupportedOperationException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ReadOnlyBufferException() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/nio/ShortBuffer
+		/// </java-name>
+		[Dot42.DexImport("java/nio/ShortBuffer", AccessFlags = 1057, Signature = "Ljava/nio/Buffer;Ljava/lang/Comparable<Ljava/nio/ShortBuffer;>;")]
+		public abstract partial class ShortBuffer : global::Java.Nio.Buffer, global::System.IComparable<global::Java.Nio.ShortBuffer>
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal ShortBuffer() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// allocate
+				/// </java-name>
+				[Dot42.DexImport("allocate", "(I)Ljava/nio/ShortBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.ShortBuffer Allocate(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.ShortBuffer);
+				}
+
+				/// <java-name>
+				/// wrap
+				/// </java-name>
+				[Dot42.DexImport("wrap", "([S)Ljava/nio/ShortBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.ShortBuffer Wrap(short[] int16) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.ShortBuffer);
+				}
+
+				/// <java-name>
+				/// wrap
+				/// </java-name>
+				[Dot42.DexImport("wrap", "([SII)Ljava/nio/ShortBuffer;", AccessFlags = 9)]
+				public static global::Java.Nio.ShortBuffer Wrap(short[] int16, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.ShortBuffer);
+				}
+
+				/// <java-name>
+				/// array
+				/// </java-name>
+				[Dot42.DexImport("array", "()[S", AccessFlags = 17)]
+				public override object Array() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// arrayOffset
+				/// </java-name>
+				[Dot42.DexImport("arrayOffset", "()I", AccessFlags = 17)]
+				public override int ArrayOffset() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// asReadOnlyBuffer
+				/// </java-name>
+				[Dot42.DexImport("asReadOnlyBuffer", "()Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ShortBuffer AsReadOnlyBuffer() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// compact
+				/// </java-name>
+				[Dot42.DexImport("compact", "()Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ShortBuffer Compact() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// compareTo
+				/// </java-name>
+				[Dot42.DexImport("compareTo", "(Ljava/nio/ShortBuffer;)I", AccessFlags = 1)]
+				public virtual int CompareTo(global::Java.Nio.ShortBuffer shortBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// duplicate
+				/// </java-name>
+				[Dot42.DexImport("duplicate", "()Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ShortBuffer Duplicate() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "()S", AccessFlags = 1025)]
+				public abstract short Get() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "([S)Ljava/nio/ShortBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.ShortBuffer Get(short[] int16) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.ShortBuffer);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "([SII)Ljava/nio/ShortBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.ShortBuffer Get(short[] int16, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.ShortBuffer);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(I)S", AccessFlags = 1025)]
+				public abstract short Get(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+				public override bool HasArray() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+				public override bool IsDirect() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// order
+				/// </java-name>
+				[Dot42.DexImport("order", "()Ljava/nio/ByteOrder;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ByteOrder Order() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(S)Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ShortBuffer Put(short int16) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "([S)Ljava/nio/ShortBuffer;", AccessFlags = 17)]
+				public global::Java.Nio.ShortBuffer Put(short[] int16) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.ShortBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "([SII)Ljava/nio/ShortBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.ShortBuffer Put(short[] int16, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.ShortBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(Ljava/nio/ShortBuffer;)Ljava/nio/ShortBuffer;", AccessFlags = 1)]
+				public virtual global::Java.Nio.ShortBuffer Put(global::Java.Nio.ShortBuffer shortBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.ShortBuffer);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(IS)Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ShortBuffer Put(int int32, short int16) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// slice
+				/// </java-name>
+				[Dot42.DexImport("slice", "()Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.ShortBuffer Slice() /* MethodBuilder.Create */ ;
 
 		}
 

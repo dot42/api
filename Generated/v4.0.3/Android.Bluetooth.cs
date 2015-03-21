@@ -2,281 +2,6 @@
 namespace Android.Bluetooth
 {
 		/// <java-name>
-		/// android/bluetooth/BluetoothDevice
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothDevice", AccessFlags = 49)]
-		public sealed partial class BluetoothDevice : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// ERROR
-				/// </java-name>
-				[Dot42.DexImport("ERROR", "I", AccessFlags = 25)]
-				public const int ERROR = -2147483648;
-				/// <java-name>
-				/// ACTION_FOUND
-				/// </java-name>
-				[Dot42.DexImport("ACTION_FOUND", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_FOUND = "android.bluetooth.device.action.FOUND";
-				/// <java-name>
-				/// ACTION_CLASS_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_CLASS_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_CLASS_CHANGED = "android.bluetooth.device.action.CLASS_CHANGED";
-				/// <java-name>
-				/// ACTION_ACL_CONNECTED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_ACL_CONNECTED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_ACL_CONNECTED = "android.bluetooth.device.action.ACL_CONNECTED";
-				/// <java-name>
-				/// ACTION_ACL_DISCONNECT_REQUESTED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_ACL_DISCONNECT_REQUESTED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_ACL_DISCONNECT_REQUESTED = "android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED";
-				/// <java-name>
-				/// ACTION_ACL_DISCONNECTED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_ACL_DISCONNECTED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_ACL_DISCONNECTED = "android.bluetooth.device.action.ACL_DISCONNECTED";
-				/// <java-name>
-				/// ACTION_NAME_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_NAME_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_NAME_CHANGED = "android.bluetooth.device.action.NAME_CHANGED";
-				/// <java-name>
-				/// ACTION_BOND_STATE_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_BOND_STATE_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_BOND_STATE_CHANGED = "android.bluetooth.device.action.BOND_STATE_CHANGED";
-				/// <java-name>
-				/// EXTRA_DEVICE
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_DEVICE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_DEVICE = "android.bluetooth.device.extra.DEVICE";
-				/// <java-name>
-				/// EXTRA_NAME
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_NAME", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_NAME = "android.bluetooth.device.extra.NAME";
-				/// <java-name>
-				/// EXTRA_RSSI
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_RSSI", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_RSSI = "android.bluetooth.device.extra.RSSI";
-				/// <java-name>
-				/// EXTRA_CLASS
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_CLASS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_CLASS = "android.bluetooth.device.extra.CLASS";
-				/// <java-name>
-				/// EXTRA_BOND_STATE
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_BOND_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_BOND_STATE = "android.bluetooth.device.extra.BOND_STATE";
-				/// <java-name>
-				/// EXTRA_PREVIOUS_BOND_STATE
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_PREVIOUS_BOND_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_PREVIOUS_BOND_STATE = "android.bluetooth.device.extra.PREVIOUS_BOND_STATE";
-				/// <java-name>
-				/// BOND_NONE
-				/// </java-name>
-				[Dot42.DexImport("BOND_NONE", "I", AccessFlags = 25)]
-				public const int BOND_NONE = 10;
-				/// <java-name>
-				/// BOND_BONDING
-				/// </java-name>
-				[Dot42.DexImport("BOND_BONDING", "I", AccessFlags = 25)]
-				public const int BOND_BONDING = 11;
-				/// <java-name>
-				/// BOND_BONDED
-				/// </java-name>
-				[Dot42.DexImport("BOND_BONDED", "I", AccessFlags = 25)]
-				public const int BOND_BONDED = 12;
-				/// <java-name>
-				/// ACTION_UUID
-				/// </java-name>
-				[Dot42.DexImport("ACTION_UUID", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_UUID = "android.bluetooth.device.action.UUID";
-				/// <java-name>
-				/// EXTRA_UUID
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_UUID", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_UUID = "android.bluetooth.device.extra.UUID";
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Bluetooth.BluetoothDevice> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal BluetoothDevice() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getBondState
-				/// </java-name>
-				[Dot42.DexImport("getBondState", "()I", AccessFlags = 1)]
-				public int GetBondState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBluetoothClass
-				/// </java-name>
-				[Dot42.DexImport("getBluetoothClass", "()Landroid/bluetooth/BluetoothClass;", AccessFlags = 1)]
-				public global::Android.Bluetooth.BluetoothClass GetBluetoothClass() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Bluetooth.BluetoothClass);
-				}
-
-				/// <java-name>
-				/// getUuids
-				/// </java-name>
-				[Dot42.DexImport("getUuids", "()[Landroid/os/ParcelUuid;", AccessFlags = 1)]
-				public global::Android.Os.ParcelUuid[] GetUuids() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelUuid[]);
-				}
-
-				/// <java-name>
-				/// fetchUuidsWithSdp
-				/// </java-name>
-				[Dot42.DexImport("fetchUuidsWithSdp", "()Z", AccessFlags = 1)]
-				public bool FetchUuidsWithSdp() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// createRfcommSocketToServiceRecord
-				/// </java-name>
-				[Dot42.DexImport("createRfcommSocketToServiceRecord", "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;", AccessFlags = 1)]
-				public global::Android.Bluetooth.BluetoothSocket CreateRfcommSocketToServiceRecord(global::Java.Util.UUID uUID) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Bluetooth.BluetoothSocket);
-				}
-
-				/// <java-name>
-				/// createInsecureRfcommSocketToServiceRecord
-				/// </java-name>
-				[Dot42.DexImport("createInsecureRfcommSocketToServiceRecord", "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;", AccessFlags = 1)]
-				public global::Android.Bluetooth.BluetoothSocket CreateInsecureRfcommSocketToServiceRecord(global::Java.Util.UUID uUID) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Bluetooth.BluetoothSocket);
-				}
-
-				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				public string Address
-				{
-				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAddress(); }
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				public string Name
-				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				}
-
-				/// <java-name>
-				/// getBondState
-				/// </java-name>
-				public int BondState
-				{
-				[Dot42.DexImport("getBondState", "()I", AccessFlags = 1)]
-						get{ return GetBondState(); }
-				}
-
-				/// <java-name>
-				/// getBluetoothClass
-				/// </java-name>
-				public global::Android.Bluetooth.BluetoothClass BluetoothClass
-				{
-				[Dot42.DexImport("getBluetoothClass", "()Landroid/bluetooth/BluetoothClass;", AccessFlags = 1)]
-						get{ return GetBluetoothClass(); }
-				}
-
-				/// <java-name>
-				/// getUuids
-				/// </java-name>
-				public global::Android.Os.ParcelUuid[] Uuids
-				{
-				[Dot42.DexImport("getUuids", "()[Landroid/os/ParcelUuid;", AccessFlags = 1)]
-						get{ return GetUuids(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// android/bluetooth/BluetoothA2dp
 		/// </java-name>
 		[Dot42.DexImport("android/bluetooth/BluetoothA2dp", AccessFlags = 49)]
@@ -351,424 +76,6 @@ namespace Android.Bluetooth
 				{
 				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
 						get{ return GetConnectedDevices(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/bluetooth/BluetoothProfile
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothProfile", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IBluetoothProfileConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// EXTRA_STATE
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_STATE = "android.bluetooth.profile.extra.STATE";
-				/// <java-name>
-				/// EXTRA_PREVIOUS_STATE
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_PREVIOUS_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_PREVIOUS_STATE = "android.bluetooth.profile.extra.PREVIOUS_STATE";
-				/// <java-name>
-				/// STATE_DISCONNECTED
-				/// </java-name>
-				[Dot42.DexImport("STATE_DISCONNECTED", "I", AccessFlags = 25)]
-				public const int STATE_DISCONNECTED = 0;
-				/// <java-name>
-				/// STATE_CONNECTING
-				/// </java-name>
-				[Dot42.DexImport("STATE_CONNECTING", "I", AccessFlags = 25)]
-				public const int STATE_CONNECTING = 1;
-				/// <java-name>
-				/// STATE_CONNECTED
-				/// </java-name>
-				[Dot42.DexImport("STATE_CONNECTED", "I", AccessFlags = 25)]
-				public const int STATE_CONNECTED = 2;
-				/// <java-name>
-				/// STATE_DISCONNECTING
-				/// </java-name>
-				[Dot42.DexImport("STATE_DISCONNECTING", "I", AccessFlags = 25)]
-				public const int STATE_DISCONNECTING = 3;
-				/// <java-name>
-				/// HEADSET
-				/// </java-name>
-				[Dot42.DexImport("HEADSET", "I", AccessFlags = 25)]
-				public const int HEADSET = 1;
-				/// <java-name>
-				/// A2DP
-				/// </java-name>
-				[Dot42.DexImport("A2DP", "I", AccessFlags = 25)]
-				public const int A2DP = 2;
-				/// <java-name>
-				/// HEALTH
-				/// </java-name>
-				[Dot42.DexImport("HEALTH", "I", AccessFlags = 25)]
-				public const int HEALTH = 3;
-		}
-
-		/// <java-name>
-		/// android/bluetooth/BluetoothProfile
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothProfile", AccessFlags = 1537)]
-		public partial interface IBluetoothProfile
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getConnectedDevices
-				/// </java-name>
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDevicesMatchingConnectionStates
-				/// </java-name>
-				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1025, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetDevicesMatchingConnectionStates(int[] int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getConnectionState
-				/// </java-name>
-				[Dot42.DexImport("getConnectionState", "(Landroid/bluetooth/BluetoothDevice;)I", AccessFlags = 1025)]
-				int GetConnectionState(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/bluetooth/BluetoothProfile$ServiceListener
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothProfile$ServiceListener", AccessFlags = 1545)]
-		public partial interface IBluetoothProfile_IServiceListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// onServiceConnected
-				/// </java-name>
-				[Dot42.DexImport("onServiceConnected", "(ILandroid/bluetooth/BluetoothProfile;)V", AccessFlags = 1025)]
-				void OnServiceConnected(int int32, global::Android.Bluetooth.IBluetoothProfile bluetoothProfile) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onServiceDisconnected
-				/// </java-name>
-				[Dot42.DexImport("onServiceDisconnected", "(I)V", AccessFlags = 1025)]
-				void OnServiceDisconnected(int int32) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/bluetooth/BluetoothHeadset
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothHeadset", AccessFlags = 49)]
-		public sealed partial class BluetoothHeadset : global::Android.Bluetooth.IBluetoothProfile
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// ACTION_CONNECTION_STATE_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_CONNECTION_STATE_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_CONNECTION_STATE_CHANGED = "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED";
-				/// <java-name>
-				/// ACTION_AUDIO_STATE_CHANGED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_AUDIO_STATE_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_AUDIO_STATE_CHANGED = "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED";
-				/// <java-name>
-				/// ACTION_VENDOR_SPECIFIC_HEADSET_EVENT
-				/// </java-name>
-				[Dot42.DexImport("ACTION_VENDOR_SPECIFIC_HEADSET_EVENT", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_VENDOR_SPECIFIC_HEADSET_EVENT = "android.bluetooth.headset.action.VENDOR_SPECIFIC_HEADSET_EVENT";
-				/// <java-name>
-				/// EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD = "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD";
-				/// <java-name>
-				/// EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE = "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE";
-				/// <java-name>
-				/// AT_CMD_TYPE_READ
-				/// </java-name>
-				[Dot42.DexImport("AT_CMD_TYPE_READ", "I", AccessFlags = 25)]
-				public const int AT_CMD_TYPE_READ = 0;
-				/// <java-name>
-				/// AT_CMD_TYPE_TEST
-				/// </java-name>
-				[Dot42.DexImport("AT_CMD_TYPE_TEST", "I", AccessFlags = 25)]
-				public const int AT_CMD_TYPE_TEST = 1;
-				/// <java-name>
-				/// AT_CMD_TYPE_SET
-				/// </java-name>
-				[Dot42.DexImport("AT_CMD_TYPE_SET", "I", AccessFlags = 25)]
-				public const int AT_CMD_TYPE_SET = 2;
-				/// <java-name>
-				/// AT_CMD_TYPE_BASIC
-				/// </java-name>
-				[Dot42.DexImport("AT_CMD_TYPE_BASIC", "I", AccessFlags = 25)]
-				public const int AT_CMD_TYPE_BASIC = 3;
-				/// <java-name>
-				/// AT_CMD_TYPE_ACTION
-				/// </java-name>
-				[Dot42.DexImport("AT_CMD_TYPE_ACTION", "I", AccessFlags = 25)]
-				public const int AT_CMD_TYPE_ACTION = 4;
-				/// <java-name>
-				/// EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_ARGS
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_ARGS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_ARGS = "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_ARGS";
-				/// <java-name>
-				/// VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY
-				/// </java-name>
-				[Dot42.DexImport("VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY = "android.bluetooth.headset.intent.category.companyid";
-				/// <java-name>
-				/// STATE_AUDIO_DISCONNECTED
-				/// </java-name>
-				[Dot42.DexImport("STATE_AUDIO_DISCONNECTED", "I", AccessFlags = 25)]
-				public const int STATE_AUDIO_DISCONNECTED = 10;
-				/// <java-name>
-				/// STATE_AUDIO_CONNECTING
-				/// </java-name>
-				[Dot42.DexImport("STATE_AUDIO_CONNECTING", "I", AccessFlags = 25)]
-				public const int STATE_AUDIO_CONNECTING = 11;
-				/// <java-name>
-				/// STATE_AUDIO_CONNECTED
-				/// </java-name>
-				[Dot42.DexImport("STATE_AUDIO_CONNECTED", "I", AccessFlags = 25)]
-				public const int STATE_AUDIO_CONNECTED = 12;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal BluetoothHeadset() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getConnectedDevices
-				/// </java-name>
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
-				}
-
-				/// <java-name>
-				/// getDevicesMatchingConnectionStates
-				/// </java-name>
-				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetDevicesMatchingConnectionStates(int[] int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
-				}
-
-				/// <java-name>
-				/// getConnectionState
-				/// </java-name>
-				[Dot42.DexImport("getConnectionState", "(Landroid/bluetooth/BluetoothDevice;)I", AccessFlags = 1)]
-				public int GetConnectionState(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// startVoiceRecognition
-				/// </java-name>
-				[Dot42.DexImport("startVoiceRecognition", "(Landroid/bluetooth/BluetoothDevice;)Z", AccessFlags = 1)]
-				public bool StartVoiceRecognition(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// stopVoiceRecognition
-				/// </java-name>
-				[Dot42.DexImport("stopVoiceRecognition", "(Landroid/bluetooth/BluetoothDevice;)Z", AccessFlags = 1)]
-				public bool StopVoiceRecognition(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isAudioConnected
-				/// </java-name>
-				[Dot42.DexImport("isAudioConnected", "(Landroid/bluetooth/BluetoothDevice;)Z", AccessFlags = 1)]
-				public bool IsAudioConnected(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getConnectedDevices
-				/// </java-name>
-				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> ConnectedDevices
-				{
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-						get{ return GetConnectedDevices(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/bluetooth/BluetoothSocket
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothSocket", AccessFlags = 49)]
-		public sealed partial class BluetoothSocket : global::Java.Io.ICloseable
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal BluetoothSocket() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// connect
-				/// </java-name>
-				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
-				public void Connect() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRemoteDevice
-				/// </java-name>
-				[Dot42.DexImport("getRemoteDevice", "()Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
-				public global::Android.Bluetooth.BluetoothDevice GetRemoteDevice() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Bluetooth.BluetoothDevice);
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-				public global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.OutputStream);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getRemoteDevice
-				/// </java-name>
-				public global::Android.Bluetooth.BluetoothDevice RemoteDevice
-				{
-				[Dot42.DexImport("getRemoteDevice", "()Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
-						get{ return GetRemoteDevice(); }
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				public global::Java.Io.InputStream InputStream
-				{
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetInputStream(); }
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				public global::Java.Io.OutputStream OutputStream
-				{
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return GetOutputStream(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/bluetooth/BluetoothServerSocket
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothServerSocket", AccessFlags = 49)]
-		public sealed partial class BluetoothServerSocket : global::Java.Io.ICloseable
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal BluetoothServerSocket() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// accept
-				/// </java-name>
-				[Dot42.DexImport("accept", "()Landroid/bluetooth/BluetoothSocket;", AccessFlags = 1)]
-				public global::Android.Bluetooth.BluetoothSocket Accept() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Bluetooth.BluetoothSocket);
-				}
-
-				/// <java-name>
-				/// accept
-				/// </java-name>
-				[Dot42.DexImport("accept", "(I)Landroid/bluetooth/BluetoothSocket;", AccessFlags = 1)]
-				public global::Android.Bluetooth.BluetoothSocket Accept(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Bluetooth.BluetoothSocket);
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/bluetooth/BluetoothHealthCallback
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothHealthCallback", AccessFlags = 1057)]
-		public abstract partial class BluetoothHealthCallback
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BluetoothHealthCallback() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onHealthAppConfigurationStatusChange
-				/// </java-name>
-				[Dot42.DexImport("onHealthAppConfigurationStatusChange", "(Landroid/bluetooth/BluetoothHealthAppConfiguration;I)V", AccessFlags = 1)]
-				public virtual void OnHealthAppConfigurationStatusChange(global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onHealthChannelStateChange
-				/// </java-name>
-				[Dot42.DexImport("onHealthChannelStateChange", "(Landroid/bluetooth/BluetoothHealthAppConfiguration;Landroid/bluetooth/BluetoothD" +
-    "evice;IILandroid/os/ParcelFileDescriptor;I)V", AccessFlags = 1)]
-				public virtual void OnHealthChannelStateChange(global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration, global::Android.Bluetooth.BluetoothDevice bluetoothDevice, int int32, int int321, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, int int322) /* MethodBuilder.Create */ 
-				{
 				}
 
 		}
@@ -1157,164 +464,6 @@ namespace Android.Bluetooth
 				{
 				[Dot42.DexImport("getBondedDevices", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;")]
 						get{ return GetBondedDevices(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/bluetooth/BluetoothHealth
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothHealth", AccessFlags = 49)]
-		public sealed partial class BluetoothHealth : global::Android.Bluetooth.IBluetoothProfile
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// SOURCE_ROLE
-				/// </java-name>
-				[Dot42.DexImport("SOURCE_ROLE", "I", AccessFlags = 25)]
-				public const int SOURCE_ROLE = 1;
-				/// <java-name>
-				/// SINK_ROLE
-				/// </java-name>
-				[Dot42.DexImport("SINK_ROLE", "I", AccessFlags = 25)]
-				public const int SINK_ROLE = 2;
-				/// <java-name>
-				/// CHANNEL_TYPE_RELIABLE
-				/// </java-name>
-				[Dot42.DexImport("CHANNEL_TYPE_RELIABLE", "I", AccessFlags = 25)]
-				public const int CHANNEL_TYPE_RELIABLE = 10;
-				/// <java-name>
-				/// CHANNEL_TYPE_STREAMING
-				/// </java-name>
-				[Dot42.DexImport("CHANNEL_TYPE_STREAMING", "I", AccessFlags = 25)]
-				public const int CHANNEL_TYPE_STREAMING = 11;
-				/// <java-name>
-				/// STATE_CHANNEL_DISCONNECTED
-				/// </java-name>
-				[Dot42.DexImport("STATE_CHANNEL_DISCONNECTED", "I", AccessFlags = 25)]
-				public const int STATE_CHANNEL_DISCONNECTED = 0;
-				/// <java-name>
-				/// STATE_CHANNEL_CONNECTING
-				/// </java-name>
-				[Dot42.DexImport("STATE_CHANNEL_CONNECTING", "I", AccessFlags = 25)]
-				public const int STATE_CHANNEL_CONNECTING = 1;
-				/// <java-name>
-				/// STATE_CHANNEL_CONNECTED
-				/// </java-name>
-				[Dot42.DexImport("STATE_CHANNEL_CONNECTED", "I", AccessFlags = 25)]
-				public const int STATE_CHANNEL_CONNECTED = 2;
-				/// <java-name>
-				/// STATE_CHANNEL_DISCONNECTING
-				/// </java-name>
-				[Dot42.DexImport("STATE_CHANNEL_DISCONNECTING", "I", AccessFlags = 25)]
-				public const int STATE_CHANNEL_DISCONNECTING = 3;
-				/// <java-name>
-				/// APP_CONFIG_REGISTRATION_SUCCESS
-				/// </java-name>
-				[Dot42.DexImport("APP_CONFIG_REGISTRATION_SUCCESS", "I", AccessFlags = 25)]
-				public const int APP_CONFIG_REGISTRATION_SUCCESS = 0;
-				/// <java-name>
-				/// APP_CONFIG_REGISTRATION_FAILURE
-				/// </java-name>
-				[Dot42.DexImport("APP_CONFIG_REGISTRATION_FAILURE", "I", AccessFlags = 25)]
-				public const int APP_CONFIG_REGISTRATION_FAILURE = 1;
-				/// <java-name>
-				/// APP_CONFIG_UNREGISTRATION_SUCCESS
-				/// </java-name>
-				[Dot42.DexImport("APP_CONFIG_UNREGISTRATION_SUCCESS", "I", AccessFlags = 25)]
-				public const int APP_CONFIG_UNREGISTRATION_SUCCESS = 2;
-				/// <java-name>
-				/// APP_CONFIG_UNREGISTRATION_FAILURE
-				/// </java-name>
-				[Dot42.DexImport("APP_CONFIG_UNREGISTRATION_FAILURE", "I", AccessFlags = 25)]
-				public const int APP_CONFIG_UNREGISTRATION_FAILURE = 3;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal BluetoothHealth() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// registerSinkAppConfiguration
-				/// </java-name>
-				[Dot42.DexImport("registerSinkAppConfiguration", "(Ljava/lang/String;ILandroid/bluetooth/BluetoothHealthCallback;)Z", AccessFlags = 1)]
-				public bool RegisterSinkAppConfiguration(string @string, int int32, global::Android.Bluetooth.BluetoothHealthCallback bluetoothHealthCallback) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// unregisterAppConfiguration
-				/// </java-name>
-				[Dot42.DexImport("unregisterAppConfiguration", "(Landroid/bluetooth/BluetoothHealthAppConfiguration;)Z", AccessFlags = 1)]
-				public bool UnregisterAppConfiguration(global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// connectChannelToSource
-				/// </java-name>
-				[Dot42.DexImport("connectChannelToSource", "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfigur" +
-    "ation;)Z", AccessFlags = 1)]
-				public bool ConnectChannelToSource(global::Android.Bluetooth.BluetoothDevice bluetoothDevice, global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// disconnectChannel
-				/// </java-name>
-				[Dot42.DexImport("disconnectChannel", "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfigur" +
-    "ation;I)Z", AccessFlags = 1)]
-				public bool DisconnectChannel(global::Android.Bluetooth.BluetoothDevice bluetoothDevice, global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getMainChannelFd
-				/// </java-name>
-				[Dot42.DexImport("getMainChannelFd", "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfigur" +
-    "ation;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
-				public global::Android.Os.ParcelFileDescriptor GetMainChannelFd(global::Android.Bluetooth.BluetoothDevice bluetoothDevice, global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
-				}
-
-				/// <java-name>
-				/// getConnectionState
-				/// </java-name>
-				[Dot42.DexImport("getConnectionState", "(Landroid/bluetooth/BluetoothDevice;)I", AccessFlags = 1)]
-				public int GetConnectionState(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getConnectedDevices
-				/// </java-name>
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
-				}
-
-				/// <java-name>
-				/// getDevicesMatchingConnectionStates
-				/// </java-name>
-				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetDevicesMatchingConnectionStates(int[] int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
-				}
-
-				/// <java-name>
-				/// getConnectedDevices
-				/// </java-name>
-				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> ConnectedDevices
-				{
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-						get{ return GetConnectedDevices(); }
 				}
 
 		}
@@ -1819,123 +968,6 @@ namespace Android.Bluetooth
 		}
 
 		/// <java-name>
-		/// android/bluetooth/BluetoothHealthAppConfiguration
-		/// </java-name>
-		[Dot42.DexImport("android/bluetooth/BluetoothHealthAppConfiguration", AccessFlags = 49)]
-		public sealed partial class BluetoothHealthAppConfiguration : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Bluetooth.BluetoothHealthAppConfiguration> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal BluetoothHealthAppConfiguration() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDataType
-				/// </java-name>
-				[Dot42.DexImport("getDataType", "()I", AccessFlags = 1)]
-				public int GetDataType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRole
-				/// </java-name>
-				[Dot42.DexImport("getRole", "()I", AccessFlags = 1)]
-				public int GetRole() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDataType
-				/// </java-name>
-				public int DataType
-				{
-				[Dot42.DexImport("getDataType", "()I", AccessFlags = 1)]
-						get{ return GetDataType(); }
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				public string Name
-				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				}
-
-				/// <java-name>
-				/// getRole
-				/// </java-name>
-				public int Role
-				{
-				[Dot42.DexImport("getRole", "()I", AccessFlags = 1)]
-						get{ return GetRole(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// android/bluetooth/BluetoothClass
 		/// </java-name>
 		[Dot42.DexImport("android/bluetooth/BluetoothClass", AccessFlags = 49)]
@@ -2433,6 +1465,974 @@ namespace Android.Bluetooth
 
 				}
 
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothDevice
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothDevice", AccessFlags = 49)]
+		public sealed partial class BluetoothDevice : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// ERROR
+				/// </java-name>
+				[Dot42.DexImport("ERROR", "I", AccessFlags = 25)]
+				public const int ERROR = -2147483648;
+				/// <java-name>
+				/// ACTION_FOUND
+				/// </java-name>
+				[Dot42.DexImport("ACTION_FOUND", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_FOUND = "android.bluetooth.device.action.FOUND";
+				/// <java-name>
+				/// ACTION_CLASS_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_CLASS_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_CLASS_CHANGED = "android.bluetooth.device.action.CLASS_CHANGED";
+				/// <java-name>
+				/// ACTION_ACL_CONNECTED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_ACL_CONNECTED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_ACL_CONNECTED = "android.bluetooth.device.action.ACL_CONNECTED";
+				/// <java-name>
+				/// ACTION_ACL_DISCONNECT_REQUESTED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_ACL_DISCONNECT_REQUESTED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_ACL_DISCONNECT_REQUESTED = "android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED";
+				/// <java-name>
+				/// ACTION_ACL_DISCONNECTED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_ACL_DISCONNECTED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_ACL_DISCONNECTED = "android.bluetooth.device.action.ACL_DISCONNECTED";
+				/// <java-name>
+				/// ACTION_NAME_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_NAME_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_NAME_CHANGED = "android.bluetooth.device.action.NAME_CHANGED";
+				/// <java-name>
+				/// ACTION_BOND_STATE_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_BOND_STATE_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_BOND_STATE_CHANGED = "android.bluetooth.device.action.BOND_STATE_CHANGED";
+				/// <java-name>
+				/// EXTRA_DEVICE
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_DEVICE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_DEVICE = "android.bluetooth.device.extra.DEVICE";
+				/// <java-name>
+				/// EXTRA_NAME
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_NAME", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_NAME = "android.bluetooth.device.extra.NAME";
+				/// <java-name>
+				/// EXTRA_RSSI
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_RSSI", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_RSSI = "android.bluetooth.device.extra.RSSI";
+				/// <java-name>
+				/// EXTRA_CLASS
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_CLASS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_CLASS = "android.bluetooth.device.extra.CLASS";
+				/// <java-name>
+				/// EXTRA_BOND_STATE
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_BOND_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_BOND_STATE = "android.bluetooth.device.extra.BOND_STATE";
+				/// <java-name>
+				/// EXTRA_PREVIOUS_BOND_STATE
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_PREVIOUS_BOND_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_PREVIOUS_BOND_STATE = "android.bluetooth.device.extra.PREVIOUS_BOND_STATE";
+				/// <java-name>
+				/// BOND_NONE
+				/// </java-name>
+				[Dot42.DexImport("BOND_NONE", "I", AccessFlags = 25)]
+				public const int BOND_NONE = 10;
+				/// <java-name>
+				/// BOND_BONDING
+				/// </java-name>
+				[Dot42.DexImport("BOND_BONDING", "I", AccessFlags = 25)]
+				public const int BOND_BONDING = 11;
+				/// <java-name>
+				/// BOND_BONDED
+				/// </java-name>
+				[Dot42.DexImport("BOND_BONDED", "I", AccessFlags = 25)]
+				public const int BOND_BONDED = 12;
+				/// <java-name>
+				/// ACTION_UUID
+				/// </java-name>
+				[Dot42.DexImport("ACTION_UUID", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_UUID = "android.bluetooth.device.action.UUID";
+				/// <java-name>
+				/// EXTRA_UUID
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_UUID", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_UUID = "android.bluetooth.device.extra.UUID";
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Bluetooth.BluetoothDevice> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal BluetoothDevice() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAddress
+				/// </java-name>
+				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetAddress() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getBondState
+				/// </java-name>
+				[Dot42.DexImport("getBondState", "()I", AccessFlags = 1)]
+				public int GetBondState() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getBluetoothClass
+				/// </java-name>
+				[Dot42.DexImport("getBluetoothClass", "()Landroid/bluetooth/BluetoothClass;", AccessFlags = 1)]
+				public global::Android.Bluetooth.BluetoothClass GetBluetoothClass() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Bluetooth.BluetoothClass);
+				}
+
+				/// <java-name>
+				/// getUuids
+				/// </java-name>
+				[Dot42.DexImport("getUuids", "()[Landroid/os/ParcelUuid;", AccessFlags = 1)]
+				public global::Android.Os.ParcelUuid[] GetUuids() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelUuid[]);
+				}
+
+				/// <java-name>
+				/// fetchUuidsWithSdp
+				/// </java-name>
+				[Dot42.DexImport("fetchUuidsWithSdp", "()Z", AccessFlags = 1)]
+				public bool FetchUuidsWithSdp() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// createRfcommSocketToServiceRecord
+				/// </java-name>
+				[Dot42.DexImport("createRfcommSocketToServiceRecord", "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;", AccessFlags = 1)]
+				public global::Android.Bluetooth.BluetoothSocket CreateRfcommSocketToServiceRecord(global::Java.Util.UUID uUID) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Bluetooth.BluetoothSocket);
+				}
+
+				/// <java-name>
+				/// createInsecureRfcommSocketToServiceRecord
+				/// </java-name>
+				[Dot42.DexImport("createInsecureRfcommSocketToServiceRecord", "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;", AccessFlags = 1)]
+				public global::Android.Bluetooth.BluetoothSocket CreateInsecureRfcommSocketToServiceRecord(global::Java.Util.UUID uUID) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Bluetooth.BluetoothSocket);
+				}
+
+				/// <java-name>
+				/// getAddress
+				/// </java-name>
+				public string Address
+				{
+				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetAddress(); }
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				public string Name
+				{
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetName(); }
+				}
+
+				/// <java-name>
+				/// getBondState
+				/// </java-name>
+				public int BondState
+				{
+				[Dot42.DexImport("getBondState", "()I", AccessFlags = 1)]
+						get{ return GetBondState(); }
+				}
+
+				/// <java-name>
+				/// getBluetoothClass
+				/// </java-name>
+				public global::Android.Bluetooth.BluetoothClass BluetoothClass
+				{
+				[Dot42.DexImport("getBluetoothClass", "()Landroid/bluetooth/BluetoothClass;", AccessFlags = 1)]
+						get{ return GetBluetoothClass(); }
+				}
+
+				/// <java-name>
+				/// getUuids
+				/// </java-name>
+				public global::Android.Os.ParcelUuid[] Uuids
+				{
+				[Dot42.DexImport("getUuids", "()[Landroid/os/ParcelUuid;", AccessFlags = 1)]
+						get{ return GetUuids(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothHeadset
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothHeadset", AccessFlags = 49)]
+		public sealed partial class BluetoothHeadset : global::Android.Bluetooth.IBluetoothProfile
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// ACTION_CONNECTION_STATE_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_CONNECTION_STATE_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_CONNECTION_STATE_CHANGED = "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED";
+				/// <java-name>
+				/// ACTION_AUDIO_STATE_CHANGED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_AUDIO_STATE_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_AUDIO_STATE_CHANGED = "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED";
+				/// <java-name>
+				/// ACTION_VENDOR_SPECIFIC_HEADSET_EVENT
+				/// </java-name>
+				[Dot42.DexImport("ACTION_VENDOR_SPECIFIC_HEADSET_EVENT", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_VENDOR_SPECIFIC_HEADSET_EVENT = "android.bluetooth.headset.action.VENDOR_SPECIFIC_HEADSET_EVENT";
+				/// <java-name>
+				/// EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD = "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD";
+				/// <java-name>
+				/// EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE = "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD_TYPE";
+				/// <java-name>
+				/// AT_CMD_TYPE_READ
+				/// </java-name>
+				[Dot42.DexImport("AT_CMD_TYPE_READ", "I", AccessFlags = 25)]
+				public const int AT_CMD_TYPE_READ = 0;
+				/// <java-name>
+				/// AT_CMD_TYPE_TEST
+				/// </java-name>
+				[Dot42.DexImport("AT_CMD_TYPE_TEST", "I", AccessFlags = 25)]
+				public const int AT_CMD_TYPE_TEST = 1;
+				/// <java-name>
+				/// AT_CMD_TYPE_SET
+				/// </java-name>
+				[Dot42.DexImport("AT_CMD_TYPE_SET", "I", AccessFlags = 25)]
+				public const int AT_CMD_TYPE_SET = 2;
+				/// <java-name>
+				/// AT_CMD_TYPE_BASIC
+				/// </java-name>
+				[Dot42.DexImport("AT_CMD_TYPE_BASIC", "I", AccessFlags = 25)]
+				public const int AT_CMD_TYPE_BASIC = 3;
+				/// <java-name>
+				/// AT_CMD_TYPE_ACTION
+				/// </java-name>
+				[Dot42.DexImport("AT_CMD_TYPE_ACTION", "I", AccessFlags = 25)]
+				public const int AT_CMD_TYPE_ACTION = 4;
+				/// <java-name>
+				/// EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_ARGS
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_ARGS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_VENDOR_SPECIFIC_HEADSET_EVENT_ARGS = "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_ARGS";
+				/// <java-name>
+				/// VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY
+				/// </java-name>
+				[Dot42.DexImport("VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY = "android.bluetooth.headset.intent.category.companyid";
+				/// <java-name>
+				/// STATE_AUDIO_DISCONNECTED
+				/// </java-name>
+				[Dot42.DexImport("STATE_AUDIO_DISCONNECTED", "I", AccessFlags = 25)]
+				public const int STATE_AUDIO_DISCONNECTED = 10;
+				/// <java-name>
+				/// STATE_AUDIO_CONNECTING
+				/// </java-name>
+				[Dot42.DexImport("STATE_AUDIO_CONNECTING", "I", AccessFlags = 25)]
+				public const int STATE_AUDIO_CONNECTING = 11;
+				/// <java-name>
+				/// STATE_AUDIO_CONNECTED
+				/// </java-name>
+				[Dot42.DexImport("STATE_AUDIO_CONNECTED", "I", AccessFlags = 25)]
+				public const int STATE_AUDIO_CONNECTED = 12;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal BluetoothHeadset() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getConnectedDevices
+				/// </java-name>
+				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
+				}
+
+				/// <java-name>
+				/// getDevicesMatchingConnectionStates
+				/// </java-name>
+				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetDevicesMatchingConnectionStates(int[] int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
+				}
+
+				/// <java-name>
+				/// getConnectionState
+				/// </java-name>
+				[Dot42.DexImport("getConnectionState", "(Landroid/bluetooth/BluetoothDevice;)I", AccessFlags = 1)]
+				public int GetConnectionState(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// startVoiceRecognition
+				/// </java-name>
+				[Dot42.DexImport("startVoiceRecognition", "(Landroid/bluetooth/BluetoothDevice;)Z", AccessFlags = 1)]
+				public bool StartVoiceRecognition(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// stopVoiceRecognition
+				/// </java-name>
+				[Dot42.DexImport("stopVoiceRecognition", "(Landroid/bluetooth/BluetoothDevice;)Z", AccessFlags = 1)]
+				public bool StopVoiceRecognition(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isAudioConnected
+				/// </java-name>
+				[Dot42.DexImport("isAudioConnected", "(Landroid/bluetooth/BluetoothDevice;)Z", AccessFlags = 1)]
+				public bool IsAudioConnected(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getConnectedDevices
+				/// </java-name>
+				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> ConnectedDevices
+				{
+				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+						get{ return GetConnectedDevices(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothHealth
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothHealth", AccessFlags = 49)]
+		public sealed partial class BluetoothHealth : global::Android.Bluetooth.IBluetoothProfile
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// SOURCE_ROLE
+				/// </java-name>
+				[Dot42.DexImport("SOURCE_ROLE", "I", AccessFlags = 25)]
+				public const int SOURCE_ROLE = 1;
+				/// <java-name>
+				/// SINK_ROLE
+				/// </java-name>
+				[Dot42.DexImport("SINK_ROLE", "I", AccessFlags = 25)]
+				public const int SINK_ROLE = 2;
+				/// <java-name>
+				/// CHANNEL_TYPE_RELIABLE
+				/// </java-name>
+				[Dot42.DexImport("CHANNEL_TYPE_RELIABLE", "I", AccessFlags = 25)]
+				public const int CHANNEL_TYPE_RELIABLE = 10;
+				/// <java-name>
+				/// CHANNEL_TYPE_STREAMING
+				/// </java-name>
+				[Dot42.DexImport("CHANNEL_TYPE_STREAMING", "I", AccessFlags = 25)]
+				public const int CHANNEL_TYPE_STREAMING = 11;
+				/// <java-name>
+				/// STATE_CHANNEL_DISCONNECTED
+				/// </java-name>
+				[Dot42.DexImport("STATE_CHANNEL_DISCONNECTED", "I", AccessFlags = 25)]
+				public const int STATE_CHANNEL_DISCONNECTED = 0;
+				/// <java-name>
+				/// STATE_CHANNEL_CONNECTING
+				/// </java-name>
+				[Dot42.DexImport("STATE_CHANNEL_CONNECTING", "I", AccessFlags = 25)]
+				public const int STATE_CHANNEL_CONNECTING = 1;
+				/// <java-name>
+				/// STATE_CHANNEL_CONNECTED
+				/// </java-name>
+				[Dot42.DexImport("STATE_CHANNEL_CONNECTED", "I", AccessFlags = 25)]
+				public const int STATE_CHANNEL_CONNECTED = 2;
+				/// <java-name>
+				/// STATE_CHANNEL_DISCONNECTING
+				/// </java-name>
+				[Dot42.DexImport("STATE_CHANNEL_DISCONNECTING", "I", AccessFlags = 25)]
+				public const int STATE_CHANNEL_DISCONNECTING = 3;
+				/// <java-name>
+				/// APP_CONFIG_REGISTRATION_SUCCESS
+				/// </java-name>
+				[Dot42.DexImport("APP_CONFIG_REGISTRATION_SUCCESS", "I", AccessFlags = 25)]
+				public const int APP_CONFIG_REGISTRATION_SUCCESS = 0;
+				/// <java-name>
+				/// APP_CONFIG_REGISTRATION_FAILURE
+				/// </java-name>
+				[Dot42.DexImport("APP_CONFIG_REGISTRATION_FAILURE", "I", AccessFlags = 25)]
+				public const int APP_CONFIG_REGISTRATION_FAILURE = 1;
+				/// <java-name>
+				/// APP_CONFIG_UNREGISTRATION_SUCCESS
+				/// </java-name>
+				[Dot42.DexImport("APP_CONFIG_UNREGISTRATION_SUCCESS", "I", AccessFlags = 25)]
+				public const int APP_CONFIG_UNREGISTRATION_SUCCESS = 2;
+				/// <java-name>
+				/// APP_CONFIG_UNREGISTRATION_FAILURE
+				/// </java-name>
+				[Dot42.DexImport("APP_CONFIG_UNREGISTRATION_FAILURE", "I", AccessFlags = 25)]
+				public const int APP_CONFIG_UNREGISTRATION_FAILURE = 3;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal BluetoothHealth() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// registerSinkAppConfiguration
+				/// </java-name>
+				[Dot42.DexImport("registerSinkAppConfiguration", "(Ljava/lang/String;ILandroid/bluetooth/BluetoothHealthCallback;)Z", AccessFlags = 1)]
+				public bool RegisterSinkAppConfiguration(string @string, int int32, global::Android.Bluetooth.BluetoothHealthCallback bluetoothHealthCallback) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// unregisterAppConfiguration
+				/// </java-name>
+				[Dot42.DexImport("unregisterAppConfiguration", "(Landroid/bluetooth/BluetoothHealthAppConfiguration;)Z", AccessFlags = 1)]
+				public bool UnregisterAppConfiguration(global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// connectChannelToSource
+				/// </java-name>
+				[Dot42.DexImport("connectChannelToSource", "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfigur" +
+    "ation;)Z", AccessFlags = 1)]
+				public bool ConnectChannelToSource(global::Android.Bluetooth.BluetoothDevice bluetoothDevice, global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// disconnectChannel
+				/// </java-name>
+				[Dot42.DexImport("disconnectChannel", "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfigur" +
+    "ation;I)Z", AccessFlags = 1)]
+				public bool DisconnectChannel(global::Android.Bluetooth.BluetoothDevice bluetoothDevice, global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getMainChannelFd
+				/// </java-name>
+				[Dot42.DexImport("getMainChannelFd", "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfigur" +
+    "ation;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
+				public global::Android.Os.ParcelFileDescriptor GetMainChannelFd(global::Android.Bluetooth.BluetoothDevice bluetoothDevice, global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+				/// <java-name>
+				/// getConnectionState
+				/// </java-name>
+				[Dot42.DexImport("getConnectionState", "(Landroid/bluetooth/BluetoothDevice;)I", AccessFlags = 1)]
+				public int GetConnectionState(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getConnectedDevices
+				/// </java-name>
+				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
+				}
+
+				/// <java-name>
+				/// getDevicesMatchingConnectionStates
+				/// </java-name>
+				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetDevicesMatchingConnectionStates(int[] int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
+				}
+
+				/// <java-name>
+				/// getConnectedDevices
+				/// </java-name>
+				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> ConnectedDevices
+				{
+				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+						get{ return GetConnectedDevices(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothHealthAppConfiguration
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothHealthAppConfiguration", AccessFlags = 49)]
+		public sealed partial class BluetoothHealthAppConfiguration : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Bluetooth.BluetoothHealthAppConfiguration> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal BluetoothHealthAppConfiguration() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getDataType
+				/// </java-name>
+				[Dot42.DexImport("getDataType", "()I", AccessFlags = 1)]
+				public int GetDataType() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getRole
+				/// </java-name>
+				[Dot42.DexImport("getRole", "()I", AccessFlags = 1)]
+				public int GetRole() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDataType
+				/// </java-name>
+				public int DataType
+				{
+				[Dot42.DexImport("getDataType", "()I", AccessFlags = 1)]
+						get{ return GetDataType(); }
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				public string Name
+				{
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetName(); }
+				}
+
+				/// <java-name>
+				/// getRole
+				/// </java-name>
+				public int Role
+				{
+				[Dot42.DexImport("getRole", "()I", AccessFlags = 1)]
+						get{ return GetRole(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothHealthCallback
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothHealthCallback", AccessFlags = 1057)]
+		public abstract partial class BluetoothHealthCallback
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BluetoothHealthCallback() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onHealthAppConfigurationStatusChange
+				/// </java-name>
+				[Dot42.DexImport("onHealthAppConfigurationStatusChange", "(Landroid/bluetooth/BluetoothHealthAppConfiguration;I)V", AccessFlags = 1)]
+				public virtual void OnHealthAppConfigurationStatusChange(global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onHealthChannelStateChange
+				/// </java-name>
+				[Dot42.DexImport("onHealthChannelStateChange", "(Landroid/bluetooth/BluetoothHealthAppConfiguration;Landroid/bluetooth/BluetoothD" +
+    "evice;IILandroid/os/ParcelFileDescriptor;I)V", AccessFlags = 1)]
+				public virtual void OnHealthChannelStateChange(global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration, global::Android.Bluetooth.BluetoothDevice bluetoothDevice, int int32, int int321, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, int int322) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothServerSocket
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothServerSocket", AccessFlags = 49)]
+		public sealed partial class BluetoothServerSocket : global::Java.Io.ICloseable
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal BluetoothServerSocket() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// accept
+				/// </java-name>
+				[Dot42.DexImport("accept", "()Landroid/bluetooth/BluetoothSocket;", AccessFlags = 1)]
+				public global::Android.Bluetooth.BluetoothSocket Accept() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Bluetooth.BluetoothSocket);
+				}
+
+				/// <java-name>
+				/// accept
+				/// </java-name>
+				[Dot42.DexImport("accept", "(I)Landroid/bluetooth/BluetoothSocket;", AccessFlags = 1)]
+				public global::Android.Bluetooth.BluetoothSocket Accept(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Bluetooth.BluetoothSocket);
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothSocket
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothSocket", AccessFlags = 49)]
+		public sealed partial class BluetoothSocket : global::Java.Io.ICloseable
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal BluetoothSocket() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// connect
+				/// </java-name>
+				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
+				public void Connect() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRemoteDevice
+				/// </java-name>
+				[Dot42.DexImport("getRemoteDevice", "()Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
+				public global::Android.Bluetooth.BluetoothDevice GetRemoteDevice() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Bluetooth.BluetoothDevice);
+				}
+
+				/// <java-name>
+				/// getInputStream
+				/// </java-name>
+				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+				public global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// getOutputStream
+				/// </java-name>
+				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+				public global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.OutputStream);
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+				public bool IsConnected() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getRemoteDevice
+				/// </java-name>
+				public global::Android.Bluetooth.BluetoothDevice RemoteDevice
+				{
+				[Dot42.DexImport("getRemoteDevice", "()Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
+						get{ return GetRemoteDevice(); }
+				}
+
+				/// <java-name>
+				/// getInputStream
+				/// </java-name>
+				public global::Java.Io.InputStream InputStream
+				{
+				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return GetInputStream(); }
+				}
+
+				/// <java-name>
+				/// getOutputStream
+				/// </java-name>
+				public global::Java.Io.OutputStream OutputStream
+				{
+				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+						get{ return GetOutputStream(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothProfile
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothProfile", AccessFlags = 1537)]
+		public partial interface IBluetoothProfile
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// getConnectedDevices
+				/// </java-name>
+				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+				global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getDevicesMatchingConnectionStates
+				/// </java-name>
+				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1025, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+				global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetDevicesMatchingConnectionStates(int[] int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getConnectionState
+				/// </java-name>
+				[Dot42.DexImport("getConnectionState", "(Landroid/bluetooth/BluetoothDevice;)I", AccessFlags = 1025)]
+				int GetConnectionState(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothProfile$ServiceListener
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothProfile$ServiceListener", AccessFlags = 1545)]
+		public partial interface IBluetoothProfile_IServiceListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// onServiceConnected
+				/// </java-name>
+				[Dot42.DexImport("onServiceConnected", "(ILandroid/bluetooth/BluetoothProfile;)V", AccessFlags = 1025)]
+				void OnServiceConnected(int int32, global::Android.Bluetooth.IBluetoothProfile bluetoothProfile) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onServiceDisconnected
+				/// </java-name>
+				[Dot42.DexImport("onServiceDisconnected", "(I)V", AccessFlags = 1025)]
+				void OnServiceDisconnected(int int32) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/bluetooth/BluetoothProfile
+		/// </java-name>
+		[Dot42.DexImport("android/bluetooth/BluetoothProfile", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IBluetoothProfileConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// EXTRA_STATE
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_STATE = "android.bluetooth.profile.extra.STATE";
+				/// <java-name>
+				/// EXTRA_PREVIOUS_STATE
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_PREVIOUS_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_PREVIOUS_STATE = "android.bluetooth.profile.extra.PREVIOUS_STATE";
+				/// <java-name>
+				/// STATE_DISCONNECTED
+				/// </java-name>
+				[Dot42.DexImport("STATE_DISCONNECTED", "I", AccessFlags = 25)]
+				public const int STATE_DISCONNECTED = 0;
+				/// <java-name>
+				/// STATE_CONNECTING
+				/// </java-name>
+				[Dot42.DexImport("STATE_CONNECTING", "I", AccessFlags = 25)]
+				public const int STATE_CONNECTING = 1;
+				/// <java-name>
+				/// STATE_CONNECTED
+				/// </java-name>
+				[Dot42.DexImport("STATE_CONNECTED", "I", AccessFlags = 25)]
+				public const int STATE_CONNECTED = 2;
+				/// <java-name>
+				/// STATE_DISCONNECTING
+				/// </java-name>
+				[Dot42.DexImport("STATE_DISCONNECTING", "I", AccessFlags = 25)]
+				public const int STATE_DISCONNECTING = 3;
+				/// <java-name>
+				/// HEADSET
+				/// </java-name>
+				[Dot42.DexImport("HEADSET", "I", AccessFlags = 25)]
+				public const int HEADSET = 1;
+				/// <java-name>
+				/// A2DP
+				/// </java-name>
+				[Dot42.DexImport("A2DP", "I", AccessFlags = 25)]
+				public const int A2DP = 2;
+				/// <java-name>
+				/// HEALTH
+				/// </java-name>
+				[Dot42.DexImport("HEALTH", "I", AccessFlags = 25)]
+				public const int HEALTH = 3;
 		}
 
 }

@@ -2,175 +2,6 @@
 namespace Junit.Framework
 {
 		/// <java-name>
-		/// junit/framework/TestResult
-		/// </java-name>
-		[Dot42.DexImport("junit/framework/TestResult", AccessFlags = 33)]
-		public partial class TestResult
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// fFailures
-				/// </java-name>
-				[Dot42.DexImport("fFailures", "Ljava/util/Vector;", AccessFlags = 4)]
-				protected internal global::Java.Util.Vector<object> FFailures;
-				/// <java-name>
-				/// fErrors
-				/// </java-name>
-				[Dot42.DexImport("fErrors", "Ljava/util/Vector;", AccessFlags = 4)]
-				protected internal global::Java.Util.Vector<object> FErrors;
-				/// <java-name>
-				/// fListeners
-				/// </java-name>
-				[Dot42.DexImport("fListeners", "Ljava/util/Vector;", AccessFlags = 4)]
-				protected internal global::Java.Util.Vector<object> FListeners;
-				/// <java-name>
-				/// fRunTests
-				/// </java-name>
-				[Dot42.DexImport("fRunTests", "I", AccessFlags = 4)]
-				protected internal int FRunTests;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public TestResult() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addError
-				/// </java-name>
-				[Dot42.DexImport("addError", "(Ljunit/framework/Test;Ljava/lang/Throwable;)V", AccessFlags = 33)]
-				public virtual void AddError(global::Junit.Framework.ITest test, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addFailure
-				/// </java-name>
-				[Dot42.DexImport("addFailure", "(Ljunit/framework/Test;Ljunit/framework/AssertionFailedError;)V", AccessFlags = 33)]
-				public virtual void AddFailure(global::Junit.Framework.ITest test, global::Junit.Framework.AssertionFailedError assertionFailedError) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addListener
-				/// </java-name>
-				[Dot42.DexImport("addListener", "(Ljunit/framework/TestListener;)V", AccessFlags = 33)]
-				public virtual void AddListener(global::Junit.Framework.ITestListener testListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeListener
-				/// </java-name>
-				[Dot42.DexImport("removeListener", "(Ljunit/framework/TestListener;)V", AccessFlags = 33)]
-				public virtual void RemoveListener(global::Junit.Framework.ITestListener testListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// endTest
-				/// </java-name>
-				[Dot42.DexImport("endTest", "(Ljunit/framework/Test;)V", AccessFlags = 1)]
-				public virtual void EndTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// errorCount
-				/// </java-name>
-				[Dot42.DexImport("errorCount", "()I", AccessFlags = 33)]
-				public virtual int ErrorCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// errors
-				/// </java-name>
-				[Dot42.DexImport("errors", "()Ljava/util/Enumeration;", AccessFlags = 33)]
-				public virtual global::Java.Util.IEnumeration<object> Errors() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<object>);
-				}
-
-				/// <java-name>
-				/// failureCount
-				/// </java-name>
-				[Dot42.DexImport("failureCount", "()I", AccessFlags = 33)]
-				public virtual int FailureCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// failures
-				/// </java-name>
-				[Dot42.DexImport("failures", "()Ljava/util/Enumeration;", AccessFlags = 33)]
-				public virtual global::Java.Util.IEnumeration<object> Failures() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<object>);
-				}
-
-				/// <java-name>
-				/// run
-				/// </java-name>
-				[Dot42.DexImport("run", "(Ljunit/framework/TestCase;)V", AccessFlags = 4)]
-				protected internal virtual void Run(global::Junit.Framework.TestCase testCase) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// runCount
-				/// </java-name>
-				[Dot42.DexImport("runCount", "()I", AccessFlags = 33)]
-				public virtual int RunCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// runProtected
-				/// </java-name>
-				[Dot42.DexImport("runProtected", "(Ljunit/framework/Test;Ljunit/framework/Protectable;)V", AccessFlags = 1)]
-				public virtual void RunProtected(global::Junit.Framework.ITest test, global::Junit.Framework.IProtectable protectable) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// shouldStop
-				/// </java-name>
-				[Dot42.DexImport("shouldStop", "()Z", AccessFlags = 33)]
-				public virtual bool ShouldStop() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// startTest
-				/// </java-name>
-				[Dot42.DexImport("startTest", "(Ljunit/framework/Test;)V", AccessFlags = 1)]
-				public virtual void StartTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// stop
-				/// </java-name>
-				[Dot42.DexImport("stop", "()V", AccessFlags = 33)]
-				public virtual void Stop() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// wasSuccessful
-				/// </java-name>
-				[Dot42.DexImport("wasSuccessful", "()Z", AccessFlags = 33)]
-				public virtual bool WasSuccessful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-		}
-
-		/// <java-name>
 		/// junit/framework/Assert
 		/// </java-name>
 		[Dot42.DexImport("junit/framework/Assert", AccessFlags = 33)]
@@ -473,6 +304,53 @@ namespace Junit.Framework
 		}
 
 		/// <java-name>
+		/// junit/framework/AssertionFailedError
+		/// </java-name>
+		[Dot42.DexImport("junit/framework/AssertionFailedError", AccessFlags = 33)]
+		public partial class AssertionFailedError : global::Java.Lang.Error
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AssertionFailedError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public AssertionFailedError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// junit/framework/ComparisonFailure
+		/// </java-name>
+		[Dot42.DexImport("junit/framework/ComparisonFailure", AccessFlags = 33)]
+		public partial class ComparisonFailure : global::Junit.Framework.AssertionFailedError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public ComparisonFailure(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getMessage
+				/// </java-name>
+				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetMessage() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ComparisonFailure() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// junit/framework/Protectable
 		/// </java-name>
 		[Dot42.DexImport("junit/framework/Protectable", AccessFlags = 1537)]
@@ -484,6 +362,60 @@ namespace Junit.Framework
 				/// </java-name>
 				[Dot42.DexImport("protect", "()V", AccessFlags = 1025)]
 				void Protect() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// junit/framework/Test
+		/// </java-name>
+		[Dot42.DexImport("junit/framework/Test", AccessFlags = 1537)]
+		public partial interface ITest
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// countTestCases
+				/// </java-name>
+				[Dot42.DexImport("countTestCases", "()I", AccessFlags = 1025)]
+				int CountTestCases() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// run
+				/// </java-name>
+				[Dot42.DexImport("run", "(Ljunit/framework/TestResult;)V", AccessFlags = 1025)]
+				void Run(global::Junit.Framework.TestResult testResult) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// junit/framework/TestListener
+		/// </java-name>
+		[Dot42.DexImport("junit/framework/TestListener", AccessFlags = 1537)]
+		public partial interface ITestListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// addError
+				/// </java-name>
+				[Dot42.DexImport("addError", "(Ljunit/framework/Test;Ljava/lang/Throwable;)V", AccessFlags = 1025)]
+				void AddError(global::Junit.Framework.ITest test, global::System.Exception exception) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addFailure
+				/// </java-name>
+				[Dot42.DexImport("addFailure", "(Ljunit/framework/Test;Ljunit/framework/AssertionFailedError;)V", AccessFlags = 1025)]
+				void AddFailure(global::Junit.Framework.ITest test, global::Junit.Framework.AssertionFailedError assertionFailedError) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// endTest
+				/// </java-name>
+				[Dot42.DexImport("endTest", "(Ljunit/framework/Test;)V", AccessFlags = 1025)]
+				void EndTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// startTest
+				/// </java-name>
+				[Dot42.DexImport("startTest", "(Ljunit/framework/Test;)V", AccessFlags = 1025)]
+				void StartTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -694,102 +626,170 @@ namespace Junit.Framework
 		}
 
 		/// <java-name>
-		/// junit/framework/Test
+		/// junit/framework/TestResult
 		/// </java-name>
-		[Dot42.DexImport("junit/framework/Test", AccessFlags = 1537)]
-		public partial interface ITest
+		[Dot42.DexImport("junit/framework/TestResult", AccessFlags = 33)]
+		public partial class TestResult
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// countTestCases
+				/// fFailures
 				/// </java-name>
-				[Dot42.DexImport("countTestCases", "()I", AccessFlags = 1025)]
-				int CountTestCases() /* MethodBuilder.Create */ ;
-
+				[Dot42.DexImport("fFailures", "Ljava/util/Vector;", AccessFlags = 4)]
+				protected internal global::Java.Util.Vector<object> FFailures;
 				/// <java-name>
-				/// run
+				/// fErrors
 				/// </java-name>
-				[Dot42.DexImport("run", "(Ljunit/framework/TestResult;)V", AccessFlags = 1025)]
-				void Run(global::Junit.Framework.TestResult testResult) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("fErrors", "Ljava/util/Vector;", AccessFlags = 4)]
+				protected internal global::Java.Util.Vector<object> FErrors;
+				/// <java-name>
+				/// fListeners
+				/// </java-name>
+				[Dot42.DexImport("fListeners", "Ljava/util/Vector;", AccessFlags = 4)]
+				protected internal global::Java.Util.Vector<object> FListeners;
+				/// <java-name>
+				/// fRunTests
+				/// </java-name>
+				[Dot42.DexImport("fRunTests", "I", AccessFlags = 4)]
+				protected internal int FRunTests;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public TestResult() /* MethodBuilder.Create */ 
+				{
+				}
 
-		}
-
-		/// <java-name>
-		/// junit/framework/TestListener
-		/// </java-name>
-		[Dot42.DexImport("junit/framework/TestListener", AccessFlags = 1537)]
-		public partial interface ITestListener
- /* scope: __dot42__ */ 
-		{
 				/// <java-name>
 				/// addError
 				/// </java-name>
-				[Dot42.DexImport("addError", "(Ljunit/framework/Test;Ljava/lang/Throwable;)V", AccessFlags = 1025)]
-				void AddError(global::Junit.Framework.ITest test, global::System.Exception exception) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("addError", "(Ljunit/framework/Test;Ljava/lang/Throwable;)V", AccessFlags = 33)]
+				public virtual void AddError(global::Junit.Framework.ITest test, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
 
 				/// <java-name>
 				/// addFailure
 				/// </java-name>
-				[Dot42.DexImport("addFailure", "(Ljunit/framework/Test;Ljunit/framework/AssertionFailedError;)V", AccessFlags = 1025)]
-				void AddFailure(global::Junit.Framework.ITest test, global::Junit.Framework.AssertionFailedError assertionFailedError) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("addFailure", "(Ljunit/framework/Test;Ljunit/framework/AssertionFailedError;)V", AccessFlags = 33)]
+				public virtual void AddFailure(global::Junit.Framework.ITest test, global::Junit.Framework.AssertionFailedError assertionFailedError) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addListener
+				/// </java-name>
+				[Dot42.DexImport("addListener", "(Ljunit/framework/TestListener;)V", AccessFlags = 33)]
+				public virtual void AddListener(global::Junit.Framework.ITestListener testListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeListener
+				/// </java-name>
+				[Dot42.DexImport("removeListener", "(Ljunit/framework/TestListener;)V", AccessFlags = 33)]
+				public virtual void RemoveListener(global::Junit.Framework.ITestListener testListener) /* MethodBuilder.Create */ 
+				{
+				}
 
 				/// <java-name>
 				/// endTest
 				/// </java-name>
-				[Dot42.DexImport("endTest", "(Ljunit/framework/Test;)V", AccessFlags = 1025)]
-				void EndTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("endTest", "(Ljunit/framework/Test;)V", AccessFlags = 1)]
+				public virtual void EndTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// errorCount
+				/// </java-name>
+				[Dot42.DexImport("errorCount", "()I", AccessFlags = 33)]
+				public virtual int ErrorCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// errors
+				/// </java-name>
+				[Dot42.DexImport("errors", "()Ljava/util/Enumeration;", AccessFlags = 33)]
+				public virtual global::Java.Util.IEnumeration<object> Errors() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IEnumeration<object>);
+				}
+
+				/// <java-name>
+				/// failureCount
+				/// </java-name>
+				[Dot42.DexImport("failureCount", "()I", AccessFlags = 33)]
+				public virtual int FailureCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// failures
+				/// </java-name>
+				[Dot42.DexImport("failures", "()Ljava/util/Enumeration;", AccessFlags = 33)]
+				public virtual global::Java.Util.IEnumeration<object> Failures() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IEnumeration<object>);
+				}
+
+				/// <java-name>
+				/// run
+				/// </java-name>
+				[Dot42.DexImport("run", "(Ljunit/framework/TestCase;)V", AccessFlags = 4)]
+				protected internal virtual void Run(global::Junit.Framework.TestCase testCase) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runCount
+				/// </java-name>
+				[Dot42.DexImport("runCount", "()I", AccessFlags = 33)]
+				public virtual int RunCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// runProtected
+				/// </java-name>
+				[Dot42.DexImport("runProtected", "(Ljunit/framework/Test;Ljunit/framework/Protectable;)V", AccessFlags = 1)]
+				public virtual void RunProtected(global::Junit.Framework.ITest test, global::Junit.Framework.IProtectable protectable) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// shouldStop
+				/// </java-name>
+				[Dot42.DexImport("shouldStop", "()Z", AccessFlags = 33)]
+				public virtual bool ShouldStop() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
 
 				/// <java-name>
 				/// startTest
 				/// </java-name>
-				[Dot42.DexImport("startTest", "(Ljunit/framework/Test;)V", AccessFlags = 1025)]
-				void StartTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// junit/framework/AssertionFailedError
-		/// </java-name>
-		[Dot42.DexImport("junit/framework/AssertionFailedError", AccessFlags = 33)]
-		public partial class AssertionFailedError : global::Java.Lang.Error
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AssertionFailedError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public AssertionFailedError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// junit/framework/ComparisonFailure
-		/// </java-name>
-		[Dot42.DexImport("junit/framework/ComparisonFailure", AccessFlags = 33)]
-		public partial class ComparisonFailure : global::Junit.Framework.AssertionFailedError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public ComparisonFailure(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("startTest", "(Ljunit/framework/Test;)V", AccessFlags = 1)]
+				public virtual void StartTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getMessage
+				/// stop
 				/// </java-name>
-				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMessage() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("stop", "()V", AccessFlags = 33)]
+				public virtual void Stop() /* MethodBuilder.Create */ 
 				{
-						return default(string);
 				}
 
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ComparisonFailure() /* TypeBuilder.AddDefaultConstructor */ 
+				/// <java-name>
+				/// wasSuccessful
+				/// </java-name>
+				[Dot42.DexImport("wasSuccessful", "()Z", AccessFlags = 33)]
+				public virtual bool WasSuccessful() /* MethodBuilder.Create */ 
 				{
+						return default(bool);
 				}
 
 		}

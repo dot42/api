@@ -2,29 +2,6 @@
 namespace Org.Apache.Http.Auth.Params
 {
 		/// <java-name>
-		/// org/apache/http/auth/params/AuthPNames
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/auth/params/AuthPNames", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IAuthPNamesConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CREDENTIAL_CHARSET
-				/// </java-name>
-				[Dot42.DexImport("CREDENTIAL_CHARSET", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string CREDENTIAL_CHARSET = "http.auth.credential-charset";
-		}
-
-		/// <java-name>
-		/// org/apache/http/auth/params/AuthPNames
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/auth/params/AuthPNames", AccessFlags = 1537)]
-		public partial interface IAuthPNames
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
 		/// org/apache/http/auth/params/AuthParamBean
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/auth/params/AuthParamBean", AccessFlags = 33)]
@@ -80,6 +57,29 @@ namespace Org.Apache.Http.Auth.Params
 				{
 				}
 
+		}
+
+		/// <java-name>
+		/// org/apache/http/auth/params/AuthPNames
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/auth/params/AuthPNames", AccessFlags = 1537)]
+		public partial interface IAuthPNames
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// org/apache/http/auth/params/AuthPNames
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/auth/params/AuthPNames", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IAuthPNamesConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREDENTIAL_CHARSET
+				/// </java-name>
+				[Dot42.DexImport("CREDENTIAL_CHARSET", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string CREDENTIAL_CHARSET = "http.auth.credential-charset";
 		}
 
 }

@@ -2,41 +2,118 @@
 namespace Javax.Xml.Xpath
 {
 		/// <java-name>
-		/// javax/xml/xpath/XPathFunctionResolver
+		/// javax/xml/xpath/XPath
 		/// </java-name>
-		[Dot42.DexImport("javax/xml/xpath/XPathFunctionResolver", AccessFlags = 1537)]
-		public partial interface IXPathFunctionResolver
+		[Dot42.DexImport("javax/xml/xpath/XPath", AccessFlags = 1537)]
+		public partial interface IXPath
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// resolveFunction
+				/// reset
 				/// </java-name>
-				[Dot42.DexImport("resolveFunction", "(Ljavax/xml/namespace/QName;I)Ljavax/xml/xpath/XPathFunction;", AccessFlags = 1025)]
-				global::Javax.Xml.Xpath.IXPathFunction ResolveFunction(global::Javax.Xml.Namespace.QName qName, int int32) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("reset", "()V", AccessFlags = 1025)]
+				void Reset() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setXPathVariableResolver
+				/// </java-name>
+				[Dot42.DexImport("setXPathVariableResolver", "(Ljavax/xml/xpath/XPathVariableResolver;)V", AccessFlags = 1025)]
+				void SetXPathVariableResolver(global::Javax.Xml.Xpath.IXPathVariableResolver xPathVariableResolver) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getXPathVariableResolver
+				/// </java-name>
+				[Dot42.DexImport("getXPathVariableResolver", "()Ljavax/xml/xpath/XPathVariableResolver;", AccessFlags = 1025)]
+				global::Javax.Xml.Xpath.IXPathVariableResolver GetXPathVariableResolver() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setXPathFunctionResolver
+				/// </java-name>
+				[Dot42.DexImport("setXPathFunctionResolver", "(Ljavax/xml/xpath/XPathFunctionResolver;)V", AccessFlags = 1025)]
+				void SetXPathFunctionResolver(global::Javax.Xml.Xpath.IXPathFunctionResolver xPathFunctionResolver) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getXPathFunctionResolver
+				/// </java-name>
+				[Dot42.DexImport("getXPathFunctionResolver", "()Ljavax/xml/xpath/XPathFunctionResolver;", AccessFlags = 1025)]
+				global::Javax.Xml.Xpath.IXPathFunctionResolver GetXPathFunctionResolver() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setNamespaceContext
+				/// </java-name>
+				[Dot42.DexImport("setNamespaceContext", "(Ljavax/xml/namespace/NamespaceContext;)V", AccessFlags = 1025)]
+				void SetNamespaceContext(global::Javax.Xml.Namespace.INamespaceContext namespaceContext) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getNamespaceContext
+				/// </java-name>
+				[Dot42.DexImport("getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", AccessFlags = 1025)]
+				global::Javax.Xml.Namespace.INamespaceContext GetNamespaceContext() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// compile
+				/// </java-name>
+				[Dot42.DexImport("compile", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathExpression;", AccessFlags = 1025)]
+				global::Javax.Xml.Xpath.IXPathExpression Compile(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// evaluate
+				/// </java-name>
+				[Dot42.DexImport("evaluate", "(Ljava/lang/String;Ljava/lang/Object;Ljavax/xml/namespace/QName;)Ljava/lang/Objec" +
+    "t;", AccessFlags = 1025)]
+				object Evaluate(string @string, object @object, global::Javax.Xml.Namespace.QName qName) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// evaluate
+				/// </java-name>
+				[Dot42.DexImport("evaluate", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 1025)]
+				string Evaluate(string @string, object @object) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// evaluate
+				/// </java-name>
+				[Dot42.DexImport("evaluate", "(Ljava/lang/String;Lorg/xml/sax/InputSource;Ljavax/xml/namespace/QName;)Ljava/lan" +
+    "g/Object;", AccessFlags = 1025)]
+				object Evaluate(string @string, global::Org.Xml.Sax.InputSource inputSource, global::Javax.Xml.Namespace.QName qName) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// evaluate
+				/// </java-name>
+				[Dot42.DexImport("evaluate", "(Ljava/lang/String;Lorg/xml/sax/InputSource;)Ljava/lang/String;", AccessFlags = 1025)]
+				string Evaluate(string @string, global::Org.Xml.Sax.InputSource inputSource) /* MethodBuilder.Create */ ;
 
 		}
 
 		/// <java-name>
-		/// javax/xml/xpath/XPathFactoryConfigurationException
+		/// javax/xml/xpath/XPathExpression
 		/// </java-name>
-		[Dot42.DexImport("javax/xml/xpath/XPathFactoryConfigurationException", AccessFlags = 33)]
-		public partial class XPathFactoryConfigurationException : global::Javax.Xml.Xpath.XPathException
+		[Dot42.DexImport("javax/xml/xpath/XPathExpression", AccessFlags = 1537)]
+		public partial interface IXPathExpression
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public XPathFactoryConfigurationException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
+				/// <java-name>
+				/// evaluate
+				/// </java-name>
+				[Dot42.DexImport("evaluate", "(Ljava/lang/Object;Ljavax/xml/namespace/QName;)Ljava/lang/Object;", AccessFlags = 1025)]
+				object Evaluate(object @object, global::Javax.Xml.Namespace.QName qName) /* MethodBuilder.Create */ ;
 
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public XPathFactoryConfigurationException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
+				/// <java-name>
+				/// evaluate
+				/// </java-name>
+				[Dot42.DexImport("evaluate", "(Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 1025)]
+				string Evaluate(object @object) /* MethodBuilder.Create */ ;
 
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal XPathFactoryConfigurationException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
+				/// <java-name>
+				/// evaluate
+				/// </java-name>
+				[Dot42.DexImport("evaluate", "(Lorg/xml/sax/InputSource;Ljavax/xml/namespace/QName;)Ljava/lang/Object;", AccessFlags = 1025)]
+				object Evaluate(global::Org.Xml.Sax.InputSource inputSource, global::Javax.Xml.Namespace.QName qName) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// evaluate
+				/// </java-name>
+				[Dot42.DexImport("evaluate", "(Lorg/xml/sax/InputSource;)Ljava/lang/String;", AccessFlags = 1025)]
+				string Evaluate(global::Org.Xml.Sax.InputSource inputSource) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -56,26 +133,17 @@ namespace Javax.Xml.Xpath
 		}
 
 		/// <java-name>
-		/// javax/xml/xpath/XPathExpressionException
+		/// javax/xml/xpath/XPathFunctionResolver
 		/// </java-name>
-		[Dot42.DexImport("javax/xml/xpath/XPathExpressionException", AccessFlags = 33)]
-		public partial class XPathExpressionException : global::Javax.Xml.Xpath.XPathException
+		[Dot42.DexImport("javax/xml/xpath/XPathFunctionResolver", AccessFlags = 1537)]
+		public partial interface IXPathFunctionResolver
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public XPathExpressionException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public XPathExpressionException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal XPathExpressionException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
+				/// <java-name>
+				/// resolveFunction
+				/// </java-name>
+				[Dot42.DexImport("resolveFunction", "(Ljavax/xml/namespace/QName;I)Ljavax/xml/xpath/XPathFunction;", AccessFlags = 1025)]
+				global::Javax.Xml.Xpath.IXPathFunction ResolveFunction(global::Javax.Xml.Namespace.QName qName, int int32) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -91,6 +159,50 @@ namespace Javax.Xml.Xpath
 				/// </java-name>
 				[Dot42.DexImport("resolveVariable", "(Ljavax/xml/namespace/QName;)Ljava/lang/Object;", AccessFlags = 1025)]
 				object ResolveVariable(global::Javax.Xml.Namespace.QName qName) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/xml/xpath/XPathConstants
+		/// </java-name>
+		[Dot42.DexImport("javax/xml/xpath/XPathConstants", AccessFlags = 33)]
+		public partial class XPathConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// NUMBER
+				/// </java-name>
+				[Dot42.DexImport("NUMBER", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
+				public static readonly global::Javax.Xml.Namespace.QName NUMBER;
+				/// <java-name>
+				/// STRING
+				/// </java-name>
+				[Dot42.DexImport("STRING", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
+				public static readonly global::Javax.Xml.Namespace.QName STRING;
+				/// <java-name>
+				/// BOOLEAN
+				/// </java-name>
+				[Dot42.DexImport("BOOLEAN", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
+				public static readonly global::Javax.Xml.Namespace.QName BOOLEAN;
+				/// <java-name>
+				/// NODESET
+				/// </java-name>
+				[Dot42.DexImport("NODESET", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
+				public static readonly global::Javax.Xml.Namespace.QName NODESET;
+				/// <java-name>
+				/// NODE
+				/// </java-name>
+				[Dot42.DexImport("NODE", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
+				public static readonly global::Javax.Xml.Namespace.QName NODE;
+				/// <java-name>
+				/// DOM_OBJECT_MODEL
+				/// </java-name>
+				[Dot42.DexImport("DOM_OBJECT_MODEL", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string DOM_OBJECT_MODEL = "http://java.sun.com/jaxp/xpath/dom";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal XPathConstants() /* MethodBuilder.Create */ 
+				{
+				}
 
 		}
 
@@ -152,24 +264,24 @@ namespace Javax.Xml.Xpath
 		}
 
 		/// <java-name>
-		/// javax/xml/xpath/XPathFunctionException
+		/// javax/xml/xpath/XPathExpressionException
 		/// </java-name>
-		[Dot42.DexImport("javax/xml/xpath/XPathFunctionException", AccessFlags = 33)]
-		public partial class XPathFunctionException : global::Javax.Xml.Xpath.XPathExpressionException
+		[Dot42.DexImport("javax/xml/xpath/XPathExpressionException", AccessFlags = 33)]
+		public partial class XPathExpressionException : global::Javax.Xml.Xpath.XPathException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public XPathFunctionException(string @string) /* MethodBuilder.Create */ 
+				public XPathExpressionException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public XPathFunctionException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				public XPathExpressionException(global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal XPathFunctionException() /* TypeBuilder.AddDefaultConstructor */ 
+				internal XPathExpressionException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -264,160 +376,48 @@ namespace Javax.Xml.Xpath
 		}
 
 		/// <java-name>
-		/// javax/xml/xpath/XPathExpression
+		/// javax/xml/xpath/XPathFactoryConfigurationException
 		/// </java-name>
-		[Dot42.DexImport("javax/xml/xpath/XPathExpression", AccessFlags = 1537)]
-		public partial interface IXPathExpression
+		[Dot42.DexImport("javax/xml/xpath/XPathFactoryConfigurationException", AccessFlags = 33)]
+		public partial class XPathFactoryConfigurationException : global::Javax.Xml.Xpath.XPathException
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// evaluate
-				/// </java-name>
-				[Dot42.DexImport("evaluate", "(Ljava/lang/Object;Ljavax/xml/namespace/QName;)Ljava/lang/Object;", AccessFlags = 1025)]
-				object Evaluate(object @object, global::Javax.Xml.Namespace.QName qName) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public XPathFactoryConfigurationException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
 
-				/// <java-name>
-				/// evaluate
-				/// </java-name>
-				[Dot42.DexImport("evaluate", "(Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 1025)]
-				string Evaluate(object @object) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public XPathFactoryConfigurationException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
 
-				/// <java-name>
-				/// evaluate
-				/// </java-name>
-				[Dot42.DexImport("evaluate", "(Lorg/xml/sax/InputSource;Ljavax/xml/namespace/QName;)Ljava/lang/Object;", AccessFlags = 1025)]
-				object Evaluate(global::Org.Xml.Sax.InputSource inputSource, global::Javax.Xml.Namespace.QName qName) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// evaluate
-				/// </java-name>
-				[Dot42.DexImport("evaluate", "(Lorg/xml/sax/InputSource;)Ljava/lang/String;", AccessFlags = 1025)]
-				string Evaluate(global::Org.Xml.Sax.InputSource inputSource) /* MethodBuilder.Create */ ;
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal XPathFactoryConfigurationException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
 
 		}
 
 		/// <java-name>
-		/// javax/xml/xpath/XPath
+		/// javax/xml/xpath/XPathFunctionException
 		/// </java-name>
-		[Dot42.DexImport("javax/xml/xpath/XPath", AccessFlags = 1537)]
-		public partial interface IXPath
+		[Dot42.DexImport("javax/xml/xpath/XPathFunctionException", AccessFlags = 33)]
+		public partial class XPathFunctionException : global::Javax.Xml.Xpath.XPathExpressionException
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// reset
-				/// </java-name>
-				[Dot42.DexImport("reset", "()V", AccessFlags = 1025)]
-				void Reset() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public XPathFunctionException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
 
-				/// <java-name>
-				/// setXPathVariableResolver
-				/// </java-name>
-				[Dot42.DexImport("setXPathVariableResolver", "(Ljavax/xml/xpath/XPathVariableResolver;)V", AccessFlags = 1025)]
-				void SetXPathVariableResolver(global::Javax.Xml.Xpath.IXPathVariableResolver xPathVariableResolver) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public XPathFunctionException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
 
-				/// <java-name>
-				/// getXPathVariableResolver
-				/// </java-name>
-				[Dot42.DexImport("getXPathVariableResolver", "()Ljavax/xml/xpath/XPathVariableResolver;", AccessFlags = 1025)]
-				global::Javax.Xml.Xpath.IXPathVariableResolver GetXPathVariableResolver() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setXPathFunctionResolver
-				/// </java-name>
-				[Dot42.DexImport("setXPathFunctionResolver", "(Ljavax/xml/xpath/XPathFunctionResolver;)V", AccessFlags = 1025)]
-				void SetXPathFunctionResolver(global::Javax.Xml.Xpath.IXPathFunctionResolver xPathFunctionResolver) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getXPathFunctionResolver
-				/// </java-name>
-				[Dot42.DexImport("getXPathFunctionResolver", "()Ljavax/xml/xpath/XPathFunctionResolver;", AccessFlags = 1025)]
-				global::Javax.Xml.Xpath.IXPathFunctionResolver GetXPathFunctionResolver() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setNamespaceContext
-				/// </java-name>
-				[Dot42.DexImport("setNamespaceContext", "(Ljavax/xml/namespace/NamespaceContext;)V", AccessFlags = 1025)]
-				void SetNamespaceContext(global::Javax.Xml.Namespace.INamespaceContext namespaceContext) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNamespaceContext
-				/// </java-name>
-				[Dot42.DexImport("getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", AccessFlags = 1025)]
-				global::Javax.Xml.Namespace.INamespaceContext GetNamespaceContext() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// compile
-				/// </java-name>
-				[Dot42.DexImport("compile", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathExpression;", AccessFlags = 1025)]
-				global::Javax.Xml.Xpath.IXPathExpression Compile(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// evaluate
-				/// </java-name>
-				[Dot42.DexImport("evaluate", "(Ljava/lang/String;Ljava/lang/Object;Ljavax/xml/namespace/QName;)Ljava/lang/Objec" +
-    "t;", AccessFlags = 1025)]
-				object Evaluate(string @string, object @object, global::Javax.Xml.Namespace.QName qName) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// evaluate
-				/// </java-name>
-				[Dot42.DexImport("evaluate", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 1025)]
-				string Evaluate(string @string, object @object) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// evaluate
-				/// </java-name>
-				[Dot42.DexImport("evaluate", "(Ljava/lang/String;Lorg/xml/sax/InputSource;Ljavax/xml/namespace/QName;)Ljava/lan" +
-    "g/Object;", AccessFlags = 1025)]
-				object Evaluate(string @string, global::Org.Xml.Sax.InputSource inputSource, global::Javax.Xml.Namespace.QName qName) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// evaluate
-				/// </java-name>
-				[Dot42.DexImport("evaluate", "(Ljava/lang/String;Lorg/xml/sax/InputSource;)Ljava/lang/String;", AccessFlags = 1025)]
-				string Evaluate(string @string, global::Org.Xml.Sax.InputSource inputSource) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// javax/xml/xpath/XPathConstants
-		/// </java-name>
-		[Dot42.DexImport("javax/xml/xpath/XPathConstants", AccessFlags = 33)]
-		public partial class XPathConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// NUMBER
-				/// </java-name>
-				[Dot42.DexImport("NUMBER", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
-				public static readonly global::Javax.Xml.Namespace.QName NUMBER;
-				/// <java-name>
-				/// STRING
-				/// </java-name>
-				[Dot42.DexImport("STRING", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
-				public static readonly global::Javax.Xml.Namespace.QName STRING;
-				/// <java-name>
-				/// BOOLEAN
-				/// </java-name>
-				[Dot42.DexImport("BOOLEAN", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
-				public static readonly global::Javax.Xml.Namespace.QName BOOLEAN;
-				/// <java-name>
-				/// NODESET
-				/// </java-name>
-				[Dot42.DexImport("NODESET", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
-				public static readonly global::Javax.Xml.Namespace.QName NODESET;
-				/// <java-name>
-				/// NODE
-				/// </java-name>
-				[Dot42.DexImport("NODE", "Ljavax/xml/namespace/QName;", AccessFlags = 25)]
-				public static readonly global::Javax.Xml.Namespace.QName NODE;
-				/// <java-name>
-				/// DOM_OBJECT_MODEL
-				/// </java-name>
-				[Dot42.DexImport("DOM_OBJECT_MODEL", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string DOM_OBJECT_MODEL = "http://java.sun.com/jaxp/xpath/dom";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal XPathConstants() /* MethodBuilder.Create */ 
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal XPathFunctionException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

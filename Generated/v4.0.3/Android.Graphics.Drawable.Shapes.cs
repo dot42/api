@@ -2,6 +2,55 @@
 namespace Android.Graphics.Drawable.Shapes
 {
 		/// <java-name>
+		/// android/graphics/drawable/shapes/ArcShape
+		/// </java-name>
+		[Dot42.DexImport("android/graphics/drawable/shapes/ArcShape", AccessFlags = 33)]
+		public partial class ArcShape : global::Android.Graphics.Drawable.Shapes.RectShape
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(FF)V", AccessFlags = 1)]
+				public ArcShape(float single, float single1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// draw
+				/// </java-name>
+				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V", AccessFlags = 1)]
+				public override void Draw(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ArcShape() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/graphics/drawable/shapes/OvalShape
+		/// </java-name>
+		[Dot42.DexImport("android/graphics/drawable/shapes/OvalShape", AccessFlags = 33)]
+		public partial class OvalShape : global::Android.Graphics.Drawable.Shapes.RectShape
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public OvalShape() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// draw
+				/// </java-name>
+				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V", AccessFlags = 1)]
+				public override void Draw(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// android/graphics/drawable/shapes/PathShape
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/shapes/PathShape", AccessFlags = 33)]
@@ -89,55 +138,6 @@ namespace Android.Graphics.Drawable.Shapes
 				public new virtual global::Android.Graphics.Drawable.Shapes.RectShape Clone() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawable.Shapes.RectShape);
-				}
-
-		}
-
-		/// <java-name>
-		/// android/graphics/drawable/shapes/OvalShape
-		/// </java-name>
-		[Dot42.DexImport("android/graphics/drawable/shapes/OvalShape", AccessFlags = 33)]
-		public partial class OvalShape : global::Android.Graphics.Drawable.Shapes.RectShape
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public OvalShape() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// draw
-				/// </java-name>
-				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V", AccessFlags = 1)]
-				public override void Draw(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/graphics/drawable/shapes/ArcShape
-		/// </java-name>
-		[Dot42.DexImport("android/graphics/drawable/shapes/ArcShape", AccessFlags = 33)]
-		public partial class ArcShape : global::Android.Graphics.Drawable.Shapes.RectShape
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(FF)V", AccessFlags = 1)]
-				public ArcShape(float single, float single1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// draw
-				/// </java-name>
-				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V", AccessFlags = 1)]
-				public override void Draw(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ArcShape() /* TypeBuilder.AddDefaultConstructor */ 
-				{
 				}
 
 		}

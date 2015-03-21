@@ -39,6 +39,15 @@ namespace Org.Apache.Http.Cookie.Params
 		/// <java-name>
 		/// org/apache/http/cookie/params/CookieSpecPNames
 		/// </java-name>
+		[Dot42.DexImport("org/apache/http/cookie/params/CookieSpecPNames", AccessFlags = 1537)]
+		public partial interface ICookieSpecPNames
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// org/apache/http/cookie/params/CookieSpecPNames
+		/// </java-name>
 		[Dot42.DexImport("org/apache/http/cookie/params/CookieSpecPNames", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
 		public static partial class ICookieSpecPNamesConstants
  /* scope: __dot42__ */ 
@@ -53,15 +62,6 @@ namespace Org.Apache.Http.Cookie.Params
 				/// </java-name>
 				[Dot42.DexImport("SINGLE_COOKIE_HEADER", "Ljava/lang/String;", AccessFlags = 25)]
 				public const string SINGLE_COOKIE_HEADER = "http.protocol.single-cookie-header";
-		}
-
-		/// <java-name>
-		/// org/apache/http/cookie/params/CookieSpecPNames
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/params/CookieSpecPNames", AccessFlags = 1537)]
-		public partial interface ICookieSpecPNames
- /* scope: __dot42__ */ 
-		{
 		}
 
 }

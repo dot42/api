@@ -17,31 +17,17 @@ namespace Javax.Crypto.Interfaces
 		}
 
 		/// <java-name>
-		/// javax/crypto/interfaces/DHPublicKey
+		/// javax/crypto/interfaces/DHPrivateKey
 		/// </java-name>
-		[Dot42.DexImport("javax/crypto/interfaces/DHPublicKey", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IDHPublicKeyConstants
+		[Dot42.DexImport("javax/crypto/interfaces/DHPrivateKey", AccessFlags = 1537)]
+		public partial interface IDHPrivateKey : global::Javax.Crypto.Interfaces.IDHKey, global::Java.Security.IPrivateKey
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// serialVersionUID
+				/// getX
 				/// </java-name>
-				[Dot42.DexImport("serialVersionUID", "J", AccessFlags = 25)]
-				public const long SerialVersionUID = -6628103563352519193;
-		}
-
-		/// <java-name>
-		/// javax/crypto/interfaces/DHPublicKey
-		/// </java-name>
-		[Dot42.DexImport("javax/crypto/interfaces/DHPublicKey", AccessFlags = 1537)]
-		public partial interface IDHPublicKey : global::Javax.Crypto.Interfaces.IDHKey, global::Java.Security.IPublicKey
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getY
-				/// </java-name>
-				[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetY() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+				global::Java.Math.BigInteger GetX() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -60,32 +46,32 @@ namespace Javax.Crypto.Interfaces
 		}
 
 		/// <java-name>
-		/// javax/crypto/interfaces/DHPrivateKey
+		/// javax/crypto/interfaces/DHPublicKey
 		/// </java-name>
-		[Dot42.DexImport("javax/crypto/interfaces/DHPrivateKey", AccessFlags = 1537)]
-		public partial interface IDHPrivateKey : global::Javax.Crypto.Interfaces.IDHKey, global::Java.Security.IPrivateKey
+		[Dot42.DexImport("javax/crypto/interfaces/DHPublicKey", AccessFlags = 1537)]
+		public partial interface IDHPublicKey : global::Javax.Crypto.Interfaces.IDHKey, global::Java.Security.IPublicKey
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getX
+				/// getY
 				/// </java-name>
-				[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetX() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+				global::Java.Math.BigInteger GetY() /* MethodBuilder.Create */ ;
 
 		}
 
 		/// <java-name>
-		/// javax/crypto/interfaces/PBEKey
+		/// javax/crypto/interfaces/DHPublicKey
 		/// </java-name>
-		[Dot42.DexImport("javax/crypto/interfaces/PBEKey", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IPBEKeyConstants
+		[Dot42.DexImport("javax/crypto/interfaces/DHPublicKey", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IDHPublicKeyConstants
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// serialVersionUID
 				/// </java-name>
 				[Dot42.DexImport("serialVersionUID", "J", AccessFlags = 25)]
-				public const long SerialVersionUID = -1430015993304333921;
+				public const long SerialVersionUID = -6628103563352519193;
 		}
 
 		/// <java-name>
@@ -113,6 +99,20 @@ namespace Javax.Crypto.Interfaces
 				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 1025)]
 				char[] GetPassword() /* MethodBuilder.Create */ ;
 
+		}
+
+		/// <java-name>
+		/// javax/crypto/interfaces/PBEKey
+		/// </java-name>
+		[Dot42.DexImport("javax/crypto/interfaces/PBEKey", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IPBEKeyConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// serialVersionUID
+				/// </java-name>
+				[Dot42.DexImport("serialVersionUID", "J", AccessFlags = 25)]
+				public const long SerialVersionUID = -1430015993304333921;
 		}
 
 }

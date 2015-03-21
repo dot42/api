@@ -4,6 +4,15 @@ namespace Dalvik.Bytecode
 		/// <java-name>
 		/// dalvik/bytecode/Opcodes
 		/// </java-name>
+		[Dot42.DexImport("dalvik/bytecode/Opcodes", AccessFlags = 1537)]
+		public partial interface IOpcodes
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// dalvik/bytecode/Opcodes
+		/// </java-name>
 		[Dot42.DexImport("dalvik/bytecode/Opcodes", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
 		public static partial class IOpcodesConstants
  /* scope: __dot42__ */ 
@@ -1388,15 +1397,6 @@ namespace Dalvik.Bytecode
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_SUPER_QUICK_RANGE", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_SUPER_QUICK_RANGE = 251;
-		}
-
-		/// <java-name>
-		/// dalvik/bytecode/Opcodes
-		/// </java-name>
-		[Dot42.DexImport("dalvik/bytecode/Opcodes", AccessFlags = 1537)]
-		public partial interface IOpcodes
- /* scope: __dot42__ */ 
-		{
 		}
 
 		/// <java-name>

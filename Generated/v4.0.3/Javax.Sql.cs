@@ -44,27 +44,6 @@ namespace Javax.Sql
 		}
 
 		/// <java-name>
-		/// javax/sql/StatementEventListener
-		/// </java-name>
-		[Dot42.DexImport("javax/sql/StatementEventListener", AccessFlags = 1537)]
-		public partial interface IStatementEventListener : global::Java.Util.IEventListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// statementClosed
-				/// </java-name>
-				[Dot42.DexImport("statementClosed", "(Ljavax/sql/StatementEvent;)V", AccessFlags = 1025)]
-				void StatementClosed(global::Javax.Sql.StatementEvent statementEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// statementErrorOccurred
-				/// </java-name>
-				[Dot42.DexImport("statementErrorOccurred", "(Ljavax/sql/StatementEvent;)V", AccessFlags = 1025)]
-				void StatementErrorOccurred(global::Javax.Sql.StatementEvent statementEvent) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
 		/// javax/sql/CommonDataSource
 		/// </java-name>
 		[Dot42.DexImport("javax/sql/CommonDataSource", AccessFlags = 1537)]
@@ -98,171 +77,44 @@ namespace Javax.Sql
 		}
 
 		/// <java-name>
-		/// javax/sql/RowSetEvent
+		/// javax/sql/ConnectionEventListener
 		/// </java-name>
-		[Dot42.DexImport("javax/sql/RowSetEvent", AccessFlags = 33)]
-		public partial class RowSetEvent : global::Java.Util.EventObject, global::Java.Io.ISerializable
+		[Dot42.DexImport("javax/sql/ConnectionEventListener", AccessFlags = 1537)]
+		public partial interface IConnectionEventListener : global::Java.Util.IEventListener
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljavax/sql/RowSet;)V", AccessFlags = 1)]
-				public RowSetEvent(global::Javax.Sql.IRowSet rowSet) /* MethodBuilder.Create */ 
-				{
-				}
+				/// <java-name>
+				/// connectionClosed
+				/// </java-name>
+				[Dot42.DexImport("connectionClosed", "(Ljavax/sql/ConnectionEvent;)V", AccessFlags = 1025)]
+				void ConnectionClosed(global::Javax.Sql.ConnectionEvent connectionEvent) /* MethodBuilder.Create */ ;
 
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RowSetEvent() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
+				/// <java-name>
+				/// connectionErrorOccurred
+				/// </java-name>
+				[Dot42.DexImport("connectionErrorOccurred", "(Ljavax/sql/ConnectionEvent;)V", AccessFlags = 1025)]
+				void ConnectionErrorOccurred(global::Javax.Sql.ConnectionEvent connectionEvent) /* MethodBuilder.Create */ ;
 
 		}
 
 		/// <java-name>
-		/// javax/sql/RowSetMetaData
+		/// javax/sql/ConnectionPoolDataSource
 		/// </java-name>
-		[Dot42.DexImport("javax/sql/RowSetMetaData", AccessFlags = 1537)]
-		public partial interface IRowSetMetaData : global::Java.Sql.IResultSetMetaData
+		[Dot42.DexImport("javax/sql/ConnectionPoolDataSource", AccessFlags = 1537)]
+		public partial interface IConnectionPoolDataSource : global::Javax.Sql.ICommonDataSource
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// setAutoIncrement
+				/// getPooledConnection
 				/// </java-name>
-				[Dot42.DexImport("setAutoIncrement", "(IZ)V", AccessFlags = 1025)]
-				void SetAutoIncrement(int int32, bool boolean) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getPooledConnection", "()Ljavax/sql/PooledConnection;", AccessFlags = 1025)]
+				global::Javax.Sql.IPooledConnection GetPooledConnection() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setCaseSensitive
+				/// getPooledConnection
 				/// </java-name>
-				[Dot42.DexImport("setCaseSensitive", "(IZ)V", AccessFlags = 1025)]
-				void SetCaseSensitive(int int32, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setCatalogName
-				/// </java-name>
-				[Dot42.DexImport("setCatalogName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
-				void SetCatalogName(int int32, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setColumnCount
-				/// </java-name>
-				[Dot42.DexImport("setColumnCount", "(I)V", AccessFlags = 1025)]
-				void SetColumnCount(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setColumnDisplaySize
-				/// </java-name>
-				[Dot42.DexImport("setColumnDisplaySize", "(II)V", AccessFlags = 1025)]
-				void SetColumnDisplaySize(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setColumnLabel
-				/// </java-name>
-				[Dot42.DexImport("setColumnLabel", "(ILjava/lang/String;)V", AccessFlags = 1025)]
-				void SetColumnLabel(int int32, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setColumnName
-				/// </java-name>
-				[Dot42.DexImport("setColumnName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
-				void SetColumnName(int int32, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setColumnType
-				/// </java-name>
-				[Dot42.DexImport("setColumnType", "(II)V", AccessFlags = 1025)]
-				void SetColumnType(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setColumnTypeName
-				/// </java-name>
-				[Dot42.DexImport("setColumnTypeName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
-				void SetColumnTypeName(int int32, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setCurrency
-				/// </java-name>
-				[Dot42.DexImport("setCurrency", "(IZ)V", AccessFlags = 1025)]
-				void SetCurrency(int int32, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setNullable
-				/// </java-name>
-				[Dot42.DexImport("setNullable", "(II)V", AccessFlags = 1025)]
-				void SetNullable(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setPrecision
-				/// </java-name>
-				[Dot42.DexImport("setPrecision", "(II)V", AccessFlags = 1025)]
-				void SetPrecision(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setScale
-				/// </java-name>
-				[Dot42.DexImport("setScale", "(II)V", AccessFlags = 1025)]
-				void SetScale(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSchemaName
-				/// </java-name>
-				[Dot42.DexImport("setSchemaName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
-				void SetSchemaName(int int32, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSearchable
-				/// </java-name>
-				[Dot42.DexImport("setSearchable", "(IZ)V", AccessFlags = 1025)]
-				void SetSearchable(int int32, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSigned
-				/// </java-name>
-				[Dot42.DexImport("setSigned", "(IZ)V", AccessFlags = 1025)]
-				void SetSigned(int int32, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setTableName
-				/// </java-name>
-				[Dot42.DexImport("setTableName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
-				void SetTableName(int int32, string @string) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// javax/sql/RowSetInternal
-		/// </java-name>
-		[Dot42.DexImport("javax/sql/RowSetInternal", AccessFlags = 1537)]
-		public partial interface IRowSetInternal
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getConnection
-				/// </java-name>
-				[Dot42.DexImport("getConnection", "()Ljava/sql/Connection;", AccessFlags = 1025)]
-				global::Java.Sql.IConnection GetConnection() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getOriginal
-				/// </java-name>
-				[Dot42.DexImport("getOriginal", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetOriginal() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getOriginalRow
-				/// </java-name>
-				[Dot42.DexImport("getOriginalRow", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetOriginalRow() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getParams
-				/// </java-name>
-				[Dot42.DexImport("getParams", "()[Ljava/lang/Object;", AccessFlags = 1025)]
-				object[] GetParams() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setMetaData
-				/// </java-name>
-				[Dot42.DexImport("setMetaData", "(Ljavax/sql/RowSetMetaData;)V", AccessFlags = 1025)]
-				void SetMetaData(global::Javax.Sql.IRowSetMetaData rowSetMetaData) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getPooledConnection", "(Ljava/lang/String;Ljava/lang/String;)Ljavax/sql/PooledConnection;", AccessFlags = 1025)]
+				global::Javax.Sql.IPooledConnection GetPooledConnection(string @string, string string1) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -288,17 +140,47 @@ namespace Javax.Sql
 		}
 
 		/// <java-name>
-		/// javax/sql/RowSetReader
+		/// javax/sql/PooledConnection
 		/// </java-name>
-		[Dot42.DexImport("javax/sql/RowSetReader", AccessFlags = 1537)]
-		public partial interface IRowSetReader
+		[Dot42.DexImport("javax/sql/PooledConnection", AccessFlags = 1537)]
+		public partial interface IPooledConnection
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// readData
+				/// addConnectionEventListener
 				/// </java-name>
-				[Dot42.DexImport("readData", "(Ljavax/sql/RowSetInternal;)V", AccessFlags = 1025)]
-				void ReadData(global::Javax.Sql.IRowSetInternal rowSetInternal) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("addConnectionEventListener", "(Ljavax/sql/ConnectionEventListener;)V", AccessFlags = 1025)]
+				void AddConnectionEventListener(global::Javax.Sql.IConnectionEventListener connectionEventListener) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
+				void Close() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getConnection
+				/// </java-name>
+				[Dot42.DexImport("getConnection", "()Ljava/sql/Connection;", AccessFlags = 1025)]
+				global::Java.Sql.IConnection GetConnection() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// removeConnectionEventListener
+				/// </java-name>
+				[Dot42.DexImport("removeConnectionEventListener", "(Ljavax/sql/ConnectionEventListener;)V", AccessFlags = 1025)]
+				void RemoveConnectionEventListener(global::Javax.Sql.IConnectionEventListener connectionEventListener) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addStatementEventListener
+				/// </java-name>
+				[Dot42.DexImport("addStatementEventListener", "(Ljavax/sql/StatementEventListener;)V", AccessFlags = 1025)]
+				void AddStatementEventListener(global::Javax.Sql.IStatementEventListener statementEventListener) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// removeStatementEventListener
+				/// </java-name>
+				[Dot42.DexImport("removeStatementEventListener", "(Ljavax/sql/StatementEventListener;)V", AccessFlags = 1025)]
+				void RemoveStatementEventListener(global::Javax.Sql.IStatementEventListener statementEventListener) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -1002,44 +884,249 @@ namespace Javax.Sql
 		}
 
 		/// <java-name>
-		/// javax/sql/ConnectionEventListener
+		/// javax/sql/RowSetInternal
 		/// </java-name>
-		[Dot42.DexImport("javax/sql/ConnectionEventListener", AccessFlags = 1537)]
-		public partial interface IConnectionEventListener : global::Java.Util.IEventListener
+		[Dot42.DexImport("javax/sql/RowSetInternal", AccessFlags = 1537)]
+		public partial interface IRowSetInternal
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// connectionClosed
+				/// getConnection
 				/// </java-name>
-				[Dot42.DexImport("connectionClosed", "(Ljavax/sql/ConnectionEvent;)V", AccessFlags = 1025)]
-				void ConnectionClosed(global::Javax.Sql.ConnectionEvent connectionEvent) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getConnection", "()Ljava/sql/Connection;", AccessFlags = 1025)]
+				global::Java.Sql.IConnection GetConnection() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// connectionErrorOccurred
+				/// getOriginal
 				/// </java-name>
-				[Dot42.DexImport("connectionErrorOccurred", "(Ljavax/sql/ConnectionEvent;)V", AccessFlags = 1025)]
-				void ConnectionErrorOccurred(global::Javax.Sql.ConnectionEvent connectionEvent) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getOriginal", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+				global::Java.Sql.IResultSet GetOriginal() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getOriginalRow
+				/// </java-name>
+				[Dot42.DexImport("getOriginalRow", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+				global::Java.Sql.IResultSet GetOriginalRow() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getParams
+				/// </java-name>
+				[Dot42.DexImport("getParams", "()[Ljava/lang/Object;", AccessFlags = 1025)]
+				object[] GetParams() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setMetaData
+				/// </java-name>
+				[Dot42.DexImport("setMetaData", "(Ljavax/sql/RowSetMetaData;)V", AccessFlags = 1025)]
+				void SetMetaData(global::Javax.Sql.IRowSetMetaData rowSetMetaData) /* MethodBuilder.Create */ ;
 
 		}
 
 		/// <java-name>
-		/// javax/sql/ConnectionPoolDataSource
+		/// javax/sql/RowSetListener
 		/// </java-name>
-		[Dot42.DexImport("javax/sql/ConnectionPoolDataSource", AccessFlags = 1537)]
-		public partial interface IConnectionPoolDataSource : global::Javax.Sql.ICommonDataSource
+		[Dot42.DexImport("javax/sql/RowSetListener", AccessFlags = 1537)]
+		public partial interface IRowSetListener : global::Java.Util.IEventListener
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getPooledConnection
+				/// cursorMoved
 				/// </java-name>
-				[Dot42.DexImport("getPooledConnection", "()Ljavax/sql/PooledConnection;", AccessFlags = 1025)]
-				global::Javax.Sql.IPooledConnection GetPooledConnection() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("cursorMoved", "(Ljavax/sql/RowSetEvent;)V", AccessFlags = 1025)]
+				void CursorMoved(global::Javax.Sql.RowSetEvent rowSetEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getPooledConnection
+				/// rowChanged
 				/// </java-name>
-				[Dot42.DexImport("getPooledConnection", "(Ljava/lang/String;Ljava/lang/String;)Ljavax/sql/PooledConnection;", AccessFlags = 1025)]
-				global::Javax.Sql.IPooledConnection GetPooledConnection(string @string, string string1) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("rowChanged", "(Ljavax/sql/RowSetEvent;)V", AccessFlags = 1025)]
+				void RowChanged(global::Javax.Sql.RowSetEvent rowSetEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// rowSetChanged
+				/// </java-name>
+				[Dot42.DexImport("rowSetChanged", "(Ljavax/sql/RowSetEvent;)V", AccessFlags = 1025)]
+				void RowSetChanged(global::Javax.Sql.RowSetEvent rowSetEvent) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/sql/RowSetMetaData
+		/// </java-name>
+		[Dot42.DexImport("javax/sql/RowSetMetaData", AccessFlags = 1537)]
+		public partial interface IRowSetMetaData : global::Java.Sql.IResultSetMetaData
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// setAutoIncrement
+				/// </java-name>
+				[Dot42.DexImport("setAutoIncrement", "(IZ)V", AccessFlags = 1025)]
+				void SetAutoIncrement(int int32, bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setCaseSensitive
+				/// </java-name>
+				[Dot42.DexImport("setCaseSensitive", "(IZ)V", AccessFlags = 1025)]
+				void SetCaseSensitive(int int32, bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setCatalogName
+				/// </java-name>
+				[Dot42.DexImport("setCatalogName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
+				void SetCatalogName(int int32, string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setColumnCount
+				/// </java-name>
+				[Dot42.DexImport("setColumnCount", "(I)V", AccessFlags = 1025)]
+				void SetColumnCount(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setColumnDisplaySize
+				/// </java-name>
+				[Dot42.DexImport("setColumnDisplaySize", "(II)V", AccessFlags = 1025)]
+				void SetColumnDisplaySize(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setColumnLabel
+				/// </java-name>
+				[Dot42.DexImport("setColumnLabel", "(ILjava/lang/String;)V", AccessFlags = 1025)]
+				void SetColumnLabel(int int32, string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setColumnName
+				/// </java-name>
+				[Dot42.DexImport("setColumnName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
+				void SetColumnName(int int32, string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setColumnType
+				/// </java-name>
+				[Dot42.DexImport("setColumnType", "(II)V", AccessFlags = 1025)]
+				void SetColumnType(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setColumnTypeName
+				/// </java-name>
+				[Dot42.DexImport("setColumnTypeName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
+				void SetColumnTypeName(int int32, string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setCurrency
+				/// </java-name>
+				[Dot42.DexImport("setCurrency", "(IZ)V", AccessFlags = 1025)]
+				void SetCurrency(int int32, bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setNullable
+				/// </java-name>
+				[Dot42.DexImport("setNullable", "(II)V", AccessFlags = 1025)]
+				void SetNullable(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setPrecision
+				/// </java-name>
+				[Dot42.DexImport("setPrecision", "(II)V", AccessFlags = 1025)]
+				void SetPrecision(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setScale
+				/// </java-name>
+				[Dot42.DexImport("setScale", "(II)V", AccessFlags = 1025)]
+				void SetScale(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setSchemaName
+				/// </java-name>
+				[Dot42.DexImport("setSchemaName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
+				void SetSchemaName(int int32, string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setSearchable
+				/// </java-name>
+				[Dot42.DexImport("setSearchable", "(IZ)V", AccessFlags = 1025)]
+				void SetSearchable(int int32, bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setSigned
+				/// </java-name>
+				[Dot42.DexImport("setSigned", "(IZ)V", AccessFlags = 1025)]
+				void SetSigned(int int32, bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setTableName
+				/// </java-name>
+				[Dot42.DexImport("setTableName", "(ILjava/lang/String;)V", AccessFlags = 1025)]
+				void SetTableName(int int32, string @string) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/sql/RowSetReader
+		/// </java-name>
+		[Dot42.DexImport("javax/sql/RowSetReader", AccessFlags = 1537)]
+		public partial interface IRowSetReader
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// readData
+				/// </java-name>
+				[Dot42.DexImport("readData", "(Ljavax/sql/RowSetInternal;)V", AccessFlags = 1025)]
+				void ReadData(global::Javax.Sql.IRowSetInternal rowSetInternal) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/sql/RowSetWriter
+		/// </java-name>
+		[Dot42.DexImport("javax/sql/RowSetWriter", AccessFlags = 1537)]
+		public partial interface IRowSetWriter
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// writeData
+				/// </java-name>
+				[Dot42.DexImport("writeData", "(Ljavax/sql/RowSetInternal;)Z", AccessFlags = 1025)]
+				bool WriteData(global::Javax.Sql.IRowSetInternal rowSetInternal) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/sql/StatementEventListener
+		/// </java-name>
+		[Dot42.DexImport("javax/sql/StatementEventListener", AccessFlags = 1537)]
+		public partial interface IStatementEventListener : global::Java.Util.IEventListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// statementClosed
+				/// </java-name>
+				[Dot42.DexImport("statementClosed", "(Ljavax/sql/StatementEvent;)V", AccessFlags = 1025)]
+				void StatementClosed(global::Javax.Sql.StatementEvent statementEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// statementErrorOccurred
+				/// </java-name>
+				[Dot42.DexImport("statementErrorOccurred", "(Ljavax/sql/StatementEvent;)V", AccessFlags = 1025)]
+				void StatementErrorOccurred(global::Javax.Sql.StatementEvent statementEvent) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/sql/RowSetEvent
+		/// </java-name>
+		[Dot42.DexImport("javax/sql/RowSetEvent", AccessFlags = 33)]
+		public partial class RowSetEvent : global::Java.Util.EventObject, global::Java.Io.ISerializable
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljavax/sql/RowSet;)V", AccessFlags = 1)]
+				public RowSetEvent(global::Javax.Sql.IRowSet rowSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal RowSetEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
 
 		}
 
@@ -1101,93 +1188,6 @@ namespace Javax.Sql
 				[Dot42.DexImport("getSQLException", "()Ljava/sql/SQLException;", AccessFlags = 1)]
 						get{ return GetSQLException(); }
 				}
-
-		}
-
-		/// <java-name>
-		/// javax/sql/RowSetListener
-		/// </java-name>
-		[Dot42.DexImport("javax/sql/RowSetListener", AccessFlags = 1537)]
-		public partial interface IRowSetListener : global::Java.Util.IEventListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// cursorMoved
-				/// </java-name>
-				[Dot42.DexImport("cursorMoved", "(Ljavax/sql/RowSetEvent;)V", AccessFlags = 1025)]
-				void CursorMoved(global::Javax.Sql.RowSetEvent rowSetEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// rowChanged
-				/// </java-name>
-				[Dot42.DexImport("rowChanged", "(Ljavax/sql/RowSetEvent;)V", AccessFlags = 1025)]
-				void RowChanged(global::Javax.Sql.RowSetEvent rowSetEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// rowSetChanged
-				/// </java-name>
-				[Dot42.DexImport("rowSetChanged", "(Ljavax/sql/RowSetEvent;)V", AccessFlags = 1025)]
-				void RowSetChanged(global::Javax.Sql.RowSetEvent rowSetEvent) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// javax/sql/PooledConnection
-		/// </java-name>
-		[Dot42.DexImport("javax/sql/PooledConnection", AccessFlags = 1537)]
-		public partial interface IPooledConnection
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// addConnectionEventListener
-				/// </java-name>
-				[Dot42.DexImport("addConnectionEventListener", "(Ljavax/sql/ConnectionEventListener;)V", AccessFlags = 1025)]
-				void AddConnectionEventListener(global::Javax.Sql.IConnectionEventListener connectionEventListener) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
-				void Close() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getConnection
-				/// </java-name>
-				[Dot42.DexImport("getConnection", "()Ljava/sql/Connection;", AccessFlags = 1025)]
-				global::Java.Sql.IConnection GetConnection() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// removeConnectionEventListener
-				/// </java-name>
-				[Dot42.DexImport("removeConnectionEventListener", "(Ljavax/sql/ConnectionEventListener;)V", AccessFlags = 1025)]
-				void RemoveConnectionEventListener(global::Javax.Sql.IConnectionEventListener connectionEventListener) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// addStatementEventListener
-				/// </java-name>
-				[Dot42.DexImport("addStatementEventListener", "(Ljavax/sql/StatementEventListener;)V", AccessFlags = 1025)]
-				void AddStatementEventListener(global::Javax.Sql.IStatementEventListener statementEventListener) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// removeStatementEventListener
-				/// </java-name>
-				[Dot42.DexImport("removeStatementEventListener", "(Ljavax/sql/StatementEventListener;)V", AccessFlags = 1025)]
-				void RemoveStatementEventListener(global::Javax.Sql.IStatementEventListener statementEventListener) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// javax/sql/RowSetWriter
-		/// </java-name>
-		[Dot42.DexImport("javax/sql/RowSetWriter", AccessFlags = 1537)]
-		public partial interface IRowSetWriter
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// writeData
-				/// </java-name>
-				[Dot42.DexImport("writeData", "(Ljavax/sql/RowSetInternal;)Z", AccessFlags = 1025)]
-				bool WriteData(global::Javax.Sql.IRowSetInternal rowSetInternal) /* MethodBuilder.Create */ ;
 
 		}
 

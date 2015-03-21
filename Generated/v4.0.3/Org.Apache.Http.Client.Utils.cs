@@ -2,6 +2,29 @@
 namespace Org.Apache.Http.Client.Utils
 {
 		/// <java-name>
+		/// org/apache/http/client/utils/CloneUtils
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/client/utils/CloneUtils", AccessFlags = 33)]
+		public partial class CloneUtils
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal CloneUtils() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clone
+				/// </java-name>
+				[Dot42.DexImport("clone", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 9)]
+				public static object Clone(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+		}
+
+		/// <java-name>
 		/// org/apache/http/client/utils/URIUtils
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/client/utils/URIUtils", AccessFlags = 33)]
@@ -57,29 +80,6 @@ namespace Org.Apache.Http.Client.Utils
 				public static global::System.Uri Resolve(global::System.Uri uri, global::System.Uri uri1) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Uri);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/client/utils/CloneUtils
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/utils/CloneUtils", AccessFlags = 33)]
-		public partial class CloneUtils
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal CloneUtils() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clone
-				/// </java-name>
-				[Dot42.DexImport("clone", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 9)]
-				public static object Clone(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(object);
 				}
 
 		}

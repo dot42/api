@@ -2,6 +2,405 @@
 namespace Org.Json
 {
 		/// <java-name>
+		/// org/json/JSONArray
+		/// </java-name>
+		[Dot42.DexImport("org/json/JSONArray", AccessFlags = 33)]
+		public partial class JSONArray
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public JSONArray() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/util/Collection;)V", AccessFlags = 1)]
+				public JSONArray(global::Java.Util.ICollection<object> collection) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Lorg/json/JSONTokener;)V", AccessFlags = 1)]
+				public JSONArray(global::Org.Json.JSONTokener jSONTokener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public JSONArray(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
+				public virtual int Length() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(Z)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(D)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(double @double) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(I)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(J)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(long int64) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(Ljava/lang/Object;)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(IZ)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(int int32, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(ID)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(int int32, double @double) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(II)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(IJ)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(int int32, long int64) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// put
+				/// </java-name>
+				[Dot42.DexImport("put", "(ILjava/lang/Object;)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray Put(int int32, object @object) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// isNull
+				/// </java-name>
+				[Dot42.DexImport("isNull", "(I)Z", AccessFlags = 1)]
+				public virtual bool IsNull(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(I)Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object Get(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// opt
+				/// </java-name>
+				[Dot42.DexImport("opt", "(I)Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object Opt(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// getBoolean
+				/// </java-name>
+				[Dot42.DexImport("getBoolean", "(I)Z", AccessFlags = 1)]
+				public virtual bool GetBoolean(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// optBoolean
+				/// </java-name>
+				[Dot42.DexImport("optBoolean", "(I)Z", AccessFlags = 1)]
+				public virtual bool OptBoolean(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// optBoolean
+				/// </java-name>
+				[Dot42.DexImport("optBoolean", "(IZ)Z", AccessFlags = 1)]
+				public virtual bool OptBoolean(int int32, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getDouble
+				/// </java-name>
+				[Dot42.DexImport("getDouble", "(I)D", AccessFlags = 1)]
+				public virtual double GetDouble(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(double);
+				}
+
+				/// <java-name>
+				/// optDouble
+				/// </java-name>
+				[Dot42.DexImport("optDouble", "(I)D", AccessFlags = 1)]
+				public virtual double OptDouble(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(double);
+				}
+
+				/// <java-name>
+				/// optDouble
+				/// </java-name>
+				[Dot42.DexImport("optDouble", "(ID)D", AccessFlags = 1)]
+				public virtual double OptDouble(int int32, double @double) /* MethodBuilder.Create */ 
+				{
+						return default(double);
+				}
+
+				/// <java-name>
+				/// getInt
+				/// </java-name>
+				[Dot42.DexImport("getInt", "(I)I", AccessFlags = 1)]
+				public virtual int GetInt(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// optInt
+				/// </java-name>
+				[Dot42.DexImport("optInt", "(I)I", AccessFlags = 1)]
+				public virtual int OptInt(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// optInt
+				/// </java-name>
+				[Dot42.DexImport("optInt", "(II)I", AccessFlags = 1)]
+				public virtual int OptInt(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getLong
+				/// </java-name>
+				[Dot42.DexImport("getLong", "(I)J", AccessFlags = 1)]
+				public virtual long GetLong(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// optLong
+				/// </java-name>
+				[Dot42.DexImport("optLong", "(I)J", AccessFlags = 1)]
+				public virtual long OptLong(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// optLong
+				/// </java-name>
+				[Dot42.DexImport("optLong", "(IJ)J", AccessFlags = 1)]
+				public virtual long OptLong(int int32, long int64) /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getString
+				/// </java-name>
+				[Dot42.DexImport("getString", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetString(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// optString
+				/// </java-name>
+				[Dot42.DexImport("optString", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string OptString(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// optString
+				/// </java-name>
+				[Dot42.DexImport("optString", "(ILjava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string OptString(int int32, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getJSONArray
+				/// </java-name>
+				[Dot42.DexImport("getJSONArray", "(I)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray GetJSONArray(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// optJSONArray
+				/// </java-name>
+				[Dot42.DexImport("optJSONArray", "(I)Lorg/json/JSONArray;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONArray OptJSONArray(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONArray);
+				}
+
+				/// <java-name>
+				/// getJSONObject
+				/// </java-name>
+				[Dot42.DexImport("getJSONObject", "(I)Lorg/json/JSONObject;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONObject GetJSONObject(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONObject);
+				}
+
+				/// <java-name>
+				/// optJSONObject
+				/// </java-name>
+				[Dot42.DexImport("optJSONObject", "(I)Lorg/json/JSONObject;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONObject OptJSONObject(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONObject);
+				}
+
+				/// <java-name>
+				/// toJSONObject
+				/// </java-name>
+				[Dot42.DexImport("toJSONObject", "(Lorg/json/JSONArray;)Lorg/json/JSONObject;", AccessFlags = 1)]
+				public virtual global::Org.Json.JSONObject ToJSONObject(global::Org.Json.JSONArray jSONArray) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Json.JSONObject);
+				}
+
+				/// <java-name>
+				/// join
+				/// </java-name>
+				[Dot42.DexImport("join", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string Join(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string ToString(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/json/JSONException
+		/// </java-name>
+		[Dot42.DexImport("org/json/JSONException", AccessFlags = 33)]
+		public partial class JSONException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public JSONException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal JSONException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// org/json/JSONObject
 		/// </java-name>
 		[Dot42.DexImport("org/json/JSONObject", AccessFlags = 33)]
@@ -392,25 +791,6 @@ namespace Org.Json
 		}
 
 		/// <java-name>
-		/// org/json/JSONException
-		/// </java-name>
-		[Dot42.DexImport("org/json/JSONException", AccessFlags = 33)]
-		public partial class JSONException : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public JSONException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal JSONException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// org/json/JSONStringer
 		/// </java-name>
 		[Dot42.DexImport("org/json/JSONStringer", AccessFlags = 33)]
@@ -510,386 +890,6 @@ namespace Org.Json
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/json/JSONArray
-		/// </java-name>
-		[Dot42.DexImport("org/json/JSONArray", AccessFlags = 33)]
-		public partial class JSONArray
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public JSONArray() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/util/Collection;)V", AccessFlags = 1)]
-				public JSONArray(global::Java.Util.ICollection<object> collection) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Lorg/json/JSONTokener;)V", AccessFlags = 1)]
-				public JSONArray(global::Org.Json.JSONTokener jSONTokener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public JSONArray(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public virtual int Length() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(Z)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(D)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(double @double) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(I)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(J)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(long int64) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(Ljava/lang/Object;)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(IZ)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(int int32, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(ID)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(int int32, double @double) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(II)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(IJ)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(int int32, long int64) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(ILjava/lang/Object;)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray Put(int int32, object @object) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// isNull
-				/// </java-name>
-				[Dot42.DexImport("isNull", "(I)Z", AccessFlags = 1)]
-				public virtual bool IsNull(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(I)Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object Get(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// opt
-				/// </java-name>
-				[Dot42.DexImport("opt", "(I)Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object Opt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// getBoolean
-				/// </java-name>
-				[Dot42.DexImport("getBoolean", "(I)Z", AccessFlags = 1)]
-				public virtual bool GetBoolean(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// optBoolean
-				/// </java-name>
-				[Dot42.DexImport("optBoolean", "(I)Z", AccessFlags = 1)]
-				public virtual bool OptBoolean(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// optBoolean
-				/// </java-name>
-				[Dot42.DexImport("optBoolean", "(IZ)Z", AccessFlags = 1)]
-				public virtual bool OptBoolean(int int32, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getDouble
-				/// </java-name>
-				[Dot42.DexImport("getDouble", "(I)D", AccessFlags = 1)]
-				public virtual double GetDouble(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// optDouble
-				/// </java-name>
-				[Dot42.DexImport("optDouble", "(I)D", AccessFlags = 1)]
-				public virtual double OptDouble(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// optDouble
-				/// </java-name>
-				[Dot42.DexImport("optDouble", "(ID)D", AccessFlags = 1)]
-				public virtual double OptDouble(int int32, double @double) /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// getInt
-				/// </java-name>
-				[Dot42.DexImport("getInt", "(I)I", AccessFlags = 1)]
-				public virtual int GetInt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// optInt
-				/// </java-name>
-				[Dot42.DexImport("optInt", "(I)I", AccessFlags = 1)]
-				public virtual int OptInt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// optInt
-				/// </java-name>
-				[Dot42.DexImport("optInt", "(II)I", AccessFlags = 1)]
-				public virtual int OptInt(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLong
-				/// </java-name>
-				[Dot42.DexImport("getLong", "(I)J", AccessFlags = 1)]
-				public virtual long GetLong(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// optLong
-				/// </java-name>
-				[Dot42.DexImport("optLong", "(I)J", AccessFlags = 1)]
-				public virtual long OptLong(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// optLong
-				/// </java-name>
-				[Dot42.DexImport("optLong", "(IJ)J", AccessFlags = 1)]
-				public virtual long OptLong(int int32, long int64) /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getString
-				/// </java-name>
-				[Dot42.DexImport("getString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetString(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// optString
-				/// </java-name>
-				[Dot42.DexImport("optString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string OptString(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// optString
-				/// </java-name>
-				[Dot42.DexImport("optString", "(ILjava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string OptString(int int32, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getJSONArray
-				/// </java-name>
-				[Dot42.DexImport("getJSONArray", "(I)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray GetJSONArray(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// optJSONArray
-				/// </java-name>
-				[Dot42.DexImport("optJSONArray", "(I)Lorg/json/JSONArray;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONArray OptJSONArray(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONArray);
-				}
-
-				/// <java-name>
-				/// getJSONObject
-				/// </java-name>
-				[Dot42.DexImport("getJSONObject", "(I)Lorg/json/JSONObject;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONObject GetJSONObject(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONObject);
-				}
-
-				/// <java-name>
-				/// optJSONObject
-				/// </java-name>
-				[Dot42.DexImport("optJSONObject", "(I)Lorg/json/JSONObject;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONObject OptJSONObject(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONObject);
-				}
-
-				/// <java-name>
-				/// toJSONObject
-				/// </java-name>
-				[Dot42.DexImport("toJSONObject", "(Lorg/json/JSONArray;)Lorg/json/JSONObject;", AccessFlags = 1)]
-				public virtual global::Org.Json.JSONObject ToJSONObject(global::Org.Json.JSONArray jSONArray) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Json.JSONObject);
-				}
-
-				/// <java-name>
-				/// join
-				/// </java-name>
-				[Dot42.DexImport("join", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string Join(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string ToString(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 		}

@@ -65,12 +65,20 @@ namespace System
 
         /// <summary>
         /// Is the given type a value type.
-        /// This will always return false, since Android does not support value types.
         /// </summary>
 	    public bool IsValueType
 	    {
-            get { return false; }
+            get { return IsPrimitive || typeof(ValueType).IsAssignableFrom(this); }
 	    }
+
+        /// <summary>
+        /// Is the given type an enum?
+        /// </summary>
+        public bool IsEnum
+        {
+            // java has some quirks regarding enums: http://stackoverflow.com/questions/4166488/checking-if-a-class-is-java-lang-enum
+            get { return typeof(Java.Lang.Enum<object>).IsAssignableFrom(this); }
+        }
 
 	    public bool IsGenericType
 	    {
@@ -434,18 +442,16 @@ namespace System
 
 	    public static Type GetType(string typeName)
 	    {
-	        return typeof (Type).GetClassLoader().LoadClass(typeName);
+	        return ForName(typeName);
 	    }
 
         /// <summary>
-        /// note that ignoreCase is not supported.
+        /// note that ignoreCase is not ignored.
         /// </summary>
         /// <returns></returns>
         public static Type GetType(string typeName, bool ignoreCase)
         {
-            var classLoader = typeof(Type).GetClassLoader();
-            return classLoader.LoadClass(typeName);
-            
+            return Type.ForName(typeName);
         }
     }
 }

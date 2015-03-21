@@ -2,6 +2,57 @@
 namespace Javax.Security.Auth
 {
 		/// <java-name>
+		/// javax/security/auth/AuthPermission
+		/// </java-name>
+		[Dot42.DexImport("javax/security/auth/AuthPermission", AccessFlags = 49)]
+		public sealed partial class AuthPermission : global::Java.Security.BasicPermission
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public AuthPermission(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public AuthPermission(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActions
+				/// </java-name>
+				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetActions() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// implies
+				/// </java-name>
+				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
+				public override bool Implies(global::Java.Security.Permission permission) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal AuthPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActions
+				/// </java-name>
+				public string Actions
+				{
+				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetActions(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// javax/security/auth/DestroyFailedException
 		/// </java-name>
 		[Dot42.DexImport("javax/security/auth/DestroyFailedException", AccessFlags = 33)]
@@ -21,48 +72,104 @@ namespace Javax.Security.Auth
 		}
 
 		/// <java-name>
-		/// javax/security/auth/SubjectDomainCombiner
+		/// javax/security/auth/Destroyable
 		/// </java-name>
-		[Dot42.DexImport("javax/security/auth/SubjectDomainCombiner", AccessFlags = 33)]
-		public partial class SubjectDomainCombiner : global::Java.Security.IDomainCombiner
+		[Dot42.DexImport("javax/security/auth/Destroyable", AccessFlags = 1537)]
+		public partial interface IDestroyable
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljavax/security/auth/Subject;)V", AccessFlags = 1)]
-				public SubjectDomainCombiner(global::Javax.Security.Auth.Subject subject) /* MethodBuilder.Create */ 
+				/// <java-name>
+				/// destroy
+				/// </java-name>
+				[Dot42.DexImport("destroy", "()V", AccessFlags = 1025)]
+				void Destroy() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isDestroyed
+				/// </java-name>
+				[Dot42.DexImport("isDestroyed", "()Z", AccessFlags = 1025)]
+				bool IsDestroyed() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/security/auth/PrivateCredentialPermission
+		/// </java-name>
+		[Dot42.DexImport("javax/security/auth/PrivateCredentialPermission", AccessFlags = 49)]
+		public sealed partial class PrivateCredentialPermission : global::Java.Security.Permission
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public PrivateCredentialPermission(string @string, string string1) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getSubject
+				/// getPrincipals
 				/// </java-name>
-				[Dot42.DexImport("getSubject", "()Ljavax/security/auth/Subject;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.Subject GetSubject() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getPrincipals", "()[[Ljava/lang/String;", AccessFlags = 1)]
+				public string[][] GetPrincipals() /* MethodBuilder.Create */ 
 				{
-						return default(global::Javax.Security.Auth.Subject);
+						return default(string[][]);
 				}
 
 				/// <java-name>
-				/// combine
+				/// getCredentialClass
 				/// </java-name>
-				[Dot42.DexImport("combine", "([Ljava/security/ProtectionDomain;[Ljava/security/ProtectionDomain;)[Ljava/securi" +
-    "ty/ProtectionDomain;", AccessFlags = 1)]
-				public virtual global::Java.Security.ProtectionDomain[] Combine(global::Java.Security.ProtectionDomain[] protectionDomain, global::Java.Security.ProtectionDomain[] protectionDomain1) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getCredentialClass", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetCredentialClass() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Security.ProtectionDomain[]);
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getActions
+				/// </java-name>
+				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetActions() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// implies
+				/// </java-name>
+				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
+				public override bool Implies(global::Java.Security.Permission permission) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SubjectDomainCombiner() /* TypeBuilder.AddDefaultConstructor */ 
+				internal PrivateCredentialPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
-				/// getSubject
+				/// getPrincipals
 				/// </java-name>
-				public global::Javax.Security.Auth.Subject Subject
+				public string[][] Principals
 				{
-				[Dot42.DexImport("getSubject", "()Ljavax/security/auth/Subject;", AccessFlags = 1)]
-						get{ return GetSubject(); }
+				[Dot42.DexImport("getPrincipals", "()[[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetPrincipals(); }
+				}
+
+				/// <java-name>
+				/// getCredentialClass
+				/// </java-name>
+				public string CredentialClass
+				{
+				[Dot42.DexImport("getCredentialClass", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetCredentialClass(); }
+				}
+
+				/// <java-name>
+				/// getActions
+				/// </java-name>
+				public string Actions
+				{
+				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetActions(); }
 				}
 
 		}
@@ -266,156 +373,49 @@ namespace Javax.Security.Auth
 		}
 
 		/// <java-name>
-		/// javax/security/auth/AuthPermission
+		/// javax/security/auth/SubjectDomainCombiner
 		/// </java-name>
-		[Dot42.DexImport("javax/security/auth/AuthPermission", AccessFlags = 49)]
-		public sealed partial class AuthPermission : global::Java.Security.BasicPermission
+		[Dot42.DexImport("javax/security/auth/SubjectDomainCombiner", AccessFlags = 33)]
+		public partial class SubjectDomainCombiner : global::Java.Security.IDomainCombiner
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public AuthPermission(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public AuthPermission(string @string, string string1) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljavax/security/auth/Subject;)V", AccessFlags = 1)]
+				public SubjectDomainCombiner(global::Javax.Security.Auth.Subject subject) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getActions
+				/// getSubject
 				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getSubject", "()Ljavax/security/auth/Subject;", AccessFlags = 1)]
+				public virtual global::Javax.Security.Auth.Subject GetSubject() /* MethodBuilder.Create */ 
 				{
-						return default(string);
+						return default(global::Javax.Security.Auth.Subject);
 				}
 
 				/// <java-name>
-				/// implies
+				/// combine
 				/// </java-name>
-				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
-				public override bool Implies(global::Java.Security.Permission permission) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("combine", "([Ljava/security/ProtectionDomain;[Ljava/security/ProtectionDomain;)[Ljava/securi" +
+    "ty/ProtectionDomain;", AccessFlags = 1)]
+				public virtual global::Java.Security.ProtectionDomain[] Combine(global::Java.Security.ProtectionDomain[] protectionDomain, global::Java.Security.ProtectionDomain[] protectionDomain1) /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(global::Java.Security.ProtectionDomain[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AuthPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				internal SubjectDomainCombiner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
-				/// getActions
+				/// getSubject
 				/// </java-name>
-				public string Actions
+				public global::Javax.Security.Auth.Subject Subject
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
+				[Dot42.DexImport("getSubject", "()Ljavax/security/auth/Subject;", AccessFlags = 1)]
+						get{ return GetSubject(); }
 				}
-
-		}
-
-		/// <java-name>
-		/// javax/security/auth/PrivateCredentialPermission
-		/// </java-name>
-		[Dot42.DexImport("javax/security/auth/PrivateCredentialPermission", AccessFlags = 49)]
-		public sealed partial class PrivateCredentialPermission : global::Java.Security.Permission
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public PrivateCredentialPermission(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPrincipals
-				/// </java-name>
-				[Dot42.DexImport("getPrincipals", "()[[Ljava/lang/String;", AccessFlags = 1)]
-				public string[][] GetPrincipals() /* MethodBuilder.Create */ 
-				{
-						return default(string[][]);
-				}
-
-				/// <java-name>
-				/// getCredentialClass
-				/// </java-name>
-				[Dot42.DexImport("getCredentialClass", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetCredentialClass() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// implies
-				/// </java-name>
-				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
-				public override bool Implies(global::Java.Security.Permission permission) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrivateCredentialPermission() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPrincipals
-				/// </java-name>
-				public string[][] Principals
-				{
-				[Dot42.DexImport("getPrincipals", "()[[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPrincipals(); }
-				}
-
-				/// <java-name>
-				/// getCredentialClass
-				/// </java-name>
-				public string CredentialClass
-				{
-				[Dot42.DexImport("getCredentialClass", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCredentialClass(); }
-				}
-
-				/// <java-name>
-				/// getActions
-				/// </java-name>
-				public string Actions
-				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/security/auth/Destroyable
-		/// </java-name>
-		[Dot42.DexImport("javax/security/auth/Destroyable", AccessFlags = 1537)]
-		public partial interface IDestroyable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// destroy
-				/// </java-name>
-				[Dot42.DexImport("destroy", "()V", AccessFlags = 1025)]
-				void Destroy() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isDestroyed
-				/// </java-name>
-				[Dot42.DexImport("isDestroyed", "()Z", AccessFlags = 1025)]
-				bool IsDestroyed() /* MethodBuilder.Create */ ;
 
 		}
 

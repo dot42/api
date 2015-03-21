@@ -101,21 +101,42 @@ namespace Android.Sax
 		}
 
 		/// <java-name>
-		/// android/sax/TextElementListener
-		/// </java-name>
-		[Dot42.DexImport("android/sax/TextElementListener", AccessFlags = 1537)]
-		public partial interface ITextElementListener : global::Android.Sax.IStartElementListener, global::Android.Sax.IEndTextElementListener
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
 		/// android/sax/ElementListener
 		/// </java-name>
 		[Dot42.DexImport("android/sax/ElementListener", AccessFlags = 1537)]
 		public partial interface IElementListener : global::Android.Sax.IStartElementListener, global::Android.Sax.IEndElementListener
  /* scope: __dot42__ */ 
 		{
+		}
+
+		/// <java-name>
+		/// android/sax/EndElementListener
+		/// </java-name>
+		[Dot42.DexImport("android/sax/EndElementListener", AccessFlags = 1537)]
+		public partial interface IEndElementListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// end
+				/// </java-name>
+				[Dot42.DexImport("end", "()V", AccessFlags = 1025)]
+				void End() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/sax/EndTextElementListener
+		/// </java-name>
+		[Dot42.DexImport("android/sax/EndTextElementListener", AccessFlags = 1537)]
+		public partial interface IEndTextElementListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// end
+				/// </java-name>
+				[Dot42.DexImport("end", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void End(string @string) /* MethodBuilder.Create */ ;
+
 		}
 
 		/// <java-name>
@@ -131,6 +152,15 @@ namespace Android.Sax
 				[Dot42.DexImport("start", "(Lorg/xml/sax/Attributes;)V", AccessFlags = 1025)]
 				void Start(global::Org.Xml.Sax.IAttributes attributes) /* MethodBuilder.Create */ ;
 
+		}
+
+		/// <java-name>
+		/// android/sax/TextElementListener
+		/// </java-name>
+		[Dot42.DexImport("android/sax/TextElementListener", AccessFlags = 1537)]
+		public partial interface ITextElementListener : global::Android.Sax.IStartElementListener, global::Android.Sax.IEndTextElementListener
+ /* scope: __dot42__ */ 
+		{
 		}
 
 		/// <java-name>
@@ -172,36 +202,6 @@ namespace Android.Sax
 				[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
 						get{ return GetContentHandler(); }
 				}
-
-		}
-
-		/// <java-name>
-		/// android/sax/EndElementListener
-		/// </java-name>
-		[Dot42.DexImport("android/sax/EndElementListener", AccessFlags = 1537)]
-		public partial interface IEndElementListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// end
-				/// </java-name>
-				[Dot42.DexImport("end", "()V", AccessFlags = 1025)]
-				void End() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/sax/EndTextElementListener
-		/// </java-name>
-		[Dot42.DexImport("android/sax/EndTextElementListener", AccessFlags = 1537)]
-		public partial interface IEndTextElementListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// end
-				/// </java-name>
-				[Dot42.DexImport("end", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void End(string @string) /* MethodBuilder.Create */ ;
 
 		}
 

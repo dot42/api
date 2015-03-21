@@ -2,19 +2,19 @@
 namespace Android.Nfc
 {
 		/// <java-name>
-		/// android/nfc/TagLostException
+		/// android/nfc/FormatException
 		/// </java-name>
-		[Dot42.DexImport("android/nfc/TagLostException", AccessFlags = 33)]
-		public partial class TagLostException : global::System.IO.IOException
+		[Dot42.DexImport("android/nfc/FormatException", AccessFlags = 33)]
+		public partial class FormatException : global::System.Exception
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public TagLostException() /* MethodBuilder.Create */ 
+				public FormatException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public TagLostException(string @string) /* MethodBuilder.Create */ 
+				public FormatException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -378,128 +378,6 @@ namespace Android.Nfc
 		}
 
 		/// <java-name>
-		/// android/nfc/NfcManager
-		/// </java-name>
-		[Dot42.DexImport("android/nfc/NfcManager", AccessFlags = 49)]
-		public sealed partial class NfcManager
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal NfcManager() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefaultAdapter
-				/// </java-name>
-				[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 1)]
-				public global::Android.Nfc.NfcAdapter GetDefaultAdapter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.NfcAdapter);
-				}
-
-				/// <java-name>
-				/// getDefaultAdapter
-				/// </java-name>
-				public global::Android.Nfc.NfcAdapter DefaultAdapter
-				{
-				[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 1)]
-						get{ return GetDefaultAdapter(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/nfc/Tag
-		/// </java-name>
-		[Dot42.DexImport("android/nfc/Tag", AccessFlags = 49)]
-		public sealed partial class Tag : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Nfc.Tag> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Tag() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1)]
-				public sbyte[] JavaGetId() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetId() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getTechList
-				/// </java-name>
-				[Dot42.DexImport("getTechList", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public string[] GetTechList() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				public byte[] Id
-				{
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetId(); }
-				}
-
-				/// <java-name>
-				/// getTechList
-				/// </java-name>
-				public string[] TechList
-				{
-				[Dot42.DexImport("getTechList", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTechList(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// android/nfc/NfcAdapter
 		/// </java-name>
 		[Dot42.DexImport("android/nfc/NfcAdapter", AccessFlags = 49)]
@@ -688,19 +566,141 @@ namespace Android.Nfc
 		}
 
 		/// <java-name>
-		/// android/nfc/FormatException
+		/// android/nfc/NfcManager
 		/// </java-name>
-		[Dot42.DexImport("android/nfc/FormatException", AccessFlags = 33)]
-		public partial class FormatException : global::System.Exception
+		[Dot42.DexImport("android/nfc/NfcManager", AccessFlags = 49)]
+		public sealed partial class NfcManager
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal NfcManager() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDefaultAdapter
+				/// </java-name>
+				[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 1)]
+				public global::Android.Nfc.NfcAdapter GetDefaultAdapter() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Nfc.NfcAdapter);
+				}
+
+				/// <java-name>
+				/// getDefaultAdapter
+				/// </java-name>
+				public global::Android.Nfc.NfcAdapter DefaultAdapter
+				{
+				[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 1)]
+						get{ return GetDefaultAdapter(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/nfc/Tag
+		/// </java-name>
+		[Dot42.DexImport("android/nfc/Tag", AccessFlags = 49)]
+		public sealed partial class Tag : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Nfc.Tag> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Tag() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getId
+				/// </java-name>
+				[Dot42.DexImport("getId", "()[B", AccessFlags = 1)]
+				public sbyte[] JavaGetId() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getId
+				/// </java-name>
+				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] GetId() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getTechList
+				/// </java-name>
+				[Dot42.DexImport("getTechList", "()[Ljava/lang/String;", AccessFlags = 1)]
+				public string[] GetTechList() /* MethodBuilder.Create */ 
+				{
+						return default(string[]);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getId
+				/// </java-name>
+				public byte[] Id
+				{
+				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return GetId(); }
+				}
+
+				/// <java-name>
+				/// getTechList
+				/// </java-name>
+				public string[] TechList
+				{
+				[Dot42.DexImport("getTechList", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetTechList(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/nfc/TagLostException
+		/// </java-name>
+		[Dot42.DexImport("android/nfc/TagLostException", AccessFlags = 33)]
+		public partial class TagLostException : global::System.IO.IOException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public FormatException() /* MethodBuilder.Create */ 
+				public TagLostException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public FormatException(string @string) /* MethodBuilder.Create */ 
+				public TagLostException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 

@@ -2,89 +2,6 @@
 namespace Java.Nio.Charset
 {
 		/// <java-name>
-		/// java/nio/charset/MalformedInputException
-		/// </java-name>
-		[Dot42.DexImport("java/nio/charset/MalformedInputException", AccessFlags = 33)]
-		public partial class MalformedInputException : global::Java.Nio.Charset.CharacterCodingException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public MalformedInputException(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInputLength
-				/// </java-name>
-				[Dot42.DexImport("getInputLength", "()I", AccessFlags = 1)]
-				public virtual int GetInputLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMessage
-				/// </java-name>
-				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMessage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MalformedInputException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInputLength
-				/// </java-name>
-				public int InputLength
-				{
-				[Dot42.DexImport("getInputLength", "()I", AccessFlags = 1)]
-						get{ return GetInputLength(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/nio/charset/IllegalCharsetNameException
-		/// </java-name>
-		[Dot42.DexImport("java/nio/charset/IllegalCharsetNameException", AccessFlags = 33)]
-		public partial class IllegalCharsetNameException : global::System.ArgumentException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public IllegalCharsetNameException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCharsetName
-				/// </java-name>
-				[Dot42.DexImport("getCharsetName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetCharsetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IllegalCharsetNameException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCharsetName
-				/// </java-name>
-				public string CharsetName
-				{
-				[Dot42.DexImport("getCharsetName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCharsetName(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// java/nio/charset/CharacterCodingException
 		/// </java-name>
 		[Dot42.DexImport("java/nio/charset/CharacterCodingException", AccessFlags = 33)]
@@ -99,114 +16,191 @@ namespace Java.Nio.Charset
 		}
 
 		/// <java-name>
-		/// java/nio/charset/CoderResult
+		/// java/nio/charset/Charset
 		/// </java-name>
-		[Dot42.DexImport("java/nio/charset/CoderResult", AccessFlags = 33)]
-		public partial class CoderResult
+		[Dot42.DexImport("java/nio/charset/Charset", AccessFlags = 1057, Signature = "Ljava/lang/Object;Ljava/lang/Comparable<Ljava/nio/charset/Charset;>;")]
+		public abstract partial class Charset : global::System.IComparable<global::Java.Nio.Charset.Charset>
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// UNDERFLOW
-				/// </java-name>
-				[Dot42.DexImport("UNDERFLOW", "Ljava/nio/charset/CoderResult;", AccessFlags = 25)]
-				public static readonly global::Java.Nio.Charset.CoderResult UNDERFLOW;
-				/// <java-name>
-				/// OVERFLOW
-				/// </java-name>
-				[Dot42.DexImport("OVERFLOW", "Ljava/nio/charset/CoderResult;", AccessFlags = 25)]
-				public static readonly global::Java.Nio.Charset.CoderResult OVERFLOW;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal CoderResult() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;[Ljava/lang/String;)V", AccessFlags = 4)]
+				protected internal Charset(string @string, string[] string1) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// malformedForLength
+				/// availableCharsets
 				/// </java-name>
-				[Dot42.DexImport("malformedForLength", "(I)Ljava/nio/charset/CoderResult;", AccessFlags = 41)]
-				public static global::Java.Nio.Charset.CoderResult MalformedForLength(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("availableCharsets", "()Ljava/util/SortedMap;", AccessFlags = 9, Signature = "()Ljava/util/SortedMap<Ljava/lang/String;Ljava/nio/charset/Charset;>;")]
+				public static global::Java.Util.ISortedMap<string, global::Java.Nio.Charset.Charset> AvailableCharsets() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Nio.Charset.CoderResult);
+						return default(global::Java.Util.ISortedMap<string, global::Java.Nio.Charset.Charset>);
 				}
 
 				/// <java-name>
-				/// unmappableForLength
+				/// forName
 				/// </java-name>
-				[Dot42.DexImport("unmappableForLength", "(I)Ljava/nio/charset/CoderResult;", AccessFlags = 41)]
-				public static global::Java.Nio.Charset.CoderResult UnmappableForLength(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("forName", "(Ljava/lang/String;)Ljava/nio/charset/Charset;", AccessFlags = 9)]
+				public static global::Java.Nio.Charset.Charset ForName(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Nio.Charset.CoderResult);
+						return default(global::Java.Nio.Charset.Charset);
 				}
 
 				/// <java-name>
-				/// isUnderflow
+				/// isSupported
 				/// </java-name>
-				[Dot42.DexImport("isUnderflow", "()Z", AccessFlags = 1)]
-				public virtual bool IsUnderflow() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isSupported", "(Ljava/lang/String;)Z", AccessFlags = 9)]
+				public static bool IsSupported(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// isError
+				/// contains
 				/// </java-name>
-				[Dot42.DexImport("isError", "()Z", AccessFlags = 1)]
-				public virtual bool IsError() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("contains", "(Ljava/nio/charset/Charset;)Z", AccessFlags = 1025)]
+				public abstract bool Contains(global::Java.Nio.Charset.Charset charset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// newEncoder
+				/// </java-name>
+				[Dot42.DexImport("newEncoder", "()Ljava/nio/charset/CharsetEncoder;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.Charset.CharsetEncoder NewEncoder() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// newDecoder
+				/// </java-name>
+				[Dot42.DexImport("newDecoder", "()Ljava/nio/charset/CharsetDecoder;", AccessFlags = 1025)]
+				public abstract global::Java.Nio.Charset.CharsetDecoder NewDecoder() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// name
+				/// </java-name>
+				[Dot42.DexImport("name", "()Ljava/lang/String;", AccessFlags = 17)]
+				public string Name() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// aliases
+				/// </java-name>
+				[Dot42.DexImport("aliases", "()Ljava/util/Set;", AccessFlags = 17, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+				public global::Java.Util.ISet<string> Aliases() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ISet<string>);
+				}
+
+				/// <java-name>
+				/// displayName
+				/// </java-name>
+				[Dot42.DexImport("displayName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string DisplayName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// displayName
+				/// </java-name>
+				[Dot42.DexImport("displayName", "(Ljava/util/Locale;)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string DisplayName(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// isRegistered
+				/// </java-name>
+				[Dot42.DexImport("isRegistered", "()Z", AccessFlags = 17)]
+				public bool IsRegistered() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// isMalformed
+				/// canEncode
 				/// </java-name>
-				[Dot42.DexImport("isMalformed", "()Z", AccessFlags = 1)]
-				public virtual bool IsMalformed() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("canEncode", "()Z", AccessFlags = 1)]
+				public virtual bool CanEncode() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// isOverflow
+				/// encode
 				/// </java-name>
-				[Dot42.DexImport("isOverflow", "()Z", AccessFlags = 1)]
-				public virtual bool IsOverflow() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("encode", "(Ljava/nio/CharBuffer;)Ljava/nio/ByteBuffer;", AccessFlags = 17)]
+				public global::Java.Nio.ByteBuffer Encode(global::Java.Nio.CharBuffer charBuffer) /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(global::Java.Nio.ByteBuffer);
 				}
 
 				/// <java-name>
-				/// isUnmappable
+				/// encode
 				/// </java-name>
-				[Dot42.DexImport("isUnmappable", "()Z", AccessFlags = 1)]
-				public virtual bool IsUnmappable() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("encode", "(Ljava/lang/String;)Ljava/nio/ByteBuffer;", AccessFlags = 17)]
+				public global::Java.Nio.ByteBuffer Encode(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(global::Java.Nio.ByteBuffer);
 				}
 
 				/// <java-name>
-				/// length
+				/// decode
 				/// </java-name>
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public virtual int Length() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("decode", "(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;", AccessFlags = 17)]
+				public global::Java.Nio.CharBuffer Decode(global::Java.Nio.ByteBuffer byteBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.CharBuffer);
+				}
+
+				/// <java-name>
+				/// compareTo
+				/// </java-name>
+				[Dot42.DexImport("compareTo", "(Ljava/nio/charset/Charset;)I", AccessFlags = 17)]
+				public int CompareTo(global::Java.Nio.Charset.Charset charset) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// throwException
+				/// equals
 				/// </java-name>
-				[Dot42.DexImport("throwException", "()V", AccessFlags = 1)]
-				public virtual void ThrowException() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 17)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
 				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 17)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
 				}
 
 				/// <java-name>
 				/// toString
 				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 17)]
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
+				}
+
+				/// <java-name>
+				/// defaultCharset
+				/// </java-name>
+				[Dot42.DexImport("defaultCharset", "()Ljava/nio/charset/Charset;", AccessFlags = 9)]
+				public static global::Java.Nio.Charset.Charset DefaultCharset() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.Charset.Charset);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal Charset() /* TypeBuilder.AddDefaultConstructor */ 
+				{
 				}
 
 		}
@@ -696,228 +690,114 @@ namespace Java.Nio.Charset
 		}
 
 		/// <java-name>
-		/// java/nio/charset/UnsupportedCharsetException
+		/// java/nio/charset/CoderResult
 		/// </java-name>
-		[Dot42.DexImport("java/nio/charset/UnsupportedCharsetException", AccessFlags = 33)]
-		public partial class UnsupportedCharsetException : global::System.ArgumentException
+		[Dot42.DexImport("java/nio/charset/CoderResult", AccessFlags = 33)]
+		public partial class CoderResult
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public UnsupportedCharsetException(string @string) /* MethodBuilder.Create */ 
+				/// <java-name>
+				/// UNDERFLOW
+				/// </java-name>
+				[Dot42.DexImport("UNDERFLOW", "Ljava/nio/charset/CoderResult;", AccessFlags = 25)]
+				public static readonly global::Java.Nio.Charset.CoderResult UNDERFLOW;
+				/// <java-name>
+				/// OVERFLOW
+				/// </java-name>
+				[Dot42.DexImport("OVERFLOW", "Ljava/nio/charset/CoderResult;", AccessFlags = 25)]
+				public static readonly global::Java.Nio.Charset.CoderResult OVERFLOW;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal CoderResult() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getCharsetName
+				/// malformedForLength
 				/// </java-name>
-				[Dot42.DexImport("getCharsetName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetCharsetName() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("malformedForLength", "(I)Ljava/nio/charset/CoderResult;", AccessFlags = 41)]
+				public static global::Java.Nio.Charset.CoderResult MalformedForLength(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UnsupportedCharsetException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
+						return default(global::Java.Nio.Charset.CoderResult);
 				}
 
 				/// <java-name>
-				/// getCharsetName
+				/// unmappableForLength
 				/// </java-name>
-				public string CharsetName
+				[Dot42.DexImport("unmappableForLength", "(I)Ljava/nio/charset/CoderResult;", AccessFlags = 41)]
+				public static global::Java.Nio.Charset.CoderResult UnmappableForLength(int int32) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getCharsetName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCharsetName(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/nio/charset/Charset
-		/// </java-name>
-		[Dot42.DexImport("java/nio/charset/Charset", AccessFlags = 1057, Signature = "Ljava/lang/Object;Ljava/lang/Comparable<Ljava/nio/charset/Charset;>;")]
-		public abstract partial class Charset : global::System.IComparable<global::Java.Nio.Charset.Charset>
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;[Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal Charset(string @string, string[] string1) /* MethodBuilder.Create */ 
-				{
+						return default(global::Java.Nio.Charset.CoderResult);
 				}
 
 				/// <java-name>
-				/// availableCharsets
+				/// isUnderflow
 				/// </java-name>
-				[Dot42.DexImport("availableCharsets", "()Ljava/util/SortedMap;", AccessFlags = 9, Signature = "()Ljava/util/SortedMap<Ljava/lang/String;Ljava/nio/charset/Charset;>;")]
-				public static global::Java.Util.ISortedMap<string, global::Java.Nio.Charset.Charset> AvailableCharsets() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISortedMap<string, global::Java.Nio.Charset.Charset>);
-				}
-
-				/// <java-name>
-				/// forName
-				/// </java-name>
-				[Dot42.DexImport("forName", "(Ljava/lang/String;)Ljava/nio/charset/Charset;", AccessFlags = 9)]
-				public static global::Java.Nio.Charset.Charset ForName(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.Charset.Charset);
-				}
-
-				/// <java-name>
-				/// isSupported
-				/// </java-name>
-				[Dot42.DexImport("isSupported", "(Ljava/lang/String;)Z", AccessFlags = 9)]
-				public static bool IsSupported(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isUnderflow", "()Z", AccessFlags = 1)]
+				public virtual bool IsUnderflow() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// contains
+				/// isError
 				/// </java-name>
-				[Dot42.DexImport("contains", "(Ljava/nio/charset/Charset;)Z", AccessFlags = 1025)]
-				public abstract bool Contains(global::Java.Nio.Charset.Charset charset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// newEncoder
-				/// </java-name>
-				[Dot42.DexImport("newEncoder", "()Ljava/nio/charset/CharsetEncoder;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.Charset.CharsetEncoder NewEncoder() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// newDecoder
-				/// </java-name>
-				[Dot42.DexImport("newDecoder", "()Ljava/nio/charset/CharsetDecoder;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.Charset.CharsetDecoder NewDecoder() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// name
-				/// </java-name>
-				[Dot42.DexImport("name", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string Name() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// aliases
-				/// </java-name>
-				[Dot42.DexImport("aliases", "()Ljava/util/Set;", AccessFlags = 17, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public global::Java.Util.ISet<string> Aliases() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				/// <java-name>
-				/// displayName
-				/// </java-name>
-				[Dot42.DexImport("displayName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string DisplayName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// displayName
-				/// </java-name>
-				[Dot42.DexImport("displayName", "(Ljava/util/Locale;)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string DisplayName(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isRegistered
-				/// </java-name>
-				[Dot42.DexImport("isRegistered", "()Z", AccessFlags = 17)]
-				public bool IsRegistered() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isError", "()Z", AccessFlags = 1)]
+				public virtual bool IsError() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// canEncode
+				/// isMalformed
 				/// </java-name>
-				[Dot42.DexImport("canEncode", "()Z", AccessFlags = 1)]
-				public virtual bool CanEncode() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isMalformed", "()Z", AccessFlags = 1)]
+				public virtual bool IsMalformed() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// encode
+				/// isOverflow
 				/// </java-name>
-				[Dot42.DexImport("encode", "(Ljava/nio/CharBuffer;)Ljava/nio/ByteBuffer;", AccessFlags = 17)]
-				public global::Java.Nio.ByteBuffer Encode(global::Java.Nio.CharBuffer charBuffer) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isOverflow", "()Z", AccessFlags = 1)]
+				public virtual bool IsOverflow() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Nio.ByteBuffer);
+						return default(bool);
 				}
 
 				/// <java-name>
-				/// encode
+				/// isUnmappable
 				/// </java-name>
-				[Dot42.DexImport("encode", "(Ljava/lang/String;)Ljava/nio/ByteBuffer;", AccessFlags = 17)]
-				public global::Java.Nio.ByteBuffer Encode(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isUnmappable", "()Z", AccessFlags = 1)]
+				public virtual bool IsUnmappable() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Nio.ByteBuffer);
+						return default(bool);
 				}
 
 				/// <java-name>
-				/// decode
+				/// length
 				/// </java-name>
-				[Dot42.DexImport("decode", "(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;", AccessFlags = 17)]
-				public global::Java.Nio.CharBuffer Decode(global::Java.Nio.ByteBuffer byteBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.CharBuffer);
-				}
-
-				/// <java-name>
-				/// compareTo
-				/// </java-name>
-				[Dot42.DexImport("compareTo", "(Ljava/nio/charset/Charset;)I", AccessFlags = 17)]
-				public int CompareTo(global::Java.Nio.Charset.Charset charset) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
+				public virtual int Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// equals
+				/// throwException
 				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 17)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("throwException", "()V", AccessFlags = 1)]
+				public virtual void ThrowException() /* MethodBuilder.Create */ 
 				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 17)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
 				/// toString
 				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 17)]
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// defaultCharset
-				/// </java-name>
-				[Dot42.DexImport("defaultCharset", "()Ljava/nio/charset/Charset;", AccessFlags = 9)]
-				public static global::Java.Nio.Charset.Charset DefaultCharset() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.Charset.Charset);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Charset() /* TypeBuilder.AddDefaultConstructor */ 
-				{
 				}
 
 		}
@@ -956,6 +836,89 @@ namespace Java.Nio.Charset
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
+				}
+
+		}
+
+		/// <java-name>
+		/// java/nio/charset/IllegalCharsetNameException
+		/// </java-name>
+		[Dot42.DexImport("java/nio/charset/IllegalCharsetNameException", AccessFlags = 33)]
+		public partial class IllegalCharsetNameException : global::System.ArgumentException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public IllegalCharsetNameException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getCharsetName
+				/// </java-name>
+				[Dot42.DexImport("getCharsetName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetCharsetName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal IllegalCharsetNameException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getCharsetName
+				/// </java-name>
+				public string CharsetName
+				{
+				[Dot42.DexImport("getCharsetName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetCharsetName(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/nio/charset/MalformedInputException
+		/// </java-name>
+		[Dot42.DexImport("java/nio/charset/MalformedInputException", AccessFlags = 33)]
+		public partial class MalformedInputException : global::Java.Nio.Charset.CharacterCodingException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
+				public MalformedInputException(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getInputLength
+				/// </java-name>
+				[Dot42.DexImport("getInputLength", "()I", AccessFlags = 1)]
+				public virtual int GetInputLength() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getMessage
+				/// </java-name>
+				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetMessage() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal MalformedInputException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getInputLength
+				/// </java-name>
+				public int InputLength
+				{
+				[Dot42.DexImport("getInputLength", "()I", AccessFlags = 1)]
+						get{ return GetInputLength(); }
 				}
 
 		}
@@ -1002,6 +965,43 @@ namespace Java.Nio.Charset
 				{
 				[Dot42.DexImport("getInputLength", "()I", AccessFlags = 1)]
 						get{ return GetInputLength(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/nio/charset/UnsupportedCharsetException
+		/// </java-name>
+		[Dot42.DexImport("java/nio/charset/UnsupportedCharsetException", AccessFlags = 33)]
+		public partial class UnsupportedCharsetException : global::System.ArgumentException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public UnsupportedCharsetException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getCharsetName
+				/// </java-name>
+				[Dot42.DexImport("getCharsetName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetCharsetName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal UnsupportedCharsetException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getCharsetName
+				/// </java-name>
+				public string CharsetName
+				{
+				[Dot42.DexImport("getCharsetName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetCharsetName(); }
 				}
 
 		}

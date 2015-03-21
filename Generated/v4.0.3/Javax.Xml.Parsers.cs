@@ -2,6 +2,427 @@
 namespace Javax.Xml.Parsers
 {
 		/// <java-name>
+		/// javax/xml/parsers/DocumentBuilder
+		/// </java-name>
+		[Dot42.DexImport("javax/xml/parsers/DocumentBuilder", AccessFlags = 1057)]
+		public abstract partial class DocumentBuilder
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal DocumentBuilder() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// reset
+				/// </java-name>
+				[Dot42.DexImport("reset", "()V", AccessFlags = 1)]
+				public virtual void Reset() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Ljava/io/InputStream;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
+				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.W3c.Dom.IDocument);
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Ljava/io/InputStream;Ljava/lang/String;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
+				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.W3c.Dom.IDocument);
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Ljava/lang/String;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
+				public virtual global::Org.W3c.Dom.IDocument Parse(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.W3c.Dom.IDocument);
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Ljava/io/File;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
+				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.W3c.Dom.IDocument);
+				}
+
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;", AccessFlags = 1025)]
+				public abstract global::Org.W3c.Dom.IDocument Parse(global::Org.Xml.Sax.InputSource inputSource) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isNamespaceAware
+				/// </java-name>
+				[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1025)]
+				public abstract bool IsNamespaceAware() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isValidating
+				/// </java-name>
+				[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1025)]
+				public abstract bool IsValidating() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setEntityResolver
+				/// </java-name>
+				[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1025)]
+				public abstract void SetEntityResolver(global::Org.Xml.Sax.IEntityResolver entityResolver) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setErrorHandler
+				/// </java-name>
+				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1025)]
+				public abstract void SetErrorHandler(global::Org.Xml.Sax.IErrorHandler errorHandler) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// newDocument
+				/// </java-name>
+				[Dot42.DexImport("newDocument", "()Lorg/w3c/dom/Document;", AccessFlags = 1025)]
+				public abstract global::Org.W3c.Dom.IDocument NewDocument() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getDOMImplementation
+				/// </java-name>
+				[Dot42.DexImport("getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", AccessFlags = 1025)]
+				public abstract global::Org.W3c.Dom.IDOMImplementation GetDOMImplementation() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getSchema
+				/// </java-name>
+				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+				public virtual global::Javax.Xml.Validation.Schema GetSchema() /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Xml.Validation.Schema);
+				}
+
+				/// <java-name>
+				/// isXIncludeAware
+				/// </java-name>
+				[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
+				public virtual bool IsXIncludeAware() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getDOMImplementation
+				/// </java-name>
+				public global::Org.W3c.Dom.IDOMImplementation DOMImplementation
+				{
+				[Dot42.DexImport("getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", AccessFlags = 1025)]
+						get{ return GetDOMImplementation(); }
+				}
+
+				/// <java-name>
+				/// getSchema
+				/// </java-name>
+				public global::Javax.Xml.Validation.Schema Schema
+				{
+				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+						get{ return GetSchema(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/xml/parsers/DocumentBuilderFactory
+		/// </java-name>
+		[Dot42.DexImport("javax/xml/parsers/DocumentBuilderFactory", AccessFlags = 1057)]
+		public abstract partial class DocumentBuilderFactory
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal DocumentBuilderFactory() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", AccessFlags = 9)]
+				public static global::Javax.Xml.Parsers.DocumentBuilderFactory NewInstance() /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Xml.Parsers.DocumentBuilderFactory);
+				}
+
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/DocumentBuilderFact" +
+    "ory;", AccessFlags = 9)]
+				public static global::Javax.Xml.Parsers.DocumentBuilderFactory NewInstance(string @string, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Xml.Parsers.DocumentBuilderFactory);
+				}
+
+				/// <java-name>
+				/// newDocumentBuilder
+				/// </java-name>
+				[Dot42.DexImport("newDocumentBuilder", "()Ljavax/xml/parsers/DocumentBuilder;", AccessFlags = 1025)]
+				public abstract global::Javax.Xml.Parsers.DocumentBuilder NewDocumentBuilder() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setNamespaceAware
+				/// </java-name>
+				[Dot42.DexImport("setNamespaceAware", "(Z)V", AccessFlags = 1)]
+				public virtual void SetNamespaceAware(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setValidating
+				/// </java-name>
+				[Dot42.DexImport("setValidating", "(Z)V", AccessFlags = 1)]
+				public virtual void SetValidating(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setIgnoringElementContentWhitespace
+				/// </java-name>
+				[Dot42.DexImport("setIgnoringElementContentWhitespace", "(Z)V", AccessFlags = 1)]
+				public virtual void SetIgnoringElementContentWhitespace(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setExpandEntityReferences
+				/// </java-name>
+				[Dot42.DexImport("setExpandEntityReferences", "(Z)V", AccessFlags = 1)]
+				public virtual void SetExpandEntityReferences(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setIgnoringComments
+				/// </java-name>
+				[Dot42.DexImport("setIgnoringComments", "(Z)V", AccessFlags = 1)]
+				public virtual void SetIgnoringComments(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setCoalescing
+				/// </java-name>
+				[Dot42.DexImport("setCoalescing", "(Z)V", AccessFlags = 1)]
+				public virtual void SetCoalescing(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isNamespaceAware
+				/// </java-name>
+				[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
+				public virtual bool IsNamespaceAware() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isValidating
+				/// </java-name>
+				[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
+				public virtual bool IsValidating() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isIgnoringElementContentWhitespace
+				/// </java-name>
+				[Dot42.DexImport("isIgnoringElementContentWhitespace", "()Z", AccessFlags = 1)]
+				public virtual bool IsIgnoringElementContentWhitespace() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isExpandEntityReferences
+				/// </java-name>
+				[Dot42.DexImport("isExpandEntityReferences", "()Z", AccessFlags = 1)]
+				public virtual bool IsExpandEntityReferences() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isIgnoringComments
+				/// </java-name>
+				[Dot42.DexImport("isIgnoringComments", "()Z", AccessFlags = 1)]
+				public virtual bool IsIgnoringComments() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isCoalescing
+				/// </java-name>
+				[Dot42.DexImport("isCoalescing", "()Z", AccessFlags = 1)]
+				public virtual bool IsCoalescing() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setAttribute
+				/// </java-name>
+				[Dot42.DexImport("setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1025)]
+				public abstract void SetAttribute(string @string, object @object) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getAttribute
+				/// </java-name>
+				[Dot42.DexImport("getAttribute", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1025)]
+				public abstract object GetAttribute(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setFeature
+				/// </java-name>
+				[Dot42.DexImport("setFeature", "(Ljava/lang/String;Z)V", AccessFlags = 1025)]
+				public abstract void SetFeature(string @string, bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getFeature
+				/// </java-name>
+				[Dot42.DexImport("getFeature", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
+				public abstract bool GetFeature(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getSchema
+				/// </java-name>
+				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+				public virtual global::Javax.Xml.Validation.Schema GetSchema() /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Xml.Validation.Schema);
+				}
+
+				/// <java-name>
+				/// setSchema
+				/// </java-name>
+				[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
+				public virtual void SetSchema(global::Javax.Xml.Validation.Schema schema) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setXIncludeAware
+				/// </java-name>
+				[Dot42.DexImport("setXIncludeAware", "(Z)V", AccessFlags = 1)]
+				public virtual void SetXIncludeAware(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isXIncludeAware
+				/// </java-name>
+				[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
+				public virtual bool IsXIncludeAware() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getSchema
+				/// </java-name>
+				public global::Javax.Xml.Validation.Schema Schema
+				{
+				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+						get{ return GetSchema(); }
+				[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
+						set{ SetSchema(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/xml/parsers/FactoryConfigurationError
+		/// </java-name>
+		[Dot42.DexImport("javax/xml/parsers/FactoryConfigurationError", AccessFlags = 33)]
+		public partial class FactoryConfigurationError : global::Java.Lang.Error
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public FactoryConfigurationError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public FactoryConfigurationError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Exception;)V", AccessFlags = 1)]
+				public FactoryConfigurationError(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Exception;Ljava/lang/String;)V", AccessFlags = 1)]
+				public FactoryConfigurationError(global::System.Exception exception, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getMessage
+				/// </java-name>
+				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetMessage() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getException
+				/// </java-name>
+				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
+				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Exception);
+				}
+
+				/// <java-name>
+				/// getException
+				/// </java-name>
+				public global::System.Exception Exception
+				{
+				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
+						get{ return GetException(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// javax/xml/parsers/ParserConfigurationException
+		/// </java-name>
+		[Dot42.DexImport("javax/xml/parsers/ParserConfigurationException", AccessFlags = 33)]
+		public partial class ParserConfigurationException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ParserConfigurationException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ParserConfigurationException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// javax/xml/parsers/SAXParser
 		/// </java-name>
 		[Dot42.DexImport("javax/xml/parsers/SAXParser", AccessFlags = 1057)]
@@ -309,427 +730,6 @@ namespace Javax.Xml.Parsers
 						get{ return GetSchema(); }
 				[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
 						set{ SetSchema(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/xml/parsers/ParserConfigurationException
-		/// </java-name>
-		[Dot42.DexImport("javax/xml/parsers/ParserConfigurationException", AccessFlags = 33)]
-		public partial class ParserConfigurationException : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ParserConfigurationException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ParserConfigurationException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/xml/parsers/FactoryConfigurationError
-		/// </java-name>
-		[Dot42.DexImport("javax/xml/parsers/FactoryConfigurationError", AccessFlags = 33)]
-		public partial class FactoryConfigurationError : global::Java.Lang.Error
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public FactoryConfigurationError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public FactoryConfigurationError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Exception;)V", AccessFlags = 1)]
-				public FactoryConfigurationError(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Exception;Ljava/lang/String;)V", AccessFlags = 1)]
-				public FactoryConfigurationError(global::System.Exception exception, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMessage
-				/// </java-name>
-				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMessage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getException
-				/// </java-name>
-				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
-				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getException
-				/// </java-name>
-				public global::System.Exception Exception
-				{
-				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
-						get{ return GetException(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/xml/parsers/DocumentBuilderFactory
-		/// </java-name>
-		[Dot42.DexImport("javax/xml/parsers/DocumentBuilderFactory", AccessFlags = 1057)]
-		public abstract partial class DocumentBuilderFactory
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal DocumentBuilderFactory() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newInstance
-				/// </java-name>
-				[Dot42.DexImport("newInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", AccessFlags = 9)]
-				public static global::Javax.Xml.Parsers.DocumentBuilderFactory NewInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Parsers.DocumentBuilderFactory);
-				}
-
-				/// <java-name>
-				/// newInstance
-				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/DocumentBuilderFact" +
-    "ory;", AccessFlags = 9)]
-				public static global::Javax.Xml.Parsers.DocumentBuilderFactory NewInstance(string @string, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Parsers.DocumentBuilderFactory);
-				}
-
-				/// <java-name>
-				/// newDocumentBuilder
-				/// </java-name>
-				[Dot42.DexImport("newDocumentBuilder", "()Ljavax/xml/parsers/DocumentBuilder;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Parsers.DocumentBuilder NewDocumentBuilder() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("setNamespaceAware", "(Z)V", AccessFlags = 1)]
-				public virtual void SetNamespaceAware(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setValidating
-				/// </java-name>
-				[Dot42.DexImport("setValidating", "(Z)V", AccessFlags = 1)]
-				public virtual void SetValidating(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIgnoringElementContentWhitespace
-				/// </java-name>
-				[Dot42.DexImport("setIgnoringElementContentWhitespace", "(Z)V", AccessFlags = 1)]
-				public virtual void SetIgnoringElementContentWhitespace(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setExpandEntityReferences
-				/// </java-name>
-				[Dot42.DexImport("setExpandEntityReferences", "(Z)V", AccessFlags = 1)]
-				public virtual void SetExpandEntityReferences(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIgnoringComments
-				/// </java-name>
-				[Dot42.DexImport("setIgnoringComments", "(Z)V", AccessFlags = 1)]
-				public virtual void SetIgnoringComments(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCoalescing
-				/// </java-name>
-				[Dot42.DexImport("setCoalescing", "(Z)V", AccessFlags = 1)]
-				public virtual void SetCoalescing(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsNamespaceAware() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isValidating
-				/// </java-name>
-				[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
-				public virtual bool IsValidating() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isIgnoringElementContentWhitespace
-				/// </java-name>
-				[Dot42.DexImport("isIgnoringElementContentWhitespace", "()Z", AccessFlags = 1)]
-				public virtual bool IsIgnoringElementContentWhitespace() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isExpandEntityReferences
-				/// </java-name>
-				[Dot42.DexImport("isExpandEntityReferences", "()Z", AccessFlags = 1)]
-				public virtual bool IsExpandEntityReferences() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isIgnoringComments
-				/// </java-name>
-				[Dot42.DexImport("isIgnoringComments", "()Z", AccessFlags = 1)]
-				public virtual bool IsIgnoringComments() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isCoalescing
-				/// </java-name>
-				[Dot42.DexImport("isCoalescing", "()Z", AccessFlags = 1)]
-				public virtual bool IsCoalescing() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setAttribute
-				/// </java-name>
-				[Dot42.DexImport("setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1025)]
-				public abstract void SetAttribute(string @string, object @object) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAttribute
-				/// </java-name>
-				[Dot42.DexImport("getAttribute", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1025)]
-				public abstract object GetAttribute(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFeature
-				/// </java-name>
-				[Dot42.DexImport("setFeature", "(Ljava/lang/String;Z)V", AccessFlags = 1025)]
-				public abstract void SetFeature(string @string, bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFeature
-				/// </java-name>
-				[Dot42.DexImport("getFeature", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
-				public abstract bool GetFeature(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSchema
-				/// </java-name>
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema GetSchema() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.Schema);
-				}
-
-				/// <java-name>
-				/// setSchema
-				/// </java-name>
-				[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
-				public virtual void SetSchema(global::Javax.Xml.Validation.Schema schema) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setXIncludeAware
-				/// </java-name>
-				[Dot42.DexImport("setXIncludeAware", "(Z)V", AccessFlags = 1)]
-				public virtual void SetXIncludeAware(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isXIncludeAware
-				/// </java-name>
-				[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsXIncludeAware() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getSchema
-				/// </java-name>
-				public global::Javax.Xml.Validation.Schema Schema
-				{
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-						get{ return GetSchema(); }
-				[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
-						set{ SetSchema(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// javax/xml/parsers/DocumentBuilder
-		/// </java-name>
-		[Dot42.DexImport("javax/xml/parsers/DocumentBuilder", AccessFlags = 1057)]
-		public abstract partial class DocumentBuilder
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal DocumentBuilder() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// reset
-				/// </java-name>
-				[Dot42.DexImport("reset", "()V", AccessFlags = 1)]
-				public virtual void Reset() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Ljava/io/InputStream;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.W3c.Dom.IDocument);
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Ljava/io/InputStream;Ljava/lang/String;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.W3c.Dom.IDocument);
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Ljava/lang/String;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.IDocument Parse(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.W3c.Dom.IDocument);
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Ljava/io/File;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.Io.File file) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.W3c.Dom.IDocument);
-				}
-
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;", AccessFlags = 1025)]
-				public abstract global::Org.W3c.Dom.IDocument Parse(global::Org.Xml.Sax.InputSource inputSource) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1025)]
-				public abstract bool IsNamespaceAware() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isValidating
-				/// </java-name>
-				[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1025)]
-				public abstract bool IsValidating() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEntityResolver
-				/// </java-name>
-				[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1025)]
-				public abstract void SetEntityResolver(global::Org.Xml.Sax.IEntityResolver entityResolver) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1025)]
-				public abstract void SetErrorHandler(global::Org.Xml.Sax.IErrorHandler errorHandler) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// newDocument
-				/// </java-name>
-				[Dot42.DexImport("newDocument", "()Lorg/w3c/dom/Document;", AccessFlags = 1025)]
-				public abstract global::Org.W3c.Dom.IDocument NewDocument() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDOMImplementation
-				/// </java-name>
-				[Dot42.DexImport("getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", AccessFlags = 1025)]
-				public abstract global::Org.W3c.Dom.IDOMImplementation GetDOMImplementation() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSchema
-				/// </java-name>
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema GetSchema() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.Schema);
-				}
-
-				/// <java-name>
-				/// isXIncludeAware
-				/// </java-name>
-				[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsXIncludeAware() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getDOMImplementation
-				/// </java-name>
-				public global::Org.W3c.Dom.IDOMImplementation DOMImplementation
-				{
-				[Dot42.DexImport("getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", AccessFlags = 1025)]
-						get{ return GetDOMImplementation(); }
-				}
-
-				/// <java-name>
-				/// getSchema
-				/// </java-name>
-				public global::Javax.Xml.Validation.Schema Schema
-				{
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-						get{ return GetSchema(); }
 				}
 
 		}

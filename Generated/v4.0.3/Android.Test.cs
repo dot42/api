@@ -2,6 +2,1188 @@
 namespace Android.Test
 {
 		/// <java-name>
+		/// android/test/ActivityInstrumentationTestCase
+		/// </java-name>
+		[Dot42.DexImport("android/test/ActivityInstrumentationTestCase", AccessFlags = 1057, Signature = "<T:Landroid/app/Activity;>Landroid/test/ActivityTestCase;")]
+		public abstract partial class ActivityInstrumentationTestCase<T> : global::Android.Test.ActivityTestCase
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/Class<TT;>;)V")]
+				public ActivityInstrumentationTestCase(string @string, global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Class;Z)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/Class<TT;>;Z)V")]
+				public ActivityInstrumentationTestCase(string @string, global::System.Type type, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActivity
+				/// </java-name>
+				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
+				public new virtual T GetActivity() /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// setUp
+				/// </java-name>
+				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
+				protected internal override void SetUp() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// tearDown
+				/// </java-name>
+				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
+				protected internal override void TearDown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// testActivityTestCaseSetUpProperly
+				/// </java-name>
+				[Dot42.DexImport("testActivityTestCaseSetUpProperly", "()V", AccessFlags = 1)]
+				public virtual void TestActivityTestCaseSetUpProperly() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ActivityInstrumentationTestCase() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActivity
+				/// </java-name>
+				public T Activity
+				{
+				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
+						get{ return GetActivity(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/ActivityInstrumentationTestCase2
+		/// </java-name>
+		[Dot42.DexImport("android/test/ActivityInstrumentationTestCase2", AccessFlags = 1057, Signature = "<T:Landroid/app/Activity;>Landroid/test/ActivityTestCase;")]
+		public abstract partial class ActivityInstrumentationTestCase2<T> : global::Android.Test.ActivityTestCase
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/Class<TT;>;)V")]
+				public ActivityInstrumentationTestCase2(string @string, global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;)V")]
+				public ActivityInstrumentationTestCase2(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActivity
+				/// </java-name>
+				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
+				public new virtual T GetActivity() /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// setActivityIntent
+				/// </java-name>
+				[Dot42.DexImport("setActivityIntent", "(Landroid/content/Intent;)V", AccessFlags = 1)]
+				public virtual void SetActivityIntent(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setActivityInitialTouchMode
+				/// </java-name>
+				[Dot42.DexImport("setActivityInitialTouchMode", "(Z)V", AccessFlags = 1)]
+				public virtual void SetActivityInitialTouchMode(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setUp
+				/// </java-name>
+				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
+				protected internal override void SetUp() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// tearDown
+				/// </java-name>
+				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
+				protected internal override void TearDown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runTest
+				/// </java-name>
+				[Dot42.DexImport("runTest", "()V", AccessFlags = 4)]
+				protected internal override void RunTest() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ActivityInstrumentationTestCase2() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActivity
+				/// </java-name>
+				public T Activity
+				{
+				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
+						get{ return GetActivity(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/ActivityTestCase
+		/// </java-name>
+		[Dot42.DexImport("android/test/ActivityTestCase", AccessFlags = 1057)]
+		public abstract partial class ActivityTestCase : global::Android.Test.InstrumentationTestCase
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ActivityTestCase() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActivity
+				/// </java-name>
+				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 4)]
+				protected internal virtual global::Android.App.Activity GetActivity() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.App.Activity);
+				}
+
+				/// <java-name>
+				/// setActivity
+				/// </java-name>
+				[Dot42.DexImport("setActivity", "(Landroid/app/Activity;)V", AccessFlags = 4)]
+				protected internal virtual void SetActivity(global::Android.App.Activity activity) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// scrubClass
+				/// </java-name>
+				[Dot42.DexImport("scrubClass", "(Ljava/lang/Class;)V", AccessFlags = 4, Signature = "(Ljava/lang/Class<*>;)V")]
+				protected internal virtual void ScrubClass(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActivity
+				/// </java-name>
+				protected internal global::Android.App.Activity Activity
+				{
+				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 4)]
+						get{ return GetActivity(); }
+				[Dot42.DexImport("setActivity", "(Landroid/app/Activity;)V", AccessFlags = 4)]
+						set{ SetActivity(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/ActivityUnitTestCase
+		/// </java-name>
+		[Dot42.DexImport("android/test/ActivityUnitTestCase", AccessFlags = 1057, Signature = "<T:Landroid/app/Activity;>Landroid/test/ActivityTestCase;")]
+		public abstract partial class ActivityUnitTestCase<T> : global::Android.Test.ActivityTestCase
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;)V")]
+				public ActivityUnitTestCase(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActivity
+				/// </java-name>
+				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
+				public new virtual T GetActivity() /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// setUp
+				/// </java-name>
+				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
+				protected internal override void SetUp() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// startActivity
+				/// </java-name>
+				[Dot42.DexImport("startActivity", "(Landroid/content/Intent;Landroid/os/Bundle;Ljava/lang/Object;)Landroid/app/Activ" +
+    "ity;", AccessFlags = 4, Signature = "(Landroid/content/Intent;Landroid/os/Bundle;Ljava/lang/Object;)TT;")]
+				protected internal virtual T StartActivity(global::Android.Content.Intent intent, global::Android.Os.Bundle bundle, object @object) /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// tearDown
+				/// </java-name>
+				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
+				protected internal override void TearDown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setApplication
+				/// </java-name>
+				[Dot42.DexImport("setApplication", "(Landroid/app/Application;)V", AccessFlags = 1)]
+				public virtual void SetApplication(global::Android.App.Application application) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setActivityContext
+				/// </java-name>
+				[Dot42.DexImport("setActivityContext", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public virtual void SetActivityContext(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRequestedOrientation
+				/// </java-name>
+				[Dot42.DexImport("getRequestedOrientation", "()I", AccessFlags = 1)]
+				public virtual int GetRequestedOrientation() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getStartedActivityIntent
+				/// </java-name>
+				[Dot42.DexImport("getStartedActivityIntent", "()Landroid/content/Intent;", AccessFlags = 1)]
+				public virtual global::Android.Content.Intent GetStartedActivityIntent() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Intent);
+				}
+
+				/// <java-name>
+				/// getStartedActivityRequest
+				/// </java-name>
+				[Dot42.DexImport("getStartedActivityRequest", "()I", AccessFlags = 1)]
+				public virtual int GetStartedActivityRequest() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isFinishCalled
+				/// </java-name>
+				[Dot42.DexImport("isFinishCalled", "()Z", AccessFlags = 1)]
+				public virtual bool IsFinishCalled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getFinishedActivityRequest
+				/// </java-name>
+				[Dot42.DexImport("getFinishedActivityRequest", "()I", AccessFlags = 1)]
+				public virtual int GetFinishedActivityRequest() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ActivityUnitTestCase() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActivity
+				/// </java-name>
+				public T Activity
+				{
+				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
+						get{ return GetActivity(); }
+				}
+
+				/// <java-name>
+				/// getRequestedOrientation
+				/// </java-name>
+				public int RequestedOrientation
+				{
+				[Dot42.DexImport("getRequestedOrientation", "()I", AccessFlags = 1)]
+						get{ return GetRequestedOrientation(); }
+				}
+
+				/// <java-name>
+				/// getStartedActivityIntent
+				/// </java-name>
+				public global::Android.Content.Intent StartedActivityIntent
+				{
+				[Dot42.DexImport("getStartedActivityIntent", "()Landroid/content/Intent;", AccessFlags = 1)]
+						get{ return GetStartedActivityIntent(); }
+				}
+
+				/// <java-name>
+				/// getStartedActivityRequest
+				/// </java-name>
+				public int StartedActivityRequest
+				{
+				[Dot42.DexImport("getStartedActivityRequest", "()I", AccessFlags = 1)]
+						get{ return GetStartedActivityRequest(); }
+				}
+
+				/// <java-name>
+				/// getFinishedActivityRequest
+				/// </java-name>
+				public int FinishedActivityRequest
+				{
+				[Dot42.DexImport("getFinishedActivityRequest", "()I", AccessFlags = 1)]
+						get{ return GetFinishedActivityRequest(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/AndroidTestCase
+		/// </java-name>
+		[Dot42.DexImport("android/test/AndroidTestCase", AccessFlags = 33)]
+		public partial class AndroidTestCase : global::Junit.Framework.TestCase
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// mContext
+				/// </java-name>
+				[Dot42.DexImport("mContext", "Landroid/content/Context;", AccessFlags = 4)]
+				protected internal global::Android.Content.Context MContext;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AndroidTestCase() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setUp
+				/// </java-name>
+				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
+				protected internal override void SetUp() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// tearDown
+				/// </java-name>
+				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
+				protected internal override void TearDown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// testAndroidTestCaseSetupProperly
+				/// </java-name>
+				[Dot42.DexImport("testAndroidTestCaseSetupProperly", "()V", AccessFlags = 1)]
+				public virtual void TestAndroidTestCaseSetupProperly() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setContext
+				/// </java-name>
+				[Dot42.DexImport("setContext", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public virtual void SetContext(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContext
+				/// </java-name>
+				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 1)]
+				public virtual global::Android.Content.Context GetContext() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Context);
+				}
+
+				/// <java-name>
+				/// assertActivityRequiresPermission
+				/// </java-name>
+				[Dot42.DexImport("assertActivityRequiresPermission", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void AssertActivityRequiresPermission(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertReadingContentUriRequiresPermission
+				/// </java-name>
+				[Dot42.DexImport("assertReadingContentUriRequiresPermission", "(Landroid/net/Uri;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void AssertReadingContentUriRequiresPermission(global::Android.Net.Uri uri, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertWritingContentUriRequiresPermission
+				/// </java-name>
+				[Dot42.DexImport("assertWritingContentUriRequiresPermission", "(Landroid/net/Uri;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void AssertWritingContentUriRequiresPermission(global::Android.Net.Uri uri, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// scrubClass
+				/// </java-name>
+				[Dot42.DexImport("scrubClass", "(Ljava/lang/Class;)V", AccessFlags = 4, Signature = "(Ljava/lang/Class<*>;)V")]
+				protected internal virtual void ScrubClass(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContext
+				/// </java-name>
+				public global::Android.Content.Context Context
+				{
+				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 1)]
+						get{ return GetContext(); }
+				[Dot42.DexImport("setContext", "(Landroid/content/Context;)V", AccessFlags = 1)]
+						set{ SetContext(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/AndroidTestRunner
+		/// </java-name>
+		[Dot42.DexImport("android/test/AndroidTestRunner", AccessFlags = 33)]
+		public partial class AndroidTestRunner : global::Junit.Runner.BaseTestRunner
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AndroidTestRunner() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setTestClassName
+				/// </java-name>
+				[Dot42.DexImport("setTestClassName", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void SetTestClassName(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setTest
+				/// </java-name>
+				[Dot42.DexImport("setTest", "(Ljunit/framework/Test;)V", AccessFlags = 1)]
+				public virtual void SetTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clearTestListeners
+				/// </java-name>
+				[Dot42.DexImport("clearTestListeners", "()V", AccessFlags = 1)]
+				public virtual void ClearTestListeners() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addTestListener
+				/// </java-name>
+				[Dot42.DexImport("addTestListener", "(Ljunit/framework/TestListener;)V", AccessFlags = 1)]
+				public virtual void AddTestListener(global::Junit.Framework.ITestListener testListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createTestResult
+				/// </java-name>
+				[Dot42.DexImport("createTestResult", "()Ljunit/framework/TestResult;", AccessFlags = 4)]
+				protected internal virtual global::Junit.Framework.TestResult CreateTestResult() /* MethodBuilder.Create */ 
+				{
+						return default(global::Junit.Framework.TestResult);
+				}
+
+				/// <java-name>
+				/// getTestCases
+				/// </java-name>
+				[Dot42.DexImport("getTestCases", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljunit/framework/TestCase;>;")]
+				public virtual global::Java.Util.IList<global::Junit.Framework.TestCase> GetTestCases() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Junit.Framework.TestCase>);
+				}
+
+				/// <java-name>
+				/// getTestClassName
+				/// </java-name>
+				[Dot42.DexImport("getTestClassName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetTestClassName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getTestResult
+				/// </java-name>
+				[Dot42.DexImport("getTestResult", "()Ljunit/framework/TestResult;", AccessFlags = 1)]
+				public virtual global::Junit.Framework.TestResult GetTestResult() /* MethodBuilder.Create */ 
+				{
+						return default(global::Junit.Framework.TestResult);
+				}
+
+				/// <java-name>
+				/// runTest
+				/// </java-name>
+				[Dot42.DexImport("runTest", "()V", AccessFlags = 1)]
+				public virtual void RunTest() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runTest
+				/// </java-name>
+				[Dot42.DexImport("runTest", "(Ljunit/framework/TestResult;)V", AccessFlags = 1)]
+				public virtual void RunTest(global::Junit.Framework.TestResult testResult) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setContext
+				/// </java-name>
+				[Dot42.DexImport("setContext", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public virtual void SetContext(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setInstrumentation
+				/// </java-name>
+				[Dot42.DexImport("setInstrumentation", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
+				public virtual void SetInstrumentation(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setInstrumentaiton
+				/// </java-name>
+				[Dot42.DexImport("setInstrumentaiton", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
+				public virtual void SetInstrumentaiton(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// loadSuiteClass
+				/// </java-name>
+				[Dot42.DexImport("loadSuiteClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 4)]
+				protected internal override global::System.Type LoadSuiteClass(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// testStarted
+				/// </java-name>
+				[Dot42.DexImport("testStarted", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void TestStarted(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// testEnded
+				/// </java-name>
+				[Dot42.DexImport("testEnded", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public override void TestEnded(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// testFailed
+				/// </java-name>
+				[Dot42.DexImport("testFailed", "(ILjunit/framework/Test;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public override void TestFailed(int int32, global::Junit.Framework.ITest test, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runFailed
+				/// </java-name>
+				[Dot42.DexImport("runFailed", "(Ljava/lang/String;)V", AccessFlags = 4)]
+				protected internal override void RunFailed(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTestCases
+				/// </java-name>
+				public global::Java.Util.IList<global::Junit.Framework.TestCase> TestCases
+				{
+				[Dot42.DexImport("getTestCases", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljunit/framework/TestCase;>;")]
+						get{ return GetTestCases(); }
+				}
+
+				/// <java-name>
+				/// getTestClassName
+				/// </java-name>
+				public string TestClassName
+				{
+				[Dot42.DexImport("getTestClassName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetTestClassName(); }
+				}
+
+				/// <java-name>
+				/// getTestResult
+				/// </java-name>
+				public global::Junit.Framework.TestResult TestResult
+				{
+				[Dot42.DexImport("getTestResult", "()Ljunit/framework/TestResult;", AccessFlags = 1)]
+						get{ return GetTestResult(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/ApplicationTestCase
+		/// </java-name>
+		[Dot42.DexImport("android/test/ApplicationTestCase", AccessFlags = 1057, Signature = "<T:Landroid/app/Application;>Landroid/test/AndroidTestCase;")]
+		public abstract partial class ApplicationTestCase<T> : global::Android.Test.AndroidTestCase
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;)V")]
+				public ApplicationTestCase(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getApplication
+				/// </java-name>
+				[Dot42.DexImport("getApplication", "()Landroid/app/Application;", AccessFlags = 1, Signature = "()TT;")]
+				public virtual T GetApplication() /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// setUp
+				/// </java-name>
+				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
+				protected internal override void SetUp() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createApplication
+				/// </java-name>
+				[Dot42.DexImport("createApplication", "()V", AccessFlags = 20)]
+				protected internal void CreateApplication() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// terminateApplication
+				/// </java-name>
+				[Dot42.DexImport("terminateApplication", "()V", AccessFlags = 20)]
+				protected internal void TerminateApplication() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// tearDown
+				/// </java-name>
+				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
+				protected internal override void TearDown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSystemContext
+				/// </java-name>
+				[Dot42.DexImport("getSystemContext", "()Landroid/content/Context;", AccessFlags = 1)]
+				public virtual global::Android.Content.Context GetSystemContext() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.Context);
+				}
+
+				/// <java-name>
+				/// testApplicationTestCaseSetUpProperly
+				/// </java-name>
+				[Dot42.DexImport("testApplicationTestCaseSetUpProperly", "()V", AccessFlags = 17)]
+				public void TestApplicationTestCaseSetUpProperly() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ApplicationTestCase() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getApplication
+				/// </java-name>
+				public T Application
+				{
+				[Dot42.DexImport("getApplication", "()Landroid/app/Application;", AccessFlags = 1, Signature = "()TT;")]
+						get{ return GetApplication(); }
+				}
+
+				/// <java-name>
+				/// getSystemContext
+				/// </java-name>
+				public global::Android.Content.Context SystemContext
+				{
+				[Dot42.DexImport("getSystemContext", "()Landroid/content/Context;", AccessFlags = 1)]
+						get{ return GetSystemContext(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/AssertionFailedError
+		/// </java-name>
+		[Dot42.DexImport("android/test/AssertionFailedError", AccessFlags = 33)]
+		public partial class AssertionFailedError : global::Java.Lang.Error
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AssertionFailedError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public AssertionFailedError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/ComparisonFailure
+		/// </java-name>
+		[Dot42.DexImport("android/test/ComparisonFailure", AccessFlags = 33)]
+		public partial class ComparisonFailure : global::Android.Test.AssertionFailedError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public ComparisonFailure(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getMessage
+				/// </java-name>
+				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetMessage() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ComparisonFailure() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/FlakyTest
+		/// </java-name>
+		[Dot42.DexImport("android/test/FlakyTest", AccessFlags = 9729)]
+		public partial interface IFlakyTest : global::Java.Lang.Annotation.IAnnotation
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// tolerance
+				/// </java-name>
+				[Dot42.DexImport("tolerance", "()I", AccessFlags = 1025)]
+				int Tolerance() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/test/InstrumentationTestCase
+		/// </java-name>
+		[Dot42.DexImport("android/test/InstrumentationTestCase", AccessFlags = 33)]
+		public partial class InstrumentationTestCase : global::Junit.Framework.TestCase
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public InstrumentationTestCase() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// injectInstrumentation
+				/// </java-name>
+				[Dot42.DexImport("injectInstrumentation", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
+				public virtual void InjectInstrumentation(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// injectInsrumentation
+				/// </java-name>
+				[Dot42.DexImport("injectInsrumentation", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
+				public virtual void InjectInsrumentation(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getInstrumentation
+				/// </java-name>
+				[Dot42.DexImport("getInstrumentation", "()Landroid/app/Instrumentation;", AccessFlags = 1)]
+				public virtual global::Android.App.Instrumentation GetInstrumentation() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.App.Instrumentation);
+				}
+
+				/// <java-name>
+				/// launchActivity
+				/// </java-name>
+				[Dot42.DexImport("launchActivity", "(Ljava/lang/String;Ljava/lang/Class;Landroid/os/Bundle;)Landroid/app/Activity;", AccessFlags = 17, Signature = "<T:Landroid/app/Activity;>(Ljava/lang/String;Ljava/lang/Class<TT;>;Landroid/os/Bu" +
+    "ndle;)TT;")]
+				public T LaunchActivity<T>(string @string, global::System.Type type, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// launchActivityWithIntent
+				/// </java-name>
+				[Dot42.DexImport("launchActivityWithIntent", "(Ljava/lang/String;Ljava/lang/Class;Landroid/content/Intent;)Landroid/app/Activit" +
+    "y;", AccessFlags = 17, Signature = "<T:Landroid/app/Activity;>(Ljava/lang/String;Ljava/lang/Class<TT;>;Landroid/conte" +
+    "nt/Intent;)TT;")]
+				public T LaunchActivityWithIntent<T>(string @string, global::System.Type type, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// runTestOnUiThread
+				/// </java-name>
+				[Dot42.DexImport("runTestOnUiThread", "(Ljava/lang/Runnable;)V", AccessFlags = 1)]
+				public virtual void RunTestOnUiThread(global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runTest
+				/// </java-name>
+				[Dot42.DexImport("runTest", "()V", AccessFlags = 4)]
+				protected internal override void RunTest() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendKeys
+				/// </java-name>
+				[Dot42.DexImport("sendKeys", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void SendKeys(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendKeys
+				/// </java-name>
+				[Dot42.DexImport("sendKeys", "([I)V", AccessFlags = 129)]
+				public virtual void SendKeys(params int[] int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendRepeatedKeys
+				/// </java-name>
+				[Dot42.DexImport("sendRepeatedKeys", "([I)V", AccessFlags = 129)]
+				public virtual void SendRepeatedKeys(params int[] int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// tearDown
+				/// </java-name>
+				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
+				protected internal override void TearDown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getInstrumentation
+				/// </java-name>
+				public global::Android.App.Instrumentation Instrumentation
+				{
+				[Dot42.DexImport("getInstrumentation", "()Landroid/app/Instrumentation;", AccessFlags = 1)]
+						get{ return GetInstrumentation(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/InstrumentationTestRunner
+		/// </java-name>
+		[Dot42.DexImport("android/test/InstrumentationTestRunner", AccessFlags = 33)]
+		public partial class InstrumentationTestRunner : global::Android.App.Instrumentation, global::Android.Test.ITestSuiteProvider
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// REPORT_VALUE_ID
+				/// </java-name>
+				[Dot42.DexImport("REPORT_VALUE_ID", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string REPORT_VALUE_ID = "InstrumentationTestRunner";
+				/// <java-name>
+				/// REPORT_KEY_NUM_TOTAL
+				/// </java-name>
+				[Dot42.DexImport("REPORT_KEY_NUM_TOTAL", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string REPORT_KEY_NUM_TOTAL = "numtests";
+				/// <java-name>
+				/// REPORT_KEY_NUM_CURRENT
+				/// </java-name>
+				[Dot42.DexImport("REPORT_KEY_NUM_CURRENT", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string REPORT_KEY_NUM_CURRENT = "current";
+				/// <java-name>
+				/// REPORT_KEY_NAME_CLASS
+				/// </java-name>
+				[Dot42.DexImport("REPORT_KEY_NAME_CLASS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string REPORT_KEY_NAME_CLASS = "class";
+				/// <java-name>
+				/// REPORT_KEY_NAME_TEST
+				/// </java-name>
+				[Dot42.DexImport("REPORT_KEY_NAME_TEST", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string REPORT_KEY_NAME_TEST = "test";
+				/// <java-name>
+				/// REPORT_VALUE_RESULT_START
+				/// </java-name>
+				[Dot42.DexImport("REPORT_VALUE_RESULT_START", "I", AccessFlags = 25)]
+				public const int REPORT_VALUE_RESULT_START = 1;
+				/// <java-name>
+				/// REPORT_VALUE_RESULT_OK
+				/// </java-name>
+				[Dot42.DexImport("REPORT_VALUE_RESULT_OK", "I", AccessFlags = 25)]
+				public const int REPORT_VALUE_RESULT_OK = 0;
+				/// <java-name>
+				/// REPORT_VALUE_RESULT_ERROR
+				/// </java-name>
+				[Dot42.DexImport("REPORT_VALUE_RESULT_ERROR", "I", AccessFlags = 25)]
+				public const int REPORT_VALUE_RESULT_ERROR = -1;
+				/// <java-name>
+				/// REPORT_VALUE_RESULT_FAILURE
+				/// </java-name>
+				[Dot42.DexImport("REPORT_VALUE_RESULT_FAILURE", "I", AccessFlags = 25)]
+				public const int REPORT_VALUE_RESULT_FAILURE = -2;
+				/// <java-name>
+				/// REPORT_KEY_STACK
+				/// </java-name>
+				[Dot42.DexImport("REPORT_KEY_STACK", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string REPORT_KEY_STACK = "stack";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public InstrumentationTestRunner() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCreate
+				/// </java-name>
+				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+				public override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAndroidTestRunner
+				/// </java-name>
+				[Dot42.DexImport("getAndroidTestRunner", "()Landroid/test/AndroidTestRunner;", AccessFlags = 4)]
+				protected internal virtual global::Android.Test.AndroidTestRunner GetAndroidTestRunner() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Test.AndroidTestRunner);
+				}
+
+				/// <java-name>
+				/// onStart
+				/// </java-name>
+				[Dot42.DexImport("onStart", "()V", AccessFlags = 1)]
+				public override void OnStart() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTestSuite
+				/// </java-name>
+				[Dot42.DexImport("getTestSuite", "()Ljunit/framework/TestSuite;", AccessFlags = 1)]
+				public virtual global::Junit.Framework.TestSuite GetTestSuite() /* MethodBuilder.Create */ 
+				{
+						return default(global::Junit.Framework.TestSuite);
+				}
+
+				/// <java-name>
+				/// getAllTests
+				/// </java-name>
+				[Dot42.DexImport("getAllTests", "()Ljunit/framework/TestSuite;", AccessFlags = 1)]
+				public virtual global::Junit.Framework.TestSuite GetAllTests() /* MethodBuilder.Create */ 
+				{
+						return default(global::Junit.Framework.TestSuite);
+				}
+
+				/// <java-name>
+				/// getLoader
+				/// </java-name>
+				[Dot42.DexImport("getLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ClassLoader GetLoader() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ClassLoader);
+				}
+
+				/// <java-name>
+				/// getAndroidTestRunner
+				/// </java-name>
+				protected internal global::Android.Test.AndroidTestRunner AndroidTestRunner
+				{
+				[Dot42.DexImport("getAndroidTestRunner", "()Landroid/test/AndroidTestRunner;", AccessFlags = 4)]
+						get{ return GetAndroidTestRunner(); }
+				}
+
+				/// <java-name>
+				/// getTestSuite
+				/// </java-name>
+				public global::Junit.Framework.TestSuite TestSuite
+				{
+				[Dot42.DexImport("getTestSuite", "()Ljunit/framework/TestSuite;", AccessFlags = 1)]
+						get{ return GetTestSuite(); }
+				}
+
+				/// <java-name>
+				/// getAllTests
+				/// </java-name>
+				public global::Junit.Framework.TestSuite AllTests
+				{
+				[Dot42.DexImport("getAllTests", "()Ljunit/framework/TestSuite;", AccessFlags = 1)]
+						get{ return GetAllTests(); }
+				}
+
+				/// <java-name>
+				/// getLoader
+				/// </java-name>
+				public global::Java.Lang.ClassLoader Loader
+				{
+				[Dot42.DexImport("getLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
+						get{ return GetLoader(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/InstrumentationTestSuite
+		/// </java-name>
+		[Dot42.DexImport("android/test/InstrumentationTestSuite", AccessFlags = 33)]
+		public partial class InstrumentationTestSuite : global::Junit.Framework.TestSuite
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
+				public InstrumentationTestSuite(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Landroid/app/Instrumentation;)V", AccessFlags = 1)]
+				public InstrumentationTestSuite(string @string, global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Class;Landroid/app/Instrumentation;)V", AccessFlags = 1)]
+				public InstrumentationTestSuite(global::System.Type type, global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addTestSuite
+				/// </java-name>
+				[Dot42.DexImport("addTestSuite", "(Ljava/lang/Class;)V", AccessFlags = 1)]
+				public override void AddTestSuite(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runTest
+				/// </java-name>
+				[Dot42.DexImport("runTest", "(Ljunit/framework/Test;Ljunit/framework/TestResult;)V", AccessFlags = 1)]
+				public override void RunTest(global::Junit.Framework.ITest test, global::Junit.Framework.TestResult testResult) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal InstrumentationTestSuite() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/test/PerformanceTestCase
+		/// </java-name>
+		[Dot42.DexImport("android/test/PerformanceTestCase", AccessFlags = 1537)]
+		public partial interface IPerformanceTestCase
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// startPerformance
+				/// </java-name>
+				[Dot42.DexImport("startPerformance", "(Landroid/test/PerformanceTestCase$Intermediates;)I", AccessFlags = 1025)]
+				int StartPerformance(global::Android.Test.IPerformanceTestCase_IIntermediates performanceTestCase_IIntermediates) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isPerformanceOnly
+				/// </java-name>
+				[Dot42.DexImport("isPerformanceOnly", "()Z", AccessFlags = 1025)]
+				bool IsPerformanceOnly() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/test/PerformanceTestCase$Intermediates
+		/// </java-name>
+		[Dot42.DexImport("android/test/PerformanceTestCase$Intermediates", AccessFlags = 1545)]
+		public partial interface IPerformanceTestCase_IIntermediates
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// setInternalIterations
+				/// </java-name>
+				[Dot42.DexImport("setInternalIterations", "(I)V", AccessFlags = 1025)]
+				void SetInternalIterations(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// startTiming
+				/// </java-name>
+				[Dot42.DexImport("startTiming", "(Z)V", AccessFlags = 1025)]
+				void StartTiming(bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addIntermediate
+				/// </java-name>
+				[Dot42.DexImport("addIntermediate", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void AddIntermediate(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// addIntermediate
+				/// </java-name>
+				[Dot42.DexImport("addIntermediate", "(Ljava/lang/String;J)V", AccessFlags = 1025)]
+				void AddIntermediate(string @string, long int64) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// finishTiming
+				/// </java-name>
+				[Dot42.DexImport("finishTiming", "(Z)V", AccessFlags = 1025)]
+				void FinishTiming(bool boolean) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
 		/// android/test/IsolatedContext
 		/// </java-name>
 		[Dot42.DexImport("android/test/IsolatedContext", AccessFlags = 33)]
@@ -145,6 +1327,30 @@ namespace Android.Test
 		}
 
 		/// <java-name>
+		/// android/test/TestSuiteProvider
+		/// </java-name>
+		[Dot42.DexImport("android/test/TestSuiteProvider", AccessFlags = 1537)]
+		public partial interface ITestSuiteProvider
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// getTestSuite
+				/// </java-name>
+				[Dot42.DexImport("getTestSuite", "()Ljunit/framework/TestSuite;", AccessFlags = 1025)]
+				global::Junit.Framework.TestSuite GetTestSuite() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/test/UiThreadTest
+		/// </java-name>
+		[Dot42.DexImport("android/test/UiThreadTest", AccessFlags = 9729)]
+		public partial interface IUiThreadTest : global::Java.Lang.Annotation.IAnnotation
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
 		/// android/test/LoaderTestCase
 		/// </java-name>
 		[Dot42.DexImport("android/test/LoaderTestCase", AccessFlags = 33)]
@@ -164,21 +1370,6 @@ namespace Android.Test
 				{
 						return default(T);
 				}
-
-		}
-
-		/// <java-name>
-		/// android/test/TestSuiteProvider
-		/// </java-name>
-		[Dot42.DexImport("android/test/TestSuiteProvider", AccessFlags = 1537)]
-		public partial interface ITestSuiteProvider
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getTestSuite
-				/// </java-name>
-				[Dot42.DexImport("getTestSuite", "()Ljunit/framework/TestSuite;", AccessFlags = 1025)]
-				global::Junit.Framework.TestSuite GetTestSuite() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -508,358 +1699,27 @@ namespace Android.Test
 		}
 
 		/// <java-name>
-		/// android/test/InstrumentationTestRunner
+		/// android/test/ProviderTestCase
 		/// </java-name>
-		[Dot42.DexImport("android/test/InstrumentationTestRunner", AccessFlags = 33)]
-		public partial class InstrumentationTestRunner : global::Android.App.Instrumentation, global::Android.Test.ITestSuiteProvider
+		[Dot42.DexImport("android/test/ProviderTestCase", AccessFlags = 1057, Signature = "<T:Landroid/content/ContentProvider;>Landroid/test/InstrumentationTestCase;")]
+		public abstract partial class ProviderTestCase<T> : global::Android.Test.InstrumentationTestCase
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// REPORT_VALUE_ID
-				/// </java-name>
-				[Dot42.DexImport("REPORT_VALUE_ID", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string REPORT_VALUE_ID = "InstrumentationTestRunner";
-				/// <java-name>
-				/// REPORT_KEY_NUM_TOTAL
-				/// </java-name>
-				[Dot42.DexImport("REPORT_KEY_NUM_TOTAL", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string REPORT_KEY_NUM_TOTAL = "numtests";
-				/// <java-name>
-				/// REPORT_KEY_NUM_CURRENT
-				/// </java-name>
-				[Dot42.DexImport("REPORT_KEY_NUM_CURRENT", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string REPORT_KEY_NUM_CURRENT = "current";
-				/// <java-name>
-				/// REPORT_KEY_NAME_CLASS
-				/// </java-name>
-				[Dot42.DexImport("REPORT_KEY_NAME_CLASS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string REPORT_KEY_NAME_CLASS = "class";
-				/// <java-name>
-				/// REPORT_KEY_NAME_TEST
-				/// </java-name>
-				[Dot42.DexImport("REPORT_KEY_NAME_TEST", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string REPORT_KEY_NAME_TEST = "test";
-				/// <java-name>
-				/// REPORT_VALUE_RESULT_START
-				/// </java-name>
-				[Dot42.DexImport("REPORT_VALUE_RESULT_START", "I", AccessFlags = 25)]
-				public const int REPORT_VALUE_RESULT_START = 1;
-				/// <java-name>
-				/// REPORT_VALUE_RESULT_OK
-				/// </java-name>
-				[Dot42.DexImport("REPORT_VALUE_RESULT_OK", "I", AccessFlags = 25)]
-				public const int REPORT_VALUE_RESULT_OK = 0;
-				/// <java-name>
-				/// REPORT_VALUE_RESULT_ERROR
-				/// </java-name>
-				[Dot42.DexImport("REPORT_VALUE_RESULT_ERROR", "I", AccessFlags = 25)]
-				public const int REPORT_VALUE_RESULT_ERROR = -1;
-				/// <java-name>
-				/// REPORT_VALUE_RESULT_FAILURE
-				/// </java-name>
-				[Dot42.DexImport("REPORT_VALUE_RESULT_FAILURE", "I", AccessFlags = 25)]
-				public const int REPORT_VALUE_RESULT_FAILURE = -2;
-				/// <java-name>
-				/// REPORT_KEY_STACK
-				/// </java-name>
-				[Dot42.DexImport("REPORT_KEY_STACK", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string REPORT_KEY_STACK = "stack";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public InstrumentationTestRunner() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/Class;Ljava/lang/String;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;Ljava/lang/String;)V")]
+				public ProviderTestCase(global::System.Type type, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// onCreate
+				/// getProvider
 				/// </java-name>
-				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAndroidTestRunner
-				/// </java-name>
-				[Dot42.DexImport("getAndroidTestRunner", "()Landroid/test/AndroidTestRunner;", AccessFlags = 4)]
-				protected internal virtual global::Android.Test.AndroidTestRunner GetAndroidTestRunner() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Test.AndroidTestRunner);
-				}
-
-				/// <java-name>
-				/// onStart
-				/// </java-name>
-				[Dot42.DexImport("onStart", "()V", AccessFlags = 1)]
-				public override void OnStart() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTestSuite
-				/// </java-name>
-				[Dot42.DexImport("getTestSuite", "()Ljunit/framework/TestSuite;", AccessFlags = 1)]
-				public virtual global::Junit.Framework.TestSuite GetTestSuite() /* MethodBuilder.Create */ 
-				{
-						return default(global::Junit.Framework.TestSuite);
-				}
-
-				/// <java-name>
-				/// getAllTests
-				/// </java-name>
-				[Dot42.DexImport("getAllTests", "()Ljunit/framework/TestSuite;", AccessFlags = 1)]
-				public virtual global::Junit.Framework.TestSuite GetAllTests() /* MethodBuilder.Create */ 
-				{
-						return default(global::Junit.Framework.TestSuite);
-				}
-
-				/// <java-name>
-				/// getLoader
-				/// </java-name>
-				[Dot42.DexImport("getLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ClassLoader GetLoader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ClassLoader);
-				}
-
-				/// <java-name>
-				/// getAndroidTestRunner
-				/// </java-name>
-				protected internal global::Android.Test.AndroidTestRunner AndroidTestRunner
-				{
-				[Dot42.DexImport("getAndroidTestRunner", "()Landroid/test/AndroidTestRunner;", AccessFlags = 4)]
-						get{ return GetAndroidTestRunner(); }
-				}
-
-				/// <java-name>
-				/// getTestSuite
-				/// </java-name>
-				public global::Junit.Framework.TestSuite TestSuite
-				{
-				[Dot42.DexImport("getTestSuite", "()Ljunit/framework/TestSuite;", AccessFlags = 1)]
-						get{ return GetTestSuite(); }
-				}
-
-				/// <java-name>
-				/// getAllTests
-				/// </java-name>
-				public global::Junit.Framework.TestSuite AllTests
-				{
-				[Dot42.DexImport("getAllTests", "()Ljunit/framework/TestSuite;", AccessFlags = 1)]
-						get{ return GetAllTests(); }
-				}
-
-				/// <java-name>
-				/// getLoader
-				/// </java-name>
-				public global::Java.Lang.ClassLoader Loader
-				{
-				[Dot42.DexImport("getLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-						get{ return GetLoader(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/ViewAsserts
-		/// </java-name>
-		[Dot42.DexImport("android/test/ViewAsserts", AccessFlags = 33)]
-		public partial class ViewAsserts
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal ViewAsserts() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertOnScreen
-				/// </java-name>
-				[Dot42.DexImport("assertOnScreen", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertOnScreen(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertOffScreenBelow
-				/// </java-name>
-				[Dot42.DexImport("assertOffScreenBelow", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertOffScreenBelow(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertOffScreenAbove
-				/// </java-name>
-				[Dot42.DexImport("assertOffScreenAbove", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertOffScreenAbove(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertHasScreenCoordinates
-				/// </java-name>
-				[Dot42.DexImport("assertHasScreenCoordinates", "(Landroid/view/View;Landroid/view/View;II)V", AccessFlags = 9)]
-				public static void AssertHasScreenCoordinates(global::Android.View.View view, global::Android.View.View view1, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertBaselineAligned
-				/// </java-name>
-				[Dot42.DexImport("assertBaselineAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertBaselineAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertRightAligned
-				/// </java-name>
-				[Dot42.DexImport("assertRightAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertRightAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertRightAligned
-				/// </java-name>
-				[Dot42.DexImport("assertRightAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void AssertRightAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertLeftAligned
-				/// </java-name>
-				[Dot42.DexImport("assertLeftAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertLeftAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertLeftAligned
-				/// </java-name>
-				[Dot42.DexImport("assertLeftAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void AssertLeftAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertBottomAligned
-				/// </java-name>
-				[Dot42.DexImport("assertBottomAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertBottomAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertBottomAligned
-				/// </java-name>
-				[Dot42.DexImport("assertBottomAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void AssertBottomAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertTopAligned
-				/// </java-name>
-				[Dot42.DexImport("assertTopAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertTopAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertTopAligned
-				/// </java-name>
-				[Dot42.DexImport("assertTopAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void AssertTopAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertHorizontalCenterAligned
-				/// </java-name>
-				[Dot42.DexImport("assertHorizontalCenterAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertHorizontalCenterAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertVerticalCenterAligned
-				/// </java-name>
-				[Dot42.DexImport("assertVerticalCenterAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertVerticalCenterAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertGroupIntegrity
-				/// </java-name>
-				[Dot42.DexImport("assertGroupIntegrity", "(Landroid/view/ViewGroup;)V", AccessFlags = 9)]
-				public static void AssertGroupIntegrity(global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertGroupContains
-				/// </java-name>
-				[Dot42.DexImport("assertGroupContains", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertGroupContains(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertGroupNotContains
-				/// </java-name>
-				[Dot42.DexImport("assertGroupNotContains", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertGroupNotContains(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/ActivityInstrumentationTestCase2
-		/// </java-name>
-		[Dot42.DexImport("android/test/ActivityInstrumentationTestCase2", AccessFlags = 1057, Signature = "<T:Landroid/app/Activity;>Landroid/test/ActivityTestCase;")]
-		public abstract partial class ActivityInstrumentationTestCase2<T> : global::Android.Test.ActivityTestCase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/Class<TT;>;)V")]
-				public ActivityInstrumentationTestCase2(string @string, global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;)V")]
-				public ActivityInstrumentationTestCase2(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getActivity
-				/// </java-name>
-				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
-				public new virtual T GetActivity() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getProvider", "()Landroid/content/ContentProvider;", AccessFlags = 1, Signature = "()TT;")]
+				public virtual T GetProvider() /* MethodBuilder.Create */ 
 				{
 						return default(T);
 				}
 
 				/// <java-name>
-				/// setActivityIntent
-				/// </java-name>
-				[Dot42.DexImport("setActivityIntent", "(Landroid/content/Intent;)V", AccessFlags = 1)]
-				public virtual void SetActivityIntent(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setActivityInitialTouchMode
-				/// </java-name>
-				[Dot42.DexImport("setActivityInitialTouchMode", "(Z)V", AccessFlags = 1)]
-				public virtual void SetActivityInitialTouchMode(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setUp
 				/// </java-name>
 				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
@@ -876,44 +1736,88 @@ namespace Android.Test
 				}
 
 				/// <java-name>
-				/// runTest
+				/// getMockContentResolver
 				/// </java-name>
-				[Dot42.DexImport("runTest", "()V", AccessFlags = 4)]
-				protected internal override void RunTest() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getMockContentResolver", "()Landroid/test/mock/MockContentResolver;", AccessFlags = 1)]
+				public virtual global::Android.Test.Mock.MockContentResolver GetMockContentResolver() /* MethodBuilder.Create */ 
 				{
+						return default(global::Android.Test.Mock.MockContentResolver);
+				}
+
+				/// <java-name>
+				/// getMockContext
+				/// </java-name>
+				[Dot42.DexImport("getMockContext", "()Landroid/test/IsolatedContext;", AccessFlags = 1)]
+				public virtual global::Android.Test.IsolatedContext GetMockContext() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Test.IsolatedContext);
+				}
+
+				/// <java-name>
+				/// newResolverWithContentProviderFromSql
+				/// </java-name>
+				[Dot42.DexImport("newResolverWithContentProviderFromSql", "(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;IL" +
+    "java/lang/String;)Landroid/content/ContentResolver;", AccessFlags = 9, Signature = "<T:Landroid/content/ContentProvider;>(Landroid/content/Context;Ljava/lang/Class<T" +
+    "T;>;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Landroid/content/Con" +
+    "tentResolver;")]
+				public static global::Android.Content.ContentResolver NewResolverWithContentProviderFromSql<JavaT>(global::Android.Content.Context context, global::System.Type type, string @string, string string1, int int32, string string2) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.ContentResolver);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ActivityInstrumentationTestCase2() /* TypeBuilder.AddDefaultConstructor */ 
+				internal ProviderTestCase() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
-				/// getActivity
+				/// getProvider
 				/// </java-name>
-				public T Activity
+				public T Provider
 				{
-				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
-						get{ return GetActivity(); }
+				[Dot42.DexImport("getProvider", "()Landroid/content/ContentProvider;", AccessFlags = 1, Signature = "()TT;")]
+						get{ return GetProvider(); }
+				}
+
+				/// <java-name>
+				/// getMockContentResolver
+				/// </java-name>
+				public global::Android.Test.Mock.MockContentResolver MockContentResolver
+				{
+				[Dot42.DexImport("getMockContentResolver", "()Landroid/test/mock/MockContentResolver;", AccessFlags = 1)]
+						get{ return GetMockContentResolver(); }
+				}
+
+				/// <java-name>
+				/// getMockContext
+				/// </java-name>
+				public global::Android.Test.IsolatedContext MockContext
+				{
+				[Dot42.DexImport("getMockContext", "()Landroid/test/IsolatedContext;", AccessFlags = 1)]
+						get{ return GetMockContext(); }
 				}
 
 		}
 
 		/// <java-name>
-		/// android/test/AndroidTestCase
+		/// android/test/ProviderTestCase2
 		/// </java-name>
-		[Dot42.DexImport("android/test/AndroidTestCase", AccessFlags = 33)]
-		public partial class AndroidTestCase : global::Junit.Framework.TestCase
+		[Dot42.DexImport("android/test/ProviderTestCase2", AccessFlags = 1057, Signature = "<T:Landroid/content/ContentProvider;>Landroid/test/AndroidTestCase;")]
+		public abstract partial class ProviderTestCase2<T> : global::Android.Test.AndroidTestCase
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// mContext
-				/// </java-name>
-				[Dot42.DexImport("mContext", "Landroid/content/Context;", AccessFlags = 4)]
-				protected internal global::Android.Content.Context MContext;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AndroidTestCase() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/Class;Ljava/lang/String;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;Ljava/lang/String;)V")]
+				public ProviderTestCase2(global::System.Type type, string @string) /* MethodBuilder.Create */ 
 				{
+				}
+
+				/// <java-name>
+				/// getProvider
+				/// </java-name>
+				[Dot42.DexImport("getProvider", "()Landroid/content/ContentProvider;", AccessFlags = 1, Signature = "()TT;")]
+				public virtual T GetProvider() /* MethodBuilder.Create */ 
+				{
+						return default(T);
 				}
 
 				/// <java-name>
@@ -933,383 +1837,65 @@ namespace Android.Test
 				}
 
 				/// <java-name>
-				/// testAndroidTestCaseSetupProperly
+				/// getMockContentResolver
 				/// </java-name>
-				[Dot42.DexImport("testAndroidTestCaseSetupProperly", "()V", AccessFlags = 1)]
-				public virtual void TestAndroidTestCaseSetupProperly() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getMockContentResolver", "()Landroid/test/mock/MockContentResolver;", AccessFlags = 1)]
+				public virtual global::Android.Test.Mock.MockContentResolver GetMockContentResolver() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Test.Mock.MockContentResolver);
+				}
+
+				/// <java-name>
+				/// getMockContext
+				/// </java-name>
+				[Dot42.DexImport("getMockContext", "()Landroid/test/IsolatedContext;", AccessFlags = 1)]
+				public virtual global::Android.Test.IsolatedContext GetMockContext() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Test.IsolatedContext);
+				}
+
+				/// <java-name>
+				/// newResolverWithContentProviderFromSql
+				/// </java-name>
+				[Dot42.DexImport("newResolverWithContentProviderFromSql", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;Lj" +
+    "ava/lang/String;ILjava/lang/String;)Landroid/content/ContentResolver;", AccessFlags = 9, Signature = "<T:Landroid/content/ContentProvider;>(Landroid/content/Context;Ljava/lang/String;" +
+    "Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)La" +
+    "ndroid/content/ContentResolver;")]
+				public static global::Android.Content.ContentResolver NewResolverWithContentProviderFromSql<JavaT>(global::Android.Content.Context context, string @string, global::System.Type type, string string1, string string2, int int32, string string3) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.ContentResolver);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ProviderTestCase2() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
-				/// setContext
+				/// getProvider
 				/// </java-name>
-				[Dot42.DexImport("setContext", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public virtual void SetContext(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				public T Provider
 				{
+				[Dot42.DexImport("getProvider", "()Landroid/content/ContentProvider;", AccessFlags = 1, Signature = "()TT;")]
+						get{ return GetProvider(); }
 				}
 
 				/// <java-name>
-				/// getContext
+				/// getMockContentResolver
 				/// </java-name>
-				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 1)]
-				public virtual global::Android.Content.Context GetContext() /* MethodBuilder.Create */ 
+				public global::Android.Test.Mock.MockContentResolver MockContentResolver
 				{
-						return default(global::Android.Content.Context);
+				[Dot42.DexImport("getMockContentResolver", "()Landroid/test/mock/MockContentResolver;", AccessFlags = 1)]
+						get{ return GetMockContentResolver(); }
 				}
 
 				/// <java-name>
-				/// assertActivityRequiresPermission
+				/// getMockContext
 				/// </java-name>
-				[Dot42.DexImport("assertActivityRequiresPermission", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void AssertActivityRequiresPermission(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				public global::Android.Test.IsolatedContext MockContext
 				{
-				}
-
-				/// <java-name>
-				/// assertReadingContentUriRequiresPermission
-				/// </java-name>
-				[Dot42.DexImport("assertReadingContentUriRequiresPermission", "(Landroid/net/Uri;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void AssertReadingContentUriRequiresPermission(global::Android.Net.Uri uri, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// assertWritingContentUriRequiresPermission
-				/// </java-name>
-				[Dot42.DexImport("assertWritingContentUriRequiresPermission", "(Landroid/net/Uri;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void AssertWritingContentUriRequiresPermission(global::Android.Net.Uri uri, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// scrubClass
-				/// </java-name>
-				[Dot42.DexImport("scrubClass", "(Ljava/lang/Class;)V", AccessFlags = 4, Signature = "(Ljava/lang/Class<*>;)V")]
-				protected internal virtual void ScrubClass(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContext
-				/// </java-name>
-				public global::Android.Content.Context Context
-				{
-				[Dot42.DexImport("getContext", "()Landroid/content/Context;", AccessFlags = 1)]
-						get{ return GetContext(); }
-				[Dot42.DexImport("setContext", "(Landroid/content/Context;)V", AccessFlags = 1)]
-						set{ SetContext(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/TouchUtils
-		/// </java-name>
-		[Dot42.DexImport("android/test/TouchUtils", AccessFlags = 33)]
-		public partial class TouchUtils
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public TouchUtils() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragQuarterScreenDown
-				/// </java-name>
-				[Dot42.DexImport("dragQuarterScreenDown", "(Landroid/test/ActivityInstrumentationTestCase;)V", AccessFlags = 9)]
-				public static void DragQuarterScreenDown(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragQuarterScreenDown
-				/// </java-name>
-				[Dot42.DexImport("dragQuarterScreenDown", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;)V", AccessFlags = 9)]
-				public static void DragQuarterScreenDown(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragQuarterScreenUp
-				/// </java-name>
-				[Dot42.DexImport("dragQuarterScreenUp", "(Landroid/test/ActivityInstrumentationTestCase;)V", AccessFlags = 9)]
-				public static void DragQuarterScreenUp(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragQuarterScreenUp
-				/// </java-name>
-				[Dot42.DexImport("dragQuarterScreenUp", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;)V", AccessFlags = 9)]
-				public static void DragQuarterScreenUp(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// scrollToBottom
-				/// </java-name>
-				[Dot42.DexImport("scrollToBottom", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/ViewGroup;)V", AccessFlags = 9)]
-				public static void ScrollToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// scrollToBottom
-				/// </java-name>
-				[Dot42.DexImport("scrollToBottom", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/ViewGr" +
-    "oup;)V", AccessFlags = 9)]
-				public static void ScrollToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// scrollToTop
-				/// </java-name>
-				[Dot42.DexImport("scrollToTop", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/ViewGroup;)V", AccessFlags = 9)]
-				public static void ScrollToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// scrollToTop
-				/// </java-name>
-				[Dot42.DexImport("scrollToTop", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/ViewGr" +
-    "oup;)V", AccessFlags = 9)]
-				public static void ScrollToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragViewToBottom
-				/// </java-name>
-				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void DragViewToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragViewToBottom
-				/// </java-name>
-				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/View;)" +
-    "V", AccessFlags = 9)]
-				public static void DragViewToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragViewToBottom
-				/// </java-name>
-				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void DragViewToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragViewToBottom
-				/// </java-name>
-				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/View;I" +
-    ")V", AccessFlags = 9)]
-				public static void DragViewToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// tapView
-				/// </java-name>
-				[Dot42.DexImport("tapView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void TapView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// touchAndCancelView
-				/// </java-name>
-				[Dot42.DexImport("touchAndCancelView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void TouchAndCancelView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clickView
-				/// </java-name>
-				[Dot42.DexImport("clickView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void ClickView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// longClickView
-				/// </java-name>
-				[Dot42.DexImport("longClickView", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void LongClickView(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// longClickView
-				/// </java-name>
-				[Dot42.DexImport("longClickView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void LongClickView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragViewToTop
-				/// </java-name>
-				[Dot42.DexImport("dragViewToTop", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void DragViewToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragViewToTop
-				/// </java-name>
-				[Dot42.DexImport("dragViewToTop", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void DragViewToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragViewToTop
-				/// </java-name>
-				[Dot42.DexImport("dragViewToTop", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void DragViewToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragViewToTop
-				/// </java-name>
-				[Dot42.DexImport("dragViewToTop", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void DragViewToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dragViewBy
-				/// </java-name>
-				[Dot42.DexImport("dragViewBy", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
-				public static int DragViewBy(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dragViewBy
-				/// </java-name>
-				[Dot42.DexImport("dragViewBy", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
-				public static int DragViewBy(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dragViewTo
-				/// </java-name>
-				[Dot42.DexImport("dragViewTo", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
-				public static int DragViewTo(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dragViewTo
-				/// </java-name>
-				[Dot42.DexImport("dragViewTo", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
-				public static int DragViewTo(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dragViewToX
-				/// </java-name>
-				[Dot42.DexImport("dragViewToX", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
-				public static int DragViewToX(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dragViewToX
-				/// </java-name>
-				[Dot42.DexImport("dragViewToX", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
-				public static int DragViewToX(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dragViewToY
-				/// </java-name>
-				[Dot42.DexImport("dragViewToY", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
-				public static int DragViewToY(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dragViewToY
-				/// </java-name>
-				[Dot42.DexImport("dragViewToY", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
-				public static int DragViewToY(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// drag
-				/// </java-name>
-				[Dot42.DexImport("drag", "(Landroid/test/ActivityInstrumentationTestCase;FFFFI)V", AccessFlags = 9)]
-				public static void Drag(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, float single, float single1, float single2, float single3, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// drag
-				/// </java-name>
-				[Dot42.DexImport("drag", "(Landroid/test/InstrumentationTestCase;FFFFI)V", AccessFlags = 9)]
-				public static void Drag(global::Android.Test.InstrumentationTestCase instrumentationTestCase, float single, float single1, float single2, float single3, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/SyncBaseInstrumentation
-		/// </java-name>
-		[Dot42.DexImport("android/test/SyncBaseInstrumentation", AccessFlags = 33)]
-		public partial class SyncBaseInstrumentation : global::Android.Test.InstrumentationTestCase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SyncBaseInstrumentation() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setUp
-				/// </java-name>
-				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
-				protected internal override void SetUp() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// syncProvider
-				/// </java-name>
-				[Dot42.DexImport("syncProvider", "(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal virtual void SyncProvider(global::Android.Net.Uri uri, string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// cancelSyncsandDisableAutoSync
-				/// </java-name>
-				[Dot42.DexImport("cancelSyncsandDisableAutoSync", "()V", AccessFlags = 4)]
-				protected internal virtual void CancelSyncsandDisableAutoSync() /* MethodBuilder.Create */ 
-				{
+				[Dot42.DexImport("getMockContext", "()Landroid/test/IsolatedContext;", AccessFlags = 1)]
+						get{ return GetMockContext(); }
 				}
 
 		}
@@ -1637,854 +2223,6 @@ namespace Android.Test
 		}
 
 		/// <java-name>
-		/// android/test/ActivityInstrumentationTestCase
-		/// </java-name>
-		[Dot42.DexImport("android/test/ActivityInstrumentationTestCase", AccessFlags = 1057, Signature = "<T:Landroid/app/Activity;>Landroid/test/ActivityTestCase;")]
-		public abstract partial class ActivityInstrumentationTestCase<T> : global::Android.Test.ActivityTestCase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/Class<TT;>;)V")]
-				public ActivityInstrumentationTestCase(string @string, global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Class;Z)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/Class<TT;>;Z)V")]
-				public ActivityInstrumentationTestCase(string @string, global::System.Type type, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getActivity
-				/// </java-name>
-				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
-				public new virtual T GetActivity() /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// setUp
-				/// </java-name>
-				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
-				protected internal override void SetUp() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// tearDown
-				/// </java-name>
-				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
-				protected internal override void TearDown() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// testActivityTestCaseSetUpProperly
-				/// </java-name>
-				[Dot42.DexImport("testActivityTestCaseSetUpProperly", "()V", AccessFlags = 1)]
-				public virtual void TestActivityTestCaseSetUpProperly() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ActivityInstrumentationTestCase() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getActivity
-				/// </java-name>
-				public T Activity
-				{
-				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
-						get{ return GetActivity(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/FlakyTest
-		/// </java-name>
-		[Dot42.DexImport("android/test/FlakyTest", AccessFlags = 9729)]
-		public partial interface IFlakyTest : global::Java.Lang.Annotation.IAnnotation
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// tolerance
-				/// </java-name>
-				[Dot42.DexImport("tolerance", "()I", AccessFlags = 1025)]
-				int Tolerance() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/test/InstrumentationTestSuite
-		/// </java-name>
-		[Dot42.DexImport("android/test/InstrumentationTestSuite", AccessFlags = 33)]
-		public partial class InstrumentationTestSuite : global::Junit.Framework.TestSuite
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
-				public InstrumentationTestSuite(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Landroid/app/Instrumentation;)V", AccessFlags = 1)]
-				public InstrumentationTestSuite(string @string, global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Class;Landroid/app/Instrumentation;)V", AccessFlags = 1)]
-				public InstrumentationTestSuite(global::System.Type type, global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addTestSuite
-				/// </java-name>
-				[Dot42.DexImport("addTestSuite", "(Ljava/lang/Class;)V", AccessFlags = 1)]
-				public override void AddTestSuite(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// runTest
-				/// </java-name>
-				[Dot42.DexImport("runTest", "(Ljunit/framework/Test;Ljunit/framework/TestResult;)V", AccessFlags = 1)]
-				public override void RunTest(global::Junit.Framework.ITest test, global::Junit.Framework.TestResult testResult) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InstrumentationTestSuite() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/ActivityTestCase
-		/// </java-name>
-		[Dot42.DexImport("android/test/ActivityTestCase", AccessFlags = 1057)]
-		public abstract partial class ActivityTestCase : global::Android.Test.InstrumentationTestCase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ActivityTestCase() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getActivity
-				/// </java-name>
-				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 4)]
-				protected internal virtual global::Android.App.Activity GetActivity() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.App.Activity);
-				}
-
-				/// <java-name>
-				/// setActivity
-				/// </java-name>
-				[Dot42.DexImport("setActivity", "(Landroid/app/Activity;)V", AccessFlags = 4)]
-				protected internal virtual void SetActivity(global::Android.App.Activity activity) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// scrubClass
-				/// </java-name>
-				[Dot42.DexImport("scrubClass", "(Ljava/lang/Class;)V", AccessFlags = 4, Signature = "(Ljava/lang/Class<*>;)V")]
-				protected internal virtual void ScrubClass(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getActivity
-				/// </java-name>
-				protected internal global::Android.App.Activity Activity
-				{
-				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 4)]
-						get{ return GetActivity(); }
-				[Dot42.DexImport("setActivity", "(Landroid/app/Activity;)V", AccessFlags = 4)]
-						set{ SetActivity(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/ActivityUnitTestCase
-		/// </java-name>
-		[Dot42.DexImport("android/test/ActivityUnitTestCase", AccessFlags = 1057, Signature = "<T:Landroid/app/Activity;>Landroid/test/ActivityTestCase;")]
-		public abstract partial class ActivityUnitTestCase<T> : global::Android.Test.ActivityTestCase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;)V")]
-				public ActivityUnitTestCase(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getActivity
-				/// </java-name>
-				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
-				public new virtual T GetActivity() /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// setUp
-				/// </java-name>
-				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
-				protected internal override void SetUp() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// startActivity
-				/// </java-name>
-				[Dot42.DexImport("startActivity", "(Landroid/content/Intent;Landroid/os/Bundle;Ljava/lang/Object;)Landroid/app/Activ" +
-    "ity;", AccessFlags = 4, Signature = "(Landroid/content/Intent;Landroid/os/Bundle;Ljava/lang/Object;)TT;")]
-				protected internal virtual T StartActivity(global::Android.Content.Intent intent, global::Android.Os.Bundle bundle, object @object) /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// tearDown
-				/// </java-name>
-				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
-				protected internal override void TearDown() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setApplication
-				/// </java-name>
-				[Dot42.DexImport("setApplication", "(Landroid/app/Application;)V", AccessFlags = 1)]
-				public virtual void SetApplication(global::Android.App.Application application) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setActivityContext
-				/// </java-name>
-				[Dot42.DexImport("setActivityContext", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public virtual void SetActivityContext(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRequestedOrientation
-				/// </java-name>
-				[Dot42.DexImport("getRequestedOrientation", "()I", AccessFlags = 1)]
-				public virtual int GetRequestedOrientation() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getStartedActivityIntent
-				/// </java-name>
-				[Dot42.DexImport("getStartedActivityIntent", "()Landroid/content/Intent;", AccessFlags = 1)]
-				public virtual global::Android.Content.Intent GetStartedActivityIntent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Intent);
-				}
-
-				/// <java-name>
-				/// getStartedActivityRequest
-				/// </java-name>
-				[Dot42.DexImport("getStartedActivityRequest", "()I", AccessFlags = 1)]
-				public virtual int GetStartedActivityRequest() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isFinishCalled
-				/// </java-name>
-				[Dot42.DexImport("isFinishCalled", "()Z", AccessFlags = 1)]
-				public virtual bool IsFinishCalled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getFinishedActivityRequest
-				/// </java-name>
-				[Dot42.DexImport("getFinishedActivityRequest", "()I", AccessFlags = 1)]
-				public virtual int GetFinishedActivityRequest() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ActivityUnitTestCase() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getActivity
-				/// </java-name>
-				public T Activity
-				{
-				[Dot42.DexImport("getActivity", "()Landroid/app/Activity;", AccessFlags = 1, Signature = "()TT;")]
-						get{ return GetActivity(); }
-				}
-
-				/// <java-name>
-				/// getRequestedOrientation
-				/// </java-name>
-				public int RequestedOrientation
-				{
-				[Dot42.DexImport("getRequestedOrientation", "()I", AccessFlags = 1)]
-						get{ return GetRequestedOrientation(); }
-				}
-
-				/// <java-name>
-				/// getStartedActivityIntent
-				/// </java-name>
-				public global::Android.Content.Intent StartedActivityIntent
-				{
-				[Dot42.DexImport("getStartedActivityIntent", "()Landroid/content/Intent;", AccessFlags = 1)]
-						get{ return GetStartedActivityIntent(); }
-				}
-
-				/// <java-name>
-				/// getStartedActivityRequest
-				/// </java-name>
-				public int StartedActivityRequest
-				{
-				[Dot42.DexImport("getStartedActivityRequest", "()I", AccessFlags = 1)]
-						get{ return GetStartedActivityRequest(); }
-				}
-
-				/// <java-name>
-				/// getFinishedActivityRequest
-				/// </java-name>
-				public int FinishedActivityRequest
-				{
-				[Dot42.DexImport("getFinishedActivityRequest", "()I", AccessFlags = 1)]
-						get{ return GetFinishedActivityRequest(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/ApplicationTestCase
-		/// </java-name>
-		[Dot42.DexImport("android/test/ApplicationTestCase", AccessFlags = 1057, Signature = "<T:Landroid/app/Application;>Landroid/test/AndroidTestCase;")]
-		public abstract partial class ApplicationTestCase<T> : global::Android.Test.AndroidTestCase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;)V")]
-				public ApplicationTestCase(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getApplication
-				/// </java-name>
-				[Dot42.DexImport("getApplication", "()Landroid/app/Application;", AccessFlags = 1, Signature = "()TT;")]
-				public virtual T GetApplication() /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// setUp
-				/// </java-name>
-				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
-				protected internal override void SetUp() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createApplication
-				/// </java-name>
-				[Dot42.DexImport("createApplication", "()V", AccessFlags = 20)]
-				protected internal void CreateApplication() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// terminateApplication
-				/// </java-name>
-				[Dot42.DexImport("terminateApplication", "()V", AccessFlags = 20)]
-				protected internal void TerminateApplication() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// tearDown
-				/// </java-name>
-				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
-				protected internal override void TearDown() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSystemContext
-				/// </java-name>
-				[Dot42.DexImport("getSystemContext", "()Landroid/content/Context;", AccessFlags = 1)]
-				public virtual global::Android.Content.Context GetSystemContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Context);
-				}
-
-				/// <java-name>
-				/// testApplicationTestCaseSetUpProperly
-				/// </java-name>
-				[Dot42.DexImport("testApplicationTestCaseSetUpProperly", "()V", AccessFlags = 17)]
-				public void TestApplicationTestCaseSetUpProperly() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ApplicationTestCase() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getApplication
-				/// </java-name>
-				public T Application
-				{
-				[Dot42.DexImport("getApplication", "()Landroid/app/Application;", AccessFlags = 1, Signature = "()TT;")]
-						get{ return GetApplication(); }
-				}
-
-				/// <java-name>
-				/// getSystemContext
-				/// </java-name>
-				public global::Android.Content.Context SystemContext
-				{
-				[Dot42.DexImport("getSystemContext", "()Landroid/content/Context;", AccessFlags = 1)]
-						get{ return GetSystemContext(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/UiThreadTest
-		/// </java-name>
-		[Dot42.DexImport("android/test/UiThreadTest", AccessFlags = 9729)]
-		public partial interface IUiThreadTest : global::Java.Lang.Annotation.IAnnotation
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
-		/// android/test/ProviderTestCase
-		/// </java-name>
-		[Dot42.DexImport("android/test/ProviderTestCase", AccessFlags = 1057, Signature = "<T:Landroid/content/ContentProvider;>Landroid/test/InstrumentationTestCase;")]
-		public abstract partial class ProviderTestCase<T> : global::Android.Test.InstrumentationTestCase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/Class;Ljava/lang/String;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;Ljava/lang/String;)V")]
-				public ProviderTestCase(global::System.Type type, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Landroid/content/ContentProvider;", AccessFlags = 1, Signature = "()TT;")]
-				public virtual T GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// setUp
-				/// </java-name>
-				[Dot42.DexImport("setUp", "()V", AccessFlags = 4)]
-				protected internal override void SetUp() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// tearDown
-				/// </java-name>
-				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
-				protected internal override void TearDown() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMockContentResolver
-				/// </java-name>
-				[Dot42.DexImport("getMockContentResolver", "()Landroid/test/mock/MockContentResolver;", AccessFlags = 1)]
-				public virtual global::Android.Test.Mock.MockContentResolver GetMockContentResolver() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Test.Mock.MockContentResolver);
-				}
-
-				/// <java-name>
-				/// getMockContext
-				/// </java-name>
-				[Dot42.DexImport("getMockContext", "()Landroid/test/IsolatedContext;", AccessFlags = 1)]
-				public virtual global::Android.Test.IsolatedContext GetMockContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Test.IsolatedContext);
-				}
-
-				/// <java-name>
-				/// newResolverWithContentProviderFromSql
-				/// </java-name>
-				[Dot42.DexImport("newResolverWithContentProviderFromSql", "(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;IL" +
-    "java/lang/String;)Landroid/content/ContentResolver;", AccessFlags = 9, Signature = "<T:Landroid/content/ContentProvider;>(Landroid/content/Context;Ljava/lang/Class<T" +
-    "T;>;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Landroid/content/Con" +
-    "tentResolver;")]
-				public static global::Android.Content.ContentResolver NewResolverWithContentProviderFromSql<JavaT>(global::Android.Content.Context context, global::System.Type type, string @string, string string1, int int32, string string2) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ContentResolver);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProviderTestCase() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				public T Provider
-				{
-				[Dot42.DexImport("getProvider", "()Landroid/content/ContentProvider;", AccessFlags = 1, Signature = "()TT;")]
-						get{ return GetProvider(); }
-				}
-
-				/// <java-name>
-				/// getMockContentResolver
-				/// </java-name>
-				public global::Android.Test.Mock.MockContentResolver MockContentResolver
-				{
-				[Dot42.DexImport("getMockContentResolver", "()Landroid/test/mock/MockContentResolver;", AccessFlags = 1)]
-						get{ return GetMockContentResolver(); }
-				}
-
-				/// <java-name>
-				/// getMockContext
-				/// </java-name>
-				public global::Android.Test.IsolatedContext MockContext
-				{
-				[Dot42.DexImport("getMockContext", "()Landroid/test/IsolatedContext;", AccessFlags = 1)]
-						get{ return GetMockContext(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/AndroidTestRunner
-		/// </java-name>
-		[Dot42.DexImport("android/test/AndroidTestRunner", AccessFlags = 33)]
-		public partial class AndroidTestRunner : global::Junit.Runner.BaseTestRunner
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AndroidTestRunner() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTestClassName
-				/// </java-name>
-				[Dot42.DexImport("setTestClassName", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetTestClassName(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTest
-				/// </java-name>
-				[Dot42.DexImport("setTest", "(Ljunit/framework/Test;)V", AccessFlags = 1)]
-				public virtual void SetTest(global::Junit.Framework.ITest test) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clearTestListeners
-				/// </java-name>
-				[Dot42.DexImport("clearTestListeners", "()V", AccessFlags = 1)]
-				public virtual void ClearTestListeners() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addTestListener
-				/// </java-name>
-				[Dot42.DexImport("addTestListener", "(Ljunit/framework/TestListener;)V", AccessFlags = 1)]
-				public virtual void AddTestListener(global::Junit.Framework.ITestListener testListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createTestResult
-				/// </java-name>
-				[Dot42.DexImport("createTestResult", "()Ljunit/framework/TestResult;", AccessFlags = 4)]
-				protected internal virtual global::Junit.Framework.TestResult CreateTestResult() /* MethodBuilder.Create */ 
-				{
-						return default(global::Junit.Framework.TestResult);
-				}
-
-				/// <java-name>
-				/// getTestCases
-				/// </java-name>
-				[Dot42.DexImport("getTestCases", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljunit/framework/TestCase;>;")]
-				public virtual global::Java.Util.IList<global::Junit.Framework.TestCase> GetTestCases() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Junit.Framework.TestCase>);
-				}
-
-				/// <java-name>
-				/// getTestClassName
-				/// </java-name>
-				[Dot42.DexImport("getTestClassName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetTestClassName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getTestResult
-				/// </java-name>
-				[Dot42.DexImport("getTestResult", "()Ljunit/framework/TestResult;", AccessFlags = 1)]
-				public virtual global::Junit.Framework.TestResult GetTestResult() /* MethodBuilder.Create */ 
-				{
-						return default(global::Junit.Framework.TestResult);
-				}
-
-				/// <java-name>
-				/// runTest
-				/// </java-name>
-				[Dot42.DexImport("runTest", "()V", AccessFlags = 1)]
-				public virtual void RunTest() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// runTest
-				/// </java-name>
-				[Dot42.DexImport("runTest", "(Ljunit/framework/TestResult;)V", AccessFlags = 1)]
-				public virtual void RunTest(global::Junit.Framework.TestResult testResult) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setContext
-				/// </java-name>
-				[Dot42.DexImport("setContext", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public virtual void SetContext(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setInstrumentation
-				/// </java-name>
-				[Dot42.DexImport("setInstrumentation", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
-				public virtual void SetInstrumentation(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setInstrumentaiton
-				/// </java-name>
-				[Dot42.DexImport("setInstrumentaiton", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
-				public virtual void SetInstrumentaiton(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// loadSuiteClass
-				/// </java-name>
-				[Dot42.DexImport("loadSuiteClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 4)]
-				protected internal override global::System.Type LoadSuiteClass(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// testStarted
-				/// </java-name>
-				[Dot42.DexImport("testStarted", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void TestStarted(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// testEnded
-				/// </java-name>
-				[Dot42.DexImport("testEnded", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void TestEnded(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// testFailed
-				/// </java-name>
-				[Dot42.DexImport("testFailed", "(ILjunit/framework/Test;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public override void TestFailed(int int32, global::Junit.Framework.ITest test, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// runFailed
-				/// </java-name>
-				[Dot42.DexImport("runFailed", "(Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal override void RunFailed(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTestCases
-				/// </java-name>
-				public global::Java.Util.IList<global::Junit.Framework.TestCase> TestCases
-				{
-				[Dot42.DexImport("getTestCases", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljunit/framework/TestCase;>;")]
-						get{ return GetTestCases(); }
-				}
-
-				/// <java-name>
-				/// getTestClassName
-				/// </java-name>
-				public string TestClassName
-				{
-				[Dot42.DexImport("getTestClassName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTestClassName(); }
-				}
-
-				/// <java-name>
-				/// getTestResult
-				/// </java-name>
-				public global::Junit.Framework.TestResult TestResult
-				{
-				[Dot42.DexImport("getTestResult", "()Ljunit/framework/TestResult;", AccessFlags = 1)]
-						get{ return GetTestResult(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/InstrumentationTestCase
-		/// </java-name>
-		[Dot42.DexImport("android/test/InstrumentationTestCase", AccessFlags = 33)]
-		public partial class InstrumentationTestCase : global::Junit.Framework.TestCase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public InstrumentationTestCase() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// injectInstrumentation
-				/// </java-name>
-				[Dot42.DexImport("injectInstrumentation", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
-				public virtual void InjectInstrumentation(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// injectInsrumentation
-				/// </java-name>
-				[Dot42.DexImport("injectInsrumentation", "(Landroid/app/Instrumentation;)V", AccessFlags = 1)]
-				public virtual void InjectInsrumentation(global::Android.App.Instrumentation instrumentation) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInstrumentation
-				/// </java-name>
-				[Dot42.DexImport("getInstrumentation", "()Landroid/app/Instrumentation;", AccessFlags = 1)]
-				public virtual global::Android.App.Instrumentation GetInstrumentation() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.App.Instrumentation);
-				}
-
-				/// <java-name>
-				/// launchActivity
-				/// </java-name>
-				[Dot42.DexImport("launchActivity", "(Ljava/lang/String;Ljava/lang/Class;Landroid/os/Bundle;)Landroid/app/Activity;", AccessFlags = 17, Signature = "<T:Landroid/app/Activity;>(Ljava/lang/String;Ljava/lang/Class<TT;>;Landroid/os/Bu" +
-    "ndle;)TT;")]
-				public T LaunchActivity<T>(string @string, global::System.Type type, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// launchActivityWithIntent
-				/// </java-name>
-				[Dot42.DexImport("launchActivityWithIntent", "(Ljava/lang/String;Ljava/lang/Class;Landroid/content/Intent;)Landroid/app/Activit" +
-    "y;", AccessFlags = 17, Signature = "<T:Landroid/app/Activity;>(Ljava/lang/String;Ljava/lang/Class<TT;>;Landroid/conte" +
-    "nt/Intent;)TT;")]
-				public T LaunchActivityWithIntent<T>(string @string, global::System.Type type, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// runTestOnUiThread
-				/// </java-name>
-				[Dot42.DexImport("runTestOnUiThread", "(Ljava/lang/Runnable;)V", AccessFlags = 1)]
-				public virtual void RunTestOnUiThread(global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// runTest
-				/// </java-name>
-				[Dot42.DexImport("runTest", "()V", AccessFlags = 4)]
-				protected internal override void RunTest() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendKeys
-				/// </java-name>
-				[Dot42.DexImport("sendKeys", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SendKeys(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendKeys
-				/// </java-name>
-				[Dot42.DexImport("sendKeys", "([I)V", AccessFlags = 129)]
-				public virtual void SendKeys(params int[] int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendRepeatedKeys
-				/// </java-name>
-				[Dot42.DexImport("sendRepeatedKeys", "([I)V", AccessFlags = 129)]
-				public virtual void SendRepeatedKeys(params int[] int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// tearDown
-				/// </java-name>
-				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
-				protected internal override void TearDown() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInstrumentation
-				/// </java-name>
-				public global::Android.App.Instrumentation Instrumentation
-				{
-				[Dot42.DexImport("getInstrumentation", "()Landroid/app/Instrumentation;", AccessFlags = 1)]
-						get{ return GetInstrumentation(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// android/test/SingleLaunchActivityTestCase
 		/// </java-name>
 		[Dot42.DexImport("android/test/SingleLaunchActivityTestCase", AccessFlags = 1057, Signature = "<T:Landroid/app/Activity;>Landroid/test/InstrumentationTestCase;")]
@@ -2546,71 +2284,15 @@ namespace Android.Test
 		}
 
 		/// <java-name>
-		/// android/test/AssertionFailedError
+		/// android/test/SyncBaseInstrumentation
 		/// </java-name>
-		[Dot42.DexImport("android/test/AssertionFailedError", AccessFlags = 33)]
-		public partial class AssertionFailedError : global::Java.Lang.Error
+		[Dot42.DexImport("android/test/SyncBaseInstrumentation", AccessFlags = 33)]
+		public partial class SyncBaseInstrumentation : global::Android.Test.InstrumentationTestCase
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AssertionFailedError() /* MethodBuilder.Create */ 
+				public SyncBaseInstrumentation() /* MethodBuilder.Create */ 
 				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public AssertionFailedError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/ComparisonFailure
-		/// </java-name>
-		[Dot42.DexImport("android/test/ComparisonFailure", AccessFlags = 33)]
-		public partial class ComparisonFailure : global::Android.Test.AssertionFailedError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public ComparisonFailure(string @string, string string1, string string2) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMessage
-				/// </java-name>
-				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMessage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ComparisonFailure() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/test/ProviderTestCase2
-		/// </java-name>
-		[Dot42.DexImport("android/test/ProviderTestCase2", AccessFlags = 1057, Signature = "<T:Landroid/content/ContentProvider;>Landroid/test/AndroidTestCase;")]
-		public abstract partial class ProviderTestCase2<T> : global::Android.Test.AndroidTestCase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/Class;Ljava/lang/String;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TT;>;Ljava/lang/String;)V")]
-				public ProviderTestCase2(global::System.Type type, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Landroid/content/ContentProvider;", AccessFlags = 1, Signature = "()TT;")]
-				public virtual T GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(T);
 				}
 
 				/// <java-name>
@@ -2622,134 +2304,452 @@ namespace Android.Test
 				}
 
 				/// <java-name>
-				/// tearDown
+				/// syncProvider
 				/// </java-name>
-				[Dot42.DexImport("tearDown", "()V", AccessFlags = 4)]
-				protected internal override void TearDown() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("syncProvider", "(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 4)]
+				protected internal virtual void SyncProvider(global::Android.Net.Uri uri, string @string, string string1) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getMockContentResolver
+				/// cancelSyncsandDisableAutoSync
 				/// </java-name>
-				[Dot42.DexImport("getMockContentResolver", "()Landroid/test/mock/MockContentResolver;", AccessFlags = 1)]
-				public virtual global::Android.Test.Mock.MockContentResolver GetMockContentResolver() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("cancelSyncsandDisableAutoSync", "()V", AccessFlags = 4)]
+				protected internal virtual void CancelSyncsandDisableAutoSync() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Test.Mock.MockContentResolver);
-				}
-
-				/// <java-name>
-				/// getMockContext
-				/// </java-name>
-				[Dot42.DexImport("getMockContext", "()Landroid/test/IsolatedContext;", AccessFlags = 1)]
-				public virtual global::Android.Test.IsolatedContext GetMockContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Test.IsolatedContext);
-				}
-
-				/// <java-name>
-				/// newResolverWithContentProviderFromSql
-				/// </java-name>
-				[Dot42.DexImport("newResolverWithContentProviderFromSql", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;Lj" +
-    "ava/lang/String;ILjava/lang/String;)Landroid/content/ContentResolver;", AccessFlags = 9, Signature = "<T:Landroid/content/ContentProvider;>(Landroid/content/Context;Ljava/lang/String;" +
-    "Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)La" +
-    "ndroid/content/ContentResolver;")]
-				public static global::Android.Content.ContentResolver NewResolverWithContentProviderFromSql<JavaT>(global::Android.Content.Context context, string @string, global::System.Type type, string string1, string string2, int int32, string string3) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ContentResolver);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProviderTestCase2() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				public T Provider
-				{
-				[Dot42.DexImport("getProvider", "()Landroid/content/ContentProvider;", AccessFlags = 1, Signature = "()TT;")]
-						get{ return GetProvider(); }
-				}
-
-				/// <java-name>
-				/// getMockContentResolver
-				/// </java-name>
-				public global::Android.Test.Mock.MockContentResolver MockContentResolver
-				{
-				[Dot42.DexImport("getMockContentResolver", "()Landroid/test/mock/MockContentResolver;", AccessFlags = 1)]
-						get{ return GetMockContentResolver(); }
-				}
-
-				/// <java-name>
-				/// getMockContext
-				/// </java-name>
-				public global::Android.Test.IsolatedContext MockContext
-				{
-				[Dot42.DexImport("getMockContext", "()Landroid/test/IsolatedContext;", AccessFlags = 1)]
-						get{ return GetMockContext(); }
 				}
 
 		}
 
 		/// <java-name>
-		/// android/test/PerformanceTestCase
+		/// android/test/TouchUtils
 		/// </java-name>
-		[Dot42.DexImport("android/test/PerformanceTestCase", AccessFlags = 1537)]
-		public partial interface IPerformanceTestCase
+		[Dot42.DexImport("android/test/TouchUtils", AccessFlags = 33)]
+		public partial class TouchUtils
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// startPerformance
-				/// </java-name>
-				[Dot42.DexImport("startPerformance", "(Landroid/test/PerformanceTestCase$Intermediates;)I", AccessFlags = 1025)]
-				int StartPerformance(global::Android.Test.IPerformanceTestCase_IIntermediates performanceTestCase_IIntermediates) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public TouchUtils() /* MethodBuilder.Create */ 
+				{
+				}
 
 				/// <java-name>
-				/// isPerformanceOnly
+				/// dragQuarterScreenDown
 				/// </java-name>
-				[Dot42.DexImport("isPerformanceOnly", "()Z", AccessFlags = 1025)]
-				bool IsPerformanceOnly() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("dragQuarterScreenDown", "(Landroid/test/ActivityInstrumentationTestCase;)V", AccessFlags = 9)]
+				public static void DragQuarterScreenDown(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragQuarterScreenDown
+				/// </java-name>
+				[Dot42.DexImport("dragQuarterScreenDown", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;)V", AccessFlags = 9)]
+				public static void DragQuarterScreenDown(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragQuarterScreenUp
+				/// </java-name>
+				[Dot42.DexImport("dragQuarterScreenUp", "(Landroid/test/ActivityInstrumentationTestCase;)V", AccessFlags = 9)]
+				public static void DragQuarterScreenUp(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragQuarterScreenUp
+				/// </java-name>
+				[Dot42.DexImport("dragQuarterScreenUp", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;)V", AccessFlags = 9)]
+				public static void DragQuarterScreenUp(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// scrollToBottom
+				/// </java-name>
+				[Dot42.DexImport("scrollToBottom", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/ViewGroup;)V", AccessFlags = 9)]
+				public static void ScrollToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// scrollToBottom
+				/// </java-name>
+				[Dot42.DexImport("scrollToBottom", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/ViewGr" +
+    "oup;)V", AccessFlags = 9)]
+				public static void ScrollToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// scrollToTop
+				/// </java-name>
+				[Dot42.DexImport("scrollToTop", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/ViewGroup;)V", AccessFlags = 9)]
+				public static void ScrollToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// scrollToTop
+				/// </java-name>
+				[Dot42.DexImport("scrollToTop", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/ViewGr" +
+    "oup;)V", AccessFlags = 9)]
+				public static void ScrollToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragViewToBottom
+				/// </java-name>
+				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void DragViewToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragViewToBottom
+				/// </java-name>
+				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/View;)" +
+    "V", AccessFlags = 9)]
+				public static void DragViewToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragViewToBottom
+				/// </java-name>
+				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;I)V", AccessFlags = 9)]
+				public static void DragViewToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragViewToBottom
+				/// </java-name>
+				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/View;I" +
+    ")V", AccessFlags = 9)]
+				public static void DragViewToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// tapView
+				/// </java-name>
+				[Dot42.DexImport("tapView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void TapView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// touchAndCancelView
+				/// </java-name>
+				[Dot42.DexImport("touchAndCancelView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void TouchAndCancelView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clickView
+				/// </java-name>
+				[Dot42.DexImport("clickView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void ClickView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// longClickView
+				/// </java-name>
+				[Dot42.DexImport("longClickView", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void LongClickView(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// longClickView
+				/// </java-name>
+				[Dot42.DexImport("longClickView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void LongClickView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragViewToTop
+				/// </java-name>
+				[Dot42.DexImport("dragViewToTop", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void DragViewToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragViewToTop
+				/// </java-name>
+				[Dot42.DexImport("dragViewToTop", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;I)V", AccessFlags = 9)]
+				public static void DragViewToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragViewToTop
+				/// </java-name>
+				[Dot42.DexImport("dragViewToTop", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void DragViewToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragViewToTop
+				/// </java-name>
+				[Dot42.DexImport("dragViewToTop", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;I)V", AccessFlags = 9)]
+				public static void DragViewToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dragViewBy
+				/// </java-name>
+				[Dot42.DexImport("dragViewBy", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
+				public static int DragViewBy(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dragViewBy
+				/// </java-name>
+				[Dot42.DexImport("dragViewBy", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
+				public static int DragViewBy(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dragViewTo
+				/// </java-name>
+				[Dot42.DexImport("dragViewTo", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
+				public static int DragViewTo(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dragViewTo
+				/// </java-name>
+				[Dot42.DexImport("dragViewTo", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
+				public static int DragViewTo(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dragViewToX
+				/// </java-name>
+				[Dot42.DexImport("dragViewToX", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
+				public static int DragViewToX(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dragViewToX
+				/// </java-name>
+				[Dot42.DexImport("dragViewToX", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
+				public static int DragViewToX(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dragViewToY
+				/// </java-name>
+				[Dot42.DexImport("dragViewToY", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
+				public static int DragViewToY(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dragViewToY
+				/// </java-name>
+				[Dot42.DexImport("dragViewToY", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
+				public static int DragViewToY(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// drag
+				/// </java-name>
+				[Dot42.DexImport("drag", "(Landroid/test/ActivityInstrumentationTestCase;FFFFI)V", AccessFlags = 9)]
+				public static void Drag(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, float single, float single1, float single2, float single3, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// drag
+				/// </java-name>
+				[Dot42.DexImport("drag", "(Landroid/test/InstrumentationTestCase;FFFFI)V", AccessFlags = 9)]
+				public static void Drag(global::Android.Test.InstrumentationTestCase instrumentationTestCase, float single, float single1, float single2, float single3, int int32) /* MethodBuilder.Create */ 
+				{
+				}
 
 		}
 
 		/// <java-name>
-		/// android/test/PerformanceTestCase$Intermediates
+		/// android/test/ViewAsserts
 		/// </java-name>
-		[Dot42.DexImport("android/test/PerformanceTestCase$Intermediates", AccessFlags = 1545)]
-		public partial interface IPerformanceTestCase_IIntermediates
+		[Dot42.DexImport("android/test/ViewAsserts", AccessFlags = 33)]
+		public partial class ViewAsserts
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// setInternalIterations
-				/// </java-name>
-				[Dot42.DexImport("setInternalIterations", "(I)V", AccessFlags = 1025)]
-				void SetInternalIterations(int int32) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal ViewAsserts() /* MethodBuilder.Create */ 
+				{
+				}
 
 				/// <java-name>
-				/// startTiming
+				/// assertOnScreen
 				/// </java-name>
-				[Dot42.DexImport("startTiming", "(Z)V", AccessFlags = 1025)]
-				void StartTiming(bool boolean) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("assertOnScreen", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertOnScreen(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
 
 				/// <java-name>
-				/// addIntermediate
+				/// assertOffScreenBelow
 				/// </java-name>
-				[Dot42.DexImport("addIntermediate", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void AddIntermediate(string @string) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("assertOffScreenBelow", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertOffScreenBelow(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
 
 				/// <java-name>
-				/// addIntermediate
+				/// assertOffScreenAbove
 				/// </java-name>
-				[Dot42.DexImport("addIntermediate", "(Ljava/lang/String;J)V", AccessFlags = 1025)]
-				void AddIntermediate(string @string, long int64) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("assertOffScreenAbove", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertOffScreenAbove(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
 
 				/// <java-name>
-				/// finishTiming
+				/// assertHasScreenCoordinates
 				/// </java-name>
-				[Dot42.DexImport("finishTiming", "(Z)V", AccessFlags = 1025)]
-				void FinishTiming(bool boolean) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("assertHasScreenCoordinates", "(Landroid/view/View;Landroid/view/View;II)V", AccessFlags = 9)]
+				public static void AssertHasScreenCoordinates(global::Android.View.View view, global::Android.View.View view1, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertBaselineAligned
+				/// </java-name>
+				[Dot42.DexImport("assertBaselineAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertBaselineAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertRightAligned
+				/// </java-name>
+				[Dot42.DexImport("assertRightAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertRightAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertRightAligned
+				/// </java-name>
+				[Dot42.DexImport("assertRightAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
+				public static void AssertRightAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertLeftAligned
+				/// </java-name>
+				[Dot42.DexImport("assertLeftAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertLeftAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertLeftAligned
+				/// </java-name>
+				[Dot42.DexImport("assertLeftAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
+				public static void AssertLeftAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertBottomAligned
+				/// </java-name>
+				[Dot42.DexImport("assertBottomAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertBottomAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertBottomAligned
+				/// </java-name>
+				[Dot42.DexImport("assertBottomAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
+				public static void AssertBottomAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertTopAligned
+				/// </java-name>
+				[Dot42.DexImport("assertTopAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertTopAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertTopAligned
+				/// </java-name>
+				[Dot42.DexImport("assertTopAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
+				public static void AssertTopAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertHorizontalCenterAligned
+				/// </java-name>
+				[Dot42.DexImport("assertHorizontalCenterAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertHorizontalCenterAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertVerticalCenterAligned
+				/// </java-name>
+				[Dot42.DexImport("assertVerticalCenterAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertVerticalCenterAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertGroupIntegrity
+				/// </java-name>
+				[Dot42.DexImport("assertGroupIntegrity", "(Landroid/view/ViewGroup;)V", AccessFlags = 9)]
+				public static void AssertGroupIntegrity(global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertGroupContains
+				/// </java-name>
+				[Dot42.DexImport("assertGroupContains", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertGroupContains(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// assertGroupNotContains
+				/// </java-name>
+				[Dot42.DexImport("assertGroupNotContains", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 9)]
+				public static void AssertGroupNotContains(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
 
 		}
 

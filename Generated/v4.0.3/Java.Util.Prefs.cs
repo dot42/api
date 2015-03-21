@@ -417,27 +417,6 @@ namespace Java.Util.Prefs
 		}
 
 		/// <java-name>
-		/// java/util/prefs/PreferencesFactory
-		/// </java-name>
-		[Dot42.DexImport("java/util/prefs/PreferencesFactory", AccessFlags = 1537)]
-		public partial interface IPreferencesFactory
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// userRoot
-				/// </java-name>
-				[Dot42.DexImport("userRoot", "()Ljava/util/prefs/Preferences;", AccessFlags = 1025)]
-				global::Java.Util.Prefs.Preferences UserRoot() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// systemRoot
-				/// </java-name>
-				[Dot42.DexImport("systemRoot", "()Ljava/util/prefs/Preferences;", AccessFlags = 1025)]
-				global::Java.Util.Prefs.Preferences SystemRoot() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
 		/// java/util/prefs/BackingStoreException
 		/// </java-name>
 		[Dot42.DexImport("java/util/prefs/BackingStoreException", AccessFlags = 33)]
@@ -458,6 +437,92 @@ namespace Java.Util.Prefs
 				internal BackingStoreException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
+
+		}
+
+		/// <java-name>
+		/// java/util/prefs/NodeChangeListener
+		/// </java-name>
+		[Dot42.DexImport("java/util/prefs/NodeChangeListener", AccessFlags = 1537)]
+		public partial interface INodeChangeListener : global::Java.Util.IEventListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// childAdded
+				/// </java-name>
+				[Dot42.DexImport("childAdded", "(Ljava/util/prefs/NodeChangeEvent;)V", AccessFlags = 1025)]
+				void ChildAdded(global::Java.Util.Prefs.NodeChangeEvent nodeChangeEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// childRemoved
+				/// </java-name>
+				[Dot42.DexImport("childRemoved", "(Ljava/util/prefs/NodeChangeEvent;)V", AccessFlags = 1025)]
+				void ChildRemoved(global::Java.Util.Prefs.NodeChangeEvent nodeChangeEvent) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/util/prefs/InvalidPreferencesFormatException
+		/// </java-name>
+		[Dot42.DexImport("java/util/prefs/InvalidPreferencesFormatException", AccessFlags = 33)]
+		public partial class InvalidPreferencesFormatException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public InvalidPreferencesFormatException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public InvalidPreferencesFormatException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public InvalidPreferencesFormatException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal InvalidPreferencesFormatException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/util/prefs/PreferenceChangeListener
+		/// </java-name>
+		[Dot42.DexImport("java/util/prefs/PreferenceChangeListener", AccessFlags = 1537)]
+		public partial interface IPreferenceChangeListener : global::Java.Util.IEventListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// preferenceChange
+				/// </java-name>
+				[Dot42.DexImport("preferenceChange", "(Ljava/util/prefs/PreferenceChangeEvent;)V", AccessFlags = 1025)]
+				void PreferenceChange(global::Java.Util.Prefs.PreferenceChangeEvent preferenceChangeEvent) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/util/prefs/PreferencesFactory
+		/// </java-name>
+		[Dot42.DexImport("java/util/prefs/PreferencesFactory", AccessFlags = 1537)]
+		public partial interface IPreferencesFactory
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// userRoot
+				/// </java-name>
+				[Dot42.DexImport("userRoot", "()Ljava/util/prefs/Preferences;", AccessFlags = 1025)]
+				global::Java.Util.Prefs.Preferences UserRoot() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// systemRoot
+				/// </java-name>
+				[Dot42.DexImport("systemRoot", "()Ljava/util/prefs/Preferences;", AccessFlags = 1025)]
+				global::Java.Util.Prefs.Preferences SystemRoot() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -513,27 +578,6 @@ namespace Java.Util.Prefs
 				[Dot42.DexImport("getChild", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
 						get{ return GetChild(); }
 				}
-
-		}
-
-		/// <java-name>
-		/// java/util/prefs/NodeChangeListener
-		/// </java-name>
-		[Dot42.DexImport("java/util/prefs/NodeChangeListener", AccessFlags = 1537)]
-		public partial interface INodeChangeListener : global::Java.Util.IEventListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// childAdded
-				/// </java-name>
-				[Dot42.DexImport("childAdded", "(Ljava/util/prefs/NodeChangeEvent;)V", AccessFlags = 1025)]
-				void ChildAdded(global::Java.Util.Prefs.NodeChangeEvent nodeChangeEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// childRemoved
-				/// </java-name>
-				[Dot42.DexImport("childRemoved", "(Ljava/util/prefs/NodeChangeEvent;)V", AccessFlags = 1025)]
-				void ChildRemoved(global::Java.Util.Prefs.NodeChangeEvent nodeChangeEvent) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -606,35 +650,6 @@ namespace Java.Util.Prefs
 				{
 				[Dot42.DexImport("getNode", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
 						get{ return GetNode(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/util/prefs/InvalidPreferencesFormatException
-		/// </java-name>
-		[Dot42.DexImport("java/util/prefs/InvalidPreferencesFormatException", AccessFlags = 33)]
-		public partial class InvalidPreferencesFormatException : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public InvalidPreferencesFormatException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public InvalidPreferencesFormatException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public InvalidPreferencesFormatException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InvalidPreferencesFormatException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
 				}
 
 		}
@@ -928,21 +943,6 @@ namespace Java.Util.Prefs
 				{
 						return default(string);
 				}
-
-		}
-
-		/// <java-name>
-		/// java/util/prefs/PreferenceChangeListener
-		/// </java-name>
-		[Dot42.DexImport("java/util/prefs/PreferenceChangeListener", AccessFlags = 1537)]
-		public partial interface IPreferenceChangeListener : global::Java.Util.IEventListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// preferenceChange
-				/// </java-name>
-				[Dot42.DexImport("preferenceChange", "(Ljava/util/prefs/PreferenceChangeEvent;)V", AccessFlags = 1025)]
-				void PreferenceChange(global::Java.Util.Prefs.PreferenceChangeEvent preferenceChangeEvent) /* MethodBuilder.Create */ ;
 
 		}
 

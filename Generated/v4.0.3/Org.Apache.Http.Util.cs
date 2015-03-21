@@ -2,6 +2,162 @@
 namespace Org.Apache.Http.Util
 {
 		/// <java-name>
+		/// org/apache/http/util/ByteArrayBuffer
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/util/ByteArrayBuffer", AccessFlags = 49)]
+		public sealed partial class ByteArrayBuffer
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
+				public ByteArrayBuffer(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "([BII)V", AccessFlags = 1)]
+				public void Append(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public void Append(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(I)V", AccessFlags = 1)]
+				public void Append(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "([CII)V", AccessFlags = 1)]
+				public void Append(char[] @char, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(Lorg/apache/http/util/CharArrayBuffer;II)V", AccessFlags = 1)]
+				public void Append(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clear
+				/// </java-name>
+				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
+				public void Clear() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toByteArray
+				/// </java-name>
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
+				public sbyte[] JavaToByteArray() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// toByteArray
+				/// </java-name>
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] ToByteArray() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// byteAt
+				/// </java-name>
+				[Dot42.DexImport("byteAt", "(I)I", AccessFlags = 1)]
+				public int ByteAt(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// capacity
+				/// </java-name>
+				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
+				public int Capacity() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
+				public int Length() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// buffer
+				/// </java-name>
+				[Dot42.DexImport("buffer", "()[B", AccessFlags = 1)]
+				public sbyte[] JavaBuffer() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// buffer
+				/// </java-name>
+				[Dot42.DexImport("buffer", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public byte[] Buffer() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// setLength
+				/// </java-name>
+				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
+				public void SetLength(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+				public bool IsEmpty() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isFull
+				/// </java-name>
+				[Dot42.DexImport("isFull", "()Z", AccessFlags = 1)]
+				public bool IsFull() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ByteArrayBuffer() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// org/apache/http/util/CharArrayBuffer
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/util/CharArrayBuffer", AccessFlags = 49)]
@@ -225,6 +381,209 @@ namespace Org.Apache.Http.Util
 		}
 
 		/// <java-name>
+		/// org/apache/http/util/EncodingUtils
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/util/EncodingUtils", AccessFlags = 49)]
+		public sealed partial class EncodingUtils
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal EncodingUtils() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getString
+				/// </java-name>
+				[Dot42.DexImport("getString", "([BIILjava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetString(sbyte[] sByte, int int32, int int321, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getString
+				/// </java-name>
+				[Dot42.DexImport("getString", "([BIILjava/lang/String;)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
+				public static string GetString(byte[] @byte, int int32, int int321, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getString
+				/// </java-name>
+				[Dot42.DexImport("getString", "([BLjava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetString(sbyte[] sByte, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getString
+				/// </java-name>
+				[Dot42.DexImport("getString", "([BLjava/lang/String;)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
+				public static string GetString(byte[] @byte, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getBytes
+				/// </java-name>
+				[Dot42.DexImport("getBytes", "(Ljava/lang/String;Ljava/lang/String;)[B", AccessFlags = 9)]
+				public static sbyte[] JavaGetBytes(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getBytes
+				/// </java-name>
+				[Dot42.DexImport("getBytes", "(Ljava/lang/String;Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				public static byte[] GetBytes(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getAsciiBytes
+				/// </java-name>
+				[Dot42.DexImport("getAsciiBytes", "(Ljava/lang/String;)[B", AccessFlags = 9)]
+				public static sbyte[] JavaGetAsciiBytes(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// getAsciiBytes
+				/// </java-name>
+				[Dot42.DexImport("getAsciiBytes", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				public static byte[] GetAsciiBytes(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getAsciiString
+				/// </java-name>
+				[Dot42.DexImport("getAsciiString", "([BII)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetAsciiString(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getAsciiString
+				/// </java-name>
+				[Dot42.DexImport("getAsciiString", "([BII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
+				public static string GetAsciiString(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getAsciiString
+				/// </java-name>
+				[Dot42.DexImport("getAsciiString", "([B)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetAsciiString(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getAsciiString
+				/// </java-name>
+				[Dot42.DexImport("getAsciiString", "([B)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
+				public static string GetAsciiString(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/util/EntityUtils
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/util/EntityUtils", AccessFlags = 49)]
+		public sealed partial class EntityUtils
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal EntityUtils() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toByteArray
+				/// </java-name>
+				[Dot42.DexImport("toByteArray", "(Lorg/apache/http/HttpEntity;)[B", AccessFlags = 9)]
+				public static sbyte[] JavaToByteArray(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// toByteArray
+				/// </java-name>
+				[Dot42.DexImport("toByteArray", "(Lorg/apache/http/HttpEntity;)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				public static byte[] ToByteArray(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// getContentCharSet
+				/// </java-name>
+				[Dot42.DexImport("getContentCharSet", "(Lorg/apache/http/HttpEntity;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetContentCharSet(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "(Lorg/apache/http/HttpEntity;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string ToString(global::Org.Apache.Http.IHttpEntity httpEntity, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "(Lorg/apache/http/HttpEntity;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string ToString(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/util/ExceptionUtils
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/util/ExceptionUtils", AccessFlags = 49)]
+		public sealed partial class ExceptionUtils
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal ExceptionUtils() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// initCause
+				/// </java-name>
+				[Dot42.DexImport("initCause", "(Ljava/lang/Throwable;Ljava/lang/Throwable;)V", AccessFlags = 9)]
+				public static void InitCause(global::System.Exception exception, global::System.Exception exception1) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// org/apache/http/util/LangUtils
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/util/LangUtils", AccessFlags = 49)]
@@ -289,221 +648,6 @@ namespace Org.Apache.Http.Util
 				public static bool Equals(object[] @object, object[] object1) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/util/ByteArrayBuffer
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/util/ByteArrayBuffer", AccessFlags = 49)]
-		public sealed partial class ByteArrayBuffer
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public ByteArrayBuffer(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "([BII)V", AccessFlags = 1)]
-				public void Append(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public void Append(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(I)V", AccessFlags = 1)]
-				public void Append(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "([CII)V", AccessFlags = 1)]
-				public void Append(char[] @char, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(Lorg/apache/http/util/CharArrayBuffer;II)V", AccessFlags = 1)]
-				public void Append(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clear
-				/// </java-name>
-				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
-				public void Clear() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toByteArray
-				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
-				public sbyte[] JavaToByteArray() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// toByteArray
-				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] ToByteArray() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// byteAt
-				/// </java-name>
-				[Dot42.DexImport("byteAt", "(I)I", AccessFlags = 1)]
-				public int ByteAt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// capacity
-				/// </java-name>
-				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
-				public int Capacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public int Length() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// buffer
-				/// </java-name>
-				[Dot42.DexImport("buffer", "()[B", AccessFlags = 1)]
-				public sbyte[] JavaBuffer() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// buffer
-				/// </java-name>
-				[Dot42.DexImport("buffer", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] Buffer() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// setLength
-				/// </java-name>
-				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
-				public void SetLength(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isFull
-				/// </java-name>
-				[Dot42.DexImport("isFull", "()Z", AccessFlags = 1)]
-				public bool IsFull() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ByteArrayBuffer() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/util/EntityUtils
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/util/EntityUtils", AccessFlags = 49)]
-		public sealed partial class EntityUtils
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal EntityUtils() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toByteArray
-				/// </java-name>
-				[Dot42.DexImport("toByteArray", "(Lorg/apache/http/HttpEntity;)[B", AccessFlags = 9)]
-				public static sbyte[] JavaToByteArray(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// toByteArray
-				/// </java-name>
-				[Dot42.DexImport("toByteArray", "(Lorg/apache/http/HttpEntity;)[B", AccessFlags = 9, IgnoreFromJava = true)]
-				public static byte[] ToByteArray(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getContentCharSet
-				/// </java-name>
-				[Dot42.DexImport("getContentCharSet", "(Lorg/apache/http/HttpEntity;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetContentCharSet(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "(Lorg/apache/http/HttpEntity;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string ToString(global::Org.Apache.Http.IHttpEntity httpEntity, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "(Lorg/apache/http/HttpEntity;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string ToString(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 		}
@@ -676,150 +820,6 @@ namespace Org.Apache.Http.Util
 				{
 				[Dot42.DexImport("getClassloader", "()Ljava/lang/String;", AccessFlags = 17)]
 						get{ return GetClassloader(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/util/ExceptionUtils
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/util/ExceptionUtils", AccessFlags = 49)]
-		public sealed partial class ExceptionUtils
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal ExceptionUtils() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// initCause
-				/// </java-name>
-				[Dot42.DexImport("initCause", "(Ljava/lang/Throwable;Ljava/lang/Throwable;)V", AccessFlags = 9)]
-				public static void InitCause(global::System.Exception exception, global::System.Exception exception1) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/util/EncodingUtils
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/util/EncodingUtils", AccessFlags = 49)]
-		public sealed partial class EncodingUtils
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal EncodingUtils() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getString
-				/// </java-name>
-				[Dot42.DexImport("getString", "([BIILjava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetString(sbyte[] sByte, int int32, int int321, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getString
-				/// </java-name>
-				[Dot42.DexImport("getString", "([BIILjava/lang/String;)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
-				public static string GetString(byte[] @byte, int int32, int int321, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getString
-				/// </java-name>
-				[Dot42.DexImport("getString", "([BLjava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetString(sbyte[] sByte, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getString
-				/// </java-name>
-				[Dot42.DexImport("getString", "([BLjava/lang/String;)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
-				public static string GetString(byte[] @byte, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getBytes
-				/// </java-name>
-				[Dot42.DexImport("getBytes", "(Ljava/lang/String;Ljava/lang/String;)[B", AccessFlags = 9)]
-				public static sbyte[] JavaGetBytes(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getBytes
-				/// </java-name>
-				[Dot42.DexImport("getBytes", "(Ljava/lang/String;Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
-				public static byte[] GetBytes(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getAsciiBytes
-				/// </java-name>
-				[Dot42.DexImport("getAsciiBytes", "(Ljava/lang/String;)[B", AccessFlags = 9)]
-				public static sbyte[] JavaGetAsciiBytes(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getAsciiBytes
-				/// </java-name>
-				[Dot42.DexImport("getAsciiBytes", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
-				public static byte[] GetAsciiBytes(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getAsciiString
-				/// </java-name>
-				[Dot42.DexImport("getAsciiString", "([BII)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetAsciiString(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAsciiString
-				/// </java-name>
-				[Dot42.DexImport("getAsciiString", "([BII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
-				public static string GetAsciiString(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAsciiString
-				/// </java-name>
-				[Dot42.DexImport("getAsciiString", "([B)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetAsciiString(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAsciiString
-				/// </java-name>
-				[Dot42.DexImport("getAsciiString", "([B)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
-				public static string GetAsciiString(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 		}

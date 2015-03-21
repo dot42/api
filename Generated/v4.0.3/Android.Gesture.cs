@@ -2,427 +2,6 @@
 namespace Android.Gesture
 {
 		/// <java-name>
-		/// android/gesture/GestureLibraries
-		/// </java-name>
-		[Dot42.DexImport("android/gesture/GestureLibraries", AccessFlags = 49)]
-		public sealed partial class GestureLibraries
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal GestureLibraries() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// fromFile
-				/// </java-name>
-				[Dot42.DexImport("fromFile", "(Ljava/lang/String;)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
-				public static global::Android.Gesture.GestureLibrary FromFile(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Gesture.GestureLibrary);
-				}
-
-				/// <java-name>
-				/// fromFile
-				/// </java-name>
-				[Dot42.DexImport("fromFile", "(Ljava/io/File;)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
-				public static global::Android.Gesture.GestureLibrary FromFile(global::Java.Io.File file) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Gesture.GestureLibrary);
-				}
-
-				/// <java-name>
-				/// fromPrivateFile
-				/// </java-name>
-				[Dot42.DexImport("fromPrivateFile", "(Landroid/content/Context;Ljava/lang/String;)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
-				public static global::Android.Gesture.GestureLibrary FromPrivateFile(global::Android.Content.Context context, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Gesture.GestureLibrary);
-				}
-
-				/// <java-name>
-				/// fromRawResource
-				/// </java-name>
-				[Dot42.DexImport("fromRawResource", "(Landroid/content/Context;I)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
-				public static global::Android.Gesture.GestureLibrary FromRawResource(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Gesture.GestureLibrary);
-				}
-
-		}
-
-		/// <java-name>
-		/// android/gesture/Prediction
-		/// </java-name>
-		[Dot42.DexImport("android/gesture/Prediction", AccessFlags = 33)]
-		public partial class Prediction
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// name
-				/// </java-name>
-				[Dot42.DexImport("name", "Ljava/lang/String;", AccessFlags = 17)]
-				public readonly string Name;
-				/// <java-name>
-				/// score
-				/// </java-name>
-				[Dot42.DexImport("score", "D", AccessFlags = 1)]
-				public double Score;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Prediction() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-		}
-
-		/// <java-name>
-		/// android/gesture/GesturePoint
-		/// </java-name>
-		[Dot42.DexImport("android/gesture/GesturePoint", AccessFlags = 33)]
-		public partial class GesturePoint
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// x
-				/// </java-name>
-				[Dot42.DexImport("x", "F", AccessFlags = 17)]
-				public readonly float X;
-				/// <java-name>
-				/// y
-				/// </java-name>
-				[Dot42.DexImport("y", "F", AccessFlags = 17)]
-				public readonly float Y;
-				/// <java-name>
-				/// timestamp
-				/// </java-name>
-				[Dot42.DexImport("timestamp", "J", AccessFlags = 17)]
-				public readonly long Timestamp;
-				[Dot42.DexImport("<init>", "(FFJ)V", AccessFlags = 1)]
-				public GesturePoint(float single, float single1, long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clone
-				/// </java-name>
-				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object Clone() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GesturePoint() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/gesture/GestureStore
-		/// </java-name>
-		[Dot42.DexImport("android/gesture/GestureStore", AccessFlags = 33)]
-		public partial class GestureStore
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// SEQUENCE_INVARIANT
-				/// </java-name>
-				[Dot42.DexImport("SEQUENCE_INVARIANT", "I", AccessFlags = 25)]
-				public const int SEQUENCE_INVARIANT = 1;
-				/// <java-name>
-				/// SEQUENCE_SENSITIVE
-				/// </java-name>
-				[Dot42.DexImport("SEQUENCE_SENSITIVE", "I", AccessFlags = 25)]
-				public const int SEQUENCE_SENSITIVE = 2;
-				/// <java-name>
-				/// ORIENTATION_INVARIANT
-				/// </java-name>
-				[Dot42.DexImport("ORIENTATION_INVARIANT", "I", AccessFlags = 25)]
-				public const int ORIENTATION_INVARIANT = 1;
-				/// <java-name>
-				/// ORIENTATION_SENSITIVE
-				/// </java-name>
-				[Dot42.DexImport("ORIENTATION_SENSITIVE", "I", AccessFlags = 25)]
-				public const int ORIENTATION_SENSITIVE = 2;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public GestureStore() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setOrientationStyle
-				/// </java-name>
-				[Dot42.DexImport("setOrientationStyle", "(I)V", AccessFlags = 1)]
-				public virtual void SetOrientationStyle(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getOrientationStyle
-				/// </java-name>
-				[Dot42.DexImport("getOrientationStyle", "()I", AccessFlags = 1)]
-				public virtual int GetOrientationStyle() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setSequenceType
-				/// </java-name>
-				[Dot42.DexImport("setSequenceType", "(I)V", AccessFlags = 1)]
-				public virtual void SetSequenceType(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSequenceType
-				/// </java-name>
-				[Dot42.DexImport("getSequenceType", "()I", AccessFlags = 1)]
-				public virtual int GetSequenceType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGestureEntries
-				/// </java-name>
-				[Dot42.DexImport("getGestureEntries", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetGestureEntries() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				/// <java-name>
-				/// recognize
-				/// </java-name>
-				[Dot42.DexImport("recognize", "(Landroid/gesture/Gesture;)Ljava/util/ArrayList;", AccessFlags = 1, Signature = "(Landroid/gesture/Gesture;)Ljava/util/ArrayList<Landroid/gesture/Prediction;>;")]
-				public virtual global::Java.Util.ArrayList<global::Android.Gesture.Prediction> Recognize(global::Android.Gesture.Gesture gesture) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ArrayList<global::Android.Gesture.Prediction>);
-				}
-
-				/// <java-name>
-				/// addGesture
-				/// </java-name>
-				[Dot42.DexImport("addGesture", "(Ljava/lang/String;Landroid/gesture/Gesture;)V", AccessFlags = 1)]
-				public virtual void AddGesture(string @string, global::Android.Gesture.Gesture gesture) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeGesture
-				/// </java-name>
-				[Dot42.DexImport("removeGesture", "(Ljava/lang/String;Landroid/gesture/Gesture;)V", AccessFlags = 1)]
-				public virtual void RemoveGesture(string @string, global::Android.Gesture.Gesture gesture) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeEntry
-				/// </java-name>
-				[Dot42.DexImport("removeEntry", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void RemoveEntry(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getGestures
-				/// </java-name>
-				[Dot42.DexImport("getGestures", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Landroid/gesture/Gesture;>;")]
-				public virtual global::Java.Util.ArrayList<global::Android.Gesture.Gesture> GetGestures(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ArrayList<global::Android.Gesture.Gesture>);
-				}
-
-				/// <java-name>
-				/// hasChanged
-				/// </java-name>
-				[Dot42.DexImport("hasChanged", "()Z", AccessFlags = 1)]
-				public virtual bool HasChanged() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// save
-				/// </java-name>
-				[Dot42.DexImport("save", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public virtual void Save(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// save
-				/// </java-name>
-				[Dot42.DexImport("save", "(Ljava/io/OutputStream;Z)V", AccessFlags = 1)]
-				public virtual void Save(global::Java.Io.OutputStream outputStream, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// load
-				/// </java-name>
-				[Dot42.DexImport("load", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void Load(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// load
-				/// </java-name>
-				[Dot42.DexImport("load", "(Ljava/io/InputStream;Z)V", AccessFlags = 1)]
-				public virtual void Load(global::Java.Io.InputStream inputStream, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getOrientationStyle
-				/// </java-name>
-				public int OrientationStyle
-				{
-				[Dot42.DexImport("getOrientationStyle", "()I", AccessFlags = 1)]
-						get{ return GetOrientationStyle(); }
-				[Dot42.DexImport("setOrientationStyle", "(I)V", AccessFlags = 1)]
-						set{ SetOrientationStyle(value); }
-				}
-
-				/// <java-name>
-				/// getSequenceType
-				/// </java-name>
-				public int SequenceType
-				{
-				[Dot42.DexImport("getSequenceType", "()I", AccessFlags = 1)]
-						get{ return GetSequenceType(); }
-				[Dot42.DexImport("setSequenceType", "(I)V", AccessFlags = 1)]
-						set{ SetSequenceType(value); }
-				}
-
-				/// <java-name>
-				/// getGestureEntries
-				/// </java-name>
-				public global::Java.Util.ISet<string> GestureEntries
-				{
-				[Dot42.DexImport("getGestureEntries", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetGestureEntries(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/gesture/GestureUtils
-		/// </java-name>
-		[Dot42.DexImport("android/gesture/GestureUtils", AccessFlags = 49)]
-		public sealed partial class GestureUtils
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal GestureUtils() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// spatialSampling
-				/// </java-name>
-				[Dot42.DexImport("spatialSampling", "(Landroid/gesture/Gesture;I)[F", AccessFlags = 9)]
-				public static float[] SpatialSampling(global::Android.Gesture.Gesture gesture, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(float[]);
-				}
-
-				/// <java-name>
-				/// spatialSampling
-				/// </java-name>
-				[Dot42.DexImport("spatialSampling", "(Landroid/gesture/Gesture;IZ)[F", AccessFlags = 9)]
-				public static float[] SpatialSampling(global::Android.Gesture.Gesture gesture, int int32, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(float[]);
-				}
-
-				/// <java-name>
-				/// temporalSampling
-				/// </java-name>
-				[Dot42.DexImport("temporalSampling", "(Landroid/gesture/GestureStroke;I)[F", AccessFlags = 9)]
-				public static float[] TemporalSampling(global::Android.Gesture.GestureStroke gestureStroke, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(float[]);
-				}
-
-				/// <java-name>
-				/// computeOrientedBoundingBox
-				/// </java-name>
-				[Dot42.DexImport("computeOrientedBoundingBox", "(Ljava/util/ArrayList;)Landroid/gesture/OrientedBoundingBox;", AccessFlags = 9, Signature = "(Ljava/util/ArrayList<Landroid/gesture/GesturePoint;>;)Landroid/gesture/OrientedB" +
-    "oundingBox;")]
-				public static global::Android.Gesture.OrientedBoundingBox ComputeOrientedBoundingBox(global::Java.Util.ArrayList<global::Android.Gesture.GesturePoint> arrayList) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Gesture.OrientedBoundingBox);
-				}
-
-				/// <java-name>
-				/// computeOrientedBoundingBox
-				/// </java-name>
-				[Dot42.DexImport("computeOrientedBoundingBox", "([F)Landroid/gesture/OrientedBoundingBox;", AccessFlags = 9)]
-				public static global::Android.Gesture.OrientedBoundingBox ComputeOrientedBoundingBox(float[] single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Gesture.OrientedBoundingBox);
-				}
-
-		}
-
-		/// <java-name>
-		/// android/gesture/OrientedBoundingBox
-		/// </java-name>
-		[Dot42.DexImport("android/gesture/OrientedBoundingBox", AccessFlags = 33)]
-		public partial class OrientedBoundingBox
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// squareness
-				/// </java-name>
-				[Dot42.DexImport("squareness", "F", AccessFlags = 17)]
-				public readonly float Squareness;
-				/// <java-name>
-				/// width
-				/// </java-name>
-				[Dot42.DexImport("width", "F", AccessFlags = 17)]
-				public readonly float Width;
-				/// <java-name>
-				/// height
-				/// </java-name>
-				[Dot42.DexImport("height", "F", AccessFlags = 17)]
-				public readonly float Height;
-				/// <java-name>
-				/// orientation
-				/// </java-name>
-				[Dot42.DexImport("orientation", "F", AccessFlags = 17)]
-				public readonly float Orientation;
-				/// <java-name>
-				/// centerX
-				/// </java-name>
-				[Dot42.DexImport("centerX", "F", AccessFlags = 17)]
-				public readonly float CenterX;
-				/// <java-name>
-				/// centerY
-				/// </java-name>
-				[Dot42.DexImport("centerY", "F", AccessFlags = 17)]
-				public readonly float CenterY;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal OrientedBoundingBox() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// android/gesture/Gesture
 		/// </java-name>
 		[Dot42.DexImport("android/gesture/Gesture", AccessFlags = 33)]
@@ -620,88 +199,51 @@ namespace Android.Gesture
 		}
 
 		/// <java-name>
-		/// android/gesture/GestureStroke
+		/// android/gesture/GestureLibraries
 		/// </java-name>
-		[Dot42.DexImport("android/gesture/GestureStroke", AccessFlags = 33)]
-		public partial class GestureStroke
+		[Dot42.DexImport("android/gesture/GestureLibraries", AccessFlags = 49)]
+		public sealed partial class GestureLibraries
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// boundingBox
-				/// </java-name>
-				[Dot42.DexImport("boundingBox", "Landroid/graphics/RectF;", AccessFlags = 17)]
-				public readonly global::Android.Graphics.RectF BoundingBox;
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "F", AccessFlags = 17)]
-				public readonly float Length;
-				/// <java-name>
-				/// points
-				/// </java-name>
-				[Dot42.DexImport("points", "[F", AccessFlags = 17)]
-				public readonly float[] Points;
-				[Dot42.DexImport("<init>", "(Ljava/util/ArrayList;)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/gesture/GesturePoint;>;)V")]
-				public GestureStroke(global::Java.Util.ArrayList<global::Android.Gesture.GesturePoint> arrayList) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal GestureLibraries() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// clone
+				/// fromFile
 				/// </java-name>
-				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object Clone() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("fromFile", "(Ljava/lang/String;)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
+				public static global::Android.Gesture.GestureLibrary FromFile(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(object);
+						return default(global::Android.Gesture.GestureLibrary);
 				}
 
 				/// <java-name>
-				/// getPath
+				/// fromFile
 				/// </java-name>
-				[Dot42.DexImport("getPath", "()Landroid/graphics/Path;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Path GetPath() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("fromFile", "(Ljava/io/File;)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
+				public static global::Android.Gesture.GestureLibrary FromFile(global::Java.Io.File file) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Path);
+						return default(global::Android.Gesture.GestureLibrary);
 				}
 
 				/// <java-name>
-				/// toPath
+				/// fromPrivateFile
 				/// </java-name>
-				[Dot42.DexImport("toPath", "(FFI)Landroid/graphics/Path;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Path ToPath(float single, float single1, int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("fromPrivateFile", "(Landroid/content/Context;Ljava/lang/String;)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
+				public static global::Android.Gesture.GestureLibrary FromPrivateFile(global::Android.Content.Context context, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Path);
+						return default(global::Android.Gesture.GestureLibrary);
 				}
 
 				/// <java-name>
-				/// clearPath
+				/// fromRawResource
 				/// </java-name>
-				[Dot42.DexImport("clearPath", "()V", AccessFlags = 1)]
-				public virtual void ClearPath() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("fromRawResource", "(Landroid/content/Context;I)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
+				public static global::Android.Gesture.GestureLibrary FromRawResource(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// computeOrientedBoundingBox
-				/// </java-name>
-				[Dot42.DexImport("computeOrientedBoundingBox", "()Landroid/gesture/OrientedBoundingBox;", AccessFlags = 1)]
-				public virtual global::Android.Gesture.OrientedBoundingBox ComputeOrientedBoundingBox() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Gesture.OrientedBoundingBox);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GestureStroke() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				public global::Android.Graphics.Path Path
-				{
-				[Dot42.DexImport("getPath", "()Landroid/graphics/Path;", AccessFlags = 1)]
-						get{ return GetPath(); }
+						return default(global::Android.Gesture.GestureLibrary);
 				}
 
 		}
@@ -1482,6 +1024,464 @@ namespace Android.Gesture
 						[Dot42.DexImport("onGesturingEnded", "(Landroid/gesture/GestureOverlayView;)V", AccessFlags = 1025)]
 						void OnGesturingEnded(global::Android.Gesture.GestureOverlayView gestureOverlayView) /* MethodBuilder.Create */ ;
 
+				}
+
+		}
+
+		/// <java-name>
+		/// android/gesture/GesturePoint
+		/// </java-name>
+		[Dot42.DexImport("android/gesture/GesturePoint", AccessFlags = 33)]
+		public partial class GesturePoint
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// x
+				/// </java-name>
+				[Dot42.DexImport("x", "F", AccessFlags = 17)]
+				public readonly float X;
+				/// <java-name>
+				/// y
+				/// </java-name>
+				[Dot42.DexImport("y", "F", AccessFlags = 17)]
+				public readonly float Y;
+				/// <java-name>
+				/// timestamp
+				/// </java-name>
+				[Dot42.DexImport("timestamp", "J", AccessFlags = 17)]
+				public readonly long Timestamp;
+				[Dot42.DexImport("<init>", "(FFJ)V", AccessFlags = 1)]
+				public GesturePoint(float single, float single1, long int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clone
+				/// </java-name>
+				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object Clone() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal GesturePoint() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/gesture/GestureStore
+		/// </java-name>
+		[Dot42.DexImport("android/gesture/GestureStore", AccessFlags = 33)]
+		public partial class GestureStore
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// SEQUENCE_INVARIANT
+				/// </java-name>
+				[Dot42.DexImport("SEQUENCE_INVARIANT", "I", AccessFlags = 25)]
+				public const int SEQUENCE_INVARIANT = 1;
+				/// <java-name>
+				/// SEQUENCE_SENSITIVE
+				/// </java-name>
+				[Dot42.DexImport("SEQUENCE_SENSITIVE", "I", AccessFlags = 25)]
+				public const int SEQUENCE_SENSITIVE = 2;
+				/// <java-name>
+				/// ORIENTATION_INVARIANT
+				/// </java-name>
+				[Dot42.DexImport("ORIENTATION_INVARIANT", "I", AccessFlags = 25)]
+				public const int ORIENTATION_INVARIANT = 1;
+				/// <java-name>
+				/// ORIENTATION_SENSITIVE
+				/// </java-name>
+				[Dot42.DexImport("ORIENTATION_SENSITIVE", "I", AccessFlags = 25)]
+				public const int ORIENTATION_SENSITIVE = 2;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public GestureStore() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setOrientationStyle
+				/// </java-name>
+				[Dot42.DexImport("setOrientationStyle", "(I)V", AccessFlags = 1)]
+				public virtual void SetOrientationStyle(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getOrientationStyle
+				/// </java-name>
+				[Dot42.DexImport("getOrientationStyle", "()I", AccessFlags = 1)]
+				public virtual int GetOrientationStyle() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setSequenceType
+				/// </java-name>
+				[Dot42.DexImport("setSequenceType", "(I)V", AccessFlags = 1)]
+				public virtual void SetSequenceType(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSequenceType
+				/// </java-name>
+				[Dot42.DexImport("getSequenceType", "()I", AccessFlags = 1)]
+				public virtual int GetSequenceType() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getGestureEntries
+				/// </java-name>
+				[Dot42.DexImport("getGestureEntries", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+				public virtual global::Java.Util.ISet<string> GetGestureEntries() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ISet<string>);
+				}
+
+				/// <java-name>
+				/// recognize
+				/// </java-name>
+				[Dot42.DexImport("recognize", "(Landroid/gesture/Gesture;)Ljava/util/ArrayList;", AccessFlags = 1, Signature = "(Landroid/gesture/Gesture;)Ljava/util/ArrayList<Landroid/gesture/Prediction;>;")]
+				public virtual global::Java.Util.ArrayList<global::Android.Gesture.Prediction> Recognize(global::Android.Gesture.Gesture gesture) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ArrayList<global::Android.Gesture.Prediction>);
+				}
+
+				/// <java-name>
+				/// addGesture
+				/// </java-name>
+				[Dot42.DexImport("addGesture", "(Ljava/lang/String;Landroid/gesture/Gesture;)V", AccessFlags = 1)]
+				public virtual void AddGesture(string @string, global::Android.Gesture.Gesture gesture) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeGesture
+				/// </java-name>
+				[Dot42.DexImport("removeGesture", "(Ljava/lang/String;Landroid/gesture/Gesture;)V", AccessFlags = 1)]
+				public virtual void RemoveGesture(string @string, global::Android.Gesture.Gesture gesture) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeEntry
+				/// </java-name>
+				[Dot42.DexImport("removeEntry", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void RemoveEntry(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getGestures
+				/// </java-name>
+				[Dot42.DexImport("getGestures", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Landroid/gesture/Gesture;>;")]
+				public virtual global::Java.Util.ArrayList<global::Android.Gesture.Gesture> GetGestures(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ArrayList<global::Android.Gesture.Gesture>);
+				}
+
+				/// <java-name>
+				/// hasChanged
+				/// </java-name>
+				[Dot42.DexImport("hasChanged", "()Z", AccessFlags = 1)]
+				public virtual bool HasChanged() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// save
+				/// </java-name>
+				[Dot42.DexImport("save", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
+				public virtual void Save(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// save
+				/// </java-name>
+				[Dot42.DexImport("save", "(Ljava/io/OutputStream;Z)V", AccessFlags = 1)]
+				public virtual void Save(global::Java.Io.OutputStream outputStream, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// load
+				/// </java-name>
+				[Dot42.DexImport("load", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
+				public virtual void Load(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// load
+				/// </java-name>
+				[Dot42.DexImport("load", "(Ljava/io/InputStream;Z)V", AccessFlags = 1)]
+				public virtual void Load(global::Java.Io.InputStream inputStream, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getOrientationStyle
+				/// </java-name>
+				public int OrientationStyle
+				{
+				[Dot42.DexImport("getOrientationStyle", "()I", AccessFlags = 1)]
+						get{ return GetOrientationStyle(); }
+				[Dot42.DexImport("setOrientationStyle", "(I)V", AccessFlags = 1)]
+						set{ SetOrientationStyle(value); }
+				}
+
+				/// <java-name>
+				/// getSequenceType
+				/// </java-name>
+				public int SequenceType
+				{
+				[Dot42.DexImport("getSequenceType", "()I", AccessFlags = 1)]
+						get{ return GetSequenceType(); }
+				[Dot42.DexImport("setSequenceType", "(I)V", AccessFlags = 1)]
+						set{ SetSequenceType(value); }
+				}
+
+				/// <java-name>
+				/// getGestureEntries
+				/// </java-name>
+				public global::Java.Util.ISet<string> GestureEntries
+				{
+				[Dot42.DexImport("getGestureEntries", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return GetGestureEntries(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/gesture/GestureStroke
+		/// </java-name>
+		[Dot42.DexImport("android/gesture/GestureStroke", AccessFlags = 33)]
+		public partial class GestureStroke
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// boundingBox
+				/// </java-name>
+				[Dot42.DexImport("boundingBox", "Landroid/graphics/RectF;", AccessFlags = 17)]
+				public readonly global::Android.Graphics.RectF BoundingBox;
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "F", AccessFlags = 17)]
+				public readonly float Length;
+				/// <java-name>
+				/// points
+				/// </java-name>
+				[Dot42.DexImport("points", "[F", AccessFlags = 17)]
+				public readonly float[] Points;
+				[Dot42.DexImport("<init>", "(Ljava/util/ArrayList;)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/gesture/GesturePoint;>;)V")]
+				public GestureStroke(global::Java.Util.ArrayList<global::Android.Gesture.GesturePoint> arrayList) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clone
+				/// </java-name>
+				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object Clone() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// getPath
+				/// </java-name>
+				[Dot42.DexImport("getPath", "()Landroid/graphics/Path;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Path GetPath() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Path);
+				}
+
+				/// <java-name>
+				/// toPath
+				/// </java-name>
+				[Dot42.DexImport("toPath", "(FFI)Landroid/graphics/Path;", AccessFlags = 1)]
+				public virtual global::Android.Graphics.Path ToPath(float single, float single1, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Graphics.Path);
+				}
+
+				/// <java-name>
+				/// clearPath
+				/// </java-name>
+				[Dot42.DexImport("clearPath", "()V", AccessFlags = 1)]
+				public virtual void ClearPath() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// computeOrientedBoundingBox
+				/// </java-name>
+				[Dot42.DexImport("computeOrientedBoundingBox", "()Landroid/gesture/OrientedBoundingBox;", AccessFlags = 1)]
+				public virtual global::Android.Gesture.OrientedBoundingBox ComputeOrientedBoundingBox() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Gesture.OrientedBoundingBox);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal GestureStroke() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPath
+				/// </java-name>
+				public global::Android.Graphics.Path Path
+				{
+				[Dot42.DexImport("getPath", "()Landroid/graphics/Path;", AccessFlags = 1)]
+						get{ return GetPath(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/gesture/GestureUtils
+		/// </java-name>
+		[Dot42.DexImport("android/gesture/GestureUtils", AccessFlags = 49)]
+		public sealed partial class GestureUtils
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal GestureUtils() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// spatialSampling
+				/// </java-name>
+				[Dot42.DexImport("spatialSampling", "(Landroid/gesture/Gesture;I)[F", AccessFlags = 9)]
+				public static float[] SpatialSampling(global::Android.Gesture.Gesture gesture, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(float[]);
+				}
+
+				/// <java-name>
+				/// spatialSampling
+				/// </java-name>
+				[Dot42.DexImport("spatialSampling", "(Landroid/gesture/Gesture;IZ)[F", AccessFlags = 9)]
+				public static float[] SpatialSampling(global::Android.Gesture.Gesture gesture, int int32, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(float[]);
+				}
+
+				/// <java-name>
+				/// temporalSampling
+				/// </java-name>
+				[Dot42.DexImport("temporalSampling", "(Landroid/gesture/GestureStroke;I)[F", AccessFlags = 9)]
+				public static float[] TemporalSampling(global::Android.Gesture.GestureStroke gestureStroke, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(float[]);
+				}
+
+				/// <java-name>
+				/// computeOrientedBoundingBox
+				/// </java-name>
+				[Dot42.DexImport("computeOrientedBoundingBox", "(Ljava/util/ArrayList;)Landroid/gesture/OrientedBoundingBox;", AccessFlags = 9, Signature = "(Ljava/util/ArrayList<Landroid/gesture/GesturePoint;>;)Landroid/gesture/OrientedB" +
+    "oundingBox;")]
+				public static global::Android.Gesture.OrientedBoundingBox ComputeOrientedBoundingBox(global::Java.Util.ArrayList<global::Android.Gesture.GesturePoint> arrayList) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Gesture.OrientedBoundingBox);
+				}
+
+				/// <java-name>
+				/// computeOrientedBoundingBox
+				/// </java-name>
+				[Dot42.DexImport("computeOrientedBoundingBox", "([F)Landroid/gesture/OrientedBoundingBox;", AccessFlags = 9)]
+				public static global::Android.Gesture.OrientedBoundingBox ComputeOrientedBoundingBox(float[] single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Gesture.OrientedBoundingBox);
+				}
+
+		}
+
+		/// <java-name>
+		/// android/gesture/OrientedBoundingBox
+		/// </java-name>
+		[Dot42.DexImport("android/gesture/OrientedBoundingBox", AccessFlags = 33)]
+		public partial class OrientedBoundingBox
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// squareness
+				/// </java-name>
+				[Dot42.DexImport("squareness", "F", AccessFlags = 17)]
+				public readonly float Squareness;
+				/// <java-name>
+				/// width
+				/// </java-name>
+				[Dot42.DexImport("width", "F", AccessFlags = 17)]
+				public readonly float Width;
+				/// <java-name>
+				/// height
+				/// </java-name>
+				[Dot42.DexImport("height", "F", AccessFlags = 17)]
+				public readonly float Height;
+				/// <java-name>
+				/// orientation
+				/// </java-name>
+				[Dot42.DexImport("orientation", "F", AccessFlags = 17)]
+				public readonly float Orientation;
+				/// <java-name>
+				/// centerX
+				/// </java-name>
+				[Dot42.DexImport("centerX", "F", AccessFlags = 17)]
+				public readonly float CenterX;
+				/// <java-name>
+				/// centerY
+				/// </java-name>
+				[Dot42.DexImport("centerY", "F", AccessFlags = 17)]
+				public readonly float CenterY;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal OrientedBoundingBox() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/gesture/Prediction
+		/// </java-name>
+		[Dot42.DexImport("android/gesture/Prediction", AccessFlags = 33)]
+		public partial class Prediction
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// name
+				/// </java-name>
+				[Dot42.DexImport("name", "Ljava/lang/String;", AccessFlags = 17)]
+				public readonly string Name;
+				/// <java-name>
+				/// score
+				/// </java-name>
+				[Dot42.DexImport("score", "D", AccessFlags = 1)]
+				public double Score;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Prediction() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
 				}
 
 		}

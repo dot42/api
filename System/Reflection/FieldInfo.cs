@@ -63,9 +63,10 @@ namespace System.Reflection
         public bool IsVirtual { get { return !Modifier.IsFinal(_field.GetModifiers()); } }
 
         /// <summary>
-        /// returns false, Literals are not supported by Java (i think)
+        /// returns true only for enum fields.
         /// </summary>
-        public bool IsLiteral { get { return false; } }
+        // return enum members as literals.
+        public bool IsLiteral { get { return IsFinal && DeclaringType.IsEnum; } }
 
         /// <summary>
         /// returns IsFinal

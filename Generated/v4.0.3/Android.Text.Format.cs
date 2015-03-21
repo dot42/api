@@ -2,6 +2,161 @@
 namespace Android.Text.Format
 {
 		/// <java-name>
+		/// android/text/format/DateFormat
+		/// </java-name>
+		[Dot42.DexImport("android/text/format/DateFormat", AccessFlags = 33)]
+		public partial class DateFormat
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// QUOTE
+				/// </java-name>
+				[Dot42.DexImport("QUOTE", "C", AccessFlags = 25)]
+				public const char QUOTE = '\'';
+				/// <java-name>
+				/// AM_PM
+				/// </java-name>
+				[Dot42.DexImport("AM_PM", "C", AccessFlags = 25)]
+				public const char AM_PM = 'a';
+				/// <java-name>
+				/// CAPITAL_AM_PM
+				/// </java-name>
+				[Dot42.DexImport("CAPITAL_AM_PM", "C", AccessFlags = 25)]
+				public const char CAPITAL_AM_PM = 'A';
+				/// <java-name>
+				/// DATE
+				/// </java-name>
+				[Dot42.DexImport("DATE", "C", AccessFlags = 25)]
+				public const char DATE = 'd';
+				/// <java-name>
+				/// DAY
+				/// </java-name>
+				[Dot42.DexImport("DAY", "C", AccessFlags = 25)]
+				public const char DAY = 'E';
+				/// <java-name>
+				/// HOUR
+				/// </java-name>
+				[Dot42.DexImport("HOUR", "C", AccessFlags = 25)]
+				public const char HOUR = 'h';
+				/// <java-name>
+				/// HOUR_OF_DAY
+				/// </java-name>
+				[Dot42.DexImport("HOUR_OF_DAY", "C", AccessFlags = 25)]
+				public const char HOUR_OF_DAY = 'k';
+				/// <java-name>
+				/// MINUTE
+				/// </java-name>
+				[Dot42.DexImport("MINUTE", "C", AccessFlags = 25)]
+				public const char MINUTE = 'm';
+				/// <java-name>
+				/// MONTH
+				/// </java-name>
+				[Dot42.DexImport("MONTH", "C", AccessFlags = 25)]
+				public const char MONTH = 'M';
+				/// <java-name>
+				/// SECONDS
+				/// </java-name>
+				[Dot42.DexImport("SECONDS", "C", AccessFlags = 25)]
+				public const char SECONDS = 's';
+				/// <java-name>
+				/// TIME_ZONE
+				/// </java-name>
+				[Dot42.DexImport("TIME_ZONE", "C", AccessFlags = 25)]
+				public const char TIME_ZONE = 'z';
+				/// <java-name>
+				/// YEAR
+				/// </java-name>
+				[Dot42.DexImport("YEAR", "C", AccessFlags = 25)]
+				public const char YEAR = 'y';
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public DateFormat() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// is24HourFormat
+				/// </java-name>
+				[Dot42.DexImport("is24HourFormat", "(Landroid/content/Context;)Z", AccessFlags = 9)]
+				public static bool Is24HourFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getTimeFormat
+				/// </java-name>
+				[Dot42.DexImport("getTimeFormat", "(Landroid/content/Context;)Ljava/text/DateFormat;", AccessFlags = 25)]
+				public static global::Java.Text.DateFormat GetTimeFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Text.DateFormat);
+				}
+
+				/// <java-name>
+				/// getDateFormat
+				/// </java-name>
+				[Dot42.DexImport("getDateFormat", "(Landroid/content/Context;)Ljava/text/DateFormat;", AccessFlags = 25)]
+				public static global::Java.Text.DateFormat GetDateFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Text.DateFormat);
+				}
+
+				/// <java-name>
+				/// getLongDateFormat
+				/// </java-name>
+				[Dot42.DexImport("getLongDateFormat", "(Landroid/content/Context;)Ljava/text/DateFormat;", AccessFlags = 25)]
+				public static global::Java.Text.DateFormat GetLongDateFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Text.DateFormat);
+				}
+
+				/// <java-name>
+				/// getMediumDateFormat
+				/// </java-name>
+				[Dot42.DexImport("getMediumDateFormat", "(Landroid/content/Context;)Ljava/text/DateFormat;", AccessFlags = 25)]
+				public static global::Java.Text.DateFormat GetMediumDateFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Text.DateFormat);
+				}
+
+				/// <java-name>
+				/// getDateFormatOrder
+				/// </java-name>
+				[Dot42.DexImport("getDateFormatOrder", "(Landroid/content/Context;)[C", AccessFlags = 25)]
+				public static char[] GetDateFormatOrder(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(char[]);
+				}
+
+				/// <java-name>
+				/// format
+				/// </java-name>
+				[Dot42.DexImport("format", "(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;", AccessFlags = 25)]
+				public static global::Java.Lang.ICharSequence Format(global::Java.Lang.ICharSequence charSequence, long int64) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// format
+				/// </java-name>
+				[Dot42.DexImport("format", "(Ljava/lang/CharSequence;Ljava/util/Date;)Ljava/lang/CharSequence;", AccessFlags = 25)]
+				public static global::Java.Lang.ICharSequence Format(global::Java.Lang.ICharSequence charSequence, global::Java.Util.Date date) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// format
+				/// </java-name>
+				[Dot42.DexImport("format", "(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;", AccessFlags = 25)]
+				public static global::Java.Lang.ICharSequence Format(global::Java.Lang.ICharSequence charSequence, global::Java.Util.Calendar calendar) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+		}
+
+		/// <java-name>
 		/// android/text/format/DateUtils
 		/// </java-name>
 		[Dot42.DexImport("android/text/format/DateUtils", AccessFlags = 33)]
@@ -850,161 +1005,6 @@ namespace Android.Text.Format
 				{
 				[Dot42.DexImport("getWeekNumber", "()I", AccessFlags = 1)]
 						get{ return GetWeekNumber(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/text/format/DateFormat
-		/// </java-name>
-		[Dot42.DexImport("android/text/format/DateFormat", AccessFlags = 33)]
-		public partial class DateFormat
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// QUOTE
-				/// </java-name>
-				[Dot42.DexImport("QUOTE", "C", AccessFlags = 25)]
-				public const char QUOTE = '\'';
-				/// <java-name>
-				/// AM_PM
-				/// </java-name>
-				[Dot42.DexImport("AM_PM", "C", AccessFlags = 25)]
-				public const char AM_PM = 'a';
-				/// <java-name>
-				/// CAPITAL_AM_PM
-				/// </java-name>
-				[Dot42.DexImport("CAPITAL_AM_PM", "C", AccessFlags = 25)]
-				public const char CAPITAL_AM_PM = 'A';
-				/// <java-name>
-				/// DATE
-				/// </java-name>
-				[Dot42.DexImport("DATE", "C", AccessFlags = 25)]
-				public const char DATE = 'd';
-				/// <java-name>
-				/// DAY
-				/// </java-name>
-				[Dot42.DexImport("DAY", "C", AccessFlags = 25)]
-				public const char DAY = 'E';
-				/// <java-name>
-				/// HOUR
-				/// </java-name>
-				[Dot42.DexImport("HOUR", "C", AccessFlags = 25)]
-				public const char HOUR = 'h';
-				/// <java-name>
-				/// HOUR_OF_DAY
-				/// </java-name>
-				[Dot42.DexImport("HOUR_OF_DAY", "C", AccessFlags = 25)]
-				public const char HOUR_OF_DAY = 'k';
-				/// <java-name>
-				/// MINUTE
-				/// </java-name>
-				[Dot42.DexImport("MINUTE", "C", AccessFlags = 25)]
-				public const char MINUTE = 'm';
-				/// <java-name>
-				/// MONTH
-				/// </java-name>
-				[Dot42.DexImport("MONTH", "C", AccessFlags = 25)]
-				public const char MONTH = 'M';
-				/// <java-name>
-				/// SECONDS
-				/// </java-name>
-				[Dot42.DexImport("SECONDS", "C", AccessFlags = 25)]
-				public const char SECONDS = 's';
-				/// <java-name>
-				/// TIME_ZONE
-				/// </java-name>
-				[Dot42.DexImport("TIME_ZONE", "C", AccessFlags = 25)]
-				public const char TIME_ZONE = 'z';
-				/// <java-name>
-				/// YEAR
-				/// </java-name>
-				[Dot42.DexImport("YEAR", "C", AccessFlags = 25)]
-				public const char YEAR = 'y';
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public DateFormat() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// is24HourFormat
-				/// </java-name>
-				[Dot42.DexImport("is24HourFormat", "(Landroid/content/Context;)Z", AccessFlags = 9)]
-				public static bool Is24HourFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getTimeFormat
-				/// </java-name>
-				[Dot42.DexImport("getTimeFormat", "(Landroid/content/Context;)Ljava/text/DateFormat;", AccessFlags = 25)]
-				public static global::Java.Text.DateFormat GetTimeFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormat);
-				}
-
-				/// <java-name>
-				/// getDateFormat
-				/// </java-name>
-				[Dot42.DexImport("getDateFormat", "(Landroid/content/Context;)Ljava/text/DateFormat;", AccessFlags = 25)]
-				public static global::Java.Text.DateFormat GetDateFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormat);
-				}
-
-				/// <java-name>
-				/// getLongDateFormat
-				/// </java-name>
-				[Dot42.DexImport("getLongDateFormat", "(Landroid/content/Context;)Ljava/text/DateFormat;", AccessFlags = 25)]
-				public static global::Java.Text.DateFormat GetLongDateFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormat);
-				}
-
-				/// <java-name>
-				/// getMediumDateFormat
-				/// </java-name>
-				[Dot42.DexImport("getMediumDateFormat", "(Landroid/content/Context;)Ljava/text/DateFormat;", AccessFlags = 25)]
-				public static global::Java.Text.DateFormat GetMediumDateFormat(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormat);
-				}
-
-				/// <java-name>
-				/// getDateFormatOrder
-				/// </java-name>
-				[Dot42.DexImport("getDateFormatOrder", "(Landroid/content/Context;)[C", AccessFlags = 25)]
-				public static char[] GetDateFormatOrder(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// format
-				/// </java-name>
-				[Dot42.DexImport("format", "(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;", AccessFlags = 25)]
-				public static global::Java.Lang.ICharSequence Format(global::Java.Lang.ICharSequence charSequence, long int64) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// format
-				/// </java-name>
-				[Dot42.DexImport("format", "(Ljava/lang/CharSequence;Ljava/util/Date;)Ljava/lang/CharSequence;", AccessFlags = 25)]
-				public static global::Java.Lang.ICharSequence Format(global::Java.Lang.ICharSequence charSequence, global::Java.Util.Date date) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// format
-				/// </java-name>
-				[Dot42.DexImport("format", "(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;", AccessFlags = 25)]
-				public static global::Java.Lang.ICharSequence Format(global::Java.Lang.ICharSequence charSequence, global::Java.Util.Calendar calendar) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
 				}
 
 		}

@@ -2,15 +2,15 @@
 namespace Org.Apache.Http.Cookie
 {
 		/// <java-name>
-		/// org/apache/http/cookie/CookiePathComparator
+		/// org/apache/http/cookie/CookieIdentityComparator
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/CookiePathComparator", AccessFlags = 33, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/util/Comparator<Lorg/apache/http/co" +
+		[Dot42.DexImport("org/apache/http/cookie/CookieIdentityComparator", AccessFlags = 33, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/util/Comparator<Lorg/apache/http/co" +
     "okie/Cookie;>;")]
-		public partial class CookiePathComparator : global::Java.Io.ISerializable, global::Java.Util.IComparator<global::Org.Apache.Http.Cookie.ICookie>
+		public partial class CookieIdentityComparator : global::Java.Io.ISerializable, global::Java.Util.IComparator<global::Org.Apache.Http.Cookie.ICookie>
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public CookiePathComparator() /* MethodBuilder.Create */ 
+				public CookieIdentityComparator() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -32,15 +32,106 @@ namespace Org.Apache.Http.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/cookie/CookieIdentityComparator
+		/// org/apache/http/cookie/CookieOrigin
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/CookieIdentityComparator", AccessFlags = 33, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/util/Comparator<Lorg/apache/http/co" +
+		[Dot42.DexImport("org/apache/http/cookie/CookieOrigin", AccessFlags = 49)]
+		public sealed partial class CookieOrigin
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;ILjava/lang/String;Z)V", AccessFlags = 1)]
+				public CookieOrigin(string @string, int int32, string string1, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getHost
+				/// </java-name>
+				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetHost() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getPath
+				/// </java-name>
+				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetPath() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getPort
+				/// </java-name>
+				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+				public int GetPort() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1)]
+				public bool IsSecure() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal CookieOrigin() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getHost
+				/// </java-name>
+				public string Host
+				{
+				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetHost(); }
+				}
+
+				/// <java-name>
+				/// getPath
+				/// </java-name>
+				public string Path
+				{
+				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetPath(); }
+				}
+
+				/// <java-name>
+				/// getPort
+				/// </java-name>
+				public int Port
+				{
+				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+						get{ return GetPort(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/cookie/CookiePathComparator
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/cookie/CookiePathComparator", AccessFlags = 33, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/util/Comparator<Lorg/apache/http/co" +
     "okie/Cookie;>;")]
-		public partial class CookieIdentityComparator : global::Java.Io.ISerializable, global::Java.Util.IComparator<global::Org.Apache.Http.Cookie.ICookie>
+		public partial class CookiePathComparator : global::Java.Io.ISerializable, global::Java.Util.IComparator<global::Org.Apache.Http.Cookie.ICookie>
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public CookieIdentityComparator() /* MethodBuilder.Create */ 
+				public CookiePathComparator() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -137,187 +228,83 @@ namespace Org.Apache.Http.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/cookie/CookieSpecFactory
+		/// org/apache/http/cookie/ClientCookie
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/CookieSpecFactory", AccessFlags = 1537)]
-		public partial interface ICookieSpecFactory
+		[Dot42.DexImport("org/apache/http/cookie/ClientCookie", AccessFlags = 1537)]
+		public partial interface IClientCookie : global::Org.Apache.Http.Cookie.ICookie
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// newInstance
+				/// getAttribute
 				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/cookie/CookieSpec;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Cookie.ICookieSpec NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getAttribute", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
+				string GetAttribute(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// containsAttribute
+				/// </java-name>
+				[Dot42.DexImport("containsAttribute", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
+				bool ContainsAttribute(string @string) /* MethodBuilder.Create */ ;
 
 		}
 
 		/// <java-name>
-		/// org/apache/http/cookie/SetCookie
+		/// org/apache/http/cookie/ClientCookie
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/SetCookie", AccessFlags = 1537)]
-		public partial interface ISetCookie : global::Org.Apache.Http.Cookie.ICookie
+		[Dot42.DexImport("org/apache/http/cookie/ClientCookie", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IClientCookieConstants
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// setValue
+				/// VERSION_ATTR
 				/// </java-name>
-				[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetValue(string @string) /* MethodBuilder.Create */ ;
-
+				[Dot42.DexImport("VERSION_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string VERSION_ATTR = "version";
 				/// <java-name>
-				/// setComment
+				/// PATH_ATTR
 				/// </java-name>
-				[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetComment(string @string) /* MethodBuilder.Create */ ;
-
+				[Dot42.DexImport("PATH_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string PATH_ATTR = "path";
 				/// <java-name>
-				/// setExpiryDate
+				/// DOMAIN_ATTR
 				/// </java-name>
-				[Dot42.DexImport("setExpiryDate", "(Ljava/util/Date;)V", AccessFlags = 1025)]
-				void SetExpiryDate(global::Java.Util.Date date) /* MethodBuilder.Create */ ;
-
+				[Dot42.DexImport("DOMAIN_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string DOMAIN_ATTR = "domain";
 				/// <java-name>
-				/// setDomain
+				/// MAX_AGE_ATTR
 				/// </java-name>
-				[Dot42.DexImport("setDomain", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetDomain(string @string) /* MethodBuilder.Create */ ;
-
+				[Dot42.DexImport("MAX_AGE_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MAX_AGE_ATTR = "max-age";
 				/// <java-name>
-				/// setPath
+				/// SECURE_ATTR
 				/// </java-name>
-				[Dot42.DexImport("setPath", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetPath(string @string) /* MethodBuilder.Create */ ;
-
+				[Dot42.DexImport("SECURE_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string SECURE_ATTR = "secure";
 				/// <java-name>
-				/// setSecure
+				/// COMMENT_ATTR
 				/// </java-name>
-				[Dot42.DexImport("setSecure", "(Z)V", AccessFlags = 1025)]
-				void SetSecure(bool boolean) /* MethodBuilder.Create */ ;
-
+				[Dot42.DexImport("COMMENT_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string COMMENT_ATTR = "comment";
 				/// <java-name>
-				/// setVersion
+				/// EXPIRES_ATTR
 				/// </java-name>
-				[Dot42.DexImport("setVersion", "(I)V", AccessFlags = 1025)]
-				void SetVersion(int int32) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/cookie/CookieOrigin
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/CookieOrigin", AccessFlags = 49)]
-		public sealed partial class CookieOrigin
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;ILjava/lang/String;Z)V", AccessFlags = 1)]
-				public CookieOrigin(string @string, int int32, string string1, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
+				[Dot42.DexImport("EXPIRES_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXPIRES_ATTR = "expires";
 				/// <java-name>
-				/// getHost
+				/// PORT_ATTR
 				/// </java-name>
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetHost() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
+				[Dot42.DexImport("PORT_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string PORT_ATTR = "port";
 				/// <java-name>
-				/// getPath
+				/// COMMENTURL_ATTR
 				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
+				[Dot42.DexImport("COMMENTURL_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string COMMENTURL_ATTR = "commenturl";
 				/// <java-name>
-				/// getPort
+				/// DISCARD_ATTR
 				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-				public int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1)]
-				public bool IsSecure() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CookieOrigin() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHost
-				/// </java-name>
-				public string Host
-				{
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetHost(); }
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				public string Path
-				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPath(); }
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				public int Port
-				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-						get{ return GetPort(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/cookie/CookieAttributeHandler
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/CookieAttributeHandler", AccessFlags = 1537)]
-		public partial interface ICookieAttributeHandler
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1025)]
-				void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// validate
-				/// </java-name>
-				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1025)]
-				void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// match
-				/// </java-name>
-				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1025)]
-				bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ ;
-
+				[Dot42.DexImport("DISCARD_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string DISCARD_ATTR = "discard";
 		}
 
 		/// <java-name>
@@ -402,91 +389,29 @@ namespace Org.Apache.Http.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/cookie/SM
+		/// org/apache/http/cookie/CookieAttributeHandler
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/SM", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class ISMConstants
+		[Dot42.DexImport("org/apache/http/cookie/CookieAttributeHandler", AccessFlags = 1537)]
+		public partial interface ICookieAttributeHandler
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// COOKIE
+				/// parse
 				/// </java-name>
-				[Dot42.DexImport("COOKIE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string COOKIE = "Cookie";
-				/// <java-name>
-				/// COOKIE2
-				/// </java-name>
-				[Dot42.DexImport("COOKIE2", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string COOKIE2 = "Cookie2";
-				/// <java-name>
-				/// SET_COOKIE
-				/// </java-name>
-				[Dot42.DexImport("SET_COOKIE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string SET_COOKIE = "Set-Cookie";
-				/// <java-name>
-				/// SET_COOKIE2
-				/// </java-name>
-				[Dot42.DexImport("SET_COOKIE2", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string SET_COOKIE2 = "Set-Cookie2";
-		}
-
-		/// <java-name>
-		/// org/apache/http/cookie/SM
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/SM", AccessFlags = 1537)]
-		public partial interface ISM
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
-		/// org/apache/http/cookie/MalformedCookieException
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/MalformedCookieException", AccessFlags = 33)]
-		public partial class MalformedCookieException : global::Org.Apache.Http.ProtocolException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public MalformedCookieException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public MalformedCookieException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public MalformedCookieException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/cookie/SetCookie2
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/SetCookie2", AccessFlags = 1537)]
-		public partial interface ISetCookie2 : global::Org.Apache.Http.Cookie.ISetCookie
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// setCommentURL
-				/// </java-name>
-				[Dot42.DexImport("setCommentURL", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetCommentURL(string @string) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("parse", "(Lorg/apache/http/cookie/SetCookie;Ljava/lang/String;)V", AccessFlags = 1025)]
+				void Parse(global::Org.Apache.Http.Cookie.ISetCookie setCookie, string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setPorts
+				/// validate
 				/// </java-name>
-				[Dot42.DexImport("setPorts", "([I)V", AccessFlags = 1025)]
-				void SetPorts(int[] int32) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("validate", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)V", AccessFlags = 1025)]
+				void Validate(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setDiscard
+				/// match
 				/// </java-name>
-				[Dot42.DexImport("setDiscard", "(Z)V", AccessFlags = 1025)]
-				void SetDiscard(bool boolean) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("match", "(Lorg/apache/http/cookie/Cookie;Lorg/apache/http/cookie/CookieOrigin;)Z", AccessFlags = 1025)]
+				bool Match(global::Org.Apache.Http.Cookie.ICookie cookie, global::Org.Apache.Http.Cookie.CookieOrigin cookieOrigin) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -538,82 +463,157 @@ namespace Org.Apache.Http.Cookie
 		}
 
 		/// <java-name>
-		/// org/apache/http/cookie/ClientCookie
+		/// org/apache/http/cookie/CookieSpecFactory
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/ClientCookie", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IClientCookieConstants
+		[Dot42.DexImport("org/apache/http/cookie/CookieSpecFactory", AccessFlags = 1537)]
+		public partial interface ICookieSpecFactory
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// VERSION_ATTR
+				/// newInstance
 				/// </java-name>
-				[Dot42.DexImport("VERSION_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string VERSION_ATTR = "version";
-				/// <java-name>
-				/// PATH_ATTR
-				/// </java-name>
-				[Dot42.DexImport("PATH_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string PATH_ATTR = "path";
-				/// <java-name>
-				/// DOMAIN_ATTR
-				/// </java-name>
-				[Dot42.DexImport("DOMAIN_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string DOMAIN_ATTR = "domain";
-				/// <java-name>
-				/// MAX_AGE_ATTR
-				/// </java-name>
-				[Dot42.DexImport("MAX_AGE_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MAX_AGE_ATTR = "max-age";
-				/// <java-name>
-				/// SECURE_ATTR
-				/// </java-name>
-				[Dot42.DexImport("SECURE_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string SECURE_ATTR = "secure";
-				/// <java-name>
-				/// COMMENT_ATTR
-				/// </java-name>
-				[Dot42.DexImport("COMMENT_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string COMMENT_ATTR = "comment";
-				/// <java-name>
-				/// EXPIRES_ATTR
-				/// </java-name>
-				[Dot42.DexImport("EXPIRES_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXPIRES_ATTR = "expires";
-				/// <java-name>
-				/// PORT_ATTR
-				/// </java-name>
-				[Dot42.DexImport("PORT_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string PORT_ATTR = "port";
-				/// <java-name>
-				/// COMMENTURL_ATTR
-				/// </java-name>
-				[Dot42.DexImport("COMMENTURL_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string COMMENTURL_ATTR = "commenturl";
-				/// <java-name>
-				/// DISCARD_ATTR
-				/// </java-name>
-				[Dot42.DexImport("DISCARD_ATTR", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string DISCARD_ATTR = "discard";
+				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/cookie/CookieSpec;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Cookie.ICookieSpec NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
+
 		}
 
 		/// <java-name>
-		/// org/apache/http/cookie/ClientCookie
+		/// org/apache/http/cookie/SetCookie
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/cookie/ClientCookie", AccessFlags = 1537)]
-		public partial interface IClientCookie : global::Org.Apache.Http.Cookie.ICookie
+		[Dot42.DexImport("org/apache/http/cookie/SetCookie", AccessFlags = 1537)]
+		public partial interface ISetCookie : global::Org.Apache.Http.Cookie.ICookie
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getAttribute
+				/// setValue
 				/// </java-name>
-				[Dot42.DexImport("getAttribute", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
-				string GetAttribute(string @string) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void SetValue(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// containsAttribute
+				/// setComment
 				/// </java-name>
-				[Dot42.DexImport("containsAttribute", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
-				bool ContainsAttribute(string @string) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void SetComment(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setExpiryDate
+				/// </java-name>
+				[Dot42.DexImport("setExpiryDate", "(Ljava/util/Date;)V", AccessFlags = 1025)]
+				void SetExpiryDate(global::Java.Util.Date date) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setDomain
+				/// </java-name>
+				[Dot42.DexImport("setDomain", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void SetDomain(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setPath
+				/// </java-name>
+				[Dot42.DexImport("setPath", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void SetPath(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setSecure
+				/// </java-name>
+				[Dot42.DexImport("setSecure", "(Z)V", AccessFlags = 1025)]
+				void SetSecure(bool boolean) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setVersion
+				/// </java-name>
+				[Dot42.DexImport("setVersion", "(I)V", AccessFlags = 1025)]
+				void SetVersion(int int32) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/cookie/SetCookie2
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/cookie/SetCookie2", AccessFlags = 1537)]
+		public partial interface ISetCookie2 : global::Org.Apache.Http.Cookie.ISetCookie
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// setCommentURL
+				/// </java-name>
+				[Dot42.DexImport("setCommentURL", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void SetCommentURL(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setPorts
+				/// </java-name>
+				[Dot42.DexImport("setPorts", "([I)V", AccessFlags = 1025)]
+				void SetPorts(int[] int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setDiscard
+				/// </java-name>
+				[Dot42.DexImport("setDiscard", "(Z)V", AccessFlags = 1025)]
+				void SetDiscard(bool boolean) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/cookie/SM
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/cookie/SM", AccessFlags = 1537)]
+		public partial interface ISM
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// org/apache/http/cookie/SM
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/cookie/SM", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class ISMConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// COOKIE
+				/// </java-name>
+				[Dot42.DexImport("COOKIE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string COOKIE = "Cookie";
+				/// <java-name>
+				/// COOKIE2
+				/// </java-name>
+				[Dot42.DexImport("COOKIE2", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string COOKIE2 = "Cookie2";
+				/// <java-name>
+				/// SET_COOKIE
+				/// </java-name>
+				[Dot42.DexImport("SET_COOKIE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string SET_COOKIE = "Set-Cookie";
+				/// <java-name>
+				/// SET_COOKIE2
+				/// </java-name>
+				[Dot42.DexImport("SET_COOKIE2", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string SET_COOKIE2 = "Set-Cookie2";
+		}
+
+		/// <java-name>
+		/// org/apache/http/cookie/MalformedCookieException
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/cookie/MalformedCookieException", AccessFlags = 33)]
+		public partial class MalformedCookieException : global::Org.Apache.Http.ProtocolException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public MalformedCookieException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public MalformedCookieException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public MalformedCookieException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
 
 		}
 

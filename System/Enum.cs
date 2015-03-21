@@ -206,9 +206,10 @@ namespace System
             throw new InvalidOperationException("enum value not found: " + value);
         }
 
-        // this will actually direcly be redirected by a call to the method by the compiler.
+        // this will actually be redirected by the compiler, and never be called.
         public string ToString(string format)
         {
+            // keep the call though, so that the compiler knows he has to include the target method
             return ((Dot42.Internal.Enum) (object)this).ToString(format);
         }
 

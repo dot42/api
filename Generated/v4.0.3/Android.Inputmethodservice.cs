@@ -2,130 +2,6 @@
 namespace Android.Inputmethodservice
 {
 		/// <java-name>
-		/// android/inputmethodservice/ExtractEditText
-		/// </java-name>
-		[Dot42.DexImport("android/inputmethodservice/ExtractEditText", AccessFlags = 33)]
-		public partial class ExtractEditText : global::Android.Widget.EditText
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public ExtractEditText(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public ExtractEditText(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public ExtractEditText(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// startInternalChanges
-				/// </java-name>
-				[Dot42.DexImport("startInternalChanges", "()V", AccessFlags = 1)]
-				public virtual void StartInternalChanges() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// finishInternalChanges
-				/// </java-name>
-				[Dot42.DexImport("finishInternalChanges", "()V", AccessFlags = 1)]
-				public virtual void FinishInternalChanges() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setExtractedText
-				/// </java-name>
-				[Dot42.DexImport("setExtractedText", "(Landroid/view/inputmethod/ExtractedText;)V", AccessFlags = 1)]
-				public override void SetExtractedText(global::Android.View.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onSelectionChanged
-				/// </java-name>
-				[Dot42.DexImport("onSelectionChanged", "(II)V", AccessFlags = 4)]
-				protected internal override void OnSelectionChanged(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// performClick
-				/// </java-name>
-				[Dot42.DexImport("performClick", "()Z", AccessFlags = 1)]
-				public override bool PerformClick() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// onTextContextMenuItem
-				/// </java-name>
-				[Dot42.DexImport("onTextContextMenuItem", "(I)Z", AccessFlags = 1)]
-				public override bool OnTextContextMenuItem(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isInputMethodTarget
-				/// </java-name>
-				[Dot42.DexImport("isInputMethodTarget", "()Z", AccessFlags = 1)]
-				public override bool IsInputMethodTarget() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasVerticalScrollBar
-				/// </java-name>
-				[Dot42.DexImport("hasVerticalScrollBar", "()Z", AccessFlags = 1)]
-				public virtual bool HasVerticalScrollBar() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasWindowFocus
-				/// </java-name>
-				[Dot42.DexImport("hasWindowFocus", "()Z", AccessFlags = 1)]
-				public override bool HasWindowFocus() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isFocused
-				/// </java-name>
-				[Dot42.DexImport("isFocused", "()Z", AccessFlags = 1)]
-				public override bool IsFocused() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasFocus
-				/// </java-name>
-				[Dot42.DexImport("hasFocus", "()Z", AccessFlags = 1)]
-				public override bool HasFocus() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ExtractEditText() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// android/inputmethodservice/AbstractInputMethodService
 		/// </java-name>
 		[Dot42.DexImport("android/inputmethodservice/AbstractInputMethodService", AccessFlags = 1057)]
@@ -429,901 +305,125 @@ namespace Android.Inputmethodservice
 		}
 
 		/// <java-name>
-		/// android/inputmethodservice/Keyboard
+		/// android/inputmethodservice/ExtractEditText
 		/// </java-name>
-		[Dot42.DexImport("android/inputmethodservice/Keyboard", AccessFlags = 33)]
-		public partial class Keyboard
+		[Dot42.DexImport("android/inputmethodservice/ExtractEditText", AccessFlags = 33)]
+		public partial class ExtractEditText : global::Android.Widget.EditText
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// EDGE_LEFT
-				/// </java-name>
-				[Dot42.DexImport("EDGE_LEFT", "I", AccessFlags = 25)]
-				public const int EDGE_LEFT = 1;
-				/// <java-name>
-				/// EDGE_RIGHT
-				/// </java-name>
-				[Dot42.DexImport("EDGE_RIGHT", "I", AccessFlags = 25)]
-				public const int EDGE_RIGHT = 2;
-				/// <java-name>
-				/// EDGE_TOP
-				/// </java-name>
-				[Dot42.DexImport("EDGE_TOP", "I", AccessFlags = 25)]
-				public const int EDGE_TOP = 4;
-				/// <java-name>
-				/// EDGE_BOTTOM
-				/// </java-name>
-				[Dot42.DexImport("EDGE_BOTTOM", "I", AccessFlags = 25)]
-				public const int EDGE_BOTTOM = 8;
-				/// <java-name>
-				/// KEYCODE_SHIFT
-				/// </java-name>
-				[Dot42.DexImport("KEYCODE_SHIFT", "I", AccessFlags = 25)]
-				public const int KEYCODE_SHIFT = -1;
-				/// <java-name>
-				/// KEYCODE_MODE_CHANGE
-				/// </java-name>
-				[Dot42.DexImport("KEYCODE_MODE_CHANGE", "I", AccessFlags = 25)]
-				public const int KEYCODE_MODE_CHANGE = -2;
-				/// <java-name>
-				/// KEYCODE_CANCEL
-				/// </java-name>
-				[Dot42.DexImport("KEYCODE_CANCEL", "I", AccessFlags = 25)]
-				public const int KEYCODE_CANCEL = -3;
-				/// <java-name>
-				/// KEYCODE_DONE
-				/// </java-name>
-				[Dot42.DexImport("KEYCODE_DONE", "I", AccessFlags = 25)]
-				public const int KEYCODE_DONE = -4;
-				/// <java-name>
-				/// KEYCODE_DELETE
-				/// </java-name>
-				[Dot42.DexImport("KEYCODE_DELETE", "I", AccessFlags = 25)]
-				public const int KEYCODE_DELETE = -5;
-				/// <java-name>
-				/// KEYCODE_ALT
-				/// </java-name>
-				[Dot42.DexImport("KEYCODE_ALT", "I", AccessFlags = 25)]
-				public const int KEYCODE_ALT = -6;
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
-				public Keyboard(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public ExtractEditText(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;IIII)V", AccessFlags = 1)]
-				public Keyboard(global::Android.Content.Context context, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;II)V", AccessFlags = 1)]
-				public Keyboard(global::Android.Content.Context context, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;ILjava/lang/CharSequence;II)V", AccessFlags = 1)]
-				public Keyboard(global::Android.Content.Context context, int int32, global::Java.Lang.ICharSequence charSequence, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKeys
-				/// </java-name>
-				[Dot42.DexImport("getKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> GetKeys() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>);
-				}
-
-				/// <java-name>
-				/// getModifierKeys
-				/// </java-name>
-				[Dot42.DexImport("getModifierKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> GetModifierKeys() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>);
-				}
-
-				/// <java-name>
-				/// getHorizontalGap
-				/// </java-name>
-				[Dot42.DexImport("getHorizontalGap", "()I", AccessFlags = 4)]
-				protected internal virtual int GetHorizontalGap() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setHorizontalGap
-				/// </java-name>
-				[Dot42.DexImport("setHorizontalGap", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetHorizontalGap(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getVerticalGap
-				/// </java-name>
-				[Dot42.DexImport("getVerticalGap", "()I", AccessFlags = 4)]
-				protected internal virtual int GetVerticalGap() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setVerticalGap
-				/// </java-name>
-				[Dot42.DexImport("setVerticalGap", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetVerticalGap(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKeyHeight
-				/// </java-name>
-				[Dot42.DexImport("getKeyHeight", "()I", AccessFlags = 4)]
-				protected internal virtual int GetKeyHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setKeyHeight
-				/// </java-name>
-				[Dot42.DexImport("setKeyHeight", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetKeyHeight(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKeyWidth
-				/// </java-name>
-				[Dot42.DexImport("getKeyWidth", "()I", AccessFlags = 4)]
-				protected internal virtual int GetKeyWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setKeyWidth
-				/// </java-name>
-				[Dot42.DexImport("setKeyWidth", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetKeyWidth(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-				public virtual int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinWidth
-				/// </java-name>
-				[Dot42.DexImport("getMinWidth", "()I", AccessFlags = 1)]
-				public virtual int GetMinWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setShifted
-				/// </java-name>
-				[Dot42.DexImport("setShifted", "(Z)Z", AccessFlags = 1)]
-				public virtual bool SetShifted(bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isShifted
-				/// </java-name>
-				[Dot42.DexImport("isShifted", "()Z", AccessFlags = 1)]
-				public virtual bool IsShifted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getShiftKeyIndex
-				/// </java-name>
-				[Dot42.DexImport("getShiftKeyIndex", "()I", AccessFlags = 1)]
-				public virtual int GetShiftKeyIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNearestKeys
-				/// </java-name>
-				[Dot42.DexImport("getNearestKeys", "(II)[I", AccessFlags = 1)]
-				public virtual int[] GetNearestKeys(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// createRowFromXml
-				/// </java-name>
-				[Dot42.DexImport("createRowFromXml", "(Landroid/content/res/Resources;Landroid/content/res/XmlResourceParser;)Landroid/" +
-    "inputmethodservice/Keyboard$Row;", AccessFlags = 4)]
-				protected internal virtual global::Android.Inputmethodservice.Keyboard.Row CreateRowFromXml(global::Android.Content.Res.Resources resources, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Inputmethodservice.Keyboard.Row);
-				}
-
-				/// <java-name>
-				/// createKeyFromXml
-				/// </java-name>
-				[Dot42.DexImport("createKeyFromXml", "(Landroid/content/res/Resources;Landroid/inputmethodservice/Keyboard$Row;IILandro" +
-    "id/content/res/XmlResourceParser;)Landroid/inputmethodservice/Keyboard$Key;", AccessFlags = 4)]
-				protected internal virtual global::Android.Inputmethodservice.Keyboard.Key CreateKeyFromXml(global::Android.Content.Res.Resources resources, global::Android.Inputmethodservice.Keyboard.Row row, int int32, int int321, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Inputmethodservice.Keyboard.Key);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Keyboard() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKeys
-				/// </java-name>
-				public global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> Keys
-				{
-				[Dot42.DexImport("getKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-						get{ return GetKeys(); }
-				}
-
-				/// <java-name>
-				/// getModifierKeys
-				/// </java-name>
-				public global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> ModifierKeys
-				{
-				[Dot42.DexImport("getModifierKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-						get{ return GetModifierKeys(); }
-				}
-
-				/// <java-name>
-				/// getHorizontalGap
-				/// </java-name>
-				protected internal int HorizontalGap
-				{
-				[Dot42.DexImport("getHorizontalGap", "()I", AccessFlags = 4)]
-						get{ return GetHorizontalGap(); }
-				[Dot42.DexImport("setHorizontalGap", "(I)V", AccessFlags = 4)]
-						set{ SetHorizontalGap(value); }
-				}
-
-				/// <java-name>
-				/// getVerticalGap
-				/// </java-name>
-				protected internal int VerticalGap
-				{
-				[Dot42.DexImport("getVerticalGap", "()I", AccessFlags = 4)]
-						get{ return GetVerticalGap(); }
-				[Dot42.DexImport("setVerticalGap", "(I)V", AccessFlags = 4)]
-						set{ SetVerticalGap(value); }
-				}
-
-				/// <java-name>
-				/// getKeyHeight
-				/// </java-name>
-				protected internal int KeyHeight
-				{
-				[Dot42.DexImport("getKeyHeight", "()I", AccessFlags = 4)]
-						get{ return GetKeyHeight(); }
-				[Dot42.DexImport("setKeyHeight", "(I)V", AccessFlags = 4)]
-						set{ SetKeyHeight(value); }
-				}
-
-				/// <java-name>
-				/// getKeyWidth
-				/// </java-name>
-				protected internal int KeyWidth
-				{
-				[Dot42.DexImport("getKeyWidth", "()I", AccessFlags = 4)]
-						get{ return GetKeyWidth(); }
-				[Dot42.DexImport("setKeyWidth", "(I)V", AccessFlags = 4)]
-						set{ SetKeyWidth(value); }
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				public int Height
-				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						get{ return GetHeight(); }
-				}
-
-				/// <java-name>
-				/// getMinWidth
-				/// </java-name>
-				public int MinWidth
-				{
-				[Dot42.DexImport("getMinWidth", "()I", AccessFlags = 1)]
-						get{ return GetMinWidth(); }
-				}
-
-				/// <java-name>
-				/// getShiftKeyIndex
-				/// </java-name>
-				public int ShiftKeyIndex
-				{
-				[Dot42.DexImport("getShiftKeyIndex", "()I", AccessFlags = 1)]
-						get{ return GetShiftKeyIndex(); }
-				}
-
-				/// <java-name>
-				/// android/inputmethodservice/Keyboard$Key
-				/// </java-name>
-				[Dot42.DexImport("android/inputmethodservice/Keyboard$Key", AccessFlags = 9)]
-				public partial class Key
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// codes
-						/// </java-name>
-						[Dot42.DexImport("codes", "[I", AccessFlags = 1)]
-						public int[] Codes;
-						/// <java-name>
-						/// label
-						/// </java-name>
-						[Dot42.DexImport("label", "Ljava/lang/CharSequence;", AccessFlags = 1)]
-						public global::Java.Lang.ICharSequence Label;
-						/// <java-name>
-						/// icon
-						/// </java-name>
-						[Dot42.DexImport("icon", "Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						public global::Android.Graphics.Drawable.Drawable Icon;
-						/// <java-name>
-						/// iconPreview
-						/// </java-name>
-						[Dot42.DexImport("iconPreview", "Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						public global::Android.Graphics.Drawable.Drawable IconPreview;
-						/// <java-name>
-						/// width
-						/// </java-name>
-						[Dot42.DexImport("width", "I", AccessFlags = 1)]
-						public int Width;
-						/// <java-name>
-						/// height
-						/// </java-name>
-						[Dot42.DexImport("height", "I", AccessFlags = 1)]
-						public int Height;
-						/// <java-name>
-						/// gap
-						/// </java-name>
-						[Dot42.DexImport("gap", "I", AccessFlags = 1)]
-						public int Gap;
-						/// <java-name>
-						/// sticky
-						/// </java-name>
-						[Dot42.DexImport("sticky", "Z", AccessFlags = 1)]
-						public bool Sticky;
-						/// <java-name>
-						/// x
-						/// </java-name>
-						[Dot42.DexImport("x", "I", AccessFlags = 1)]
-						public int X;
-						/// <java-name>
-						/// y
-						/// </java-name>
-						[Dot42.DexImport("y", "I", AccessFlags = 1)]
-						public int Y;
-						/// <java-name>
-						/// pressed
-						/// </java-name>
-						[Dot42.DexImport("pressed", "Z", AccessFlags = 1)]
-						public bool Pressed;
-						/// <java-name>
-						/// on
-						/// </java-name>
-						[Dot42.DexImport("on", "Z", AccessFlags = 1)]
-						public bool On;
-						/// <java-name>
-						/// text
-						/// </java-name>
-						[Dot42.DexImport("text", "Ljava/lang/CharSequence;", AccessFlags = 1)]
-						public global::Java.Lang.ICharSequence Text;
-						/// <java-name>
-						/// popupCharacters
-						/// </java-name>
-						[Dot42.DexImport("popupCharacters", "Ljava/lang/CharSequence;", AccessFlags = 1)]
-						public global::Java.Lang.ICharSequence PopupCharacters;
-						/// <java-name>
-						/// edgeFlags
-						/// </java-name>
-						[Dot42.DexImport("edgeFlags", "I", AccessFlags = 1)]
-						public int EdgeFlags;
-						/// <java-name>
-						/// modifier
-						/// </java-name>
-						[Dot42.DexImport("modifier", "Z", AccessFlags = 1)]
-						public bool Modifier;
-						/// <java-name>
-						/// popupResId
-						/// </java-name>
-						[Dot42.DexImport("popupResId", "I", AccessFlags = 1)]
-						public int PopupResId;
-						/// <java-name>
-						/// repeatable
-						/// </java-name>
-						[Dot42.DexImport("repeatable", "Z", AccessFlags = 1)]
-						public bool Repeatable;
-						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/Keyboard$Row;)V", AccessFlags = 1)]
-						public Key(global::Android.Inputmethodservice.Keyboard.Row row) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Landroid/content/res/Resources;Landroid/inputmethodservice/Keyboard$Row;IILandro" +
-    "id/content/res/XmlResourceParser;)V", AccessFlags = 1)]
-						public Key(global::Android.Content.Res.Resources resources, global::Android.Inputmethodservice.Keyboard.Row row, int int32, int int321, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onPressed
-						/// </java-name>
-						[Dot42.DexImport("onPressed", "()V", AccessFlags = 1)]
-						public virtual void OnPressed() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// onReleased
-						/// </java-name>
-						[Dot42.DexImport("onReleased", "(Z)V", AccessFlags = 1)]
-						public virtual void OnReleased(bool boolean) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// isInside
-						/// </java-name>
-						[Dot42.DexImport("isInside", "(II)Z", AccessFlags = 1)]
-						public virtual bool IsInside(int int32, int int321) /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// squaredDistanceFrom
-						/// </java-name>
-						[Dot42.DexImport("squaredDistanceFrom", "(II)I", AccessFlags = 1)]
-						public virtual int SquaredDistanceFrom(int int32, int int321) /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getCurrentDrawableState
-						/// </java-name>
-						[Dot42.DexImport("getCurrentDrawableState", "()[I", AccessFlags = 1)]
-						public virtual int[] GetCurrentDrawableState() /* MethodBuilder.Create */ 
-						{
-								return default(int[]);
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Key() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-						/// <java-name>
-						/// getCurrentDrawableState
-						/// </java-name>
-						public int[] CurrentDrawableState
-						{
-						[Dot42.DexImport("getCurrentDrawableState", "()[I", AccessFlags = 1)]
-								get{ return GetCurrentDrawableState(); }
-						}
-
-				}
-
-				/// <java-name>
-				/// android/inputmethodservice/Keyboard$Row
-				/// </java-name>
-				[Dot42.DexImport("android/inputmethodservice/Keyboard$Row", AccessFlags = 9)]
-				public partial class Row
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// defaultWidth
-						/// </java-name>
-						[Dot42.DexImport("defaultWidth", "I", AccessFlags = 1)]
-						public int DefaultWidth;
-						/// <java-name>
-						/// defaultHeight
-						/// </java-name>
-						[Dot42.DexImport("defaultHeight", "I", AccessFlags = 1)]
-						public int DefaultHeight;
-						/// <java-name>
-						/// defaultHorizontalGap
-						/// </java-name>
-						[Dot42.DexImport("defaultHorizontalGap", "I", AccessFlags = 1)]
-						public int DefaultHorizontalGap;
-						/// <java-name>
-						/// verticalGap
-						/// </java-name>
-						[Dot42.DexImport("verticalGap", "I", AccessFlags = 1)]
-						public int VerticalGap;
-						/// <java-name>
-						/// rowEdgeFlags
-						/// </java-name>
-						[Dot42.DexImport("rowEdgeFlags", "I", AccessFlags = 1)]
-						public int RowEdgeFlags;
-						/// <java-name>
-						/// mode
-						/// </java-name>
-						[Dot42.DexImport("mode", "I", AccessFlags = 1)]
-						public int Mode;
-						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
-						public Row(global::Android.Inputmethodservice.Keyboard keyboard) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Landroid/content/res/Resources;Landroid/inputmethodservice/Keyboard;Landroid/con" +
-    "tent/res/XmlResourceParser;)V", AccessFlags = 1)]
-						public Row(global::Android.Content.Res.Resources resources, global::Android.Inputmethodservice.Keyboard keyboard, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Row() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/inputmethodservice/KeyboardView
-		/// </java-name>
-		[Dot42.DexImport("android/inputmethodservice/KeyboardView", AccessFlags = 33)]
-		public partial class KeyboardView : global::Android.View.View, global::Android.View.View.IOnClickListener
- /* scope: __dot42__ */ 
-		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public KeyboardView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				public ExtractEditText(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public KeyboardView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				public ExtractEditText(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// setOnKeyboardActionListener
+				/// startInternalChanges
 				/// </java-name>
-				[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
-				public virtual void SetOnKeyboardActionListener(global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener onKeyboardActionListener) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("startInternalChanges", "()V", AccessFlags = 1)]
+				public virtual void StartInternalChanges() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getOnKeyboardActionListener
+				/// finishInternalChanges
 				/// </java-name>
-				[Dot42.DexImport("getOnKeyboardActionListener", "()Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;", AccessFlags = 4)]
-				protected internal virtual global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener GetOnKeyboardActionListener() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener);
-				}
-
-				/// <java-name>
-				/// setKeyboard
-				/// </java-name>
-				[Dot42.DexImport("setKeyboard", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
-				public virtual void SetKeyboard(global::Android.Inputmethodservice.Keyboard keyboard) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("finishInternalChanges", "()V", AccessFlags = 1)]
+				public virtual void FinishInternalChanges() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getKeyboard
+				/// setExtractedText
 				/// </java-name>
-				[Dot42.DexImport("getKeyboard", "()Landroid/inputmethodservice/Keyboard;", AccessFlags = 1)]
-				public virtual global::Android.Inputmethodservice.Keyboard GetKeyboard() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("setExtractedText", "(Landroid/view/inputmethod/ExtractedText;)V", AccessFlags = 1)]
+				public override void SetExtractedText(global::Android.View.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Inputmethodservice.Keyboard);
 				}
 
 				/// <java-name>
-				/// setShifted
+				/// onSelectionChanged
 				/// </java-name>
-				[Dot42.DexImport("setShifted", "(Z)Z", AccessFlags = 1)]
-				public virtual bool SetShifted(bool boolean) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onSelectionChanged", "(II)V", AccessFlags = 4)]
+				protected internal override void OnSelectionChanged(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// performClick
+				/// </java-name>
+				[Dot42.DexImport("performClick", "()Z", AccessFlags = 1)]
+				public override bool PerformClick() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// isShifted
+				/// onTextContextMenuItem
 				/// </java-name>
-				[Dot42.DexImport("isShifted", "()Z", AccessFlags = 1)]
-				public virtual bool IsShifted() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onTextContextMenuItem", "(I)Z", AccessFlags = 1)]
+				public override bool OnTextContextMenuItem(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// setPreviewEnabled
+				/// isInputMethodTarget
 				/// </java-name>
-				[Dot42.DexImport("setPreviewEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPreviewEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isPreviewEnabled
-				/// </java-name>
-				[Dot42.DexImport("isPreviewEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsPreviewEnabled() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isInputMethodTarget", "()Z", AccessFlags = 1)]
+				public override bool IsInputMethodTarget() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// setVerticalCorrection
+				/// hasVerticalScrollBar
 				/// </java-name>
-				[Dot42.DexImport("setVerticalCorrection", "(I)V", AccessFlags = 1)]
-				public virtual void SetVerticalCorrection(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPopupParent
-				/// </java-name>
-				[Dot42.DexImport("setPopupParent", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetPopupParent(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPopupOffset
-				/// </java-name>
-				[Dot42.DexImport("setPopupOffset", "(II)V", AccessFlags = 1)]
-				public virtual void SetPopupOffset(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setProximityCorrectionEnabled
-				/// </java-name>
-				[Dot42.DexImport("setProximityCorrectionEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetProximityCorrectionEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isProximityCorrectionEnabled
-				/// </java-name>
-				[Dot42.DexImport("isProximityCorrectionEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsProximityCorrectionEnabled() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("hasVerticalScrollBar", "()Z", AccessFlags = 1)]
+				public virtual bool HasVerticalScrollBar() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// onMeasure
+				/// hasWindowFocus
 				/// </java-name>
-				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 1)]
-				public new virtual void OnMeasure(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onSizeChanged
-				/// </java-name>
-				[Dot42.DexImport("onSizeChanged", "(IIII)V", AccessFlags = 1)]
-				public new virtual void OnSizeChanged(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDraw
-				/// </java-name>
-				[Dot42.DexImport("onDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
-				public new virtual void OnDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// invalidateAllKeys
-				/// </java-name>
-				[Dot42.DexImport("invalidateAllKeys", "()V", AccessFlags = 1)]
-				public virtual void InvalidateAllKeys() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// invalidateKey
-				/// </java-name>
-				[Dot42.DexImport("invalidateKey", "(I)V", AccessFlags = 1)]
-				public virtual void InvalidateKey(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onLongPress
-				/// </java-name>
-				[Dot42.DexImport("onLongPress", "(Landroid/inputmethodservice/Keyboard$Key;)Z", AccessFlags = 4)]
-				protected internal virtual bool OnLongPress(global::Android.Inputmethodservice.Keyboard.Key key) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("hasWindowFocus", "()Z", AccessFlags = 1)]
+				public override bool HasWindowFocus() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// onHoverEvent
+				/// isFocused
 				/// </java-name>
-				[Dot42.DexImport("onHoverEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnHoverEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isFocused", "()Z", AccessFlags = 1)]
+				public override bool IsFocused() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// onTouchEvent
+				/// hasFocus
 				/// </java-name>
-				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("hasFocus", "()Z", AccessFlags = 1)]
+				public override bool HasFocus() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// swipeRight
-				/// </java-name>
-				[Dot42.DexImport("swipeRight", "()V", AccessFlags = 4)]
-				protected internal virtual void SwipeRight() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// swipeLeft
-				/// </java-name>
-				[Dot42.DexImport("swipeLeft", "()V", AccessFlags = 4)]
-				protected internal virtual void SwipeLeft() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// swipeUp
-				/// </java-name>
-				[Dot42.DexImport("swipeUp", "()V", AccessFlags = 4)]
-				protected internal virtual void SwipeUp() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// swipeDown
-				/// </java-name>
-				[Dot42.DexImport("swipeDown", "()V", AccessFlags = 4)]
-				protected internal virtual void SwipeDown() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// closing
-				/// </java-name>
-				[Dot42.DexImport("closing", "()V", AccessFlags = 1)]
-				public virtual void Closing() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDetachedFromWindow
-				/// </java-name>
-				[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 1)]
-				public new virtual void OnDetachedFromWindow() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// handleBack
-				/// </java-name>
-				[Dot42.DexImport("handleBack", "()Z", AccessFlags = 1)]
-				public virtual bool HandleBack() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// onClick
-				/// </java-name>
-				[Dot42.DexImport("onClick", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void OnClick(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyboardView() /* TypeBuilder.AddDefaultConstructor */ 
+				internal ExtractEditText() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-				}
-
-				/// <java-name>
-				/// getOnKeyboardActionListener
-				/// </java-name>
-				protected internal global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener OnKeyboardActionListener
-				{
-				[Dot42.DexImport("getOnKeyboardActionListener", "()Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;", AccessFlags = 4)]
-						get{ return GetOnKeyboardActionListener(); }
-				[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
-						set{ SetOnKeyboardActionListener(value); }
-				}
-
-				/// <java-name>
-				/// getKeyboard
-				/// </java-name>
-				public global::Android.Inputmethodservice.Keyboard Keyboard
-				{
-				[Dot42.DexImport("getKeyboard", "()Landroid/inputmethodservice/Keyboard;", AccessFlags = 1)]
-						get{ return GetKeyboard(); }
-				[Dot42.DexImport("setKeyboard", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
-						set{ SetKeyboard(value); }
-				}
-
-				/// <java-name>
-				/// android/inputmethodservice/KeyboardView$OnKeyboardActionListener
-				/// </java-name>
-				[Dot42.DexImport("android/inputmethodservice/KeyboardView$OnKeyboardActionListener", AccessFlags = 1545)]
-				public partial interface IOnKeyboardActionListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onPress
-						/// </java-name>
-						[Dot42.DexImport("onPress", "(I)V", AccessFlags = 1025)]
-						void OnPress(int int32) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onRelease
-						/// </java-name>
-						[Dot42.DexImport("onRelease", "(I)V", AccessFlags = 1025)]
-						void OnRelease(int int32) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onKey
-						/// </java-name>
-						[Dot42.DexImport("onKey", "(I[I)V", AccessFlags = 1025)]
-						void OnKey(int int32, int[] int321) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// onText
-						/// </java-name>
-						[Dot42.DexImport("onText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
-						void OnText(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// swipeLeft
-						/// </java-name>
-						[Dot42.DexImport("swipeLeft", "()V", AccessFlags = 1025)]
-						void SwipeLeft() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// swipeRight
-						/// </java-name>
-						[Dot42.DexImport("swipeRight", "()V", AccessFlags = 1025)]
-						void SwipeRight() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// swipeDown
-						/// </java-name>
-						[Dot42.DexImport("swipeDown", "()V", AccessFlags = 1025)]
-						void SwipeDown() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// swipeUp
-						/// </java-name>
-						[Dot42.DexImport("swipeUp", "()V", AccessFlags = 1025)]
-						void SwipeUp() /* MethodBuilder.Create */ ;
-
 				}
 
 		}
@@ -2306,6 +1406,906 @@ namespace Android.Inputmethodservice
 						internal InputMethodImpl() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/inputmethodservice/Keyboard
+		/// </java-name>
+		[Dot42.DexImport("android/inputmethodservice/Keyboard", AccessFlags = 33)]
+		public partial class Keyboard
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// EDGE_LEFT
+				/// </java-name>
+				[Dot42.DexImport("EDGE_LEFT", "I", AccessFlags = 25)]
+				public const int EDGE_LEFT = 1;
+				/// <java-name>
+				/// EDGE_RIGHT
+				/// </java-name>
+				[Dot42.DexImport("EDGE_RIGHT", "I", AccessFlags = 25)]
+				public const int EDGE_RIGHT = 2;
+				/// <java-name>
+				/// EDGE_TOP
+				/// </java-name>
+				[Dot42.DexImport("EDGE_TOP", "I", AccessFlags = 25)]
+				public const int EDGE_TOP = 4;
+				/// <java-name>
+				/// EDGE_BOTTOM
+				/// </java-name>
+				[Dot42.DexImport("EDGE_BOTTOM", "I", AccessFlags = 25)]
+				public const int EDGE_BOTTOM = 8;
+				/// <java-name>
+				/// KEYCODE_SHIFT
+				/// </java-name>
+				[Dot42.DexImport("KEYCODE_SHIFT", "I", AccessFlags = 25)]
+				public const int KEYCODE_SHIFT = -1;
+				/// <java-name>
+				/// KEYCODE_MODE_CHANGE
+				/// </java-name>
+				[Dot42.DexImport("KEYCODE_MODE_CHANGE", "I", AccessFlags = 25)]
+				public const int KEYCODE_MODE_CHANGE = -2;
+				/// <java-name>
+				/// KEYCODE_CANCEL
+				/// </java-name>
+				[Dot42.DexImport("KEYCODE_CANCEL", "I", AccessFlags = 25)]
+				public const int KEYCODE_CANCEL = -3;
+				/// <java-name>
+				/// KEYCODE_DONE
+				/// </java-name>
+				[Dot42.DexImport("KEYCODE_DONE", "I", AccessFlags = 25)]
+				public const int KEYCODE_DONE = -4;
+				/// <java-name>
+				/// KEYCODE_DELETE
+				/// </java-name>
+				[Dot42.DexImport("KEYCODE_DELETE", "I", AccessFlags = 25)]
+				public const int KEYCODE_DELETE = -5;
+				/// <java-name>
+				/// KEYCODE_ALT
+				/// </java-name>
+				[Dot42.DexImport("KEYCODE_ALT", "I", AccessFlags = 25)]
+				public const int KEYCODE_ALT = -6;
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
+				public Keyboard(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;IIII)V", AccessFlags = 1)]
+				public Keyboard(global::Android.Content.Context context, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;II)V", AccessFlags = 1)]
+				public Keyboard(global::Android.Content.Context context, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;ILjava/lang/CharSequence;II)V", AccessFlags = 1)]
+				public Keyboard(global::Android.Content.Context context, int int32, global::Java.Lang.ICharSequence charSequence, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getKeys
+				/// </java-name>
+				[Dot42.DexImport("getKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
+				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> GetKeys() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>);
+				}
+
+				/// <java-name>
+				/// getModifierKeys
+				/// </java-name>
+				[Dot42.DexImport("getModifierKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
+				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> GetModifierKeys() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>);
+				}
+
+				/// <java-name>
+				/// getHorizontalGap
+				/// </java-name>
+				[Dot42.DexImport("getHorizontalGap", "()I", AccessFlags = 4)]
+				protected internal virtual int GetHorizontalGap() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setHorizontalGap
+				/// </java-name>
+				[Dot42.DexImport("setHorizontalGap", "(I)V", AccessFlags = 4)]
+				protected internal virtual void SetHorizontalGap(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getVerticalGap
+				/// </java-name>
+				[Dot42.DexImport("getVerticalGap", "()I", AccessFlags = 4)]
+				protected internal virtual int GetVerticalGap() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setVerticalGap
+				/// </java-name>
+				[Dot42.DexImport("setVerticalGap", "(I)V", AccessFlags = 4)]
+				protected internal virtual void SetVerticalGap(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getKeyHeight
+				/// </java-name>
+				[Dot42.DexImport("getKeyHeight", "()I", AccessFlags = 4)]
+				protected internal virtual int GetKeyHeight() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setKeyHeight
+				/// </java-name>
+				[Dot42.DexImport("setKeyHeight", "(I)V", AccessFlags = 4)]
+				protected internal virtual void SetKeyHeight(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getKeyWidth
+				/// </java-name>
+				[Dot42.DexImport("getKeyWidth", "()I", AccessFlags = 4)]
+				protected internal virtual int GetKeyWidth() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setKeyWidth
+				/// </java-name>
+				[Dot42.DexImport("setKeyWidth", "(I)V", AccessFlags = 4)]
+				protected internal virtual void SetKeyWidth(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getHeight
+				/// </java-name>
+				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+				public virtual int GetHeight() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getMinWidth
+				/// </java-name>
+				[Dot42.DexImport("getMinWidth", "()I", AccessFlags = 1)]
+				public virtual int GetMinWidth() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setShifted
+				/// </java-name>
+				[Dot42.DexImport("setShifted", "(Z)Z", AccessFlags = 1)]
+				public virtual bool SetShifted(bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isShifted
+				/// </java-name>
+				[Dot42.DexImport("isShifted", "()Z", AccessFlags = 1)]
+				public virtual bool IsShifted() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getShiftKeyIndex
+				/// </java-name>
+				[Dot42.DexImport("getShiftKeyIndex", "()I", AccessFlags = 1)]
+				public virtual int GetShiftKeyIndex() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getNearestKeys
+				/// </java-name>
+				[Dot42.DexImport("getNearestKeys", "(II)[I", AccessFlags = 1)]
+				public virtual int[] GetNearestKeys(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int[]);
+				}
+
+				/// <java-name>
+				/// createRowFromXml
+				/// </java-name>
+				[Dot42.DexImport("createRowFromXml", "(Landroid/content/res/Resources;Landroid/content/res/XmlResourceParser;)Landroid/" +
+    "inputmethodservice/Keyboard$Row;", AccessFlags = 4)]
+				protected internal virtual global::Android.Inputmethodservice.Keyboard.Row CreateRowFromXml(global::Android.Content.Res.Resources resources, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Inputmethodservice.Keyboard.Row);
+				}
+
+				/// <java-name>
+				/// createKeyFromXml
+				/// </java-name>
+				[Dot42.DexImport("createKeyFromXml", "(Landroid/content/res/Resources;Landroid/inputmethodservice/Keyboard$Row;IILandro" +
+    "id/content/res/XmlResourceParser;)Landroid/inputmethodservice/Keyboard$Key;", AccessFlags = 4)]
+				protected internal virtual global::Android.Inputmethodservice.Keyboard.Key CreateKeyFromXml(global::Android.Content.Res.Resources resources, global::Android.Inputmethodservice.Keyboard.Row row, int int32, int int321, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Inputmethodservice.Keyboard.Key);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal Keyboard() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getKeys
+				/// </java-name>
+				public global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> Keys
+				{
+				[Dot42.DexImport("getKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
+						get{ return GetKeys(); }
+				}
+
+				/// <java-name>
+				/// getModifierKeys
+				/// </java-name>
+				public global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> ModifierKeys
+				{
+				[Dot42.DexImport("getModifierKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
+						get{ return GetModifierKeys(); }
+				}
+
+				/// <java-name>
+				/// getHorizontalGap
+				/// </java-name>
+				protected internal int HorizontalGap
+				{
+				[Dot42.DexImport("getHorizontalGap", "()I", AccessFlags = 4)]
+						get{ return GetHorizontalGap(); }
+				[Dot42.DexImport("setHorizontalGap", "(I)V", AccessFlags = 4)]
+						set{ SetHorizontalGap(value); }
+				}
+
+				/// <java-name>
+				/// getVerticalGap
+				/// </java-name>
+				protected internal int VerticalGap
+				{
+				[Dot42.DexImport("getVerticalGap", "()I", AccessFlags = 4)]
+						get{ return GetVerticalGap(); }
+				[Dot42.DexImport("setVerticalGap", "(I)V", AccessFlags = 4)]
+						set{ SetVerticalGap(value); }
+				}
+
+				/// <java-name>
+				/// getKeyHeight
+				/// </java-name>
+				protected internal int KeyHeight
+				{
+				[Dot42.DexImport("getKeyHeight", "()I", AccessFlags = 4)]
+						get{ return GetKeyHeight(); }
+				[Dot42.DexImport("setKeyHeight", "(I)V", AccessFlags = 4)]
+						set{ SetKeyHeight(value); }
+				}
+
+				/// <java-name>
+				/// getKeyWidth
+				/// </java-name>
+				protected internal int KeyWidth
+				{
+				[Dot42.DexImport("getKeyWidth", "()I", AccessFlags = 4)]
+						get{ return GetKeyWidth(); }
+				[Dot42.DexImport("setKeyWidth", "(I)V", AccessFlags = 4)]
+						set{ SetKeyWidth(value); }
+				}
+
+				/// <java-name>
+				/// getHeight
+				/// </java-name>
+				public int Height
+				{
+				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+						get{ return GetHeight(); }
+				}
+
+				/// <java-name>
+				/// getMinWidth
+				/// </java-name>
+				public int MinWidth
+				{
+				[Dot42.DexImport("getMinWidth", "()I", AccessFlags = 1)]
+						get{ return GetMinWidth(); }
+				}
+
+				/// <java-name>
+				/// getShiftKeyIndex
+				/// </java-name>
+				public int ShiftKeyIndex
+				{
+				[Dot42.DexImport("getShiftKeyIndex", "()I", AccessFlags = 1)]
+						get{ return GetShiftKeyIndex(); }
+				}
+
+				/// <java-name>
+				/// android/inputmethodservice/Keyboard$Key
+				/// </java-name>
+				[Dot42.DexImport("android/inputmethodservice/Keyboard$Key", AccessFlags = 9)]
+				public partial class Key
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// codes
+						/// </java-name>
+						[Dot42.DexImport("codes", "[I", AccessFlags = 1)]
+						public int[] Codes;
+						/// <java-name>
+						/// label
+						/// </java-name>
+						[Dot42.DexImport("label", "Ljava/lang/CharSequence;", AccessFlags = 1)]
+						public global::Java.Lang.ICharSequence Label;
+						/// <java-name>
+						/// icon
+						/// </java-name>
+						[Dot42.DexImport("icon", "Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						public global::Android.Graphics.Drawable.Drawable Icon;
+						/// <java-name>
+						/// iconPreview
+						/// </java-name>
+						[Dot42.DexImport("iconPreview", "Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						public global::Android.Graphics.Drawable.Drawable IconPreview;
+						/// <java-name>
+						/// width
+						/// </java-name>
+						[Dot42.DexImport("width", "I", AccessFlags = 1)]
+						public int Width;
+						/// <java-name>
+						/// height
+						/// </java-name>
+						[Dot42.DexImport("height", "I", AccessFlags = 1)]
+						public int Height;
+						/// <java-name>
+						/// gap
+						/// </java-name>
+						[Dot42.DexImport("gap", "I", AccessFlags = 1)]
+						public int Gap;
+						/// <java-name>
+						/// sticky
+						/// </java-name>
+						[Dot42.DexImport("sticky", "Z", AccessFlags = 1)]
+						public bool Sticky;
+						/// <java-name>
+						/// x
+						/// </java-name>
+						[Dot42.DexImport("x", "I", AccessFlags = 1)]
+						public int X;
+						/// <java-name>
+						/// y
+						/// </java-name>
+						[Dot42.DexImport("y", "I", AccessFlags = 1)]
+						public int Y;
+						/// <java-name>
+						/// pressed
+						/// </java-name>
+						[Dot42.DexImport("pressed", "Z", AccessFlags = 1)]
+						public bool Pressed;
+						/// <java-name>
+						/// on
+						/// </java-name>
+						[Dot42.DexImport("on", "Z", AccessFlags = 1)]
+						public bool On;
+						/// <java-name>
+						/// text
+						/// </java-name>
+						[Dot42.DexImport("text", "Ljava/lang/CharSequence;", AccessFlags = 1)]
+						public global::Java.Lang.ICharSequence Text;
+						/// <java-name>
+						/// popupCharacters
+						/// </java-name>
+						[Dot42.DexImport("popupCharacters", "Ljava/lang/CharSequence;", AccessFlags = 1)]
+						public global::Java.Lang.ICharSequence PopupCharacters;
+						/// <java-name>
+						/// edgeFlags
+						/// </java-name>
+						[Dot42.DexImport("edgeFlags", "I", AccessFlags = 1)]
+						public int EdgeFlags;
+						/// <java-name>
+						/// modifier
+						/// </java-name>
+						[Dot42.DexImport("modifier", "Z", AccessFlags = 1)]
+						public bool Modifier;
+						/// <java-name>
+						/// popupResId
+						/// </java-name>
+						[Dot42.DexImport("popupResId", "I", AccessFlags = 1)]
+						public int PopupResId;
+						/// <java-name>
+						/// repeatable
+						/// </java-name>
+						[Dot42.DexImport("repeatable", "Z", AccessFlags = 1)]
+						public bool Repeatable;
+						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/Keyboard$Row;)V", AccessFlags = 1)]
+						public Key(global::Android.Inputmethodservice.Keyboard.Row row) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Landroid/content/res/Resources;Landroid/inputmethodservice/Keyboard$Row;IILandro" +
+    "id/content/res/XmlResourceParser;)V", AccessFlags = 1)]
+						public Key(global::Android.Content.Res.Resources resources, global::Android.Inputmethodservice.Keyboard.Row row, int int32, int int321, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onPressed
+						/// </java-name>
+						[Dot42.DexImport("onPressed", "()V", AccessFlags = 1)]
+						public virtual void OnPressed() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// onReleased
+						/// </java-name>
+						[Dot42.DexImport("onReleased", "(Z)V", AccessFlags = 1)]
+						public virtual void OnReleased(bool boolean) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// isInside
+						/// </java-name>
+						[Dot42.DexImport("isInside", "(II)Z", AccessFlags = 1)]
+						public virtual bool IsInside(int int32, int int321) /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// squaredDistanceFrom
+						/// </java-name>
+						[Dot42.DexImport("squaredDistanceFrom", "(II)I", AccessFlags = 1)]
+						public virtual int SquaredDistanceFrom(int int32, int int321) /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// getCurrentDrawableState
+						/// </java-name>
+						[Dot42.DexImport("getCurrentDrawableState", "()[I", AccessFlags = 1)]
+						public virtual int[] GetCurrentDrawableState() /* MethodBuilder.Create */ 
+						{
+								return default(int[]);
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal Key() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+						/// <java-name>
+						/// getCurrentDrawableState
+						/// </java-name>
+						public int[] CurrentDrawableState
+						{
+						[Dot42.DexImport("getCurrentDrawableState", "()[I", AccessFlags = 1)]
+								get{ return GetCurrentDrawableState(); }
+						}
+
+				}
+
+				/// <java-name>
+				/// android/inputmethodservice/Keyboard$Row
+				/// </java-name>
+				[Dot42.DexImport("android/inputmethodservice/Keyboard$Row", AccessFlags = 9)]
+				public partial class Row
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// defaultWidth
+						/// </java-name>
+						[Dot42.DexImport("defaultWidth", "I", AccessFlags = 1)]
+						public int DefaultWidth;
+						/// <java-name>
+						/// defaultHeight
+						/// </java-name>
+						[Dot42.DexImport("defaultHeight", "I", AccessFlags = 1)]
+						public int DefaultHeight;
+						/// <java-name>
+						/// defaultHorizontalGap
+						/// </java-name>
+						[Dot42.DexImport("defaultHorizontalGap", "I", AccessFlags = 1)]
+						public int DefaultHorizontalGap;
+						/// <java-name>
+						/// verticalGap
+						/// </java-name>
+						[Dot42.DexImport("verticalGap", "I", AccessFlags = 1)]
+						public int VerticalGap;
+						/// <java-name>
+						/// rowEdgeFlags
+						/// </java-name>
+						[Dot42.DexImport("rowEdgeFlags", "I", AccessFlags = 1)]
+						public int RowEdgeFlags;
+						/// <java-name>
+						/// mode
+						/// </java-name>
+						[Dot42.DexImport("mode", "I", AccessFlags = 1)]
+						public int Mode;
+						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
+						public Row(global::Android.Inputmethodservice.Keyboard keyboard) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Landroid/content/res/Resources;Landroid/inputmethodservice/Keyboard;Landroid/con" +
+    "tent/res/XmlResourceParser;)V", AccessFlags = 1)]
+						public Row(global::Android.Content.Res.Resources resources, global::Android.Inputmethodservice.Keyboard keyboard, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal Row() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/inputmethodservice/KeyboardView
+		/// </java-name>
+		[Dot42.DexImport("android/inputmethodservice/KeyboardView", AccessFlags = 33)]
+		public partial class KeyboardView : global::Android.View.View, global::Android.View.View.IOnClickListener
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public KeyboardView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public KeyboardView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setOnKeyboardActionListener
+				/// </java-name>
+				[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
+				public virtual void SetOnKeyboardActionListener(global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener onKeyboardActionListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getOnKeyboardActionListener
+				/// </java-name>
+				[Dot42.DexImport("getOnKeyboardActionListener", "()Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;", AccessFlags = 4)]
+				protected internal virtual global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener GetOnKeyboardActionListener() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener);
+				}
+
+				/// <java-name>
+				/// setKeyboard
+				/// </java-name>
+				[Dot42.DexImport("setKeyboard", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
+				public virtual void SetKeyboard(global::Android.Inputmethodservice.Keyboard keyboard) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getKeyboard
+				/// </java-name>
+				[Dot42.DexImport("getKeyboard", "()Landroid/inputmethodservice/Keyboard;", AccessFlags = 1)]
+				public virtual global::Android.Inputmethodservice.Keyboard GetKeyboard() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Inputmethodservice.Keyboard);
+				}
+
+				/// <java-name>
+				/// setShifted
+				/// </java-name>
+				[Dot42.DexImport("setShifted", "(Z)Z", AccessFlags = 1)]
+				public virtual bool SetShifted(bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isShifted
+				/// </java-name>
+				[Dot42.DexImport("isShifted", "()Z", AccessFlags = 1)]
+				public virtual bool IsShifted() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setPreviewEnabled
+				/// </java-name>
+				[Dot42.DexImport("setPreviewEnabled", "(Z)V", AccessFlags = 1)]
+				public virtual void SetPreviewEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isPreviewEnabled
+				/// </java-name>
+				[Dot42.DexImport("isPreviewEnabled", "()Z", AccessFlags = 1)]
+				public virtual bool IsPreviewEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setVerticalCorrection
+				/// </java-name>
+				[Dot42.DexImport("setVerticalCorrection", "(I)V", AccessFlags = 1)]
+				public virtual void SetVerticalCorrection(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setPopupParent
+				/// </java-name>
+				[Dot42.DexImport("setPopupParent", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void SetPopupParent(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setPopupOffset
+				/// </java-name>
+				[Dot42.DexImport("setPopupOffset", "(II)V", AccessFlags = 1)]
+				public virtual void SetPopupOffset(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setProximityCorrectionEnabled
+				/// </java-name>
+				[Dot42.DexImport("setProximityCorrectionEnabled", "(Z)V", AccessFlags = 1)]
+				public virtual void SetProximityCorrectionEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isProximityCorrectionEnabled
+				/// </java-name>
+				[Dot42.DexImport("isProximityCorrectionEnabled", "()Z", AccessFlags = 1)]
+				public virtual bool IsProximityCorrectionEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onMeasure
+				/// </java-name>
+				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 1)]
+				public new virtual void OnMeasure(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onSizeChanged
+				/// </java-name>
+				[Dot42.DexImport("onSizeChanged", "(IIII)V", AccessFlags = 1)]
+				public new virtual void OnSizeChanged(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDraw
+				/// </java-name>
+				[Dot42.DexImport("onDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
+				public new virtual void OnDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// invalidateAllKeys
+				/// </java-name>
+				[Dot42.DexImport("invalidateAllKeys", "()V", AccessFlags = 1)]
+				public virtual void InvalidateAllKeys() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// invalidateKey
+				/// </java-name>
+				[Dot42.DexImport("invalidateKey", "(I)V", AccessFlags = 1)]
+				public virtual void InvalidateKey(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onLongPress
+				/// </java-name>
+				[Dot42.DexImport("onLongPress", "(Landroid/inputmethodservice/Keyboard$Key;)Z", AccessFlags = 4)]
+				protected internal virtual bool OnLongPress(global::Android.Inputmethodservice.Keyboard.Key key) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onHoverEvent
+				/// </java-name>
+				[Dot42.DexImport("onHoverEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+				public override bool OnHoverEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onTouchEvent
+				/// </java-name>
+				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
+				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// swipeRight
+				/// </java-name>
+				[Dot42.DexImport("swipeRight", "()V", AccessFlags = 4)]
+				protected internal virtual void SwipeRight() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// swipeLeft
+				/// </java-name>
+				[Dot42.DexImport("swipeLeft", "()V", AccessFlags = 4)]
+				protected internal virtual void SwipeLeft() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// swipeUp
+				/// </java-name>
+				[Dot42.DexImport("swipeUp", "()V", AccessFlags = 4)]
+				protected internal virtual void SwipeUp() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// swipeDown
+				/// </java-name>
+				[Dot42.DexImport("swipeDown", "()V", AccessFlags = 4)]
+				protected internal virtual void SwipeDown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// closing
+				/// </java-name>
+				[Dot42.DexImport("closing", "()V", AccessFlags = 1)]
+				public virtual void Closing() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDetachedFromWindow
+				/// </java-name>
+				[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 1)]
+				public new virtual void OnDetachedFromWindow() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// handleBack
+				/// </java-name>
+				[Dot42.DexImport("handleBack", "()Z", AccessFlags = 1)]
+				public virtual bool HandleBack() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onClick
+				/// </java-name>
+				[Dot42.DexImport("onClick", "(Landroid/view/View;)V", AccessFlags = 1)]
+				public virtual void OnClick(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal KeyboardView() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getOnKeyboardActionListener
+				/// </java-name>
+				protected internal global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener OnKeyboardActionListener
+				{
+				[Dot42.DexImport("getOnKeyboardActionListener", "()Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;", AccessFlags = 4)]
+						get{ return GetOnKeyboardActionListener(); }
+				[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
+						set{ SetOnKeyboardActionListener(value); }
+				}
+
+				/// <java-name>
+				/// getKeyboard
+				/// </java-name>
+				public global::Android.Inputmethodservice.Keyboard Keyboard
+				{
+				[Dot42.DexImport("getKeyboard", "()Landroid/inputmethodservice/Keyboard;", AccessFlags = 1)]
+						get{ return GetKeyboard(); }
+				[Dot42.DexImport("setKeyboard", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
+						set{ SetKeyboard(value); }
+				}
+
+				/// <java-name>
+				/// android/inputmethodservice/KeyboardView$OnKeyboardActionListener
+				/// </java-name>
+				[Dot42.DexImport("android/inputmethodservice/KeyboardView$OnKeyboardActionListener", AccessFlags = 1545)]
+				public partial interface IOnKeyboardActionListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onPress
+						/// </java-name>
+						[Dot42.DexImport("onPress", "(I)V", AccessFlags = 1025)]
+						void OnPress(int int32) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onRelease
+						/// </java-name>
+						[Dot42.DexImport("onRelease", "(I)V", AccessFlags = 1025)]
+						void OnRelease(int int32) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onKey
+						/// </java-name>
+						[Dot42.DexImport("onKey", "(I[I)V", AccessFlags = 1025)]
+						void OnKey(int int32, int[] int321) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// onText
+						/// </java-name>
+						[Dot42.DexImport("onText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
+						void OnText(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// swipeLeft
+						/// </java-name>
+						[Dot42.DexImport("swipeLeft", "()V", AccessFlags = 1025)]
+						void SwipeLeft() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// swipeRight
+						/// </java-name>
+						[Dot42.DexImport("swipeRight", "()V", AccessFlags = 1025)]
+						void SwipeRight() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// swipeDown
+						/// </java-name>
+						[Dot42.DexImport("swipeDown", "()V", AccessFlags = 1025)]
+						void SwipeDown() /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// swipeUp
+						/// </java-name>
+						[Dot42.DexImport("swipeUp", "()V", AccessFlags = 1025)]
+						void SwipeUp() /* MethodBuilder.Create */ ;
 
 				}
 

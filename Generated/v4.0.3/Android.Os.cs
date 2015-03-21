@@ -2,600 +2,221 @@
 namespace Android.Os
 {
 		/// <java-name>
-		/// android/os/IInterface
+		/// android/os/AsyncTask
 		/// </java-name>
-		[Dot42.DexImport("android/os/IInterface", AccessFlags = 1537)]
-		public partial interface IInterface
+		[Dot42.DexImport("android/os/AsyncTask", AccessFlags = 1057, Signature = "<Params:Ljava/lang/Object;Progress:Ljava/lang/Object;Result:Ljava/lang/Object;>Lj" +
+    "ava/lang/Object;")]
+		public abstract partial class AsyncTask<Params, Progress, Result>
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// asBinder
+				/// THREAD_POOL_EXECUTOR
 				/// </java-name>
-				[Dot42.DexImport("asBinder", "()Landroid/os/IBinder;", AccessFlags = 1025)]
-				global::Android.Os.IBinder AsBinder() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/os/Message
-		/// </java-name>
-		[Dot42.DexImport("android/os/Message", AccessFlags = 49)]
-		public sealed partial class Message : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
+				[Dot42.DexImport("THREAD_POOL_EXECUTOR", "Ljava/util/concurrent/Executor;", AccessFlags = 25)]
+				public static readonly global::Java.Util.Concurrent.IExecutor THREAD_POOL_EXECUTOR;
 				/// <java-name>
-				/// what
+				/// SERIAL_EXECUTOR
 				/// </java-name>
-				[Dot42.DexImport("what", "I", AccessFlags = 1)]
-				public int What;
-				/// <java-name>
-				/// arg1
-				/// </java-name>
-				[Dot42.DexImport("arg1", "I", AccessFlags = 1)]
-				public int Arg1;
-				/// <java-name>
-				/// arg2
-				/// </java-name>
-				[Dot42.DexImport("arg2", "I", AccessFlags = 1)]
-				public int Arg2;
-				/// <java-name>
-				/// obj
-				/// </java-name>
-				[Dot42.DexImport("obj", "Ljava/lang/Object;", AccessFlags = 1)]
-				public object Obj;
-				/// <java-name>
-				/// replyTo
-				/// </java-name>
-				[Dot42.DexImport("replyTo", "Landroid/os/Messenger;", AccessFlags = 1)]
-				public global::Android.Os.Messenger ReplyTo;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.Message> CREATOR;
+				[Dot42.DexImport("SERIAL_EXECUTOR", "Ljava/util/concurrent/Executor;", AccessFlags = 25)]
+				public static readonly global::Java.Util.Concurrent.IExecutor SERIAL_EXECUTOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Message() /* MethodBuilder.Create */ 
+				public AsyncTask() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// obtain
+				/// getStatus
 				/// </java-name>
-				[Dot42.DexImport("obtain", "()Landroid/os/Message;", AccessFlags = 9)]
-				public static global::Android.Os.Message Obtain() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getStatus", "()Landroid/os/AsyncTask$Status;", AccessFlags = 17)]
+				public global::Android.Os.AsyncTask<Params, Progress, Result>.Status GetStatus() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Message);
+						return default(global::Android.Os.AsyncTask<Params, Progress, Result>.Status);
 				}
 
 				/// <java-name>
-				/// obtain
+				/// doInBackground
 				/// </java-name>
-				[Dot42.DexImport("obtain", "(Landroid/os/Message;)Landroid/os/Message;", AccessFlags = 9)]
-				public static global::Android.Os.Message Obtain(global::Android.Os.Message message) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Message);
-				}
+				[Dot42.DexImport("doInBackground", "([Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 1156, Signature = "([TParams;)TResult;")]
+				protected internal abstract Result DoInBackground(params Params[] p) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// obtain
+				/// onPreExecute
 				/// </java-name>
-				[Dot42.DexImport("obtain", "(Landroid/os/Handler;)Landroid/os/Message;", AccessFlags = 9)]
-				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Message);
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;", AccessFlags = 9)]
-				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Message);
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "(Landroid/os/Handler;I)Landroid/os/Message;", AccessFlags = 9)]
-				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Message);
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;", AccessFlags = 9)]
-				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, int int32, object @object) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Message);
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "(Landroid/os/Handler;III)Landroid/os/Message;", AccessFlags = 9)]
-				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Message);
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "(Landroid/os/Handler;IIILjava/lang/Object;)Landroid/os/Message;", AccessFlags = 9)]
-				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, int int32, int int321, int int322, object @object) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Message);
-				}
-
-				/// <java-name>
-				/// recycle
-				/// </java-name>
-				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
-				public void Recycle() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onPreExecute", "()V", AccessFlags = 4)]
+				protected internal virtual void OnPreExecute() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// copyFrom
+				/// onPostExecute
 				/// </java-name>
-				[Dot42.DexImport("copyFrom", "(Landroid/os/Message;)V", AccessFlags = 1)]
-				public void CopyFrom(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onPostExecute", "(Ljava/lang/Object;)V", AccessFlags = 4, Signature = "(TResult;)V")]
+				protected internal virtual void OnPostExecute(Result result) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getWhen
+				/// onProgressUpdate
 				/// </java-name>
-				[Dot42.DexImport("getWhen", "()J", AccessFlags = 1)]
-				public long GetWhen() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setTarget
-				/// </java-name>
-				[Dot42.DexImport("setTarget", "(Landroid/os/Handler;)V", AccessFlags = 1)]
-				public void SetTarget(global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onProgressUpdate", "([Ljava/lang/Object;)V", AccessFlags = 132, Signature = "([TProgress;)V")]
+				protected internal virtual void OnProgressUpdate(params Progress[] p) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getTarget
+				/// onCancelled
 				/// </java-name>
-				[Dot42.DexImport("getTarget", "()Landroid/os/Handler;", AccessFlags = 1)]
-				public global::Android.Os.Handler GetTarget() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Handler);
-				}
-
-				/// <java-name>
-				/// getCallback
-				/// </java-name>
-				[Dot42.DexImport("getCallback", "()Ljava/lang/Runnable;", AccessFlags = 1)]
-				public global::Java.Lang.IRunnable GetCallback() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.IRunnable);
-				}
-
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				[Dot42.DexImport("getData", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public global::Android.Os.Bundle GetData() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Bundle);
-				}
-
-				/// <java-name>
-				/// peekData
-				/// </java-name>
-				[Dot42.DexImport("peekData", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public global::Android.Os.Bundle PeekData() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Bundle);
-				}
-
-				/// <java-name>
-				/// setData
-				/// </java-name>
-				[Dot42.DexImport("setData", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public void SetData(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onCancelled", "(Ljava/lang/Object;)V", AccessFlags = 4, Signature = "(TResult;)V")]
+				protected internal virtual void OnCancelled(Result result) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// sendToTarget
+				/// onCancelled
 				/// </java-name>
-				[Dot42.DexImport("sendToTarget", "()V", AccessFlags = 1)]
-				public void SendToTarget() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("onCancelled", "()V", AccessFlags = 4)]
+				protected internal virtual void OnCancelled() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// toString
+				/// isCancelled
 				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getWhen
-				/// </java-name>
-				public long When
-				{
-				[Dot42.DexImport("getWhen", "()J", AccessFlags = 1)]
-						get{ return GetWhen(); }
-				}
-
-				/// <java-name>
-				/// getTarget
-				/// </java-name>
-				public global::Android.Os.Handler Target
-				{
-				[Dot42.DexImport("getTarget", "()Landroid/os/Handler;", AccessFlags = 1)]
-						get{ return GetTarget(); }
-				[Dot42.DexImport("setTarget", "(Landroid/os/Handler;)V", AccessFlags = 1)]
-						set{ SetTarget(value); }
-				}
-
-				/// <java-name>
-				/// getCallback
-				/// </java-name>
-				public global::Java.Lang.IRunnable Callback
-				{
-				[Dot42.DexImport("getCallback", "()Ljava/lang/Runnable;", AccessFlags = 1)]
-						get{ return GetCallback(); }
-				}
-
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				public global::Android.Os.Bundle Data
-				{
-				[Dot42.DexImport("getData", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						get{ return GetData(); }
-				[Dot42.DexImport("setData", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						set{ SetData(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/ParcelUuid
-		/// </java-name>
-		[Dot42.DexImport("android/os/ParcelUuid", AccessFlags = 49)]
-		public sealed partial class ParcelUuid : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.ParcelUuid> CREATOR;
-				[Dot42.DexImport("<init>", "(Ljava/util/UUID;)V", AccessFlags = 1)]
-				public ParcelUuid(global::Java.Util.UUID uUID) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// fromString
-				/// </java-name>
-				[Dot42.DexImport("fromString", "(Ljava/lang/String;)Landroid/os/ParcelUuid;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelUuid FromString(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelUuid);
-				}
-
-				/// <java-name>
-				/// getUuid
-				/// </java-name>
-				[Dot42.DexImport("getUuid", "()Ljava/util/UUID;", AccessFlags = 1)]
-				public global::Java.Util.UUID GetUuid() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.UUID);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 17)]
+				public bool IsCancelled() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ParcelUuid() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getUuid
-				/// </java-name>
-				public global::Java.Util.UUID Uuid
-				{
-				[Dot42.DexImport("getUuid", "()Ljava/util/UUID;", AccessFlags = 1)]
-						get{ return GetUuid(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/Parcelable
-		/// </java-name>
-		[Dot42.DexImport("android/os/Parcelable", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IParcelableConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// PARCELABLE_WRITE_RETURN_VALUE
-				/// </java-name>
-				[Dot42.DexImport("PARCELABLE_WRITE_RETURN_VALUE", "I", AccessFlags = 25)]
-				public const int PARCELABLE_WRITE_RETURN_VALUE = 1;
-				/// <java-name>
-				/// CONTENTS_FILE_DESCRIPTOR
-				/// </java-name>
-				[Dot42.DexImport("CONTENTS_FILE_DESCRIPTOR", "I", AccessFlags = 25)]
-				public const int CONTENTS_FILE_DESCRIPTOR = 1;
-		}
-
-		/// <java-name>
-		/// android/os/Parcelable
-		/// </java-name>
-		[Dot42.DexImport("android/os/Parcelable", AccessFlags = 1537)]
-		public partial interface IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1025)]
-				int DescribeContents() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1025)]
-				void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/os/Parcelable$ClassLoaderCreator
-		/// </java-name>
-		[Dot42.DexImport("android/os/Parcelable$ClassLoaderCreator", AccessFlags = 1545, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;Landroid/os/Parcelable$Creator<TT;>;")]
-		public partial interface IParcelable_IClassLoaderCreator<T> : global::Android.Os.IParcelable_ICreator<T>
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// createFromParcel
-				/// </java-name>
-				[Dot42.DexImport("createFromParcel", "(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(Landroid/os/Parcel;Ljava/lang/ClassLoader;)TT;")]
-				T CreateFromParcel(global::Android.Os.Parcel parcel, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/os/Parcelable$Creator
-		/// </java-name>
-		[Dot42.DexImport("android/os/Parcelable$Creator", AccessFlags = 1545, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
-		public partial interface IParcelable_ICreator<T>
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// createFromParcel
-				/// </java-name>
-				[Dot42.DexImport("createFromParcel", "(Landroid/os/Parcel;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(Landroid/os/Parcel;)TT;")]
-				T CreateFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// newArray
-				/// </java-name>
-				[Dot42.DexImport("newArray", "(I)[Ljava/lang/Object;", AccessFlags = 1025, Signature = "(I)[TT;")]
-				T[] NewArray(int int32) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/os/RemoteCallbackList
-		/// </java-name>
-		[Dot42.DexImport("android/os/RemoteCallbackList", AccessFlags = 33, Signature = "<E::Landroid/os/IInterface;>Ljava/lang/Object;")]
-		public partial class RemoteCallbackList<E>
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RemoteCallbackList() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// register
-				/// </java-name>
-				[Dot42.DexImport("register", "(Landroid/os/IInterface;)Z", AccessFlags = 1, Signature = "(TE;)Z")]
-				public virtual bool Register(E e) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// register
-				/// </java-name>
-				[Dot42.DexImport("register", "(Landroid/os/IInterface;Ljava/lang/Object;)Z", AccessFlags = 1, Signature = "(TE;Ljava/lang/Object;)Z")]
-				public virtual bool Register(E e, object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// unregister
-				/// </java-name>
-				[Dot42.DexImport("unregister", "(Landroid/os/IInterface;)Z", AccessFlags = 1, Signature = "(TE;)Z")]
-				public virtual bool Unregister(E e) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// kill
-				/// </java-name>
-				[Dot42.DexImport("kill", "()V", AccessFlags = 1)]
-				public virtual void Kill() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCallbackDied
-				/// </java-name>
-				[Dot42.DexImport("onCallbackDied", "(Landroid/os/IInterface;)V", AccessFlags = 1, Signature = "(TE;)V")]
-				public virtual void OnCallbackDied(E e) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCallbackDied
-				/// </java-name>
-				[Dot42.DexImport("onCallbackDied", "(Landroid/os/IInterface;Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TE;Ljava/lang/Object;)V")]
-				public virtual void OnCallbackDied(E e, object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// beginBroadcast
-				/// </java-name>
-				[Dot42.DexImport("beginBroadcast", "()I", AccessFlags = 1)]
-				public virtual int BeginBroadcast() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBroadcastItem
-				/// </java-name>
-				[Dot42.DexImport("getBroadcastItem", "(I)Landroid/os/IInterface;", AccessFlags = 1, Signature = "(I)TE;")]
-				public virtual E GetBroadcastItem(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(E);
-				}
-
-				/// <java-name>
-				/// getBroadcastCookie
-				/// </java-name>
-				[Dot42.DexImport("getBroadcastCookie", "(I)Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetBroadcastCookie(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// finishBroadcast
-				/// </java-name>
-				[Dot42.DexImport("finishBroadcast", "()V", AccessFlags = 1)]
-				public virtual void FinishBroadcast() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/Vibrator
-		/// </java-name>
-		[Dot42.DexImport("android/os/Vibrator", AccessFlags = 33)]
-		public partial class Vibrator
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Vibrator() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// hasVibrator
-				/// </java-name>
-				[Dot42.DexImport("hasVibrator", "()Z", AccessFlags = 1)]
-				public virtual bool HasVibrator() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// vibrate
-				/// </java-name>
-				[Dot42.DexImport("vibrate", "(J)V", AccessFlags = 1)]
-				public virtual void Vibrate(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// vibrate
-				/// </java-name>
-				[Dot42.DexImport("vibrate", "([JI)V", AccessFlags = 1)]
-				public virtual void Vibrate(long[] int64, int int32) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
 				/// cancel
 				/// </java-name>
-				[Dot42.DexImport("cancel", "()V", AccessFlags = 1)]
-				public virtual void Cancel() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("cancel", "(Z)Z", AccessFlags = 17)]
+				public bool Cancel(bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "()Ljava/lang/Object;", AccessFlags = 17, Signature = "()TResult;")]
+				public Result Get() /* MethodBuilder.Create */ 
+				{
+						return default(Result);
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;", AccessFlags = 17, Signature = "(JLjava/util/concurrent/TimeUnit;)TResult;")]
+				public Result Get(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
+				{
+						return default(Result);
+				}
+
+				/// <java-name>
+				/// execute
+				/// </java-name>
+				[Dot42.DexImport("execute", "([Ljava/lang/Object;)Landroid/os/AsyncTask;", AccessFlags = 145, Signature = "([TParams;)Landroid/os/AsyncTask<TParams;TProgress;TResult;>;")]
+				public global::Android.Os.AsyncTask<Params, Progress, Result> Execute(params Params[] p) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.AsyncTask<Params, Progress, Result>);
+				}
+
+				/// <java-name>
+				/// executeOnExecutor
+				/// </java-name>
+				[Dot42.DexImport("executeOnExecutor", "(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;", AccessFlags = 145, Signature = "(Ljava/util/concurrent/Executor;[TParams;)Landroid/os/AsyncTask<TParams;TProgress" +
+    ";TResult;>;")]
+				public global::Android.Os.AsyncTask<Params, Progress, Result> ExecuteOnExecutor(global::Java.Util.Concurrent.IExecutor executor, params Params[] p) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.AsyncTask<Params, Progress, Result>);
+				}
+
+				/// <java-name>
+				/// execute
+				/// </java-name>
+				[Dot42.DexImport("execute", "(Ljava/lang/Runnable;)V", AccessFlags = 9)]
+				public static void Execute(global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// publishProgress
+				/// </java-name>
+				[Dot42.DexImport("publishProgress", "([Ljava/lang/Object;)V", AccessFlags = 148, Signature = "([TProgress;)V")]
+				protected internal void PublishProgress(params Progress[] p) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/os/AsyncTask$Status
+				/// </java-name>
+				[Dot42.DexImport("android/os/AsyncTask$Status", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/os/AsyncTask$Status;>;")]
+				public sealed class Status
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// FINISHED
+						/// </java-name>
+						[Dot42.DexImport("FINISHED", "Landroid/os/AsyncTask$Status;", AccessFlags = 16409)]
+						public static readonly Status FINISHED;
+						/// <java-name>
+						/// PENDING
+						/// </java-name>
+						[Dot42.DexImport("PENDING", "Landroid/os/AsyncTask$Status;", AccessFlags = 16409)]
+						public static readonly Status PENDING;
+						/// <java-name>
+						/// RUNNING
+						/// </java-name>
+						[Dot42.DexImport("RUNNING", "Landroid/os/AsyncTask$Status;", AccessFlags = 16409)]
+						public static readonly Status RUNNING;
+						private Status() /* TypeBuilder.AddPrivateDefaultCtor */ 
+						{
+						}
+
+						/// <java-name>
+						/// values
+						/// </java-name>
+						[Dot42.DexImport("values", "()[Landroid/os/AsyncTask$Status;", AccessFlags = 9)]
+						public static Status[] Values() /* MethodBuilder.Create */ 
+						{
+								return default(Status[]);
+						}
+
+						/// <java-name>
+						/// valueOf
+						/// </java-name>
+						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Landroid/os/AsyncTask$Status;", AccessFlags = 9)]
+						public static Status ValueOf(string @string) /* MethodBuilder.Create */ 
+						{
+								return default(Status);
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/BadParcelableException
+		/// </java-name>
+		[Dot42.DexImport("android/os/BadParcelableException", AccessFlags = 33)]
+		public partial class BadParcelableException : global::Android.Util.AndroidRuntimeException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public BadParcelableException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Exception;)V", AccessFlags = 1)]
+				public BadParcelableException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal BadParcelableException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -736,2088 +357,203 @@ namespace Android.Os
 		}
 
 		/// <java-name>
-		/// android/os/DeadObjectException
+		/// android/os/Binder
 		/// </java-name>
-		[Dot42.DexImport("android/os/DeadObjectException", AccessFlags = 33)]
-		public partial class DeadObjectException : global::Android.Os.RemoteException
+		[Dot42.DexImport("android/os/Binder", AccessFlags = 33)]
+		public partial class Binder : global::Android.Os.IBinder
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public DeadObjectException() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/StrictMode
-		/// </java-name>
-		[Dot42.DexImport("android/os/StrictMode", AccessFlags = 49)]
-		public sealed partial class StrictMode
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal StrictMode() /* MethodBuilder.Create */ 
+				public Binder() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// setThreadPolicy
+				/// getCallingPid
 				/// </java-name>
-				[Dot42.DexImport("setThreadPolicy", "(Landroid/os/StrictMode$ThreadPolicy;)V", AccessFlags = 9)]
-				public static void SetThreadPolicy(global::Android.Os.StrictMode.ThreadPolicy threadPolicy) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getCallingPid", "()I", AccessFlags = 281)]
+				public static int GetCallingPid() /* MethodBuilder.Create */ 
 				{
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getThreadPolicy
+				/// getCallingUid
 				/// </java-name>
-				[Dot42.DexImport("getThreadPolicy", "()Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 9)]
-				public static global::Android.Os.StrictMode.ThreadPolicy GetThreadPolicy() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getCallingUid", "()I", AccessFlags = 281)]
+				public static int GetCallingUid() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.StrictMode.ThreadPolicy);
+						return default(int);
 				}
 
 				/// <java-name>
-				/// allowThreadDiskWrites
+				/// clearCallingIdentity
 				/// </java-name>
-				[Dot42.DexImport("allowThreadDiskWrites", "()Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 9)]
-				public static global::Android.Os.StrictMode.ThreadPolicy AllowThreadDiskWrites() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.StrictMode.ThreadPolicy);
-				}
-
-				/// <java-name>
-				/// allowThreadDiskReads
-				/// </java-name>
-				[Dot42.DexImport("allowThreadDiskReads", "()Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 9)]
-				public static global::Android.Os.StrictMode.ThreadPolicy AllowThreadDiskReads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.StrictMode.ThreadPolicy);
-				}
-
-				/// <java-name>
-				/// setVmPolicy
-				/// </java-name>
-				[Dot42.DexImport("setVmPolicy", "(Landroid/os/StrictMode$VmPolicy;)V", AccessFlags = 9)]
-				public static void SetVmPolicy(global::Android.Os.StrictMode.VmPolicy vmPolicy) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getVmPolicy
-				/// </java-name>
-				[Dot42.DexImport("getVmPolicy", "()Landroid/os/StrictMode$VmPolicy;", AccessFlags = 9)]
-				public static global::Android.Os.StrictMode.VmPolicy GetVmPolicy() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.StrictMode.VmPolicy);
-				}
-
-				/// <java-name>
-				/// enableDefaults
-				/// </java-name>
-				[Dot42.DexImport("enableDefaults", "()V", AccessFlags = 9)]
-				public static void EnableDefaults() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// noteSlowCall
-				/// </java-name>
-				[Dot42.DexImport("noteSlowCall", "(Ljava/lang/String;)V", AccessFlags = 9)]
-				public static void NoteSlowCall(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/os/StrictMode$VmPolicy
-				/// </java-name>
-				[Dot42.DexImport("android/os/StrictMode$VmPolicy", AccessFlags = 25)]
-				public sealed partial class VmPolicy
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// LAX
-						/// </java-name>
-						[Dot42.DexImport("LAX", "Landroid/os/StrictMode$VmPolicy;", AccessFlags = 25)]
-						public static readonly VmPolicy LAX;
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal VmPolicy() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// toString
-						/// </java-name>
-						[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-						public override string ToString() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// android/os/StrictMode$VmPolicy$Builder
-						/// </java-name>
-						[Dot42.DexImport("android/os/StrictMode$VmPolicy$Builder", AccessFlags = 25)]
-						public sealed partial class Builder
- /* scope: __dot42__ */ 
-						{
-								[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-								public Builder() /* MethodBuilder.Create */ 
-								{
-								}
-
-								[Dot42.DexImport("<init>", "(Landroid/os/StrictMode$VmPolicy;)V", AccessFlags = 1)]
-								public Builder(global::Android.Os.StrictMode.VmPolicy vmPolicy) /* MethodBuilder.Create */ 
-								{
-								}
-
-								/// <java-name>
-								/// setClassInstanceLimit
-								/// </java-name>
-								[Dot42.DexImport("setClassInstanceLimit", "(Ljava/lang/Class;I)Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
-								public Builder SetClassInstanceLimit(global::System.Type type, int int32) /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// detectActivityLeaks
-								/// </java-name>
-								[Dot42.DexImport("detectActivityLeaks", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
-								public Builder DetectActivityLeaks() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// detectAll
-								/// </java-name>
-								[Dot42.DexImport("detectAll", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
-								public Builder DetectAll() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// detectLeakedSqlLiteObjects
-								/// </java-name>
-								[Dot42.DexImport("detectLeakedSqlLiteObjects", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
-								public Builder DetectLeakedSqlLiteObjects() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// detectLeakedClosableObjects
-								/// </java-name>
-								[Dot42.DexImport("detectLeakedClosableObjects", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
-								public Builder DetectLeakedClosableObjects() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// penaltyDeath
-								/// </java-name>
-								[Dot42.DexImport("penaltyDeath", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
-								public Builder PenaltyDeath() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// penaltyLog
-								/// </java-name>
-								[Dot42.DexImport("penaltyLog", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
-								public Builder PenaltyLog() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// penaltyDropBox
-								/// </java-name>
-								[Dot42.DexImport("penaltyDropBox", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
-								public Builder PenaltyDropBox() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// build
-								/// </java-name>
-								[Dot42.DexImport("build", "()Landroid/os/StrictMode$VmPolicy;", AccessFlags = 1)]
-								public global::Android.Os.StrictMode.VmPolicy Build() /* MethodBuilder.Create */ 
-								{
-										return default(global::Android.Os.StrictMode.VmPolicy);
-								}
-
-						}
-
-				}
-
-				/// <java-name>
-				/// android/os/StrictMode$ThreadPolicy
-				/// </java-name>
-				[Dot42.DexImport("android/os/StrictMode$ThreadPolicy", AccessFlags = 25)]
-				public sealed partial class ThreadPolicy
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// LAX
-						/// </java-name>
-						[Dot42.DexImport("LAX", "Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 25)]
-						public static readonly ThreadPolicy LAX;
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-						internal ThreadPolicy() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// toString
-						/// </java-name>
-						[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-						public override string ToString() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// android/os/StrictMode$ThreadPolicy$Builder
-						/// </java-name>
-						[Dot42.DexImport("android/os/StrictMode$ThreadPolicy$Builder", AccessFlags = 25)]
-						public sealed partial class Builder
- /* scope: __dot42__ */ 
-						{
-								[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-								public Builder() /* MethodBuilder.Create */ 
-								{
-								}
-
-								[Dot42.DexImport("<init>", "(Landroid/os/StrictMode$ThreadPolicy;)V", AccessFlags = 1)]
-								public Builder(global::Android.Os.StrictMode.ThreadPolicy threadPolicy) /* MethodBuilder.Create */ 
-								{
-								}
-
-								/// <java-name>
-								/// detectAll
-								/// </java-name>
-								[Dot42.DexImport("detectAll", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder DetectAll() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// permitAll
-								/// </java-name>
-								[Dot42.DexImport("permitAll", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PermitAll() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// detectNetwork
-								/// </java-name>
-								[Dot42.DexImport("detectNetwork", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder DetectNetwork() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// permitNetwork
-								/// </java-name>
-								[Dot42.DexImport("permitNetwork", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PermitNetwork() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// detectDiskReads
-								/// </java-name>
-								[Dot42.DexImport("detectDiskReads", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder DetectDiskReads() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// permitDiskReads
-								/// </java-name>
-								[Dot42.DexImport("permitDiskReads", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PermitDiskReads() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// detectCustomSlowCalls
-								/// </java-name>
-								[Dot42.DexImport("detectCustomSlowCalls", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder DetectCustomSlowCalls() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// permitCustomSlowCalls
-								/// </java-name>
-								[Dot42.DexImport("permitCustomSlowCalls", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PermitCustomSlowCalls() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// detectDiskWrites
-								/// </java-name>
-								[Dot42.DexImport("detectDiskWrites", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder DetectDiskWrites() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// permitDiskWrites
-								/// </java-name>
-								[Dot42.DexImport("permitDiskWrites", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PermitDiskWrites() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// penaltyDialog
-								/// </java-name>
-								[Dot42.DexImport("penaltyDialog", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PenaltyDialog() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// penaltyDeath
-								/// </java-name>
-								[Dot42.DexImport("penaltyDeath", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PenaltyDeath() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// penaltyDeathOnNetwork
-								/// </java-name>
-								[Dot42.DexImport("penaltyDeathOnNetwork", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PenaltyDeathOnNetwork() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// penaltyFlashScreen
-								/// </java-name>
-								[Dot42.DexImport("penaltyFlashScreen", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PenaltyFlashScreen() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// penaltyLog
-								/// </java-name>
-								[Dot42.DexImport("penaltyLog", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PenaltyLog() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// penaltyDropBox
-								/// </java-name>
-								[Dot42.DexImport("penaltyDropBox", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
-								public Builder PenaltyDropBox() /* MethodBuilder.Create */ 
-								{
-										return default(Builder);
-								}
-
-								/// <java-name>
-								/// build
-								/// </java-name>
-								[Dot42.DexImport("build", "()Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 1)]
-								public global::Android.Os.StrictMode.ThreadPolicy Build() /* MethodBuilder.Create */ 
-								{
-										return default(global::Android.Os.StrictMode.ThreadPolicy);
-								}
-
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/PowerManager
-		/// </java-name>
-		[Dot42.DexImport("android/os/PowerManager", AccessFlags = 33)]
-		public partial class PowerManager
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// PARTIAL_WAKE_LOCK
-				/// </java-name>
-				[Dot42.DexImport("PARTIAL_WAKE_LOCK", "I", AccessFlags = 25)]
-				public const int PARTIAL_WAKE_LOCK = 1;
-				/// <java-name>
-				/// FULL_WAKE_LOCK
-				/// </java-name>
-				[Dot42.DexImport("FULL_WAKE_LOCK", "I", AccessFlags = 25)]
-				public const int FULL_WAKE_LOCK = 26;
-				/// <java-name>
-				/// SCREEN_BRIGHT_WAKE_LOCK
-				/// </java-name>
-				[Dot42.DexImport("SCREEN_BRIGHT_WAKE_LOCK", "I", AccessFlags = 25)]
-				public const int SCREEN_BRIGHT_WAKE_LOCK = 10;
-				/// <java-name>
-				/// SCREEN_DIM_WAKE_LOCK
-				/// </java-name>
-				[Dot42.DexImport("SCREEN_DIM_WAKE_LOCK", "I", AccessFlags = 25)]
-				public const int SCREEN_DIM_WAKE_LOCK = 6;
-				/// <java-name>
-				/// ACQUIRE_CAUSES_WAKEUP
-				/// </java-name>
-				[Dot42.DexImport("ACQUIRE_CAUSES_WAKEUP", "I", AccessFlags = 25)]
-				public const int ACQUIRE_CAUSES_WAKEUP = 268435456;
-				/// <java-name>
-				/// ON_AFTER_RELEASE
-				/// </java-name>
-				[Dot42.DexImport("ON_AFTER_RELEASE", "I", AccessFlags = 25)]
-				public const int ON_AFTER_RELEASE = 536870912;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal PowerManager() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// newWakeLock
-				/// </java-name>
-				[Dot42.DexImport("newWakeLock", "(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;", AccessFlags = 1)]
-				public virtual global::Android.Os.PowerManager.WakeLock NewWakeLock(int int32, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.PowerManager.WakeLock);
-				}
-
-				/// <java-name>
-				/// userActivity
-				/// </java-name>
-				[Dot42.DexImport("userActivity", "(JZ)V", AccessFlags = 1)]
-				public virtual void UserActivity(long int64, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// goToSleep
-				/// </java-name>
-				[Dot42.DexImport("goToSleep", "(J)V", AccessFlags = 1)]
-				public virtual void GoToSleep(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isScreenOn
-				/// </java-name>
-				[Dot42.DexImport("isScreenOn", "()Z", AccessFlags = 1)]
-				public virtual bool IsScreenOn() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// reboot
-				/// </java-name>
-				[Dot42.DexImport("reboot", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Reboot(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/os/PowerManager$WakeLock
-				/// </java-name>
-				[Dot42.DexImport("android/os/PowerManager$WakeLock", AccessFlags = 1)]
-				public partial class WakeLock
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// this$0
-						/// </java-name>
-						[Dot42.DexImport("this$0", "Landroid/os/PowerManager;", AccessFlags = 4112)]
-						internal readonly global::Android.Os.PowerManager This_0;
-						[Dot42.DexImport("<init>", "(Landroid/os/PowerManager;)V", AccessFlags = 0)]
-						internal WakeLock(global::Android.Os.PowerManager powerManager) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// setReferenceCounted
-						/// </java-name>
-						[Dot42.DexImport("setReferenceCounted", "(Z)V", AccessFlags = 1)]
-						public virtual void SetReferenceCounted(bool boolean) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// acquire
-						/// </java-name>
-						[Dot42.DexImport("acquire", "()V", AccessFlags = 1)]
-						public virtual void Acquire() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// acquire
-						/// </java-name>
-						[Dot42.DexImport("acquire", "(J)V", AccessFlags = 1)]
-						public virtual void Acquire(long int64) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// release
-						/// </java-name>
-						[Dot42.DexImport("release", "()V", AccessFlags = 1)]
-						public virtual void Release() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// isHeld
-						/// </java-name>
-						[Dot42.DexImport("isHeld", "()Z", AccessFlags = 1)]
-						public virtual bool IsHeld() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// setWorkSource
-						/// </java-name>
-						[Dot42.DexImport("setWorkSource", "(Landroid/os/WorkSource;)V", AccessFlags = 1)]
-						public virtual void SetWorkSource(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// toString
-						/// </java-name>
-						[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-						public override string ToString() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// finalize
-						/// </java-name>
-						[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-						extern ~WakeLock() /* MethodBuilder.Create */ ;
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal WakeLock() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/ParcelFileDescriptor
-		/// </java-name>
-		[Dot42.DexImport("android/os/ParcelFileDescriptor", AccessFlags = 33)]
-		public partial class ParcelFileDescriptor : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// MODE_WORLD_READABLE
-				/// </java-name>
-				[Dot42.DexImport("MODE_WORLD_READABLE", "I", AccessFlags = 25)]
-				public const int MODE_WORLD_READABLE = 1;
-				/// <java-name>
-				/// MODE_WORLD_WRITEABLE
-				/// </java-name>
-				[Dot42.DexImport("MODE_WORLD_WRITEABLE", "I", AccessFlags = 25)]
-				public const int MODE_WORLD_WRITEABLE = 2;
-				/// <java-name>
-				/// MODE_READ_ONLY
-				/// </java-name>
-				[Dot42.DexImport("MODE_READ_ONLY", "I", AccessFlags = 25)]
-				public const int MODE_READ_ONLY = 268435456;
-				/// <java-name>
-				/// MODE_WRITE_ONLY
-				/// </java-name>
-				[Dot42.DexImport("MODE_WRITE_ONLY", "I", AccessFlags = 25)]
-				public const int MODE_WRITE_ONLY = 536870912;
-				/// <java-name>
-				/// MODE_READ_WRITE
-				/// </java-name>
-				[Dot42.DexImport("MODE_READ_WRITE", "I", AccessFlags = 25)]
-				public const int MODE_READ_WRITE = 805306368;
-				/// <java-name>
-				/// MODE_CREATE
-				/// </java-name>
-				[Dot42.DexImport("MODE_CREATE", "I", AccessFlags = 25)]
-				public const int MODE_CREATE = 134217728;
-				/// <java-name>
-				/// MODE_TRUNCATE
-				/// </java-name>
-				[Dot42.DexImport("MODE_TRUNCATE", "I", AccessFlags = 25)]
-				public const int MODE_TRUNCATE = 67108864;
-				/// <java-name>
-				/// MODE_APPEND
-				/// </java-name>
-				[Dot42.DexImport("MODE_APPEND", "I", AccessFlags = 25)]
-				public const int MODE_APPEND = 33554432;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.ParcelFileDescriptor> CREATOR;
-				[Dot42.DexImport("<init>", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public ParcelFileDescriptor(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// open
-				/// </java-name>
-				[Dot42.DexImport("open", "(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelFileDescriptor Open(global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
-				}
-
-				/// <java-name>
-				/// dup
-				/// </java-name>
-				[Dot42.DexImport("dup", "(Ljava/io/FileDescriptor;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelFileDescriptor Dup(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
-				}
-
-				/// <java-name>
-				/// dup
-				/// </java-name>
-				[Dot42.DexImport("dup", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
-				public virtual global::Android.Os.ParcelFileDescriptor Dup() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
-				}
-
-				/// <java-name>
-				/// fromFd
-				/// </java-name>
-				[Dot42.DexImport("fromFd", "(I)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelFileDescriptor FromFd(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
-				}
-
-				/// <java-name>
-				/// adoptFd
-				/// </java-name>
-				[Dot42.DexImport("adoptFd", "(I)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelFileDescriptor AdoptFd(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
-				}
-
-				/// <java-name>
-				/// fromSocket
-				/// </java-name>
-				[Dot42.DexImport("fromSocket", "(Ljava/net/Socket;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelFileDescriptor FromSocket(global::Java.Net.Socket socket) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
-				}
-
-				/// <java-name>
-				/// fromDatagramSocket
-				/// </java-name>
-				[Dot42.DexImport("fromDatagramSocket", "(Ljava/net/DatagramSocket;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelFileDescriptor FromDatagramSocket(global::Java.Net.DatagramSocket datagramSocket) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
-				}
-
-				/// <java-name>
-				/// createPipe
-				/// </java-name>
-				[Dot42.DexImport("createPipe", "()[Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelFileDescriptor[] CreatePipe() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor[]);
-				}
-
-				/// <java-name>
-				/// getFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-				public virtual global::Java.Io.FileDescriptor GetFileDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor);
-				}
-
-				/// <java-name>
-				/// getStatSize
-				/// </java-name>
-				[Dot42.DexImport("getStatSize", "()J", AccessFlags = 257)]
-				public virtual long GetStatSize() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("clearCallingIdentity", "()J", AccessFlags = 281)]
+				public static long ClearCallingIdentity() /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
 
 				/// <java-name>
-				/// getFd
+				/// restoreCallingIdentity
 				/// </java-name>
-				[Dot42.DexImport("getFd", "()I", AccessFlags = 1)]
-				public virtual int GetFd() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// detachFd
-				/// </java-name>
-				[Dot42.DexImport("detachFd", "()I", AccessFlags = 1)]
-				public virtual int DetachFd() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public virtual void Close() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("restoreCallingIdentity", "(J)V", AccessFlags = 281)]
+				public static void RestoreCallingIdentity(long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// toString
+				/// flushPendingCommands
 				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("flushPendingCommands", "()V", AccessFlags = 281)]
+				public static void FlushPendingCommands() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// joinThreadPool
+				/// </java-name>
+				[Dot42.DexImport("joinThreadPool", "()V", AccessFlags = 281)]
+				public static void JoinThreadPool() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// attachInterface
+				/// </java-name>
+				[Dot42.DexImport("attachInterface", "(Landroid/os/IInterface;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void AttachInterface(global::Android.Os.IInterface @interface, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getInterfaceDescriptor
+				/// </java-name>
+				[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetInterfaceDescriptor() /* MethodBuilder.Create */ 
 				{
 						return default(string);
+				}
+
+				/// <java-name>
+				/// pingBinder
+				/// </java-name>
+				[Dot42.DexImport("pingBinder", "()Z", AccessFlags = 1)]
+				public virtual bool PingBinder() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isBinderAlive
+				/// </java-name>
+				[Dot42.DexImport("isBinderAlive", "()Z", AccessFlags = 1)]
+				public virtual bool IsBinderAlive() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// queryLocalInterface
+				/// </java-name>
+				[Dot42.DexImport("queryLocalInterface", "(Ljava/lang/String;)Landroid/os/IInterface;", AccessFlags = 1)]
+				public virtual global::Android.Os.IInterface QueryLocalInterface(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IInterface);
+				}
+
+				/// <java-name>
+				/// onTransact
+				/// </java-name>
+				[Dot42.DexImport("onTransact", "(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z", AccessFlags = 4)]
+				protected internal virtual bool OnTransact(int int32, global::Android.Os.Parcel parcel, global::Android.Os.Parcel parcel1, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// dump
+				/// </java-name>
+				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Dump(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dumpAsync
+				/// </java-name>
+				[Dot42.DexImport("dumpAsync", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void DumpAsync(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dump
+				/// </java-name>
+				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V", AccessFlags = 4)]
+				protected internal virtual void Dump(global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// transact
+				/// </java-name>
+				[Dot42.DexImport("transact", "(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z", AccessFlags = 17)]
+				public bool Transact(int int32, global::Android.Os.Parcel parcel, global::Android.Os.Parcel parcel1, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// linkToDeath
+				/// </java-name>
+				[Dot42.DexImport("linkToDeath", "(Landroid/os/IBinder$DeathRecipient;I)V", AccessFlags = 1)]
+				public virtual void LinkToDeath(global::Android.Os.IBinder_IDeathRecipient binder_IDeathRecipient, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// unlinkToDeath
+				/// </java-name>
+				[Dot42.DexImport("unlinkToDeath", "(Landroid/os/IBinder$DeathRecipient;I)Z", AccessFlags = 1)]
+				public virtual bool UnlinkToDeath(global::Android.Os.IBinder_IDeathRecipient binder_IDeathRecipient, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
 				}
 
 				/// <java-name>
 				/// finalize
 				/// </java-name>
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~ParcelFileDescriptor() /* MethodBuilder.Create */ ;
+				extern ~Binder() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// describeContents
+				/// getCallingPid
 				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				public static int CallingPid
 				{
-						return default(int);
+				[Dot42.DexImport("getCallingPid", "()I", AccessFlags = 281)]
+						get{ return GetCallingPid(); }
 				}
 
 				/// <java-name>
-				/// writeToParcel
+				/// getCallingUid
 				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public static int CallingUid
 				{
+				[Dot42.DexImport("getCallingUid", "()I", AccessFlags = 281)]
+						get{ return GetCallingUid(); }
 				}
 
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ParcelFileDescriptor() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getFileDescriptor
-				/// </java-name>
-				public global::Java.Io.FileDescriptor FileDescriptor
-				{
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return GetFileDescriptor(); }
-				}
-
-				/// <java-name>
-				/// getStatSize
-				/// </java-name>
-				public long StatSize
-				{
-				[Dot42.DexImport("getStatSize", "()J", AccessFlags = 257)]
-						get{ return GetStatSize(); }
-				}
-
-				/// <java-name>
-				/// getFd
-				/// </java-name>
-				public int Fd
-				{
-				[Dot42.DexImport("getFd", "()I", AccessFlags = 1)]
-						get{ return GetFd(); }
-				}
-
-				/// <java-name>
-				/// android/os/ParcelFileDescriptor$AutoCloseOutputStream
-				/// </java-name>
-				[Dot42.DexImport("android/os/ParcelFileDescriptor$AutoCloseOutputStream", AccessFlags = 9)]
-				public partial class AutoCloseOutputStream : global::Java.Io.FileOutputStream
- /* scope: __dot42__ */ 
-				{
-						[Dot42.DexImport("<init>", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-						public AutoCloseOutputStream(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// close
-						/// </java-name>
-						[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-						public override void Close() /* MethodBuilder.Create */ 
-						{
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AutoCloseOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/os/ParcelFileDescriptor$AutoCloseInputStream
-				/// </java-name>
-				[Dot42.DexImport("android/os/ParcelFileDescriptor$AutoCloseInputStream", AccessFlags = 9)]
-				public partial class AutoCloseInputStream : global::Java.Io.FileInputStream
- /* scope: __dot42__ */ 
-				{
-						[Dot42.DexImport("<init>", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-						public AutoCloseInputStream(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// close
-						/// </java-name>
-						[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-						public override void Close() /* MethodBuilder.Create */ 
-						{
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AutoCloseInputStream() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/RecoverySystem
-		/// </java-name>
-		[Dot42.DexImport("android/os/RecoverySystem", AccessFlags = 33)]
-		public partial class RecoverySystem
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RecoverySystem() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// verifyPackage
-				/// </java-name>
-				[Dot42.DexImport("verifyPackage", "(Ljava/io/File;Landroid/os/RecoverySystem$ProgressListener;Ljava/io/File;)V", AccessFlags = 9)]
-				public static void VerifyPackage(global::Java.Io.File file, global::Android.Os.RecoverySystem.IProgressListener progressListener, global::Java.Io.File file1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// installPackage
-				/// </java-name>
-				[Dot42.DexImport("installPackage", "(Landroid/content/Context;Ljava/io/File;)V", AccessFlags = 9)]
-				public static void InstallPackage(global::Android.Content.Context context, global::Java.Io.File file) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// rebootWipeUserData
-				/// </java-name>
-				[Dot42.DexImport("rebootWipeUserData", "(Landroid/content/Context;)V", AccessFlags = 9)]
-				public static void RebootWipeUserData(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// rebootWipeCache
-				/// </java-name>
-				[Dot42.DexImport("rebootWipeCache", "(Landroid/content/Context;)V", AccessFlags = 9)]
-				public static void RebootWipeCache(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/os/RecoverySystem$ProgressListener
-				/// </java-name>
-				[Dot42.DexImport("android/os/RecoverySystem$ProgressListener", AccessFlags = 1545)]
-				public partial interface IProgressListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onProgress
-						/// </java-name>
-						[Dot42.DexImport("onProgress", "(I)V", AccessFlags = 1025)]
-						void OnProgress(int int32) /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/PatternMatcher
-		/// </java-name>
-		[Dot42.DexImport("android/os/PatternMatcher", AccessFlags = 33)]
-		public partial class PatternMatcher : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// PATTERN_LITERAL
-				/// </java-name>
-				[Dot42.DexImport("PATTERN_LITERAL", "I", AccessFlags = 25)]
-				public const int PATTERN_LITERAL = 0;
-				/// <java-name>
-				/// PATTERN_PREFIX
-				/// </java-name>
-				[Dot42.DexImport("PATTERN_PREFIX", "I", AccessFlags = 25)]
-				public const int PATTERN_PREFIX = 1;
-				/// <java-name>
-				/// PATTERN_SIMPLE_GLOB
-				/// </java-name>
-				[Dot42.DexImport("PATTERN_SIMPLE_GLOB", "I", AccessFlags = 25)]
-				public const int PATTERN_SIMPLE_GLOB = 2;
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.PatternMatcher> CREATOR;
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
-				public PatternMatcher(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public PatternMatcher(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 17)]
-				public int GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// match
-				/// </java-name>
-				[Dot42.DexImport("match", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public virtual bool Match(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PatternMatcher() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				public string Path
-				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetPath(); }
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				public int Type
-				{
-				[Dot42.DexImport("getType", "()I", AccessFlags = 17)]
-						get{ return GetTypeJava(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/RemoteException
-		/// </java-name>
-		[Dot42.DexImport("android/os/RemoteException", AccessFlags = 33)]
-		public partial class RemoteException : global::Android.Util.AndroidException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RemoteException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public RemoteException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/ConditionVariable
-		/// </java-name>
-		[Dot42.DexImport("android/os/ConditionVariable", AccessFlags = 33)]
-		public partial class ConditionVariable
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ConditionVariable() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Z)V", AccessFlags = 1)]
-				public ConditionVariable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// open
-				/// </java-name>
-				[Dot42.DexImport("open", "()V", AccessFlags = 1)]
-				public virtual void Open() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public virtual void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// block
-				/// </java-name>
-				[Dot42.DexImport("block", "()V", AccessFlags = 1)]
-				public virtual void Block() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// block
-				/// </java-name>
-				[Dot42.DexImport("block", "(J)Z", AccessFlags = 1)]
-				public virtual bool Block(long int64) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/NetworkOnMainThreadException
-		/// </java-name>
-		[Dot42.DexImport("android/os/NetworkOnMainThreadException", AccessFlags = 33)]
-		public partial class NetworkOnMainThreadException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NetworkOnMainThreadException() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/Parcel
-		/// </java-name>
-		[Dot42.DexImport("android/os/Parcel", AccessFlags = 49)]
-		public sealed partial class Parcel
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// STRING_CREATOR
-				/// </java-name>
-				[Dot42.DexImport("STRING_CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<string> STRING_CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Parcel() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "()Landroid/os/Parcel;", AccessFlags = 9)]
-				public static global::Android.Os.Parcel Obtain() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Parcel);
-				}
-
-				/// <java-name>
-				/// recycle
-				/// </java-name>
-				[Dot42.DexImport("recycle", "()V", AccessFlags = 17)]
-				public void Recycle() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dataSize
-				/// </java-name>
-				[Dot42.DexImport("dataSize", "()I", AccessFlags = 273)]
-				public int DataSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dataAvail
-				/// </java-name>
-				[Dot42.DexImport("dataAvail", "()I", AccessFlags = 273)]
-				public int DataAvail() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dataPosition
-				/// </java-name>
-				[Dot42.DexImport("dataPosition", "()I", AccessFlags = 273)]
-				public int DataPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// dataCapacity
-				/// </java-name>
-				[Dot42.DexImport("dataCapacity", "()I", AccessFlags = 273)]
-				public int DataCapacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDataSize
-				/// </java-name>
-				[Dot42.DexImport("setDataSize", "(I)V", AccessFlags = 273)]
-				public void SetDataSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDataPosition
-				/// </java-name>
-				[Dot42.DexImport("setDataPosition", "(I)V", AccessFlags = 273)]
-				public void SetDataPosition(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDataCapacity
-				/// </java-name>
-				[Dot42.DexImport("setDataCapacity", "(I)V", AccessFlags = 273)]
-				public void SetDataCapacity(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// marshall
-				/// </java-name>
-				[Dot42.DexImport("marshall", "()[B", AccessFlags = 273)]
-				public sbyte[] JavaMarshall() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// marshall
-				/// </java-name>
-				[Dot42.DexImport("marshall", "()[B", AccessFlags = 273, IgnoreFromJava = true)]
-				public byte[] Marshall() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// unmarshall
-				/// </java-name>
-				[Dot42.DexImport("unmarshall", "([BII)V", AccessFlags = 273)]
-				public void Unmarshall(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// unmarshall
-				/// </java-name>
-				[Dot42.DexImport("unmarshall", "([BII)V", AccessFlags = 273, IgnoreFromJava = true)]
-				public void Unmarshall(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// appendFrom
-				/// </java-name>
-				[Dot42.DexImport("appendFrom", "(Landroid/os/Parcel;II)V", AccessFlags = 273)]
-				public void AppendFrom(global::Android.Os.Parcel parcel, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// hasFileDescriptors
-				/// </java-name>
-				[Dot42.DexImport("hasFileDescriptors", "()Z", AccessFlags = 273)]
-				public bool HasFileDescriptors() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// writeInterfaceToken
-				/// </java-name>
-				[Dot42.DexImport("writeInterfaceToken", "(Ljava/lang/String;)V", AccessFlags = 273)]
-				public void WriteInterfaceToken(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// enforceInterface
-				/// </java-name>
-				[Dot42.DexImport("enforceInterface", "(Ljava/lang/String;)V", AccessFlags = 273)]
-				public void EnforceInterface(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeByteArray
-				/// </java-name>
-				[Dot42.DexImport("writeByteArray", "([B)V", AccessFlags = 17)]
-				public void WriteByteArray(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeByteArray
-				/// </java-name>
-				[Dot42.DexImport("writeByteArray", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
-				public void WriteByteArray(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeByteArray
-				/// </java-name>
-				[Dot42.DexImport("writeByteArray", "([BII)V", AccessFlags = 17)]
-				public void WriteByteArray(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeByteArray
-				/// </java-name>
-				[Dot42.DexImport("writeByteArray", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
-				public void WriteByteArray(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeInt
-				/// </java-name>
-				[Dot42.DexImport("writeInt", "(I)V", AccessFlags = 273)]
-				public void WriteInt(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeLong
-				/// </java-name>
-				[Dot42.DexImport("writeLong", "(J)V", AccessFlags = 273)]
-				public void WriteLong(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeFloat
-				/// </java-name>
-				[Dot42.DexImport("writeFloat", "(F)V", AccessFlags = 273)]
-				public void WriteFloat(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeDouble
-				/// </java-name>
-				[Dot42.DexImport("writeDouble", "(D)V", AccessFlags = 273)]
-				public void WriteDouble(double @double) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeString
-				/// </java-name>
-				[Dot42.DexImport("writeString", "(Ljava/lang/String;)V", AccessFlags = 273)]
-				public void WriteString(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeStrongBinder
-				/// </java-name>
-				[Dot42.DexImport("writeStrongBinder", "(Landroid/os/IBinder;)V", AccessFlags = 273)]
-				public void WriteStrongBinder(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeStrongInterface
-				/// </java-name>
-				[Dot42.DexImport("writeStrongInterface", "(Landroid/os/IInterface;)V", AccessFlags = 17)]
-				public void WriteStrongInterface(global::Android.Os.IInterface @interface) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("writeFileDescriptor", "(Ljava/io/FileDescriptor;)V", AccessFlags = 273)]
-				public void WriteFileDescriptor(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeByte
-				/// </java-name>
-				[Dot42.DexImport("writeByte", "(B)V", AccessFlags = 17)]
-				public void WriteByte(sbyte sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeByte
-				/// </java-name>
-				[Dot42.DexImport("writeByte", "(B)V", AccessFlags = 17, IgnoreFromJava = true)]
-				public void WriteByte(byte @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeMap
-				/// </java-name>
-				[Dot42.DexImport("writeMap", "(Ljava/util/Map;)V", AccessFlags = 17)]
-				public void WriteMap(global::Java.Util.IMap<object, object> map) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeBundle
-				/// </java-name>
-				[Dot42.DexImport("writeBundle", "(Landroid/os/Bundle;)V", AccessFlags = 17)]
-				public void WriteBundle(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeList
-				/// </java-name>
-				[Dot42.DexImport("writeList", "(Ljava/util/List;)V", AccessFlags = 17)]
-				public void WriteList(global::Java.Util.IList<object> list) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeArray
-				/// </java-name>
-				[Dot42.DexImport("writeArray", "([Ljava/lang/Object;)V", AccessFlags = 17)]
-				public void WriteArray(object[] @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeSparseArray
-				/// </java-name>
-				[Dot42.DexImport("writeSparseArray", "(Landroid/util/SparseArray;)V", AccessFlags = 17, Signature = "(Landroid/util/SparseArray<Ljava/lang/Object;>;)V")]
-				public void WriteSparseArray(global::Android.Util.SparseArray<object> sparseArray) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeSparseBooleanArray
-				/// </java-name>
-				[Dot42.DexImport("writeSparseBooleanArray", "(Landroid/util/SparseBooleanArray;)V", AccessFlags = 17)]
-				public void WriteSparseBooleanArray(global::Android.Util.SparseBooleanArray sparseBooleanArray) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeBooleanArray
-				/// </java-name>
-				[Dot42.DexImport("writeBooleanArray", "([Z)V", AccessFlags = 17)]
-				public void WriteBooleanArray(bool[] boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createBooleanArray
-				/// </java-name>
-				[Dot42.DexImport("createBooleanArray", "()[Z", AccessFlags = 17)]
-				public bool[] CreateBooleanArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool[]);
-				}
-
-				/// <java-name>
-				/// readBooleanArray
-				/// </java-name>
-				[Dot42.DexImport("readBooleanArray", "([Z)V", AccessFlags = 17)]
-				public void ReadBooleanArray(bool[] boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeCharArray
-				/// </java-name>
-				[Dot42.DexImport("writeCharArray", "([C)V", AccessFlags = 17)]
-				public void WriteCharArray(char[] @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createCharArray
-				/// </java-name>
-				[Dot42.DexImport("createCharArray", "()[C", AccessFlags = 17)]
-				public char[] CreateCharArray() /* MethodBuilder.Create */ 
-				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// readCharArray
-				/// </java-name>
-				[Dot42.DexImport("readCharArray", "([C)V", AccessFlags = 17)]
-				public void ReadCharArray(char[] @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeIntArray
-				/// </java-name>
-				[Dot42.DexImport("writeIntArray", "([I)V", AccessFlags = 17)]
-				public void WriteIntArray(int[] int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createIntArray
-				/// </java-name>
-				[Dot42.DexImport("createIntArray", "()[I", AccessFlags = 17)]
-				public int[] CreateIntArray() /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// readIntArray
-				/// </java-name>
-				[Dot42.DexImport("readIntArray", "([I)V", AccessFlags = 17)]
-				public void ReadIntArray(int[] int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeLongArray
-				/// </java-name>
-				[Dot42.DexImport("writeLongArray", "([J)V", AccessFlags = 17)]
-				public void WriteLongArray(long[] int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createLongArray
-				/// </java-name>
-				[Dot42.DexImport("createLongArray", "()[J", AccessFlags = 17)]
-				public long[] CreateLongArray() /* MethodBuilder.Create */ 
-				{
-						return default(long[]);
-				}
-
-				/// <java-name>
-				/// readLongArray
-				/// </java-name>
-				[Dot42.DexImport("readLongArray", "([J)V", AccessFlags = 17)]
-				public void ReadLongArray(long[] int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeFloatArray
-				/// </java-name>
-				[Dot42.DexImport("writeFloatArray", "([F)V", AccessFlags = 17)]
-				public void WriteFloatArray(float[] single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createFloatArray
-				/// </java-name>
-				[Dot42.DexImport("createFloatArray", "()[F", AccessFlags = 17)]
-				public float[] CreateFloatArray() /* MethodBuilder.Create */ 
-				{
-						return default(float[]);
-				}
-
-				/// <java-name>
-				/// readFloatArray
-				/// </java-name>
-				[Dot42.DexImport("readFloatArray", "([F)V", AccessFlags = 17)]
-				public void ReadFloatArray(float[] single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeDoubleArray
-				/// </java-name>
-				[Dot42.DexImport("writeDoubleArray", "([D)V", AccessFlags = 17)]
-				public void WriteDoubleArray(double[] @double) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createDoubleArray
-				/// </java-name>
-				[Dot42.DexImport("createDoubleArray", "()[D", AccessFlags = 17)]
-				public double[] CreateDoubleArray() /* MethodBuilder.Create */ 
-				{
-						return default(double[]);
-				}
-
-				/// <java-name>
-				/// readDoubleArray
-				/// </java-name>
-				[Dot42.DexImport("readDoubleArray", "([D)V", AccessFlags = 17)]
-				public void ReadDoubleArray(double[] @double) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeStringArray
-				/// </java-name>
-				[Dot42.DexImport("writeStringArray", "([Ljava/lang/String;)V", AccessFlags = 17)]
-				public void WriteStringArray(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createStringArray
-				/// </java-name>
-				[Dot42.DexImport("createStringArray", "()[Ljava/lang/String;", AccessFlags = 17)]
-				public string[] CreateStringArray() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// readStringArray
-				/// </java-name>
-				[Dot42.DexImport("readStringArray", "([Ljava/lang/String;)V", AccessFlags = 17)]
-				public void ReadStringArray(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeBinderArray
-				/// </java-name>
-				[Dot42.DexImport("writeBinderArray", "([Landroid/os/IBinder;)V", AccessFlags = 17)]
-				public void WriteBinderArray(global::Android.Os.IBinder[] binder) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createBinderArray
-				/// </java-name>
-				[Dot42.DexImport("createBinderArray", "()[Landroid/os/IBinder;", AccessFlags = 17)]
-				public global::Android.Os.IBinder[] CreateBinderArray() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IBinder[]);
-				}
-
-				/// <java-name>
-				/// readBinderArray
-				/// </java-name>
-				[Dot42.DexImport("readBinderArray", "([Landroid/os/IBinder;)V", AccessFlags = 17)]
-				public void ReadBinderArray(global::Android.Os.IBinder[] binder) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeTypedList
-				/// </java-name>
-				[Dot42.DexImport("writeTypedList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "<T::Landroid/os/Parcelable;>(Ljava/util/List<TT;>;)V")]
-				public void WriteTypedList<T>(global::Java.Util.IList<T> list) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeStringList
-				/// </java-name>
-				[Dot42.DexImport("writeStringList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "(Ljava/util/List<Ljava/lang/String;>;)V")]
-				public void WriteStringList(global::Java.Util.IList<string> list) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeBinderList
-				/// </java-name>
-				[Dot42.DexImport("writeBinderList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "(Ljava/util/List<Landroid/os/IBinder;>;)V")]
-				public void WriteBinderList(global::Java.Util.IList<global::Android.Os.IBinder> list) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeTypedArray
-				/// </java-name>
-				[Dot42.DexImport("writeTypedArray", "([Landroid/os/Parcelable;I)V", AccessFlags = 17, Signature = "<T::Landroid/os/Parcelable;>([TT;I)V")]
-				public void WriteTypedArray<T>(T[] p, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeValue
-				/// </java-name>
-				[Dot42.DexImport("writeValue", "(Ljava/lang/Object;)V", AccessFlags = 17)]
-				public void WriteValue(object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeParcelable
-				/// </java-name>
-				[Dot42.DexImport("writeParcelable", "(Landroid/os/Parcelable;I)V", AccessFlags = 17)]
-				public void WriteParcelable(global::Android.Os.IParcelable parcelable, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeSerializable
-				/// </java-name>
-				[Dot42.DexImport("writeSerializable", "(Ljava/io/Serializable;)V", AccessFlags = 17)]
-				public void WriteSerializable(global::Java.Io.ISerializable serializable) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeException
-				/// </java-name>
-				[Dot42.DexImport("writeException", "(Ljava/lang/Exception;)V", AccessFlags = 17)]
-				public void WriteException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeNoException
-				/// </java-name>
-				[Dot42.DexImport("writeNoException", "()V", AccessFlags = 17)]
-				public void WriteNoException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// readException
-				/// </java-name>
-				[Dot42.DexImport("readException", "()V", AccessFlags = 17)]
-				public void ReadException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// readException
-				/// </java-name>
-				[Dot42.DexImport("readException", "(ILjava/lang/String;)V", AccessFlags = 17)]
-				public void ReadException(int int32, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// readInt
-				/// </java-name>
-				[Dot42.DexImport("readInt", "()I", AccessFlags = 273)]
-				public int ReadInt() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// readLong
-				/// </java-name>
-				[Dot42.DexImport("readLong", "()J", AccessFlags = 273)]
-				public long ReadLong() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// readFloat
-				/// </java-name>
-				[Dot42.DexImport("readFloat", "()F", AccessFlags = 273)]
-				public float ReadFloat() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// readDouble
-				/// </java-name>
-				[Dot42.DexImport("readDouble", "()D", AccessFlags = 273)]
-				public double ReadDouble() /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// readString
-				/// </java-name>
-				[Dot42.DexImport("readString", "()Ljava/lang/String;", AccessFlags = 273)]
-				public string ReadString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// readStrongBinder
-				/// </java-name>
-				[Dot42.DexImport("readStrongBinder", "()Landroid/os/IBinder;", AccessFlags = 273)]
-				public global::Android.Os.IBinder ReadStrongBinder() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IBinder);
-				}
-
-				/// <java-name>
-				/// readFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("readFileDescriptor", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 17)]
-				public global::Android.Os.ParcelFileDescriptor ReadFileDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
-				}
-
-				/// <java-name>
-				/// readByte
-				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 17)]
-				public sbyte JavaReadByte() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte);
-				}
-
-				/// <java-name>
-				/// readByte
-				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 17, IgnoreFromJava = true)]
-				public byte ReadByte() /* MethodBuilder.Create */ 
-				{
-						return default(byte);
-				}
-
-				/// <java-name>
-				/// readMap
-				/// </java-name>
-				[Dot42.DexImport("readMap", "(Ljava/util/Map;Ljava/lang/ClassLoader;)V", AccessFlags = 17)]
-				public void ReadMap(global::Java.Util.IMap<object, object> map, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// readList
-				/// </java-name>
-				[Dot42.DexImport("readList", "(Ljava/util/List;Ljava/lang/ClassLoader;)V", AccessFlags = 17)]
-				public void ReadList(global::Java.Util.IList<object> list, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// readHashMap
-				/// </java-name>
-				[Dot42.DexImport("readHashMap", "(Ljava/lang/ClassLoader;)Ljava/util/HashMap;", AccessFlags = 17)]
-				public global::Java.Util.HashMap<object, object> ReadHashMap(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.HashMap<object, object>);
-				}
-
-				/// <java-name>
-				/// readBundle
-				/// </java-name>
-				[Dot42.DexImport("readBundle", "()Landroid/os/Bundle;", AccessFlags = 17)]
-				public global::Android.Os.Bundle ReadBundle() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Bundle);
-				}
-
-				/// <java-name>
-				/// readBundle
-				/// </java-name>
-				[Dot42.DexImport("readBundle", "(Ljava/lang/ClassLoader;)Landroid/os/Bundle;", AccessFlags = 17)]
-				public global::Android.Os.Bundle ReadBundle(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Bundle);
-				}
-
-				/// <java-name>
-				/// createByteArray
-				/// </java-name>
-				[Dot42.DexImport("createByteArray", "()[B", AccessFlags = 273)]
-				public sbyte[] JavaCreateByteArray() /* MethodBuilder.Create */ 
-				{
-						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// createByteArray
-				/// </java-name>
-				[Dot42.DexImport("createByteArray", "()[B", AccessFlags = 273, IgnoreFromJava = true)]
-				public byte[] CreateByteArray() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// readByteArray
-				/// </java-name>
-				[Dot42.DexImport("readByteArray", "([B)V", AccessFlags = 17)]
-				public void ReadByteArray(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// readByteArray
-				/// </java-name>
-				[Dot42.DexImport("readByteArray", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
-				public void ReadByteArray(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// readArrayList
-				/// </java-name>
-				[Dot42.DexImport("readArrayList", "(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;", AccessFlags = 17)]
-				public global::Java.Util.ArrayList<object> ReadArrayList(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ArrayList<object>);
-				}
-
-				/// <java-name>
-				/// readArray
-				/// </java-name>
-				[Dot42.DexImport("readArray", "(Ljava/lang/ClassLoader;)[Ljava/lang/Object;", AccessFlags = 17)]
-				public object[] ReadArray(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(object[]);
-				}
-
-				/// <java-name>
-				/// readSparseArray
-				/// </java-name>
-				[Dot42.DexImport("readSparseArray", "(Ljava/lang/ClassLoader;)Landroid/util/SparseArray;", AccessFlags = 17)]
-				public global::Android.Util.SparseArray<object> ReadSparseArray(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Util.SparseArray<object>);
-				}
-
-				/// <java-name>
-				/// readSparseBooleanArray
-				/// </java-name>
-				[Dot42.DexImport("readSparseBooleanArray", "()Landroid/util/SparseBooleanArray;", AccessFlags = 17)]
-				public global::Android.Util.SparseBooleanArray ReadSparseBooleanArray() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Util.SparseBooleanArray);
-				}
-
-				/// <java-name>
-				/// createTypedArrayList
-				/// </java-name>
-				[Dot42.DexImport("createTypedArrayList", "(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;", AccessFlags = 17, Signature = "<T:Ljava/lang/Object;>(Landroid/os/Parcelable$Creator<TT;>;)Ljava/util/ArrayList<" +
-    "TT;>;")]
-				public global::Java.Util.ArrayList<T> CreateTypedArrayList<T>(global::Android.Os.IParcelable_ICreator<T> parcelable_ICreator) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ArrayList<T>);
-				}
-
-				/// <java-name>
-				/// readTypedList
-				/// </java-name>
-				[Dot42.DexImport("readTypedList", "(Ljava/util/List;Landroid/os/Parcelable$Creator;)V", AccessFlags = 17, Signature = "<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;Landroid/os/Parcelable$Creator<TT;>;)" +
-    "V")]
-				public void ReadTypedList<T>(global::Java.Util.IList<T> list, global::Android.Os.IParcelable_ICreator<T> parcelable_ICreator) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createStringArrayList
-				/// </java-name>
-				[Dot42.DexImport("createStringArrayList", "()Ljava/util/ArrayList;", AccessFlags = 17, Signature = "()Ljava/util/ArrayList<Ljava/lang/String;>;")]
-				public global::Java.Util.ArrayList<string> CreateStringArrayList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ArrayList<string>);
-				}
-
-				/// <java-name>
-				/// createBinderArrayList
-				/// </java-name>
-				[Dot42.DexImport("createBinderArrayList", "()Ljava/util/ArrayList;", AccessFlags = 17, Signature = "()Ljava/util/ArrayList<Landroid/os/IBinder;>;")]
-				public global::Java.Util.ArrayList<global::Android.Os.IBinder> CreateBinderArrayList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ArrayList<global::Android.Os.IBinder>);
-				}
-
-				/// <java-name>
-				/// readStringList
-				/// </java-name>
-				[Dot42.DexImport("readStringList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "(Ljava/util/List<Ljava/lang/String;>;)V")]
-				public void ReadStringList(global::Java.Util.IList<string> list) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// readBinderList
-				/// </java-name>
-				[Dot42.DexImport("readBinderList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "(Ljava/util/List<Landroid/os/IBinder;>;)V")]
-				public void ReadBinderList(global::Java.Util.IList<global::Android.Os.IBinder> list) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createTypedArray
-				/// </java-name>
-				[Dot42.DexImport("createTypedArray", "(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;", AccessFlags = 17, Signature = "<T:Ljava/lang/Object;>(Landroid/os/Parcelable$Creator<TT;>;)[TT;")]
-				public T[] CreateTypedArray<T>(global::Android.Os.IParcelable_ICreator<T> parcelable_ICreator) /* MethodBuilder.Create */ 
-				{
-						return default(T[]);
-				}
-
 				/// <java-name>
-				/// readTypedArray
+				/// getInterfaceDescriptor
 				/// </java-name>
-				[Dot42.DexImport("readTypedArray", "([Ljava/lang/Object;Landroid/os/Parcelable$Creator;)V", AccessFlags = 17, Signature = "<T:Ljava/lang/Object;>([TT;Landroid/os/Parcelable$Creator<TT;>;)V")]
-				public void ReadTypedArray<T>(T[] p, global::Android.Os.IParcelable_ICreator<T> parcelable_ICreator) /* MethodBuilder.Create */ 
+				public string InterfaceDescriptor
 				{
+				[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetInterfaceDescriptor(); }
 				}
-
-				/// <java-name>
-				/// writeParcelableArray
-				/// </java-name>
-				[Dot42.DexImport("writeParcelableArray", "([Landroid/os/Parcelable;I)V", AccessFlags = 17, Signature = "<T::Landroid/os/Parcelable;>([TT;I)V")]
-				public void WriteParcelableArray<T>(T[] p, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// readValue
-				/// </java-name>
-				[Dot42.DexImport("readValue", "(Ljava/lang/ClassLoader;)Ljava/lang/Object;", AccessFlags = 17)]
-				public object ReadValue(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// readParcelable
-				/// </java-name>
-				[Dot42.DexImport("readParcelable", "(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;", AccessFlags = 17, Signature = "<T::Landroid/os/Parcelable;>(Ljava/lang/ClassLoader;)TT;")]
-				public T ReadParcelable<T>(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// readParcelableArray
-				/// </java-name>
-				[Dot42.DexImport("readParcelableArray", "(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;", AccessFlags = 17)]
-				public global::Android.Os.IParcelable[] ReadParcelableArray(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IParcelable[]);
-				}
-
-				/// <java-name>
-				/// readSerializable
-				/// </java-name>
-				[Dot42.DexImport("readSerializable", "()Ljava/io/Serializable;", AccessFlags = 17)]
-				public global::Java.Io.ISerializable ReadSerializable() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.ISerializable);
-				}
-
-				/// <java-name>
-				/// obtain
-				/// </java-name>
-				[Dot42.DexImport("obtain", "(I)Landroid/os/Parcel;", AccessFlags = 28)]
-				internal static global::Android.Os.Parcel Obtain(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Parcel);
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~Parcel() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -3085,951 +821,6 @@ namespace Android.Os
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 						public VERSION() /* MethodBuilder.Create */ 
 						{
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/MessageQueue
-		/// </java-name>
-		[Dot42.DexImport("android/os/MessageQueue", AccessFlags = 33)]
-		public partial class MessageQueue
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal MessageQueue() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addIdleHandler
-				/// </java-name>
-				[Dot42.DexImport("addIdleHandler", "(Landroid/os/MessageQueue$IdleHandler;)V", AccessFlags = 17)]
-				public void AddIdleHandler(global::Android.Os.MessageQueue.IIdleHandler idleHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeIdleHandler
-				/// </java-name>
-				[Dot42.DexImport("removeIdleHandler", "(Landroid/os/MessageQueue$IdleHandler;)V", AccessFlags = 17)]
-				public void RemoveIdleHandler(global::Android.Os.MessageQueue.IIdleHandler idleHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~MessageQueue() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// android/os/MessageQueue$IdleHandler
-				/// </java-name>
-				[Dot42.DexImport("android/os/MessageQueue$IdleHandler", AccessFlags = 1545)]
-				public partial interface IIdleHandler
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// queueIdle
-						/// </java-name>
-						[Dot42.DexImport("queueIdle", "()Z", AccessFlags = 1025)]
-						bool QueueIdle() /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/Looper
-		/// </java-name>
-		[Dot42.DexImport("android/os/Looper", AccessFlags = 33)]
-		public partial class Looper
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Looper() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// prepare
-				/// </java-name>
-				[Dot42.DexImport("prepare", "()V", AccessFlags = 9)]
-				public static void Prepare() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// prepareMainLooper
-				/// </java-name>
-				[Dot42.DexImport("prepareMainLooper", "()V", AccessFlags = 9)]
-				public static void PrepareMainLooper() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMainLooper
-				/// </java-name>
-				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 41)]
-				public static global::Android.Os.Looper GetMainLooper() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Looper);
-				}
-
-				/// <java-name>
-				/// loop
-				/// </java-name>
-				[Dot42.DexImport("loop", "()V", AccessFlags = 9)]
-				public static void Loop() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// myLooper
-				/// </java-name>
-				[Dot42.DexImport("myLooper", "()Landroid/os/Looper;", AccessFlags = 9)]
-				public static global::Android.Os.Looper MyLooper() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Looper);
-				}
-
-				/// <java-name>
-				/// setMessageLogging
-				/// </java-name>
-				[Dot42.DexImport("setMessageLogging", "(Landroid/util/Printer;)V", AccessFlags = 1)]
-				public virtual void SetMessageLogging(global::Android.Util.IPrinter printer) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// myQueue
-				/// </java-name>
-				[Dot42.DexImport("myQueue", "()Landroid/os/MessageQueue;", AccessFlags = 9)]
-				public static global::Android.Os.MessageQueue MyQueue() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.MessageQueue);
-				}
-
-				/// <java-name>
-				/// quit
-				/// </java-name>
-				[Dot42.DexImport("quit", "()V", AccessFlags = 1)]
-				public virtual void Quit() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getThread
-				/// </java-name>
-				[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 1)]
-				public virtual global::System.Threading.Thread GetThread() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
-				}
-
-				/// <java-name>
-				/// dump
-				/// </java-name>
-				[Dot42.DexImport("dump", "(Landroid/util/Printer;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Dump(global::Android.Util.IPrinter printer, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMainLooper
-				/// </java-name>
-				public static global::Android.Os.Looper MainLooper
-				{
-				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 41)]
-						get{ return GetMainLooper(); }
-				}
-
-				/// <java-name>
-				/// getThread
-				/// </java-name>
-				public global::System.Threading.Thread Thread
-				{
-				[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 1)]
-						get{ return GetThread(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/Process
-		/// </java-name>
-		[Dot42.DexImport("android/os/Process", AccessFlags = 33)]
-		public partial class Process
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// SYSTEM_UID
-				/// </java-name>
-				[Dot42.DexImport("SYSTEM_UID", "I", AccessFlags = 25)]
-				public const int SYSTEM_UID = 1000;
-				/// <java-name>
-				/// PHONE_UID
-				/// </java-name>
-				[Dot42.DexImport("PHONE_UID", "I", AccessFlags = 25)]
-				public const int PHONE_UID = 1001;
-				/// <java-name>
-				/// FIRST_APPLICATION_UID
-				/// </java-name>
-				[Dot42.DexImport("FIRST_APPLICATION_UID", "I", AccessFlags = 25)]
-				public const int FIRST_APPLICATION_UID = 10000;
-				/// <java-name>
-				/// LAST_APPLICATION_UID
-				/// </java-name>
-				[Dot42.DexImport("LAST_APPLICATION_UID", "I", AccessFlags = 25)]
-				public const int LAST_APPLICATION_UID = 99999;
-				/// <java-name>
-				/// BLUETOOTH_GID
-				/// </java-name>
-				[Dot42.DexImport("BLUETOOTH_GID", "I", AccessFlags = 25)]
-				public const int BLUETOOTH_GID = 2000;
-				/// <java-name>
-				/// THREAD_PRIORITY_DEFAULT
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_DEFAULT", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_DEFAULT = 0;
-				/// <java-name>
-				/// THREAD_PRIORITY_LOWEST
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_LOWEST", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_LOWEST = 19;
-				/// <java-name>
-				/// THREAD_PRIORITY_BACKGROUND
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_BACKGROUND", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_BACKGROUND = 10;
-				/// <java-name>
-				/// THREAD_PRIORITY_FOREGROUND
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_FOREGROUND", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_FOREGROUND = -2;
-				/// <java-name>
-				/// THREAD_PRIORITY_DISPLAY
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_DISPLAY", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_DISPLAY = -4;
-				/// <java-name>
-				/// THREAD_PRIORITY_URGENT_DISPLAY
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_URGENT_DISPLAY", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_URGENT_DISPLAY = -8;
-				/// <java-name>
-				/// THREAD_PRIORITY_AUDIO
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_AUDIO", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_AUDIO = -16;
-				/// <java-name>
-				/// THREAD_PRIORITY_URGENT_AUDIO
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_URGENT_AUDIO", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_URGENT_AUDIO = -19;
-				/// <java-name>
-				/// THREAD_PRIORITY_MORE_FAVORABLE
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_MORE_FAVORABLE", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_MORE_FAVORABLE = -1;
-				/// <java-name>
-				/// THREAD_PRIORITY_LESS_FAVORABLE
-				/// </java-name>
-				[Dot42.DexImport("THREAD_PRIORITY_LESS_FAVORABLE", "I", AccessFlags = 25)]
-				public const int THREAD_PRIORITY_LESS_FAVORABLE = 1;
-				/// <java-name>
-				/// SIGNAL_QUIT
-				/// </java-name>
-				[Dot42.DexImport("SIGNAL_QUIT", "I", AccessFlags = 25)]
-				public const int SIGNAL_QUIT = 3;
-				/// <java-name>
-				/// SIGNAL_KILL
-				/// </java-name>
-				[Dot42.DexImport("SIGNAL_KILL", "I", AccessFlags = 25)]
-				public const int SIGNAL_KILL = 9;
-				/// <java-name>
-				/// SIGNAL_USR1
-				/// </java-name>
-				[Dot42.DexImport("SIGNAL_USR1", "I", AccessFlags = 25)]
-				public const int SIGNAL_USR1 = 10;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Process() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getElapsedCpuTime
-				/// </java-name>
-				[Dot42.DexImport("getElapsedCpuTime", "()J", AccessFlags = 281)]
-				public static long GetElapsedCpuTime() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// myPid
-				/// </java-name>
-				[Dot42.DexImport("myPid", "()I", AccessFlags = 281)]
-				public static int MyPid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// myTid
-				/// </java-name>
-				[Dot42.DexImport("myTid", "()I", AccessFlags = 281)]
-				public static int MyTid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// myUid
-				/// </java-name>
-				[Dot42.DexImport("myUid", "()I", AccessFlags = 281)]
-				public static int MyUid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getUidForName
-				/// </java-name>
-				[Dot42.DexImport("getUidForName", "(Ljava/lang/String;)I", AccessFlags = 281)]
-				public static int GetUidForName(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGidForName
-				/// </java-name>
-				[Dot42.DexImport("getGidForName", "(Ljava/lang/String;)I", AccessFlags = 281)]
-				public static int GetGidForName(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setThreadPriority
-				/// </java-name>
-				[Dot42.DexImport("setThreadPriority", "(II)V", AccessFlags = 281)]
-				public static void SetThreadPriority(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setThreadPriority
-				/// </java-name>
-				[Dot42.DexImport("setThreadPriority", "(I)V", AccessFlags = 281)]
-				public static void SetThreadPriority(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getThreadPriority
-				/// </java-name>
-				[Dot42.DexImport("getThreadPriority", "(I)I", AccessFlags = 281)]
-				public static int GetThreadPriority(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// supportsProcesses
-				/// </java-name>
-				[Dot42.DexImport("supportsProcesses", "()Z", AccessFlags = 25)]
-				public static bool SupportsProcesses() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// killProcess
-				/// </java-name>
-				[Dot42.DexImport("killProcess", "(I)V", AccessFlags = 25)]
-				public static void KillProcess(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendSignal
-				/// </java-name>
-				[Dot42.DexImport("sendSignal", "(II)V", AccessFlags = 281)]
-				public static void SendSignal(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getElapsedCpuTime
-				/// </java-name>
-				public static long ElapsedCpuTime
-				{
-				[Dot42.DexImport("getElapsedCpuTime", "()J", AccessFlags = 281)]
-						get{ return GetElapsedCpuTime(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/TransactionTooLargeException
-		/// </java-name>
-		[Dot42.DexImport("android/os/TransactionTooLargeException", AccessFlags = 33)]
-		public partial class TransactionTooLargeException : global::Android.Os.RemoteException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public TransactionTooLargeException() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/WorkSource
-		/// </java-name>
-		[Dot42.DexImport("android/os/WorkSource", AccessFlags = 33)]
-		public partial class WorkSource : global::Android.Os.IParcelable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// CREATOR
-				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.WorkSource> CREATOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public WorkSource() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/os/WorkSource;)V", AccessFlags = 1)]
-				public WorkSource(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clear
-				/// </java-name>
-				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
-				public virtual void Clear() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// diff
-				/// </java-name>
-				[Dot42.DexImport("diff", "(Landroid/os/WorkSource;)Z", AccessFlags = 1)]
-				public virtual bool Diff(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// set
-				/// </java-name>
-				[Dot42.DexImport("set", "(Landroid/os/WorkSource;)V", AccessFlags = 1)]
-				public virtual void Set(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// add
-				/// </java-name>
-				[Dot42.DexImport("add", "(Landroid/os/WorkSource;)Z", AccessFlags = 1)]
-				public virtual bool Add(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// remove
-				/// </java-name>
-				[Dot42.DexImport("remove", "(Landroid/os/WorkSource;)Z", AccessFlags = 1)]
-				public virtual bool Remove(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// describeContents
-				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public virtual int DescribeContents() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeToParcel
-				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/IBinder
-		/// </java-name>
-		[Dot42.DexImport("android/os/IBinder", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IBinderConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// FIRST_CALL_TRANSACTION
-				/// </java-name>
-				[Dot42.DexImport("FIRST_CALL_TRANSACTION", "I", AccessFlags = 25)]
-				public const int FIRST_CALL_TRANSACTION = 1;
-				/// <java-name>
-				/// LAST_CALL_TRANSACTION
-				/// </java-name>
-				[Dot42.DexImport("LAST_CALL_TRANSACTION", "I", AccessFlags = 25)]
-				public const int LAST_CALL_TRANSACTION = 16777215;
-				/// <java-name>
-				/// PING_TRANSACTION
-				/// </java-name>
-				[Dot42.DexImport("PING_TRANSACTION", "I", AccessFlags = 25)]
-				public const int PING_TRANSACTION = 1599098439;
-				/// <java-name>
-				/// DUMP_TRANSACTION
-				/// </java-name>
-				[Dot42.DexImport("DUMP_TRANSACTION", "I", AccessFlags = 25)]
-				public const int DUMP_TRANSACTION = 1598311760;
-				/// <java-name>
-				/// INTERFACE_TRANSACTION
-				/// </java-name>
-				[Dot42.DexImport("INTERFACE_TRANSACTION", "I", AccessFlags = 25)]
-				public const int INTERFACE_TRANSACTION = 1598968902;
-				/// <java-name>
-				/// TWEET_TRANSACTION
-				/// </java-name>
-				[Dot42.DexImport("TWEET_TRANSACTION", "I", AccessFlags = 25)]
-				public const int TWEET_TRANSACTION = 1599362900;
-				/// <java-name>
-				/// LIKE_TRANSACTION
-				/// </java-name>
-				[Dot42.DexImport("LIKE_TRANSACTION", "I", AccessFlags = 25)]
-				public const int LIKE_TRANSACTION = 1598835019;
-				/// <java-name>
-				/// FLAG_ONEWAY
-				/// </java-name>
-				[Dot42.DexImport("FLAG_ONEWAY", "I", AccessFlags = 25)]
-				public const int FLAG_ONEWAY = 1;
-		}
-
-		/// <java-name>
-		/// android/os/IBinder
-		/// </java-name>
-		[Dot42.DexImport("android/os/IBinder", AccessFlags = 1537)]
-		public partial interface IBinder
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getInterfaceDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetInterfaceDescriptor() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// pingBinder
-				/// </java-name>
-				[Dot42.DexImport("pingBinder", "()Z", AccessFlags = 1025)]
-				bool PingBinder() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isBinderAlive
-				/// </java-name>
-				[Dot42.DexImport("isBinderAlive", "()Z", AccessFlags = 1025)]
-				bool IsBinderAlive() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// queryLocalInterface
-				/// </java-name>
-				[Dot42.DexImport("queryLocalInterface", "(Ljava/lang/String;)Landroid/os/IInterface;", AccessFlags = 1025)]
-				global::Android.Os.IInterface QueryLocalInterface(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// dump
-				/// </java-name>
-				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1025)]
-				void Dump(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// dumpAsync
-				/// </java-name>
-				[Dot42.DexImport("dumpAsync", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1025)]
-				void DumpAsync(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// transact
-				/// </java-name>
-				[Dot42.DexImport("transact", "(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z", AccessFlags = 1025)]
-				bool Transact(int int32, global::Android.Os.Parcel parcel, global::Android.Os.Parcel parcel1, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// linkToDeath
-				/// </java-name>
-				[Dot42.DexImport("linkToDeath", "(Landroid/os/IBinder$DeathRecipient;I)V", AccessFlags = 1025)]
-				void LinkToDeath(global::Android.Os.IBinder_IDeathRecipient binder_IDeathRecipient, int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// unlinkToDeath
-				/// </java-name>
-				[Dot42.DexImport("unlinkToDeath", "(Landroid/os/IBinder$DeathRecipient;I)Z", AccessFlags = 1025)]
-				bool UnlinkToDeath(global::Android.Os.IBinder_IDeathRecipient binder_IDeathRecipient, int int32) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/os/IBinder$DeathRecipient
-		/// </java-name>
-		[Dot42.DexImport("android/os/IBinder$DeathRecipient", AccessFlags = 1545)]
-		public partial interface IBinder_IDeathRecipient
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// binderDied
-				/// </java-name>
-				[Dot42.DexImport("binderDied", "()V", AccessFlags = 1025)]
-				void BinderDied() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/os/MemoryFile
-		/// </java-name>
-		[Dot42.DexImport("android/os/MemoryFile", AccessFlags = 33)]
-		public partial class MemoryFile
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
-				public MemoryFile(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public virtual void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~MemoryFile() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public virtual int Length() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isPurgingAllowed
-				/// </java-name>
-				[Dot42.DexImport("isPurgingAllowed", "()Z", AccessFlags = 1)]
-				public virtual bool IsPurgingAllowed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// allowPurging
-				/// </java-name>
-				[Dot42.DexImport("allowPurging", "(Z)Z", AccessFlags = 33)]
-				public virtual bool AllowPurging(bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.OutputStream);
-				}
-
-				/// <java-name>
-				/// readBytes
-				/// </java-name>
-				[Dot42.DexImport("readBytes", "([BIII)I", AccessFlags = 1)]
-				public virtual int ReadBytes(sbyte[] sByte, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// readBytes
-				/// </java-name>
-				[Dot42.DexImport("readBytes", "([BIII)I", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual int ReadBytes(byte[] @byte, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeBytes
-				/// </java-name>
-				[Dot42.DexImport("writeBytes", "([BIII)V", AccessFlags = 1)]
-				public virtual void WriteBytes(sbyte[] sByte, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeBytes
-				/// </java-name>
-				[Dot42.DexImport("writeBytes", "([BIII)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual void WriteBytes(byte[] @byte, int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MemoryFile() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				public global::Java.Io.InputStream InputStream
-				{
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetInputStream(); }
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				public global::Java.Io.OutputStream OutputStream
-				{
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return GetOutputStream(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/AsyncTask
-		/// </java-name>
-		[Dot42.DexImport("android/os/AsyncTask", AccessFlags = 1057, Signature = "<Params:Ljava/lang/Object;Progress:Ljava/lang/Object;Result:Ljava/lang/Object;>Lj" +
-    "ava/lang/Object;")]
-		public abstract partial class AsyncTask<Params, Progress, Result>
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// THREAD_POOL_EXECUTOR
-				/// </java-name>
-				[Dot42.DexImport("THREAD_POOL_EXECUTOR", "Ljava/util/concurrent/Executor;", AccessFlags = 25)]
-				public static readonly global::Java.Util.Concurrent.IExecutor THREAD_POOL_EXECUTOR;
-				/// <java-name>
-				/// SERIAL_EXECUTOR
-				/// </java-name>
-				[Dot42.DexImport("SERIAL_EXECUTOR", "Ljava/util/concurrent/Executor;", AccessFlags = 25)]
-				public static readonly global::Java.Util.Concurrent.IExecutor SERIAL_EXECUTOR;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AsyncTask() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getStatus
-				/// </java-name>
-				[Dot42.DexImport("getStatus", "()Landroid/os/AsyncTask$Status;", AccessFlags = 17)]
-				public global::Android.Os.AsyncTask<Params, Progress, Result>.Status GetStatus() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.AsyncTask<Params, Progress, Result>.Status);
-				}
-
-				/// <java-name>
-				/// doInBackground
-				/// </java-name>
-				[Dot42.DexImport("doInBackground", "([Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 1156, Signature = "([TParams;)TResult;")]
-				protected internal abstract Result DoInBackground(params Params[] p) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onPreExecute
-				/// </java-name>
-				[Dot42.DexImport("onPreExecute", "()V", AccessFlags = 4)]
-				protected internal virtual void OnPreExecute() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPostExecute
-				/// </java-name>
-				[Dot42.DexImport("onPostExecute", "(Ljava/lang/Object;)V", AccessFlags = 4, Signature = "(TResult;)V")]
-				protected internal virtual void OnPostExecute(Result result) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onProgressUpdate
-				/// </java-name>
-				[Dot42.DexImport("onProgressUpdate", "([Ljava/lang/Object;)V", AccessFlags = 132, Signature = "([TProgress;)V")]
-				protected internal virtual void OnProgressUpdate(params Progress[] p) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCancelled
-				/// </java-name>
-				[Dot42.DexImport("onCancelled", "(Ljava/lang/Object;)V", AccessFlags = 4, Signature = "(TResult;)V")]
-				protected internal virtual void OnCancelled(Result result) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCancelled
-				/// </java-name>
-				[Dot42.DexImport("onCancelled", "()V", AccessFlags = 4)]
-				protected internal virtual void OnCancelled() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isCancelled
-				/// </java-name>
-				[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 17)]
-				public bool IsCancelled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// cancel
-				/// </java-name>
-				[Dot42.DexImport("cancel", "(Z)Z", AccessFlags = 17)]
-				public bool Cancel(bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "()Ljava/lang/Object;", AccessFlags = 17, Signature = "()TResult;")]
-				public Result Get() /* MethodBuilder.Create */ 
-				{
-						return default(Result);
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;", AccessFlags = 17, Signature = "(JLjava/util/concurrent/TimeUnit;)TResult;")]
-				public Result Get(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
-				{
-						return default(Result);
-				}
-
-				/// <java-name>
-				/// execute
-				/// </java-name>
-				[Dot42.DexImport("execute", "([Ljava/lang/Object;)Landroid/os/AsyncTask;", AccessFlags = 145, Signature = "([TParams;)Landroid/os/AsyncTask<TParams;TProgress;TResult;>;")]
-				public global::Android.Os.AsyncTask<Params, Progress, Result> Execute(params Params[] p) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.AsyncTask<Params, Progress, Result>);
-				}
-
-				/// <java-name>
-				/// executeOnExecutor
-				/// </java-name>
-				[Dot42.DexImport("executeOnExecutor", "(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;", AccessFlags = 145, Signature = "(Ljava/util/concurrent/Executor;[TParams;)Landroid/os/AsyncTask<TParams;TProgress" +
-    ";TResult;>;")]
-				public global::Android.Os.AsyncTask<Params, Progress, Result> ExecuteOnExecutor(global::Java.Util.Concurrent.IExecutor executor, params Params[] p) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.AsyncTask<Params, Progress, Result>);
-				}
-
-				/// <java-name>
-				/// execute
-				/// </java-name>
-				[Dot42.DexImport("execute", "(Ljava/lang/Runnable;)V", AccessFlags = 9)]
-				public static void Execute(global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// publishProgress
-				/// </java-name>
-				[Dot42.DexImport("publishProgress", "([Ljava/lang/Object;)V", AccessFlags = 148, Signature = "([TProgress;)V")]
-				protected internal void PublishProgress(params Progress[] p) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/os/AsyncTask$Status
-				/// </java-name>
-				[Dot42.DexImport("android/os/AsyncTask$Status", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/os/AsyncTask$Status;>;")]
-				public sealed class Status
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// FINISHED
-						/// </java-name>
-						[Dot42.DexImport("FINISHED", "Landroid/os/AsyncTask$Status;", AccessFlags = 16409)]
-						public static readonly Status FINISHED;
-						/// <java-name>
-						/// PENDING
-						/// </java-name>
-						[Dot42.DexImport("PENDING", "Landroid/os/AsyncTask$Status;", AccessFlags = 16409)]
-						public static readonly Status PENDING;
-						/// <java-name>
-						/// RUNNING
-						/// </java-name>
-						[Dot42.DexImport("RUNNING", "Landroid/os/AsyncTask$Status;", AccessFlags = 16409)]
-						public static readonly Status RUNNING;
-						private Status() /* TypeBuilder.AddPrivateDefaultCtor */ 
-						{
-						}
-
-						/// <java-name>
-						/// values
-						/// </java-name>
-						[Dot42.DexImport("values", "()[Landroid/os/AsyncTask$Status;", AccessFlags = 9)]
-						public static Status[] Values() /* MethodBuilder.Create */ 
-						{
-								return default(Status[]);
-						}
-
-						/// <java-name>
-						/// valueOf
-						/// </java-name>
-						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Landroid/os/AsyncTask$Status;", AccessFlags = 9)]
-						public static Status ValueOf(string @string) /* MethodBuilder.Create */ 
-						{
-								return default(Status);
 						}
 
 				}
@@ -4851,298 +1642,53 @@ namespace Android.Os
 		}
 
 		/// <java-name>
-		/// android/os/TokenWatcher
+		/// android/os/ConditionVariable
 		/// </java-name>
-		[Dot42.DexImport("android/os/TokenWatcher", AccessFlags = 1057)]
-		public abstract partial class TokenWatcher
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/os/Handler;Ljava/lang/String;)V", AccessFlags = 1)]
-				public TokenWatcher(global::Android.Os.Handler handler, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// acquired
-				/// </java-name>
-				[Dot42.DexImport("acquired", "()V", AccessFlags = 1025)]
-				public abstract void Acquired() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// released
-				/// </java-name>
-				[Dot42.DexImport("released", "()V", AccessFlags = 1025)]
-				public abstract void Released() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// acquire
-				/// </java-name>
-				[Dot42.DexImport("acquire", "(Landroid/os/IBinder;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Acquire(global::Android.Os.IBinder binder, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// cleanup
-				/// </java-name>
-				[Dot42.DexImport("cleanup", "(Landroid/os/IBinder;Z)V", AccessFlags = 1)]
-				public virtual void Cleanup(global::Android.Os.IBinder binder, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// release
-				/// </java-name>
-				[Dot42.DexImport("release", "(Landroid/os/IBinder;)V", AccessFlags = 1)]
-				public virtual void Release(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isAcquired
-				/// </java-name>
-				[Dot42.DexImport("isAcquired", "()Z", AccessFlags = 1)]
-				public virtual bool IsAcquired() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dump
-				/// </java-name>
-				[Dot42.DexImport("dump", "()V", AccessFlags = 1)]
-				public virtual void Dump() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TokenWatcher() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/BadParcelableException
-		/// </java-name>
-		[Dot42.DexImport("android/os/BadParcelableException", AccessFlags = 33)]
-		public partial class BadParcelableException : global::Android.Util.AndroidRuntimeException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public BadParcelableException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Exception;)V", AccessFlags = 1)]
-				public BadParcelableException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BadParcelableException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/Binder
-		/// </java-name>
-		[Dot42.DexImport("android/os/Binder", AccessFlags = 33)]
-		public partial class Binder : global::Android.Os.IBinder
+		[Dot42.DexImport("android/os/ConditionVariable", AccessFlags = 33)]
+		public partial class ConditionVariable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Binder() /* MethodBuilder.Create */ 
+				public ConditionVariable() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Z)V", AccessFlags = 1)]
+				public ConditionVariable(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getCallingPid
+				/// open
 				/// </java-name>
-				[Dot42.DexImport("getCallingPid", "()I", AccessFlags = 281)]
-				public static int GetCallingPid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCallingUid
-				/// </java-name>
-				[Dot42.DexImport("getCallingUid", "()I", AccessFlags = 281)]
-				public static int GetCallingUid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// clearCallingIdentity
-				/// </java-name>
-				[Dot42.DexImport("clearCallingIdentity", "()J", AccessFlags = 281)]
-				public static long ClearCallingIdentity() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// restoreCallingIdentity
-				/// </java-name>
-				[Dot42.DexImport("restoreCallingIdentity", "(J)V", AccessFlags = 281)]
-				public static void RestoreCallingIdentity(long int64) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("open", "()V", AccessFlags = 1)]
+				public virtual void Open() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// flushPendingCommands
+				/// close
 				/// </java-name>
-				[Dot42.DexImport("flushPendingCommands", "()V", AccessFlags = 281)]
-				public static void FlushPendingCommands() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public virtual void Close() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// joinThreadPool
+				/// block
 				/// </java-name>
-				[Dot42.DexImport("joinThreadPool", "()V", AccessFlags = 281)]
-				public static void JoinThreadPool() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("block", "()V", AccessFlags = 1)]
+				public virtual void Block() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// attachInterface
+				/// block
 				/// </java-name>
-				[Dot42.DexImport("attachInterface", "(Landroid/os/IInterface;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void AttachInterface(global::Android.Os.IInterface @interface, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInterfaceDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetInterfaceDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// pingBinder
-				/// </java-name>
-				[Dot42.DexImport("pingBinder", "()Z", AccessFlags = 1)]
-				public virtual bool PingBinder() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("block", "(J)Z", AccessFlags = 1)]
+				public virtual bool Block(long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// isBinderAlive
-				/// </java-name>
-				[Dot42.DexImport("isBinderAlive", "()Z", AccessFlags = 1)]
-				public virtual bool IsBinderAlive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// queryLocalInterface
-				/// </java-name>
-				[Dot42.DexImport("queryLocalInterface", "(Ljava/lang/String;)Landroid/os/IInterface;", AccessFlags = 1)]
-				public virtual global::Android.Os.IInterface QueryLocalInterface(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IInterface);
-				}
-
-				/// <java-name>
-				/// onTransact
-				/// </java-name>
-				[Dot42.DexImport("onTransact", "(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z", AccessFlags = 4)]
-				protected internal virtual bool OnTransact(int int32, global::Android.Os.Parcel parcel, global::Android.Os.Parcel parcel1, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// dump
-				/// </java-name>
-				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Dump(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dumpAsync
-				/// </java-name>
-				[Dot42.DexImport("dumpAsync", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void DumpAsync(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dump
-				/// </java-name>
-				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal virtual void Dump(global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// transact
-				/// </java-name>
-				[Dot42.DexImport("transact", "(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z", AccessFlags = 17)]
-				public bool Transact(int int32, global::Android.Os.Parcel parcel, global::Android.Os.Parcel parcel1, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// linkToDeath
-				/// </java-name>
-				[Dot42.DexImport("linkToDeath", "(Landroid/os/IBinder$DeathRecipient;I)V", AccessFlags = 1)]
-				public virtual void LinkToDeath(global::Android.Os.IBinder_IDeathRecipient binder_IDeathRecipient, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// unlinkToDeath
-				/// </java-name>
-				[Dot42.DexImport("unlinkToDeath", "(Landroid/os/IBinder$DeathRecipient;I)Z", AccessFlags = 1)]
-				public virtual bool UnlinkToDeath(global::Android.Os.IBinder_IDeathRecipient binder_IDeathRecipient, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~Binder() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCallingPid
-				/// </java-name>
-				public static int CallingPid
-				{
-				[Dot42.DexImport("getCallingPid", "()I", AccessFlags = 281)]
-						get{ return GetCallingPid(); }
-				}
-
-				/// <java-name>
-				/// getCallingUid
-				/// </java-name>
-				public static int CallingUid
-				{
-				[Dot42.DexImport("getCallingUid", "()I", AccessFlags = 281)]
-						get{ return GetCallingUid(); }
-				}
-
-				/// <java-name>
-				/// getInterfaceDescriptor
-				/// </java-name>
-				public string InterfaceDescriptor
-				{
-				[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetInterfaceDescriptor(); }
 				}
 
 		}
@@ -5196,269 +1742,15 @@ namespace Android.Os
 		}
 
 		/// <java-name>
-		/// android/os/ParcelFormatException
+		/// android/os/DeadObjectException
 		/// </java-name>
-		[Dot42.DexImport("android/os/ParcelFormatException", AccessFlags = 33)]
-		public partial class ParcelFormatException : global::System.SystemException
+		[Dot42.DexImport("android/os/DeadObjectException", AccessFlags = 33)]
+		public partial class DeadObjectException : global::Android.Os.RemoteException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ParcelFormatException() /* MethodBuilder.Create */ 
+				public DeadObjectException() /* MethodBuilder.Create */ 
 				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ParcelFormatException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/DropBoxManager
-		/// </java-name>
-		[Dot42.DexImport("android/os/DropBoxManager", AccessFlags = 33)]
-		public partial class DropBoxManager
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// IS_EMPTY
-				/// </java-name>
-				[Dot42.DexImport("IS_EMPTY", "I", AccessFlags = 25)]
-				public const int IS_EMPTY = 1;
-				/// <java-name>
-				/// IS_TEXT
-				/// </java-name>
-				[Dot42.DexImport("IS_TEXT", "I", AccessFlags = 25)]
-				public const int IS_TEXT = 2;
-				/// <java-name>
-				/// IS_GZIPPED
-				/// </java-name>
-				[Dot42.DexImport("IS_GZIPPED", "I", AccessFlags = 25)]
-				public const int IS_GZIPPED = 4;
-				/// <java-name>
-				/// ACTION_DROPBOX_ENTRY_ADDED
-				/// </java-name>
-				[Dot42.DexImport("ACTION_DROPBOX_ENTRY_ADDED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_DROPBOX_ENTRY_ADDED = "android.intent.action.DROPBOX_ENTRY_ADDED";
-				/// <java-name>
-				/// EXTRA_TAG
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_TAG", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_TAG = "tag";
-				/// <java-name>
-				/// EXTRA_TIME
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_TIME", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_TIME = "time";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal DropBoxManager() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addText
-				/// </java-name>
-				[Dot42.DexImport("addText", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void AddText(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addData
-				/// </java-name>
-				[Dot42.DexImport("addData", "(Ljava/lang/String;[BI)V", AccessFlags = 1)]
-				public virtual void AddData(string @string, sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addData
-				/// </java-name>
-				[Dot42.DexImport("addData", "(Ljava/lang/String;[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual void AddData(string @string, byte[] @byte, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addFile
-				/// </java-name>
-				[Dot42.DexImport("addFile", "(Ljava/lang/String;Ljava/io/File;I)V", AccessFlags = 1)]
-				public virtual void AddFile(string @string, global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isTagEnabled
-				/// </java-name>
-				[Dot42.DexImport("isTagEnabled", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public virtual bool IsTagEnabled(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getNextEntry
-				/// </java-name>
-				[Dot42.DexImport("getNextEntry", "(Ljava/lang/String;J)Landroid/os/DropBoxManager$Entry;", AccessFlags = 1)]
-				public virtual global::Android.Os.DropBoxManager.Entry GetNextEntry(string @string, long int64) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.DropBoxManager.Entry);
-				}
-
-				/// <java-name>
-				/// android/os/DropBoxManager$Entry
-				/// </java-name>
-				[Dot42.DexImport("android/os/DropBoxManager$Entry", AccessFlags = 9)]
-				public partial class Entry : global::Android.Os.IParcelable, global::Java.Io.ICloseable
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// CREATOR
-						/// </java-name>
-						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_ICreator<Entry> CREATOR;
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;J)V", AccessFlags = 1)]
-						public Entry(string @string, long int64) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;JLjava/lang/String;)V", AccessFlags = 1)]
-						public Entry(string @string, long int64, string string1) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;J[BI)V", AccessFlags = 1)]
-						public Entry(string @string, long int64, sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;J[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
-						public Entry(string @string, long int64, byte[] @byte, int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;JLandroid/os/ParcelFileDescriptor;I)V", AccessFlags = 1)]
-						public Entry(string @string, long int64, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;JLjava/io/File;I)V", AccessFlags = 1)]
-						public Entry(string @string, long int64, global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// close
-						/// </java-name>
-						[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-						public virtual void Close() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getTag
-						/// </java-name>
-						[Dot42.DexImport("getTag", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetTag() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// getTimeMillis
-						/// </java-name>
-						[Dot42.DexImport("getTimeMillis", "()J", AccessFlags = 1)]
-						public virtual long GetTimeMillis() /* MethodBuilder.Create */ 
-						{
-								return default(long);
-						}
-
-						/// <java-name>
-						/// getFlags
-						/// </java-name>
-						[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
-						public virtual int GetFlags() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getText
-						/// </java-name>
-						[Dot42.DexImport("getText", "(I)Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetText(int int32) /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// getInputStream
-						/// </java-name>
-						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Io.InputStream);
-						}
-
-						/// <java-name>
-						/// describeContents
-						/// </java-name>
-						[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-						public virtual int DescribeContents() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// writeToParcel
-						/// </java-name>
-						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Entry() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-						/// <java-name>
-						/// getTag
-						/// </java-name>
-						public string Tag
-						{
-						[Dot42.DexImport("getTag", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetTag(); }
-						}
-
-						/// <java-name>
-						/// getTimeMillis
-						/// </java-name>
-						public long TimeMillis
-						{
-						[Dot42.DexImport("getTimeMillis", "()J", AccessFlags = 1)]
-								get{ return GetTimeMillis(); }
-						}
-
-						/// <java-name>
-						/// getFlags
-						/// </java-name>
-						public int Flags
-						{
-						[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
-								get{ return GetFlags(); }
-						}
-
-						/// <java-name>
-						/// getInputStream
-						/// </java-name>
-						public global::Java.Io.InputStream InputStream
-						{
-						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-								get{ return GetInputStream(); }
-						}
-
 				}
 
 		}
@@ -6505,213 +2797,471 @@ namespace Android.Os
 		}
 
 		/// <java-name>
-		/// android/os/StatFs
+		/// android/os/DropBoxManager
 		/// </java-name>
-		[Dot42.DexImport("android/os/StatFs", AccessFlags = 33)]
-		public partial class StatFs
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public StatFs(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// restat
-				/// </java-name>
-				[Dot42.DexImport("restat", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Restat(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~StatFs() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getBlockSize
-				/// </java-name>
-				[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 257)]
-				public virtual int GetBlockSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBlockCount
-				/// </java-name>
-				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 257)]
-				public virtual int GetBlockCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFreeBlocks
-				/// </java-name>
-				[Dot42.DexImport("getFreeBlocks", "()I", AccessFlags = 257)]
-				public virtual int GetFreeBlocks() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAvailableBlocks
-				/// </java-name>
-				[Dot42.DexImport("getAvailableBlocks", "()I", AccessFlags = 257)]
-				public virtual int GetAvailableBlocks() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StatFs() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getBlockSize
-				/// </java-name>
-				public int BlockSize
-				{
-				[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 257)]
-						get{ return GetBlockSize(); }
-				}
-
-				/// <java-name>
-				/// getBlockCount
-				/// </java-name>
-				public int BlockCount
-				{
-				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 257)]
-						get{ return GetBlockCount(); }
-				}
-
-				/// <java-name>
-				/// getFreeBlocks
-				/// </java-name>
-				public int FreeBlocks
-				{
-				[Dot42.DexImport("getFreeBlocks", "()I", AccessFlags = 257)]
-						get{ return GetFreeBlocks(); }
-				}
-
-				/// <java-name>
-				/// getAvailableBlocks
-				/// </java-name>
-				public int AvailableBlocks
-				{
-				[Dot42.DexImport("getAvailableBlocks", "()I", AccessFlags = 257)]
-						get{ return GetAvailableBlocks(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/Messenger
-		/// </java-name>
-		[Dot42.DexImport("android/os/Messenger", AccessFlags = 49)]
-		public sealed partial class Messenger : global::Android.Os.IParcelable
+		[Dot42.DexImport("android/os/DropBoxManager", AccessFlags = 33)]
+		public partial class DropBoxManager
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// CREATOR
+				/// IS_EMPTY
 				/// </java-name>
-				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.Messenger> CREATOR;
-				[Dot42.DexImport("<init>", "(Landroid/os/Handler;)V", AccessFlags = 1)]
-				public Messenger(global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/os/IBinder;)V", AccessFlags = 1)]
-				public Messenger(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("IS_EMPTY", "I", AccessFlags = 25)]
+				public const int IS_EMPTY = 1;
+				/// <java-name>
+				/// IS_TEXT
+				/// </java-name>
+				[Dot42.DexImport("IS_TEXT", "I", AccessFlags = 25)]
+				public const int IS_TEXT = 2;
+				/// <java-name>
+				/// IS_GZIPPED
+				/// </java-name>
+				[Dot42.DexImport("IS_GZIPPED", "I", AccessFlags = 25)]
+				public const int IS_GZIPPED = 4;
+				/// <java-name>
+				/// ACTION_DROPBOX_ENTRY_ADDED
+				/// </java-name>
+				[Dot42.DexImport("ACTION_DROPBOX_ENTRY_ADDED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_DROPBOX_ENTRY_ADDED = "android.intent.action.DROPBOX_ENTRY_ADDED";
+				/// <java-name>
+				/// EXTRA_TAG
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_TAG", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_TAG = "tag";
+				/// <java-name>
+				/// EXTRA_TIME
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_TIME", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_TIME = "time";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal DropBoxManager() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// send
+				/// addText
 				/// </java-name>
-				[Dot42.DexImport("send", "(Landroid/os/Message;)V", AccessFlags = 1)]
-				public void Send(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("addText", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void AddText(string @string, string string1) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getBinder
+				/// addData
 				/// </java-name>
-				[Dot42.DexImport("getBinder", "()Landroid/os/IBinder;", AccessFlags = 1)]
-				public global::Android.Os.IBinder GetBinder() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("addData", "(Ljava/lang/String;[BI)V", AccessFlags = 1)]
+				public virtual void AddData(string @string, sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
 				}
 
 				/// <java-name>
-				/// equals
+				/// addData
 				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("addData", "(Ljava/lang/String;[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual void AddData(string @string, byte[] @byte, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addFile
+				/// </java-name>
+				[Dot42.DexImport("addFile", "(Ljava/lang/String;Ljava/io/File;I)V", AccessFlags = 1)]
+				public virtual void AddFile(string @string, global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isTagEnabled
+				/// </java-name>
+				[Dot42.DexImport("isTagEnabled", "(Ljava/lang/String;)Z", AccessFlags = 1)]
+				public virtual bool IsTagEnabled(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// hashCode
+				/// getNextEntry
 				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getNextEntry", "(Ljava/lang/String;J)Landroid/os/DropBoxManager$Entry;", AccessFlags = 1)]
+				public virtual global::Android.Os.DropBoxManager.Entry GetNextEntry(string @string, long int64) /* MethodBuilder.Create */ 
 				{
-						return default(int);
+						return default(global::Android.Os.DropBoxManager.Entry);
 				}
 
 				/// <java-name>
-				/// describeContents
+				/// android/os/DropBoxManager$Entry
 				/// </java-name>
-				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
-				public int DescribeContents() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("android/os/DropBoxManager$Entry", AccessFlags = 9)]
+				public partial class Entry : global::Android.Os.IParcelable, global::Java.Io.ICloseable
+ /* scope: __dot42__ */ 
 				{
-						return default(int);
+						/// <java-name>
+						/// CREATOR
+						/// </java-name>
+						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+						public static readonly global::Android.Os.IParcelable_ICreator<Entry> CREATOR;
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;J)V", AccessFlags = 1)]
+						public Entry(string @string, long int64) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;JLjava/lang/String;)V", AccessFlags = 1)]
+						public Entry(string @string, long int64, string string1) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;J[BI)V", AccessFlags = 1)]
+						public Entry(string @string, long int64, sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;J[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+						public Entry(string @string, long int64, byte[] @byte, int int32) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;JLandroid/os/ParcelFileDescriptor;I)V", AccessFlags = 1)]
+						public Entry(string @string, long int64, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, int int32) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;JLjava/io/File;I)V", AccessFlags = 1)]
+						public Entry(string @string, long int64, global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// close
+						/// </java-name>
+						[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+						public virtual void Close() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// getTag
+						/// </java-name>
+						[Dot42.DexImport("getTag", "()Ljava/lang/String;", AccessFlags = 1)]
+						public virtual string GetTag() /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+						/// <java-name>
+						/// getTimeMillis
+						/// </java-name>
+						[Dot42.DexImport("getTimeMillis", "()J", AccessFlags = 1)]
+						public virtual long GetTimeMillis() /* MethodBuilder.Create */ 
+						{
+								return default(long);
+						}
+
+						/// <java-name>
+						/// getFlags
+						/// </java-name>
+						[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
+						public virtual int GetFlags() /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// getText
+						/// </java-name>
+						[Dot42.DexImport("getText", "(I)Ljava/lang/String;", AccessFlags = 1)]
+						public virtual string GetText(int int32) /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+						/// <java-name>
+						/// getInputStream
+						/// </java-name>
+						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
+						{
+								return default(global::Java.Io.InputStream);
+						}
+
+						/// <java-name>
+						/// describeContents
+						/// </java-name>
+						[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+						public virtual int DescribeContents() /* MethodBuilder.Create */ 
+						{
+								return default(int);
+						}
+
+						/// <java-name>
+						/// writeToParcel
+						/// </java-name>
+						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal Entry() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+						/// <java-name>
+						/// getTag
+						/// </java-name>
+						public string Tag
+						{
+						[Dot42.DexImport("getTag", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return GetTag(); }
+						}
+
+						/// <java-name>
+						/// getTimeMillis
+						/// </java-name>
+						public long TimeMillis
+						{
+						[Dot42.DexImport("getTimeMillis", "()J", AccessFlags = 1)]
+								get{ return GetTimeMillis(); }
+						}
+
+						/// <java-name>
+						/// getFlags
+						/// </java-name>
+						public int Flags
+						{
+						[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
+								get{ return GetFlags(); }
+						}
+
+						/// <java-name>
+						/// getInputStream
+						/// </java-name>
+						public global::Java.Io.InputStream InputStream
+						{
+						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+								get{ return GetInputStream(); }
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/Environment
+		/// </java-name>
+		[Dot42.DexImport("android/os/Environment", AccessFlags = 33)]
+		public partial class Environment
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// DIRECTORY_MUSIC
+				/// </java-name>
+				[Dot42.DexImport("DIRECTORY_MUSIC", "Ljava/lang/String;", AccessFlags = 9)]
+				public static string DIRECTORY_MUSIC;
+				/// <java-name>
+				/// DIRECTORY_PODCASTS
+				/// </java-name>
+				[Dot42.DexImport("DIRECTORY_PODCASTS", "Ljava/lang/String;", AccessFlags = 9)]
+				public static string DIRECTORY_PODCASTS;
+				/// <java-name>
+				/// DIRECTORY_RINGTONES
+				/// </java-name>
+				[Dot42.DexImport("DIRECTORY_RINGTONES", "Ljava/lang/String;", AccessFlags = 9)]
+				public static string DIRECTORY_RINGTONES;
+				/// <java-name>
+				/// DIRECTORY_ALARMS
+				/// </java-name>
+				[Dot42.DexImport("DIRECTORY_ALARMS", "Ljava/lang/String;", AccessFlags = 9)]
+				public static string DIRECTORY_ALARMS;
+				/// <java-name>
+				/// DIRECTORY_NOTIFICATIONS
+				/// </java-name>
+				[Dot42.DexImport("DIRECTORY_NOTIFICATIONS", "Ljava/lang/String;", AccessFlags = 9)]
+				public static string DIRECTORY_NOTIFICATIONS;
+				/// <java-name>
+				/// DIRECTORY_PICTURES
+				/// </java-name>
+				[Dot42.DexImport("DIRECTORY_PICTURES", "Ljava/lang/String;", AccessFlags = 9)]
+				public static string DIRECTORY_PICTURES;
+				/// <java-name>
+				/// DIRECTORY_MOVIES
+				/// </java-name>
+				[Dot42.DexImport("DIRECTORY_MOVIES", "Ljava/lang/String;", AccessFlags = 9)]
+				public static string DIRECTORY_MOVIES;
+				/// <java-name>
+				/// DIRECTORY_DOWNLOADS
+				/// </java-name>
+				[Dot42.DexImport("DIRECTORY_DOWNLOADS", "Ljava/lang/String;", AccessFlags = 9)]
+				public static string DIRECTORY_DOWNLOADS;
+				/// <java-name>
+				/// DIRECTORY_DCIM
+				/// </java-name>
+				[Dot42.DexImport("DIRECTORY_DCIM", "Ljava/lang/String;", AccessFlags = 9)]
+				public static string DIRECTORY_DCIM;
+				/// <java-name>
+				/// MEDIA_REMOVED
+				/// </java-name>
+				[Dot42.DexImport("MEDIA_REMOVED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MEDIA_REMOVED = "removed";
+				/// <java-name>
+				/// MEDIA_UNMOUNTED
+				/// </java-name>
+				[Dot42.DexImport("MEDIA_UNMOUNTED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MEDIA_UNMOUNTED = "unmounted";
+				/// <java-name>
+				/// MEDIA_CHECKING
+				/// </java-name>
+				[Dot42.DexImport("MEDIA_CHECKING", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MEDIA_CHECKING = "checking";
+				/// <java-name>
+				/// MEDIA_NOFS
+				/// </java-name>
+				[Dot42.DexImport("MEDIA_NOFS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MEDIA_NOFS = "nofs";
+				/// <java-name>
+				/// MEDIA_MOUNTED
+				/// </java-name>
+				[Dot42.DexImport("MEDIA_MOUNTED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MEDIA_MOUNTED = "mounted";
+				/// <java-name>
+				/// MEDIA_MOUNTED_READ_ONLY
+				/// </java-name>
+				[Dot42.DexImport("MEDIA_MOUNTED_READ_ONLY", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MEDIA_MOUNTED_READ_ONLY = "mounted_ro";
+				/// <java-name>
+				/// MEDIA_SHARED
+				/// </java-name>
+				[Dot42.DexImport("MEDIA_SHARED", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MEDIA_SHARED = "shared";
+				/// <java-name>
+				/// MEDIA_BAD_REMOVAL
+				/// </java-name>
+				[Dot42.DexImport("MEDIA_BAD_REMOVAL", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MEDIA_BAD_REMOVAL = "bad_removal";
+				/// <java-name>
+				/// MEDIA_UNMOUNTABLE
+				/// </java-name>
+				[Dot42.DexImport("MEDIA_UNMOUNTABLE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string MEDIA_UNMOUNTABLE = "unmountable";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Environment() /* MethodBuilder.Create */ 
+				{
 				}
 
 				/// <java-name>
-				/// writeToParcel
+				/// getRootDirectory
 				/// </java-name>
-				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getRootDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+				public static global::Java.Io.File GetRootDirectory() /* MethodBuilder.Create */ 
 				{
+						return default(global::Java.Io.File);
 				}
 
 				/// <java-name>
-				/// writeMessengerOrNullToParcel
+				/// getDataDirectory
 				/// </java-name>
-				[Dot42.DexImport("writeMessengerOrNullToParcel", "(Landroid/os/Messenger;Landroid/os/Parcel;)V", AccessFlags = 9)]
-				public static void WriteMessengerOrNullToParcel(global::Android.Os.Messenger messenger, global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getDataDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+				public static global::Java.Io.File GetDataDirectory() /* MethodBuilder.Create */ 
 				{
+						return default(global::Java.Io.File);
 				}
 
 				/// <java-name>
-				/// readMessengerOrNullFromParcel
+				/// getExternalStorageDirectory
 				/// </java-name>
-				[Dot42.DexImport("readMessengerOrNullFromParcel", "(Landroid/os/Parcel;)Landroid/os/Messenger;", AccessFlags = 9)]
-				public static global::Android.Os.Messenger ReadMessengerOrNullFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getExternalStorageDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+				public static global::Java.Io.File GetExternalStorageDirectory() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Messenger);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Messenger() /* TypeBuilder.AddDefaultConstructor */ 
-				{
+						return default(global::Java.Io.File);
 				}
 
 				/// <java-name>
-				/// getBinder
+				/// getExternalStoragePublicDirectory
 				/// </java-name>
-				public global::Android.Os.IBinder Binder
+				[Dot42.DexImport("getExternalStoragePublicDirectory", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 9)]
+				public static global::Java.Io.File GetExternalStoragePublicDirectory(string @string) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getBinder", "()Landroid/os/IBinder;", AccessFlags = 1)]
-						get{ return GetBinder(); }
+						return default(global::Java.Io.File);
+				}
+
+				/// <java-name>
+				/// getDownloadCacheDirectory
+				/// </java-name>
+				[Dot42.DexImport("getDownloadCacheDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+				public static global::Java.Io.File GetDownloadCacheDirectory() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.File);
+				}
+
+				/// <java-name>
+				/// getExternalStorageState
+				/// </java-name>
+				[Dot42.DexImport("getExternalStorageState", "()Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetExternalStorageState() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// isExternalStorageRemovable
+				/// </java-name>
+				[Dot42.DexImport("isExternalStorageRemovable", "()Z", AccessFlags = 9)]
+				public static bool IsExternalStorageRemovable() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isExternalStorageEmulated
+				/// </java-name>
+				[Dot42.DexImport("isExternalStorageEmulated", "()Z", AccessFlags = 9)]
+				public static bool IsExternalStorageEmulated() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getRootDirectory
+				/// </java-name>
+				public static global::Java.Io.File RootDirectory
+				{
+				[Dot42.DexImport("getRootDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+						get{ return GetRootDirectory(); }
+				}
+
+				/// <java-name>
+				/// getDataDirectory
+				/// </java-name>
+				public static global::Java.Io.File DataDirectory
+				{
+				[Dot42.DexImport("getDataDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+						get{ return GetDataDirectory(); }
+				}
+
+				/// <java-name>
+				/// getExternalStorageDirectory
+				/// </java-name>
+				public static global::Java.Io.File ExternalStorageDirectory
+				{
+				[Dot42.DexImport("getExternalStorageDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+						get{ return GetExternalStorageDirectory(); }
+				}
+
+				/// <java-name>
+				/// getDownloadCacheDirectory
+				/// </java-name>
+				public static global::Java.Io.File DownloadCacheDirectory
+				{
+				[Dot42.DexImport("getDownloadCacheDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+						get{ return GetDownloadCacheDirectory(); }
+				}
+
+				/// <java-name>
+				/// getExternalStorageState
+				/// </java-name>
+				public static string ExternalStorageState
+				{
+				[Dot42.DexImport("getExternalStorageState", "()Ljava/lang/String;", AccessFlags = 9)]
+						get{ return GetExternalStorageState(); }
 				}
 
 		}
@@ -6829,91 +3379,6 @@ namespace Android.Os
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal FileObserver() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/os/HandlerThread
-		/// </java-name>
-		[Dot42.DexImport("android/os/HandlerThread", AccessFlags = 33)]
-		public partial class HandlerThread : global::System.Threading.Thread
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public HandlerThread(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
-				public HandlerThread(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onLooperPrepared
-				/// </java-name>
-				[Dot42.DexImport("onLooperPrepared", "()V", AccessFlags = 4)]
-				protected internal virtual void OnLooperPrepared() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// run
-				/// </java-name>
-				[Dot42.DexImport("run", "()V", AccessFlags = 1)]
-				public override void Run() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLooper
-				/// </java-name>
-				[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
-				public virtual global::Android.Os.Looper GetLooper() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Looper);
-				}
-
-				/// <java-name>
-				/// quit
-				/// </java-name>
-				[Dot42.DexImport("quit", "()Z", AccessFlags = 1)]
-				public virtual bool Quit() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getThreadId
-				/// </java-name>
-				[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
-				public virtual int GetThreadId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HandlerThread() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLooper
-				/// </java-name>
-				public global::Android.Os.Looper Looper
-				{
-				[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
-						get{ return GetLooper(); }
-				}
-
-				/// <java-name>
-				/// getThreadId
-				/// </java-name>
-				public int ThreadId
-				{
-				[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
-						get{ return GetThreadId(); }
 				}
 
 		}
@@ -7234,6 +3699,3602 @@ namespace Android.Os
 		}
 
 		/// <java-name>
+		/// android/os/HandlerThread
+		/// </java-name>
+		[Dot42.DexImport("android/os/HandlerThread", AccessFlags = 33)]
+		public partial class HandlerThread : global::System.Threading.Thread
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public HandlerThread(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
+				public HandlerThread(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onLooperPrepared
+				/// </java-name>
+				[Dot42.DexImport("onLooperPrepared", "()V", AccessFlags = 4)]
+				protected internal virtual void OnLooperPrepared() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// run
+				/// </java-name>
+				[Dot42.DexImport("run", "()V", AccessFlags = 1)]
+				public override void Run() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLooper
+				/// </java-name>
+				[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
+				public virtual global::Android.Os.Looper GetLooper() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Looper);
+				}
+
+				/// <java-name>
+				/// quit
+				/// </java-name>
+				[Dot42.DexImport("quit", "()Z", AccessFlags = 1)]
+				public virtual bool Quit() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getThreadId
+				/// </java-name>
+				[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
+				public virtual int GetThreadId() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal HandlerThread() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLooper
+				/// </java-name>
+				public global::Android.Os.Looper Looper
+				{
+				[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
+						get{ return GetLooper(); }
+				}
+
+				/// <java-name>
+				/// getThreadId
+				/// </java-name>
+				public int ThreadId
+				{
+				[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
+						get{ return GetThreadId(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/IBinder
+		/// </java-name>
+		[Dot42.DexImport("android/os/IBinder", AccessFlags = 1537)]
+		public partial interface IBinder
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// getInterfaceDescriptor
+				/// </java-name>
+				[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1025)]
+				string GetInterfaceDescriptor() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// pingBinder
+				/// </java-name>
+				[Dot42.DexImport("pingBinder", "()Z", AccessFlags = 1025)]
+				bool PingBinder() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isBinderAlive
+				/// </java-name>
+				[Dot42.DexImport("isBinderAlive", "()Z", AccessFlags = 1025)]
+				bool IsBinderAlive() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// queryLocalInterface
+				/// </java-name>
+				[Dot42.DexImport("queryLocalInterface", "(Ljava/lang/String;)Landroid/os/IInterface;", AccessFlags = 1025)]
+				global::Android.Os.IInterface QueryLocalInterface(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// dump
+				/// </java-name>
+				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1025)]
+				void Dump(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// dumpAsync
+				/// </java-name>
+				[Dot42.DexImport("dumpAsync", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1025)]
+				void DumpAsync(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// transact
+				/// </java-name>
+				[Dot42.DexImport("transact", "(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z", AccessFlags = 1025)]
+				bool Transact(int int32, global::Android.Os.Parcel parcel, global::Android.Os.Parcel parcel1, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// linkToDeath
+				/// </java-name>
+				[Dot42.DexImport("linkToDeath", "(Landroid/os/IBinder$DeathRecipient;I)V", AccessFlags = 1025)]
+				void LinkToDeath(global::Android.Os.IBinder_IDeathRecipient binder_IDeathRecipient, int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// unlinkToDeath
+				/// </java-name>
+				[Dot42.DexImport("unlinkToDeath", "(Landroid/os/IBinder$DeathRecipient;I)Z", AccessFlags = 1025)]
+				bool UnlinkToDeath(global::Android.Os.IBinder_IDeathRecipient binder_IDeathRecipient, int int32) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/os/IBinder$DeathRecipient
+		/// </java-name>
+		[Dot42.DexImport("android/os/IBinder$DeathRecipient", AccessFlags = 1545)]
+		public partial interface IBinder_IDeathRecipient
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// binderDied
+				/// </java-name>
+				[Dot42.DexImport("binderDied", "()V", AccessFlags = 1025)]
+				void BinderDied() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/os/IBinder
+		/// </java-name>
+		[Dot42.DexImport("android/os/IBinder", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IBinderConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// FIRST_CALL_TRANSACTION
+				/// </java-name>
+				[Dot42.DexImport("FIRST_CALL_TRANSACTION", "I", AccessFlags = 25)]
+				public const int FIRST_CALL_TRANSACTION = 1;
+				/// <java-name>
+				/// LAST_CALL_TRANSACTION
+				/// </java-name>
+				[Dot42.DexImport("LAST_CALL_TRANSACTION", "I", AccessFlags = 25)]
+				public const int LAST_CALL_TRANSACTION = 16777215;
+				/// <java-name>
+				/// PING_TRANSACTION
+				/// </java-name>
+				[Dot42.DexImport("PING_TRANSACTION", "I", AccessFlags = 25)]
+				public const int PING_TRANSACTION = 1599098439;
+				/// <java-name>
+				/// DUMP_TRANSACTION
+				/// </java-name>
+				[Dot42.DexImport("DUMP_TRANSACTION", "I", AccessFlags = 25)]
+				public const int DUMP_TRANSACTION = 1598311760;
+				/// <java-name>
+				/// INTERFACE_TRANSACTION
+				/// </java-name>
+				[Dot42.DexImport("INTERFACE_TRANSACTION", "I", AccessFlags = 25)]
+				public const int INTERFACE_TRANSACTION = 1598968902;
+				/// <java-name>
+				/// TWEET_TRANSACTION
+				/// </java-name>
+				[Dot42.DexImport("TWEET_TRANSACTION", "I", AccessFlags = 25)]
+				public const int TWEET_TRANSACTION = 1599362900;
+				/// <java-name>
+				/// LIKE_TRANSACTION
+				/// </java-name>
+				[Dot42.DexImport("LIKE_TRANSACTION", "I", AccessFlags = 25)]
+				public const int LIKE_TRANSACTION = 1598835019;
+				/// <java-name>
+				/// FLAG_ONEWAY
+				/// </java-name>
+				[Dot42.DexImport("FLAG_ONEWAY", "I", AccessFlags = 25)]
+				public const int FLAG_ONEWAY = 1;
+		}
+
+		/// <java-name>
+		/// android/os/IInterface
+		/// </java-name>
+		[Dot42.DexImport("android/os/IInterface", AccessFlags = 1537)]
+		public partial interface IInterface
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// asBinder
+				/// </java-name>
+				[Dot42.DexImport("asBinder", "()Landroid/os/IBinder;", AccessFlags = 1025)]
+				global::Android.Os.IBinder AsBinder() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/os/Parcelable
+		/// </java-name>
+		[Dot42.DexImport("android/os/Parcelable", AccessFlags = 1537)]
+		public partial interface IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1025)]
+				int DescribeContents() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1025)]
+				void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/os/Parcelable$ClassLoaderCreator
+		/// </java-name>
+		[Dot42.DexImport("android/os/Parcelable$ClassLoaderCreator", AccessFlags = 1545, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;Landroid/os/Parcelable$Creator<TT;>;")]
+		public partial interface IParcelable_IClassLoaderCreator<T> : global::Android.Os.IParcelable_ICreator<T>
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// createFromParcel
+				/// </java-name>
+				[Dot42.DexImport("createFromParcel", "(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(Landroid/os/Parcel;Ljava/lang/ClassLoader;)TT;")]
+				T CreateFromParcel(global::Android.Os.Parcel parcel, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/os/Parcelable$Creator
+		/// </java-name>
+		[Dot42.DexImport("android/os/Parcelable$Creator", AccessFlags = 1545, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
+		public partial interface IParcelable_ICreator<T>
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// createFromParcel
+				/// </java-name>
+				[Dot42.DexImport("createFromParcel", "(Landroid/os/Parcel;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(Landroid/os/Parcel;)TT;")]
+				T CreateFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// newArray
+				/// </java-name>
+				[Dot42.DexImport("newArray", "(I)[Ljava/lang/Object;", AccessFlags = 1025, Signature = "(I)[TT;")]
+				T[] NewArray(int int32) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/os/Parcelable
+		/// </java-name>
+		[Dot42.DexImport("android/os/Parcelable", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IParcelableConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// PARCELABLE_WRITE_RETURN_VALUE
+				/// </java-name>
+				[Dot42.DexImport("PARCELABLE_WRITE_RETURN_VALUE", "I", AccessFlags = 25)]
+				public const int PARCELABLE_WRITE_RETURN_VALUE = 1;
+				/// <java-name>
+				/// CONTENTS_FILE_DESCRIPTOR
+				/// </java-name>
+				[Dot42.DexImport("CONTENTS_FILE_DESCRIPTOR", "I", AccessFlags = 25)]
+				public const int CONTENTS_FILE_DESCRIPTOR = 1;
+		}
+
+		/// <java-name>
+		/// android/os/Looper
+		/// </java-name>
+		[Dot42.DexImport("android/os/Looper", AccessFlags = 33)]
+		public partial class Looper
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Looper() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// prepare
+				/// </java-name>
+				[Dot42.DexImport("prepare", "()V", AccessFlags = 9)]
+				public static void Prepare() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// prepareMainLooper
+				/// </java-name>
+				[Dot42.DexImport("prepareMainLooper", "()V", AccessFlags = 9)]
+				public static void PrepareMainLooper() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getMainLooper
+				/// </java-name>
+				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 41)]
+				public static global::Android.Os.Looper GetMainLooper() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Looper);
+				}
+
+				/// <java-name>
+				/// loop
+				/// </java-name>
+				[Dot42.DexImport("loop", "()V", AccessFlags = 9)]
+				public static void Loop() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// myLooper
+				/// </java-name>
+				[Dot42.DexImport("myLooper", "()Landroid/os/Looper;", AccessFlags = 9)]
+				public static global::Android.Os.Looper MyLooper() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Looper);
+				}
+
+				/// <java-name>
+				/// setMessageLogging
+				/// </java-name>
+				[Dot42.DexImport("setMessageLogging", "(Landroid/util/Printer;)V", AccessFlags = 1)]
+				public virtual void SetMessageLogging(global::Android.Util.IPrinter printer) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// myQueue
+				/// </java-name>
+				[Dot42.DexImport("myQueue", "()Landroid/os/MessageQueue;", AccessFlags = 9)]
+				public static global::Android.Os.MessageQueue MyQueue() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.MessageQueue);
+				}
+
+				/// <java-name>
+				/// quit
+				/// </java-name>
+				[Dot42.DexImport("quit", "()V", AccessFlags = 1)]
+				public virtual void Quit() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getThread
+				/// </java-name>
+				[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 1)]
+				public virtual global::System.Threading.Thread GetThread() /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Threading.Thread);
+				}
+
+				/// <java-name>
+				/// dump
+				/// </java-name>
+				[Dot42.DexImport("dump", "(Landroid/util/Printer;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Dump(global::Android.Util.IPrinter printer, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getMainLooper
+				/// </java-name>
+				public static global::Android.Os.Looper MainLooper
+				{
+				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 41)]
+						get{ return GetMainLooper(); }
+				}
+
+				/// <java-name>
+				/// getThread
+				/// </java-name>
+				public global::System.Threading.Thread Thread
+				{
+				[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 1)]
+						get{ return GetThread(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/MemoryFile
+		/// </java-name>
+		[Dot42.DexImport("android/os/MemoryFile", AccessFlags = 33)]
+		public partial class MemoryFile
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
+				public MemoryFile(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public virtual void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~MemoryFile() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
+				public virtual int Length() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isPurgingAllowed
+				/// </java-name>
+				[Dot42.DexImport("isPurgingAllowed", "()Z", AccessFlags = 1)]
+				public virtual bool IsPurgingAllowed() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// allowPurging
+				/// </java-name>
+				[Dot42.DexImport("allowPurging", "(Z)Z", AccessFlags = 33)]
+				public virtual bool AllowPurging(bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getInputStream
+				/// </java-name>
+				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+				public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// getOutputStream
+				/// </java-name>
+				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+				public virtual global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.OutputStream);
+				}
+
+				/// <java-name>
+				/// readBytes
+				/// </java-name>
+				[Dot42.DexImport("readBytes", "([BIII)I", AccessFlags = 1)]
+				public virtual int ReadBytes(sbyte[] sByte, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// readBytes
+				/// </java-name>
+				[Dot42.DexImport("readBytes", "([BIII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual int ReadBytes(byte[] @byte, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeBytes
+				/// </java-name>
+				[Dot42.DexImport("writeBytes", "([BIII)V", AccessFlags = 1)]
+				public virtual void WriteBytes(sbyte[] sByte, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeBytes
+				/// </java-name>
+				[Dot42.DexImport("writeBytes", "([BIII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual void WriteBytes(byte[] @byte, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal MemoryFile() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getInputStream
+				/// </java-name>
+				public global::Java.Io.InputStream InputStream
+				{
+				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return GetInputStream(); }
+				}
+
+				/// <java-name>
+				/// getOutputStream
+				/// </java-name>
+				public global::Java.Io.OutputStream OutputStream
+				{
+				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+						get{ return GetOutputStream(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/Message
+		/// </java-name>
+		[Dot42.DexImport("android/os/Message", AccessFlags = 49)]
+		public sealed partial class Message : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// what
+				/// </java-name>
+				[Dot42.DexImport("what", "I", AccessFlags = 1)]
+				public int What;
+				/// <java-name>
+				/// arg1
+				/// </java-name>
+				[Dot42.DexImport("arg1", "I", AccessFlags = 1)]
+				public int Arg1;
+				/// <java-name>
+				/// arg2
+				/// </java-name>
+				[Dot42.DexImport("arg2", "I", AccessFlags = 1)]
+				public int Arg2;
+				/// <java-name>
+				/// obj
+				/// </java-name>
+				[Dot42.DexImport("obj", "Ljava/lang/Object;", AccessFlags = 1)]
+				public object Obj;
+				/// <java-name>
+				/// replyTo
+				/// </java-name>
+				[Dot42.DexImport("replyTo", "Landroid/os/Messenger;", AccessFlags = 1)]
+				public global::Android.Os.Messenger ReplyTo;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.Message> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Message() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "()Landroid/os/Message;", AccessFlags = 9)]
+				public static global::Android.Os.Message Obtain() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Message);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(Landroid/os/Message;)Landroid/os/Message;", AccessFlags = 9)]
+				public static global::Android.Os.Message Obtain(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Message);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(Landroid/os/Handler;)Landroid/os/Message;", AccessFlags = 9)]
+				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Message);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;", AccessFlags = 9)]
+				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Message);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(Landroid/os/Handler;I)Landroid/os/Message;", AccessFlags = 9)]
+				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Message);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;", AccessFlags = 9)]
+				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, int int32, object @object) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Message);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(Landroid/os/Handler;III)Landroid/os/Message;", AccessFlags = 9)]
+				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Message);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(Landroid/os/Handler;IIILjava/lang/Object;)Landroid/os/Message;", AccessFlags = 9)]
+				public static global::Android.Os.Message Obtain(global::Android.Os.Handler handler, int int32, int int321, int int322, object @object) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Message);
+				}
+
+				/// <java-name>
+				/// recycle
+				/// </java-name>
+				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
+				public void Recycle() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// copyFrom
+				/// </java-name>
+				[Dot42.DexImport("copyFrom", "(Landroid/os/Message;)V", AccessFlags = 1)]
+				public void CopyFrom(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getWhen
+				/// </java-name>
+				[Dot42.DexImport("getWhen", "()J", AccessFlags = 1)]
+				public long GetWhen() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// setTarget
+				/// </java-name>
+				[Dot42.DexImport("setTarget", "(Landroid/os/Handler;)V", AccessFlags = 1)]
+				public void SetTarget(global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTarget
+				/// </java-name>
+				[Dot42.DexImport("getTarget", "()Landroid/os/Handler;", AccessFlags = 1)]
+				public global::Android.Os.Handler GetTarget() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Handler);
+				}
+
+				/// <java-name>
+				/// getCallback
+				/// </java-name>
+				[Dot42.DexImport("getCallback", "()Ljava/lang/Runnable;", AccessFlags = 1)]
+				public global::Java.Lang.IRunnable GetCallback() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.IRunnable);
+				}
+
+				/// <java-name>
+				/// getData
+				/// </java-name>
+				[Dot42.DexImport("getData", "()Landroid/os/Bundle;", AccessFlags = 1)]
+				public global::Android.Os.Bundle GetData() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Bundle);
+				}
+
+				/// <java-name>
+				/// peekData
+				/// </java-name>
+				[Dot42.DexImport("peekData", "()Landroid/os/Bundle;", AccessFlags = 1)]
+				public global::Android.Os.Bundle PeekData() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Bundle);
+				}
+
+				/// <java-name>
+				/// setData
+				/// </java-name>
+				[Dot42.DexImport("setData", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+				public void SetData(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendToTarget
+				/// </java-name>
+				[Dot42.DexImport("sendToTarget", "()V", AccessFlags = 1)]
+				public void SendToTarget() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getWhen
+				/// </java-name>
+				public long When
+				{
+				[Dot42.DexImport("getWhen", "()J", AccessFlags = 1)]
+						get{ return GetWhen(); }
+				}
+
+				/// <java-name>
+				/// getTarget
+				/// </java-name>
+				public global::Android.Os.Handler Target
+				{
+				[Dot42.DexImport("getTarget", "()Landroid/os/Handler;", AccessFlags = 1)]
+						get{ return GetTarget(); }
+				[Dot42.DexImport("setTarget", "(Landroid/os/Handler;)V", AccessFlags = 1)]
+						set{ SetTarget(value); }
+				}
+
+				/// <java-name>
+				/// getCallback
+				/// </java-name>
+				public global::Java.Lang.IRunnable Callback
+				{
+				[Dot42.DexImport("getCallback", "()Ljava/lang/Runnable;", AccessFlags = 1)]
+						get{ return GetCallback(); }
+				}
+
+				/// <java-name>
+				/// getData
+				/// </java-name>
+				public global::Android.Os.Bundle Data
+				{
+				[Dot42.DexImport("getData", "()Landroid/os/Bundle;", AccessFlags = 1)]
+						get{ return GetData(); }
+				[Dot42.DexImport("setData", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+						set{ SetData(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/MessageQueue
+		/// </java-name>
+		[Dot42.DexImport("android/os/MessageQueue", AccessFlags = 33)]
+		public partial class MessageQueue
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal MessageQueue() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addIdleHandler
+				/// </java-name>
+				[Dot42.DexImport("addIdleHandler", "(Landroid/os/MessageQueue$IdleHandler;)V", AccessFlags = 17)]
+				public void AddIdleHandler(global::Android.Os.MessageQueue.IIdleHandler idleHandler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeIdleHandler
+				/// </java-name>
+				[Dot42.DexImport("removeIdleHandler", "(Landroid/os/MessageQueue$IdleHandler;)V", AccessFlags = 17)]
+				public void RemoveIdleHandler(global::Android.Os.MessageQueue.IIdleHandler idleHandler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~MessageQueue() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// android/os/MessageQueue$IdleHandler
+				/// </java-name>
+				[Dot42.DexImport("android/os/MessageQueue$IdleHandler", AccessFlags = 1545)]
+				public partial interface IIdleHandler
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// queueIdle
+						/// </java-name>
+						[Dot42.DexImport("queueIdle", "()Z", AccessFlags = 1025)]
+						bool QueueIdle() /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/Messenger
+		/// </java-name>
+		[Dot42.DexImport("android/os/Messenger", AccessFlags = 49)]
+		public sealed partial class Messenger : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.Messenger> CREATOR;
+				[Dot42.DexImport("<init>", "(Landroid/os/Handler;)V", AccessFlags = 1)]
+				public Messenger(global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/os/IBinder;)V", AccessFlags = 1)]
+				public Messenger(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// send
+				/// </java-name>
+				[Dot42.DexImport("send", "(Landroid/os/Message;)V", AccessFlags = 1)]
+				public void Send(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getBinder
+				/// </java-name>
+				[Dot42.DexImport("getBinder", "()Landroid/os/IBinder;", AccessFlags = 1)]
+				public global::Android.Os.IBinder GetBinder() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IBinder);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeMessengerOrNullToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeMessengerOrNullToParcel", "(Landroid/os/Messenger;Landroid/os/Parcel;)V", AccessFlags = 9)]
+				public static void WriteMessengerOrNullToParcel(global::Android.Os.Messenger messenger, global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readMessengerOrNullFromParcel
+				/// </java-name>
+				[Dot42.DexImport("readMessengerOrNullFromParcel", "(Landroid/os/Parcel;)Landroid/os/Messenger;", AccessFlags = 9)]
+				public static global::Android.Os.Messenger ReadMessengerOrNullFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Messenger);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal Messenger() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getBinder
+				/// </java-name>
+				public global::Android.Os.IBinder Binder
+				{
+				[Dot42.DexImport("getBinder", "()Landroid/os/IBinder;", AccessFlags = 1)]
+						get{ return GetBinder(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/NetworkOnMainThreadException
+		/// </java-name>
+		[Dot42.DexImport("android/os/NetworkOnMainThreadException", AccessFlags = 33)]
+		public partial class NetworkOnMainThreadException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public NetworkOnMainThreadException() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/Parcel
+		/// </java-name>
+		[Dot42.DexImport("android/os/Parcel", AccessFlags = 49)]
+		public sealed partial class Parcel
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// STRING_CREATOR
+				/// </java-name>
+				[Dot42.DexImport("STRING_CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<string> STRING_CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Parcel() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "()Landroid/os/Parcel;", AccessFlags = 9)]
+				public static global::Android.Os.Parcel Obtain() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Parcel);
+				}
+
+				/// <java-name>
+				/// recycle
+				/// </java-name>
+				[Dot42.DexImport("recycle", "()V", AccessFlags = 17)]
+				public void Recycle() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dataSize
+				/// </java-name>
+				[Dot42.DexImport("dataSize", "()I", AccessFlags = 273)]
+				public int DataSize() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dataAvail
+				/// </java-name>
+				[Dot42.DexImport("dataAvail", "()I", AccessFlags = 273)]
+				public int DataAvail() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dataPosition
+				/// </java-name>
+				[Dot42.DexImport("dataPosition", "()I", AccessFlags = 273)]
+				public int DataPosition() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// dataCapacity
+				/// </java-name>
+				[Dot42.DexImport("dataCapacity", "()I", AccessFlags = 273)]
+				public int DataCapacity() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setDataSize
+				/// </java-name>
+				[Dot42.DexImport("setDataSize", "(I)V", AccessFlags = 273)]
+				public void SetDataSize(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setDataPosition
+				/// </java-name>
+				[Dot42.DexImport("setDataPosition", "(I)V", AccessFlags = 273)]
+				public void SetDataPosition(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setDataCapacity
+				/// </java-name>
+				[Dot42.DexImport("setDataCapacity", "(I)V", AccessFlags = 273)]
+				public void SetDataCapacity(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// marshall
+				/// </java-name>
+				[Dot42.DexImport("marshall", "()[B", AccessFlags = 273)]
+				public sbyte[] JavaMarshall() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// marshall
+				/// </java-name>
+				[Dot42.DexImport("marshall", "()[B", AccessFlags = 273, IgnoreFromJava = true)]
+				public byte[] Marshall() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// unmarshall
+				/// </java-name>
+				[Dot42.DexImport("unmarshall", "([BII)V", AccessFlags = 273)]
+				public void Unmarshall(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// unmarshall
+				/// </java-name>
+				[Dot42.DexImport("unmarshall", "([BII)V", AccessFlags = 273, IgnoreFromJava = true)]
+				public void Unmarshall(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// appendFrom
+				/// </java-name>
+				[Dot42.DexImport("appendFrom", "(Landroid/os/Parcel;II)V", AccessFlags = 273)]
+				public void AppendFrom(global::Android.Os.Parcel parcel, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// hasFileDescriptors
+				/// </java-name>
+				[Dot42.DexImport("hasFileDescriptors", "()Z", AccessFlags = 273)]
+				public bool HasFileDescriptors() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// writeInterfaceToken
+				/// </java-name>
+				[Dot42.DexImport("writeInterfaceToken", "(Ljava/lang/String;)V", AccessFlags = 273)]
+				public void WriteInterfaceToken(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// enforceInterface
+				/// </java-name>
+				[Dot42.DexImport("enforceInterface", "(Ljava/lang/String;)V", AccessFlags = 273)]
+				public void EnforceInterface(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeByteArray
+				/// </java-name>
+				[Dot42.DexImport("writeByteArray", "([B)V", AccessFlags = 17)]
+				public void WriteByteArray(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeByteArray
+				/// </java-name>
+				[Dot42.DexImport("writeByteArray", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				public void WriteByteArray(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeByteArray
+				/// </java-name>
+				[Dot42.DexImport("writeByteArray", "([BII)V", AccessFlags = 17)]
+				public void WriteByteArray(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeByteArray
+				/// </java-name>
+				[Dot42.DexImport("writeByteArray", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
+				public void WriteByteArray(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeInt
+				/// </java-name>
+				[Dot42.DexImport("writeInt", "(I)V", AccessFlags = 273)]
+				public void WriteInt(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeLong
+				/// </java-name>
+				[Dot42.DexImport("writeLong", "(J)V", AccessFlags = 273)]
+				public void WriteLong(long int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeFloat
+				/// </java-name>
+				[Dot42.DexImport("writeFloat", "(F)V", AccessFlags = 273)]
+				public void WriteFloat(float single) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeDouble
+				/// </java-name>
+				[Dot42.DexImport("writeDouble", "(D)V", AccessFlags = 273)]
+				public void WriteDouble(double @double) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeString
+				/// </java-name>
+				[Dot42.DexImport("writeString", "(Ljava/lang/String;)V", AccessFlags = 273)]
+				public void WriteString(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeStrongBinder
+				/// </java-name>
+				[Dot42.DexImport("writeStrongBinder", "(Landroid/os/IBinder;)V", AccessFlags = 273)]
+				public void WriteStrongBinder(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeStrongInterface
+				/// </java-name>
+				[Dot42.DexImport("writeStrongInterface", "(Landroid/os/IInterface;)V", AccessFlags = 17)]
+				public void WriteStrongInterface(global::Android.Os.IInterface @interface) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeFileDescriptor
+				/// </java-name>
+				[Dot42.DexImport("writeFileDescriptor", "(Ljava/io/FileDescriptor;)V", AccessFlags = 273)]
+				public void WriteFileDescriptor(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeByte
+				/// </java-name>
+				[Dot42.DexImport("writeByte", "(B)V", AccessFlags = 17)]
+				public void WriteByte(sbyte sByte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeByte
+				/// </java-name>
+				[Dot42.DexImport("writeByte", "(B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				public void WriteByte(byte @byte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeMap
+				/// </java-name>
+				[Dot42.DexImport("writeMap", "(Ljava/util/Map;)V", AccessFlags = 17)]
+				public void WriteMap(global::Java.Util.IMap<object, object> map) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeBundle
+				/// </java-name>
+				[Dot42.DexImport("writeBundle", "(Landroid/os/Bundle;)V", AccessFlags = 17)]
+				public void WriteBundle(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeList
+				/// </java-name>
+				[Dot42.DexImport("writeList", "(Ljava/util/List;)V", AccessFlags = 17)]
+				public void WriteList(global::Java.Util.IList<object> list) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeArray
+				/// </java-name>
+				[Dot42.DexImport("writeArray", "([Ljava/lang/Object;)V", AccessFlags = 17)]
+				public void WriteArray(object[] @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeSparseArray
+				/// </java-name>
+				[Dot42.DexImport("writeSparseArray", "(Landroid/util/SparseArray;)V", AccessFlags = 17, Signature = "(Landroid/util/SparseArray<Ljava/lang/Object;>;)V")]
+				public void WriteSparseArray(global::Android.Util.SparseArray<object> sparseArray) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeSparseBooleanArray
+				/// </java-name>
+				[Dot42.DexImport("writeSparseBooleanArray", "(Landroid/util/SparseBooleanArray;)V", AccessFlags = 17)]
+				public void WriteSparseBooleanArray(global::Android.Util.SparseBooleanArray sparseBooleanArray) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeBooleanArray
+				/// </java-name>
+				[Dot42.DexImport("writeBooleanArray", "([Z)V", AccessFlags = 17)]
+				public void WriteBooleanArray(bool[] boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createBooleanArray
+				/// </java-name>
+				[Dot42.DexImport("createBooleanArray", "()[Z", AccessFlags = 17)]
+				public bool[] CreateBooleanArray() /* MethodBuilder.Create */ 
+				{
+						return default(bool[]);
+				}
+
+				/// <java-name>
+				/// readBooleanArray
+				/// </java-name>
+				[Dot42.DexImport("readBooleanArray", "([Z)V", AccessFlags = 17)]
+				public void ReadBooleanArray(bool[] boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeCharArray
+				/// </java-name>
+				[Dot42.DexImport("writeCharArray", "([C)V", AccessFlags = 17)]
+				public void WriteCharArray(char[] @char) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createCharArray
+				/// </java-name>
+				[Dot42.DexImport("createCharArray", "()[C", AccessFlags = 17)]
+				public char[] CreateCharArray() /* MethodBuilder.Create */ 
+				{
+						return default(char[]);
+				}
+
+				/// <java-name>
+				/// readCharArray
+				/// </java-name>
+				[Dot42.DexImport("readCharArray", "([C)V", AccessFlags = 17)]
+				public void ReadCharArray(char[] @char) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeIntArray
+				/// </java-name>
+				[Dot42.DexImport("writeIntArray", "([I)V", AccessFlags = 17)]
+				public void WriteIntArray(int[] int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createIntArray
+				/// </java-name>
+				[Dot42.DexImport("createIntArray", "()[I", AccessFlags = 17)]
+				public int[] CreateIntArray() /* MethodBuilder.Create */ 
+				{
+						return default(int[]);
+				}
+
+				/// <java-name>
+				/// readIntArray
+				/// </java-name>
+				[Dot42.DexImport("readIntArray", "([I)V", AccessFlags = 17)]
+				public void ReadIntArray(int[] int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeLongArray
+				/// </java-name>
+				[Dot42.DexImport("writeLongArray", "([J)V", AccessFlags = 17)]
+				public void WriteLongArray(long[] int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createLongArray
+				/// </java-name>
+				[Dot42.DexImport("createLongArray", "()[J", AccessFlags = 17)]
+				public long[] CreateLongArray() /* MethodBuilder.Create */ 
+				{
+						return default(long[]);
+				}
+
+				/// <java-name>
+				/// readLongArray
+				/// </java-name>
+				[Dot42.DexImport("readLongArray", "([J)V", AccessFlags = 17)]
+				public void ReadLongArray(long[] int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeFloatArray
+				/// </java-name>
+				[Dot42.DexImport("writeFloatArray", "([F)V", AccessFlags = 17)]
+				public void WriteFloatArray(float[] single) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createFloatArray
+				/// </java-name>
+				[Dot42.DexImport("createFloatArray", "()[F", AccessFlags = 17)]
+				public float[] CreateFloatArray() /* MethodBuilder.Create */ 
+				{
+						return default(float[]);
+				}
+
+				/// <java-name>
+				/// readFloatArray
+				/// </java-name>
+				[Dot42.DexImport("readFloatArray", "([F)V", AccessFlags = 17)]
+				public void ReadFloatArray(float[] single) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeDoubleArray
+				/// </java-name>
+				[Dot42.DexImport("writeDoubleArray", "([D)V", AccessFlags = 17)]
+				public void WriteDoubleArray(double[] @double) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createDoubleArray
+				/// </java-name>
+				[Dot42.DexImport("createDoubleArray", "()[D", AccessFlags = 17)]
+				public double[] CreateDoubleArray() /* MethodBuilder.Create */ 
+				{
+						return default(double[]);
+				}
+
+				/// <java-name>
+				/// readDoubleArray
+				/// </java-name>
+				[Dot42.DexImport("readDoubleArray", "([D)V", AccessFlags = 17)]
+				public void ReadDoubleArray(double[] @double) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeStringArray
+				/// </java-name>
+				[Dot42.DexImport("writeStringArray", "([Ljava/lang/String;)V", AccessFlags = 17)]
+				public void WriteStringArray(string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createStringArray
+				/// </java-name>
+				[Dot42.DexImport("createStringArray", "()[Ljava/lang/String;", AccessFlags = 17)]
+				public string[] CreateStringArray() /* MethodBuilder.Create */ 
+				{
+						return default(string[]);
+				}
+
+				/// <java-name>
+				/// readStringArray
+				/// </java-name>
+				[Dot42.DexImport("readStringArray", "([Ljava/lang/String;)V", AccessFlags = 17)]
+				public void ReadStringArray(string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeBinderArray
+				/// </java-name>
+				[Dot42.DexImport("writeBinderArray", "([Landroid/os/IBinder;)V", AccessFlags = 17)]
+				public void WriteBinderArray(global::Android.Os.IBinder[] binder) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createBinderArray
+				/// </java-name>
+				[Dot42.DexImport("createBinderArray", "()[Landroid/os/IBinder;", AccessFlags = 17)]
+				public global::Android.Os.IBinder[] CreateBinderArray() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IBinder[]);
+				}
+
+				/// <java-name>
+				/// readBinderArray
+				/// </java-name>
+				[Dot42.DexImport("readBinderArray", "([Landroid/os/IBinder;)V", AccessFlags = 17)]
+				public void ReadBinderArray(global::Android.Os.IBinder[] binder) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeTypedList
+				/// </java-name>
+				[Dot42.DexImport("writeTypedList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "<T::Landroid/os/Parcelable;>(Ljava/util/List<TT;>;)V")]
+				public void WriteTypedList<T>(global::Java.Util.IList<T> list) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeStringList
+				/// </java-name>
+				[Dot42.DexImport("writeStringList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "(Ljava/util/List<Ljava/lang/String;>;)V")]
+				public void WriteStringList(global::Java.Util.IList<string> list) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeBinderList
+				/// </java-name>
+				[Dot42.DexImport("writeBinderList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "(Ljava/util/List<Landroid/os/IBinder;>;)V")]
+				public void WriteBinderList(global::Java.Util.IList<global::Android.Os.IBinder> list) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeTypedArray
+				/// </java-name>
+				[Dot42.DexImport("writeTypedArray", "([Landroid/os/Parcelable;I)V", AccessFlags = 17, Signature = "<T::Landroid/os/Parcelable;>([TT;I)V")]
+				public void WriteTypedArray<T>(T[] p, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeValue
+				/// </java-name>
+				[Dot42.DexImport("writeValue", "(Ljava/lang/Object;)V", AccessFlags = 17)]
+				public void WriteValue(object @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeParcelable
+				/// </java-name>
+				[Dot42.DexImport("writeParcelable", "(Landroid/os/Parcelable;I)V", AccessFlags = 17)]
+				public void WriteParcelable(global::Android.Os.IParcelable parcelable, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeSerializable
+				/// </java-name>
+				[Dot42.DexImport("writeSerializable", "(Ljava/io/Serializable;)V", AccessFlags = 17)]
+				public void WriteSerializable(global::Java.Io.ISerializable serializable) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeException
+				/// </java-name>
+				[Dot42.DexImport("writeException", "(Ljava/lang/Exception;)V", AccessFlags = 17)]
+				public void WriteException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeNoException
+				/// </java-name>
+				[Dot42.DexImport("writeNoException", "()V", AccessFlags = 17)]
+				public void WriteNoException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readException
+				/// </java-name>
+				[Dot42.DexImport("readException", "()V", AccessFlags = 17)]
+				public void ReadException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readException
+				/// </java-name>
+				[Dot42.DexImport("readException", "(ILjava/lang/String;)V", AccessFlags = 17)]
+				public void ReadException(int int32, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readInt
+				/// </java-name>
+				[Dot42.DexImport("readInt", "()I", AccessFlags = 273)]
+				public int ReadInt() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// readLong
+				/// </java-name>
+				[Dot42.DexImport("readLong", "()J", AccessFlags = 273)]
+				public long ReadLong() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// readFloat
+				/// </java-name>
+				[Dot42.DexImport("readFloat", "()F", AccessFlags = 273)]
+				public float ReadFloat() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// readDouble
+				/// </java-name>
+				[Dot42.DexImport("readDouble", "()D", AccessFlags = 273)]
+				public double ReadDouble() /* MethodBuilder.Create */ 
+				{
+						return default(double);
+				}
+
+				/// <java-name>
+				/// readString
+				/// </java-name>
+				[Dot42.DexImport("readString", "()Ljava/lang/String;", AccessFlags = 273)]
+				public string ReadString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// readStrongBinder
+				/// </java-name>
+				[Dot42.DexImport("readStrongBinder", "()Landroid/os/IBinder;", AccessFlags = 273)]
+				public global::Android.Os.IBinder ReadStrongBinder() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IBinder);
+				}
+
+				/// <java-name>
+				/// readFileDescriptor
+				/// </java-name>
+				[Dot42.DexImport("readFileDescriptor", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 17)]
+				public global::Android.Os.ParcelFileDescriptor ReadFileDescriptor() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+				/// <java-name>
+				/// readByte
+				/// </java-name>
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 17)]
+				public sbyte JavaReadByte() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte);
+				}
+
+				/// <java-name>
+				/// readByte
+				/// </java-name>
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 17, IgnoreFromJava = true)]
+				public byte ReadByte() /* MethodBuilder.Create */ 
+				{
+						return default(byte);
+				}
+
+				/// <java-name>
+				/// readMap
+				/// </java-name>
+				[Dot42.DexImport("readMap", "(Ljava/util/Map;Ljava/lang/ClassLoader;)V", AccessFlags = 17)]
+				public void ReadMap(global::Java.Util.IMap<object, object> map, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readList
+				/// </java-name>
+				[Dot42.DexImport("readList", "(Ljava/util/List;Ljava/lang/ClassLoader;)V", AccessFlags = 17)]
+				public void ReadList(global::Java.Util.IList<object> list, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readHashMap
+				/// </java-name>
+				[Dot42.DexImport("readHashMap", "(Ljava/lang/ClassLoader;)Ljava/util/HashMap;", AccessFlags = 17)]
+				public global::Java.Util.HashMap<object, object> ReadHashMap(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.HashMap<object, object>);
+				}
+
+				/// <java-name>
+				/// readBundle
+				/// </java-name>
+				[Dot42.DexImport("readBundle", "()Landroid/os/Bundle;", AccessFlags = 17)]
+				public global::Android.Os.Bundle ReadBundle() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Bundle);
+				}
+
+				/// <java-name>
+				/// readBundle
+				/// </java-name>
+				[Dot42.DexImport("readBundle", "(Ljava/lang/ClassLoader;)Landroid/os/Bundle;", AccessFlags = 17)]
+				public global::Android.Os.Bundle ReadBundle(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Bundle);
+				}
+
+				/// <java-name>
+				/// createByteArray
+				/// </java-name>
+				[Dot42.DexImport("createByteArray", "()[B", AccessFlags = 273)]
+				public sbyte[] JavaCreateByteArray() /* MethodBuilder.Create */ 
+				{
+						return default(sbyte[]);
+				}
+
+				/// <java-name>
+				/// createByteArray
+				/// </java-name>
+				[Dot42.DexImport("createByteArray", "()[B", AccessFlags = 273, IgnoreFromJava = true)]
+				public byte[] CreateByteArray() /* MethodBuilder.Create */ 
+				{
+						return default(byte[]);
+				}
+
+				/// <java-name>
+				/// readByteArray
+				/// </java-name>
+				[Dot42.DexImport("readByteArray", "([B)V", AccessFlags = 17)]
+				public void ReadByteArray(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readByteArray
+				/// </java-name>
+				[Dot42.DexImport("readByteArray", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				public void ReadByteArray(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readArrayList
+				/// </java-name>
+				[Dot42.DexImport("readArrayList", "(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;", AccessFlags = 17)]
+				public global::Java.Util.ArrayList<object> ReadArrayList(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ArrayList<object>);
+				}
+
+				/// <java-name>
+				/// readArray
+				/// </java-name>
+				[Dot42.DexImport("readArray", "(Ljava/lang/ClassLoader;)[Ljava/lang/Object;", AccessFlags = 17)]
+				public object[] ReadArray(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(object[]);
+				}
+
+				/// <java-name>
+				/// readSparseArray
+				/// </java-name>
+				[Dot42.DexImport("readSparseArray", "(Ljava/lang/ClassLoader;)Landroid/util/SparseArray;", AccessFlags = 17)]
+				public global::Android.Util.SparseArray<object> ReadSparseArray(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Util.SparseArray<object>);
+				}
+
+				/// <java-name>
+				/// readSparseBooleanArray
+				/// </java-name>
+				[Dot42.DexImport("readSparseBooleanArray", "()Landroid/util/SparseBooleanArray;", AccessFlags = 17)]
+				public global::Android.Util.SparseBooleanArray ReadSparseBooleanArray() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Util.SparseBooleanArray);
+				}
+
+				/// <java-name>
+				/// createTypedArrayList
+				/// </java-name>
+				[Dot42.DexImport("createTypedArrayList", "(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;", AccessFlags = 17, Signature = "<T:Ljava/lang/Object;>(Landroid/os/Parcelable$Creator<TT;>;)Ljava/util/ArrayList<" +
+    "TT;>;")]
+				public global::Java.Util.ArrayList<T> CreateTypedArrayList<T>(global::Android.Os.IParcelable_ICreator<T> parcelable_ICreator) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ArrayList<T>);
+				}
+
+				/// <java-name>
+				/// readTypedList
+				/// </java-name>
+				[Dot42.DexImport("readTypedList", "(Ljava/util/List;Landroid/os/Parcelable$Creator;)V", AccessFlags = 17, Signature = "<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;Landroid/os/Parcelable$Creator<TT;>;)" +
+    "V")]
+				public void ReadTypedList<T>(global::Java.Util.IList<T> list, global::Android.Os.IParcelable_ICreator<T> parcelable_ICreator) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createStringArrayList
+				/// </java-name>
+				[Dot42.DexImport("createStringArrayList", "()Ljava/util/ArrayList;", AccessFlags = 17, Signature = "()Ljava/util/ArrayList<Ljava/lang/String;>;")]
+				public global::Java.Util.ArrayList<string> CreateStringArrayList() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ArrayList<string>);
+				}
+
+				/// <java-name>
+				/// createBinderArrayList
+				/// </java-name>
+				[Dot42.DexImport("createBinderArrayList", "()Ljava/util/ArrayList;", AccessFlags = 17, Signature = "()Ljava/util/ArrayList<Landroid/os/IBinder;>;")]
+				public global::Java.Util.ArrayList<global::Android.Os.IBinder> CreateBinderArrayList() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ArrayList<global::Android.Os.IBinder>);
+				}
+
+				/// <java-name>
+				/// readStringList
+				/// </java-name>
+				[Dot42.DexImport("readStringList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "(Ljava/util/List<Ljava/lang/String;>;)V")]
+				public void ReadStringList(global::Java.Util.IList<string> list) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readBinderList
+				/// </java-name>
+				[Dot42.DexImport("readBinderList", "(Ljava/util/List;)V", AccessFlags = 17, Signature = "(Ljava/util/List<Landroid/os/IBinder;>;)V")]
+				public void ReadBinderList(global::Java.Util.IList<global::Android.Os.IBinder> list) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createTypedArray
+				/// </java-name>
+				[Dot42.DexImport("createTypedArray", "(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;", AccessFlags = 17, Signature = "<T:Ljava/lang/Object;>(Landroid/os/Parcelable$Creator<TT;>;)[TT;")]
+				public T[] CreateTypedArray<T>(global::Android.Os.IParcelable_ICreator<T> parcelable_ICreator) /* MethodBuilder.Create */ 
+				{
+						return default(T[]);
+				}
+
+				/// <java-name>
+				/// readTypedArray
+				/// </java-name>
+				[Dot42.DexImport("readTypedArray", "([Ljava/lang/Object;Landroid/os/Parcelable$Creator;)V", AccessFlags = 17, Signature = "<T:Ljava/lang/Object;>([TT;Landroid/os/Parcelable$Creator<TT;>;)V")]
+				public void ReadTypedArray<T>(T[] p, global::Android.Os.IParcelable_ICreator<T> parcelable_ICreator) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// writeParcelableArray
+				/// </java-name>
+				[Dot42.DexImport("writeParcelableArray", "([Landroid/os/Parcelable;I)V", AccessFlags = 17, Signature = "<T::Landroid/os/Parcelable;>([TT;I)V")]
+				public void WriteParcelableArray<T>(T[] p, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// readValue
+				/// </java-name>
+				[Dot42.DexImport("readValue", "(Ljava/lang/ClassLoader;)Ljava/lang/Object;", AccessFlags = 17)]
+				public object ReadValue(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// readParcelable
+				/// </java-name>
+				[Dot42.DexImport("readParcelable", "(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;", AccessFlags = 17, Signature = "<T::Landroid/os/Parcelable;>(Ljava/lang/ClassLoader;)TT;")]
+				public T ReadParcelable<T>(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// readParcelableArray
+				/// </java-name>
+				[Dot42.DexImport("readParcelableArray", "(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;", AccessFlags = 17)]
+				public global::Android.Os.IParcelable[] ReadParcelableArray(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IParcelable[]);
+				}
+
+				/// <java-name>
+				/// readSerializable
+				/// </java-name>
+				[Dot42.DexImport("readSerializable", "()Ljava/io/Serializable;", AccessFlags = 17)]
+				public global::Java.Io.ISerializable ReadSerializable() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.ISerializable);
+				}
+
+				/// <java-name>
+				/// obtain
+				/// </java-name>
+				[Dot42.DexImport("obtain", "(I)Landroid/os/Parcel;", AccessFlags = 28)]
+				internal static global::Android.Os.Parcel Obtain(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Parcel);
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~Parcel() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/os/ParcelFileDescriptor
+		/// </java-name>
+		[Dot42.DexImport("android/os/ParcelFileDescriptor", AccessFlags = 33)]
+		public partial class ParcelFileDescriptor : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// MODE_WORLD_READABLE
+				/// </java-name>
+				[Dot42.DexImport("MODE_WORLD_READABLE", "I", AccessFlags = 25)]
+				public const int MODE_WORLD_READABLE = 1;
+				/// <java-name>
+				/// MODE_WORLD_WRITEABLE
+				/// </java-name>
+				[Dot42.DexImport("MODE_WORLD_WRITEABLE", "I", AccessFlags = 25)]
+				public const int MODE_WORLD_WRITEABLE = 2;
+				/// <java-name>
+				/// MODE_READ_ONLY
+				/// </java-name>
+				[Dot42.DexImport("MODE_READ_ONLY", "I", AccessFlags = 25)]
+				public const int MODE_READ_ONLY = 268435456;
+				/// <java-name>
+				/// MODE_WRITE_ONLY
+				/// </java-name>
+				[Dot42.DexImport("MODE_WRITE_ONLY", "I", AccessFlags = 25)]
+				public const int MODE_WRITE_ONLY = 536870912;
+				/// <java-name>
+				/// MODE_READ_WRITE
+				/// </java-name>
+				[Dot42.DexImport("MODE_READ_WRITE", "I", AccessFlags = 25)]
+				public const int MODE_READ_WRITE = 805306368;
+				/// <java-name>
+				/// MODE_CREATE
+				/// </java-name>
+				[Dot42.DexImport("MODE_CREATE", "I", AccessFlags = 25)]
+				public const int MODE_CREATE = 134217728;
+				/// <java-name>
+				/// MODE_TRUNCATE
+				/// </java-name>
+				[Dot42.DexImport("MODE_TRUNCATE", "I", AccessFlags = 25)]
+				public const int MODE_TRUNCATE = 67108864;
+				/// <java-name>
+				/// MODE_APPEND
+				/// </java-name>
+				[Dot42.DexImport("MODE_APPEND", "I", AccessFlags = 25)]
+				public const int MODE_APPEND = 33554432;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.ParcelFileDescriptor> CREATOR;
+				[Dot42.DexImport("<init>", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
+				public ParcelFileDescriptor(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// open
+				/// </java-name>
+				[Dot42.DexImport("open", "(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
+				public static global::Android.Os.ParcelFileDescriptor Open(global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+				/// <java-name>
+				/// dup
+				/// </java-name>
+				[Dot42.DexImport("dup", "(Ljava/io/FileDescriptor;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
+				public static global::Android.Os.ParcelFileDescriptor Dup(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+				/// <java-name>
+				/// dup
+				/// </java-name>
+				[Dot42.DexImport("dup", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
+				public virtual global::Android.Os.ParcelFileDescriptor Dup() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+				/// <java-name>
+				/// fromFd
+				/// </java-name>
+				[Dot42.DexImport("fromFd", "(I)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
+				public static global::Android.Os.ParcelFileDescriptor FromFd(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+				/// <java-name>
+				/// adoptFd
+				/// </java-name>
+				[Dot42.DexImport("adoptFd", "(I)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
+				public static global::Android.Os.ParcelFileDescriptor AdoptFd(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+				/// <java-name>
+				/// fromSocket
+				/// </java-name>
+				[Dot42.DexImport("fromSocket", "(Ljava/net/Socket;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
+				public static global::Android.Os.ParcelFileDescriptor FromSocket(global::Java.Net.Socket socket) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+				/// <java-name>
+				/// fromDatagramSocket
+				/// </java-name>
+				[Dot42.DexImport("fromDatagramSocket", "(Ljava/net/DatagramSocket;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
+				public static global::Android.Os.ParcelFileDescriptor FromDatagramSocket(global::Java.Net.DatagramSocket datagramSocket) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+				/// <java-name>
+				/// createPipe
+				/// </java-name>
+				[Dot42.DexImport("createPipe", "()[Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
+				public static global::Android.Os.ParcelFileDescriptor[] CreatePipe() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor[]);
+				}
+
+				/// <java-name>
+				/// getFileDescriptor
+				/// </java-name>
+				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
+				public virtual global::Java.Io.FileDescriptor GetFileDescriptor() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.FileDescriptor);
+				}
+
+				/// <java-name>
+				/// getStatSize
+				/// </java-name>
+				[Dot42.DexImport("getStatSize", "()J", AccessFlags = 257)]
+				public virtual long GetStatSize() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getFd
+				/// </java-name>
+				[Dot42.DexImport("getFd", "()I", AccessFlags = 1)]
+				public virtual int GetFd() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// detachFd
+				/// </java-name>
+				[Dot42.DexImport("detachFd", "()I", AccessFlags = 1)]
+				public virtual int DetachFd() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public virtual void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~ParcelFileDescriptor() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ParcelFileDescriptor() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getFileDescriptor
+				/// </java-name>
+				public global::Java.Io.FileDescriptor FileDescriptor
+				{
+				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
+						get{ return GetFileDescriptor(); }
+				}
+
+				/// <java-name>
+				/// getStatSize
+				/// </java-name>
+				public long StatSize
+				{
+				[Dot42.DexImport("getStatSize", "()J", AccessFlags = 257)]
+						get{ return GetStatSize(); }
+				}
+
+				/// <java-name>
+				/// getFd
+				/// </java-name>
+				public int Fd
+				{
+				[Dot42.DexImport("getFd", "()I", AccessFlags = 1)]
+						get{ return GetFd(); }
+				}
+
+				/// <java-name>
+				/// android/os/ParcelFileDescriptor$AutoCloseOutputStream
+				/// </java-name>
+				[Dot42.DexImport("android/os/ParcelFileDescriptor$AutoCloseOutputStream", AccessFlags = 9)]
+				public partial class AutoCloseOutputStream : global::Java.Io.FileOutputStream
+ /* scope: __dot42__ */ 
+				{
+						[Dot42.DexImport("<init>", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
+						public AutoCloseOutputStream(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// close
+						/// </java-name>
+						[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+						public override void Close() /* MethodBuilder.Create */ 
+						{
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal AutoCloseOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/os/ParcelFileDescriptor$AutoCloseInputStream
+				/// </java-name>
+				[Dot42.DexImport("android/os/ParcelFileDescriptor$AutoCloseInputStream", AccessFlags = 9)]
+				public partial class AutoCloseInputStream : global::Java.Io.FileInputStream
+ /* scope: __dot42__ */ 
+				{
+						[Dot42.DexImport("<init>", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
+						public AutoCloseInputStream(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// close
+						/// </java-name>
+						[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+						public override void Close() /* MethodBuilder.Create */ 
+						{
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal AutoCloseInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/ParcelFormatException
+		/// </java-name>
+		[Dot42.DexImport("android/os/ParcelFormatException", AccessFlags = 33)]
+		public partial class ParcelFormatException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ParcelFormatException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ParcelFormatException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/ParcelUuid
+		/// </java-name>
+		[Dot42.DexImport("android/os/ParcelUuid", AccessFlags = 49)]
+		public sealed partial class ParcelUuid : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.ParcelUuid> CREATOR;
+				[Dot42.DexImport("<init>", "(Ljava/util/UUID;)V", AccessFlags = 1)]
+				public ParcelUuid(global::Java.Util.UUID uUID) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// fromString
+				/// </java-name>
+				[Dot42.DexImport("fromString", "(Ljava/lang/String;)Landroid/os/ParcelUuid;", AccessFlags = 9)]
+				public static global::Android.Os.ParcelUuid FromString(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelUuid);
+				}
+
+				/// <java-name>
+				/// getUuid
+				/// </java-name>
+				[Dot42.DexImport("getUuid", "()Ljava/util/UUID;", AccessFlags = 1)]
+				public global::Java.Util.UUID GetUuid() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.UUID);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// equals
+				/// </java-name>
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ParcelUuid() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getUuid
+				/// </java-name>
+				public global::Java.Util.UUID Uuid
+				{
+				[Dot42.DexImport("getUuid", "()Ljava/util/UUID;", AccessFlags = 1)]
+						get{ return GetUuid(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/PatternMatcher
+		/// </java-name>
+		[Dot42.DexImport("android/os/PatternMatcher", AccessFlags = 33)]
+		public partial class PatternMatcher : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// PATTERN_LITERAL
+				/// </java-name>
+				[Dot42.DexImport("PATTERN_LITERAL", "I", AccessFlags = 25)]
+				public const int PATTERN_LITERAL = 0;
+				/// <java-name>
+				/// PATTERN_PREFIX
+				/// </java-name>
+				[Dot42.DexImport("PATTERN_PREFIX", "I", AccessFlags = 25)]
+				public const int PATTERN_PREFIX = 1;
+				/// <java-name>
+				/// PATTERN_SIMPLE_GLOB
+				/// </java-name>
+				[Dot42.DexImport("PATTERN_SIMPLE_GLOB", "I", AccessFlags = 25)]
+				public const int PATTERN_SIMPLE_GLOB = 2;
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.PatternMatcher> CREATOR;
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
+				public PatternMatcher(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
+				public PatternMatcher(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPath
+				/// </java-name>
+				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
+				public string GetPath() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getType
+				/// </java-name>
+				[Dot42.DexImport("getType", "()I", AccessFlags = 17)]
+				public int GetTypeJava() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// match
+				/// </java-name>
+				[Dot42.DexImport("match", "(Ljava/lang/String;)Z", AccessFlags = 1)]
+				public virtual bool Match(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal PatternMatcher() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPath
+				/// </java-name>
+				public string Path
+				{
+				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return GetPath(); }
+				}
+
+				/// <java-name>
+				/// getType
+				/// </java-name>
+				public int Type
+				{
+				[Dot42.DexImport("getType", "()I", AccessFlags = 17)]
+						get{ return GetTypeJava(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/PowerManager
+		/// </java-name>
+		[Dot42.DexImport("android/os/PowerManager", AccessFlags = 33)]
+		public partial class PowerManager
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// PARTIAL_WAKE_LOCK
+				/// </java-name>
+				[Dot42.DexImport("PARTIAL_WAKE_LOCK", "I", AccessFlags = 25)]
+				public const int PARTIAL_WAKE_LOCK = 1;
+				/// <java-name>
+				/// FULL_WAKE_LOCK
+				/// </java-name>
+				[Dot42.DexImport("FULL_WAKE_LOCK", "I", AccessFlags = 25)]
+				public const int FULL_WAKE_LOCK = 26;
+				/// <java-name>
+				/// SCREEN_BRIGHT_WAKE_LOCK
+				/// </java-name>
+				[Dot42.DexImport("SCREEN_BRIGHT_WAKE_LOCK", "I", AccessFlags = 25)]
+				public const int SCREEN_BRIGHT_WAKE_LOCK = 10;
+				/// <java-name>
+				/// SCREEN_DIM_WAKE_LOCK
+				/// </java-name>
+				[Dot42.DexImport("SCREEN_DIM_WAKE_LOCK", "I", AccessFlags = 25)]
+				public const int SCREEN_DIM_WAKE_LOCK = 6;
+				/// <java-name>
+				/// ACQUIRE_CAUSES_WAKEUP
+				/// </java-name>
+				[Dot42.DexImport("ACQUIRE_CAUSES_WAKEUP", "I", AccessFlags = 25)]
+				public const int ACQUIRE_CAUSES_WAKEUP = 268435456;
+				/// <java-name>
+				/// ON_AFTER_RELEASE
+				/// </java-name>
+				[Dot42.DexImport("ON_AFTER_RELEASE", "I", AccessFlags = 25)]
+				public const int ON_AFTER_RELEASE = 536870912;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal PowerManager() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// newWakeLock
+				/// </java-name>
+				[Dot42.DexImport("newWakeLock", "(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;", AccessFlags = 1)]
+				public virtual global::Android.Os.PowerManager.WakeLock NewWakeLock(int int32, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.PowerManager.WakeLock);
+				}
+
+				/// <java-name>
+				/// userActivity
+				/// </java-name>
+				[Dot42.DexImport("userActivity", "(JZ)V", AccessFlags = 1)]
+				public virtual void UserActivity(long int64, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// goToSleep
+				/// </java-name>
+				[Dot42.DexImport("goToSleep", "(J)V", AccessFlags = 1)]
+				public virtual void GoToSleep(long int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isScreenOn
+				/// </java-name>
+				[Dot42.DexImport("isScreenOn", "()Z", AccessFlags = 1)]
+				public virtual bool IsScreenOn() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// reboot
+				/// </java-name>
+				[Dot42.DexImport("reboot", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Reboot(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/os/PowerManager$WakeLock
+				/// </java-name>
+				[Dot42.DexImport("android/os/PowerManager$WakeLock", AccessFlags = 1)]
+				public partial class WakeLock
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// this$0
+						/// </java-name>
+						[Dot42.DexImport("this$0", "Landroid/os/PowerManager;", AccessFlags = 4112)]
+						internal readonly global::Android.Os.PowerManager This_0;
+						[Dot42.DexImport("<init>", "(Landroid/os/PowerManager;)V", AccessFlags = 0)]
+						internal WakeLock(global::Android.Os.PowerManager powerManager) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// setReferenceCounted
+						/// </java-name>
+						[Dot42.DexImport("setReferenceCounted", "(Z)V", AccessFlags = 1)]
+						public virtual void SetReferenceCounted(bool boolean) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// acquire
+						/// </java-name>
+						[Dot42.DexImport("acquire", "()V", AccessFlags = 1)]
+						public virtual void Acquire() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// acquire
+						/// </java-name>
+						[Dot42.DexImport("acquire", "(J)V", AccessFlags = 1)]
+						public virtual void Acquire(long int64) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// release
+						/// </java-name>
+						[Dot42.DexImport("release", "()V", AccessFlags = 1)]
+						public virtual void Release() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// isHeld
+						/// </java-name>
+						[Dot42.DexImport("isHeld", "()Z", AccessFlags = 1)]
+						public virtual bool IsHeld() /* MethodBuilder.Create */ 
+						{
+								return default(bool);
+						}
+
+						/// <java-name>
+						/// setWorkSource
+						/// </java-name>
+						[Dot42.DexImport("setWorkSource", "(Landroid/os/WorkSource;)V", AccessFlags = 1)]
+						public virtual void SetWorkSource(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// toString
+						/// </java-name>
+						[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+						public override string ToString() /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+						/// <java-name>
+						/// finalize
+						/// </java-name>
+						[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+						extern ~WakeLock() /* MethodBuilder.Create */ ;
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal WakeLock() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/Process
+		/// </java-name>
+		[Dot42.DexImport("android/os/Process", AccessFlags = 33)]
+		public partial class Process
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// SYSTEM_UID
+				/// </java-name>
+				[Dot42.DexImport("SYSTEM_UID", "I", AccessFlags = 25)]
+				public const int SYSTEM_UID = 1000;
+				/// <java-name>
+				/// PHONE_UID
+				/// </java-name>
+				[Dot42.DexImport("PHONE_UID", "I", AccessFlags = 25)]
+				public const int PHONE_UID = 1001;
+				/// <java-name>
+				/// FIRST_APPLICATION_UID
+				/// </java-name>
+				[Dot42.DexImport("FIRST_APPLICATION_UID", "I", AccessFlags = 25)]
+				public const int FIRST_APPLICATION_UID = 10000;
+				/// <java-name>
+				/// LAST_APPLICATION_UID
+				/// </java-name>
+				[Dot42.DexImport("LAST_APPLICATION_UID", "I", AccessFlags = 25)]
+				public const int LAST_APPLICATION_UID = 99999;
+				/// <java-name>
+				/// BLUETOOTH_GID
+				/// </java-name>
+				[Dot42.DexImport("BLUETOOTH_GID", "I", AccessFlags = 25)]
+				public const int BLUETOOTH_GID = 2000;
+				/// <java-name>
+				/// THREAD_PRIORITY_DEFAULT
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_DEFAULT", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_DEFAULT = 0;
+				/// <java-name>
+				/// THREAD_PRIORITY_LOWEST
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_LOWEST", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_LOWEST = 19;
+				/// <java-name>
+				/// THREAD_PRIORITY_BACKGROUND
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_BACKGROUND", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_BACKGROUND = 10;
+				/// <java-name>
+				/// THREAD_PRIORITY_FOREGROUND
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_FOREGROUND", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_FOREGROUND = -2;
+				/// <java-name>
+				/// THREAD_PRIORITY_DISPLAY
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_DISPLAY", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_DISPLAY = -4;
+				/// <java-name>
+				/// THREAD_PRIORITY_URGENT_DISPLAY
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_URGENT_DISPLAY", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_URGENT_DISPLAY = -8;
+				/// <java-name>
+				/// THREAD_PRIORITY_AUDIO
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_AUDIO", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_AUDIO = -16;
+				/// <java-name>
+				/// THREAD_PRIORITY_URGENT_AUDIO
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_URGENT_AUDIO", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_URGENT_AUDIO = -19;
+				/// <java-name>
+				/// THREAD_PRIORITY_MORE_FAVORABLE
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_MORE_FAVORABLE", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_MORE_FAVORABLE = -1;
+				/// <java-name>
+				/// THREAD_PRIORITY_LESS_FAVORABLE
+				/// </java-name>
+				[Dot42.DexImport("THREAD_PRIORITY_LESS_FAVORABLE", "I", AccessFlags = 25)]
+				public const int THREAD_PRIORITY_LESS_FAVORABLE = 1;
+				/// <java-name>
+				/// SIGNAL_QUIT
+				/// </java-name>
+				[Dot42.DexImport("SIGNAL_QUIT", "I", AccessFlags = 25)]
+				public const int SIGNAL_QUIT = 3;
+				/// <java-name>
+				/// SIGNAL_KILL
+				/// </java-name>
+				[Dot42.DexImport("SIGNAL_KILL", "I", AccessFlags = 25)]
+				public const int SIGNAL_KILL = 9;
+				/// <java-name>
+				/// SIGNAL_USR1
+				/// </java-name>
+				[Dot42.DexImport("SIGNAL_USR1", "I", AccessFlags = 25)]
+				public const int SIGNAL_USR1 = 10;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Process() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getElapsedCpuTime
+				/// </java-name>
+				[Dot42.DexImport("getElapsedCpuTime", "()J", AccessFlags = 281)]
+				public static long GetElapsedCpuTime() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// myPid
+				/// </java-name>
+				[Dot42.DexImport("myPid", "()I", AccessFlags = 281)]
+				public static int MyPid() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// myTid
+				/// </java-name>
+				[Dot42.DexImport("myTid", "()I", AccessFlags = 281)]
+				public static int MyTid() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// myUid
+				/// </java-name>
+				[Dot42.DexImport("myUid", "()I", AccessFlags = 281)]
+				public static int MyUid() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getUidForName
+				/// </java-name>
+				[Dot42.DexImport("getUidForName", "(Ljava/lang/String;)I", AccessFlags = 281)]
+				public static int GetUidForName(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getGidForName
+				/// </java-name>
+				[Dot42.DexImport("getGidForName", "(Ljava/lang/String;)I", AccessFlags = 281)]
+				public static int GetGidForName(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setThreadPriority
+				/// </java-name>
+				[Dot42.DexImport("setThreadPriority", "(II)V", AccessFlags = 281)]
+				public static void SetThreadPriority(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setThreadPriority
+				/// </java-name>
+				[Dot42.DexImport("setThreadPriority", "(I)V", AccessFlags = 281)]
+				public static void SetThreadPriority(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getThreadPriority
+				/// </java-name>
+				[Dot42.DexImport("getThreadPriority", "(I)I", AccessFlags = 281)]
+				public static int GetThreadPriority(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// supportsProcesses
+				/// </java-name>
+				[Dot42.DexImport("supportsProcesses", "()Z", AccessFlags = 25)]
+				public static bool SupportsProcesses() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// killProcess
+				/// </java-name>
+				[Dot42.DexImport("killProcess", "(I)V", AccessFlags = 25)]
+				public static void KillProcess(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendSignal
+				/// </java-name>
+				[Dot42.DexImport("sendSignal", "(II)V", AccessFlags = 281)]
+				public static void SendSignal(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getElapsedCpuTime
+				/// </java-name>
+				public static long ElapsedCpuTime
+				{
+				[Dot42.DexImport("getElapsedCpuTime", "()J", AccessFlags = 281)]
+						get{ return GetElapsedCpuTime(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/RecoverySystem
+		/// </java-name>
+		[Dot42.DexImport("android/os/RecoverySystem", AccessFlags = 33)]
+		public partial class RecoverySystem
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RecoverySystem() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// verifyPackage
+				/// </java-name>
+				[Dot42.DexImport("verifyPackage", "(Ljava/io/File;Landroid/os/RecoverySystem$ProgressListener;Ljava/io/File;)V", AccessFlags = 9)]
+				public static void VerifyPackage(global::Java.Io.File file, global::Android.Os.RecoverySystem.IProgressListener progressListener, global::Java.Io.File file1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// installPackage
+				/// </java-name>
+				[Dot42.DexImport("installPackage", "(Landroid/content/Context;Ljava/io/File;)V", AccessFlags = 9)]
+				public static void InstallPackage(global::Android.Content.Context context, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// rebootWipeUserData
+				/// </java-name>
+				[Dot42.DexImport("rebootWipeUserData", "(Landroid/content/Context;)V", AccessFlags = 9)]
+				public static void RebootWipeUserData(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// rebootWipeCache
+				/// </java-name>
+				[Dot42.DexImport("rebootWipeCache", "(Landroid/content/Context;)V", AccessFlags = 9)]
+				public static void RebootWipeCache(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/os/RecoverySystem$ProgressListener
+				/// </java-name>
+				[Dot42.DexImport("android/os/RecoverySystem$ProgressListener", AccessFlags = 1545)]
+				public partial interface IProgressListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onProgress
+						/// </java-name>
+						[Dot42.DexImport("onProgress", "(I)V", AccessFlags = 1025)]
+						void OnProgress(int int32) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/RemoteCallbackList
+		/// </java-name>
+		[Dot42.DexImport("android/os/RemoteCallbackList", AccessFlags = 33, Signature = "<E::Landroid/os/IInterface;>Ljava/lang/Object;")]
+		public partial class RemoteCallbackList<E>
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RemoteCallbackList() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// register
+				/// </java-name>
+				[Dot42.DexImport("register", "(Landroid/os/IInterface;)Z", AccessFlags = 1, Signature = "(TE;)Z")]
+				public virtual bool Register(E e) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// register
+				/// </java-name>
+				[Dot42.DexImport("register", "(Landroid/os/IInterface;Ljava/lang/Object;)Z", AccessFlags = 1, Signature = "(TE;Ljava/lang/Object;)Z")]
+				public virtual bool Register(E e, object @object) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// unregister
+				/// </java-name>
+				[Dot42.DexImport("unregister", "(Landroid/os/IInterface;)Z", AccessFlags = 1, Signature = "(TE;)Z")]
+				public virtual bool Unregister(E e) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// kill
+				/// </java-name>
+				[Dot42.DexImport("kill", "()V", AccessFlags = 1)]
+				public virtual void Kill() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCallbackDied
+				/// </java-name>
+				[Dot42.DexImport("onCallbackDied", "(Landroid/os/IInterface;)V", AccessFlags = 1, Signature = "(TE;)V")]
+				public virtual void OnCallbackDied(E e) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCallbackDied
+				/// </java-name>
+				[Dot42.DexImport("onCallbackDied", "(Landroid/os/IInterface;Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TE;Ljava/lang/Object;)V")]
+				public virtual void OnCallbackDied(E e, object @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// beginBroadcast
+				/// </java-name>
+				[Dot42.DexImport("beginBroadcast", "()I", AccessFlags = 1)]
+				public virtual int BeginBroadcast() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getBroadcastItem
+				/// </java-name>
+				[Dot42.DexImport("getBroadcastItem", "(I)Landroid/os/IInterface;", AccessFlags = 1, Signature = "(I)TE;")]
+				public virtual E GetBroadcastItem(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(E);
+				}
+
+				/// <java-name>
+				/// getBroadcastCookie
+				/// </java-name>
+				[Dot42.DexImport("getBroadcastCookie", "(I)Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object GetBroadcastCookie(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// finishBroadcast
+				/// </java-name>
+				[Dot42.DexImport("finishBroadcast", "()V", AccessFlags = 1)]
+				public virtual void FinishBroadcast() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/RemoteException
+		/// </java-name>
+		[Dot42.DexImport("android/os/RemoteException", AccessFlags = 33)]
+		public partial class RemoteException : global::Android.Util.AndroidException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RemoteException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public RemoteException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/ResultReceiver
+		/// </java-name>
+		[Dot42.DexImport("android/os/ResultReceiver", AccessFlags = 33)]
+		public partial class ResultReceiver : global::Android.Os.IParcelable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// CREATOR
+				/// </java-name>
+				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.ResultReceiver> CREATOR;
+				[Dot42.DexImport("<init>", "(Landroid/os/Handler;)V", AccessFlags = 1)]
+				public ResultReceiver(global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// send
+				/// </java-name>
+				[Dot42.DexImport("send", "(ILandroid/os/Bundle;)V", AccessFlags = 1)]
+				public virtual void Send(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onReceiveResult
+				/// </java-name>
+				[Dot42.DexImport("onReceiveResult", "(ILandroid/os/Bundle;)V", AccessFlags = 4)]
+				protected internal virtual void OnReceiveResult(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// describeContents
+				/// </java-name>
+				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
+				public virtual int DescribeContents() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeToParcel
+				/// </java-name>
+				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
+				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ResultReceiver() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/StatFs
+		/// </java-name>
+		[Dot42.DexImport("android/os/StatFs", AccessFlags = 33)]
+		public partial class StatFs
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public StatFs(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// restat
+				/// </java-name>
+				[Dot42.DexImport("restat", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Restat(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~StatFs() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getBlockSize
+				/// </java-name>
+				[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 257)]
+				public virtual int GetBlockSize() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getBlockCount
+				/// </java-name>
+				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 257)]
+				public virtual int GetBlockCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getFreeBlocks
+				/// </java-name>
+				[Dot42.DexImport("getFreeBlocks", "()I", AccessFlags = 257)]
+				public virtual int GetFreeBlocks() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getAvailableBlocks
+				/// </java-name>
+				[Dot42.DexImport("getAvailableBlocks", "()I", AccessFlags = 257)]
+				public virtual int GetAvailableBlocks() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal StatFs() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getBlockSize
+				/// </java-name>
+				public int BlockSize
+				{
+				[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 257)]
+						get{ return GetBlockSize(); }
+				}
+
+				/// <java-name>
+				/// getBlockCount
+				/// </java-name>
+				public int BlockCount
+				{
+				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 257)]
+						get{ return GetBlockCount(); }
+				}
+
+				/// <java-name>
+				/// getFreeBlocks
+				/// </java-name>
+				public int FreeBlocks
+				{
+				[Dot42.DexImport("getFreeBlocks", "()I", AccessFlags = 257)]
+						get{ return GetFreeBlocks(); }
+				}
+
+				/// <java-name>
+				/// getAvailableBlocks
+				/// </java-name>
+				public int AvailableBlocks
+				{
+				[Dot42.DexImport("getAvailableBlocks", "()I", AccessFlags = 257)]
+						get{ return GetAvailableBlocks(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/StrictMode
+		/// </java-name>
+		[Dot42.DexImport("android/os/StrictMode", AccessFlags = 49)]
+		public sealed partial class StrictMode
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal StrictMode() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setThreadPolicy
+				/// </java-name>
+				[Dot42.DexImport("setThreadPolicy", "(Landroid/os/StrictMode$ThreadPolicy;)V", AccessFlags = 9)]
+				public static void SetThreadPolicy(global::Android.Os.StrictMode.ThreadPolicy threadPolicy) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getThreadPolicy
+				/// </java-name>
+				[Dot42.DexImport("getThreadPolicy", "()Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 9)]
+				public static global::Android.Os.StrictMode.ThreadPolicy GetThreadPolicy() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.StrictMode.ThreadPolicy);
+				}
+
+				/// <java-name>
+				/// allowThreadDiskWrites
+				/// </java-name>
+				[Dot42.DexImport("allowThreadDiskWrites", "()Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 9)]
+				public static global::Android.Os.StrictMode.ThreadPolicy AllowThreadDiskWrites() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.StrictMode.ThreadPolicy);
+				}
+
+				/// <java-name>
+				/// allowThreadDiskReads
+				/// </java-name>
+				[Dot42.DexImport("allowThreadDiskReads", "()Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 9)]
+				public static global::Android.Os.StrictMode.ThreadPolicy AllowThreadDiskReads() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.StrictMode.ThreadPolicy);
+				}
+
+				/// <java-name>
+				/// setVmPolicy
+				/// </java-name>
+				[Dot42.DexImport("setVmPolicy", "(Landroid/os/StrictMode$VmPolicy;)V", AccessFlags = 9)]
+				public static void SetVmPolicy(global::Android.Os.StrictMode.VmPolicy vmPolicy) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getVmPolicy
+				/// </java-name>
+				[Dot42.DexImport("getVmPolicy", "()Landroid/os/StrictMode$VmPolicy;", AccessFlags = 9)]
+				public static global::Android.Os.StrictMode.VmPolicy GetVmPolicy() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.StrictMode.VmPolicy);
+				}
+
+				/// <java-name>
+				/// enableDefaults
+				/// </java-name>
+				[Dot42.DexImport("enableDefaults", "()V", AccessFlags = 9)]
+				public static void EnableDefaults() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// noteSlowCall
+				/// </java-name>
+				[Dot42.DexImport("noteSlowCall", "(Ljava/lang/String;)V", AccessFlags = 9)]
+				public static void NoteSlowCall(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/os/StrictMode$VmPolicy
+				/// </java-name>
+				[Dot42.DexImport("android/os/StrictMode$VmPolicy", AccessFlags = 25)]
+				public sealed partial class VmPolicy
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// LAX
+						/// </java-name>
+						[Dot42.DexImport("LAX", "Landroid/os/StrictMode$VmPolicy;", AccessFlags = 25)]
+						public static readonly VmPolicy LAX;
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal VmPolicy() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// toString
+						/// </java-name>
+						[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+						public override string ToString() /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+						/// <java-name>
+						/// android/os/StrictMode$VmPolicy$Builder
+						/// </java-name>
+						[Dot42.DexImport("android/os/StrictMode$VmPolicy$Builder", AccessFlags = 25)]
+						public sealed partial class Builder
+ /* scope: __dot42__ */ 
+						{
+								[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+								public Builder() /* MethodBuilder.Create */ 
+								{
+								}
+
+								[Dot42.DexImport("<init>", "(Landroid/os/StrictMode$VmPolicy;)V", AccessFlags = 1)]
+								public Builder(global::Android.Os.StrictMode.VmPolicy vmPolicy) /* MethodBuilder.Create */ 
+								{
+								}
+
+								/// <java-name>
+								/// setClassInstanceLimit
+								/// </java-name>
+								[Dot42.DexImport("setClassInstanceLimit", "(Ljava/lang/Class;I)Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
+								public Builder SetClassInstanceLimit(global::System.Type type, int int32) /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// detectActivityLeaks
+								/// </java-name>
+								[Dot42.DexImport("detectActivityLeaks", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
+								public Builder DetectActivityLeaks() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// detectAll
+								/// </java-name>
+								[Dot42.DexImport("detectAll", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
+								public Builder DetectAll() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// detectLeakedSqlLiteObjects
+								/// </java-name>
+								[Dot42.DexImport("detectLeakedSqlLiteObjects", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
+								public Builder DetectLeakedSqlLiteObjects() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// detectLeakedClosableObjects
+								/// </java-name>
+								[Dot42.DexImport("detectLeakedClosableObjects", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
+								public Builder DetectLeakedClosableObjects() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// penaltyDeath
+								/// </java-name>
+								[Dot42.DexImport("penaltyDeath", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
+								public Builder PenaltyDeath() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// penaltyLog
+								/// </java-name>
+								[Dot42.DexImport("penaltyLog", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
+								public Builder PenaltyLog() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// penaltyDropBox
+								/// </java-name>
+								[Dot42.DexImport("penaltyDropBox", "()Landroid/os/StrictMode$VmPolicy$Builder;", AccessFlags = 1)]
+								public Builder PenaltyDropBox() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// build
+								/// </java-name>
+								[Dot42.DexImport("build", "()Landroid/os/StrictMode$VmPolicy;", AccessFlags = 1)]
+								public global::Android.Os.StrictMode.VmPolicy Build() /* MethodBuilder.Create */ 
+								{
+										return default(global::Android.Os.StrictMode.VmPolicy);
+								}
+
+						}
+
+				}
+
+				/// <java-name>
+				/// android/os/StrictMode$ThreadPolicy
+				/// </java-name>
+				[Dot42.DexImport("android/os/StrictMode$ThreadPolicy", AccessFlags = 25)]
+				public sealed partial class ThreadPolicy
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// LAX
+						/// </java-name>
+						[Dot42.DexImport("LAX", "Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 25)]
+						public static readonly ThreadPolicy LAX;
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+						internal ThreadPolicy() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// toString
+						/// </java-name>
+						[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+						public override string ToString() /* MethodBuilder.Create */ 
+						{
+								return default(string);
+						}
+
+						/// <java-name>
+						/// android/os/StrictMode$ThreadPolicy$Builder
+						/// </java-name>
+						[Dot42.DexImport("android/os/StrictMode$ThreadPolicy$Builder", AccessFlags = 25)]
+						public sealed partial class Builder
+ /* scope: __dot42__ */ 
+						{
+								[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+								public Builder() /* MethodBuilder.Create */ 
+								{
+								}
+
+								[Dot42.DexImport("<init>", "(Landroid/os/StrictMode$ThreadPolicy;)V", AccessFlags = 1)]
+								public Builder(global::Android.Os.StrictMode.ThreadPolicy threadPolicy) /* MethodBuilder.Create */ 
+								{
+								}
+
+								/// <java-name>
+								/// detectAll
+								/// </java-name>
+								[Dot42.DexImport("detectAll", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder DetectAll() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// permitAll
+								/// </java-name>
+								[Dot42.DexImport("permitAll", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PermitAll() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// detectNetwork
+								/// </java-name>
+								[Dot42.DexImport("detectNetwork", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder DetectNetwork() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// permitNetwork
+								/// </java-name>
+								[Dot42.DexImport("permitNetwork", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PermitNetwork() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// detectDiskReads
+								/// </java-name>
+								[Dot42.DexImport("detectDiskReads", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder DetectDiskReads() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// permitDiskReads
+								/// </java-name>
+								[Dot42.DexImport("permitDiskReads", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PermitDiskReads() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// detectCustomSlowCalls
+								/// </java-name>
+								[Dot42.DexImport("detectCustomSlowCalls", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder DetectCustomSlowCalls() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// permitCustomSlowCalls
+								/// </java-name>
+								[Dot42.DexImport("permitCustomSlowCalls", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PermitCustomSlowCalls() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// detectDiskWrites
+								/// </java-name>
+								[Dot42.DexImport("detectDiskWrites", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder DetectDiskWrites() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// permitDiskWrites
+								/// </java-name>
+								[Dot42.DexImport("permitDiskWrites", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PermitDiskWrites() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// penaltyDialog
+								/// </java-name>
+								[Dot42.DexImport("penaltyDialog", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PenaltyDialog() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// penaltyDeath
+								/// </java-name>
+								[Dot42.DexImport("penaltyDeath", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PenaltyDeath() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// penaltyDeathOnNetwork
+								/// </java-name>
+								[Dot42.DexImport("penaltyDeathOnNetwork", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PenaltyDeathOnNetwork() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// penaltyFlashScreen
+								/// </java-name>
+								[Dot42.DexImport("penaltyFlashScreen", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PenaltyFlashScreen() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// penaltyLog
+								/// </java-name>
+								[Dot42.DexImport("penaltyLog", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PenaltyLog() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// penaltyDropBox
+								/// </java-name>
+								[Dot42.DexImport("penaltyDropBox", "()Landroid/os/StrictMode$ThreadPolicy$Builder;", AccessFlags = 1)]
+								public Builder PenaltyDropBox() /* MethodBuilder.Create */ 
+								{
+										return default(Builder);
+								}
+
+								/// <java-name>
+								/// build
+								/// </java-name>
+								[Dot42.DexImport("build", "()Landroid/os/StrictMode$ThreadPolicy;", AccessFlags = 1)]
+								public global::Android.Os.StrictMode.ThreadPolicy Build() /* MethodBuilder.Create */ 
+								{
+										return default(global::Android.Os.StrictMode.ThreadPolicy);
+								}
+
+						}
+
+				}
+
+		}
+
+		/// <java-name>
 		/// android/os/SystemClock
 		/// </java-name>
 		[Dot42.DexImport("android/os/SystemClock", AccessFlags = 49)]
@@ -7292,257 +7353,201 @@ namespace Android.Os
 		}
 
 		/// <java-name>
-		/// android/os/Environment
+		/// android/os/TokenWatcher
 		/// </java-name>
-		[Dot42.DexImport("android/os/Environment", AccessFlags = 33)]
-		public partial class Environment
+		[Dot42.DexImport("android/os/TokenWatcher", AccessFlags = 1057)]
+		public abstract partial class TokenWatcher
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// DIRECTORY_MUSIC
-				/// </java-name>
-				[Dot42.DexImport("DIRECTORY_MUSIC", "Ljava/lang/String;", AccessFlags = 9)]
-				public static string DIRECTORY_MUSIC;
-				/// <java-name>
-				/// DIRECTORY_PODCASTS
-				/// </java-name>
-				[Dot42.DexImport("DIRECTORY_PODCASTS", "Ljava/lang/String;", AccessFlags = 9)]
-				public static string DIRECTORY_PODCASTS;
-				/// <java-name>
-				/// DIRECTORY_RINGTONES
-				/// </java-name>
-				[Dot42.DexImport("DIRECTORY_RINGTONES", "Ljava/lang/String;", AccessFlags = 9)]
-				public static string DIRECTORY_RINGTONES;
-				/// <java-name>
-				/// DIRECTORY_ALARMS
-				/// </java-name>
-				[Dot42.DexImport("DIRECTORY_ALARMS", "Ljava/lang/String;", AccessFlags = 9)]
-				public static string DIRECTORY_ALARMS;
-				/// <java-name>
-				/// DIRECTORY_NOTIFICATIONS
-				/// </java-name>
-				[Dot42.DexImport("DIRECTORY_NOTIFICATIONS", "Ljava/lang/String;", AccessFlags = 9)]
-				public static string DIRECTORY_NOTIFICATIONS;
-				/// <java-name>
-				/// DIRECTORY_PICTURES
-				/// </java-name>
-				[Dot42.DexImport("DIRECTORY_PICTURES", "Ljava/lang/String;", AccessFlags = 9)]
-				public static string DIRECTORY_PICTURES;
-				/// <java-name>
-				/// DIRECTORY_MOVIES
-				/// </java-name>
-				[Dot42.DexImport("DIRECTORY_MOVIES", "Ljava/lang/String;", AccessFlags = 9)]
-				public static string DIRECTORY_MOVIES;
-				/// <java-name>
-				/// DIRECTORY_DOWNLOADS
-				/// </java-name>
-				[Dot42.DexImport("DIRECTORY_DOWNLOADS", "Ljava/lang/String;", AccessFlags = 9)]
-				public static string DIRECTORY_DOWNLOADS;
-				/// <java-name>
-				/// DIRECTORY_DCIM
-				/// </java-name>
-				[Dot42.DexImport("DIRECTORY_DCIM", "Ljava/lang/String;", AccessFlags = 9)]
-				public static string DIRECTORY_DCIM;
-				/// <java-name>
-				/// MEDIA_REMOVED
-				/// </java-name>
-				[Dot42.DexImport("MEDIA_REMOVED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MEDIA_REMOVED = "removed";
-				/// <java-name>
-				/// MEDIA_UNMOUNTED
-				/// </java-name>
-				[Dot42.DexImport("MEDIA_UNMOUNTED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MEDIA_UNMOUNTED = "unmounted";
-				/// <java-name>
-				/// MEDIA_CHECKING
-				/// </java-name>
-				[Dot42.DexImport("MEDIA_CHECKING", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MEDIA_CHECKING = "checking";
-				/// <java-name>
-				/// MEDIA_NOFS
-				/// </java-name>
-				[Dot42.DexImport("MEDIA_NOFS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MEDIA_NOFS = "nofs";
-				/// <java-name>
-				/// MEDIA_MOUNTED
-				/// </java-name>
-				[Dot42.DexImport("MEDIA_MOUNTED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MEDIA_MOUNTED = "mounted";
-				/// <java-name>
-				/// MEDIA_MOUNTED_READ_ONLY
-				/// </java-name>
-				[Dot42.DexImport("MEDIA_MOUNTED_READ_ONLY", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MEDIA_MOUNTED_READ_ONLY = "mounted_ro";
-				/// <java-name>
-				/// MEDIA_SHARED
-				/// </java-name>
-				[Dot42.DexImport("MEDIA_SHARED", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MEDIA_SHARED = "shared";
-				/// <java-name>
-				/// MEDIA_BAD_REMOVAL
-				/// </java-name>
-				[Dot42.DexImport("MEDIA_BAD_REMOVAL", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MEDIA_BAD_REMOVAL = "bad_removal";
-				/// <java-name>
-				/// MEDIA_UNMOUNTABLE
-				/// </java-name>
-				[Dot42.DexImport("MEDIA_UNMOUNTABLE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string MEDIA_UNMOUNTABLE = "unmountable";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Environment() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Landroid/os/Handler;Ljava/lang/String;)V", AccessFlags = 1)]
+				public TokenWatcher(global::Android.Os.Handler handler, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getRootDirectory
+				/// acquired
 				/// </java-name>
-				[Dot42.DexImport("getRootDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetRootDirectory() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("acquired", "()V", AccessFlags = 1025)]
+				public abstract void Acquired() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// released
+				/// </java-name>
+				[Dot42.DexImport("released", "()V", AccessFlags = 1025)]
+				public abstract void Released() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// acquire
+				/// </java-name>
+				[Dot42.DexImport("acquire", "(Landroid/os/IBinder;Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Acquire(global::Android.Os.IBinder binder, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
 				}
 
 				/// <java-name>
-				/// getDataDirectory
+				/// cleanup
 				/// </java-name>
-				[Dot42.DexImport("getDataDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetDataDirectory() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("cleanup", "(Landroid/os/IBinder;Z)V", AccessFlags = 1)]
+				public virtual void Cleanup(global::Android.Os.IBinder binder, bool boolean) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
 				}
 
 				/// <java-name>
-				/// getExternalStorageDirectory
+				/// release
 				/// </java-name>
-				[Dot42.DexImport("getExternalStorageDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetExternalStorageDirectory() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("release", "(Landroid/os/IBinder;)V", AccessFlags = 1)]
+				public virtual void Release(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
 				}
 
 				/// <java-name>
-				/// getExternalStoragePublicDirectory
+				/// isAcquired
 				/// </java-name>
-				[Dot42.DexImport("getExternalStoragePublicDirectory", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetExternalStoragePublicDirectory(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getDownloadCacheDirectory
-				/// </java-name>
-				[Dot42.DexImport("getDownloadCacheDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetDownloadCacheDirectory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getExternalStorageState
-				/// </java-name>
-				[Dot42.DexImport("getExternalStorageState", "()Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetExternalStorageState() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isExternalStorageRemovable
-				/// </java-name>
-				[Dot42.DexImport("isExternalStorageRemovable", "()Z", AccessFlags = 9)]
-				public static bool IsExternalStorageRemovable() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isAcquired", "()Z", AccessFlags = 1)]
+				public virtual bool IsAcquired() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// isExternalStorageEmulated
+				/// dump
 				/// </java-name>
-				[Dot42.DexImport("isExternalStorageEmulated", "()Z", AccessFlags = 9)]
-				public static bool IsExternalStorageEmulated() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("dump", "()V", AccessFlags = 1)]
+				public virtual void Dump() /* MethodBuilder.Create */ 
 				{
-						return default(bool);
 				}
 
-				/// <java-name>
-				/// getRootDirectory
-				/// </java-name>
-				public static global::Java.Io.File RootDirectory
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal TokenWatcher() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-				[Dot42.DexImport("getRootDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return GetRootDirectory(); }
-				}
-
-				/// <java-name>
-				/// getDataDirectory
-				/// </java-name>
-				public static global::Java.Io.File DataDirectory
-				{
-				[Dot42.DexImport("getDataDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return GetDataDirectory(); }
-				}
-
-				/// <java-name>
-				/// getExternalStorageDirectory
-				/// </java-name>
-				public static global::Java.Io.File ExternalStorageDirectory
-				{
-				[Dot42.DexImport("getExternalStorageDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return GetExternalStorageDirectory(); }
-				}
-
-				/// <java-name>
-				/// getDownloadCacheDirectory
-				/// </java-name>
-				public static global::Java.Io.File DownloadCacheDirectory
-				{
-				[Dot42.DexImport("getDownloadCacheDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return GetDownloadCacheDirectory(); }
-				}
-
-				/// <java-name>
-				/// getExternalStorageState
-				/// </java-name>
-				public static string ExternalStorageState
-				{
-				[Dot42.DexImport("getExternalStorageState", "()Ljava/lang/String;", AccessFlags = 9)]
-						get{ return GetExternalStorageState(); }
 				}
 
 		}
 
 		/// <java-name>
-		/// android/os/ResultReceiver
+		/// android/os/TransactionTooLargeException
 		/// </java-name>
-		[Dot42.DexImport("android/os/ResultReceiver", AccessFlags = 33)]
-		public partial class ResultReceiver : global::Android.Os.IParcelable
+		[Dot42.DexImport("android/os/TransactionTooLargeException", AccessFlags = 33)]
+		public partial class TransactionTooLargeException : global::Android.Os.RemoteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public TransactionTooLargeException() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/Vibrator
+		/// </java-name>
+		[Dot42.DexImport("android/os/Vibrator", AccessFlags = 33)]
+		public partial class Vibrator
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Vibrator() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// hasVibrator
+				/// </java-name>
+				[Dot42.DexImport("hasVibrator", "()Z", AccessFlags = 1)]
+				public virtual bool HasVibrator() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// vibrate
+				/// </java-name>
+				[Dot42.DexImport("vibrate", "(J)V", AccessFlags = 1)]
+				public virtual void Vibrate(long int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// vibrate
+				/// </java-name>
+				[Dot42.DexImport("vibrate", "([JI)V", AccessFlags = 1)]
+				public virtual void Vibrate(long[] int64, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// cancel
+				/// </java-name>
+				[Dot42.DexImport("cancel", "()V", AccessFlags = 1)]
+				public virtual void Cancel() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/os/WorkSource
+		/// </java-name>
+		[Dot42.DexImport("android/os/WorkSource", AccessFlags = 33)]
+		public partial class WorkSource : global::Android.Os.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.ResultReceiver> CREATOR;
-				[Dot42.DexImport("<init>", "(Landroid/os/Handler;)V", AccessFlags = 1)]
-				public ResultReceiver(global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Os.WorkSource> CREATOR;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public WorkSource() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/os/WorkSource;)V", AccessFlags = 1)]
+				public WorkSource(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// send
+				/// clear
 				/// </java-name>
-				[Dot42.DexImport("send", "(ILandroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void Send(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
+				public virtual void Clear() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// onReceiveResult
+				/// diff
 				/// </java-name>
-				[Dot42.DexImport("onReceiveResult", "(ILandroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal virtual void OnReceiveResult(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("diff", "(Landroid/os/WorkSource;)Z", AccessFlags = 1)]
+				public virtual bool Diff(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
 				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// set
+				/// </java-name>
+				[Dot42.DexImport("set", "(Landroid/os/WorkSource;)V", AccessFlags = 1)]
+				public virtual void Set(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// add
+				/// </java-name>
+				[Dot42.DexImport("add", "(Landroid/os/WorkSource;)Z", AccessFlags = 1)]
+				public virtual bool Add(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// remove
+				/// </java-name>
+				[Dot42.DexImport("remove", "(Landroid/os/WorkSource;)Z", AccessFlags = 1)]
+				public virtual bool Remove(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
 				}
 
 				/// <java-name>
@@ -7559,11 +7564,6 @@ namespace Android.Os
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ResultReceiver() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

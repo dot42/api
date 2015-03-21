@@ -2,71 +2,6 @@
 namespace Org.Apache.Http.Client.Params
 {
 		/// <java-name>
-		/// org/apache/http/client/params/HttpClientParams
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/params/HttpClientParams", AccessFlags = 33)]
-		public partial class HttpClientParams
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal HttpClientParams() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isRedirecting
-				/// </java-name>
-				[Dot42.DexImport("isRedirecting", "(Lorg/apache/http/params/HttpParams;)Z", AccessFlags = 9)]
-				public static bool IsRedirecting(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setRedirecting
-				/// </java-name>
-				[Dot42.DexImport("setRedirecting", "(Lorg/apache/http/params/HttpParams;Z)V", AccessFlags = 9)]
-				public static void SetRedirecting(global::Org.Apache.Http.Params.IHttpParams httpParams, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isAuthenticating
-				/// </java-name>
-				[Dot42.DexImport("isAuthenticating", "(Lorg/apache/http/params/HttpParams;)Z", AccessFlags = 9)]
-				public static bool IsAuthenticating(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setAuthenticating
-				/// </java-name>
-				[Dot42.DexImport("setAuthenticating", "(Lorg/apache/http/params/HttpParams;Z)V", AccessFlags = 9)]
-				public static void SetAuthenticating(global::Org.Apache.Http.Params.IHttpParams httpParams, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCookiePolicy
-				/// </java-name>
-				[Dot42.DexImport("getCookiePolicy", "(Lorg/apache/http/params/HttpParams;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetCookiePolicy(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setCookiePolicy
-				/// </java-name>
-				[Dot42.DexImport("setCookiePolicy", "(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V", AccessFlags = 9)]
-				public static void SetCookiePolicy(global::Org.Apache.Http.Params.IHttpParams httpParams, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/client/params/AuthPolicy
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/client/params/AuthPolicy", AccessFlags = 49)]
@@ -90,45 +25,6 @@ namespace Org.Apache.Http.Client.Params
 				public const string BASIC = "Basic";
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal AuthPolicy() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/client/params/CookiePolicy
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/params/CookiePolicy", AccessFlags = 49)]
-		public sealed partial class CookiePolicy
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// BROWSER_COMPATIBILITY
-				/// </java-name>
-				[Dot42.DexImport("BROWSER_COMPATIBILITY", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string BROWSER_COMPATIBILITY = "compatibility";
-				/// <java-name>
-				/// NETSCAPE
-				/// </java-name>
-				[Dot42.DexImport("NETSCAPE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string NETSCAPE = "netscape";
-				/// <java-name>
-				/// RFC_2109
-				/// </java-name>
-				[Dot42.DexImport("RFC_2109", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string RFC_2109 = "rfc2109";
-				/// <java-name>
-				/// RFC_2965
-				/// </java-name>
-				[Dot42.DexImport("RFC_2965", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string RFC_2965 = "rfc2965";
-				/// <java-name>
-				/// BEST_MATCH
-				/// </java-name>
-				[Dot42.DexImport("BEST_MATCH", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string BEST_MATCH = "best-match";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal CookiePolicy() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -242,10 +138,123 @@ namespace Org.Apache.Http.Client.Params
 		}
 
 		/// <java-name>
+		/// org/apache/http/client/params/CookiePolicy
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/client/params/CookiePolicy", AccessFlags = 49)]
+		public sealed partial class CookiePolicy
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// BROWSER_COMPATIBILITY
+				/// </java-name>
+				[Dot42.DexImport("BROWSER_COMPATIBILITY", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string BROWSER_COMPATIBILITY = "compatibility";
+				/// <java-name>
+				/// NETSCAPE
+				/// </java-name>
+				[Dot42.DexImport("NETSCAPE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string NETSCAPE = "netscape";
+				/// <java-name>
+				/// RFC_2109
+				/// </java-name>
+				[Dot42.DexImport("RFC_2109", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string RFC_2109 = "rfc2109";
+				/// <java-name>
+				/// RFC_2965
+				/// </java-name>
+				[Dot42.DexImport("RFC_2965", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string RFC_2965 = "rfc2965";
+				/// <java-name>
+				/// BEST_MATCH
+				/// </java-name>
+				[Dot42.DexImport("BEST_MATCH", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string BEST_MATCH = "best-match";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal CookiePolicy() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/client/params/HttpClientParams
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/client/params/HttpClientParams", AccessFlags = 33)]
+		public partial class HttpClientParams
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal HttpClientParams() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isRedirecting
+				/// </java-name>
+				[Dot42.DexImport("isRedirecting", "(Lorg/apache/http/params/HttpParams;)Z", AccessFlags = 9)]
+				public static bool IsRedirecting(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setRedirecting
+				/// </java-name>
+				[Dot42.DexImport("setRedirecting", "(Lorg/apache/http/params/HttpParams;Z)V", AccessFlags = 9)]
+				public static void SetRedirecting(global::Org.Apache.Http.Params.IHttpParams httpParams, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isAuthenticating
+				/// </java-name>
+				[Dot42.DexImport("isAuthenticating", "(Lorg/apache/http/params/HttpParams;)Z", AccessFlags = 9)]
+				public static bool IsAuthenticating(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setAuthenticating
+				/// </java-name>
+				[Dot42.DexImport("setAuthenticating", "(Lorg/apache/http/params/HttpParams;Z)V", AccessFlags = 9)]
+				public static void SetAuthenticating(global::Org.Apache.Http.Params.IHttpParams httpParams, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getCookiePolicy
+				/// </java-name>
+				[Dot42.DexImport("getCookiePolicy", "(Lorg/apache/http/params/HttpParams;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetCookiePolicy(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// setCookiePolicy
+				/// </java-name>
+				[Dot42.DexImport("setCookiePolicy", "(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V", AccessFlags = 9)]
+				public static void SetCookiePolicy(global::Org.Apache.Http.Params.IHttpParams httpParams, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// org/apache/http/client/params/AllClientPNames
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/client/params/AllClientPNames", AccessFlags = 1537)]
 		public partial interface IAllClientPNames : global::Org.Apache.Http.Params.ICoreConnectionPNames, global::Org.Apache.Http.Params.ICoreProtocolPNames, global::Org.Apache.Http.Client.Params.IClientPNames, global::Org.Apache.Http.Auth.Params.IAuthPNames, global::Org.Apache.Http.Cookie.Params.ICookieSpecPNames, global::Org.Apache.Http.Conn.Params.IConnConnectionPNames, global::Org.Apache.Http.Conn.Params.IConnManagerPNames, global::Org.Apache.Http.Conn.Params.IConnRoutePNames
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// org/apache/http/client/params/ClientPNames
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/client/params/ClientPNames", AccessFlags = 1537)]
+		public partial interface IClientPNames
  /* scope: __dot42__ */ 
 		{
 		}
@@ -312,15 +321,6 @@ namespace Org.Apache.Http.Client.Params
 				/// </java-name>
 				[Dot42.DexImport("DEFAULT_HOST", "Ljava/lang/String;", AccessFlags = 25)]
 				public const string DEFAULT_HOST = "http.default-host";
-		}
-
-		/// <java-name>
-		/// org/apache/http/client/params/ClientPNames
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/client/params/ClientPNames", AccessFlags = 1537)]
-		public partial interface IClientPNames
- /* scope: __dot42__ */ 
-		{
 		}
 
 }

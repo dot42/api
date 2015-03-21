@@ -2,228 +2,111 @@
 namespace Java.Lang
 {
 		/// <java-name>
-		/// java/lang/NoSuchFieldError
+		/// java/lang/AbstractMethodError
 		/// </java-name>
-		[Dot42.DexImport("java/lang/NoSuchFieldError", AccessFlags = 33)]
-		public partial class NoSuchFieldError : global::Java.Lang.IncompatibleClassChangeError
+		[Dot42.DexImport("java/lang/AbstractMethodError", AccessFlags = 33)]
+		public partial class AbstractMethodError : global::Java.Lang.IncompatibleClassChangeError
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NoSuchFieldError() /* MethodBuilder.Create */ 
+				public AbstractMethodError() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public NoSuchFieldError(string @string) /* MethodBuilder.Create */ 
+				public AbstractMethodError(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 		}
 
 		/// <java-name>
-		/// java/lang/ThreadGroup
+		/// java/lang/AbstractStringBuilder
 		/// </java-name>
-		[Dot42.DexImport("java/lang/ThreadGroup", AccessFlags = 33)]
-		public partial class ThreadGroup : global::System.Threading.Thread.IUncaughtExceptionHandler
+		[Dot42.DexImport("java/lang/AbstractStringBuilder", AccessFlags = 1056)]
+		internal abstract partial class AbstractStringBuilder
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ThreadGroup(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/ThreadGroup;Ljava/lang/String;)V", AccessFlags = 1)]
-				public ThreadGroup(global::Java.Lang.ThreadGroup threadGroup, string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal AbstractStringBuilder() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// activeCount
+				/// capacity
 				/// </java-name>
-				[Dot42.DexImport("activeCount", "()I", AccessFlags = 1)]
-				public virtual int ActiveCount() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
+				public virtual int Capacity() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// activeGroupCount
+				/// charAt
 				/// </java-name>
-				[Dot42.DexImport("activeGroupCount", "()I", AccessFlags = 1)]
-				public virtual int ActiveGroupCount() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 1)]
+				public virtual char CharAt(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(char);
+				}
+
+				/// <java-name>
+				/// ensureCapacity
+				/// </java-name>
+				[Dot42.DexImport("ensureCapacity", "(I)V", AccessFlags = 1)]
+				public virtual void EnsureCapacity(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getChars
+				/// </java-name>
+				[Dot42.DexImport("getChars", "(II[CI)V", AccessFlags = 1)]
+				public virtual void GetChars(int int32, int int321, char[] @char, int int322) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
+				public virtual int Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// allowThreadSuspension
+				/// setCharAt
 				/// </java-name>
-				[Dot42.DexImport("allowThreadSuspension", "(Z)Z", AccessFlags = 1)]
-				public virtual bool AllowThreadSuspension(bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// checkAccess
-				/// </java-name>
-				[Dot42.DexImport("checkAccess", "()V", AccessFlags = 17)]
-				public void CheckAccess() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("setCharAt", "(IC)V", AccessFlags = 1)]
+				public virtual void SetCharAt(int int32, char @char) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// destroy
+				/// setLength
 				/// </java-name>
-				[Dot42.DexImport("destroy", "()V", AccessFlags = 17)]
-				public void Destroy() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
+				public virtual void SetLength(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// enumerate
+				/// substring
 				/// </java-name>
-				[Dot42.DexImport("enumerate", "([Ljava/lang/Thread;)I", AccessFlags = 1)]
-				public virtual int Enumerate(global::System.Threading.Thread[] thread) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// enumerate
-				/// </java-name>
-				[Dot42.DexImport("enumerate", "([Ljava/lang/Thread;Z)I", AccessFlags = 1)]
-				public virtual int Enumerate(global::System.Threading.Thread[] thread, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// enumerate
-				/// </java-name>
-				[Dot42.DexImport("enumerate", "([Ljava/lang/ThreadGroup;)I", AccessFlags = 1)]
-				public virtual int Enumerate(global::Java.Lang.ThreadGroup[] threadGroup) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// enumerate
-				/// </java-name>
-				[Dot42.DexImport("enumerate", "([Ljava/lang/ThreadGroup;Z)I", AccessFlags = 1)]
-				public virtual int Enumerate(global::Java.Lang.ThreadGroup[] threadGroup, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMaxPriority
-				/// </java-name>
-				[Dot42.DexImport("getMaxPriority", "()I", AccessFlags = 17)]
-				public int GetMaxPriority() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetName() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("substring", "(I)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string Substring(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
 				/// <java-name>
-				/// getParent
+				/// substring
 				/// </java-name>
-				[Dot42.DexImport("getParent", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
-				public global::Java.Lang.ThreadGroup GetParent() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("substring", "(II)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string Substring(int int32, int int321) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Lang.ThreadGroup);
-				}
-
-				/// <java-name>
-				/// interrupt
-				/// </java-name>
-				[Dot42.DexImport("interrupt", "()V", AccessFlags = 17)]
-				public void Interrupt() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isDaemon
-				/// </java-name>
-				[Dot42.DexImport("isDaemon", "()Z", AccessFlags = 17)]
-				public bool IsDaemon() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isDestroyed
-				/// </java-name>
-				[Dot42.DexImport("isDestroyed", "()Z", AccessFlags = 33)]
-				public virtual bool IsDestroyed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// list
-				/// </java-name>
-				[Dot42.DexImport("list", "()V", AccessFlags = 1)]
-				public virtual void List() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// parentOf
-				/// </java-name>
-				[Dot42.DexImport("parentOf", "(Ljava/lang/ThreadGroup;)Z", AccessFlags = 17)]
-				public bool ParentOf(global::Java.Lang.ThreadGroup threadGroup) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// resume
-				/// </java-name>
-				[Dot42.DexImport("resume", "()V", AccessFlags = 17)]
-				public void Resume() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDaemon
-				/// </java-name>
-				[Dot42.DexImport("setDaemon", "(Z)V", AccessFlags = 17)]
-				public void SetDaemon(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMaxPriority
-				/// </java-name>
-				[Dot42.DexImport("setMaxPriority", "(I)V", AccessFlags = 17)]
-				public void SetMaxPriority(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// stop
-				/// </java-name>
-				[Dot42.DexImport("stop", "()V", AccessFlags = 17)]
-				public void Stop() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// suspend
-				/// </java-name>
-				[Dot42.DexImport("suspend", "()V", AccessFlags = 17)]
-				public void Suspend() /* MethodBuilder.Create */ 
-				{
+						return default(string);
 				}
 
 				/// <java-name>
@@ -236,45 +119,165 @@ namespace Java.Lang
 				}
 
 				/// <java-name>
-				/// uncaughtException
+				/// subSequence
 				/// </java-name>
-				[Dot42.DexImport("uncaughtException", "(Ljava/lang/Thread;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public virtual void UncaughtException(global::System.Threading.Thread thread, global::System.Exception exception) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("subSequence", "(II)Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence SubSequence(int int32, int int321) /* MethodBuilder.Create */ 
 				{
+						return default(global::Java.Lang.ICharSequence);
 				}
 
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ThreadGroup() /* TypeBuilder.AddDefaultConstructor */ 
+				/// <java-name>
+				/// indexOf
+				/// </java-name>
+				[Dot42.DexImport("indexOf", "(Ljava/lang/String;)I", AccessFlags = 1)]
+				public virtual int IndexOf(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// indexOf
+				/// </java-name>
+				[Dot42.DexImport("indexOf", "(Ljava/lang/String;I)I", AccessFlags = 1)]
+				public virtual int IndexOf(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// lastIndexOf
+				/// </java-name>
+				[Dot42.DexImport("lastIndexOf", "(Ljava/lang/String;)I", AccessFlags = 1)]
+				public virtual int LastIndexOf(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// lastIndexOf
+				/// </java-name>
+				[Dot42.DexImport("lastIndexOf", "(Ljava/lang/String;I)I", AccessFlags = 1)]
+				public virtual int LastIndexOf(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// trimToSize
+				/// </java-name>
+				[Dot42.DexImport("trimToSize", "()V", AccessFlags = 1)]
+				public virtual void TrimToSize() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getMaxPriority
+				/// codePointAt
 				/// </java-name>
-				public int MaxPriority
+				[Dot42.DexImport("codePointAt", "(I)I", AccessFlags = 1)]
+				public virtual int CodePointAt(int int32) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getMaxPriority", "()I", AccessFlags = 17)]
-						get{ return GetMaxPriority(); }
-				[Dot42.DexImport("setMaxPriority", "(I)V", AccessFlags = 17)]
-						set{ SetMaxPriority(value); }
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getName
+				/// codePointBefore
 				/// </java-name>
-				public string Name
+				[Dot42.DexImport("codePointBefore", "(I)I", AccessFlags = 1)]
+				public virtual int CodePointBefore(int int32) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetName(); }
+						return default(int);
 				}
 
 				/// <java-name>
-				/// getParent
+				/// codePointCount
 				/// </java-name>
-				public global::Java.Lang.ThreadGroup Parent
+				[Dot42.DexImport("codePointCount", "(II)I", AccessFlags = 1)]
+				public virtual int CodePointCount(int int32, int int321) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getParent", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
-						get{ return GetParent(); }
+						return default(int);
+				}
+
+				/// <java-name>
+				/// offsetByCodePoints
+				/// </java-name>
+				[Dot42.DexImport("offsetByCodePoints", "(II)I", AccessFlags = 1)]
+				public virtual int OffsetByCodePoints(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/ArrayIndexOutOfBoundsException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/ArrayIndexOutOfBoundsException", AccessFlags = 33)]
+		public partial class ArrayIndexOutOfBoundsException : global::System.IndexOutOfRangeException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ArrayIndexOutOfBoundsException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
+				public ArrayIndexOutOfBoundsException(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ArrayIndexOutOfBoundsException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/AssertionError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/AssertionError", AccessFlags = 33)]
+		public partial class AssertionError : global::Java.Lang.Error
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AssertionError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Object;)V", AccessFlags = 1)]
+				public AssertionError(object @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Z)V", AccessFlags = 1)]
+				public AssertionError(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(C)V", AccessFlags = 1)]
+				public AssertionError(char @char) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
+				public AssertionError(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(J)V", AccessFlags = 1)]
+				public AssertionError(long int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(F)V", AccessFlags = 1)]
+				public AssertionError(float single) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(D)V", AccessFlags = 1)]
+				public AssertionError(double @double) /* MethodBuilder.Create */ 
+				{
 				}
 
 		}
@@ -299,423 +302,480 @@ namespace Java.Lang
 		}
 
 		/// <java-name>
-		/// java/lang/ProcessBuilder
+		/// java/lang/ClassFormatError
 		/// </java-name>
-		[Dot42.DexImport("java/lang/ProcessBuilder", AccessFlags = 49)]
-		public sealed partial class ProcessBuilder
+		[Dot42.DexImport("java/lang/ClassFormatError", AccessFlags = 33)]
+		public partial class ClassFormatError : global::Java.Lang.LinkageError
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "([Ljava/lang/String;)V", AccessFlags = 129)]
-				public ProcessBuilder(params string[] @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ClassFormatError() /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/lang/String;>;)V")]
-				public ProcessBuilder(global::Java.Util.IList<string> list) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ClassFormatError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/ClassLoader
+		/// </java-name>
+		[Dot42.DexImport("java/lang/ClassLoader", AccessFlags = 1057)]
+		public abstract partial class ClassLoader
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal ClassLoader() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/ClassLoader;)V", AccessFlags = 4)]
+				protected internal ClassLoader(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSystemClassLoader
+				/// </java-name>
+				[Dot42.DexImport("getSystemClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 9)]
+				public static global::Java.Lang.ClassLoader GetSystemClassLoader() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ClassLoader);
+				}
+
+				/// <java-name>
+				/// getSystemResource
+				/// </java-name>
+				[Dot42.DexImport("getSystemResource", "(Ljava/lang/String;)Ljava/net/URL;", AccessFlags = 9)]
+				public static global::Java.Net.URL GetSystemResource(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Net.URL);
+				}
+
+				/// <java-name>
+				/// getSystemResources
+				/// </java-name>
+				[Dot42.DexImport("getSystemResources", "(Ljava/lang/String;)Ljava/util/Enumeration;", AccessFlags = 9, Signature = "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;")]
+				public static global::Java.Util.IEnumeration<global::Java.Net.URL> GetSystemResources(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IEnumeration<global::Java.Net.URL>);
+				}
+
+				/// <java-name>
+				/// getSystemResourceAsStream
+				/// </java-name>
+				[Dot42.DexImport("getSystemResourceAsStream", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 9)]
+				public static global::Java.Io.InputStream GetSystemResourceAsStream(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// defineClass
+				/// </java-name>
+				[Dot42.DexImport("defineClass", "([BII)Ljava/lang/Class;", AccessFlags = 20, Signature = "([BII)Ljava/lang/Class<*>;")]
+				protected internal global::System.Type DefineClass(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// defineClass
+				/// </java-name>
+				[Dot42.DexImport("defineClass", "([BII)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "([BII)Ljava/lang/Class<*>;")]
+				protected internal global::System.Type DefineClass(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// defineClass
+				/// </java-name>
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BII)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BII)Ljava/lang/Class<*>;")]
+				protected internal global::System.Type DefineClass(string @string, sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// defineClass
+				/// </java-name>
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BII)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BII)Ljava/lang/Class<*>;")]
+				protected internal global::System.Type DefineClass(string @string, byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// defineClass
+				/// </java-name>
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class<*>;")]
+				protected internal global::System.Type DefineClass(string @string, sbyte[] sByte, int int32, int int321, global::Java.Security.ProtectionDomain protectionDomain) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// defineClass
+				/// </java-name>
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class<*>;")]
+				protected internal global::System.Type DefineClass(string @string, byte[] @byte, int int32, int int321, global::Java.Security.ProtectionDomain protectionDomain) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// defineClass
+				/// </java-name>
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;Ljava/nio/ByteBuffer;Ljava/security/ProtectionDomain;)Ljava/la" +
+    "ng/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;Ljava/nio/ByteBuffer;Ljava/security/ProtectionDomain;)Ljava/la" +
+    "ng/Class<*>;")]
+				protected internal global::System.Type DefineClass(string @string, global::Java.Nio.ByteBuffer byteBuffer, global::Java.Security.ProtectionDomain protectionDomain) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// findClass
+				/// </java-name>
+				[Dot42.DexImport("findClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 4, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
+				protected internal virtual global::System.Type FindClass(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// findLoadedClass
+				/// </java-name>
+				[Dot42.DexImport("findLoadedClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
+				protected internal global::System.Type FindLoadedClass(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// findSystemClass
+				/// </java-name>
+				[Dot42.DexImport("findSystemClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
+				protected internal global::System.Type FindSystemClass(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// getParent
+				/// </java-name>
+				[Dot42.DexImport("getParent", "()Ljava/lang/ClassLoader;", AccessFlags = 17)]
+				public global::Java.Lang.ClassLoader GetParent() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ClassLoader);
+				}
+
+				/// <java-name>
+				/// getResource
+				/// </java-name>
+				[Dot42.DexImport("getResource", "(Ljava/lang/String;)Ljava/net/URL;", AccessFlags = 1)]
+				public virtual global::Java.Net.URL GetResource(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Net.URL);
+				}
+
+				/// <java-name>
+				/// getResources
+				/// </java-name>
+				[Dot42.DexImport("getResources", "(Ljava/lang/String;)Ljava/util/Enumeration;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;")]
+				public virtual global::Java.Util.IEnumeration<global::Java.Net.URL> GetResources(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IEnumeration<global::Java.Net.URL>);
+				}
+
+				/// <java-name>
+				/// getResourceAsStream
+				/// </java-name>
+				[Dot42.DexImport("getResourceAsStream", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 1)]
+				public virtual global::Java.Io.InputStream GetResourceAsStream(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// loadClass
+				/// </java-name>
+				[Dot42.DexImport("loadClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
+				public virtual global::System.Type LoadClass(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// loadClass
+				/// </java-name>
+				[Dot42.DexImport("loadClass", "(Ljava/lang/String;Z)Ljava/lang/Class;", AccessFlags = 4, Signature = "(Ljava/lang/String;Z)Ljava/lang/Class<*>;")]
+				protected internal virtual global::System.Type LoadClass(string @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Type);
+				}
+
+				/// <java-name>
+				/// resolveClass
+				/// </java-name>
+				[Dot42.DexImport("resolveClass", "(Ljava/lang/Class;)V", AccessFlags = 20, Signature = "(Ljava/lang/Class<*>;)V")]
+				protected internal void ResolveClass(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// findResource
+				/// </java-name>
+				[Dot42.DexImport("findResource", "(Ljava/lang/String;)Ljava/net/URL;", AccessFlags = 4)]
+				protected internal virtual global::Java.Net.URL FindResource(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Net.URL);
+				}
+
+				/// <java-name>
+				/// findResources
+				/// </java-name>
+				[Dot42.DexImport("findResources", "(Ljava/lang/String;)Ljava/util/Enumeration;", AccessFlags = 4, Signature = "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;")]
+				protected internal virtual global::Java.Util.IEnumeration<global::Java.Net.URL> FindResources(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IEnumeration<global::Java.Net.URL>);
+				}
+
+				/// <java-name>
+				/// findLibrary
+				/// </java-name>
+				[Dot42.DexImport("findLibrary", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 4)]
+				protected internal virtual string FindLibrary(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getPackage
+				/// </java-name>
+				[Dot42.DexImport("getPackage", "(Ljava/lang/String;)Ljava/lang/Package;", AccessFlags = 4)]
+				protected internal virtual global::Java.Lang.Package GetPackage(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Package);
+				}
+
+				/// <java-name>
+				/// getPackages
+				/// </java-name>
+				[Dot42.DexImport("getPackages", "()[Ljava/lang/Package;", AccessFlags = 4)]
+				protected internal virtual global::Java.Lang.Package[] GetPackages() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Package[]);
+				}
+
+				/// <java-name>
+				/// definePackage
+				/// </java-name>
+				[Dot42.DexImport("definePackage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/la" +
+    "ng/String;Ljava/lang/String;Ljava/lang/String;Ljava/net/URL;)Ljava/lang/Package;" +
+    "", AccessFlags = 4)]
+				protected internal virtual global::Java.Lang.Package DefinePackage(string @string, string string1, string string2, string string3, string string4, string string5, string string6, global::Java.Net.URL uRL) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Package);
+				}
+
+				/// <java-name>
+				/// setSigners
+				/// </java-name>
+				[Dot42.DexImport("setSigners", "(Ljava/lang/Class;[Ljava/lang/Object;)V", AccessFlags = 20, Signature = "(Ljava/lang/Class<*>;[Ljava/lang/Object;)V")]
+				protected internal void SetSigners(global::System.Type type, object[] @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setClassAssertionStatus
+				/// </java-name>
+				[Dot42.DexImport("setClassAssertionStatus", "(Ljava/lang/String;Z)V", AccessFlags = 1)]
+				public virtual void SetClassAssertionStatus(string @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setPackageAssertionStatus
+				/// </java-name>
+				[Dot42.DexImport("setPackageAssertionStatus", "(Ljava/lang/String;Z)V", AccessFlags = 1)]
+				public virtual void SetPackageAssertionStatus(string @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setDefaultAssertionStatus
+				/// </java-name>
+				[Dot42.DexImport("setDefaultAssertionStatus", "(Z)V", AccessFlags = 1)]
+				public virtual void SetDefaultAssertionStatus(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clearAssertionStatus
+				/// </java-name>
+				[Dot42.DexImport("clearAssertionStatus", "()V", AccessFlags = 1)]
+				public virtual void ClearAssertionStatus() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSystemClassLoader
+				/// </java-name>
+				public static global::Java.Lang.ClassLoader SystemClassLoader
+				{
+				[Dot42.DexImport("getSystemClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 9)]
+						get{ return GetSystemClassLoader(); }
+				}
+
+				/// <java-name>
+				/// getParent
+				/// </java-name>
+				public global::Java.Lang.ClassLoader Parent
+				{
+				[Dot42.DexImport("getParent", "()Ljava/lang/ClassLoader;", AccessFlags = 17)]
+						get{ return GetParent(); }
+				}
+
+				/// <java-name>
+				/// getPackages
+				/// </java-name>
+				protected internal global::Java.Lang.Package[] Packages
+				{
+				[Dot42.DexImport("getPackages", "()[Ljava/lang/Package;", AccessFlags = 4)]
+						get{ return GetPackages(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/ClassNotFoundException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/ClassNotFoundException", AccessFlags = 33)]
+		public partial class ClassNotFoundException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ClassNotFoundException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ClassNotFoundException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public ClassNotFoundException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getException
+				/// </java-name>
+				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Exception);
+				}
+
+				/// <java-name>
+				/// getCause
+				/// </java-name>
+				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+				public override global::System.Exception GetCause() /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Exception);
+				}
+
+				/// <java-name>
+				/// getException
+				/// </java-name>
+				public global::System.Exception Exception
+				{
+				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+						get{ return GetException(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/CloneNotSupportedException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/CloneNotSupportedException", AccessFlags = 33)]
+		public partial class CloneNotSupportedException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public CloneNotSupportedException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public CloneNotSupportedException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/Compiler
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Compiler", AccessFlags = 49)]
+		public sealed partial class Compiler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Compiler() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// command
 				/// </java-name>
-				[Dot42.DexImport("command", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-				public global::Java.Util.IList<string> Command() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("command", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 9)]
+				public static object Command(object @object) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<string>);
+						return default(object);
 				}
 
 				/// <java-name>
-				/// command
+				/// compileClass
 				/// </java-name>
-				[Dot42.DexImport("command", "([Ljava/lang/String;)Ljava/lang/ProcessBuilder;", AccessFlags = 129)]
-				public global::Java.Lang.ProcessBuilder Command(params string[] @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ProcessBuilder);
-				}
-
-				/// <java-name>
-				/// command
-				/// </java-name>
-				[Dot42.DexImport("command", "(Ljava/util/List;)Ljava/lang/ProcessBuilder;", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/lang/String;>;)Ljava/lang/ProcessBuilder;")]
-				public global::Java.Lang.ProcessBuilder Command(global::Java.Util.IList<string> list) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ProcessBuilder);
-				}
-
-				/// <java-name>
-				/// directory
-				/// </java-name>
-				[Dot42.DexImport("directory", "()Ljava/io/File;", AccessFlags = 1)]
-				public global::Java.Io.File Directory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// directory
-				/// </java-name>
-				[Dot42.DexImport("directory", "(Ljava/io/File;)Ljava/lang/ProcessBuilder;", AccessFlags = 1)]
-				public global::Java.Lang.ProcessBuilder Directory(global::Java.Io.File file) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ProcessBuilder);
-				}
-
-				/// <java-name>
-				/// environment
-				/// </java-name>
-				[Dot42.DexImport("environment", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-				public global::Java.Util.IMap<string, string> Environment() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<string, string>);
-				}
-
-				/// <java-name>
-				/// redirectErrorStream
-				/// </java-name>
-				[Dot42.DexImport("redirectErrorStream", "()Z", AccessFlags = 1)]
-				public bool RedirectErrorStream() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("compileClass", "(Ljava/lang/Class;)Z", AccessFlags = 9, Signature = "(Ljava/lang/Class<*>;)Z")]
+				public static bool CompileClass(global::System.Type type) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// redirectErrorStream
+				/// compileClasses
 				/// </java-name>
-				[Dot42.DexImport("redirectErrorStream", "(Z)Ljava/lang/ProcessBuilder;", AccessFlags = 1)]
-				public global::Java.Lang.ProcessBuilder RedirectErrorStream(bool boolean) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("compileClasses", "(Ljava/lang/String;)Z", AccessFlags = 9)]
+				public static bool CompileClasses(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Lang.ProcessBuilder);
+						return default(bool);
 				}
 
 				/// <java-name>
-				/// start
+				/// disable
 				/// </java-name>
-				[Dot42.DexImport("start", "()Ljava/lang/Process;", AccessFlags = 1)]
-				public global::Java.Lang.Process Start() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Process);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProcessBuilder() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/System
-		/// </java-name>
-		[Dot42.DexImport("java/lang/System", AccessFlags = 49)]
-		public sealed partial class System
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// in
-				/// </java-name>
-				[Dot42.DexImport("in", "Ljava/io/InputStream;", AccessFlags = 25)]
-				public static readonly global::Java.Io.InputStream In;
-				/// <java-name>
-				/// out
-				/// </java-name>
-				[Dot42.DexImport("out", "Ljava/io/PrintStream;", AccessFlags = 25)]
-				public static readonly global::Java.Io.PrintStream Out;
-				/// <java-name>
-				/// err
-				/// </java-name>
-				[Dot42.DexImport("err", "Ljava/io/PrintStream;", AccessFlags = 25)]
-				public static readonly global::Java.Io.PrintStream Err;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal System() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("disable", "()V", AccessFlags = 9)]
+				public static void Disable() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// setIn
+				/// enable
 				/// </java-name>
-				[Dot42.DexImport("setIn", "(Ljava/io/InputStream;)V", AccessFlags = 9)]
-				public static void SetIn(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("enable", "()V", AccessFlags = 9)]
+				public static void Enable() /* MethodBuilder.Create */ 
 				{
 				}
-
-				/// <java-name>
-				/// setOut
-				/// </java-name>
-				[Dot42.DexImport("setOut", "(Ljava/io/PrintStream;)V", AccessFlags = 9)]
-				public static void SetOut(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setErr
-				/// </java-name>
-				[Dot42.DexImport("setErr", "(Ljava/io/PrintStream;)V", AccessFlags = 9)]
-				public static void SetErr(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// arraycopy
-				/// </java-name>
-				[Dot42.DexImport("arraycopy", "(Ljava/lang/Object;ILjava/lang/Object;II)V", AccessFlags = 265)]
-				public static void Arraycopy(object @object, int int32, object object1, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// currentTimeMillis
-				/// </java-name>
-				[Dot42.DexImport("currentTimeMillis", "()J", AccessFlags = 265)]
-				public static long CurrentTimeMillis() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// nanoTime
-				/// </java-name>
-				[Dot42.DexImport("nanoTime", "()J", AccessFlags = 265)]
-				public static long NanoTime() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// exit
-				/// </java-name>
-				[Dot42.DexImport("exit", "(I)V", AccessFlags = 9)]
-				public static void Exit(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// gc
-				/// </java-name>
-				[Dot42.DexImport("gc", "()V", AccessFlags = 9)]
-				public static void Gc() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getenv
-				/// </java-name>
-				[Dot42.DexImport("getenv", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string Getenv(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getenv
-				/// </java-name>
-				[Dot42.DexImport("getenv", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-				public static global::Java.Util.IMap<string, string> Getenv() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<string, string>);
-				}
-
-				/// <java-name>
-				/// inheritedChannel
-				/// </java-name>
-				[Dot42.DexImport("inheritedChannel", "()Ljava/nio/channels/Channel;", AccessFlags = 9)]
-				public static global::Java.Nio.Channels.IChannel InheritedChannel() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.Channels.IChannel);
-				}
-
-				/// <java-name>
-				/// getProperties
-				/// </java-name>
-				[Dot42.DexImport("getProperties", "()Ljava/util/Properties;", AccessFlags = 9)]
-				public static global::Java.Util.Properties GetProperties() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Properties);
-				}
-
-				/// <java-name>
-				/// getProperty
-				/// </java-name>
-				[Dot42.DexImport("getProperty", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetProperty(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProperty
-				/// </java-name>
-				[Dot42.DexImport("getProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetProperty(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setProperty
-				/// </java-name>
-				[Dot42.DexImport("setProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string SetProperty(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// clearProperty
-				/// </java-name>
-				[Dot42.DexImport("clearProperty", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string ClearProperty(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// console
-				/// </java-name>
-				[Dot42.DexImport("console", "()Ljava/io/Console;", AccessFlags = 9)]
-				public static global::Java.Io.Console Console() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.Console);
-				}
-
-				/// <java-name>
-				/// getSecurityManager
-				/// </java-name>
-				[Dot42.DexImport("getSecurityManager", "()Ljava/lang/SecurityManager;", AccessFlags = 9)]
-				public static global::Java.Lang.SecurityManager GetSecurityManager() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.SecurityManager);
-				}
-
-				/// <java-name>
-				/// identityHashCode
-				/// </java-name>
-				[Dot42.DexImport("identityHashCode", "(Ljava/lang/Object;)I", AccessFlags = 265)]
-				public static int IdentityHashCode(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// load
-				/// </java-name>
-				[Dot42.DexImport("load", "(Ljava/lang/String;)V", AccessFlags = 9)]
-				public static void Load(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// loadLibrary
-				/// </java-name>
-				[Dot42.DexImport("loadLibrary", "(Ljava/lang/String;)V", AccessFlags = 9)]
-				public static void LoadLibrary(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// runFinalization
-				/// </java-name>
-				[Dot42.DexImport("runFinalization", "()V", AccessFlags = 9)]
-				public static void RunFinalization() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// runFinalizersOnExit
-				/// </java-name>
-				[Dot42.DexImport("runFinalizersOnExit", "(Z)V", AccessFlags = 9)]
-				public static void RunFinalizersOnExit(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setProperties
-				/// </java-name>
-				[Dot42.DexImport("setProperties", "(Ljava/util/Properties;)V", AccessFlags = 9)]
-				public static void SetProperties(global::Java.Util.Properties properties) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSecurityManager
-				/// </java-name>
-				[Dot42.DexImport("setSecurityManager", "(Ljava/lang/SecurityManager;)V", AccessFlags = 9)]
-				public static void SetSecurityManager(global::Java.Lang.SecurityManager securityManager) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// mapLibraryName
-				/// </java-name>
-				[Dot42.DexImport("mapLibraryName", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 265)]
-				public static string MapLibraryName(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getenv
-				/// </java-name>
-				public static global::Java.Util.IMap<string, string> env
-				{
-				[Dot42.DexImport("getenv", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-						get{ return Getenv(); }
-				}
-
-				/// <java-name>
-				/// getProperties
-				/// </java-name>
-				public static global::Java.Util.Properties Properties
-				{
-				[Dot42.DexImport("getProperties", "()Ljava/util/Properties;", AccessFlags = 9)]
-						get{ return GetProperties(); }
-				[Dot42.DexImport("setProperties", "(Ljava/util/Properties;)V", AccessFlags = 9)]
-						set{ SetProperties(value); }
-				}
-
-				/// <java-name>
-				/// getSecurityManager
-				/// </java-name>
-				public static global::Java.Lang.SecurityManager SecurityManager
-				{
-				[Dot42.DexImport("getSecurityManager", "()Ljava/lang/SecurityManager;", AccessFlags = 9)]
-						get{ return GetSecurityManager(); }
-				[Dot42.DexImport("setSecurityManager", "(Ljava/lang/SecurityManager;)V", AccessFlags = 9)]
-						set{ SetSecurityManager(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/NoSuchMethodError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/NoSuchMethodError", AccessFlags = 33)]
-		public partial class NoSuchMethodError : global::Java.Lang.IncompatibleClassChangeError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NoSuchMethodError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public NoSuchMethodError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Readable
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Readable", AccessFlags = 1537)]
-		public partial interface IReadable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// read
-				/// </java-name>
-				[Dot42.DexImport("read", "(Ljava/nio/CharBuffer;)I", AccessFlags = 1025)]
-				int Read(global::Java.Nio.CharBuffer charBuffer) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -836,250 +896,6 @@ namespace Java.Lang
 		}
 
 		/// <java-name>
-		/// java/lang/TypeNotPresentException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/TypeNotPresentException", AccessFlags = 33)]
-		public partial class TypeNotPresentException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public TypeNotPresentException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// typeName
-				/// </java-name>
-				[Dot42.DexImport("typeName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string TypeName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TypeNotPresentException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Override
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Override", AccessFlags = 9729)]
-		public partial interface IOverride : global::Java.Lang.Annotation.IAnnotation
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
-		/// java/lang/VerifyError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/VerifyError", AccessFlags = 33)]
-		public partial class VerifyError : global::Java.Lang.LinkageError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public VerifyError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public VerifyError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Appendable
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Appendable", AccessFlags = 1537)]
-		public partial interface IAppendable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(C)Ljava/lang/Appendable;", AccessFlags = 1025)]
-				global::Java.Lang.IAppendable Append(char @char) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(Ljava/lang/CharSequence;)Ljava/lang/Appendable;", AccessFlags = 1025)]
-				global::Java.Lang.IAppendable Append(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;", AccessFlags = 1025)]
-				global::Java.Lang.IAppendable JavaAppend(global::Java.Lang.ICharSequence charSequence, int int32, int int321) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// java/lang/Runnable
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Runnable", AccessFlags = 1537)]
-		public partial interface IRunnable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// run
-				/// </java-name>
-				[Dot42.DexImport("run", "()V", AccessFlags = 1025)]
-				void Run() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// java/lang/StackTraceElement
-		/// </java-name>
-		[Dot42.DexImport("java/lang/StackTraceElement", AccessFlags = 49)]
-		public sealed partial class StackTraceElement : global::Java.Io.ISerializable
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V", AccessFlags = 1)]
-				public StackTraceElement(string @string, string string1, string string2, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// equals
-				/// </java-name>
-				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getClassName
-				/// </java-name>
-				[Dot42.DexImport("getClassName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetClassName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getFileName
-				/// </java-name>
-				[Dot42.DexImport("getFileName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetFileName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLineNumber
-				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-				public int GetLineNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMethodName
-				/// </java-name>
-				[Dot42.DexImport("getMethodName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetMethodName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// hashCode
-				/// </java-name>
-				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public override int GetHashCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isNativeMethod
-				/// </java-name>
-				[Dot42.DexImport("isNativeMethod", "()Z", AccessFlags = 1)]
-				public bool IsNativeMethod() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StackTraceElement() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getClassName
-				/// </java-name>
-				public string ClassName
-				{
-				[Dot42.DexImport("getClassName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetClassName(); }
-				}
-
-				/// <java-name>
-				/// getFileName
-				/// </java-name>
-				public string FileName
-				{
-				[Dot42.DexImport("getFileName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetFileName(); }
-				}
-
-				/// <java-name>
-				/// getLineNumber
-				/// </java-name>
-				public int LineNumber
-				{
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-						get{ return GetLineNumber(); }
-				}
-
-				/// <java-name>
-				/// getMethodName
-				/// </java-name>
-				public string MethodName
-				{
-				[Dot42.DexImport("getMethodName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMethodName(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/UnsatisfiedLinkError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/UnsatisfiedLinkError", AccessFlags = 33)]
-		public partial class UnsatisfiedLinkError : global::Java.Lang.LinkageError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public UnsatisfiedLinkError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public UnsatisfiedLinkError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// java/lang/EnumConstantNotPresentException
 		/// </java-name>
 		[Dot42.DexImport("java/lang/EnumConstantNotPresentException", AccessFlags = 33)]
@@ -1117,12 +933,352 @@ namespace Java.Lang
 		}
 
 		/// <java-name>
+		/// java/lang/Error
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Error", AccessFlags = 33)]
+		public partial class Error : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Error() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public Error(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public Error(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public Error(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/Exception
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Exception", AccessFlags = 33)]
+		public partial class Exception : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Exception() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public Exception(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public Exception(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public Exception(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/ExceptionInInitializerError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/ExceptionInInitializerError", AccessFlags = 33)]
+		public partial class ExceptionInInitializerError : global::Java.Lang.LinkageError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ExceptionInInitializerError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ExceptionInInitializerError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public ExceptionInInitializerError(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getException
+				/// </java-name>
+				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Exception);
+				}
+
+				/// <java-name>
+				/// getCause
+				/// </java-name>
+				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+				public override global::System.Exception GetCause() /* MethodBuilder.Create */ 
+				{
+						return default(global::System.Exception);
+				}
+
+				/// <java-name>
+				/// getException
+				/// </java-name>
+				public global::System.Exception Exception
+				{
+				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+						get{ return GetException(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/Appendable
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Appendable", AccessFlags = 1537)]
+		public partial interface IAppendable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(C)Ljava/lang/Appendable;", AccessFlags = 1025)]
+				global::Java.Lang.IAppendable Append(char @char) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(Ljava/lang/CharSequence;)Ljava/lang/Appendable;", AccessFlags = 1025)]
+				global::Java.Lang.IAppendable Append(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;", AccessFlags = 1025)]
+				global::Java.Lang.IAppendable JavaAppend(global::Java.Lang.ICharSequence charSequence, int int32, int int321) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/lang/CharSequence
+		/// </java-name>
+		[Dot42.DexImport("java/lang/CharSequence", AccessFlags = 1537)]
+		public partial interface ICharSequence
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "()I", AccessFlags = 1025)]
+				int GetLength() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// charAt
+				/// </java-name>
+				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 1025)]
+				char CharAt(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// subSequence
+				/// </java-name>
+				[Dot42.DexImport("subSequence", "(II)Ljava/lang/CharSequence;", AccessFlags = 1025)]
+				global::Java.Lang.ICharSequence SubSequence(int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1025)]
+				string ToString() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/lang/Cloneable
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Cloneable", AccessFlags = 1537)]
+		public partial interface ICloneable
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
 		/// java/lang/Deprecated
 		/// </java-name>
 		[Dot42.DexImport("java/lang/Deprecated", AccessFlags = 9729)]
 		public partial interface IDeprecated : global::Java.Lang.Annotation.IAnnotation
  /* scope: __dot42__ */ 
 		{
+		}
+
+		/// <java-name>
+		/// java/lang/Iterable
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Iterable", AccessFlags = 1537, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
+		public partial interface IIterable<T>
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// iterator
+				/// </java-name>
+				[Dot42.DexImport("iterator", "()Ljava/util/Iterator;", AccessFlags = 1025, Signature = "()Ljava/util/Iterator<TT;>;")]
+				global::Java.Util.IIterator<T> Iterator() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/lang/IllegalAccessError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/IllegalAccessError", AccessFlags = 33)]
+		public partial class IllegalAccessError : global::Java.Lang.IncompatibleClassChangeError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public IllegalAccessError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public IllegalAccessError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/IllegalAccessException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/IllegalAccessException", AccessFlags = 33)]
+		public partial class IllegalAccessException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public IllegalAccessException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public IllegalAccessException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/IllegalMonitorStateException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/IllegalMonitorStateException", AccessFlags = 33)]
+		public partial class IllegalMonitorStateException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public IllegalMonitorStateException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public IllegalMonitorStateException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/IllegalStateException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/IllegalStateException", AccessFlags = 33)]
+		public partial class IllegalStateException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public IllegalStateException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public IllegalStateException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public IllegalStateException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public IllegalStateException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/IllegalThreadStateException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/IllegalThreadStateException", AccessFlags = 33)]
+		public partial class IllegalThreadStateException : global::System.ArgumentException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public IllegalThreadStateException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public IllegalThreadStateException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/IncompatibleClassChangeError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/IncompatibleClassChangeError", AccessFlags = 33)]
+		public partial class IncompatibleClassChangeError : global::Java.Lang.LinkageError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public IncompatibleClassChangeError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public IncompatibleClassChangeError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/InheritableThreadLocal
+		/// </java-name>
+		[Dot42.DexImport("java/lang/InheritableThreadLocal", AccessFlags = 33, Signature = "<T:Ljava/lang/Object;>Ljava/lang/ThreadLocal<TT;>;")]
+		public partial class InheritableThreadLocal<T> : global::Java.Lang.ThreadLocal<T>
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public InheritableThreadLocal() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// childValue
+				/// </java-name>
+				[Dot42.DexImport("childValue", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 4, Signature = "(TT;)TT;")]
+				protected internal virtual T ChildValue(T t) /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
 		}
 
 		/// <java-name>
@@ -1164,6 +1320,117 @@ namespace Java.Lang
 		}
 
 		/// <java-name>
+		/// java/lang/InternalError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/InternalError", AccessFlags = 33)]
+		public partial class InternalError : global::Java.Lang.VirtualMachineError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public InternalError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public InternalError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/InterruptedException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/InterruptedException", AccessFlags = 33)]
+		public partial class InterruptedException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public InterruptedException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public InterruptedException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/Override
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Override", AccessFlags = 9729)]
+		public partial interface IOverride : global::Java.Lang.Annotation.IAnnotation
+ /* scope: __dot42__ */ 
+		{
+		}
+
+		/// <java-name>
+		/// java/lang/Readable
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Readable", AccessFlags = 1537)]
+		public partial interface IReadable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// read
+				/// </java-name>
+				[Dot42.DexImport("read", "(Ljava/nio/CharBuffer;)I", AccessFlags = 1025)]
+				int Read(global::Java.Nio.CharBuffer charBuffer) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/lang/Runnable
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Runnable", AccessFlags = 1537)]
+		public partial interface IRunnable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// run
+				/// </java-name>
+				[Dot42.DexImport("run", "()V", AccessFlags = 1025)]
+				void Run() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/lang/SuppressWarnings
+		/// </java-name>
+		[Dot42.DexImport("java/lang/SuppressWarnings", AccessFlags = 9729)]
+		public partial interface ISuppressWarnings : global::Java.Lang.Annotation.IAnnotation
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// value
+				/// </java-name>
+				[Dot42.DexImport("value", "()[Ljava/lang/String;", AccessFlags = 1025)]
+				string[] Value() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// java/lang/LinkageError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/LinkageError", AccessFlags = 33)]
+		public partial class LinkageError : global::Java.Lang.Error
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public LinkageError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public LinkageError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// java/lang/NegativeArraySizeException
 		/// </java-name>
 		[Dot42.DexImport("java/lang/NegativeArraySizeException", AccessFlags = 33)]
@@ -1183,38 +1450,57 @@ namespace Java.Lang
 		}
 
 		/// <java-name>
-		/// java/lang/UnsupportedClassVersionError
+		/// java/lang/NoClassDefFoundError
 		/// </java-name>
-		[Dot42.DexImport("java/lang/UnsupportedClassVersionError", AccessFlags = 33)]
-		public partial class UnsupportedClassVersionError : global::Java.Lang.ClassFormatError
+		[Dot42.DexImport("java/lang/NoClassDefFoundError", AccessFlags = 33)]
+		public partial class NoClassDefFoundError : global::Java.Lang.LinkageError
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public UnsupportedClassVersionError() /* MethodBuilder.Create */ 
+				public NoClassDefFoundError() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public UnsupportedClassVersionError(string @string) /* MethodBuilder.Create */ 
+				public NoClassDefFoundError(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 		}
 
 		/// <java-name>
-		/// java/lang/IllegalAccessException
+		/// java/lang/NoSuchFieldError
 		/// </java-name>
-		[Dot42.DexImport("java/lang/IllegalAccessException", AccessFlags = 33)]
-		public partial class IllegalAccessException : global::System.Exception
+		[Dot42.DexImport("java/lang/NoSuchFieldError", AccessFlags = 33)]
+		public partial class NoSuchFieldError : global::Java.Lang.IncompatibleClassChangeError
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public IllegalAccessException() /* MethodBuilder.Create */ 
+				public NoSuchFieldError() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public IllegalAccessException(string @string) /* MethodBuilder.Create */ 
+				public NoSuchFieldError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/NoSuchMethodError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/NoSuchMethodError", AccessFlags = 33)]
+		public partial class NoSuchMethodError : global::Java.Lang.IncompatibleClassChangeError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public NoSuchMethodError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public NoSuchMethodError(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1277,19 +1563,773 @@ namespace Java.Lang
 		}
 
 		/// <java-name>
-		/// java/lang/InternalError
+		/// java/lang/NumberFormatException
 		/// </java-name>
-		[Dot42.DexImport("java/lang/InternalError", AccessFlags = 33)]
-		public partial class InternalError : global::Java.Lang.VirtualMachineError
+		[Dot42.DexImport("java/lang/NumberFormatException", AccessFlags = 33)]
+		public partial class NumberFormatException : global::System.ArgumentException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public InternalError() /* MethodBuilder.Create */ 
+				public NumberFormatException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public InternalError(string @string) /* MethodBuilder.Create */ 
+				public NumberFormatException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/Package
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Package", AccessFlags = 33)]
+		public partial class Package : global::Java.Lang.Reflect.IAnnotatedElement
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Package() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getAnnotation
+				/// </java-name>
+				[Dot42.DexImport("getAnnotation", "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", AccessFlags = 1, Signature = "<A::Ljava/lang/annotation/Annotation;>(Ljava/lang/Class<TA;>;)TA;")]
+				public virtual A GetAnnotation<A>(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+						return default(A);
+				}
+
+				/// <java-name>
+				/// getAnnotations
+				/// </java-name>
+				[Dot42.DexImport("getAnnotations", "()[Ljava/lang/annotation/Annotation;", AccessFlags = 1)]
+				public virtual global::Java.Lang.Annotation.IAnnotation[] GetAnnotations() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Annotation.IAnnotation[]);
+				}
+
+				/// <java-name>
+				/// getDeclaredAnnotations
+				/// </java-name>
+				[Dot42.DexImport("getDeclaredAnnotations", "()[Ljava/lang/annotation/Annotation;", AccessFlags = 1)]
+				public virtual global::Java.Lang.Annotation.IAnnotation[] GetDeclaredAnnotations() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Annotation.IAnnotation[]);
+				}
+
+				/// <java-name>
+				/// isAnnotationPresent
+				/// </java-name>
+				[Dot42.DexImport("isAnnotationPresent", "(Ljava/lang/Class;)Z", AccessFlags = 1, Signature = "(Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;)Z")]
+				public virtual bool IsAnnotationPresent(global::System.Type type) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getImplementationTitle
+				/// </java-name>
+				[Dot42.DexImport("getImplementationTitle", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetImplementationTitle() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getImplementationVendor
+				/// </java-name>
+				[Dot42.DexImport("getImplementationVendor", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetImplementationVendor() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getImplementationVersion
+				/// </java-name>
+				[Dot42.DexImport("getImplementationVersion", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetImplementationVersion() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getPackage
+				/// </java-name>
+				[Dot42.DexImport("getPackage", "(Ljava/lang/String;)Ljava/lang/Package;", AccessFlags = 9)]
+				public static global::Java.Lang.Package GetPackage(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Package);
+				}
+
+				/// <java-name>
+				/// getPackages
+				/// </java-name>
+				[Dot42.DexImport("getPackages", "()[Ljava/lang/Package;", AccessFlags = 9)]
+				public static global::Java.Lang.Package[] GetPackages() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Package[]);
+				}
+
+				/// <java-name>
+				/// getSpecificationTitle
+				/// </java-name>
+				[Dot42.DexImport("getSpecificationTitle", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetSpecificationTitle() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getSpecificationVendor
+				/// </java-name>
+				[Dot42.DexImport("getSpecificationVendor", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetSpecificationVendor() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getSpecificationVersion
+				/// </java-name>
+				[Dot42.DexImport("getSpecificationVersion", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetSpecificationVersion() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// hashCode
+				/// </java-name>
+				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+				public override int GetHashCode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// isCompatibleWith
+				/// </java-name>
+				[Dot42.DexImport("isCompatibleWith", "(Ljava/lang/String;)Z", AccessFlags = 1)]
+				public virtual bool IsCompatibleWith(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isSealed
+				/// </java-name>
+				[Dot42.DexImport("isSealed", "()Z", AccessFlags = 1)]
+				public virtual bool IsSealed() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isSealed
+				/// </java-name>
+				[Dot42.DexImport("isSealed", "(Ljava/net/URL;)Z", AccessFlags = 1)]
+				public virtual bool IsSealed(global::Java.Net.URL uRL) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[Dot42.DexImport("java/lang/reflect/AnnotatedElement", "getAnnotation", "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", AccessFlags = 1025, Signature = "<T::Ljava/lang/annotation/Annotation;>(Ljava/lang/Class<TT;>;)TT;")]
+				T global::Java.Lang.Reflect.IAnnotatedElement.GetAnnotation<T>(global::System.Type type) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// getAnnotations
+				/// </java-name>
+				public global::Java.Lang.Annotation.IAnnotation[] Annotations
+				{
+				[Dot42.DexImport("getAnnotations", "()[Ljava/lang/annotation/Annotation;", AccessFlags = 1)]
+						get{ return GetAnnotations(); }
+				}
+
+				/// <java-name>
+				/// getDeclaredAnnotations
+				/// </java-name>
+				public global::Java.Lang.Annotation.IAnnotation[] DeclaredAnnotations
+				{
+				[Dot42.DexImport("getDeclaredAnnotations", "()[Ljava/lang/annotation/Annotation;", AccessFlags = 1)]
+						get{ return GetDeclaredAnnotations(); }
+				}
+
+				/// <java-name>
+				/// getImplementationTitle
+				/// </java-name>
+				public string ImplementationTitle
+				{
+				[Dot42.DexImport("getImplementationTitle", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetImplementationTitle(); }
+				}
+
+				/// <java-name>
+				/// getImplementationVendor
+				/// </java-name>
+				public string ImplementationVendor
+				{
+				[Dot42.DexImport("getImplementationVendor", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetImplementationVendor(); }
+				}
+
+				/// <java-name>
+				/// getImplementationVersion
+				/// </java-name>
+				public string ImplementationVersion
+				{
+				[Dot42.DexImport("getImplementationVersion", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetImplementationVersion(); }
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				public string Name
+				{
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetName(); }
+				}
+
+				/// <java-name>
+				/// getPackages
+				/// </java-name>
+				public static global::Java.Lang.Package[] Packages
+				{
+				[Dot42.DexImport("getPackages", "()[Ljava/lang/Package;", AccessFlags = 9)]
+						get{ return GetPackages(); }
+				}
+
+				/// <java-name>
+				/// getSpecificationTitle
+				/// </java-name>
+				public string SpecificationTitle
+				{
+				[Dot42.DexImport("getSpecificationTitle", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetSpecificationTitle(); }
+				}
+
+				/// <java-name>
+				/// getSpecificationVendor
+				/// </java-name>
+				public string SpecificationVendor
+				{
+				[Dot42.DexImport("getSpecificationVendor", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetSpecificationVendor(); }
+				}
+
+				/// <java-name>
+				/// getSpecificationVersion
+				/// </java-name>
+				public string SpecificationVersion
+				{
+				[Dot42.DexImport("getSpecificationVersion", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetSpecificationVersion(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/Process
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Process", AccessFlags = 1057)]
+		public abstract partial class Process
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Process() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// destroy
+				/// </java-name>
+				[Dot42.DexImport("destroy", "()V", AccessFlags = 1025)]
+				public abstract void Destroy() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// exitValue
+				/// </java-name>
+				[Dot42.DexImport("exitValue", "()I", AccessFlags = 1025)]
+				public abstract int ExitValue() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getErrorStream
+				/// </java-name>
+				[Dot42.DexImport("getErrorStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
+				public abstract global::Java.Io.InputStream GetErrorStream() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getInputStream
+				/// </java-name>
+				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
+				public abstract global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getOutputStream
+				/// </java-name>
+				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
+				public abstract global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// waitFor
+				/// </java-name>
+				[Dot42.DexImport("waitFor", "()I", AccessFlags = 1025)]
+				public abstract int WaitFor() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getErrorStream
+				/// </java-name>
+				public global::Java.Io.InputStream ErrorStream
+				{
+				[Dot42.DexImport("getErrorStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
+						get{ return GetErrorStream(); }
+				}
+
+				/// <java-name>
+				/// getInputStream
+				/// </java-name>
+				public global::Java.Io.InputStream InputStream
+				{
+				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
+						get{ return GetInputStream(); }
+				}
+
+				/// <java-name>
+				/// getOutputStream
+				/// </java-name>
+				public global::Java.Io.OutputStream OutputStream
+				{
+				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
+						get{ return GetOutputStream(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/ProcessBuilder
+		/// </java-name>
+		[Dot42.DexImport("java/lang/ProcessBuilder", AccessFlags = 49)]
+		public sealed partial class ProcessBuilder
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "([Ljava/lang/String;)V", AccessFlags = 129)]
+				public ProcessBuilder(params string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/lang/String;>;)V")]
+				public ProcessBuilder(global::Java.Util.IList<string> list) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// command
+				/// </java-name>
+				[Dot42.DexImport("command", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+				public global::Java.Util.IList<string> Command() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<string>);
+				}
+
+				/// <java-name>
+				/// command
+				/// </java-name>
+				[Dot42.DexImport("command", "([Ljava/lang/String;)Ljava/lang/ProcessBuilder;", AccessFlags = 129)]
+				public global::Java.Lang.ProcessBuilder Command(params string[] @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ProcessBuilder);
+				}
+
+				/// <java-name>
+				/// command
+				/// </java-name>
+				[Dot42.DexImport("command", "(Ljava/util/List;)Ljava/lang/ProcessBuilder;", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/lang/String;>;)Ljava/lang/ProcessBuilder;")]
+				public global::Java.Lang.ProcessBuilder Command(global::Java.Util.IList<string> list) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ProcessBuilder);
+				}
+
+				/// <java-name>
+				/// directory
+				/// </java-name>
+				[Dot42.DexImport("directory", "()Ljava/io/File;", AccessFlags = 1)]
+				public global::Java.Io.File Directory() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.File);
+				}
+
+				/// <java-name>
+				/// directory
+				/// </java-name>
+				[Dot42.DexImport("directory", "(Ljava/io/File;)Ljava/lang/ProcessBuilder;", AccessFlags = 1)]
+				public global::Java.Lang.ProcessBuilder Directory(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ProcessBuilder);
+				}
+
+				/// <java-name>
+				/// environment
+				/// </java-name>
+				[Dot42.DexImport("environment", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
+				public global::Java.Util.IMap<string, string> Environment() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IMap<string, string>);
+				}
+
+				/// <java-name>
+				/// redirectErrorStream
+				/// </java-name>
+				[Dot42.DexImport("redirectErrorStream", "()Z", AccessFlags = 1)]
+				public bool RedirectErrorStream() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// redirectErrorStream
+				/// </java-name>
+				[Dot42.DexImport("redirectErrorStream", "(Z)Ljava/lang/ProcessBuilder;", AccessFlags = 1)]
+				public global::Java.Lang.ProcessBuilder RedirectErrorStream(bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ProcessBuilder);
+				}
+
+				/// <java-name>
+				/// start
+				/// </java-name>
+				[Dot42.DexImport("start", "()Ljava/lang/Process;", AccessFlags = 1)]
+				public global::Java.Lang.Process Start() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Process);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ProcessBuilder() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/Runtime
+		/// </java-name>
+		[Dot42.DexImport("java/lang/Runtime", AccessFlags = 33)]
+		public partial class Runtime
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal Runtime() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// exec
+				/// </java-name>
+				[Dot42.DexImport("exec", "([Ljava/lang/String;)Ljava/lang/Process;", AccessFlags = 1)]
+				public virtual global::Java.Lang.Process Exec(string[] @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Process);
+				}
+
+				/// <java-name>
+				/// exec
+				/// </java-name>
+				[Dot42.DexImport("exec", "([Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/Process;", AccessFlags = 1)]
+				public virtual global::Java.Lang.Process Exec(string[] @string, string[] string1) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Process);
+				}
+
+				/// <java-name>
+				/// exec
+				/// </java-name>
+				[Dot42.DexImport("exec", "([Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;", AccessFlags = 1)]
+				public virtual global::Java.Lang.Process Exec(string[] @string, string[] string1, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Process);
+				}
+
+				/// <java-name>
+				/// exec
+				/// </java-name>
+				[Dot42.DexImport("exec", "(Ljava/lang/String;)Ljava/lang/Process;", AccessFlags = 1)]
+				public virtual global::Java.Lang.Process Exec(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Process);
+				}
+
+				/// <java-name>
+				/// exec
+				/// </java-name>
+				[Dot42.DexImport("exec", "(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/Process;", AccessFlags = 1)]
+				public virtual global::Java.Lang.Process Exec(string @string, string[] string1) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Process);
+				}
+
+				/// <java-name>
+				/// exec
+				/// </java-name>
+				[Dot42.DexImport("exec", "(Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;", AccessFlags = 1)]
+				public virtual global::Java.Lang.Process Exec(string @string, string[] string1, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Process);
+				}
+
+				/// <java-name>
+				/// exit
+				/// </java-name>
+				[Dot42.DexImport("exit", "(I)V", AccessFlags = 1)]
+				public virtual void Exit(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// freeMemory
+				/// </java-name>
+				[Dot42.DexImport("freeMemory", "()J", AccessFlags = 257)]
+				public virtual long FreeMemory() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// gc
+				/// </java-name>
+				[Dot42.DexImport("gc", "()V", AccessFlags = 257)]
+				public virtual void Gc() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRuntime
+				/// </java-name>
+				[Dot42.DexImport("getRuntime", "()Ljava/lang/Runtime;", AccessFlags = 9)]
+				public static global::Java.Lang.Runtime GetRuntime() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.Runtime);
+				}
+
+				/// <java-name>
+				/// load
+				/// </java-name>
+				[Dot42.DexImport("load", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void Load(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// loadLibrary
+				/// </java-name>
+				[Dot42.DexImport("loadLibrary", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void LoadLibrary(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runFinalization
+				/// </java-name>
+				[Dot42.DexImport("runFinalization", "()V", AccessFlags = 1)]
+				public virtual void RunFinalization() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runFinalizersOnExit
+				/// </java-name>
+				[Dot42.DexImport("runFinalizersOnExit", "(Z)V", AccessFlags = 9)]
+				public static void RunFinalizersOnExit(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// totalMemory
+				/// </java-name>
+				[Dot42.DexImport("totalMemory", "()J", AccessFlags = 257)]
+				public virtual long TotalMemory() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// traceInstructions
+				/// </java-name>
+				[Dot42.DexImport("traceInstructions", "(Z)V", AccessFlags = 1)]
+				public virtual void TraceInstructions(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// traceMethodCalls
+				/// </java-name>
+				[Dot42.DexImport("traceMethodCalls", "(Z)V", AccessFlags = 1)]
+				public virtual void TraceMethodCalls(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getLocalizedInputStream
+				/// </java-name>
+				[Dot42.DexImport("getLocalizedInputStream", "(Ljava/io/InputStream;)Ljava/io/InputStream;", AccessFlags = 1)]
+				public virtual global::Java.Io.InputStream GetLocalizedInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// getLocalizedOutputStream
+				/// </java-name>
+				[Dot42.DexImport("getLocalizedOutputStream", "(Ljava/io/OutputStream;)Ljava/io/OutputStream;", AccessFlags = 1)]
+				public virtual global::Java.Io.OutputStream GetLocalizedOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.OutputStream);
+				}
+
+				/// <java-name>
+				/// addShutdownHook
+				/// </java-name>
+				[Dot42.DexImport("addShutdownHook", "(Ljava/lang/Thread;)V", AccessFlags = 1)]
+				public virtual void AddShutdownHook(global::System.Threading.Thread thread) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// removeShutdownHook
+				/// </java-name>
+				[Dot42.DexImport("removeShutdownHook", "(Ljava/lang/Thread;)Z", AccessFlags = 1)]
+				public virtual bool RemoveShutdownHook(global::System.Threading.Thread thread) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// halt
+				/// </java-name>
+				[Dot42.DexImport("halt", "(I)V", AccessFlags = 1)]
+				public virtual void Halt(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// availableProcessors
+				/// </java-name>
+				[Dot42.DexImport("availableProcessors", "()I", AccessFlags = 1)]
+				public virtual int AvailableProcessors() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// maxMemory
+				/// </java-name>
+				[Dot42.DexImport("maxMemory", "()J", AccessFlags = 257)]
+				public virtual long MaxMemory() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/RuntimePermission
+		/// </java-name>
+		[Dot42.DexImport("java/lang/RuntimePermission", AccessFlags = 49)]
+		public sealed partial class RuntimePermission : global::Java.Security.BasicPermission
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public RuntimePermission(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public RuntimePermission(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActions
+				/// </java-name>
+				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string GetActions() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// implies
+				/// </java-name>
+				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
+				public override bool Implies(global::Java.Security.Permission permission) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal RuntimePermission() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getActions
+				/// </java-name>
+				public string Actions
+				{
+				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetActions(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/SecurityException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/SecurityException", AccessFlags = 33)]
+		public partial class SecurityException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SecurityException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SecurityException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public SecurityException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public SecurityException(global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1698,1942 +2738,58 @@ namespace Java.Lang
 		}
 
 		/// <java-name>
-		/// java/lang/InterruptedException
+		/// java/lang/StackTraceElement
 		/// </java-name>
-		[Dot42.DexImport("java/lang/InterruptedException", AccessFlags = 33)]
-		public partial class InterruptedException : global::System.Exception
+		[Dot42.DexImport("java/lang/StackTraceElement", AccessFlags = 49)]
+		public sealed partial class StackTraceElement : global::Java.Io.ISerializable
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public InterruptedException() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V", AccessFlags = 1)]
+				public StackTraceElement(string @string, string string1, string string2, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public InterruptedException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/ThreadDeath
-		/// </java-name>
-		[Dot42.DexImport("java/lang/ThreadDeath", AccessFlags = 33)]
-		public partial class ThreadDeath : global::Java.Lang.Error
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ThreadDeath() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/StringBuffer
-		/// </java-name>
-		[Dot42.DexImport("java/lang/StringBuffer", AccessFlags = 49)]
-		public sealed partial class StringBuffer : global::Java.Lang.IAppendable, global::Java.Io.ISerializable, global::Java.Lang.ICharSequence
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public StringBuffer() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public StringBuffer(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public StringBuffer(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public StringBuffer(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(Z)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Append(bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(C)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Append(char @char) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(D)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Append(double @double) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(F)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Append(float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(I)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Append(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(J)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Append(long int64) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(Ljava/lang/Object;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Append(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(Ljava/lang/String;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Append(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Append(global::Java.Lang.StringBuffer stringBuffer) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "([C)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Append(char[] @char) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "([CII)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Append(char[] @char, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(Ljava/lang/CharSequence;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Append(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// append
-				/// </java-name>
-				[Dot42.DexImport("append", "(Ljava/lang/CharSequence;II)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer JavaAppend(global::Java.Lang.ICharSequence charSequence, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// appendCodePoint
-				/// </java-name>
-				[Dot42.DexImport("appendCodePoint", "(I)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer AppendCodePoint(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// charAt
-				/// </java-name>
-				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 33)]
-				public char CharAt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// codePointAt
-				/// </java-name>
-				[Dot42.DexImport("codePointAt", "(I)I", AccessFlags = 33)]
-				public int CodePointAt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// codePointBefore
-				/// </java-name>
-				[Dot42.DexImport("codePointBefore", "(I)I", AccessFlags = 33)]
-				public int CodePointBefore(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// codePointCount
-				/// </java-name>
-				[Dot42.DexImport("codePointCount", "(II)I", AccessFlags = 33)]
-				public int CodePointCount(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// delete
-				/// </java-name>
-				[Dot42.DexImport("delete", "(II)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Delete(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// deleteCharAt
-				/// </java-name>
-				[Dot42.DexImport("deleteCharAt", "(I)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer DeleteCharAt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// ensureCapacity
-				/// </java-name>
-				[Dot42.DexImport("ensureCapacity", "(I)V", AccessFlags = 33)]
-				public void EnsureCapacity(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getChars
-				/// </java-name>
-				[Dot42.DexImport("getChars", "(II[CI)V", AccessFlags = 33)]
-				public void GetChars(int int32, int int321, char[] @char, int int322) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// indexOf
-				/// </java-name>
-				[Dot42.DexImport("indexOf", "(Ljava/lang/String;I)I", AccessFlags = 33)]
-				public int IndexOf(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(IC)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Insert(int int32, char @char) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(IZ)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Insert(int int32, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(II)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Insert(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(IJ)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Insert(int int32, long int64) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(ID)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Insert(int int32, double @double) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(IF)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Insert(int int32, float single) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(ILjava/lang/Object;)Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public global::Java.Lang.StringBuffer Insert(int int32, object @object) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(ILjava/lang/String;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Insert(int int32, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(I[C)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Insert(int int32, char[] @char) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(I[CII)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Insert(int int32, char[] @char, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(ILjava/lang/CharSequence;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Insert(int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// insert
-				/// </java-name>
-				[Dot42.DexImport("insert", "(ILjava/lang/CharSequence;II)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Insert(int int32, global::Java.Lang.ICharSequence charSequence, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// lastIndexOf
-				/// </java-name>
-				[Dot42.DexImport("lastIndexOf", "(Ljava/lang/String;I)I", AccessFlags = 33)]
-				public int LastIndexOf(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// offsetByCodePoints
-				/// </java-name>
-				[Dot42.DexImport("offsetByCodePoints", "(II)I", AccessFlags = 33)]
-				public int OffsetByCodePoints(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// replace
-				/// </java-name>
-				[Dot42.DexImport("replace", "(IILjava/lang/String;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Replace(int int32, int int321, string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// reverse
-				/// </java-name>
-				[Dot42.DexImport("reverse", "()Ljava/lang/StringBuffer;", AccessFlags = 33)]
-				public global::Java.Lang.StringBuffer Reverse() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// setCharAt
-				/// </java-name>
-				[Dot42.DexImport("setCharAt", "(IC)V", AccessFlags = 33)]
-				public void SetCharAt(int int32, char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLength
-				/// </java-name>
-				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 33)]
-				public void SetLength(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// subSequence
-				/// </java-name>
-				[Dot42.DexImport("subSequence", "(II)Ljava/lang/CharSequence;", AccessFlags = 33)]
-				public global::Java.Lang.ICharSequence SubSequence(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// substring
-				/// </java-name>
-				[Dot42.DexImport("substring", "(I)Ljava/lang/String;", AccessFlags = 33)]
-				public string Substring(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// substring
-				/// </java-name>
-				[Dot42.DexImport("substring", "(II)Ljava/lang/String;", AccessFlags = 33)]
-				public string Substring(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 33)]
-				public string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// trimToSize
-				/// </java-name>
-				[Dot42.DexImport("trimToSize", "()V", AccessFlags = 33)]
-				public void TrimToSize() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// capacity
-				/// </java-name>
-				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
-				public int Capacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public int GetLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// indexOf
-				/// </java-name>
-				[Dot42.DexImport("indexOf", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public int IndexOf(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// lastIndexOf
-				/// </java-name>
-				[Dot42.DexImport("lastIndexOf", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public int LastIndexOf(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				[Dot42.DexImport("java/lang/Appendable", "append", "(C)Ljava/lang/Appendable;", AccessFlags = 1025)]
-				global::Java.Lang.IAppendable global::Java.Lang.IAppendable.Append(char @char) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Lang.IAppendable);
-				}
-
-				[Dot42.DexImport("java/lang/Appendable", "append", "(Ljava/lang/CharSequence;)Ljava/lang/Appendable;", AccessFlags = 1025)]
-				global::Java.Lang.IAppendable global::Java.Lang.IAppendable.Append(global::Java.Lang.ICharSequence charSequence) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Lang.IAppendable);
-				}
-
-				[Dot42.DexImport("java/lang/Appendable", "append", "(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;", AccessFlags = 1025)]
-				global::Java.Lang.IAppendable global::Java.Lang.IAppendable.JavaAppend(global::Java.Lang.ICharSequence charSequence, int int32, int int321) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Lang.IAppendable);
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				public int Length
-				{
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-						get{ return GetLength(); }
-				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 33)]
-						set{ SetLength(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/VirtualMachineError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/VirtualMachineError", AccessFlags = 1057)]
-		public abstract partial class VirtualMachineError : global::Java.Lang.Error
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public VirtualMachineError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public VirtualMachineError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/AbstractStringBuilder
-		/// </java-name>
-		[Dot42.DexImport("java/lang/AbstractStringBuilder", AccessFlags = 1056)]
-		internal abstract partial class AbstractStringBuilder
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal AbstractStringBuilder() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// capacity
-				/// </java-name>
-				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
-				public virtual int Capacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// charAt
-				/// </java-name>
-				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 1)]
-				public virtual char CharAt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// ensureCapacity
-				/// </java-name>
-				[Dot42.DexImport("ensureCapacity", "(I)V", AccessFlags = 1)]
-				public virtual void EnsureCapacity(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getChars
-				/// </java-name>
-				[Dot42.DexImport("getChars", "(II[CI)V", AccessFlags = 1)]
-				public virtual void GetChars(int int32, int int321, char[] @char, int int322) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public virtual int Length() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setCharAt
-				/// </java-name>
-				[Dot42.DexImport("setCharAt", "(IC)V", AccessFlags = 1)]
-				public virtual void SetCharAt(int int32, char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLength
-				/// </java-name>
-				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
-				public virtual void SetLength(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// substring
-				/// </java-name>
-				[Dot42.DexImport("substring", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string Substring(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// substring
-				/// </java-name>
-				[Dot42.DexImport("substring", "(II)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string Substring(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// subSequence
-				/// </java-name>
-				[Dot42.DexImport("subSequence", "(II)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence SubSequence(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// indexOf
-				/// </java-name>
-				[Dot42.DexImport("indexOf", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public virtual int IndexOf(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// indexOf
-				/// </java-name>
-				[Dot42.DexImport("indexOf", "(Ljava/lang/String;I)I", AccessFlags = 1)]
-				public virtual int IndexOf(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// lastIndexOf
-				/// </java-name>
-				[Dot42.DexImport("lastIndexOf", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public virtual int LastIndexOf(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// lastIndexOf
-				/// </java-name>
-				[Dot42.DexImport("lastIndexOf", "(Ljava/lang/String;I)I", AccessFlags = 1)]
-				public virtual int LastIndexOf(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// trimToSize
-				/// </java-name>
-				[Dot42.DexImport("trimToSize", "()V", AccessFlags = 1)]
-				public virtual void TrimToSize() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// codePointAt
-				/// </java-name>
-				[Dot42.DexImport("codePointAt", "(I)I", AccessFlags = 1)]
-				public virtual int CodePointAt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// codePointBefore
-				/// </java-name>
-				[Dot42.DexImport("codePointBefore", "(I)I", AccessFlags = 1)]
-				public virtual int CodePointBefore(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// codePointCount
-				/// </java-name>
-				[Dot42.DexImport("codePointCount", "(II)I", AccessFlags = 1)]
-				public virtual int CodePointCount(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// offsetByCodePoints
-				/// </java-name>
-				[Dot42.DexImport("offsetByCodePoints", "(II)I", AccessFlags = 1)]
-				public virtual int OffsetByCodePoints(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/IllegalMonitorStateException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/IllegalMonitorStateException", AccessFlags = 33)]
-		public partial class IllegalMonitorStateException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public IllegalMonitorStateException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public IllegalMonitorStateException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/IncompatibleClassChangeError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/IncompatibleClassChangeError", AccessFlags = 33)]
-		public partial class IncompatibleClassChangeError : global::Java.Lang.LinkageError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public IncompatibleClassChangeError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public IncompatibleClassChangeError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/NoClassDefFoundError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/NoClassDefFoundError", AccessFlags = 33)]
-		public partial class NoClassDefFoundError : global::Java.Lang.LinkageError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NoClassDefFoundError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public NoClassDefFoundError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/NumberFormatException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/NumberFormatException", AccessFlags = 33)]
-		public partial class NumberFormatException : global::System.ArgumentException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NumberFormatException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public NumberFormatException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Process
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Process", AccessFlags = 1057)]
-		public abstract partial class Process
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Process() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// destroy
-				/// </java-name>
-				[Dot42.DexImport("destroy", "()V", AccessFlags = 1025)]
-				public abstract void Destroy() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// exitValue
-				/// </java-name>
-				[Dot42.DexImport("exitValue", "()I", AccessFlags = 1025)]
-				public abstract int ExitValue() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getErrorStream
-				/// </java-name>
-				[Dot42.DexImport("getErrorStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-				public abstract global::Java.Io.InputStream GetErrorStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-				public abstract global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
-				public abstract global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// waitFor
-				/// </java-name>
-				[Dot42.DexImport("waitFor", "()I", AccessFlags = 1025)]
-				public abstract int WaitFor() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getErrorStream
-				/// </java-name>
-				public global::Java.Io.InputStream ErrorStream
-				{
-				[Dot42.DexImport("getErrorStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-						get{ return GetErrorStream(); }
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				public global::Java.Io.InputStream InputStream
-				{
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-						get{ return GetInputStream(); }
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				public global::Java.Io.OutputStream OutputStream
-				{
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
-						get{ return GetOutputStream(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/IllegalThreadStateException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/IllegalThreadStateException", AccessFlags = 33)]
-		public partial class IllegalThreadStateException : global::System.ArgumentException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public IllegalThreadStateException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public IllegalThreadStateException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/ThreadLocal
-		/// </java-name>
-		[Dot42.DexImport("java/lang/ThreadLocal", AccessFlags = 33, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
-		public partial class ThreadLocal<T>
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ThreadLocal() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TT;")]
-				public virtual T Get() /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// initialValue
-				/// </java-name>
-				[Dot42.DexImport("initialValue", "()Ljava/lang/Object;", AccessFlags = 4, Signature = "()TT;")]
-				protected internal virtual T InitialValue() /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// set
-				/// </java-name>
-				[Dot42.DexImport("set", "(Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TT;)V")]
-				public virtual void Set(T t) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// remove
-				/// </java-name>
-				[Dot42.DexImport("remove", "()V", AccessFlags = 1)]
-				public virtual void Remove() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/SuppressWarnings
-		/// </java-name>
-		[Dot42.DexImport("java/lang/SuppressWarnings", AccessFlags = 9729)]
-		public partial interface ISuppressWarnings : global::Java.Lang.Annotation.IAnnotation
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// value
-				/// </java-name>
-				[Dot42.DexImport("value", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				string[] Value() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// java/lang/StringIndexOutOfBoundsException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/StringIndexOutOfBoundsException", AccessFlags = 33)]
-		public partial class StringIndexOutOfBoundsException : global::System.IndexOutOfRangeException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public StringIndexOutOfBoundsException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public StringIndexOutOfBoundsException(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public StringIndexOutOfBoundsException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/IllegalAccessError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/IllegalAccessError", AccessFlags = 33)]
-		public partial class IllegalAccessError : global::Java.Lang.IncompatibleClassChangeError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public IllegalAccessError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public IllegalAccessError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/InheritableThreadLocal
-		/// </java-name>
-		[Dot42.DexImport("java/lang/InheritableThreadLocal", AccessFlags = 33, Signature = "<T:Ljava/lang/Object;>Ljava/lang/ThreadLocal<TT;>;")]
-		public partial class InheritableThreadLocal<T> : global::Java.Lang.ThreadLocal<T>
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public InheritableThreadLocal() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// childValue
-				/// </java-name>
-				[Dot42.DexImport("childValue", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 4, Signature = "(TT;)TT;")]
-				protected internal virtual T ChildValue(T t) /* MethodBuilder.Create */ 
-				{
-						return default(T);
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/ClassLoader
-		/// </java-name>
-		[Dot42.DexImport("java/lang/ClassLoader", AccessFlags = 1057)]
-		public abstract partial class ClassLoader
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal ClassLoader() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/ClassLoader;)V", AccessFlags = 4)]
-				protected internal ClassLoader(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSystemClassLoader
-				/// </java-name>
-				[Dot42.DexImport("getSystemClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 9)]
-				public static global::Java.Lang.ClassLoader GetSystemClassLoader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ClassLoader);
-				}
-
-				/// <java-name>
-				/// getSystemResource
-				/// </java-name>
-				[Dot42.DexImport("getSystemResource", "(Ljava/lang/String;)Ljava/net/URL;", AccessFlags = 9)]
-				public static global::Java.Net.URL GetSystemResource(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.URL);
-				}
-
-				/// <java-name>
-				/// getSystemResources
-				/// </java-name>
-				[Dot42.DexImport("getSystemResources", "(Ljava/lang/String;)Ljava/util/Enumeration;", AccessFlags = 9, Signature = "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;")]
-				public static global::Java.Util.IEnumeration<global::Java.Net.URL> GetSystemResources(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<global::Java.Net.URL>);
-				}
-
-				/// <java-name>
-				/// getSystemResourceAsStream
-				/// </java-name>
-				[Dot42.DexImport("getSystemResourceAsStream", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 9)]
-				public static global::Java.Io.InputStream GetSystemResourceAsStream(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// defineClass
-				/// </java-name>
-				[Dot42.DexImport("defineClass", "([BII)Ljava/lang/Class;", AccessFlags = 20, Signature = "([BII)Ljava/lang/Class<*>;")]
-				protected internal global::System.Type DefineClass(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// defineClass
-				/// </java-name>
-				[Dot42.DexImport("defineClass", "([BII)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "([BII)Ljava/lang/Class<*>;")]
-				protected internal global::System.Type DefineClass(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// defineClass
-				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BII)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BII)Ljava/lang/Class<*>;")]
-				protected internal global::System.Type DefineClass(string @string, sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// defineClass
-				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BII)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BII)Ljava/lang/Class<*>;")]
-				protected internal global::System.Type DefineClass(string @string, byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// defineClass
-				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class<*>;")]
-				protected internal global::System.Type DefineClass(string @string, sbyte[] sByte, int int32, int int321, global::Java.Security.ProtectionDomain protectionDomain) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// defineClass
-				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class<*>;")]
-				protected internal global::System.Type DefineClass(string @string, byte[] @byte, int int32, int int321, global::Java.Security.ProtectionDomain protectionDomain) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// defineClass
-				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;Ljava/nio/ByteBuffer;Ljava/security/ProtectionDomain;)Ljava/la" +
-    "ng/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;Ljava/nio/ByteBuffer;Ljava/security/ProtectionDomain;)Ljava/la" +
-    "ng/Class<*>;")]
-				protected internal global::System.Type DefineClass(string @string, global::Java.Nio.ByteBuffer byteBuffer, global::Java.Security.ProtectionDomain protectionDomain) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// findClass
-				/// </java-name>
-				[Dot42.DexImport("findClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 4, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
-				protected internal virtual global::System.Type FindClass(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// findLoadedClass
-				/// </java-name>
-				[Dot42.DexImport("findLoadedClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
-				protected internal global::System.Type FindLoadedClass(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// findSystemClass
-				/// </java-name>
-				[Dot42.DexImport("findSystemClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
-				protected internal global::System.Type FindSystemClass(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// getParent
-				/// </java-name>
-				[Dot42.DexImport("getParent", "()Ljava/lang/ClassLoader;", AccessFlags = 17)]
-				public global::Java.Lang.ClassLoader GetParent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ClassLoader);
-				}
-
-				/// <java-name>
-				/// getResource
-				/// </java-name>
-				[Dot42.DexImport("getResource", "(Ljava/lang/String;)Ljava/net/URL;", AccessFlags = 1)]
-				public virtual global::Java.Net.URL GetResource(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.URL);
-				}
-
-				/// <java-name>
-				/// getResources
-				/// </java-name>
-				[Dot42.DexImport("getResources", "(Ljava/lang/String;)Ljava/util/Enumeration;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;")]
-				public virtual global::Java.Util.IEnumeration<global::Java.Net.URL> GetResources(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<global::Java.Net.URL>);
-				}
-
-				/// <java-name>
-				/// getResourceAsStream
-				/// </java-name>
-				[Dot42.DexImport("getResourceAsStream", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetResourceAsStream(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// loadClass
-				/// </java-name>
-				[Dot42.DexImport("loadClass", "(Ljava/lang/String;)Ljava/lang/Class;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/lang/Class<*>;")]
-				public virtual global::System.Type LoadClass(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// loadClass
-				/// </java-name>
-				[Dot42.DexImport("loadClass", "(Ljava/lang/String;Z)Ljava/lang/Class;", AccessFlags = 4, Signature = "(Ljava/lang/String;Z)Ljava/lang/Class<*>;")]
-				protected internal virtual global::System.Type LoadClass(string @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// resolveClass
-				/// </java-name>
-				[Dot42.DexImport("resolveClass", "(Ljava/lang/Class;)V", AccessFlags = 20, Signature = "(Ljava/lang/Class<*>;)V")]
-				protected internal void ResolveClass(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// findResource
-				/// </java-name>
-				[Dot42.DexImport("findResource", "(Ljava/lang/String;)Ljava/net/URL;", AccessFlags = 4)]
-				protected internal virtual global::Java.Net.URL FindResource(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.URL);
-				}
-
-				/// <java-name>
-				/// findResources
-				/// </java-name>
-				[Dot42.DexImport("findResources", "(Ljava/lang/String;)Ljava/util/Enumeration;", AccessFlags = 4, Signature = "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;")]
-				protected internal virtual global::Java.Util.IEnumeration<global::Java.Net.URL> FindResources(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<global::Java.Net.URL>);
-				}
-
-				/// <java-name>
-				/// findLibrary
-				/// </java-name>
-				[Dot42.DexImport("findLibrary", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 4)]
-				protected internal virtual string FindLibrary(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPackage
-				/// </java-name>
-				[Dot42.DexImport("getPackage", "(Ljava/lang/String;)Ljava/lang/Package;", AccessFlags = 4)]
-				protected internal virtual global::Java.Lang.Package GetPackage(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Package);
-				}
-
-				/// <java-name>
-				/// getPackages
-				/// </java-name>
-				[Dot42.DexImport("getPackages", "()[Ljava/lang/Package;", AccessFlags = 4)]
-				protected internal virtual global::Java.Lang.Package[] GetPackages() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Package[]);
-				}
-
-				/// <java-name>
-				/// definePackage
-				/// </java-name>
-				[Dot42.DexImport("definePackage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/la" +
-    "ng/String;Ljava/lang/String;Ljava/lang/String;Ljava/net/URL;)Ljava/lang/Package;" +
-    "", AccessFlags = 4)]
-				protected internal virtual global::Java.Lang.Package DefinePackage(string @string, string string1, string string2, string string3, string string4, string string5, string string6, global::Java.Net.URL uRL) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Package);
-				}
-
-				/// <java-name>
-				/// setSigners
-				/// </java-name>
-				[Dot42.DexImport("setSigners", "(Ljava/lang/Class;[Ljava/lang/Object;)V", AccessFlags = 20, Signature = "(Ljava/lang/Class<*>;[Ljava/lang/Object;)V")]
-				protected internal void SetSigners(global::System.Type type, object[] @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setClassAssertionStatus
-				/// </java-name>
-				[Dot42.DexImport("setClassAssertionStatus", "(Ljava/lang/String;Z)V", AccessFlags = 1)]
-				public virtual void SetClassAssertionStatus(string @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPackageAssertionStatus
-				/// </java-name>
-				[Dot42.DexImport("setPackageAssertionStatus", "(Ljava/lang/String;Z)V", AccessFlags = 1)]
-				public virtual void SetPackageAssertionStatus(string @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDefaultAssertionStatus
-				/// </java-name>
-				[Dot42.DexImport("setDefaultAssertionStatus", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDefaultAssertionStatus(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clearAssertionStatus
-				/// </java-name>
-				[Dot42.DexImport("clearAssertionStatus", "()V", AccessFlags = 1)]
-				public virtual void ClearAssertionStatus() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSystemClassLoader
-				/// </java-name>
-				public static global::Java.Lang.ClassLoader SystemClassLoader
-				{
-				[Dot42.DexImport("getSystemClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 9)]
-						get{ return GetSystemClassLoader(); }
-				}
-
-				/// <java-name>
-				/// getParent
-				/// </java-name>
-				public global::Java.Lang.ClassLoader Parent
-				{
-				[Dot42.DexImport("getParent", "()Ljava/lang/ClassLoader;", AccessFlags = 17)]
-						get{ return GetParent(); }
-				}
-
-				/// <java-name>
-				/// getPackages
-				/// </java-name>
-				protected internal global::Java.Lang.Package[] Packages
-				{
-				[Dot42.DexImport("getPackages", "()[Ljava/lang/Package;", AccessFlags = 4)]
-						get{ return GetPackages(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/IllegalStateException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/IllegalStateException", AccessFlags = 33)]
-		public partial class IllegalStateException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public IllegalStateException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public IllegalStateException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public IllegalStateException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public IllegalStateException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/CloneNotSupportedException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/CloneNotSupportedException", AccessFlags = 33)]
-		public partial class CloneNotSupportedException : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public CloneNotSupportedException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public CloneNotSupportedException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Compiler
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Compiler", AccessFlags = 49)]
-		public sealed partial class Compiler
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Compiler() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// command
-				/// </java-name>
-				[Dot42.DexImport("command", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 9)]
-				public static object Command(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
 				/// <java-name>
-				/// compileClass
+				/// equals
 				/// </java-name>
-				[Dot42.DexImport("compileClass", "(Ljava/lang/Class;)Z", AccessFlags = 9, Signature = "(Ljava/lang/Class<*>;)Z")]
-				public static bool CompileClass(global::System.Type type) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				/// <java-name>
-				/// compileClasses
+				/// getClassName
 				/// </java-name>
-				[Dot42.DexImport("compileClasses", "(Ljava/lang/String;)Z", AccessFlags = 9)]
-				public static bool CompileClasses(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getClassName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetClassName() /* MethodBuilder.Create */ 
 				{
-						return default(bool);
+						return default(string);
 				}
 
 				/// <java-name>
-				/// disable
+				/// getFileName
 				/// </java-name>
-				[Dot42.DexImport("disable", "()V", AccessFlags = 9)]
-				public static void Disable() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getFileName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetFileName() /* MethodBuilder.Create */ 
 				{
+						return default(string);
 				}
 
 				/// <java-name>
-				/// enable
+				/// getLineNumber
 				/// </java-name>
-				[Dot42.DexImport("enable", "()V", AccessFlags = 9)]
-				public static void Enable() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/AbstractMethodError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/AbstractMethodError", AccessFlags = 33)]
-		public partial class AbstractMethodError : global::Java.Lang.IncompatibleClassChangeError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AbstractMethodError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public AbstractMethodError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Iterable
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Iterable", AccessFlags = 1537, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
-		public partial interface IIterable<T>
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// iterator
-				/// </java-name>
-				[Dot42.DexImport("iterator", "()Ljava/util/Iterator;", AccessFlags = 1025, Signature = "()Ljava/util/Iterator<TT;>;")]
-				global::Java.Util.IIterator<T> Iterator() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// java/lang/Exception
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Exception", AccessFlags = 33)]
-		public partial class Exception : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Exception() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public Exception(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public Exception(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public Exception(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Runtime
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Runtime", AccessFlags = 33)]
-		public partial class Runtime
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Runtime() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// exec
-				/// </java-name>
-				[Dot42.DexImport("exec", "([Ljava/lang/String;)Ljava/lang/Process;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Process Exec(string[] @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Process);
-				}
-
-				/// <java-name>
-				/// exec
-				/// </java-name>
-				[Dot42.DexImport("exec", "([Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/Process;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Process Exec(string[] @string, string[] string1) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Process);
-				}
-
-				/// <java-name>
-				/// exec
-				/// </java-name>
-				[Dot42.DexImport("exec", "([Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Process Exec(string[] @string, string[] string1, global::Java.Io.File file) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Process);
-				}
-
-				/// <java-name>
-				/// exec
-				/// </java-name>
-				[Dot42.DexImport("exec", "(Ljava/lang/String;)Ljava/lang/Process;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Process Exec(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Process);
-				}
-
-				/// <java-name>
-				/// exec
-				/// </java-name>
-				[Dot42.DexImport("exec", "(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/Process;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Process Exec(string @string, string[] string1) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Process);
-				}
-
-				/// <java-name>
-				/// exec
-				/// </java-name>
-				[Dot42.DexImport("exec", "(Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Process Exec(string @string, string[] string1, global::Java.Io.File file) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Process);
-				}
-
-				/// <java-name>
-				/// exit
-				/// </java-name>
-				[Dot42.DexImport("exit", "(I)V", AccessFlags = 1)]
-				public virtual void Exit(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// freeMemory
-				/// </java-name>
-				[Dot42.DexImport("freeMemory", "()J", AccessFlags = 257)]
-				public virtual long FreeMemory() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// gc
-				/// </java-name>
-				[Dot42.DexImport("gc", "()V", AccessFlags = 257)]
-				public virtual void Gc() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRuntime
-				/// </java-name>
-				[Dot42.DexImport("getRuntime", "()Ljava/lang/Runtime;", AccessFlags = 9)]
-				public static global::Java.Lang.Runtime GetRuntime() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Runtime);
-				}
-
-				/// <java-name>
-				/// load
-				/// </java-name>
-				[Dot42.DexImport("load", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Load(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// loadLibrary
-				/// </java-name>
-				[Dot42.DexImport("loadLibrary", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void LoadLibrary(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// runFinalization
-				/// </java-name>
-				[Dot42.DexImport("runFinalization", "()V", AccessFlags = 1)]
-				public virtual void RunFinalization() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// runFinalizersOnExit
-				/// </java-name>
-				[Dot42.DexImport("runFinalizersOnExit", "(Z)V", AccessFlags = 9)]
-				public static void RunFinalizersOnExit(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// totalMemory
-				/// </java-name>
-				[Dot42.DexImport("totalMemory", "()J", AccessFlags = 257)]
-				public virtual long TotalMemory() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// traceInstructions
-				/// </java-name>
-				[Dot42.DexImport("traceInstructions", "(Z)V", AccessFlags = 1)]
-				public virtual void TraceInstructions(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// traceMethodCalls
-				/// </java-name>
-				[Dot42.DexImport("traceMethodCalls", "(Z)V", AccessFlags = 1)]
-				public virtual void TraceMethodCalls(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLocalizedInputStream
-				/// </java-name>
-				[Dot42.DexImport("getLocalizedInputStream", "(Ljava/io/InputStream;)Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetLocalizedInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getLocalizedOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getLocalizedOutputStream", "(Ljava/io/OutputStream;)Ljava/io/OutputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.OutputStream GetLocalizedOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.OutputStream);
-				}
-
-				/// <java-name>
-				/// addShutdownHook
-				/// </java-name>
-				[Dot42.DexImport("addShutdownHook", "(Ljava/lang/Thread;)V", AccessFlags = 1)]
-				public virtual void AddShutdownHook(global::System.Threading.Thread thread) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// removeShutdownHook
-				/// </java-name>
-				[Dot42.DexImport("removeShutdownHook", "(Ljava/lang/Thread;)Z", AccessFlags = 1)]
-				public virtual bool RemoveShutdownHook(global::System.Threading.Thread thread) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// halt
-				/// </java-name>
-				[Dot42.DexImport("halt", "(I)V", AccessFlags = 1)]
-				public virtual void Halt(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// availableProcessors
-				/// </java-name>
-				[Dot42.DexImport("availableProcessors", "()I", AccessFlags = 1)]
-				public virtual int AvailableProcessors() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
+				public int GetLineNumber() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				/// <java-name>
-				/// maxMemory
+				/// getMethodName
 				/// </java-name>
-				[Dot42.DexImport("maxMemory", "()J", AccessFlags = 257)]
-				public virtual long MaxMemory() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/LinkageError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/LinkageError", AccessFlags = 33)]
-		public partial class LinkageError : global::Java.Lang.Error
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public LinkageError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public LinkageError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Cloneable
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Cloneable", AccessFlags = 1537)]
-		public partial interface ICloneable
- /* scope: __dot42__ */ 
-		{
-		}
-
-		/// <java-name>
-		/// java/lang/UnknownError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/UnknownError", AccessFlags = 33)]
-		public partial class UnknownError : global::Java.Lang.VirtualMachineError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public UnknownError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public UnknownError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Package
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Package", AccessFlags = 33)]
-		public partial class Package : global::Java.Lang.Reflect.IAnnotatedElement
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal Package() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAnnotation
-				/// </java-name>
-				[Dot42.DexImport("getAnnotation", "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", AccessFlags = 1, Signature = "<A::Ljava/lang/annotation/Annotation;>(Ljava/lang/Class<TA;>;)TA;")]
-				public virtual A GetAnnotation<A>(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-						return default(A);
-				}
-
-				/// <java-name>
-				/// getAnnotations
-				/// </java-name>
-				[Dot42.DexImport("getAnnotations", "()[Ljava/lang/annotation/Annotation;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Annotation.IAnnotation[] GetAnnotations() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Annotation.IAnnotation[]);
-				}
-
-				/// <java-name>
-				/// getDeclaredAnnotations
-				/// </java-name>
-				[Dot42.DexImport("getDeclaredAnnotations", "()[Ljava/lang/annotation/Annotation;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Annotation.IAnnotation[] GetDeclaredAnnotations() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Annotation.IAnnotation[]);
-				}
-
-				/// <java-name>
-				/// isAnnotationPresent
-				/// </java-name>
-				[Dot42.DexImport("isAnnotationPresent", "(Ljava/lang/Class;)Z", AccessFlags = 1, Signature = "(Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;)Z")]
-				public virtual bool IsAnnotationPresent(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getImplementationTitle
-				/// </java-name>
-				[Dot42.DexImport("getImplementationTitle", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetImplementationTitle() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getImplementationVendor
-				/// </java-name>
-				[Dot42.DexImport("getImplementationVendor", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetImplementationVendor() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getImplementationVersion
-				/// </java-name>
-				[Dot42.DexImport("getImplementationVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetImplementationVersion() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPackage
-				/// </java-name>
-				[Dot42.DexImport("getPackage", "(Ljava/lang/String;)Ljava/lang/Package;", AccessFlags = 9)]
-				public static global::Java.Lang.Package GetPackage(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Package);
-				}
-
-				/// <java-name>
-				/// getPackages
-				/// </java-name>
-				[Dot42.DexImport("getPackages", "()[Ljava/lang/Package;", AccessFlags = 9)]
-				public static global::Java.Lang.Package[] GetPackages() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.Package[]);
-				}
-
-				/// <java-name>
-				/// getSpecificationTitle
-				/// </java-name>
-				[Dot42.DexImport("getSpecificationTitle", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSpecificationTitle() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSpecificationVendor
-				/// </java-name>
-				[Dot42.DexImport("getSpecificationVendor", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSpecificationVendor() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSpecificationVersion
-				/// </java-name>
-				[Dot42.DexImport("getSpecificationVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSpecificationVersion() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getMethodName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetMethodName() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -3648,28 +2804,10 @@ namespace Java.Lang
 				}
 
 				/// <java-name>
-				/// isCompatibleWith
+				/// isNativeMethod
 				/// </java-name>
-				[Dot42.DexImport("isCompatibleWith", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public virtual bool IsCompatibleWith(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isSealed
-				/// </java-name>
-				[Dot42.DexImport("isSealed", "()Z", AccessFlags = 1)]
-				public virtual bool IsSealed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isSealed
-				/// </java-name>
-				[Dot42.DexImport("isSealed", "(Ljava/net/URL;)Z", AccessFlags = 1)]
-				public virtual bool IsSealed(global::Java.Net.URL uRL) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("isNativeMethod", "()Z", AccessFlags = 1)]
+				public bool IsNativeMethod() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3683,436 +2821,45 @@ namespace Java.Lang
 						return default(string);
 				}
 
-				[Dot42.DexImport("java/lang/reflect/AnnotatedElement", "getAnnotation", "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", AccessFlags = 1025, Signature = "<T::Ljava/lang/annotation/Annotation;>(Ljava/lang/Class<TT;>;)TT;")]
-				T global::Java.Lang.Reflect.IAnnotatedElement.GetAnnotation<T>(global::System.Type type) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(T);
-				}
-
-				/// <java-name>
-				/// getAnnotations
-				/// </java-name>
-				public global::Java.Lang.Annotation.IAnnotation[] Annotations
-				{
-				[Dot42.DexImport("getAnnotations", "()[Ljava/lang/annotation/Annotation;", AccessFlags = 1)]
-						get{ return GetAnnotations(); }
-				}
-
-				/// <java-name>
-				/// getDeclaredAnnotations
-				/// </java-name>
-				public global::Java.Lang.Annotation.IAnnotation[] DeclaredAnnotations
-				{
-				[Dot42.DexImport("getDeclaredAnnotations", "()[Ljava/lang/annotation/Annotation;", AccessFlags = 1)]
-						get{ return GetDeclaredAnnotations(); }
-				}
-
-				/// <java-name>
-				/// getImplementationTitle
-				/// </java-name>
-				public string ImplementationTitle
-				{
-				[Dot42.DexImport("getImplementationTitle", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetImplementationTitle(); }
-				}
-
-				/// <java-name>
-				/// getImplementationVendor
-				/// </java-name>
-				public string ImplementationVendor
-				{
-				[Dot42.DexImport("getImplementationVendor", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetImplementationVendor(); }
-				}
-
-				/// <java-name>
-				/// getImplementationVersion
-				/// </java-name>
-				public string ImplementationVersion
-				{
-				[Dot42.DexImport("getImplementationVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetImplementationVersion(); }
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				public string Name
-				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				}
-
-				/// <java-name>
-				/// getPackages
-				/// </java-name>
-				public static global::Java.Lang.Package[] Packages
-				{
-				[Dot42.DexImport("getPackages", "()[Ljava/lang/Package;", AccessFlags = 9)]
-						get{ return GetPackages(); }
-				}
-
-				/// <java-name>
-				/// getSpecificationTitle
-				/// </java-name>
-				public string SpecificationTitle
-				{
-				[Dot42.DexImport("getSpecificationTitle", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSpecificationTitle(); }
-				}
-
-				/// <java-name>
-				/// getSpecificationVendor
-				/// </java-name>
-				public string SpecificationVendor
-				{
-				[Dot42.DexImport("getSpecificationVendor", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSpecificationVendor(); }
-				}
-
-				/// <java-name>
-				/// getSpecificationVersion
-				/// </java-name>
-				public string SpecificationVersion
-				{
-				[Dot42.DexImport("getSpecificationVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSpecificationVersion(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/SecurityException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/SecurityException", AccessFlags = 33)]
-		public partial class SecurityException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SecurityException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SecurityException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public SecurityException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public SecurityException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/AssertionError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/AssertionError", AccessFlags = 33)]
-		public partial class AssertionError : global::Java.Lang.Error
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AssertionError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-				public AssertionError(object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Z)V", AccessFlags = 1)]
-				public AssertionError(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(C)V", AccessFlags = 1)]
-				public AssertionError(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public AssertionError(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(J)V", AccessFlags = 1)]
-				public AssertionError(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(F)V", AccessFlags = 1)]
-				public AssertionError(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(D)V", AccessFlags = 1)]
-				public AssertionError(double @double) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/ClassFormatError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/ClassFormatError", AccessFlags = 33)]
-		public partial class ClassFormatError : global::Java.Lang.LinkageError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ClassFormatError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ClassFormatError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/RuntimePermission
-		/// </java-name>
-		[Dot42.DexImport("java/lang/RuntimePermission", AccessFlags = 49)]
-		public sealed partial class RuntimePermission : global::Java.Security.BasicPermission
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public RuntimePermission(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public RuntimePermission(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// implies
-				/// </java-name>
-				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
-				public override bool Implies(global::Java.Security.Permission permission) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RuntimePermission() /* TypeBuilder.AddDefaultConstructor */ 
+				internal StackTraceElement() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
-				/// getActions
+				/// getClassName
 				/// </java-name>
-				public string Actions
+				public string ClassName
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/CharSequence
-		/// </java-name>
-		[Dot42.DexImport("java/lang/CharSequence", AccessFlags = 1537)]
-		public partial interface ICharSequence
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// charAt
-				/// </java-name>
-				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 1025)]
-				char CharAt(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// subSequence
-				/// </java-name>
-				[Dot42.DexImport("subSequence", "(II)Ljava/lang/CharSequence;", AccessFlags = 1025)]
-				global::Java.Lang.ICharSequence SubSequence(int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string ToString() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// java/lang/ArrayIndexOutOfBoundsException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/ArrayIndexOutOfBoundsException", AccessFlags = 33)]
-		public partial class ArrayIndexOutOfBoundsException : global::System.IndexOutOfRangeException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ArrayIndexOutOfBoundsException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public ArrayIndexOutOfBoundsException(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ArrayIndexOutOfBoundsException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/Error
-		/// </java-name>
-		[Dot42.DexImport("java/lang/Error", AccessFlags = 33)]
-		public partial class Error : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Error() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public Error(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public Error(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public Error(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/ClassNotFoundException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/ClassNotFoundException", AccessFlags = 33)]
-		public partial class ClassNotFoundException : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ClassNotFoundException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ClassNotFoundException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public ClassNotFoundException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
+				[Dot42.DexImport("getClassName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetClassName(); }
 				}
 
 				/// <java-name>
-				/// getException
+				/// getFileName
 				/// </java-name>
-				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
+				public string FileName
 				{
-						return default(global::System.Exception);
+				[Dot42.DexImport("getFileName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetFileName(); }
 				}
 
 				/// <java-name>
-				/// getCause
+				/// getLineNumber
 				/// </java-name>
-				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public override global::System.Exception GetCause() /* MethodBuilder.Create */ 
+				public int LineNumber
 				{
-						return default(global::System.Exception);
+				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
+						get{ return GetLineNumber(); }
 				}
 
 				/// <java-name>
-				/// getException
+				/// getMethodName
 				/// </java-name>
-				public global::System.Exception Exception
+				public string MethodName
 				{
-				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-						get{ return GetException(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// java/lang/ExceptionInInitializerError
-		/// </java-name>
-		[Dot42.DexImport("java/lang/ExceptionInInitializerError", AccessFlags = 33)]
-		public partial class ExceptionInInitializerError : global::Java.Lang.LinkageError
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ExceptionInInitializerError() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ExceptionInInitializerError(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public ExceptionInInitializerError(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getException
-				/// </java-name>
-				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getCause
-				/// </java-name>
-				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public override global::System.Exception GetCause() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getException
-				/// </java-name>
-				public global::System.Exception Exception
-				{
-				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-						get{ return GetException(); }
+				[Dot42.DexImport("getMethodName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetMethodName(); }
 				}
 
 		}
@@ -4628,6 +3375,1221 @@ namespace Java.Lang
 		}
 
 		/// <java-name>
+		/// java/lang/StringBuffer
+		/// </java-name>
+		[Dot42.DexImport("java/lang/StringBuffer", AccessFlags = 49)]
+		public sealed partial class StringBuffer : global::Java.Lang.IAppendable, global::Java.Io.ISerializable, global::Java.Lang.ICharSequence
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public StringBuffer() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
+				public StringBuffer(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public StringBuffer(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public StringBuffer(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(Z)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Append(bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(C)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Append(char @char) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(D)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Append(double @double) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(F)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Append(float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(I)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Append(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(J)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Append(long int64) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(Ljava/lang/Object;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Append(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(Ljava/lang/String;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Append(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Append(global::Java.Lang.StringBuffer stringBuffer) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "([C)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Append(char[] @char) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "([CII)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Append(char[] @char, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(Ljava/lang/CharSequence;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Append(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// append
+				/// </java-name>
+				[Dot42.DexImport("append", "(Ljava/lang/CharSequence;II)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer JavaAppend(global::Java.Lang.ICharSequence charSequence, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// appendCodePoint
+				/// </java-name>
+				[Dot42.DexImport("appendCodePoint", "(I)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer AppendCodePoint(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// charAt
+				/// </java-name>
+				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 33)]
+				public char CharAt(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(char);
+				}
+
+				/// <java-name>
+				/// codePointAt
+				/// </java-name>
+				[Dot42.DexImport("codePointAt", "(I)I", AccessFlags = 33)]
+				public int CodePointAt(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// codePointBefore
+				/// </java-name>
+				[Dot42.DexImport("codePointBefore", "(I)I", AccessFlags = 33)]
+				public int CodePointBefore(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// codePointCount
+				/// </java-name>
+				[Dot42.DexImport("codePointCount", "(II)I", AccessFlags = 33)]
+				public int CodePointCount(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// delete
+				/// </java-name>
+				[Dot42.DexImport("delete", "(II)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Delete(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// deleteCharAt
+				/// </java-name>
+				[Dot42.DexImport("deleteCharAt", "(I)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer DeleteCharAt(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// ensureCapacity
+				/// </java-name>
+				[Dot42.DexImport("ensureCapacity", "(I)V", AccessFlags = 33)]
+				public void EnsureCapacity(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getChars
+				/// </java-name>
+				[Dot42.DexImport("getChars", "(II[CI)V", AccessFlags = 33)]
+				public void GetChars(int int32, int int321, char[] @char, int int322) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// indexOf
+				/// </java-name>
+				[Dot42.DexImport("indexOf", "(Ljava/lang/String;I)I", AccessFlags = 33)]
+				public int IndexOf(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(IC)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Insert(int int32, char @char) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(IZ)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Insert(int int32, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(II)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Insert(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(IJ)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Insert(int int32, long int64) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(ID)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Insert(int int32, double @double) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(IF)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Insert(int int32, float single) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(ILjava/lang/Object;)Ljava/lang/StringBuffer;", AccessFlags = 1)]
+				public global::Java.Lang.StringBuffer Insert(int int32, object @object) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(ILjava/lang/String;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Insert(int int32, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(I[C)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Insert(int int32, char[] @char) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(I[CII)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Insert(int int32, char[] @char, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(ILjava/lang/CharSequence;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Insert(int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// insert
+				/// </java-name>
+				[Dot42.DexImport("insert", "(ILjava/lang/CharSequence;II)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Insert(int int32, global::Java.Lang.ICharSequence charSequence, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// lastIndexOf
+				/// </java-name>
+				[Dot42.DexImport("lastIndexOf", "(Ljava/lang/String;I)I", AccessFlags = 33)]
+				public int LastIndexOf(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// offsetByCodePoints
+				/// </java-name>
+				[Dot42.DexImport("offsetByCodePoints", "(II)I", AccessFlags = 33)]
+				public int OffsetByCodePoints(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// replace
+				/// </java-name>
+				[Dot42.DexImport("replace", "(IILjava/lang/String;)Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Replace(int int32, int int321, string @string) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// reverse
+				/// </java-name>
+				[Dot42.DexImport("reverse", "()Ljava/lang/StringBuffer;", AccessFlags = 33)]
+				public global::Java.Lang.StringBuffer Reverse() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.StringBuffer);
+				}
+
+				/// <java-name>
+				/// setCharAt
+				/// </java-name>
+				[Dot42.DexImport("setCharAt", "(IC)V", AccessFlags = 33)]
+				public void SetCharAt(int int32, char @char) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setLength
+				/// </java-name>
+				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 33)]
+				public void SetLength(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// subSequence
+				/// </java-name>
+				[Dot42.DexImport("subSequence", "(II)Ljava/lang/CharSequence;", AccessFlags = 33)]
+				public global::Java.Lang.ICharSequence SubSequence(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// substring
+				/// </java-name>
+				[Dot42.DexImport("substring", "(I)Ljava/lang/String;", AccessFlags = 33)]
+				public string Substring(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// substring
+				/// </java-name>
+				[Dot42.DexImport("substring", "(II)Ljava/lang/String;", AccessFlags = 33)]
+				public string Substring(int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 33)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// trimToSize
+				/// </java-name>
+				[Dot42.DexImport("trimToSize", "()V", AccessFlags = 33)]
+				public void TrimToSize() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// capacity
+				/// </java-name>
+				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
+				public int Capacity() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
+				public int GetLength() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// indexOf
+				/// </java-name>
+				[Dot42.DexImport("indexOf", "(Ljava/lang/String;)I", AccessFlags = 1)]
+				public int IndexOf(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// lastIndexOf
+				/// </java-name>
+				[Dot42.DexImport("lastIndexOf", "(Ljava/lang/String;)I", AccessFlags = 1)]
+				public int LastIndexOf(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				[Dot42.DexImport("java/lang/Appendable", "append", "(C)Ljava/lang/Appendable;", AccessFlags = 1025)]
+				global::Java.Lang.IAppendable global::Java.Lang.IAppendable.Append(char @char) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+						return default(global::Java.Lang.IAppendable);
+				}
+
+				[Dot42.DexImport("java/lang/Appendable", "append", "(Ljava/lang/CharSequence;)Ljava/lang/Appendable;", AccessFlags = 1025)]
+				global::Java.Lang.IAppendable global::Java.Lang.IAppendable.Append(global::Java.Lang.ICharSequence charSequence) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+						return default(global::Java.Lang.IAppendable);
+				}
+
+				[Dot42.DexImport("java/lang/Appendable", "append", "(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;", AccessFlags = 1025)]
+				global::Java.Lang.IAppendable global::Java.Lang.IAppendable.JavaAppend(global::Java.Lang.ICharSequence charSequence, int int32, int int321) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				{
+						return default(global::Java.Lang.IAppendable);
+				}
+
+				/// <java-name>
+				/// length
+				/// </java-name>
+				public int Length
+				{
+				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
+						get{ return GetLength(); }
+				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 33)]
+						set{ SetLength(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/StringIndexOutOfBoundsException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/StringIndexOutOfBoundsException", AccessFlags = 33)]
+		public partial class StringIndexOutOfBoundsException : global::System.IndexOutOfRangeException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public StringIndexOutOfBoundsException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
+				public StringIndexOutOfBoundsException(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public StringIndexOutOfBoundsException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/System
+		/// </java-name>
+		[Dot42.DexImport("java/lang/System", AccessFlags = 49)]
+		public sealed partial class System
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// in
+				/// </java-name>
+				[Dot42.DexImport("in", "Ljava/io/InputStream;", AccessFlags = 25)]
+				public static readonly global::Java.Io.InputStream In;
+				/// <java-name>
+				/// out
+				/// </java-name>
+				[Dot42.DexImport("out", "Ljava/io/PrintStream;", AccessFlags = 25)]
+				public static readonly global::Java.Io.PrintStream Out;
+				/// <java-name>
+				/// err
+				/// </java-name>
+				[Dot42.DexImport("err", "Ljava/io/PrintStream;", AccessFlags = 25)]
+				public static readonly global::Java.Io.PrintStream Err;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal System() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setIn
+				/// </java-name>
+				[Dot42.DexImport("setIn", "(Ljava/io/InputStream;)V", AccessFlags = 9)]
+				public static void SetIn(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setOut
+				/// </java-name>
+				[Dot42.DexImport("setOut", "(Ljava/io/PrintStream;)V", AccessFlags = 9)]
+				public static void SetOut(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setErr
+				/// </java-name>
+				[Dot42.DexImport("setErr", "(Ljava/io/PrintStream;)V", AccessFlags = 9)]
+				public static void SetErr(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// arraycopy
+				/// </java-name>
+				[Dot42.DexImport("arraycopy", "(Ljava/lang/Object;ILjava/lang/Object;II)V", AccessFlags = 265)]
+				public static void Arraycopy(object @object, int int32, object object1, int int321, int int322) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// currentTimeMillis
+				/// </java-name>
+				[Dot42.DexImport("currentTimeMillis", "()J", AccessFlags = 265)]
+				public static long CurrentTimeMillis() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// nanoTime
+				/// </java-name>
+				[Dot42.DexImport("nanoTime", "()J", AccessFlags = 265)]
+				public static long NanoTime() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// exit
+				/// </java-name>
+				[Dot42.DexImport("exit", "(I)V", AccessFlags = 9)]
+				public static void Exit(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// gc
+				/// </java-name>
+				[Dot42.DexImport("gc", "()V", AccessFlags = 9)]
+				public static void Gc() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getenv
+				/// </java-name>
+				[Dot42.DexImport("getenv", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string Getenv(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getenv
+				/// </java-name>
+				[Dot42.DexImport("getenv", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
+				public static global::Java.Util.IMap<string, string> Getenv() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IMap<string, string>);
+				}
+
+				/// <java-name>
+				/// inheritedChannel
+				/// </java-name>
+				[Dot42.DexImport("inheritedChannel", "()Ljava/nio/channels/Channel;", AccessFlags = 9)]
+				public static global::Java.Nio.Channels.IChannel InheritedChannel() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Nio.Channels.IChannel);
+				}
+
+				/// <java-name>
+				/// getProperties
+				/// </java-name>
+				[Dot42.DexImport("getProperties", "()Ljava/util/Properties;", AccessFlags = 9)]
+				public static global::Java.Util.Properties GetProperties() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.Properties);
+				}
+
+				/// <java-name>
+				/// getProperty
+				/// </java-name>
+				[Dot42.DexImport("getProperty", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetProperty(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getProperty
+				/// </java-name>
+				[Dot42.DexImport("getProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GetProperty(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// setProperty
+				/// </java-name>
+				[Dot42.DexImport("setProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string SetProperty(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// clearProperty
+				/// </java-name>
+				[Dot42.DexImport("clearProperty", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string ClearProperty(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// console
+				/// </java-name>
+				[Dot42.DexImport("console", "()Ljava/io/Console;", AccessFlags = 9)]
+				public static global::Java.Io.Console Console() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.Console);
+				}
+
+				/// <java-name>
+				/// getSecurityManager
+				/// </java-name>
+				[Dot42.DexImport("getSecurityManager", "()Ljava/lang/SecurityManager;", AccessFlags = 9)]
+				public static global::Java.Lang.SecurityManager GetSecurityManager() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.SecurityManager);
+				}
+
+				/// <java-name>
+				/// identityHashCode
+				/// </java-name>
+				[Dot42.DexImport("identityHashCode", "(Ljava/lang/Object;)I", AccessFlags = 265)]
+				public static int IdentityHashCode(object @object) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// load
+				/// </java-name>
+				[Dot42.DexImport("load", "(Ljava/lang/String;)V", AccessFlags = 9)]
+				public static void Load(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// loadLibrary
+				/// </java-name>
+				[Dot42.DexImport("loadLibrary", "(Ljava/lang/String;)V", AccessFlags = 9)]
+				public static void LoadLibrary(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runFinalization
+				/// </java-name>
+				[Dot42.DexImport("runFinalization", "()V", AccessFlags = 9)]
+				public static void RunFinalization() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// runFinalizersOnExit
+				/// </java-name>
+				[Dot42.DexImport("runFinalizersOnExit", "(Z)V", AccessFlags = 9)]
+				public static void RunFinalizersOnExit(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setProperties
+				/// </java-name>
+				[Dot42.DexImport("setProperties", "(Ljava/util/Properties;)V", AccessFlags = 9)]
+				public static void SetProperties(global::Java.Util.Properties properties) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setSecurityManager
+				/// </java-name>
+				[Dot42.DexImport("setSecurityManager", "(Ljava/lang/SecurityManager;)V", AccessFlags = 9)]
+				public static void SetSecurityManager(global::Java.Lang.SecurityManager securityManager) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// mapLibraryName
+				/// </java-name>
+				[Dot42.DexImport("mapLibraryName", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 265)]
+				public static string MapLibraryName(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getenv
+				/// </java-name>
+				public static global::Java.Util.IMap<string, string> env
+				{
+				[Dot42.DexImport("getenv", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
+						get{ return Getenv(); }
+				}
+
+				/// <java-name>
+				/// getProperties
+				/// </java-name>
+				public static global::Java.Util.Properties Properties
+				{
+				[Dot42.DexImport("getProperties", "()Ljava/util/Properties;", AccessFlags = 9)]
+						get{ return GetProperties(); }
+				[Dot42.DexImport("setProperties", "(Ljava/util/Properties;)V", AccessFlags = 9)]
+						set{ SetProperties(value); }
+				}
+
+				/// <java-name>
+				/// getSecurityManager
+				/// </java-name>
+				public static global::Java.Lang.SecurityManager SecurityManager
+				{
+				[Dot42.DexImport("getSecurityManager", "()Ljava/lang/SecurityManager;", AccessFlags = 9)]
+						get{ return GetSecurityManager(); }
+				[Dot42.DexImport("setSecurityManager", "(Ljava/lang/SecurityManager;)V", AccessFlags = 9)]
+						set{ SetSecurityManager(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/ThreadDeath
+		/// </java-name>
+		[Dot42.DexImport("java/lang/ThreadDeath", AccessFlags = 33)]
+		public partial class ThreadDeath : global::Java.Lang.Error
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ThreadDeath() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/ThreadGroup
+		/// </java-name>
+		[Dot42.DexImport("java/lang/ThreadGroup", AccessFlags = 33)]
+		public partial class ThreadGroup : global::System.Threading.Thread.IUncaughtExceptionHandler
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ThreadGroup(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/ThreadGroup;Ljava/lang/String;)V", AccessFlags = 1)]
+				public ThreadGroup(global::Java.Lang.ThreadGroup threadGroup, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// activeCount
+				/// </java-name>
+				[Dot42.DexImport("activeCount", "()I", AccessFlags = 1)]
+				public virtual int ActiveCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// activeGroupCount
+				/// </java-name>
+				[Dot42.DexImport("activeGroupCount", "()I", AccessFlags = 1)]
+				public virtual int ActiveGroupCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// allowThreadSuspension
+				/// </java-name>
+				[Dot42.DexImport("allowThreadSuspension", "(Z)Z", AccessFlags = 1)]
+				public virtual bool AllowThreadSuspension(bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// checkAccess
+				/// </java-name>
+				[Dot42.DexImport("checkAccess", "()V", AccessFlags = 17)]
+				public void CheckAccess() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// destroy
+				/// </java-name>
+				[Dot42.DexImport("destroy", "()V", AccessFlags = 17)]
+				public void Destroy() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// enumerate
+				/// </java-name>
+				[Dot42.DexImport("enumerate", "([Ljava/lang/Thread;)I", AccessFlags = 1)]
+				public virtual int Enumerate(global::System.Threading.Thread[] thread) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// enumerate
+				/// </java-name>
+				[Dot42.DexImport("enumerate", "([Ljava/lang/Thread;Z)I", AccessFlags = 1)]
+				public virtual int Enumerate(global::System.Threading.Thread[] thread, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// enumerate
+				/// </java-name>
+				[Dot42.DexImport("enumerate", "([Ljava/lang/ThreadGroup;)I", AccessFlags = 1)]
+				public virtual int Enumerate(global::Java.Lang.ThreadGroup[] threadGroup) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// enumerate
+				/// </java-name>
+				[Dot42.DexImport("enumerate", "([Ljava/lang/ThreadGroup;Z)I", AccessFlags = 1)]
+				public virtual int Enumerate(global::Java.Lang.ThreadGroup[] threadGroup, bool boolean) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getMaxPriority
+				/// </java-name>
+				[Dot42.DexImport("getMaxPriority", "()I", AccessFlags = 17)]
+				public int GetMaxPriority() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
+				public string GetName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getParent
+				/// </java-name>
+				[Dot42.DexImport("getParent", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
+				public global::Java.Lang.ThreadGroup GetParent() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ThreadGroup);
+				}
+
+				/// <java-name>
+				/// interrupt
+				/// </java-name>
+				[Dot42.DexImport("interrupt", "()V", AccessFlags = 17)]
+				public void Interrupt() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isDaemon
+				/// </java-name>
+				[Dot42.DexImport("isDaemon", "()Z", AccessFlags = 17)]
+				public bool IsDaemon() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isDestroyed
+				/// </java-name>
+				[Dot42.DexImport("isDestroyed", "()Z", AccessFlags = 33)]
+				public virtual bool IsDestroyed() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// list
+				/// </java-name>
+				[Dot42.DexImport("list", "()V", AccessFlags = 1)]
+				public virtual void List() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// parentOf
+				/// </java-name>
+				[Dot42.DexImport("parentOf", "(Ljava/lang/ThreadGroup;)Z", AccessFlags = 17)]
+				public bool ParentOf(global::Java.Lang.ThreadGroup threadGroup) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// resume
+				/// </java-name>
+				[Dot42.DexImport("resume", "()V", AccessFlags = 17)]
+				public void Resume() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setDaemon
+				/// </java-name>
+				[Dot42.DexImport("setDaemon", "(Z)V", AccessFlags = 17)]
+				public void SetDaemon(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setMaxPriority
+				/// </java-name>
+				[Dot42.DexImport("setMaxPriority", "(I)V", AccessFlags = 17)]
+				public void SetMaxPriority(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// stop
+				/// </java-name>
+				[Dot42.DexImport("stop", "()V", AccessFlags = 17)]
+				public void Stop() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// suspend
+				/// </java-name>
+				[Dot42.DexImport("suspend", "()V", AccessFlags = 17)]
+				public void Suspend() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// uncaughtException
+				/// </java-name>
+				[Dot42.DexImport("uncaughtException", "(Ljava/lang/Thread;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public virtual void UncaughtException(global::System.Threading.Thread thread, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ThreadGroup() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getMaxPriority
+				/// </java-name>
+				public int MaxPriority
+				{
+				[Dot42.DexImport("getMaxPriority", "()I", AccessFlags = 17)]
+						get{ return GetMaxPriority(); }
+				[Dot42.DexImport("setMaxPriority", "(I)V", AccessFlags = 17)]
+						set{ SetMaxPriority(value); }
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				public string Name
+				{
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return GetName(); }
+				}
+
+				/// <java-name>
+				/// getParent
+				/// </java-name>
+				public global::Java.Lang.ThreadGroup Parent
+				{
+				[Dot42.DexImport("getParent", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
+						get{ return GetParent(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/ThreadLocal
+		/// </java-name>
+		[Dot42.DexImport("java/lang/ThreadLocal", AccessFlags = 33, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;")]
+		public partial class ThreadLocal<T>
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ThreadLocal() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// get
+				/// </java-name>
+				[Dot42.DexImport("get", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TT;")]
+				public virtual T Get() /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// initialValue
+				/// </java-name>
+				[Dot42.DexImport("initialValue", "()Ljava/lang/Object;", AccessFlags = 4, Signature = "()TT;")]
+				protected internal virtual T InitialValue() /* MethodBuilder.Create */ 
+				{
+						return default(T);
+				}
+
+				/// <java-name>
+				/// set
+				/// </java-name>
+				[Dot42.DexImport("set", "(Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TT;)V")]
+				public virtual void Set(T t) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// remove
+				/// </java-name>
+				[Dot42.DexImport("remove", "()V", AccessFlags = 1)]
+				public virtual void Remove() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/TypeNotPresentException
+		/// </java-name>
+		[Dot42.DexImport("java/lang/TypeNotPresentException", AccessFlags = 33)]
+		public partial class TypeNotPresentException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public TypeNotPresentException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// typeName
+				/// </java-name>
+				[Dot42.DexImport("typeName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string TypeName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal TypeNotPresentException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/UnknownError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/UnknownError", AccessFlags = 33)]
+		public partial class UnknownError : global::Java.Lang.VirtualMachineError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public UnknownError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public UnknownError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/UnsatisfiedLinkError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/UnsatisfiedLinkError", AccessFlags = 33)]
+		public partial class UnsatisfiedLinkError : global::Java.Lang.LinkageError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public UnsatisfiedLinkError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public UnsatisfiedLinkError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/UnsupportedClassVersionError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/UnsupportedClassVersionError", AccessFlags = 33)]
+		public partial class UnsupportedClassVersionError : global::Java.Lang.ClassFormatError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public UnsupportedClassVersionError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public UnsupportedClassVersionError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// java/lang/UnsupportedOperationException
 		/// </java-name>
 		[Dot42.DexImport("java/lang/UnsupportedOperationException", AccessFlags = 33)]
@@ -4651,6 +4613,44 @@ namespace Java.Lang
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
 				public UnsupportedOperationException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/VerifyError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/VerifyError", AccessFlags = 33)]
+		public partial class VerifyError : global::Java.Lang.LinkageError
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public VerifyError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public VerifyError(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/lang/VirtualMachineError
+		/// </java-name>
+		[Dot42.DexImport("java/lang/VirtualMachineError", AccessFlags = 1057)]
+		public abstract partial class VirtualMachineError : global::Java.Lang.Error
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public VirtualMachineError() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public VirtualMachineError(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 

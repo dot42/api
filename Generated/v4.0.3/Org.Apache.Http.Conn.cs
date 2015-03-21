@@ -2,25 +2,6 @@
 namespace Org.Apache.Http.Conn
 {
 		/// <java-name>
-		/// org/apache/http/conn/ConnectTimeoutException
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ConnectTimeoutException", AccessFlags = 33)]
-		public partial class ConnectTimeoutException : global::Java.Io.InterruptedIOException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ConnectTimeoutException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ConnectTimeoutException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/conn/BasicEofSensorWatcher
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/conn/BasicEofSensorWatcher", AccessFlags = 33)]
@@ -73,238 +54,6 @@ namespace Org.Apache.Http.Conn
 				internal BasicEofSensorWatcher() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/conn/ManagedClientConnection
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", AccessFlags = 1537)]
-		public partial interface IManagedClientConnection : global::Org.Apache.Http.IHttpClientConnection, global::Org.Apache.Http.IHttpInetConnection, global::Org.Apache.Http.Conn.IConnectionReleaseTrigger
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
-				bool IsSecure() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getRoute
-				/// </java-name>
-				[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.Routing.HttpRoute GetRoute() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSSLSession
-				/// </java-name>
-				[Dot42.DexImport("getSSLSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
-				global::Javax.Net.Ssl.ISSLSession GetSSLSession() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// open
-				/// </java-name>
-				[Dot42.DexImport("open", "(Lorg/apache/http/conn/routing/HttpRoute;Lorg/apache/http/protocol/HttpContext;Lo" +
-    "rg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
-				void Open(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, global::Org.Apache.Http.Protocol.IHttpContext httpContext, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// tunnelTarget
-				/// </java-name>
-				[Dot42.DexImport("tunnelTarget", "(ZLorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
-				void TunnelTarget(bool boolean, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// tunnelProxy
-				/// </java-name>
-				[Dot42.DexImport("tunnelProxy", "(Lorg/apache/http/HttpHost;ZLorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
-				void TunnelProxy(global::Org.Apache.Http.HttpHost httpHost, bool boolean, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// layerProtocol
-				/// </java-name>
-				[Dot42.DexImport("layerProtocol", "(Lorg/apache/http/protocol/HttpContext;Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
-				void LayerProtocol(global::Org.Apache.Http.Protocol.IHttpContext httpContext, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// markReusable
-				/// </java-name>
-				[Dot42.DexImport("markReusable", "()V", AccessFlags = 1025)]
-				void MarkReusable() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// unmarkReusable
-				/// </java-name>
-				[Dot42.DexImport("unmarkReusable", "()V", AccessFlags = 1025)]
-				void UnmarkReusable() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isMarkedReusable
-				/// </java-name>
-				[Dot42.DexImport("isMarkedReusable", "()Z", AccessFlags = 1025)]
-				bool IsMarkedReusable() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setState
-				/// </java-name>
-				[Dot42.DexImport("setState", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
-				void SetState(object @object) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()Ljava/lang/Object;", AccessFlags = 1025)]
-				object GetState() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setIdleDuration
-				/// </java-name>
-				[Dot42.DexImport("setIdleDuration", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1025)]
-				void SetIdleDuration(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/conn/ClientConnectionOperator
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ClientConnectionOperator", AccessFlags = 1537)]
-		public partial interface IClientConnectionOperator
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// createConnection
-				/// </java-name>
-				[Dot42.DexImport("createConnection", "()Lorg/apache/http/conn/OperatedClientConnection;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.IOperatedClientConnection CreateConnection() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// openConnection
-				/// </java-name>
-				[Dot42.DexImport("openConnection", "(Lorg/apache/http/conn/OperatedClientConnection;Lorg/apache/http/HttpHost;Ljava/n" +
-    "et/InetAddress;Lorg/apache/http/protocol/HttpContext;Lorg/apache/http/params/Htt" +
-    "pParams;)V", AccessFlags = 1025)]
-				void OpenConnection(global::Org.Apache.Http.Conn.IOperatedClientConnection operatedClientConnection, global::Org.Apache.Http.HttpHost httpHost, global::Java.Net.InetAddress inetAddress, global::Org.Apache.Http.Protocol.IHttpContext httpContext, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// updateSecureConnection
-				/// </java-name>
-				[Dot42.DexImport("updateSecureConnection", "(Lorg/apache/http/conn/OperatedClientConnection;Lorg/apache/http/HttpHost;Lorg/ap" +
-    "ache/http/protocol/HttpContext;Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
-				void UpdateSecureConnection(global::Org.Apache.Http.Conn.IOperatedClientConnection operatedClientConnection, global::Org.Apache.Http.HttpHost httpHost, global::Org.Apache.Http.Protocol.IHttpContext httpContext, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/conn/ClientConnectionManager
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ClientConnectionManager", AccessFlags = 1537)]
-		public partial interface IClientConnectionManager
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getSchemeRegistry
-				/// </java-name>
-				[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.Scheme.SchemeRegistry GetSchemeRegistry() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// requestConnection
-				/// </java-name>
-				[Dot42.DexImport("requestConnection", "(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;)Lorg/apache/http/conn" +
-    "/ClientConnectionRequest;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.IClientConnectionRequest RequestConnection(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, object @object) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// releaseConnection
-				/// </java-name>
-				[Dot42.DexImport("releaseConnection", "(Lorg/apache/http/conn/ManagedClientConnection;JLjava/util/concurrent/TimeUnit;)V" +
-    "", AccessFlags = 1025)]
-				void ReleaseConnection(global::Org.Apache.Http.Conn.IManagedClientConnection managedClientConnection, long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// closeIdleConnections
-				/// </java-name>
-				[Dot42.DexImport("closeIdleConnections", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1025)]
-				void CloseIdleConnections(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// closeExpiredConnections
-				/// </java-name>
-				[Dot42.DexImport("closeExpiredConnections", "()V", AccessFlags = 1025)]
-				void CloseExpiredConnections() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// shutdown
-				/// </java-name>
-				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1025)]
-				void Shutdown() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/conn/ClientConnectionRequest
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ClientConnectionRequest", AccessFlags = 1537)]
-		public partial interface IClientConnectionRequest
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getConnection
-				/// </java-name>
-				[Dot42.DexImport("getConnection", "(JLjava/util/concurrent/TimeUnit;)Lorg/apache/http/conn/ManagedClientConnection;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.IManagedClientConnection GetConnection(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// abortRequest
-				/// </java-name>
-				[Dot42.DexImport("abortRequest", "()V", AccessFlags = 1025)]
-				void AbortRequest() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/conn/ConnectionPoolTimeoutException
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ConnectionPoolTimeoutException", AccessFlags = 33)]
-		public partial class ConnectionPoolTimeoutException : global::Org.Apache.Http.Conn.ConnectTimeoutException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ConnectionPoolTimeoutException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ConnectionPoolTimeoutException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/conn/EofSensorWatcher
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/EofSensorWatcher", AccessFlags = 1537)]
-		public partial interface IEofSensorWatcher
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// eofDetected
-				/// </java-name>
-				[Dot42.DexImport("eofDetected", "(Ljava/io/InputStream;)Z", AccessFlags = 1025)]
-				bool EofDetected(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// streamClosed
-				/// </java-name>
-				[Dot42.DexImport("streamClosed", "(Ljava/io/InputStream;)Z", AccessFlags = 1025)]
-				bool StreamClosed(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// streamAbort
-				/// </java-name>
-				[Dot42.DexImport("streamAbort", "(Ljava/io/InputStream;)Z", AccessFlags = 1025)]
-				bool StreamAbort(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -432,18 +181,40 @@ namespace Org.Apache.Http.Conn
 		}
 
 		/// <java-name>
-		/// org/apache/http/conn/ClientConnectionManagerFactory
+		/// org/apache/http/conn/ConnectionPoolTimeoutException
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ClientConnectionManagerFactory", AccessFlags = 1537)]
-		public partial interface IClientConnectionManagerFactory
+		[Dot42.DexImport("org/apache/http/conn/ConnectionPoolTimeoutException", AccessFlags = 33)]
+		public partial class ConnectionPoolTimeoutException : global::Org.Apache.Http.Conn.ConnectTimeoutException
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// newInstance
-				/// </java-name>
-				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/scheme/SchemeRegistry;)" +
-    "Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.IClientConnectionManager NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams, global::Org.Apache.Http.Conn.Scheme.SchemeRegistry schemeRegistry) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ConnectionPoolTimeoutException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ConnectionPoolTimeoutException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/conn/ConnectTimeoutException
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/ConnectTimeoutException", AccessFlags = 33)]
+		public partial class ConnectTimeoutException : global::Java.Io.InterruptedIOException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public ConnectTimeoutException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public ConnectTimeoutException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
 
 		}
 
@@ -620,6 +391,271 @@ namespace Org.Apache.Http.Conn
 		}
 
 		/// <java-name>
+		/// org/apache/http/conn/ClientConnectionManager
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/ClientConnectionManager", AccessFlags = 1537)]
+		public partial interface IClientConnectionManager
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// getSchemeRegistry
+				/// </java-name>
+				[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Conn.Scheme.SchemeRegistry GetSchemeRegistry() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// requestConnection
+				/// </java-name>
+				[Dot42.DexImport("requestConnection", "(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;)Lorg/apache/http/conn" +
+    "/ClientConnectionRequest;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Conn.IClientConnectionRequest RequestConnection(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, object @object) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// releaseConnection
+				/// </java-name>
+				[Dot42.DexImport("releaseConnection", "(Lorg/apache/http/conn/ManagedClientConnection;JLjava/util/concurrent/TimeUnit;)V" +
+    "", AccessFlags = 1025)]
+				void ReleaseConnection(global::Org.Apache.Http.Conn.IManagedClientConnection managedClientConnection, long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// closeIdleConnections
+				/// </java-name>
+				[Dot42.DexImport("closeIdleConnections", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1025)]
+				void CloseIdleConnections(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// closeExpiredConnections
+				/// </java-name>
+				[Dot42.DexImport("closeExpiredConnections", "()V", AccessFlags = 1025)]
+				void CloseExpiredConnections() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// shutdown
+				/// </java-name>
+				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1025)]
+				void Shutdown() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/conn/ClientConnectionManagerFactory
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/ClientConnectionManagerFactory", AccessFlags = 1537)]
+		public partial interface IClientConnectionManagerFactory
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// newInstance
+				/// </java-name>
+				[Dot42.DexImport("newInstance", "(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/scheme/SchemeRegistry;)" +
+    "Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Conn.IClientConnectionManager NewInstance(global::Org.Apache.Http.Params.IHttpParams httpParams, global::Org.Apache.Http.Conn.Scheme.SchemeRegistry schemeRegistry) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/conn/ClientConnectionOperator
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/ClientConnectionOperator", AccessFlags = 1537)]
+		public partial interface IClientConnectionOperator
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// createConnection
+				/// </java-name>
+				[Dot42.DexImport("createConnection", "()Lorg/apache/http/conn/OperatedClientConnection;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Conn.IOperatedClientConnection CreateConnection() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// openConnection
+				/// </java-name>
+				[Dot42.DexImport("openConnection", "(Lorg/apache/http/conn/OperatedClientConnection;Lorg/apache/http/HttpHost;Ljava/n" +
+    "et/InetAddress;Lorg/apache/http/protocol/HttpContext;Lorg/apache/http/params/Htt" +
+    "pParams;)V", AccessFlags = 1025)]
+				void OpenConnection(global::Org.Apache.Http.Conn.IOperatedClientConnection operatedClientConnection, global::Org.Apache.Http.HttpHost httpHost, global::Java.Net.InetAddress inetAddress, global::Org.Apache.Http.Protocol.IHttpContext httpContext, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// updateSecureConnection
+				/// </java-name>
+				[Dot42.DexImport("updateSecureConnection", "(Lorg/apache/http/conn/OperatedClientConnection;Lorg/apache/http/HttpHost;Lorg/ap" +
+    "ache/http/protocol/HttpContext;Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
+				void UpdateSecureConnection(global::Org.Apache.Http.Conn.IOperatedClientConnection operatedClientConnection, global::Org.Apache.Http.HttpHost httpHost, global::Org.Apache.Http.Protocol.IHttpContext httpContext, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/conn/ClientConnectionRequest
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/ClientConnectionRequest", AccessFlags = 1537)]
+		public partial interface IClientConnectionRequest
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// getConnection
+				/// </java-name>
+				[Dot42.DexImport("getConnection", "(JLjava/util/concurrent/TimeUnit;)Lorg/apache/http/conn/ManagedClientConnection;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Conn.IManagedClientConnection GetConnection(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// abortRequest
+				/// </java-name>
+				[Dot42.DexImport("abortRequest", "()V", AccessFlags = 1025)]
+				void AbortRequest() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/conn/ConnectionKeepAliveStrategy
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/ConnectionKeepAliveStrategy", AccessFlags = 1537)]
+		public partial interface IConnectionKeepAliveStrategy
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// getKeepAliveDuration
+				/// </java-name>
+				[Dot42.DexImport("getKeepAliveDuration", "(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)J", AccessFlags = 1025)]
+				long GetKeepAliveDuration(global::Org.Apache.Http.IHttpResponse httpResponse, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/conn/ConnectionReleaseTrigger
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/ConnectionReleaseTrigger", AccessFlags = 1537)]
+		public partial interface IConnectionReleaseTrigger
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// releaseConnection
+				/// </java-name>
+				[Dot42.DexImport("releaseConnection", "()V", AccessFlags = 1025)]
+				void ReleaseConnection() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// abortConnection
+				/// </java-name>
+				[Dot42.DexImport("abortConnection", "()V", AccessFlags = 1025)]
+				void AbortConnection() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/conn/EofSensorWatcher
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/EofSensorWatcher", AccessFlags = 1537)]
+		public partial interface IEofSensorWatcher
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// eofDetected
+				/// </java-name>
+				[Dot42.DexImport("eofDetected", "(Ljava/io/InputStream;)Z", AccessFlags = 1025)]
+				bool EofDetected(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// streamClosed
+				/// </java-name>
+				[Dot42.DexImport("streamClosed", "(Ljava/io/InputStream;)Z", AccessFlags = 1025)]
+				bool StreamClosed(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// streamAbort
+				/// </java-name>
+				[Dot42.DexImport("streamAbort", "(Ljava/io/InputStream;)Z", AccessFlags = 1025)]
+				bool StreamAbort(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/conn/ManagedClientConnection
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", AccessFlags = 1537)]
+		public partial interface IManagedClientConnection : global::Org.Apache.Http.IHttpClientConnection, global::Org.Apache.Http.IHttpInetConnection, global::Org.Apache.Http.Conn.IConnectionReleaseTrigger
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
+				bool IsSecure() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getRoute
+				/// </java-name>
+				[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1025)]
+				global::Org.Apache.Http.Conn.Routing.HttpRoute GetRoute() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getSSLSession
+				/// </java-name>
+				[Dot42.DexImport("getSSLSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
+				global::Javax.Net.Ssl.ISSLSession GetSSLSession() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// open
+				/// </java-name>
+				[Dot42.DexImport("open", "(Lorg/apache/http/conn/routing/HttpRoute;Lorg/apache/http/protocol/HttpContext;Lo" +
+    "rg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
+				void Open(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, global::Org.Apache.Http.Protocol.IHttpContext httpContext, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// tunnelTarget
+				/// </java-name>
+				[Dot42.DexImport("tunnelTarget", "(ZLorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
+				void TunnelTarget(bool boolean, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// tunnelProxy
+				/// </java-name>
+				[Dot42.DexImport("tunnelProxy", "(Lorg/apache/http/HttpHost;ZLorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
+				void TunnelProxy(global::Org.Apache.Http.HttpHost httpHost, bool boolean, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// layerProtocol
+				/// </java-name>
+				[Dot42.DexImport("layerProtocol", "(Lorg/apache/http/protocol/HttpContext;Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
+				void LayerProtocol(global::Org.Apache.Http.Protocol.IHttpContext httpContext, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// markReusable
+				/// </java-name>
+				[Dot42.DexImport("markReusable", "()V", AccessFlags = 1025)]
+				void MarkReusable() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// unmarkReusable
+				/// </java-name>
+				[Dot42.DexImport("unmarkReusable", "()V", AccessFlags = 1025)]
+				void UnmarkReusable() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isMarkedReusable
+				/// </java-name>
+				[Dot42.DexImport("isMarkedReusable", "()Z", AccessFlags = 1025)]
+				bool IsMarkedReusable() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setState
+				/// </java-name>
+				[Dot42.DexImport("setState", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
+				void SetState(object @object) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getState
+				/// </java-name>
+				[Dot42.DexImport("getState", "()Ljava/lang/Object;", AccessFlags = 1025)]
+				object GetState() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setIdleDuration
+				/// </java-name>
+				[Dot42.DexImport("setIdleDuration", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1025)]
+				void SetIdleDuration(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
 		/// org/apache/http/conn/OperatedClientConnection
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/conn/OperatedClientConnection", AccessFlags = 1537)]
@@ -662,42 +698,6 @@ namespace Org.Apache.Http.Conn
 				[Dot42.DexImport("update", "(Ljava/net/Socket;Lorg/apache/http/HttpHost;ZLorg/apache/http/params/HttpParams;)" +
     "V", AccessFlags = 1025)]
 				void Update(global::Java.Net.Socket socket, global::Org.Apache.Http.HttpHost httpHost, bool boolean, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/conn/ConnectionReleaseTrigger
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ConnectionReleaseTrigger", AccessFlags = 1537)]
-		public partial interface IConnectionReleaseTrigger
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// releaseConnection
-				/// </java-name>
-				[Dot42.DexImport("releaseConnection", "()V", AccessFlags = 1025)]
-				void ReleaseConnection() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// abortConnection
-				/// </java-name>
-				[Dot42.DexImport("abortConnection", "()V", AccessFlags = 1025)]
-				void AbortConnection() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/conn/ConnectionKeepAliveStrategy
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ConnectionKeepAliveStrategy", AccessFlags = 1537)]
-		public partial interface IConnectionKeepAliveStrategy
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getKeepAliveDuration
-				/// </java-name>
-				[Dot42.DexImport("getKeepAliveDuration", "(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)J", AccessFlags = 1025)]
-				long GetKeepAliveDuration(global::Org.Apache.Http.IHttpResponse httpResponse, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ ;
 
 		}
 

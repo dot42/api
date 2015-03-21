@@ -83,6 +83,108 @@ namespace Android.Net.Rtp
 		}
 
 		/// <java-name>
+		/// android/net/rtp/AudioGroup
+		/// </java-name>
+		[Dot42.DexImport("android/net/rtp/AudioGroup", AccessFlags = 33)]
+		public partial class AudioGroup
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// MODE_ON_HOLD
+				/// </java-name>
+				[Dot42.DexImport("MODE_ON_HOLD", "I", AccessFlags = 25)]
+				public const int MODE_ON_HOLD = 0;
+				/// <java-name>
+				/// MODE_MUTED
+				/// </java-name>
+				[Dot42.DexImport("MODE_MUTED", "I", AccessFlags = 25)]
+				public const int MODE_MUTED = 1;
+				/// <java-name>
+				/// MODE_NORMAL
+				/// </java-name>
+				[Dot42.DexImport("MODE_NORMAL", "I", AccessFlags = 25)]
+				public const int MODE_NORMAL = 2;
+				/// <java-name>
+				/// MODE_ECHO_SUPPRESSION
+				/// </java-name>
+				[Dot42.DexImport("MODE_ECHO_SUPPRESSION", "I", AccessFlags = 25)]
+				public const int MODE_ECHO_SUPPRESSION = 3;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AudioGroup() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getStreams
+				/// </java-name>
+				[Dot42.DexImport("getStreams", "()[Landroid/net/rtp/AudioStream;", AccessFlags = 1)]
+				public virtual global::Android.Net.Rtp.AudioStream[] GetStreams() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Net.Rtp.AudioStream[]);
+				}
+
+				/// <java-name>
+				/// getMode
+				/// </java-name>
+				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
+				public virtual int GetMode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setMode
+				/// </java-name>
+				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
+				public virtual void SetMode(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// sendDtmf
+				/// </java-name>
+				[Dot42.DexImport("sendDtmf", "(I)V", AccessFlags = 1)]
+				public virtual void SendDtmf(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// clear
+				/// </java-name>
+				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
+				public virtual void Clear() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~AudioGroup() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getStreams
+				/// </java-name>
+				public global::Android.Net.Rtp.AudioStream[] Streams
+				{
+				[Dot42.DexImport("getStreams", "()[Landroid/net/rtp/AudioStream;", AccessFlags = 1)]
+						get{ return GetStreams(); }
+				}
+
+				/// <java-name>
+				/// getMode
+				/// </java-name>
+				public int Mode
+				{
+				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
+						get{ return GetMode(); }
+				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
+						set{ SetMode(value); }
+				}
+
+		}
+
+		/// <java-name>
 		/// android/net/rtp/AudioStream
 		/// </java-name>
 		[Dot42.DexImport("android/net/rtp/AudioStream", AccessFlags = 33)]
@@ -337,108 +439,6 @@ namespace Android.Net.Rtp
 				{
 				[Dot42.DexImport("getRemotePort", "()I", AccessFlags = 1)]
 						get{ return GetRemotePort(); }
-				}
-
-				/// <java-name>
-				/// getMode
-				/// </java-name>
-				public int Mode
-				{
-				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
-						get{ return GetMode(); }
-				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
-						set{ SetMode(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/net/rtp/AudioGroup
-		/// </java-name>
-		[Dot42.DexImport("android/net/rtp/AudioGroup", AccessFlags = 33)]
-		public partial class AudioGroup
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// MODE_ON_HOLD
-				/// </java-name>
-				[Dot42.DexImport("MODE_ON_HOLD", "I", AccessFlags = 25)]
-				public const int MODE_ON_HOLD = 0;
-				/// <java-name>
-				/// MODE_MUTED
-				/// </java-name>
-				[Dot42.DexImport("MODE_MUTED", "I", AccessFlags = 25)]
-				public const int MODE_MUTED = 1;
-				/// <java-name>
-				/// MODE_NORMAL
-				/// </java-name>
-				[Dot42.DexImport("MODE_NORMAL", "I", AccessFlags = 25)]
-				public const int MODE_NORMAL = 2;
-				/// <java-name>
-				/// MODE_ECHO_SUPPRESSION
-				/// </java-name>
-				[Dot42.DexImport("MODE_ECHO_SUPPRESSION", "I", AccessFlags = 25)]
-				public const int MODE_ECHO_SUPPRESSION = 3;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AudioGroup() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getStreams
-				/// </java-name>
-				[Dot42.DexImport("getStreams", "()[Landroid/net/rtp/AudioStream;", AccessFlags = 1)]
-				public virtual global::Android.Net.Rtp.AudioStream[] GetStreams() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Rtp.AudioStream[]);
-				}
-
-				/// <java-name>
-				/// getMode
-				/// </java-name>
-				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
-				public virtual int GetMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setMode
-				/// </java-name>
-				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// sendDtmf
-				/// </java-name>
-				[Dot42.DexImport("sendDtmf", "(I)V", AccessFlags = 1)]
-				public virtual void SendDtmf(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// clear
-				/// </java-name>
-				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
-				public virtual void Clear() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~AudioGroup() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getStreams
-				/// </java-name>
-				public global::Android.Net.Rtp.AudioStream[] Streams
-				{
-				[Dot42.DexImport("getStreams", "()[Landroid/net/rtp/AudioStream;", AccessFlags = 1)]
-						get{ return GetStreams(); }
 				}
 
 				/// <java-name>

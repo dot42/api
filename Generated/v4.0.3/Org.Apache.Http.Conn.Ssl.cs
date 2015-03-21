@@ -2,37 +2,6 @@
 namespace Org.Apache.Http.Conn.Ssl
 {
 		/// <java-name>
-		/// org/apache/http/conn/ssl/AllowAllHostnameVerifier
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ssl/AllowAllHostnameVerifier", AccessFlags = 33)]
-		public partial class AllowAllHostnameVerifier : global::Org.Apache.Http.Conn.Ssl.AbstractVerifier
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AllowAllHostnameVerifier() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// verify
-				/// </java-name>
-				[Dot42.DexImport("verify", "(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V", AccessFlags = 17)]
-				public override void Verify(string @string, string[] string1, string[] string2) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 17)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/conn/ssl/AbstractVerifier
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/conn/ssl/AbstractVerifier", AccessFlags = 1057)]
@@ -121,14 +90,45 @@ namespace Org.Apache.Http.Conn.Ssl
 		}
 
 		/// <java-name>
-		/// org/apache/http/conn/ssl/StrictHostnameVerifier
+		/// org/apache/http/conn/ssl/AllowAllHostnameVerifier
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ssl/StrictHostnameVerifier", AccessFlags = 33)]
-		public partial class StrictHostnameVerifier : global::Org.Apache.Http.Conn.Ssl.AbstractVerifier
+		[Dot42.DexImport("org/apache/http/conn/ssl/AllowAllHostnameVerifier", AccessFlags = 33)]
+		public partial class AllowAllHostnameVerifier : global::Org.Apache.Http.Conn.Ssl.AbstractVerifier
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public StrictHostnameVerifier() /* MethodBuilder.Create */ 
+				public AllowAllHostnameVerifier() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// verify
+				/// </java-name>
+				[Dot42.DexImport("verify", "(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V", AccessFlags = 17)]
+				public override void Verify(string @string, string[] string1, string[] string2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 17)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/conn/ssl/BrowserCompatHostnameVerifier
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/conn/ssl/BrowserCompatHostnameVerifier", AccessFlags = 33)]
+		public partial class BrowserCompatHostnameVerifier : global::Org.Apache.Http.Conn.Ssl.AbstractVerifier
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public BrowserCompatHostnameVerifier() /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -334,14 +334,14 @@ namespace Org.Apache.Http.Conn.Ssl
 		}
 
 		/// <java-name>
-		/// org/apache/http/conn/ssl/BrowserCompatHostnameVerifier
+		/// org/apache/http/conn/ssl/StrictHostnameVerifier
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/conn/ssl/BrowserCompatHostnameVerifier", AccessFlags = 33)]
-		public partial class BrowserCompatHostnameVerifier : global::Org.Apache.Http.Conn.Ssl.AbstractVerifier
+		[Dot42.DexImport("org/apache/http/conn/ssl/StrictHostnameVerifier", AccessFlags = 33)]
+		public partial class StrictHostnameVerifier : global::Org.Apache.Http.Conn.Ssl.AbstractVerifier
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public BrowserCompatHostnameVerifier() /* MethodBuilder.Create */ 
+				public StrictHostnameVerifier() /* MethodBuilder.Create */ 
 				{
 				}
 

@@ -2,56 +2,6 @@
 namespace Android.App.Backup
 {
 		/// <java-name>
-		/// android/app/backup/SharedPreferencesBackupHelper
-		/// </java-name>
-		[Dot42.DexImport("android/app/backup/SharedPreferencesBackupHelper", AccessFlags = 33)]
-		public partial class SharedPreferencesBackupHelper : global::Android.App.Backup.IBackupHelper
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;[Ljava/lang/String;)V", AccessFlags = 129)]
-				public SharedPreferencesBackupHelper(global::Android.Content.Context context, params string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// performBackup
-				/// </java-name>
-				[Dot42.DexImport("performBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
-    "s/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void PerformBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// restoreEntity
-				/// </java-name>
-				[Dot42.DexImport("restoreEntity", "(Landroid/app/backup/BackupDataInputStream;)V", AccessFlags = 1)]
-				public virtual void RestoreEntity(global::Android.App.Backup.BackupDataInputStream backupDataInputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~SharedPreferencesBackupHelper() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// writeNewStateDescription
-				/// </java-name>
-				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SharedPreferencesBackupHelper() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// android/app/backup/BackupAgent
 		/// </java-name>
 		[Dot42.DexImport("android/app/backup/BackupAgent", AccessFlags = 1057)]
@@ -129,97 +79,6 @@ namespace Android.App.Backup
 		}
 
 		/// <java-name>
-		/// android/app/backup/FileBackupHelper
-		/// </java-name>
-		[Dot42.DexImport("android/app/backup/FileBackupHelper", AccessFlags = 33)]
-		public partial class FileBackupHelper : global::Android.App.Backup.IBackupHelper
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;[Ljava/lang/String;)V", AccessFlags = 129)]
-				public FileBackupHelper(global::Android.Content.Context context, params string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// performBackup
-				/// </java-name>
-				[Dot42.DexImport("performBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
-    "s/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void PerformBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// restoreEntity
-				/// </java-name>
-				[Dot42.DexImport("restoreEntity", "(Landroid/app/backup/BackupDataInputStream;)V", AccessFlags = 1)]
-				public virtual void RestoreEntity(global::Android.App.Backup.BackupDataInputStream backupDataInputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~FileBackupHelper() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// writeNewStateDescription
-				/// </java-name>
-				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FileBackupHelper() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/app/backup/BackupDataOutput
-		/// </java-name>
-		[Dot42.DexImport("android/app/backup/BackupDataOutput", AccessFlags = 33)]
-		public partial class BackupDataOutput
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal BackupDataOutput() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// writeEntityHeader
-				/// </java-name>
-				[Dot42.DexImport("writeEntityHeader", "(Ljava/lang/String;I)I", AccessFlags = 1)]
-				public virtual int WriteEntityHeader(string @string, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeEntityData
-				/// </java-name>
-				[Dot42.DexImport("writeEntityData", "([BI)I", AccessFlags = 1)]
-				public virtual int WriteEntityData(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// writeEntityData
-				/// </java-name>
-				[Dot42.DexImport("writeEntityData", "([BI)I", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual int WriteEntityData(byte[] @byte, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-		}
-
-		/// <java-name>
 		/// android/app/backup/BackupAgentHelper
 		/// </java-name>
 		[Dot42.DexImport("android/app/backup/BackupAgentHelper", AccessFlags = 33)]
@@ -254,120 +113,6 @@ namespace Android.App.Backup
 				[Dot42.DexImport("addHelper", "(Ljava/lang/String;Landroid/app/backup/BackupHelper;)V", AccessFlags = 1)]
 				public virtual void AddHelper(string @string, global::Android.App.Backup.IBackupHelper backupHelper) /* MethodBuilder.Create */ 
 				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/app/backup/BackupHelper
-		/// </java-name>
-		[Dot42.DexImport("android/app/backup/BackupHelper", AccessFlags = 1537)]
-		public partial interface IBackupHelper
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// performBackup
-				/// </java-name>
-				[Dot42.DexImport("performBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
-    "s/ParcelFileDescriptor;)V", AccessFlags = 1025)]
-				void PerformBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// restoreEntity
-				/// </java-name>
-				[Dot42.DexImport("restoreEntity", "(Landroid/app/backup/BackupDataInputStream;)V", AccessFlags = 1025)]
-				void RestoreEntity(global::Android.App.Backup.BackupDataInputStream backupDataInputStream) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// writeNewStateDescription
-				/// </java-name>
-				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1025)]
-				void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/app/backup/BackupDataInputStream
-		/// </java-name>
-		[Dot42.DexImport("android/app/backup/BackupDataInputStream", AccessFlags = 33)]
-		public partial class BackupDataInputStream : global::Java.Io.InputStream
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal BackupDataInputStream() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// read
-				/// </java-name>
-				[Dot42.DexImport("read", "()I", AccessFlags = 1)]
-				public override int Read() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// read
-				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
-				public override int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// read
-				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
-				public override int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// read
-				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
-				public override int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// read
-				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
-				public override int Read(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetKey() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// size
-				/// </java-name>
-				[Dot42.DexImport("size", "()I", AccessFlags = 1)]
-				public virtual int Size() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				public string Key
-				{
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetKey(); }
 				}
 
 		}
@@ -458,81 +203,128 @@ namespace Android.App.Backup
 		}
 
 		/// <java-name>
-		/// android/app/backup/RestoreObserver
+		/// android/app/backup/BackupDataInputStream
 		/// </java-name>
-		[Dot42.DexImport("android/app/backup/RestoreObserver", AccessFlags = 1057)]
-		public abstract partial class RestoreObserver
+		[Dot42.DexImport("android/app/backup/BackupDataInputStream", AccessFlags = 33)]
+		public partial class BackupDataInputStream : global::Java.Io.InputStream
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RestoreObserver() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal BackupDataInputStream() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// restoreStarting
+				/// read
 				/// </java-name>
-				[Dot42.DexImport("restoreStarting", "(I)V", AccessFlags = 1)]
-				public virtual void RestoreStarting(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("read", "()I", AccessFlags = 1)]
+				public override int Read() /* MethodBuilder.Create */ 
 				{
+						return default(int);
 				}
 
 				/// <java-name>
-				/// onUpdate
+				/// read
 				/// </java-name>
-				[Dot42.DexImport("onUpdate", "(ILjava/lang/String;)V", AccessFlags = 1)]
-				public virtual void OnUpdate(int int32, string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				public override int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
+						return default(int);
 				}
 
 				/// <java-name>
-				/// restoreFinished
+				/// read
 				/// </java-name>
-				[Dot42.DexImport("restoreFinished", "(I)V", AccessFlags = 1)]
-				public virtual void RestoreFinished(int int32) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				public override int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// read
+				/// </java-name>
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				public override int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// read
+				/// </java-name>
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				public override int Read(byte[] @byte) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getKey
+				/// </java-name>
+				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetKey() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// size
+				/// </java-name>
+				[Dot42.DexImport("size", "()I", AccessFlags = 1)]
+				public virtual int Size() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getKey
+				/// </java-name>
+				public string Key
+				{
+				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetKey(); }
 				}
 
 		}
 
 		/// <java-name>
-		/// android/app/backup/FullBackupDataOutput
+		/// android/app/backup/BackupDataOutput
 		/// </java-name>
-		[Dot42.DexImport("android/app/backup/FullBackupDataOutput", AccessFlags = 33)]
-		public partial class FullBackupDataOutput
+		[Dot42.DexImport("android/app/backup/BackupDataOutput", AccessFlags = 33)]
+		public partial class BackupDataOutput
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal FullBackupDataOutput() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/app/backup/FileBackupHelperBase
-		/// </java-name>
-		[Dot42.DexImport("android/app/backup/FileBackupHelperBase", AccessFlags = 32)]
-		internal partial class FileBackupHelperBase
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal FileBackupHelperBase() /* MethodBuilder.Create */ 
+				internal BackupDataOutput() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// finalize
+				/// writeEntityHeader
 				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~FileBackupHelperBase() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("writeEntityHeader", "(Ljava/lang/String;I)I", AccessFlags = 1)]
+				public virtual int WriteEntityHeader(string @string, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
 
 				/// <java-name>
-				/// writeNewStateDescription
+				/// writeEntityData
 				/// </java-name>
-				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("writeEntityData", "([BI)I", AccessFlags = 1)]
+				public virtual int WriteEntityData(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
 				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// writeEntityData
+				/// </java-name>
+				[Dot42.DexImport("writeEntityData", "([BI)I", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual int WriteEntityData(byte[] @byte, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(int);
 				}
 
 		}
@@ -576,6 +368,214 @@ namespace Android.App.Backup
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal BackupManager() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/app/backup/FileBackupHelper
+		/// </java-name>
+		[Dot42.DexImport("android/app/backup/FileBackupHelper", AccessFlags = 33)]
+		public partial class FileBackupHelper : global::Android.App.Backup.IBackupHelper
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;[Ljava/lang/String;)V", AccessFlags = 129)]
+				public FileBackupHelper(global::Android.Content.Context context, params string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// performBackup
+				/// </java-name>
+				[Dot42.DexImport("performBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
+    "s/ParcelFileDescriptor;)V", AccessFlags = 1)]
+				public virtual void PerformBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// restoreEntity
+				/// </java-name>
+				[Dot42.DexImport("restoreEntity", "(Landroid/app/backup/BackupDataInputStream;)V", AccessFlags = 1)]
+				public virtual void RestoreEntity(global::Android.App.Backup.BackupDataInputStream backupDataInputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~FileBackupHelper() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// writeNewStateDescription
+				/// </java-name>
+				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
+				public virtual void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal FileBackupHelper() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/app/backup/FileBackupHelperBase
+		/// </java-name>
+		[Dot42.DexImport("android/app/backup/FileBackupHelperBase", AccessFlags = 32)]
+		internal partial class FileBackupHelperBase
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal FileBackupHelperBase() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~FileBackupHelperBase() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// writeNewStateDescription
+				/// </java-name>
+				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
+				public virtual void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/app/backup/FullBackupDataOutput
+		/// </java-name>
+		[Dot42.DexImport("android/app/backup/FullBackupDataOutput", AccessFlags = 33)]
+		public partial class FullBackupDataOutput
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal FullBackupDataOutput() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/app/backup/BackupHelper
+		/// </java-name>
+		[Dot42.DexImport("android/app/backup/BackupHelper", AccessFlags = 1537)]
+		public partial interface IBackupHelper
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// performBackup
+				/// </java-name>
+				[Dot42.DexImport("performBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
+    "s/ParcelFileDescriptor;)V", AccessFlags = 1025)]
+				void PerformBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// restoreEntity
+				/// </java-name>
+				[Dot42.DexImport("restoreEntity", "(Landroid/app/backup/BackupDataInputStream;)V", AccessFlags = 1025)]
+				void RestoreEntity(global::Android.App.Backup.BackupDataInputStream backupDataInputStream) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// writeNewStateDescription
+				/// </java-name>
+				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1025)]
+				void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/app/backup/RestoreObserver
+		/// </java-name>
+		[Dot42.DexImport("android/app/backup/RestoreObserver", AccessFlags = 1057)]
+		public abstract partial class RestoreObserver
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RestoreObserver() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// restoreStarting
+				/// </java-name>
+				[Dot42.DexImport("restoreStarting", "(I)V", AccessFlags = 1)]
+				public virtual void RestoreStarting(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onUpdate
+				/// </java-name>
+				[Dot42.DexImport("onUpdate", "(ILjava/lang/String;)V", AccessFlags = 1)]
+				public virtual void OnUpdate(int int32, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// restoreFinished
+				/// </java-name>
+				[Dot42.DexImport("restoreFinished", "(I)V", AccessFlags = 1)]
+				public virtual void RestoreFinished(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/app/backup/SharedPreferencesBackupHelper
+		/// </java-name>
+		[Dot42.DexImport("android/app/backup/SharedPreferencesBackupHelper", AccessFlags = 33)]
+		public partial class SharedPreferencesBackupHelper : global::Android.App.Backup.IBackupHelper
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;[Ljava/lang/String;)V", AccessFlags = 129)]
+				public SharedPreferencesBackupHelper(global::Android.Content.Context context, params string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// performBackup
+				/// </java-name>
+				[Dot42.DexImport("performBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
+    "s/ParcelFileDescriptor;)V", AccessFlags = 1)]
+				public virtual void PerformBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// restoreEntity
+				/// </java-name>
+				[Dot42.DexImport("restoreEntity", "(Landroid/app/backup/BackupDataInputStream;)V", AccessFlags = 1)]
+				public virtual void RestoreEntity(global::Android.App.Backup.BackupDataInputStream backupDataInputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// finalize
+				/// </java-name>
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~SharedPreferencesBackupHelper() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// writeNewStateDescription
+				/// </java-name>
+				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
+				public virtual void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal SharedPreferencesBackupHelper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

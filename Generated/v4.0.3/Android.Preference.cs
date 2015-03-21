@@ -2,352 +2,24 @@
 namespace Android.Preference
 {
 		/// <java-name>
-		/// android/preference/EditTextPreference
+		/// android/preference/CheckBoxPreference
 		/// </java-name>
-		[Dot42.DexImport("android/preference/EditTextPreference", AccessFlags = 33)]
-		public partial class EditTextPreference : global::Android.Preference.DialogPreference
+		[Dot42.DexImport("android/preference/CheckBoxPreference", AccessFlags = 33)]
+		public partial class CheckBoxPreference : global::Android.Preference.TwoStatePreference
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public EditTextPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				public CheckBoxPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public EditTextPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				public CheckBoxPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public EditTextPreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setText
-				/// </java-name>
-				[Dot42.DexImport("setText", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetText(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetText() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// onBindDialogView
-				/// </java-name>
-				[Dot42.DexImport("onBindDialogView", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal override void OnBindDialogView(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onAddEditTextToDialogView
-				/// </java-name>
-				[Dot42.DexImport("onAddEditTextToDialogView", "(Landroid/view/View;Landroid/widget/EditText;)V", AccessFlags = 4)]
-				protected internal virtual void OnAddEditTextToDialogView(global::Android.View.View view, global::Android.Widget.EditText editText) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDialogClosed
-				/// </java-name>
-				[Dot42.DexImport("onDialogClosed", "(Z)V", AccessFlags = 4)]
-				protected internal override void OnDialogClosed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onGetDefaultValue
-				/// </java-name>
-				[Dot42.DexImport("onGetDefaultValue", "(Landroid/content/res/TypedArray;I)Ljava/lang/Object;", AccessFlags = 4)]
-				protected internal override object OnGetDefaultValue(global::Android.Content.Res.TypedArray typedArray, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// onSetInitialValue
-				/// </java-name>
-				[Dot42.DexImport("onSetInitialValue", "(ZLjava/lang/Object;)V", AccessFlags = 4)]
-				protected internal override void OnSetInitialValue(bool boolean, object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// shouldDisableDependents
-				/// </java-name>
-				[Dot42.DexImport("shouldDisableDependents", "()Z", AccessFlags = 1)]
-				public override bool ShouldDisableDependents() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getEditText
-				/// </java-name>
-				[Dot42.DexImport("getEditText", "()Landroid/widget/EditText;", AccessFlags = 1)]
-				public virtual global::Android.Widget.EditText GetEditText() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Widget.EditText);
-				}
-
-				/// <java-name>
-				/// onSaveInstanceState
-				/// </java-name>
-				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
-				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IParcelable);
-				}
-
-				/// <java-name>
-				/// onRestoreInstanceState
-				/// </java-name>
-				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
-				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EditTextPreference() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				public string Text
-				{
-				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetText(); }
-				[Dot42.DexImport("setText", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetText(value); }
-				}
-
-				/// <java-name>
-				/// getEditText
-				/// </java-name>
-				public global::Android.Widget.EditText EditText
-				{
-				[Dot42.DexImport("getEditText", "()Landroid/widget/EditText;", AccessFlags = 1)]
-						get{ return GetEditText(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/preference/PreferenceManager
-		/// </java-name>
-		[Dot42.DexImport("android/preference/PreferenceManager", AccessFlags = 33)]
-		public partial class PreferenceManager
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// METADATA_KEY_PREFERENCES
-				/// </java-name>
-				[Dot42.DexImport("METADATA_KEY_PREFERENCES", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string METADATA_KEY_PREFERENCES = "android.preference";
-				/// <java-name>
-				/// KEY_HAS_SET_DEFAULT_VALUES
-				/// </java-name>
-				[Dot42.DexImport("KEY_HAS_SET_DEFAULT_VALUES", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string KEY_HAS_SET_DEFAULT_VALUES = "_has_set_default_values";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal PreferenceManager() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// createPreferenceScreen
-				/// </java-name>
-				[Dot42.DexImport("createPreferenceScreen", "(Landroid/content/Context;)Landroid/preference/PreferenceScreen;", AccessFlags = 1)]
-				public virtual global::Android.Preference.PreferenceScreen CreatePreferenceScreen(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Preference.PreferenceScreen);
-				}
-
-				/// <java-name>
-				/// getSharedPreferencesName
-				/// </java-name>
-				[Dot42.DexImport("getSharedPreferencesName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSharedPreferencesName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setSharedPreferencesName
-				/// </java-name>
-				[Dot42.DexImport("setSharedPreferencesName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSharedPreferencesName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSharedPreferencesMode
-				/// </java-name>
-				[Dot42.DexImport("getSharedPreferencesMode", "()I", AccessFlags = 1)]
-				public virtual int GetSharedPreferencesMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setSharedPreferencesMode
-				/// </java-name>
-				[Dot42.DexImport("setSharedPreferencesMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetSharedPreferencesMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSharedPreferences
-				/// </java-name>
-				[Dot42.DexImport("getSharedPreferences", "()Landroid/content/SharedPreferences;", AccessFlags = 1)]
-				public virtual global::Android.Content.ISharedPreferences GetSharedPreferences() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ISharedPreferences);
-				}
-
-				/// <java-name>
-				/// getDefaultSharedPreferences
-				/// </java-name>
-				[Dot42.DexImport("getDefaultSharedPreferences", "(Landroid/content/Context;)Landroid/content/SharedPreferences;", AccessFlags = 9)]
-				public static global::Android.Content.ISharedPreferences GetDefaultSharedPreferences(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ISharedPreferences);
-				}
-
-				/// <java-name>
-				/// findPreference
-				/// </java-name>
-				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
-				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Preference.Preference);
-				}
-
-				/// <java-name>
-				/// setDefaultValues
-				/// </java-name>
-				[Dot42.DexImport("setDefaultValues", "(Landroid/content/Context;IZ)V", AccessFlags = 9)]
-				public static void SetDefaultValues(global::Android.Content.Context context, int int32, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDefaultValues
-				/// </java-name>
-				[Dot42.DexImport("setDefaultValues", "(Landroid/content/Context;Ljava/lang/String;IIZ)V", AccessFlags = 9)]
-				public static void SetDefaultValues(global::Android.Content.Context context, string @string, int int32, int int321, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSharedPreferencesName
-				/// </java-name>
-				public string SharedPreferencesName
-				{
-				[Dot42.DexImport("getSharedPreferencesName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSharedPreferencesName(); }
-				[Dot42.DexImport("setSharedPreferencesName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSharedPreferencesName(value); }
-				}
-
-				/// <java-name>
-				/// getSharedPreferencesMode
-				/// </java-name>
-				public int SharedPreferencesMode
-				{
-				[Dot42.DexImport("getSharedPreferencesMode", "()I", AccessFlags = 1)]
-						get{ return GetSharedPreferencesMode(); }
-				[Dot42.DexImport("setSharedPreferencesMode", "(I)V", AccessFlags = 1)]
-						set{ SetSharedPreferencesMode(value); }
-				}
-
-				/// <java-name>
-				/// getSharedPreferences
-				/// </java-name>
-				public global::Android.Content.ISharedPreferences SharedPreferences
-				{
-				[Dot42.DexImport("getSharedPreferences", "()Landroid/content/SharedPreferences;", AccessFlags = 1)]
-						get{ return GetSharedPreferences(); }
-				}
-
-				/// <java-name>
-				/// android/preference/PreferenceManager$OnActivityDestroyListener
-				/// </java-name>
-				[Dot42.DexImport("android/preference/PreferenceManager$OnActivityDestroyListener", AccessFlags = 1545)]
-				public partial interface IOnActivityDestroyListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onActivityDestroy
-						/// </java-name>
-						[Dot42.DexImport("onActivityDestroy", "()V", AccessFlags = 1025)]
-						void OnActivityDestroy() /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/preference/PreferenceManager$OnActivityStopListener
-				/// </java-name>
-				[Dot42.DexImport("android/preference/PreferenceManager$OnActivityStopListener", AccessFlags = 1545)]
-				public partial interface IOnActivityStopListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onActivityStop
-						/// </java-name>
-						[Dot42.DexImport("onActivityStop", "()V", AccessFlags = 1025)]
-						void OnActivityStop() /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <java-name>
-				/// android/preference/PreferenceManager$OnActivityResultListener
-				/// </java-name>
-				[Dot42.DexImport("android/preference/PreferenceManager$OnActivityResultListener", AccessFlags = 1545)]
-				public partial interface IOnActivityResultListener
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onActivityResult
-						/// </java-name>
-						[Dot42.DexImport("onActivityResult", "(IILandroid/content/Intent;)Z", AccessFlags = 1025)]
-						bool OnActivityResult(int int32, int int321, global::Android.Content.Intent intent) /* MethodBuilder.Create */ ;
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/preference/SwitchPreference
-		/// </java-name>
-		[Dot42.DexImport("android/preference/SwitchPreference", AccessFlags = 33)]
-		public partial class SwitchPreference : global::Android.Preference.TwoStatePreference
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public SwitchPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public SwitchPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public SwitchPreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				public CheckBoxPreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -359,487 +31,9 @@ namespace Android.Preference
 				{
 				}
 
-				/// <java-name>
-				/// setSwitchTextOn
-				/// </java-name>
-				[Dot42.DexImport("setSwitchTextOn", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetSwitchTextOn(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSwitchTextOff
-				/// </java-name>
-				[Dot42.DexImport("setSwitchTextOff", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetSwitchTextOff(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSwitchTextOn
-				/// </java-name>
-				[Dot42.DexImport("setSwitchTextOn", "(I)V", AccessFlags = 1)]
-				public virtual void SetSwitchTextOn(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSwitchTextOff
-				/// </java-name>
-				[Dot42.DexImport("setSwitchTextOff", "(I)V", AccessFlags = 1)]
-				public virtual void SetSwitchTextOff(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSwitchTextOn
-				/// </java-name>
-				[Dot42.DexImport("getSwitchTextOn", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetSwitchTextOn() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getSwitchTextOff
-				/// </java-name>
-				[Dot42.DexImport("getSwitchTextOff", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetSwitchTextOff() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SwitchPreference() /* TypeBuilder.AddDefaultConstructor */ 
+				internal CheckBoxPreference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSwitchTextOn
-				/// </java-name>
-				public global::Java.Lang.ICharSequence SwitchTextOn
-				{
-				[Dot42.DexImport("getSwitchTextOn", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetSwitchTextOn(); }
-				[Dot42.DexImport("setSwitchTextOn", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetSwitchTextOn(value); }
-				}
-
-				/// <java-name>
-				/// getSwitchTextOff
-				/// </java-name>
-				public global::Java.Lang.ICharSequence SwitchTextOff
-				{
-				[Dot42.DexImport("getSwitchTextOff", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetSwitchTextOff(); }
-				[Dot42.DexImport("setSwitchTextOff", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetSwitchTextOff(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/preference/ListPreference
-		/// </java-name>
-		[Dot42.DexImport("android/preference/ListPreference", AccessFlags = 33)]
-		public partial class ListPreference : global::Android.Preference.DialogPreference
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public ListPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public ListPreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setEntries
-				/// </java-name>
-				[Dot42.DexImport("setEntries", "([Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetEntries(global::Java.Lang.ICharSequence[] charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setEntries
-				/// </java-name>
-				[Dot42.DexImport("setEntries", "(I)V", AccessFlags = 1)]
-				public virtual void SetEntries(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEntries
-				/// </java-name>
-				[Dot42.DexImport("getEntries", "()[Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence[] GetEntries() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence[]);
-				}
-
-				/// <java-name>
-				/// setEntryValues
-				/// </java-name>
-				[Dot42.DexImport("setEntryValues", "([Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetEntryValues(global::Java.Lang.ICharSequence[] charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setEntryValues
-				/// </java-name>
-				[Dot42.DexImport("setEntryValues", "(I)V", AccessFlags = 1)]
-				public virtual void SetEntryValues(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEntryValues
-				/// </java-name>
-				[Dot42.DexImport("getEntryValues", "()[Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence[] GetEntryValues() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence[]);
-				}
-
-				/// <java-name>
-				/// setValue
-				/// </java-name>
-				[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetValue(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSummary
-				/// </java-name>
-				[Dot42.DexImport("getSummary", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetSummary() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setSummary
-				/// </java-name>
-				[Dot42.DexImport("setSummary", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public override void SetSummary(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setValueIndex
-				/// </java-name>
-				[Dot42.DexImport("setValueIndex", "(I)V", AccessFlags = 1)]
-				public virtual void SetValueIndex(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetValue() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getEntry
-				/// </java-name>
-				[Dot42.DexImport("getEntry", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetEntry() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// findIndexOfValue
-				/// </java-name>
-				[Dot42.DexImport("findIndexOfValue", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public virtual int FindIndexOfValue(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// onPrepareDialogBuilder
-				/// </java-name>
-				[Dot42.DexImport("onPrepareDialogBuilder", "(Landroid/app/AlertDialog$Builder;)V", AccessFlags = 4)]
-				protected internal override void OnPrepareDialogBuilder(global::Android.App.AlertDialog.Builder builder) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDialogClosed
-				/// </java-name>
-				[Dot42.DexImport("onDialogClosed", "(Z)V", AccessFlags = 4)]
-				protected internal override void OnDialogClosed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onGetDefaultValue
-				/// </java-name>
-				[Dot42.DexImport("onGetDefaultValue", "(Landroid/content/res/TypedArray;I)Ljava/lang/Object;", AccessFlags = 4)]
-				protected internal override object OnGetDefaultValue(global::Android.Content.Res.TypedArray typedArray, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// onSetInitialValue
-				/// </java-name>
-				[Dot42.DexImport("onSetInitialValue", "(ZLjava/lang/Object;)V", AccessFlags = 4)]
-				protected internal override void OnSetInitialValue(bool boolean, object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onSaveInstanceState
-				/// </java-name>
-				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
-				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IParcelable);
-				}
-
-				/// <java-name>
-				/// onRestoreInstanceState
-				/// </java-name>
-				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
-				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ListPreference() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEntries
-				/// </java-name>
-				public global::Java.Lang.ICharSequence[] Entries
-				{
-				[Dot42.DexImport("getEntries", "()[Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetEntries(); }
-				[Dot42.DexImport("setEntries", "([Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetEntries(value); }
-				}
-
-				/// <java-name>
-				/// getEntryValues
-				/// </java-name>
-				public global::Java.Lang.ICharSequence[] EntryValues
-				{
-				[Dot42.DexImport("getEntryValues", "()[Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetEntryValues(); }
-				[Dot42.DexImport("setEntryValues", "([Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetEntryValues(value); }
-				}
-
-				/// <java-name>
-				/// getSummary
-				/// </java-name>
-				public global::Java.Lang.ICharSequence Summary
-				{
-				[Dot42.DexImport("getSummary", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetSummary(); }
-				[Dot42.DexImport("setSummary", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetSummary(value); }
-				}
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				public string Value
-				{
-				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetValue(); }
-				[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetValue(value); }
-				}
-
-				/// <java-name>
-				/// getEntry
-				/// </java-name>
-				public global::Java.Lang.ICharSequence Entry
-				{
-				[Dot42.DexImport("getEntry", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetEntry(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/preference/PreferenceGroup
-		/// </java-name>
-		[Dot42.DexImport("android/preference/PreferenceGroup", AccessFlags = 1057)]
-		public abstract partial class PreferenceGroup : global::Android.Preference.Preference
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public PreferenceGroup(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public PreferenceGroup(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setOrderingAsAdded
-				/// </java-name>
-				[Dot42.DexImport("setOrderingAsAdded", "(Z)V", AccessFlags = 1)]
-				public virtual void SetOrderingAsAdded(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isOrderingAsAdded
-				/// </java-name>
-				[Dot42.DexImport("isOrderingAsAdded", "()Z", AccessFlags = 1)]
-				public virtual bool IsOrderingAsAdded() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// addItemFromInflater
-				/// </java-name>
-				[Dot42.DexImport("addItemFromInflater", "(Landroid/preference/Preference;)V", AccessFlags = 1)]
-				public virtual void AddItemFromInflater(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPreferenceCount
-				/// </java-name>
-				[Dot42.DexImport("getPreferenceCount", "()I", AccessFlags = 1)]
-				public virtual int GetPreferenceCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPreference
-				/// </java-name>
-				[Dot42.DexImport("getPreference", "(I)Landroid/preference/Preference;", AccessFlags = 1)]
-				public virtual global::Android.Preference.Preference GetPreference(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Preference.Preference);
-				}
-
-				/// <java-name>
-				/// addPreference
-				/// </java-name>
-				[Dot42.DexImport("addPreference", "(Landroid/preference/Preference;)Z", AccessFlags = 1)]
-				public virtual bool AddPreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// removePreference
-				/// </java-name>
-				[Dot42.DexImport("removePreference", "(Landroid/preference/Preference;)Z", AccessFlags = 1)]
-				public virtual bool RemovePreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// removeAll
-				/// </java-name>
-				[Dot42.DexImport("removeAll", "()V", AccessFlags = 1)]
-				public virtual void RemoveAll() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPrepareAddPreference
-				/// </java-name>
-				[Dot42.DexImport("onPrepareAddPreference", "(Landroid/preference/Preference;)Z", AccessFlags = 4)]
-				protected internal virtual bool OnPrepareAddPreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// findPreference
-				/// </java-name>
-				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
-				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Preference.Preference);
-				}
-
-				/// <java-name>
-				/// isOnSameScreenAsChildren
-				/// </java-name>
-				[Dot42.DexImport("isOnSameScreenAsChildren", "()Z", AccessFlags = 4)]
-				protected internal virtual bool IsOnSameScreenAsChildren() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// onAttachedToActivity
-				/// </java-name>
-				[Dot42.DexImport("onAttachedToActivity", "()V", AccessFlags = 4)]
-				protected internal override void OnAttachedToActivity() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPrepareForRemoval
-				/// </java-name>
-				[Dot42.DexImport("onPrepareForRemoval", "()V", AccessFlags = 4)]
-				protected internal override void OnPrepareForRemoval() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchSaveInstanceState
-				/// </java-name>
-				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal virtual void DispatchSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// dispatchRestoreInstanceState
-				/// </java-name>
-				[Dot42.DexImport("dispatchRestoreInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal virtual void DispatchRestoreInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PreferenceGroup() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPreferenceCount
-				/// </java-name>
-				public int PreferenceCount
-				{
-				[Dot42.DexImport("getPreferenceCount", "()I", AccessFlags = 1)]
-						get{ return GetPreferenceCount(); }
 				}
 
 		}
@@ -1185,6 +379,385 @@ namespace Android.Preference
 		}
 
 		/// <java-name>
+		/// android/preference/EditTextPreference
+		/// </java-name>
+		[Dot42.DexImport("android/preference/EditTextPreference", AccessFlags = 33)]
+		public partial class EditTextPreference : global::Android.Preference.DialogPreference
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public EditTextPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public EditTextPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public EditTextPreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setText
+				/// </java-name>
+				[Dot42.DexImport("setText", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void SetText(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getText
+				/// </java-name>
+				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetText() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// onBindDialogView
+				/// </java-name>
+				[Dot42.DexImport("onBindDialogView", "(Landroid/view/View;)V", AccessFlags = 4)]
+				protected internal override void OnBindDialogView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onAddEditTextToDialogView
+				/// </java-name>
+				[Dot42.DexImport("onAddEditTextToDialogView", "(Landroid/view/View;Landroid/widget/EditText;)V", AccessFlags = 4)]
+				protected internal virtual void OnAddEditTextToDialogView(global::Android.View.View view, global::Android.Widget.EditText editText) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDialogClosed
+				/// </java-name>
+				[Dot42.DexImport("onDialogClosed", "(Z)V", AccessFlags = 4)]
+				protected internal override void OnDialogClosed(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onGetDefaultValue
+				/// </java-name>
+				[Dot42.DexImport("onGetDefaultValue", "(Landroid/content/res/TypedArray;I)Ljava/lang/Object;", AccessFlags = 4)]
+				protected internal override object OnGetDefaultValue(global::Android.Content.Res.TypedArray typedArray, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// onSetInitialValue
+				/// </java-name>
+				[Dot42.DexImport("onSetInitialValue", "(ZLjava/lang/Object;)V", AccessFlags = 4)]
+				protected internal override void OnSetInitialValue(bool boolean, object @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// shouldDisableDependents
+				/// </java-name>
+				[Dot42.DexImport("shouldDisableDependents", "()Z", AccessFlags = 1)]
+				public override bool ShouldDisableDependents() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getEditText
+				/// </java-name>
+				[Dot42.DexImport("getEditText", "()Landroid/widget/EditText;", AccessFlags = 1)]
+				public virtual global::Android.Widget.EditText GetEditText() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Widget.EditText);
+				}
+
+				/// <java-name>
+				/// onSaveInstanceState
+				/// </java-name>
+				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
+				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IParcelable);
+				}
+
+				/// <java-name>
+				/// onRestoreInstanceState
+				/// </java-name>
+				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
+				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal EditTextPreference() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getText
+				/// </java-name>
+				public string Text
+				{
+				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetText(); }
+				[Dot42.DexImport("setText", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ SetText(value); }
+				}
+
+				/// <java-name>
+				/// getEditText
+				/// </java-name>
+				public global::Android.Widget.EditText EditText
+				{
+				[Dot42.DexImport("getEditText", "()Landroid/widget/EditText;", AccessFlags = 1)]
+						get{ return GetEditText(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/preference/ListPreference
+		/// </java-name>
+		[Dot42.DexImport("android/preference/ListPreference", AccessFlags = 33)]
+		public partial class ListPreference : global::Android.Preference.DialogPreference
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public ListPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public ListPreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setEntries
+				/// </java-name>
+				[Dot42.DexImport("setEntries", "([Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public virtual void SetEntries(global::Java.Lang.ICharSequence[] charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setEntries
+				/// </java-name>
+				[Dot42.DexImport("setEntries", "(I)V", AccessFlags = 1)]
+				public virtual void SetEntries(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getEntries
+				/// </java-name>
+				[Dot42.DexImport("getEntries", "()[Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence[] GetEntries() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence[]);
+				}
+
+				/// <java-name>
+				/// setEntryValues
+				/// </java-name>
+				[Dot42.DexImport("setEntryValues", "([Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public virtual void SetEntryValues(global::Java.Lang.ICharSequence[] charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setEntryValues
+				/// </java-name>
+				[Dot42.DexImport("setEntryValues", "(I)V", AccessFlags = 1)]
+				public virtual void SetEntryValues(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getEntryValues
+				/// </java-name>
+				[Dot42.DexImport("getEntryValues", "()[Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence[] GetEntryValues() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence[]);
+				}
+
+				/// <java-name>
+				/// setValue
+				/// </java-name>
+				[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void SetValue(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSummary
+				/// </java-name>
+				[Dot42.DexImport("getSummary", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public override global::Java.Lang.ICharSequence GetSummary() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// setSummary
+				/// </java-name>
+				[Dot42.DexImport("setSummary", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public override void SetSummary(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setValueIndex
+				/// </java-name>
+				[Dot42.DexImport("setValueIndex", "(I)V", AccessFlags = 1)]
+				public virtual void SetValueIndex(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getValue
+				/// </java-name>
+				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetValue() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getEntry
+				/// </java-name>
+				[Dot42.DexImport("getEntry", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence GetEntry() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// findIndexOfValue
+				/// </java-name>
+				[Dot42.DexImport("findIndexOfValue", "(Ljava/lang/String;)I", AccessFlags = 1)]
+				public virtual int FindIndexOfValue(string @string) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// onPrepareDialogBuilder
+				/// </java-name>
+				[Dot42.DexImport("onPrepareDialogBuilder", "(Landroid/app/AlertDialog$Builder;)V", AccessFlags = 4)]
+				protected internal override void OnPrepareDialogBuilder(global::Android.App.AlertDialog.Builder builder) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDialogClosed
+				/// </java-name>
+				[Dot42.DexImport("onDialogClosed", "(Z)V", AccessFlags = 4)]
+				protected internal override void OnDialogClosed(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onGetDefaultValue
+				/// </java-name>
+				[Dot42.DexImport("onGetDefaultValue", "(Landroid/content/res/TypedArray;I)Ljava/lang/Object;", AccessFlags = 4)]
+				protected internal override object OnGetDefaultValue(global::Android.Content.Res.TypedArray typedArray, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// onSetInitialValue
+				/// </java-name>
+				[Dot42.DexImport("onSetInitialValue", "(ZLjava/lang/Object;)V", AccessFlags = 4)]
+				protected internal override void OnSetInitialValue(bool boolean, object @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onSaveInstanceState
+				/// </java-name>
+				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
+				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IParcelable);
+				}
+
+				/// <java-name>
+				/// onRestoreInstanceState
+				/// </java-name>
+				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
+				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ListPreference() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getEntries
+				/// </java-name>
+				public global::Java.Lang.ICharSequence[] Entries
+				{
+				[Dot42.DexImport("getEntries", "()[Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return GetEntries(); }
+				[Dot42.DexImport("setEntries", "([Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ SetEntries(value); }
+				}
+
+				/// <java-name>
+				/// getEntryValues
+				/// </java-name>
+				public global::Java.Lang.ICharSequence[] EntryValues
+				{
+				[Dot42.DexImport("getEntryValues", "()[Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return GetEntryValues(); }
+				[Dot42.DexImport("setEntryValues", "([Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ SetEntryValues(value); }
+				}
+
+				/// <java-name>
+				/// getSummary
+				/// </java-name>
+				public global::Java.Lang.ICharSequence Summary
+				{
+				[Dot42.DexImport("getSummary", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return GetSummary(); }
+				[Dot42.DexImport("setSummary", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ SetSummary(value); }
+				}
+
+				/// <java-name>
+				/// getValue
+				/// </java-name>
+				public string Value
+				{
+				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetValue(); }
+				[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ SetValue(value); }
+				}
+
+				/// <java-name>
+				/// getEntry
+				/// </java-name>
+				public global::Java.Lang.ICharSequence Entry
+				{
+				[Dot42.DexImport("getEntry", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return GetEntry(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// android/preference/MultiSelectListPreference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/MultiSelectListPreference", AccessFlags = 33)]
@@ -1355,423 +928,6 @@ namespace Android.Preference
 						get{ return GetValues(); }
 				[Dot42.DexImport("setValues", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
 						set{ SetValues(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/preference/TwoStatePreference
-		/// </java-name>
-		[Dot42.DexImport("android/preference/TwoStatePreference", AccessFlags = 1057)]
-		public abstract partial class TwoStatePreference : global::Android.Preference.Preference
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public TwoStatePreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public TwoStatePreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public TwoStatePreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onClick
-				/// </java-name>
-				[Dot42.DexImport("onClick", "()V", AccessFlags = 4)]
-				protected internal override void OnClick() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setChecked
-				/// </java-name>
-				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
-				public virtual void SetChecked(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isChecked
-				/// </java-name>
-				[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
-				public virtual bool IsChecked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// shouldDisableDependents
-				/// </java-name>
-				[Dot42.DexImport("shouldDisableDependents", "()Z", AccessFlags = 1)]
-				public override bool ShouldDisableDependents() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setSummaryOn
-				/// </java-name>
-				[Dot42.DexImport("setSummaryOn", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetSummaryOn(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSummaryOn
-				/// </java-name>
-				[Dot42.DexImport("setSummaryOn", "(I)V", AccessFlags = 1)]
-				public virtual void SetSummaryOn(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSummaryOn
-				/// </java-name>
-				[Dot42.DexImport("getSummaryOn", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetSummaryOn() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setSummaryOff
-				/// </java-name>
-				[Dot42.DexImport("setSummaryOff", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetSummaryOff(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSummaryOff
-				/// </java-name>
-				[Dot42.DexImport("setSummaryOff", "(I)V", AccessFlags = 1)]
-				public virtual void SetSummaryOff(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSummaryOff
-				/// </java-name>
-				[Dot42.DexImport("getSummaryOff", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetSummaryOff() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getDisableDependentsState
-				/// </java-name>
-				[Dot42.DexImport("getDisableDependentsState", "()Z", AccessFlags = 1)]
-				public virtual bool GetDisableDependentsState() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setDisableDependentsState
-				/// </java-name>
-				[Dot42.DexImport("setDisableDependentsState", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDisableDependentsState(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onGetDefaultValue
-				/// </java-name>
-				[Dot42.DexImport("onGetDefaultValue", "(Landroid/content/res/TypedArray;I)Ljava/lang/Object;", AccessFlags = 4)]
-				protected internal override object OnGetDefaultValue(global::Android.Content.Res.TypedArray typedArray, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// onSetInitialValue
-				/// </java-name>
-				[Dot42.DexImport("onSetInitialValue", "(ZLjava/lang/Object;)V", AccessFlags = 4)]
-				protected internal override void OnSetInitialValue(bool boolean, object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onSaveInstanceState
-				/// </java-name>
-				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
-				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IParcelable);
-				}
-
-				/// <java-name>
-				/// onRestoreInstanceState
-				/// </java-name>
-				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
-				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TwoStatePreference() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSummaryOn
-				/// </java-name>
-				public global::Java.Lang.ICharSequence SummaryOn
-				{
-				[Dot42.DexImport("getSummaryOn", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetSummaryOn(); }
-				[Dot42.DexImport("setSummaryOn", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetSummaryOn(value); }
-				}
-
-				/// <java-name>
-				/// getSummaryOff
-				/// </java-name>
-				public global::Java.Lang.ICharSequence SummaryOff
-				{
-				[Dot42.DexImport("getSummaryOff", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetSummaryOff(); }
-				[Dot42.DexImport("setSummaryOff", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetSummaryOff(value); }
-				}
-
-				/// <java-name>
-				/// getDisableDependentsState
-				/// </java-name>
-				public bool IsDisableDependentsState
-				{
-				[Dot42.DexImport("getDisableDependentsState", "()Z", AccessFlags = 1)]
-						get{ return GetDisableDependentsState(); }
-				[Dot42.DexImport("setDisableDependentsState", "(Z)V", AccessFlags = 1)]
-						set{ SetDisableDependentsState(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/preference/CheckBoxPreference
-		/// </java-name>
-		[Dot42.DexImport("android/preference/CheckBoxPreference", AccessFlags = 33)]
-		public partial class CheckBoxPreference : global::Android.Preference.TwoStatePreference
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public CheckBoxPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public CheckBoxPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public CheckBoxPreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onBindView
-				/// </java-name>
-				[Dot42.DexImport("onBindView", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal override void OnBindView(global::Android.View.View view) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CheckBoxPreference() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/preference/PreferenceFragment
-		/// </java-name>
-		[Dot42.DexImport("android/preference/PreferenceFragment", AccessFlags = 1057)]
-		public abstract partial class PreferenceFragment : global::Android.App.Fragment
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public PreferenceFragment() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCreate
-				/// </java-name>
-				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCreateView
-				/// </java-name>
-				[Dot42.DexImport("onCreateView", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroi" +
-    "d/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.View.View);
-				}
-
-				/// <java-name>
-				/// onActivityCreated
-				/// </java-name>
-				[Dot42.DexImport("onActivityCreated", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnActivityCreated(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onStart
-				/// </java-name>
-				[Dot42.DexImport("onStart", "()V", AccessFlags = 1)]
-				public override void OnStart() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onStop
-				/// </java-name>
-				[Dot42.DexImport("onStop", "()V", AccessFlags = 1)]
-				public override void OnStop() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDestroyView
-				/// </java-name>
-				[Dot42.DexImport("onDestroyView", "()V", AccessFlags = 1)]
-				public override void OnDestroyView() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDestroy
-				/// </java-name>
-				[Dot42.DexImport("onDestroy", "()V", AccessFlags = 1)]
-				public override void OnDestroy() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onSaveInstanceState
-				/// </java-name>
-				[Dot42.DexImport("onSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onActivityResult
-				/// </java-name>
-				[Dot42.DexImport("onActivityResult", "(IILandroid/content/Intent;)V", AccessFlags = 1)]
-				public override void OnActivityResult(int int32, int int321, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPreferenceManager
-				/// </java-name>
-				[Dot42.DexImport("getPreferenceManager", "()Landroid/preference/PreferenceManager;", AccessFlags = 1)]
-				public virtual global::Android.Preference.PreferenceManager GetPreferenceManager() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Preference.PreferenceManager);
-				}
-
-				/// <java-name>
-				/// setPreferenceScreen
-				/// </java-name>
-				[Dot42.DexImport("setPreferenceScreen", "(Landroid/preference/PreferenceScreen;)V", AccessFlags = 1)]
-				public virtual void SetPreferenceScreen(global::Android.Preference.PreferenceScreen preferenceScreen) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPreferenceScreen
-				/// </java-name>
-				[Dot42.DexImport("getPreferenceScreen", "()Landroid/preference/PreferenceScreen;", AccessFlags = 1)]
-				public virtual global::Android.Preference.PreferenceScreen GetPreferenceScreen() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Preference.PreferenceScreen);
-				}
-
-				/// <java-name>
-				/// addPreferencesFromIntent
-				/// </java-name>
-				[Dot42.DexImport("addPreferencesFromIntent", "(Landroid/content/Intent;)V", AccessFlags = 1)]
-				public virtual void AddPreferencesFromIntent(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// addPreferencesFromResource
-				/// </java-name>
-				[Dot42.DexImport("addPreferencesFromResource", "(I)V", AccessFlags = 1)]
-				public virtual void AddPreferencesFromResource(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPreferenceTreeClick
-				/// </java-name>
-				[Dot42.DexImport("onPreferenceTreeClick", "(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z", AccessFlags = 1)]
-				public virtual bool OnPreferenceTreeClick(global::Android.Preference.PreferenceScreen preferenceScreen, global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// findPreference
-				/// </java-name>
-				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
-				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Preference.Preference);
-				}
-
-				/// <java-name>
-				/// getPreferenceManager
-				/// </java-name>
-				public global::Android.Preference.PreferenceManager PreferenceManager
-				{
-				[Dot42.DexImport("getPreferenceManager", "()Landroid/preference/PreferenceManager;", AccessFlags = 1)]
-						get{ return GetPreferenceManager(); }
-				}
-
-				/// <java-name>
-				/// getPreferenceScreen
-				/// </java-name>
-				public global::Android.Preference.PreferenceScreen PreferenceScreen
-				{
-				[Dot42.DexImport("getPreferenceScreen", "()Landroid/preference/PreferenceScreen;", AccessFlags = 1)]
-						get{ return GetPreferenceScreen(); }
-				[Dot42.DexImport("setPreferenceScreen", "(Landroid/preference/PreferenceScreen;)V", AccessFlags = 1)]
-						set{ SetPreferenceScreen(value); }
-				}
-
-				/// <java-name>
-				/// android/preference/PreferenceFragment$OnPreferenceStartFragmentCallback
-				/// </java-name>
-				[Dot42.DexImport("android/preference/PreferenceFragment$OnPreferenceStartFragmentCallback", AccessFlags = 1545)]
-				public partial interface IOnPreferenceStartFragmentCallback
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// onPreferenceStartFragment
-						/// </java-name>
-						[Dot42.DexImport("onPreferenceStartFragment", "(Landroid/preference/PreferenceFragment;Landroid/preference/Preference;)Z", AccessFlags = 1025)]
-						bool OnPreferenceStartFragment(global::Android.Preference.PreferenceFragment preferenceFragment, global::Android.Preference.Preference preference) /* MethodBuilder.Create */ ;
-
 				}
 
 		}
@@ -2736,350 +1892,6 @@ namespace Android.Preference
 		}
 
 		/// <java-name>
-		/// android/preference/RingtonePreference
-		/// </java-name>
-		[Dot42.DexImport("android/preference/RingtonePreference", AccessFlags = 33)]
-		public partial class RingtonePreference : global::Android.Preference.Preference, global::Android.Preference.PreferenceManager.IOnActivityResultListener
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public RingtonePreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public RingtonePreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public RingtonePreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRingtoneType
-				/// </java-name>
-				[Dot42.DexImport("getRingtoneType", "()I", AccessFlags = 1)]
-				public virtual int GetRingtoneType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setRingtoneType
-				/// </java-name>
-				[Dot42.DexImport("setRingtoneType", "(I)V", AccessFlags = 1)]
-				public virtual void SetRingtoneType(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getShowDefault
-				/// </java-name>
-				[Dot42.DexImport("getShowDefault", "()Z", AccessFlags = 1)]
-				public virtual bool GetShowDefault() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setShowDefault
-				/// </java-name>
-				[Dot42.DexImport("setShowDefault", "(Z)V", AccessFlags = 1)]
-				public virtual void SetShowDefault(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getShowSilent
-				/// </java-name>
-				[Dot42.DexImport("getShowSilent", "()Z", AccessFlags = 1)]
-				public virtual bool GetShowSilent() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setShowSilent
-				/// </java-name>
-				[Dot42.DexImport("setShowSilent", "(Z)V", AccessFlags = 1)]
-				public virtual void SetShowSilent(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onClick
-				/// </java-name>
-				[Dot42.DexImport("onClick", "()V", AccessFlags = 4)]
-				protected internal override void OnClick() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPrepareRingtonePickerIntent
-				/// </java-name>
-				[Dot42.DexImport("onPrepareRingtonePickerIntent", "(Landroid/content/Intent;)V", AccessFlags = 4)]
-				protected internal virtual void OnPrepareRingtonePickerIntent(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onSaveRingtone
-				/// </java-name>
-				[Dot42.DexImport("onSaveRingtone", "(Landroid/net/Uri;)V", AccessFlags = 4)]
-				protected internal virtual void OnSaveRingtone(global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onRestoreRingtone
-				/// </java-name>
-				[Dot42.DexImport("onRestoreRingtone", "()Landroid/net/Uri;", AccessFlags = 4)]
-				protected internal virtual global::Android.Net.Uri OnRestoreRingtone() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Uri);
-				}
-
-				/// <java-name>
-				/// onGetDefaultValue
-				/// </java-name>
-				[Dot42.DexImport("onGetDefaultValue", "(Landroid/content/res/TypedArray;I)Ljava/lang/Object;", AccessFlags = 4)]
-				protected internal override object OnGetDefaultValue(global::Android.Content.Res.TypedArray typedArray, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// onSetInitialValue
-				/// </java-name>
-				[Dot42.DexImport("onSetInitialValue", "(ZLjava/lang/Object;)V", AccessFlags = 4)]
-				protected internal override void OnSetInitialValue(bool boolean, object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onAttachedToHierarchy
-				/// </java-name>
-				[Dot42.DexImport("onAttachedToHierarchy", "(Landroid/preference/PreferenceManager;)V", AccessFlags = 4)]
-				protected internal override void OnAttachedToHierarchy(global::Android.Preference.PreferenceManager preferenceManager) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onActivityResult
-				/// </java-name>
-				[Dot42.DexImport("onActivityResult", "(IILandroid/content/Intent;)Z", AccessFlags = 1)]
-				public virtual bool OnActivityResult(int int32, int int321, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RingtonePreference() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRingtoneType
-				/// </java-name>
-				public int RingtoneType
-				{
-				[Dot42.DexImport("getRingtoneType", "()I", AccessFlags = 1)]
-						get{ return GetRingtoneType(); }
-				[Dot42.DexImport("setRingtoneType", "(I)V", AccessFlags = 1)]
-						set{ SetRingtoneType(value); }
-				}
-
-				/// <java-name>
-				/// getShowDefault
-				/// </java-name>
-				public bool IsShowDefault
-				{
-				[Dot42.DexImport("getShowDefault", "()Z", AccessFlags = 1)]
-						get{ return GetShowDefault(); }
-				[Dot42.DexImport("setShowDefault", "(Z)V", AccessFlags = 1)]
-						set{ SetShowDefault(value); }
-				}
-
-				/// <java-name>
-				/// getShowSilent
-				/// </java-name>
-				public bool IsShowSilent
-				{
-				[Dot42.DexImport("getShowSilent", "()Z", AccessFlags = 1)]
-						get{ return GetShowSilent(); }
-				[Dot42.DexImport("setShowSilent", "(Z)V", AccessFlags = 1)]
-						set{ SetShowSilent(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/preference/PreferenceScreen
-		/// </java-name>
-		[Dot42.DexImport("android/preference/PreferenceScreen", AccessFlags = 49)]
-		public sealed partial class PreferenceScreen : global::Android.Preference.PreferenceGroup, global::Android.Widget.AdapterView<object>.IOnItemClickListener, global::Android.Content.IDialogInterface_IOnDismissListener
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal PreferenceScreen() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRootAdapter
-				/// </java-name>
-				[Dot42.DexImport("getRootAdapter", "()Landroid/widget/ListAdapter;", AccessFlags = 1)]
-				public global::Android.Widget.IListAdapter GetRootAdapter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Widget.IListAdapter);
-				}
-
-				/// <java-name>
-				/// onCreateRootAdapter
-				/// </java-name>
-				[Dot42.DexImport("onCreateRootAdapter", "()Landroid/widget/ListAdapter;", AccessFlags = 4)]
-				internal global::Android.Widget.IListAdapter OnCreateRootAdapter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Widget.IListAdapter);
-				}
-
-				/// <java-name>
-				/// bind
-				/// </java-name>
-				[Dot42.DexImport("bind", "(Landroid/widget/ListView;)V", AccessFlags = 1)]
-				public void Bind(global::Android.Widget.ListView listView) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onClick
-				/// </java-name>
-				[Dot42.DexImport("onClick", "()V", AccessFlags = 4)]
-				protected internal override void OnClick() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDismiss
-				/// </java-name>
-				[Dot42.DexImport("onDismiss", "(Landroid/content/DialogInterface;)V", AccessFlags = 1)]
-				public void OnDismiss(global::Android.Content.IDialogInterface dialogInterface) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDialog
-				/// </java-name>
-				[Dot42.DexImport("getDialog", "()Landroid/app/Dialog;", AccessFlags = 1)]
-				public global::Android.App.Dialog GetDialog() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.App.Dialog);
-				}
-
-				/// <java-name>
-				/// onItemClick
-				/// </java-name>
-				[Dot42.DexImport("onItemClick", "(Landroid/widget/AdapterView;Landroid/view/View;IJ)V", AccessFlags = 1)]
-				public void OnItemClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isOnSameScreenAsChildren
-				/// </java-name>
-				[Dot42.DexImport("isOnSameScreenAsChildren", "()Z", AccessFlags = 4)]
-				protected internal override bool IsOnSameScreenAsChildren() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// onSaveInstanceState
-				/// </java-name>
-				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
-				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IParcelable);
-				}
-
-				/// <java-name>
-				/// onRestoreInstanceState
-				/// </java-name>
-				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
-				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRootAdapter
-				/// </java-name>
-				public global::Android.Widget.IListAdapter RootAdapter
-				{
-				[Dot42.DexImport("getRootAdapter", "()Landroid/widget/ListAdapter;", AccessFlags = 1)]
-						get{ return GetRootAdapter(); }
-				}
-
-				/// <java-name>
-				/// getDialog
-				/// </java-name>
-				public global::Android.App.Dialog Dialog
-				{
-				[Dot42.DexImport("getDialog", "()Landroid/app/Dialog;", AccessFlags = 1)]
-						get{ return GetDialog(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/preference/PreferenceCategory
-		/// </java-name>
-		[Dot42.DexImport("android/preference/PreferenceCategory", AccessFlags = 33)]
-		public partial class PreferenceCategory : global::Android.Preference.PreferenceGroup
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public PreferenceCategory(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public PreferenceCategory(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public PreferenceCategory(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onPrepareAddPreference
-				/// </java-name>
-				[Dot42.DexImport("onPrepareAddPreference", "(Landroid/preference/Preference;)Z", AccessFlags = 4)]
-				protected internal override bool OnPrepareAddPreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isEnabled
-				/// </java-name>
-				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
-				public override bool IsEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PreferenceCategory() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// android/preference/PreferenceActivity
 		/// </java-name>
 		[Dot42.DexImport("android/preference/PreferenceActivity", AccessFlags = 1057)]
@@ -3607,6 +2419,1194 @@ namespace Android.Preference
 						{
 						}
 
+				}
+
+		}
+
+		/// <java-name>
+		/// android/preference/PreferenceCategory
+		/// </java-name>
+		[Dot42.DexImport("android/preference/PreferenceCategory", AccessFlags = 33)]
+		public partial class PreferenceCategory : global::Android.Preference.PreferenceGroup
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public PreferenceCategory(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public PreferenceCategory(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public PreferenceCategory(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onPrepareAddPreference
+				/// </java-name>
+				[Dot42.DexImport("onPrepareAddPreference", "(Landroid/preference/Preference;)Z", AccessFlags = 4)]
+				protected internal override bool OnPrepareAddPreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isEnabled
+				/// </java-name>
+				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
+				public override bool IsEnabled() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal PreferenceCategory() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/preference/PreferenceFragment
+		/// </java-name>
+		[Dot42.DexImport("android/preference/PreferenceFragment", AccessFlags = 1057)]
+		public abstract partial class PreferenceFragment : global::Android.App.Fragment
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public PreferenceFragment() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCreate
+				/// </java-name>
+				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+				public override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCreateView
+				/// </java-name>
+				[Dot42.DexImport("onCreateView", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroi" +
+    "d/view/View;", AccessFlags = 1)]
+				public override global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.View.View);
+				}
+
+				/// <java-name>
+				/// onActivityCreated
+				/// </java-name>
+				[Dot42.DexImport("onActivityCreated", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+				public override void OnActivityCreated(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onStart
+				/// </java-name>
+				[Dot42.DexImport("onStart", "()V", AccessFlags = 1)]
+				public override void OnStart() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onStop
+				/// </java-name>
+				[Dot42.DexImport("onStop", "()V", AccessFlags = 1)]
+				public override void OnStop() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDestroyView
+				/// </java-name>
+				[Dot42.DexImport("onDestroyView", "()V", AccessFlags = 1)]
+				public override void OnDestroyView() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDestroy
+				/// </java-name>
+				[Dot42.DexImport("onDestroy", "()V", AccessFlags = 1)]
+				public override void OnDestroy() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onSaveInstanceState
+				/// </java-name>
+				[Dot42.DexImport("onSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+				public override void OnSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onActivityResult
+				/// </java-name>
+				[Dot42.DexImport("onActivityResult", "(IILandroid/content/Intent;)V", AccessFlags = 1)]
+				public override void OnActivityResult(int int32, int int321, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPreferenceManager
+				/// </java-name>
+				[Dot42.DexImport("getPreferenceManager", "()Landroid/preference/PreferenceManager;", AccessFlags = 1)]
+				public virtual global::Android.Preference.PreferenceManager GetPreferenceManager() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Preference.PreferenceManager);
+				}
+
+				/// <java-name>
+				/// setPreferenceScreen
+				/// </java-name>
+				[Dot42.DexImport("setPreferenceScreen", "(Landroid/preference/PreferenceScreen;)V", AccessFlags = 1)]
+				public virtual void SetPreferenceScreen(global::Android.Preference.PreferenceScreen preferenceScreen) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPreferenceScreen
+				/// </java-name>
+				[Dot42.DexImport("getPreferenceScreen", "()Landroid/preference/PreferenceScreen;", AccessFlags = 1)]
+				public virtual global::Android.Preference.PreferenceScreen GetPreferenceScreen() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Preference.PreferenceScreen);
+				}
+
+				/// <java-name>
+				/// addPreferencesFromIntent
+				/// </java-name>
+				[Dot42.DexImport("addPreferencesFromIntent", "(Landroid/content/Intent;)V", AccessFlags = 1)]
+				public virtual void AddPreferencesFromIntent(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// addPreferencesFromResource
+				/// </java-name>
+				[Dot42.DexImport("addPreferencesFromResource", "(I)V", AccessFlags = 1)]
+				public virtual void AddPreferencesFromResource(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onPreferenceTreeClick
+				/// </java-name>
+				[Dot42.DexImport("onPreferenceTreeClick", "(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z", AccessFlags = 1)]
+				public virtual bool OnPreferenceTreeClick(global::Android.Preference.PreferenceScreen preferenceScreen, global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// findPreference
+				/// </java-name>
+				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
+				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Preference.Preference);
+				}
+
+				/// <java-name>
+				/// getPreferenceManager
+				/// </java-name>
+				public global::Android.Preference.PreferenceManager PreferenceManager
+				{
+				[Dot42.DexImport("getPreferenceManager", "()Landroid/preference/PreferenceManager;", AccessFlags = 1)]
+						get{ return GetPreferenceManager(); }
+				}
+
+				/// <java-name>
+				/// getPreferenceScreen
+				/// </java-name>
+				public global::Android.Preference.PreferenceScreen PreferenceScreen
+				{
+				[Dot42.DexImport("getPreferenceScreen", "()Landroid/preference/PreferenceScreen;", AccessFlags = 1)]
+						get{ return GetPreferenceScreen(); }
+				[Dot42.DexImport("setPreferenceScreen", "(Landroid/preference/PreferenceScreen;)V", AccessFlags = 1)]
+						set{ SetPreferenceScreen(value); }
+				}
+
+				/// <java-name>
+				/// android/preference/PreferenceFragment$OnPreferenceStartFragmentCallback
+				/// </java-name>
+				[Dot42.DexImport("android/preference/PreferenceFragment$OnPreferenceStartFragmentCallback", AccessFlags = 1545)]
+				public partial interface IOnPreferenceStartFragmentCallback
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onPreferenceStartFragment
+						/// </java-name>
+						[Dot42.DexImport("onPreferenceStartFragment", "(Landroid/preference/PreferenceFragment;Landroid/preference/Preference;)Z", AccessFlags = 1025)]
+						bool OnPreferenceStartFragment(global::Android.Preference.PreferenceFragment preferenceFragment, global::Android.Preference.Preference preference) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/preference/PreferenceGroup
+		/// </java-name>
+		[Dot42.DexImport("android/preference/PreferenceGroup", AccessFlags = 1057)]
+		public abstract partial class PreferenceGroup : global::Android.Preference.Preference
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public PreferenceGroup(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public PreferenceGroup(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setOrderingAsAdded
+				/// </java-name>
+				[Dot42.DexImport("setOrderingAsAdded", "(Z)V", AccessFlags = 1)]
+				public virtual void SetOrderingAsAdded(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isOrderingAsAdded
+				/// </java-name>
+				[Dot42.DexImport("isOrderingAsAdded", "()Z", AccessFlags = 1)]
+				public virtual bool IsOrderingAsAdded() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// addItemFromInflater
+				/// </java-name>
+				[Dot42.DexImport("addItemFromInflater", "(Landroid/preference/Preference;)V", AccessFlags = 1)]
+				public virtual void AddItemFromInflater(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPreferenceCount
+				/// </java-name>
+				[Dot42.DexImport("getPreferenceCount", "()I", AccessFlags = 1)]
+				public virtual int GetPreferenceCount() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getPreference
+				/// </java-name>
+				[Dot42.DexImport("getPreference", "(I)Landroid/preference/Preference;", AccessFlags = 1)]
+				public virtual global::Android.Preference.Preference GetPreference(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Preference.Preference);
+				}
+
+				/// <java-name>
+				/// addPreference
+				/// </java-name>
+				[Dot42.DexImport("addPreference", "(Landroid/preference/Preference;)Z", AccessFlags = 1)]
+				public virtual bool AddPreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// removePreference
+				/// </java-name>
+				[Dot42.DexImport("removePreference", "(Landroid/preference/Preference;)Z", AccessFlags = 1)]
+				public virtual bool RemovePreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// removeAll
+				/// </java-name>
+				[Dot42.DexImport("removeAll", "()V", AccessFlags = 1)]
+				public virtual void RemoveAll() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onPrepareAddPreference
+				/// </java-name>
+				[Dot42.DexImport("onPrepareAddPreference", "(Landroid/preference/Preference;)Z", AccessFlags = 4)]
+				protected internal virtual bool OnPrepareAddPreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// findPreference
+				/// </java-name>
+				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
+				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Preference.Preference);
+				}
+
+				/// <java-name>
+				/// isOnSameScreenAsChildren
+				/// </java-name>
+				[Dot42.DexImport("isOnSameScreenAsChildren", "()Z", AccessFlags = 4)]
+				protected internal virtual bool IsOnSameScreenAsChildren() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onAttachedToActivity
+				/// </java-name>
+				[Dot42.DexImport("onAttachedToActivity", "()V", AccessFlags = 4)]
+				protected internal override void OnAttachedToActivity() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onPrepareForRemoval
+				/// </java-name>
+				[Dot42.DexImport("onPrepareForRemoval", "()V", AccessFlags = 4)]
+				protected internal override void OnPrepareForRemoval() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setEnabled
+				/// </java-name>
+				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchSaveInstanceState
+				/// </java-name>
+				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
+				protected internal virtual void DispatchSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// dispatchRestoreInstanceState
+				/// </java-name>
+				[Dot42.DexImport("dispatchRestoreInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
+				protected internal virtual void DispatchRestoreInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal PreferenceGroup() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getPreferenceCount
+				/// </java-name>
+				public int PreferenceCount
+				{
+				[Dot42.DexImport("getPreferenceCount", "()I", AccessFlags = 1)]
+						get{ return GetPreferenceCount(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/preference/PreferenceManager
+		/// </java-name>
+		[Dot42.DexImport("android/preference/PreferenceManager", AccessFlags = 33)]
+		public partial class PreferenceManager
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// METADATA_KEY_PREFERENCES
+				/// </java-name>
+				[Dot42.DexImport("METADATA_KEY_PREFERENCES", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string METADATA_KEY_PREFERENCES = "android.preference";
+				/// <java-name>
+				/// KEY_HAS_SET_DEFAULT_VALUES
+				/// </java-name>
+				[Dot42.DexImport("KEY_HAS_SET_DEFAULT_VALUES", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string KEY_HAS_SET_DEFAULT_VALUES = "_has_set_default_values";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal PreferenceManager() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// createPreferenceScreen
+				/// </java-name>
+				[Dot42.DexImport("createPreferenceScreen", "(Landroid/content/Context;)Landroid/preference/PreferenceScreen;", AccessFlags = 1)]
+				public virtual global::Android.Preference.PreferenceScreen CreatePreferenceScreen(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Preference.PreferenceScreen);
+				}
+
+				/// <java-name>
+				/// getSharedPreferencesName
+				/// </java-name>
+				[Dot42.DexImport("getSharedPreferencesName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetSharedPreferencesName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// setSharedPreferencesName
+				/// </java-name>
+				[Dot42.DexImport("setSharedPreferencesName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void SetSharedPreferencesName(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSharedPreferencesMode
+				/// </java-name>
+				[Dot42.DexImport("getSharedPreferencesMode", "()I", AccessFlags = 1)]
+				public virtual int GetSharedPreferencesMode() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setSharedPreferencesMode
+				/// </java-name>
+				[Dot42.DexImport("setSharedPreferencesMode", "(I)V", AccessFlags = 1)]
+				public virtual void SetSharedPreferencesMode(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSharedPreferences
+				/// </java-name>
+				[Dot42.DexImport("getSharedPreferences", "()Landroid/content/SharedPreferences;", AccessFlags = 1)]
+				public virtual global::Android.Content.ISharedPreferences GetSharedPreferences() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.ISharedPreferences);
+				}
+
+				/// <java-name>
+				/// getDefaultSharedPreferences
+				/// </java-name>
+				[Dot42.DexImport("getDefaultSharedPreferences", "(Landroid/content/Context;)Landroid/content/SharedPreferences;", AccessFlags = 9)]
+				public static global::Android.Content.ISharedPreferences GetDefaultSharedPreferences(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Content.ISharedPreferences);
+				}
+
+				/// <java-name>
+				/// findPreference
+				/// </java-name>
+				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
+				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Preference.Preference);
+				}
+
+				/// <java-name>
+				/// setDefaultValues
+				/// </java-name>
+				[Dot42.DexImport("setDefaultValues", "(Landroid/content/Context;IZ)V", AccessFlags = 9)]
+				public static void SetDefaultValues(global::Android.Content.Context context, int int32, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setDefaultValues
+				/// </java-name>
+				[Dot42.DexImport("setDefaultValues", "(Landroid/content/Context;Ljava/lang/String;IIZ)V", AccessFlags = 9)]
+				public static void SetDefaultValues(global::Android.Content.Context context, string @string, int int32, int int321, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSharedPreferencesName
+				/// </java-name>
+				public string SharedPreferencesName
+				{
+				[Dot42.DexImport("getSharedPreferencesName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetSharedPreferencesName(); }
+				[Dot42.DexImport("setSharedPreferencesName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ SetSharedPreferencesName(value); }
+				}
+
+				/// <java-name>
+				/// getSharedPreferencesMode
+				/// </java-name>
+				public int SharedPreferencesMode
+				{
+				[Dot42.DexImport("getSharedPreferencesMode", "()I", AccessFlags = 1)]
+						get{ return GetSharedPreferencesMode(); }
+				[Dot42.DexImport("setSharedPreferencesMode", "(I)V", AccessFlags = 1)]
+						set{ SetSharedPreferencesMode(value); }
+				}
+
+				/// <java-name>
+				/// getSharedPreferences
+				/// </java-name>
+				public global::Android.Content.ISharedPreferences SharedPreferences
+				{
+				[Dot42.DexImport("getSharedPreferences", "()Landroid/content/SharedPreferences;", AccessFlags = 1)]
+						get{ return GetSharedPreferences(); }
+				}
+
+				/// <java-name>
+				/// android/preference/PreferenceManager$OnActivityDestroyListener
+				/// </java-name>
+				[Dot42.DexImport("android/preference/PreferenceManager$OnActivityDestroyListener", AccessFlags = 1545)]
+				public partial interface IOnActivityDestroyListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onActivityDestroy
+						/// </java-name>
+						[Dot42.DexImport("onActivityDestroy", "()V", AccessFlags = 1025)]
+						void OnActivityDestroy() /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/preference/PreferenceManager$OnActivityStopListener
+				/// </java-name>
+				[Dot42.DexImport("android/preference/PreferenceManager$OnActivityStopListener", AccessFlags = 1545)]
+				public partial interface IOnActivityStopListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onActivityStop
+						/// </java-name>
+						[Dot42.DexImport("onActivityStop", "()V", AccessFlags = 1025)]
+						void OnActivityStop() /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <java-name>
+				/// android/preference/PreferenceManager$OnActivityResultListener
+				/// </java-name>
+				[Dot42.DexImport("android/preference/PreferenceManager$OnActivityResultListener", AccessFlags = 1545)]
+				public partial interface IOnActivityResultListener
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// onActivityResult
+						/// </java-name>
+						[Dot42.DexImport("onActivityResult", "(IILandroid/content/Intent;)Z", AccessFlags = 1025)]
+						bool OnActivityResult(int int32, int int321, global::Android.Content.Intent intent) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <java-name>
+		/// android/preference/PreferenceScreen
+		/// </java-name>
+		[Dot42.DexImport("android/preference/PreferenceScreen", AccessFlags = 49)]
+		public sealed partial class PreferenceScreen : global::Android.Preference.PreferenceGroup, global::Android.Widget.AdapterView<object>.IOnItemClickListener, global::Android.Content.IDialogInterface_IOnDismissListener
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal PreferenceScreen() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRootAdapter
+				/// </java-name>
+				[Dot42.DexImport("getRootAdapter", "()Landroid/widget/ListAdapter;", AccessFlags = 1)]
+				public global::Android.Widget.IListAdapter GetRootAdapter() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Widget.IListAdapter);
+				}
+
+				/// <java-name>
+				/// onCreateRootAdapter
+				/// </java-name>
+				[Dot42.DexImport("onCreateRootAdapter", "()Landroid/widget/ListAdapter;", AccessFlags = 4)]
+				internal global::Android.Widget.IListAdapter OnCreateRootAdapter() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Widget.IListAdapter);
+				}
+
+				/// <java-name>
+				/// bind
+				/// </java-name>
+				[Dot42.DexImport("bind", "(Landroid/widget/ListView;)V", AccessFlags = 1)]
+				public void Bind(global::Android.Widget.ListView listView) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onClick
+				/// </java-name>
+				[Dot42.DexImport("onClick", "()V", AccessFlags = 4)]
+				protected internal override void OnClick() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onDismiss
+				/// </java-name>
+				[Dot42.DexImport("onDismiss", "(Landroid/content/DialogInterface;)V", AccessFlags = 1)]
+				public void OnDismiss(global::Android.Content.IDialogInterface dialogInterface) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDialog
+				/// </java-name>
+				[Dot42.DexImport("getDialog", "()Landroid/app/Dialog;", AccessFlags = 1)]
+				public global::Android.App.Dialog GetDialog() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.App.Dialog);
+				}
+
+				/// <java-name>
+				/// onItemClick
+				/// </java-name>
+				[Dot42.DexImport("onItemClick", "(Landroid/widget/AdapterView;Landroid/view/View;IJ)V", AccessFlags = 1)]
+				public void OnItemClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isOnSameScreenAsChildren
+				/// </java-name>
+				[Dot42.DexImport("isOnSameScreenAsChildren", "()Z", AccessFlags = 4)]
+				protected internal override bool IsOnSameScreenAsChildren() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// onSaveInstanceState
+				/// </java-name>
+				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
+				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IParcelable);
+				}
+
+				/// <java-name>
+				/// onRestoreInstanceState
+				/// </java-name>
+				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
+				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRootAdapter
+				/// </java-name>
+				public global::Android.Widget.IListAdapter RootAdapter
+				{
+				[Dot42.DexImport("getRootAdapter", "()Landroid/widget/ListAdapter;", AccessFlags = 1)]
+						get{ return GetRootAdapter(); }
+				}
+
+				/// <java-name>
+				/// getDialog
+				/// </java-name>
+				public global::Android.App.Dialog Dialog
+				{
+				[Dot42.DexImport("getDialog", "()Landroid/app/Dialog;", AccessFlags = 1)]
+						get{ return GetDialog(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/preference/RingtonePreference
+		/// </java-name>
+		[Dot42.DexImport("android/preference/RingtonePreference", AccessFlags = 33)]
+		public partial class RingtonePreference : global::Android.Preference.Preference, global::Android.Preference.PreferenceManager.IOnActivityResultListener
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public RingtonePreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public RingtonePreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public RingtonePreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRingtoneType
+				/// </java-name>
+				[Dot42.DexImport("getRingtoneType", "()I", AccessFlags = 1)]
+				public virtual int GetRingtoneType() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// setRingtoneType
+				/// </java-name>
+				[Dot42.DexImport("setRingtoneType", "(I)V", AccessFlags = 1)]
+				public virtual void SetRingtoneType(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getShowDefault
+				/// </java-name>
+				[Dot42.DexImport("getShowDefault", "()Z", AccessFlags = 1)]
+				public virtual bool GetShowDefault() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setShowDefault
+				/// </java-name>
+				[Dot42.DexImport("setShowDefault", "(Z)V", AccessFlags = 1)]
+				public virtual void SetShowDefault(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getShowSilent
+				/// </java-name>
+				[Dot42.DexImport("getShowSilent", "()Z", AccessFlags = 1)]
+				public virtual bool GetShowSilent() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setShowSilent
+				/// </java-name>
+				[Dot42.DexImport("setShowSilent", "(Z)V", AccessFlags = 1)]
+				public virtual void SetShowSilent(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onClick
+				/// </java-name>
+				[Dot42.DexImport("onClick", "()V", AccessFlags = 4)]
+				protected internal override void OnClick() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onPrepareRingtonePickerIntent
+				/// </java-name>
+				[Dot42.DexImport("onPrepareRingtonePickerIntent", "(Landroid/content/Intent;)V", AccessFlags = 4)]
+				protected internal virtual void OnPrepareRingtonePickerIntent(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onSaveRingtone
+				/// </java-name>
+				[Dot42.DexImport("onSaveRingtone", "(Landroid/net/Uri;)V", AccessFlags = 4)]
+				protected internal virtual void OnSaveRingtone(global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onRestoreRingtone
+				/// </java-name>
+				[Dot42.DexImport("onRestoreRingtone", "()Landroid/net/Uri;", AccessFlags = 4)]
+				protected internal virtual global::Android.Net.Uri OnRestoreRingtone() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Net.Uri);
+				}
+
+				/// <java-name>
+				/// onGetDefaultValue
+				/// </java-name>
+				[Dot42.DexImport("onGetDefaultValue", "(Landroid/content/res/TypedArray;I)Ljava/lang/Object;", AccessFlags = 4)]
+				protected internal override object OnGetDefaultValue(global::Android.Content.Res.TypedArray typedArray, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// onSetInitialValue
+				/// </java-name>
+				[Dot42.DexImport("onSetInitialValue", "(ZLjava/lang/Object;)V", AccessFlags = 4)]
+				protected internal override void OnSetInitialValue(bool boolean, object @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onAttachedToHierarchy
+				/// </java-name>
+				[Dot42.DexImport("onAttachedToHierarchy", "(Landroid/preference/PreferenceManager;)V", AccessFlags = 4)]
+				protected internal override void OnAttachedToHierarchy(global::Android.Preference.PreferenceManager preferenceManager) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onActivityResult
+				/// </java-name>
+				[Dot42.DexImport("onActivityResult", "(IILandroid/content/Intent;)Z", AccessFlags = 1)]
+				public virtual bool OnActivityResult(int int32, int int321, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal RingtonePreference() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRingtoneType
+				/// </java-name>
+				public int RingtoneType
+				{
+				[Dot42.DexImport("getRingtoneType", "()I", AccessFlags = 1)]
+						get{ return GetRingtoneType(); }
+				[Dot42.DexImport("setRingtoneType", "(I)V", AccessFlags = 1)]
+						set{ SetRingtoneType(value); }
+				}
+
+				/// <java-name>
+				/// getShowDefault
+				/// </java-name>
+				public bool IsShowDefault
+				{
+				[Dot42.DexImport("getShowDefault", "()Z", AccessFlags = 1)]
+						get{ return GetShowDefault(); }
+				[Dot42.DexImport("setShowDefault", "(Z)V", AccessFlags = 1)]
+						set{ SetShowDefault(value); }
+				}
+
+				/// <java-name>
+				/// getShowSilent
+				/// </java-name>
+				public bool IsShowSilent
+				{
+				[Dot42.DexImport("getShowSilent", "()Z", AccessFlags = 1)]
+						get{ return GetShowSilent(); }
+				[Dot42.DexImport("setShowSilent", "(Z)V", AccessFlags = 1)]
+						set{ SetShowSilent(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/preference/SwitchPreference
+		/// </java-name>
+		[Dot42.DexImport("android/preference/SwitchPreference", AccessFlags = 33)]
+		public partial class SwitchPreference : global::Android.Preference.TwoStatePreference
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public SwitchPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public SwitchPreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public SwitchPreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onBindView
+				/// </java-name>
+				[Dot42.DexImport("onBindView", "(Landroid/view/View;)V", AccessFlags = 4)]
+				protected internal override void OnBindView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setSwitchTextOn
+				/// </java-name>
+				[Dot42.DexImport("setSwitchTextOn", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public virtual void SetSwitchTextOn(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setSwitchTextOff
+				/// </java-name>
+				[Dot42.DexImport("setSwitchTextOff", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public virtual void SetSwitchTextOff(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setSwitchTextOn
+				/// </java-name>
+				[Dot42.DexImport("setSwitchTextOn", "(I)V", AccessFlags = 1)]
+				public virtual void SetSwitchTextOn(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setSwitchTextOff
+				/// </java-name>
+				[Dot42.DexImport("setSwitchTextOff", "(I)V", AccessFlags = 1)]
+				public virtual void SetSwitchTextOff(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSwitchTextOn
+				/// </java-name>
+				[Dot42.DexImport("getSwitchTextOn", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence GetSwitchTextOn() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// getSwitchTextOff
+				/// </java-name>
+				[Dot42.DexImport("getSwitchTextOff", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence GetSwitchTextOff() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal SwitchPreference() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSwitchTextOn
+				/// </java-name>
+				public global::Java.Lang.ICharSequence SwitchTextOn
+				{
+				[Dot42.DexImport("getSwitchTextOn", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return GetSwitchTextOn(); }
+				[Dot42.DexImport("setSwitchTextOn", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ SetSwitchTextOn(value); }
+				}
+
+				/// <java-name>
+				/// getSwitchTextOff
+				/// </java-name>
+				public global::Java.Lang.ICharSequence SwitchTextOff
+				{
+				[Dot42.DexImport("getSwitchTextOff", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return GetSwitchTextOff(); }
+				[Dot42.DexImport("setSwitchTextOff", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ SetSwitchTextOff(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/preference/TwoStatePreference
+		/// </java-name>
+		[Dot42.DexImport("android/preference/TwoStatePreference", AccessFlags = 1057)]
+		public abstract partial class TwoStatePreference : global::Android.Preference.Preference
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
+				public TwoStatePreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public TwoStatePreference(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public TwoStatePreference(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onClick
+				/// </java-name>
+				[Dot42.DexImport("onClick", "()V", AccessFlags = 4)]
+				protected internal override void OnClick() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setChecked
+				/// </java-name>
+				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
+				public virtual void SetChecked(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isChecked
+				/// </java-name>
+				[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
+				public virtual bool IsChecked() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// shouldDisableDependents
+				/// </java-name>
+				[Dot42.DexImport("shouldDisableDependents", "()Z", AccessFlags = 1)]
+				public override bool ShouldDisableDependents() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setSummaryOn
+				/// </java-name>
+				[Dot42.DexImport("setSummaryOn", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public virtual void SetSummaryOn(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setSummaryOn
+				/// </java-name>
+				[Dot42.DexImport("setSummaryOn", "(I)V", AccessFlags = 1)]
+				public virtual void SetSummaryOn(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSummaryOn
+				/// </java-name>
+				[Dot42.DexImport("getSummaryOn", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence GetSummaryOn() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// setSummaryOff
+				/// </java-name>
+				[Dot42.DexImport("setSummaryOff", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public virtual void SetSummaryOff(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setSummaryOff
+				/// </java-name>
+				[Dot42.DexImport("setSummaryOff", "(I)V", AccessFlags = 1)]
+				public virtual void SetSummaryOff(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSummaryOff
+				/// </java-name>
+				[Dot42.DexImport("getSummaryOff", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+				public virtual global::Java.Lang.ICharSequence GetSummaryOff() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
+				}
+
+				/// <java-name>
+				/// getDisableDependentsState
+				/// </java-name>
+				[Dot42.DexImport("getDisableDependentsState", "()Z", AccessFlags = 1)]
+				public virtual bool GetDisableDependentsState() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// setDisableDependentsState
+				/// </java-name>
+				[Dot42.DexImport("setDisableDependentsState", "(Z)V", AccessFlags = 1)]
+				public virtual void SetDisableDependentsState(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onGetDefaultValue
+				/// </java-name>
+				[Dot42.DexImport("onGetDefaultValue", "(Landroid/content/res/TypedArray;I)Ljava/lang/Object;", AccessFlags = 4)]
+				protected internal override object OnGetDefaultValue(global::Android.Content.Res.TypedArray typedArray, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				/// <java-name>
+				/// onSetInitialValue
+				/// </java-name>
+				[Dot42.DexImport("onSetInitialValue", "(ZLjava/lang/Object;)V", AccessFlags = 4)]
+				protected internal override void OnSetInitialValue(bool boolean, object @object) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onSaveInstanceState
+				/// </java-name>
+				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
+				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IParcelable);
+				}
+
+				/// <java-name>
+				/// onRestoreInstanceState
+				/// </java-name>
+				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
+				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal TwoStatePreference() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSummaryOn
+				/// </java-name>
+				public global::Java.Lang.ICharSequence SummaryOn
+				{
+				[Dot42.DexImport("getSummaryOn", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return GetSummaryOn(); }
+				[Dot42.DexImport("setSummaryOn", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ SetSummaryOn(value); }
+				}
+
+				/// <java-name>
+				/// getSummaryOff
+				/// </java-name>
+				public global::Java.Lang.ICharSequence SummaryOff
+				{
+				[Dot42.DexImport("getSummaryOff", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return GetSummaryOff(); }
+				[Dot42.DexImport("setSummaryOff", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ SetSummaryOff(value); }
+				}
+
+				/// <java-name>
+				/// getDisableDependentsState
+				/// </java-name>
+				public bool IsDisableDependentsState
+				{
+				[Dot42.DexImport("getDisableDependentsState", "()Z", AccessFlags = 1)]
+						get{ return GetDisableDependentsState(); }
+				[Dot42.DexImport("setDisableDependentsState", "(Z)V", AccessFlags = 1)]
+						set{ SetDisableDependentsState(value); }
 				}
 
 		}

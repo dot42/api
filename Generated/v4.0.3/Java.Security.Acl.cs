@@ -2,35 +2,74 @@
 namespace Java.Security.Acl
 {
 		/// <java-name>
-		/// java/security/acl/Group
+		/// java/security/acl/AclNotFoundException
 		/// </java-name>
-		[Dot42.DexImport("java/security/acl/Group", AccessFlags = 1537)]
-		public partial interface IGroup : global::Java.Security.IPrincipal
+		[Dot42.DexImport("java/security/acl/AclNotFoundException", AccessFlags = 33)]
+		public partial class AclNotFoundException : global::System.Exception
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public AclNotFoundException() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// java/security/acl/Acl
+		/// </java-name>
+		[Dot42.DexImport("java/security/acl/Acl", AccessFlags = 1537)]
+		public partial interface IAcl : global::Java.Security.Acl.IOwner
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// addMember
+				/// setName
 				/// </java-name>
-				[Dot42.DexImport("addMember", "(Ljava/security/Principal;)Z", AccessFlags = 1025)]
-				bool AddMember(global::Java.Security.IPrincipal principal) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("setName", "(Ljava/security/Principal;Ljava/lang/String;)V", AccessFlags = 1025)]
+				void SetName(global::Java.Security.IPrincipal principal, string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// removeMember
+				/// getName
 				/// </java-name>
-				[Dot42.DexImport("removeMember", "(Ljava/security/Principal;)Z", AccessFlags = 1025)]
-				bool RemoveMember(global::Java.Security.IPrincipal principal) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+				string GetName() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isMember
+				/// addEntry
 				/// </java-name>
-				[Dot42.DexImport("isMember", "(Ljava/security/Principal;)Z", AccessFlags = 1025)]
-				bool IsMember(global::Java.Security.IPrincipal principal) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("addEntry", "(Ljava/security/Principal;Ljava/security/acl/AclEntry;)Z", AccessFlags = 1025)]
+				bool AddEntry(global::Java.Security.IPrincipal principal, global::Java.Security.Acl.IAclEntry aclEntry) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// members
+				/// removeEntry
 				/// </java-name>
-				[Dot42.DexImport("members", "()Ljava/util/Enumeration;", AccessFlags = 1025, Signature = "()Ljava/util/Enumeration<+Ljava/security/Principal;>;")]
-				global::Java.Util.IEnumeration<global::Java.Security.IPrincipal> Members() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("removeEntry", "(Ljava/security/Principal;Ljava/security/acl/AclEntry;)Z", AccessFlags = 1025)]
+				bool RemoveEntry(global::Java.Security.IPrincipal principal, global::Java.Security.Acl.IAclEntry aclEntry) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getPermissions
+				/// </java-name>
+				[Dot42.DexImport("getPermissions", "(Ljava/security/Principal;)Ljava/util/Enumeration;", AccessFlags = 1025, Signature = "(Ljava/security/Principal;)Ljava/util/Enumeration<Ljava/security/acl/Permission;>" +
+    ";")]
+				global::Java.Util.IEnumeration<global::Java.Security.Acl.IPermission> GetPermissions(global::Java.Security.IPrincipal principal) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// entries
+				/// </java-name>
+				[Dot42.DexImport("entries", "()Ljava/util/Enumeration;", AccessFlags = 1025, Signature = "()Ljava/util/Enumeration<Ljava/security/acl/AclEntry;>;")]
+				global::Java.Util.IEnumeration<global::Java.Security.Acl.IAclEntry> Entries() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// checkPermission
+				/// </java-name>
+				[Dot42.DexImport("checkPermission", "(Ljava/security/Principal;Ljava/security/acl/Permission;)Z", AccessFlags = 1025)]
+				bool CheckPermission(global::Java.Security.IPrincipal principal, global::Java.Security.Acl.IPermission permission) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1025)]
+				string ToString() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -104,16 +143,35 @@ namespace Java.Security.Acl
 		}
 
 		/// <java-name>
-		/// java/security/acl/AclNotFoundException
+		/// java/security/acl/Group
 		/// </java-name>
-		[Dot42.DexImport("java/security/acl/AclNotFoundException", AccessFlags = 33)]
-		public partial class AclNotFoundException : global::System.Exception
+		[Dot42.DexImport("java/security/acl/Group", AccessFlags = 1537)]
+		public partial interface IGroup : global::Java.Security.IPrincipal
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public AclNotFoundException() /* MethodBuilder.Create */ 
-				{
-				}
+				/// <java-name>
+				/// addMember
+				/// </java-name>
+				[Dot42.DexImport("addMember", "(Ljava/security/Principal;)Z", AccessFlags = 1025)]
+				bool AddMember(global::Java.Security.IPrincipal principal) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// removeMember
+				/// </java-name>
+				[Dot42.DexImport("removeMember", "(Ljava/security/Principal;)Z", AccessFlags = 1025)]
+				bool RemoveMember(global::Java.Security.IPrincipal principal) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isMember
+				/// </java-name>
+				[Dot42.DexImport("isMember", "(Ljava/security/Principal;)Z", AccessFlags = 1025)]
+				bool IsMember(global::Java.Security.IPrincipal principal) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// members
+				/// </java-name>
+				[Dot42.DexImport("members", "()Ljava/util/Enumeration;", AccessFlags = 1025, Signature = "()Ljava/util/Enumeration<+Ljava/security/Principal;>;")]
+				global::Java.Util.IEnumeration<global::Java.Security.IPrincipal> Members() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -176,64 +234,6 @@ namespace Java.Security.Acl
 				public LastOwnerException() /* MethodBuilder.Create */ 
 				{
 				}
-
-		}
-
-		/// <java-name>
-		/// java/security/acl/Acl
-		/// </java-name>
-		[Dot42.DexImport("java/security/acl/Acl", AccessFlags = 1537)]
-		public partial interface IAcl : global::Java.Security.Acl.IOwner
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// setName
-				/// </java-name>
-				[Dot42.DexImport("setName", "(Ljava/security/Principal;Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetName(global::Java.Security.IPrincipal principal, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// addEntry
-				/// </java-name>
-				[Dot42.DexImport("addEntry", "(Ljava/security/Principal;Ljava/security/acl/AclEntry;)Z", AccessFlags = 1025)]
-				bool AddEntry(global::Java.Security.IPrincipal principal, global::Java.Security.Acl.IAclEntry aclEntry) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// removeEntry
-				/// </java-name>
-				[Dot42.DexImport("removeEntry", "(Ljava/security/Principal;Ljava/security/acl/AclEntry;)Z", AccessFlags = 1025)]
-				bool RemoveEntry(global::Java.Security.IPrincipal principal, global::Java.Security.Acl.IAclEntry aclEntry) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPermissions
-				/// </java-name>
-				[Dot42.DexImport("getPermissions", "(Ljava/security/Principal;)Ljava/util/Enumeration;", AccessFlags = 1025, Signature = "(Ljava/security/Principal;)Ljava/util/Enumeration<Ljava/security/acl/Permission;>" +
-    ";")]
-				global::Java.Util.IEnumeration<global::Java.Security.Acl.IPermission> GetPermissions(global::Java.Security.IPrincipal principal) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// entries
-				/// </java-name>
-				[Dot42.DexImport("entries", "()Ljava/util/Enumeration;", AccessFlags = 1025, Signature = "()Ljava/util/Enumeration<Ljava/security/acl/AclEntry;>;")]
-				global::Java.Util.IEnumeration<global::Java.Security.Acl.IAclEntry> Entries() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// checkPermission
-				/// </java-name>
-				[Dot42.DexImport("checkPermission", "(Ljava/security/Principal;Ljava/security/acl/Permission;)Z", AccessFlags = 1025)]
-				bool CheckPermission(global::Java.Security.IPrincipal principal, global::Java.Security.Acl.IPermission permission) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string ToString() /* MethodBuilder.Create */ ;
 
 		}
 

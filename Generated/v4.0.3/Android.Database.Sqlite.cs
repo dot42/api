@@ -2,6 +2,92 @@
 namespace Android.Database.Sqlite
 {
 		/// <java-name>
+		/// android/database/sqlite/SQLiteCursorDriver
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteCursorDriver", AccessFlags = 1537)]
+		public partial interface ISQLiteCursorDriver
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// query
+				/// </java-name>
+				[Dot42.DexImport("query", "(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;[Ljava/lang/String;)Landro" +
+    "id/database/Cursor;", AccessFlags = 1025)]
+				global::Android.Database.ICursor Query(global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory, string[] @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// cursorDeactivated
+				/// </java-name>
+				[Dot42.DexImport("cursorDeactivated", "()V", AccessFlags = 1025)]
+				void CursorDeactivated() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// cursorRequeried
+				/// </java-name>
+				[Dot42.DexImport("cursorRequeried", "(Landroid/database/Cursor;)V", AccessFlags = 1025)]
+				void CursorRequeried(global::Android.Database.ICursor cursor) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// cursorClosed
+				/// </java-name>
+				[Dot42.DexImport("cursorClosed", "()V", AccessFlags = 1025)]
+				void CursorClosed() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// setBindArguments
+				/// </java-name>
+				[Dot42.DexImport("setBindArguments", "([Ljava/lang/String;)V", AccessFlags = 1025)]
+				void SetBindArguments(string[] @string) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteTransactionListener
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteTransactionListener", AccessFlags = 1537)]
+		public partial interface ISQLiteTransactionListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// onBegin
+				/// </java-name>
+				[Dot42.DexImport("onBegin", "()V", AccessFlags = 1025)]
+				void OnBegin() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onCommit
+				/// </java-name>
+				[Dot42.DexImport("onCommit", "()V", AccessFlags = 1025)]
+				void OnCommit() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onRollback
+				/// </java-name>
+				[Dot42.DexImport("onRollback", "()V", AccessFlags = 1025)]
+				void OnRollback() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteAbortException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteAbortException", AccessFlags = 33)]
+		public partial class SQLiteAbortException : global::Android.Database.Sqlite.SQLiteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteAbortException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteAbortException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// android/database/sqlite/SQLiteAccessPermException
 		/// </java-name>
 		[Dot42.DexImport("android/database/sqlite/SQLiteAccessPermException", AccessFlags = 33)]
@@ -21,105 +107,57 @@ namespace Android.Database.Sqlite
 		}
 
 		/// <java-name>
-		/// android/database/sqlite/SQLiteDoneException
+		/// android/database/sqlite/SQLiteBindOrColumnIndexOutOfRangeException
 		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteDoneException", AccessFlags = 33)]
-		public partial class SQLiteDoneException : global::Android.Database.Sqlite.SQLiteException
+		[Dot42.DexImport("android/database/sqlite/SQLiteBindOrColumnIndexOutOfRangeException", AccessFlags = 33)]
+		public partial class SQLiteBindOrColumnIndexOutOfRangeException : global::Android.Database.Sqlite.SQLiteException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteDoneException() /* MethodBuilder.Create */ 
+				public SQLiteBindOrColumnIndexOutOfRangeException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteDoneException(string @string) /* MethodBuilder.Create */ 
+				public SQLiteBindOrColumnIndexOutOfRangeException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 		}
 
 		/// <java-name>
-		/// android/database/sqlite/SQLiteStatement
+		/// android/database/sqlite/SQLiteBlobTooBigException
 		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteStatement", AccessFlags = 33)]
-		public partial class SQLiteStatement : global::Android.Database.Sqlite.SQLiteProgram
+		[Dot42.DexImport("android/database/sqlite/SQLiteBlobTooBigException", AccessFlags = 33)]
+		public partial class SQLiteBlobTooBigException : global::Android.Database.Sqlite.SQLiteException
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SQLiteStatement() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteBlobTooBigException() /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <java-name>
-				/// execute
-				/// </java-name>
-				[Dot42.DexImport("execute", "()V", AccessFlags = 1)]
-				public virtual void Execute() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteBlobTooBigException(string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// executeUpdateDelete
-				/// </java-name>
-				[Dot42.DexImport("executeUpdateDelete", "()I", AccessFlags = 1)]
-				public virtual int ExecuteUpdateDelete() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// executeInsert
-				/// </java-name>
-				[Dot42.DexImport("executeInsert", "()J", AccessFlags = 1)]
-				public virtual long ExecuteInsert() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// simpleQueryForLong
-				/// </java-name>
-				[Dot42.DexImport("simpleQueryForLong", "()J", AccessFlags = 1)]
-				public virtual long SimpleQueryForLong() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// simpleQueryForString
-				/// </java-name>
-				[Dot42.DexImport("simpleQueryForString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string SimpleQueryForString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// simpleQueryForBlobFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("simpleQueryForBlobFileDescriptor", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
-				public virtual global::Android.Os.ParcelFileDescriptor SimpleQueryForBlobFileDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.ParcelFileDescriptor);
 				}
 
 		}
 
 		/// <java-name>
-		/// android/database/sqlite/SQLiteFullException
+		/// android/database/sqlite/SQLiteCantOpenDatabaseException
 		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteFullException", AccessFlags = 33)]
-		public partial class SQLiteFullException : global::Android.Database.Sqlite.SQLiteException
+		[Dot42.DexImport("android/database/sqlite/SQLiteCantOpenDatabaseException", AccessFlags = 33)]
+		public partial class SQLiteCantOpenDatabaseException : global::Android.Database.Sqlite.SQLiteException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteFullException() /* MethodBuilder.Create */ 
+				public SQLiteCantOpenDatabaseException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteFullException(string @string) /* MethodBuilder.Create */ 
+				public SQLiteCantOpenDatabaseException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -172,6 +210,25 @@ namespace Android.Database.Sqlite
 				/// </java-name>
 				[Dot42.DexImport("releaseReferenceFromContainer", "()V", AccessFlags = 1)]
 				public virtual void ReleaseReferenceFromContainer() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteConstraintException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteConstraintException", AccessFlags = 33)]
+		public partial class SQLiteConstraintException : global::Android.Database.Sqlite.SQLiteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteConstraintException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteConstraintException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -318,44 +375,6 @@ namespace Android.Database.Sqlite
 				{
 				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
 						get{ return GetColumnNames(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteTableLockedException
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteTableLockedException", AccessFlags = 33)]
-		public partial class SQLiteTableLockedException : global::Android.Database.Sqlite.SQLiteException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteTableLockedException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteTableLockedException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteReadOnlyDatabaseException
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteReadOnlyDatabaseException", AccessFlags = 33)]
-		public partial class SQLiteReadOnlyDatabaseException : global::Android.Database.Sqlite.SQLiteException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteReadOnlyDatabaseException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteReadOnlyDatabaseException(string @string) /* MethodBuilder.Create */ 
-				{
 				}
 
 		}
@@ -1037,6 +1056,25 @@ namespace Android.Database.Sqlite
 		}
 
 		/// <java-name>
+		/// android/database/sqlite/SQLiteDatabaseCorruptException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteDatabaseCorruptException", AccessFlags = 33)]
+		public partial class SQLiteDatabaseCorruptException : global::Android.Database.Sqlite.SQLiteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteDatabaseCorruptException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteDatabaseCorruptException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// android/database/sqlite/SQLiteDatabaseLockedException
 		/// </java-name>
 		[Dot42.DexImport("android/database/sqlite/SQLiteDatabaseLockedException", AccessFlags = 33)]
@@ -1050,333 +1088,6 @@ namespace Android.Database.Sqlite
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public SQLiteDatabaseLockedException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteBindOrColumnIndexOutOfRangeException
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteBindOrColumnIndexOutOfRangeException", AccessFlags = 33)]
-		public partial class SQLiteBindOrColumnIndexOutOfRangeException : global::Android.Database.Sqlite.SQLiteException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteBindOrColumnIndexOutOfRangeException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteBindOrColumnIndexOutOfRangeException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteException
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteException", AccessFlags = 33)]
-		public partial class SQLiteException : global::Android.Database.SQLException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteQueryBuilder
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteQueryBuilder", AccessFlags = 33)]
-		public partial class SQLiteQueryBuilder
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteQueryBuilder() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDistinct
-				/// </java-name>
-				[Dot42.DexImport("setDistinct", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDistinct(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTables
-				/// </java-name>
-				[Dot42.DexImport("getTables", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetTables() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setTables
-				/// </java-name>
-				[Dot42.DexImport("setTables", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetTables(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// appendWhere
-				/// </java-name>
-				[Dot42.DexImport("appendWhere", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void AppendWhere(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// appendWhereEscapeString
-				/// </java-name>
-				[Dot42.DexImport("appendWhereEscapeString", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void AppendWhereEscapeString(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setProjectionMap
-				/// </java-name>
-				[Dot42.DexImport("setProjectionMap", "(Ljava/util/Map;)V", AccessFlags = 1, Signature = "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)V")]
-				public virtual void SetProjectionMap(global::Java.Util.IMap<string, string> map) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCursorFactory
-				/// </java-name>
-				[Dot42.DexImport("setCursorFactory", "(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)V", AccessFlags = 1)]
-				public virtual void SetCursorFactory(global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setStrict
-				/// </java-name>
-				[Dot42.DexImport("setStrict", "(Z)V", AccessFlags = 1)]
-				public virtual void SetStrict(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// buildQueryString
-				/// </java-name>
-				[Dot42.DexImport("buildQueryString", "(ZLjava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/" +
-    "lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string BuildQueryString(bool boolean, string @string, string[] string1, string string2, string string3, string string4, string string5, string string6) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// appendColumns
-				/// </java-name>
-				[Dot42.DexImport("appendColumns", "(Ljava/lang/StringBuilder;[Ljava/lang/String;)V", AccessFlags = 9)]
-				public static void AppendColumns(global::System.Text.StringBuilder stringBuilder, string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// query
-				/// </java-name>
-				[Dot42.DexImport("query", "(Landroid/database/sqlite/SQLiteDatabase;[Ljava/lang/String;Ljava/lang/String;[Lj" +
-    "ava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/" +
-    "database/Cursor;", AccessFlags = 1)]
-				public virtual global::Android.Database.ICursor Query(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, string[] @string, string string1, string[] string2, string string3, string string4, string string5) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.ICursor);
-				}
-
-				/// <java-name>
-				/// query
-				/// </java-name>
-				[Dot42.DexImport("query", "(Landroid/database/sqlite/SQLiteDatabase;[Ljava/lang/String;Ljava/lang/String;[Lj" +
-    "ava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang" +
-    "/String;)Landroid/database/Cursor;", AccessFlags = 1)]
-				public virtual global::Android.Database.ICursor Query(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, string[] @string, string string1, string[] string2, string string3, string string4, string string5, string string6) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.ICursor);
-				}
-
-				/// <java-name>
-				/// buildQuery
-				/// </java-name>
-				[Dot42.DexImport("buildQuery", "([Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/l" +
-    "ang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string BuildQuery(string[] @string, string string1, string string2, string string3, string string4, string string5) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// buildQuery
-				/// </java-name>
-				[Dot42.DexImport("buildQuery", "([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/" +
-    "lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string BuildQuery(string[] @string, string string1, string[] string2, string string3, string string4, string string5, string string6) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// buildUnionSubQuery
-				/// </java-name>
-				[Dot42.DexImport("buildUnionSubQuery", "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;ILjava/lang/String;Ljava/lan" +
-    "g/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1, Signature = "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;ILjava/l" +
-    "ang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Str" +
-    "ing;")]
-				public virtual string BuildUnionSubQuery(string @string, string[] string1, global::Java.Util.ISet<string> set, int int32, string string2, string string3, string string4, string string5) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// buildUnionSubQuery
-				/// </java-name>
-				[Dot42.DexImport("buildUnionSubQuery", "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;ILjava/lang/String;Ljava/lan" +
-    "g/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Stri" +
-    "ng;", AccessFlags = 1, Signature = "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;ILjava/l" +
-    "ang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/Str" +
-    "ing;)Ljava/lang/String;")]
-				public virtual string BuildUnionSubQuery(string @string, string[] string1, global::Java.Util.ISet<string> set, int int32, string string2, string string3, string[] string4, string string5, string string6) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// buildUnionQuery
-				/// </java-name>
-				[Dot42.DexImport("buildUnionQuery", "([Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string BuildUnionQuery(string[] @string, string string1, string string2) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getTables
-				/// </java-name>
-				public string Tables
-				{
-				[Dot42.DexImport("getTables", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTables(); }
-				[Dot42.DexImport("setTables", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetTables(value); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteTransactionListener
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteTransactionListener", AccessFlags = 1537)]
-		public partial interface ISQLiteTransactionListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// onBegin
-				/// </java-name>
-				[Dot42.DexImport("onBegin", "()V", AccessFlags = 1025)]
-				void OnBegin() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onCommit
-				/// </java-name>
-				[Dot42.DexImport("onCommit", "()V", AccessFlags = 1025)]
-				void OnCommit() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onRollback
-				/// </java-name>
-				[Dot42.DexImport("onRollback", "()V", AccessFlags = 1025)]
-				void OnRollback() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteCursorDriver
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteCursorDriver", AccessFlags = 1537)]
-		public partial interface ISQLiteCursorDriver
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// query
-				/// </java-name>
-				[Dot42.DexImport("query", "(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;[Ljava/lang/String;)Landro" +
-    "id/database/Cursor;", AccessFlags = 1025)]
-				global::Android.Database.ICursor Query(global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory, string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// cursorDeactivated
-				/// </java-name>
-				[Dot42.DexImport("cursorDeactivated", "()V", AccessFlags = 1025)]
-				void CursorDeactivated() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// cursorRequeried
-				/// </java-name>
-				[Dot42.DexImport("cursorRequeried", "(Landroid/database/Cursor;)V", AccessFlags = 1025)]
-				void CursorRequeried(global::Android.Database.ICursor cursor) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// cursorClosed
-				/// </java-name>
-				[Dot42.DexImport("cursorClosed", "()V", AccessFlags = 1025)]
-				void CursorClosed() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setBindArguments
-				/// </java-name>
-				[Dot42.DexImport("setBindArguments", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetBindArguments(string[] @string) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteAbortException
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteAbortException", AccessFlags = 33)]
-		public partial class SQLiteAbortException : global::Android.Database.Sqlite.SQLiteException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteAbortException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteAbortException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteConstraintException
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteConstraintException", AccessFlags = 33)]
-		public partial class SQLiteConstraintException : global::Android.Database.Sqlite.SQLiteException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteConstraintException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteConstraintException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1402,6 +1113,217 @@ namespace Android.Database.Sqlite
 		}
 
 		/// <java-name>
+		/// android/database/sqlite/SQLiteDiskIOException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteDiskIOException", AccessFlags = 33)]
+		public partial class SQLiteDiskIOException : global::Android.Database.Sqlite.SQLiteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteDiskIOException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteDiskIOException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteDoneException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteDoneException", AccessFlags = 33)]
+		public partial class SQLiteDoneException : global::Android.Database.Sqlite.SQLiteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteDoneException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteDoneException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteException", AccessFlags = 33)]
+		public partial class SQLiteException : global::Android.Database.SQLException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteFullException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteFullException", AccessFlags = 33)]
+		public partial class SQLiteFullException : global::Android.Database.Sqlite.SQLiteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteFullException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteFullException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteMisuseException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteMisuseException", AccessFlags = 33)]
+		public partial class SQLiteMisuseException : global::Android.Database.Sqlite.SQLiteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteMisuseException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteMisuseException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteOpenHelper
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteOpenHelper", AccessFlags = 1057)]
+		public abstract partial class SQLiteOpenHelper
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDataba" +
+    "se$CursorFactory;I)V", AccessFlags = 1)]
+				public SQLiteOpenHelper(global::Android.Content.Context context, string @string, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDataba" +
+    "se$CursorFactory;ILandroid/database/DatabaseErrorHandler;)V", AccessFlags = 1)]
+				public SQLiteOpenHelper(global::Android.Content.Context context, string @string, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory, int int32, global::Android.Database.IDatabaseErrorHandler databaseErrorHandler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDatabaseName
+				/// </java-name>
+				[Dot42.DexImport("getDatabaseName", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetDatabaseName() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getWritableDatabase
+				/// </java-name>
+				[Dot42.DexImport("getWritableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
+				public virtual global::Android.Database.Sqlite.SQLiteDatabase GetWritableDatabase() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Database.Sqlite.SQLiteDatabase);
+				}
+
+				/// <java-name>
+				/// getReadableDatabase
+				/// </java-name>
+				[Dot42.DexImport("getReadableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
+				public virtual global::Android.Database.Sqlite.SQLiteDatabase GetReadableDatabase() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Database.Sqlite.SQLiteDatabase);
+				}
+
+				/// <java-name>
+				/// close
+				/// </java-name>
+				[Dot42.DexImport("close", "()V", AccessFlags = 33)]
+				public virtual void Close() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onCreate
+				/// </java-name>
+				[Dot42.DexImport("onCreate", "(Landroid/database/sqlite/SQLiteDatabase;)V", AccessFlags = 1025)]
+				public abstract void OnCreate(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onUpgrade
+				/// </java-name>
+				[Dot42.DexImport("onUpgrade", "(Landroid/database/sqlite/SQLiteDatabase;II)V", AccessFlags = 1025)]
+				public abstract void OnUpgrade(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, int int32, int int321) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onDowngrade
+				/// </java-name>
+				[Dot42.DexImport("onDowngrade", "(Landroid/database/sqlite/SQLiteDatabase;II)V", AccessFlags = 1)]
+				public virtual void OnDowngrade(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onOpen
+				/// </java-name>
+				[Dot42.DexImport("onOpen", "(Landroid/database/sqlite/SQLiteDatabase;)V", AccessFlags = 1)]
+				public virtual void OnOpen(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal SQLiteOpenHelper() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getDatabaseName
+				/// </java-name>
+				public string DatabaseName
+				{
+				[Dot42.DexImport("getDatabaseName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetDatabaseName(); }
+				}
+
+				/// <java-name>
+				/// getWritableDatabase
+				/// </java-name>
+				public global::Android.Database.Sqlite.SQLiteDatabase WritableDatabase
+				{
+				[Dot42.DexImport("getWritableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
+						get{ return GetWritableDatabase(); }
+				}
+
+				/// <java-name>
+				/// getReadableDatabase
+				/// </java-name>
+				public global::Android.Database.Sqlite.SQLiteDatabase ReadableDatabase
+				{
+				[Dot42.DexImport("getReadableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
+						get{ return GetReadableDatabase(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// android/database/sqlite/SQLiteOutOfMemoryException
 		/// </java-name>
 		[Dot42.DexImport("android/database/sqlite/SQLiteOutOfMemoryException", AccessFlags = 33)]
@@ -1415,56 +1337,6 @@ namespace Android.Database.Sqlite
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public SQLiteOutOfMemoryException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteQuery
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteQuery", AccessFlags = 33)]
-		public partial class SQLiteQuery : global::Android.Database.Sqlite.SQLiteProgram
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SQLiteQuery() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// close
-				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
-				public override void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteBlobTooBigException
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteBlobTooBigException", AccessFlags = 33)]
-		public partial class SQLiteBlobTooBigException : global::Android.Database.Sqlite.SQLiteException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteBlobTooBigException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteBlobTooBigException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1678,192 +1550,320 @@ namespace Android.Database.Sqlite
 		}
 
 		/// <java-name>
-		/// android/database/sqlite/SQLiteDiskIOException
+		/// android/database/sqlite/SQLiteQuery
 		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteDiskIOException", AccessFlags = 33)]
-		public partial class SQLiteDiskIOException : global::Android.Database.Sqlite.SQLiteException
+		[Dot42.DexImport("android/database/sqlite/SQLiteQuery", AccessFlags = 33)]
+		public partial class SQLiteQuery : global::Android.Database.Sqlite.SQLiteProgram
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteDiskIOException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteDiskIOException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteDatabaseCorruptException
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteDatabaseCorruptException", AccessFlags = 33)]
-		public partial class SQLiteDatabaseCorruptException : global::Android.Database.Sqlite.SQLiteException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteDatabaseCorruptException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteDatabaseCorruptException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteOpenHelper
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteOpenHelper", AccessFlags = 1057)]
-		public abstract partial class SQLiteOpenHelper
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDataba" +
-    "se$CursorFactory;I)V", AccessFlags = 1)]
-				public SQLiteOpenHelper(global::Android.Content.Context context, string @string, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDataba" +
-    "se$CursorFactory;ILandroid/database/DatabaseErrorHandler;)V", AccessFlags = 1)]
-				public SQLiteOpenHelper(global::Android.Content.Context context, string @string, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory, int int32, global::Android.Database.IDatabaseErrorHandler databaseErrorHandler) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal SQLiteQuery() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getDatabaseName
+				/// toString
 				/// </java-name>
-				[Dot42.DexImport("getDatabaseName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDatabaseName() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
 				/// <java-name>
-				/// getWritableDatabase
-				/// </java-name>
-				[Dot42.DexImport("getWritableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
-				public virtual global::Android.Database.Sqlite.SQLiteDatabase GetWritableDatabase() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.Sqlite.SQLiteDatabase);
-				}
-
-				/// <java-name>
-				/// getReadableDatabase
-				/// </java-name>
-				[Dot42.DexImport("getReadableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
-				public virtual global::Android.Database.Sqlite.SQLiteDatabase GetReadableDatabase() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.Sqlite.SQLiteDatabase);
-				}
-
-				/// <java-name>
 				/// close
 				/// </java-name>
-				[Dot42.DexImport("close", "()V", AccessFlags = 33)]
-				public virtual void Close() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCreate
-				/// </java-name>
-				[Dot42.DexImport("onCreate", "(Landroid/database/sqlite/SQLiteDatabase;)V", AccessFlags = 1025)]
-				public abstract void OnCreate(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onUpgrade
-				/// </java-name>
-				[Dot42.DexImport("onUpgrade", "(Landroid/database/sqlite/SQLiteDatabase;II)V", AccessFlags = 1025)]
-				public abstract void OnUpgrade(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, int int32, int int321) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onDowngrade
-				/// </java-name>
-				[Dot42.DexImport("onDowngrade", "(Landroid/database/sqlite/SQLiteDatabase;II)V", AccessFlags = 1)]
-				public virtual void OnDowngrade(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onOpen
-				/// </java-name>
-				[Dot42.DexImport("onOpen", "(Landroid/database/sqlite/SQLiteDatabase;)V", AccessFlags = 1)]
-				public virtual void OnOpen(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SQLiteOpenHelper() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDatabaseName
-				/// </java-name>
-				public string DatabaseName
-				{
-				[Dot42.DexImport("getDatabaseName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDatabaseName(); }
-				}
-
-				/// <java-name>
-				/// getWritableDatabase
-				/// </java-name>
-				public global::Android.Database.Sqlite.SQLiteDatabase WritableDatabase
-				{
-				[Dot42.DexImport("getWritableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
-						get{ return GetWritableDatabase(); }
-				}
-
-				/// <java-name>
-				/// getReadableDatabase
-				/// </java-name>
-				public global::Android.Database.Sqlite.SQLiteDatabase ReadableDatabase
-				{
-				[Dot42.DexImport("getReadableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
-						get{ return GetReadableDatabase(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/database/sqlite/SQLiteCantOpenDatabaseException
-		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteCantOpenDatabaseException", AccessFlags = 33)]
-		public partial class SQLiteCantOpenDatabaseException : global::Android.Database.Sqlite.SQLiteException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteCantOpenDatabaseException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteCantOpenDatabaseException(string @string) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
+				public override void Close() /* MethodBuilder.Create */ 
 				{
 				}
 
 		}
 
 		/// <java-name>
-		/// android/database/sqlite/SQLiteMisuseException
+		/// android/database/sqlite/SQLiteQueryBuilder
 		/// </java-name>
-		[Dot42.DexImport("android/database/sqlite/SQLiteMisuseException", AccessFlags = 33)]
-		public partial class SQLiteMisuseException : global::Android.Database.Sqlite.SQLiteException
+		[Dot42.DexImport("android/database/sqlite/SQLiteQueryBuilder", AccessFlags = 33)]
+		public partial class SQLiteQueryBuilder
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public SQLiteMisuseException() /* MethodBuilder.Create */ 
+				public SQLiteQueryBuilder() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setDistinct
+				/// </java-name>
+				[Dot42.DexImport("setDistinct", "(Z)V", AccessFlags = 1)]
+				public virtual void SetDistinct(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTables
+				/// </java-name>
+				[Dot42.DexImport("getTables", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string GetTables() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// setTables
+				/// </java-name>
+				[Dot42.DexImport("setTables", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void SetTables(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// appendWhere
+				/// </java-name>
+				[Dot42.DexImport("appendWhere", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public virtual void AppendWhere(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// appendWhereEscapeString
+				/// </java-name>
+				[Dot42.DexImport("appendWhereEscapeString", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public virtual void AppendWhereEscapeString(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setProjectionMap
+				/// </java-name>
+				[Dot42.DexImport("setProjectionMap", "(Ljava/util/Map;)V", AccessFlags = 1, Signature = "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)V")]
+				public virtual void SetProjectionMap(global::Java.Util.IMap<string, string> map) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setCursorFactory
+				/// </java-name>
+				[Dot42.DexImport("setCursorFactory", "(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)V", AccessFlags = 1)]
+				public virtual void SetCursorFactory(global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setStrict
+				/// </java-name>
+				[Dot42.DexImport("setStrict", "(Z)V", AccessFlags = 1)]
+				public virtual void SetStrict(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// buildQueryString
+				/// </java-name>
+				[Dot42.DexImport("buildQueryString", "(ZLjava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/" +
+    "lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
+				public static string BuildQueryString(bool boolean, string @string, string[] string1, string string2, string string3, string string4, string string5, string string6) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// appendColumns
+				/// </java-name>
+				[Dot42.DexImport("appendColumns", "(Ljava/lang/StringBuilder;[Ljava/lang/String;)V", AccessFlags = 9)]
+				public static void AppendColumns(global::System.Text.StringBuilder stringBuilder, string[] @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// query
+				/// </java-name>
+				[Dot42.DexImport("query", "(Landroid/database/sqlite/SQLiteDatabase;[Ljava/lang/String;Ljava/lang/String;[Lj" +
+    "ava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/" +
+    "database/Cursor;", AccessFlags = 1)]
+				public virtual global::Android.Database.ICursor Query(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, string[] @string, string string1, string[] string2, string string3, string string4, string string5) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Database.ICursor);
+				}
+
+				/// <java-name>
+				/// query
+				/// </java-name>
+				[Dot42.DexImport("query", "(Landroid/database/sqlite/SQLiteDatabase;[Ljava/lang/String;Ljava/lang/String;[Lj" +
+    "ava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang" +
+    "/String;)Landroid/database/Cursor;", AccessFlags = 1)]
+				public virtual global::Android.Database.ICursor Query(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, string[] @string, string string1, string[] string2, string string3, string string4, string string5, string string6) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Database.ICursor);
+				}
+
+				/// <java-name>
+				/// buildQuery
+				/// </java-name>
+				[Dot42.DexImport("buildQuery", "([Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/l" +
+    "ang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string BuildQuery(string[] @string, string string1, string string2, string string3, string string4, string string5) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// buildQuery
+				/// </java-name>
+				[Dot42.DexImport("buildQuery", "([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/" +
+    "lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string BuildQuery(string[] @string, string string1, string[] string2, string string3, string string4, string string5, string string6) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// buildUnionSubQuery
+				/// </java-name>
+				[Dot42.DexImport("buildUnionSubQuery", "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;ILjava/lang/String;Ljava/lan" +
+    "g/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1, Signature = "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;ILjava/l" +
+    "ang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Str" +
+    "ing;")]
+				public virtual string BuildUnionSubQuery(string @string, string[] string1, global::Java.Util.ISet<string> set, int int32, string string2, string string3, string string4, string string5) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// buildUnionSubQuery
+				/// </java-name>
+				[Dot42.DexImport("buildUnionSubQuery", "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;ILjava/lang/String;Ljava/lan" +
+    "g/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Stri" +
+    "ng;", AccessFlags = 1, Signature = "(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;ILjava/l" +
+    "ang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/Str" +
+    "ing;)Ljava/lang/String;")]
+				public virtual string BuildUnionSubQuery(string @string, string[] string1, global::Java.Util.ISet<string> set, int int32, string string2, string string3, string[] string4, string string5, string string6) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// buildUnionQuery
+				/// </java-name>
+				[Dot42.DexImport("buildUnionQuery", "([Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string BuildUnionQuery(string[] @string, string string1, string string2) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getTables
+				/// </java-name>
+				public string Tables
+				{
+				[Dot42.DexImport("getTables", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetTables(); }
+				[Dot42.DexImport("setTables", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ SetTables(value); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteReadOnlyDatabaseException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteReadOnlyDatabaseException", AccessFlags = 33)]
+		public partial class SQLiteReadOnlyDatabaseException : global::Android.Database.Sqlite.SQLiteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteReadOnlyDatabaseException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public SQLiteMisuseException(string @string) /* MethodBuilder.Create */ 
+				public SQLiteReadOnlyDatabaseException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteStatement
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteStatement", AccessFlags = 33)]
+		public partial class SQLiteStatement : global::Android.Database.Sqlite.SQLiteProgram
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal SQLiteStatement() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// execute
+				/// </java-name>
+				[Dot42.DexImport("execute", "()V", AccessFlags = 1)]
+				public virtual void Execute() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// executeUpdateDelete
+				/// </java-name>
+				[Dot42.DexImport("executeUpdateDelete", "()I", AccessFlags = 1)]
+				public virtual int ExecuteUpdateDelete() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// executeInsert
+				/// </java-name>
+				[Dot42.DexImport("executeInsert", "()J", AccessFlags = 1)]
+				public virtual long ExecuteInsert() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// simpleQueryForLong
+				/// </java-name>
+				[Dot42.DexImport("simpleQueryForLong", "()J", AccessFlags = 1)]
+				public virtual long SimpleQueryForLong() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// simpleQueryForString
+				/// </java-name>
+				[Dot42.DexImport("simpleQueryForString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public virtual string SimpleQueryForString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// simpleQueryForBlobFileDescriptor
+				/// </java-name>
+				[Dot42.DexImport("simpleQueryForBlobFileDescriptor", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
+				public virtual global::Android.Os.ParcelFileDescriptor SimpleQueryForBlobFileDescriptor() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.ParcelFileDescriptor);
+				}
+
+		}
+
+		/// <java-name>
+		/// android/database/sqlite/SQLiteTableLockedException
+		/// </java-name>
+		[Dot42.DexImport("android/database/sqlite/SQLiteTableLockedException", AccessFlags = 33)]
+		public partial class SQLiteTableLockedException : global::Android.Database.Sqlite.SQLiteException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public SQLiteTableLockedException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public SQLiteTableLockedException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 

@@ -2,117 +2,6 @@
 namespace Android.Speech.Tts
 {
 		/// <java-name>
-		/// android/speech/tts/UtteranceProgressListener
-		/// </java-name>
-		[Dot42.DexImport("android/speech/tts/UtteranceProgressListener", AccessFlags = 1057)]
-		public abstract partial class UtteranceProgressListener
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public UtteranceProgressListener() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onStart
-				/// </java-name>
-				[Dot42.DexImport("onStart", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				public abstract void OnStart(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onDone
-				/// </java-name>
-				[Dot42.DexImport("onDone", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				public abstract void OnDone(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onError
-				/// </java-name>
-				[Dot42.DexImport("onError", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				public abstract void OnError(string @string) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/speech/tts/TextToSpeechService
-		/// </java-name>
-		[Dot42.DexImport("android/speech/tts/TextToSpeechService", AccessFlags = 1057)]
-		public abstract partial class TextToSpeechService : global::Android.App.Service
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public TextToSpeechService() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onCreate
-				/// </java-name>
-				[Dot42.DexImport("onCreate", "()V", AccessFlags = 1)]
-				public override void OnCreate() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onDestroy
-				/// </java-name>
-				[Dot42.DexImport("onDestroy", "()V", AccessFlags = 1)]
-				public override void OnDestroy() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onIsLanguageAvailable
-				/// </java-name>
-				[Dot42.DexImport("onIsLanguageAvailable", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1028)]
-				protected internal abstract int OnIsLanguageAvailable(string @string, string string1, string string2) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onGetLanguage
-				/// </java-name>
-				[Dot42.DexImport("onGetLanguage", "()[Ljava/lang/String;", AccessFlags = 1028)]
-				protected internal abstract string[] OnGetLanguage() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onLoadLanguage
-				/// </java-name>
-				[Dot42.DexImport("onLoadLanguage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1028)]
-				protected internal abstract int OnLoadLanguage(string @string, string string1, string string2) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onStop
-				/// </java-name>
-				[Dot42.DexImport("onStop", "()V", AccessFlags = 1028)]
-				protected internal abstract void OnStop() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onSynthesizeText
-				/// </java-name>
-				[Dot42.DexImport("onSynthesizeText", "(Landroid/speech/tts/SynthesisRequest;Landroid/speech/tts/SynthesisCallback;)V", AccessFlags = 1028)]
-				protected internal abstract void OnSynthesizeText(global::Android.Speech.Tts.SynthesisRequest synthesisRequest, global::Android.Speech.Tts.ISynthesisCallback synthesisCallback) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onGetFeaturesForLanguage
-				/// </java-name>
-				[Dot42.DexImport("onGetFeaturesForLanguage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Set;", AccessFlags = 4, Signature = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Set<Ljava/lang" +
-    "/String;>;")]
-				protected internal virtual global::Java.Util.ISet<string> OnGetFeaturesForLanguage(string @string, string string1, string string2) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				/// <java-name>
-				/// onBind
-				/// </java-name>
-				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 1)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IBinder);
-				}
-
-		}
-
-		/// <java-name>
 		/// android/speech/tts/SynthesisCallback
 		/// </java-name>
 		[Dot42.DexImport("android/speech/tts/SynthesisCallback", AccessFlags = 1537)]
@@ -148,6 +37,151 @@ namespace Android.Speech.Tts
 				/// </java-name>
 				[Dot42.DexImport("error", "()V", AccessFlags = 1025)]
 				void Error() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/speech/tts/SynthesisRequest
+		/// </java-name>
+		[Dot42.DexImport("android/speech/tts/SynthesisRequest", AccessFlags = 49)]
+		public sealed partial class SynthesisRequest
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
+				public SynthesisRequest(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getText
+				/// </java-name>
+				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetText() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getLanguage
+				/// </java-name>
+				[Dot42.DexImport("getLanguage", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetLanguage() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getCountry
+				/// </java-name>
+				[Dot42.DexImport("getCountry", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetCountry() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getVariant
+				/// </java-name>
+				[Dot42.DexImport("getVariant", "()Ljava/lang/String;", AccessFlags = 1)]
+				public string GetVariant() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <java-name>
+				/// getSpeechRate
+				/// </java-name>
+				[Dot42.DexImport("getSpeechRate", "()I", AccessFlags = 1)]
+				public int GetSpeechRate() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getPitch
+				/// </java-name>
+				[Dot42.DexImport("getPitch", "()I", AccessFlags = 1)]
+				public int GetPitch() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getParams
+				/// </java-name>
+				[Dot42.DexImport("getParams", "()Landroid/os/Bundle;", AccessFlags = 1)]
+				public global::Android.Os.Bundle GetParams() /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.Bundle);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal SynthesisRequest() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getText
+				/// </java-name>
+				public string Text
+				{
+				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetText(); }
+				}
+
+				/// <java-name>
+				/// getLanguage
+				/// </java-name>
+				public string Language
+				{
+				[Dot42.DexImport("getLanguage", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetLanguage(); }
+				}
+
+				/// <java-name>
+				/// getCountry
+				/// </java-name>
+				public string Country
+				{
+				[Dot42.DexImport("getCountry", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetCountry(); }
+				}
+
+				/// <java-name>
+				/// getVariant
+				/// </java-name>
+				public string Variant
+				{
+				[Dot42.DexImport("getVariant", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return GetVariant(); }
+				}
+
+				/// <java-name>
+				/// getSpeechRate
+				/// </java-name>
+				public int SpeechRate
+				{
+				[Dot42.DexImport("getSpeechRate", "()I", AccessFlags = 1)]
+						get{ return GetSpeechRate(); }
+				}
+
+				/// <java-name>
+				/// getPitch
+				/// </java-name>
+				public int Pitch
+				{
+				[Dot42.DexImport("getPitch", "()I", AccessFlags = 1)]
+						get{ return GetPitch(); }
+				}
+
+				/// <java-name>
+				/// getParams
+				/// </java-name>
+				public global::Android.Os.Bundle Params
+				{
+				[Dot42.DexImport("getParams", "()Landroid/os/Bundle;", AccessFlags = 1)]
+						get{ return GetParams(); }
+				}
 
 		}
 
@@ -673,147 +707,113 @@ namespace Android.Speech.Tts
 		}
 
 		/// <java-name>
-		/// android/speech/tts/SynthesisRequest
+		/// android/speech/tts/TextToSpeechService
 		/// </java-name>
-		[Dot42.DexImport("android/speech/tts/SynthesisRequest", AccessFlags = 49)]
-		public sealed partial class SynthesisRequest
+		[Dot42.DexImport("android/speech/tts/TextToSpeechService", AccessFlags = 1057)]
+		public abstract partial class TextToSpeechService : global::Android.App.Service
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public SynthesisRequest(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public TextToSpeechService() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getText
+				/// onCreate
 				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetText() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLanguage
-				/// </java-name>
-				[Dot42.DexImport("getLanguage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetLanguage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCountry
-				/// </java-name>
-				[Dot42.DexImport("getCountry", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetCountry() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getVariant
-				/// </java-name>
-				[Dot42.DexImport("getVariant", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetVariant() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSpeechRate
-				/// </java-name>
-				[Dot42.DexImport("getSpeechRate", "()I", AccessFlags = 1)]
-				public int GetSpeechRate() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPitch
-				/// </java-name>
-				[Dot42.DexImport("getPitch", "()I", AccessFlags = 1)]
-				public int GetPitch() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getParams
-				/// </java-name>
-				[Dot42.DexImport("getParams", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public global::Android.Os.Bundle GetParams() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.Bundle);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SynthesisRequest() /* TypeBuilder.AddDefaultConstructor */ 
+				[Dot42.DexImport("onCreate", "()V", AccessFlags = 1)]
+				public override void OnCreate() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getText
+				/// onDestroy
 				/// </java-name>
-				public string Text
+				[Dot42.DexImport("onDestroy", "()V", AccessFlags = 1)]
+				public override void OnDestroy() /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetText(); }
 				}
 
 				/// <java-name>
-				/// getLanguage
+				/// onIsLanguageAvailable
 				/// </java-name>
-				public string Language
+				[Dot42.DexImport("onIsLanguageAvailable", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1028)]
+				protected internal abstract int OnIsLanguageAvailable(string @string, string string1, string string2) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onGetLanguage
+				/// </java-name>
+				[Dot42.DexImport("onGetLanguage", "()[Ljava/lang/String;", AccessFlags = 1028)]
+				protected internal abstract string[] OnGetLanguage() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onLoadLanguage
+				/// </java-name>
+				[Dot42.DexImport("onLoadLanguage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1028)]
+				protected internal abstract int OnLoadLanguage(string @string, string string1, string string2) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onStop
+				/// </java-name>
+				[Dot42.DexImport("onStop", "()V", AccessFlags = 1028)]
+				protected internal abstract void OnStop() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onSynthesizeText
+				/// </java-name>
+				[Dot42.DexImport("onSynthesizeText", "(Landroid/speech/tts/SynthesisRequest;Landroid/speech/tts/SynthesisCallback;)V", AccessFlags = 1028)]
+				protected internal abstract void OnSynthesizeText(global::Android.Speech.Tts.SynthesisRequest synthesisRequest, global::Android.Speech.Tts.ISynthesisCallback synthesisCallback) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onGetFeaturesForLanguage
+				/// </java-name>
+				[Dot42.DexImport("onGetFeaturesForLanguage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Set;", AccessFlags = 4, Signature = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Set<Ljava/lang" +
+    "/String;>;")]
+				protected internal virtual global::Java.Util.ISet<string> OnGetFeaturesForLanguage(string @string, string string1, string string2) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getLanguage", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLanguage(); }
+						return default(global::Java.Util.ISet<string>);
 				}
 
 				/// <java-name>
-				/// getCountry
+				/// onBind
 				/// </java-name>
-				public string Country
+				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 1)]
+				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-				[Dot42.DexImport("getCountry", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCountry(); }
+						return default(global::Android.Os.IBinder);
+				}
+
+		}
+
+		/// <java-name>
+		/// android/speech/tts/UtteranceProgressListener
+		/// </java-name>
+		[Dot42.DexImport("android/speech/tts/UtteranceProgressListener", AccessFlags = 1057)]
+		public abstract partial class UtteranceProgressListener
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public UtteranceProgressListener() /* MethodBuilder.Create */ 
+				{
 				}
 
 				/// <java-name>
-				/// getVariant
+				/// onStart
 				/// </java-name>
-				public string Variant
-				{
-				[Dot42.DexImport("getVariant", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetVariant(); }
-				}
+				[Dot42.DexImport("onStart", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				public abstract void OnStart(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSpeechRate
+				/// onDone
 				/// </java-name>
-				public int SpeechRate
-				{
-				[Dot42.DexImport("getSpeechRate", "()I", AccessFlags = 1)]
-						get{ return GetSpeechRate(); }
-				}
+				[Dot42.DexImport("onDone", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				public abstract void OnDone(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getPitch
+				/// onError
 				/// </java-name>
-				public int Pitch
-				{
-				[Dot42.DexImport("getPitch", "()I", AccessFlags = 1)]
-						get{ return GetPitch(); }
-				}
-
-				/// <java-name>
-				/// getParams
-				/// </java-name>
-				public global::Android.Os.Bundle Params
-				{
-				[Dot42.DexImport("getParams", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						get{ return GetParams(); }
-				}
+				[Dot42.DexImport("onError", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				public abstract void OnError(string @string) /* MethodBuilder.Create */ ;
 
 		}
 

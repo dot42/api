@@ -2,130 +2,6 @@
 namespace Org.Apache.Http.Entity
 {
 		/// <java-name>
-		/// org/apache/http/entity/BufferedHttpEntity
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/entity/BufferedHttpEntity", AccessFlags = 33)]
-		public partial class BufferedHttpEntity : global::Org.Apache.Http.Entity.HttpEntityWrapper
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Lorg/apache/http/HttpEntity;)V", AccessFlags = 1)]
-				public BufferedHttpEntity(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// isChunked
-				/// </java-name>
-				[Dot42.DexImport("isChunked", "()Z", AccessFlags = 1)]
-				public override bool IsChunked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// writeTo
-				/// </java-name>
-				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BufferedHttpEntity() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				public long ContentLength
-				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				public global::Java.Io.InputStream Content
-				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/entity/ContentLengthStrategy
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/entity/ContentLengthStrategy", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IContentLengthStrategyConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// IDENTITY
-				/// </java-name>
-				[Dot42.DexImport("IDENTITY", "I", AccessFlags = 25)]
-				public const int IDENTITY = -1;
-				/// <java-name>
-				/// CHUNKED
-				/// </java-name>
-				[Dot42.DexImport("CHUNKED", "I", AccessFlags = 25)]
-				public const int CHUNKED = -2;
-		}
-
-		/// <java-name>
-		/// org/apache/http/entity/ContentLengthStrategy
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/entity/ContentLengthStrategy", AccessFlags = 1537)]
-		public partial interface IContentLengthStrategy
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// determineLength
-				/// </java-name>
-				[Dot42.DexImport("determineLength", "(Lorg/apache/http/HttpMessage;)J", AccessFlags = 1025)]
-				long DetermineLength(global::Org.Apache.Http.IHttpMessage httpMessage) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/entity/AbstractHttpEntity
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/entity/AbstractHttpEntity", AccessFlags = 1057)]
@@ -271,466 +147,6 @@ namespace Org.Apache.Http.Entity
 		}
 
 		/// <java-name>
-		/// org/apache/http/entity/ContentProducer
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/entity/ContentProducer", AccessFlags = 1537)]
-		public partial interface IContentProducer
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// writeTo
-				/// </java-name>
-				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-				void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/entity/InputStreamEntity
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/entity/InputStreamEntity", AccessFlags = 33)]
-		public partial class InputStreamEntity : global::Org.Apache.Http.Entity.AbstractHttpEntity
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;J)V", AccessFlags = 1)]
-				public InputStreamEntity(global::Java.Io.InputStream inputStream, long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// writeTo
-				/// </java-name>
-				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// consumeContent
-				/// </java-name>
-				[Dot42.DexImport("consumeContent", "()V", AccessFlags = 1)]
-				public override void ConsumeContent() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InputStreamEntity() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				public long ContentLength
-				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				public global::Java.Io.InputStream Content
-				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/entity/EntityTemplate
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/entity/EntityTemplate", AccessFlags = 33)]
-		public partial class EntityTemplate : global::Org.Apache.Http.Entity.AbstractHttpEntity
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Lorg/apache/http/entity/ContentProducer;)V", AccessFlags = 1)]
-				public EntityTemplate(global::Org.Apache.Http.Entity.IContentProducer contentProducer) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// writeTo
-				/// </java-name>
-				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// consumeContent
-				/// </java-name>
-				[Dot42.DexImport("consumeContent", "()V", AccessFlags = 1)]
-				public override void ConsumeContent() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EntityTemplate() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				public long ContentLength
-				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				public global::Java.Io.InputStream Content
-				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/entity/StringEntity
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/entity/StringEntity", AccessFlags = 33)]
-		public partial class StringEntity : global::Org.Apache.Http.Entity.AbstractHttpEntity, global::Java.Lang.ICloneable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// content
-				/// </java-name>
-				[Dot42.DexImport("content", "[B", AccessFlags = 20)]
-				protected internal readonly sbyte[] Content;
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public StringEntity(string @string, string string1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public StringEntity(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// writeTo
-				/// </java-name>
-				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// clone
-				/// </java-name>
-				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object Clone() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StringEntity() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				public long ContentLength
-				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/entity/SerializableEntity
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/entity/SerializableEntity", AccessFlags = 33)]
-		public partial class SerializableEntity : global::Org.Apache.Http.Entity.AbstractHttpEntity
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(Ljava/io/Serializable;Z)V", AccessFlags = 1)]
-				public SerializableEntity(global::Java.Io.ISerializable serializable, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// writeTo
-				/// </java-name>
-				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SerializableEntity() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				public global::Java.Io.InputStream Content
-				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				public long ContentLength
-				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/entity/FileEntity
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/entity/FileEntity", AccessFlags = 33)]
-		public partial class FileEntity : global::Org.Apache.Http.Entity.AbstractHttpEntity, global::Java.Lang.ICloneable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// file
-				/// </java-name>
-				[Dot42.DexImport("file", "Ljava/io/File;", AccessFlags = 20)]
-				protected internal readonly global::Java.Io.File File;
-				[Dot42.DexImport("<init>", "(Ljava/io/File;Ljava/lang/String;)V", AccessFlags = 1)]
-				public FileEntity(global::Java.Io.File file, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// writeTo
-				/// </java-name>
-				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// clone
-				/// </java-name>
-				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object Clone() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FileEntity() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				public long ContentLength
-				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				public global::Java.Io.InputStream Content
-				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/entity/BasicHttpEntity
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/entity/BasicHttpEntity", AccessFlags = 33)]
@@ -807,6 +223,96 @@ namespace Org.Apache.Http.Entity
 				/// </java-name>
 				[Dot42.DexImport("consumeContent", "()V", AccessFlags = 1)]
 				public override void ConsumeContent() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				public long ContentLength
+				{
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return GetContentLength(); }
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				public global::Java.Io.InputStream Content
+				{
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return GetContent(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/entity/BufferedHttpEntity
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/entity/BufferedHttpEntity", AccessFlags = 33)]
+		public partial class BufferedHttpEntity : global::Org.Apache.Http.Entity.HttpEntityWrapper
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Lorg/apache/http/HttpEntity;)V", AccessFlags = 1)]
+				public BufferedHttpEntity(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+				public override long GetContentLength() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// isChunked
+				/// </java-name>
+				[Dot42.DexImport("isChunked", "()Z", AccessFlags = 1)]
+				public override bool IsChunked() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+				public override bool IsRepeatable() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// writeTo
+				/// </java-name>
+				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
+				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+				public override bool IsStreaming() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal BufferedHttpEntity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -917,6 +423,190 @@ namespace Org.Apache.Http.Entity
 				{
 				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
 						get{ return GetContentLength(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/entity/EntityTemplate
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/entity/EntityTemplate", AccessFlags = 33)]
+		public partial class EntityTemplate : global::Org.Apache.Http.Entity.AbstractHttpEntity
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Lorg/apache/http/entity/ContentProducer;)V", AccessFlags = 1)]
+				public EntityTemplate(global::Org.Apache.Http.Entity.IContentProducer contentProducer) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+				public override long GetContentLength() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+				public override bool IsRepeatable() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// writeTo
+				/// </java-name>
+				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
+				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+				public override bool IsStreaming() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// consumeContent
+				/// </java-name>
+				[Dot42.DexImport("consumeContent", "()V", AccessFlags = 1)]
+				public override void ConsumeContent() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal EntityTemplate() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				public long ContentLength
+				{
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return GetContentLength(); }
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				public global::Java.Io.InputStream Content
+				{
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return GetContent(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/entity/FileEntity
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/entity/FileEntity", AccessFlags = 33)]
+		public partial class FileEntity : global::Org.Apache.Http.Entity.AbstractHttpEntity, global::Java.Lang.ICloneable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// file
+				/// </java-name>
+				[Dot42.DexImport("file", "Ljava/io/File;", AccessFlags = 20)]
+				protected internal readonly global::Java.Io.File File;
+				[Dot42.DexImport("<init>", "(Ljava/io/File;Ljava/lang/String;)V", AccessFlags = 1)]
+				public FileEntity(global::Java.Io.File file, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+				public override bool IsRepeatable() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+				public override long GetContentLength() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// writeTo
+				/// </java-name>
+				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
+				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+				public override bool IsStreaming() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// clone
+				/// </java-name>
+				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object Clone() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal FileEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				public long ContentLength
+				{
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return GetContentLength(); }
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				public global::Java.Io.InputStream Content
+				{
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return GetContent(); }
 				}
 
 		}
@@ -1056,6 +746,316 @@ namespace Org.Apache.Http.Entity
 				{
 				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
 						get{ return GetContent(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/entity/ContentLengthStrategy
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/entity/ContentLengthStrategy", AccessFlags = 1537)]
+		public partial interface IContentLengthStrategy
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// determineLength
+				/// </java-name>
+				[Dot42.DexImport("determineLength", "(Lorg/apache/http/HttpMessage;)J", AccessFlags = 1025)]
+				long DetermineLength(global::Org.Apache.Http.IHttpMessage httpMessage) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/entity/ContentLengthStrategy
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/entity/ContentLengthStrategy", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IContentLengthStrategyConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// IDENTITY
+				/// </java-name>
+				[Dot42.DexImport("IDENTITY", "I", AccessFlags = 25)]
+				public const int IDENTITY = -1;
+				/// <java-name>
+				/// CHUNKED
+				/// </java-name>
+				[Dot42.DexImport("CHUNKED", "I", AccessFlags = 25)]
+				public const int CHUNKED = -2;
+		}
+
+		/// <java-name>
+		/// org/apache/http/entity/ContentProducer
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/entity/ContentProducer", AccessFlags = 1537)]
+		public partial interface IContentProducer
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// writeTo
+				/// </java-name>
+				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
+				void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/entity/InputStreamEntity
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/entity/InputStreamEntity", AccessFlags = 33)]
+		public partial class InputStreamEntity : global::Org.Apache.Http.Entity.AbstractHttpEntity
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;J)V", AccessFlags = 1)]
+				public InputStreamEntity(global::Java.Io.InputStream inputStream, long int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+				public override bool IsRepeatable() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+				public override long GetContentLength() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// writeTo
+				/// </java-name>
+				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
+				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+				public override bool IsStreaming() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// consumeContent
+				/// </java-name>
+				[Dot42.DexImport("consumeContent", "()V", AccessFlags = 1)]
+				public override void ConsumeContent() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal InputStreamEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				public long ContentLength
+				{
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return GetContentLength(); }
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				public global::Java.Io.InputStream Content
+				{
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return GetContent(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/entity/SerializableEntity
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/entity/SerializableEntity", AccessFlags = 33)]
+		public partial class SerializableEntity : global::Org.Apache.Http.Entity.AbstractHttpEntity
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Ljava/io/Serializable;Z)V", AccessFlags = 1)]
+				public SerializableEntity(global::Java.Io.ISerializable serializable, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+				public override long GetContentLength() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+				public override bool IsRepeatable() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+				public override bool IsStreaming() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// writeTo
+				/// </java-name>
+				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
+				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal SerializableEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				public global::Java.Io.InputStream Content
+				{
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return GetContent(); }
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				public long ContentLength
+				{
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return GetContentLength(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/entity/StringEntity
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/entity/StringEntity", AccessFlags = 33)]
+		public partial class StringEntity : global::Org.Apache.Http.Entity.AbstractHttpEntity, global::Java.Lang.ICloneable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// content
+				/// </java-name>
+				[Dot42.DexImport("content", "[B", AccessFlags = 20)]
+				protected internal readonly sbyte[] Content;
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
+				public StringEntity(string @string, string string1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public StringEntity(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+				public override bool IsRepeatable() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+				public override long GetContentLength() /* MethodBuilder.Create */ 
+				{
+						return default(long);
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Io.InputStream);
+				}
+
+				/// <java-name>
+				/// writeTo
+				/// </java-name>
+				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
+				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+				public override bool IsStreaming() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// clone
+				/// </java-name>
+				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
+				public virtual object Clone() /* MethodBuilder.Create */ 
+				{
+						return default(object);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal StringEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getContentLength
+				/// </java-name>
+				public long ContentLength
+				{
+				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return GetContentLength(); }
 				}
 
 		}

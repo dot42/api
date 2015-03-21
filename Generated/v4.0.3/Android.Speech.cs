@@ -2,6 +2,224 @@
 namespace Android.Speech
 {
 		/// <java-name>
+		/// android/speech/RecognitionListener
+		/// </java-name>
+		[Dot42.DexImport("android/speech/RecognitionListener", AccessFlags = 1537)]
+		public partial interface IRecognitionListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// onReadyForSpeech
+				/// </java-name>
+				[Dot42.DexImport("onReadyForSpeech", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
+				void OnReadyForSpeech(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onBeginningOfSpeech
+				/// </java-name>
+				[Dot42.DexImport("onBeginningOfSpeech", "()V", AccessFlags = 1025)]
+				void OnBeginningOfSpeech() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onRmsChanged
+				/// </java-name>
+				[Dot42.DexImport("onRmsChanged", "(F)V", AccessFlags = 1025)]
+				void OnRmsChanged(float single) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onBufferReceived
+				/// </java-name>
+				[Dot42.DexImport("onBufferReceived", "([B)V", AccessFlags = 1025)]
+				void OnBufferReceived(sbyte[] sByte) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onEndOfSpeech
+				/// </java-name>
+				[Dot42.DexImport("onEndOfSpeech", "()V", AccessFlags = 1025)]
+				void OnEndOfSpeech() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onError
+				/// </java-name>
+				[Dot42.DexImport("onError", "(I)V", AccessFlags = 1025)]
+				void OnError(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onResults
+				/// </java-name>
+				[Dot42.DexImport("onResults", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
+				void OnResults(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onPartialResults
+				/// </java-name>
+				[Dot42.DexImport("onPartialResults", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
+				void OnPartialResults(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onEvent
+				/// </java-name>
+				[Dot42.DexImport("onEvent", "(ILandroid/os/Bundle;)V", AccessFlags = 1025)]
+				void OnEvent(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/speech/RecognitionService
+		/// </java-name>
+		[Dot42.DexImport("android/speech/RecognitionService", AccessFlags = 1057)]
+		public abstract partial class RecognitionService : global::Android.App.Service
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// SERVICE_INTERFACE
+				/// </java-name>
+				[Dot42.DexImport("SERVICE_INTERFACE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string SERVICE_INTERFACE = "android.speech.RecognitionService";
+				/// <java-name>
+				/// SERVICE_META_DATA
+				/// </java-name>
+				[Dot42.DexImport("SERVICE_META_DATA", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string SERVICE_META_DATA = "android.speech";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public RecognitionService() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// onStartListening
+				/// </java-name>
+				[Dot42.DexImport("onStartListening", "(Landroid/content/Intent;Landroid/speech/RecognitionService$Callback;)V", AccessFlags = 1028)]
+				protected internal abstract void OnStartListening(global::Android.Content.Intent intent, global::Android.Speech.RecognitionService.Callback callback) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onCancel
+				/// </java-name>
+				[Dot42.DexImport("onCancel", "(Landroid/speech/RecognitionService$Callback;)V", AccessFlags = 1028)]
+				protected internal abstract void OnCancel(global::Android.Speech.RecognitionService.Callback callback) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onStopListening
+				/// </java-name>
+				[Dot42.DexImport("onStopListening", "(Landroid/speech/RecognitionService$Callback;)V", AccessFlags = 1028)]
+				protected internal abstract void OnStopListening(global::Android.Speech.RecognitionService.Callback callback) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onBind
+				/// </java-name>
+				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 17)]
+				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Os.IBinder);
+				}
+
+				/// <java-name>
+				/// onDestroy
+				/// </java-name>
+				[Dot42.DexImport("onDestroy", "()V", AccessFlags = 1)]
+				public override void OnDestroy() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/speech/RecognitionService$Callback
+				/// </java-name>
+				[Dot42.DexImport("android/speech/RecognitionService$Callback", AccessFlags = 1)]
+				public partial class Callback
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// this$0
+						/// </java-name>
+						[Dot42.DexImport("this$0", "Landroid/speech/RecognitionService;", AccessFlags = 4112)]
+						internal readonly global::Android.Speech.RecognitionService This_0;
+						[Dot42.DexImport("<init>", "(Landroid/speech/RecognitionService;)V", AccessFlags = 0)]
+						internal Callback(global::Android.Speech.RecognitionService recognitionService) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// beginningOfSpeech
+						/// </java-name>
+						[Dot42.DexImport("beginningOfSpeech", "()V", AccessFlags = 1)]
+						public virtual void BeginningOfSpeech() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// bufferReceived
+						/// </java-name>
+						[Dot42.DexImport("bufferReceived", "([B)V", AccessFlags = 1)]
+						public virtual void BufferReceived(sbyte[] sByte) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// bufferReceived
+						/// </java-name>
+						[Dot42.DexImport("bufferReceived", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						public virtual void BufferReceived(byte[] @byte) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// endOfSpeech
+						/// </java-name>
+						[Dot42.DexImport("endOfSpeech", "()V", AccessFlags = 1)]
+						public virtual void EndOfSpeech() /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// error
+						/// </java-name>
+						[Dot42.DexImport("error", "(I)V", AccessFlags = 1)]
+						public virtual void Error(int int32) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// partialResults
+						/// </java-name>
+						[Dot42.DexImport("partialResults", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+						public virtual void PartialResults(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// readyForSpeech
+						/// </java-name>
+						[Dot42.DexImport("readyForSpeech", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+						public virtual void ReadyForSpeech(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// results
+						/// </java-name>
+						[Dot42.DexImport("results", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+						public virtual void Results(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
+						/// rmsChanged
+						/// </java-name>
+						[Dot42.DexImport("rmsChanged", "(F)V", AccessFlags = 1)]
+						public virtual void RmsChanged(float single) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal Callback() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+				}
+
+		}
+
+		/// <java-name>
 		/// android/speech/RecognizerIntent
 		/// </java-name>
 		[Dot42.DexImport("android/speech/RecognizerIntent", AccessFlags = 33)]
@@ -170,6 +388,55 @@ namespace Android.Speech
 		}
 
 		/// <java-name>
+		/// android/speech/RecognizerResultsIntent
+		/// </java-name>
+		[Dot42.DexImport("android/speech/RecognizerResultsIntent", AccessFlags = 33)]
+		public partial class RecognizerResultsIntent
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// ACTION_VOICE_SEARCH_RESULTS
+				/// </java-name>
+				[Dot42.DexImport("ACTION_VOICE_SEARCH_RESULTS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string ACTION_VOICE_SEARCH_RESULTS = "android.speech.action.VOICE_SEARCH_RESULTS";
+				/// <java-name>
+				/// EXTRA_VOICE_SEARCH_RESULT_STRINGS
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_STRINGS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_VOICE_SEARCH_RESULT_STRINGS = "android.speech.extras.VOICE_SEARCH_RESULT_STRINGS";
+				/// <java-name>
+				/// EXTRA_VOICE_SEARCH_RESULT_URLS
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_URLS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_VOICE_SEARCH_RESULT_URLS = "android.speech.extras.VOICE_SEARCH_RESULT_URLS";
+				/// <java-name>
+				/// EXTRA_VOICE_SEARCH_RESULT_HTML
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_HTML", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_VOICE_SEARCH_RESULT_HTML = "android.speech.extras.VOICE_SEARCH_RESULT_HTML";
+				/// <java-name>
+				/// EXTRA_VOICE_SEARCH_RESULT_HTML_BASE_URLS
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_HTML_BASE_URLS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_VOICE_SEARCH_RESULT_HTML_BASE_URLS = "android.speech.extras.VOICE_SEARCH_RESULT_HTML_BASE_URLS";
+				/// <java-name>
+				/// EXTRA_VOICE_SEARCH_RESULT_HTTP_HEADERS
+				/// </java-name>
+				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_HTTP_HEADERS", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string EXTRA_VOICE_SEARCH_RESULT_HTTP_HEADERS = "android.speech.extras.EXTRA_VOICE_SEARCH_RESULT_HTTP_HEADERS";
+				/// <java-name>
+				/// URI_SCHEME_INLINE
+				/// </java-name>
+				[Dot42.DexImport("URI_SCHEME_INLINE", "Ljava/lang/String;", AccessFlags = 25)]
+				public const string URI_SCHEME_INLINE = "inline";
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal RecognizerResultsIntent() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
 		/// android/speech/SpeechRecognizer
 		/// </java-name>
 		[Dot42.DexImport("android/speech/SpeechRecognizer", AccessFlags = 33)]
@@ -303,273 +570,6 @@ namespace Android.Speech
 				public virtual void Destroy() /* MethodBuilder.Create */ 
 				{
 				}
-
-		}
-
-		/// <java-name>
-		/// android/speech/RecognizerResultsIntent
-		/// </java-name>
-		[Dot42.DexImport("android/speech/RecognizerResultsIntent", AccessFlags = 33)]
-		public partial class RecognizerResultsIntent
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// ACTION_VOICE_SEARCH_RESULTS
-				/// </java-name>
-				[Dot42.DexImport("ACTION_VOICE_SEARCH_RESULTS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string ACTION_VOICE_SEARCH_RESULTS = "android.speech.action.VOICE_SEARCH_RESULTS";
-				/// <java-name>
-				/// EXTRA_VOICE_SEARCH_RESULT_STRINGS
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_STRINGS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_VOICE_SEARCH_RESULT_STRINGS = "android.speech.extras.VOICE_SEARCH_RESULT_STRINGS";
-				/// <java-name>
-				/// EXTRA_VOICE_SEARCH_RESULT_URLS
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_URLS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_VOICE_SEARCH_RESULT_URLS = "android.speech.extras.VOICE_SEARCH_RESULT_URLS";
-				/// <java-name>
-				/// EXTRA_VOICE_SEARCH_RESULT_HTML
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_HTML", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_VOICE_SEARCH_RESULT_HTML = "android.speech.extras.VOICE_SEARCH_RESULT_HTML";
-				/// <java-name>
-				/// EXTRA_VOICE_SEARCH_RESULT_HTML_BASE_URLS
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_HTML_BASE_URLS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_VOICE_SEARCH_RESULT_HTML_BASE_URLS = "android.speech.extras.VOICE_SEARCH_RESULT_HTML_BASE_URLS";
-				/// <java-name>
-				/// EXTRA_VOICE_SEARCH_RESULT_HTTP_HEADERS
-				/// </java-name>
-				[Dot42.DexImport("EXTRA_VOICE_SEARCH_RESULT_HTTP_HEADERS", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string EXTRA_VOICE_SEARCH_RESULT_HTTP_HEADERS = "android.speech.extras.EXTRA_VOICE_SEARCH_RESULT_HTTP_HEADERS";
-				/// <java-name>
-				/// URI_SCHEME_INLINE
-				/// </java-name>
-				[Dot42.DexImport("URI_SCHEME_INLINE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string URI_SCHEME_INLINE = "inline";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal RecognizerResultsIntent() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/speech/RecognitionService
-		/// </java-name>
-		[Dot42.DexImport("android/speech/RecognitionService", AccessFlags = 1057)]
-		public abstract partial class RecognitionService : global::Android.App.Service
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// SERVICE_INTERFACE
-				/// </java-name>
-				[Dot42.DexImport("SERVICE_INTERFACE", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string SERVICE_INTERFACE = "android.speech.RecognitionService";
-				/// <java-name>
-				/// SERVICE_META_DATA
-				/// </java-name>
-				[Dot42.DexImport("SERVICE_META_DATA", "Ljava/lang/String;", AccessFlags = 25)]
-				public const string SERVICE_META_DATA = "android.speech";
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public RecognitionService() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// onStartListening
-				/// </java-name>
-				[Dot42.DexImport("onStartListening", "(Landroid/content/Intent;Landroid/speech/RecognitionService$Callback;)V", AccessFlags = 1028)]
-				protected internal abstract void OnStartListening(global::Android.Content.Intent intent, global::Android.Speech.RecognitionService.Callback callback) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onCancel
-				/// </java-name>
-				[Dot42.DexImport("onCancel", "(Landroid/speech/RecognitionService$Callback;)V", AccessFlags = 1028)]
-				protected internal abstract void OnCancel(global::Android.Speech.RecognitionService.Callback callback) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onStopListening
-				/// </java-name>
-				[Dot42.DexImport("onStopListening", "(Landroid/speech/RecognitionService$Callback;)V", AccessFlags = 1028)]
-				protected internal abstract void OnStopListening(global::Android.Speech.RecognitionService.Callback callback) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onBind
-				/// </java-name>
-				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 17)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Os.IBinder);
-				}
-
-				/// <java-name>
-				/// onDestroy
-				/// </java-name>
-				[Dot42.DexImport("onDestroy", "()V", AccessFlags = 1)]
-				public override void OnDestroy() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/speech/RecognitionService$Callback
-				/// </java-name>
-				[Dot42.DexImport("android/speech/RecognitionService$Callback", AccessFlags = 1)]
-				public partial class Callback
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// this$0
-						/// </java-name>
-						[Dot42.DexImport("this$0", "Landroid/speech/RecognitionService;", AccessFlags = 4112)]
-						internal readonly global::Android.Speech.RecognitionService This_0;
-						[Dot42.DexImport("<init>", "(Landroid/speech/RecognitionService;)V", AccessFlags = 0)]
-						internal Callback(global::Android.Speech.RecognitionService recognitionService) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// beginningOfSpeech
-						/// </java-name>
-						[Dot42.DexImport("beginningOfSpeech", "()V", AccessFlags = 1)]
-						public virtual void BeginningOfSpeech() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// bufferReceived
-						/// </java-name>
-						[Dot42.DexImport("bufferReceived", "([B)V", AccessFlags = 1)]
-						public virtual void BufferReceived(sbyte[] sByte) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// bufferReceived
-						/// </java-name>
-						[Dot42.DexImport("bufferReceived", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-						public virtual void BufferReceived(byte[] @byte) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// endOfSpeech
-						/// </java-name>
-						[Dot42.DexImport("endOfSpeech", "()V", AccessFlags = 1)]
-						public virtual void EndOfSpeech() /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// error
-						/// </java-name>
-						[Dot42.DexImport("error", "(I)V", AccessFlags = 1)]
-						public virtual void Error(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// partialResults
-						/// </java-name>
-						[Dot42.DexImport("partialResults", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						public virtual void PartialResults(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// readyForSpeech
-						/// </java-name>
-						[Dot42.DexImport("readyForSpeech", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						public virtual void ReadyForSpeech(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// results
-						/// </java-name>
-						[Dot42.DexImport("results", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						public virtual void Results(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// rmsChanged
-						/// </java-name>
-						[Dot42.DexImport("rmsChanged", "(F)V", AccessFlags = 1)]
-						public virtual void RmsChanged(float single) /* MethodBuilder.Create */ 
-						{
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Callback() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-				}
-
-		}
-
-		/// <java-name>
-		/// android/speech/RecognitionListener
-		/// </java-name>
-		[Dot42.DexImport("android/speech/RecognitionListener", AccessFlags = 1537)]
-		public partial interface IRecognitionListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// onReadyForSpeech
-				/// </java-name>
-				[Dot42.DexImport("onReadyForSpeech", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
-				void OnReadyForSpeech(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onBeginningOfSpeech
-				/// </java-name>
-				[Dot42.DexImport("onBeginningOfSpeech", "()V", AccessFlags = 1025)]
-				void OnBeginningOfSpeech() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onRmsChanged
-				/// </java-name>
-				[Dot42.DexImport("onRmsChanged", "(F)V", AccessFlags = 1025)]
-				void OnRmsChanged(float single) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onBufferReceived
-				/// </java-name>
-				[Dot42.DexImport("onBufferReceived", "([B)V", AccessFlags = 1025)]
-				void OnBufferReceived(sbyte[] sByte) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onEndOfSpeech
-				/// </java-name>
-				[Dot42.DexImport("onEndOfSpeech", "()V", AccessFlags = 1025)]
-				void OnEndOfSpeech() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onError
-				/// </java-name>
-				[Dot42.DexImport("onError", "(I)V", AccessFlags = 1025)]
-				void OnError(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onResults
-				/// </java-name>
-				[Dot42.DexImport("onResults", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
-				void OnResults(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onPartialResults
-				/// </java-name>
-				[Dot42.DexImport("onPartialResults", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
-				void OnPartialResults(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onEvent
-				/// </java-name>
-				[Dot42.DexImport("onEvent", "(ILandroid/os/Bundle;)V", AccessFlags = 1025)]
-				void OnEvent(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
 
 		}
 

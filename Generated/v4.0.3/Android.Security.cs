@@ -2,31 +2,17 @@
 namespace Android.Security
 {
 		/// <java-name>
-		/// android/security/KeyChainException
+		/// android/security/KeyChainAliasCallback
 		/// </java-name>
-		[Dot42.DexImport("android/security/KeyChainException", AccessFlags = 33)]
-		public partial class KeyChainException : global::System.Exception
+		[Dot42.DexImport("android/security/KeyChainAliasCallback", AccessFlags = 1537)]
+		public partial interface IKeyChainAliasCallback
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public KeyChainException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public KeyChainException(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public KeyChainException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public KeyChainException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
+				/// <java-name>
+				/// alias
+				/// </java-name>
+				[Dot42.DexImport("alias", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+				void Alias(string @string) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -97,17 +83,31 @@ namespace Android.Security
 		}
 
 		/// <java-name>
-		/// android/security/KeyChainAliasCallback
+		/// android/security/KeyChainException
 		/// </java-name>
-		[Dot42.DexImport("android/security/KeyChainAliasCallback", AccessFlags = 1537)]
-		public partial interface IKeyChainAliasCallback
+		[Dot42.DexImport("android/security/KeyChainException", AccessFlags = 33)]
+		public partial class KeyChainException : global::System.Exception
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// alias
-				/// </java-name>
-				[Dot42.DexImport("alias", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void Alias(string @string) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public KeyChainException() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
+				public KeyChainException(string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public KeyChainException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
+				public KeyChainException(global::System.Exception exception) /* MethodBuilder.Create */ 
+				{
+				}
 
 		}
 

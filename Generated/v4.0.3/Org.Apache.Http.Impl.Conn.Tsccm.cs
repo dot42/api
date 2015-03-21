@@ -2,6 +2,198 @@
 namespace Org.Apache.Http.Impl.Conn.Tsccm
 {
 		/// <java-name>
+		/// org/apache/http/impl/conn/tsccm/AbstractConnPool
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/AbstractConnPool", AccessFlags = 1057)]
+		public abstract partial class AbstractConnPool : global::Org.Apache.Http.Impl.Conn.Tsccm.IRefQueueHandler
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// poolLock
+				/// </java-name>
+				[Dot42.DexImport("poolLock", "Ljava/util/concurrent/locks/Lock;", AccessFlags = 20)]
+				protected internal readonly global::Java.Util.Concurrent.Locks.ILock PoolLock;
+				/// <java-name>
+				/// issuedConnections
+				/// </java-name>
+				[Dot42.DexImport("issuedConnections", "Ljava/util/Set;", AccessFlags = 4)]
+				protected internal global::Java.Util.ISet<global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntryRef> IssuedConnections;
+				/// <java-name>
+				/// idleConnHandler
+				/// </java-name>
+				[Dot42.DexImport("idleConnHandler", "Lorg/apache/http/impl/conn/IdleConnectionHandler;", AccessFlags = 4)]
+				protected internal global::Org.Apache.Http.Impl.Conn.IdleConnectionHandler IdleConnHandler;
+				/// <java-name>
+				/// numConnections
+				/// </java-name>
+				[Dot42.DexImport("numConnections", "I", AccessFlags = 4)]
+				protected internal int NumConnections;
+				/// <java-name>
+				/// refQueue
+				/// </java-name>
+				[Dot42.DexImport("refQueue", "Ljava/lang/ref/ReferenceQueue;", AccessFlags = 4)]
+				protected internal global::Java.Lang.Ref.ReferenceQueue<object> RefQueue;
+				/// <java-name>
+				/// isShutDown
+				/// </java-name>
+				[Dot42.DexImport("isShutDown", "Z", AccessFlags = 68)]
+				protected internal bool IsShutDown;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
+				protected internal AbstractConnPool() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// enableConnectionGC
+				/// </java-name>
+				[Dot42.DexImport("enableConnectionGC", "()V", AccessFlags = 1)]
+				public virtual void EnableConnectionGC() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getEntry
+				/// </java-name>
+				[Dot42.DexImport("getEntry", "(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;JLjava/util/concurrent" +
+    "/TimeUnit;)Lorg/apache/http/impl/conn/tsccm/BasicPoolEntry;", AccessFlags = 17)]
+				public global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntry GetEntry(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, object @object, long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntry);
+				}
+
+				/// <java-name>
+				/// requestPoolEntry
+				/// </java-name>
+				[Dot42.DexImport("requestPoolEntry", "(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;)Lorg/apache/http/impl" +
+    "/conn/tsccm/PoolEntryRequest;", AccessFlags = 1025)]
+				public abstract global::Org.Apache.Http.Impl.Conn.Tsccm.IPoolEntryRequest RequestPoolEntry(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, object @object) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// freeEntry
+				/// </java-name>
+				[Dot42.DexImport("freeEntry", "(Lorg/apache/http/impl/conn/tsccm/BasicPoolEntry;ZJLjava/util/concurrent/TimeUnit" +
+    ";)V", AccessFlags = 1025)]
+				public abstract void FreeEntry(global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntry basicPoolEntry, bool boolean, long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// handleReference
+				/// </java-name>
+				[Dot42.DexImport("handleReference", "(Ljava/lang/ref/Reference;)V", AccessFlags = 1)]
+				public virtual void HandleReference(global::Java.Lang.Ref.Reference<object> reference) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// handleLostEntry
+				/// </java-name>
+				[Dot42.DexImport("handleLostEntry", "(Lorg/apache/http/conn/routing/HttpRoute;)V", AccessFlags = 1028)]
+				protected internal abstract void HandleLostEntry(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// closeIdleConnections
+				/// </java-name>
+				[Dot42.DexImport("closeIdleConnections", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1)]
+				public virtual void CloseIdleConnections(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// closeExpiredConnections
+				/// </java-name>
+				[Dot42.DexImport("closeExpiredConnections", "()V", AccessFlags = 1)]
+				public virtual void CloseExpiredConnections() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// deleteClosedConnections
+				/// </java-name>
+				[Dot42.DexImport("deleteClosedConnections", "()V", AccessFlags = 1025)]
+				public abstract void DeleteClosedConnections() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// shutdown
+				/// </java-name>
+				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1)]
+				public virtual void Shutdown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// closeConnection
+				/// </java-name>
+				[Dot42.DexImport("closeConnection", "(Lorg/apache/http/conn/OperatedClientConnection;)V", AccessFlags = 4)]
+				protected internal virtual void CloseConnection(global::Org.Apache.Http.Conn.IOperatedClientConnection operatedClientConnection) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/conn/tsccm/BasicPooledConnAdapter
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/BasicPooledConnAdapter", AccessFlags = 33)]
+		public partial class BasicPooledConnAdapter : global::Org.Apache.Http.Impl.Conn.AbstractPooledConnAdapter
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(Lorg/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager;Lorg/apache/http/im" +
+    "pl/conn/AbstractPoolEntry;)V", AccessFlags = 4)]
+				protected internal BasicPooledConnAdapter(global::Org.Apache.Http.Impl.Conn.Tsccm.ThreadSafeClientConnManager threadSafeClientConnManager, global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry abstractPoolEntry) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getManager
+				/// </java-name>
+				[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
+				protected internal override global::Org.Apache.Http.Conn.IClientConnectionManager GetManager() /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Conn.IClientConnectionManager);
+				}
+
+				/// <java-name>
+				/// getPoolEntry
+				/// </java-name>
+				[Dot42.DexImport("getPoolEntry", "()Lorg/apache/http/impl/conn/AbstractPoolEntry;", AccessFlags = 4)]
+				protected internal virtual global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry GetPoolEntry() /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry);
+				}
+
+				/// <java-name>
+				/// detach
+				/// </java-name>
+				[Dot42.DexImport("detach", "()V", AccessFlags = 4)]
+				protected internal override void Detach() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal BasicPooledConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getManager
+				/// </java-name>
+				protected internal global::Org.Apache.Http.Conn.IClientConnectionManager Manager
+				{
+				[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
+						get{ return GetManager(); }
+				}
+
+				/// <java-name>
+				/// getPoolEntry
+				/// </java-name>
+				protected internal global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry PoolEntry
+				{
+				[Dot42.DexImport("getPoolEntry", "()Lorg/apache/http/impl/conn/AbstractPoolEntry;", AccessFlags = 4)]
+						get{ return GetPoolEntry(); }
+				}
+
+		}
+
+		/// <java-name>
 		/// org/apache/http/impl/conn/tsccm/BasicPoolEntry
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/BasicPoolEntry", AccessFlags = 33)]
@@ -77,36 +269,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/conn/tsccm/WaitingThreadAborter
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/WaitingThreadAborter", AccessFlags = 33)]
-		public partial class WaitingThreadAborter
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public WaitingThreadAborter() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// abort
-				/// </java-name>
-				[Dot42.DexImport("abort", "()V", AccessFlags = 1)]
-				public virtual void Abort() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setWaitingThread
-				/// </java-name>
-				[Dot42.DexImport("setWaitingThread", "(Lorg/apache/http/impl/conn/tsccm/WaitingThread;)V", AccessFlags = 1)]
-				public virtual void SetWaitingThread(global::Org.Apache.Http.Impl.Conn.Tsccm.WaitingThread waitingThread) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/impl/conn/tsccm/BasicPoolEntryRef
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/BasicPoolEntryRef", AccessFlags = 33, Signature = "Ljava/lang/ref/WeakReference<Lorg/apache/http/impl/conn/tsccm/BasicPoolEntry;>;")]
@@ -142,222 +304,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 17)]
 						get{ return GetRoute(); }
 				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager", AccessFlags = 33)]
-		public partial class ThreadSafeClientConnManager : global::Org.Apache.Http.Conn.IClientConnectionManager
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// schemeRegistry
-				/// </java-name>
-				[Dot42.DexImport("schemeRegistry", "Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry SchemeRegistry;
-				/// <java-name>
-				/// connectionPool
-				/// </java-name>
-				[Dot42.DexImport("connectionPool", "Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;", AccessFlags = 20)]
-				protected internal readonly global::Org.Apache.Http.Impl.Conn.Tsccm.AbstractConnPool ConnectionPool;
-				/// <java-name>
-				/// connOperator
-				/// </java-name>
-				[Dot42.DexImport("connOperator", "Lorg/apache/http/conn/ClientConnectionOperator;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.Conn.IClientConnectionOperator ConnOperator;
-				[Dot42.DexImport("<init>", "(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/scheme/SchemeRegistry;)" +
-    "V", AccessFlags = 1)]
-				public ThreadSafeClientConnManager(global::Org.Apache.Http.Params.IHttpParams httpParams, global::Org.Apache.Http.Conn.Scheme.SchemeRegistry schemeRegistry) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// finalize
-				/// </java-name>
-				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
-				extern ~ThreadSafeClientConnManager() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// createConnectionPool
-				/// </java-name>
-				[Dot42.DexImport("createConnectionPool", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/impl/conn/tsccm/AbstractCon" +
-    "nPool;", AccessFlags = 4)]
-				protected internal virtual global::Org.Apache.Http.Impl.Conn.Tsccm.AbstractConnPool CreateConnectionPool(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Impl.Conn.Tsccm.AbstractConnPool);
-				}
-
-				/// <java-name>
-				/// createConnectionOperator
-				/// </java-name>
-				[Dot42.DexImport("createConnectionOperator", "(Lorg/apache/http/conn/scheme/SchemeRegistry;)Lorg/apache/http/conn/ClientConnect" +
-    "ionOperator;", AccessFlags = 4)]
-				protected internal virtual global::Org.Apache.Http.Conn.IClientConnectionOperator CreateConnectionOperator(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry schemeRegistry) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.IClientConnectionOperator);
-				}
-
-				/// <java-name>
-				/// getSchemeRegistry
-				/// </java-name>
-				[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Conn.Scheme.SchemeRegistry GetSchemeRegistry() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry);
-				}
-
-				/// <java-name>
-				/// requestConnection
-				/// </java-name>
-				[Dot42.DexImport("requestConnection", "(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;)Lorg/apache/http/conn" +
-    "/ClientConnectionRequest;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Conn.IClientConnectionRequest RequestConnection(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, object @object) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.IClientConnectionRequest);
-				}
-
-				/// <java-name>
-				/// releaseConnection
-				/// </java-name>
-				[Dot42.DexImport("releaseConnection", "(Lorg/apache/http/conn/ManagedClientConnection;JLjava/util/concurrent/TimeUnit;)V" +
-    "", AccessFlags = 1)]
-				public virtual void ReleaseConnection(global::Org.Apache.Http.Conn.IManagedClientConnection managedClientConnection, long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// shutdown
-				/// </java-name>
-				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1)]
-				public virtual void Shutdown() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getConnectionsInPool
-				/// </java-name>
-				[Dot42.DexImport("getConnectionsInPool", "(Lorg/apache/http/conn/routing/HttpRoute;)I", AccessFlags = 1)]
-				public virtual int GetConnectionsInPool(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getConnectionsInPool
-				/// </java-name>
-				[Dot42.DexImport("getConnectionsInPool", "()I", AccessFlags = 1)]
-				public virtual int GetConnectionsInPool() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// closeIdleConnections
-				/// </java-name>
-				[Dot42.DexImport("closeIdleConnections", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1)]
-				public virtual void CloseIdleConnections(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// closeExpiredConnections
-				/// </java-name>
-				[Dot42.DexImport("closeExpiredConnections", "()V", AccessFlags = 1)]
-				public virtual void CloseExpiredConnections() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ThreadSafeClientConnManager() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getConnectionsInPool
-				/// </java-name>
-				public int ConnectionsInPool
-				{
-				[Dot42.DexImport("getConnectionsInPool", "()I", AccessFlags = 1)]
-						get{ return GetConnectionsInPool(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/conn/tsccm/RefQueueWorker
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/RefQueueWorker", AccessFlags = 33)]
-		public partial class RefQueueWorker : global::Java.Lang.IRunnable
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// refQueue
-				/// </java-name>
-				[Dot42.DexImport("refQueue", "Ljava/lang/ref/ReferenceQueue;", AccessFlags = 20)]
-				protected internal readonly global::Java.Lang.Ref.ReferenceQueue<object> RefQueue;
-				/// <java-name>
-				/// refHandler
-				/// </java-name>
-				[Dot42.DexImport("refHandler", "Lorg/apache/http/impl/conn/tsccm/RefQueueHandler;", AccessFlags = 20)]
-				protected internal readonly global::Org.Apache.Http.Impl.Conn.Tsccm.IRefQueueHandler RefHandler;
-				/// <java-name>
-				/// workerThread
-				/// </java-name>
-				[Dot42.DexImport("workerThread", "Ljava/lang/Thread;", AccessFlags = 68)]
-				protected internal global::System.Threading.Thread WorkerThread;
-				[Dot42.DexImport("<init>", "(Ljava/lang/ref/ReferenceQueue;Lorg/apache/http/impl/conn/tsccm/RefQueueHandler;)" +
-    "V", AccessFlags = 1, Signature = "(Ljava/lang/ref/ReferenceQueue<*>;Lorg/apache/http/impl/conn/tsccm/RefQueueHandle" +
-    "r;)V")]
-				public RefQueueWorker(global::Java.Lang.Ref.ReferenceQueue<object> referenceQueue, global::Org.Apache.Http.Impl.Conn.Tsccm.IRefQueueHandler refQueueHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// run
-				/// </java-name>
-				[Dot42.DexImport("run", "()V", AccessFlags = 1)]
-				public virtual void Run() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// shutdown
-				/// </java-name>
-				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1)]
-				public virtual void Shutdown() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// toString
-				/// </java-name>
-				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string ToString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RefQueueWorker() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/impl/conn/tsccm/RefQueueHandler
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/RefQueueHandler", AccessFlags = 1537)]
-		public partial interface IRefQueueHandler
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// handleReference
-				/// </java-name>
-				[Dot42.DexImport("handleReference", "(Ljava/lang/ref/Reference;)V", AccessFlags = 1025, Signature = "(Ljava/lang/ref/Reference<*>;)V")]
-				void HandleReference(global::Java.Lang.Ref.Reference<object> reference) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -572,134 +518,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/conn/tsccm/AbstractConnPool
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/AbstractConnPool", AccessFlags = 1057)]
-		public abstract partial class AbstractConnPool : global::Org.Apache.Http.Impl.Conn.Tsccm.IRefQueueHandler
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// poolLock
-				/// </java-name>
-				[Dot42.DexImport("poolLock", "Ljava/util/concurrent/locks/Lock;", AccessFlags = 20)]
-				protected internal readonly global::Java.Util.Concurrent.Locks.ILock PoolLock;
-				/// <java-name>
-				/// issuedConnections
-				/// </java-name>
-				[Dot42.DexImport("issuedConnections", "Ljava/util/Set;", AccessFlags = 4)]
-				protected internal global::Java.Util.ISet<global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntryRef> IssuedConnections;
-				/// <java-name>
-				/// idleConnHandler
-				/// </java-name>
-				[Dot42.DexImport("idleConnHandler", "Lorg/apache/http/impl/conn/IdleConnectionHandler;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.Impl.Conn.IdleConnectionHandler IdleConnHandler;
-				/// <java-name>
-				/// numConnections
-				/// </java-name>
-				[Dot42.DexImport("numConnections", "I", AccessFlags = 4)]
-				protected internal int NumConnections;
-				/// <java-name>
-				/// refQueue
-				/// </java-name>
-				[Dot42.DexImport("refQueue", "Ljava/lang/ref/ReferenceQueue;", AccessFlags = 4)]
-				protected internal global::Java.Lang.Ref.ReferenceQueue<object> RefQueue;
-				/// <java-name>
-				/// isShutDown
-				/// </java-name>
-				[Dot42.DexImport("isShutDown", "Z", AccessFlags = 68)]
-				protected internal bool IsShutDown;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal AbstractConnPool() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// enableConnectionGC
-				/// </java-name>
-				[Dot42.DexImport("enableConnectionGC", "()V", AccessFlags = 1)]
-				public virtual void EnableConnectionGC() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEntry
-				/// </java-name>
-				[Dot42.DexImport("getEntry", "(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;JLjava/util/concurrent" +
-    "/TimeUnit;)Lorg/apache/http/impl/conn/tsccm/BasicPoolEntry;", AccessFlags = 17)]
-				public global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntry GetEntry(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, object @object, long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntry);
-				}
-
-				/// <java-name>
-				/// requestPoolEntry
-				/// </java-name>
-				[Dot42.DexImport("requestPoolEntry", "(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;)Lorg/apache/http/impl" +
-    "/conn/tsccm/PoolEntryRequest;", AccessFlags = 1025)]
-				public abstract global::Org.Apache.Http.Impl.Conn.Tsccm.IPoolEntryRequest RequestPoolEntry(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, object @object) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// freeEntry
-				/// </java-name>
-				[Dot42.DexImport("freeEntry", "(Lorg/apache/http/impl/conn/tsccm/BasicPoolEntry;ZJLjava/util/concurrent/TimeUnit" +
-    ";)V", AccessFlags = 1025)]
-				public abstract void FreeEntry(global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntry basicPoolEntry, bool boolean, long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// handleReference
-				/// </java-name>
-				[Dot42.DexImport("handleReference", "(Ljava/lang/ref/Reference;)V", AccessFlags = 1)]
-				public virtual void HandleReference(global::Java.Lang.Ref.Reference<object> reference) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// handleLostEntry
-				/// </java-name>
-				[Dot42.DexImport("handleLostEntry", "(Lorg/apache/http/conn/routing/HttpRoute;)V", AccessFlags = 1028)]
-				protected internal abstract void HandleLostEntry(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// closeIdleConnections
-				/// </java-name>
-				[Dot42.DexImport("closeIdleConnections", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1)]
-				public virtual void CloseIdleConnections(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// closeExpiredConnections
-				/// </java-name>
-				[Dot42.DexImport("closeExpiredConnections", "()V", AccessFlags = 1)]
-				public virtual void CloseExpiredConnections() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// deleteClosedConnections
-				/// </java-name>
-				[Dot42.DexImport("deleteClosedConnections", "()V", AccessFlags = 1025)]
-				public abstract void DeleteClosedConnections() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// shutdown
-				/// </java-name>
-				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1)]
-				public virtual void Shutdown() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// closeConnection
-				/// </java-name>
-				[Dot42.DexImport("closeConnection", "(Lorg/apache/http/conn/OperatedClientConnection;)V", AccessFlags = 4)]
-				protected internal virtual void CloseConnection(global::Org.Apache.Http.Conn.IOperatedClientConnection operatedClientConnection) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/impl/conn/tsccm/PoolEntryRequest
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/PoolEntryRequest", AccessFlags = 1537)]
@@ -718,6 +536,82 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// </java-name>
 				[Dot42.DexImport("abortRequest", "()V", AccessFlags = 1025)]
 				void AbortRequest() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/conn/tsccm/RefQueueHandler
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/RefQueueHandler", AccessFlags = 1537)]
+		public partial interface IRefQueueHandler
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// handleReference
+				/// </java-name>
+				[Dot42.DexImport("handleReference", "(Ljava/lang/ref/Reference;)V", AccessFlags = 1025, Signature = "(Ljava/lang/ref/Reference<*>;)V")]
+				void HandleReference(global::Java.Lang.Ref.Reference<object> reference) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/conn/tsccm/RefQueueWorker
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/RefQueueWorker", AccessFlags = 33)]
+		public partial class RefQueueWorker : global::Java.Lang.IRunnable
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// refQueue
+				/// </java-name>
+				[Dot42.DexImport("refQueue", "Ljava/lang/ref/ReferenceQueue;", AccessFlags = 20)]
+				protected internal readonly global::Java.Lang.Ref.ReferenceQueue<object> RefQueue;
+				/// <java-name>
+				/// refHandler
+				/// </java-name>
+				[Dot42.DexImport("refHandler", "Lorg/apache/http/impl/conn/tsccm/RefQueueHandler;", AccessFlags = 20)]
+				protected internal readonly global::Org.Apache.Http.Impl.Conn.Tsccm.IRefQueueHandler RefHandler;
+				/// <java-name>
+				/// workerThread
+				/// </java-name>
+				[Dot42.DexImport("workerThread", "Ljava/lang/Thread;", AccessFlags = 68)]
+				protected internal global::System.Threading.Thread WorkerThread;
+				[Dot42.DexImport("<init>", "(Ljava/lang/ref/ReferenceQueue;Lorg/apache/http/impl/conn/tsccm/RefQueueHandler;)" +
+    "V", AccessFlags = 1, Signature = "(Ljava/lang/ref/ReferenceQueue<*>;Lorg/apache/http/impl/conn/tsccm/RefQueueHandle" +
+    "r;)V")]
+				public RefQueueWorker(global::Java.Lang.Ref.ReferenceQueue<object> referenceQueue, global::Org.Apache.Http.Impl.Conn.Tsccm.IRefQueueHandler refQueueHandler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// run
+				/// </java-name>
+				[Dot42.DexImport("run", "()V", AccessFlags = 1)]
+				public virtual void Run() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// shutdown
+				/// </java-name>
+				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1)]
+				public virtual void Shutdown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// toString
+				/// </java-name>
+				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
+				public override string ToString() /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal RefQueueWorker() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
 
 		}
 
@@ -905,65 +799,141 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 		}
 
 		/// <java-name>
-		/// org/apache/http/impl/conn/tsccm/BasicPooledConnAdapter
+		/// org/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager
 		/// </java-name>
-		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/BasicPooledConnAdapter", AccessFlags = 33)]
-		public partial class BasicPooledConnAdapter : global::Org.Apache.Http.Impl.Conn.AbstractPooledConnAdapter
+		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager", AccessFlags = 33)]
+		public partial class ThreadSafeClientConnManager : global::Org.Apache.Http.Conn.IClientConnectionManager
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Lorg/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager;Lorg/apache/http/im" +
-    "pl/conn/AbstractPoolEntry;)V", AccessFlags = 4)]
-				protected internal BasicPooledConnAdapter(global::Org.Apache.Http.Impl.Conn.Tsccm.ThreadSafeClientConnManager threadSafeClientConnManager, global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry abstractPoolEntry) /* MethodBuilder.Create */ 
+				/// <java-name>
+				/// schemeRegistry
+				/// </java-name>
+				[Dot42.DexImport("schemeRegistry", "Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 4)]
+				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry SchemeRegistry;
+				/// <java-name>
+				/// connectionPool
+				/// </java-name>
+				[Dot42.DexImport("connectionPool", "Lorg/apache/http/impl/conn/tsccm/AbstractConnPool;", AccessFlags = 20)]
+				protected internal readonly global::Org.Apache.Http.Impl.Conn.Tsccm.AbstractConnPool ConnectionPool;
+				/// <java-name>
+				/// connOperator
+				/// </java-name>
+				[Dot42.DexImport("connOperator", "Lorg/apache/http/conn/ClientConnectionOperator;", AccessFlags = 4)]
+				protected internal global::Org.Apache.Http.Conn.IClientConnectionOperator ConnOperator;
+				[Dot42.DexImport("<init>", "(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/scheme/SchemeRegistry;)" +
+    "V", AccessFlags = 1)]
+				public ThreadSafeClientConnManager(global::Org.Apache.Http.Params.IHttpParams httpParams, global::Org.Apache.Http.Conn.Scheme.SchemeRegistry schemeRegistry) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
-				/// getManager
+				/// finalize
 				/// </java-name>
-				[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
-				protected internal override global::Org.Apache.Http.Conn.IClientConnectionManager GetManager() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
+				extern ~ThreadSafeClientConnManager() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// createConnectionPool
+				/// </java-name>
+				[Dot42.DexImport("createConnectionPool", "(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/impl/conn/tsccm/AbstractCon" +
+    "nPool;", AccessFlags = 4)]
+				protected internal virtual global::Org.Apache.Http.Impl.Conn.Tsccm.AbstractConnPool CreateConnectionPool(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
 				{
-						return default(global::Org.Apache.Http.Conn.IClientConnectionManager);
+						return default(global::Org.Apache.Http.Impl.Conn.Tsccm.AbstractConnPool);
 				}
 
 				/// <java-name>
-				/// getPoolEntry
+				/// createConnectionOperator
 				/// </java-name>
-				[Dot42.DexImport("getPoolEntry", "()Lorg/apache/http/impl/conn/AbstractPoolEntry;", AccessFlags = 4)]
-				protected internal virtual global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry GetPoolEntry() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("createConnectionOperator", "(Lorg/apache/http/conn/scheme/SchemeRegistry;)Lorg/apache/http/conn/ClientConnect" +
+    "ionOperator;", AccessFlags = 4)]
+				protected internal virtual global::Org.Apache.Http.Conn.IClientConnectionOperator CreateConnectionOperator(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry schemeRegistry) /* MethodBuilder.Create */ 
 				{
-						return default(global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry);
+						return default(global::Org.Apache.Http.Conn.IClientConnectionOperator);
 				}
 
 				/// <java-name>
-				/// detach
+				/// getSchemeRegistry
 				/// </java-name>
-				[Dot42.DexImport("detach", "()V", AccessFlags = 4)]
-				protected internal override void Detach() /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1)]
+				public virtual global::Org.Apache.Http.Conn.Scheme.SchemeRegistry GetSchemeRegistry() /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry);
+				}
+
+				/// <java-name>
+				/// requestConnection
+				/// </java-name>
+				[Dot42.DexImport("requestConnection", "(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;)Lorg/apache/http/conn" +
+    "/ClientConnectionRequest;", AccessFlags = 1)]
+				public virtual global::Org.Apache.Http.Conn.IClientConnectionRequest RequestConnection(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, object @object) /* MethodBuilder.Create */ 
+				{
+						return default(global::Org.Apache.Http.Conn.IClientConnectionRequest);
+				}
+
+				/// <java-name>
+				/// releaseConnection
+				/// </java-name>
+				[Dot42.DexImport("releaseConnection", "(Lorg/apache/http/conn/ManagedClientConnection;JLjava/util/concurrent/TimeUnit;)V" +
+    "", AccessFlags = 1)]
+				public virtual void ReleaseConnection(global::Org.Apache.Http.Conn.IManagedClientConnection managedClientConnection, long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// shutdown
+				/// </java-name>
+				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1)]
+				public virtual void Shutdown() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getConnectionsInPool
+				/// </java-name>
+				[Dot42.DexImport("getConnectionsInPool", "(Lorg/apache/http/conn/routing/HttpRoute;)I", AccessFlags = 1)]
+				public virtual int GetConnectionsInPool(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getConnectionsInPool
+				/// </java-name>
+				[Dot42.DexImport("getConnectionsInPool", "()I", AccessFlags = 1)]
+				public virtual int GetConnectionsInPool() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// closeIdleConnections
+				/// </java-name>
+				[Dot42.DexImport("closeIdleConnections", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1)]
+				public virtual void CloseIdleConnections(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// closeExpiredConnections
+				/// </java-name>
+				[Dot42.DexImport("closeExpiredConnections", "()V", AccessFlags = 1)]
+				public virtual void CloseExpiredConnections() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicPooledConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				internal ThreadSafeClientConnManager() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
-				/// getManager
+				/// getConnectionsInPool
 				/// </java-name>
-				protected internal global::Org.Apache.Http.Conn.IClientConnectionManager Manager
+				public int ConnectionsInPool
 				{
-				[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
-						get{ return GetManager(); }
-				}
-
-				/// <java-name>
-				/// getPoolEntry
-				/// </java-name>
-				protected internal global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry PoolEntry
-				{
-				[Dot42.DexImport("getPoolEntry", "()Lorg/apache/http/impl/conn/AbstractPoolEntry;", AccessFlags = 4)]
-						get{ return GetPoolEntry(); }
+				[Dot42.DexImport("getConnectionsInPool", "()I", AccessFlags = 1)]
+						get{ return GetConnectionsInPool(); }
 				}
 
 		}
@@ -1063,6 +1033,36 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				{
 				[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
 						get{ return GetThread(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/impl/conn/tsccm/WaitingThreadAborter
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/impl/conn/tsccm/WaitingThreadAborter", AccessFlags = 33)]
+		public partial class WaitingThreadAborter
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public WaitingThreadAborter() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// abort
+				/// </java-name>
+				[Dot42.DexImport("abort", "()V", AccessFlags = 1)]
+				public virtual void Abort() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setWaitingThread
+				/// </java-name>
+				[Dot42.DexImport("setWaitingThread", "(Lorg/apache/http/impl/conn/tsccm/WaitingThread;)V", AccessFlags = 1)]
+				public virtual void SetWaitingThread(global::Org.Apache.Http.Impl.Conn.Tsccm.WaitingThread waitingThread) /* MethodBuilder.Create */ 
+				{
 				}
 
 		}

@@ -11,44 +11,17 @@ namespace Javax.Security.Auth.Callback
 		}
 
 		/// <java-name>
-		/// javax/security/auth/callback/UnsupportedCallbackException
+		/// javax/security/auth/callback/CallbackHandler
 		/// </java-name>
-		[Dot42.DexImport("javax/security/auth/callback/UnsupportedCallbackException", AccessFlags = 33)]
-		public partial class UnsupportedCallbackException : global::System.Exception
+		[Dot42.DexImport("javax/security/auth/callback/CallbackHandler", AccessFlags = 1537)]
+		public partial interface ICallbackHandler
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(Ljavax/security/auth/callback/Callback;)V", AccessFlags = 1)]
-				public UnsupportedCallbackException(global::Javax.Security.Auth.Callback.ICallback callback) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljavax/security/auth/callback/Callback;Ljava/lang/String;)V", AccessFlags = 1)]
-				public UnsupportedCallbackException(global::Javax.Security.Auth.Callback.ICallback callback, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
 				/// <java-name>
-				/// getCallback
+				/// handle
 				/// </java-name>
-				[Dot42.DexImport("getCallback", "()Ljavax/security/auth/callback/Callback;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.Callback.ICallback GetCallback() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.Callback.ICallback);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UnsupportedCallbackException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCallback
-				/// </java-name>
-				public global::Javax.Security.Auth.Callback.ICallback Callback
-				{
-				[Dot42.DexImport("getCallback", "()Ljavax/security/auth/callback/Callback;", AccessFlags = 1)]
-						get{ return GetCallback(); }
-				}
+				[Dot42.DexImport("handle", "([Ljavax/security/auth/callback/Callback;)V", AccessFlags = 1025)]
+				void Handle(global::Javax.Security.Auth.Callback.ICallback[] callback) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -135,17 +108,44 @@ namespace Javax.Security.Auth.Callback
 		}
 
 		/// <java-name>
-		/// javax/security/auth/callback/CallbackHandler
+		/// javax/security/auth/callback/UnsupportedCallbackException
 		/// </java-name>
-		[Dot42.DexImport("javax/security/auth/callback/CallbackHandler", AccessFlags = 1537)]
-		public partial interface ICallbackHandler
+		[Dot42.DexImport("javax/security/auth/callback/UnsupportedCallbackException", AccessFlags = 33)]
+		public partial class UnsupportedCallbackException : global::System.Exception
  /* scope: __dot42__ */ 
 		{
+				[Dot42.DexImport("<init>", "(Ljavax/security/auth/callback/Callback;)V", AccessFlags = 1)]
+				public UnsupportedCallbackException(global::Javax.Security.Auth.Callback.ICallback callback) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[Dot42.DexImport("<init>", "(Ljavax/security/auth/callback/Callback;Ljava/lang/String;)V", AccessFlags = 1)]
+				public UnsupportedCallbackException(global::Javax.Security.Auth.Callback.ICallback callback, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
 				/// <java-name>
-				/// handle
+				/// getCallback
 				/// </java-name>
-				[Dot42.DexImport("handle", "([Ljavax/security/auth/callback/Callback;)V", AccessFlags = 1025)]
-				void Handle(global::Javax.Security.Auth.Callback.ICallback[] callback) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("getCallback", "()Ljavax/security/auth/callback/Callback;", AccessFlags = 1)]
+				public virtual global::Javax.Security.Auth.Callback.ICallback GetCallback() /* MethodBuilder.Create */ 
+				{
+						return default(global::Javax.Security.Auth.Callback.ICallback);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal UnsupportedCallbackException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getCallback
+				/// </java-name>
+				public global::Javax.Security.Auth.Callback.ICallback Callback
+				{
+				[Dot42.DexImport("getCallback", "()Ljavax/security/auth/callback/Callback;", AccessFlags = 1)]
+						get{ return GetCallback(); }
+				}
 
 		}
 

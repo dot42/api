@@ -2,6 +2,57 @@
 namespace Org.Apache.Http.Io
 {
 		/// <java-name>
+		/// org/apache/http/io/HttpMessageParser
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/io/HttpMessageParser", AccessFlags = 1537)]
+		public partial interface IHttpMessageParser
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// parse
+				/// </java-name>
+				[Dot42.DexImport("parse", "()Lorg/apache/http/HttpMessage;", AccessFlags = 1025)]
+				global::Org.Apache.Http.IHttpMessage Parse() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/io/HttpMessageWriter
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/io/HttpMessageWriter", AccessFlags = 1537)]
+		public partial interface IHttpMessageWriter
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// write
+				/// </java-name>
+				[Dot42.DexImport("write", "(Lorg/apache/http/HttpMessage;)V", AccessFlags = 1025)]
+				void Write(global::Org.Apache.Http.IHttpMessage httpMessage) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// org/apache/http/io/HttpTransportMetrics
+		/// </java-name>
+		[Dot42.DexImport("org/apache/http/io/HttpTransportMetrics", AccessFlags = 1537)]
+		public partial interface IHttpTransportMetrics
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// getBytesTransferred
+				/// </java-name>
+				[Dot42.DexImport("getBytesTransferred", "()J", AccessFlags = 1025)]
+				long GetBytesTransferred() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// reset
+				/// </java-name>
+				[Dot42.DexImport("reset", "()V", AccessFlags = 1025)]
+				void Reset() /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
 		/// org/apache/http/io/SessionInputBuffer
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/io/SessionInputBuffer", AccessFlags = 1537)]
@@ -53,42 +104,6 @@ namespace Org.Apache.Http.Io
 		}
 
 		/// <java-name>
-		/// org/apache/http/io/HttpTransportMetrics
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/io/HttpTransportMetrics", AccessFlags = 1537)]
-		public partial interface IHttpTransportMetrics
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// getBytesTransferred
-				/// </java-name>
-				[Dot42.DexImport("getBytesTransferred", "()J", AccessFlags = 1025)]
-				long GetBytesTransferred() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// reset
-				/// </java-name>
-				[Dot42.DexImport("reset", "()V", AccessFlags = 1025)]
-				void Reset() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/io/HttpMessageParser
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/io/HttpMessageParser", AccessFlags = 1537)]
-		public partial interface IHttpMessageParser
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// parse
-				/// </java-name>
-				[Dot42.DexImport("parse", "()Lorg/apache/http/HttpMessage;", AccessFlags = 1025)]
-				global::Org.Apache.Http.IHttpMessage Parse() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
 		/// org/apache/http/io/SessionOutputBuffer
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/io/SessionOutputBuffer", AccessFlags = 1537)]
@@ -136,21 +151,6 @@ namespace Org.Apache.Http.Io
 				/// </java-name>
 				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1025)]
 				global::Org.Apache.Http.Io.IHttpTransportMetrics GetMetrics() /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// org/apache/http/io/HttpMessageWriter
-		/// </java-name>
-		[Dot42.DexImport("org/apache/http/io/HttpMessageWriter", AccessFlags = 1537)]
-		public partial interface IHttpMessageWriter
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// write
-				/// </java-name>
-				[Dot42.DexImport("write", "(Lorg/apache/http/HttpMessage;)V", AccessFlags = 1025)]
-				void Write(global::Org.Apache.Http.IHttpMessage httpMessage) /* MethodBuilder.Create */ ;
 
 		}
 

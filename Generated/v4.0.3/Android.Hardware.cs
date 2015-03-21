@@ -2,700 +2,6 @@
 namespace Android.Hardware
 {
 		/// <java-name>
-		/// android/hardware/SensorEventListener
-		/// </java-name>
-		[Dot42.DexImport("android/hardware/SensorEventListener", AccessFlags = 1537)]
-		public partial interface ISensorEventListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// onSensorChanged
-				/// </java-name>
-				[Dot42.DexImport("onSensorChanged", "(Landroid/hardware/SensorEvent;)V", AccessFlags = 1025)]
-				void OnSensorChanged(global::Android.Hardware.SensorEvent sensorEvent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onAccuracyChanged
-				/// </java-name>
-				[Dot42.DexImport("onAccuracyChanged", "(Landroid/hardware/Sensor;I)V", AccessFlags = 1025)]
-				void OnAccuracyChanged(global::Android.Hardware.Sensor sensor, int int32) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// android/hardware/GeomagneticField
-		/// </java-name>
-		[Dot42.DexImport("android/hardware/GeomagneticField", AccessFlags = 33)]
-		public partial class GeomagneticField
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(FFFJ)V", AccessFlags = 1)]
-				public GeomagneticField(float single, float single1, float single2, long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getX
-				/// </java-name>
-				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
-				public virtual float GetX() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getY
-				/// </java-name>
-				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
-				public virtual float GetY() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getZ
-				/// </java-name>
-				[Dot42.DexImport("getZ", "()F", AccessFlags = 1)]
-				public virtual float GetZ() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getDeclination
-				/// </java-name>
-				[Dot42.DexImport("getDeclination", "()F", AccessFlags = 1)]
-				public virtual float GetDeclination() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getInclination
-				/// </java-name>
-				[Dot42.DexImport("getInclination", "()F", AccessFlags = 1)]
-				public virtual float GetInclination() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getHorizontalStrength
-				/// </java-name>
-				[Dot42.DexImport("getHorizontalStrength", "()F", AccessFlags = 1)]
-				public virtual float GetHorizontalStrength() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getFieldStrength
-				/// </java-name>
-				[Dot42.DexImport("getFieldStrength", "()F", AccessFlags = 1)]
-				public virtual float GetFieldStrength() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GeomagneticField() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <java-name>
-				/// getX
-				/// </java-name>
-				public float X
-				{
-				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
-						get{ return GetX(); }
-				}
-
-				/// <java-name>
-				/// getY
-				/// </java-name>
-				public float Y
-				{
-				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
-						get{ return GetY(); }
-				}
-
-				/// <java-name>
-				/// getZ
-				/// </java-name>
-				public float Z
-				{
-				[Dot42.DexImport("getZ", "()F", AccessFlags = 1)]
-						get{ return GetZ(); }
-				}
-
-				/// <java-name>
-				/// getDeclination
-				/// </java-name>
-				public float Declination
-				{
-				[Dot42.DexImport("getDeclination", "()F", AccessFlags = 1)]
-						get{ return GetDeclination(); }
-				}
-
-				/// <java-name>
-				/// getInclination
-				/// </java-name>
-				public float Inclination
-				{
-				[Dot42.DexImport("getInclination", "()F", AccessFlags = 1)]
-						get{ return GetInclination(); }
-				}
-
-				/// <java-name>
-				/// getHorizontalStrength
-				/// </java-name>
-				public float HorizontalStrength
-				{
-				[Dot42.DexImport("getHorizontalStrength", "()F", AccessFlags = 1)]
-						get{ return GetHorizontalStrength(); }
-				}
-
-				/// <java-name>
-				/// getFieldStrength
-				/// </java-name>
-				public float FieldStrength
-				{
-				[Dot42.DexImport("getFieldStrength", "()F", AccessFlags = 1)]
-						get{ return GetFieldStrength(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/hardware/SensorManager
-		/// </java-name>
-		[Dot42.DexImport("android/hardware/SensorManager", AccessFlags = 33)]
-		public partial class SensorManager
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// SENSOR_ORIENTATION
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_ORIENTATION", "I", AccessFlags = 25)]
-				public const int SENSOR_ORIENTATION = 1;
-				/// <java-name>
-				/// SENSOR_ACCELEROMETER
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_ACCELEROMETER", "I", AccessFlags = 25)]
-				public const int SENSOR_ACCELEROMETER = 2;
-				/// <java-name>
-				/// SENSOR_TEMPERATURE
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_TEMPERATURE", "I", AccessFlags = 25)]
-				public const int SENSOR_TEMPERATURE = 4;
-				/// <java-name>
-				/// SENSOR_MAGNETIC_FIELD
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_MAGNETIC_FIELD", "I", AccessFlags = 25)]
-				public const int SENSOR_MAGNETIC_FIELD = 8;
-				/// <java-name>
-				/// SENSOR_LIGHT
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_LIGHT", "I", AccessFlags = 25)]
-				public const int SENSOR_LIGHT = 16;
-				/// <java-name>
-				/// SENSOR_PROXIMITY
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_PROXIMITY", "I", AccessFlags = 25)]
-				public const int SENSOR_PROXIMITY = 32;
-				/// <java-name>
-				/// SENSOR_TRICORDER
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_TRICORDER", "I", AccessFlags = 25)]
-				public const int SENSOR_TRICORDER = 64;
-				/// <java-name>
-				/// SENSOR_ORIENTATION_RAW
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_ORIENTATION_RAW", "I", AccessFlags = 25)]
-				public const int SENSOR_ORIENTATION_RAW = 128;
-				/// <java-name>
-				/// SENSOR_ALL
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_ALL", "I", AccessFlags = 25)]
-				public const int SENSOR_ALL = 127;
-				/// <java-name>
-				/// SENSOR_MIN
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_MIN", "I", AccessFlags = 25)]
-				public const int SENSOR_MIN = 1;
-				/// <java-name>
-				/// SENSOR_MAX
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_MAX", "I", AccessFlags = 25)]
-				public const int SENSOR_MAX = 64;
-				/// <java-name>
-				/// DATA_X
-				/// </java-name>
-				[Dot42.DexImport("DATA_X", "I", AccessFlags = 25)]
-				public const int DATA_X = 0;
-				/// <java-name>
-				/// DATA_Y
-				/// </java-name>
-				[Dot42.DexImport("DATA_Y", "I", AccessFlags = 25)]
-				public const int DATA_Y = 1;
-				/// <java-name>
-				/// DATA_Z
-				/// </java-name>
-				[Dot42.DexImport("DATA_Z", "I", AccessFlags = 25)]
-				public const int DATA_Z = 2;
-				/// <java-name>
-				/// RAW_DATA_INDEX
-				/// </java-name>
-				[Dot42.DexImport("RAW_DATA_INDEX", "I", AccessFlags = 25)]
-				public const int RAW_DATA_INDEX = 3;
-				/// <java-name>
-				/// RAW_DATA_X
-				/// </java-name>
-				[Dot42.DexImport("RAW_DATA_X", "I", AccessFlags = 25)]
-				public const int RAW_DATA_X = 3;
-				/// <java-name>
-				/// RAW_DATA_Y
-				/// </java-name>
-				[Dot42.DexImport("RAW_DATA_Y", "I", AccessFlags = 25)]
-				public const int RAW_DATA_Y = 4;
-				/// <java-name>
-				/// RAW_DATA_Z
-				/// </java-name>
-				[Dot42.DexImport("RAW_DATA_Z", "I", AccessFlags = 25)]
-				public const int RAW_DATA_Z = 5;
-				/// <java-name>
-				/// STANDARD_GRAVITY
-				/// </java-name>
-				[Dot42.DexImport("STANDARD_GRAVITY", "F", AccessFlags = 25)]
-				public const float STANDARD_GRAVITY = 9.80665F;
-				/// <java-name>
-				/// GRAVITY_SUN
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_SUN", "F", AccessFlags = 25)]
-				public const float GRAVITY_SUN = 275F;
-				/// <java-name>
-				/// GRAVITY_MERCURY
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_MERCURY", "F", AccessFlags = 25)]
-				public const float GRAVITY_MERCURY = 3.7F;
-				/// <java-name>
-				/// GRAVITY_VENUS
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_VENUS", "F", AccessFlags = 25)]
-				public const float GRAVITY_VENUS = 8.87F;
-				/// <java-name>
-				/// GRAVITY_EARTH
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_EARTH", "F", AccessFlags = 25)]
-				public const float GRAVITY_EARTH = 9.80665F;
-				/// <java-name>
-				/// GRAVITY_MOON
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_MOON", "F", AccessFlags = 25)]
-				public const float GRAVITY_MOON = 1.6F;
-				/// <java-name>
-				/// GRAVITY_MARS
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_MARS", "F", AccessFlags = 25)]
-				public const float GRAVITY_MARS = 3.71F;
-				/// <java-name>
-				/// GRAVITY_JUPITER
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_JUPITER", "F", AccessFlags = 25)]
-				public const float GRAVITY_JUPITER = 23.12F;
-				/// <java-name>
-				/// GRAVITY_SATURN
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_SATURN", "F", AccessFlags = 25)]
-				public const float GRAVITY_SATURN = 8.96F;
-				/// <java-name>
-				/// GRAVITY_URANUS
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_URANUS", "F", AccessFlags = 25)]
-				public const float GRAVITY_URANUS = 8.69F;
-				/// <java-name>
-				/// GRAVITY_NEPTUNE
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_NEPTUNE", "F", AccessFlags = 25)]
-				public const float GRAVITY_NEPTUNE = 11F;
-				/// <java-name>
-				/// GRAVITY_PLUTO
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_PLUTO", "F", AccessFlags = 25)]
-				public const float GRAVITY_PLUTO = 0.6F;
-				/// <java-name>
-				/// GRAVITY_DEATH_STAR_I
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_DEATH_STAR_I", "F", AccessFlags = 25)]
-				public const float GRAVITY_DEATH_STAR_I = 3.530361E-07F;
-				/// <java-name>
-				/// GRAVITY_THE_ISLAND
-				/// </java-name>
-				[Dot42.DexImport("GRAVITY_THE_ISLAND", "F", AccessFlags = 25)]
-				public const float GRAVITY_THE_ISLAND = 4.815162F;
-				/// <java-name>
-				/// MAGNETIC_FIELD_EARTH_MAX
-				/// </java-name>
-				[Dot42.DexImport("MAGNETIC_FIELD_EARTH_MAX", "F", AccessFlags = 25)]
-				public const float MAGNETIC_FIELD_EARTH_MAX = 60F;
-				/// <java-name>
-				/// MAGNETIC_FIELD_EARTH_MIN
-				/// </java-name>
-				[Dot42.DexImport("MAGNETIC_FIELD_EARTH_MIN", "F", AccessFlags = 25)]
-				public const float MAGNETIC_FIELD_EARTH_MIN = 30F;
-				/// <java-name>
-				/// PRESSURE_STANDARD_ATMOSPHERE
-				/// </java-name>
-				[Dot42.DexImport("PRESSURE_STANDARD_ATMOSPHERE", "F", AccessFlags = 25)]
-				public const float PRESSURE_STANDARD_ATMOSPHERE = 1013.25F;
-				/// <java-name>
-				/// LIGHT_SUNLIGHT_MAX
-				/// </java-name>
-				[Dot42.DexImport("LIGHT_SUNLIGHT_MAX", "F", AccessFlags = 25)]
-				public const float LIGHT_SUNLIGHT_MAX = 120000F;
-				/// <java-name>
-				/// LIGHT_SUNLIGHT
-				/// </java-name>
-				[Dot42.DexImport("LIGHT_SUNLIGHT", "F", AccessFlags = 25)]
-				public const float LIGHT_SUNLIGHT = 110000F;
-				/// <java-name>
-				/// LIGHT_SHADE
-				/// </java-name>
-				[Dot42.DexImport("LIGHT_SHADE", "F", AccessFlags = 25)]
-				public const float LIGHT_SHADE = 20000F;
-				/// <java-name>
-				/// LIGHT_OVERCAST
-				/// </java-name>
-				[Dot42.DexImport("LIGHT_OVERCAST", "F", AccessFlags = 25)]
-				public const float LIGHT_OVERCAST = 10000F;
-				/// <java-name>
-				/// LIGHT_SUNRISE
-				/// </java-name>
-				[Dot42.DexImport("LIGHT_SUNRISE", "F", AccessFlags = 25)]
-				public const float LIGHT_SUNRISE = 400F;
-				/// <java-name>
-				/// LIGHT_CLOUDY
-				/// </java-name>
-				[Dot42.DexImport("LIGHT_CLOUDY", "F", AccessFlags = 25)]
-				public const float LIGHT_CLOUDY = 100F;
-				/// <java-name>
-				/// LIGHT_FULLMOON
-				/// </java-name>
-				[Dot42.DexImport("LIGHT_FULLMOON", "F", AccessFlags = 25)]
-				public const float LIGHT_FULLMOON = 0.25F;
-				/// <java-name>
-				/// LIGHT_NO_MOON
-				/// </java-name>
-				[Dot42.DexImport("LIGHT_NO_MOON", "F", AccessFlags = 25)]
-				public const float LIGHT_NO_MOON = 0.001F;
-				/// <java-name>
-				/// SENSOR_DELAY_FASTEST
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_DELAY_FASTEST", "I", AccessFlags = 25)]
-				public const int SENSOR_DELAY_FASTEST = 0;
-				/// <java-name>
-				/// SENSOR_DELAY_GAME
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_DELAY_GAME", "I", AccessFlags = 25)]
-				public const int SENSOR_DELAY_GAME = 1;
-				/// <java-name>
-				/// SENSOR_DELAY_UI
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_DELAY_UI", "I", AccessFlags = 25)]
-				public const int SENSOR_DELAY_UI = 2;
-				/// <java-name>
-				/// SENSOR_DELAY_NORMAL
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_DELAY_NORMAL", "I", AccessFlags = 25)]
-				public const int SENSOR_DELAY_NORMAL = 3;
-				/// <java-name>
-				/// SENSOR_STATUS_UNRELIABLE
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_STATUS_UNRELIABLE", "I", AccessFlags = 25)]
-				public const int SENSOR_STATUS_UNRELIABLE = 0;
-				/// <java-name>
-				/// SENSOR_STATUS_ACCURACY_LOW
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_STATUS_ACCURACY_LOW", "I", AccessFlags = 25)]
-				public const int SENSOR_STATUS_ACCURACY_LOW = 1;
-				/// <java-name>
-				/// SENSOR_STATUS_ACCURACY_MEDIUM
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_STATUS_ACCURACY_MEDIUM", "I", AccessFlags = 25)]
-				public const int SENSOR_STATUS_ACCURACY_MEDIUM = 2;
-				/// <java-name>
-				/// SENSOR_STATUS_ACCURACY_HIGH
-				/// </java-name>
-				[Dot42.DexImport("SENSOR_STATUS_ACCURACY_HIGH", "I", AccessFlags = 25)]
-				public const int SENSOR_STATUS_ACCURACY_HIGH = 3;
-				/// <java-name>
-				/// AXIS_X
-				/// </java-name>
-				[Dot42.DexImport("AXIS_X", "I", AccessFlags = 25)]
-				public const int AXIS_X = 1;
-				/// <java-name>
-				/// AXIS_Y
-				/// </java-name>
-				[Dot42.DexImport("AXIS_Y", "I", AccessFlags = 25)]
-				public const int AXIS_Y = 2;
-				/// <java-name>
-				/// AXIS_Z
-				/// </java-name>
-				[Dot42.DexImport("AXIS_Z", "I", AccessFlags = 25)]
-				public const int AXIS_Z = 3;
-				/// <java-name>
-				/// AXIS_MINUS_X
-				/// </java-name>
-				[Dot42.DexImport("AXIS_MINUS_X", "I", AccessFlags = 25)]
-				public const int AXIS_MINUS_X = 129;
-				/// <java-name>
-				/// AXIS_MINUS_Y
-				/// </java-name>
-				[Dot42.DexImport("AXIS_MINUS_Y", "I", AccessFlags = 25)]
-				public const int AXIS_MINUS_Y = 130;
-				/// <java-name>
-				/// AXIS_MINUS_Z
-				/// </java-name>
-				[Dot42.DexImport("AXIS_MINUS_Z", "I", AccessFlags = 25)]
-				public const int AXIS_MINUS_Z = 131;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SensorManager() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSensors
-				/// </java-name>
-				[Dot42.DexImport("getSensors", "()I", AccessFlags = 1)]
-				public virtual int GetSensors() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSensorList
-				/// </java-name>
-				[Dot42.DexImport("getSensorList", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/hardware/Sensor;>;")]
-				public virtual global::Java.Util.IList<global::Android.Hardware.Sensor> GetSensorList(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Hardware.Sensor>);
-				}
-
-				/// <java-name>
-				/// getDefaultSensor
-				/// </java-name>
-				[Dot42.DexImport("getDefaultSensor", "(I)Landroid/hardware/Sensor;", AccessFlags = 1)]
-				public virtual global::Android.Hardware.Sensor GetDefaultSensor(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Hardware.Sensor);
-				}
-
-				/// <java-name>
-				/// registerListener
-				/// </java-name>
-				[Dot42.DexImport("registerListener", "(Landroid/hardware/SensorListener;I)Z", AccessFlags = 1)]
-				public virtual bool RegisterListener(global::Android.Hardware.ISensorListener sensorListener, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// registerListener
-				/// </java-name>
-				[Dot42.DexImport("registerListener", "(Landroid/hardware/SensorListener;II)Z", AccessFlags = 1)]
-				public virtual bool RegisterListener(global::Android.Hardware.ISensorListener sensorListener, int int32, int int321) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// unregisterListener
-				/// </java-name>
-				[Dot42.DexImport("unregisterListener", "(Landroid/hardware/SensorListener;I)V", AccessFlags = 1)]
-				public virtual void UnregisterListener(global::Android.Hardware.ISensorListener sensorListener, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// unregisterListener
-				/// </java-name>
-				[Dot42.DexImport("unregisterListener", "(Landroid/hardware/SensorListener;)V", AccessFlags = 1)]
-				public virtual void UnregisterListener(global::Android.Hardware.ISensorListener sensorListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// unregisterListener
-				/// </java-name>
-				[Dot42.DexImport("unregisterListener", "(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V", AccessFlags = 1)]
-				public virtual void UnregisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener, global::Android.Hardware.Sensor sensor) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// unregisterListener
-				/// </java-name>
-				[Dot42.DexImport("unregisterListener", "(Landroid/hardware/SensorEventListener;)V", AccessFlags = 1)]
-				public virtual void UnregisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// registerListener
-				/// </java-name>
-				[Dot42.DexImport("registerListener", "(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z", AccessFlags = 1)]
-				public virtual bool RegisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener, global::Android.Hardware.Sensor sensor, int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// registerListener
-				/// </java-name>
-				[Dot42.DexImport("registerListener", "(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;ILandroid/os/Hand" +
-    "ler;)Z", AccessFlags = 1)]
-				public virtual bool RegisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener, global::Android.Hardware.Sensor sensor, int int32, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getRotationMatrix
-				/// </java-name>
-				[Dot42.DexImport("getRotationMatrix", "([F[F[F[F)Z", AccessFlags = 9)]
-				public static bool GetRotationMatrix(float[] single, float[] single1, float[] single2, float[] single3) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getInclination
-				/// </java-name>
-				[Dot42.DexImport("getInclination", "([F)F", AccessFlags = 9)]
-				public static float GetInclination(float[] single) /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// remapCoordinateSystem
-				/// </java-name>
-				[Dot42.DexImport("remapCoordinateSystem", "([FII[F)Z", AccessFlags = 9)]
-				public static bool RemapCoordinateSystem(float[] single, int int32, int int321, float[] single1) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getOrientation
-				/// </java-name>
-				[Dot42.DexImport("getOrientation", "([F[F)[F", AccessFlags = 9)]
-				public static float[] GetOrientation(float[] single, float[] single1) /* MethodBuilder.Create */ 
-				{
-						return default(float[]);
-				}
-
-				/// <java-name>
-				/// getAltitude
-				/// </java-name>
-				[Dot42.DexImport("getAltitude", "(FF)F", AccessFlags = 9)]
-				public static float GetAltitude(float single, float single1) /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getAngleChange
-				/// </java-name>
-				[Dot42.DexImport("getAngleChange", "([F[F[F)V", AccessFlags = 9)]
-				public static void GetAngleChange(float[] single, float[] single1, float[] single2) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRotationMatrixFromVector
-				/// </java-name>
-				[Dot42.DexImport("getRotationMatrixFromVector", "([F[F)V", AccessFlags = 9)]
-				public static void GetRotationMatrixFromVector(float[] single, float[] single1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getQuaternionFromVector
-				/// </java-name>
-				[Dot42.DexImport("getQuaternionFromVector", "([F[F)V", AccessFlags = 9)]
-				public static void GetQuaternionFromVector(float[] single, float[] single1) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSensors
-				/// </java-name>
-				public int Sensors
-				{
-				[Dot42.DexImport("getSensors", "()I", AccessFlags = 1)]
-						get{ return GetSensors(); }
-				}
-
-		}
-
-		/// <java-name>
-		/// android/hardware/SensorEvent
-		/// </java-name>
-		[Dot42.DexImport("android/hardware/SensorEvent", AccessFlags = 33)]
-		public partial class SensorEvent
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// values
-				/// </java-name>
-				[Dot42.DexImport("values", "[F", AccessFlags = 17)]
-				public readonly float[] Values;
-				/// <java-name>
-				/// sensor
-				/// </java-name>
-				[Dot42.DexImport("sensor", "Landroid/hardware/Sensor;", AccessFlags = 1)]
-				public global::Android.Hardware.Sensor Sensor;
-				/// <java-name>
-				/// accuracy
-				/// </java-name>
-				[Dot42.DexImport("accuracy", "I", AccessFlags = 1)]
-				public int Accuracy;
-				/// <java-name>
-				/// timestamp
-				/// </java-name>
-				[Dot42.DexImport("timestamp", "J", AccessFlags = 1)]
-				public long Timestamp;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal SensorEvent() /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <java-name>
-		/// android/hardware/SensorListener
-		/// </java-name>
-		[Dot42.DexImport("android/hardware/SensorListener", AccessFlags = 1537)]
-		public partial interface ISensorListener
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// onSensorChanged
-				/// </java-name>
-				[Dot42.DexImport("onSensorChanged", "(I[F)V", AccessFlags = 1025)]
-				void OnSensorChanged(int int32, float[] single) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// onAccuracyChanged
-				/// </java-name>
-				[Dot42.DexImport("onAccuracyChanged", "(II)V", AccessFlags = 1025)]
-				void OnAccuracyChanged(int int32, int int321) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
 		/// android/hardware/Camera
 		/// </java-name>
 		[Dot42.DexImport("android/hardware/Camera", AccessFlags = 33)]
@@ -2818,6 +2124,193 @@ namespace Android.Hardware
 		}
 
 		/// <java-name>
+		/// android/hardware/GeomagneticField
+		/// </java-name>
+		[Dot42.DexImport("android/hardware/GeomagneticField", AccessFlags = 33)]
+		public partial class GeomagneticField
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(FFFJ)V", AccessFlags = 1)]
+				public GeomagneticField(float single, float single1, float single2, long int64) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getX
+				/// </java-name>
+				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
+				public virtual float GetX() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getY
+				/// </java-name>
+				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
+				public virtual float GetY() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getZ
+				/// </java-name>
+				[Dot42.DexImport("getZ", "()F", AccessFlags = 1)]
+				public virtual float GetZ() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getDeclination
+				/// </java-name>
+				[Dot42.DexImport("getDeclination", "()F", AccessFlags = 1)]
+				public virtual float GetDeclination() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getInclination
+				/// </java-name>
+				[Dot42.DexImport("getInclination", "()F", AccessFlags = 1)]
+				public virtual float GetInclination() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getHorizontalStrength
+				/// </java-name>
+				[Dot42.DexImport("getHorizontalStrength", "()F", AccessFlags = 1)]
+				public virtual float GetHorizontalStrength() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getFieldStrength
+				/// </java-name>
+				[Dot42.DexImport("getFieldStrength", "()F", AccessFlags = 1)]
+				public virtual float GetFieldStrength() /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal GeomagneticField() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <java-name>
+				/// getX
+				/// </java-name>
+				public float X
+				{
+				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
+						get{ return GetX(); }
+				}
+
+				/// <java-name>
+				/// getY
+				/// </java-name>
+				public float Y
+				{
+				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
+						get{ return GetY(); }
+				}
+
+				/// <java-name>
+				/// getZ
+				/// </java-name>
+				public float Z
+				{
+				[Dot42.DexImport("getZ", "()F", AccessFlags = 1)]
+						get{ return GetZ(); }
+				}
+
+				/// <java-name>
+				/// getDeclination
+				/// </java-name>
+				public float Declination
+				{
+				[Dot42.DexImport("getDeclination", "()F", AccessFlags = 1)]
+						get{ return GetDeclination(); }
+				}
+
+				/// <java-name>
+				/// getInclination
+				/// </java-name>
+				public float Inclination
+				{
+				[Dot42.DexImport("getInclination", "()F", AccessFlags = 1)]
+						get{ return GetInclination(); }
+				}
+
+				/// <java-name>
+				/// getHorizontalStrength
+				/// </java-name>
+				public float HorizontalStrength
+				{
+				[Dot42.DexImport("getHorizontalStrength", "()F", AccessFlags = 1)]
+						get{ return GetHorizontalStrength(); }
+				}
+
+				/// <java-name>
+				/// getFieldStrength
+				/// </java-name>
+				public float FieldStrength
+				{
+				[Dot42.DexImport("getFieldStrength", "()F", AccessFlags = 1)]
+						get{ return GetFieldStrength(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/hardware/SensorEventListener
+		/// </java-name>
+		[Dot42.DexImport("android/hardware/SensorEventListener", AccessFlags = 1537)]
+		public partial interface ISensorEventListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// onSensorChanged
+				/// </java-name>
+				[Dot42.DexImport("onSensorChanged", "(Landroid/hardware/SensorEvent;)V", AccessFlags = 1025)]
+				void OnSensorChanged(global::Android.Hardware.SensorEvent sensorEvent) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onAccuracyChanged
+				/// </java-name>
+				[Dot42.DexImport("onAccuracyChanged", "(Landroid/hardware/Sensor;I)V", AccessFlags = 1025)]
+				void OnAccuracyChanged(global::Android.Hardware.Sensor sensor, int int32) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// android/hardware/SensorListener
+		/// </java-name>
+		[Dot42.DexImport("android/hardware/SensorListener", AccessFlags = 1537)]
+		public partial interface ISensorListener
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// onSensorChanged
+				/// </java-name>
+				[Dot42.DexImport("onSensorChanged", "(I[F)V", AccessFlags = 1025)]
+				void OnSensorChanged(int int32, float[] single) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// onAccuracyChanged
+				/// </java-name>
+				[Dot42.DexImport("onAccuracyChanged", "(II)V", AccessFlags = 1025)]
+				void OnAccuracyChanged(int int32, int int321) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
 		/// android/hardware/Sensor
 		/// </java-name>
 		[Dot42.DexImport("android/hardware/Sensor", AccessFlags = 33)]
@@ -3041,6 +2534,513 @@ namespace Android.Hardware
 				{
 				[Dot42.DexImport("getMinDelay", "()I", AccessFlags = 1)]
 						get{ return GetMinDelay(); }
+				}
+
+		}
+
+		/// <java-name>
+		/// android/hardware/SensorEvent
+		/// </java-name>
+		[Dot42.DexImport("android/hardware/SensorEvent", AccessFlags = 33)]
+		public partial class SensorEvent
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// values
+				/// </java-name>
+				[Dot42.DexImport("values", "[F", AccessFlags = 17)]
+				public readonly float[] Values;
+				/// <java-name>
+				/// sensor
+				/// </java-name>
+				[Dot42.DexImport("sensor", "Landroid/hardware/Sensor;", AccessFlags = 1)]
+				public global::Android.Hardware.Sensor Sensor;
+				/// <java-name>
+				/// accuracy
+				/// </java-name>
+				[Dot42.DexImport("accuracy", "I", AccessFlags = 1)]
+				public int Accuracy;
+				/// <java-name>
+				/// timestamp
+				/// </java-name>
+				[Dot42.DexImport("timestamp", "J", AccessFlags = 1)]
+				public long Timestamp;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal SensorEvent() /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <java-name>
+		/// android/hardware/SensorManager
+		/// </java-name>
+		[Dot42.DexImport("android/hardware/SensorManager", AccessFlags = 33)]
+		public partial class SensorManager
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// SENSOR_ORIENTATION
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_ORIENTATION", "I", AccessFlags = 25)]
+				public const int SENSOR_ORIENTATION = 1;
+				/// <java-name>
+				/// SENSOR_ACCELEROMETER
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_ACCELEROMETER", "I", AccessFlags = 25)]
+				public const int SENSOR_ACCELEROMETER = 2;
+				/// <java-name>
+				/// SENSOR_TEMPERATURE
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_TEMPERATURE", "I", AccessFlags = 25)]
+				public const int SENSOR_TEMPERATURE = 4;
+				/// <java-name>
+				/// SENSOR_MAGNETIC_FIELD
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_MAGNETIC_FIELD", "I", AccessFlags = 25)]
+				public const int SENSOR_MAGNETIC_FIELD = 8;
+				/// <java-name>
+				/// SENSOR_LIGHT
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_LIGHT", "I", AccessFlags = 25)]
+				public const int SENSOR_LIGHT = 16;
+				/// <java-name>
+				/// SENSOR_PROXIMITY
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_PROXIMITY", "I", AccessFlags = 25)]
+				public const int SENSOR_PROXIMITY = 32;
+				/// <java-name>
+				/// SENSOR_TRICORDER
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_TRICORDER", "I", AccessFlags = 25)]
+				public const int SENSOR_TRICORDER = 64;
+				/// <java-name>
+				/// SENSOR_ORIENTATION_RAW
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_ORIENTATION_RAW", "I", AccessFlags = 25)]
+				public const int SENSOR_ORIENTATION_RAW = 128;
+				/// <java-name>
+				/// SENSOR_ALL
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_ALL", "I", AccessFlags = 25)]
+				public const int SENSOR_ALL = 127;
+				/// <java-name>
+				/// SENSOR_MIN
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_MIN", "I", AccessFlags = 25)]
+				public const int SENSOR_MIN = 1;
+				/// <java-name>
+				/// SENSOR_MAX
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_MAX", "I", AccessFlags = 25)]
+				public const int SENSOR_MAX = 64;
+				/// <java-name>
+				/// DATA_X
+				/// </java-name>
+				[Dot42.DexImport("DATA_X", "I", AccessFlags = 25)]
+				public const int DATA_X = 0;
+				/// <java-name>
+				/// DATA_Y
+				/// </java-name>
+				[Dot42.DexImport("DATA_Y", "I", AccessFlags = 25)]
+				public const int DATA_Y = 1;
+				/// <java-name>
+				/// DATA_Z
+				/// </java-name>
+				[Dot42.DexImport("DATA_Z", "I", AccessFlags = 25)]
+				public const int DATA_Z = 2;
+				/// <java-name>
+				/// RAW_DATA_INDEX
+				/// </java-name>
+				[Dot42.DexImport("RAW_DATA_INDEX", "I", AccessFlags = 25)]
+				public const int RAW_DATA_INDEX = 3;
+				/// <java-name>
+				/// RAW_DATA_X
+				/// </java-name>
+				[Dot42.DexImport("RAW_DATA_X", "I", AccessFlags = 25)]
+				public const int RAW_DATA_X = 3;
+				/// <java-name>
+				/// RAW_DATA_Y
+				/// </java-name>
+				[Dot42.DexImport("RAW_DATA_Y", "I", AccessFlags = 25)]
+				public const int RAW_DATA_Y = 4;
+				/// <java-name>
+				/// RAW_DATA_Z
+				/// </java-name>
+				[Dot42.DexImport("RAW_DATA_Z", "I", AccessFlags = 25)]
+				public const int RAW_DATA_Z = 5;
+				/// <java-name>
+				/// STANDARD_GRAVITY
+				/// </java-name>
+				[Dot42.DexImport("STANDARD_GRAVITY", "F", AccessFlags = 25)]
+				public const float STANDARD_GRAVITY = 9.80665F;
+				/// <java-name>
+				/// GRAVITY_SUN
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_SUN", "F", AccessFlags = 25)]
+				public const float GRAVITY_SUN = 275F;
+				/// <java-name>
+				/// GRAVITY_MERCURY
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_MERCURY", "F", AccessFlags = 25)]
+				public const float GRAVITY_MERCURY = 3.7F;
+				/// <java-name>
+				/// GRAVITY_VENUS
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_VENUS", "F", AccessFlags = 25)]
+				public const float GRAVITY_VENUS = 8.87F;
+				/// <java-name>
+				/// GRAVITY_EARTH
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_EARTH", "F", AccessFlags = 25)]
+				public const float GRAVITY_EARTH = 9.80665F;
+				/// <java-name>
+				/// GRAVITY_MOON
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_MOON", "F", AccessFlags = 25)]
+				public const float GRAVITY_MOON = 1.6F;
+				/// <java-name>
+				/// GRAVITY_MARS
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_MARS", "F", AccessFlags = 25)]
+				public const float GRAVITY_MARS = 3.71F;
+				/// <java-name>
+				/// GRAVITY_JUPITER
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_JUPITER", "F", AccessFlags = 25)]
+				public const float GRAVITY_JUPITER = 23.12F;
+				/// <java-name>
+				/// GRAVITY_SATURN
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_SATURN", "F", AccessFlags = 25)]
+				public const float GRAVITY_SATURN = 8.96F;
+				/// <java-name>
+				/// GRAVITY_URANUS
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_URANUS", "F", AccessFlags = 25)]
+				public const float GRAVITY_URANUS = 8.69F;
+				/// <java-name>
+				/// GRAVITY_NEPTUNE
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_NEPTUNE", "F", AccessFlags = 25)]
+				public const float GRAVITY_NEPTUNE = 11F;
+				/// <java-name>
+				/// GRAVITY_PLUTO
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_PLUTO", "F", AccessFlags = 25)]
+				public const float GRAVITY_PLUTO = 0.6F;
+				/// <java-name>
+				/// GRAVITY_DEATH_STAR_I
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_DEATH_STAR_I", "F", AccessFlags = 25)]
+				public const float GRAVITY_DEATH_STAR_I = 3.530361E-07F;
+				/// <java-name>
+				/// GRAVITY_THE_ISLAND
+				/// </java-name>
+				[Dot42.DexImport("GRAVITY_THE_ISLAND", "F", AccessFlags = 25)]
+				public const float GRAVITY_THE_ISLAND = 4.815162F;
+				/// <java-name>
+				/// MAGNETIC_FIELD_EARTH_MAX
+				/// </java-name>
+				[Dot42.DexImport("MAGNETIC_FIELD_EARTH_MAX", "F", AccessFlags = 25)]
+				public const float MAGNETIC_FIELD_EARTH_MAX = 60F;
+				/// <java-name>
+				/// MAGNETIC_FIELD_EARTH_MIN
+				/// </java-name>
+				[Dot42.DexImport("MAGNETIC_FIELD_EARTH_MIN", "F", AccessFlags = 25)]
+				public const float MAGNETIC_FIELD_EARTH_MIN = 30F;
+				/// <java-name>
+				/// PRESSURE_STANDARD_ATMOSPHERE
+				/// </java-name>
+				[Dot42.DexImport("PRESSURE_STANDARD_ATMOSPHERE", "F", AccessFlags = 25)]
+				public const float PRESSURE_STANDARD_ATMOSPHERE = 1013.25F;
+				/// <java-name>
+				/// LIGHT_SUNLIGHT_MAX
+				/// </java-name>
+				[Dot42.DexImport("LIGHT_SUNLIGHT_MAX", "F", AccessFlags = 25)]
+				public const float LIGHT_SUNLIGHT_MAX = 120000F;
+				/// <java-name>
+				/// LIGHT_SUNLIGHT
+				/// </java-name>
+				[Dot42.DexImport("LIGHT_SUNLIGHT", "F", AccessFlags = 25)]
+				public const float LIGHT_SUNLIGHT = 110000F;
+				/// <java-name>
+				/// LIGHT_SHADE
+				/// </java-name>
+				[Dot42.DexImport("LIGHT_SHADE", "F", AccessFlags = 25)]
+				public const float LIGHT_SHADE = 20000F;
+				/// <java-name>
+				/// LIGHT_OVERCAST
+				/// </java-name>
+				[Dot42.DexImport("LIGHT_OVERCAST", "F", AccessFlags = 25)]
+				public const float LIGHT_OVERCAST = 10000F;
+				/// <java-name>
+				/// LIGHT_SUNRISE
+				/// </java-name>
+				[Dot42.DexImport("LIGHT_SUNRISE", "F", AccessFlags = 25)]
+				public const float LIGHT_SUNRISE = 400F;
+				/// <java-name>
+				/// LIGHT_CLOUDY
+				/// </java-name>
+				[Dot42.DexImport("LIGHT_CLOUDY", "F", AccessFlags = 25)]
+				public const float LIGHT_CLOUDY = 100F;
+				/// <java-name>
+				/// LIGHT_FULLMOON
+				/// </java-name>
+				[Dot42.DexImport("LIGHT_FULLMOON", "F", AccessFlags = 25)]
+				public const float LIGHT_FULLMOON = 0.25F;
+				/// <java-name>
+				/// LIGHT_NO_MOON
+				/// </java-name>
+				[Dot42.DexImport("LIGHT_NO_MOON", "F", AccessFlags = 25)]
+				public const float LIGHT_NO_MOON = 0.001F;
+				/// <java-name>
+				/// SENSOR_DELAY_FASTEST
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_DELAY_FASTEST", "I", AccessFlags = 25)]
+				public const int SENSOR_DELAY_FASTEST = 0;
+				/// <java-name>
+				/// SENSOR_DELAY_GAME
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_DELAY_GAME", "I", AccessFlags = 25)]
+				public const int SENSOR_DELAY_GAME = 1;
+				/// <java-name>
+				/// SENSOR_DELAY_UI
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_DELAY_UI", "I", AccessFlags = 25)]
+				public const int SENSOR_DELAY_UI = 2;
+				/// <java-name>
+				/// SENSOR_DELAY_NORMAL
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_DELAY_NORMAL", "I", AccessFlags = 25)]
+				public const int SENSOR_DELAY_NORMAL = 3;
+				/// <java-name>
+				/// SENSOR_STATUS_UNRELIABLE
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_STATUS_UNRELIABLE", "I", AccessFlags = 25)]
+				public const int SENSOR_STATUS_UNRELIABLE = 0;
+				/// <java-name>
+				/// SENSOR_STATUS_ACCURACY_LOW
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_STATUS_ACCURACY_LOW", "I", AccessFlags = 25)]
+				public const int SENSOR_STATUS_ACCURACY_LOW = 1;
+				/// <java-name>
+				/// SENSOR_STATUS_ACCURACY_MEDIUM
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_STATUS_ACCURACY_MEDIUM", "I", AccessFlags = 25)]
+				public const int SENSOR_STATUS_ACCURACY_MEDIUM = 2;
+				/// <java-name>
+				/// SENSOR_STATUS_ACCURACY_HIGH
+				/// </java-name>
+				[Dot42.DexImport("SENSOR_STATUS_ACCURACY_HIGH", "I", AccessFlags = 25)]
+				public const int SENSOR_STATUS_ACCURACY_HIGH = 3;
+				/// <java-name>
+				/// AXIS_X
+				/// </java-name>
+				[Dot42.DexImport("AXIS_X", "I", AccessFlags = 25)]
+				public const int AXIS_X = 1;
+				/// <java-name>
+				/// AXIS_Y
+				/// </java-name>
+				[Dot42.DexImport("AXIS_Y", "I", AccessFlags = 25)]
+				public const int AXIS_Y = 2;
+				/// <java-name>
+				/// AXIS_Z
+				/// </java-name>
+				[Dot42.DexImport("AXIS_Z", "I", AccessFlags = 25)]
+				public const int AXIS_Z = 3;
+				/// <java-name>
+				/// AXIS_MINUS_X
+				/// </java-name>
+				[Dot42.DexImport("AXIS_MINUS_X", "I", AccessFlags = 25)]
+				public const int AXIS_MINUS_X = 129;
+				/// <java-name>
+				/// AXIS_MINUS_Y
+				/// </java-name>
+				[Dot42.DexImport("AXIS_MINUS_Y", "I", AccessFlags = 25)]
+				public const int AXIS_MINUS_Y = 130;
+				/// <java-name>
+				/// AXIS_MINUS_Z
+				/// </java-name>
+				[Dot42.DexImport("AXIS_MINUS_Z", "I", AccessFlags = 25)]
+				public const int AXIS_MINUS_Z = 131;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal SensorManager() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSensors
+				/// </java-name>
+				[Dot42.DexImport("getSensors", "()I", AccessFlags = 1)]
+				public virtual int GetSensors() /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// getSensorList
+				/// </java-name>
+				[Dot42.DexImport("getSensorList", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/hardware/Sensor;>;")]
+				public virtual global::Java.Util.IList<global::Android.Hardware.Sensor> GetSensorList(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IList<global::Android.Hardware.Sensor>);
+				}
+
+				/// <java-name>
+				/// getDefaultSensor
+				/// </java-name>
+				[Dot42.DexImport("getDefaultSensor", "(I)Landroid/hardware/Sensor;", AccessFlags = 1)]
+				public virtual global::Android.Hardware.Sensor GetDefaultSensor(int int32) /* MethodBuilder.Create */ 
+				{
+						return default(global::Android.Hardware.Sensor);
+				}
+
+				/// <java-name>
+				/// registerListener
+				/// </java-name>
+				[Dot42.DexImport("registerListener", "(Landroid/hardware/SensorListener;I)Z", AccessFlags = 1)]
+				public virtual bool RegisterListener(global::Android.Hardware.ISensorListener sensorListener, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// registerListener
+				/// </java-name>
+				[Dot42.DexImport("registerListener", "(Landroid/hardware/SensorListener;II)Z", AccessFlags = 1)]
+				public virtual bool RegisterListener(global::Android.Hardware.ISensorListener sensorListener, int int32, int int321) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// unregisterListener
+				/// </java-name>
+				[Dot42.DexImport("unregisterListener", "(Landroid/hardware/SensorListener;I)V", AccessFlags = 1)]
+				public virtual void UnregisterListener(global::Android.Hardware.ISensorListener sensorListener, int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// unregisterListener
+				/// </java-name>
+				[Dot42.DexImport("unregisterListener", "(Landroid/hardware/SensorListener;)V", AccessFlags = 1)]
+				public virtual void UnregisterListener(global::Android.Hardware.ISensorListener sensorListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// unregisterListener
+				/// </java-name>
+				[Dot42.DexImport("unregisterListener", "(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V", AccessFlags = 1)]
+				public virtual void UnregisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener, global::Android.Hardware.Sensor sensor) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// unregisterListener
+				/// </java-name>
+				[Dot42.DexImport("unregisterListener", "(Landroid/hardware/SensorEventListener;)V", AccessFlags = 1)]
+				public virtual void UnregisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// registerListener
+				/// </java-name>
+				[Dot42.DexImport("registerListener", "(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z", AccessFlags = 1)]
+				public virtual bool RegisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener, global::Android.Hardware.Sensor sensor, int int32) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// registerListener
+				/// </java-name>
+				[Dot42.DexImport("registerListener", "(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;ILandroid/os/Hand" +
+    "ler;)Z", AccessFlags = 1)]
+				public virtual bool RegisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener, global::Android.Hardware.Sensor sensor, int int32, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getRotationMatrix
+				/// </java-name>
+				[Dot42.DexImport("getRotationMatrix", "([F[F[F[F)Z", AccessFlags = 9)]
+				public static bool GetRotationMatrix(float[] single, float[] single1, float[] single2, float[] single3) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getInclination
+				/// </java-name>
+				[Dot42.DexImport("getInclination", "([F)F", AccessFlags = 9)]
+				public static float GetInclination(float[] single) /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// remapCoordinateSystem
+				/// </java-name>
+				[Dot42.DexImport("remapCoordinateSystem", "([FII[F)Z", AccessFlags = 9)]
+				public static bool RemapCoordinateSystem(float[] single, int int32, int int321, float[] single1) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
+				/// getOrientation
+				/// </java-name>
+				[Dot42.DexImport("getOrientation", "([F[F)[F", AccessFlags = 9)]
+				public static float[] GetOrientation(float[] single, float[] single1) /* MethodBuilder.Create */ 
+				{
+						return default(float[]);
+				}
+
+				/// <java-name>
+				/// getAltitude
+				/// </java-name>
+				[Dot42.DexImport("getAltitude", "(FF)F", AccessFlags = 9)]
+				public static float GetAltitude(float single, float single1) /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <java-name>
+				/// getAngleChange
+				/// </java-name>
+				[Dot42.DexImport("getAngleChange", "([F[F[F)V", AccessFlags = 9)]
+				public static void GetAngleChange(float[] single, float[] single1, float[] single2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getRotationMatrixFromVector
+				/// </java-name>
+				[Dot42.DexImport("getRotationMatrixFromVector", "([F[F)V", AccessFlags = 9)]
+				public static void GetRotationMatrixFromVector(float[] single, float[] single1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getQuaternionFromVector
+				/// </java-name>
+				[Dot42.DexImport("getQuaternionFromVector", "([F[F)V", AccessFlags = 9)]
+				public static void GetQuaternionFromVector(float[] single, float[] single1) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getSensors
+				/// </java-name>
+				public int Sensors
+				{
+				[Dot42.DexImport("getSensors", "()I", AccessFlags = 1)]
+						get{ return GetSensors(); }
 				}
 
 		}
