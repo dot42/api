@@ -45,7 +45,7 @@
 ===========================================================*/
 namespace System.Collections.Generic
 {
-
+#if false
     using System;
     using System.Collections;
     using System.Diagnostics;
@@ -53,6 +53,8 @@ namespace System.Collections.Generic
     using System.Runtime.Serialization;
     //using System.Security.Permissions;
 
+    // Note: compiles, but doesn't verify on device, since dot42 does not 
+    //       correcly support generic struct arrays 
     [DebuggerDisplay("Count = {Count}")]
     public class DictionaryImplCSharp<TKey, TValue> : IDictionaryImpl<TKey, TValue>, IDictionary
         /*, IReadOnlyDictionary<TKey, TValue>, ISerializable, IDeserializationCallback*/
@@ -1373,4 +1375,5 @@ namespace System.Collections.Generic
             }
         }
     }
+#endif
 }

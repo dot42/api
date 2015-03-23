@@ -181,8 +181,7 @@ namespace System.Collections.Generic
 	    /// Add ths given element to the end of this list.
 	    /// </summary>
 	    /// <returns>The index at which the element was added or -1 if the element was not added.</returns>
-        [DexName("Add$$O")]
-	    public int Add(object element)
+        int IList.Add(object element)
 	    {
 	        var rc = list.Size();
 	        list.Add((T) element);
@@ -197,12 +196,7 @@ namespace System.Collections.Generic
 	        list.Add(item);
 	    }
 
-	    void ICollection<T>.Add(T element)
-	    {
-            list.Add(element);
-        }
-
-        /// <summary>
+	    /// <summary>
         /// Adds the elements of the specified collection to the end of this List.
         /// </summary>
         public void AddRange(IEnumerable<T> collection)
@@ -254,26 +248,23 @@ namespace System.Collections.Generic
 	        Dot42.Collections.Collections.CopyTo(list, array, index);
 	    }
 
-        [DexName("Contains$$O")]
-	    public bool Contains(object element)
+        
+        bool IList.Contains(object element)
 	    {
 	        return list.Contains(element);
 	    }
 
-        [DexName("IndexOf$$O")]
-	    public int IndexOf(object element)
+        int IList.IndexOf(object element)
 	    {
             return list.IndexOf(element);
         }
 
-        [DexName("Insert$$_O")]
-	    public void Insert(int index, object element)
+        void IList.Insert(int index, object element)
 	    {
 	        list.Add(index, (T) element);
 	    }
 
-        [DexName("Remove$$O")]
-	    public void Remove(object element)
+        void IList.Remove(object element)
 	    {
 	        list.Remove(element);
 	    }

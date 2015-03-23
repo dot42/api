@@ -93,7 +93,8 @@ namespace System.Globalization
                 return new CustomFormatter();
             }
 
-            throw new NotImplementedException("System.Globalization.CultureInfo.GetFormat: " + formatType.FullName);
+            return null; // not supported.
+            //throw new NotImplementedException("System.Globalization.CultureInfo.GetFormat: " + formatType.FullName);
         }
 
         private class CustomFormatter : ICustomFormatter
@@ -106,7 +107,8 @@ namespace System.Globalization
                 if (arg is double) return NumberFormatter.Format(format, (double)arg, formatProvider);
                 if (arg is string) return null; //should be handled by caller.
 
-                throw new NotImplementedException("System.Globalization.CultureInfo.CustomFormatter.Format");
+                return null; // should be handled by caller.
+                //throw new NotImplementedException("System.Globalization.CultureInfo.CustomFormatter.Format");
             }
         }
 	}

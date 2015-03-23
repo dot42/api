@@ -26,33 +26,30 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-using System.Runtime.InteropServices;
 
 namespace System.Collections.Generic {
 	[Serializable]
-	public abstract class EqualityComparer <T> : IEqualityComparer, IEqualityComparer <T> {
+	public abstract class EqualityComparer <T> : IEqualityComparer, IEqualityComparer <T> 
+    {
+        private static readonly Dictionary<Type, object> _comparers = new Dictionary<Type, object>();
 		
-		static EqualityComparer ()
-		{
-			if (typeof (T) == typeof (string)){
-				_default = (EqualityComparer<T>) (object) new InternalStringComparer ();
-				return;
-			}
-			if (typeof (IEquatable <T>).IsAssignableFrom (typeof (T)))
-				_default = (EqualityComparer <T>) Activator.CreateInstance (typeof (GenericEqualityComparer <>).MakeGenericType (typeof (T)));
-			else
-				_default = new DefaultComparer ();
-		}
 		
-		public abstract int GetHashCode (T obj);
+	    public abstract int GetHashCode (T obj);
 		public abstract bool Equals (T x, T y);
 	
-		static readonly EqualityComparer <T> _default;
-		
-		public static EqualityComparer <T> Default {
-			get {
-				return _default;
+		// not the most performant implementation, but should
+        // work with dot42's generics implementation.
+		public static EqualityComparer<T> Default 
+        {
+			get
+			{
+			    object comparer;
+
+                lock(_comparers)
+                    if(!_comparers.TryGetValue(typeof(T), out comparer))
+                        _comparers.Add(typeof(T), comparer = CreateComparer(typeof(T)));
+
+                return (EqualityComparer<T>)comparer;
 			}
 		}
 
@@ -81,7 +78,20 @@ namespace System.Collections.Generic {
 				throw new ArgumentException ("Argument is not compatible", "y");
 			return Equals ((T)x, (T)y);
 		}
-		
+
+        private static EqualityComparer<T> CreateComparer(Type type)
+        {
+            if (type == typeof(string))
+            {
+                return (EqualityComparer<T>)(object)new InternalStringComparer();
+            }
+            if (typeof(IEquatable<T>).IsAssignableFrom(type))
+                return (EqualityComparer<T>)
+                        Activator.CreateInstance(typeof(GenericEqualityComparer<>).MakeGenericType(typeof(T)));
+            else
+                return new DefaultComparer();
+        }
+
 		[Serializable]
 		sealed class DefaultComparer : EqualityComparer<T> {
 	

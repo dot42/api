@@ -139,7 +139,8 @@ namespace System.Globalization
                 return new CustomFormatter();
             }
 
-            throw new NotImplementedException("System.Globalization.NumberFormatInfo.GetFormat: " + formatType.FullName);
+	        return null; // let the caller handle everything.
+            //throw new NotImplementedException("System.Globalization.NumberFormatInfo.GetFormat: " + formatType.FullName);
 	    }
 
         private class CustomFormatter: ICustomFormatter
@@ -150,7 +151,9 @@ namespace System.Globalization
                 if (arg is long) return NumberFormatter.Format(format, (long)arg, formatProvider);
                 if (arg is float) return NumberFormatter.Format(format, (float)arg, formatProvider);
                 if (arg is double) return NumberFormatter.Format(format, (double)arg, formatProvider);
-                throw new NotImplementedException("System.Globalization.NumberFormatInfo.CustomFormatter.Format");
+
+                return null; // let the caller handle the formatting.
+                //throw new NotImplementedException("System.Globalization.NumberFormatInfo.CustomFormatter.Format");
             }
         }
 	}

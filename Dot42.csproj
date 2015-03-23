@@ -163,6 +163,7 @@
     <Compile Include="Android\View\View.cs" />
     <Compile Include="AssemblyInfo\Dot42.cs" />
     <Compile Include="Dot42\ApiEnhancementIgnoreMethodsAttribute.cs" />
+    <Compile Include="Dot42\Collections\IteratorWrapperWithSelector.cs" />
     <Compile Include="Dot42\Collections\Null.cs" />
     <Compile Include="Dot42\IncludeAttribute.cs" />
     <Compile Include="Dot42\Internal\AssertFailedException.cs" />
@@ -274,6 +275,7 @@
     <Compile Include="System\AggregateException.cs" />
     <Compile Include="System\AsyncCallback.cs" />
     <Compile Include="System\Buffer.cs" />
+    <Compile Include="System\Collections\Generic\DictionaryImplHashMapWithComparerWrapper.cs" />
     <Compile Include="System\Collections\HashHelpers.cs" />
     <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
     <Compile Include="System\Collections\DictionaryEntry.cs" />
@@ -286,6 +288,7 @@
     <Compile Include="System\Collections\Generic\SortedDictionary.cs" />
     <Compile Include="System\Collections\Generic\Stack.cs" />
     <Compile Include="System\Collections\IDictionaryEnumerator.cs" />
+    <Compile Include="System\Collections\ObjectModel\KeyedCollection.cs" />
     <Compile Include="System\Collections\SortedList.cs" />
     <Compile Include="System\Collections\Specialized\NameObjectCollectionBase.cs" />
     <Compile Include="System\Collections\Specialized\NameValueCollection.cs" />

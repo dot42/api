@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Dot42;
 
 namespace System
 {
@@ -12,7 +13,8 @@ namespace System
         info,
         key,
         value,
-        dictionary
+        dictionary,
+        item
     }
 
     internal enum ExceptionResource
@@ -26,12 +28,25 @@ namespace System
         NotSupported_KeyCollectionSet,
         NotSupported_ValueCollectionSet,
         ArgumentOutOfRange_NeedNonNegNum,
-        Arg_HTCapacityOverflow
+        Arg_HTCapacityOverflow,
+        InvalidType
     }
 
 
     internal class ThrowHelper
     {
+        [Inline]
+        public static void ThrowIfArgumentNullException(object arg, string msg)
+        {
+            if(arg == null)
+                ThrowArgumentNullException(msg);
+        }
+
+        public static void ThrowArgumentNullException(string msg)
+        {
+            throw new ArgumentNullException(msg);
+        }
+
         public static void ThrowArgumentNullException(ExceptionArgument arg)
         {
             throw new ArgumentNullException(arg.ToString());
@@ -40,6 +55,11 @@ namespace System
         public static void ThrowArgumentOutOfRangeException(ExceptionArgument arg, ExceptionResource msg)
         {
             throw new ArgumentOutOfRangeException(arg.ToString(), msg.ToString());
+        }
+
+        public static void ThrowArgumentOutOfRangeException(ExceptionArgument arg)
+        {
+            throw new ArgumentOutOfRangeException(arg.ToString());
         }
 
         public static void ThrowArgumentException(ExceptionResource msg)

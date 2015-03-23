@@ -19,6 +19,7 @@ using System.Linq;
 using System.Reflection;
 using Dot42;
 using Dot42.Internal;
+using Java.Lang;
 using Java.Lang.Reflect;
 using Java.Util;
 
@@ -126,22 +127,21 @@ namespace System
 	    {
 	        get { return Modifier.IsFinal(this.GetModifiers()); }
 	    }
-
+        
+        // Note: it should be possible to support this.
         public Type GetGenericTypeDefinition()
         {
             throw new NotImplementedException("System.Type.GetGenericTypeDefinition");
         }
 
+        // Note: it should be possible to support this.
         public Type[] GetGenericArguments()
         {
             throw new NotImplementedException("System.Type.GetGenericArguments");
         }
 
-        public static TypeCode GetTypeCode(Type t)
-        {
-            throw new NotImplementedException("System.Type.GetTypeCode");
-        }
-
+        // Note: it should be possible to support this. this would be a DexNative call,
+        //       or at least one with DexNative support.
         public Type MakeGenericType(params Type[] typeArguments)
         {
             throw new NotImplementedException("System.Type.MakeGenericType");
@@ -165,12 +165,6 @@ namespace System
         /// </summary>
         public bool IsGenericParameter { get { return false; } }
 
-        [DexNative]
-        public static Type GetTypeFromHandle(RuntimeTypeHandle handle)
-        {
-            return null;
-        }
-    
         public Assembly Assembly
 	    {
             get { return Assembly.GetAssembly(this); }
@@ -229,9 +223,14 @@ namespace System
 
         public ConstructorInfo GetConstructor(Type[] parameters)
         {
-            var ret =  JavaGetConstructor(parameters);
-            if (ret == null) return null;
-            return new ConstructorInfo(ret);
+            try
+            {
+                return new ConstructorInfo(JavaGetConstructor(parameters));
+            }
+            catch (MissingMethodException)
+            {
+                return null;
+            }
         }
 
 	    public Type[] GetInterfaces()
@@ -250,9 +249,15 @@ namespace System
 
         public FieldInfo GetField(string name)
         {
-            var ret = JavaGetField(name);
-            if (ret == null) return null;
-            return new FieldInfo(ret);
+            // NOTE: doesn't throw AmbiguousMatchException
+            try
+            {
+                return new FieldInfo(JavaGetField(name));
+            }
+            catch (MissingFieldException) 
+            {
+                return null;
+            }
         }
 
         public FieldInfo GetField(string name, BindingFlags flags)
@@ -295,18 +300,28 @@ namespace System
 
         public MethodInfo GetMethod(string name)
         {
-            var ret = JavaGetMethod(name);
-            if (ret != null)
-                return new MethodInfo(ret);
-            return null;
+            // NOTE: doesn't throw AmbiguousMatchException
+            try
+            {
+                return new MethodInfo(JavaGetMethod(name));
+            }
+            catch (MissingMethodException)
+            {
+                return null;
+            }
         }
 
         public MethodInfo GetMethod(string name, Type[] parameters)
         {
-            var ret = JavaGetMethod(name, parameters);
-            if(ret != null)
-                return new MethodInfo(ret);
-            return null;
+            // NOTE: doesn't throw AmbiguousMatchException
+            try
+            {
+                return new MethodInfo(JavaGetMethod(name, parameters));
+            }
+            catch (MissingMethodException)
+            {
+                return null;
+            } 
         }
 
         /// <summary>
@@ -396,6 +411,22 @@ namespace System
         }
 
 
+        public /*virtual*/ bool IsInstanceOfType(Object o)
+        {
+            if (o == null) return false;
+            return IsAssignableFrom(o.GetType());
+        }
+
+        public /*virtual*/ bool IsSubclassOf(Type other)
+        {
+            Type t = this;
+            while ((t = t.GetSuperclass()) != null)
+            {
+                if (t == other) return true;
+            }
+            return false;
+        }
+
         /// <summary>
         /// this will return 1 for array types, as multidimensional arrays 
         /// are not really supported.
@@ -423,21 +454,16 @@ namespace System
             if (((flags & BindingFlags.NonPublic) == 0) && !Modifier.IsPublic(modifiers)) return false;
             return true;
         }
-        
-        public /*virtual*/ bool IsInstanceOfType(Object o)
+
+        [DexNative]
+        public static Type GetTypeFromHandle(RuntimeTypeHandle handle)
         {
-            if (o == null) return false;
-            return IsAssignableFrom(o.GetType());
+            return null;
         }
 
-        public /*virtual*/ bool IsSubclassOf(Type other)
+        public static TypeCode GetTypeCode(Type t)
         {
-            Type t;
-            while ((t = GetType().GetSuperclass()) != null)
-            {
-                if (t == other) return true;
-            }
-            return false;
+            throw new NotImplementedException("System.Type.GetTypeCode");
         }
 
 	    public static Type GetType(string typeName)

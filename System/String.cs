@@ -75,6 +75,19 @@ namespace System
         /// <summary>
         /// Compare strings
         /// </summary>
+        public static int Compare(string strA, string strB, bool ignoreCase, CultureInfo cutureInfo)
+        {
+            if (ReferenceEquals(strA, null) && ReferenceEquals(strB, null)) return 0;
+            if (ReferenceEquals(strA, null)) return 1;
+            if (ReferenceEquals(strB, null)) return -1;
+            if (ignoreCase)
+                return strA.CompareToIgnoreCase(strB);
+            return strA.CompareTo(strB);
+        }
+
+        /// <summary>
+        /// Compare strings
+        /// </summary>
         public static int Compare(string strA, string strB, StringComparison comparisonType)
         {
             var ignoreCase = (comparisonType == StringComparison.InvariantCultureIgnoreCase) ||

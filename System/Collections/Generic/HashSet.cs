@@ -19,7 +19,7 @@ using Java.Lang;
 
 namespace System.Collections.Generic
 {
-	public class HashSet<T> : ICollection<T>, ISet<T>
+	public class HashSet<T> : ICollection<T>, ISet<T>, ICollection
 	{
 	    private readonly Java.Util.HashSet<T> hset;
 
@@ -63,7 +63,14 @@ namespace System.Collections.Generic
             }
         }
 
-	    public int Count { get; private set; }
+	    public int Count { get { return hset.Size(); } }
+	    public bool IsSynchronized { get { return false; } }
+	    public object SyncRoot { get { return hset; } }
+	    public void CopyTo(Array array, int index)
+	    {
+            Dot42.Collections.Collections.CopyTo(hset, array, index);
+	    }
+
 	    public bool IsReadOnly { get; private set; }
 
 	    /// <summary>

@@ -38,13 +38,13 @@ namespace System.Reflection
         public override ParameterInfo[] GetParameters()
         {
             var types = _method.GetParameterTypes();
-            ParameterInfo[] ret = new ParameterInfo[types.Length];
+            var length = types.Length;
 
-            for (int idx = 0; idx < types.Length; ++idx)
-            {
-                // java doesn't support argument names.
+            ParameterInfo[] ret = new ParameterInfo[length];
+
+            // java doesn't support argument names.
+            for (int idx = 0; idx < length; ++idx)
                 ret[idx] = new ParameterInfo(this, "arg" + idx, types[idx], idx);
-            }
             return ret;
         }
 

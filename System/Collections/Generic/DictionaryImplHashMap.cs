@@ -16,11 +16,12 @@
 
 using Android.Os;
 using Dot42.Collections;
+using Java.Lang.Reflect;
 using Java.Util;
 
 namespace System.Collections.Generic
 {
-    public class DictionaryImplHashMap<TKey, TValue> : IDictionaryImpl<TKey,TValue>
+    public class DictionaryImplHashMap<TKey, TValue> : IDictionaryImpl<TKey, TValue>, IDictionary
     {
         internal readonly HashMap<TKey, TValue> map;
 
@@ -62,8 +63,16 @@ namespace System.Collections.Generic
         /// </summary>
         public int Count { get { return map.Size(); } }
 
-        public bool IsReadOnly { get; private set; }
+        public bool IsSynchronized { get { return false; } }
+        public object SyncRoot { get { return map; } }
 
+        public void CopyTo(Array array, int index)
+        {
+            throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.CopyTo");
+        }
+        
+        public bool IsReadOnly { get; private set; }
+        
         /// <summary>
         /// Gets or sets the value associated with the specified key.
         /// </summary>
@@ -108,6 +117,7 @@ namespace System.Collections.Generic
             map.Put(item.Key, item.Value);
         }
 
+
         /// <summary>
         /// Remove all entries
         /// </summary>
@@ -115,7 +125,7 @@ namespace System.Collections.Generic
         {
             map.Clear();
         }
-
+        
         public bool Contains(KeyValuePair<TKey, TValue> item)
         {
             TValue current;
@@ -200,6 +210,38 @@ namespace System.Collections.Generic
             return GetEnumerator();
         }
 
+
+        #region IDictionary implementation
+
+        bool IDictionary.IsFixedSize { get { return false; } }
+
+        bool IDictionary.Contains(object key)
+        {
+            return map.ContainsKey(key);
+        }
+
+        void IDictionary.Add(object key, object value)
+        {
+            Add((TKey)key, (TValue)value);
+        }
+
+        IDictionaryEnumerator IDictionary.GetEnumerator()
+        {
+            throw new NotImplementedException("System.Collections.Generic.Dictionary.GetEnumerator");
+        }
+
+        object IDictionary.this[object key] { get { return map.Get(key); } set { this[(TKey)key] = (TValue)value; } }
+
+
+        ICollection IDictionary.Keys { get { return Keys; } }
+        ICollection IDictionary.Values { get { return Values; } }
+
+        void IDictionary.Remove(object key)
+        {
+            map.Remove(key);
+        }
+        #endregion
+
         /// <summary>
         /// Gets the keys of the collection.
         /// </summary>
@@ -220,7 +262,7 @@ namespace System.Collections.Generic
             get { return new ValueCollection(this); }
         }
 
-        public sealed class KeyCollection: ICollection<TKey>
+        public sealed class KeyCollection: ICollection<TKey>, ICollection
         {
             private readonly Java.Util.ICollection<TKey> keys;
 
@@ -306,7 +348,7 @@ namespace System.Collections.Generic
             }
         }
 
-        public sealed class ValueCollection : ICollection<TValue>
+        public sealed class ValueCollection : ICollection<TValue>, ICollection
         {
             private readonly Java.Util.ICollection<TValue> values;
 

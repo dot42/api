@@ -64,13 +64,16 @@ namespace System.Reflection
 
         public override bool ContainsGenericParameters { get { return _ctor.GenericParameterTypes.Length > 0; } }
 
-    public override ParameterInfo[] GetParameters()
+        public override ParameterInfo[] GetParameters()
         {
             var types = _ctor.GetParameterTypes();
-            ParameterInfo[] ret = new ParameterInfo[types.Length];
+            var length = types.Length;
 
-            for (int idx = 0; idx < types.Length; ++idx)
-                ret[idx] = new ParameterInfo(this, "arg" + (idx++), types[idx], idx);
+            ParameterInfo[] ret = new ParameterInfo[length];
+
+            // java doesn't support argument names.
+            for (int idx = 0; idx < length; ++idx)
+                ret[idx] = new ParameterInfo(this, "arg" + idx, types[idx], idx);
             return ret;
         }
 

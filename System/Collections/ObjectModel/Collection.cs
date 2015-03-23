@@ -63,7 +63,7 @@ namespace System.Collections.ObjectModel
 
 	    protected virtual void RemoveItem(int index)
 	    {
-	        list.Remove(index);
+	        list.RemoveAt(index);
 	    }
 
 	    protected virtual void SetItem(int index, T item)
@@ -163,32 +163,15 @@ namespace System.Collections.ObjectModel
         public T this[int index]
         {
             get { return list[index]; }
-            set { list[index] = value; }
+            set { SetItem(index, value); }
         }
-
-	    /// <summary>
-	    /// Gets/sets an item in this list at the given index.
-	    /// </summary>
-	    object IList.this[int index]
-	    {
-            get { return list[index]; } set { list[index] = (T)value; }
-        }
-
-	    /// <summary>
-	    /// Add ths given element to the end of this list.
-	    /// </summary>
-	    /// <returns>The index at which the element was added or -1 if the element was not added.</returns>
-	    public int Add(object element)
-	    {
-	        return list.Add(element);
-	    }
 
 	    /// <summary>
 	    /// Add the given item to this collection.
 	    /// </summary>
 	    public void Add(T item)
 	    {
-	        list.Add(item);
+            InsertItem(list.Count, item);
 	    }
 
 	    /// <summary>
@@ -196,8 +179,8 @@ namespace System.Collections.ObjectModel
         /// </summary>
         public void AddRange(IEnumerable<T> collection)
 	    {
-	        list.AddRange(collection);
-
+            foreach(var element in collection)
+                InsertItem(list.Count, element);
 	    }
 
 	    /// <summary>
@@ -208,17 +191,15 @@ namespace System.Collections.ObjectModel
 	        return list.Contains(element);
 	    }
 
-	    bool ICollection<T>.Remove(T item)
-	    {
-            return list.Remove(item);
-	    }
-
 	    /// <summary>
 	    /// Removes the first occurrance of the given element from this list.
 	    /// </summary>
 	    public bool Remove(T element)
 	    {
-	        return list.Remove(element);
+	        int idx = IndexOf(element);
+	        if (idx == -1) return false;
+	        RemoveItem(idx);
+	        return true;
 	    }
 
         public int IndexOf(T element)
@@ -226,14 +207,19 @@ namespace System.Collections.ObjectModel
 	        return list.IndexOf(element);
 	    }
 
+        public void RemoveAt(int index)
+        {
+            RemoveItem(index);
+        }
+
 	    public void Insert(int index, T element)
 	    {
-	        list.Insert(index, element);
+            InsertItem(index, element);
 	    }
 
 	    public void Clear()
 	    {
-	        list.Clear();
+            ClearItems();
 	    }
 
 	    public void CopyTo(T[] array, int index)
@@ -241,31 +227,45 @@ namespace System.Collections.ObjectModel
             list.CopyTo(array, index);
 	    }
 
-	    public bool Contains(object element)
-	    {
-	        return list.Contains(element);
-	    }
-
-	    public int IndexOf(object element)
-	    {
-            return list.IndexOf(element);
+        /// <summary>
+        /// Gets/sets an item in this list at the given index.
+        /// </summary>
+        object IList.this[int index]
+        {
+            get { return list[index]; }
+            set { SetItem(index, (T)value); }
         }
 
-	    public void Insert(int index, object element)
+        /// <summary>
+        /// Add ths given element to the end of this list.
+        /// </summary>
+        /// <returns>The index at which the element was added or -1 if the element was not added.</returns>
+        int IList.Add(object element)
+        {
+            int idx = list.Count;
+            InsertItem(idx, (T)element);
+            return idx;
+        }
+
+        bool IList.Contains(object element)
 	    {
-	        list.Insert(index, (T) element);
+	        return list.Contains((T)element);
 	    }
 
-	    public void Remove(object element)
+        int IList.IndexOf(object element)
 	    {
-	        list.Remove(element);
+            return list.IndexOf((T)element);
+        }
+
+        void IList.Insert(int index, object element)
+	    {
+            InsertItem(index, (T)element);
 	    }
 
-	    public void RemoveAt(int index)
+	    void IList.Remove(object element)
 	    {
-	        list.RemoveAt(index);
+	        Remove((T) element);
 	    }
-
        
         public class Enumerator<T> : IteratorWrapper<T>
         {
