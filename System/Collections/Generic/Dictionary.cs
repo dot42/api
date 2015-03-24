@@ -293,8 +293,7 @@ namespace System.Collections.Generic
         {
             if (!(key is TKey))
             {
-                string dictType = string.Format("{0}<{1},{2}>", GetType().FullName, typeof(TKey), typeof(TValue));
-                throw new ArgumentException(string.Format("can not store key type {0} in {1}", key.GetType(), dictType));
+                throw new ArgumentException(string.Format("can not store key type {0} in {1}", key.GetType(), TypeName));
             }
         }
         private void ThrowIfWrongValueType(object value)
@@ -309,12 +308,19 @@ namespace System.Collections.Generic
                 return;
             if (value != null && !(typeof (TValue).IsAssignableFrom(value.GetType())))
             {
-                string dictType = string.Format("{0}<{1},{2}>", GetType().FullName, typeof (TKey), typeof (TValue));
-                throw new ArgumentException(string.Format("can not store value type {0} in {1}", value.GetType(), dictType));
+                throw new ArgumentException(string.Format("can not store value type {0} in {1}", value.GetType(), TypeName));
             }
-
         }
-        
+
+        private string TypeName
+        {
+            get
+            {
+                string dictType = string.Format("{0}<{1},{2}>", GetType().FullName, typeof (TKey), typeof (TValue));
+                return dictType;
+            }
+        }
+
         #endregion 
 
     }

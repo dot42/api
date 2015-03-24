@@ -3940,7 +3940,7 @@ namespace System
 				/// getClass
 				/// </java-name>
 				[Dot42.DexImport("getClass", "()Ljava/lang/Class;", AccessFlags = 273, Signature = "()Ljava/lang/Class<*>;")]
-				public global::System.Type GetType() /* MethodBuilder.Create */ 
+				public global::System.Type JavaGetClass() /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
 				}
@@ -5532,7 +5532,8 @@ namespace System
 				/// getComponentType
 				/// </java-name>
 				[Dot42.DexImport("getComponentType", "()Ljava/lang/Class;", AccessFlags = 257, Signature = "()Ljava/lang/Class<*>;")]
-				public global::System.Type GetElementType() /* MethodBuilder.Create */ 
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				public global::System.Type JavaGetComponentType() /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
 				}
@@ -5870,6 +5871,7 @@ namespace System
 				/// isAssignableFrom
 				/// </java-name>
 				[Dot42.DexImport("isAssignableFrom", "(Ljava/lang/Class;)Z", AccessFlags = 257, Signature = "(Ljava/lang/Class<*>;)Z")]
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				public bool JavaIsAssignableFrom(global::System.Type type) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -5889,7 +5891,8 @@ namespace System
 				/// isInstance
 				/// </java-name>
 				[Dot42.DexImport("isInstance", "(Ljava/lang/Object;)Z", AccessFlags = 257)]
-				public bool IsInstance(object @object) /* MethodBuilder.Create */ 
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				public bool JavaIsInstance(object @object) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}

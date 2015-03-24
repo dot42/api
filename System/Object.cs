@@ -15,6 +15,7 @@
 // limitations under the License.
 using System.ComponentModel;
 using Dot42;
+using Dot42.Internal;
 
 namespace System
 {
@@ -37,6 +38,31 @@ namespace System
                 return false;
             return a.Equals(b);
         }
+
+        // We have to make sure we return the correct primitive type
+        // if the object was boxed.
+	    public Type GetType()
+	    {
+	        var type = JavaGetClass();
+	        if (type == TypeHelper.BooleanType())
+	            return typeof (bool);
+            if (type == TypeHelper.CharacterType())
+                return typeof(char);
+            if (type == TypeHelper.ByteType())
+                return typeof(byte);
+            if (type == TypeHelper.ShortType())
+                return typeof(short);
+            if (type == TypeHelper.IntegerType())
+                return typeof(int);
+            if (type == TypeHelper.LongType())
+                return typeof(long);
+            if (type == TypeHelper.FloatType())
+                return typeof(float);
+            if (type == TypeHelper.DoubleType())
+                return typeof(double);
+	        return type;
+	    }
+
 
         /// <summary>
         /// Create a memberwise clone of this object.

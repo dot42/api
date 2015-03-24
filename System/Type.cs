@@ -428,29 +428,10 @@ namespace System
             return ret.ToArray();
         }
 
+        [Dot42.DexImport("isAssignableFrom", "(Ljava/lang/Class;)Z", AccessFlags = 257, Signature = "(Ljava/lang/Class<*>;)Z")]
         public /*virtual*/ bool IsAssignableFrom(Type other)
         {
             return JavaIsAssignableFrom(other);
-            //    if (field.getType().equals(Integer.class) || field.getType().equals(int.class)) {
-            //    return obj.getClass().equals(Integer.class) || field.getType().equals(int.class);
-            //} else if (field.getType().equals(Float.class) || field.getType().equals(float.class)) {
-            //    return obj.getClass().equals(Float.class) || field.getType().equals(float.class);
-            //} else if (field.getType().equals(Double.class) || field.getType().equals(double.class)) {
-            //    return obj.getClass().equals(Double.class) || field.getType().equals(double.class);
-            //} else if (field.getType().equals(Character.class) || field.getType().equals(char.class)) {
-            //    return obj.getClass().equals(Character.class) || field.getType().equals(char.class);
-            //} else if (field.getType().equals(Long.class) || field.getType().equals(long.class)) {
-            //    return obj.getClass().equals(Long.class) || field.getType().equals(long.class);
-            //} else if (field.getType().equals(Short.class) || field.getType().equals(short.class)) {
-            //    return obj.getClass().equals(Short.class) || field.getType().equals(short.class);
-            //} else if (field.getType().equals(Boolean.class) || field.getType().equals(boolean.class)) {
-            //    return obj.getClass().equals(Boolean.class) || field.getType().equals(boolean.class);
-            //} else if (field.getType().equals(Byte.class) || field.getType().equals(byte.class)) {
-            //    return obj.getClass().equals(Byte.class) || field.getType().equals(byte.class);
-            //}
-            //return field.getType().isAssignableFrom(obj.getClass());
-            //    if (o == null) return false;
-            //    return IsAssignableFrom(o.GetType());
         }
 
         [Include,Inline] // used by "x is T" in generic methods.
@@ -468,6 +449,31 @@ namespace System
                 if (t == other) return true;
             }
             return false;
+        }
+
+        // We have to make sure we never return 
+        // the boxed types to .NET callers.
+        public Type GetElementType()
+        {
+            var type = JavaGetComponentType();
+            if (type == null) return null;
+            if (type == TypeHelper.BooleanType())
+                return typeof(bool);
+            if (type == TypeHelper.CharacterType())
+                return typeof(char);
+            if (type == TypeHelper.ByteType())
+                return typeof(byte);
+            if (type == TypeHelper.ShortType())
+                return typeof(short);
+            if (type == TypeHelper.IntegerType())
+                return typeof(int);
+            if (type == TypeHelper.LongType())
+                return typeof(long);
+            if (type == TypeHelper.FloatType())
+                return typeof(float);
+            if (type == TypeHelper.DoubleType())
+                return typeof(double);
+            return type;
         }
 
         /// <summary>

@@ -58,9 +58,14 @@ namespace Dot42.Internal
                 throw new ArgumentOutOfRangeException("typeArguments", string.Format("exected {0} generic arguments, got {1} for type {2}", expected, genericParameters.Length, baseType.FullName));
 
             var key = new ArrayList<Type>(genericParameters.Length + 1);
+            Type[] param = new Type[genericParameters.Length];
             key.Add(baseType);
             for (int i = 0; i < genericParameters.Length; ++i)
-                key.Add(TransformParameterType(genericParameters[i]));
+            {
+                var transformedType = TypeHelper.EnsureBoxedType(genericParameters[i]);
+                key.Add(transformedType);
+                param[i] = transformedType;
+            }
 
             Type genericType = GenericProxyTypes.Get(baseType);
             Type previousGenericType = null;
@@ -71,31 +76,10 @@ namespace Dot42.Internal
 
                 // always put generic parameters, to avoid 
                 // possible race. the final instance doesn't matter.
-                GenericProxyTypeArguments.Put(genericType, Tuple.Create(baseType, genericParameters));
+                GenericProxyTypeArguments.Put(genericType, Tuple.Create(baseType, param));
             }
 
             return previousGenericType ?? genericType;
-        }
-
-        private static Type TransformParameterType(Type p)
-        {
-            if (p == typeof(bool))
-                return TypeHelper.BooleanType();
-            if (p == typeof(char))
-                return TypeHelper.CharacterType();
-            if (p == typeof(byte))
-                return TypeHelper.ByteType();
-            if (p == typeof(short))
-                return TypeHelper.ShortType();
-            if (p == typeof(int))
-                return TypeHelper.IntegerType();
-            if (p == typeof(long))
-                return TypeHelper.LongType();
-            if (p == typeof(float))
-                return TypeHelper.FloatType();
-            if (p == typeof(double))
-                return TypeHelper.DoubleType();
-            return p;
         }
 
         private static Type CreateUniqueType(Type baseType, Type[] genericParameters)

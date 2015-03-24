@@ -29,9 +29,11 @@ namespace System
         public int CompareTo(object value)
         {
             if (value == null) return +1;
-            if (value.GetType() != TypeHelper.IntegerType()) throw new ArgumentException("value is not an Int32");
 
-            return CompareTo((int)value);
+            if (value.JavaGetClass() != TypeHelper.IntegerType()) 
+                throw new ArgumentException("value is not an Int32");
+
+            return CompareTo((int?)value); 
         }
 
         public static int Parse(string s, IFormatProvider provider)

@@ -91,6 +91,49 @@ namespace Dot42.Internal
                 componentType = type;
             }
         }
-    }
+
+	    [Include]
+	    internal static Type EnsurePrimitiveType(Type type)
+	    {
+	        if (type == BooleanType())
+	            return typeof(bool);
+	        if (type == CharacterType())
+	            return typeof(char);
+	        if (type == ByteType())
+	            return typeof(byte);
+	        if (type == ShortType())
+	            return typeof(short);
+	        if (type == IntegerType())
+	            return typeof(int);
+	        if (type == LongType())
+	            return typeof(long);
+	        if (type == FloatType())
+	            return typeof(float);
+	        if (type == DoubleType())
+	            return typeof(double);
+	        return type;
+	    }
+
+	    public static Type EnsureBoxedType(Type p)
+	    {
+	        if (p == typeof(bool))
+	            return BooleanType();
+	        if (p == typeof(char))
+	            return CharacterType();
+	        if (p == typeof(byte))
+	            return ByteType();
+	        if (p == typeof(short))
+	            return ShortType();
+	        if (p == typeof(int))
+	            return IntegerType();
+	        if (p == typeof(long))
+	            return LongType();
+	        if (p == typeof(float))
+	            return FloatType();
+	        if (p == typeof(double))
+	            return DoubleType();
+	        return p;
+	    }
+	}
 }
 

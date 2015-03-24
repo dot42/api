@@ -29,7 +29,7 @@ namespace Dot42.Internal
         public static bool IsVirtualFormattable(object value)
         {
             if (value == null) return false;
-            var type = value.GetType();
+            var type = value.JavaGetClass();
             return (type == TypeHelper.ByteType()) ||
                    (type == TypeHelper.ShortType()) ||
                    (type == TypeHelper.IntegerType()) ||
@@ -45,7 +45,7 @@ namespace Dot42.Internal
         public static IFormattable AsFormattable(object value)
         {
             if (value == null) return null;
-            var type = value.GetType();
+            var type = value.JavaGetClass();
             if (type == TypeHelper.ByteType()) return new FormattableByte((byte)value);
             if (type == TypeHelper.ShortType()) return new FormattableShort((short) value);
             if (type == TypeHelper.IntegerType()) return new FormattableInt((int) value);
