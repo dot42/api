@@ -87,7 +87,7 @@ namespace System.Reflection
             return b.GetMethod(_method.Name, _method.GetParameterTypes());
         }
 
-        public override object Invoke(object instance, params object[] args)
+        public override object Invoke(object instance, object[] args)
         {
             return _method.Invoke(instance, args);
         }

@@ -77,12 +77,12 @@ namespace System.Reflection
             return ret;
         }
 
-        public object Invoke(params object[] args)
+        public object Invoke(object[] args)
         {
             return _ctor.NewInstance(args);
         }
 
-        public override object Invoke(object instance, params object[] args)
+        public override object Invoke(object instance, object[] args)
         {
             if (instance != null)
                 throw new InvalidOperationException("instance must be null");

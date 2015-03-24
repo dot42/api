@@ -43,7 +43,7 @@ namespace System.Reflection
 
         public abstract bool ContainsGenericParameters { get; }
 
-        public abstract object Invoke(object instance, params object[] args);
+        public abstract object Invoke(object instance, object[] args);
 
         public abstract ParameterInfo[] GetParameters();
     }

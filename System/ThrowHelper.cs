@@ -29,7 +29,10 @@ namespace System
         NotSupported_ValueCollectionSet,
         ArgumentOutOfRange_NeedNonNegNum,
         Arg_HTCapacityOverflow,
-        InvalidType
+        InvalidType,
+        NotAGenericType,
+        InternalError,
+        MaximumNumberOfGenericTypesReached
     }
 
 
@@ -67,6 +70,11 @@ namespace System
             throw new ArgumentException(msg.ToString());
         }
 
+        public static void ThrowArgumentException(string msg, string param)
+        {
+            throw new ArgumentException(msg, param);
+        }
+
         public static void ThrowInvalidOperationException(ExceptionResource msg)
         {
             throw new InvalidOperationException(msg.ToString());
@@ -97,5 +105,6 @@ namespace System
         {
             throw new NotSupportedException(msg.ToString());
         }
+
     }
 }

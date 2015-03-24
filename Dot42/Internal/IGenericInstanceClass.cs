@@ -21,13 +21,18 @@ namespace Dot42.Internal
     /// <summary>
     /// Interface for annotation that stores the field of a generic type that holds the type arguments.
     /// </summary>
+    [Include]
 	internal interface IGenericInstanceClass : IAnnotation
     {
-        /// <summary>
-        /// Gets the field to holds the type arguments.
-        /// </summary>
+        ///// <summary>
+        ///// Gets the field to holds the type arguments.
+        ///// </summary>
+        //[Include]
+        //FieldInfo Arguments();
+
         [Include]
-        FieldInfo Arguments();
+        int ArgumentCount();
+
     }
 }
 

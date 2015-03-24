@@ -153,7 +153,7 @@ namespace System.ServiceModel
                 var constructor = constructors[0];
                 if (constructor == null) throw new NotSupportedException("Cannot resolve constuctor proxy class for type: " + interfaceName);
 
-                var obj = constructor.Invoke(endpointAddress.Uri);
+                var obj = constructor.Invoke(new []{ endpointAddress.Uri });
                 if (obj == null) throw new NotSupportedException("Cannot instanciate proxy class for type: " + interfaceName);
 
                 if (!(obj is TChannel)) throw new NotSupportedException("Cannot cast instanciated proxy class for type: " + interfaceName);

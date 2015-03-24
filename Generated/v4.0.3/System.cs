@@ -5870,7 +5870,7 @@ namespace System
 				/// isAssignableFrom
 				/// </java-name>
 				[Dot42.DexImport("isAssignableFrom", "(Ljava/lang/Class;)Z", AccessFlags = 257, Signature = "(Ljava/lang/Class<*>;)Z")]
-				public bool IsAssignableFrom(global::System.Type type) /* MethodBuilder.Create */ 
+				public bool JavaIsAssignableFrom(global::System.Type type) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}

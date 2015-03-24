@@ -105,9 +105,9 @@ namespace System.Reflection
         public object GetValue(object instance)
         {
             if (getter == null)
-                throw new ArgumentException("instance"); 
+                throw new InvalidOperationException("property has no getter");
             
-            return getter.Invoke(instance);
+            return getter.Invoke(instance, null);
         }
 
         /// <summary>
@@ -118,9 +118,9 @@ namespace System.Reflection
             if (index != null)
                 throw new ArgumentException("index");
             if (getter == null)
-                throw new ArgumentException("instance");
+                throw new InvalidOperationException("property has no getter");
 
-            return getter.Invoke(instance);
+            return getter.Invoke(instance,null);
         }
 
         /// <summary>
@@ -131,8 +131,8 @@ namespace System.Reflection
             if(index != null)
                 throw new ArgumentException("index");
             if (setter == null)
-                throw new ArgumentException("not setter defined");
-            setter.Invoke(instance, value);
+                throw new InvalidOperationException("property has no setter");
+            setter.Invoke(instance, new [] {value});
         }
 
         /// <summary>
@@ -141,8 +141,8 @@ namespace System.Reflection
         public void SetValue(object instance, object value)
         {
             if (setter == null)
-                throw new ArgumentException("not setter defined");
-            setter.Invoke(instance, value);
+                throw new ArgumentException("property has no setter");
+            setter.Invoke(instance, new[] { value });
         }
 
         public override object[] GetCustomAttributes(bool inherit)

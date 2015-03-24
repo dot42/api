@@ -27,29 +27,29 @@
 //
 
 
+using Java.Util;
+using Java.Util.Concurrent;
+
 namespace System.Collections.Generic {
 	[Serializable]
 	public abstract class EqualityComparer <T> : IEqualityComparer, IEqualityComparer <T> 
     {
-        private static readonly Dictionary<Type, object> _comparers = new Dictionary<Type, object>();
-		
+        private static readonly ConcurrentHashMap<Type, object> _comparers = new ConcurrentHashMap<Type, object>();
 		
 	    public abstract int GetHashCode (T obj);
 		public abstract bool Equals (T x, T y);
 	
-		// not the most performant implementation, but should
-        // work with dot42's generics implementation.
+        // works with dot42's generics implementation.
 		public static EqualityComparer<T> Default 
         {
 			get
 			{
-			    object comparer;
+                object previous = null;
+			    object comparer = _comparers.Get(typeof (T));
+			    if (comparer == null)
+                    previous = _comparers.PutIfAbsent(typeof (T), comparer = CreateComparer(typeof (T)));
 
-                lock(_comparers)
-                    if(!_comparers.TryGetValue(typeof(T), out comparer))
-                        _comparers.Add(typeof(T), comparer = CreateComparer(typeof(T)));
-
-                return (EqualityComparer<T>)comparer;
+			    return (EqualityComparer<T>)(previous??comparer);
 			}
 		}
 

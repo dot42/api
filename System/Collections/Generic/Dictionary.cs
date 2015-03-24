@@ -208,10 +208,11 @@ namespace System.Collections.Generic
             return dict.TryGetValue(key, out value);
         }
 
+        [Inline]
         private void ThrowIfKeyExists(TKey key)
         {
             if (dict.ContainsKey(key))
-                throw new ArgumentException("duplicate key");
+                ThrowHelper.ThrowArgumentException("duplicate key: " + key, "key");
         }
 
         #region IDictionary explicit implementation
@@ -244,14 +245,14 @@ namespace System.Collections.Generic
         bool IDictionary.Contains(object key)
         {
             ThrowHelper.ThrowIfArgumentNullException(key, "key");
-            ThrowIfWrongKeyType(key);
+            if (!(key is TKey)) return false;
             return ContainsKey((TKey)key);
         }
 
         void IDictionary.Remove(object key)
         {
             ThrowHelper.ThrowIfArgumentNullException(key, "key");
-            ThrowIfWrongKeyType(key);
+            if (!(key is TKey)) return;
             Remove((TKey)key);
         }
 
@@ -291,7 +292,10 @@ namespace System.Collections.Generic
         private void ThrowIfWrongKeyType(object key)
         {
             if (!(key is TKey))
-                ThrowHelper.ThrowArgumentException(ExceptionResource.InvalidType);
+            {
+                string dictType = string.Format("{0}<{1},{2}>", GetType().FullName, typeof(TKey), typeof(TValue));
+                throw new ArgumentException(string.Format("can not store key type {0} in {1}", key.GetType(), dictType));
+            }
         }
         private void ThrowIfWrongValueType(object value)
         {
@@ -303,9 +307,14 @@ namespace System.Collections.Generic
             
             if (!isValueType && value == null)
                 return;
-            if (!(value is TValue))
-                ThrowHelper.ThrowArgumentException(ExceptionResource.InvalidType);
+            if (value != null && !(typeof (TValue).IsAssignableFrom(value.GetType())))
+            {
+                string dictType = string.Format("{0}<{1},{2}>", GetType().FullName, typeof (TKey), typeof (TValue));
+                throw new ArgumentException(string.Format("can not store value type {0} in {1}", value.GetType(), dictType));
+            }
+
         }
+        
         #endregion 
 
     }

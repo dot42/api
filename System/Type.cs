@@ -15,13 +15,11 @@
 // limitations under the License.
 
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using Dot42;
 using Dot42.Internal;
-using Java.Lang;
 using Java.Lang.Reflect;
-using Java.Util;
+using Java.Util.Zip;
 
 namespace System
 {
@@ -83,7 +81,10 @@ namespace System
 
 	    public bool IsGenericType
 	    {
-            get { return this.GetTypeParameters().Length > 0; }
+	        get
+	        {
+	            return GenericInstanceFactory.IsGenericType(this);
+	        }
 	    }
 
 	    public bool IsClass
@@ -131,37 +132,54 @@ namespace System
         // Note: it should be possible to support this.
         public Type GetGenericTypeDefinition()
         {
-            throw new NotImplementedException("System.Type.GetGenericTypeDefinition");
-        }
-
-        // Note: it should be possible to support this.
-        public Type[] GetGenericArguments()
-        {
-            throw new NotImplementedException("System.Type.GetGenericArguments");
-        }
-
-        // Note: it should be possible to support this. this would be a DexNative call,
-        //       or at least one with DexNative support.
-        public Type MakeGenericType(params Type[] typeArguments)
-        {
-            throw new NotImplementedException("System.Type.MakeGenericType");
+            if (!IsGenericType) 
+                ThrowHelper.ThrowInvalidOperationException(ExceptionResource.NotAGenericType);
+            return this;
         }
 
         /// <summary>
-        /// returns always false.
+        /// will return the correct count
+        /// but always the values will always be typeof(object)
+        /// </summary>
+        /// <returns></returns>
+        public Type[] GetGenericArguments()
+        {
+            return GenericInstanceFactory.GetGenericArguments(this);
+        }
+
+        /// <summary>
+        /// this will only work with .NET types not java types.
+        /// the returned type can only be used in Activator.CreateInstance,
+        /// and is otherwise useless. 
+        /// <para>
+        /// In particular the class name, methods, fields, constructors and 
+        /// properties as well as the superclass and implemented interfaces can
+        /// all not be retrieved from this type.
+        /// </para>
+        /// </summary>
+        public Type MakeGenericType(params Type[] typeArguments)
+        {
+            return GenericInstanceFactory.GetOrMakeGenericRuntimeType(this, typeArguments);
+        }
+
+
+        /// <summary>
+        /// returns true is this is a generic type.
+        /// [ should only return true for true GenericTypeDefinitions ]
         /// </summary>
         public bool ContainsGenericParameters
         {
-            get { return false; }
+            get { return IsGenericType; }
         }
 
         /// <summary>
-        /// returns always false, since we do not support MakeGenericType.
+        /// returns true is this is a generic type.
+        /// [ should only return true for true GenericTypeDefinitions ]
         /// </summary>
-        public bool IsGenericTypeDefinition { get { return false; } }
+        public bool IsGenericTypeDefinition { get { return IsGenericType; } }
 
         /// <summary>
-        /// returns always false, since we do not support MakeGenericType.
+        /// returns always false
         /// </summary>
         public bool IsGenericParameter { get { return false; } }
 
@@ -410,11 +428,36 @@ namespace System
             return ret.ToArray();
         }
 
+        public /*virtual*/ bool IsAssignableFrom(Type other)
+        {
+            return JavaIsAssignableFrom(other);
+            //    if (field.getType().equals(Integer.class) || field.getType().equals(int.class)) {
+            //    return obj.getClass().equals(Integer.class) || field.getType().equals(int.class);
+            //} else if (field.getType().equals(Float.class) || field.getType().equals(float.class)) {
+            //    return obj.getClass().equals(Float.class) || field.getType().equals(float.class);
+            //} else if (field.getType().equals(Double.class) || field.getType().equals(double.class)) {
+            //    return obj.getClass().equals(Double.class) || field.getType().equals(double.class);
+            //} else if (field.getType().equals(Character.class) || field.getType().equals(char.class)) {
+            //    return obj.getClass().equals(Character.class) || field.getType().equals(char.class);
+            //} else if (field.getType().equals(Long.class) || field.getType().equals(long.class)) {
+            //    return obj.getClass().equals(Long.class) || field.getType().equals(long.class);
+            //} else if (field.getType().equals(Short.class) || field.getType().equals(short.class)) {
+            //    return obj.getClass().equals(Short.class) || field.getType().equals(short.class);
+            //} else if (field.getType().equals(Boolean.class) || field.getType().equals(boolean.class)) {
+            //    return obj.getClass().equals(Boolean.class) || field.getType().equals(boolean.class);
+            //} else if (field.getType().equals(Byte.class) || field.getType().equals(byte.class)) {
+            //    return obj.getClass().equals(Byte.class) || field.getType().equals(byte.class);
+            //}
+            //return field.getType().isAssignableFrom(obj.getClass());
+            //    if (o == null) return false;
+            //    return IsAssignableFrom(o.GetType());
+        }
 
+        [Include,Inline] // used by "x is T" in generic methods.
         public /*virtual*/ bool IsInstanceOfType(Object o)
         {
             if (o == null) return false;
-            return IsAssignableFrom(o.GetType());
+            return JavaIsAssignableFrom(o.GetType());
         }
 
         public /*virtual*/ bool IsSubclassOf(Type other)

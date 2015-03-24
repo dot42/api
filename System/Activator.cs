@@ -13,6 +13,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42.Internal;
+
 namespace System
 {
 	public sealed class Activator
@@ -22,7 +25,10 @@ namespace System
         /// </summary>
         public static object CreateInstance(Type type)
         {
-            return type.NewInstance();
+            var genericInstance = GenericInstanceFactory.CreateGenericInstance(type);
+            if (genericInstance != null) 
+                return genericInstance;
+            return  type.NewInstance();
         }
 
         /// <summary>
