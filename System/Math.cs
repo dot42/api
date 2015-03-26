@@ -27,8 +27,7 @@ namespace System
 
         public static decimal Ceiling(decimal value)
         {
-            // TODO
-            return value;
+            return Decimal.Ceiling(value);
         }
 
         public static decimal Max(decimal a, decimal b)
@@ -65,12 +64,12 @@ namespace System
 
         public static decimal Round(decimal value)
         {
-            throw new NotImplementedException("System.Math.Round");
+            return Decimal.Round(value);
         }
 
         public static decimal Round(decimal value, MidpointRounding midpointRounding)
         {
-            throw new NotImplementedException("System.Math.Round");
+            return Decimal.Round(value, midpointRounding);
         }
 
 	    public static double Round(double value, MidpointRounding midpointRounding)

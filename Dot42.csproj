@@ -308,6 +308,7 @@
     <Compile Include="System\Boolean.cs" />
     <Compile Include="System\Console.cs" />
     <Compile Include="System\DayOfWeek.cs" />
+    <Compile Include="System\Decimal_BigInteger.cs" />
     <Compile Include="System\Diagnostics\Stopwatch.cs" />
     <Compile Include="System\Enum.cs" />
     <Compile Include="System\Exception.cs" />

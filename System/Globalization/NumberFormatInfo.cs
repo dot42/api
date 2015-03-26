@@ -15,50 +15,58 @@
 // limitations under the License.
 using Dot42.Internal;
 using Java.Text;
+using Java.Util;
 
 namespace System.Globalization
 {
 	public sealed class NumberFormatInfo : IFormatProvider
 	{
-	    private readonly NumberFormat numberFormat;
+	    private readonly Locale _locale;
+
 	    private int[] currencyGroupSizes;
         private int[] numberGroupSizes;
         private int[] percentGroupSizes;
+	    private DecimalFormat _decimals;
+	    private NumberFormat _currency;
+	    private NumberFormat _percent;
 
-        public NumberFormatInfo()
-            :this(CultureInfo.CurrentCulture.JavaNumberFormat)
+	    public NumberFormatInfo() :this(CultureInfo.CurrentCulture.Locale)
         { 
         }
 
-	    internal NumberFormatInfo(NumberFormat numberFormat)
+	    internal NumberFormatInfo(Locale locale)
 	    {
-	        this.numberFormat = numberFormat;
-            currencyGroupSizes = new[] { 3 };
-            numberGroupSizes = new[] { 3 };
-            percentGroupSizes = new[] { 3 };
+	        _locale = locale;
+	        _decimals = (DecimalFormat) NumberFormat.GetNumberInstance(locale);
+	        _currency = NumberFormat.GetCurrencyInstance(locale);
+	        _percent = NumberFormat.GetPercentInstance(locale);
+
+	        currencyGroupSizes = new[] { _currency.Currency.DefaultFractionDigits };
+            numberGroupSizes = new[] { _decimals.GroupingSize };
+            percentGroupSizes = new[] { _percent.MaximumFractionDigits };
         }
 
         public static NumberFormatInfo GetInstance(IFormatProvider provider)
         {
-            throw new NotImplementedException("System.Globalization.NumberFormatInfo.GetInstance");
+            return new NumberFormatInfo(provider.ToLocale());
         }
 
         public static NumberFormatInfo InvariantInfo
         {
             get
             {
-                return new NumberFormatInfo(CultureInfo.InvariantCulture.JavaNumberFormat);
+                return new NumberFormatInfo(CultureInfo.InvariantCulture.Locale);
             }
         }
 
 	    public string CurrencySymbol
 	    {
-            get { return numberFormat.Currency.GetSymbol(); }
+            get { return _currency.Currency.Symbol; }
 	    }
 
 	    public string CurrencyDecimalSeparator
 	    {
-            get { return "."; }
+            get { return _decimals.DecimalFormatSymbols.MonetaryDecimalSeparator.ToString(); }
 	        set { if(value != ".") throw new NotSupportedException(); }
 	    }
 
@@ -70,13 +78,13 @@ namespace System.Globalization
 
         public string NumberDecimalSeparator
         {
-            get { return "."; }
+            get { return _decimals.DecimalFormatSymbols.DecimalSeparator.ToString(); }
             set { if (value != ".") throw new NotSupportedException(); }
         }
 
         public string NumberGroupSeparator
         {
-            get { return ""; }
+            get { return _decimals.DecimalFormatSymbols.GroupingSeparator.ToString(); }
             set { if (value != "") throw new NotSupportedException(); }
         }
 
@@ -89,7 +97,7 @@ namespace System.Globalization
 
 	    public string PercentSymbol
 	    {
-            get { return "%"; }
+            get { return _decimals.DecimalFormatSymbols.Percent.ToString(); }
 	    }
 
         public string PercentGroupSeparator
@@ -107,7 +115,7 @@ namespace System.Globalization
 
         public string PercentDecimalSeparator
         {
-            get { return "."; }
+            get { return NumberDecimalSeparator; }
             set { if (value != ".") throw new NotSupportedException(); }
         }
 
@@ -121,11 +129,11 @@ namespace System.Globalization
         public string NegativeSign { get { return "-"; } }
         public string PositiveSign { get { return string.Empty; } }
 
-        public string NaNSymbol { get { return "NaN"; } }
+        public string NaNSymbol { get { return _decimals.DecimalFormatSymbols.NaN; } }
         public string PositiveInfinitySymbol { get { return "+INF"; } }
         public string NegativeInfinitySymbol { get { return "-INF"; } }
 
-        public string PerMilleSymbol { get { return ""; } }
+        public string PerMilleSymbol { get { return _decimals.DecimalFormatSymbols.PerMill.ToString(); } }
 
         public bool IsReadOnly { get { return true; } }
 

@@ -13,6 +13,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 using System.Runtime.InteropServices;
 using Dot42.Internal;
 using Java.Text;
@@ -24,46 +25,56 @@ namespace System.Globalization
     [ComVisible(true)]
 	public class CultureInfo : IFormatProvider
     {
-        private readonly Locale locale;
+        private readonly Locale _locale;
+        private readonly Lazy<NumberFormatInfo> _numberFormat;
+
+        private static readonly Lazy<CultureInfo> _invariantCulture;
 
         internal Locale Locale
         {
-            get { return locale; }
+            get { return _locale; }
         }
 
+        static CultureInfo ()
+        {
+            Locale invariantLocale;
+
+#if ANDROID_9P
+            invariantLocale = Locale.ROOT;
+#else
+            // TODO: check if this actually exists. else change back to Locale.Default.
+            invariantLocale = Locale.US; 
+#endif
+            _invariantCulture = new Lazy<CultureInfo>(() => new CultureInfo(invariantLocale));
+            
+        }
         /// <summary>
         /// Default ctor
         /// </summary>
         private CultureInfo(Locale locale)
         {
-            this.locale = locale;
+            this._locale = locale;
+            _numberFormat = new Lazy<NumberFormatInfo>(()=>new NumberFormatInfo(locale));
+
         }
 
-        public CultureInfo(string locale)
+        public CultureInfo(string locale) : this(new Locale(locale))
         {
-            this.locale = new Locale(locale);
         }
 
         public static CultureInfo CurrentCulture
         {
-            get { return new CultureInfo(Locale.Default); }
+            get { return new CultureInfo(Java.Util.Locale.Default); } 
         }
 
         public static CultureInfo InvariantCulture
         {
-            get
-            {
-#if ANDROID_9P
-                return new CultureInfo(Locale.ROOT);
-#else
-                return new CultureInfo(Locale.US); // TODO: check if this actually exists. else change back to Default.
-#endif
-            }
+            get { return _invariantCulture.Value; } 
         }
 
         internal DateFormat JavaDateFormat
         {
-            get { return DateFormat.GetDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, locale); }
+            get { return DateFormat.GetDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, _locale); }
         }
 
         public virtual DateTimeFormatInfo DateTimeFormat
@@ -73,12 +84,12 @@ namespace System.Globalization
 
         internal Java.Text.NumberFormat JavaNumberFormat
         {
-            get { return Java.Text.NumberFormat.GetNumberInstance(locale); }
+            get { return Java.Text.NumberFormat.GetNumberInstance(_locale); }
         }
 
         public virtual NumberFormatInfo NumberFormat
         {
-            get { return new NumberFormatInfo(JavaNumberFormat); }
+            get { return _numberFormat.Value; }
         }
 
         public bool IsReadOnly { get { return true; } }
@@ -122,6 +133,20 @@ namespace System.Globalization
             if (locale == null) locale = Locale.Default;
             return locale;
         }
+
+        public static bool IsInvariantCulture(this IFormatProvider provider)
+        {
+            var cultureInfo = provider as CultureInfo;
+            return cultureInfo != null && cultureInfo == CultureInfo.InvariantCulture;
+        }
+
+        public static NumberFormatInfo ToNumberFormatInfo(this IFormatProvider provider)
+        {
+            var cultureInfo = provider as CultureInfo ?? CultureInfo.CurrentCulture;
+            return cultureInfo.NumberFormat;
+        }
+
+
     }
 }
 

@@ -45,6 +45,7 @@ using System.Runtime.InteropServices;
 #endif
 using Java.Math;
 
+#if false
 
 namespace System
 {
@@ -62,9 +63,9 @@ namespace System
 		public const decimal MinValue = -79228162514264337593543950335m;
 		public const decimal MaxValue =  79228162514264337593543950335m;
 
-		public const decimal MinusOne = -1;
-		public const decimal One = 1;
-		public const decimal Zero = 0;
+		public const decimal MinusOne = -1m;
+		public const decimal One = 1m;
+		public const decimal Zero = 0m;
 
 		private static readonly Decimal MaxValueDiv10 = MaxValue / 10;
 
@@ -1533,3 +1534,4 @@ namespace System
 	}
 }
 
+#endif
