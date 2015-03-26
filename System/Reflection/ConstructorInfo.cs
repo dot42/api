@@ -77,8 +77,16 @@ namespace System.Reflection
             return ret;
         }
 
+        public override string ToString()
+        {
+            return _ctor.DeclaringClass.JavaGetName() + "::" + _ctor.Name;
+        }
+
         public object Invoke(object[] args)
         {
+            // .NET doesn't have accessibility semantics
+            if (!_ctor.IsAccessible()) _ctor.SetAccessible(true);
+
             return _ctor.NewInstance(args);
         }
 

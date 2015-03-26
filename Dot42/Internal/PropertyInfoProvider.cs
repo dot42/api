@@ -14,8 +14,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using System.Linq;
 using System.Reflection;
+using Android.Util;
+using Java.Lang;
 using Java.Util;
+using Exception = System.Exception;
 
 namespace Dot42.Internal
 {
@@ -41,9 +45,18 @@ namespace Dot42.Internal
                 result = loadedProperties.Get(type);
                 if (result != null) return result;
             }
+            try
+            {
+                // Not found, build it
+                result = BuildProperties(type);
+            }
+            catch (Exception ex)
+            {
+                Log.E("dot42", string.Format("unable create property info from annotation for class '{0}'",
+                                             type.FullName), ex);
 
-            // Not found, build it
-            result = BuildProperties(type);
+                result = new PropertyInfo[0];
+            }
 
             // Store in loaded map
             lock (dataLock)
@@ -71,16 +84,39 @@ namespace Dot42.Internal
             for (var i = 0; i < count; i++)
             {
                 var p = properties[i];
-                var getArr = p.Get();
-                var getter = ((getArr != null) && (getArr.Length > 0)) ? getArr[0] : null;
-                var setArr = p.Set();
-                var setter = ((setArr != null) && (setArr.Length > 0)) ? setArr[0] : null;
-                var attributesArr = p.Attributes();
-                var attributes = ((attributesArr != null) && (attributesArr.Length > 0)) ? attributesArr[0] : null;
+                var propName = p.Name();
+
+                var getName = !string.IsNullOrEmpty(p.Get()) ? p.Get() : ("get_" + propName);
+                var setName = !string.IsNullOrEmpty(p.Set()) ? p.Set() : ("set_" + propName);
+
+                JavaMethod getter = null, setter = null;
+                try
+                {
+                    getter = type.JavaGetDeclaredMethod(getName);
+                }
+                catch (MissingMethodException )
+                {
+                }
+
+                try
+                {
+                    setter = type.JavaGetDeclaredMethods().FirstOrDefault(m => m.Name == setName && m.ParameterTypes.Length == 1);
+                }
+                catch (MissingMethodException)
+                {
+                }
+
+                if (getter == null && setter == null)
+                {
+                    Log.E("dot42", "property has neither getter nor setter: " + propName + " / class" + type.FullName);
+                    continue;
+                }
+
+                //var attributes = p.Attributes();
                 infos[i] = new PropertyInfo(type, p.Name(),
                                             getter != null?new MethodInfo(getter):null, 
                                             setter != null?new MethodInfo(setter):null, 
-                                            attributes);
+                                            new IAttribute[0]);
             }
             return infos;
         }

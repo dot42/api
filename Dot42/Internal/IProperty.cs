@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System;
 using System.Reflection;
 using Java.Lang.Annotation;
 
@@ -21,6 +23,7 @@ namespace Dot42.Internal
     /// <summary>
     /// Annotation interface for property metadata.
     /// </summary>
+    [Include(TypeCondition = typeof(PropertyInfo))]
     internal interface IProperty : IAnnotation
     {
         /// <summary>
@@ -30,25 +33,23 @@ namespace Dot42.Internal
         string Name();
 
         /// <summary>
-        /// Getter.
-        /// Returned array must be length 0 or 1
+        /// Name of getter, if not default
         /// </summary>
         [Include(TypeCondition = typeof(PropertyInfo))]
-        JavaMethod[] Get();
+        string Get();
 
         /// <summary>
-        /// Setter.
-        /// Returned array must be length 0 or 1
+        /// Name of setter, if not default
         /// </summary>
         [Include(TypeCondition = typeof(PropertyInfo))]
-        JavaMethod[] Set();
+        string Set();
 
-        /// <summary>
-        /// Custom attributes of this property.
-        /// Returned array must be length 0 or 1
-        /// </summary>
-        [Include(TypeCondition = typeof(PropertyInfo))]
-        IAttributes[] Attributes();
+        ///// <summary>
+        ///// Custom attributes of this property.
+        ///// Returned array must be length 0 or 1
+        ///// </summary>
+        //[Include(TypeCondition = typeof(PropertyInfo))]
+        //IAttribute[] Attributes();
     }
 }
 

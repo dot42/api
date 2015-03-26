@@ -15,11 +15,11 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Dot42;
 using Dot42.Internal;
 using Java.Lang.Reflect;
-using Java.Util.Zip;
 
 namespace System
 {
@@ -56,7 +56,7 @@ namespace System
             get
             {
                 string name = FullName;
-                int idx = name.LastIndexOf('.');
+                int idx = name.LastIndexOf((int)'.');
                 if (idx == -1) return "";
                 return name.Substring(0, idx);
             }
@@ -83,6 +83,10 @@ namespace System
 	    {
 	        get
 	        {
+                // emulate Nullable<T>
+	            if (NullableReflection.TreatAsSystemNullableT(this)) 
+                    return true;
+
 	            return GenericInstanceFactory.IsGenericType(this);
 	        }
 	    }
@@ -129,37 +133,61 @@ namespace System
 	        get { return Modifier.IsFinal(this.GetModifiers()); }
 	    }
         
-        // Note: it should be possible to support this.
         public Type GetGenericTypeDefinition()
         {
+            // emulate Nullable<T>
+            if (NullableReflection.TreatAsSystemNullableT(this))
+                return typeof (Nullable<>);
+
             if (!IsGenericType) 
                 ThrowHelper.ThrowInvalidOperationException(ExceptionResource.NotAGenericType);
             return this;
         }
 
         /// <summary>
-        /// will return the correct count
-        /// but always the values will always be typeof(object)
+        /// will return the correct count. For nullable types, 
+        /// will return the underlying type.
+        /// for other types the count will be right, but
+        /// elements are all typeof(object)
         /// </summary>
         /// <returns></returns>
         public Type[] GetGenericArguments()
         {
+            if (NullableReflection.TreatAsSystemNullableT(this))
+                return new[] {Nullable.GetUnderlyingType(this)};
+
             return GenericInstanceFactory.GetGenericArguments(this);
         }
 
         /// <summary>
-        /// this will only work with .NET types not java types.
-        /// the returned type can only be used in Activator.CreateInstance,
-        /// and is otherwise useless. 
+        /// This will only work with .NET types not java types.
         /// <para>
+        /// The returned type can only be used in Activator.CreateInstance,
+        /// and is otherwise useless, expept if this is Nullable[T].
+        ///
         /// In particular the class name, methods, fields, constructors and 
         /// properties as well as the superclass and implemented interfaces can
         /// all not be retrieved from this type.
         /// </para>
         /// </summary>
-        public Type MakeGenericType(params Type[] typeArguments)
+        public Type MakeGenericType(params Type[] types)
         {
-            return GenericInstanceFactory.GetOrMakeGenericRuntimeType(this, typeArguments);
+            // emulate Nullable<T>
+            if (this == typeof (Nullable<>))
+            {
+                if(types.Length != 1)
+                    ThrowHelper.ThrowArgumentException(ExceptionResource.WrongNumberOfArguments);
+
+                var type = NullableReflection.GetNullableTFromUnterlyingType(types[0]);
+
+                if (type != null)
+                    return type;
+
+                // can't create an instance of non-predifined nullable.
+                return null; 
+            }
+
+            return GenericInstanceFactory.GetOrMakeGenericRuntimeType(this, types);
         }
 
 
@@ -169,14 +197,30 @@ namespace System
         /// </summary>
         public bool ContainsGenericParameters
         {
-            get { return IsGenericType; }
+            get
+            {
+                // emulate Nullable<T>
+                if (NullableReflection.TreatAsSystemNullableT(this)) 
+                    return false;
+
+                return IsGenericType;
+            }
         }
 
-        /// <summary>
-        /// returns true is this is a generic type.
-        /// [ should only return true for true GenericTypeDefinitions ]
-        /// </summary>
-        public bool IsGenericTypeDefinition { get { return IsGenericType; } }
+	    /// <summary>
+	    /// returns true is this is a generic type.
+	    /// [ should only return true for true GenericTypeDefinitions ]
+	    /// </summary>
+	    public bool IsGenericTypeDefinition
+	    {
+	        get
+	        {
+	            if (NullableReflection.TreatAsSystemNullableT(this))
+	                return false;
+
+	            return IsGenericType;
+	        }
+	    }
 
         /// <summary>
         /// returns always false
@@ -229,14 +273,17 @@ namespace System
         }
 
         /// <summary>
-        /// Gets all constructors of this type that match the given binding flags.
+        /// Gets all constructors of this type that match the given binding flags,
+        /// declared in this class.
         /// </summary>
         public ConstructorInfo[] GetConstructors(BindingFlags flags)
         {
-            var ctors = ((flags & BindingFlags.DeclaredOnly) != 0) ? JavaGetDeclaredConstructors() : JavaGetConstructors();
-            
-            return ctors.Where(x => Matches(x.GetModifiers(), flags))
-                        .Select(x => new ConstructorInfo(x));
+            // note that unlike the other member retrival operations
+            // GetConstructors never searches base classes.
+            return JavaGetDeclaredConstructors()
+                        .Where(x => TypeHelper.Matches(x.GetModifiers(), flags))
+                        .Select(p=>new ConstructorInfo(p))
+                        .ToArray();
         }
 
         public ConstructorInfo GetConstructor(Type[] parameters)
@@ -280,8 +327,8 @@ namespace System
 
         public FieldInfo GetField(string name, BindingFlags flags)
         {
-            var fields = ((flags & BindingFlags.DeclaredOnly) != 0) ? JavaGetDeclaredFields() : JavaGetFields();
-            var ret = fields.Where(x => Matches(x.GetModifiers(), flags) && x.Name == name);
+            var fields = TypeHelper.GetFields(this, flags);
+            var ret = fields.Where(x => x.Name == name);
             if(ret.Length > 1)
                 throw new AmbiguousMatchException();
             return ret.Length == 0 ? null : new FieldInfo(ret[0]);
@@ -292,9 +339,8 @@ namespace System
         /// </summary>
         public FieldInfo[] GetFields(BindingFlags flags)
         {
-            var fields = ((flags & BindingFlags.DeclaredOnly) != 0) ? JavaGetDeclaredFields() : JavaGetFields();
-            return fields.Where(x => Matches(x.GetModifiers(), flags))
-                         .Select(x => new FieldInfo(x));
+            return TypeHelper.GetFields(this, flags)
+                             .Select(x => new FieldInfo(x));
         }
 
         /// <summary>
@@ -311,9 +357,8 @@ namespace System
         /// </summary>
         public MethodInfo[] GetMethods(BindingFlags flags)
         {
-            var methods = ((flags & BindingFlags.DeclaredOnly) != 0) ? JavaGetDeclaredMethods() : JavaGetMethods();
-            return methods.Where(x => Matches(x.GetModifiers(), flags))
-                          .Select(x=> new MethodInfo(x));
+            return TypeHelper.GetMethods(this, flags).Select(x=> new MethodInfo(x));
+                          
         }
 
         public MethodInfo GetMethod(string name)
@@ -428,6 +473,9 @@ namespace System
             return ret.ToArray();
         }
 
+        
+
+
         [Dot42.DexImport("isAssignableFrom", "(Ljava/lang/Class;)Z", AccessFlags = 257, Signature = "(Ljava/lang/Class<*>;)Z")]
         public /*virtual*/ bool IsAssignableFrom(Type other)
         {
@@ -487,22 +535,6 @@ namespace System
                 throw new InvalidOperationException("not an array");
 	        return 1;
 	    }
-
-        /// <summary>
-        /// Do the given modifiers of a member match the given binding flags?
-        /// </summary>
-        private static bool Matches(int modifiers, BindingFlags flags)
-        {
-            // Exclude instance members?
-            if (((flags & BindingFlags.Instance) == 0) && !Modifier.IsStatic(modifiers)) return false;
-            // Exclude static members?
-            if (((flags & BindingFlags.Static) == 0) && Modifier.IsStatic(modifiers)) return false;
-            // Exclude public members?
-            if (((flags & BindingFlags.Public) == 0) && Modifier.IsPublic(modifiers)) return false;
-            // Exclude nonpublic members?
-            if (((flags & BindingFlags.NonPublic) == 0) && !Modifier.IsPublic(modifiers)) return false;
-            return true;
-        }
 
         [DexNative]
         public static Type GetTypeFromHandle(RuntimeTypeHandle handle)

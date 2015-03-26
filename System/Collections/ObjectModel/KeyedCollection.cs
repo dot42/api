@@ -5,6 +5,7 @@ namespace System.Collections.ObjectModel
 {
     [Serializable]
     [DebuggerDisplay("Count = {Count}")]
+    // TODO: think about rewriting using a LinkedHashMap
     public abstract class KeyedCollection<TKey, TItem> : Collection<TItem>
     {
         IEqualityComparer<TKey> comparer;

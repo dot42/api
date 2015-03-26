@@ -25,9 +25,13 @@ namespace System
         /// </summary>
         public static object CreateInstance(Type type)
         {
+            if (NullableReflection.TreatAsSystemNullableT(type))
+                return null;
+
             var genericInstance = GenericInstanceFactory.CreateGenericInstance(type);
             if (genericInstance != null) 
                 return genericInstance;
+
             return  type.NewInstance();
         }
 
@@ -36,6 +40,9 @@ namespace System
         /// </summary>
         public static T CreateInstance<T>()
         {
+            if (NullableReflection.TreatAsSystemNullableT(typeof(T)))
+                return default(T);
+
             return (T)typeof(T).NewInstance();
         }
     }

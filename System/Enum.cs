@@ -14,10 +14,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Globalization;
-using Dot42;
+using System.Linq;
+using System.Reflection;
 using Java.Lang.Reflect;
-using Java.Text;
 using Java.Util;
 
 namespace System
@@ -48,21 +47,17 @@ namespace System
         public static string[] GetNames(Type enumType)
         {
             var fields = enumType.JavaGetDeclaredFields();
-            var names = new ArrayList<string>();
+
+            var names = new ArrayList<Tuple<int,string>>();
+
             foreach (var field in fields)
             {
-                if (!Modifier.IsStatic(field.GetModifiers()))
-                    continue;
-                if (field.Type != field.DeclaringClass)
-                    continue;
-                
-                var name = field.Name;
-                if (name[name.Length - 1] != '$')
-                {
-                    names.Add(name);
-                }
+                if (!IsEnumMember(field)) continue;
+                names.Add(Tuple.Create((int)field.Get(null), field.Name));
             }
-            return names.ToArray(new string[names.Count]);
+            return names.OrderBy(p=>p.Item1)
+                        .Select(p=>p.Item2)
+                        .ToArray();
         }
 
         /// <summary>
@@ -72,18 +67,22 @@ namespace System
         {
             var fields = enumType.JavaGetDeclaredFields();
             var values = new ArrayList<object>();
+
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
-                {
-                    var name = field.Name;
-                    if (name[name.Length - 1] != '$')
-                    {
-                        values.Add(field.Get(null));
-                    }
-                }
+                if (!IsEnumMember(field)) continue;
+                values.Add(field.Get(null));
             }
-            return values.ToArray();
+            
+            return values.OrderBy(p=>p).ToArray();
+        }
+
+        private static bool IsEnumMember(JavaField field)
+        {
+            return Modifier.IsStatic(field.GetModifiers())
+                   && (field.Type == field.DeclaringClass)
+                   && (!field.IsSynthetic())
+                   && !field.Name.EndsWith("$");
         }
 
         /// <summary>
@@ -95,16 +94,14 @@ namespace System
                 throw new ArgumentNullException("enumType");
             if (name == null)
                 throw new ArgumentNullException("name");
+
             var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
-                {
-                    if (field.Name == name)
-                    {
-                        return field.Get(null);
-                    }
-                }
+                if (!IsEnumMember(field)) continue;
+
+                if (field.Name == name)
+                    return field.Get(null);
             }
             throw new ArgumentException("name");
         }
@@ -118,15 +115,14 @@ namespace System
                 throw new ArgumentNullException("enumType");
             if (name == null)
                 throw new ArgumentNullException("name");
+
             var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
+                if (!IsEnumMember(field)) continue;
+                if ((!ignoreCase && field.Name == name) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
                 {
-                    if ((!ignoreCase && (field.Name == name)) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
-                    {
-                        return field.Get(null);
-                    }
+                    return field.Get(null);
                 }
             }
             throw new ArgumentException("name");
@@ -140,17 +136,16 @@ namespace System
         {
             if (name == null)
                 throw new ArgumentNullException("name");
+
             var enumType = typeof (TEnum);
             var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
+                if (!IsEnumMember(field)) continue;
+                if (field.Name == name)
                 {
-                    if (field.Name == name)
-                    {
-                        result = (TEnum)field.Get(null);
-                        return true;
-                    }
+                    result = (TEnum)field.Get(null);
+                    return true;
                 }
             }
             result = default(TEnum);
@@ -165,6 +160,7 @@ namespace System
         {
             if (name == null)
                 throw new ArgumentNullException("name");
+
             var enumType = typeof(TEnum);
             var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
@@ -187,6 +183,7 @@ namespace System
         {
             if(!enumType.IsEnum)
                 throw new ArgumentException("enumType");
+
             var vals = GetValues(enumType);
             if (vals.Length == 0) 
                 return typeof (int);
@@ -198,6 +195,7 @@ namespace System
             var vals = GetValues(enumType);
             for(int i = 0; i < vals.Length; ++i)
             {
+                // TODO: use the underlaying value field.
                 int val = ((Java.Lang.Enum<object>)vals[i]).Ordinal();
                 if (val.Equals(value))
                     return vals[i];

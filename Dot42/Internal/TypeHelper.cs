@@ -14,6 +14,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using System.Reflection;
+using Java.Lang.Reflect;
+using Java.Util;
 
 namespace Dot42.Internal
 {
@@ -93,47 +96,118 @@ namespace Dot42.Internal
         }
 
 	    [Include]
-	    internal static Type EnsurePrimitiveType(Type type)
+	    internal static Type EnsurePrimitiveType(Type p)
 	    {
-	        if (type == BooleanType())
-	            return typeof(bool);
-	        if (type == CharacterType())
-	            return typeof(char);
-	        if (type == ByteType())
-	            return typeof(byte);
-	        if (type == ShortType())
-	            return typeof(short);
-	        if (type == IntegerType())
-	            return typeof(int);
-	        if (type == LongType())
-	            return typeof(long);
-	        if (type == FloatType())
-	            return typeof(float);
-	        if (type == DoubleType())
-	            return typeof(double);
-	        return type;
+            return p == BooleanType()   ? typeof(bool) 
+                 : p == CharacterType() ? typeof(char) 
+                 : p == ByteType()      ? typeof(byte) 
+                 : p == ShortType()     ? typeof(short)
+                 : p == IntegerType()   ? typeof(int) 
+                 : p == LongType()      ? typeof(long)
+                 : p == FloatType()     ? typeof(float)
+                 : p == DoubleType()    ? typeof(double)
+                 : p;
 	    }
 
 	    public static Type EnsureBoxedType(Type p)
 	    {
-	        if (p == typeof(bool))
-	            return BooleanType();
-	        if (p == typeof(char))
-	            return CharacterType();
-	        if (p == typeof(byte))
-	            return ByteType();
-	        if (p == typeof(short))
-	            return ShortType();
-	        if (p == typeof(int))
-	            return IntegerType();
-	        if (p == typeof(long))
-	            return LongType();
-	        if (p == typeof(float))
-	            return FloatType();
-	        if (p == typeof(double))
-	            return DoubleType();
-	        return p;
+	        return p == typeof(bool)  ? BooleanType()
+                 : p == typeof(char)  ? CharacterType()
+                 : p == typeof(byte)  ? ByteType()
+                 : p == typeof(short) ? ShortType()
+                 : p == typeof(int)   ? IntegerType()
+                 : p == typeof(long)  ? LongType()
+                 : p == typeof(float) ? FloatType()
+                 : p == typeof(double)? DoubleType()
+                 : p;
 	    }
+
+        public static bool IsBoxedType(Type type)
+        {
+            return    type == BooleanType()
+                   || type == ByteType()
+                   || type == ShortType()
+                   || type == IntegerType()
+                   || type == LongType()
+                   || type == FloatType()
+                   || type == DoubleType()
+                   || type == CharacterType()
+                   || type == CharacterType();
+        }
+
+        /// <summary>
+        /// never returns synthetic fields.
+        /// </summary>
+        internal static JavaField[] GetFields(Type type, BindingFlags flags)
+        {
+            if (((flags & BindingFlags.DeclaredOnly) != 0))
+                return type.JavaGetDeclaredFields().Where(x => Matches(x.GetModifiers(), flags));
+            if (((flags & BindingFlags.NonPublic) == 0))
+                return type.JavaGetFields().Where(x => !x.IsSynthetic() && Matches(x.GetModifiers(), flags));
+
+            ArrayList<JavaField> ret = new ArrayList<JavaField>();
+
+            while (type != null)
+            {
+                var fields = type.JavaGetDeclaredFields();
+                for (int i = 0; i < fields.Length; ++i)
+                {
+                    var javaField = fields[i];
+
+                    if (javaField.IsSynthetic()) continue;
+                    if (Matches(javaField.GetModifiers(), flags))
+                        ret.Add(javaField);
+                }
+                type = type.GetSuperclass();
+            }
+
+            return ret.ToArray((JavaField[])Java.Lang.Reflect.Array.NewInstance(typeof(JavaField), ret.Size()));
+        }
+
+        /// <summary>
+        /// hides synthetic methods
+        /// </summary>
+        internal static JavaMethod[] GetMethods(Type type, BindingFlags flags)
+        {
+            if (((flags & BindingFlags.DeclaredOnly) != 0))
+                return type.JavaGetDeclaredMethods().Where(x => Matches(x.GetModifiers(), flags));
+            if (((flags & BindingFlags.NonPublic) == 0))
+                return type.JavaGetMethods().Where(x => x.IsSynthetic() && Matches(x.GetModifiers(), flags));
+
+            ArrayList<JavaMethod> ret = new ArrayList<JavaMethod>();
+
+            while (type != null)
+            {
+                var methods = type.JavaGetDeclaredMethods();
+                for (int i = 0; i < methods.Length; ++i)
+                {
+                    var javaMethod = methods[i];
+                    if (javaMethod.IsSynthetic())
+                        continue;
+                    if (Matches(javaMethod.GetModifiers(), flags))
+                        ret.Add(javaMethod);
+                }
+                type = type.GetSuperclass();
+            }
+
+            return ret.ToArray((JavaMethod[])Java.Lang.Reflect.Array.NewInstance(typeof(JavaMethod), ret.Size()));
+        }
+
+        /// <summary>
+        /// Do the given modifiers of a member match the given binding flags?
+        /// </summary>
+        internal static bool Matches(int modifiers, BindingFlags flags)
+        {
+            // Exclude instance members?
+            if (((flags & BindingFlags.Instance) == 0) && !Modifier.IsStatic(modifiers)) return false;
+            // Exclude static members?
+            if (((flags & BindingFlags.Static) == 0) && Modifier.IsStatic(modifiers)) return false;
+            // Exclude public members?
+            if (((flags & BindingFlags.Public) == 0) && Modifier.IsPublic(modifiers)) return false;
+            // Exclude nonpublic members?
+            if (((flags & BindingFlags.NonPublic) == 0) && !Modifier.IsPublic(modifiers)) return false;
+            return true;
+        }
 	}
 }
 

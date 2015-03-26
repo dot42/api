@@ -14,7 +14,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Reflection;
 using Java.Lang.Annotation;
 
 namespace Dot42.Internal
@@ -22,12 +21,13 @@ namespace Dot42.Internal
     /// <summary>
     /// Interface for annotations storing the values of custom attributes.
     /// </summary>
+    [Include]
 	internal interface IAttributes : IAnnotation
     {
         /// <summary>
         /// Gets all attributes
         /// </summary>
-        [Include(TypeCondition = typeof(PropertyInfo))]
+        [Include]
         IAttribute[] Attributes();
     }
 }

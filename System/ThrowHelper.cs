@@ -14,7 +14,8 @@ namespace System
         key,
         value,
         dictionary,
-        item
+        item,
+        type
     }
 
     internal enum ExceptionResource
@@ -32,7 +33,8 @@ namespace System
         InvalidType,
         NotAGenericType,
         InternalError,
-        MaximumNumberOfGenericTypesReached
+        MaximumNumberOfGenericTypesReached,
+        WrongNumberOfArguments,
     }
 
 
@@ -106,5 +108,9 @@ namespace System
             throw new NotSupportedException(msg.ToString());
         }
 
+        public static void ThrowArgumentException(ExceptionArgument arg)
+        {
+            throw new ArgumentException("argument error", arg.ToString());
+        }
     }
 }

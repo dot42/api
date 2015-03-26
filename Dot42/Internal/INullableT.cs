@@ -1,6 +1,6 @@
 // Copyright (C) 2014 dot42
 //
-// Original filename: IGenericMethodParameter.cs
+// Original filename: IProperty.cs
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,16 +13,24 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System;
+using System.Reflection;
 using Java.Lang.Annotation;
 
 namespace Dot42.Internal
 {
     /// <summary>
-    /// Interface for annotation that indicates a method parameter as the generic type information for the method.
+    /// Annotation interface for property metadata.
     /// </summary>
-    [Include]
-    internal interface IGenericMethodParameter : IAnnotation
+    [Include(TypeCondition = typeof(Nullable<>))]
+    internal interface INullableT : IAnnotation
     {
+        /// <summary>
+        /// Property name.
+        /// </summary>
+        [Include(TypeCondition = typeof(Nullable<>))]
+        Type Type();
     }
 }
 

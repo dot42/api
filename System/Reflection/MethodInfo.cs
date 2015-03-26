@@ -89,7 +89,15 @@ namespace System.Reflection
 
         public override object Invoke(object instance, object[] args)
         {
+            // .NET doesn't have accessibility semantics
+            if (!_method.IsAccessible()) _method.SetAccessible(true);
+
             return _method.Invoke(instance, args);
+        }
+
+        public override string ToString()
+        {
+            return _method.DeclaringClass.JavaGetName() + "::" + _method.Name;
         }
     }
 }

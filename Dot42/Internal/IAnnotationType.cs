@@ -21,6 +21,7 @@ namespace Dot42.Internal
     /// <summary>
     /// Annotation added to attribute types.
     /// </summary>
+    [Include(ApplyToMembers = true)]
 	internal interface IAnnotationType : IAnnotation
     {
         /// <summary>

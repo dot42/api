@@ -46,6 +46,20 @@ namespace Dot42
             return list.ToArray((T[])Array.NewInstance(elementType, list.Count));
         }
 
+        /// <summary>
+        /// Create a filtered array.
+        /// </summary>
+        public static T FirstOrDefault<T>(this T[] array, Func<T, bool> predicate)
+        {
+            int len = array.Length;
+            for (int i = 0; i < len; ++i)
+            {
+                if (predicate(array[i]))
+                    return array[i];
+            }
+            return default(T);
+        }
+
         public static TOut[] Select<TIn,TOut>(this TIn[] array, Func<TIn, TOut> select)
         {
             if ((array == null) || (array.Length == 0))

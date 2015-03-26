@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42.Internal;
 using Java.Lang.Reflect;
 
 namespace System.Reflection
@@ -20,6 +22,7 @@ namespace System.Reflection
     public class FieldInfo : JavaMemberInfo
     {
         private readonly JavaField _field;
+        private Type _type;
 
         public FieldInfo(JavaField field)  :base(field)
         {
@@ -30,7 +33,18 @@ namespace System.Reflection
         public override Type DeclaringType { get { return _field.DeclaringClass; } }
         public override string Name { get { return _field.Name; } }
 
-        public Type FieldType { get { return _field.Type; } }
+        public Type FieldType
+        {
+            get
+            {
+                if (_type == null)
+                {
+                    var nullableT = _field.GetAnnotation<INullableT>(typeof(INullableT));
+                    _type = nullableT == null ? _field.Type : nullableT.Type();
+                }
+                return _type;
+            }
+        }
 
         /// <summary>
         /// Is this an abstract method?
@@ -75,14 +89,23 @@ namespace System.Reflection
 
         public void SetValue(object instance, object value)
         {
-            // TODO: if this is a final field, we might want to
-            // consider to set the accessibility of the field.
+            // .NET doesn't have accessibility semantics
+            if (!_field.IsAccessible()) _field.SetAccessible(true);
+            
             _field.Set(instance, value);
         }
 
         public object GetValue(object instance)
         {
+            // .NET doesn't have accessibility semantics
+            if (!_field.IsAccessible()) _field.SetAccessible(true);
+
             return _field.Get(instance);
+        }
+
+        public override string ToString()
+        {
+            return _field.DeclaringClass.JavaGetName() + "::" + _field.Name;
         }
 
     }

@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using Dot42.Internal;
 
 namespace System.Reflection
@@ -26,13 +28,14 @@ namespace System.Reflection
         private readonly string name;
         private readonly MethodInfo getter;
         private readonly MethodInfo setter;
-        private readonly IAttributes attributes;
+        private readonly IAttribute[] attributes;
         private Type declaringType;
+        private Type propertyType;
 
         /// <summary>
         /// Default ctor
         /// </summary>
-        internal PropertyInfo(Type declaringType, string name, MethodInfo getter, MethodInfo setter, IAttributes attributes)
+        internal PropertyInfo(Type declaringType, string name, MethodInfo getter, MethodInfo setter, IAttribute[] attributes)
         {
             this.declaringType = declaringType;
             this.name = name;
@@ -88,14 +91,29 @@ namespace System.Reflection
         {
             get
             {
-                if (getter != null)
-                    return getter.ReturnType;
-                if (setter != null)
+                if (propertyType == null)
                 {
-                    var paramTypes = setter.JavaMethod.ParameterTypes;
-                    return paramTypes[paramTypes.Length - 1];
+                    if (getter != null)
+                    {
+                        var nullableT = getter.JavaMethod.GetAnnotation<INullableT>(typeof (INullableT));
+                        propertyType = nullableT != null ? nullableT.Type() : getter.ReturnType;
+                    }
+                    else if (setter != null)
+                    {
+                        var nullableT = setter.JavaMethod.GetParameterAnnotations()[0]
+                                              .FirstOrDefault(x => x.AnnotationType() == typeof (INullableT));
+                        if (nullableT != null)
+                        {
+                            propertyType = ((INullableT) nullableT).Type();
+                        }
+                        else
+                        {
+                            var paramTypes = setter.JavaMethod.GetParameterTypes();
+                            propertyType = paramTypes[paramTypes.Length - 1];
+                        }
+                    }
                 }
-                throw new NotSupportedException("PropertyType");
+                return propertyType;
             }
         }
 
@@ -160,12 +178,37 @@ namespace System.Reflection
             return CustomAttributeProvider.IsDefined(this, attributeType, inherit);
         }
 
+        public override string ToString()
+        {
+            return DeclaringType.FullName + "::" + Name;
+        }
+
         /// <summary>
         /// Gets all attributes
         /// </summary>
         IAttributes IAttributesProvider.Attributes()
         {
-            return attributes;
+            return new AttributesWrapper(attributes);
+        }
+
+        private class AttributesWrapper : IAttributes
+        {
+            private readonly IAttribute[] _attr;
+
+            public AttributesWrapper(IAttribute[] attr)
+            {
+                _attr = attr;
+            }
+
+            public Type AnnotationType()
+            {
+                return typeof (IAttributes);
+            }
+
+            public IAttribute[] Attributes()
+            {
+                return _attr;
+            }
         }
     }
 }

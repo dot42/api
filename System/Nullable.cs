@@ -15,6 +15,8 @@
 // limitations under the License.
 using System.Collections.Generic;
 using Dot42;
+using Dot42.Internal;
+using Java.Lang;
 
 namespace System
 {
@@ -93,15 +95,15 @@ namespace System
             return (n1.HasValue == n2.HasValue) && ((!n1.HasValue) || (n1.RawValue == n2.RawValue));
         }
 
+        [Include, Inline]
+        internal static string ToStringChecked(object obj)
+        {
+            return ReferenceEquals(obj, null) ? string.Empty : obj.ToString();
+        }
 
         public static Type GetUnderlyingType(Type nullableType)
         {
-            if (nullableType == null)
-                throw new ArgumentNullException("nullableType");
-            if (nullableType.IsGenericType && nullableType.GetGenericTypeDefinition() == typeof(Nullable<>))
-                return nullableType.GetGenericArguments()[0];
-            else
-                return null;
+            return NullableReflection.GetUnderlyingType(nullableType);
         }
     }
 
@@ -155,11 +157,9 @@ namespace System
         [Include]
         internal static T GetValueOrDefault(object nullable, T defaultOnNull)
         {
-            if (ReferenceEquals(nullable, null))
-            {
-                return defaultOnNull;
-            }
-            return (T)nullable;
+            return (ReferenceEquals(nullable, null)) 
+                    ? defaultOnNull 
+                    : (T)nullable;
         }
 
         public /*override*/ int GetHashCode()
@@ -179,10 +179,11 @@ namespace System
             return HasValue ? RawValue : defaultValue;
         }
 
-        public override string ToString()
-        {
-            return HasValue ? RawValue.ToString() : String.Empty;
-        }
+        // this is handled at the compiler level.
+        //public override string ToString()
+        //{
+        //    return HasValue ? RawValue.ToString() : String.Empty;
+        //}
 
         [DexNative]
         public static implicit operator Nullable<T>(T value)

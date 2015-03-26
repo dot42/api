@@ -22,6 +22,7 @@ namespace Dot42.Internal
     /// <summary>
     /// Interface for annotations storing the values of custom attributes.
     /// </summary>
+    [Include]
 	internal interface IAttribute : IAnnotation
     {
         /// <summary>
