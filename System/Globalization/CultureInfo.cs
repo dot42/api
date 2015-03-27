@@ -134,6 +134,13 @@ namespace System.Globalization
             return locale;
         }
 
+        public static CultureInfo ToCultureInfo(this IFormatProvider provider)
+        {
+            var cultureInfo = provider as CultureInfo;
+            return cultureInfo ?? CultureInfo.CurrentCulture;
+
+        }
+
         public static bool IsInvariantCulture(this IFormatProvider provider)
         {
             var cultureInfo = provider as CultureInfo;

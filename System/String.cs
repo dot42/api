@@ -153,7 +153,7 @@ namespace System
             if (!ignoreCase)
                 return EndsWith(other);
 
-            var _this = this.JavaSubstring(Length-other.Length, other.Length);
+            var _this = this.JavaSubstring(Length-other.Length, Length);
 
             return Compare(_this, other, ignoreCase) == 0;
 

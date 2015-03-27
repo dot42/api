@@ -14,11 +14,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Globalization;
-using Android.Text.Style;
-using Dot42;
+using System.Text;
 using Java.Text;
+using Java.Util;
 using Calendar = Java.Util.Calendar;
-using Locale = Java.Util.Locale;
 
 namespace System
 {
@@ -619,19 +618,83 @@ namespace System
         /// <summary>
         /// Parse the given date/time string into a DateTime.
         /// </summary>
-        public static DateTime Parse(string s, IFormatProvider provider)
+        public static DateTime Parse(string value)
         {
-            return Parse(s);
+            return Parse(value, null, DateTimeStyles.None);
         }
 
         /// <summary>
         /// Parse the given date/time string into a DateTime.
         /// </summary>
-        public static DateTime Parse(string s, IFormatProvider provider, DateTimeStyles styles)
+        public static DateTime Parse(string value, IFormatProvider provider)
         {
-            // TODO: respect provider.
-            long millies = Java.Util.Date.Parse(s);
-            return FromDate(new Java.Util.Date(millies), styles);
+            return Parse(value, provider, DateTimeStyles.None);
+        }
+
+        /// <summary>
+        /// Parse the given date/time string into a DateTime.
+        /// </summary>
+        public static DateTime Parse(string s, IFormatProvider provider, DateTimeStyles style)
+        {
+            ThrowHelper.ThrowIfArgumentNullException(s, "s");
+            if (s == "")
+                throw new FormatException("invalid format");
+
+            try
+            {
+                // try default...
+                // TODO: respect provider.
+                long millies = Java.Util.Date.Parse(s);
+                return FromDate(new Java.Util.Date(millies), style);
+            }
+            catch (Exception ex)
+            {
+            }
+
+            s = s.Trim();
+            
+            // try all .NET date time formats
+            // Note: the Date/Time handling in java is just broken, and putting a 
+            //       .NET compatibility layer on top of it will probalby not fix much
+            var ci = provider.ToCultureInfo();
+            string[] formats = new string[]
+            {
+                ci.DateTimeFormat.UniversalSortableDateTimePattern,
+                ci.DateTimeFormat.SortableDateTimePattern,
+                ci.DateTimeFormat.FullDateTimePattern,
+                ci.DateTimeFormat.RFC1123Pattern,
+                ci.DateTimeFormat.LongDatePattern,
+                ci.DateTimeFormat.LongTimePattern,
+                ci.DateTimeFormat.ShortDatePattern,
+                ci.DateTimeFormat.ShortTimePattern
+            };
+            var locale = provider.ToLocale();
+            NumberFormat nf = NumberFormat.GetNumberInstance(provider.ToLocale());
+
+            // Note: this should be optimized in caching the old values, but I'm not 
+            //       sure this whole approach is the right anyway. Exception handling
+            //       for control flow, a loop to tests all formats and such.
+            //       Probably better to use jodatime or nodatime or something else.
+            foreach(var pattern in formats)
+            {
+                var javaFormat = GetJavaFormat(pattern, provider);
+
+                try
+                {
+                    DateFormat formatter = new SimpleDateFormat(javaFormat, locale);
+                    formatter.SetLenient(false);
+
+                    if (provider != null)
+                        formatter.SetNumberFormat(nf);
+
+                    var result = FromDate(formatter.Parse(s), style);
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+            throw new FormatException("unable to parse " + s);
         }
 
         //
@@ -699,12 +762,17 @@ namespace System
         //     the AM/PM designator in s do not agree.
         public static DateTime ParseExact(string s, string format, IFormatProvider provider)
         {
-            DateFormat formatter = new SimpleDateFormat(format, provider.ToLocale());
-            return FromDate(formatter.Parse(s));
+            return ParseExact(s, format, provider, DateTimeStyles.None);
         }
 
 	    public static DateTime ParseExact(string s, string format, IFormatProvider provider, DateTimeStyles style)
 	    {
+            // Note: the Date/Time handling in java is just broken, and putting a 
+            //       .NET compatibility layer on top of it will probalby not fix much
+            ThrowHelper.ThrowIfArgumentNullException(s, "s");
+            if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(format))
+                throw new FormatException("invalid format");
+
 	        if ((style & DateTimeStyles.AllowLeadingWhite) != 0)
 	            s = s.TrimStart();
             if ((style & DateTimeStyles.AllowTrailingWhite) != 0)
@@ -712,12 +780,32 @@ namespace System
             if ((style & DateTimeStyles.AllowWhiteSpaces) != 0)
                 s = s.Trim();
 
-            DateFormat formatter = new SimpleDateFormat(format, provider.ToLocale());
-            formatter.SetLenient(false);
-            
-            var result = FromDate(formatter.Parse(s), style);
+	        var javaFormat = GetJavaFormat(format, provider);
 
-            return result;
+	        while (true)
+	        {
+	            try
+	            {
+	                DateFormat formatter = new SimpleDateFormat(javaFormat, provider.ToLocale());
+	                formatter.SetLenient(false);
+
+	                if (provider != null)
+	                    formatter.SetNumberFormat(NumberFormat.GetNumberInstance(provider.ToLocale()));
+
+	                var result = FromDate(formatter.Parse(s), style);
+	                return result;
+	            }
+	            catch (Exception ex)
+	            {
+	                if (javaFormat.EndsWith("Z", StringComparison.OrdinalIgnoreCase))
+	                {
+	                    // try again without Z
+	                    javaFormat = javaFormat.Substring(0, javaFormat.Length - 1);
+	                    continue;
+	                }
+	                throw new FormatException(ex.Message, ex);
+	            }
+	        }
 	    }
     
 
@@ -1053,7 +1141,8 @@ namespace System
         public string ToString(string format, IFormatProvider provider)
         {
             var sdf = new Java.Text.SimpleDateFormat(GetJavaFormat(format, provider), provider.ToLocale());
-            sdf.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
+            if(Kind == DateTimeKind.Utc)
+                sdf.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
             return sdf.Format(ToDate());
         }
         //
@@ -1091,7 +1180,6 @@ namespace System
         internal static TimeSpan GetUtcOffset()
         {
             var offsetInMs = Java.Util.TimeZone.GetDefault().GetRawOffset();
-
             return new TimeSpan(offsetInMs * TimeSpan.TicksPerMillisecond);
         }
 
@@ -1120,16 +1208,7 @@ namespace System
         //     of range.
         public static bool TryParse(string s, out DateTime result)
         {
-            try
-            {
-                result = Parse(s);
-                return true;
-            }
-            catch 
-            {
-                result = MinValue;
-                return false; 
-            }
+            return TryParse(s, null, DateTimeStyles.None, out result);
         }
 
         public static bool TryParse(string s, IFormatProvider provider, DateTimeStyles style, out DateTime result)
@@ -1139,7 +1218,7 @@ namespace System
                 result = Parse(s, provider, style);
                 return true;
             }
-            catch
+            catch(FormatException)
             {
                 result = MinValue;
                 return false;
@@ -1232,7 +1311,7 @@ namespace System
                 result = ParseExact(s, format, provider, style);
                 return true;
             }
-            catch
+            catch(FormatException ex)
             {
                 result = MinValue;
                 return false;
@@ -1356,15 +1435,6 @@ namespace System
         }
 
 
-
-        /// <summary>
-        /// Parse the given date/time string into a DateTime.
-        /// </summary>
-        public static DateTime Parse(string value)
-        {
-            return FromDate(Java.Util.Date.Parse(value));
-        }
-
         public string ToString()
         {
             return ToString("G", null);
@@ -1375,7 +1445,8 @@ namespace System
             return ToString();
         }
 
-        private string GetJavaFormat(string format, IFormatProvider provider)
+	    
+        private static string GetJavaFormat(string format, IFormatProvider provider)
         {
             if (string.IsNullOrEmpty(format))
                 format = "G";
@@ -1389,10 +1460,77 @@ namespace System
                     throw new FormatException("format is not one of the format specifier characters defined for DateTimeFormatInfo");
             }
 
+            format = DateFormatEscapeJavaInvalidCharacters(format);
             return format;
         }
 
-        //Mono code (DateTimeUtils.cs):
+        private static HashSet<char> _allowedCharacters;
+	    private static string DateFormatEscapeJavaInvalidCharacters(string format)
+	    {
+            if (_allowedCharacters == null)
+            {
+                _allowedCharacters = new HashSet<char>(20);
+                foreach (char c in new[] { 'G', 'y', 'M', 'w', 'W', 'D', 'd', 'F', 'E', 'a', 'H', 'k', 'K', 'h', 'm', 's', 'S', 'z', 'Z'})
+                    _allowedCharacters.Add(c);
+            }
+
+            
+            StringBuilder b = new StringBuilder(format.Length + 6);
+	        bool isEscape = false;
+	        bool isAutoEscape = false;
+
+	        for (int i = 0; i < format.Length; ++i)
+	        {
+	            char c = format.CharAt(i);
+
+	            if (c == '\'')
+	            {
+	                if (isAutoEscape)
+	                {
+	                    b.Append('\'');
+	                    isAutoEscape = false;
+	                }
+	                isEscape = !isEscape;
+	                b.Append(c);
+	                continue;
+	            }
+
+	            if (isEscape)
+	            {
+	                b.Append(c);
+	                continue;
+	            }
+
+	            bool isAllowed = !char.IsLetter(c) || _allowedCharacters.Contains(c);
+
+	            if (isAutoEscape && isAllowed)
+	            {
+	                isAutoEscape = false;
+	                b.Append('\'');
+	                b.Append(c);
+	                continue;
+	            }
+
+	            if (isAllowed)
+	            {
+	                b.Append(c);
+	                continue;
+	            }
+
+	            // not allowed.
+	            isAutoEscape = true;
+	            b.Append('\'');
+	            b.Append(c);
+	        }
+
+	        if (isAutoEscape)
+	            b.Append('\'');
+
+	        format = b.ToString();
+	        return format;
+	    }
+
+	    //Mono code (DateTimeUtils.cs):
         public static string GetStandardPattern(char format, DateTimeFormatInfo dfi, out bool useutc, out bool use_invariant, bool date_time_offset)
         {
             String pattern;
