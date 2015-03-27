@@ -43,7 +43,8 @@ namespace System.IO
 
         public override int Read(char[] buffer, int index, int count)
         {
-            return _reader.Read(buffer, index, count);
+            var read = _reader.Read(buffer, index, count);
+            return read == -1 ? 0 : read;
         }
     }
 }
