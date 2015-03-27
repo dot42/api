@@ -95,7 +95,6 @@ namespace Dot42.Internal
             }
         }
 
-	    [Include]
 	    internal static Type EnsurePrimitiveType(Type p)
 	    {
             return p == BooleanType()   ? typeof(bool) 
@@ -108,6 +107,17 @@ namespace Dot42.Internal
                  : p == DoubleType()    ? typeof(double)
                  : p;
 	    }
+
+        [Include]
+        internal static Type EnsureGenericInstanceType(Type p)
+        {
+            Type t = EnsureBoxedType(p);
+            if (t != p) return t;
+
+            var underlying = NullableReflection.GetUnderlyingTypeForMarked(p);
+
+            return underlying ?? p;
+        }
 
 	    public static Type EnsureBoxedType(Type p)
 	    {
