@@ -637,8 +637,8 @@ namespace System
         /// </summary>
         public static DateTime Parse(string s, IFormatProvider provider, DateTimeStyles style)
         {
-            if (string.IsNullOrEmpty(s))
-                throw new ArgumentException("empty string", "s");
+            if (s == null)
+                throw new ArgumentNullException("s");
 
             s = s.Trim();
             
@@ -769,8 +769,8 @@ namespace System
 	    {
             // Note: the Date/Time handling in java is just broken, and putting a 
             //       .NET compatibility layer on top of it will probalby not fix much
-            if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(format))
-                throw new ArgumentException("empty string");
+            if (s == null || format == null)
+                throw new ArgumentNullException();
 
 	        if ((style & DateTimeStyles.AllowLeadingWhite) != 0)
 	            s = s.TrimStart();
@@ -1235,6 +1235,10 @@ namespace System
                 result = Parse(s, provider, style);
                 return true;
             }
+            catch (ArgumentNullException)
+            {
+                throw;
+            }
             catch(FormatException)
             {
                 throw;
@@ -1332,7 +1336,15 @@ namespace System
                 result = ParseExact(s, format, provider, style);
                 return true;
             }
-            catch(FormatException ex)
+            catch (ArgumentNullException)
+            {
+                throw;
+            }
+            catch (FormatException)
+            {
+                throw;
+            }
+            catch(Exception ex)
             {
                 result = MinValue;
                 return false;
