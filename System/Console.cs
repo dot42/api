@@ -33,7 +33,12 @@ namespace System
 
         public static void WriteLine(object obj)
         {
-            WriteLine(obj.ToString());
+            WriteLine("" + obj);
+        }
+
+        public static void WriteLine(string format, params object[] parameter)
+        {
+            WriteLine(string.Format(format, parameter));
         }
 
 	    public static void WriteLine(string message)

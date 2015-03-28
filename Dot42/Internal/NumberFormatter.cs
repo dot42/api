@@ -26,22 +26,22 @@ namespace Dot42.Internal
 	{
 	    internal static string Format(int value, IFormatProvider provider)
 	    {
-            return NumberFormat.GetIntegerInstance(provider.ToLocale()).Format((long)value);
+            return provider.ToJavaNumberFormat().Format((long)value);
 	    }
 
 	    internal static string Format(long value, IFormatProvider provider)
         {
-            return NumberFormat.GetIntegerInstance(provider.ToLocale()).Format(value);
+            return provider.ToJavaNumberFormat().Format(value);
         }
 
 	    internal static string Format(float value, IFormatProvider provider)
         {
-            return NumberFormat.GetInstance(provider.ToLocale()).Format((double)value);
+            return provider.ToJavaNumberFormat().Format((double)value);
         }
 
 	    internal static string Format(double value, IFormatProvider provider)
         {
-            return NumberFormat.GetInstance(provider.ToLocale()).Format(value);
+            return provider.ToJavaNumberFormat().Format(value);
         }
 
         internal static string Format(string format, int value, IFormatProvider provider)
@@ -73,9 +73,10 @@ namespace Dot42.Internal
         }
 
 	    private static NumberFormat GetFormat(string format, IFormatProvider provider)
-        {
-            if (format == null)
-                return NumberFormat.GetInstance();
+	    {
+	        if (format == null)
+	            return provider.ToJavaNumberFormat();
+
             var locale = provider.ToLocale();
 
             if (format.Length >= 1)
@@ -222,8 +223,10 @@ namespace Dot42.Internal
         private static NumberFormat GetDecimalFormat(string format, IFormatProvider provider)
         {
             var locale = provider.ToLocale();
-            DecimalFormat f = (DecimalFormat)NumberFormat.GetNumberInstance(locale);
-            f.ApplyPattern(format);
+            
+            DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale) {Infinity = "Infinity"};
+            DecimalFormat f = new DecimalFormat(format,symbols);
+            
             return f;
         }
 

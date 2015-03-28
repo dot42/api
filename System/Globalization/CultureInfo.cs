@@ -176,6 +176,15 @@ namespace System.Globalization
             return cultureInfo.NumberFormat;
         }
 
+        internal static NumberFormat ToJavaNumberFormat(this IFormatProvider provider)
+        {
+            var numberFormat = provider as NumberFormatInfo;
+            if (numberFormat != null) return numberFormat.JavaNumberFormat;
+
+            var cultureInfo = provider as CultureInfo ?? CultureInfo.CurrentCulture;
+            return cultureInfo.NumberFormat.JavaNumberFormat;
+        }
+
 
     }
 }

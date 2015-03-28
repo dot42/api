@@ -39,7 +39,9 @@ namespace System.Globalization
 	    internal NumberFormatInfo(Locale locale)
 	    {
 	        _locale = locale;
+
 	        _decimals = (DecimalFormat) NumberFormat.GetNumberInstance(locale);
+           
 	        _currency = NumberFormat.GetCurrencyInstance(locale);
 	        _percent = NumberFormat.GetPercentInstance(locale);
 
