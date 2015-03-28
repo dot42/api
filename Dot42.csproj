@@ -168,6 +168,7 @@
     <Compile Include="Dot42\IncludeAttribute.cs" />
     <Compile Include="Dot42\Internal\AssertFailedException.cs" />
     <Compile Include="Dot42\Internal\CompilerHelper.Enum.cs" />
+    <Compile Include="Dot42\Internal\DateTimeFormatting.cs" />
     <Compile Include="Dot42\Internal\GenericInstanceFactory.cs" />
     <Compile Include="Dot42\Internal\IAttributesProvider.cs" />
     <Compile Include="Dot42\Internal\IProperties.cs" />
