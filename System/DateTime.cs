@@ -90,7 +90,7 @@ namespace System
 
         private DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, DateTimeKind kind, bool useSpecifiedKind)
         {
-            var dateTime = FromDate(new Java.Util.Date(year - YearOffset, month - MonthOffset, day, hour, minute, second));
+            var dateTime = FromDate(new Java.Util.Date(year - YearOffset, month - MonthOffset, day, hour, minute, second), DateTimeKind.Unspecified);
             this.ticks = dateTime.Ticks + TimeSpan.TicksPerMillisecond * millisecond;
             CheckMinMaxTicks(ticks);
             this.kind = useSpecifiedKind ? kind : dateTime.Kind;
@@ -160,7 +160,7 @@ namespace System
 
         public int Month { get { return GetCalendar().Get(Calendar.MONTH) + MonthOffset; } }
        
-        public static DateTime Now { get { return FromDate(new Java.Util.Date()); } }
+        public static DateTime Now { get { return FromDate(new Java.Util.Date(), DateTimeKind.Local); } }
 
         public int Second { get { return GetCalendar().Get(Calendar.SECOND); } }
 
@@ -211,14 +211,14 @@ namespace System
         {
             var calender = GetCalendar();
             calender.Add(Calendar.YEAR, value);
-            return FromDate(calender.GetTime());
+            return FromDate(calender.GetTime(), Kind);
         }
 
         public DateTime AddMonths(int months)
         {
             var calender = GetCalendar();
             calender.Add(Calendar.MONTH, months);
-            return FromDate(calender.GetTime());
+            return FromDate(calender.GetTime(), Kind);
         }
 
 	    public static int DaysInMonth(int year, int month)
@@ -636,20 +636,8 @@ namespace System
         /// </summary>
         public static DateTime Parse(string s, IFormatProvider provider, DateTimeStyles style)
         {
-            ThrowHelper.ThrowIfArgumentNullException(s, "s");
-            if (s == "")
-                throw new FormatException("invalid format");
-
-            try
-            {
-                // try default...
-                // TODO: respect provider.
-                long millies = Java.Util.Date.Parse(s);
-                return FromDate(new Java.Util.Date(millies), style);
-            }
-            catch (Exception ex)
-            {
-            }
+            if (string.IsNullOrEmpty(s))
+                throw new ArgumentException("empty string", "s");
 
             s = s.Trim();
             
@@ -657,7 +645,8 @@ namespace System
             // Note: the Date/Time handling in java is just broken, and putting a 
             //       .NET compatibility layer on top of it will probalby not fix much
             var ci = provider.ToCultureInfo();
-            string[] formats = new string[]
+
+            string[] formats = 
             {
                 ci.DateTimeFormat.UniversalSortableDateTimePattern,
                 ci.DateTimeFormat.SortableDateTimePattern,
@@ -668,8 +657,17 @@ namespace System
                 ci.DateTimeFormat.ShortDatePattern,
                 ci.DateTimeFormat.ShortTimePattern
             };
+
             var locale = provider.ToLocale();
-            NumberFormat nf = NumberFormat.GetNumberInstance(provider.ToLocale());
+            var invariantLocale = CultureInfo.InvariantCulture.Locale;
+
+            Java.Util.TimeZone timeZone = null;
+
+            if ((style & DateTimeStyles.AssumeLocal) != 0)
+                timeZone = Java.Util.TimeZone.Default;
+            else if ((style & DateTimeStyles.AssumeUniversal) != 0)
+                timeZone = Java.Util.TimeZone.GetTimeZone("UTC");
+
 
             // Note: this should be optimized in caching the old values, but I'm not 
             //       sure this whole approach is the right anyway. Exception handling
@@ -677,24 +675,24 @@ namespace System
             //       Probably better to use jodatime or nodatime or something else.
             foreach(var pattern in formats)
             {
-                var javaFormat = GetJavaFormat(pattern, provider);
+                bool useInvariant, foundK;
+                var javaFormat = GetJavaFormat(pattern, provider, DateTimeKind.Unspecified, out useInvariant, out foundK);
+                if (foundK) style |= DateTimeStyles.RoundtripKind;
 
                 try
                 {
-                    DateFormat formatter = new SimpleDateFormat(javaFormat, locale);
+                    DateFormat formatter = new SimpleDateFormat(javaFormat, useInvariant?invariantLocale:locale);
                     formatter.SetLenient(false);
+                    formatter.SetTimeZone(timeZone);
 
-                    if (provider != null)
-                        formatter.SetNumberFormat(nf);
-
-                    var result = FromDate(formatter.Parse(s), style);
+                    var result = FromParsedDate(formatter.Parse(s), s, style);
                     return result;
                 }
-                catch (Exception ex)
+                catch (ParseException ex)
                 {
                 }
             }
-            throw new FormatException("unable to parse " + s);
+            throw new ArgumentException("unable to parse " + s);
         }
 
         //
@@ -769,9 +767,8 @@ namespace System
 	    {
             // Note: the Date/Time handling in java is just broken, and putting a 
             //       .NET compatibility layer on top of it will probalby not fix much
-            ThrowHelper.ThrowIfArgumentNullException(s, "s");
             if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(format))
-                throw new FormatException("invalid format");
+                throw new ArgumentException("empty string");
 
 	        if ((style & DateTimeStyles.AllowLeadingWhite) != 0)
 	            s = s.TrimStart();
@@ -780,35 +777,36 @@ namespace System
             if ((style & DateTimeStyles.AllowWhiteSpaces) != 0)
                 s = s.Trim();
 
-	        var javaFormat = GetJavaFormat(format, provider);
+	        bool useInvariant, foundK;
+            var javaFormat = GetJavaFormat(format, provider, DateTimeKind.Unspecified, out useInvariant, out foundK);
+            if(foundK) style |= DateTimeStyles.RoundtripKind;
 
-	        while (true)
+            Locale locale = useInvariant ? CultureInfo.InvariantCulture.Locale : provider.ToLocale();
+
+	        try
 	        {
-	            try
-	            {
-	                DateFormat formatter = new SimpleDateFormat(javaFormat, provider.ToLocale());
-	                formatter.SetLenient(false);
+	            DateFormat formatter = new SimpleDateFormat(javaFormat, locale);
+	            formatter.SetLenient(false);
 
-	                if (provider != null)
-	                    formatter.SetNumberFormat(NumberFormat.GetNumberInstance(provider.ToLocale()));
+	            if ((style & DateTimeStyles.AssumeUniversal) != 0)
+                    formatter.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
+	            else
+                    formatter.TimeZone = Java.Util.TimeZone.Default;
 
-	                var result = FromDate(formatter.Parse(s), style);
-	                return result;
-	            }
-	            catch (Exception ex)
-	            {
-	                if (javaFormat.EndsWith("Z", StringComparison.OrdinalIgnoreCase))
-	                {
-	                    // try again without Z
-	                    javaFormat = javaFormat.Substring(0, javaFormat.Length - 1);
-	                    continue;
-	                }
-	                throw new FormatException(ex.Message, ex);
-	            }
+	            Java.Util.Date parsed = formatter.Parse(s);
+
+	            var result = FromParsedDate(parsed, s, style);
+	            return result;
+	        }
+	        catch (ArgumentException ex)
+	        {
+	            throw new FormatException(ex.Message);
+	        }
+	        catch (ParseException ex)
+	        {
+	            throw new ArgumentException(ex.Message, "s");
 	        }
 	    }
-    
-
 
         //
         // Summary:
@@ -1010,7 +1008,8 @@ namespace System
             if (Kind == DateTimeKind.Local)
                 return this;
 
-            var utcOffset = GetUtcOffset();
+            var utcOffset = TimeZoneInfo.Local.GetUtcOffset(ticks);
+
             if (utcOffset.Ticks > 0)
             {
                 if (MaxValue - utcOffset < this)
@@ -1110,7 +1109,7 @@ namespace System
         //     used by the current culture.
         public string ToString(string format)
         {
-            return ToString(format, DateTimeFormatInfo.InvariantInfo);
+            return ToString(format, DateTimeFormatInfo.CurrentInfo);
         }
         //
         // Summary:
@@ -1140,11 +1139,32 @@ namespace System
         //     used by provider.
         public string ToString(string format, IFormatProvider provider)
         {
-            var sdf = new Java.Text.SimpleDateFormat(GetJavaFormat(format, provider), provider.ToLocale());
+            bool useInvariant;bool foundK;
+            string javaFormat = GetJavaFormat(format, provider, Kind, out useInvariant, out foundK);
+
+            var locale = useInvariant ? CultureInfo.InvariantCulture.Locale
+                                      : provider.ToLocale();
+
+            var sdf = new Java.Text.SimpleDateFormat(javaFormat, locale);
+            
             if(Kind == DateTimeKind.Utc)
                 sdf.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
+            else 
+                sdf.TimeZone = Java.Util.TimeZone.Default;
+
             return sdf.Format(ToDate());
         }
+
+        public override string ToString()
+        {
+            return ToString("G", null);
+        }
+
+        public string ToString(IFormatProvider provider)
+        {
+            return ToString();
+        }
+
         //
         // Summary:
         //     Converts the value of the current System.DateTime object to Coordinated Universal
@@ -1161,7 +1181,7 @@ namespace System
             if (Kind == DateTimeKind.Utc)
                 return this;
 
-            var offset = GetUtcOffset();
+            var offset = TimeZoneInfo.Local.GetUtcOffset(ticks);
 
             if (offset.Ticks < 0)
             {
@@ -1177,11 +1197,6 @@ namespace System
             return SpecifyKind(Subtract(offset), DateTimeKind.Utc);
         }
 
-        internal static TimeSpan GetUtcOffset()
-        {
-            var offsetInMs = Java.Util.TimeZone.GetDefault().GetRawOffset();
-            return new TimeSpan(offsetInMs * TimeSpan.TicksPerMillisecond);
-        }
 
         //
         // Summary:
@@ -1219,6 +1234,10 @@ namespace System
                 return true;
             }
             catch(FormatException)
+            {
+                throw;
+            }
+            catch(Exception)
             {
                 result = MinValue;
                 return false;
@@ -1362,169 +1381,303 @@ namespace System
         /// </summary>
         public Java.Util.Date ToDate()
         {
-            var calendar = GetCalendar();
-            return calendar.GetTime();
+            var millis = (ticks / TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
+            
+            long offsetInMs = (long)0;
+
+            if(kind != DateTimeKind.Utc)
+                offsetInMs = JavaGetOffsetInMs(millis);
+
+            return new Date(millis - offsetInMs);
         }
 
         private Java.Util.Calendar GetCalendar()
         {
-            var millis = (ticks / TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
-
             var calender = new Java.Util.GregorianCalendar();
-            if (Kind == DateTimeKind.Utc || Kind == DateTimeKind.Unspecified)
+
+            var millis = (ticks / TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
+            long offsetInMs = (long)0;
+
+            if (kind != DateTimeKind.Utc)
+            {
+                offsetInMs = JavaGetOffsetInMs(millis);
+                calender.SetTimeZone(Java.Util.TimeZone.Default);
+            }
+            else
             {
                 calender.SetTimeZone(Java.Util.TimeZone.GetTimeZone("UTC"));
             }
-            calender.SetTimeInMillis(millis);
+
+            calender.SetTimeInMillis(millis - offsetInMs);
 
             return calender;
         }
 
-        /// <summary>
-        /// Convert from java based date to DateTime.
-        /// </summary>
-        public static DateTime FromDate(Java.Util.Date value)
+        private static long JavaGetOffsetInMs(long millies)
         {
-            var timezoneOffsetInMinutes = value.GetTimezoneOffset();
-            var millis = value.GetTime();
-
-            return FromDate(millis - timezoneOffsetInMinutes * MillisecondsPerMinute);
+            return Java.Util.TimeZone.GetDefault().GetOffset(millies);
         }
 
         /// <summary>
         /// Convert from java based date to DateTime.
         /// </summary>
-        public static DateTime FromDate(Java.Util.Date value, DateTimeStyles style)
+        public static DateTime FromDate(Date value, DateTimeKind kind)
         {
-            bool assumeLocal = (style & DateTimeStyles.AssumeLocal) != 0;
-            bool assumeUtc = (style & DateTimeStyles.AssumeUniversal) != 0;
-
-            var millis = value.GetTime();
-            var ticks = (millis + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
-
-            DateTime result;
-
-            if (assumeLocal)
-            {
-                result = new DateTime(ticks, DateTimeKind.Local);
-            }
-            else if (assumeUtc)
-            {
-                result = new DateTime(ticks, DateTimeKind.Utc);
-            }
-            else
-            {
-                var timezoneOffsetInMinutes = value.GetTimezoneOffset();
-                result = FromDate(millis - timezoneOffsetInMinutes * MillisecondsPerMinute);
-            }
-            
-            if ((style & DateTimeStyles.AdjustToUniversal) != 0)
-                result = result.ToUniversalTime();
-
-            return result;
+            return FromDate(value.GetTime(), kind);
         }
 
         /// <summary>
         /// Convert from java based date to DateTime.
         /// </summary>value
         /// <param name="millis">milliseconds since Jan 1, 1970, midnight GMT</param>
-        public static DateTime FromDate(long millis)
+        public static DateTime FromDate(long millis, DateTimeKind kind)
         {
+            long offsetInMs = (long)0;
+
+            if (kind != DateTimeKind.Utc)
+                offsetInMs = JavaGetOffsetInMs(millis);
+
+            var ticks = ((millis + offsetInMs) + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
+            return new DateTime(ticks, kind);
+        }
+
+
+	    /// <summary>
+        /// Convert from java based date to DateTime.
+        /// </summary>
+        public static DateTime FromParsedDate(Java.Util.Date value, string originalString, DateTimeStyles style)
+        {
+            bool assumeLocal = (style & DateTimeStyles.AssumeLocal) != 0;
+            bool assumeUtc = (style & DateTimeStyles.AssumeUniversal) != 0;
+            bool roundtripKind = (style & DateTimeStyles.RoundtripKind) != 0;
+
+            var millis = value.GetTime();
             var ticks = (millis + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
-            return new DateTime(ticks);   
+
+            DateTime result;
+
+            if(roundtripKind)
+            {
+                // TODO: this is a hack. find a better way.
+                bool isUtc = originalString.EndsWith("Z");
+                if (isUtc)
+                    result = new DateTime(ticks, DateTimeKind.Utc);
+                else
+                {
+                    // don't kow how to preserve local.
+                    var offsetInTicks = JavaGetOffsetInMs(millis) * TimeSpan.TicksPerMillisecond;
+                    result = new DateTime(ticks + offsetInTicks, DateTimeKind.Unspecified);    
+                }
+            }
+            else if (!assumeUtc)
+            {
+                var offsetInTicks = JavaGetOffsetInMs(millis) * TimeSpan.TicksPerMillisecond;
+                result = new DateTime(ticks + offsetInTicks, assumeLocal?DateTimeKind.Local:DateTimeKind.Unspecified);
+            }
+            else 
+            {
+                result = new DateTime(ticks, DateTimeKind.Utc);
+            }
+            
+            if ((style & DateTimeStyles.AdjustToUniversal) != 0)
+                result = result.ToUniversalTime();
+            else if(assumeUtc)
+                result = result.ToLocalTime();
+
+            return result;
         }
-
-
-        public string ToString()
-        {
-            return ToString("G", null);
-        }
-
-        public string ToString(IFormatProvider provider)
-        {
-            return ToString();
-        }
-
 	    
-        private static string GetJavaFormat(string format, IFormatProvider provider)
+        private static string GetJavaFormat(string format, IFormatProvider provider, DateTimeKind kind, out bool useInvariant, out bool foundDateTimeKind)
         {
             if (string.IsNullOrEmpty(format))
                 format = "G";
 
-            if (format.Length == 1 && provider is DateTimeFormatInfo)
+            DateTimeFormatInfo dtfi = null;
+            
+            if (provider != null)
+                dtfi = (DateTimeFormatInfo)provider.GetFormat(typeof(DateTimeFormatInfo));
+
+            if (dtfi == null)
+                dtfi = DateTimeFormatInfo.CurrentInfo;
+
+            if (format.Length == 1 && dtfi != null)
             {
-                bool useInvariant, useUtc;
-                format = GetStandardPattern(format[0], provider as DateTimeFormatInfo, out useInvariant, out useUtc, false);
+                bool useUtc;
+                format = GetStandardPattern(format[0], dtfi, out useInvariant, out useUtc, false);
 
                 if (format == null)
-                    throw new FormatException("format is not one of the format specifier characters defined for DateTimeFormatInfo");
+                    throw new FormatException(
+                        "format is not one of the format specifier characters defined for DateTimeFormatInfo");
             }
+            else 
+                useInvariant = false;
 
-            format = DateFormatEscapeJavaInvalidCharacters(format);
+            format = ConvertFormatStringNetToJava(format, kind, out foundDateTimeKind);
             return format;
         }
 
-        private static HashSet<char> _allowedCharacters;
-	    private static string DateFormatEscapeJavaInvalidCharacters(string format)
+        private static HashMap<string, string> _conversion;
+	    private static string ConvertFormatStringNetToJava(string format, DateTimeKind kind, out bool foundDateTimeKind)
 	    {
-            if (_allowedCharacters == null)
+            if (_conversion == null)
             {
-                _allowedCharacters = new HashSet<char>(20);
-                foreach (char c in new[] { 'G', 'y', 'M', 'w', 'W', 'D', 'd', 'F', 'E', 'a', 'H', 'k', 'K', 'h', 'm', 's', 'S', 'z', 'Z'})
-                    _allowedCharacters.Add(c);
+                var conv = new HashMap<string, string>();
+                conv.Put("d", "d");
+                conv.Put("dd", "dd");
+                conv.Put("ddd", "E");
+                conv.Put("dddd", "EEEE");
+                conv.Put("f", "S");
+                conv.Put("ff", "SS");
+                conv.Put("fff", "SSS");
+                conv.Put("ffff", "SSSS");
+                conv.Put("fffff", "SSSSS");
+                conv.Put("ffffff", "SSSSSS");
+                conv.Put("fffffff", "SSSSSSS");
+                conv.Put("F", "S");
+                conv.Put("FF", "SS");
+                conv.Put("FFF", "SSS");
+                conv.Put("FFFF", "SSSS");
+                conv.Put("FFFFF", "SSSSS");
+                conv.Put("FFFFFF", "SSSSSS");
+                conv.Put("FFFFFFF", "SSSSSSS");
+                conv.Put("g", "G");
+                conv.Put("gg", "GG");
+                conv.Put("h", "K");
+                conv.Put("hh", "KK");
+                conv.Put("H", "H");
+                conv.Put("HH", "HH");
+                // K is handled in Code.
+                //conv.Put("K", "X");
+                conv.Put("m", "m");
+                conv.Put("mm", "mm");
+                conv.Put("M", "M");
+                conv.Put("MM", "MM");
+                conv.Put("MMM", "MMM");
+                conv.Put("MMMM", "MMMM");
+                conv.Put("s", "s");
+                conv.Put("ss", "ss");
+                conv.Put("t", "a");
+                conv.Put("tt", "aa");
+                conv.Put("y", "y");
+                conv.Put("yy", "yy");
+                conv.Put("yyy", "yyy");
+                conv.Put("yyyy", "yyyy");
+                conv.Put("yyyyy", "yyyyy");
+                conv.Put("yyyyy", "yyyyy");
+                conv.Put("yyyyyy", "yyyyyy");
+                conv.Put("yyyyyyy", "yyyyyyy");
+                conv.Put("z", "Z");
+                conv.Put("zz", "ZZ");
+                conv.Put("zzz", "ZZZ");
+                conv.Put("%", "");
+
+                _conversion = conv;
             }
 
+	        foundDateTimeKind = false;
             
             StringBuilder b = new StringBuilder(format.Length + 6);
-	        bool isEscape = false;
-	        bool isAutoEscape = false;
+	        bool isQuote = false;
+	        bool isAutoQuote = false;
 
-	        for (int i = 0; i < format.Length; ++i)
+	        StringBuilder currentPart = new StringBuilder();
+
+
+	        for (int i = 0; true; ++i)
 	        {
-	            char c = format.CharAt(i);
+	            char c = i >= format.Length? '\0' : format.CharAt(i);
 
-	            if (c == '\'')
+	            if (currentPart.Length > 0 && c != currentPart[0])
 	            {
-	                if (isAutoEscape)
+	                string part = currentPart.ToString();
+	                string conv = null;
+	                if (part == "K")
 	                {
-	                    b.Append('\'');
-	                    isAutoEscape = false;
+	                    // special case.
+	                    foundDateTimeKind = true;
+	                    if (kind == DateTimeKind.Utc)
+	                    {
+	                        part = "Z";
+	                    }
+	                    else if (kind == DateTimeKind.Local)
+	                    {
+	                        // best we can do, even though not 100% accurate.
+	                        conv = "Z";
+	                    }
 	                }
-	                isEscape = !isEscape;
-	                b.Append(c);
-	                continue;
+	                else
+	                {
+	                    // append collected.
+	                    conv = _conversion.Get(part);
+	                }
+	                if (conv == null)
+	                {
+	                    // not in map.
+	                    if (!isAutoQuote)
+	                    {
+	                        b.Append('\'');
+	                        isAutoQuote = true;
+	                    }
+                        b.Append(part);
+	                }
+	                else
+	                {
+                        if (isAutoQuote)
+                        {
+                            b.Append('\'');
+                            isAutoQuote = false;
+                        }
+                        b.Append(conv);
+	                }
+
+	                currentPart = new StringBuilder();
 	            }
 
-	            if (isEscape)
+	            if (i >= format.Length)
+	                break;
+
+	            if (c == '\'' || c == '\"')
+	            {
+	                if (isAutoQuote) 
+                        isAutoQuote = false;
+                    else
+                        b.Append('\'');
+                    isQuote = !isQuote;
+	                continue;
+	            }
+                
+	            if (isQuote)
 	            {
 	                b.Append(c);
 	                continue;
 	            }
 
-	            bool isAllowed = !char.IsLetter(c) || _allowedCharacters.Contains(c);
-
-	            if (isAutoEscape && isAllowed)
+	            if (c == '\\')
 	            {
-	                isAutoEscape = false;
-	                b.Append('\'');
+	                if (i < format.Length - 1)
+	                {
+	                    if (!isAutoQuote)
+	                    {
+                            isAutoQuote = true;
+                            b.Append('\'');
+	                    }
+                        b.Append(format[i + 1]);
+                        
+                        ++i;
+	                }
+	                continue;
+	            }
+
+	            if (!char.IsLetter(c) && c != '%')
+	            {
 	                b.Append(c);
 	                continue;
 	            }
 
-	            if (isAllowed)
-	            {
-	                b.Append(c);
-	                continue;
-	            }
-
-	            // not allowed.
-	            isAutoEscape = true;
-	            b.Append('\'');
-	            b.Append(c);
+	            currentPart.Append(c);
 	        }
 
-	        if (isAutoEscape)
-	            b.Append('\'');
+            if (isAutoQuote) b.Append('\'');
 
 	        format = b.ToString();
 	        return format;

@@ -26,9 +26,11 @@ namespace System.Globalization
 	public class CultureInfo : IFormatProvider
     {
         private readonly Locale _locale;
-        private readonly Lazy<NumberFormatInfo> _numberFormat;
+        private readonly LazyAndWeak<NumberFormatInfo> _numberFormat;
+        private readonly LazyAndWeak<DateTimeFormatInfo > _dateTimeFormat;
 
-        private static readonly Lazy<CultureInfo> _invariantCulture;
+        private static readonly Lazy<CultureInfo> CachedInvariantCulture;
+        private static readonly Lazy<CultureInfo> CachedCurrentCulture;
 
         internal Locale Locale
         {
@@ -40,12 +42,14 @@ namespace System.Globalization
             Locale invariantLocale;
 
 #if ANDROID_9P
-            invariantLocale = Locale.ROOT;
+            invariantLocale = Locale.US; // US comes much closer to CultureInfo.InvariantCulture 
+                                         // than Locale.ROOT, when it comes to Date/Time formatting.
 #else
             // TODO: check if this actually exists. else change back to Locale.Default.
-            invariantLocale = Locale.US; 
+            invariantLocale = Locale.US;
 #endif
-            _invariantCulture = new Lazy<CultureInfo>(() => new CultureInfo(invariantLocale));
+            CachedInvariantCulture = new Lazy<CultureInfo>(() => new CultureInfo(invariantLocale));
+            CachedCurrentCulture = new Lazy<CultureInfo>(() => new CultureInfo(Locale.Default));
             
         }
         /// <summary>
@@ -54,7 +58,8 @@ namespace System.Globalization
         private CultureInfo(Locale locale)
         {
             this._locale = locale;
-            _numberFormat = new Lazy<NumberFormatInfo>(()=>new NumberFormatInfo(locale));
+            _numberFormat = new LazyAndWeak<NumberFormatInfo>(()=>new NumberFormatInfo(locale));
+            _dateTimeFormat = new LazyAndWeak<DateTimeFormatInfo>(() => new DateTimeFormatInfo(JavaDateFormat, locale));
 
         }
 
@@ -64,12 +69,12 @@ namespace System.Globalization
 
         public static CultureInfo CurrentCulture
         {
-            get { return new CultureInfo(Java.Util.Locale.Default); } 
+            get { return CachedCurrentCulture.Value; } 
         }
 
         public static CultureInfo InvariantCulture
         {
-            get { return _invariantCulture.Value; } 
+            get { return CachedInvariantCulture.Value; } 
         }
 
         internal DateFormat JavaDateFormat
@@ -79,12 +84,12 @@ namespace System.Globalization
 
         public virtual DateTimeFormatInfo DateTimeFormat
         {
-            get { return new DateTimeFormatInfo(JavaDateFormat); }
+            get { return _dateTimeFormat.Value; }
         }
 
         internal Java.Text.NumberFormat JavaNumberFormat
         {
-            get { return Java.Text.NumberFormat.GetNumberInstance(_locale); }
+            get { return _numberFormat.Value.JavaNumberFormat; }
         }
 
         public virtual NumberFormatInfo NumberFormat
@@ -102,6 +107,15 @@ namespace System.Globalization
             if (formatType == typeof(ICustomFormatter))
             {
                 return new CustomFormatter();
+            }
+            if (formatType == typeof(NumberFormatInfo))
+            {
+                return NumberFormat;
+            }
+
+            if (formatType == typeof(DateTimeFormatInfo))
+            {
+                return DateTimeFormat;
             }
 
             return null; // not supported.
@@ -129,9 +143,15 @@ namespace System.Globalization
         public static Locale ToLocale(this IFormatProvider provider)
         {
             var cultureInfo = provider as CultureInfo;
-            var locale = cultureInfo == null ? Locale.Default : cultureInfo.Locale;
-            if (locale == null) locale = Locale.Default;
-            return locale;
+            if (cultureInfo != null) return cultureInfo.Locale;
+
+            var dateTime = provider as DateTimeFormatInfo;
+            if (dateTime != null) return dateTime.Locale;
+
+            var numberFormat = provider as NumberFormatInfo;
+            if (numberFormat != null) return numberFormat.Locale;
+            
+            return Locale.Default;
         }
 
         public static CultureInfo ToCultureInfo(this IFormatProvider provider)
@@ -149,6 +169,9 @@ namespace System.Globalization
 
         public static NumberFormatInfo ToNumberFormatInfo(this IFormatProvider provider)
         {
+            var numberFormat = provider as NumberFormatInfo;
+            if (numberFormat != null) return numberFormat;
+
             var cultureInfo = provider as CultureInfo ?? CultureInfo.CurrentCulture;
             return cultureInfo.NumberFormat;
         }

@@ -173,6 +173,7 @@
     <Compile Include="Dot42\Internal\IProperties.cs" />
     <Compile Include="Dot42\Internal\INullableT.cs" />
     <Compile Include="Dot42\Internal\IProperty.cs" />
+    <Compile Include="Dot42\Internal\LazyAndWeak.cs" />
     <Compile Include="Dot42\Internal\NullableReflection.cs" />
     <Compile Include="Dot42\Internal\PropertyInfoProvider.cs" />
     <Compile Include="Dot42\Internal\TaskMonitorService.cs" />

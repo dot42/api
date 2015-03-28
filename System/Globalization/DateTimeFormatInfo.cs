@@ -13,12 +13,16 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using Java.Text;
+using Locale = Java.Util.Locale;
 
 namespace System.Globalization
 {
 	public sealed class DateTimeFormatInfo : IFormatProvider
 	{
+	    public Locale Locale { get; set; }
 	    private readonly DateFormat dateFormat;
 
         private string amDesignator;
@@ -33,8 +37,9 @@ namespace System.Globalization
         private string yearMonthPattern;
         private string fullDateTimePattern;
 
-	    internal DateTimeFormatInfo(DateFormat dateFormat)
+	    internal DateTimeFormatInfo(DateFormat dateFormat, Java.Util.Locale locale)
 	    {
+	        Locale = locale;
 	        this.dateFormat = dateFormat;
 
             amDesignator = "AM";
@@ -239,7 +244,15 @@ namespace System.Globalization
         {
             get
             {
-                return new DateTimeFormatInfo(CultureInfo.InvariantCulture.JavaDateFormat);
+                return CultureInfo.InvariantCulture.DateTimeFormat;
+            }
+        }
+
+        public static DateTimeFormatInfo CurrentInfo
+        {
+            get
+            {
+                return CultureInfo.CurrentCulture.DateTimeFormat;
             }
         }
 
@@ -248,7 +261,9 @@ namespace System.Globalization
 	    /// </summary>
 	    public object GetFormat(Type formatType)
 	    {
-            throw new NotImplementedException("System.Globalization.DateTimeFormatInfo.GetFormat: " + formatType.FullName);
+	        if (formatType == typeof (DateTimeFormatInfo))
+	            return this;
+	        return null;
 	    }
 	}
 }

@@ -23,6 +23,8 @@ namespace System.Globalization
 	{
 	    private readonly Locale _locale;
 
+        internal NumberFormat JavaNumberFormat { get { return _decimals; } }
+
 	    private int[] currencyGroupSizes;
         private int[] numberGroupSizes;
         private int[] percentGroupSizes;
@@ -136,6 +138,8 @@ namespace System.Globalization
         public string PerMilleSymbol { get { return _decimals.DecimalFormatSymbols.PerMill.ToString(); } }
 
         public bool IsReadOnly { get { return true; } }
+
+	    public Locale Locale { get { return _locale; } }
 
 	    /// <summary>
 	    /// Returns an object that provides formatting services for the specified type.

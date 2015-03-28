@@ -41,7 +41,7 @@ namespace Dot42.Internal
         public static string ToString(DateTime dateTime)
         {
             var millis = (dateTime.Ticks / TimeSpan.TicksPerMillisecond) - DateTime.EraDifferenceInMs;
-            var offset = DateTime.GetUtcOffset();
+            var offset = TimeZoneInfo.Local.BaseUtcOffset;
             return string.Format(@"/Date({0}{1}{2:D2}{3:D2})/", millis.ToString(), offset.Hours >=0? "+" : "-", offset.Hours, offset.Minutes);
         }
 
