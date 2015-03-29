@@ -15,6 +15,7 @@
 // limitations under the License.
 
 using Dot42.Collections;
+using Java.Lang;
 using Java.Util;
 
 namespace System.Collections.Generic
@@ -244,7 +245,7 @@ namespace System.Collections.Generic
 
         IDictionaryEnumerator IDictionary.GetEnumerator()
         {
-            throw new NotImplementedException("System.Collections.Generic.Dictionary.GetEnumerator");
+            return new HashMapIterator(map.EntrySet());
         }
 
         object IDictionary.this[object key] { get { return map.Get(key); } set { this[(TKey) key] = (TValue) value; } }
@@ -428,6 +429,34 @@ namespace System.Collections.Generic
             public void CopyTo(Array array, int index)
             {
                 throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.ValueCollection.CopyTo");
+            }
+        }
+
+        internal class HashMapIterator: IteratorWrapperWithSelector<IMap_IEntry<KeyWrapper<TKey>, TValue>, DictionaryEntry>, IDictionaryEnumerator
+        {
+            public HashMapIterator(IIterable<IMap_IEntry<KeyWrapper<TKey>, TValue>> iterator)
+                : base(iterator, Transform)
+            {
+
+            }
+
+            public DictionaryEntry Entry
+            {
+                get { return base.Current; }
+            }
+
+            public object Key
+            {
+                get { return base.Current.Key; }
+            }
+            public object Value
+            {
+                get { return base.Current.Value; }
+            }
+
+            private static DictionaryEntry Transform(IMap_IEntry<KeyWrapper<TKey>, TValue> obj)
+            {
+                return new DictionaryEntry(obj.GetKey().Key, obj.GetValue());
             }
         }
 

@@ -16,7 +16,6 @@
 
 using System.Linq;
 using Dot42;
-using Java.Io;
 
 namespace System.Collections.Generic
 {
@@ -32,7 +31,10 @@ namespace System.Collections.Generic
     
     // since we want both support the lightweight java-forwarding 
     // and the full c# IComparer<T> functionality, this is a thin 
-    // wrapper around two different implementations
+    // wrapper around two different implementations.
+    //
+    // Note that this redirection could also be handled at the compiler
+    // to remove one level of indirection at runtime.
     public class Dictionary<TKey, TValue> : IDictionary<TKey, TValue>, IDictionary, ICollection
     {
         internal readonly IDictionaryImpl<TKey, TValue> dict;

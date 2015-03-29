@@ -14,9 +14,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Android.Os;
 using Dot42.Collections;
-using Java.Lang.Reflect;
+using Java.Lang;
 using Java.Util;
 
 namespace System.Collections.Generic
@@ -227,7 +226,7 @@ namespace System.Collections.Generic
 
         IDictionaryEnumerator IDictionary.GetEnumerator()
         {
-            throw new NotImplementedException("System.Collections.Generic.Dictionary.GetEnumerator");
+            return new HashMapIterator(map.EntrySet());
         }
 
         object IDictionary.this[object key] { get { return map.Get(key); } set { this[(TKey)key] = (TValue)value; } }
@@ -427,6 +426,34 @@ namespace System.Collections.Generic
             public void CopyTo(Array array, int index)
             {
                 throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.ValueCollection.CopyTo");
+            }
+        }
+
+        internal class HashMapIterator : IteratorWrapperWithSelector<IMap_IEntry<TKey, TValue>, DictionaryEntry>, IDictionaryEnumerator
+        {
+            public HashMapIterator(IIterable<IMap_IEntry<TKey, TValue>> iterator)
+                : base(iterator, Transform)
+            {
+
+            }
+
+            private static DictionaryEntry Transform(IMap_IEntry<TKey, TValue> obj)
+            {
+                return new DictionaryEntry(obj.GetKey(), obj.GetValue());
+            }
+
+            public DictionaryEntry Entry
+            {
+                get { return base.Current; }
+            }
+
+            public object Key
+            {
+                get { return base.Current.Key; }
+            }
+            public object Value
+            {
+                get { return base.Current.Value; }
             }
         }
     }
