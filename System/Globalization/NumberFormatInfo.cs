@@ -23,14 +23,12 @@ namespace System.Globalization
 	{
 	    private readonly Locale _locale;
 
-        internal NumberFormat JavaNumberFormat { get { return _decimals; } }
+        private readonly NumberFormat _numbers;
+	    private readonly DecimalFormat _decimals;
+        private readonly DecimalFormat _currency;
+        private readonly DecimalFormat _percent;
 
-	    private int[] currencyGroupSizes;
-        private int[] numberGroupSizes;
-        private int[] percentGroupSizes;
-	    private DecimalFormat _decimals;
-	    private NumberFormat _currency;
-	    private NumberFormat _percent;
+        private readonly DecimalFormatSymbols _symbols;
 
 	    public NumberFormatInfo() :this(CultureInfo.CurrentCulture.Locale)
         { 
@@ -40,15 +38,18 @@ namespace System.Globalization
 	    {
 	        _locale = locale;
 
-	        _decimals = (DecimalFormat) NumberFormat.GetNumberInstance(locale);
-           
-	        _currency = NumberFormat.GetCurrencyInstance(locale);
-	        _percent = NumberFormat.GetPercentInstance(locale);
+	        _numbers = NumberFormat.GetNumberInstance(locale);
 
-	        currencyGroupSizes = new[] { _currency.Currency.DefaultFractionDigits };
-            numberGroupSizes = new[] { _decimals.GroupingSize };
-            percentGroupSizes = new[] { _percent.MaximumFractionDigits };
+            _symbols = new DecimalFormatSymbols(locale) { Infinity = "Infinity" };
+	        
+            _decimals = _numbers as DecimalFormat ?? new DecimalFormat();
+            _decimals.SetDecimalFormatSymbols(_symbols);
+
+            _currency =  NumberFormat.GetCurrencyInstance(locale) as DecimalFormat ?? _decimals;
+            _percent = NumberFormat.GetPercentInstance(locale) as DecimalFormat ?? _decimals;
         }
+
+        internal NumberFormat JavaNumberFormat { get { return _numbers; } }
 
         public static NumberFormatInfo GetInstance(IFormatProvider provider)
         {
@@ -57,43 +58,44 @@ namespace System.Globalization
 
         public static NumberFormatInfo InvariantInfo
         {
-            get
-            {
-                return new NumberFormatInfo(CultureInfo.InvariantCulture.Locale);
-            }
+            get { return CultureInfo.InvariantCulture.NumberFormat; }
+        }
+
+        public static NumberFormatInfo CurrentInfo
+        {
+            get { return CultureInfo.CurrentCulture.NumberFormat; }
         }
 
 	    public string CurrencySymbol
 	    {
-            get { return _currency.Currency.Symbol; }
+            get { return _symbols.CurrencySymbol; }
 	    }
 
 	    public string CurrencyDecimalSeparator
 	    {
-            get { return _decimals.DecimalFormatSymbols.MonetaryDecimalSeparator.ToString(); }
-	        set { if(value != ".") throw new NotSupportedException(); }
+            get { return _symbols.MonetaryDecimalSeparator.ToString(); }
+            set { if (value != CurrencyDecimalSeparator) throw new NotSupportedException(); }
 	    }
 
 	    public string CurrencyGroupSeparator
 	    {
-            get { return ""; }
-            set { if (value != "") throw new NotSupportedException(); }
+            get { return _currency.DecimalFormatSymbols.GroupingSeparator.ToString(); }
+            set { if (value != CurrencyGroupSeparator) throw new NotSupportedException(); }
 	    }
 
         public string NumberDecimalSeparator
         {
-            get { return _decimals.DecimalFormatSymbols.DecimalSeparator.ToString(); }
-            set { if (value != ".") throw new NotSupportedException(); }
+            get { return _symbols.DecimalSeparator.ToString(); }
+            set { if (value != NumberDecimalSeparator) throw new NotSupportedException(); }
         }
 
         public string NumberGroupSeparator
         {
-            get { return _decimals.DecimalFormatSymbols.GroupingSeparator.ToString(); }
-            set { if (value != "") throw new NotSupportedException(); }
+            get { return _symbols.GroupingSeparator.ToString(); }
+            set { if (value != NumberGroupSeparator) throw new NotSupportedException(); }
         }
 
-        public int[] NumberGroupSizes { get { return numberGroupSizes; } }
-        internal int[] RawNumberGroupSizes { get { return numberGroupSizes; } }
+        public int[] NumberGroupSizes { get { return new [] {_decimals.GroupingSize}; } }
 
         public int NumberPositivePattern { get; set; }
         public int NumberNegativePattern { get; set; }
@@ -101,17 +103,16 @@ namespace System.Globalization
 
 	    public string PercentSymbol
 	    {
-            get { return _decimals.DecimalFormatSymbols.Percent.ToString(); }
+            get { return _symbols.Percent.ToString(); }
 	    }
 
         public string PercentGroupSeparator
-        {
-            get { return ""; }
-            set { if (value != "") throw new NotSupportedException(); }
-        }
+	    {
+            get { return _percent.DecimalFormatSymbols.GroupingSeparator.ToString(); }
+            set { if (value != PercentGroupSeparator) throw new NotSupportedException(); }
+	    }
 
-        public int[] PercentGroupSizes { get { return percentGroupSizes; } }
-        internal int[] RawPercentGroupSizes { get { return percentGroupSizes; } }
+        public int[] PercentGroupSizes { get { return new[] { _percent.GroupingSize } ; } }
 
         public int PercentPositivePattern { get; set; }
         public int PercentNegativePattern { get; set; }
@@ -119,25 +120,24 @@ namespace System.Globalization
 
         public string PercentDecimalSeparator
         {
-            get { return NumberDecimalSeparator; }
+            get { return _percent.DecimalFormatSymbols.DecimalSeparator.ToString(); }
             set { if (value != ".") throw new NotSupportedException(); }
         }
 
         public int CurrencyPositivePattern { get; set; }
         public int CurrencyNegativePattern { get; set; }
-        public int CurrencyDecimalDigits { get { return 2; } }
+        public int CurrencyDecimalDigits { get { return _currency.Currency.DefaultFractionDigits; } }
 
-        public int[] CurrencyGroupSizes { get { return currencyGroupSizes; } }
-        internal int[] RawCurrencyGroupSizes { get { return currencyGroupSizes; } }
+        public int[] CurrencyGroupSizes { get { return new [] {_currency.GroupingSize }; } }
 
         public string NegativeSign { get { return "-"; } }
         public string PositiveSign { get { return string.Empty; } }
 
-        public string NaNSymbol { get { return _decimals.DecimalFormatSymbols.NaN; } }
-        public string PositiveInfinitySymbol { get { return "+INF"; } }
-        public string NegativeInfinitySymbol { get { return "-INF"; } }
+        public string NaNSymbol { get { return _symbols.NaN; } }
+        public string PositiveInfinitySymbol { get { return "+" + _symbols.Infinity; } }
+        public string NegativeInfinitySymbol { get { return "-" + _symbols.Infinity; } }
 
-        public string PerMilleSymbol { get { return _decimals.DecimalFormatSymbols.PerMill.ToString(); } }
+        public string PerMilleSymbol { get { return _symbols.PerMill.ToString(); } }
 
         public bool IsReadOnly { get { return true; } }
 
@@ -151,6 +151,10 @@ namespace System.Globalization
             if (formatType == typeof (ICustomFormatter))
             {
                 return new CustomFormatter();
+            }
+            if (formatType == typeof(NumberFormatInfo))
+            {
+                return this;
             }
 
 	        return null; // let the caller handle everything.

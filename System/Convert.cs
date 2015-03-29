@@ -1651,12 +1651,12 @@ namespace System
 
         public static string ToString(bool value)
         {
-            return value.ToString();
+            return value? "True" : "False";
         }
 
         public static string ToString(bool value, IFormatProvider provider)
         {
-            return value.ToString(); // the same as ToString (bool).
+            return value ? "True" : "False"; // the same as ToString (bool).
         }
 
         public static string ToString(byte value)
@@ -2407,6 +2407,9 @@ namespace System
                 throw new ArgumentException("fromBase is not valid.");
             if (value == null)
                 return 0;
+            if (value == "")
+                throw new ArgumentOutOfRangeException("value");
+
 
             int chars = 0;
             int result = 0;
@@ -2524,8 +2527,12 @@ namespace System
         {
             if (NotValidBase(fromBase))
                 throw new ArgumentException("fromBase is not valid.");
+
             if (value == null)
                 return 0L;
+
+            if (value == "")
+                throw new ArgumentOutOfRangeException("value");
 
             int chars = 0;
             int digitValue = -1;
