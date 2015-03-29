@@ -49,39 +49,41 @@ namespace System
 			}
 		}
 
-		[CLSCompliant(false)]
+#if NOT_IMLPLEMENTED // can't have this overload, as the constructor can not be renamed.
+        [CLSCompliant(false)]
 		public Decimal (uint value) 
 		{
             _val = new BigDecimal((long)value);
 		}
+#endif
 
 		public Decimal (long value) 
 		{
-			unchecked 
-			{
-                _val = new BigDecimal(value);
-			}
+            _val = new BigDecimal(value);
 		}
 
+#if NOT_IMLPLEMENTED // can't have this overload, as the constructor can not be renamed.
 		[CLSCompliant(false)]
 		public Decimal (ulong value) 
 		{
 			unchecked 
 			{
-                ulong canBeLong = value & (ulong)~0x8000000000000000L;
-			    if (canBeLong == value)
-			    {
-			        _val = new BigDecimal((long)value);
-			    }
-			    else
-			    {
-			        _val = new BigDecimal((long) canBeLong).Multiply(new BigDecimal(2));
-			    }
+                // some bit-twiddeling to make it work.
+		        bool mustDouble = (value & 0x8000000000000000L) != (ulong)0;
                 
+                if(!mustDouble)
+                    _val = new BigDecimal ((long)value);
+                else
+                {
+		            value &= ~0x8000000000000000L;
+		            _val = new BigDecimal ((long)value).Multiply(new BigDecimal(2));
+                }
 			}
 		}
+#endif
 
-		public Decimal (float value) 
+
+        public Decimal (float value) 
 		{
             _val = new BigDecimal(value.ToString(CultureInfo.InvariantCulture));
 		}
@@ -95,8 +97,6 @@ namespace System
         {
             _val = value;
         }
-
-
 
         public Decimal(int[] bits)
         {
@@ -212,7 +212,7 @@ namespace System
 
 		public static explicit operator byte (Decimal value)
 		{
-			return checked ((byte) value.Val.IntValue());
+			return checked (value.Val.ByteValueExact());
 		}
 
 		[CLSCompliant (false)]
@@ -228,7 +228,7 @@ namespace System
 
 		public static explicit operator short (Decimal value) 
 		{
-            return checked((short)value.Val.IntValue());
+            return value.Val.ShortValueExact();
 		}
 
 		[CLSCompliant (false)]
@@ -294,7 +294,7 @@ namespace System
 		[CLSCompliant(false)]
 		public static implicit operator Decimal (uint value) 
 		{
-			return new Decimal (value);
+			return new Decimal ((long)value);
 		}
 
 		public static implicit operator Decimal (long value) 
@@ -303,9 +303,19 @@ namespace System
 		}
 
 		[CLSCompliant(false)]
-		public static implicit operator Decimal (ulong value) 
+		public static implicit operator Decimal (ulong value)
 		{
-			return new Decimal (value);
+            // some bit-twiddeling to make it work.
+            // some bit-twiddeling to make it work.
+            bool mustDouble = (value & 0x8000000000000000L) != (ulong)0;
+
+            if (!mustDouble)
+                return new BigDecimal((long)value);
+            else
+            {
+                value &= ~0x8000000000000000L;
+                return new BigDecimal((long)value).Multiply(new BigDecimal(2));
+            }
 		}
 
 		public static explicit operator Decimal (float value) 
@@ -373,12 +383,12 @@ namespace System
 
 		public static Decimal Floor (Decimal d) 
 		{
-            return d.Val.Round(new MathContext(0, RoundingMode.FLOOR));
+            return d.Val.SetScale(0, RoundingMode.FLOOR);
 		}
 
 		public static Decimal Truncate (Decimal d)
 		{
-		    return d.Val.Round(new MathContext(0, RoundingMode.DOWN));
+		    return d.Val.SetScale(0, RoundingMode.DOWN);
 			
 		}
 
@@ -389,15 +399,14 @@ namespace System
 
 		public static Decimal Round (Decimal d, int decimals, MidpointRounding mode) 
 		{
-            var mathContext = mode == MidpointRounding.ToEven ? new MathContext(decimals, RoundingMode.HALF_EVEN)
-                                                              : new MathContext(decimals, RoundingMode.DOWN);
-            return d.Val.Round(mathContext);
-
+            var roundMode = mode == MidpointRounding.ToEven ? RoundingMode.HALF_EVEN
+                                                            : RoundingMode.DOWN;
+            return d.Val.SetScale(decimals, roundMode);
 		}
 
 		public static Decimal Round (Decimal d)
 		{
-		    return d.Val.Round(new MathContext(0, RoundingMode.HALF_EVEN));
+		    return d.Val.SetScale(0, RoundingMode.HALF_EVEN);
 		}
 
 		public static Decimal Round (Decimal d, MidpointRounding mode)

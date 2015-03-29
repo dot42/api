@@ -314,7 +314,7 @@ namespace System
         [CLSCompliant(false)]
         public static bool ToBoolean(ulong value)
         {
-            return (value != 0);
+            return (value != (ulong)0);
         }
 
         [CLSCompliant(false)]
@@ -869,7 +869,7 @@ namespace System
 
         public static double ToDouble(bool value)
         {
-            return value ? 1 : 0;
+            return (double)(value ? 1 : 0);
         }
 
         public static double ToDouble(byte value)
@@ -1034,7 +1034,7 @@ namespace System
         [CLSCompliant(false)]
         public static short ToInt16(sbyte value)
         {
-            return value;
+            return (short)value;
         }
 
         public static short ToInt16(short value)
@@ -1260,7 +1260,7 @@ namespace System
 
         public static long ToInt64(bool value)
         {
-            return value ? 1 : 0;
+            return value ? 1L : 0L;
         }
 
         public static long ToInt64(byte value)
@@ -1321,14 +1321,14 @@ namespace System
         public static long ToInt64(string value)
         {
             if (value == null)
-                return 0; // LAMESPEC: Spec says throw ArgumentNullException
+                return 0L; // LAMESPEC: Spec says throw ArgumentNullException
             return Int64.Parse(value);
         }
 
         public static long ToInt64(string value, IFormatProvider provider)
         {
             if (value == null)
-                return 0; // LAMESPEC: Spec says throw ArgumentNullException
+                return 0L; // LAMESPEC: Spec says throw ArgumentNullException
             return Int64.Parse(value, provider);
         }
 
@@ -1358,14 +1358,14 @@ namespace System
         public static long ToInt64(object value)
         {
             if (value == null)
-                return 0;
+                return 0L;
             return ToInt64(value, null);
         }
 
         public static long ToInt64(object value, IFormatProvider provider)
         {
             if (value == null)
-                return 0;
+                return 0L;
 
             if (value is bool) return ToInt64((bool)value);
             if (value is byte) return ToInt64((byte)value);
@@ -1534,7 +1534,7 @@ namespace System
 
         public static float ToSingle(bool value)
         {
-            return value ? 1 : 0;
+            return value ? 1f : 0f;
         }
 
         public static float ToSingle(byte value)
@@ -1669,6 +1669,7 @@ namespace System
             return value.ToString(provider);
         }
 
+
         public static string ToString(byte value, int toBase)
         {
             if (value == 0)
@@ -1690,6 +1691,7 @@ namespace System
                     throw new ArgumentException(Locale.GetText("toBase is not valid."));
             }
         }
+         
 
         public static string ToString(char value)
         {
@@ -2523,11 +2525,11 @@ namespace System
             if (NotValidBase(fromBase))
                 throw new ArgumentException("fromBase is not valid.");
             if (value == null)
-                return 0;
+                return 0L;
 
             int chars = 0;
             int digitValue = -1;
-            long result = 0;
+            long result = 0L;
             bool negative = false;
 
             int i = 0;
