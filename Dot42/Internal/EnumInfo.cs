@@ -13,7 +13,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Java.Util;
+using Java.Util.Concurrent;
 
 namespace Dot42.Internal
 {
@@ -23,8 +23,7 @@ namespace Dot42.Internal
     [Include(TypeCondition = typeof(System.Enum))]
     internal abstract class EnumInfo 
 	{
-        private readonly object dataLock = new object();
-        private readonly HashMap<object, Enum> customValues = new HashMap<object, Enum>();
+        private readonly ConcurrentHashMap<object, Enum> customValues = new ConcurrentHashMap<object, Enum>();
 
         /// <summary>
         /// Create a new instance with given underlying value
@@ -50,16 +49,13 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Enum))]
         internal Enum GetValue(int value)
         {
-            lock (dataLock)
+            var result = customValues.Get(value);
+            if (ReferenceEquals(result, null))
             {
-                var result = customValues.Get(value);
-                if (ReferenceEquals(result, null))
-                {
-                    result = Create(value);
-                    customValues.Put(value, result);
-                }
-                return result;
+                result = Create(value);
+                customValues.Put(value, result);
             }
+            return result;
         }
 
         /// <summary>
@@ -68,16 +64,14 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Enum))]
         internal Enum GetValue(long value)
         {
-            lock (dataLock)
+            var result = customValues.Get(value);
+            if (ReferenceEquals(result, null))
             {
-                var result = customValues.Get(value);
-                if (ReferenceEquals(result, null))
-                {
-                    result = Create(value);
-                    customValues.Put(value, result);
-                }
-                return result;
+                result = Create(value);
+                customValues.Put(value, result);
             }
+            return result;
+           
         }
 
         /// <summary>
@@ -86,10 +80,8 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Enum))]
         internal void Add(int value, Enum instance)
         {
-            lock (dataLock)
-            {
-                customValues.Put(value, instance);
-            }            
+            customValues.Put(value, instance);
+                        
         }
 
         /// <summary>
@@ -98,10 +90,7 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Enum))]
         internal void Add(long value, Enum instance)
         {
-            lock (dataLock)
-            {
-                customValues.Put(value, instance);
-            }
+            customValues.Put(value, instance);
         }
     }
 }
