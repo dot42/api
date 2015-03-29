@@ -41,6 +41,24 @@ namespace System.Reflection
         {
             return CustomAttributeProvider.IsDefined(Member, attributeType, inherit);
         }
+
+        protected bool Equals(JavaMemberInfo other)
+        {
+            return Equals(Member, other.Member);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((JavaMemberInfo)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return (Member != null ? Member.GetHashCode() : 0);
+        }
     }
 
     public abstract class MemberInfo : ICustomAttributeProvider

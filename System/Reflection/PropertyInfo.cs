@@ -24,12 +24,11 @@ namespace System.Reflection
     /// </summary>
     public class PropertyInfo : MemberInfo, IAttributesProvider
     {
-        
         private readonly string name;
         private readonly MethodInfo getter;
         private readonly MethodInfo setter;
         private readonly IAttribute[] attributes;
-        private Type declaringType;
+        private readonly Type declaringType;
         private Type propertyType;
 
         /// <summary>
@@ -191,6 +190,27 @@ namespace System.Reflection
             return new AttributesWrapper(attributes);
         }
 
+        protected bool Equals(PropertyInfo other)
+        {
+            return declaringType == other.declaringType && Equals(name, other.name);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((PropertyInfo)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (declaringType.GetHashCode() * 397) ^ (name != null ? name.GetHashCode() : 0);
+            }
+        }
+
         private class AttributesWrapper : IAttributes
         {
             private readonly IAttribute[] _attr;
@@ -202,7 +222,7 @@ namespace System.Reflection
 
             public Type AnnotationType()
             {
-                return typeof (IAttributes);
+                return typeof(IAttributes);
             }
 
             public IAttribute[] Attributes()
