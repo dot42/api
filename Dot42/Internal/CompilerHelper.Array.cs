@@ -266,6 +266,46 @@ namespace Dot42.Internal
             return (array != null) ? new ArrayListWrapper(array) : null;
         }
 
+	    [Include(TypeCondition = typeof(Attribute))]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        // used by the attribute system to handle array parameters
+	    public static object ConvertArray(object sourceObjectArray, Type targetElementType)
+	    {
+	        object[] sourceArray = (object[]) sourceObjectArray;
+
+	        var len = sourceArray.Length;
+            var ret = (Array)Java.Lang.Reflect.Array.NewInstance(targetElementType, len);
+
+	        if (!targetElementType.IsPrimitive)
+	        {
+	            Java.Lang.System.Arraycopy(sourceArray, 0, ret, 0, len);
+	        }
+            else if (targetElementType == typeof (byte))
+	            for (int i = 0; i < len; ++i) ret[i] = (byte) sourceArray[i];
+            else if (targetElementType == typeof(sbyte))
+                for (int i = 0; i < len; ++i) ret[i] = (sbyte)sourceArray[i];
+            else if (targetElementType == typeof(short))
+                for (int i = 0; i < len; ++i) ret[i] = (short)sourceArray[i];
+            else if (targetElementType == typeof(ushort))
+                for (int i = 0; i < len; ++i) ret[i] = (ushort)sourceArray[i];
+            else if (targetElementType == typeof(int))
+                for (int i = 0; i < len; ++i) ret[i] = (int)sourceArray[i];
+            else if (targetElementType == typeof(uint))
+                for (int i = 0; i < len; ++i) ret[i] = (uint)sourceArray[i];
+            else if (targetElementType == typeof(long))
+                for (int i = 0; i < len; ++i) ret[i] = (long)sourceArray[i];
+            else if (targetElementType == typeof(ulong))
+                for (int i = 0; i < len; ++i) ret[i] = (ulong)sourceArray[i];
+            else if (targetElementType == typeof(float))
+                for (int i = 0; i < len; ++i) ret[i] = (float)sourceArray[i];
+            else if (targetElementType == typeof (double))
+                for (int i = 0; i < len; ++i) ret[i] = (double) sourceArray[i];
+            else
+                throw new System.Exception("unsupported type: " + targetElementType);
+
+	        return ret;
+	    }
+
         /// <summary>
         /// ICollection wrapper for array's
         /// </summary>
