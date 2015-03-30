@@ -44,12 +44,11 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(PropertyInfo))]
         string Set();
 
-        ///// <summary>
-        ///// Custom attributes of this property.
-        ///// Returned array must be length 0 or 1
-        ///// </summary>
-        //[Include(TypeCondition = typeof(PropertyInfo))]
-        //IAttribute[] Attributes();
+        /// <summary>
+        /// Custom attributes of this property.
+        /// </summary>
+        [Include(TypeCondition = typeof(PropertyInfo))]
+        IAttribute[] Attributes();
     }
 }
 

@@ -19,6 +19,7 @@ using System.Reflection;
 using Android.Util;
 using Java.Lang;
 using Java.Util;
+using Java.Util.Concurrent;
 using Exception = System.Exception;
 
 namespace Dot42.Internal
@@ -29,8 +30,7 @@ namespace Dot42.Internal
 	internal static class PropertyInfoProvider
 	{
         private static readonly PropertyInfo[] Empty = new PropertyInfo[0];
-        private static readonly HashMap<Type, PropertyInfo[]> loadedProperties = new HashMap<Type, PropertyInfo[]>();
-        private static readonly object dataLock = new object();
+        private static readonly ConcurrentHashMap<Type, PropertyInfo[]> loadedProperties = new ConcurrentHashMap<Type, PropertyInfo[]>();
 
         /// <summary>
         /// Returns an array of all attributes defined on this member.
@@ -40,11 +40,10 @@ namespace Dot42.Internal
         internal static PropertyInfo[] GetProperties(Type type)
         {
             PropertyInfo[] result;
-            lock (dataLock)
-            {
-                result = loadedProperties.Get(type);
-                if (result != null) return result;
-            }
+
+            result = loadedProperties.Get(type);
+            if (result != null) return result;
+
             try
             {
                 // Not found, build it
@@ -59,10 +58,7 @@ namespace Dot42.Internal
             }
 
             // Store in loaded map
-            lock (dataLock)
-            {
-                loadedProperties.Put(type, result);
-            }
+            loadedProperties.Put(type, result);
 
             return result;
         }
@@ -112,11 +108,12 @@ namespace Dot42.Internal
                     continue;
                 }
 
-                //var attributes = p.Attributes();
+                IAttribute[] attributes = p.Attributes();
+
                 infos[i] = new PropertyInfo(type, p.Name(),
                                             getter != null?new MethodInfo(getter):null, 
                                             setter != null?new MethodInfo(setter):null, 
-                                            new IAttribute[0]);
+                                            attributes);
             }
             return infos;
         }

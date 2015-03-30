@@ -17,6 +17,7 @@ using System;
 using Android.Util;
 using Java.Lang.Reflect;
 using Java.Util;
+using Java.Util.Concurrent;
 
 namespace Dot42.Internal
 {
@@ -25,8 +26,7 @@ namespace Dot42.Internal
     /// </summary>
 	internal static class CustomAttributeProvider
 	{
-        private static readonly HashMap<IAttribute, Attribute> loadedAttributes = new HashMap<IAttribute, Attribute>();
-        private static readonly object dataLock = new object();
+        private static readonly ConcurrentHashMap<IAttribute, Attribute> loadedAttributes = new ConcurrentHashMap<IAttribute, Attribute>();
 
         /// <summary>
         /// Returns an array of all attributes defined on this member.
@@ -76,7 +76,7 @@ namespace Dot42.Internal
         /// Returns an array of all attributes defined on this member of the given attribute type.
         /// Returns an empty array if no attributes are defined on this member.
         /// </summary>
-        /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
+        /// <param name="inherit">If true, look in base classes for inherited custom attributes.[note: this parameter is ignored]</param>
         public static object[] GetCustomAttributes(IAttributesProvider member, Type attributeType, bool inherit)
         {
             var attributes = member.Attributes();
@@ -88,9 +88,10 @@ namespace Dot42.Internal
             if (attributes == null)
                 return new object[0];
             var list = new ArrayList<object>();
+
             foreach (var attr in attributes.Attributes())
             {
-                if (Equals(attr.AttributeType(), attributeType))
+                if (attributeType.IsAssignableFrom(attr.AttributeType()))
                 {
                     list.Add(GetAttribute(attr));
                 }
@@ -124,9 +125,10 @@ namespace Dot42.Internal
         {
             if (attributes == null)
                 return false;
+
             foreach (var attr in attributes.Attributes())
             {
-                if (Equals(attr.AttributeType(), attributeType))
+                if (attributeType.IsAssignableFrom(attr.AttributeType()))
                 {
                     return true;
                 }
@@ -148,11 +150,9 @@ namespace Dot42.Internal
         private static Attribute GetAttribute(IAttribute attr)
         {
             Attribute result;
-            lock (dataLock)
-            {
-                result = loadedAttributes.Get(attr);
-                if (result != null) return result;
-            }
+
+            result = loadedAttributes.Get(attr);
+            if (result != null) return result;
 
             // Not found, build it
             var builder = attr.AttributeBuilder();
@@ -161,6 +161,12 @@ namespace Dot42.Internal
             {
                 result = (Attribute)builder.Invoke(null, new[] { attr.Annotation() });
             }
+            catch (InvocationTargetException ex)
+            {
+                Log.E("dot42", string.Format("unable create attribute from annotation. build class '{0}' / method '{1}'",
+                                             builder.DeclaringClass.FullName, builder.Name), ex.GetTargetException());
+                result = new Attribute();
+            }
             catch (Exception ex)
             {
                 Log.E("dot42", string.Format("unable create attribute from annotation. build class '{0}' / method '{1}'", 
@@ -168,11 +174,7 @@ namespace Dot42.Internal
                 result = new Attribute();
             }
 
-            // Store in loaded map
-            lock (dataLock)
-            {
-                loadedAttributes.Put(attr, result);
-            }
+            loadedAttributes.Put(attr, result);
 
             return result;
         }
