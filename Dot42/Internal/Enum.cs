@@ -74,6 +74,24 @@ namespace Dot42.Internal
             return result;
         }
 
+        /// <summary>
+        /// value should be java.lang.Integer oder java.lang.Long
+        /// </summary>
+        [Include(TypeCondition = typeof(System.Enum))]
+        internal static Enum GetFromObject(System.Type enumType, object value)
+        {
+            if (value is long)
+                return Get(enumType, (long)value);
+            if (value is int)
+                return Get(enumType, (int) value);
+            if (value is short)
+                return Get(enumType, (int)(short)value);
+            if (value is byte)
+                return Get(enumType, (int)(byte)value);
+
+            throw new ArgumentException(string.Format("type: {0}; val: {1}", value.GetType(), value.ToString()), "value");
+        }
+
         public string ToString(string format)
         {
             // TODO: check if these casts can some how be removed.
