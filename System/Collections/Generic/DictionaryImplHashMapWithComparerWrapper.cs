@@ -26,7 +26,6 @@ namespace System.Collections.Generic
         internal readonly HashMap<KeyWrapper<TKey>, TValue> map;
         private readonly IEqualityComparer<TKey> comparer;
         
-
         /// <summary>
         /// Default ctor
         /// </summary>
@@ -61,10 +60,10 @@ namespace System.Collections.Generic
         {
             get
             {
-                var w = new KeyWrapper<TKey>(key, comparer);
-                if (map.ContainsKey(w))
-                    return map.Get(w);
-                throw new KeyNotFoundException();
+                TValue ret;
+                if(!TryGetValue(key, out ret))
+                    throw new KeyNotFoundException();
+                return ret;
             }
             set
             {
@@ -169,13 +168,9 @@ namespace System.Collections.Generic
         public bool TryGetValue(TKey key, out TValue value)
         {
             var w = new KeyWrapper<TKey>(key, comparer);
-            if (map.ContainsKey(w))
-            {
-                value = map.Get(w);
-                return true;
-            }
-            value = default(TValue);
-            return false;
+         
+            value = map.Get(w);
+            return value != null || map.ContainsKey(w);
         }
 
         /// <summary>
@@ -471,10 +466,10 @@ namespace System.Collections.Generic
                 _comparer = comparer;
             }
 
-            protected bool Equals(KeyWrapper<T> other)
+            public override bool Equals(object @object)
             {
-                if (other == null) return false;
-                return _comparer.Equals(this.Key, other.Key);
+                if (ReferenceEquals(@object, null)) return false;
+                return _comparer.Equals(Key, ((KeyWrapper<T>)@object).Key);
             }
 
             public override int GetHashCode()

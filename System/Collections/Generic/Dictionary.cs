@@ -35,6 +35,9 @@ namespace System.Collections.Generic
     //
     // Note that this redirection could also be handled at the compiler
     // to remove one level of indirection at runtime.
+    // in that case the comparer-wrapper dictionary should derive from 
+    // the plain dictionary. Only the specific constructor call would
+    // be redirected to a factory function, deciding which class to instantiate.
     public class Dictionary<TKey, TValue> : IDictionary<TKey, TValue>, IDictionary, ICollection
     {
         internal readonly IDictionaryImpl<TKey, TValue> dict;

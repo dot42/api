@@ -103,9 +103,11 @@ namespace System
         {
             var a = strA.JavaSubstring(indexA, indexA + length);
             var b = strB.JavaSubstring(indexB, indexB + length);
+            
             if (ignoreCase)
                 return a.CompareToIgnoreCase(b);
-            else return a.CompareTo(b);
+            else
+                return a.CompareTo(b);
         }
 
         /// <summary>

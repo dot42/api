@@ -28,24 +28,36 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-using System.Runtime.InteropServices;
+using Java.Util.Concurrent;
 
 namespace System.Collections.Generic {
 	[Serializable]
 	public abstract class Comparer<T> : IComparer<T>, IComparer
 	{
-		static readonly Comparer <T> _default = typeof (IComparable<T>).IsAssignableFrom (typeof (T)) ?
-			(Comparer<T>) Activator.CreateInstance (typeof (GenericComparer <>).MakeGenericType (typeof (T))) :
-			new DefaultComparer ();
-		
+        private static readonly ConcurrentHashMap<Type, object> _comparers = new ConcurrentHashMap<Type, object>();
+
 		public abstract int Compare (T x, T y);
 	
-		public static Comparer<T> Default {
-			get {
-				return _default;
+		public static Comparer<T> Default 
+        {
+			get 
+            {
+                object previous = null;
+                object comparer = _comparers.Get(typeof(T));
+                if (comparer == null)
+                    previous = _comparers.PutIfAbsent(typeof(T), comparer = CreateComparer(typeof(T)));
+
+                return (Comparer<T>)(previous ?? comparer);
+
 			}
 		}
+
+	    private static object CreateComparer(Type type)
+	    {
+	        return typeof (IComparable<T>).IsAssignableFrom (typeof (T)) 
+                          ? Activator.CreateInstance (typeof (GenericComparer <>).MakeGenericType (typeof (T))) 
+                          : new DefaultComparer ();
+	    }
 
 #if NET_4_5
 		public static Comparer<T> Create (Comparison<T> comparison)

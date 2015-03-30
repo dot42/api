@@ -27,7 +27,12 @@ namespace System
         public int GetHashCode(string obj)
         {
             if (obj == null) return 0;
-            return obj.GetHashCode();
+
+            bool isIgnoreCase = mode == StringComparison.OrdinalIgnoreCase
+                             || mode == StringComparison.CurrentCultureIgnoreCase 
+                             || mode == StringComparison.InvariantCultureIgnoreCase;
+
+            return isIgnoreCase ? obj.ToLowerInvariant().GetHashCode() : obj.GetHashCode();
         }
     }
 }

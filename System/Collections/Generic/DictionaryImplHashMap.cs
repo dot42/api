@@ -171,13 +171,8 @@ namespace System.Collections.Generic
         /// </summary>
         public bool TryGetValue(TKey key, out TValue value)
         {
-            if (map.ContainsKey(key))
-            {
-                value = map.Get(key);
-                return true;
-            }
-            value = default(TValue);
-            return false;
+            value = map.Get(key);
+            return value != null || map.ContainsKey(key);
         }
 
         /// <summary>
