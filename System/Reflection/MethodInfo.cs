@@ -29,7 +29,7 @@ namespace System.Reflection
             _method = method;
         }
 
-        //public override MemberTypes MemberType { get {return MemberTypes.Method; } }
+        public override MemberTypes MemberType { get {return MemberTypes.Method; } }
         public override Type DeclaringType { get { return _method.DeclaringClass; } }
         public override string Name { get { return _method.Name; } }
 

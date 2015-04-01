@@ -57,7 +57,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath Condition=" '$(OutputPath)' == '' ">bin\Debug</OutputPath>
-    <DefineConstants>BASELIB;DOT42;DEBUG;TRACE;$(AndroidDefines)</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;BASELIB;DOT42;ANDROID_15P;ANDROID_14P;ANDROID_13P;ANDROID_12P;ANDROID_11P;ANDROID_10P;ANDROID_9P;ANDROID_8P;ANDROID_7P;ANDROID_6P;ANDROID_5P;ANDROID_4P;ANDROID_3P;FEATURE_CORE_DLR</DefineConstants>
     <NoStdLib>true</NoStdLib>
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
@@ -311,6 +311,7 @@
     <Compile Include="System\DayOfWeek.cs" />
     <Compile Include="System\Decimal_BigInteger.cs" />
     <Compile Include="System\Diagnostics\Stopwatch.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\SuppressMessageAttribute.cs" />
     <Compile Include="System\Enum.cs" />
     <Compile Include="System\Exception.cs" />
     <Compile Include="System\GC.cs" />
@@ -360,6 +361,7 @@
     <Compile Include="System\Reflection\AssemblyKeyNameAttribute.cs" />
     <Compile Include="System\Reflection\AssemblyFlagsAttribute.cs" />
     <Compile Include="System\Reflection\AssemblyNameFlags.cs" />
+    <Compile Include="System\Reflection\MemberTypes.cs" />
     <Compile Include="System\Reflection\TargetParameterCountException.cs" />
     <Compile Include="System\Reflection\EventInfo.cs" />
     <Compile Include="System\Reflection\MethodBase.cs" />
@@ -875,6 +877,7 @@
   <ItemGroup>
     <Reference Include="System, Version=4.0.3.0, Culture=neutral, PublicKeyToken=0a72796057571e65, processorArchitecture=MSIL" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->
   <Target Name="GetReferenceAssemblyPaths" DependsOnTargets="$(GetReferenceAssemblyPathsDependsOn)">

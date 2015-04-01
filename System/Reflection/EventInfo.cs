@@ -12,10 +12,8 @@ namespace System.Reflection
         {
         }
 
-        //public override MemberTypes MemberType { get { return MemberTypes.Event; } }
-
+        public override MemberTypes MemberType { get { return MemberTypes.Event; } }
         public override Type DeclaringType { get { throw new NotImplementedException(); } }
-
         public override string Name { get { throw new NotImplementedException(); } }
 
         public Type EventHandlerType { get { throw new NotImplementedException(); } }

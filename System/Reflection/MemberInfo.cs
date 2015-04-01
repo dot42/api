@@ -66,6 +66,8 @@ namespace System.Reflection
         //public abstract MemberTypes MemberType { get; }
         public abstract Type DeclaringType { get; }
         public abstract string Name { get; }
+        
+        public abstract MemberTypes MemberType { get; }
 
         /// <summary>
         /// Returns an array of all attributes defined on this member.

@@ -50,6 +50,8 @@ namespace System.Reflection
         /// </summary>
         public override string Name { get { return name; } }
 
+        public override MemberTypes MemberType { get { return MemberTypes.Property; } }
+
         /// <summary>
         /// Gets this property be read from?
         /// </summary>

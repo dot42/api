@@ -29,7 +29,7 @@ namespace System.Reflection
             _field = field;
         }
 
-        //public override MemberTypes MemberType { get { return MemberTypes.Field; } }
+        public override MemberTypes MemberType { get { return MemberTypes.Field; } }
         public override Type DeclaringType { get { return _field.DeclaringClass; } }
         public override string Name { get { return _field.Name; } }
 

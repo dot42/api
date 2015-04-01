@@ -28,9 +28,9 @@ namespace System.Reflection
             _ctor = ctor;
         }
 
-        //public override MemberTypes MemberType { get { return MemberTypes.Constructor; } }
         public override Type DeclaringType { get { return _ctor.DeclaringClass; } }
         public override string Name { get { return _ctor.Name; } }
+        public override MemberTypes MemberType { get { return MemberTypes.Constructor; } }
 
         /// <summary>
         /// Is this an abstract method?
