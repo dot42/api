@@ -46,9 +46,6 @@ namespace Dot42
             return list.ToArray((T[])Array.NewInstance(elementType, list.Count));
         }
 
-        /// <summary>
-        /// Create a filtered array.
-        /// </summary>
         public static T FirstOrDefault<T>(this T[] array, Func<T, bool> predicate)
         {
             int len = array.Length;
@@ -58,6 +55,27 @@ namespace Dot42
                     return array[i];
             }
             return default(T);
+        }
+
+        public static T FirstOrDefault<T>(this T[] array)
+        {
+            int len = array.Length;
+            if (len == 0) return default(T);
+            return array[0];
+        }
+
+        public static T[] Take<T>(this T[] array, int count)
+        {
+            var len = Math.Min(count, array.Length);    
+            T[] ret = new T[len];
+            System.Array.Copy(array, ret, len);
+            return ret;
+        }
+
+        public static T Last<T>(this T[] array)
+        {
+            int len = array.Length;
+            return array[len-1];
         }
 
         public static TOut[] Select<TIn,TOut>(this TIn[] array, Func<TIn, TOut> select)

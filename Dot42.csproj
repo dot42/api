@@ -165,17 +165,19 @@
     <Compile Include="Dot42\ApiEnhancementIgnoreMethodsAttribute.cs" />
     <Compile Include="Dot42\Collections\IteratorWrapperWithSelector.cs" />
     <Compile Include="Dot42\Collections\Null.cs" />
+    <Compile Include="Dot42\Internal\Generics\GenericInstanceConstructorInfo.cs" />
+    <Compile Include="Dot42\Internal\Generics\GenericsReflection.cs" />
     <Compile Include="Dot42\IncludeAttribute.cs" />
     <Compile Include="Dot42\Internal\AssertFailedException.cs" />
     <Compile Include="Dot42\Internal\CompilerHelper.Enum.cs" />
     <Compile Include="Dot42\Internal\DateTimeFormatting.cs" />
-    <Compile Include="Dot42\Internal\GenericInstanceFactory.cs" />
+    <Compile Include="Dot42\Internal\Generics\GenericInstanceFactory.cs" />
     <Compile Include="Dot42\Internal\IAttributesProvider.cs" />
+    <Compile Include="Dot42\Internal\IGenericMember.cs" />
     <Compile Include="Dot42\Internal\IProperties.cs" />
-    <Compile Include="Dot42\Internal\INullableT.cs" />
     <Compile Include="Dot42\Internal\IProperty.cs" />
     <Compile Include="Dot42\Internal\LazyAndWeak.cs" />
-    <Compile Include="Dot42\Internal\NullableReflection.cs" />
+    <Compile Include="Dot42\Internal\Generics\NullableReflection.cs" />
     <Compile Include="Dot42\Internal\PropertyInfoProvider.cs" />
     <Compile Include="Dot42\Internal\TaskMonitorService.cs" />
     <Compile Include="Dot42\Test\AsyncSynchronizationContext.cs" />
@@ -873,9 +875,6 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System, Version=4.0.3.0, Culture=neutral, PublicKeyToken=0a72796057571e65, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

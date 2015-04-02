@@ -31,6 +31,7 @@ using System.Diagnostics;
 using System.Linq;
 using Dot42;
 using Dot42.Internal;
+using Dot42.Internal.Generics;
 
 namespace System.Reflection
 {
@@ -120,15 +121,16 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            var ret = type.JavaGetDeclaredMethod(name, parameters);
-            return ret == null ? null : new MethodInfo(ret);
+            var trueTrype = GenericsReflection.ToGenericTypeDef(type);
+            var ret = trueTrype.JavaGetDeclaredMethod(name, parameters);
+            return ret == null ? null : new MethodInfo(ret, type);
         }
 
         public static IEnumerable<MethodInfo> GetDeclaredMethods(this Type type)
         {
             if (type == null) throw new ArgumentNullException("type");
 
-            return type.JavaGetDeclaredMethods().Select(x => new MethodInfo(x));
+            return type.GetMethods(AllDeclaredMembersBindingFlags);
         }
 
 	    public static IEnumerable<PropertyInfo> GetRuntimeProperties (this Type type)

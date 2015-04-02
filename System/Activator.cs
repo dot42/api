@@ -15,6 +15,7 @@
 // limitations under the License.
 
 using Dot42.Internal;
+using Dot42.Internal.Generics;
 
 namespace System
 {

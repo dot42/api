@@ -16,6 +16,7 @@
 
 using Dot42;
 using Dot42.Internal;
+using Dot42.Internal.Generics;
 
 namespace System.Reflection
 {
@@ -96,21 +97,22 @@ namespace System.Reflection
                 {
                     if (getter != null)
                     {
-                        var nullableT = getter.JavaMethod.GetAnnotation<INullableT>(typeof (INullableT));
-                        propertyType = nullableT != null ? nullableT.Type() : getter.ReturnType;
+                        propertyType = GenericsReflection.GetMemberType(getter.ReturnType, DeclaringType, getter.JavaMethod);
                     }
                     else if (setter != null)
                     {
-                        var nullableT = setter.JavaMethod.GetParameterAnnotations()[0]
-                                              .FirstOrDefault(x => x.AnnotationType() == typeof (INullableT));
-                        if (nullableT != null)
+                        var paramType = setter.JavaMethod.GetParameterTypes().Last();
+                        var genericInfo = (IGenericMember)setter.JavaMethod.GetParameterAnnotations()
+                                                                .Last()
+                                                                .FirstOrDefault(x => x.AnnotationType() == typeof (IGenericMember));
+                        
+                        if (genericInfo != null)
                         {
-                            propertyType = ((INullableT) nullableT).Type();
+                            propertyType = GenericsReflection.GetMemberType(paramType, DeclaringType, genericInfo);
                         }
                         else
                         {
-                            var paramTypes = setter.JavaMethod.GetParameterTypes();
-                            propertyType = paramTypes[paramTypes.Length - 1];
+                            propertyType = paramType;
                         }
                     }
                 }
@@ -181,7 +183,7 @@ namespace System.Reflection
 
         public override string ToString()
         {
-            return DeclaringType.FullName + "::" + Name;
+            return DeclaringType.Name + " " + Name;
         }
 
         /// <summary>

@@ -3848,10 +3848,10 @@ namespace System
 		}
 
 		/// <java-name>
-		/// java/lang/NoSuchFieldException
+		/// java/lang/NoSuchFieldError
 		/// </java-name>
-		[Dot42.DexImport("java/lang/NoSuchFieldException", AccessFlags = 33)]
-		public partial class MissingFieldException : global::System.Exception
+		[Dot42.DexImport("java/lang/NoSuchFieldError", AccessFlags = 33)]
+		public partial class MissingFieldException : global::Java.Lang.IncompatibleClassChangeError
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -3867,10 +3867,10 @@ namespace System
 		}
 
 		/// <java-name>
-		/// java/lang/NoSuchMethodException
+		/// java/lang/NoSuchMethodError
 		/// </java-name>
-		[Dot42.DexImport("java/lang/NoSuchMethodException", AccessFlags = 33)]
-		public partial class MissingMethodException : global::System.Exception
+		[Dot42.DexImport("java/lang/NoSuchMethodError", AccessFlags = 33)]
+		public partial class MissingMethodException : global::Java.Lang.IncompatibleClassChangeError
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]

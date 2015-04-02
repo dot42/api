@@ -15,6 +15,7 @@
 // limitations under the License.
 using System;
 using System.Reflection;
+using Dot42.Internal.Generics;
 using Java.Lang.Reflect;
 using Java.Util;
 
@@ -95,21 +96,12 @@ namespace Dot42.Internal
             }
         }
 
-	    internal static Type EnsurePrimitiveType(Type p)
-	    {
-            return p == BooleanType()   ? typeof(bool) 
-                 : p == CharacterType() ? typeof(char) 
-                 : p == ByteType()      ? typeof(byte) 
-                 : p == ShortType()     ? typeof(short)
-                 : p == IntegerType()   ? typeof(int) 
-                 : p == LongType()      ? typeof(long)
-                 : p == FloatType()     ? typeof(float)
-                 : p == DoubleType()    ? typeof(double)
-                 : p;
-	    }
-
+        /// <summary>
+        /// this is used by the compiler, to find out in a generic class to which 
+        /// runtime class to map a primitive or nullable marker type.
+        /// </summary>
         [Include]
-        internal static Type EnsureGenericInstanceType(Type p)
+        internal static Type EnsureGenericRuntimeType(Type p)
         {
             Type t = EnsureBoxedType(p);
             if (t != p) return t;
@@ -117,6 +109,19 @@ namespace Dot42.Internal
             var underlying = NullableReflection.GetUnderlyingTypeForMarked(p);
 
             return underlying ?? p;
+        }
+
+        public static Type EnsurePrimitiveType(Type p)
+        {
+            return p == BooleanType() ? typeof(bool)
+                 : p == CharacterType() ? typeof(char)
+                 : p == ByteType() ? typeof(byte)
+                 : p == ShortType() ? typeof(short)
+                 : p == IntegerType() ? typeof(int)
+                 : p == LongType() ? typeof(long)
+                 : p == FloatType() ? typeof(float)
+                 : p == DoubleType() ? typeof(double)
+                 : p;
         }
 
 	    public static Type EnsureBoxedType(Type p)
@@ -141,7 +146,6 @@ namespace Dot42.Internal
                    || type == LongType()
                    || type == FloatType()
                    || type == DoubleType()
-                   || type == CharacterType()
                    || type == CharacterType();
         }
 

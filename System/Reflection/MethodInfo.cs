@@ -21,16 +21,18 @@ namespace System.Reflection
     public class MethodInfo : MethodBase
     {
         private readonly JavaMethod _method;
+        private readonly Type _declaringType;
         public JavaMethod JavaMethod { get { return _method; } }
 
 
-        public MethodInfo(JavaMethod method) : base(method)
+        public MethodInfo(JavaMethod method, Type declaringType) : base(method)
         {
             _method = method;
+            _declaringType = declaringType;
         }
 
         public override MemberTypes MemberType { get {return MemberTypes.Method; } }
-        public override Type DeclaringType { get { return _method.DeclaringClass; } }
+        public override Type DeclaringType { get { return _declaringType; } }
         public override string Name { get { return _method.Name; } }
 
         public override bool ContainsGenericParameters { get { return JavaMethod.GenericParameterTypes.Length > 0; } }

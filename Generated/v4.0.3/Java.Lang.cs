@@ -1469,38 +1469,38 @@ namespace Java.Lang
 		}
 
 		/// <java-name>
-		/// java/lang/NoSuchFieldError
+		/// java/lang/NoSuchFieldException
 		/// </java-name>
-		[Dot42.DexImport("java/lang/NoSuchFieldError", AccessFlags = 33)]
-		public partial class NoSuchFieldError : global::Java.Lang.IncompatibleClassChangeError
+		[Dot42.DexImport("java/lang/NoSuchFieldException", AccessFlags = 33)]
+		public partial class NoSuchFieldException : global::System.Exception
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NoSuchFieldError() /* MethodBuilder.Create */ 
+				public NoSuchFieldException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public NoSuchFieldError(string @string) /* MethodBuilder.Create */ 
+				public NoSuchFieldException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 		}
 
 		/// <java-name>
-		/// java/lang/NoSuchMethodError
+		/// java/lang/NoSuchMethodException
 		/// </java-name>
-		[Dot42.DexImport("java/lang/NoSuchMethodError", AccessFlags = 33)]
-		public partial class NoSuchMethodError : global::Java.Lang.IncompatibleClassChangeError
+		[Dot42.DexImport("java/lang/NoSuchMethodException", AccessFlags = 33)]
+		public partial class NoSuchMethodException : global::System.Exception
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public NoSuchMethodError() /* MethodBuilder.Create */ 
+				public NoSuchMethodException() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public NoSuchMethodError(string @string) /* MethodBuilder.Create */ 
+				public NoSuchMethodException(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 

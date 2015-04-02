@@ -14,7 +14,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Dot42.Internal;
+using Dot42;
+using Dot42.Internal.Generics;
 using Java.Lang.Reflect;
 
 namespace System.Reflection
@@ -22,15 +23,17 @@ namespace System.Reflection
     public class FieldInfo : JavaMemberInfo
     {
         private readonly JavaField _field;
+        private readonly Type _declaringType;
         private Type _type;
 
-        public FieldInfo(JavaField field)  :base(field)
+        public FieldInfo(JavaField field, Type declaringType)  : base(field)
         {
             _field = field;
+            _declaringType = declaringType;
         }
 
         public override MemberTypes MemberType { get { return MemberTypes.Field; } }
-        public override Type DeclaringType { get { return _field.DeclaringClass; } }
+        public override Type DeclaringType { get { return _declaringType; } }
         public override string Name { get { return _field.Name; } }
 
         public Type FieldType
@@ -38,10 +41,7 @@ namespace System.Reflection
             get
             {
                 if (_type == null)
-                {
-                    var nullableT = _field.GetAnnotation<INullableT>(typeof(INullableT));
-                    _type = nullableT == null ? _field.Type : nullableT.Type();
-                }
+                    _type = GenericsReflection.GetMemberType(_field.Type, DeclaringType, _field);
                 return _type;
             }
         }
@@ -105,7 +105,7 @@ namespace System.Reflection
 
         public override string ToString()
         {
-            return _field.DeclaringClass.JavaGetName() + "::" + _field.Name;
+            return _declaringType.Name + " " + _field.Name;
         }
 
     }

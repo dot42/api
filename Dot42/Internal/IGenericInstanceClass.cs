@@ -24,11 +24,11 @@ namespace Dot42.Internal
     [Include]
 	internal interface IGenericInstanceClass : IAnnotation
     {
-        ///// <summary>
-        ///// Gets the field to holds the type arguments.
-        ///// </summary>
-        //[Include]
-        //FieldInfo Arguments();
+        /// <summary>
+        /// Gets the fieldname that holds the type arguments.
+        /// </summary>
+        [Include]
+        string Arguments();
 
         [Include]
         int ArgumentCount();

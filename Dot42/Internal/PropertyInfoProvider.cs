@@ -37,38 +37,38 @@ namespace Dot42.Internal
         /// Returns an empty array if no attributes are defined on this member.
         /// </summary>
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
-        internal static PropertyInfo[] GetProperties(Type type)
+        internal static PropertyInfo[] GetProperties(Type definingType, Type declaringType)
         {
             PropertyInfo[] result;
 
-            result = loadedProperties.Get(type);
+            result = loadedProperties.Get(declaringType);
             if (result != null) return result;
 
             try
             {
                 // Not found, build it
-                result = BuildProperties(type);
+                result = BuildProperties(definingType, declaringType);
             }
             catch (Exception ex)
             {
                 Log.E("dot42", string.Format("unable create property info from annotation for class '{0}'",
-                                             type.FullName), ex);
+                                             definingType.FullName), ex);
 
                 result = new PropertyInfo[0];
             }
 
             // Store in loaded map
-            loadedProperties.Put(type, result);
+            loadedProperties.Put(declaringType, result);
 
             return result;
         }
 
         /// <summary>
-        /// Build all properties for a given type.
+        /// Build all properties for a given definingType.
         /// </summary>
-        private static PropertyInfo[] BuildProperties(Type type)
+        private static PropertyInfo[] BuildProperties(Type definingType, Type declaringType)
         {
-            var ann = type.GetAnnotation<IProperties>(typeof (IProperties));
+            var ann = definingType.GetAnnotation<IProperties>(typeof (IProperties));
             if (ann == null) return Empty;
 
             var properties = ann.Properties();
@@ -88,31 +88,31 @@ namespace Dot42.Internal
                 JavaMethod getter = null, setter = null;
                 try
                 {
-                    getter = type.JavaGetDeclaredMethod(getName);
+                    getter = definingType.JavaGetDeclaredMethod(getName);
                 }
-                catch (MissingMethodException )
+                catch (NoSuchMethodException)
                 {
                 }
 
                 try
                 {
-                    setter = type.JavaGetDeclaredMethods().FirstOrDefault(m => m.Name == setName && m.ParameterTypes.Length == 1);
+                    setter = definingType.JavaGetDeclaredMethods().FirstOrDefault(m => m.Name == setName && m.ParameterTypes.Length == 1);
                 }
-                catch (MissingMethodException)
+                catch (NoSuchMethodException)
                 {
                 }
 
                 if (getter == null && setter == null)
                 {
-                    Log.E("dot42", "property has neither getter nor setter: " + propName + " / class" + type.FullName);
+                    Log.E("dot42", "property has neither getter nor setter: " + propName + " / class" + definingType.FullName);
                     continue;
                 }
 
                 IAttribute[] attributes = p.Attributes();
 
-                infos[i] = new PropertyInfo(type, p.Name(),
-                                            getter != null?new MethodInfo(getter):null, 
-                                            setter != null?new MethodInfo(setter):null, 
+                infos[i] = new PropertyInfo(declaringType, p.Name(),
+                                            getter != null?new MethodInfo(getter, declaringType):null, 
+                                            setter != null?new MethodInfo(setter, declaringType):null, 
                                             attributes);
             }
             return infos;

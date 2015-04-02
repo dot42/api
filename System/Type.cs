@@ -19,6 +19,8 @@ using System.Linq;
 using System.Reflection;
 using Dot42;
 using Dot42.Internal;
+using Dot42.Internal.Generics;
+using Java.Lang;
 using Java.Lang.Reflect;
 
 namespace System
@@ -40,7 +42,7 @@ namespace System
         /// </summary>
 	    public string FullName
 	    {
-            get { return JavaGetName(); }
+            get { return GenericsReflection.GetFullName(this); }
 	    }
 
         /// <summary>
@@ -48,14 +50,14 @@ namespace System
         /// </summary>
         public string Name
         {
-            get { return GetSimpleName(); }
+            get { return GenericsReflection.GetName(this); }
         }
 
         public string Namespace
         {
             get
             {
-                string name = FullName;
+                string name = JavaGetName();
                 int idx = name.LastIndexOf((int)'.');
                 if (idx == -1) return "";
                 return name.Substring(0, idx);
@@ -67,7 +69,7 @@ namespace System
         /// </summary>
 	    public bool IsValueType
 	    {
-            get { return IsPrimitive || typeof(ValueType).IsAssignableFrom(this); }
+            get { return IsPrimitive || typeof(ValueType).IsAssignableFrom(EnsureGenericDef()); }
 	    }
 
         /// <summary>
@@ -83,27 +85,26 @@ namespace System
 	    {
 	        get
 	        {
-                // emulate Nullable<T>
-	            if (NullableReflection.TreatAsSystemNullableT(this)) 
-                    return true;
-
-	            return GenericInstanceFactory.IsGenericType(this);
+	            return GenericsReflection.IsGenericType(this);
 	        }
 	    }
 
 	    public bool IsClass
 	    {
-            get { return !IsPrimitive && !IsInterface && !IsEnum; }
+	        get
+	        {
+	            return !IsPrimitive && !IsInterface && !IsEnum;
+	        }
 	    }
 
         public Type BaseType
         {
-            get { return GetSuperclass(); }
+            get { return EnsureGenericDef().GetSuperclass(); }
         }
 
         public bool IsAbstract
         {
-            get { return Modifier.IsAbstract(GetModifiers()); }
+            get { return Modifier.IsAbstract(EnsureGenericDef().GetModifiers()); }
         }
 
 	    public bool IsVisible
@@ -130,18 +131,12 @@ namespace System
 
 	    public bool IsSealed
 	    {
-	        get { return Modifier.IsFinal(this.GetModifiers()); }
+            get { return Modifier.IsFinal(EnsureGenericDef().GetModifiers()); }
 	    }
         
         public Type GetGenericTypeDefinition()
         {
-            // emulate Nullable<T>
-            if (NullableReflection.TreatAsSystemNullableT(this))
-                return typeof (Nullable<>);
-
-            if (!IsGenericType) 
-                ThrowHelper.ThrowInvalidOperationException(ExceptionResource.NotAGenericType);
-            return this;
+            return GenericsReflection.GetGenericTypeDefinition(this);
         }
 
         /// <summary>
@@ -153,17 +148,14 @@ namespace System
         /// <returns></returns>
         public Type[] GetGenericArguments()
         {
-            if (NullableReflection.TreatAsSystemNullableT(this))
-                return new[] {Nullable.GetUnderlyingType(this)};
-
-            return GenericInstanceFactory.GetGenericArguments(this);
+            return GenericsReflection.GetGenericArguments(this);
         }
 
         /// <summary>
         /// This will only work with .NET types not java types.
         /// <para>
         /// The returned type can only be used in Activator.CreateInstance,
-        /// and is otherwise useless, expept if this is Nullable[T].
+        /// and is otherwise useless, except if this is Nullable[T].
         ///
         /// In particular the class name, methods, fields, constructors and 
         /// properties as well as the superclass and implemented interfaces can
@@ -172,22 +164,7 @@ namespace System
         /// </summary>
         public Type MakeGenericType(params Type[] types)
         {
-            // emulate Nullable<T>
-            if (this == typeof (Nullable<>))
-            {
-                if(types.Length != 1)
-                    ThrowHelper.ThrowArgumentException(ExceptionResource.WrongNumberOfArguments);
-
-                var type = NullableReflection.GetNullableTFromUnterlyingType(types[0]);
-
-                if (type != null)
-                    return type;
-
-                // can't create an instance of non-predifined nullable.
-                return null; 
-            }
-
-            return GenericInstanceFactory.GetOrMakeGenericRuntimeType(this, types);
+            return GenericsReflection.MakeGenericType(this, types);
         }
 
 
@@ -199,11 +176,7 @@ namespace System
         {
             get
             {
-                // emulate Nullable<T>
-                if (NullableReflection.TreatAsSystemNullableT(this)) 
-                    return false;
-
-                return IsGenericType;
+                return GenericsReflection.ContainsGenericParameters(this);
             }
         }
 
@@ -215,10 +188,7 @@ namespace System
 	    {
 	        get
 	        {
-	            if (NullableReflection.TreatAsSystemNullableT(this))
-	                return false;
-
-	            return IsGenericType;
+	            return GenericsReflection.IsGenericTypeDefition(this);
 	        }
 	    }
 
@@ -267,9 +237,7 @@ namespace System
         /// </summary>
         public ConstructorInfo[] GetConstructors()
         {
-            return JavaGetConstructors()
-                         .Where(x => Modifier.IsPublic(x.GetModifiers()))
-                         .Select(x => new ConstructorInfo(x));
+            return GetConstructors(BindingFlags.Public | BindingFlags.Instance);
         }
 
         /// <summary>
@@ -278,29 +246,41 @@ namespace System
         /// </summary>
         public ConstructorInfo[] GetConstructors(BindingFlags flags)
         {
+            return GenericsReflection.GetConstructors(this, flags)
+                   ?? GetConstructorsInternal(flags);
+        }
+
+	    public ConstructorInfo GetConstructor(Type[] parameters)
+	    {
+            return GenericsReflection.GetConstructor(this, parameters) 
+                   ?? GetConstructorInternal(parameters);
+	    }
+
+        internal ConstructorInfo[] GetConstructorsInternal(BindingFlags flags)
+        {
             // note that unlike the other member retrival operations
             // GetConstructors never searches base classes.
             return JavaGetDeclaredConstructors()
-                        .Where(x => TypeHelper.Matches(x.GetModifiers(), flags))
-                        .Select(p=>new ConstructorInfo(p))
-                        .ToArray();
+                .Where(x => TypeHelper.Matches(x.GetModifiers(), flags))
+                .Select(p => new ConstructorInfo(p))
+                .ToArray();
         }
 
-        public ConstructorInfo GetConstructor(Type[] parameters)
-        {
-            try
-            {
-                return new ConstructorInfo(JavaGetConstructor(parameters));
-            }
-            catch (MissingMethodException)
-            {
-                return null;
-            }
-        }
+        internal ConstructorInfo GetConstructorInternal(Type[] parameters)
+	    {
+	        try
+	        {
+	            return new ConstructorInfo(JavaGetConstructor(parameters));
+	        }
+	        catch (NoSuchMethodException)
+	        {
+	            return null;
+	        }
+	    }
 
 	    public Type[] GetInterfaces()
 	    {
-	        return JavaGetInterfaces();
+            return EnsureGenericDef().JavaGetInterfaces();
 	    }
 
         /// <summary>
@@ -308,8 +288,9 @@ namespace System
         /// </summary>
         public FieldInfo[] GetFields()
         {
-            return JavaGetFields().Where(x => Modifier.IsPublic(x.GetModifiers()))
-                                  .Select(x => new FieldInfo(x));
+            return EnsureGenericDef().JavaGetFields()
+                                     .Where(x => Modifier.IsPublic(x.GetModifiers()))
+                                     .Select(x => new FieldInfo(x, this));
         }
 
         public FieldInfo GetField(string name)
@@ -317,39 +298,40 @@ namespace System
             // NOTE: doesn't throw AmbiguousMatchException
             try
             {
-                return new FieldInfo(JavaGetField(name));
+                return new FieldInfo(EnsureGenericDef().JavaGetField(name), 
+                                     this);
             }
-            catch (MissingFieldException) 
+            catch (NoSuchFieldException)
             {
                 return null;
             }
         }
 
         public FieldInfo GetField(string name, BindingFlags flags)
-        {
-            var fields = TypeHelper.GetFields(this, flags);
-            var ret = fields.Where(x => x.Name == name);
-            if(ret.Length > 1)
-                throw new AmbiguousMatchException();
-            return ret.Length == 0 ? null : new FieldInfo(ret[0]);
-        }
+	    {
+            var fields = TypeHelper.GetFields(EnsureGenericDef(), flags);
+	        var ret = fields.Where(x => x.Name == name);
+	        if (ret.Length > 1)
+	            throw new AmbiguousMatchException();
+	        return ret.Length == 0 ? null : new FieldInfo(ret[0], this);
+	    }
 
         /// <summary>
         /// Gets all fields of this type that match the given binding flags.
         /// </summary>
         public FieldInfo[] GetFields(BindingFlags flags)
-        {
-            return TypeHelper.GetFields(this, flags)
-                             .Select(x => new FieldInfo(x));
-        }
+	    {
+            return TypeHelper.GetFields(EnsureGenericDef(), flags)
+	                         .Select(x => new FieldInfo(x, this));
+	    }
 
-        /// <summary>
+	    /// <summary>
         /// Gets all public methods of this type.
         /// </summary>
         public MethodInfo[] GetMethods()
         {
-            return JavaGetMethods().Where(x => Modifier.IsPublic(x.GetModifiers()))
-                                   .Select(x=> new MethodInfo(x));
+            return EnsureGenericDef().JavaGetMethods().Where(x => Modifier.IsPublic(x.GetModifiers()))
+                                     .Select(x=> new MethodInfo(x, this));
         }
 
         /// <summary>
@@ -357,7 +339,8 @@ namespace System
         /// </summary>
         public MethodInfo[] GetMethods(BindingFlags flags)
         {
-            return TypeHelper.GetMethods(this, flags).Select(x=> new MethodInfo(x));
+            return TypeHelper.GetMethods(EnsureGenericDef(), flags)
+                             .Select(x => new MethodInfo(x, this));
                           
         }
 
@@ -366,9 +349,9 @@ namespace System
             // NOTE: doesn't throw AmbiguousMatchException
             try
             {
-                return new MethodInfo(JavaGetMethod(name));
+                return new MethodInfo(EnsureGenericDef().JavaGetMethod(name), this);
             }
-            catch (MissingMethodException)
+            catch (NoSuchMethodException)
             {
                 return null;
             }
@@ -379,20 +362,25 @@ namespace System
             // NOTE: doesn't throw AmbiguousMatchException
             try
             {
-                return new MethodInfo(JavaGetMethod(name, parameters));
+                return new MethodInfo(EnsureGenericDef().JavaGetMethod(name, parameters),this);
             }
-            catch (MissingMethodException)
+            catch (NoSuchMethodException)
             {
                 return null;
             } 
         }
 
-        /// <summary>
+	    private Type EnsureGenericDef()
+	    {
+	        return GenericsReflection.ToGenericTypeDef(this);
+	    }
+
+	    /// <summary>
         /// Gets all public properties of this type.
         /// </summary>
         public PropertyInfo[] GetDeclaredProperties()
         {
-            return PropertyInfoProvider.GetProperties(this);
+            return PropertyInfoProvider.GetProperties(EnsureGenericDef(), this);
         }
 
 	    public PropertyInfo[] GetProperties()
@@ -403,7 +391,7 @@ namespace System
         public PropertyInfo[] GetProperties(BindingFlags flags)
         {
             List<PropertyInfo> ret = new List<PropertyInfo>();
-            Type type = this;
+            Type type = EnsureGenericDef();
             
             // we have to walk all the ways up.
             while (type != null)
@@ -473,25 +461,23 @@ namespace System
             return ret.ToArray();
         }
 
-        
-
-
-        [Dot42.DexImport("isAssignableFrom", "(Ljava/lang/Class;)Z", AccessFlags = 257, Signature = "(Ljava/lang/Class<*>;)Z")]
         public /*virtual*/ bool IsAssignableFrom(Type other)
         {
-            return JavaIsAssignableFrom(other);
+            return EnsureGenericDef().JavaIsAssignableFrom(other.EnsureGenericDef());
         }
 
         [Include,Inline] // used by "x is T" in generic methods.
         public /*virtual*/ bool IsInstanceOfType(Object o)
         {
             if (o == null) return false;
-            return JavaIsAssignableFrom(o.GetType());
+            return EnsureGenericDef().JavaIsAssignableFrom(o.GetType().EnsureGenericDef());
         }
 
         public /*virtual*/ bool IsSubclassOf(Type other)
         {
-            Type t = this;
+            Type t = EnsureGenericDef();
+            other = other.EnsureGenericDef();
+
             while ((t = t.GetSuperclass()) != null)
             {
                 if (t == other) return true;
@@ -542,6 +528,7 @@ namespace System
             return null;
         }
 
+        [NotImplemented]
         public static TypeCode GetTypeCode(Type t)
         {
             throw new NotImplementedException("System.Type.GetTypeCode");
@@ -549,16 +536,16 @@ namespace System
 
 	    public static Type GetType(string typeName)
 	    {
-	        return ForName(typeName);
+            // TODO: implement for generics, with parsing of "[,]" syntax.
+	        return ForName(typeName.Replace('`', GenericsReflection.GenericTickChar));
 	    }
 
         /// <summary>
-        /// note that ignoreCase is not ignored.
+        /// note that ignoreCase is ignored.
         /// </summary>
-        /// <returns></returns>
         public static Type GetType(string typeName, bool ignoreCase)
         {
-            return Type.ForName(typeName);
+            return GetType(typeName);
         }
     }
 }

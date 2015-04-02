@@ -2,7 +2,7 @@
 using Java.Lang;
 using Java.Util.Concurrent;
 
-namespace Dot42.Internal
+namespace Dot42.Internal.Generics
 {
     internal class NullableReflection
     {
@@ -56,11 +56,11 @@ namespace Dot42.Internal
         {
             var boxed = TypeHelper.EnsureBoxedType(type);
 
-            if (TypeHelper.IsBoxedType(type)) 
+            if (TypeHelper.IsBoxedType(boxed)) 
                 return boxed;
 
             // this should not neccessary, but keep for safety,
-            // and for not inadversely pulluting our double-use 
+            // and for not inadversely polluting our double-use 
             // underlying cache.
             if (type.IsSynthetic && type.Name.EndsWith(NullablePostfix))
             {

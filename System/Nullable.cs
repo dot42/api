@@ -16,6 +16,7 @@
 using System.Collections.Generic;
 using Dot42;
 using Dot42.Internal;
+using Dot42.Internal.Generics;
 using Java.Lang;
 
 namespace System
