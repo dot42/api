@@ -69,7 +69,7 @@ namespace System
         /// </summary>
 	    public bool IsValueType
 	    {
-            get { return IsPrimitive || typeof(ValueType).IsAssignableFrom(EnsureGenericDef()); }
+            get { return IsPrimitive || typeof(ValueType).JavaIsAssignableFrom(EnsureGenericDef()); }
 	    }
 
         /// <summary>
@@ -78,7 +78,10 @@ namespace System
         public bool IsEnum
         {
             // java has some quirks regarding enums: http://stackoverflow.com/questions/4166488/checking-if-a-class-is-java-lang-enum
-            get { return typeof(Java.Lang.Enum<object>).IsAssignableFrom(this); }
+            get
+            {
+                return !IsPrimitive && typeof(Java.Lang.Enum<object>).JavaIsAssignableFrom(this);
+            }
         }
 
 	    public bool IsGenericType

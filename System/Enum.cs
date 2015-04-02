@@ -184,10 +184,8 @@ namespace System
             if(!enumType.IsEnum)
                 throw new ArgumentException("enumType");
 
-            var vals = GetValues(enumType);
-            if (vals.Length == 0) 
-                return typeof (int);
-            return vals[0].GetType();
+            return enumType.JavaGetDeclaredMethods().Any(p => p.Name == "LongValue")
+                            ? typeof (long) : typeof (int);
         }
 
         public static object ToObject(Type enumType, object value)
