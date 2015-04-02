@@ -179,14 +179,16 @@ namespace Dot42.Internal
         }
 
         /// <summary>
-        /// hides synthetic methods
+        /// hides synthetic methods, except if getters, setters are requested
         /// </summary>
         internal static JavaMethod[] GetMethods(Type type, BindingFlags flags)
         {
+            bool allowSynthetic = (flags & (BindingFlags.SetProperty | BindingFlags.GetProperty)) != 0;
+
             if (((flags & BindingFlags.DeclaredOnly) != 0))
                 return type.JavaGetDeclaredMethods().Where(x => Matches(x.GetModifiers(), flags));
             if (((flags & BindingFlags.NonPublic) == 0))
-                return type.JavaGetMethods().Where(x => x.IsSynthetic() && Matches(x.GetModifiers(), flags));
+                return type.JavaGetMethods().Where(x => (allowSynthetic || !x.IsSynthetic()) && Matches(x.GetModifiers(), flags));
 
             ArrayList<JavaMethod> ret = new ArrayList<JavaMethod>();
 
@@ -196,7 +198,7 @@ namespace Dot42.Internal
                 for (int i = 0; i < methods.Length; ++i)
                 {
                     var javaMethod = methods[i];
-                    if (javaMethod.IsSynthetic())
+                    if (!allowSynthetic && javaMethod.IsSynthetic())
                         continue;
                     if (Matches(javaMethod.GetModifiers(), flags))
                         ret.Add(javaMethod);

@@ -303,18 +303,26 @@ namespace System.Collections.Generic
         }
         private void ThrowIfWrongValueType(object value)
         {
-            var type = typeof(TValue);
-            var isValueType = type.IsValueType;
+            // be lenient: or else we would have to correctly handle boxing automatically and stuff.
+            // 
+            //var type = typeof(TValue);
 
-            if(isValueType && value == null)
-                ThrowHelper.ThrowArgumentNullException("value");
-            
-            if (!isValueType && value == null)
-                return;
-            if (value != null && !(typeof (TValue).IsAssignableFrom(value.GetType())))
-            {
-                throw new ArgumentException(string.Format("can not store value type {0} in {1}", value.GetType(), TypeName));
-            }
+            //var isValueType = type.IsValueType;
+            //if(isValueType && value == null)
+            //    ThrowHelper.ThrowArgumentNullException("value");
+
+            //if (!isValueType && value == null)
+            //    return;
+
+            //var tvalue = typeof (TValue);
+            //if (tvalue == typeof (object)) 
+            //    return;
+
+
+            //if (value != null && !(typeof (TValue).IsAssignableFrom(value.GetType())))
+            //{
+            //    throw new ArgumentException(string.Format("can not store value type {0} in {1}", value.GetType(), TypeName));
+            //}
         }
 
         private string TypeName

@@ -86,21 +86,12 @@ namespace Dot42.Internal
                 var setName = !string.IsNullOrEmpty(p.Set()) ? p.Set() : ("set_" + propName);
 
                 JavaMethod getter = null, setter = null;
-                try
-                {
-                    getter = definingType.JavaGetDeclaredMethod(getName);
-                }
-                catch (NoSuchMethodException)
-                {
-                }
+                getter = TypeHelper.GetMethods(definingType, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.GetProperty)
+                                   .FirstOrDefault(m=>m.Name == getName && m.ParameterTypes.Length == 0);
+                setter = TypeHelper.GetMethods(definingType, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.SetProperty)
+                                   .FirstOrDefault(m => m.Name == setName && m.ParameterTypes.Length == 1);
 
-                try
-                {
-                    setter = definingType.JavaGetDeclaredMethods().FirstOrDefault(m => m.Name == setName && m.ParameterTypes.Length == 1);
-                }
-                catch (NoSuchMethodException)
-                {
-                }
+             
 
                 if (getter == null && setter == null)
                 {

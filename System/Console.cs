@@ -53,7 +53,7 @@ namespace System
 	        else
 #endif
 	        {
-	            Debug.WriteLine(message);
+	            Debug.WriteLine(message??"");
 	        }
 	    }
 
