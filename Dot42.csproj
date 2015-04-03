@@ -172,8 +172,9 @@
     <Compile Include="Dot42\Internal\CompilerHelper.Enum.cs" />
     <Compile Include="Dot42\Internal\DateTimeFormatting.cs" />
     <Compile Include="Dot42\Internal\Generics\GenericInstanceFactory.cs" />
+    <Compile Include="Dot42\Internal\Generics\GenericTypeInfo.cs" />
     <Compile Include="Dot42\Internal\IAttributesProvider.cs" />
-    <Compile Include="Dot42\Internal\IGenericMember.cs" />
+    <Compile Include="Dot42\Internal\IGenericDefinition.cs" />
     <Compile Include="Dot42\Internal\IProperties.cs" />
     <Compile Include="Dot42\Internal\IProperty.cs" />
     <Compile Include="Dot42\Internal\LazyAndWeak.cs" />
@@ -218,7 +219,7 @@
     <Compile Include="Dot42\Internal\Checked.cs" />
     <Compile Include="Dot42\Internal\IGenericMethodParameter.cs" />
     <Compile Include="Dot42\Internal\IGenericTypeParameter.cs" />
-    <Compile Include="Dot42\Internal\IGenericInstanceClass.cs" />
+    <Compile Include="Dot42\Internal\ITypeReflectionInfo.cs" />
     <Compile Include="Dot42\Internal\TypeHelper.cs" />
     <Compile Include="Dot42\Internal\IAttributes.cs" />
     <Compile Include="Dot42\Internal\CustomAttributeProvider.cs" />

@@ -149,65 +149,53 @@ namespace Dot42.Internal
                    || type == CharacterType();
         }
 
-        /// <summary>
-        /// never returns synthetic fields.
-        /// </summary>
-        internal static JavaField[] GetFields(Type type, BindingFlags flags)
-        {
-            if (((flags & BindingFlags.DeclaredOnly) != 0))
-                return type.JavaGetDeclaredFields().Where(x => Matches(x.GetModifiers(), flags));
-            if (((flags & BindingFlags.NonPublic) == 0))
-                return type.JavaGetFields().Where(x => !x.IsSynthetic() && Matches(x.GetModifiers(), flags));
+        //internal static JavaField[] GetFields(Type type, BindingFlags flags)
+        //{
+        //    if (((flags & BindingFlags.DeclaredOnly) != 0))
+        //        return type.JavaGetDeclaredFields().Where(x => Matches(x.GetModifiers(), flags));
+        //    if (((flags & BindingFlags.NonPublic) == 0))
+        //        return type.JavaGetFields().Where(x => Matches(x.GetModifiers(), flags));
 
-            ArrayList<JavaField> ret = new ArrayList<JavaField>();
+        //    ArrayList<JavaField> ret = new ArrayList<JavaField>();
 
-            while (type != null)
-            {
-                var fields = type.JavaGetDeclaredFields();
-                for (int i = 0; i < fields.Length; ++i)
-                {
-                    var javaField = fields[i];
+        //    while (type != null)
+        //    {
+        //        var fields = type.JavaGetDeclaredFields();
+        //        for (int i = 0; i < fields.Length; ++i)
+        //        {
+        //            var javaField = fields[i];
+        //            if (Matches(javaField.GetModifiers(), flags))
+        //                ret.Add(javaField);
+        //        }
+        //        type = type.GetSuperclass();
+        //    }
 
-                    if (javaField.IsSynthetic()) continue;
-                    if (Matches(javaField.GetModifiers(), flags))
-                        ret.Add(javaField);
-                }
-                type = type.GetSuperclass();
-            }
+        //    return ret.ToArray((JavaField[])Java.Lang.Reflect.Array.NewInstance(typeof(JavaField), ret.Size()));
+        //}
 
-            return ret.ToArray((JavaField[])Java.Lang.Reflect.Array.NewInstance(typeof(JavaField), ret.Size()));
-        }
+        //internal static JavaMethod[] GetMethods(Type type, BindingFlags flags)
+        //{
+        //    if (((flags & BindingFlags.DeclaredOnly) != 0))
+        //        return type.JavaGetDeclaredMethods().Where(x => Matches(x.GetModifiers(), flags));
+        //    if (((flags & BindingFlags.NonPublic) == 0))
+        //        return type.JavaGetMethods().Where(x => Matches(x.GetModifiers(), flags));
 
-        /// <summary>
-        /// hides synthetic methods, except if getters, setters are requested
-        /// </summary>
-        internal static JavaMethod[] GetMethods(Type type, BindingFlags flags)
-        {
-            bool allowSynthetic = (flags & (BindingFlags.SetProperty | BindingFlags.GetProperty)) != 0;
+        //    ArrayList<JavaMethod> ret = new ArrayList<JavaMethod>();
 
-            if (((flags & BindingFlags.DeclaredOnly) != 0))
-                return type.JavaGetDeclaredMethods().Where(x => Matches(x.GetModifiers(), flags));
-            if (((flags & BindingFlags.NonPublic) == 0))
-                return type.JavaGetMethods().Where(x => (allowSynthetic || !x.IsSynthetic()) && Matches(x.GetModifiers(), flags));
+        //    while (type != null)
+        //    {
+        //        var methods = type.JavaGetDeclaredMethods();
+        //        for (int i = 0; i < methods.Length; ++i)
+        //        {
+        //            var javaMethod = methods[i];
+        //            if (Matches(javaMethod.GetModifiers(), flags))
+        //                ret.Add(javaMethod);
+        //        }
+        //        type = type.GetSuperclass();
+        //    }
 
-            ArrayList<JavaMethod> ret = new ArrayList<JavaMethod>();
-
-            while (type != null)
-            {
-                var methods = type.JavaGetDeclaredMethods();
-                for (int i = 0; i < methods.Length; ++i)
-                {
-                    var javaMethod = methods[i];
-                    if (!allowSynthetic && javaMethod.IsSynthetic())
-                        continue;
-                    if (Matches(javaMethod.GetModifiers(), flags))
-                        ret.Add(javaMethod);
-                }
-                type = type.GetSuperclass();
-            }
-
-            return ret.ToArray((JavaMethod[])Java.Lang.Reflect.Array.NewInstance(typeof(JavaMethod), ret.Size()));
-        }
+        //    return ret.ToArray((JavaMethod[])Java.Lang.Reflect.Array.NewInstance(typeof(JavaMethod), ret.Size()));
+        //}
 
         /// <summary>
         /// Do the given modifiers of a member match the given binding flags?

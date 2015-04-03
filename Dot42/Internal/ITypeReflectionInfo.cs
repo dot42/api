@@ -13,7 +13,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using System.Reflection;
 using Java.Lang.Annotation;
 
 namespace Dot42.Internal
@@ -22,16 +21,37 @@ namespace Dot42.Internal
     /// Interface for annotation that stores the field of a generic type that holds the type arguments.
     /// </summary>
     [Include]
-	internal interface IGenericInstanceClass : IAnnotation
+	internal interface ITypeReflectionInfo : IAnnotation
     {
         /// <summary>
         /// Gets the fieldname that holds the type arguments.
         /// </summary>
         [Include]
-        string Arguments();
+        string GenericArgumentsField();
 
+        /// <summary>
+        /// returns the number of generic arguments of this type
+        /// </summary>
+        /// <returns></returns>
         [Include]
-        int ArgumentCount();
+        int GenericArgumentCount();
+
+        /// <summary>
+        /// holds information about generic parameter binding of 
+        /// base class and interfaces.
+        /// </summary>
+        /// <returns></returns>
+        [Include]
+        IGenericDefinition[] GenericDefinitions();
+
+        /// <summary>
+        /// this is used to be able to provide the original order for fields.
+        /// (not required by the standard, but useful nonetheless for serialization)
+        /// This will not be generated for synthetic classes, and not for static 
+        /// or synthetic fields.
+        /// </summary>
+        [Include]
+        string[] Fields();
 
     }
 }

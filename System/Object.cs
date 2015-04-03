@@ -39,11 +39,20 @@ namespace System
             return a.Equals(b);
         }
 
-        // We have to make sure we return the correct primitive type
-        // if the object was boxed.
+        /// <summary>
+        /// returns the <ref>System.Type</ref> of the object.
+        /// </summary>
 	    public Type GetType()
 	    {
+            // We have to make sure we return the correct primitive type
+            // if the object was boxed.
+            //
+            // Note though that this implementation must be lightning
+            // fast, as it is used in many places, e.g. in most Equals 
+            // implementation.
+
 	        var type = JavaGetClass();
+
 	        if (type == TypeHelper.BooleanType())
 	            return typeof (bool);
             if (type == TypeHelper.CharacterType())

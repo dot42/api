@@ -121,7 +121,7 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            var trueTrype = GenericsReflection.ToGenericTypeDef(type);
+            var trueTrype = GenericsReflection.EnsureTypeDef(type);
             var ret = trueTrype.JavaGetDeclaredMethod(name, parameters);
             return ret == null ? null : new MethodInfo(ret, type);
         }

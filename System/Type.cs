@@ -69,7 +69,7 @@ namespace System
         /// </summary>
 	    public bool IsValueType
 	    {
-            get { return IsPrimitive || typeof(ValueType).JavaIsAssignableFrom(EnsureGenericDef()); }
+            get { return IsPrimitive || typeof(ValueType).JavaIsAssignableFrom(GenericsReflection.EnsureTypeDef(this)); }
 	    }
 
         /// <summary>
@@ -102,12 +102,12 @@ namespace System
 
         public Type BaseType
         {
-            get { return EnsureGenericDef().GetSuperclass(); }
+            get { return GenericsReflection.GetBaseType(this); }
         }
 
         public bool IsAbstract
         {
-            get { return Modifier.IsAbstract(EnsureGenericDef().GetModifiers()); }
+            get { return Modifier.IsAbstract(GenericsReflection.EnsureTypeDef(this).GetModifiers()); }
         }
 
 	    public bool IsVisible
@@ -134,9 +134,14 @@ namespace System
 
 	    public bool IsSealed
 	    {
-            get { return Modifier.IsFinal(EnsureGenericDef().GetModifiers()); }
+            get { return Modifier.IsFinal(EnsureTypeDef().GetModifiers()); }
 	    }
-        
+
+        public Type[] GetInterfaces()
+        {
+            return GenericsReflection.GetInterfaces(this);
+        }
+
         public Type GetGenericTypeDefinition()
         {
             return GenericsReflection.GetGenericTypeDefinition(this);
@@ -191,7 +196,7 @@ namespace System
 	    {
 	        get
 	        {
-	            return GenericsReflection.IsGenericTypeDefition(this);
+	            return GenericsReflection.IsGenericTypeDefinition(this);
 	        }
 	    }
 
@@ -249,74 +254,47 @@ namespace System
         /// </summary>
         public ConstructorInfo[] GetConstructors(BindingFlags flags)
         {
+            // note that unlike the other member retrival operations
+            // GetConstructors never searches base classes.
             return GenericsReflection.GetConstructors(this, flags)
-                   ?? GetConstructorsInternal(flags);
+                   ?? JavaGetDeclaredConstructors()
+                        .Where(x => TypeHelper.Matches(x.GetModifiers(), flags))
+                        .Select(p => new ConstructorInfo(p))
+                        .ToArray();
         }
 
 	    public ConstructorInfo GetConstructor(Type[] parameters)
 	    {
-            return GenericsReflection.GetConstructor(this, parameters) 
-                   ?? GetConstructorInternal(parameters);
+            var ci = GenericsReflection.GetConstructor(this, parameters);
+
+            if(ci != null) return ci;
+
+            try
+            {
+                return new ConstructorInfo(JavaGetConstructor(parameters));
+            }
+            catch (NoSuchMethodException)
+            {
+                return null;
+            }
 	    }
-
-        internal ConstructorInfo[] GetConstructorsInternal(BindingFlags flags)
-        {
-            // note that unlike the other member retrival operations
-            // GetConstructors never searches base classes.
-            return JavaGetDeclaredConstructors()
-                .Where(x => TypeHelper.Matches(x.GetModifiers(), flags))
-                .Select(p => new ConstructorInfo(p))
-                .ToArray();
-        }
-
-        internal ConstructorInfo GetConstructorInternal(Type[] parameters)
-	    {
-	        try
-	        {
-	            return new ConstructorInfo(JavaGetConstructor(parameters));
-	        }
-	        catch (NoSuchMethodException)
-	        {
-	            return null;
-	        }
-	    }
-
-	    public Type[] GetInterfaces()
-	    {
-            return EnsureGenericDef().JavaGetInterfaces();
-	    }
-
+	
         /// <summary>
         /// Gets all public fields of this type.
         /// </summary>
         public FieldInfo[] GetFields()
         {
-            return EnsureGenericDef().JavaGetFields()
-                                     .Where(x => Modifier.IsPublic(x.GetModifiers()))
-                                     .Select(x => new FieldInfo(x, this));
+            return GenericsReflection.GetFields(this, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
         }
 
         public FieldInfo GetField(string name)
         {
-            // NOTE: doesn't throw AmbiguousMatchException
-            try
-            {
-                return new FieldInfo(EnsureGenericDef().JavaGetField(name), 
-                                     this);
-            }
-            catch (NoSuchFieldException)
-            {
-                return null;
-            }
+            return GenericsReflection.GetField(this, name, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
         }
 
         public FieldInfo GetField(string name, BindingFlags flags)
-	    {
-            var fields = TypeHelper.GetFields(EnsureGenericDef(), flags);
-	        var ret = fields.Where(x => x.Name == name);
-	        if (ret.Length > 1)
-	            throw new AmbiguousMatchException();
-	        return ret.Length == 0 ? null : new FieldInfo(ret[0], this);
+        {
+            return GenericsReflection.GetField(this, name, flags);
 	    }
 
         /// <summary>
@@ -324,17 +302,15 @@ namespace System
         /// </summary>
         public FieldInfo[] GetFields(BindingFlags flags)
 	    {
-            return TypeHelper.GetFields(EnsureGenericDef(), flags)
-	                         .Select(x => new FieldInfo(x, this));
+            return GenericsReflection.GetFields(this, flags);
 	    }
 
 	    /// <summary>
         /// Gets all public methods of this type.
         /// </summary>
         public MethodInfo[] GetMethods()
-        {
-            return EnsureGenericDef().JavaGetMethods().Where(x => Modifier.IsPublic(x.GetModifiers()))
-                                     .Select(x=> new MethodInfo(x, this));
+	    {
+            return GenericsReflection.GetMethods(this, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
         }
 
         /// <summary>
@@ -342,48 +318,24 @@ namespace System
         /// </summary>
         public MethodInfo[] GetMethods(BindingFlags flags)
         {
-            return TypeHelper.GetMethods(EnsureGenericDef(), flags)
-                             .Select(x => new MethodInfo(x, this));
-                          
+            return GenericsReflection.GetMethods(this, flags);
+
         }
 
         public MethodInfo GetMethod(string name)
         {
-            // NOTE: doesn't throw AmbiguousMatchException
-            try
-            {
-                return new MethodInfo(EnsureGenericDef().JavaGetMethod(name), this);
-            }
-            catch (NoSuchMethodException)
-            {
-                return null;
-            }
+            return GenericsReflection.GetMethod(this, name, null);
+
         }
 
-        public MethodInfo GetMethod(string name, Type[] parameters)
-        {
-            // NOTE: doesn't throw AmbiguousMatchException
-            try
-            {
-                return new MethodInfo(EnsureGenericDef().JavaGetMethod(name, parameters),this);
-            }
-            catch (NoSuchMethodException)
-            {
-                return null;
-            } 
-        }
-
-	    private Type EnsureGenericDef()
+	    public MethodInfo GetMethod(string name, Type[] parameters)
 	    {
-	        return GenericsReflection.ToGenericTypeDef(this);
+            return GenericsReflection.GetMethod(this, name, parameters) ;
 	    }
 
-	    /// <summary>
-        /// Gets all public properties of this type.
-        /// </summary>
         public PropertyInfo[] GetDeclaredProperties()
         {
-            return PropertyInfoProvider.GetProperties(EnsureGenericDef(), this);
+            return PropertyInfoProvider.GetProperties(GenericsReflection.EnsureTypeDef(this), this);
         }
 
 	    public PropertyInfo[] GetProperties()
@@ -394,19 +346,20 @@ namespace System
         public PropertyInfo[] GetProperties(BindingFlags flags)
         {
             List<PropertyInfo> ret = new List<PropertyInfo>();
-            Type type = EnsureGenericDef();
+
+            Type type = this;
             
             // we have to walk all the ways up.
             while (type != null)
             {
-                foreach(var prop in type.GetDeclaredProperties())
+                foreach (var prop in type.GetDeclaredProperties())
                     if (IsMatch(prop, flags))
                         ret.Add(prop);
 
                 if ((flags & BindingFlags.DeclaredOnly) != 0)
                     break;
 
-                type = type.GetSuperclass();
+                type = type.BaseType;
             }
             return ret.ToArray();
         }
@@ -466,20 +419,20 @@ namespace System
 
         public /*virtual*/ bool IsAssignableFrom(Type other)
         {
-            return EnsureGenericDef().JavaIsAssignableFrom(other.EnsureGenericDef());
+            return EnsureTypeDef().JavaIsAssignableFrom(other.EnsureTypeDef());
         }
 
         [Include,Inline] // used by "x is T" in generic methods.
         public /*virtual*/ bool IsInstanceOfType(Object o)
         {
             if (o == null) return false;
-            return EnsureGenericDef().JavaIsAssignableFrom(o.GetType().EnsureGenericDef());
+            return EnsureTypeDef().JavaIsAssignableFrom(o.GetType().EnsureTypeDef());
         }
 
         public /*virtual*/ bool IsSubclassOf(Type other)
         {
-            Type t = EnsureGenericDef();
-            other = other.EnsureGenericDef();
+            Type t = EnsureTypeDef();
+            other = other.EnsureTypeDef();
 
             while ((t = t.GetSuperclass()) != null)
             {
@@ -514,16 +467,21 @@ namespace System
         }
 
         /// <summary>
-        /// this will return 1 for array types, as multidimensional arrays 
-        /// are not really supported.
+        /// this will return 1 for array types.
+        /// TODO: find out how to retrieve the rank of our multidimensional arrays.
         /// </summary>
         /// <returns></returns>
 	    public int GetArrayRank()
 	    {
-	        if(!IsArray )
+	        if(!IsArray)
                 throw new InvalidOperationException("not an array");
 	        return 1;
 	    }
+
+        private Type EnsureTypeDef()
+        {
+            return GenericsReflection.EnsureTypeDef(this);
+        }
 
         [DexNative]
         public static Type GetTypeFromHandle(RuntimeTypeHandle handle)

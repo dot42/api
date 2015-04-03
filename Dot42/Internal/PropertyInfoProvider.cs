@@ -14,11 +14,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using System.Linq;
 using System.Reflection;
 using Android.Util;
-using Java.Lang;
-using Java.Util;
 using Java.Util.Concurrent;
 using Exception = System.Exception;
 
@@ -85,11 +82,11 @@ namespace Dot42.Internal
                 var getName = !string.IsNullOrEmpty(p.Get()) ? p.Get() : ("get_" + propName);
                 var setName = !string.IsNullOrEmpty(p.Set()) ? p.Set() : ("set_" + propName);
 
-                JavaMethod getter = null, setter = null;
-                getter = TypeHelper.GetMethods(definingType, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.GetProperty)
-                                   .FirstOrDefault(m=>m.Name == getName && m.ParameterTypes.Length == 0);
-                setter = TypeHelper.GetMethods(definingType, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.SetProperty)
-                                   .FirstOrDefault(m => m.Name == setName && m.ParameterTypes.Length == 1);
+
+                var getter = declaringType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.GetProperty)
+                                      .FirstOrDefault(m=>m.Name == getName && m.GetParameters().Length == 0);
+                var setter = declaringType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.SetProperty)
+                                      .FirstOrDefault(m => m.Name == setName && m.GetParameters().Length == 1);
 
              
 
@@ -101,10 +98,7 @@ namespace Dot42.Internal
 
                 IAttribute[] attributes = p.Attributes();
 
-                infos[i] = new PropertyInfo(declaringType, p.Name(),
-                                            getter != null?new MethodInfo(getter, declaringType):null, 
-                                            setter != null?new MethodInfo(setter, declaringType):null, 
-                                            attributes);
+                infos[i] = new PropertyInfo(declaringType, p.Name(), getter, setter, attributes);
             }
             return infos;
         }

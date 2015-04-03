@@ -102,13 +102,13 @@ namespace System.Reflection
                     else if (setter != null)
                     {
                         var paramType = setter.JavaMethod.GetParameterTypes().Last();
-                        var genericInfo = (IGenericMember)setter.JavaMethod.GetParameterAnnotations()
+                        var genericInfo = (IGenericDefinition)setter.JavaMethod.GetParameterAnnotations()
                                                                 .Last()
-                                                                .FirstOrDefault(x => x.AnnotationType() == typeof (IGenericMember));
+                                                                .FirstOrDefault(x => x.AnnotationType() == typeof (IGenericDefinition));
                         
                         if (genericInfo != null)
                         {
-                            propertyType = GenericsReflection.GetMemberType(paramType, DeclaringType, genericInfo);
+                            propertyType = GenericsReflection.ToGenericInstanceType(paramType, DeclaringType, genericInfo);
                         }
                         else
                         {

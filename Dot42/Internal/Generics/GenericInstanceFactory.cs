@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Java.Lang.Reflect;
-using Java.Util;
 using Java.Util.Concurrent;
 
 namespace Dot42.Internal.Generics
@@ -13,8 +12,9 @@ namespace Dot42.Internal.Generics
     /// </summary>
     internal static class GenericInstanceFactory
     {
-        private static readonly ConcurrentHashMap<Java.Util.IList<Type>, Type> GenericProxyTypes = new ConcurrentHashMap<Java.Util.IList<Type>, Type>();
-        private static readonly ConcurrentHashMap<Type, Tuple<Type, Type[]>> GenericProxyTypeArguments = new ConcurrentHashMap<Type, Tuple<Type, Type[]>>();
+        private static readonly ConcurrentHashMap<GenericTypeInfo, Type> TypeInfoToProxyType = new ConcurrentHashMap<GenericTypeInfo, Type>();
+        private static readonly ConcurrentHashMap<Type, GenericTypeInfo> ProxyTypeToTypeInfo = new ConcurrentHashMap<Type, GenericTypeInfo>();
+
         private static readonly IEnumerator<IEnumerable<Type>> InterfacePermutations;
 
         static GenericInstanceFactory()
@@ -28,14 +28,34 @@ namespace Dot42.Internal.Generics
             InterfacePermutations = Permutation(perm).GetEnumerator();
         }
 
-        public static object CreateGenericInstance(Type markerType, params object[] arguments)
+        public static Type GetOrMakeGenericRuntimeType(Type baseType, Type[] genericParameters)
         {
-            Tuple<Type, Type[]> type = GenericProxyTypeArguments.Get(markerType);
+            var typeInfo = new GenericTypeInfo(baseType, genericParameters);
 
-            if (type == null) // return null if not a generic instance.
+            Type proxyType = TypeInfoToProxyType.Get(typeInfo);
+
+            Type previousProxyType = null;
+
+            if (proxyType == null)
+            {
+                proxyType = CreateUniqueType(baseType, genericParameters);
+                previousProxyType = TypeInfoToProxyType.PutIfAbsent(typeInfo, proxyType);
+
+                // always put generic parameters, to avoid 
+                // possible race. the final instance doesn't matter.
+                ProxyTypeToTypeInfo.Put(proxyType, typeInfo);
+            }
+
+            return previousProxyType ?? proxyType;
+        }
+
+        public static object CreateGenericInstance(Type proxyType, params object[] arguments)
+        {
+            var typeInfo = ProxyTypeToTypeInfo.Get(proxyType);
+
+            if (typeInfo == null) // return null if not a generic instance.
                 return null;
 
-            
             List<Type> argumentTypes = arguments.Select(a => a == null 
                                                             ? typeof (object) 
                                                             : a.JavaGetClass())
@@ -44,15 +64,15 @@ namespace Dot42.Internal.Generics
 
             try
             {
-                var constructor = type.Item1.GetConstructor(argumentTypes.ToArray());
+                var constructor = typeInfo.TypeDefinition.GetConstructor(argumentTypes.ToArray());
 
-                List<object> args = new List<object>(arguments) {type.Item2};
+                List<object> args = new List<object>(arguments) {typeInfo.Arguments};
 
                 return constructor.Invoke(args.ToArray());
             }
             catch (Exception ex)
             {
-                throw new InvalidOperationException(string.Format("unable to create instance of " + markerType.FullName, ex));
+                throw new InvalidOperationException(string.Format("unable to create instance of " + proxyType.FullName, ex));
             }
         }
 
@@ -63,66 +83,33 @@ namespace Dot42.Internal.Generics
         /// <returns></returns>
         public static Type GetGenericTypeDefinition(Type type)
         {
-            Tuple<Type, Type[]> typeInfo = GenericProxyTypeArguments.Get(type);
-
-            if (typeInfo == null) // return null if not a generic instance.
+            var typeInfo = ProxyTypeToTypeInfo.Get(type);
+            if (typeInfo == null) 
                 return null;
 
-            return typeInfo.Item1;
+            return typeInfo.TypeDefinition;
 
         }
-
-        public static Tuple<Type, Type[]> GetGenericTypeInfo(Type type)
-        {
-            Tuple<Type, Type[]> typeInfo = GenericProxyTypeArguments.Get(type);
-
-            if (typeInfo == null) // return null if not a generic instance.
-                return null;
-
-            return typeInfo;
-
-        }
-
 
         /// <summary>
         /// returns null if not a generic proxy type.
         /// </summary>
         public static Type[] GetGenericArguments(Type type)
         {
-            Tuple<Type, Type[]> typeInfo = GenericProxyTypeArguments.Get(type);
-
-            if (typeInfo == null) // return null if not a generic instance.
+            var typeInfo = ProxyTypeToTypeInfo.Get(type);
+            if (typeInfo == null)
                 return null;
-            return typeInfo.Item2;
+            return typeInfo.Arguments;
+        }
+
+        public static GenericTypeInfo GetGenericTypeInfo(Type type)
+        {
+            return ProxyTypeToTypeInfo.Get(type);
         }
 
         public static bool IsGenericInstanceType(Type type)
         {
-            return GenericProxyTypeArguments.ContainsKey(type);
-        }
-
-        public static Type GetOrMakeGenericRuntimeType(Type baseType, Type[] genericParameters)
-        {
-            var key = new ArrayList<Type>(genericParameters.Length + 1);
-
-            key.Add(baseType);
-            for (int i = 0; i < genericParameters.Length; ++i)
-                key.Add(genericParameters[i]);
-
-            Type genericType = GenericProxyTypes.Get(baseType);
-
-            Type previousGenericType = null;
-            if (genericType == null)
-            {
-                genericType = CreateUniqueType(baseType, genericParameters);
-                previousGenericType = GenericProxyTypes.PutIfAbsent(key, genericType);
-
-                // always put generic parameters, to avoid 
-                // possible race. the final instance doesn't matter.
-                GenericProxyTypeArguments.Put(genericType, Tuple.Create(baseType, genericParameters.ToArray()));
-            }
-
-            return previousGenericType ?? genericType;
+            return ProxyTypeToTypeInfo.ContainsKey(type);
         }
 
         private static Type CreateUniqueType(Type baseType, Type[] genericParameters)
