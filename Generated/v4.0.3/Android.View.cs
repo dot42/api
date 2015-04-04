@@ -5,7 +5,7 @@ namespace Android.View
 		/// android/view/AbsSavedState
 		/// </java-name>
 		[Dot42.DexImport("android/view/AbsSavedState", AccessFlags = 1057)]
-		public abstract partial class AbsSavedState : global::Android.Os.IParcelable
+		public abstract partial class AbsSavedState : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -17,14 +17,14 @@ namespace Android.View
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.AbsSavedState> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.AbsSavedState> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
-				protected internal AbsSavedState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				protected internal AbsSavedState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 4)]
-				protected internal AbsSavedState(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				protected internal AbsSavedState(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -32,9 +32,9 @@ namespace Android.View
 				/// getSuperState
 				/// </java-name>
 				[Dot42.DexImport("getSuperState", "()Landroid/os/Parcelable;", AccessFlags = 17)]
-				public global::Android.Os.IParcelable GetSuperState() /* MethodBuilder.Create */ 
+				public global::Android.OS.IParcelable GetSuperState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
@@ -50,7 +50,7 @@ namespace Android.View
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -62,7 +62,7 @@ namespace Android.View
 				/// <java-name>
 				/// getSuperState
 				/// </java-name>
-				public global::Android.Os.IParcelable SuperState
+				public global::Android.OS.IParcelable SuperState
 				{
 				[Dot42.DexImport("getSuperState", "()Landroid/os/Parcelable;", AccessFlags = 17)]
 						get{ return GetSuperState(); }
@@ -562,7 +562,7 @@ namespace Android.View
 		/// android/view/DragEvent
 		/// </java-name>
 		[Dot42.DexImport("android/view/DragEvent", AccessFlags = 33)]
-		public partial class DragEvent : global::Android.Os.IParcelable
+		public partial class DragEvent : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -599,7 +599,7 @@ namespace Android.View
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.DragEvent> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.DragEvent> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal DragEvent() /* MethodBuilder.Create */ 
 				{
@@ -690,7 +690,7 @@ namespace Android.View
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -826,7 +826,7 @@ namespace Android.View
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;)V", AccessFlags = 1)]
-				public GestureDetector(global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public GestureDetector(global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -842,13 +842,13 @@ namespace Android.View
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroi" +
     "d/os/Handler;)V", AccessFlags = 1)]
-				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroi" +
     "d/os/Handler;Z)V", AccessFlags = 1)]
-				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.Os.Handler handler, bool boolean) /* MethodBuilder.Create */ 
+				public GestureDetector(global::Android.Content.Context context, global::Android.View.GestureDetector.IOnGestureListener onGestureListener, global::Android.OS.Handler handler, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1938,7 +1938,7 @@ namespace Android.View
 		/// android/view/InputDevice
 		/// </java-name>
 		[Dot42.DexImport("android/view/InputDevice", AccessFlags = 49)]
-		public sealed partial class InputDevice : global::Android.Os.IParcelable
+		public sealed partial class InputDevice : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2090,7 +2090,7 @@ namespace Android.View
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.InputDevice> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.InputDevice> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal InputDevice() /* MethodBuilder.Create */ 
 				{
@@ -2190,7 +2190,7 @@ namespace Android.View
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2421,14 +2421,14 @@ namespace Android.View
 		/// android/view/InputEvent
 		/// </java-name>
 		[Dot42.DexImport("android/view/InputEvent", AccessFlags = 1057)]
-		public abstract partial class InputEvent : global::Android.Os.IParcelable
+		public abstract partial class InputEvent : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.InputEvent> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.InputEvent> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal InputEvent() /* MethodBuilder.Create */ 
 				{
@@ -2465,7 +2465,7 @@ namespace Android.View
 				}
 
 				[Dot42.DexImport("android/os/Parcelable", "writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1025)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 				}
 
@@ -2973,7 +2973,7 @@ namespace Android.View
 		/// android/view/WindowManager$LayoutParams
 		/// </java-name>
 		[Dot42.DexImport("android/view/WindowManager$LayoutParams", AccessFlags = 9)]
-		public partial class IWindowManager_LayoutParams : global::Android.View.ViewGroup.LayoutParams, global::Android.Os.IParcelable
+		public partial class IWindowManager_LayoutParams : global::Android.View.ViewGroup.LayoutParams, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -3430,7 +3430,7 @@ namespace Android.View
 				/// token
 				/// </java-name>
 				[Dot42.DexImport("token", "Landroid/os/IBinder;", AccessFlags = 1)]
-				public global::Android.Os.IBinder Token;
+				public global::Android.OS.IBinder Token;
 				/// <java-name>
 				/// packageName
 				/// </java-name>
@@ -3450,7 +3450,7 @@ namespace Android.View
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.IWindowManager_LayoutParams> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.IWindowManager_LayoutParams> CREATOR;
 				/// <java-name>
 				/// LAYOUT_CHANGED
 				/// </java-name>
@@ -3542,7 +3542,7 @@ namespace Android.View
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public IWindowManager_LayoutParams(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public IWindowManager_LayoutParams(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3585,7 +3585,7 @@ namespace Android.View
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3915,7 +3915,7 @@ namespace Android.View
 		/// android/view/KeyEvent
 		/// </java-name>
 		[Dot42.DexImport("android/view/KeyEvent", AccessFlags = 33)]
-		public partial class KeyEvent : global::Android.View.InputEvent, global::Android.Os.IParcelable
+		public partial class KeyEvent : global::Android.View.InputEvent, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -5157,7 +5157,7 @@ namespace Android.View
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.KeyEvent> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.KeyEvent> CREATOR;
 				[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
 				public KeyEvent(int int32, int int321) /* MethodBuilder.Create */ 
 				{
@@ -5701,7 +5701,7 @@ namespace Android.View
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6260,7 +6260,7 @@ namespace Android.View
 		/// android/view/MotionEvent
 		/// </java-name>
 		[Dot42.DexImport("android/view/MotionEvent", AccessFlags = 49)]
-		public sealed partial class MotionEvent : global::Android.View.InputEvent, global::Android.Os.IParcelable
+		public sealed partial class MotionEvent : global::Android.View.InputEvent, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -6667,7 +6667,7 @@ namespace Android.View
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.MotionEvent> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.MotionEvent> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal MotionEvent() /* MethodBuilder.Create */ 
 				{
@@ -7420,7 +7420,7 @@ namespace Android.View
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8294,7 +8294,7 @@ namespace Android.View
 		/// android/view/Surface
 		/// </java-name>
 		[Dot42.DexImport("android/view/Surface", AccessFlags = 33)]
-		public partial class Surface : global::Android.Os.IParcelable
+		public partial class Surface : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -8321,7 +8321,7 @@ namespace Android.View
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Surface> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Surface> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/graphics/SurfaceTexture;)V", AccessFlags = 1)]
 				public Surface(global::Android.Graphics.SurfaceTexture surfaceTexture) /* MethodBuilder.Create */ 
 				{
@@ -8391,7 +8391,7 @@ namespace Android.View
 				/// readFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 257)]
-				public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8399,7 +8399,7 @@ namespace Android.View
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 257)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11412,9 +11412,9 @@ namespace Android.View
 				/// getHandler
 				/// </java-name>
 				[Dot42.DexImport("getHandler", "()Landroid/os/Handler;", AccessFlags = 1)]
-				public virtual global::Android.Os.Handler GetHandler() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Handler GetHandler() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Handler);
+						return default(global::Android.OS.Handler);
 				}
 
 				/// <java-name>
@@ -11739,25 +11739,25 @@ namespace Android.View
 				/// getWindowToken
 				/// </java-name>
 				[Dot42.DexImport("getWindowToken", "()Landroid/os/IBinder;", AccessFlags = 1)]
-				public virtual global::Android.Os.IBinder GetWindowToken() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.IBinder GetWindowToken() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
 				/// getApplicationWindowToken
 				/// </java-name>
 				[Dot42.DexImport("getApplicationWindowToken", "()Landroid/os/IBinder;", AccessFlags = 1)]
-				public virtual global::Android.Os.IBinder GetApplicationWindowToken() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.IBinder GetApplicationWindowToken() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
 				/// saveHierarchyState
 				/// </java-name>
 				[Dot42.DexImport("saveHierarchyState", "(Landroid/util/SparseArray;)V", AccessFlags = 1, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				public virtual void SaveHierarchyState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				public virtual void SaveHierarchyState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11765,7 +11765,7 @@ namespace Android.View
 				/// dispatchSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal virtual void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal virtual void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11773,16 +11773,16 @@ namespace Android.View
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
-				protected internal virtual global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// restoreHierarchyState
 				/// </java-name>
 				[Dot42.DexImport("restoreHierarchyState", "(Landroid/util/SparseArray;)V", AccessFlags = 1, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				public virtual void RestoreHierarchyState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				public virtual void RestoreHierarchyState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11790,7 +11790,7 @@ namespace Android.View
 				/// dispatchRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchRestoreInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal virtual void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal virtual void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11798,7 +11798,7 @@ namespace Android.View
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
-				protected internal virtual void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				protected internal virtual void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13189,7 +13189,7 @@ namespace Android.View
 				/// <java-name>
 				/// getHandler
 				/// </java-name>
-				public global::Android.Os.Handler Handler
+				public global::Android.OS.Handler Handler
 				{
 				[Dot42.DexImport("getHandler", "()Landroid/os/Handler;", AccessFlags = 1)]
 						get{ return GetHandler(); }
@@ -13254,7 +13254,7 @@ namespace Android.View
 				/// <java-name>
 				/// getWindowToken
 				/// </java-name>
-				public global::Android.Os.IBinder WindowToken
+				public global::Android.OS.IBinder WindowToken
 				{
 				[Dot42.DexImport("getWindowToken", "()Landroid/os/IBinder;", AccessFlags = 1)]
 						get{ return GetWindowToken(); }
@@ -13263,7 +13263,7 @@ namespace Android.View
 				/// <java-name>
 				/// getApplicationWindowToken
 				/// </java-name>
-				public global::Android.Os.IBinder ApplicationWindowToken
+				public global::Android.OS.IBinder ApplicationWindowToken
 				{
 				[Dot42.DexImport("getApplicationWindowToken", "()Landroid/os/IBinder;", AccessFlags = 1)]
 						get{ return GetApplicationWindowToken(); }
@@ -13599,14 +13599,14 @@ namespace Android.View
 						/// CREATOR
 						/// </java-name>
 						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_ICreator<BaseSavedState> CREATOR;
+						public static readonly global::Android.OS.IParcelable_ICreator<BaseSavedState> CREATOR;
 						[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public BaseSavedState(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public BaseSavedState(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-						public BaseSavedState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+						public BaseSavedState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -15324,7 +15324,7 @@ namespace Android.View
 				/// dispatchSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal override void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal override void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15332,7 +15332,7 @@ namespace Android.View
 				/// dispatchFreezeSelfOnly
 				/// </java-name>
 				[Dot42.DexImport("dispatchFreezeSelfOnly", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal virtual void DispatchFreezeSelfOnly(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal virtual void DispatchFreezeSelfOnly(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15340,7 +15340,7 @@ namespace Android.View
 				/// dispatchRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchRestoreInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15348,7 +15348,7 @@ namespace Android.View
 				/// dispatchThawSelfOnly
 				/// </java-name>
 				[Dot42.DexImport("dispatchThawSelfOnly", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal virtual void DispatchThawSelfOnly(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal virtual void DispatchThawSelfOnly(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -17156,7 +17156,7 @@ namespace Android.View
 				/// setWindowManager
 				/// </java-name>
 				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetWindowManager(global::Android.View.IWindowManager windowManager, global::Android.Os.IBinder binder, string @string) /* MethodBuilder.Create */ 
+				public virtual void SetWindowManager(global::Android.View.IWindowManager windowManager, global::Android.OS.IBinder binder, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -17164,7 +17164,7 @@ namespace Android.View
 				/// setWindowManager
 				/// </java-name>
 				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;Z)V", AccessFlags = 1)]
-				public virtual void SetWindowManager(global::Android.View.IWindowManager windowManager, global::Android.Os.IBinder binder, string @string, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void SetWindowManager(global::Android.View.IWindowManager windowManager, global::Android.OS.IBinder binder, string @string, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -17560,13 +17560,13 @@ namespace Android.View
 				/// saveHierarchyState
 				/// </java-name>
 				[Dot42.DexImport("saveHierarchyState", "()Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle SaveHierarchyState() /* MethodBuilder.Create */ ;
+				public abstract global::Android.OS.Bundle SaveHierarchyState() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// restoreHierarchyState
 				/// </java-name>
 				[Dot42.DexImport("restoreHierarchyState", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
-				public abstract void RestoreHierarchyState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				public abstract void RestoreHierarchyState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onActive

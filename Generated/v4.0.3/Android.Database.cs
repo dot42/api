@@ -424,18 +424,18 @@ namespace Android.Database
 				/// getExtras
 				/// </java-name>
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetExtras() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
 				/// respond
 				/// </java-name>
 				[Dot42.DexImport("respond", "(Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle Respond(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle Respond(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -536,7 +536,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.Os.Bundle Extras
+				public global::Android.OS.Bundle Extras
 				{
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
 						get{ return GetExtras(); }
@@ -856,7 +856,7 @@ namespace Android.Database
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/os/Handler;)V", AccessFlags = 1)]
-				public ContentObserver(global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public ContentObserver(global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1150,15 +1150,15 @@ namespace Android.Database
 				}
 
 				[Dot42.DexImport("android/database/Cursor", "getExtras", "()Landroid/os/Bundle;", AccessFlags = 1025)]
-				public override global::Android.Os.Bundle GetExtras() /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override global::Android.OS.Bundle GetExtras() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				[Dot42.DexImport("android/database/Cursor", "respond", "(Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public override global::Android.Os.Bundle Respond(global::Android.Os.Bundle bundle) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override global::Android.OS.Bundle Respond(global::Android.OS.Bundle bundle) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -1200,7 +1200,7 @@ namespace Android.Database
 						get{ return GetWantsAllOnMoveCalls(); }
 				}
 
-				public global::Android.Os.Bundle Extras
+				public global::Android.OS.Bundle Extras
 				{
 				[Dot42.DexImport("android/database/Cursor", "getExtras", "()Landroid/os/Bundle;", AccessFlags = 1025)]
 						get{ return GetExtras(); }
@@ -1338,14 +1338,14 @@ namespace Android.Database
 		/// android/database/CursorWindow
 		/// </java-name>
 		[Dot42.DexImport("android/database/CursorWindow", AccessFlags = 33)]
-		public partial class CursorWindow : global::Android.Database.Sqlite.SQLiteClosable, global::Android.Os.IParcelable
+		public partial class CursorWindow : global::Android.Database.Sqlite.SQLiteClosable, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Database.CursorWindow> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Database.CursorWindow> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public CursorWindow(string @string) /* MethodBuilder.Create */ 
 				{
@@ -1622,7 +1622,7 @@ namespace Android.Database
 				/// newFromParcel
 				/// </java-name>
 				[Dot42.DexImport("newFromParcel", "(Landroid/os/Parcel;)Landroid/database/CursorWindow;", AccessFlags = 9)]
-				public static global::Android.Database.CursorWindow NewFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public static global::Android.Database.CursorWindow NewFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Database.CursorWindow);
 				}
@@ -1640,7 +1640,7 @@ namespace Android.Database
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1810,9 +1810,9 @@ namespace Android.Database
 				/// getExtras
 				/// </java-name>
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetExtras() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -2032,9 +2032,9 @@ namespace Android.Database
 				/// respond
 				/// </java-name>
 				[Dot42.DexImport("respond", "(Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle Respond(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle Respond(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -2105,7 +2105,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.Os.Bundle Extras
+				public global::Android.OS.Bundle Extras
 				{
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
 						get{ return GetExtras(); }
@@ -2197,7 +2197,7 @@ namespace Android.Database
 				/// writeExceptionToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeExceptionToParcel", "(Landroid/os/Parcel;Ljava/lang/Exception;)V", AccessFlags = 25)]
-				public static void WriteExceptionToParcel(global::Android.Os.Parcel parcel, global::System.Exception exception) /* MethodBuilder.Create */ 
+				public static void WriteExceptionToParcel(global::Android.OS.Parcel parcel, global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2205,7 +2205,7 @@ namespace Android.Database
 				/// readExceptionFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readExceptionFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 25)]
-				public static void ReadExceptionFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public static void ReadExceptionFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2213,7 +2213,7 @@ namespace Android.Database
 				/// readExceptionWithFileNotFoundExceptionFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readExceptionWithFileNotFoundExceptionFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 9)]
-				public static void ReadExceptionWithFileNotFoundExceptionFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public static void ReadExceptionWithFileNotFoundExceptionFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2221,7 +2221,7 @@ namespace Android.Database
 				/// readExceptionWithOperationApplicationExceptionFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readExceptionWithOperationApplicationExceptionFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 9)]
-				public static void ReadExceptionWithOperationApplicationExceptionFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public static void ReadExceptionWithOperationApplicationExceptionFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2506,9 +2506,9 @@ namespace Android.Database
 				/// </java-name>
 				[Dot42.DexImport("blobFileDescriptorForQuery", "(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[Ljava/lang/String;)La" +
     "ndroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelFileDescriptor BlobFileDescriptorForQuery(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, string @string, string[] string1) /* MethodBuilder.Create */ 
+				public static global::Android.OS.ParcelFileDescriptor BlobFileDescriptorForQuery(global::Android.Database.Sqlite.SQLiteDatabase sQLiteDatabase, string @string, string[] string1) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.ParcelFileDescriptor);
+						return default(global::Android.OS.ParcelFileDescriptor);
 				}
 
 				/// <java-name>
@@ -2516,9 +2516,9 @@ namespace Android.Database
 				/// </java-name>
 				[Dot42.DexImport("blobFileDescriptorForQuery", "(Landroid/database/sqlite/SQLiteStatement;[Ljava/lang/String;)Landroid/os/ParcelF" +
     "ileDescriptor;", AccessFlags = 9)]
-				public static global::Android.Os.ParcelFileDescriptor BlobFileDescriptorForQuery(global::Android.Database.Sqlite.SQLiteStatement sQLiteStatement, string[] @string) /* MethodBuilder.Create */ 
+				public static global::Android.OS.ParcelFileDescriptor BlobFileDescriptorForQuery(global::Android.Database.Sqlite.SQLiteStatement sQLiteStatement, string[] @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.ParcelFileDescriptor);
+						return default(global::Android.OS.ParcelFileDescriptor);
 				}
 
 				/// <java-name>
@@ -3095,13 +3095,13 @@ namespace Android.Database
 				/// getExtras
 				/// </java-name>
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1025)]
-				global::Android.Os.Bundle GetExtras() /* MethodBuilder.Create */ ;
+				global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// respond
 				/// </java-name>
 				[Dot42.DexImport("respond", "(Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				global::Android.Os.Bundle Respond(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				global::Android.OS.Bundle Respond(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 		}
 

@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using Dot42.Internal;
+using Java.Lang;
 
 namespace System
 {
@@ -34,6 +35,20 @@ namespace System
         public static float Parse(string s, IFormatProvider provider)
         {
             return Parse(s);
+        }
+
+        public static bool TryParse(string s, out float result)
+        {
+            try
+            {
+                result = Parse(s);
+                return true;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0f;
+                return false;
+            }
         }
 
         public string ToString(IFormatProvider provider)

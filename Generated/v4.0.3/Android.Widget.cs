@@ -318,16 +318,16 @@ namespace Android.Widget
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-				public new virtual global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public new virtual global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-				public new virtual void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				public new virtual void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1814,16 +1814,16 @@ namespace Android.Widget
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-				public new virtual global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public new virtual global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-				public new virtual void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				public new virtual void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2179,7 +2179,7 @@ namespace Android.Widget
 				/// dispatchSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal override void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal override void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2187,7 +2187,7 @@ namespace Android.Widget
 				/// dispatchRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchRestoreInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2536,16 +2536,16 @@ namespace Android.Widget
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-				public new virtual global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public new virtual global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-				public new virtual void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				public new virtual void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5051,16 +5051,16 @@ namespace Android.Widget
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-				public override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public override global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-				public override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				public override void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5772,7 +5772,7 @@ namespace Android.Widget
 				/// dispatchRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchRestoreInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5780,16 +5780,16 @@ namespace Android.Widget
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
-				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				protected internal override global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
-				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				protected internal override void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6724,16 +6724,16 @@ namespace Android.Widget
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-				public override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public override global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-				public override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				public override void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13419,16 +13419,16 @@ namespace Android.Widget
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-				public new virtual global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public new virtual global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-				public new virtual void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				public new virtual void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -14376,21 +14376,21 @@ namespace Android.Widget
 		/// android/widget/RemoteViews
 		/// </java-name>
 		[Dot42.DexImport("android/widget/RemoteViews", AccessFlags = 33)]
-		public partial class RemoteViews : global::Android.Os.IParcelable, global::Android.View.LayoutInflater.IFilter
+		public partial class RemoteViews : global::Android.OS.IParcelable, global::Android.View.LayoutInflater.IFilter
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Widget.RemoteViews> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Widget.RemoteViews> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
 				public RemoteViews(string @string, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public RemoteViews(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public RemoteViews(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -14697,7 +14697,7 @@ namespace Android.Widget
 				/// setBundle
 				/// </java-name>
 				[Dot42.DexImport("setBundle", "(ILjava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void SetBundle(int int32, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void SetBundle(int int32, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -14756,7 +14756,7 @@ namespace Android.Widget
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -14834,9 +14834,9 @@ namespace Android.Widget
 				/// onBind
 				/// </java-name>
 				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 1)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.OS.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
@@ -19426,16 +19426,16 @@ namespace Android.Widget
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-				public new virtual global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public new virtual global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-				public new virtual void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				public new virtual void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -19666,9 +19666,9 @@ namespace Android.Widget
 				/// getInputExtras
 				/// </java-name>
 				[Dot42.DexImport("getInputExtras", "(Z)Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetInputExtras(bool boolean) /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle GetInputExtras(bool boolean) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -20020,7 +20020,7 @@ namespace Android.Widget
 				/// onPrivateIMECommand
 				/// </java-name>
 				[Dot42.DexImport("onPrivateIMECommand", "(Ljava/lang/String;Landroid/os/Bundle;)Z", AccessFlags = 1)]
-				public virtual bool OnPrivateIMECommand(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual bool OnPrivateIMECommand(string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -21139,7 +21139,7 @@ namespace Android.Widget
 						/// CREATOR
 						/// </java-name>
 						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_ICreator<SavedState> CREATOR;
+						public static readonly global::Android.OS.IParcelable_ICreator<SavedState> CREATOR;
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 						internal SavedState() /* MethodBuilder.Create */ 
 						{
@@ -21149,7 +21149,7 @@ namespace Android.Widget
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -21232,16 +21232,16 @@ namespace Android.Widget
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Parcelable;", AccessFlags = 4)]
-				protected internal override global::Android.Os.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
+				protected internal override global::Android.OS.IParcelable OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Parcelable;)V", AccessFlags = 4)]
-				protected internal override void OnRestoreInstanceState(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				protected internal override void OnRestoreInstanceState(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 

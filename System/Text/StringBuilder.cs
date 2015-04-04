@@ -15,6 +15,7 @@
 // limitations under the License.
 using Dot42.Internal;
 using Java.Lang;
+using Java.Text;
 
 namespace System.Text
 {
@@ -76,6 +77,15 @@ namespace System.Text
         public StringBuilder Append(string value, int startIndex, int count)
         {
             JavaAppend(value, startIndex, startIndex + count);
+            return this;
+        }
+
+        /// <summary>
+        /// Append a substring of the given string from into this builder.
+        /// </summary>
+        public StringBuilder AppendFormat(string format, params object[] args)
+        {
+            Append(string.Format(format, args));
             return this;
         }
 

@@ -5,7 +5,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/ActivityInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ActivityInfo", AccessFlags = 33)]
-		public partial class ActivityInfo : global::Android.Content.Pm.ComponentInfo, global::Android.Os.IParcelable
+		public partial class ActivityInfo : global::Android.Content.Pm.ComponentInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -262,7 +262,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.ActivityInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ActivityInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ActivityInfo() /* MethodBuilder.Create */ 
 				{
@@ -312,7 +312,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -331,7 +331,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/ApplicationInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ApplicationInfo", AccessFlags = 33)]
-		public partial class ApplicationInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.Os.IParcelable
+		public partial class ApplicationInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -553,7 +553,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.ApplicationInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ApplicationInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ApplicationInfo() /* MethodBuilder.Create */ 
 				{
@@ -594,7 +594,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -686,7 +686,7 @@ namespace Android.Content.Pm
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 4)]
-				protected internal ComponentInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				protected internal ComponentInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -737,7 +737,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -756,7 +756,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/ConfigurationInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ConfigurationInfo", AccessFlags = 33)]
-		public partial class ConfigurationInfo : global::Android.Os.IParcelable
+		public partial class ConfigurationInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -803,7 +803,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.ConfigurationInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ConfigurationInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ConfigurationInfo() /* MethodBuilder.Create */ 
 				{
@@ -836,7 +836,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -864,7 +864,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/FeatureInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/FeatureInfo", AccessFlags = 33)]
-		public partial class FeatureInfo : global::Android.Os.IParcelable
+		public partial class FeatureInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -896,7 +896,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.FeatureInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.FeatureInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public FeatureInfo() /* MethodBuilder.Create */ 
 				{
@@ -929,7 +929,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -957,7 +957,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/InstrumentationInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/InstrumentationInfo", AccessFlags = 33)]
-		public partial class InstrumentationInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.Os.IParcelable
+		public partial class InstrumentationInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -994,7 +994,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.InstrumentationInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.InstrumentationInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public InstrumentationInfo() /* MethodBuilder.Create */ 
 				{
@@ -1027,7 +1027,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1044,7 +1044,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.LabeledIntent> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.LabeledIntent> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/content/Intent;Ljava/lang/String;II)V", AccessFlags = 1)]
 				public LabeledIntent(global::Android.Content.Intent intent, string @string, int int32, int int321) /* MethodBuilder.Create */ 
 				{
@@ -1123,7 +1123,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1131,7 +1131,7 @@ namespace Android.Content.Pm
 				/// readFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public override void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public override void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1182,7 +1182,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/PackageInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/PackageInfo", AccessFlags = 33)]
-		public partial class PackageInfo : global::Android.Os.IParcelable
+		public partial class PackageInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1284,7 +1284,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.PackageInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PackageInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public PackageInfo() /* MethodBuilder.Create */ 
 				{
@@ -1312,7 +1312,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1359,7 +1359,7 @@ namespace Android.Content.Pm
 				/// metaData
 				/// </java-name>
 				[Dot42.DexImport("metaData", "Landroid/os/Bundle;", AccessFlags = 1)]
-				public global::Android.Os.Bundle MetaData;
+				public global::Android.OS.Bundle MetaData;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public PackageItemInfo() /* MethodBuilder.Create */ 
 				{
@@ -1371,7 +1371,7 @@ namespace Android.Content.Pm
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 4)]
-				protected internal PackageItemInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				protected internal PackageItemInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1432,7 +1432,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2299,7 +2299,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/PackageStats
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/PackageStats", AccessFlags = 33)]
-		public partial class PackageStats : global::Android.Os.IParcelable
+		public partial class PackageStats : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2351,14 +2351,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.PackageStats> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PackageStats> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public PackageStats(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public PackageStats(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public PackageStats(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2389,7 +2389,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2404,21 +2404,21 @@ namespace Android.Content.Pm
 		/// android/content/pm/PathPermission
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/PathPermission", AccessFlags = 33)]
-		public partial class PathPermission : global::Android.Os.PatternMatcher
+		public partial class PathPermission : global::Android.OS.PatternMatcher
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.PathPermission> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PathPermission> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public PathPermission(string @string, int int32, string string1, string string2) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public PathPermission(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public PathPermission(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2444,7 +2444,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2477,7 +2477,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/PermissionGroupInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/PermissionGroupInfo", AccessFlags = 33)]
-		public partial class PermissionGroupInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.Os.IParcelable
+		public partial class PermissionGroupInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2494,7 +2494,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.PermissionGroupInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PermissionGroupInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public PermissionGroupInfo() /* MethodBuilder.Create */ 
 				{
@@ -2536,7 +2536,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2546,7 +2546,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/PermissionInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/PermissionInfo", AccessFlags = 33)]
-		public partial class PermissionInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.Os.IParcelable
+		public partial class PermissionInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2593,7 +2593,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.PermissionInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PermissionInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public PermissionInfo() /* MethodBuilder.Create */ 
 				{
@@ -2635,7 +2635,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2645,7 +2645,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/ProviderInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ProviderInfo", AccessFlags = 49)]
-		public sealed partial class ProviderInfo : global::Android.Content.Pm.ComponentInfo, global::Android.Os.IParcelable
+		public sealed partial class ProviderInfo : global::Android.Content.Pm.ComponentInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2672,7 +2672,7 @@ namespace Android.Content.Pm
 				/// uriPermissionPatterns
 				/// </java-name>
 				[Dot42.DexImport("uriPermissionPatterns", "[Landroid/os/PatternMatcher;", AccessFlags = 1)]
-				public global::Android.Os.PatternMatcher[] UriPermissionPatterns;
+				public global::Android.OS.PatternMatcher[] UriPermissionPatterns;
 				/// <java-name>
 				/// pathPermissions
 				/// </java-name>
@@ -2697,7 +2697,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.ProviderInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ProviderInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ProviderInfo() /* MethodBuilder.Create */ 
 				{
@@ -2721,7 +2721,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2740,7 +2740,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/ResolveInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ResolveInfo", AccessFlags = 33)]
-		public partial class ResolveInfo : global::Android.Os.IParcelable
+		public partial class ResolveInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2807,7 +2807,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.ResolveInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ResolveInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ResolveInfo() /* MethodBuilder.Create */ 
 				{
@@ -2870,7 +2870,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2923,7 +2923,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/ServiceInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ServiceInfo", AccessFlags = 33)]
-		public partial class ServiceInfo : global::Android.Content.Pm.ComponentInfo, global::Android.Os.IParcelable
+		public partial class ServiceInfo : global::Android.Content.Pm.ComponentInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2945,7 +2945,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.ServiceInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ServiceInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ServiceInfo() /* MethodBuilder.Create */ 
 				{
@@ -2986,7 +2986,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public override void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public override void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2996,14 +2996,14 @@ namespace Android.Content.Pm
 		/// android/content/pm/Signature
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/Signature", AccessFlags = 33)]
-		public partial class Signature : global::Android.Os.IParcelable
+		public partial class Signature : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Pm.Signature> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.Signature> CREATOR;
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public Signature(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
@@ -3095,7 +3095,7 @@ namespace Android.Content.Pm
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

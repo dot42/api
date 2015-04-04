@@ -13,6 +13,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Java.Lang;
+
 namespace System
 {
     partial struct Boolean
@@ -39,6 +42,20 @@ namespace System
         {
             if (s == null) throw new ArgumentNullException();
             return JavaParse(s.Trim());
+        }
+
+        public static bool TryParse(string s, out bool result)
+        {
+            try
+            {
+                result = Parse(s);
+                return true;
+            }
+            catch (NumberFormatException)
+            {
+                result = false;
+                return false;
+            }
         }
     }
 }

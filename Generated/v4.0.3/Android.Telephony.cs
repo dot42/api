@@ -45,7 +45,7 @@ namespace Android.Telephony
 		/// android/telephony/NeighboringCellInfo
 		/// </java-name>
 		[Dot42.DexImport("android/telephony/NeighboringCellInfo", AccessFlags = 33)]
-		public partial class NeighboringCellInfo : global::Android.Os.IParcelable
+		public partial class NeighboringCellInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -62,7 +62,7 @@ namespace Android.Telephony
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Telephony.NeighboringCellInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Telephony.NeighboringCellInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public NeighboringCellInfo() /* MethodBuilder.Create */ 
 				{
@@ -79,7 +79,7 @@ namespace Android.Telephony
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public NeighboringCellInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public NeighboringCellInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -166,7 +166,7 @@ namespace Android.Telephony
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -773,7 +773,7 @@ namespace Android.Telephony
 		/// android/telephony/ServiceState
 		/// </java-name>
 		[Dot42.DexImport("android/telephony/ServiceState", AccessFlags = 33)]
-		public partial class ServiceState : global::Android.Os.IParcelable
+		public partial class ServiceState : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -800,7 +800,7 @@ namespace Android.Telephony
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Telephony.ServiceState> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Telephony.ServiceState> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ServiceState() /* MethodBuilder.Create */ 
 				{
@@ -812,7 +812,7 @@ namespace Android.Telephony
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public ServiceState(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public ServiceState(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -828,7 +828,7 @@ namespace Android.Telephony
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1036,7 +1036,7 @@ namespace Android.Telephony
 		/// android/telephony/SignalStrength
 		/// </java-name>
 		[Dot42.DexImport("android/telephony/SignalStrength", AccessFlags = 33)]
-		public partial class SignalStrength : global::Android.Os.IParcelable
+		public partial class SignalStrength : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -1048,7 +1048,7 @@ namespace Android.Telephony
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

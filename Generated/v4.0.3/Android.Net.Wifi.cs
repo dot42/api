@@ -5,7 +5,7 @@ namespace Android.Net.Wifi
 		/// android/net/wifi/ScanResult
 		/// </java-name>
 		[Dot42.DexImport("android/net/wifi/ScanResult", AccessFlags = 33)]
-		public partial class ScanResult : global::Android.Os.IParcelable
+		public partial class ScanResult : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -60,7 +60,7 @@ namespace Android.Net.Wifi
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -182,7 +182,7 @@ namespace Android.Net.Wifi
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -192,7 +192,7 @@ namespace Android.Net.Wifi
 		/// android/net/wifi/WifiConfiguration
 		/// </java-name>
 		[Dot42.DexImport("android/net/wifi/WifiConfiguration", AccessFlags = 33)]
-		public partial class WifiConfiguration : global::Android.Os.IParcelable
+		public partial class WifiConfiguration : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -292,7 +292,7 @@ namespace Android.Net.Wifi
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -536,7 +536,7 @@ namespace Android.Net.Wifi
 		/// android/net/wifi/WifiInfo
 		/// </java-name>
 		[Dot42.DexImport("android/net/wifi/WifiInfo", AccessFlags = 33)]
-		public partial class WifiInfo : global::Android.Os.IParcelable
+		public partial class WifiInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -661,7 +661,7 @@ namespace Android.Net.Wifi
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1268,7 +1268,7 @@ namespace Android.Net.Wifi
 						/// setWorkSource
 						/// </java-name>
 						[Dot42.DexImport("setWorkSource", "(Landroid/os/WorkSource;)V", AccessFlags = 1)]
-						public virtual void SetWorkSource(global::Android.Os.WorkSource workSource) /* MethodBuilder.Create */ 
+						public virtual void SetWorkSource(global::Android.OS.WorkSource workSource) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1300,7 +1300,7 @@ namespace Android.Net.Wifi
 		/// android/net/wifi/WpsInfo
 		/// </java-name>
 		[Dot42.DexImport("android/net/wifi/WpsInfo", AccessFlags = 33)]
-		public partial class WpsInfo : global::Android.Os.IParcelable
+		public partial class WpsInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1342,7 +1342,7 @@ namespace Android.Net.Wifi
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Net.Wifi.WpsInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Net.Wifi.WpsInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public WpsInfo() /* MethodBuilder.Create */ 
 				{
@@ -1375,7 +1375,7 @@ namespace Android.Net.Wifi
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

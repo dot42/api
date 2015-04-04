@@ -5,7 +5,7 @@ namespace Android.App.Admin
 		/// android/app/admin/DeviceAdminInfo
 		/// </java-name>
 		[Dot42.DexImport("android/app/admin/DeviceAdminInfo", AccessFlags = 49)]
-		public sealed partial class DeviceAdminInfo : global::Android.Os.IParcelable
+		public sealed partial class DeviceAdminInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -52,7 +52,7 @@ namespace Android.App.Admin
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.App.Admin.DeviceAdminInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.App.Admin.DeviceAdminInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)V", AccessFlags = 1)]
 				public DeviceAdminInfo(global::Android.Content.Context context, global::Android.Content.Pm.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
 				{
@@ -169,7 +169,7 @@ namespace Android.App.Admin
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

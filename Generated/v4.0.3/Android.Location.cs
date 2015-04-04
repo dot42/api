@@ -5,14 +5,14 @@ namespace Android.Location
 		/// android/location/Address
 		/// </java-name>
 		[Dot42.DexImport("android/location/Address", AccessFlags = 33)]
-		public partial class Address : global::Android.Os.IParcelable
+		public partial class Address : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Location.Address> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Location.Address> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/util/Locale;)V", AccessFlags = 1)]
 				public Address(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
 				{
@@ -346,16 +346,16 @@ namespace Android.Location
 				/// getExtras
 				/// </java-name>
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetExtras() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
 				/// setExtras
 				/// </java-name>
 				[Dot42.DexImport("setExtras", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void SetExtras(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void SetExtras(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -381,7 +381,7 @@ namespace Android.Location
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -576,7 +576,7 @@ namespace Android.Location
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.Os.Bundle Extras
+				public global::Android.OS.Bundle Extras
 				{
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
 						get{ return GetExtras(); }
@@ -590,7 +590,7 @@ namespace Android.Location
 		/// android/location/Criteria
 		/// </java-name>
 		[Dot42.DexImport("android/location/Criteria", AccessFlags = 33)]
-		public partial class Criteria : global::Android.Os.IParcelable
+		public partial class Criteria : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -642,7 +642,7 @@ namespace Android.Location
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Location.Criteria> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Location.Criteria> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Criteria() /* MethodBuilder.Create */ 
 				{
@@ -836,7 +836,7 @@ namespace Android.Location
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1216,7 +1216,7 @@ namespace Android.Location
 				/// onStatusChanged
 				/// </java-name>
 				[Dot42.DexImport("onStatusChanged", "(Ljava/lang/String;ILandroid/os/Bundle;)V", AccessFlags = 1025)]
-				void OnStatusChanged(string @string, int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				void OnStatusChanged(string @string, int int32, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onProviderEnabled
@@ -1236,7 +1236,7 @@ namespace Android.Location
 		/// android/location/Location
 		/// </java-name>
 		[Dot42.DexImport("android/location/Location", AccessFlags = 33)]
-		public partial class Location : global::Android.Os.IParcelable
+		public partial class Location : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1258,7 +1258,7 @@ namespace Android.Location
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Location.Location> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Location.Location> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public Location(string @string) /* MethodBuilder.Create */ 
 				{
@@ -1545,16 +1545,16 @@ namespace Android.Location
 				/// getExtras
 				/// </java-name>
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetExtras() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
 				/// setExtras
 				/// </java-name>
 				[Dot42.DexImport("setExtras", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void SetExtras(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void SetExtras(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1580,7 +1580,7 @@ namespace Android.Location
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1680,7 +1680,7 @@ namespace Android.Location
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.Os.Bundle Extras
+				public global::Android.OS.Bundle Extras
 				{
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
 						get{ return GetExtras(); }
@@ -1799,7 +1799,7 @@ namespace Android.Location
 				/// requestLocationUpdates
 				/// </java-name>
 				[Dot42.DexImport("requestLocationUpdates", "(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V", AccessFlags = 1)]
-				public virtual void RequestLocationUpdates(string @string, long int64, float single, global::Android.Location.ILocationListener locationListener, global::Android.Os.Looper looper) /* MethodBuilder.Create */ 
+				public virtual void RequestLocationUpdates(string @string, long int64, float single, global::Android.Location.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1808,7 +1808,7 @@ namespace Android.Location
 				/// </java-name>
 				[Dot42.DexImport("requestLocationUpdates", "(JFLandroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Loop" +
     "er;)V", AccessFlags = 1)]
-				public virtual void RequestLocationUpdates(long int64, float single, global::Android.Location.Criteria criteria, global::Android.Location.ILocationListener locationListener, global::Android.Os.Looper looper) /* MethodBuilder.Create */ 
+				public virtual void RequestLocationUpdates(long int64, float single, global::Android.Location.Criteria criteria, global::Android.Location.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1832,7 +1832,7 @@ namespace Android.Location
 				/// requestSingleUpdate
 				/// </java-name>
 				[Dot42.DexImport("requestSingleUpdate", "(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V", AccessFlags = 1)]
-				public virtual void RequestSingleUpdate(string @string, global::Android.Location.ILocationListener locationListener, global::Android.Os.Looper looper) /* MethodBuilder.Create */ 
+				public virtual void RequestSingleUpdate(string @string, global::Android.Location.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1841,7 +1841,7 @@ namespace Android.Location
 				/// </java-name>
 				[Dot42.DexImport("requestSingleUpdate", "(Landroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper" +
     ";)V", AccessFlags = 1)]
-				public virtual void RequestSingleUpdate(global::Android.Location.Criteria criteria, global::Android.Location.ILocationListener locationListener, global::Android.Os.Looper looper) /* MethodBuilder.Create */ 
+				public virtual void RequestSingleUpdate(global::Android.Location.Criteria criteria, global::Android.Location.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1963,7 +1963,7 @@ namespace Android.Location
 				/// setTestProviderStatus
 				/// </java-name>
 				[Dot42.DexImport("setTestProviderStatus", "(Ljava/lang/String;ILandroid/os/Bundle;J)V", AccessFlags = 1)]
-				public virtual void SetTestProviderStatus(string @string, int int32, global::Android.Os.Bundle bundle, long int64) /* MethodBuilder.Create */ 
+				public virtual void SetTestProviderStatus(string @string, int int32, global::Android.OS.Bundle bundle, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2022,7 +2022,7 @@ namespace Android.Location
 				/// sendExtraCommand
 				/// </java-name>
 				[Dot42.DexImport("sendExtraCommand", "(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Z", AccessFlags = 1)]
-				public virtual bool SendExtraCommand(string @string, string string1, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual bool SendExtraCommand(string @string, string string1, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}

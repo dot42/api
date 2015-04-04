@@ -194,7 +194,7 @@ namespace Android.Net.Sip
 				/// sendDtmf
 				/// </java-name>
 				[Dot42.DexImport("sendDtmf", "(ILandroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void SendDtmf(int int32, global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void SendDtmf(int int32, global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -658,14 +658,14 @@ namespace Android.Net.Sip
 		/// android/net/sip/SipProfile
 		/// </java-name>
 		[Dot42.DexImport("android/net/sip/SipProfile", AccessFlags = 33)]
-		public partial class SipProfile : global::Android.Os.IParcelable, global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		public partial class SipProfile : global::Android.OS.IParcelable, global::Java.Io.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Net.Sip.SipProfile> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Net.Sip.SipProfile> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal SipProfile() /* MethodBuilder.Create */ 
 				{
@@ -675,7 +675,7 @@ namespace Android.Net.Sip
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

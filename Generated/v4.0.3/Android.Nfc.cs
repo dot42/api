@@ -24,14 +24,14 @@ namespace Android.Nfc
 		/// android/nfc/NdefMessage
 		/// </java-name>
 		[Dot42.DexImport("android/nfc/NdefMessage", AccessFlags = 49)]
-		public sealed partial class NdefMessage : global::Android.Os.IParcelable
+		public sealed partial class NdefMessage : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Nfc.NdefMessage> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Nfc.NdefMessage> CREATOR;
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public NdefMessage(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
@@ -87,7 +87,7 @@ namespace Android.Nfc
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -111,7 +111,7 @@ namespace Android.Nfc
 		/// android/nfc/NdefRecord
 		/// </java-name>
 		[Dot42.DexImport("android/nfc/NdefRecord", AccessFlags = 49)]
-		public sealed partial class NdefRecord : global::Android.Os.IParcelable
+		public sealed partial class NdefRecord : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -188,7 +188,7 @@ namespace Android.Nfc
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Nfc.NdefRecord> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Nfc.NdefRecord> CREATOR;
 				[Dot42.DexImport("<init>", "(S[B[B[B)V", AccessFlags = 1)]
 				public NdefRecord(short int16, sbyte[] sByte, sbyte[] sByte1, sbyte[] sByte2) /* MethodBuilder.Create */ 
 				{
@@ -330,7 +330,7 @@ namespace Android.Nfc
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -601,14 +601,14 @@ namespace Android.Nfc
 		/// android/nfc/Tag
 		/// </java-name>
 		[Dot42.DexImport("android/nfc/Tag", AccessFlags = 49)]
-		public sealed partial class Tag : global::Android.Os.IParcelable
+		public sealed partial class Tag : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Nfc.Tag> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Nfc.Tag> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal Tag() /* MethodBuilder.Create */ 
 				{
@@ -663,7 +663,7 @@ namespace Android.Nfc
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

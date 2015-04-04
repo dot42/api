@@ -314,7 +314,7 @@ namespace Android.Net
 		/// android/net/DhcpInfo
 		/// </java-name>
 		[Dot42.DexImport("android/net/DhcpInfo", AccessFlags = 33)]
-		public partial class DhcpInfo : global::Android.Os.IParcelable
+		public partial class DhcpInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -379,7 +379,7 @@ namespace Android.Net
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1033,7 +1033,7 @@ namespace Android.Net
 		/// android/net/NetworkInfo
 		/// </java-name>
 		[Dot42.DexImport("android/net/NetworkInfo", AccessFlags = 33)]
-		public partial class NetworkInfo : global::Android.Os.IParcelable
+		public partial class NetworkInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -1180,7 +1180,7 @@ namespace Android.Net
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2008,7 +2008,7 @@ namespace Android.Net
 		/// </java-name>
 		[Dot42.DexImport("android/net/Uri", AccessFlags = 1057, Signature = "Ljava/lang/Object;Landroid/os/Parcelable;Ljava/lang/Comparable<Landroid/net/Uri;>" +
     ";")]
-		public abstract partial class Uri : global::Android.Os.IParcelable, global::System.IComparable<global::Android.Net.Uri>
+		public abstract partial class Uri : global::Android.OS.IParcelable, global::System.IComparable<global::Android.Net.Uri>
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2020,7 +2020,7 @@ namespace Android.Net
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Net.Uri> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Net.Uri> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal Uri() /* MethodBuilder.Create */ 
 				{
@@ -2267,7 +2267,7 @@ namespace Android.Net
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;Landroid/net/Uri;)V", AccessFlags = 9)]
-				public static void WriteToParcel(global::Android.Os.Parcel parcel, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
+				public static void WriteToParcel(global::Android.OS.Parcel parcel, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2314,7 +2314,7 @@ namespace Android.Net
 				}
 
 				[Dot42.DexImport("android/os/Parcelable", "writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1025)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 				}
 
@@ -3313,9 +3313,9 @@ namespace Android.Net
 				/// onBind
 				/// </java-name>
 				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 1)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.OS.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
@@ -3437,9 +3437,9 @@ namespace Android.Net
 						/// establish
 						/// </java-name>
 						[Dot42.DexImport("establish", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
-						public virtual global::Android.Os.ParcelFileDescriptor Establish() /* MethodBuilder.Create */ 
+						public virtual global::Android.OS.ParcelFileDescriptor Establish() /* MethodBuilder.Create */ 
 						{
-								return default(global::Android.Os.ParcelFileDescriptor);
+								return default(global::Android.OS.ParcelFileDescriptor);
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]

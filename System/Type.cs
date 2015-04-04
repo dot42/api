@@ -27,6 +27,9 @@ namespace System
 {
 	/*abstract*/ partial class Type : ICustomAttributeProvider
 	{
+        internal const BindingFlags AllMembersBindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
+        internal const BindingFlags AllDeclaredMembersBindingFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
+
         /// <summary>
         /// Gets the assembly-qualified name of the Type, which includes the name of the assembly from which the Type was loaded.
         /// 

@@ -104,7 +104,7 @@ namespace Dot42.Test
                         setupMethod.Invoke(instance, null);
                     }
                 }
-                catch (InvocationTargetException ex)
+                catch (TargetInvocationException ex)
                 {
                     ex.FillInStackTrace();
                     throw ex.GetTargetException();
@@ -122,7 +122,7 @@ namespace Dot42.Test
                     teardownMethod.Invoke(instance, null);
                 }
             }
-            catch (InvocationTargetException ex)
+            catch (TargetInvocationException ex)
             {
                 ex.FillInStackTrace();
                 throw ex.GetTargetException();
@@ -223,7 +223,7 @@ namespace Dot42.Test
                     throw new AssertionFailedError("Expected exception");
                 }
             }
-            catch (InvocationTargetException ex)
+            catch (TargetInvocationException ex)
             {
                 // Method has thrown an exception.
                 ex.FillInStackTrace();

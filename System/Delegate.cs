@@ -13,6 +13,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Reflection;
+
 namespace System
 {
 	public abstract partial class Delegate
@@ -46,6 +49,49 @@ namespace System
         /// Remove the given delegate from my invocation list.
         /// </summary>
         protected abstract Delegate Remove(Delegate other);
-    }
+
+	    /// <summary>
+	    /// return the class instance or null, if this is a static delegate.
+	    /// </summary>
+	    public object Target
+	    {
+	        get
+	        {
+                // don't care about performance 
+	            var field = GetType().GetField("instance");
+	            if (field == null) return null;
+	            return field.GetValue(this);
+	        }
+	    }
+
+	    internal MethodInfo Method
+	    {
+	        get
+	        {
+                throw new NotImplementedException();
+                //return GetType().GetMethod("Invoke");
+	        }
+	    }
+
+        /// <summary>
+        /// returns the invocation list
+        /// </summary>
+	    public virtual Delegate[] GetInvocationList()
+	    {
+	        return new [] { this };
+	    }
+
+	    public static bool operator ==(Delegate d1, Delegate d2)
+	    {
+	        if (ReferenceEquals(d1, null))
+	            return ReferenceEquals(d2, null);
+	        return d1.Equals(d2);
+	    }
+
+	    public static bool operator !=(Delegate d1, Delegate d2)
+	    {
+	        return !(d1 == d2);
+	    }
+	}
 }
 

@@ -451,57 +451,6 @@ namespace Java.Lang.Reflect
 		}
 
 		/// <java-name>
-		/// java/lang/reflect/InvocationTargetException
-		/// </java-name>
-		[Dot42.DexImport("java/lang/reflect/InvocationTargetException", AccessFlags = 33)]
-		public partial class InvocationTargetException : global::System.Exception
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
-				protected internal InvocationTargetException() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public InvocationTargetException(global::System.Exception exception) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(Ljava/lang/Throwable;Ljava/lang/String;)V", AccessFlags = 1)]
-				public InvocationTargetException(global::System.Exception exception, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTargetException
-				/// </java-name>
-				[Dot42.DexImport("getTargetException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public virtual global::System.Exception GetTargetException() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getCause
-				/// </java-name>
-				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public override global::System.Exception GetCause() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getTargetException
-				/// </java-name>
-				public global::System.Exception TargetException
-				{
-				[Dot42.DexImport("getTargetException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-						get{ return GetTargetException(); }
-				}
-
-		}
-
-		/// <java-name>
 		/// java/lang/reflect/ParameterizedType
 		/// </java-name>
 		[Dot42.DexImport("java/lang/reflect/ParameterizedType", AccessFlags = 1537)]

@@ -5,14 +5,14 @@ namespace Android.Hardware.Usb
 		/// android/hardware/usb/UsbAccessory
 		/// </java-name>
 		[Dot42.DexImport("android/hardware/usb/UsbAccessory", AccessFlags = 33)]
-		public partial class UsbAccessory : global::Android.Os.IParcelable
+		public partial class UsbAccessory : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Hardware.Usb.UsbAccessory> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Hardware.Usb.UsbAccessory> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal UsbAccessory() /* MethodBuilder.Create */ 
 				{
@@ -112,7 +112,7 @@ namespace Android.Hardware.Usb
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -355,14 +355,14 @@ namespace Android.Hardware.Usb
 		/// android/hardware/usb/UsbDevice
 		/// </java-name>
 		[Dot42.DexImport("android/hardware/usb/UsbDevice", AccessFlags = 33)]
-		public partial class UsbDevice : global::Android.Os.IParcelable
+		public partial class UsbDevice : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Hardware.Usb.UsbDevice> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Hardware.Usb.UsbDevice> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal UsbDevice() /* MethodBuilder.Create */ 
 				{
@@ -489,7 +489,7 @@ namespace Android.Hardware.Usb
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -737,14 +737,14 @@ namespace Android.Hardware.Usb
 		/// android/hardware/usb/UsbEndpoint
 		/// </java-name>
 		[Dot42.DexImport("android/hardware/usb/UsbEndpoint", AccessFlags = 33)]
-		public partial class UsbEndpoint : global::Android.Os.IParcelable
+		public partial class UsbEndpoint : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Hardware.Usb.UsbEndpoint> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Hardware.Usb.UsbEndpoint> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal UsbEndpoint() /* MethodBuilder.Create */ 
 				{
@@ -835,7 +835,7 @@ namespace Android.Hardware.Usb
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -908,14 +908,14 @@ namespace Android.Hardware.Usb
 		/// android/hardware/usb/UsbInterface
 		/// </java-name>
 		[Dot42.DexImport("android/hardware/usb/UsbInterface", AccessFlags = 33)]
-		public partial class UsbInterface : global::Android.Os.IParcelable
+		public partial class UsbInterface : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Hardware.Usb.UsbInterface> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Hardware.Usb.UsbInterface> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal UsbInterface() /* MethodBuilder.Create */ 
 				{
@@ -997,7 +997,7 @@ namespace Android.Hardware.Usb
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1126,9 +1126,9 @@ namespace Android.Hardware.Usb
 				/// openAccessory
 				/// </java-name>
 				[Dot42.DexImport("openAccessory", "(Landroid/hardware/usb/UsbAccessory;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
-				public virtual global::Android.Os.ParcelFileDescriptor OpenAccessory(global::Android.Hardware.Usb.UsbAccessory usbAccessory) /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.ParcelFileDescriptor OpenAccessory(global::Android.Hardware.Usb.UsbAccessory usbAccessory) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.ParcelFileDescriptor);
+						return default(global::Android.OS.ParcelFileDescriptor);
 				}
 
 				/// <java-name>

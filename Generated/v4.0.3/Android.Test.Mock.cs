@@ -159,7 +159,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("openTypedAssetFile", "(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/Asse" +
     "tFileDescriptor;", AccessFlags = 1)]
-				public override global::Android.Content.Res.AssetFileDescriptor OpenTypedAssetFile(global::Android.Net.Uri uri, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.AssetFileDescriptor OpenTypedAssetFile(global::Android.Net.Uri uri, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.AssetFileDescriptor);
 				}
@@ -248,9 +248,9 @@ namespace Android.Test.Mock
 				/// getMainLooper
 				/// </java-name>
 				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
-				public override global::Android.Os.Looper GetMainLooper() /* MethodBuilder.Create */ 
+				public override global::Android.OS.Looper GetMainLooper() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Looper);
+						return default(global::Android.OS.Looper);
 				}
 
 				/// <java-name>
@@ -592,7 +592,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("sendOrderedBroadcast", "(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Lan" +
     "droid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void SendOrderedBroadcast(global::Android.Content.Intent intent, string @string, global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.Os.Handler handler, int int32, string string1, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void SendOrderedBroadcast(global::Android.Content.Intent intent, string @string, global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.OS.Handler handler, int int32, string string1, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -609,7 +609,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("sendStickyOrderedBroadcast", "(Landroid/content/Intent;Landroid/content/BroadcastReceiver;Landroid/os/Handler;I" +
     "Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void SendStickyOrderedBroadcast(global::Android.Content.Intent intent, global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.Os.Handler handler, int int32, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void SendStickyOrderedBroadcast(global::Android.Content.Intent intent, global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.OS.Handler handler, int int32, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -636,7 +636,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("registerReceiver", "(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/Stri" +
     "ng;Landroid/os/Handler;)Landroid/content/Intent;", AccessFlags = 1)]
-				public override global::Android.Content.Intent RegisterReceiver(global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.Content.IntentFilter intentFilter, string @string, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Intent RegisterReceiver(global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.Content.IntentFilter intentFilter, string @string, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
 				}
@@ -688,7 +688,7 @@ namespace Android.Test.Mock
 				/// startInstrumentation
 				/// </java-name>
 				[Dot42.DexImport("startInstrumentation", "(Landroid/content/ComponentName;Ljava/lang/String;Landroid/os/Bundle;)Z", AccessFlags = 1)]
-				public override bool StartInstrumentation(global::Android.Content.ComponentName componentName, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override bool StartInstrumentation(global::Android.Content.ComponentName componentName, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -894,7 +894,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getMainLooper
 				/// </java-name>
-				public global::Android.Os.Looper MainLooper
+				public global::Android.OS.Looper MainLooper
 				{
 				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
 						get{ return GetMainLooper(); }
@@ -1179,9 +1179,9 @@ namespace Android.Test.Mock
 				/// getExtras
 				/// </java-name>
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetExtras() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -1345,9 +1345,9 @@ namespace Android.Test.Mock
 				/// respond
 				/// </java-name>
 				[Dot42.DexImport("respond", "(Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle Respond(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle Respond(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -1422,7 +1422,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.Os.Bundle Extras
+				public global::Android.OS.Bundle Extras
 				{
 				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
 						get{ return GetExtras(); }

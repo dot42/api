@@ -5,7 +5,7 @@ namespace Android.Content.Res
 		/// android/content/res/AssetFileDescriptor
 		/// </java-name>
 		[Dot42.DexImport("android/content/res/AssetFileDescriptor", AccessFlags = 33)]
-		public partial class AssetFileDescriptor : global::Android.Os.IParcelable
+		public partial class AssetFileDescriptor : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -17,9 +17,9 @@ namespace Android.Content.Res
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Res.AssetFileDescriptor> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Res.AssetFileDescriptor> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/os/ParcelFileDescriptor;JJ)V", AccessFlags = 1)]
-				public AssetFileDescriptor(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, long int64, long int641) /* MethodBuilder.Create */ 
+				public AssetFileDescriptor(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, long int64, long int641) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -27,9 +27,9 @@ namespace Android.Content.Res
 				/// getParcelFileDescriptor
 				/// </java-name>
 				[Dot42.DexImport("getParcelFileDescriptor", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
-				public virtual global::Android.Os.ParcelFileDescriptor GetParcelFileDescriptor() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.ParcelFileDescriptor GetParcelFileDescriptor() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.ParcelFileDescriptor);
+						return default(global::Android.OS.ParcelFileDescriptor);
 				}
 
 				/// <java-name>
@@ -116,7 +116,7 @@ namespace Android.Content.Res
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -128,7 +128,7 @@ namespace Android.Content.Res
 				/// <java-name>
 				/// getParcelFileDescriptor
 				/// </java-name>
-				public global::Android.Os.ParcelFileDescriptor ParcelFileDescriptor
+				public global::Android.OS.ParcelFileDescriptor ParcelFileDescriptor
 				{
 				[Dot42.DexImport("getParcelFileDescriptor", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
 						get{ return GetParcelFileDescriptor(); }
@@ -174,7 +174,7 @@ namespace Android.Content.Res
 				/// android/content/res/AssetFileDescriptor$AutoCloseOutputStream
 				/// </java-name>
 				[Dot42.DexImport("android/content/res/AssetFileDescriptor$AutoCloseOutputStream", AccessFlags = 9)]
-				public partial class AutoCloseOutputStream : global::Android.Os.ParcelFileDescriptor.AutoCloseOutputStream
+				public partial class AutoCloseOutputStream : global::Android.OS.ParcelFileDescriptor.AutoCloseOutputStream
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Landroid/content/res/AssetFileDescriptor;)V", AccessFlags = 1)]
@@ -233,7 +233,7 @@ namespace Android.Content.Res
 				/// android/content/res/AssetFileDescriptor$AutoCloseInputStream
 				/// </java-name>
 				[Dot42.DexImport("android/content/res/AssetFileDescriptor$AutoCloseInputStream", AccessFlags = 9)]
-				public partial class AutoCloseInputStream : global::Android.Os.ParcelFileDescriptor.AutoCloseInputStream
+				public partial class AutoCloseInputStream : global::Android.OS.ParcelFileDescriptor.AutoCloseInputStream
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Landroid/content/res/AssetFileDescriptor;)V", AccessFlags = 1)]
@@ -624,14 +624,14 @@ namespace Android.Content.Res
 		/// android/content/res/ColorStateList
 		/// </java-name>
 		[Dot42.DexImport("android/content/res/ColorStateList", AccessFlags = 33)]
-		public partial class ColorStateList : global::Android.Os.IParcelable
+		public partial class ColorStateList : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Res.ColorStateList> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Res.ColorStateList> CREATOR;
 				[Dot42.DexImport("<init>", "([[I[I)V", AccessFlags = 1)]
 				public ColorStateList(int[][] int32, int[] int321) /* MethodBuilder.Create */ 
 				{
@@ -714,7 +714,7 @@ namespace Android.Content.Res
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -739,7 +739,7 @@ namespace Android.Content.Res
 		/// </java-name>
 		[Dot42.DexImport("android/content/res/Configuration", AccessFlags = 49, Signature = "Ljava/lang/Object;Landroid/os/Parcelable;Ljava/lang/Comparable<Landroid/content/r" +
     "es/Configuration;>;")]
-		public sealed partial class Configuration : global::Android.Os.IParcelable, global::System.IComparable<global::Android.Content.Res.Configuration>
+		public sealed partial class Configuration : global::Android.OS.IParcelable, global::System.IComparable<global::Android.Content.Res.Configuration>
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1071,7 +1071,7 @@ namespace Android.Content.Res
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Res.Configuration> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Res.Configuration> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Configuration() /* MethodBuilder.Create */ 
 				{
@@ -1156,7 +1156,7 @@ namespace Android.Content.Res
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1164,7 +1164,7 @@ namespace Android.Content.Res
 				/// readFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1225,7 +1225,7 @@ namespace Android.Content.Res
 		/// android/content/res/ObbInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/res/ObbInfo", AccessFlags = 33)]
-		public partial class ObbInfo : global::Android.Os.IParcelable
+		public partial class ObbInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1257,7 +1257,7 @@ namespace Android.Content.Res
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Content.Res.ObbInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Res.ObbInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal ObbInfo() /* MethodBuilder.Create */ 
 				{
@@ -1285,7 +1285,7 @@ namespace Android.Content.Res
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1705,7 +1705,7 @@ namespace Android.Content.Res
 				/// parseBundleExtras
 				/// </java-name>
 				[Dot42.DexImport("parseBundleExtras", "(Landroid/content/res/XmlResourceParser;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void ParseBundleExtras(global::Android.Content.Res.IXmlResourceParser xmlResourceParser, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void ParseBundleExtras(global::Android.Content.Res.IXmlResourceParser xmlResourceParser, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1713,7 +1713,7 @@ namespace Android.Content.Res
 				/// parseBundleExtra
 				/// </java-name>
 				[Dot42.DexImport("parseBundleExtra", "(Ljava/lang/String;Landroid/util/AttributeSet;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void ParseBundleExtra(string @string, global::Android.Util.IAttributeSet attributeSet, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void ParseBundleExtra(string @string, global::Android.Util.IAttributeSet attributeSet, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 

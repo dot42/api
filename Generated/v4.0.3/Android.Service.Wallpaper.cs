@@ -43,9 +43,9 @@ namespace Android.Service.Wallpaper
 				/// onBind
 				/// </java-name>
 				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 17)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.OS.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
@@ -184,9 +184,9 @@ namespace Android.Service.Wallpaper
 						/// onCommand
 						/// </java-name>
 						[Dot42.DexImport("onCommand", "(Ljava/lang/String;IIILandroid/os/Bundle;Z)Landroid/os/Bundle;", AccessFlags = 1)]
-						public virtual global::Android.Os.Bundle OnCommand(string @string, int int32, int int321, int int322, global::Android.Os.Bundle bundle, bool boolean) /* MethodBuilder.Create */ 
+						public virtual global::Android.OS.Bundle OnCommand(string @string, int int32, int int321, int int322, global::Android.OS.Bundle bundle, bool boolean) /* MethodBuilder.Create */ 
 						{
-								return default(global::Android.Os.Bundle);
+								return default(global::Android.OS.Bundle);
 						}
 
 						/// <java-name>

@@ -16,6 +16,7 @@
 using System.Globalization;
 using Dot42;
 using Dot42.Internal;
+using Java.Lang;
 
 namespace System
 {
@@ -40,7 +41,36 @@ namespace System
 
         public static ulong Parse(string s, NumberStyles style)
         {
-            return Parse(s);
+            long value;
+
+            if ((style & NumberStyles.HexNumber) != 0)
+                value = long.Parse(s, 16);
+            else
+                value = long.Parse(s);
+
+            if (value < 0L)
+                throw new OverflowException();
+
+            return (ulong)value;
+        }
+
+        public static bool TryParse(string s, out ulong result)
+        {
+            try
+            {
+                result = Parse(s);
+                return true;
+            }
+            catch (OverflowException)
+            {
+                result = 0;
+                return false;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0;
+                return false;
+            }
         }
 
         [DexImport("longValue", "()J", AccessFlags = 1)]

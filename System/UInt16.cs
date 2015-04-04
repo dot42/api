@@ -13,8 +13,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Globalization;
 using Dot42;
 using Dot42.Internal;
+using Java.Lang;
 
 namespace System
 {
@@ -38,6 +41,25 @@ namespace System
         public static ushort Parse(string s, IFormatProvider provider)
         {
             return Parse(s);
+        }
+
+        public static bool TryParse(string s, out ushort result)
+        {
+            try
+            {
+                result = Parse(s);
+                return true;
+            }
+            catch (OverflowException)
+            {
+                result = 0;
+                return false;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0;
+                return false;
+            }
         }
 
         [DexImport("intValue", "()I", AccessFlags = 1)]

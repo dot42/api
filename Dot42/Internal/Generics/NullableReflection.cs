@@ -8,7 +8,7 @@ namespace Dot42.Internal.Generics
     {
         private const string NullablePostfix = "__Nullable";
         
-        private static ConcurrentHashMap<Type, Type> _underlayingCache = new ConcurrentHashMap<Type, Type>();
+        private static readonly ConcurrentHashMap<Type, Type> UnderlayingCache = new ConcurrentHashMap<Type, Type>();
 
         internal static bool TreatAsSystemNullableT(Type type)
         {
@@ -31,7 +31,7 @@ namespace Dot42.Internal.Generics
             //if (nullableType.IsGenericType && nullableType.GetGenericTypeDefinition() == typeof(Nullable<>))
             //    return nullableType.GetGenericArguments()[0];
             //else
-            return null;
+            //return null;
         }
 
         public static Type GetUnderlyingTypeForMarked(Type nullableType)
@@ -39,14 +39,14 @@ namespace Dot42.Internal.Generics
             if (!nullableType.IsSynthetic || !nullableType.Name.EndsWith(NullablePostfix))
                 return null;
 
-            var underlying = _underlayingCache.Get(nullableType);
+            var underlying = UnderlayingCache.Get(nullableType);
 
             if (underlying == null)
             {
                 // is an internal nullable.
                 var underlyingField = nullableType.JavaGetDeclaredField("underlying$");
                 underlying = (Type)underlyingField.Get(null);
-                _underlayingCache.Put(nullableType, underlying);
+                UnderlayingCache.Put(nullableType, underlying);
             }
 
             return underlying;
@@ -68,7 +68,7 @@ namespace Dot42.Internal.Generics
             }
 
 
-            Type nullableMarker = _underlayingCache.Get(type);
+            Type nullableMarker = UnderlayingCache.Get(type);
 
             if (nullableMarker != null)
                 return nullableMarker;
@@ -85,7 +85,7 @@ namespace Dot42.Internal.Generics
                 nullableMarker = null;
             }
 
-            _underlayingCache.Put(type, nullableMarker);
+            UnderlayingCache.Put(type, nullableMarker);
 
             return nullableMarker;
         }

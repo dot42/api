@@ -13,7 +13,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-namespace Android.Os
+namespace Android.OS
 {
 	partial class Message
 	{
@@ -27,9 +27,9 @@ namespace Android.Os
         /// obtain
         /// </java-name>
         [Dot42.DexImport("obtain", "(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;", AccessFlags = 9, IgnoreFromJava = true)]
-        public static global::Android.Os.Message Obtain(global::Android.Os.Handler h, global::System.Action what) 
+        public static global::Android.OS.Message Obtain(global::Android.OS.Handler h, global::System.Action what) 
         {
-            return default(global::Android.Os.Message);
+            return default(global::Android.OS.Message);
         }
 	}
 }

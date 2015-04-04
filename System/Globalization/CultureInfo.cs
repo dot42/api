@@ -72,6 +72,11 @@ namespace System.Globalization
             get { return CachedCurrentCulture.Value; } 
         }
 
+        public static CultureInfo CurrentUICulture
+        {
+            get { return CachedCurrentCulture.Value; }
+        }
+
         public static CultureInfo InvariantCulture
         {
             get { return CachedInvariantCulture.Value; } 

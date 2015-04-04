@@ -5,14 +5,14 @@ namespace Android.Gesture
 		/// android/gesture/Gesture
 		/// </java-name>
 		[Dot42.DexImport("android/gesture/Gesture", AccessFlags = 33)]
-		public partial class Gesture : global::Android.Os.IParcelable
+		public partial class Gesture : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Gesture.Gesture> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Gesture.Gesture> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Gesture() /* MethodBuilder.Create */ 
 				{
@@ -138,7 +138,7 @@ namespace Android.Gesture
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

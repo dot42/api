@@ -17,9 +17,9 @@ namespace Android.Accounts
 				/// getIBinder
 				/// </java-name>
 				[Dot42.DexImport("getIBinder", "()Landroid/os/IBinder;", AccessFlags = 17)]
-				public global::Android.Os.IBinder GetIBinder() /* MethodBuilder.Create */ 
+				public global::Android.OS.IBinder GetIBinder() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
@@ -27,28 +27,28 @@ namespace Android.Accounts
 				/// </java-name>
 				[Dot42.DexImport("editProperties", "(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;)Landroid/os/Bu" +
     "ndle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle EditProperties(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, string @string) /* MethodBuilder.Create */ ;
+				public abstract global::Android.OS.Bundle EditProperties(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// addAccount
 				/// </java-name>
 				[Dot42.DexImport("addAccount", "(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;Ljava/lang/Stri" +
     "ng;[Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle AddAccount(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, string @string, string string1, string[] string2, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				public abstract global::Android.OS.Bundle AddAccount(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, string @string, string string1, string[] string2, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// confirmCredentials
 				/// </java-name>
 				[Dot42.DexImport("confirmCredentials", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Landroi" +
     "d/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle ConfirmCredentials(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				public abstract global::Android.OS.Bundle ConfirmCredentials(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getAuthToken
 				/// </java-name>
 				[Dot42.DexImport("getAuthToken", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/l" +
     "ang/String;Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle GetAuthToken(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				public abstract global::Android.OS.Bundle GetAuthToken(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getAuthTokenLabel
@@ -61,23 +61,23 @@ namespace Android.Accounts
 				/// </java-name>
 				[Dot42.DexImport("updateCredentials", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/l" +
     "ang/String;Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle UpdateCredentials(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				public abstract global::Android.OS.Bundle UpdateCredentials(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// hasFeatures
 				/// </java-name>
 				[Dot42.DexImport("hasFeatures", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;[Ljava/" +
     "lang/String;)Landroid/os/Bundle;", AccessFlags = 1025)]
-				public abstract global::Android.Os.Bundle HasFeatures(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string[] @string) /* MethodBuilder.Create */ ;
+				public abstract global::Android.OS.Bundle HasFeatures(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account, string[] @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getAccountRemovalAllowed
 				/// </java-name>
 				[Dot42.DexImport("getAccountRemovalAllowed", "(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;)Landro" +
     "id/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetAccountRemovalAllowed(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account) /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle GetAccountRemovalAllowed(global::Android.Accounts.AccountAuthenticatorResponse accountAuthenticatorResponse, global::Android.Accounts.Account account) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -88,7 +88,7 @@ namespace Android.Accounts
 				/// <java-name>
 				/// getIBinder
 				/// </java-name>
-				public global::Android.Os.IBinder IBinder
+				public global::Android.OS.IBinder IBinder
 				{
 				[Dot42.DexImport("getIBinder", "()Landroid/os/IBinder;", AccessFlags = 17)]
 						get{ return GetIBinder(); }
@@ -100,7 +100,7 @@ namespace Android.Accounts
 		/// android/accounts/Account
 		/// </java-name>
 		[Dot42.DexImport("android/accounts/Account", AccessFlags = 33)]
-		public partial class Account : global::Android.Os.IParcelable
+		public partial class Account : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -117,14 +117,14 @@ namespace Android.Accounts
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Accounts.Account> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Accounts.Account> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public Account(string @string, string string1) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public Account(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public Account(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -159,7 +159,7 @@ namespace Android.Accounts
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -195,7 +195,7 @@ namespace Android.Accounts
 				/// setAccountAuthenticatorResult
 				/// </java-name>
 				[Dot42.DexImport("setAccountAuthenticatorResult", "(Landroid/os/Bundle;)V", AccessFlags = 17)]
-				public void SetAccountAuthenticatorResult(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public void SetAccountAuthenticatorResult(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -203,7 +203,7 @@ namespace Android.Accounts
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -221,16 +221,16 @@ namespace Android.Accounts
 		/// android/accounts/AccountAuthenticatorResponse
 		/// </java-name>
 		[Dot42.DexImport("android/accounts/AccountAuthenticatorResponse", AccessFlags = 33)]
-		public partial class AccountAuthenticatorResponse : global::Android.Os.IParcelable
+		public partial class AccountAuthenticatorResponse : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Accounts.AccountAuthenticatorResponse> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Accounts.AccountAuthenticatorResponse> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public AccountAuthenticatorResponse(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public AccountAuthenticatorResponse(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -238,7 +238,7 @@ namespace Android.Accounts
 				/// onResult
 				/// </java-name>
 				[Dot42.DexImport("onResult", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnResult(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnResult(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -271,7 +271,7 @@ namespace Android.Accounts
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -500,7 +500,7 @@ namespace Android.Accounts
     "lback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;", AccessFlags = 1, Signature = "(Landroid/accounts/Account;[Ljava/lang/String;Landroid/accounts/AccountManagerCal" +
     "lback<Ljava/lang/Boolean;>;Landroid/os/Handler;)Landroid/accounts/AccountManager" +
     "Future<Ljava/lang/Boolean;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<bool?> HasFeatures(global::Android.Accounts.Account account, string[] @string, global::Android.Accounts.IAccountManagerCallback<bool?> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<bool?> HasFeatures(global::Android.Accounts.Account account, string[] @string, global::Android.Accounts.IAccountManagerCallback<bool?> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Accounts.IAccountManagerFuture<bool?>);
 				}
@@ -512,7 +512,7 @@ namespace Android.Accounts
     "ndroid/os/Handler;)Landroid/accounts/AccountManagerFuture;", AccessFlags = 1, Signature = "(Ljava/lang/String;[Ljava/lang/String;Landroid/accounts/AccountManagerCallback<[L" +
     "android/accounts/Account;>;Landroid/os/Handler;)Landroid/accounts/AccountManager" +
     "Future<[Landroid/accounts/Account;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Accounts.Account[]> GetAccountsByTypeAndFeatures(string @string, string[] string1, global::Android.Accounts.IAccountManagerCallback<global::Android.Accounts.Account[]> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Accounts.Account[]> GetAccountsByTypeAndFeatures(string @string, string[] string1, global::Android.Accounts.IAccountManagerCallback<global::Android.Accounts.Account[]> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.Accounts.Account[]>);
 				}
@@ -521,7 +521,7 @@ namespace Android.Accounts
 				/// addAccountExplicitly
 				/// </java-name>
 				[Dot42.DexImport("addAccountExplicitly", "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Z", AccessFlags = 1)]
-				public virtual bool AddAccountExplicitly(global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual bool AddAccountExplicitly(global::Android.Accounts.Account account, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -533,7 +533,7 @@ namespace Android.Accounts
     "andler;)Landroid/accounts/AccountManagerFuture;", AccessFlags = 1, Signature = "(Landroid/accounts/Account;Landroid/accounts/AccountManagerCallback<Ljava/lang/Bo" +
     "olean;>;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture<Ljava/lang/B" +
     "oolean;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<bool?> RemoveAccount(global::Android.Accounts.Account account, global::Android.Accounts.IAccountManagerCallback<bool?> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<bool?> RemoveAccount(global::Android.Accounts.Account account, global::Android.Accounts.IAccountManagerCallback<bool?> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Accounts.IAccountManagerFuture<bool?>);
 				}
@@ -604,9 +604,9 @@ namespace Android.Accounts
     "unts/AccountManagerFuture;", AccessFlags = 1, Signature = "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Acti" +
     "vity;Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;Landroid/os/H" +
     "andler;)Landroid/accounts/AccountManagerFuture<Landroid/os/Bundle;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle> GetAuthToken(global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.Os.Bundle> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle> GetAuthToken(global::Android.Accounts.Account account, string @string, global::Android.OS.Bundle bundle, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.OS.Bundle> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle>);
+						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle>);
 				}
 
 				/// <java-name>
@@ -616,9 +616,9 @@ namespace Android.Accounts
     "lback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;", AccessFlags = 1, Signature = "(Landroid/accounts/Account;Ljava/lang/String;ZLandroid/accounts/AccountManagerCal" +
     "lback<Landroid/os/Bundle;>;Landroid/os/Handler;)Landroid/accounts/AccountManager" +
     "Future<Landroid/os/Bundle;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle> GetAuthToken(global::Android.Accounts.Account account, string @string, bool boolean, global::Android.Accounts.IAccountManagerCallback<global::Android.Os.Bundle> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle> GetAuthToken(global::Android.Accounts.Account account, string @string, bool boolean, global::Android.Accounts.IAccountManagerCallback<global::Android.OS.Bundle> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle>);
+						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle>);
 				}
 
 				/// <java-name>
@@ -629,9 +629,9 @@ namespace Android.Accounts
     "ture;", AccessFlags = 1, Signature = "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;ZLandroid/account" +
     "s/AccountManagerCallback<Landroid/os/Bundle;>;Landroid/os/Handler;)Landroid/acco" +
     "unts/AccountManagerFuture<Landroid/os/Bundle;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle> GetAuthToken(global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle, bool boolean, global::Android.Accounts.IAccountManagerCallback<global::Android.Os.Bundle> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle> GetAuthToken(global::Android.Accounts.Account account, string @string, global::Android.OS.Bundle bundle, bool boolean, global::Android.Accounts.IAccountManagerCallback<global::Android.OS.Bundle> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle>);
+						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle>);
 				}
 
 				/// <java-name>
@@ -642,9 +642,9 @@ namespace Android.Accounts
     "ndroid/accounts/AccountManagerFuture;", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;Landro" +
     "id/app/Activity;Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;La" +
     "ndroid/os/Handler;)Landroid/accounts/AccountManagerFuture<Landroid/os/Bundle;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle> AddAccount(string @string, string string1, string[] string2, global::Android.Os.Bundle bundle, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.Os.Bundle> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle> AddAccount(string @string, string string1, string[] string2, global::Android.OS.Bundle bundle, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.OS.Bundle> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle>);
+						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle>);
 				}
 
 				/// <java-name>
@@ -655,9 +655,9 @@ namespace Android.Accounts
     "rFuture;", AccessFlags = 1, Signature = "(Landroid/accounts/Account;Landroid/os/Bundle;Landroid/app/Activity;Landroid/acco" +
     "unts/AccountManagerCallback<Landroid/os/Bundle;>;Landroid/os/Handler;)Landroid/a" +
     "ccounts/AccountManagerFuture<Landroid/os/Bundle;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle> ConfirmCredentials(global::Android.Accounts.Account account, global::Android.Os.Bundle bundle, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.Os.Bundle> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle> ConfirmCredentials(global::Android.Accounts.Account account, global::Android.OS.Bundle bundle, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.OS.Bundle> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle>);
+						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle>);
 				}
 
 				/// <java-name>
@@ -668,9 +668,9 @@ namespace Android.Accounts
     "unts/AccountManagerFuture;", AccessFlags = 1, Signature = "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Acti" +
     "vity;Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;Landroid/os/H" +
     "andler;)Landroid/accounts/AccountManagerFuture<Landroid/os/Bundle;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle> UpdateCredentials(global::Android.Accounts.Account account, string @string, global::Android.Os.Bundle bundle, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.Os.Bundle> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle> UpdateCredentials(global::Android.Accounts.Account account, string @string, global::Android.OS.Bundle bundle, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.OS.Bundle> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle>);
+						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle>);
 				}
 
 				/// <java-name>
@@ -680,9 +680,9 @@ namespace Android.Accounts
     ";Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;", AccessFlags = 1, Signature = "(Ljava/lang/String;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback" +
     "<Landroid/os/Bundle;>;Landroid/os/Handler;)Landroid/accounts/AccountManagerFutur" +
     "e<Landroid/os/Bundle;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle> EditProperties(string @string, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.Os.Bundle> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle> EditProperties(string @string, global::Android.App.Activity activity, global::Android.Accounts.IAccountManagerCallback<global::Android.OS.Bundle> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle>);
+						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle>);
 				}
 
 				/// <java-name>
@@ -691,9 +691,9 @@ namespace Android.Accounts
 				[Dot42.DexImport("getAuthTokenByFeatures", "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/app/Activity;Lan" +
     "droid/os/Bundle;Landroid/os/Bundle;Landroid/accounts/AccountManagerCallback;Land" +
     "roid/os/Handler;)Landroid/accounts/AccountManagerFuture;", AccessFlags = 1, Signature = @"(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture<Landroid/os/Bundle;>;")]
-				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle> GetAuthTokenByFeatures(string @string, string string1, string[] string2, global::Android.App.Activity activity, global::Android.Os.Bundle bundle, global::Android.Os.Bundle bundle1, global::Android.Accounts.IAccountManagerCallback<global::Android.Os.Bundle> accountManagerCallback, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle> GetAuthTokenByFeatures(string @string, string string1, string[] string2, global::Android.App.Activity activity, global::Android.OS.Bundle bundle, global::Android.OS.Bundle bundle1, global::Android.Accounts.IAccountManagerCallback<global::Android.OS.Bundle> accountManagerCallback, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.Os.Bundle>);
+						return default(global::Android.Accounts.IAccountManagerFuture<global::Android.OS.Bundle>);
 				}
 
 				/// <java-name>
@@ -704,7 +704,7 @@ namespace Android.Accounts
     "ntent;", AccessFlags = 9, Signature = "(Landroid/accounts/Account;Ljava/util/ArrayList<Landroid/accounts/Account;>;[Ljav" +
     "a/lang/String;ZLjava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/o" +
     "s/Bundle;)Landroid/content/Intent;")]
-				public static global::Android.Content.Intent NewChooseAccountIntent(global::Android.Accounts.Account account, global::Java.Util.ArrayList<global::Android.Accounts.Account> arrayList, string[] @string, bool boolean, string string1, string string2, string[] string3, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public static global::Android.Content.Intent NewChooseAccountIntent(global::Android.Accounts.Account account, global::Java.Util.ArrayList<global::Android.Accounts.Account> arrayList, string[] @string, bool boolean, string string1, string string2, string[] string3, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
 				}
@@ -713,7 +713,7 @@ namespace Android.Accounts
 				/// addOnAccountsUpdatedListener
 				/// </java-name>
 				[Dot42.DexImport("addOnAccountsUpdatedListener", "(Landroid/accounts/OnAccountsUpdateListener;Landroid/os/Handler;Z)V", AccessFlags = 1)]
-				public virtual void AddOnAccountsUpdatedListener(global::Android.Accounts.IOnAccountsUpdateListener onAccountsUpdateListener, global::Android.Os.Handler handler, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void AddOnAccountsUpdatedListener(global::Android.Accounts.IOnAccountsUpdateListener onAccountsUpdateListener, global::Android.OS.Handler handler, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -778,7 +778,7 @@ namespace Android.Accounts
 		/// android/accounts/AuthenticatorDescription
 		/// </java-name>
 		[Dot42.DexImport("android/accounts/AuthenticatorDescription", AccessFlags = 33)]
-		public partial class AuthenticatorDescription : global::Android.Os.IParcelable
+		public partial class AuthenticatorDescription : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -820,7 +820,7 @@ namespace Android.Accounts
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Accounts.AuthenticatorDescription> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Accounts.AuthenticatorDescription> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;IIIIZ)V", AccessFlags = 1)]
 				public AuthenticatorDescription(string @string, string string1, int int32, int int321, int int322, int int323, bool boolean) /* MethodBuilder.Create */ 
 				{
@@ -880,7 +880,7 @@ namespace Android.Accounts
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

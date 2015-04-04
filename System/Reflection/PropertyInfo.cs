@@ -67,6 +67,7 @@ namespace System.Reflection
         /// Gets the get accessor method.
         /// </summary>
         public virtual MethodInfo GetGetMethod()  { return getter; }
+        public virtual MethodInfo GetMethod { get { return getter; } }
 
         public virtual MethodInfo GetGetMethod(bool nonPublic) { return getter!=null&&getter.IsPublic?getter:null; }
 
@@ -74,7 +75,7 @@ namespace System.Reflection
         /// Gets the set accessor method.
         /// </summary>
         public virtual MethodInfo GetSetMethod() { return setter; }
-
+        public virtual MethodInfo SetMethod { get { return setter; } }
         public virtual MethodInfo GetSetMethod(bool nonPublic) { return setter != null && setter.IsPublic ? getter : null; }
 
         /// <summary>
@@ -212,26 +213,6 @@ namespace System.Reflection
             unchecked
             {
                 return (declaringType.GetHashCode() * 397) ^ (name != null ? name.GetHashCode() : 0);
-            }
-        }
-
-        private class AttributesWrapper : IAttributes
-        {
-            private readonly IAttribute[] _attr;
-
-            public AttributesWrapper(IAttribute[] attr)
-            {
-                _attr = attr;
-            }
-
-            public Type AnnotationType()
-            {
-                return typeof(IAttributes);
-            }
-
-            public IAttribute[] Attributes()
-            {
-                return _attr;
             }
         }
     }

@@ -971,14 +971,14 @@ namespace Android.Bluetooth
 		/// android/bluetooth/BluetoothClass
 		/// </java-name>
 		[Dot42.DexImport("android/bluetooth/BluetoothClass", AccessFlags = 49)]
-		public sealed partial class BluetoothClass : global::Android.Os.IParcelable
+		public sealed partial class BluetoothClass : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Bluetooth.BluetoothClass> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Bluetooth.BluetoothClass> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal BluetoothClass() /* MethodBuilder.Create */ 
 				{
@@ -1024,7 +1024,7 @@ namespace Android.Bluetooth
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1471,7 +1471,7 @@ namespace Android.Bluetooth
 		/// android/bluetooth/BluetoothDevice
 		/// </java-name>
 		[Dot42.DexImport("android/bluetooth/BluetoothDevice", AccessFlags = 49)]
-		public sealed partial class BluetoothDevice : global::Android.Os.IParcelable
+		public sealed partial class BluetoothDevice : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1573,7 +1573,7 @@ namespace Android.Bluetooth
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Bluetooth.BluetoothDevice> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Bluetooth.BluetoothDevice> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal BluetoothDevice() /* MethodBuilder.Create */ 
 				{
@@ -1619,7 +1619,7 @@ namespace Android.Bluetooth
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1663,9 +1663,9 @@ namespace Android.Bluetooth
 				/// getUuids
 				/// </java-name>
 				[Dot42.DexImport("getUuids", "()[Landroid/os/ParcelUuid;", AccessFlags = 1)]
-				public global::Android.Os.ParcelUuid[] GetUuids() /* MethodBuilder.Create */ 
+				public global::Android.OS.ParcelUuid[] GetUuids() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.ParcelUuid[]);
+						return default(global::Android.OS.ParcelUuid[]);
 				}
 
 				/// <java-name>
@@ -1734,7 +1734,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getUuids
 				/// </java-name>
-				public global::Android.Os.ParcelUuid[] Uuids
+				public global::Android.OS.ParcelUuid[] Uuids
 				{
 				[Dot42.DexImport("getUuids", "()[Landroid/os/ParcelUuid;", AccessFlags = 1)]
 						get{ return GetUuids(); }
@@ -2009,9 +2009,9 @@ namespace Android.Bluetooth
 				/// </java-name>
 				[Dot42.DexImport("getMainChannelFd", "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfigur" +
     "ation;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
-				public global::Android.Os.ParcelFileDescriptor GetMainChannelFd(global::Android.Bluetooth.BluetoothDevice bluetoothDevice, global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration) /* MethodBuilder.Create */ 
+				public global::Android.OS.ParcelFileDescriptor GetMainChannelFd(global::Android.Bluetooth.BluetoothDevice bluetoothDevice, global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.ParcelFileDescriptor);
+						return default(global::Android.OS.ParcelFileDescriptor);
 				}
 
 				/// <java-name>
@@ -2056,14 +2056,14 @@ namespace Android.Bluetooth
 		/// android/bluetooth/BluetoothHealthAppConfiguration
 		/// </java-name>
 		[Dot42.DexImport("android/bluetooth/BluetoothHealthAppConfiguration", AccessFlags = 49)]
-		public sealed partial class BluetoothHealthAppConfiguration : global::Android.Os.IParcelable
+		public sealed partial class BluetoothHealthAppConfiguration : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Bluetooth.BluetoothHealthAppConfiguration> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Bluetooth.BluetoothHealthAppConfiguration> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal BluetoothHealthAppConfiguration() /* MethodBuilder.Create */ 
 				{
@@ -2136,7 +2136,7 @@ namespace Android.Bluetooth
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2194,7 +2194,7 @@ namespace Android.Bluetooth
 				/// </java-name>
 				[Dot42.DexImport("onHealthChannelStateChange", "(Landroid/bluetooth/BluetoothHealthAppConfiguration;Landroid/bluetooth/BluetoothD" +
     "evice;IILandroid/os/ParcelFileDescriptor;I)V", AccessFlags = 1)]
-				public virtual void OnHealthChannelStateChange(global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration, global::Android.Bluetooth.BluetoothDevice bluetoothDevice, int int32, int int321, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, int int322) /* MethodBuilder.Create */ 
+				public virtual void OnHealthChannelStateChange(global::Android.Bluetooth.BluetoothHealthAppConfiguration bluetoothHealthAppConfiguration, global::Android.Bluetooth.BluetoothDevice bluetoothDevice, int int32, int int321, global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, int int322) /* MethodBuilder.Create */ 
 				{
 				}
 

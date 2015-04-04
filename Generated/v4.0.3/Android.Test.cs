@@ -233,7 +233,7 @@ namespace Android.Test
 				/// </java-name>
 				[Dot42.DexImport("startActivity", "(Landroid/content/Intent;Landroid/os/Bundle;Ljava/lang/Object;)Landroid/app/Activ" +
     "ity;", AccessFlags = 4, Signature = "(Landroid/content/Intent;Landroid/os/Bundle;Ljava/lang/Object;)TT;")]
-				protected internal virtual T StartActivity(global::Android.Content.Intent intent, global::Android.Os.Bundle bundle, object @object) /* MethodBuilder.Create */ 
+				protected internal virtual T StartActivity(global::Android.Content.Intent intent, global::Android.OS.Bundle bundle, object @object) /* MethodBuilder.Create */ 
 				{
 						return default(T);
 				}
@@ -851,7 +851,7 @@ namespace Android.Test
 				/// </java-name>
 				[Dot42.DexImport("launchActivity", "(Ljava/lang/String;Ljava/lang/Class;Landroid/os/Bundle;)Landroid/app/Activity;", AccessFlags = 17, Signature = "<T:Landroid/app/Activity;>(Ljava/lang/String;Ljava/lang/Class<TT;>;Landroid/os/Bu" +
     "ndle;)TT;")]
-				public T LaunchActivity<T>(string @string, global::System.Type type, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public T LaunchActivity<T>(string @string, global::System.Type type, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(T);
 				}
@@ -992,7 +992,7 @@ namespace Android.Test
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2131,9 +2131,9 @@ namespace Android.Test
 				/// bindService
 				/// </java-name>
 				[Dot42.DexImport("bindService", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 4)]
-				protected internal virtual global::Android.Os.IBinder BindService(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.OS.IBinder BindService(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>

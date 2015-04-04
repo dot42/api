@@ -1238,7 +1238,7 @@ namespace Android.Media
 				/// </java-name>
 				[Dot42.DexImport("setRecordPositionUpdateListener", "(Landroid/media/AudioRecord$OnRecordPositionUpdateListener;Landroid/os/Handler;)V" +
     "", AccessFlags = 1)]
-				public virtual void SetRecordPositionUpdateListener(global::Android.Media.AudioRecord.IOnRecordPositionUpdateListener onRecordPositionUpdateListener, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual void SetRecordPositionUpdateListener(global::Android.Media.AudioRecord.IOnRecordPositionUpdateListener onRecordPositionUpdateListener, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1626,7 +1626,7 @@ namespace Android.Media
 				/// </java-name>
 				[Dot42.DexImport("setPlaybackPositionUpdateListener", "(Landroid/media/AudioTrack$OnPlaybackPositionUpdateListener;Landroid/os/Handler;)" +
     "V", AccessFlags = 1)]
-				public virtual void SetPlaybackPositionUpdateListener(global::Android.Media.AudioTrack.IOnPlaybackPositionUpdateListener onPlaybackPositionUpdateListener, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual void SetPlaybackPositionUpdateListener(global::Android.Media.AudioTrack.IOnPlaybackPositionUpdateListener onPlaybackPositionUpdateListener, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2760,7 +2760,7 @@ namespace Android.Media
 				/// setEventListener
 				/// </java-name>
 				[Dot42.DexImport("setEventListener", "(Landroid/media/JetPlayer$OnJetEventListener;Landroid/os/Handler;)V", AccessFlags = 1)]
-				public virtual void SetEventListener(global::Android.Media.JetPlayer.IOnJetEventListener onJetEventListener, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual void SetEventListener(global::Android.Media.JetPlayer.IOnJetEventListener onJetEventListener, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4277,7 +4277,7 @@ namespace Android.Media
 				/// onServiceConnected
 				/// </java-name>
 				[Dot42.DexImport("onServiceConnected", "(Landroid/content/ComponentName;Landroid/os/IBinder;)V", AccessFlags = 1)]
-				public virtual void OnServiceConnected(global::Android.Content.ComponentName componentName, global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
+				public virtual void OnServiceConnected(global::Android.Content.ComponentName componentName, global::Android.OS.IBinder binder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4430,7 +4430,7 @@ namespace Android.Media
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/app/PendingIntent;Landroid/os/Looper;)V", AccessFlags = 1)]
-				public RemoteControlClient(global::Android.App.PendingIntent pendingIntent, global::Android.Os.Looper looper) /* MethodBuilder.Create */ 
+				public RemoteControlClient(global::Android.App.PendingIntent pendingIntent, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
 				{
 				}
 

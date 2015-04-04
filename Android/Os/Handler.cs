@@ -15,7 +15,7 @@
 // limitations under the License.
 using System;
 
-namespace Android.Os
+namespace Android.OS
 {
 	partial class Handler
 	{

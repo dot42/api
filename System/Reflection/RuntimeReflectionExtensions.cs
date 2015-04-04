@@ -27,18 +27,13 @@
 
 
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using Dot42;
-using Dot42.Internal;
 using Dot42.Internal.Generics;
 
 namespace System.Reflection
 {
     public static class RuntimeReflectionExtensions
 	{
-		const BindingFlags AllMembersBindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
-        const BindingFlags AllDeclaredMembersBindingFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
 
        //public static MethodInfo GetRuntimeBaseDefinition(this MethodInfo method)
         //{
@@ -48,21 +43,25 @@ namespace System.Reflection
         //    return method.GetBaseDefinition();
         //}
 
-        //public static EventInfo GetRuntimeEvent (this Type type, string name)
-        //{
-        //    if (type == null)
-        //        throw new ArgumentNullException ("type");
+        [NotImplemented]
+        public static EventInfo GetRuntimeEvent(this Type type, string name)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
 
-        //    return type.GetEvent (name);
-        //}
+            throw new NotImplementedException();
+            //return type.GetEvent(name);
+        }
 
-        //public static IEnumerable<EventInfo> GetRuntimeEvents(this Type type)
-        //{
-        //    if (type == null)
-        //        throw new ArgumentNullException("type");
+        [NotImplemented]
+        public static IEnumerable<EventInfo> GetRuntimeEvents(this Type type)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
 
-        //    return type.GetEvents(AllMembersBindingFlags);
-        //}
+            throw new NotImplementedException();
+            //return type.GetEvents(AllMembersBindingFlags);
+        }
 
         public static FieldInfo GetRuntimeField(this Type type, string name)
         {
@@ -75,13 +74,13 @@ namespace System.Reflection
 		public static IEnumerable<FieldInfo> GetDeclaredFields (this Type type)
 		{
 			if (type == null) throw new ArgumentNullException ("type");
-            return type.GetFields(AllDeclaredMembersBindingFlags);
+            return type.GetFields(Type.AllDeclaredMembersBindingFlags);
 		}
 
         public static FieldInfo GetDeclaredField(this Type type, string name)
         {
             if (type == null) throw new ArgumentNullException("type");
-            return type.GetField(name, AllDeclaredMembersBindingFlags);
+            return type.GetField(name, Type.AllDeclaredMembersBindingFlags);
         }
 
         public static IEnumerable<FieldInfo> GetRuntimeFields(this Type type)
@@ -89,7 +88,7 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return type.GetFields(AllMembersBindingFlags);
+            return type.GetFields(Type.AllMembersBindingFlags);
         }
 
         //public static InterfaceMapping GetRuntimeInterfaceMap (this TypeInfo typeInfo, Type interfaceType)
@@ -113,30 +112,13 @@ namespace System.Reflection
 			if (type == null)
 				throw new ArgumentNullException ("type");
 
-			return type.GetMethods(AllMembersBindingFlags);
+			return type.GetMethods(Type.AllMembersBindingFlags);
 		}
-
-        public static MethodInfo GetDeclaredMethod(this Type type, string name, Type[] parameters)
-        {
-            if (type == null)
-                throw new ArgumentNullException("type");
-
-            var trueTrype = GenericsReflection.EnsureTypeDef(type);
-            var ret = trueTrype.JavaGetDeclaredMethod(name, parameters);
-            return ret == null ? null : new MethodInfo(ret, type);
-        }
-
-        public static IEnumerable<MethodInfo> GetDeclaredMethods(this Type type)
-        {
-            if (type == null) throw new ArgumentNullException("type");
-
-            return type.GetMethods(AllDeclaredMembersBindingFlags);
-        }
 
 	    public static IEnumerable<PropertyInfo> GetRuntimeProperties (this Type type)
 		{
 			if (type == null) throw new ArgumentNullException ("type");
-			return type.GetProperties(AllMembersBindingFlags);
+			return type.GetProperties(Type.AllMembersBindingFlags);
 		}
 
 		public static PropertyInfo GetRuntimeProperty (this Type type, string name)
@@ -153,12 +135,29 @@ namespace System.Reflection
             return type.GetProperty(name, flags);
         }
 
+        public static MethodInfo GetDeclaredMethod(this Type type, string name, Type[] parameters)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
+
+            var trueTrype = GenericsReflection.EnsureTypeDef(type);
+            var ret = trueTrype.JavaGetDeclaredMethod(name, parameters);
+            return ret == null ? null : new MethodInfo(ret, type);
+        }
+
+        public static IEnumerable<MethodInfo> GetDeclaredMethods(this Type type)
+        {
+            if (type == null) throw new ArgumentNullException("type");
+
+            return type.GetMethods(Type.AllDeclaredMembersBindingFlags);
+        }
+
         public static IEnumerable<PropertyInfo> GetDeclaredProperties(this Type type)
         {
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return type.GetProperties(AllDeclaredMembersBindingFlags);
+            return type.GetProperties(Type.AllDeclaredMembersBindingFlags);
         }
 
         public static PropertyInfo GetDeclaredProperty(this Type type, string name)
@@ -175,14 +174,6 @@ namespace System.Reflection
             return type.GetProperty(name, flags|BindingFlags.DeclaredOnly);
         }
 
-        //public static TypeInfo GetTypeInfo(this Type type)
-        //{
-        //    if (type == null)
-        //        throw new ArgumentNullException("type");
-
-        //    return new TypeInfo(type);
-        //}
-
         /// <summary>
         /// this is not supported atm, though should probably be possible to implement.
         /// </summary>
@@ -193,8 +184,7 @@ namespace System.Reflection
         {
             if (del == null)
                 throw new ArgumentNullException("del");
-
-            throw new NotImplementedException("Delegate.GetMethodInfo");
+            return del.Method;
         }
 	}
 }

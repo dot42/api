@@ -62,14 +62,14 @@ namespace System
             }
         }
 
-        public static bool TryParse(string s, NumberStyles styles, IFormatProvider provider, out long result)
+        public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out long result)
         {
             try
             {
-                if((styles & NumberStyles.HexNumber) != 0)
+                if((style & NumberStyles.HexNumber) != 0)
                     result = Parse(s, 16);
-
-                result = Parse(s);
+                else
+                    result = Parse(s);
                 return true;
             }
             catch (NumberFormatException)

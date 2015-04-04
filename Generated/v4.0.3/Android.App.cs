@@ -901,7 +901,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal virtual void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal virtual void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -909,7 +909,7 @@ namespace Android.App
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal virtual void OnRestoreInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal virtual void OnRestoreInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -917,7 +917,7 @@ namespace Android.App
 				/// onPostCreate
 				/// </java-name>
 				[Dot42.DexImport("onPostCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal virtual void OnPostCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal virtual void OnPostCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -965,7 +965,7 @@ namespace Android.App
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal virtual void OnSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal virtual void OnSaveInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1553,7 +1553,7 @@ namespace Android.App
 				/// onCreateDialog
 				/// </java-name>
 				[Dot42.DexImport("onCreateDialog", "(ILandroid/os/Bundle;)Landroid/app/Dialog;", AccessFlags = 4)]
-				protected internal virtual global::Android.App.Dialog OnCreateDialog(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.App.Dialog OnCreateDialog(int int32, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.App.Dialog);
 				}
@@ -1570,7 +1570,7 @@ namespace Android.App
 				/// onPrepareDialog
 				/// </java-name>
 				[Dot42.DexImport("onPrepareDialog", "(ILandroid/app/Dialog;Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal virtual void OnPrepareDialog(int int32, global::Android.App.Dialog dialog, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal virtual void OnPrepareDialog(int int32, global::Android.App.Dialog dialog, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1586,7 +1586,7 @@ namespace Android.App
 				/// showDialog
 				/// </java-name>
 				[Dot42.DexImport("showDialog", "(ILandroid/os/Bundle;)Z", AccessFlags = 17)]
-				public bool ShowDialog(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public bool ShowDialog(int int32, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1620,7 +1620,7 @@ namespace Android.App
 				/// startSearch
 				/// </java-name>
 				[Dot42.DexImport("startSearch", "(Ljava/lang/String;ZLandroid/os/Bundle;Z)V", AccessFlags = 1)]
-				public virtual void StartSearch(string @string, bool boolean, global::Android.Os.Bundle bundle, bool boolean1) /* MethodBuilder.Create */ 
+				public virtual void StartSearch(string @string, bool boolean, global::Android.OS.Bundle bundle, bool boolean1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1628,7 +1628,7 @@ namespace Android.App
 				/// triggerSearch
 				/// </java-name>
 				[Dot42.DexImport("triggerSearch", "(Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void TriggerSearch(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void TriggerSearch(string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2412,7 +2412,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2428,7 +2428,7 @@ namespace Android.App
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnSaveInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2618,9 +2618,9 @@ namespace Android.App
 				/// getProcessMemoryInfo
 				/// </java-name>
 				[Dot42.DexImport("getProcessMemoryInfo", "([I)[Landroid/os/Debug$MemoryInfo;", AccessFlags = 1)]
-				public virtual global::Android.Os.Debug.MemoryInfo[] GetProcessMemoryInfo(int[] int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Debug.MemoryInfo[] GetProcessMemoryInfo(int[] int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Debug.MemoryInfo[]);
+						return default(global::Android.OS.Debug.MemoryInfo[]);
 				}
 
 				/// <java-name>
@@ -2751,7 +2751,7 @@ namespace Android.App
 				/// android/app/ActivityManager$RunningAppProcessInfo
 				/// </java-name>
 				[Dot42.DexImport("android/app/ActivityManager$RunningAppProcessInfo", AccessFlags = 9)]
-				public partial class RunningAppProcessInfo : global::Android.Os.IParcelable
+				public partial class RunningAppProcessInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -2848,7 +2848,7 @@ namespace Android.App
 						/// CREATOR
 						/// </java-name>
 						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_ICreator<RunningAppProcessInfo> CREATOR;
+						public static readonly global::Android.OS.IParcelable_ICreator<RunningAppProcessInfo> CREATOR;
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 						public RunningAppProcessInfo() /* MethodBuilder.Create */ 
 						{
@@ -2872,7 +2872,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -2880,7 +2880,7 @@ namespace Android.App
 						/// readFromParcel
 						/// </java-name>
 						[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -2890,7 +2890,7 @@ namespace Android.App
 				/// android/app/ActivityManager$ProcessErrorStateInfo
 				/// </java-name>
 				[Dot42.DexImport("android/app/ActivityManager$ProcessErrorStateInfo", AccessFlags = 9)]
-				public partial class ProcessErrorStateInfo : global::Android.Os.IParcelable
+				public partial class ProcessErrorStateInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -2957,7 +2957,7 @@ namespace Android.App
 						/// CREATOR
 						/// </java-name>
 						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_ICreator<ProcessErrorStateInfo> CREATOR;
+						public static readonly global::Android.OS.IParcelable_ICreator<ProcessErrorStateInfo> CREATOR;
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 						public ProcessErrorStateInfo() /* MethodBuilder.Create */ 
 						{
@@ -2976,7 +2976,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -2984,7 +2984,7 @@ namespace Android.App
 						/// readFromParcel
 						/// </java-name>
 						[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -2994,7 +2994,7 @@ namespace Android.App
 				/// android/app/ActivityManager$MemoryInfo
 				/// </java-name>
 				[Dot42.DexImport("android/app/ActivityManager$MemoryInfo", AccessFlags = 9)]
-				public partial class MemoryInfo : global::Android.Os.IParcelable
+				public partial class MemoryInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -3016,7 +3016,7 @@ namespace Android.App
 						/// CREATOR
 						/// </java-name>
 						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_ICreator<MemoryInfo> CREATOR;
+						public static readonly global::Android.OS.IParcelable_ICreator<MemoryInfo> CREATOR;
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 						public MemoryInfo() /* MethodBuilder.Create */ 
 						{
@@ -3035,7 +3035,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -3043,7 +3043,7 @@ namespace Android.App
 						/// readFromParcel
 						/// </java-name>
 						[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -3053,7 +3053,7 @@ namespace Android.App
 				/// android/app/ActivityManager$RunningServiceInfo
 				/// </java-name>
 				[Dot42.DexImport("android/app/ActivityManager$RunningServiceInfo", AccessFlags = 9)]
-				public partial class RunningServiceInfo : global::Android.Os.IParcelable
+				public partial class RunningServiceInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -3150,7 +3150,7 @@ namespace Android.App
 						/// CREATOR
 						/// </java-name>
 						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_ICreator<RunningServiceInfo> CREATOR;
+						public static readonly global::Android.OS.IParcelable_ICreator<RunningServiceInfo> CREATOR;
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 						public RunningServiceInfo() /* MethodBuilder.Create */ 
 						{
@@ -3169,7 +3169,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -3177,7 +3177,7 @@ namespace Android.App
 						/// readFromParcel
 						/// </java-name>
 						[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -3187,7 +3187,7 @@ namespace Android.App
 				/// android/app/ActivityManager$RunningTaskInfo
 				/// </java-name>
 				[Dot42.DexImport("android/app/ActivityManager$RunningTaskInfo", AccessFlags = 9)]
-				public partial class RunningTaskInfo : global::Android.Os.IParcelable
+				public partial class RunningTaskInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -3229,7 +3229,7 @@ namespace Android.App
 						/// CREATOR
 						/// </java-name>
 						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_ICreator<RunningTaskInfo> CREATOR;
+						public static readonly global::Android.OS.IParcelable_ICreator<RunningTaskInfo> CREATOR;
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 						public RunningTaskInfo() /* MethodBuilder.Create */ 
 						{
@@ -3248,7 +3248,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -3256,7 +3256,7 @@ namespace Android.App
 						/// readFromParcel
 						/// </java-name>
 						[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -3266,7 +3266,7 @@ namespace Android.App
 				/// android/app/ActivityManager$RecentTaskInfo
 				/// </java-name>
 				[Dot42.DexImport("android/app/ActivityManager$RecentTaskInfo", AccessFlags = 9)]
-				public partial class RecentTaskInfo : global::Android.Os.IParcelable
+				public partial class RecentTaskInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -3298,7 +3298,7 @@ namespace Android.App
 						/// CREATOR
 						/// </java-name>
 						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_ICreator<RecentTaskInfo> CREATOR;
+						public static readonly global::Android.OS.IParcelable_ICreator<RecentTaskInfo> CREATOR;
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 						public RecentTaskInfo() /* MethodBuilder.Create */ 
 						{
@@ -3317,7 +3317,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -3325,7 +3325,7 @@ namespace Android.App
 						/// readFromParcel
 						/// </java-name>
 						[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -3549,7 +3549,7 @@ namespace Android.App
 				/// setButton
 				/// </java-name>
 				[Dot42.DexImport("setButton", "(ILjava/lang/CharSequence;Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void SetButton(int int32, global::Java.Lang.ICharSequence charSequence, global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void SetButton(int int32, global::Java.Lang.ICharSequence charSequence, global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3565,7 +3565,7 @@ namespace Android.App
 				/// setButton
 				/// </java-name>
 				[Dot42.DexImport("setButton", "(Ljava/lang/CharSequence;Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void SetButton(global::Java.Lang.ICharSequence charSequence, global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void SetButton(global::Java.Lang.ICharSequence charSequence, global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3573,7 +3573,7 @@ namespace Android.App
 				/// setButton2
 				/// </java-name>
 				[Dot42.DexImport("setButton2", "(Ljava/lang/CharSequence;Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void SetButton2(global::Java.Lang.ICharSequence charSequence, global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void SetButton2(global::Java.Lang.ICharSequence charSequence, global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3581,7 +3581,7 @@ namespace Android.App
 				/// setButton3
 				/// </java-name>
 				[Dot42.DexImport("setButton3", "(Ljava/lang/CharSequence;Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void SetButton3(global::Java.Lang.ICharSequence charSequence, global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void SetButton3(global::Java.Lang.ICharSequence charSequence, global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3645,7 +3645,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4068,7 +4068,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4169,7 +4169,7 @@ namespace Android.App
 						/// onActivityCreated
 						/// </java-name>
 						[Dot42.DexImport("onActivityCreated", "(Landroid/app/Activity;Landroid/os/Bundle;)V", AccessFlags = 1025)]
-						void OnActivityCreated(global::Android.App.Activity activity, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+						void OnActivityCreated(global::Android.App.Activity activity, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onActivityStarted
@@ -4199,7 +4199,7 @@ namespace Android.App
 						/// onActivitySaveInstanceState
 						/// </java-name>
 						[Dot42.DexImport("onActivitySaveInstanceState", "(Landroid/app/Activity;Landroid/os/Bundle;)V", AccessFlags = 1025)]
-						void OnActivitySaveInstanceState(global::Android.App.Activity activity, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+						void OnActivitySaveInstanceState(global::Android.App.Activity activity, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onActivityDestroyed
@@ -4215,7 +4215,7 @@ namespace Android.App
 		/// android/app/ApplicationErrorReport
 		/// </java-name>
 		[Dot42.DexImport("android/app/ApplicationErrorReport", AccessFlags = 33)]
-		public partial class ApplicationErrorReport : global::Android.Os.IParcelable
+		public partial class ApplicationErrorReport : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -4297,7 +4297,7 @@ namespace Android.App
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.App.ApplicationErrorReport> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.App.ApplicationErrorReport> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ApplicationErrorReport() /* MethodBuilder.Create */ 
 				{
@@ -4316,7 +4316,7 @@ namespace Android.App
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4324,7 +4324,7 @@ namespace Android.App
 				/// readFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4368,7 +4368,7 @@ namespace Android.App
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public RunningServiceInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public RunningServiceInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -4376,7 +4376,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -4423,7 +4423,7 @@ namespace Android.App
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public BatteryInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public BatteryInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -4431,7 +4431,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -4473,7 +4473,7 @@ namespace Android.App
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public AnrInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public AnrInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -4481,7 +4481,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -4548,7 +4548,7 @@ namespace Android.App
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-						public CrashInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+						public CrashInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -4556,7 +4556,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -4626,16 +4626,16 @@ namespace Android.App
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public override global::Android.Os.Bundle OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public override global::Android.OS.Bundle OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnRestoreInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void OnRestoreInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4764,7 +4764,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal virtual void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal virtual void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4788,16 +4788,16 @@ namespace Android.App
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnRestoreInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnRestoreInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5340,7 +5340,7 @@ namespace Android.App
 				/// setCancelMessage
 				/// </java-name>
 				[Dot42.DexImport("setCancelMessage", "(Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void SetCancelMessage(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void SetCancelMessage(global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5364,7 +5364,7 @@ namespace Android.App
 				/// setDismissMessage
 				/// </java-name>
 				[Dot42.DexImport("setDismissMessage", "(Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void SetDismissMessage(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void SetDismissMessage(global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5612,7 +5612,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5620,7 +5620,7 @@ namespace Android.App
 				/// onCreateDialog
 				/// </java-name>
 				[Dot42.DexImport("onCreateDialog", "(Landroid/os/Bundle;)Landroid/app/Dialog;", AccessFlags = 1)]
-				public virtual global::Android.App.Dialog OnCreateDialog(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual global::Android.App.Dialog OnCreateDialog(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.App.Dialog);
 				}
@@ -5645,7 +5645,7 @@ namespace Android.App
 				/// onActivityCreated
 				/// </java-name>
 				[Dot42.DexImport("onActivityCreated", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnActivityCreated(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void OnActivityCreated(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5661,7 +5661,7 @@ namespace Android.App
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void OnSaveInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5949,9 +5949,9 @@ namespace Android.App
 				/// openDownloadedFile
 				/// </java-name>
 				[Dot42.DexImport("openDownloadedFile", "(J)Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
-				public virtual global::Android.Os.ParcelFileDescriptor OpenDownloadedFile(long int64) /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.ParcelFileDescriptor OpenDownloadedFile(long int64) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.ParcelFileDescriptor);
+						return default(global::Android.OS.ParcelFileDescriptor);
 				}
 
 				/// <java-name>
@@ -6249,7 +6249,7 @@ namespace Android.App
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnRestoreInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnRestoreInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6386,7 +6386,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("instantiate", "(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/app/Frag" +
     "ment;", AccessFlags = 9)]
-				public static global::Android.App.Fragment Instantiate(global::Android.Content.Context context, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public static global::Android.App.Fragment Instantiate(global::Android.Content.Context context, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.App.Fragment);
 				}
@@ -6440,7 +6440,7 @@ namespace Android.App
 				/// setArguments
 				/// </java-name>
 				[Dot42.DexImport("setArguments", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void SetArguments(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void SetArguments(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6448,9 +6448,9 @@ namespace Android.App
 				/// getArguments
 				/// </java-name>
 				[Dot42.DexImport("getArguments", "()Landroid/os/Bundle;", AccessFlags = 17)]
-				public global::Android.Os.Bundle GetArguments() /* MethodBuilder.Create */ 
+				public global::Android.OS.Bundle GetArguments() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -6699,7 +6699,7 @@ namespace Android.App
 				/// onInflate
 				/// </java-name>
 				[Dot42.DexImport("onInflate", "(Landroid/util/AttributeSet;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnInflate(global::Android.Util.IAttributeSet attributeSet, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnInflate(global::Android.Util.IAttributeSet attributeSet, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6707,7 +6707,7 @@ namespace Android.App
 				/// onInflate
 				/// </java-name>
 				[Dot42.DexImport("onInflate", "(Landroid/app/Activity;Landroid/util/AttributeSet;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnInflate(global::Android.App.Activity activity, global::Android.Util.IAttributeSet attributeSet, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnInflate(global::Android.App.Activity activity, global::Android.Util.IAttributeSet attributeSet, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6732,7 +6732,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6740,7 +6740,7 @@ namespace Android.App
 				/// onViewCreated
 				/// </java-name>
 				[Dot42.DexImport("onViewCreated", "(Landroid/view/View;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnViewCreated(global::Android.View.View view, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnViewCreated(global::Android.View.View view, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6749,7 +6749,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroi" +
     "d/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.View.View);
 				}
@@ -6767,7 +6767,7 @@ namespace Android.App
 				/// onActivityCreated
 				/// </java-name>
 				[Dot42.DexImport("onActivityCreated", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnActivityCreated(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnActivityCreated(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6791,7 +6791,7 @@ namespace Android.App
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnSaveInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6964,7 +6964,7 @@ namespace Android.App
 				/// <java-name>
 				/// getArguments
 				/// </java-name>
-				public global::Android.Os.Bundle Arguments
+				public global::Android.OS.Bundle Arguments
 				{
 				[Dot42.DexImport("getArguments", "()Landroid/os/Bundle;", AccessFlags = 17)]
 						get{ return GetArguments(); }
@@ -7080,14 +7080,14 @@ namespace Android.App
 				/// android/app/Fragment$SavedState
 				/// </java-name>
 				[Dot42.DexImport("android/app/Fragment$SavedState", AccessFlags = 9)]
-				public partial class SavedState : global::Android.Os.IParcelable
+				public partial class SavedState : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
 						/// CREATOR
 						/// </java-name>
 						[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$ClassLoaderCreator;", AccessFlags = 25)]
-						public static readonly global::Android.Os.IParcelable_IClassLoaderCreator<SavedState> CREATOR;
+						public static readonly global::Android.OS.IParcelable_IClassLoaderCreator<SavedState> CREATOR;
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 						internal SavedState() /* MethodBuilder.Create */ 
 						{
@@ -7106,7 +7106,7 @@ namespace Android.App
 						/// writeToParcel
 						/// </java-name>
 						[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-						public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+						public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -7328,13 +7328,13 @@ namespace Android.App
 				/// putFragment
 				/// </java-name>
 				[Dot42.DexImport("putFragment", "(Landroid/os/Bundle;Ljava/lang/String;Landroid/app/Fragment;)V", AccessFlags = 1025)]
-				public abstract void PutFragment(global::Android.Os.Bundle bundle, string @string, global::Android.App.Fragment fragment) /* MethodBuilder.Create */ ;
+				public abstract void PutFragment(global::Android.OS.Bundle bundle, string @string, global::Android.App.Fragment fragment) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getFragment
 				/// </java-name>
 				[Dot42.DexImport("getFragment", "(Landroid/os/Bundle;Ljava/lang/String;)Landroid/app/Fragment;", AccessFlags = 1025)]
-				public abstract global::Android.App.Fragment GetFragment(global::Android.Os.Bundle bundle, string @string) /* MethodBuilder.Create */ ;
+				public abstract global::Android.App.Fragment GetFragment(global::Android.OS.Bundle bundle, string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// saveFragmentInstanceState
@@ -7655,7 +7655,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7688,7 +7688,7 @@ namespace Android.App
 				/// sendStatus
 				/// </java-name>
 				[Dot42.DexImport("sendStatus", "(ILandroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void SendStatus(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void SendStatus(int int32, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7696,7 +7696,7 @@ namespace Android.App
 				/// finish
 				/// </java-name>
 				[Dot42.DexImport("finish", "(ILandroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void Finish(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void Finish(int int32, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7991,7 +7991,7 @@ namespace Android.App
     "plication;Landroid/content/Intent;Landroid/content/pm/ActivityInfo;Ljava/lang/Ch" +
     "arSequence;Landroid/app/Activity;Ljava/lang/String;Ljava/lang/Object;)Landroid/a" +
     "pp/Activity;")]
-				public virtual global::Android.App.Activity NewActivity(global::System.Type type, global::Android.Content.Context context, global::Android.Os.IBinder binder, global::Android.App.Application application, global::Android.Content.Intent intent, global::Android.Content.Pm.ActivityInfo activityInfo, global::Java.Lang.ICharSequence charSequence, global::Android.App.Activity activity, string @string, object @object) /* MethodBuilder.Create */ 
+				public virtual global::Android.App.Activity NewActivity(global::System.Type type, global::Android.Content.Context context, global::Android.OS.IBinder binder, global::Android.App.Application application, global::Android.Content.Intent intent, global::Android.Content.Pm.ActivityInfo activityInfo, global::Java.Lang.ICharSequence charSequence, global::Android.App.Activity activity, string @string, object @object) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.App.Activity);
 				}
@@ -8010,7 +8010,7 @@ namespace Android.App
 				/// callActivityOnCreate
 				/// </java-name>
 				[Dot42.DexImport("callActivityOnCreate", "(Landroid/app/Activity;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void CallActivityOnCreate(global::Android.App.Activity activity, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void CallActivityOnCreate(global::Android.App.Activity activity, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8026,7 +8026,7 @@ namespace Android.App
 				/// callActivityOnRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("callActivityOnRestoreInstanceState", "(Landroid/app/Activity;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void CallActivityOnRestoreInstanceState(global::Android.App.Activity activity, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void CallActivityOnRestoreInstanceState(global::Android.App.Activity activity, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8034,7 +8034,7 @@ namespace Android.App
 				/// callActivityOnPostCreate
 				/// </java-name>
 				[Dot42.DexImport("callActivityOnPostCreate", "(Landroid/app/Activity;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void CallActivityOnPostCreate(global::Android.App.Activity activity, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void CallActivityOnPostCreate(global::Android.App.Activity activity, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8082,7 +8082,7 @@ namespace Android.App
 				/// callActivityOnSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("callActivityOnSaveInstanceState", "(Landroid/app/Activity;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void CallActivityOnSaveInstanceState(global::Android.App.Activity activity, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void CallActivityOnSaveInstanceState(global::Android.App.Activity activity, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8122,18 +8122,18 @@ namespace Android.App
 				/// getAllocCounts
 				/// </java-name>
 				[Dot42.DexImport("getAllocCounts", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetAllocCounts() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle GetAllocCounts() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
 				/// getBinderCounts
 				/// </java-name>
 				[Dot42.DexImport("getBinderCounts", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle GetBinderCounts() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle GetBinderCounts() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -8166,7 +8166,7 @@ namespace Android.App
 				/// <java-name>
 				/// getAllocCounts
 				/// </java-name>
-				public global::Android.Os.Bundle AllocCounts
+				public global::Android.OS.Bundle AllocCounts
 				{
 				[Dot42.DexImport("getAllocCounts", "()Landroid/os/Bundle;", AccessFlags = 1)]
 						get{ return GetAllocCounts(); }
@@ -8175,7 +8175,7 @@ namespace Android.App
 				/// <java-name>
 				/// getBinderCounts
 				/// </java-name>
-				public global::Android.Os.Bundle BinderCounts
+				public global::Android.OS.Bundle BinderCounts
 				{
 				[Dot42.DexImport("getBinderCounts", "()Landroid/os/Bundle;", AccessFlags = 1)]
 						get{ return GetBinderCounts(); }
@@ -8418,9 +8418,9 @@ namespace Android.App
 				/// onBind
 				/// </java-name>
 				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 1)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.OS.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
@@ -8547,7 +8547,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8706,7 +8706,7 @@ namespace Android.App
 						/// extras
 						/// </java-name>
 						[Dot42.DexImport("extras", "Landroid/os/Bundle;", AccessFlags = 1)]
-						public global::Android.Os.Bundle Extras;
+						public global::Android.OS.Bundle Extras;
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 						public ListItem() /* MethodBuilder.Create */ 
 						{
@@ -8740,7 +8740,7 @@ namespace Android.App
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnRestoreInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnRestoreInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8869,7 +8869,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroi" +
     "d/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.View.View);
 				}
@@ -8878,7 +8878,7 @@ namespace Android.App
 				/// onViewCreated
 				/// </java-name>
 				[Dot42.DexImport("onViewCreated", "(Landroid/view/View;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnViewCreated(global::Android.View.View view, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void OnViewCreated(global::Android.View.View view, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9032,7 +9032,7 @@ namespace Android.App
 				[Dot42.DexImport("initLoader", "(ILandroid/os/Bundle;Landroid/app/LoaderManager$LoaderCallbacks;)Landroid/content" +
     "/Loader;", AccessFlags = 1025, Signature = "<D:Ljava/lang/Object;>(ILandroid/os/Bundle;Landroid/app/LoaderManager$LoaderCallb" +
     "acks<TD;>;)Landroid/content/Loader<TD;>;")]
-				public abstract global::Android.Content.Loader<D> InitLoader<D>(int int32, global::Android.Os.Bundle bundle, global::Android.App.LoaderManager.ILoaderCallbacks<D> loaderCallbacks) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.Loader<D> InitLoader<D>(int int32, global::Android.OS.Bundle bundle, global::Android.App.LoaderManager.ILoaderCallbacks<D> loaderCallbacks) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// restartLoader
@@ -9040,7 +9040,7 @@ namespace Android.App
 				[Dot42.DexImport("restartLoader", "(ILandroid/os/Bundle;Landroid/app/LoaderManager$LoaderCallbacks;)Landroid/content" +
     "/Loader;", AccessFlags = 1025, Signature = "<D:Ljava/lang/Object;>(ILandroid/os/Bundle;Landroid/app/LoaderManager$LoaderCallb" +
     "acks<TD;>;)Landroid/content/Loader<TD;>;")]
-				public abstract global::Android.Content.Loader<D> RestartLoader<D>(int int32, global::Android.Os.Bundle bundle, global::Android.App.LoaderManager.ILoaderCallbacks<D> loaderCallbacks) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.Loader<D> RestartLoader<D>(int int32, global::Android.OS.Bundle bundle, global::Android.App.LoaderManager.ILoaderCallbacks<D> loaderCallbacks) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// destroyLoader
@@ -9080,7 +9080,7 @@ namespace Android.App
 						/// onCreateLoader
 						/// </java-name>
 						[Dot42.DexImport("onCreateLoader", "(ILandroid/os/Bundle;)Landroid/content/Loader;", AccessFlags = 1025, Signature = "(ILandroid/os/Bundle;)Landroid/content/Loader<TD;>;")]
-						global::Android.Content.Loader<D> OnCreateLoader(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+						global::Android.Content.Loader<D> OnCreateLoader(int int32, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onLoadFinished
@@ -9159,7 +9159,7 @@ namespace Android.App
 				/// dispatchCreate
 				/// </java-name>
 				[Dot42.DexImport("dispatchCreate", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void DispatchCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void DispatchCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9167,9 +9167,9 @@ namespace Android.App
 				/// saveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("saveInstanceState", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.Os.Bundle SaveInstanceState() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle SaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -9263,7 +9263,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9295,7 +9295,7 @@ namespace Android.App
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnSaveInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9410,7 +9410,7 @@ namespace Android.App
 		/// android/app/Notification
 		/// </java-name>
 		[Dot42.DexImport("android/app/Notification", AccessFlags = 33)]
-		public partial class Notification : global::Android.Os.IParcelable
+		public partial class Notification : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -9577,7 +9577,7 @@ namespace Android.App
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.App.Notification> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.App.Notification> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Notification() /* MethodBuilder.Create */ 
 				{
@@ -9589,7 +9589,7 @@ namespace Android.App
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public Notification(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public Notification(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9615,7 +9615,7 @@ namespace Android.App
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9942,7 +9942,7 @@ namespace Android.App
 		/// android/app/PendingIntent
 		/// </java-name>
 		[Dot42.DexImport("android/app/PendingIntent", AccessFlags = 49)]
-		public sealed partial class PendingIntent : global::Android.Os.IParcelable
+		public sealed partial class PendingIntent : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -9969,7 +9969,7 @@ namespace Android.App
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.App.PendingIntent> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.App.PendingIntent> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal PendingIntent() /* MethodBuilder.Create */ 
 				{
@@ -10057,7 +10057,7 @@ namespace Android.App
 				/// send
 				/// </java-name>
 				[Dot42.DexImport("send", "(ILandroid/app/PendingIntent$OnFinished;Landroid/os/Handler;)V", AccessFlags = 1)]
-				public void Send(int int32, global::Android.App.PendingIntent.IOnFinished onFinished, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public void Send(int int32, global::Android.App.PendingIntent.IOnFinished onFinished, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10066,7 +10066,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("send", "(Landroid/content/Context;ILandroid/content/Intent;Landroid/app/PendingIntent$OnF" +
     "inished;Landroid/os/Handler;)V", AccessFlags = 1)]
-				public void Send(global::Android.Content.Context context, int int32, global::Android.Content.Intent intent, global::Android.App.PendingIntent.IOnFinished onFinished, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public void Send(global::Android.Content.Context context, int int32, global::Android.Content.Intent intent, global::Android.App.PendingIntent.IOnFinished onFinished, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10075,7 +10075,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("send", "(Landroid/content/Context;ILandroid/content/Intent;Landroid/app/PendingIntent$OnF" +
     "inished;Landroid/os/Handler;Ljava/lang/String;)V", AccessFlags = 1)]
-				public void Send(global::Android.Content.Context context, int int32, global::Android.Content.Intent intent, global::Android.App.PendingIntent.IOnFinished onFinished, global::Android.Os.Handler handler, string @string) /* MethodBuilder.Create */ 
+				public void Send(global::Android.Content.Context context, int int32, global::Android.Content.Intent intent, global::Android.App.PendingIntent.IOnFinished onFinished, global::Android.OS.Handler handler, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10128,7 +10128,7 @@ namespace Android.App
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10136,7 +10136,7 @@ namespace Android.App
 				/// writePendingIntentOrNullToParcel
 				/// </java-name>
 				[Dot42.DexImport("writePendingIntentOrNullToParcel", "(Landroid/app/PendingIntent;Landroid/os/Parcel;)V", AccessFlags = 9)]
-				public static void WritePendingIntentOrNullToParcel(global::Android.App.PendingIntent pendingIntent, global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public static void WritePendingIntentOrNullToParcel(global::Android.App.PendingIntent pendingIntent, global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10144,7 +10144,7 @@ namespace Android.App
 				/// readPendingIntentOrNullFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readPendingIntentOrNullFromParcel", "(Landroid/os/Parcel;)Landroid/app/PendingIntent;", AccessFlags = 9)]
-				public static global::Android.App.PendingIntent ReadPendingIntentOrNullFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public static global::Android.App.PendingIntent ReadPendingIntentOrNullFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.App.PendingIntent);
 				}
@@ -10179,7 +10179,7 @@ namespace Android.App
 						/// </java-name>
 						[Dot42.DexImport("onSendFinished", "(Landroid/app/PendingIntent;Landroid/content/Intent;ILjava/lang/String;Landroid/o" +
     "s/Bundle;)V", AccessFlags = 1025)]
-						void OnSendFinished(global::Android.App.PendingIntent pendingIntent, global::Android.Content.Intent intent, int int32, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+						void OnSendFinished(global::Android.App.PendingIntent pendingIntent, global::Android.Content.Intent intent, int int32, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -10280,7 +10280,7 @@ namespace Android.App
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10476,14 +10476,14 @@ namespace Android.App
 		/// android/app/SearchableInfo
 		/// </java-name>
 		[Dot42.DexImport("android/app/SearchableInfo", AccessFlags = 49)]
-		public sealed partial class SearchableInfo : global::Android.Os.IParcelable
+		public sealed partial class SearchableInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.App.SearchableInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.App.SearchableInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal SearchableInfo() /* MethodBuilder.Create */ 
 				{
@@ -10718,7 +10718,7 @@ namespace Android.App
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11106,7 +11106,7 @@ namespace Android.App
 				/// startSearch
 				/// </java-name>
 				[Dot42.DexImport("startSearch", "(Ljava/lang/String;ZLandroid/content/ComponentName;Landroid/os/Bundle;Z)V", AccessFlags = 1)]
-				public virtual void StartSearch(string @string, bool boolean, global::Android.Content.ComponentName componentName, global::Android.Os.Bundle bundle, bool boolean1) /* MethodBuilder.Create */ 
+				public virtual void StartSearch(string @string, bool boolean, global::Android.Content.ComponentName componentName, global::Android.OS.Bundle bundle, bool boolean1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11114,7 +11114,7 @@ namespace Android.App
 				/// triggerSearch
 				/// </java-name>
 				[Dot42.DexImport("triggerSearch", "(Ljava/lang/String;Landroid/content/ComponentName;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void TriggerSearch(string @string, global::Android.Content.ComponentName componentName, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void TriggerSearch(string @string, global::Android.Content.ComponentName componentName, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11334,7 +11334,7 @@ namespace Android.App
 				/// onBind
 				/// </java-name>
 				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 1025)]
-				public abstract global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ ;
+				public abstract global::Android.OS.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onUnbind
@@ -11453,7 +11453,7 @@ namespace Android.App
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnRestoreInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnRestoreInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11461,7 +11461,7 @@ namespace Android.App
 				/// onPostCreate
 				/// </java-name>
 				[Dot42.DexImport("onPostCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnPostCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnPostCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11469,7 +11469,7 @@ namespace Android.App
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnSaveInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnSaveInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11572,16 +11572,16 @@ namespace Android.App
 				/// onSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onSaveInstanceState", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public override global::Android.Os.Bundle OnSaveInstanceState() /* MethodBuilder.Create */ 
+				public override global::Android.OS.Bundle OnSaveInstanceState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
 				/// onRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("onRestoreInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnRestoreInstanceState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void OnRestoreInstanceState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11732,14 +11732,14 @@ namespace Android.App
 		/// android/app/WallpaperInfo
 		/// </java-name>
 		[Dot42.DexImport("android/app/WallpaperInfo", AccessFlags = 49)]
-		public sealed partial class WallpaperInfo : global::Android.Os.IParcelable
+		public sealed partial class WallpaperInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.App.WallpaperInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.App.WallpaperInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)V", AccessFlags = 1)]
 				public WallpaperInfo(global::Android.Content.Context context, global::Android.Content.Pm.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
 				{
@@ -11856,7 +11856,7 @@ namespace Android.App
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12074,7 +12074,7 @@ namespace Android.App
 				/// setWallpaperOffsets
 				/// </java-name>
 				[Dot42.DexImport("setWallpaperOffsets", "(Landroid/os/IBinder;FF)V", AccessFlags = 1)]
-				public virtual void SetWallpaperOffsets(global::Android.Os.IBinder binder, float single, float single1) /* MethodBuilder.Create */ 
+				public virtual void SetWallpaperOffsets(global::Android.OS.IBinder binder, float single, float single1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12090,7 +12090,7 @@ namespace Android.App
 				/// sendWallpaperCommand
 				/// </java-name>
 				[Dot42.DexImport("sendWallpaperCommand", "(Landroid/os/IBinder;Ljava/lang/String;IIILandroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void SendWallpaperCommand(global::Android.Os.IBinder binder, string @string, int int32, int int321, int int322, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void SendWallpaperCommand(global::Android.OS.IBinder binder, string @string, int int32, int int321, int int322, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12098,7 +12098,7 @@ namespace Android.App
 				/// clearWallpaperOffsets
 				/// </java-name>
 				[Dot42.DexImport("clearWallpaperOffsets", "(Landroid/os/IBinder;)V", AccessFlags = 1)]
-				public virtual void ClearWallpaperOffsets(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
+				public virtual void ClearWallpaperOffsets(global::Android.OS.IBinder binder) /* MethodBuilder.Create */ 
 				{
 				}
 

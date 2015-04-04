@@ -14,7 +14,7 @@ namespace Android.Telephony.Gsm
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public GsmCellLocation(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public GsmCellLocation(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -92,7 +92,7 @@ namespace Android.Telephony.Gsm
 				/// fillInNotifierBundle
 				/// </java-name>
 				[Dot42.DexImport("fillInNotifierBundle", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void FillInNotifierBundle(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void FillInNotifierBundle(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 

@@ -5,7 +5,7 @@ namespace Android.View.Accessibility
 		/// android/view/accessibility/AccessibilityEvent
 		/// </java-name>
 		[Dot42.DexImport("android/view/accessibility/AccessibilityEvent", AccessFlags = 49)]
-		public sealed partial class AccessibilityEvent : global::Android.View.Accessibility.AccessibilityRecord, global::Android.Os.IParcelable
+		public sealed partial class AccessibilityEvent : global::Android.View.Accessibility.AccessibilityRecord, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -97,7 +97,7 @@ namespace Android.View.Accessibility
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Accessibility.AccessibilityEvent> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Accessibility.AccessibilityEvent> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal AccessibilityEvent() /* MethodBuilder.Create */ 
 				{
@@ -220,7 +220,7 @@ namespace Android.View.Accessibility
 				/// initFromParcel
 				/// </java-name>
 				[Dot42.DexImport("initFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public void InitFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public void InitFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -228,7 +228,7 @@ namespace Android.View.Accessibility
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -435,7 +435,7 @@ namespace Android.View.Accessibility
 		/// android/view/accessibility/AccessibilityNodeInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/accessibility/AccessibilityNodeInfo", AccessFlags = 33)]
-		public partial class AccessibilityNodeInfo : global::Android.Os.IParcelable
+		public partial class AccessibilityNodeInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -462,7 +462,7 @@ namespace Android.View.Accessibility
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Accessibility.AccessibilityNodeInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Accessibility.AccessibilityNodeInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal AccessibilityNodeInfo() /* MethodBuilder.Create */ 
 				{
@@ -883,7 +883,7 @@ namespace Android.View.Accessibility
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1353,16 +1353,16 @@ namespace Android.View.Accessibility
 				/// getParcelableData
 				/// </java-name>
 				[Dot42.DexImport("getParcelableData", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-				public virtual global::Android.Os.IParcelable GetParcelableData() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.IParcelable GetParcelableData() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IParcelable);
+						return default(global::Android.OS.IParcelable);
 				}
 
 				/// <java-name>
 				/// setParcelableData
 				/// </java-name>
 				[Dot42.DexImport("setParcelableData", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-				public virtual void SetParcelableData(global::Android.Os.IParcelable parcelable) /* MethodBuilder.Create */ 
+				public virtual void SetParcelableData(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1575,7 +1575,7 @@ namespace Android.View.Accessibility
 				/// <java-name>
 				/// getParcelableData
 				/// </java-name>
-				public global::Android.Os.IParcelable ParcelableData
+				public global::Android.OS.IParcelable ParcelableData
 				{
 				[Dot42.DexImport("getParcelableData", "()Landroid/os/Parcelable;", AccessFlags = 1)]
 						get{ return GetParcelableData(); }

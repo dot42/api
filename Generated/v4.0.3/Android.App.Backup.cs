@@ -44,13 +44,13 @@ namespace Android.App.Backup
 				/// </java-name>
 				[Dot42.DexImport("onBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
     "s/ParcelFileDescriptor;)V", AccessFlags = 1025)]
-				public abstract void OnBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ ;
+				public abstract void OnBackup(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.OS.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onRestore
 				/// </java-name>
 				[Dot42.DexImport("onRestore", "(Landroid/app/backup/BackupDataInput;ILandroid/os/ParcelFileDescriptor;)V", AccessFlags = 1025)]
-				public abstract void OnRestore(global::Android.App.Backup.BackupDataInput backupDataInput, int int32, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ ;
+				public abstract void OnRestore(global::Android.App.Backup.BackupDataInput backupDataInput, int int32, global::Android.OS.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onFullBackup
@@ -72,7 +72,7 @@ namespace Android.App.Backup
 				/// onRestoreFile
 				/// </java-name>
 				[Dot42.DexImport("onRestoreFile", "(Landroid/os/ParcelFileDescriptor;JLjava/io/File;IJJ)V", AccessFlags = 1)]
-				public virtual void OnRestoreFile(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, long int64, global::Java.Io.File file, int int32, long int641, long int642) /* MethodBuilder.Create */ 
+				public virtual void OnRestoreFile(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, long int64, global::Java.Io.File file, int int32, long int641, long int642) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -95,7 +95,7 @@ namespace Android.App.Backup
 				/// </java-name>
 				[Dot42.DexImport("onBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
     "s/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public override void OnBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
+				public override void OnBackup(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.OS.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -103,7 +103,7 @@ namespace Android.App.Backup
 				/// onRestore
 				/// </java-name>
 				[Dot42.DexImport("onRestore", "(Landroid/app/backup/BackupDataInput;ILandroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public override void OnRestore(global::Android.App.Backup.BackupDataInput backupDataInput, int int32, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+				public override void OnRestore(global::Android.App.Backup.BackupDataInput backupDataInput, int int32, global::Android.OS.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -390,7 +390,7 @@ namespace Android.App.Backup
 				/// </java-name>
 				[Dot42.DexImport("performBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
     "s/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void PerformBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
+				public virtual void PerformBackup(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.OS.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -412,7 +412,7 @@ namespace Android.App.Backup
 				/// writeNewStateDescription
 				/// </java-name>
 				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void WriteNewStateDescription(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -445,7 +445,7 @@ namespace Android.App.Backup
 				/// writeNewStateDescription
 				/// </java-name>
 				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void WriteNewStateDescription(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -477,7 +477,7 @@ namespace Android.App.Backup
 				/// </java-name>
 				[Dot42.DexImport("performBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
     "s/ParcelFileDescriptor;)V", AccessFlags = 1025)]
-				void PerformBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ ;
+				void PerformBackup(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.OS.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// restoreEntity
@@ -489,7 +489,7 @@ namespace Android.App.Backup
 				/// writeNewStateDescription
 				/// </java-name>
 				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1025)]
-				void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ ;
+				void WriteNewStateDescription(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -548,7 +548,7 @@ namespace Android.App.Backup
 				/// </java-name>
 				[Dot42.DexImport("performBackup", "(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/o" +
     "s/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void PerformBackup(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.Os.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
+				public virtual void PerformBackup(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, global::Android.App.Backup.BackupDataOutput backupDataOutput, global::Android.OS.ParcelFileDescriptor parcelFileDescriptor1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -570,7 +570,7 @@ namespace Android.App.Backup
 				/// writeNewStateDescription
 				/// </java-name>
 				[Dot42.DexImport("writeNewStateDescription", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
-				public virtual void WriteNewStateDescription(global::Android.Os.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void WriteNewStateDescription(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 

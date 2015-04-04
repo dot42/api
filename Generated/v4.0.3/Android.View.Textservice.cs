@@ -5,14 +5,14 @@ namespace Android.View.Textservice
 		/// android/view/textservice/SpellCheckerInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/textservice/SpellCheckerInfo", AccessFlags = 49)]
-		public sealed partial class SpellCheckerInfo : global::Android.Os.IParcelable
+		public sealed partial class SpellCheckerInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Textservice.SpellCheckerInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Textservice.SpellCheckerInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal SpellCheckerInfo() /* MethodBuilder.Create */ 
 				{
@@ -49,7 +49,7 @@ namespace Android.View.Textservice
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -275,14 +275,14 @@ namespace Android.View.Textservice
 		/// android/view/textservice/SpellCheckerSubtype
 		/// </java-name>
 		[Dot42.DexImport("android/view/textservice/SpellCheckerSubtype", AccessFlags = 49)]
-		public sealed partial class SpellCheckerSubtype : global::Android.Os.IParcelable
+		public sealed partial class SpellCheckerSubtype : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Textservice.SpellCheckerSubtype> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Textservice.SpellCheckerSubtype> CREATOR;
 				[Dot42.DexImport("<init>", "(ILjava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public SpellCheckerSubtype(int int32, string @string, string string1) /* MethodBuilder.Create */ 
 				{
@@ -356,7 +356,7 @@ namespace Android.View.Textservice
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -398,7 +398,7 @@ namespace Android.View.Textservice
 		/// android/view/textservice/SuggestionsInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/textservice/SuggestionsInfo", AccessFlags = 49)]
-		public sealed partial class SuggestionsInfo : global::Android.Os.IParcelable
+		public sealed partial class SuggestionsInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -420,7 +420,7 @@ namespace Android.View.Textservice
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Textservice.SuggestionsInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Textservice.SuggestionsInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(I[Ljava/lang/String;)V", AccessFlags = 1)]
 				public SuggestionsInfo(int int32, string[] @string) /* MethodBuilder.Create */ 
 				{
@@ -432,7 +432,7 @@ namespace Android.View.Textservice
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public SuggestionsInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public SuggestionsInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -440,7 +440,7 @@ namespace Android.View.Textservice
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -553,14 +553,14 @@ namespace Android.View.Textservice
 		/// android/view/textservice/TextInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/textservice/TextInfo", AccessFlags = 49)]
-		public sealed partial class TextInfo : global::Android.Os.IParcelable
+		public sealed partial class TextInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Textservice.TextInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Textservice.TextInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public TextInfo(string @string) /* MethodBuilder.Create */ 
 				{
@@ -572,7 +572,7 @@ namespace Android.View.Textservice
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public TextInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public TextInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -580,7 +580,7 @@ namespace Android.View.Textservice
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -671,7 +671,7 @@ namespace Android.View.Textservice
 				/// </java-name>
 				[Dot42.DexImport("newSpellCheckerSession", "(Landroid/os/Bundle;Ljava/util/Locale;Landroid/view/textservice/SpellCheckerSessi" +
     "on$SpellCheckerSessionListener;Z)Landroid/view/textservice/SpellCheckerSession;", AccessFlags = 1)]
-				public global::Android.View.Textservice.SpellCheckerSession NewSpellCheckerSession(global::Android.Os.Bundle bundle, global::Java.Util.Locale locale, global::Android.View.Textservice.SpellCheckerSession.ISpellCheckerSessionListener spellCheckerSessionListener, bool boolean) /* MethodBuilder.Create */ 
+				public global::Android.View.Textservice.SpellCheckerSession NewSpellCheckerSession(global::Android.OS.Bundle bundle, global::Java.Util.Locale locale, global::Android.View.Textservice.SpellCheckerSession.ISpellCheckerSessionListener spellCheckerSessionListener, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.View.Textservice.SpellCheckerSession);
 				}

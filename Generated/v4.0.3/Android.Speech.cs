@@ -12,7 +12,7 @@ namespace Android.Speech
 				/// onReadyForSpeech
 				/// </java-name>
 				[Dot42.DexImport("onReadyForSpeech", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
-				void OnReadyForSpeech(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				void OnReadyForSpeech(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onBeginningOfSpeech
@@ -48,19 +48,19 @@ namespace Android.Speech
 				/// onResults
 				/// </java-name>
 				[Dot42.DexImport("onResults", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
-				void OnResults(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				void OnResults(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onPartialResults
 				/// </java-name>
 				[Dot42.DexImport("onPartialResults", "(Landroid/os/Bundle;)V", AccessFlags = 1025)]
-				void OnPartialResults(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				void OnPartialResults(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onEvent
 				/// </java-name>
 				[Dot42.DexImport("onEvent", "(ILandroid/os/Bundle;)V", AccessFlags = 1025)]
-				void OnEvent(int int32, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				void OnEvent(int int32, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -108,9 +108,9 @@ namespace Android.Speech
 				/// onBind
 				/// </java-name>
 				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 17)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.OS.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
@@ -182,7 +182,7 @@ namespace Android.Speech
 						/// partialResults
 						/// </java-name>
 						[Dot42.DexImport("partialResults", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						public virtual void PartialResults(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+						public virtual void PartialResults(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -190,7 +190,7 @@ namespace Android.Speech
 						/// readyForSpeech
 						/// </java-name>
 						[Dot42.DexImport("readyForSpeech", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						public virtual void ReadyForSpeech(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+						public virtual void ReadyForSpeech(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -198,7 +198,7 @@ namespace Android.Speech
 						/// results
 						/// </java-name>
 						[Dot42.DexImport("results", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						public virtual void Results(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+						public virtual void Results(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 						{
 						}
 

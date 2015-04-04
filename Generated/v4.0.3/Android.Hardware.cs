@@ -2960,7 +2960,7 @@ namespace Android.Hardware
 				/// </java-name>
 				[Dot42.DexImport("registerListener", "(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;ILandroid/os/Hand" +
     "ler;)Z", AccessFlags = 1)]
-				public virtual bool RegisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener, global::Android.Hardware.Sensor sensor, int int32, global::Android.Os.Handler handler) /* MethodBuilder.Create */ 
+				public virtual bool RegisterListener(global::Android.Hardware.ISensorEventListener sensorEventListener, global::Android.Hardware.Sensor sensor, int int32, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}

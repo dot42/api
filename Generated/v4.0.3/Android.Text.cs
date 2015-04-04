@@ -193,7 +193,7 @@ namespace Android.Text
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public Annotation(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public Annotation(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -219,7 +219,7 @@ namespace Android.Text
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1339,7 +1339,7 @@ namespace Android.Text
 		/// android/text/ParcelableSpan
 		/// </java-name>
 		[Dot42.DexImport("android/text/ParcelableSpan", AccessFlags = 1537)]
-		public partial interface IParcelableSpan : global::Android.Os.IParcelable
+		public partial interface IParcelableSpan : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -3448,7 +3448,7 @@ namespace Android.Text
 				/// CHAR_SEQUENCE_CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CHAR_SEQUENCE_CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Java.Lang.ICharSequence> CHAR_SEQUENCE_CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Java.Lang.ICharSequence> CHAR_SEQUENCE_CREATOR;
 				/// <java-name>
 				/// CAP_MODE_CHARACTERS
 				/// </java-name>
@@ -3661,7 +3661,7 @@ namespace Android.Text
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V", AccessFlags = 9)]
-				public static void WriteToParcel(global::Java.Lang.ICharSequence charSequence, global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public static void WriteToParcel(global::Java.Lang.ICharSequence charSequence, global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

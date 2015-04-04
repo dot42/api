@@ -1843,9 +1843,9 @@ namespace Android.Database.Sqlite
 				/// simpleQueryForBlobFileDescriptor
 				/// </java-name>
 				[Dot42.DexImport("simpleQueryForBlobFileDescriptor", "()Landroid/os/ParcelFileDescriptor;", AccessFlags = 1)]
-				public virtual global::Android.Os.ParcelFileDescriptor SimpleQueryForBlobFileDescriptor() /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.ParcelFileDescriptor SimpleQueryForBlobFileDescriptor() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.ParcelFileDescriptor);
+						return default(global::Android.OS.ParcelFileDescriptor);
 				}
 
 		}

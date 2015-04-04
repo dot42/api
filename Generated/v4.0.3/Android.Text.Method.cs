@@ -523,7 +523,7 @@ namespace Android.Text.Method
 				/// onCreate
 				/// </java-name>
 				[Dot42.DexImport("onCreate", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
-				protected internal override void OnCreate(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				protected internal override void OnCreate(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 

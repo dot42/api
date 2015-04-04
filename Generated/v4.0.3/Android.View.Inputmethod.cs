@@ -196,7 +196,7 @@ namespace Android.View.Inputmethod
 				/// performPrivateCommand
 				/// </java-name>
 				[Dot42.DexImport("performPrivateCommand", "(Ljava/lang/String;Landroid/os/Bundle;)Z", AccessFlags = 1)]
-				public virtual bool PerformPrivateCommand(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual bool PerformPrivateCommand(string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -266,14 +266,14 @@ namespace Android.View.Inputmethod
 		/// android/view/inputmethod/CompletionInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/CompletionInfo", AccessFlags = 49)]
-		public sealed partial class CompletionInfo : global::Android.Os.IParcelable
+		public sealed partial class CompletionInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Inputmethod.CompletionInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.CompletionInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(JILjava/lang/CharSequence;)V", AccessFlags = 1)]
 				public CompletionInfo(long int64, int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
 				{
@@ -333,7 +333,7 @@ namespace Android.View.Inputmethod
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -393,14 +393,14 @@ namespace Android.View.Inputmethod
 		/// android/view/inputmethod/CorrectionInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/CorrectionInfo", AccessFlags = 49)]
-		public sealed partial class CorrectionInfo : global::Android.Os.IParcelable
+		public sealed partial class CorrectionInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Inputmethod.CorrectionInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.CorrectionInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(ILjava/lang/CharSequence;Ljava/lang/CharSequence;)V", AccessFlags = 1)]
 				public CorrectionInfo(int int32, global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence charSequence1) /* MethodBuilder.Create */ 
 				{
@@ -446,7 +446,7 @@ namespace Android.View.Inputmethod
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -497,7 +497,7 @@ namespace Android.View.Inputmethod
 		/// android/view/inputmethod/EditorInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/EditorInfo", AccessFlags = 33)]
-		public partial class EditorInfo : global::Android.Text.IInputType, global::Android.Os.IParcelable
+		public partial class EditorInfo : global::Android.Text.IInputType, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -649,12 +649,12 @@ namespace Android.View.Inputmethod
 				/// extras
 				/// </java-name>
 				[Dot42.DexImport("extras", "Landroid/os/Bundle;", AccessFlags = 1)]
-				public global::Android.Os.Bundle Extras;
+				public global::Android.OS.Bundle Extras;
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Inputmethod.EditorInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.EditorInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public EditorInfo() /* MethodBuilder.Create */ 
 				{
@@ -680,7 +680,7 @@ namespace Android.View.Inputmethod
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -699,7 +699,7 @@ namespace Android.View.Inputmethod
 		/// android/view/inputmethod/ExtractedText
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/ExtractedText", AccessFlags = 33)]
-		public partial class ExtractedText : global::Android.Os.IParcelable
+		public partial class ExtractedText : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -751,7 +751,7 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Inputmethod.ExtractedText> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.ExtractedText> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ExtractedText() /* MethodBuilder.Create */ 
 				{
@@ -761,7 +761,7 @@ namespace Android.View.Inputmethod
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -780,7 +780,7 @@ namespace Android.View.Inputmethod
 		/// android/view/inputmethod/ExtractedTextRequest
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/ExtractedTextRequest", AccessFlags = 33)]
-		public partial class ExtractedTextRequest : global::Android.Os.IParcelable
+		public partial class ExtractedTextRequest : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -807,7 +807,7 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Inputmethod.ExtractedTextRequest> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.ExtractedTextRequest> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ExtractedTextRequest() /* MethodBuilder.Create */ 
 				{
@@ -817,7 +817,7 @@ namespace Android.View.Inputmethod
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -964,7 +964,7 @@ namespace Android.View.Inputmethod
 				/// performPrivateCommand
 				/// </java-name>
 				[Dot42.DexImport("performPrivateCommand", "(Ljava/lang/String;Landroid/os/Bundle;)Z", AccessFlags = 1025)]
-				bool PerformPrivateCommand(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				bool PerformPrivateCommand(string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -998,7 +998,7 @@ namespace Android.View.Inputmethod
 				/// attachToken
 				/// </java-name>
 				[Dot42.DexImport("attachToken", "(Landroid/os/IBinder;)V", AccessFlags = 1025)]
-				void AttachToken(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ ;
+				void AttachToken(global::Android.OS.IBinder binder) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// bindInput
@@ -1048,13 +1048,13 @@ namespace Android.View.Inputmethod
 				/// showSoftInput
 				/// </java-name>
 				[Dot42.DexImport("showSoftInput", "(ILandroid/os/ResultReceiver;)V", AccessFlags = 1025)]
-				void ShowSoftInput(int int32, global::Android.Os.ResultReceiver resultReceiver) /* MethodBuilder.Create */ ;
+				void ShowSoftInput(int int32, global::Android.OS.ResultReceiver resultReceiver) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// hideSoftInput
 				/// </java-name>
 				[Dot42.DexImport("hideSoftInput", "(ILandroid/os/ResultReceiver;)V", AccessFlags = 1025)]
-				void HideSoftInput(int int32, global::Android.Os.ResultReceiver resultReceiver) /* MethodBuilder.Create */ ;
+				void HideSoftInput(int int32, global::Android.OS.ResultReceiver resultReceiver) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// changeInputMethodSubtype
@@ -1169,7 +1169,7 @@ namespace Android.View.Inputmethod
 				/// appPrivateCommand
 				/// </java-name>
 				[Dot42.DexImport("appPrivateCommand", "(Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1025)]
-				void AppPrivateCommand(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ ;
+				void AppPrivateCommand(string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// toggleSoftInput
@@ -1198,16 +1198,16 @@ namespace Android.View.Inputmethod
 		/// android/view/inputmethod/InputBinding
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/InputBinding", AccessFlags = 49)]
-		public sealed partial class InputBinding : global::Android.Os.IParcelable
+		public sealed partial class InputBinding : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Inputmethod.InputBinding> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.InputBinding> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/view/inputmethod/InputConnection;Landroid/os/IBinder;II)V", AccessFlags = 1)]
-				public InputBinding(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.Os.IBinder binder, int int32, int int321) /* MethodBuilder.Create */ 
+				public InputBinding(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.OS.IBinder binder, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1230,9 +1230,9 @@ namespace Android.View.Inputmethod
 				/// getConnectionToken
 				/// </java-name>
 				[Dot42.DexImport("getConnectionToken", "()Landroid/os/IBinder;", AccessFlags = 1)]
-				public global::Android.Os.IBinder GetConnectionToken() /* MethodBuilder.Create */ 
+				public global::Android.OS.IBinder GetConnectionToken() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
@@ -1266,7 +1266,7 @@ namespace Android.View.Inputmethod
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1296,7 +1296,7 @@ namespace Android.View.Inputmethod
 				/// <java-name>
 				/// getConnectionToken
 				/// </java-name>
-				public global::Android.Os.IBinder ConnectionToken
+				public global::Android.OS.IBinder ConnectionToken
 				{
 				[Dot42.DexImport("getConnectionToken", "()Landroid/os/IBinder;", AccessFlags = 1)]
 						get{ return GetConnectionToken(); }
@@ -1527,7 +1527,7 @@ namespace Android.View.Inputmethod
 				/// performPrivateCommand
 				/// </java-name>
 				[Dot42.DexImport("performPrivateCommand", "(Ljava/lang/String;Landroid/os/Bundle;)Z", AccessFlags = 1)]
-				public virtual bool PerformPrivateCommand(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual bool PerformPrivateCommand(string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1543,14 +1543,14 @@ namespace Android.View.Inputmethod
 		/// android/view/inputmethod/InputMethodInfo
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/InputMethodInfo", AccessFlags = 49)]
-		public sealed partial class InputMethodInfo : global::Android.Os.IParcelable
+		public sealed partial class InputMethodInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Inputmethod.InputMethodInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.InputMethodInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)V", AccessFlags = 1)]
 				public InputMethodInfo(global::Android.Content.Context context, global::Android.Content.Pm.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
 				{
@@ -1700,7 +1700,7 @@ namespace Android.View.Inputmethod
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1876,7 +1876,7 @@ namespace Android.View.Inputmethod
 				/// showStatusIcon
 				/// </java-name>
 				[Dot42.DexImport("showStatusIcon", "(Landroid/os/IBinder;Ljava/lang/String;I)V", AccessFlags = 1)]
-				public void ShowStatusIcon(global::Android.Os.IBinder binder, string @string, int int32) /* MethodBuilder.Create */ 
+				public void ShowStatusIcon(global::Android.OS.IBinder binder, string @string, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1884,7 +1884,7 @@ namespace Android.View.Inputmethod
 				/// hideStatusIcon
 				/// </java-name>
 				[Dot42.DexImport("hideStatusIcon", "(Landroid/os/IBinder;)V", AccessFlags = 1)]
-				public void HideStatusIcon(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
+				public void HideStatusIcon(global::Android.OS.IBinder binder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1953,7 +1953,7 @@ namespace Android.View.Inputmethod
 				/// showSoftInput
 				/// </java-name>
 				[Dot42.DexImport("showSoftInput", "(Landroid/view/View;ILandroid/os/ResultReceiver;)Z", AccessFlags = 1)]
-				public bool ShowSoftInput(global::Android.View.View view, int int32, global::Android.Os.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
+				public bool ShowSoftInput(global::Android.View.View view, int int32, global::Android.OS.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1962,7 +1962,7 @@ namespace Android.View.Inputmethod
 				/// hideSoftInputFromWindow
 				/// </java-name>
 				[Dot42.DexImport("hideSoftInputFromWindow", "(Landroid/os/IBinder;I)Z", AccessFlags = 1)]
-				public bool HideSoftInputFromWindow(global::Android.Os.IBinder binder, int int32) /* MethodBuilder.Create */ 
+				public bool HideSoftInputFromWindow(global::Android.OS.IBinder binder, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1971,7 +1971,7 @@ namespace Android.View.Inputmethod
 				/// hideSoftInputFromWindow
 				/// </java-name>
 				[Dot42.DexImport("hideSoftInputFromWindow", "(Landroid/os/IBinder;ILandroid/os/ResultReceiver;)Z", AccessFlags = 1)]
-				public bool HideSoftInputFromWindow(global::Android.Os.IBinder binder, int int32, global::Android.Os.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
+				public bool HideSoftInputFromWindow(global::Android.OS.IBinder binder, int int32, global::Android.OS.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1980,7 +1980,7 @@ namespace Android.View.Inputmethod
 				/// toggleSoftInputFromWindow
 				/// </java-name>
 				[Dot42.DexImport("toggleSoftInputFromWindow", "(Landroid/os/IBinder;II)V", AccessFlags = 1)]
-				public void ToggleSoftInputFromWindow(global::Android.Os.IBinder binder, int int32, int int321) /* MethodBuilder.Create */ 
+				public void ToggleSoftInputFromWindow(global::Android.OS.IBinder binder, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2037,7 +2037,7 @@ namespace Android.View.Inputmethod
 				/// sendAppPrivateCommand
 				/// </java-name>
 				[Dot42.DexImport("sendAppPrivateCommand", "(Landroid/view/View;Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public void SendAppPrivateCommand(global::Android.View.View view, string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public void SendAppPrivateCommand(global::Android.View.View view, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2045,7 +2045,7 @@ namespace Android.View.Inputmethod
 				/// setInputMethod
 				/// </java-name>
 				[Dot42.DexImport("setInputMethod", "(Landroid/os/IBinder;Ljava/lang/String;)V", AccessFlags = 1)]
-				public void SetInputMethod(global::Android.Os.IBinder binder, string @string) /* MethodBuilder.Create */ 
+				public void SetInputMethod(global::Android.OS.IBinder binder, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2054,7 +2054,7 @@ namespace Android.View.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("setInputMethodAndSubtype", "(Landroid/os/IBinder;Ljava/lang/String;Landroid/view/inputmethod/InputMethodSubty" +
     "pe;)V", AccessFlags = 1)]
-				public void SetInputMethodAndSubtype(global::Android.Os.IBinder binder, string @string, global::Android.View.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
+				public void SetInputMethodAndSubtype(global::Android.OS.IBinder binder, string @string, global::Android.View.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2062,7 +2062,7 @@ namespace Android.View.Inputmethod
 				/// hideSoftInputFromInputMethod
 				/// </java-name>
 				[Dot42.DexImport("hideSoftInputFromInputMethod", "(Landroid/os/IBinder;I)V", AccessFlags = 1)]
-				public void HideSoftInputFromInputMethod(global::Android.Os.IBinder binder, int int32) /* MethodBuilder.Create */ 
+				public void HideSoftInputFromInputMethod(global::Android.OS.IBinder binder, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2070,7 +2070,7 @@ namespace Android.View.Inputmethod
 				/// showSoftInputFromInputMethod
 				/// </java-name>
 				[Dot42.DexImport("showSoftInputFromInputMethod", "(Landroid/os/IBinder;I)V", AccessFlags = 1)]
-				public void ShowSoftInputFromInputMethod(global::Android.Os.IBinder binder, int int32) /* MethodBuilder.Create */ 
+				public void ShowSoftInputFromInputMethod(global::Android.OS.IBinder binder, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2122,7 +2122,7 @@ namespace Android.View.Inputmethod
 				/// switchToLastInputMethod
 				/// </java-name>
 				[Dot42.DexImport("switchToLastInputMethod", "(Landroid/os/IBinder;)Z", AccessFlags = 1)]
-				public bool SwitchToLastInputMethod(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
+				public bool SwitchToLastInputMethod(global::Android.OS.IBinder binder) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2196,14 +2196,14 @@ namespace Android.View.Inputmethod
 		/// android/view/inputmethod/InputMethodSubtype
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/InputMethodSubtype", AccessFlags = 49)]
-		public sealed partial class InputMethodSubtype : global::Android.Os.IParcelable
+		public sealed partial class InputMethodSubtype : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.View.Inputmethod.InputMethodSubtype> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.InputMethodSubtype> CREATOR;
 				[Dot42.DexImport("<init>", "(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V", AccessFlags = 1)]
 				public InputMethodSubtype(int int32, int int321, string @string, string string1, string string2, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
 				{
@@ -2331,7 +2331,7 @@ namespace Android.View.Inputmethod
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

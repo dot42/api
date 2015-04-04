@@ -13,8 +13,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Globalization;
 using Dot42;
 using Dot42.Internal;
+using Java.Lang;
 
 namespace System
 {
@@ -41,6 +44,59 @@ namespace System
         public static uint Parse(string s, IFormatProvider provider)
         {
             return Parse(s);
+        }
+
+        public static uint Parse(string s, NumberStyles style)
+        {
+            long value;
+
+            if ((style & NumberStyles.HexNumber) != 0)
+                value = long.Parse(s, 16);
+            else 
+                value = long.Parse(s);
+
+            if ((value < MinValue) || (value > maxValue))
+                throw new OverflowException(string.Format("Value {0} should not be less than {1} and not larger than {2}.", value.ToString(), MinValue, maxValue));
+            return (uint)value;
+
+        }
+
+        public static bool TryParse(string s, out uint result)
+        {
+            try
+            {
+                result = Parse(s);
+                return true;
+            }
+            catch (OverflowException)
+            {
+                result = 0;
+                return false;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0;
+                return false;
+            }
+        }
+
+        public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out uint result)
+        {
+            try
+            {
+                result = Parse(s, style);
+                return true;
+            }
+            catch (OverflowException)
+            {
+                result = 0;
+                return false;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0;
+                return false;
+            }
         }
 
         [DexImport("intValue", "()I", AccessFlags = 1)]

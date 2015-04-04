@@ -22,7 +22,7 @@ namespace System
     [AttributeUsageAttribute(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Delegate, Inherited = false)]
     [ComVisible(true)]
     [Ignore]
-    public sealed class ObsoleteAttribute : Attribute
+    public /*sealed*/ class ObsoleteAttribute : Attribute
 	{
         /// <summary>
         /// Default ctor

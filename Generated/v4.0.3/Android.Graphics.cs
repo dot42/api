@@ -65,7 +65,7 @@ namespace Android.Graphics
 		/// android/graphics/Bitmap
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/Bitmap", AccessFlags = 49)]
-		public sealed partial class Bitmap : global::Android.Os.IParcelable
+		public sealed partial class Bitmap : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -77,7 +77,7 @@ namespace Android.Graphics
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Graphics.Bitmap> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Graphics.Bitmap> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal Bitmap() /* MethodBuilder.Create */ 
 				{
@@ -421,7 +421,7 @@ namespace Android.Graphics
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5894,7 +5894,7 @@ namespace Android.Graphics
 		/// android/graphics/Point
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/Point", AccessFlags = 33)]
-		public partial class Point : global::Android.Os.IParcelable
+		public partial class Point : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -5911,7 +5911,7 @@ namespace Android.Graphics
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Graphics.Point> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Graphics.Point> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Point() /* MethodBuilder.Create */ 
 				{
@@ -6000,7 +6000,7 @@ namespace Android.Graphics
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6008,7 +6008,7 @@ namespace Android.Graphics
 				/// readFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6018,7 +6018,7 @@ namespace Android.Graphics
 		/// android/graphics/PointF
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/PointF", AccessFlags = 33)]
-		public partial class PointF : global::Android.Os.IParcelable
+		public partial class PointF : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -6035,7 +6035,7 @@ namespace Android.Graphics
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Graphics.PointF> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Graphics.PointF> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public PointF() /* MethodBuilder.Create */ 
 				{
@@ -6123,7 +6123,7 @@ namespace Android.Graphics
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6131,7 +6131,7 @@ namespace Android.Graphics
 				/// readFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6358,7 +6358,7 @@ namespace Android.Graphics
 		/// android/graphics/Rect
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/Rect", AccessFlags = 49)]
-		public sealed partial class Rect : global::Android.Os.IParcelable
+		public sealed partial class Rect : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -6385,7 +6385,7 @@ namespace Android.Graphics
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Graphics.Rect> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Graphics.Rect> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Rect() /* MethodBuilder.Create */ 
 				{
@@ -6674,7 +6674,7 @@ namespace Android.Graphics
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6682,7 +6682,7 @@ namespace Android.Graphics
 				/// readFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6692,7 +6692,7 @@ namespace Android.Graphics
 		/// android/graphics/RectF
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/RectF", AccessFlags = 33)]
-		public partial class RectF : global::Android.Os.IParcelable
+		public partial class RectF : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -6719,7 +6719,7 @@ namespace Android.Graphics
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Graphics.RectF> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Graphics.RectF> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public RectF() /* MethodBuilder.Create */ 
 				{
@@ -6992,7 +6992,7 @@ namespace Android.Graphics
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7000,7 +7000,7 @@ namespace Android.Graphics
 				/// readFromParcel
 				/// </java-name>
 				[Dot42.DexImport("readFromParcel", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public virtual void ReadFromParcel(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public virtual void ReadFromParcel(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7010,14 +7010,14 @@ namespace Android.Graphics
 		/// android/graphics/Region
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/Region", AccessFlags = 33)]
-		public partial class Region : global::Android.Os.IParcelable
+		public partial class Region : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Graphics.Region> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Graphics.Region> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Region() /* MethodBuilder.Create */ 
 				{
@@ -7292,7 +7292,7 @@ namespace Android.Graphics
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

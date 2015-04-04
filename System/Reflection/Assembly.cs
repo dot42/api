@@ -14,20 +14,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Android;
+using System.Collections.Generic;
+using System.IO;
+using Android.App;
+using Android.Content;
 using Dalvik.System;
+using Dot42;
 using Java.Lang;
+using Java.Lang.Ref;
 using Java.Util;
 
 namespace System.Reflection
 {
     /// <summary>
-    /// This class is only a stub.
+    /// This class is mostly a stub.
     /// </summary>
 	public class Assembly
     {
-        private readonly ClassLoader _loader;
+        private static Context _applicationContext;
         private static readonly WeakHashMap<ClassLoader, Assembly> Assemblies = new WeakHashMap<ClassLoader, Assembly>();
+
+        private readonly ClassLoader _loader;
+        private SoftReference<Type[]> _types;
+        
 
         public string FullName { get { return "classLoader" + _loader.GetHashCode(); } }
 
@@ -38,29 +47,76 @@ namespace System.Reflection
 
         public Type GetType(string typeName)
         {
-            return _loader.FindClass(typeName); 
+            return _loader.LoadClass(typeName); 
         }
-        
+
+        public IEnumerable<TypeInfo> DefinedTypes { get { return GetTypes().Select(t=>new TypeInfo(t)); } }
+
+        public Type[] GetTypes()
+        {
+            Type[] ret = _types == null ? null : _types.Get();
+
+            if (ret == null)
+            {
+                ret = GetTypesImpl();
+                _types = new SoftReference<Type[]>(ret);
+            }
+            return ret;
+        }
+
+        private Type[] GetTypesImpl()
+        {
+            // from http://stackoverflow.com/questions/15446036/find-all-classes-in-a-package-in-android
+            // another approach might be http://mindtherobot.com/blog/737/android-hacks-scan-android-classpath/
+            if (_applicationContext == null)
+                throw new InvalidOperationException("call SetApplicationContext before using GetTypes()");
+
+            DexFile dex = null;
+
+            try
+            {
+                List<Type> ret = new List<Type>();
+                dex = new DexFile(_applicationContext.PackageCodePath);
+
+                var e = dex.Entries();
+                while (e.HasMoreElements())
+                {
+                    string className = e.NextElement();
+                    Type type = _loader.LoadClass(className);
+                    ret.Add(type);
+                }
+
+                return ret.ToArray();
+            }
+            catch (Exception e)
+            {
+                throw new ReflectionTypeLoadException(e);
+            }
+            finally
+            {
+                if (dex != null)
+                    dex.Close();
+            }
+        }
+
         /// <summary>
-        /// this is not implemented, and will always return the system classloader.
+        /// this is not implemented, and will always return the classloader of 
+        /// the AssemblyClass
         /// </summary>
         /// <param name="load"></param>
         /// <returns></returns>
         public static Assembly Load(string load)
         {
-            return FromClassloader(ClassLoader.SystemClassLoader);
+            return FromClassLoader(typeof(Assembly).GetClassLoader());
         }
 
 
         /// <summary>
         /// Gets the currently loaded assembly in which the specified class is defined.
         /// </summary>
-        /// <remarks>
-        /// This method is not implemented.
-        /// </remarks>
         public static Assembly GetAssembly(Type type)
         {
-            return FromClassloader(type.GetClassLoader());
+            return FromClassLoader(type.GetClassLoader());
         }
 
         /// <summary>
@@ -72,7 +128,7 @@ namespace System.Reflection
         /// </remarks>
         public static Assembly GetCallingAssembly()
         {
-            return FromClassloader(ClassLoader.SystemClassLoader);
+            return FromClassLoader(typeof(Assembly).GetClassLoader());
         }
 
         /// <summary>
@@ -84,7 +140,7 @@ namespace System.Reflection
         /// </remarks>
         public static Assembly GetEntryAssembly()
         {
-            return FromClassloader(ClassLoader.SystemClassLoader);
+            return FromClassLoader(typeof(Assembly).GetClassLoader());
         }
 
         /// <summary>
@@ -96,10 +152,15 @@ namespace System.Reflection
         /// </remarks>
         public static Assembly GetExecutingAssembly()
         {
-            return FromClassloader(ClassLoader.SystemClassLoader);
+            return FromClassLoader(typeof(Assembly).GetClassLoader());
         }
 
-        private static Assembly FromClassloader(ClassLoader c)
+        public static void SetApplicationContext(Context ctx)
+        {
+            _applicationContext = ctx;
+        }
+
+        private static Assembly FromClassLoader(ClassLoader c)
         {
             lock (Assemblies)
             {

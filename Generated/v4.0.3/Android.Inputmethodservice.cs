@@ -48,9 +48,9 @@ namespace Android.Inputmethodservice
 				/// onBind
 				/// </java-name>
 				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 17)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.OS.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
@@ -201,7 +201,7 @@ namespace Android.Inputmethodservice
 						}
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethodSession", "appPrivateCommand", "(Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1025)]
-						public virtual void AppPrivateCommand(string @string, global::Android.Os.Bundle bundle) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void AppPrivateCommand(string @string, global::Android.OS.Bundle bundle) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
@@ -259,7 +259,7 @@ namespace Android.Inputmethodservice
 						}
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethod", "attachToken", "(Landroid/os/IBinder;)V", AccessFlags = 1025)]
-						public virtual void AttachToken(global::Android.Os.IBinder binder) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void AttachToken(global::Android.OS.IBinder binder) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
@@ -286,12 +286,12 @@ namespace Android.Inputmethodservice
 						}
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethod", "showSoftInput", "(ILandroid/os/ResultReceiver;)V", AccessFlags = 1025)]
-						public virtual void ShowSoftInput(int int32, global::Android.Os.ResultReceiver resultReceiver) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void ShowSoftInput(int int32, global::Android.OS.ResultReceiver resultReceiver) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethod", "hideSoftInput", "(ILandroid/os/ResultReceiver;)V", AccessFlags = 1025)]
-						public virtual void HideSoftInput(int int32, global::Android.Os.ResultReceiver resultReceiver) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void HideSoftInput(int int32, global::Android.OS.ResultReceiver resultReceiver) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
@@ -983,7 +983,7 @@ namespace Android.Inputmethodservice
 				/// onAppPrivateCommand
 				/// </java-name>
 				[Dot42.DexImport("onAppPrivateCommand", "(Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnAppPrivateCommand(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnAppPrivateCommand(string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1300,7 +1300,7 @@ namespace Android.Inputmethodservice
 						/// appPrivateCommand
 						/// </java-name>
 						[Dot42.DexImport("appPrivateCommand", "(Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-						public override void AppPrivateCommand(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+						public override void AppPrivateCommand(string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1340,7 +1340,7 @@ namespace Android.Inputmethodservice
 						/// attachToken
 						/// </java-name>
 						[Dot42.DexImport("attachToken", "(Landroid/os/IBinder;)V", AccessFlags = 1)]
-						public override void AttachToken(global::Android.Os.IBinder binder) /* MethodBuilder.Create */ 
+						public override void AttachToken(global::Android.OS.IBinder binder) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1382,7 +1382,7 @@ namespace Android.Inputmethodservice
 						/// hideSoftInput
 						/// </java-name>
 						[Dot42.DexImport("hideSoftInput", "(ILandroid/os/ResultReceiver;)V", AccessFlags = 1)]
-						public override void HideSoftInput(int int32, global::Android.Os.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
+						public override void HideSoftInput(int int32, global::Android.OS.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1390,7 +1390,7 @@ namespace Android.Inputmethodservice
 						/// showSoftInput
 						/// </java-name>
 						[Dot42.DexImport("showSoftInput", "(ILandroid/os/ResultReceiver;)V", AccessFlags = 1)]
-						public override void ShowSoftInput(int int32, global::Android.Os.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
+						public override void ShowSoftInput(int int32, global::Android.OS.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
 						{
 						}
 

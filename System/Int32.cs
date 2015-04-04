@@ -87,15 +87,15 @@ namespace System
             return TryParse(s, NumberStyles.Any, null, out result);
         }
 
-         /// <summary>
-         /// Try to parse the given string into an integer value.
-         /// </summary>
-         /// <returns>True on success, false otherwise</returns>
+        /// <summary>
+        /// Try to parse the given string into an integer value.
+        /// </summary>
+        /// <returns>True on success, false otherwise</returns>
         public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out int result)
         {
             try
             {
-                result = Parse(s);
+                result = Parse(s, style);
                 return true;
             }
             catch

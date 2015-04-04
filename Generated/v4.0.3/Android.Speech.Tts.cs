@@ -48,7 +48,7 @@ namespace Android.Speech.Tts
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public SynthesisRequest(string @string, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public SynthesisRequest(string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -110,9 +110,9 @@ namespace Android.Speech.Tts
 				/// getParams
 				/// </java-name>
 				[Dot42.DexImport("getParams", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public global::Android.Os.Bundle GetParams() /* MethodBuilder.Create */ 
+				public global::Android.OS.Bundle GetParams() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -177,7 +177,7 @@ namespace Android.Speech.Tts
 				/// <java-name>
 				/// getParams
 				/// </java-name>
-				public global::Android.Os.Bundle Params
+				public global::Android.OS.Bundle Params
 				{
 				[Dot42.DexImport("getParams", "()Landroid/os/Bundle;", AccessFlags = 1)]
 						get{ return GetParams(); }
@@ -778,9 +778,9 @@ namespace Android.Speech.Tts
 				/// onBind
 				/// </java-name>
 				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 1)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.OS.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 		}

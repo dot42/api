@@ -162,7 +162,7 @@ namespace Android.Appwidget
 				/// dispatchSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal override void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal override void DispatchSaveInstanceState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -170,7 +170,7 @@ namespace Android.Appwidget
 				/// dispatchRestoreInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchRestoreInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
-				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.Os.IParcelable> sparseArray) /* MethodBuilder.Create */ 
+				protected internal override void DispatchRestoreInstanceState(global::Android.Util.SparseArray<global::Android.OS.IParcelable> sparseArray) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -510,7 +510,7 @@ namespace Android.Appwidget
 		/// android/appwidget/AppWidgetProviderInfo
 		/// </java-name>
 		[Dot42.DexImport("android/appwidget/AppWidgetProviderInfo", AccessFlags = 33)]
-		public partial class AppWidgetProviderInfo : global::Android.Os.IParcelable
+		public partial class AppWidgetProviderInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -602,14 +602,14 @@ namespace Android.Appwidget
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.Os.IParcelable_ICreator<global::Android.Appwidget.AppWidgetProviderInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Appwidget.AppWidgetProviderInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public AppWidgetProviderInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public AppWidgetProviderInfo(global::Android.Os.Parcel parcel) /* MethodBuilder.Create */ 
+				public AppWidgetProviderInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -617,7 +617,7 @@ namespace Android.Appwidget
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.Os.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

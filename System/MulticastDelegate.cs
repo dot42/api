@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Collections.Generic;
 using Dot42;
 
 namespace System
@@ -62,6 +64,24 @@ namespace System
             }
 
             return this;
+        }
+
+        public override Delegate[] GetInvocationList()
+        {
+            List<Delegate> ret = new List<Delegate> {this};
+
+            MulticastDelegate parent = this;
+            while (parent.next != null)
+            {
+                parent = parent.next;
+
+                // TODO: check if this unfolding is neccessary.
+                var parentsList = parent.GetInvocationList();
+                
+                for(int i = 0; i < parentsList.Length; ++i)
+                    ret.Add(parentsList[i]);
+            }
+            return ret.ToArray();
         }
     }
 }

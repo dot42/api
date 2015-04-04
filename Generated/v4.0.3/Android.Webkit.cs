@@ -831,7 +831,7 @@ namespace Android.Webkit
 		/// android/webkit/HttpAuthHandler
 		/// </java-name>
 		[Dot42.DexImport("android/webkit/HttpAuthHandler", AccessFlags = 33)]
-		public partial class HttpAuthHandler : global::Android.Os.Handler
+		public partial class HttpAuthHandler : global::Android.OS.Handler
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -1063,7 +1063,7 @@ namespace Android.Webkit
 		/// android/webkit/SslErrorHandler
 		/// </java-name>
 		[Dot42.DexImport("android/webkit/SslErrorHandler", AccessFlags = 33)]
-		public partial class SslErrorHandler : global::Android.Os.Handler
+		public partial class SslErrorHandler : global::Android.OS.Handler
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -1414,7 +1414,7 @@ namespace Android.Webkit
 				/// onCreateWindow
 				/// </java-name>
 				[Dot42.DexImport("onCreateWindow", "(Landroid/webkit/WebView;ZZLandroid/os/Message;)Z", AccessFlags = 1)]
-				public virtual bool OnCreateWindow(global::Android.Webkit.WebView webView, bool boolean, bool boolean1, global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual bool OnCreateWindow(global::Android.Webkit.WebView webView, bool boolean, bool boolean1, global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3572,7 +3572,7 @@ namespace Android.Webkit
 				/// mHandler
 				/// </java-name>
 				[Dot42.DexImport("mHandler", "Landroid/os/Handler;", AccessFlags = 4)]
-				protected internal global::Android.Os.Handler MHandler;
+				protected internal global::Android.OS.Handler MHandler;
 				/// <java-name>
 				/// mDataBase
 				/// </java-name>
@@ -3856,7 +3856,7 @@ namespace Android.Webkit
 				/// saveState
 				/// </java-name>
 				[Dot42.DexImport("saveState", "(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;", AccessFlags = 1)]
-				public virtual global::Android.Webkit.WebBackForwardList SaveState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual global::Android.Webkit.WebBackForwardList SaveState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Webkit.WebBackForwardList);
 				}
@@ -3865,7 +3865,7 @@ namespace Android.Webkit
 				/// savePicture
 				/// </java-name>
 				[Dot42.DexImport("savePicture", "(Landroid/os/Bundle;Ljava/io/File;)Z", AccessFlags = 1)]
-				public virtual bool SavePicture(global::Android.Os.Bundle bundle, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual bool SavePicture(global::Android.OS.Bundle bundle, global::Java.Io.File file) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3874,7 +3874,7 @@ namespace Android.Webkit
 				/// restorePicture
 				/// </java-name>
 				[Dot42.DexImport("restorePicture", "(Landroid/os/Bundle;Ljava/io/File;)Z", AccessFlags = 1)]
-				public virtual bool RestorePicture(global::Android.Os.Bundle bundle, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual bool RestorePicture(global::Android.OS.Bundle bundle, global::Java.Io.File file) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3883,7 +3883,7 @@ namespace Android.Webkit
 				/// restoreState
 				/// </java-name>
 				[Dot42.DexImport("restoreState", "(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;", AccessFlags = 1)]
-				public virtual global::Android.Webkit.WebBackForwardList RestoreState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual global::Android.Webkit.WebBackForwardList RestoreState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Webkit.WebBackForwardList);
 				}
@@ -4102,7 +4102,7 @@ namespace Android.Webkit
 				/// requestFocusNodeHref
 				/// </java-name>
 				[Dot42.DexImport("requestFocusNodeHref", "(Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void RequestFocusNodeHref(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void RequestFocusNodeHref(global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4110,7 +4110,7 @@ namespace Android.Webkit
 				/// requestImageRef
 				/// </java-name>
 				[Dot42.DexImport("requestImageRef", "(Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void RequestImageRef(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void RequestImageRef(global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4357,7 +4357,7 @@ namespace Android.Webkit
 				/// documentHasImages
 				/// </java-name>
 				[Dot42.DexImport("documentHasImages", "(Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void DocumentHasImages(global::Android.Os.Message message) /* MethodBuilder.Create */ 
+				public virtual void DocumentHasImages(global::Android.OS.Message message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5165,7 +5165,7 @@ namespace Android.Webkit
 				/// onTooManyRedirects
 				/// </java-name>
 				[Dot42.DexImport("onTooManyRedirects", "(Landroid/webkit/WebView;Landroid/os/Message;Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void OnTooManyRedirects(global::Android.Webkit.WebView webView, global::Android.Os.Message message, global::Android.Os.Message message1) /* MethodBuilder.Create */ 
+				public virtual void OnTooManyRedirects(global::Android.Webkit.WebView webView, global::Android.OS.Message message, global::Android.OS.Message message1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5181,7 +5181,7 @@ namespace Android.Webkit
 				/// onFormResubmission
 				/// </java-name>
 				[Dot42.DexImport("onFormResubmission", "(Landroid/webkit/WebView;Landroid/os/Message;Landroid/os/Message;)V", AccessFlags = 1)]
-				public virtual void OnFormResubmission(global::Android.Webkit.WebView webView, global::Android.Os.Message message, global::Android.Os.Message message1) /* MethodBuilder.Create */ 
+				public virtual void OnFormResubmission(global::Android.Webkit.WebView webView, global::Android.OS.Message message, global::Android.OS.Message message1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5343,7 +5343,7 @@ namespace Android.Webkit
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroi" +
     "d/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public override global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.View.View);
 				}

@@ -424,16 +424,16 @@ namespace Android.Net.Http
 				/// saveState
 				/// </java-name>
 				[Dot42.DexImport("saveState", "(Landroid/net/http/SslCertificate;)Landroid/os/Bundle;", AccessFlags = 9)]
-				public static global::Android.Os.Bundle SaveState(global::Android.Net.Http.SslCertificate sslCertificate) /* MethodBuilder.Create */ 
+				public static global::Android.OS.Bundle SaveState(global::Android.Net.Http.SslCertificate sslCertificate) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
 				/// restoreState
 				/// </java-name>
 				[Dot42.DexImport("restoreState", "(Landroid/os/Bundle;)Landroid/net/http/SslCertificate;", AccessFlags = 9)]
-				public static global::Android.Net.Http.SslCertificate RestoreState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public static global::Android.Net.Http.SslCertificate RestoreState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Net.Http.SslCertificate);
 				}

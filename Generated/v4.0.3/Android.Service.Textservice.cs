@@ -22,9 +22,9 @@ namespace Android.Service.Textservice
 				/// onBind
 				/// </java-name>
 				[Dot42.DexImport("onBind", "(Landroid/content/Intent;)Landroid/os/IBinder;", AccessFlags = 17)]
-				public override global::Android.Os.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.OS.IBinder OnBind(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.IBinder);
+						return default(global::Android.OS.IBinder);
 				}
 
 				/// <java-name>
@@ -96,9 +96,9 @@ namespace Android.Service.Textservice
 						/// getBundle
 						/// </java-name>
 						[Dot42.DexImport("getBundle", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						public virtual global::Android.Os.Bundle GetBundle() /* MethodBuilder.Create */ 
+						public virtual global::Android.OS.Bundle GetBundle() /* MethodBuilder.Create */ 
 						{
-								return default(global::Android.Os.Bundle);
+								return default(global::Android.OS.Bundle);
 						}
 
 						/// <java-name>
@@ -113,7 +113,7 @@ namespace Android.Service.Textservice
 						/// <java-name>
 						/// getBundle
 						/// </java-name>
-						public global::Android.Os.Bundle Bundle
+						public global::Android.OS.Bundle Bundle
 						{
 						[Dot42.DexImport("getBundle", "()Landroid/os/Bundle;", AccessFlags = 1)]
 								get{ return GetBundle(); }

@@ -1,5 +1,5 @@
 ﻿#pragma warning disable 1717
-namespace Android.Os.Storage
+namespace Android.OS.Storage
 {
 		/// <java-name>
 		/// android/os/storage/OnObbStateChangeListener
@@ -80,7 +80,7 @@ namespace Android.Os.Storage
 				/// </java-name>
 				[Dot42.DexImport("mountObb", "(Ljava/lang/String;Ljava/lang/String;Landroid/os/storage/OnObbStateChangeListener" +
     ";)Z", AccessFlags = 1)]
-				public virtual bool MountObb(string @string, string string1, global::Android.Os.Storage.OnObbStateChangeListener onObbStateChangeListener) /* MethodBuilder.Create */ 
+				public virtual bool MountObb(string @string, string string1, global::Android.OS.Storage.OnObbStateChangeListener onObbStateChangeListener) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -89,7 +89,7 @@ namespace Android.Os.Storage
 				/// unmountObb
 				/// </java-name>
 				[Dot42.DexImport("unmountObb", "(Ljava/lang/String;ZLandroid/os/storage/OnObbStateChangeListener;)Z", AccessFlags = 1)]
-				public virtual bool UnmountObb(string @string, bool boolean, global::Android.Os.Storage.OnObbStateChangeListener onObbStateChangeListener) /* MethodBuilder.Create */ 
+				public virtual bool UnmountObb(string @string, bool boolean, global::Android.OS.Storage.OnObbStateChangeListener onObbStateChangeListener) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
