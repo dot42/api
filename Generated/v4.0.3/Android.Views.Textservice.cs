@@ -1,5 +1,5 @@
 ﻿#pragma warning disable 1717
-namespace Android.View.Textservice
+namespace Android.Views.Textservice
 {
 		/// <java-name>
 		/// android/view/textservice/SpellCheckerInfo
@@ -12,7 +12,7 @@ namespace Android.View.Textservice
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Textservice.SpellCheckerInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Textservice.SpellCheckerInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal SpellCheckerInfo() /* MethodBuilder.Create */ 
 				{
@@ -102,9 +102,9 @@ namespace Android.View.Textservice
 				/// getSubtypeAt
 				/// </java-name>
 				[Dot42.DexImport("getSubtypeAt", "(I)Landroid/view/textservice/SpellCheckerSubtype;", AccessFlags = 1)]
-				public global::Android.View.Textservice.SpellCheckerSubtype GetSubtypeAt(int int32) /* MethodBuilder.Create */ 
+				public global::Android.Views.Textservice.SpellCheckerSubtype GetSubtypeAt(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Textservice.SpellCheckerSubtype);
+						return default(global::Android.Views.Textservice.SpellCheckerSubtype);
 				}
 
 				/// <java-name>
@@ -202,9 +202,9 @@ namespace Android.View.Textservice
 				/// getSpellChecker
 				/// </java-name>
 				[Dot42.DexImport("getSpellChecker", "()Landroid/view/textservice/SpellCheckerInfo;", AccessFlags = 1)]
-				public virtual global::Android.View.Textservice.SpellCheckerInfo GetSpellChecker() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Textservice.SpellCheckerInfo GetSpellChecker() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Textservice.SpellCheckerInfo);
+						return default(global::Android.Views.Textservice.SpellCheckerInfo);
 				}
 
 				/// <java-name>
@@ -227,7 +227,7 @@ namespace Android.View.Textservice
 				/// getSuggestions
 				/// </java-name>
 				[Dot42.DexImport("getSuggestions", "(Landroid/view/textservice/TextInfo;I)V", AccessFlags = 1)]
-				public virtual void GetSuggestions(global::Android.View.Textservice.TextInfo textInfo, int int32) /* MethodBuilder.Create */ 
+				public virtual void GetSuggestions(global::Android.Views.Textservice.TextInfo textInfo, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -235,7 +235,7 @@ namespace Android.View.Textservice
 				/// getSuggestions
 				/// </java-name>
 				[Dot42.DexImport("getSuggestions", "([Landroid/view/textservice/TextInfo;IZ)V", AccessFlags = 1)]
-				public virtual void GetSuggestions(global::Android.View.Textservice.TextInfo[] textInfo, int int32, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void GetSuggestions(global::Android.Views.Textservice.TextInfo[] textInfo, int int32, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -248,7 +248,7 @@ namespace Android.View.Textservice
 				/// <java-name>
 				/// getSpellChecker
 				/// </java-name>
-				public global::Android.View.Textservice.SpellCheckerInfo SpellChecker
+				public global::Android.Views.Textservice.SpellCheckerInfo SpellChecker
 				{
 				[Dot42.DexImport("getSpellChecker", "()Landroid/view/textservice/SpellCheckerInfo;", AccessFlags = 1)]
 						get{ return GetSpellChecker(); }
@@ -265,7 +265,7 @@ namespace Android.View.Textservice
 						/// onGetSuggestions
 						/// </java-name>
 						[Dot42.DexImport("onGetSuggestions", "([Landroid/view/textservice/SuggestionsInfo;)V", AccessFlags = 1025)]
-						void OnGetSuggestions(global::Android.View.Textservice.SuggestionsInfo[] suggestionsInfo) /* MethodBuilder.Create */ ;
+						void OnGetSuggestions(global::Android.Views.Textservice.SuggestionsInfo[] suggestionsInfo) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -282,7 +282,7 @@ namespace Android.View.Textservice
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Textservice.SpellCheckerSubtype> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Textservice.SpellCheckerSubtype> CREATOR;
 				[Dot42.DexImport("<init>", "(ILjava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public SpellCheckerSubtype(int int32, string @string, string string1) /* MethodBuilder.Create */ 
 				{
@@ -420,7 +420,7 @@ namespace Android.View.Textservice
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Textservice.SuggestionsInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Textservice.SuggestionsInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(I[Ljava/lang/String;)V", AccessFlags = 1)]
 				public SuggestionsInfo(int int32, string[] @string) /* MethodBuilder.Create */ 
 				{
@@ -560,7 +560,7 @@ namespace Android.View.Textservice
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Textservice.TextInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Textservice.TextInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public TextInfo(string @string) /* MethodBuilder.Create */ 
 				{
@@ -671,9 +671,9 @@ namespace Android.View.Textservice
 				/// </java-name>
 				[Dot42.DexImport("newSpellCheckerSession", "(Landroid/os/Bundle;Ljava/util/Locale;Landroid/view/textservice/SpellCheckerSessi" +
     "on$SpellCheckerSessionListener;Z)Landroid/view/textservice/SpellCheckerSession;", AccessFlags = 1)]
-				public global::Android.View.Textservice.SpellCheckerSession NewSpellCheckerSession(global::Android.OS.Bundle bundle, global::Java.Util.Locale locale, global::Android.View.Textservice.SpellCheckerSession.ISpellCheckerSessionListener spellCheckerSessionListener, bool boolean) /* MethodBuilder.Create */ 
+				public global::Android.Views.Textservice.SpellCheckerSession NewSpellCheckerSession(global::Android.OS.Bundle bundle, global::Java.Util.Locale locale, global::Android.Views.Textservice.SpellCheckerSession.ISpellCheckerSessionListener spellCheckerSessionListener, bool boolean) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Textservice.SpellCheckerSession);
+						return default(global::Android.Views.Textservice.SpellCheckerSession);
 				}
 
 		}

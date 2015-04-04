@@ -1,6 +1,6 @@
 // Copyright (C) 2014 dot42
 //
-// Original filename: MotionEventArgs.cs
+// Original filename: TouchEventArgs.cs
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,11 +13,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-namespace Android.View
+namespace Android.Views
 {
-	public class MotionEventArgs : InputEventArgs<MotionEvent>
+	public class TouchEventArgs : InputEventArgs<MotionEvent>
 	{
-	    public MotionEventArgs(MotionEvent source) : base(source)
+	    public TouchEventArgs(MotionEvent source) : base(source)
 	    {
 	    }
 	}

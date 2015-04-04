@@ -8339,7 +8339,7 @@ namespace Android.Opengl
 		/// android/opengl/GLSurfaceView
 		/// </java-name>
 		[Dot42.DexImport("android/opengl/GLSurfaceView", AccessFlags = 33)]
-		public partial class GLSurfaceView : global::Android.View.SurfaceView, global::Android.View.ISurfaceHolder_ICallback
+		public partial class GLSurfaceView : global::Android.Views.SurfaceView, global::Android.Views.ISurfaceHolder_ICallback
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -8499,7 +8499,7 @@ namespace Android.Opengl
 				/// surfaceCreated
 				/// </java-name>
 				[Dot42.DexImport("surfaceCreated", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SurfaceCreated(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public virtual void SurfaceCreated(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8507,7 +8507,7 @@ namespace Android.Opengl
 				/// surfaceDestroyed
 				/// </java-name>
 				[Dot42.DexImport("surfaceDestroyed", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SurfaceDestroyed(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public virtual void SurfaceDestroyed(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8515,7 +8515,7 @@ namespace Android.Opengl
 				/// surfaceChanged
 				/// </java-name>
 				[Dot42.DexImport("surfaceChanged", "(Landroid/view/SurfaceHolder;III)V", AccessFlags = 1)]
-				public virtual void SurfaceChanged(global::Android.View.ISurfaceHolder surfaceHolder, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public virtual void SurfaceChanged(global::Android.Views.ISurfaceHolder surfaceHolder, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 				}
 

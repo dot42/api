@@ -75,6 +75,8 @@ namespace System
             get { return IsPrimitive || typeof(ValueType).JavaIsAssignableFrom(GenericsReflection.EnsureTypeDef(this)); }
 	    }
 
+        public bool IsPublic { get { return Modifier.IsPublic(EnsureTypeDef().GetModifiers()); } }
+
         /// <summary>
         /// Is the given type an enum?
         /// </summary>
@@ -102,6 +104,7 @@ namespace System
 	            return !IsPrimitive && !IsInterface && !IsEnum;
 	        }
 	    }
+        
 
         public Type BaseType
         {
@@ -213,7 +216,9 @@ namespace System
             get { return Assembly.GetAssembly(this); }
 	    }
 
-        /// <summary>
+	    
+
+	    /// <summary>
         /// Returns an array of all attributes defined on this member.
         /// Returns an empty array if no attributes are defined on this member.
         /// </summary>

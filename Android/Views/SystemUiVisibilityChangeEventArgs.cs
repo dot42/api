@@ -1,6 +1,6 @@
 // Copyright (C) 2014 dot42
 //
-// Original filename: InputEventArgs.cs
+// Original filename: SystemUiVisibilityChangeEventArgs.cs
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,19 +13,16 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-namespace Android.View
+namespace Android.Views
 {
-	public class InputEventArgs<T> : ViewEventArgs<T>
-#if ANDROID_9P
-        where T : InputEvent
-#endif
+	public class SystemUiVisibilityChangeEventArgs : System.EventArgs
 	{
-        /// <summary>
-        /// Default ctor
-        /// </summary>
-	    public InputEventArgs(T source) : base(source)
-	    {
-	    }
-	}
+        public SystemUiVisibilityChangeEventArgs(int visibility)
+        {
+            Visibility = visibility;
+        }
+
+	    public int Visibility { get; private set; }
+    }
 }
 

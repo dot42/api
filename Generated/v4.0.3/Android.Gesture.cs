@@ -819,7 +819,7 @@ namespace Android.Gesture
 				/// dispatchTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -983,25 +983,25 @@ namespace Android.Gesture
 						/// onGestureStarted
 						/// </java-name>
 						[Dot42.DexImport("onGestureStarted", "(Landroid/gesture/GestureOverlayView;Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnGestureStarted(global::Android.Gesture.GestureOverlayView gestureOverlayView, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+						void OnGestureStarted(global::Android.Gesture.GestureOverlayView gestureOverlayView, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onGesture
 						/// </java-name>
 						[Dot42.DexImport("onGesture", "(Landroid/gesture/GestureOverlayView;Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnGesture(global::Android.Gesture.GestureOverlayView gestureOverlayView, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+						void OnGesture(global::Android.Gesture.GestureOverlayView gestureOverlayView, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onGestureEnded
 						/// </java-name>
 						[Dot42.DexImport("onGestureEnded", "(Landroid/gesture/GestureOverlayView;Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnGestureEnded(global::Android.Gesture.GestureOverlayView gestureOverlayView, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+						void OnGestureEnded(global::Android.Gesture.GestureOverlayView gestureOverlayView, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onGestureCancelled
 						/// </java-name>
 						[Dot42.DexImport("onGestureCancelled", "(Landroid/gesture/GestureOverlayView;Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnGestureCancelled(global::Android.Gesture.GestureOverlayView gestureOverlayView, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+						void OnGestureCancelled(global::Android.Gesture.GestureOverlayView gestureOverlayView, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
 				}
 

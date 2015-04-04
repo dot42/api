@@ -83,9 +83,9 @@ namespace Android.Service.Wallpaper
 						/// getSurfaceHolder
 						/// </java-name>
 						[Dot42.DexImport("getSurfaceHolder", "()Landroid/view/SurfaceHolder;", AccessFlags = 1)]
-						public virtual global::Android.View.ISurfaceHolder GetSurfaceHolder() /* MethodBuilder.Create */ 
+						public virtual global::Android.Views.ISurfaceHolder GetSurfaceHolder() /* MethodBuilder.Create */ 
 						{
-								return default(global::Android.View.ISurfaceHolder);
+								return default(global::Android.Views.ISurfaceHolder);
 						}
 
 						/// <java-name>
@@ -144,7 +144,7 @@ namespace Android.Service.Wallpaper
 						/// onCreate
 						/// </java-name>
 						[Dot42.DexImport("onCreate", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-						public virtual void OnCreate(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+						public virtual void OnCreate(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -168,7 +168,7 @@ namespace Android.Service.Wallpaper
 						/// onTouchEvent
 						/// </java-name>
 						[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
-						public virtual void OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+						public virtual void OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -201,7 +201,7 @@ namespace Android.Service.Wallpaper
 						/// onSurfaceChanged
 						/// </java-name>
 						[Dot42.DexImport("onSurfaceChanged", "(Landroid/view/SurfaceHolder;III)V", AccessFlags = 1)]
-						public virtual void OnSurfaceChanged(global::Android.View.ISurfaceHolder surfaceHolder, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+						public virtual void OnSurfaceChanged(global::Android.Views.ISurfaceHolder surfaceHolder, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -209,7 +209,7 @@ namespace Android.Service.Wallpaper
 						/// onSurfaceRedrawNeeded
 						/// </java-name>
 						[Dot42.DexImport("onSurfaceRedrawNeeded", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-						public virtual void OnSurfaceRedrawNeeded(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+						public virtual void OnSurfaceRedrawNeeded(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -217,7 +217,7 @@ namespace Android.Service.Wallpaper
 						/// onSurfaceCreated
 						/// </java-name>
 						[Dot42.DexImport("onSurfaceCreated", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-						public virtual void OnSurfaceCreated(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+						public virtual void OnSurfaceCreated(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -225,7 +225,7 @@ namespace Android.Service.Wallpaper
 						/// onSurfaceDestroyed
 						/// </java-name>
 						[Dot42.DexImport("onSurfaceDestroyed", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-						public virtual void OnSurfaceDestroyed(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+						public virtual void OnSurfaceDestroyed(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -246,7 +246,7 @@ namespace Android.Service.Wallpaper
 						/// <java-name>
 						/// getSurfaceHolder
 						/// </java-name>
-						public global::Android.View.ISurfaceHolder SurfaceHolder
+						public global::Android.Views.ISurfaceHolder SurfaceHolder
 						{
 						[Dot42.DexImport("getSurfaceHolder", "()Landroid/view/SurfaceHolder;", AccessFlags = 1)]
 								get{ return GetSurfaceHolder(); }

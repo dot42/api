@@ -5,7 +5,7 @@ namespace Android.Inputmethodservice
 		/// android/inputmethodservice/AbstractInputMethodService
 		/// </java-name>
 		[Dot42.DexImport("android/inputmethodservice/AbstractInputMethodService", AccessFlags = 1057)]
-		public abstract partial class AbstractInputMethodService : global::Android.App.Service, global::Android.View.KeyEvent.ICallback
+		public abstract partial class AbstractInputMethodService : global::Android.App.Service, global::Android.Views.KeyEvent.ICallback
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -17,9 +17,9 @@ namespace Android.Inputmethodservice
 				/// getKeyDispatcherState
 				/// </java-name>
 				[Dot42.DexImport("getKeyDispatcherState", "()Landroid/view/KeyEvent$DispatcherState;", AccessFlags = 1)]
-				public virtual global::Android.View.KeyEvent.DispatcherState GetKeyDispatcherState() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.KeyEvent.DispatcherState GetKeyDispatcherState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.KeyEvent.DispatcherState);
+						return default(global::Android.Views.KeyEvent.DispatcherState);
 				}
 
 				/// <java-name>
@@ -57,31 +57,31 @@ namespace Android.Inputmethodservice
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/view/KeyEvent$Callback", "onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public virtual bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/view/KeyEvent$Callback", "onKeyLongPress", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public virtual bool OnKeyLongPress(int int32, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual bool OnKeyLongPress(int int32, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/view/KeyEvent$Callback", "onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public virtual bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/view/KeyEvent$Callback", "onKeyMultiple", "(IILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public virtual bool OnKeyMultiple(int int32, int int321, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual bool OnKeyMultiple(int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
@@ -89,7 +89,7 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getKeyDispatcherState
 				/// </java-name>
-				public global::Android.View.KeyEvent.DispatcherState KeyDispatcherState
+				public global::Android.Views.KeyEvent.DispatcherState KeyDispatcherState
 				{
 				[Dot42.DexImport("getKeyDispatcherState", "()Landroid/view/KeyEvent$DispatcherState;", AccessFlags = 1)]
 						get{ return GetKeyDispatcherState(); }
@@ -100,7 +100,7 @@ namespace Android.Inputmethodservice
 				/// </java-name>
 				[Dot42.DexImport("android/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionI" +
     "mpl", AccessFlags = 1025)]
-				public abstract partial class AbstractInputMethodSessionImpl : global::Android.View.Inputmethod.IInputMethodSession
+				public abstract partial class AbstractInputMethodSessionImpl : global::Android.Views.Inputmethod.IInputMethodSession
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -152,7 +152,7 @@ namespace Android.Inputmethodservice
 						/// </java-name>
 						[Dot42.DexImport("dispatchKeyEvent", "(ILandroid/view/KeyEvent;Landroid/view/inputmethod/InputMethodSession$EventCallba" +
     "ck;)V", AccessFlags = 1)]
-						public virtual void DispatchKeyEvent(int int32, global::Android.View.KeyEvent keyEvent, global::Android.View.Inputmethod.IInputMethodSession_IEventCallback inputMethodSession_IEventCallback) /* MethodBuilder.Create */ 
+						public virtual void DispatchKeyEvent(int int32, global::Android.Views.KeyEvent keyEvent, global::Android.Views.Inputmethod.IInputMethodSession_IEventCallback inputMethodSession_IEventCallback) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -161,7 +161,7 @@ namespace Android.Inputmethodservice
 						/// </java-name>
 						[Dot42.DexImport("dispatchTrackballEvent", "(ILandroid/view/MotionEvent;Landroid/view/inputmethod/InputMethodSession$EventCal" +
     "lback;)V", AccessFlags = 1)]
-						public virtual void DispatchTrackballEvent(int int32, global::Android.View.MotionEvent motionEvent, global::Android.View.Inputmethod.IInputMethodSession_IEventCallback inputMethodSession_IEventCallback) /* MethodBuilder.Create */ 
+						public virtual void DispatchTrackballEvent(int int32, global::Android.Views.MotionEvent motionEvent, global::Android.Views.Inputmethod.IInputMethodSession_IEventCallback inputMethodSession_IEventCallback) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -191,12 +191,12 @@ namespace Android.Inputmethodservice
 						}
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethodSession", "displayCompletions", "([Landroid/view/inputmethod/CompletionInfo;)V", AccessFlags = 1025)]
-						public virtual void DisplayCompletions(global::Android.View.Inputmethod.CompletionInfo[] completionInfo) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void DisplayCompletions(global::Android.Views.Inputmethod.CompletionInfo[] completionInfo) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethodSession", "updateExtractedText", "(ILandroid/view/inputmethod/ExtractedText;)V", AccessFlags = 1025)]
-						public virtual void UpdateExtractedText(int int32, global::Android.View.Inputmethod.ExtractedText extractedText) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void UpdateExtractedText(int int32, global::Android.Views.Inputmethod.ExtractedText extractedText) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
@@ -216,7 +216,7 @@ namespace Android.Inputmethodservice
 				/// android/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl
 				/// </java-name>
 				[Dot42.DexImport("android/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl", AccessFlags = 1025)]
-				public abstract partial class AbstractInputMethodImpl : global::Android.View.Inputmethod.IInputMethod
+				public abstract partial class AbstractInputMethodImpl : global::Android.Views.Inputmethod.IInputMethod
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -233,7 +233,7 @@ namespace Android.Inputmethodservice
 						/// createSession
 						/// </java-name>
 						[Dot42.DexImport("createSession", "(Landroid/view/inputmethod/InputMethod$SessionCallback;)V", AccessFlags = 1)]
-						public virtual void CreateSession(global::Android.View.Inputmethod.IInputMethod_ISessionCallback inputMethod_ISessionCallback) /* MethodBuilder.Create */ 
+						public virtual void CreateSession(global::Android.Views.Inputmethod.IInputMethod_ISessionCallback inputMethod_ISessionCallback) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -241,7 +241,7 @@ namespace Android.Inputmethodservice
 						/// setSessionEnabled
 						/// </java-name>
 						[Dot42.DexImport("setSessionEnabled", "(Landroid/view/inputmethod/InputMethodSession;Z)V", AccessFlags = 1)]
-						public virtual void SetSessionEnabled(global::Android.View.Inputmethod.IInputMethodSession inputMethodSession, bool boolean) /* MethodBuilder.Create */ 
+						public virtual void SetSessionEnabled(global::Android.Views.Inputmethod.IInputMethodSession inputMethodSession, bool boolean) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -249,7 +249,7 @@ namespace Android.Inputmethodservice
 						/// revokeSession
 						/// </java-name>
 						[Dot42.DexImport("revokeSession", "(Landroid/view/inputmethod/InputMethodSession;)V", AccessFlags = 1)]
-						public virtual void RevokeSession(global::Android.View.Inputmethod.IInputMethodSession inputMethodSession) /* MethodBuilder.Create */ 
+						public virtual void RevokeSession(global::Android.Views.Inputmethod.IInputMethodSession inputMethodSession) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -264,7 +264,7 @@ namespace Android.Inputmethodservice
 						}
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethod", "bindInput", "(Landroid/view/inputmethod/InputBinding;)V", AccessFlags = 1025)]
-						public virtual void BindInput(global::Android.View.Inputmethod.InputBinding inputBinding) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void BindInput(global::Android.Views.Inputmethod.InputBinding inputBinding) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
@@ -275,13 +275,13 @@ namespace Android.Inputmethodservice
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethod", "startInput", "(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)" +
     "V", AccessFlags = 1025)]
-						public virtual void StartInput(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.View.Inputmethod.EditorInfo editorInfo) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void StartInput(global::Android.Views.Inputmethod.IInputConnection inputConnection, global::Android.Views.Inputmethod.EditorInfo editorInfo) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethod", "restartInput", "(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)" +
     "V", AccessFlags = 1025)]
-						public virtual void RestartInput(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.View.Inputmethod.EditorInfo editorInfo) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void RestartInput(global::Android.Views.Inputmethod.IInputConnection inputConnection, global::Android.Views.Inputmethod.EditorInfo editorInfo) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
@@ -296,7 +296,7 @@ namespace Android.Inputmethodservice
 						}
 
 						[Dot42.DexImport("android/view/inputmethod/InputMethod", "changeInputMethodSubtype", "(Landroid/view/inputmethod/InputMethodSubtype;)V", AccessFlags = 1025)]
-						public virtual void ChangeInputMethodSubtype(global::Android.View.Inputmethod.InputMethodSubtype inputMethodSubtype) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+						public virtual void ChangeInputMethodSubtype(global::Android.Views.Inputmethod.InputMethodSubtype inputMethodSubtype) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 						}
 
@@ -346,7 +346,7 @@ namespace Android.Inputmethodservice
 				/// setExtractedText
 				/// </java-name>
 				[Dot42.DexImport("setExtractedText", "(Landroid/view/inputmethod/ExtractedText;)V", AccessFlags = 1)]
-				public override void SetExtractedText(global::Android.View.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
+				public override void SetExtractedText(global::Android.Views.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -519,9 +519,9 @@ namespace Android.Inputmethodservice
 				/// getLayoutInflater
 				/// </java-name>
 				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1)]
-				public virtual global::Android.View.LayoutInflater GetLayoutInflater() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.LayoutInflater GetLayoutInflater() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.LayoutInflater);
+						return default(global::Android.Views.LayoutInflater);
 				}
 
 				/// <java-name>
@@ -563,18 +563,18 @@ namespace Android.Inputmethodservice
 				/// getCurrentInputBinding
 				/// </java-name>
 				[Dot42.DexImport("getCurrentInputBinding", "()Landroid/view/inputmethod/InputBinding;", AccessFlags = 1)]
-				public virtual global::Android.View.Inputmethod.InputBinding GetCurrentInputBinding() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Inputmethod.InputBinding GetCurrentInputBinding() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.InputBinding);
+						return default(global::Android.Views.Inputmethod.InputBinding);
 				}
 
 				/// <java-name>
 				/// getCurrentInputConnection
 				/// </java-name>
 				[Dot42.DexImport("getCurrentInputConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
-				public virtual global::Android.View.Inputmethod.IInputConnection GetCurrentInputConnection() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Inputmethod.IInputConnection GetCurrentInputConnection() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.IInputConnection);
+						return default(global::Android.Views.Inputmethod.IInputConnection);
 				}
 
 				/// <java-name>
@@ -590,9 +590,9 @@ namespace Android.Inputmethodservice
 				/// getCurrentInputEditorInfo
 				/// </java-name>
 				[Dot42.DexImport("getCurrentInputEditorInfo", "()Landroid/view/inputmethod/EditorInfo;", AccessFlags = 1)]
-				public virtual global::Android.View.Inputmethod.EditorInfo GetCurrentInputEditorInfo() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Inputmethod.EditorInfo GetCurrentInputEditorInfo() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.EditorInfo);
+						return default(global::Android.Views.Inputmethod.EditorInfo);
 				}
 
 				/// <java-name>
@@ -607,7 +607,7 @@ namespace Android.Inputmethodservice
 				/// onConfigureWindow
 				/// </java-name>
 				[Dot42.DexImport("onConfigureWindow", "(Landroid/view/Window;ZZ)V", AccessFlags = 1)]
-				public virtual void OnConfigureWindow(global::Android.View.Window window, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
+				public virtual void OnConfigureWindow(global::Android.Views.Window window, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -734,7 +734,7 @@ namespace Android.Inputmethodservice
 				/// setExtractView
 				/// </java-name>
 				[Dot42.DexImport("setExtractView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetExtractView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetExtractView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -742,7 +742,7 @@ namespace Android.Inputmethodservice
 				/// setCandidatesView
 				/// </java-name>
 				[Dot42.DexImport("setCandidatesView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetCandidatesView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetCandidatesView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -750,7 +750,7 @@ namespace Android.Inputmethodservice
 				/// setInputView
 				/// </java-name>
 				[Dot42.DexImport("setInputView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetInputView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetInputView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -758,34 +758,34 @@ namespace Android.Inputmethodservice
 				/// onCreateExtractTextView
 				/// </java-name>
 				[Dot42.DexImport("onCreateExtractTextView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View OnCreateExtractTextView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View OnCreateExtractTextView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onCreateCandidatesView
 				/// </java-name>
 				[Dot42.DexImport("onCreateCandidatesView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View OnCreateCandidatesView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View OnCreateCandidatesView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onCreateInputView
 				/// </java-name>
 				[Dot42.DexImport("onCreateInputView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View OnCreateInputView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View OnCreateInputView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onStartInputView
 				/// </java-name>
 				[Dot42.DexImport("onStartInputView", "(Landroid/view/inputmethod/EditorInfo;Z)V", AccessFlags = 1)]
-				public virtual void OnStartInputView(global::Android.View.Inputmethod.EditorInfo editorInfo, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void OnStartInputView(global::Android.Views.Inputmethod.EditorInfo editorInfo, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -801,7 +801,7 @@ namespace Android.Inputmethodservice
 				/// onStartCandidatesView
 				/// </java-name>
 				[Dot42.DexImport("onStartCandidatesView", "(Landroid/view/inputmethod/EditorInfo;Z)V", AccessFlags = 1)]
-				public virtual void OnStartCandidatesView(global::Android.View.Inputmethod.EditorInfo editorInfo, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void OnStartCandidatesView(global::Android.Views.Inputmethod.EditorInfo editorInfo, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -874,7 +874,7 @@ namespace Android.Inputmethodservice
 				/// onStartInput
 				/// </java-name>
 				[Dot42.DexImport("onStartInput", "(Landroid/view/inputmethod/EditorInfo;Z)V", AccessFlags = 1)]
-				public virtual void OnStartInput(global::Android.View.Inputmethod.EditorInfo editorInfo, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void OnStartInput(global::Android.Views.Inputmethod.EditorInfo editorInfo, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -890,7 +890,7 @@ namespace Android.Inputmethodservice
 				/// onDisplayCompletions
 				/// </java-name>
 				[Dot42.DexImport("onDisplayCompletions", "([Landroid/view/inputmethod/CompletionInfo;)V", AccessFlags = 1)]
-				public virtual void OnDisplayCompletions(global::Android.View.Inputmethod.CompletionInfo[] completionInfo) /* MethodBuilder.Create */ 
+				public virtual void OnDisplayCompletions(global::Android.Views.Inputmethod.CompletionInfo[] completionInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -898,7 +898,7 @@ namespace Android.Inputmethodservice
 				/// onUpdateExtractedText
 				/// </java-name>
 				[Dot42.DexImport("onUpdateExtractedText", "(ILandroid/view/inputmethod/ExtractedText;)V", AccessFlags = 1)]
-				public virtual void OnUpdateExtractedText(int int32, global::Android.View.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
+				public virtual void OnUpdateExtractedText(int int32, global::Android.Views.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -938,7 +938,7 @@ namespace Android.Inputmethodservice
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -947,7 +947,7 @@ namespace Android.Inputmethodservice
 				/// onKeyLongPress
 				/// </java-name>
 				[Dot42.DexImport("onKeyLongPress", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyLongPress(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyLongPress(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -956,7 +956,7 @@ namespace Android.Inputmethodservice
 				/// onKeyMultiple
 				/// </java-name>
 				[Dot42.DexImport("onKeyMultiple", "(IILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyMultiple(int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyMultiple(int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -965,7 +965,7 @@ namespace Android.Inputmethodservice
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -974,7 +974,7 @@ namespace Android.Inputmethodservice
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1058,7 +1058,7 @@ namespace Android.Inputmethodservice
 				/// onUpdateExtractingVisibility
 				/// </java-name>
 				[Dot42.DexImport("onUpdateExtractingVisibility", "(Landroid/view/inputmethod/EditorInfo;)V", AccessFlags = 1)]
-				public virtual void OnUpdateExtractingVisibility(global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
+				public virtual void OnUpdateExtractingVisibility(global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1066,7 +1066,7 @@ namespace Android.Inputmethodservice
 				/// onUpdateExtractingViews
 				/// </java-name>
 				[Dot42.DexImport("onUpdateExtractingViews", "(Landroid/view/inputmethod/EditorInfo;)V", AccessFlags = 1)]
-				public virtual void OnUpdateExtractingViews(global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
+				public virtual void OnUpdateExtractingViews(global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1074,7 +1074,7 @@ namespace Android.Inputmethodservice
 				/// onExtractingInputChanged
 				/// </java-name>
 				[Dot42.DexImport("onExtractingInputChanged", "(Landroid/view/inputmethod/EditorInfo;)V", AccessFlags = 1)]
-				public virtual void OnExtractingInputChanged(global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
+				public virtual void OnExtractingInputChanged(global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1082,7 +1082,7 @@ namespace Android.Inputmethodservice
 				/// onCurrentInputMethodSubtypeChanged
 				/// </java-name>
 				[Dot42.DexImport("onCurrentInputMethodSubtypeChanged", "(Landroid/view/inputmethod/InputMethodSubtype;)V", AccessFlags = 4)]
-				protected internal virtual void OnCurrentInputMethodSubtypeChanged(global::Android.View.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
+				protected internal virtual void OnCurrentInputMethodSubtypeChanged(global::Android.Views.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1097,7 +1097,7 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getLayoutInflater
 				/// </java-name>
-				public global::Android.View.LayoutInflater LayoutInflater
+				public global::Android.Views.LayoutInflater LayoutInflater
 				{
 				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1)]
 						get{ return GetLayoutInflater(); }
@@ -1135,7 +1135,7 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getCurrentInputBinding
 				/// </java-name>
-				public global::Android.View.Inputmethod.InputBinding CurrentInputBinding
+				public global::Android.Views.Inputmethod.InputBinding CurrentInputBinding
 				{
 				[Dot42.DexImport("getCurrentInputBinding", "()Landroid/view/inputmethod/InputBinding;", AccessFlags = 1)]
 						get{ return GetCurrentInputBinding(); }
@@ -1144,7 +1144,7 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getCurrentInputConnection
 				/// </java-name>
-				public global::Android.View.Inputmethod.IInputConnection CurrentInputConnection
+				public global::Android.Views.Inputmethod.IInputConnection CurrentInputConnection
 				{
 				[Dot42.DexImport("getCurrentInputConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
 						get{ return GetCurrentInputConnection(); }
@@ -1162,7 +1162,7 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getCurrentInputEditorInfo
 				/// </java-name>
-				public global::Android.View.Inputmethod.EditorInfo CurrentInputEditorInfo
+				public global::Android.Views.Inputmethod.EditorInfo CurrentInputEditorInfo
 				{
 				[Dot42.DexImport("getCurrentInputEditorInfo", "()Landroid/view/inputmethod/EditorInfo;", AccessFlags = 1)]
 						get{ return GetCurrentInputEditorInfo(); }
@@ -1260,7 +1260,7 @@ namespace Android.Inputmethodservice
 						/// displayCompletions
 						/// </java-name>
 						[Dot42.DexImport("displayCompletions", "([Landroid/view/inputmethod/CompletionInfo;)V", AccessFlags = 1)]
-						public override void DisplayCompletions(global::Android.View.Inputmethod.CompletionInfo[] completionInfo) /* MethodBuilder.Create */ 
+						public override void DisplayCompletions(global::Android.Views.Inputmethod.CompletionInfo[] completionInfo) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1268,7 +1268,7 @@ namespace Android.Inputmethodservice
 						/// updateExtractedText
 						/// </java-name>
 						[Dot42.DexImport("updateExtractedText", "(ILandroid/view/inputmethod/ExtractedText;)V", AccessFlags = 1)]
-						public override void UpdateExtractedText(int int32, global::Android.View.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
+						public override void UpdateExtractedText(int int32, global::Android.Views.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1348,7 +1348,7 @@ namespace Android.Inputmethodservice
 						/// bindInput
 						/// </java-name>
 						[Dot42.DexImport("bindInput", "(Landroid/view/inputmethod/InputBinding;)V", AccessFlags = 1)]
-						public override void BindInput(global::Android.View.Inputmethod.InputBinding inputBinding) /* MethodBuilder.Create */ 
+						public override void BindInput(global::Android.Views.Inputmethod.InputBinding inputBinding) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1365,7 +1365,7 @@ namespace Android.Inputmethodservice
 						/// </java-name>
 						[Dot42.DexImport("startInput", "(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)" +
     "V", AccessFlags = 1)]
-						public override void StartInput(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
+						public override void StartInput(global::Android.Views.Inputmethod.IInputConnection inputConnection, global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1374,7 +1374,7 @@ namespace Android.Inputmethodservice
 						/// </java-name>
 						[Dot42.DexImport("restartInput", "(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)" +
     "V", AccessFlags = 1)]
-						public override void RestartInput(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
+						public override void RestartInput(global::Android.Views.Inputmethod.IInputConnection inputConnection, global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1398,7 +1398,7 @@ namespace Android.Inputmethodservice
 						/// changeInputMethodSubtype
 						/// </java-name>
 						[Dot42.DexImport("changeInputMethodSubtype", "(Landroid/view/inputmethod/InputMethodSubtype;)V", AccessFlags = 1)]
-						public override void ChangeInputMethodSubtype(global::Android.View.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
+						public override void ChangeInputMethodSubtype(global::Android.Views.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1970,7 +1970,7 @@ namespace Android.Inputmethodservice
 		/// android/inputmethodservice/KeyboardView
 		/// </java-name>
 		[Dot42.DexImport("android/inputmethodservice/KeyboardView", AccessFlags = 33)]
-		public partial class KeyboardView : global::Android.View.View, global::Android.View.View.IOnClickListener
+		public partial class KeyboardView : global::Android.Views.View, global::Android.Views.View.IOnClickListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -2064,7 +2064,7 @@ namespace Android.Inputmethodservice
 				/// setPopupParent
 				/// </java-name>
 				[Dot42.DexImport("setPopupParent", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetPopupParent(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetPopupParent(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2146,7 +2146,7 @@ namespace Android.Inputmethodservice
 				/// onHoverEvent
 				/// </java-name>
 				[Dot42.DexImport("onHoverEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnHoverEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnHoverEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2155,7 +2155,7 @@ namespace Android.Inputmethodservice
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2221,7 +2221,7 @@ namespace Android.Inputmethodservice
 				/// onClick
 				/// </java-name>
 				[Dot42.DexImport("onClick", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void OnClick(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void OnClick(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 

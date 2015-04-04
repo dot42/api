@@ -992,7 +992,7 @@ namespace Android.Animation
 				/// addChild
 				/// </java-name>
 				[Dot42.DexImport("addChild", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void AddChild(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void AddChild(global::Android.Views.ViewGroup viewGroup, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1000,7 +1000,7 @@ namespace Android.Animation
 				/// showChild
 				/// </java-name>
 				[Dot42.DexImport("showChild", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void ShowChild(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void ShowChild(global::Android.Views.ViewGroup viewGroup, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1008,7 +1008,7 @@ namespace Android.Animation
 				/// removeChild
 				/// </java-name>
 				[Dot42.DexImport("removeChild", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void RemoveChild(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void RemoveChild(global::Android.Views.ViewGroup viewGroup, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1016,7 +1016,7 @@ namespace Android.Animation
 				/// hideChild
 				/// </java-name>
 				[Dot42.DexImport("hideChild", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void HideChild(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void HideChild(global::Android.Views.ViewGroup viewGroup, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1066,14 +1066,14 @@ namespace Android.Animation
 						/// </java-name>
 						[Dot42.DexImport("startTransition", "(Landroid/animation/LayoutTransition;Landroid/view/ViewGroup;Landroid/view/View;I" +
     ")V", AccessFlags = 1025)]
-						void StartTransition(global::Android.Animation.LayoutTransition layoutTransition, global::Android.View.ViewGroup viewGroup, global::Android.View.View view, int int32) /* MethodBuilder.Create */ ;
+						void StartTransition(global::Android.Animation.LayoutTransition layoutTransition, global::Android.Views.ViewGroup viewGroup, global::Android.Views.View view, int int32) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// endTransition
 						/// </java-name>
 						[Dot42.DexImport("endTransition", "(Landroid/animation/LayoutTransition;Landroid/view/ViewGroup;Landroid/view/View;I" +
     ")V", AccessFlags = 1025)]
-						void EndTransition(global::Android.Animation.LayoutTransition layoutTransition, global::Android.View.ViewGroup viewGroup, global::Android.View.View view, int int32) /* MethodBuilder.Create */ ;
+						void EndTransition(global::Android.Animation.LayoutTransition layoutTransition, global::Android.Views.ViewGroup viewGroup, global::Android.Views.View view, int int32) /* MethodBuilder.Create */ ;
 
 				}
 

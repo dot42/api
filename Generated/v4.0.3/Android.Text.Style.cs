@@ -352,7 +352,7 @@ namespace Android.Text.Style
 				/// onClick
 				/// </java-name>
 				[Dot42.DexImport("onClick", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				public abstract void OnClick(global::Android.View.View view) /* MethodBuilder.Create */ ;
+				public abstract void OnClick(global::Android.Views.View view) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// updateDrawState
@@ -2481,7 +2481,7 @@ namespace Android.Text.Style
 				/// onClick
 				/// </java-name>
 				[Dot42.DexImport("onClick", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void OnClick(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void OnClick(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 

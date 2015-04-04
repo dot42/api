@@ -195,7 +195,7 @@ namespace Android.Appwidget
 				/// drawChild
 				/// </java-name>
 				[Dot42.DexImport("drawChild", "(Landroid/graphics/Canvas;Landroid/view/View;J)Z", AccessFlags = 4)]
-				protected internal override bool DrawChild(global::Android.Graphics.Canvas canvas, global::Android.View.View view, long int64) /* MethodBuilder.Create */ 
+				protected internal override bool DrawChild(global::Android.Graphics.Canvas canvas, global::Android.Views.View view, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -204,7 +204,7 @@ namespace Android.Appwidget
 				/// prepareView
 				/// </java-name>
 				[Dot42.DexImport("prepareView", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal virtual void PrepareView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				protected internal virtual void PrepareView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -212,18 +212,18 @@ namespace Android.Appwidget
 				/// getDefaultView
 				/// </java-name>
 				[Dot42.DexImport("getDefaultView", "()Landroid/view/View;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.View GetDefaultView() /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.Views.View GetDefaultView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// getErrorView
 				/// </java-name>
 				[Dot42.DexImport("getErrorView", "()Landroid/view/View;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.View GetErrorView() /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.Views.View GetErrorView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -252,7 +252,7 @@ namespace Android.Appwidget
 				/// <java-name>
 				/// getDefaultView
 				/// </java-name>
-				protected internal global::Android.View.View DefaultView
+				protected internal global::Android.Views.View DefaultView
 				{
 				[Dot42.DexImport("getDefaultView", "()Landroid/view/View;", AccessFlags = 4)]
 						get{ return GetDefaultView(); }
@@ -261,7 +261,7 @@ namespace Android.Appwidget
 				/// <java-name>
 				/// getErrorView
 				/// </java-name>
-				protected internal global::Android.View.View ErrorView
+				protected internal global::Android.Views.View ErrorView
 				{
 				[Dot42.DexImport("getErrorView", "()Landroid/view/View;", AccessFlags = 4)]
 						get{ return GetErrorView(); }

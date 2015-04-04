@@ -110,7 +110,7 @@ namespace Android.Hardware
 				/// setPreviewDisplay
 				/// </java-name>
 				[Dot42.DexImport("setPreviewDisplay", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 17)]
-				public void SetPreviewDisplay(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public void SetPreviewDisplay(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 				}
 

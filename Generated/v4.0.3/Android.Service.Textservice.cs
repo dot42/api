@@ -55,16 +55,16 @@ namespace Android.Service.Textservice
 						/// onGetSuggestions
 						/// </java-name>
 						[Dot42.DexImport("onGetSuggestions", "(Landroid/view/textservice/TextInfo;I)Landroid/view/textservice/SuggestionsInfo;", AccessFlags = 1025)]
-						public abstract global::Android.View.Textservice.SuggestionsInfo OnGetSuggestions(global::Android.View.Textservice.TextInfo textInfo, int int32) /* MethodBuilder.Create */ ;
+						public abstract global::Android.Views.Textservice.SuggestionsInfo OnGetSuggestions(global::Android.Views.Textservice.TextInfo textInfo, int int32) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onGetSuggestionsMultiple
 						/// </java-name>
 						[Dot42.DexImport("onGetSuggestionsMultiple", "([Landroid/view/textservice/TextInfo;IZ)[Landroid/view/textservice/SuggestionsInf" +
     "o;", AccessFlags = 1)]
-						public virtual global::Android.View.Textservice.SuggestionsInfo[] OnGetSuggestionsMultiple(global::Android.View.Textservice.TextInfo[] textInfo, int int32, bool boolean) /* MethodBuilder.Create */ 
+						public virtual global::Android.Views.Textservice.SuggestionsInfo[] OnGetSuggestionsMultiple(global::Android.Views.Textservice.TextInfo[] textInfo, int int32, bool boolean) /* MethodBuilder.Create */ 
 						{
-								return default(global::Android.View.Textservice.SuggestionsInfo[]);
+								return default(global::Android.Views.Textservice.SuggestionsInfo[]);
 						}
 
 						/// <java-name>

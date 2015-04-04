@@ -291,7 +291,7 @@ namespace Android.Text
 				/// get
 				/// </java-name>
 				[Dot42.DexImport("get", "(Ljava/lang/CharSequence;IILandroid/view/View;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string Get(global::Java.Lang.ICharSequence charSequence, int int32, int int321, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static string Get(global::Java.Lang.ICharSequence charSequence, int int32, int int321, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -300,7 +300,7 @@ namespace Android.Text
 				/// getSize
 				/// </java-name>
 				[Dot42.DexImport("getSize", "(Landroid/view/View;)I", AccessFlags = 9)]
-				public static int GetSize(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static int GetSize(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}

@@ -27,7 +27,7 @@ namespace Android.Accessibilityservice
 				/// onAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1025)]
-				public abstract void OnAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ ;
+				public abstract void OnAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onInterrupt

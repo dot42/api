@@ -1,11 +1,11 @@
 ﻿#pragma warning disable 1717
-namespace Android.View.Animation
+namespace Android.Views.Animation
 {
 		/// <java-name>
 		/// android/view/animation/AccelerateDecelerateInterpolator
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/AccelerateDecelerateInterpolator", AccessFlags = 33)]
-		public partial class AccelerateDecelerateInterpolator : global::Android.View.Animation.IInterpolator
+		public partial class AccelerateDecelerateInterpolator : global::Android.Views.Animation.IInterpolator
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -33,7 +33,7 @@ namespace Android.View.Animation
 		/// android/view/animation/AccelerateInterpolator
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/AccelerateInterpolator", AccessFlags = 33)]
-		public partial class AccelerateInterpolator : global::Android.View.Animation.IInterpolator
+		public partial class AccelerateInterpolator : global::Android.Views.Animation.IInterpolator
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -66,7 +66,7 @@ namespace Android.View.Animation
 		/// android/view/animation/AlphaAnimation
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/AlphaAnimation", AccessFlags = 33)]
-		public partial class AlphaAnimation : global::Android.View.Animation.Animation
+		public partial class AlphaAnimation : global::Android.Views.Animation.Animation
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -83,7 +83,7 @@ namespace Android.View.Animation
 				/// applyTransformation
 				/// </java-name>
 				[Dot42.DexImport("applyTransformation", "(FLandroid/view/animation/Transformation;)V", AccessFlags = 4)]
-				protected internal override void ApplyTransformation(float single, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				protected internal override void ApplyTransformation(float single, global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -183,9 +183,9 @@ namespace Android.View.Animation
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Landroid/view/animation/Animation;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.Animation.Animation Clone() /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.Views.Animation.Animation Clone() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.Animation);
+						return default(global::Android.Views.Animation.Animation);
 				}
 
 				/// <java-name>
@@ -233,7 +233,7 @@ namespace Android.View.Animation
 				/// setInterpolator
 				/// </java-name>
 				[Dot42.DexImport("setInterpolator", "(Landroid/view/animation/Interpolator;)V", AccessFlags = 1)]
-				public virtual void SetInterpolator(global::Android.View.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
+				public virtual void SetInterpolator(global::Android.Views.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -379,9 +379,9 @@ namespace Android.View.Animation
 				/// getInterpolator
 				/// </java-name>
 				[Dot42.DexImport("getInterpolator", "()Landroid/view/animation/Interpolator;", AccessFlags = 1)]
-				public virtual global::Android.View.Animation.IInterpolator GetInterpolator() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Animation.IInterpolator GetInterpolator() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.IInterpolator);
+						return default(global::Android.Views.Animation.IInterpolator);
 				}
 
 				/// <java-name>
@@ -496,7 +496,7 @@ namespace Android.View.Animation
 				/// setAnimationListener
 				/// </java-name>
 				[Dot42.DexImport("setAnimationListener", "(Landroid/view/animation/Animation$AnimationListener;)V", AccessFlags = 1)]
-				public virtual void SetAnimationListener(global::Android.View.Animation.Animation.IAnimationListener animationListener) /* MethodBuilder.Create */ 
+				public virtual void SetAnimationListener(global::Android.Views.Animation.Animation.IAnimationListener animationListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -521,7 +521,7 @@ namespace Android.View.Animation
 				/// getTransformation
 				/// </java-name>
 				[Dot42.DexImport("getTransformation", "(JLandroid/view/animation/Transformation;)Z", AccessFlags = 1)]
-				public virtual bool GetTransformation(long int64, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				public virtual bool GetTransformation(long int64, global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -530,7 +530,7 @@ namespace Android.View.Animation
 				/// getTransformation
 				/// </java-name>
 				[Dot42.DexImport("getTransformation", "(JLandroid/view/animation/Transformation;F)Z", AccessFlags = 1)]
-				public virtual bool GetTransformation(long int64, global::Android.View.Animation.Transformation transformation, float single) /* MethodBuilder.Create */ 
+				public virtual bool GetTransformation(long int64, global::Android.Views.Animation.Transformation transformation, float single) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -557,7 +557,7 @@ namespace Android.View.Animation
 				/// applyTransformation
 				/// </java-name>
 				[Dot42.DexImport("applyTransformation", "(FLandroid/view/animation/Transformation;)V", AccessFlags = 4)]
-				protected internal virtual void ApplyTransformation(float single, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				protected internal virtual void ApplyTransformation(float single, global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -588,7 +588,7 @@ namespace Android.View.Animation
 				/// <java-name>
 				/// getInterpolator
 				/// </java-name>
-				public global::Android.View.Animation.IInterpolator Interpolator
+				public global::Android.Views.Animation.IInterpolator Interpolator
 				{
 				[Dot42.DexImport("getInterpolator", "()Landroid/view/animation/Interpolator;", AccessFlags = 1)]
 						get{ return GetInterpolator(); }
@@ -717,19 +717,19 @@ namespace Android.View.Animation
 						/// onAnimationStart
 						/// </java-name>
 						[Dot42.DexImport("onAnimationStart", "(Landroid/view/animation/Animation;)V", AccessFlags = 1025)]
-						void OnAnimationStart(global::Android.View.Animation.Animation animation) /* MethodBuilder.Create */ ;
+						void OnAnimationStart(global::Android.Views.Animation.Animation animation) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onAnimationEnd
 						/// </java-name>
 						[Dot42.DexImport("onAnimationEnd", "(Landroid/view/animation/Animation;)V", AccessFlags = 1025)]
-						void OnAnimationEnd(global::Android.View.Animation.Animation animation) /* MethodBuilder.Create */ ;
+						void OnAnimationEnd(global::Android.Views.Animation.Animation animation) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onAnimationRepeat
 						/// </java-name>
 						[Dot42.DexImport("onAnimationRepeat", "(Landroid/view/animation/Animation;)V", AccessFlags = 1025)]
-						void OnAnimationRepeat(global::Android.View.Animation.Animation animation) /* MethodBuilder.Create */ ;
+						void OnAnimationRepeat(global::Android.Views.Animation.Animation animation) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -763,7 +763,7 @@ namespace Android.View.Animation
 		/// android/view/animation/AnimationSet
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/AnimationSet", AccessFlags = 33)]
-		public partial class AnimationSet : global::Android.View.Animation.Animation
+		public partial class AnimationSet : global::Android.Views.Animation.Animation
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -780,9 +780,9 @@ namespace Android.View.Animation
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Landroid/view/animation/AnimationSet;", AccessFlags = 4)]
-				protected internal new virtual global::Android.View.Animation.AnimationSet Clone() /* MethodBuilder.Create */ 
+				protected internal new virtual global::Android.Views.Animation.AnimationSet Clone() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.AnimationSet);
+						return default(global::Android.Views.Animation.AnimationSet);
 				}
 
 				/// <java-name>
@@ -829,7 +829,7 @@ namespace Android.View.Animation
 				/// addAnimation
 				/// </java-name>
 				[Dot42.DexImport("addAnimation", "(Landroid/view/animation/Animation;)V", AccessFlags = 1)]
-				public virtual void AddAnimation(global::Android.View.Animation.Animation animation) /* MethodBuilder.Create */ 
+				public virtual void AddAnimation(global::Android.Views.Animation.Animation animation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -880,7 +880,7 @@ namespace Android.View.Animation
 				/// getTransformation
 				/// </java-name>
 				[Dot42.DexImport("getTransformation", "(JLandroid/view/animation/Transformation;)Z", AccessFlags = 1)]
-				public override bool GetTransformation(long int64, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				public override bool GetTransformation(long int64, global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -913,9 +913,9 @@ namespace Android.View.Animation
 				/// getAnimations
 				/// </java-name>
 				[Dot42.DexImport("getAnimations", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/animation/Animation;>;")]
-				public virtual global::Java.Util.IList<global::Android.View.Animation.Animation> GetAnimations() /* MethodBuilder.Create */ 
+				public virtual global::Java.Util.IList<global::Android.Views.Animation.Animation> GetAnimations() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.View.Animation.Animation>);
+						return default(global::Java.Util.IList<global::Android.Views.Animation.Animation>);
 				}
 
 				/// <java-name>
@@ -966,7 +966,7 @@ namespace Android.View.Animation
 				/// <java-name>
 				/// getAnimations
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.View.Animation.Animation> Animations
+				public global::Java.Util.IList<global::Android.Views.Animation.Animation> Animations
 				{
 				[Dot42.DexImport("getAnimations", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/animation/Animation;>;")]
 						get{ return GetAnimations(); }
@@ -999,54 +999,54 @@ namespace Android.View.Animation
 				/// loadAnimation
 				/// </java-name>
 				[Dot42.DexImport("loadAnimation", "(Landroid/content/Context;I)Landroid/view/animation/Animation;", AccessFlags = 9)]
-				public static global::Android.View.Animation.Animation LoadAnimation(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				public static global::Android.Views.Animation.Animation LoadAnimation(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.Animation);
+						return default(global::Android.Views.Animation.Animation);
 				}
 
 				/// <java-name>
 				/// loadLayoutAnimation
 				/// </java-name>
 				[Dot42.DexImport("loadLayoutAnimation", "(Landroid/content/Context;I)Landroid/view/animation/LayoutAnimationController;", AccessFlags = 9)]
-				public static global::Android.View.Animation.LayoutAnimationController LoadLayoutAnimation(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				public static global::Android.Views.Animation.LayoutAnimationController LoadLayoutAnimation(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.LayoutAnimationController);
+						return default(global::Android.Views.Animation.LayoutAnimationController);
 				}
 
 				/// <java-name>
 				/// makeInAnimation
 				/// </java-name>
 				[Dot42.DexImport("makeInAnimation", "(Landroid/content/Context;Z)Landroid/view/animation/Animation;", AccessFlags = 9)]
-				public static global::Android.View.Animation.Animation MakeInAnimation(global::Android.Content.Context context, bool boolean) /* MethodBuilder.Create */ 
+				public static global::Android.Views.Animation.Animation MakeInAnimation(global::Android.Content.Context context, bool boolean) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.Animation);
+						return default(global::Android.Views.Animation.Animation);
 				}
 
 				/// <java-name>
 				/// makeOutAnimation
 				/// </java-name>
 				[Dot42.DexImport("makeOutAnimation", "(Landroid/content/Context;Z)Landroid/view/animation/Animation;", AccessFlags = 9)]
-				public static global::Android.View.Animation.Animation MakeOutAnimation(global::Android.Content.Context context, bool boolean) /* MethodBuilder.Create */ 
+				public static global::Android.Views.Animation.Animation MakeOutAnimation(global::Android.Content.Context context, bool boolean) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.Animation);
+						return default(global::Android.Views.Animation.Animation);
 				}
 
 				/// <java-name>
 				/// makeInChildBottomAnimation
 				/// </java-name>
 				[Dot42.DexImport("makeInChildBottomAnimation", "(Landroid/content/Context;)Landroid/view/animation/Animation;", AccessFlags = 9)]
-				public static global::Android.View.Animation.Animation MakeInChildBottomAnimation(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				public static global::Android.Views.Animation.Animation MakeInChildBottomAnimation(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.Animation);
+						return default(global::Android.Views.Animation.Animation);
 				}
 
 				/// <java-name>
 				/// loadInterpolator
 				/// </java-name>
 				[Dot42.DexImport("loadInterpolator", "(Landroid/content/Context;I)Landroid/view/animation/Interpolator;", AccessFlags = 9)]
-				public static global::Android.View.Animation.IInterpolator LoadInterpolator(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				public static global::Android.Views.Animation.IInterpolator LoadInterpolator(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.IInterpolator);
+						return default(global::Android.Views.Animation.IInterpolator);
 				}
 
 		}
@@ -1055,7 +1055,7 @@ namespace Android.View.Animation
 		/// android/view/animation/AnticipateInterpolator
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/AnticipateInterpolator", AccessFlags = 33)]
-		public partial class AnticipateInterpolator : global::Android.View.Animation.IInterpolator
+		public partial class AnticipateInterpolator : global::Android.Views.Animation.IInterpolator
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1088,7 +1088,7 @@ namespace Android.View.Animation
 		/// android/view/animation/AnticipateOvershootInterpolator
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/AnticipateOvershootInterpolator", AccessFlags = 33)]
-		public partial class AnticipateOvershootInterpolator : global::Android.View.Animation.IInterpolator
+		public partial class AnticipateOvershootInterpolator : global::Android.Views.Animation.IInterpolator
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1126,7 +1126,7 @@ namespace Android.View.Animation
 		/// android/view/animation/BounceInterpolator
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/BounceInterpolator", AccessFlags = 33)]
-		public partial class BounceInterpolator : global::Android.View.Animation.IInterpolator
+		public partial class BounceInterpolator : global::Android.Views.Animation.IInterpolator
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1154,7 +1154,7 @@ namespace Android.View.Animation
 		/// android/view/animation/CycleInterpolator
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/CycleInterpolator", AccessFlags = 33)]
-		public partial class CycleInterpolator : global::Android.View.Animation.IInterpolator
+		public partial class CycleInterpolator : global::Android.Views.Animation.IInterpolator
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(F)V", AccessFlags = 1)]
@@ -1187,7 +1187,7 @@ namespace Android.View.Animation
 		/// android/view/animation/DecelerateInterpolator
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/DecelerateInterpolator", AccessFlags = 33)]
-		public partial class DecelerateInterpolator : global::Android.View.Animation.IInterpolator
+		public partial class DecelerateInterpolator : global::Android.Views.Animation.IInterpolator
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1220,7 +1220,7 @@ namespace Android.View.Animation
 		/// android/view/animation/GridLayoutAnimationController
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/GridLayoutAnimationController", AccessFlags = 33)]
-		public partial class GridLayoutAnimationController : global::Android.View.Animation.LayoutAnimationController
+		public partial class GridLayoutAnimationController : global::Android.Views.Animation.LayoutAnimationController
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1274,12 +1274,12 @@ namespace Android.View.Animation
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/view/animation/Animation;)V", AccessFlags = 1)]
-				public GridLayoutAnimationController(global::Android.View.Animation.Animation animation) /* MethodBuilder.Create */ 
+				public GridLayoutAnimationController(global::Android.Views.Animation.Animation animation) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/view/animation/Animation;FF)V", AccessFlags = 1)]
-				public GridLayoutAnimationController(global::Android.View.Animation.Animation animation, float single, float single1) /* MethodBuilder.Create */ 
+				public GridLayoutAnimationController(global::Android.Views.Animation.Animation animation, float single, float single1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1364,7 +1364,7 @@ namespace Android.View.Animation
 				/// getDelayForView
 				/// </java-name>
 				[Dot42.DexImport("getDelayForView", "(Landroid/view/View;)J", AccessFlags = 4)]
-				protected internal override long GetDelayForView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				protected internal override long GetDelayForView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
@@ -1422,7 +1422,7 @@ namespace Android.View.Animation
 				/// android/view/animation/GridLayoutAnimationController$AnimationParameters
 				/// </java-name>
 				[Dot42.DexImport("android/view/animation/GridLayoutAnimationController$AnimationParameters", AccessFlags = 9)]
-				public partial class AnimationParameters : global::Android.View.Animation.LayoutAnimationController.AnimationParameters
+				public partial class AnimationParameters : global::Android.Views.Animation.LayoutAnimationController.AnimationParameters
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -1489,7 +1489,7 @@ namespace Android.View.Animation
 				/// mAnimation
 				/// </java-name>
 				[Dot42.DexImport("mAnimation", "Landroid/view/animation/Animation;", AccessFlags = 4)]
-				protected internal global::Android.View.Animation.Animation MAnimation;
+				protected internal global::Android.Views.Animation.Animation MAnimation;
 				/// <java-name>
 				/// mRandomizer
 				/// </java-name>
@@ -1499,19 +1499,19 @@ namespace Android.View.Animation
 				/// mInterpolator
 				/// </java-name>
 				[Dot42.DexImport("mInterpolator", "Landroid/view/animation/Interpolator;", AccessFlags = 4)]
-				protected internal global::Android.View.Animation.IInterpolator MInterpolator;
+				protected internal global::Android.Views.Animation.IInterpolator MInterpolator;
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
 				public LayoutAnimationController(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/view/animation/Animation;)V", AccessFlags = 1)]
-				public LayoutAnimationController(global::Android.View.Animation.Animation animation) /* MethodBuilder.Create */ 
+				public LayoutAnimationController(global::Android.Views.Animation.Animation animation) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/view/animation/Animation;F)V", AccessFlags = 1)]
-				public LayoutAnimationController(global::Android.View.Animation.Animation animation, float single) /* MethodBuilder.Create */ 
+				public LayoutAnimationController(global::Android.Views.Animation.Animation animation, float single) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1544,7 +1544,7 @@ namespace Android.View.Animation
 				/// setAnimation
 				/// </java-name>
 				[Dot42.DexImport("setAnimation", "(Landroid/view/animation/Animation;)V", AccessFlags = 1)]
-				public virtual void SetAnimation(global::Android.View.Animation.Animation animation) /* MethodBuilder.Create */ 
+				public virtual void SetAnimation(global::Android.Views.Animation.Animation animation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1552,9 +1552,9 @@ namespace Android.View.Animation
 				/// getAnimation
 				/// </java-name>
 				[Dot42.DexImport("getAnimation", "()Landroid/view/animation/Animation;", AccessFlags = 1)]
-				public virtual global::Android.View.Animation.Animation GetAnimation() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Animation.Animation GetAnimation() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.Animation);
+						return default(global::Android.Views.Animation.Animation);
 				}
 
 				/// <java-name>
@@ -1569,7 +1569,7 @@ namespace Android.View.Animation
 				/// setInterpolator
 				/// </java-name>
 				[Dot42.DexImport("setInterpolator", "(Landroid/view/animation/Interpolator;)V", AccessFlags = 1)]
-				public virtual void SetInterpolator(global::Android.View.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
+				public virtual void SetInterpolator(global::Android.Views.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1577,9 +1577,9 @@ namespace Android.View.Animation
 				/// getInterpolator
 				/// </java-name>
 				[Dot42.DexImport("getInterpolator", "()Landroid/view/animation/Interpolator;", AccessFlags = 1)]
-				public virtual global::Android.View.Animation.IInterpolator GetInterpolator() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Animation.IInterpolator GetInterpolator() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.IInterpolator);
+						return default(global::Android.Views.Animation.IInterpolator);
 				}
 
 				/// <java-name>
@@ -1620,9 +1620,9 @@ namespace Android.View.Animation
 				/// getAnimationForView
 				/// </java-name>
 				[Dot42.DexImport("getAnimationForView", "(Landroid/view/View;)Landroid/view/animation/Animation;", AccessFlags = 17)]
-				public global::Android.View.Animation.Animation GetAnimationForView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public global::Android.Views.Animation.Animation GetAnimationForView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.Animation);
+						return default(global::Android.Views.Animation.Animation);
 				}
 
 				/// <java-name>
@@ -1638,7 +1638,7 @@ namespace Android.View.Animation
 				/// getDelayForView
 				/// </java-name>
 				[Dot42.DexImport("getDelayForView", "(Landroid/view/View;)J", AccessFlags = 4)]
-				protected internal virtual long GetDelayForView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				protected internal virtual long GetDelayForView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
@@ -1647,7 +1647,7 @@ namespace Android.View.Animation
 				/// getTransformedIndex
 				/// </java-name>
 				[Dot42.DexImport("getTransformedIndex", "(Landroid/view/animation/LayoutAnimationController$AnimationParameters;)I", AccessFlags = 4)]
-				protected internal virtual int GetTransformedIndex(global::Android.View.Animation.LayoutAnimationController.AnimationParameters animationParameters) /* MethodBuilder.Create */ 
+				protected internal virtual int GetTransformedIndex(global::Android.Views.Animation.LayoutAnimationController.AnimationParameters animationParameters) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1671,7 +1671,7 @@ namespace Android.View.Animation
 				/// <java-name>
 				/// getAnimation
 				/// </java-name>
-				public global::Android.View.Animation.Animation Animation
+				public global::Android.Views.Animation.Animation Animation
 				{
 				[Dot42.DexImport("getAnimation", "()Landroid/view/animation/Animation;", AccessFlags = 1)]
 						get{ return GetAnimation(); }
@@ -1682,7 +1682,7 @@ namespace Android.View.Animation
 				/// <java-name>
 				/// getInterpolator
 				/// </java-name>
-				public global::Android.View.Animation.IInterpolator Interpolator
+				public global::Android.Views.Animation.IInterpolator Interpolator
 				{
 				[Dot42.DexImport("getInterpolator", "()Landroid/view/animation/Interpolator;", AccessFlags = 1)]
 						get{ return GetInterpolator(); }
@@ -1731,7 +1731,7 @@ namespace Android.View.Animation
 		/// android/view/animation/LinearInterpolator
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/LinearInterpolator", AccessFlags = 33)]
-		public partial class LinearInterpolator : global::Android.View.Animation.IInterpolator
+		public partial class LinearInterpolator : global::Android.Views.Animation.IInterpolator
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1759,7 +1759,7 @@ namespace Android.View.Animation
 		/// android/view/animation/OvershootInterpolator
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/OvershootInterpolator", AccessFlags = 33)]
-		public partial class OvershootInterpolator : global::Android.View.Animation.IInterpolator
+		public partial class OvershootInterpolator : global::Android.Views.Animation.IInterpolator
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1792,7 +1792,7 @@ namespace Android.View.Animation
 		/// android/view/animation/RotateAnimation
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/RotateAnimation", AccessFlags = 33)]
-		public partial class RotateAnimation : global::Android.View.Animation.Animation
+		public partial class RotateAnimation : global::Android.Views.Animation.Animation
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -1819,7 +1819,7 @@ namespace Android.View.Animation
 				/// applyTransformation
 				/// </java-name>
 				[Dot42.DexImport("applyTransformation", "(FLandroid/view/animation/Transformation;)V", AccessFlags = 4)]
-				protected internal override void ApplyTransformation(float single, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				protected internal override void ApplyTransformation(float single, global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1842,7 +1842,7 @@ namespace Android.View.Animation
 		/// android/view/animation/ScaleAnimation
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/ScaleAnimation", AccessFlags = 33)]
-		public partial class ScaleAnimation : global::Android.View.Animation.Animation
+		public partial class ScaleAnimation : global::Android.Views.Animation.Animation
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -1869,7 +1869,7 @@ namespace Android.View.Animation
 				/// applyTransformation
 				/// </java-name>
 				[Dot42.DexImport("applyTransformation", "(FLandroid/view/animation/Transformation;)V", AccessFlags = 4)]
-				protected internal override void ApplyTransformation(float single, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				protected internal override void ApplyTransformation(float single, global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1964,7 +1964,7 @@ namespace Android.View.Animation
 				/// set
 				/// </java-name>
 				[Dot42.DexImport("set", "(Landroid/view/animation/Transformation;)V", AccessFlags = 1)]
-				public virtual void Set(global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				public virtual void Set(global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1972,7 +1972,7 @@ namespace Android.View.Animation
 				/// compose
 				/// </java-name>
 				[Dot42.DexImport("compose", "(Landroid/view/animation/Transformation;)V", AccessFlags = 1)]
-				public virtual void Compose(global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				public virtual void Compose(global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2057,7 +2057,7 @@ namespace Android.View.Animation
 		/// android/view/animation/TranslateAnimation
 		/// </java-name>
 		[Dot42.DexImport("android/view/animation/TranslateAnimation", AccessFlags = 33)]
-		public partial class TranslateAnimation : global::Android.View.Animation.Animation
+		public partial class TranslateAnimation : global::Android.Views.Animation.Animation
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -2079,7 +2079,7 @@ namespace Android.View.Animation
 				/// applyTransformation
 				/// </java-name>
 				[Dot42.DexImport("applyTransformation", "(FLandroid/view/animation/Transformation;)V", AccessFlags = 4)]
-				protected internal override void ApplyTransformation(float single, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				protected internal override void ApplyTransformation(float single, global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 				}
 

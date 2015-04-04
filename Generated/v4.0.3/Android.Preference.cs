@@ -27,7 +27,7 @@ namespace Android.Preference
 				/// onBindView
 				/// </java-name>
 				[Dot42.DexImport("onBindView", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal override void OnBindView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				protected internal override void OnBindView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -225,16 +225,16 @@ namespace Android.Preference
 				/// onCreateDialogView
 				/// </java-name>
 				[Dot42.DexImport("onCreateDialogView", "()Landroid/view/View;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.View OnCreateDialogView() /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.Views.View OnCreateDialogView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onBindDialogView
 				/// </java-name>
 				[Dot42.DexImport("onBindDialogView", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal virtual void OnBindDialogView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				protected internal virtual void OnBindDialogView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -421,7 +421,7 @@ namespace Android.Preference
 				/// onBindDialogView
 				/// </java-name>
 				[Dot42.DexImport("onBindDialogView", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal override void OnBindDialogView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				protected internal override void OnBindDialogView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -429,7 +429,7 @@ namespace Android.Preference
 				/// onAddEditTextToDialogView
 				/// </java-name>
 				[Dot42.DexImport("onAddEditTextToDialogView", "(Landroid/view/View;Landroid/widget/EditText;)V", AccessFlags = 4)]
-				protected internal virtual void OnAddEditTextToDialogView(global::Android.View.View view, global::Android.Widget.EditText editText) /* MethodBuilder.Create */ 
+				protected internal virtual void OnAddEditTextToDialogView(global::Android.Views.View view, global::Android.Widget.EditText editText) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1058,25 +1058,25 @@ namespace Android.Preference
 				/// getView
 				/// </java-name>
 				[Dot42.DexImport("getView", "(Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetView(global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetView(global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onCreateView
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.View OnCreateView(global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.Views.View OnCreateView(global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onBindView
 				/// </java-name>
 				[Dot42.DexImport("onBindView", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal virtual void OnBindView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				protected internal virtual void OnBindView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1834,7 +1834,7 @@ namespace Android.Preference
 				/// android/preference/Preference$BaseSavedState
 				/// </java-name>
 				[Dot42.DexImport("android/preference/Preference$BaseSavedState", AccessFlags = 9)]
-				public partial class BaseSavedState : global::Android.View.AbsSavedState
+				public partial class BaseSavedState : global::Android.Views.AbsSavedState
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -2023,7 +2023,7 @@ namespace Android.Preference
 				/// setListFooter
 				/// </java-name>
 				[Dot42.DexImport("setListFooter", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetListFooter(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetListFooter(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2079,7 +2079,7 @@ namespace Android.Preference
 				/// onListItemClick
 				/// </java-name>
 				[Dot42.DexImport("onListItemClick", "(Landroid/widget/ListView;Landroid/view/View;IJ)V", AccessFlags = 4)]
-				protected internal override void OnListItemClick(global::Android.Widget.ListView listView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				protected internal override void OnListItemClick(global::Android.Widget.ListView listView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2129,7 +2129,7 @@ namespace Android.Preference
 				/// </java-name>
 				[Dot42.DexImport("setParentTitle", "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/view/View$OnClickListen" +
     "er;)V", AccessFlags = 1)]
-				public virtual void SetParentTitle(global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence charSequence1, global::Android.View.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
+				public virtual void SetParentTitle(global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence charSequence1, global::Android.Views.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2495,9 +2495,9 @@ namespace Android.Preference
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroi" +
     "d/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View OnCreateView(global::Android.Views.LayoutInflater layoutInflater, global::Android.Views.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -3075,7 +3075,7 @@ namespace Android.Preference
 				/// onItemClick
 				/// </java-name>
 				[Dot42.DexImport("onItemClick", "(Landroid/widget/AdapterView;Landroid/view/View;IJ)V", AccessFlags = 1)]
-				public void OnItemClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				public void OnItemClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3331,7 +3331,7 @@ namespace Android.Preference
 				/// onBindView
 				/// </java-name>
 				[Dot42.DexImport("onBindView", "(Landroid/view/View;)V", AccessFlags = 4)]
-				protected internal override void OnBindView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				protected internal override void OnBindView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 

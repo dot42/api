@@ -49,6 +49,8 @@ namespace System.Reflection
         public bool IsInterface { get { return _type.IsInterface; } }
         public bool IsEnum { get { return _type.IsEnum; } }
         public bool IsAbstract { get { return _type.IsAbstract; } }
+        public bool IsPublic { get { return _type.IsPublic; } }
+        public Type BaseType { get { return _type.BaseType; } }
 
 
         public bool IsAssignableFrom(TypeInfo other)

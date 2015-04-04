@@ -21,7 +21,7 @@ namespace Android.App
         /// Look for a child view with the given id. If this view has the given id, return this view.
         /// </summary>
         public T FindViewById<T>(int id)
-            where T : Android.View.View
+            where T : Android.Views.View
         {
             return (T) FindViewById(id);
         }

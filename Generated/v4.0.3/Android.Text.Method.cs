@@ -17,7 +17,7 @@ namespace Android.Text.Method
 				/// handleMovementKey
 				/// </java-name>
 				[Dot42.DexImport("handleMovementKey", "(Landroid/widget/TextView;Landroid/text/Spannable;IILandroid/view/KeyEvent;)Z", AccessFlags = 4)]
-				protected internal override bool HandleMovementKey(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				protected internal override bool HandleMovementKey(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -134,7 +134,7 @@ namespace Android.Text.Method
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -174,31 +174,31 @@ namespace Android.Text.Method
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onKeyDown", "(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public override bool OnKeyDown(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnKeyDown(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onKeyUp", "(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public override bool OnKeyUp(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnKeyUp(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onKeyOther", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public override bool OnKeyOther(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnKeyOther(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onTrackballEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				public override bool OnTrackballEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnTrackballEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onGenericMotionEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				public override bool OnGenericMotionEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnGenericMotionEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
@@ -230,7 +230,7 @@ namespace Android.Text.Method
 				/// backspace
 				/// </java-name>
 				[Dot42.DexImport("backspace", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool Backspace(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool Backspace(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -239,7 +239,7 @@ namespace Android.Text.Method
 				/// forwardDelete
 				/// </java-name>
 				[Dot42.DexImport("forwardDelete", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool ForwardDelete(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool ForwardDelete(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -248,7 +248,7 @@ namespace Android.Text.Method
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -257,7 +257,7 @@ namespace Android.Text.Method
 				/// onKeyOther
 				/// </java-name>
 				[Dot42.DexImport("onKeyOther", "(Landroid/view/View;Landroid/text/Editable;Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyOther(global::Android.View.View view, global::Android.Text.IEditable editable, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyOther(global::Android.Views.View view, global::Android.Text.IEditable editable, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -269,13 +269,13 @@ namespace Android.Text.Method
 				}
 
 				[Dot42.DexImport("android/text/method/KeyListener", "onKeyUp", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public override bool OnKeyUp(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnKeyUp(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/text/method/KeyListener", "clearMetaKeyState", "(Landroid/view/View;Landroid/text/Editable;I)V", AccessFlags = 1025)]
-				public override void ClearMetaKeyState(global::Android.View.View view, global::Android.Text.IEditable editable, int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override void ClearMetaKeyState(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 				}
 
@@ -320,7 +320,7 @@ namespace Android.Text.Method
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyDown(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyDown(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -329,7 +329,7 @@ namespace Android.Text.Method
 				/// onKeyOther
 				/// </java-name>
 				[Dot42.DexImport("onKeyOther", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyOther(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyOther(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -338,7 +338,7 @@ namespace Android.Text.Method
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyUp(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyUp(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -355,7 +355,7 @@ namespace Android.Text.Method
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -364,7 +364,7 @@ namespace Android.Text.Method
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTrackballEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnTrackballEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -373,7 +373,7 @@ namespace Android.Text.Method
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnGenericMotionEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnGenericMotionEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -382,7 +382,7 @@ namespace Android.Text.Method
 				/// getMovementMetaState
 				/// </java-name>
 				[Dot42.DexImport("getMovementMetaState", "(Landroid/text/Spannable;Landroid/view/KeyEvent;)I", AccessFlags = 4)]
-				protected internal virtual int GetMovementMetaState(global::Android.Text.ISpannable spannable, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				protected internal virtual int GetMovementMetaState(global::Android.Text.ISpannable spannable, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -391,7 +391,7 @@ namespace Android.Text.Method
 				/// handleMovementKey
 				/// </java-name>
 				[Dot42.DexImport("handleMovementKey", "(Landroid/widget/TextView;Landroid/text/Spannable;IILandroid/view/KeyEvent;)Z", AccessFlags = 4)]
-				protected internal virtual bool HandleMovementKey(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				protected internal virtual bool HandleMovementKey(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -510,12 +510,12 @@ namespace Android.Text.Method
 		/// android/text/method/CharacterPickerDialog
 		/// </java-name>
 		[Dot42.DexImport("android/text/method/CharacterPickerDialog", AccessFlags = 33)]
-		public partial class CharacterPickerDialog : global::Android.App.Dialog, global::Android.Widget.AdapterView<object>.IOnItemClickListener, global::Android.View.View.IOnClickListener
+		public partial class CharacterPickerDialog : global::Android.App.Dialog, global::Android.Widget.AdapterView<object>.IOnItemClickListener, global::Android.Views.View.IOnClickListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/View;Landroid/text/Editable;Ljava/lang/St" +
     "ring;Z)V", AccessFlags = 1)]
-				public CharacterPickerDialog(global::Android.Content.Context context, global::Android.View.View view, global::Android.Text.IEditable editable, string @string, bool boolean) /* MethodBuilder.Create */ 
+				public CharacterPickerDialog(global::Android.Content.Context context, global::Android.Views.View view, global::Android.Text.IEditable editable, string @string, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -531,7 +531,7 @@ namespace Android.Text.Method
 				/// onItemClick
 				/// </java-name>
 				[Dot42.DexImport("onItemClick", "(Landroid/widget/AdapterView;Landroid/view/View;IJ)V", AccessFlags = 1)]
-				public virtual void OnItemClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				public virtual void OnItemClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -539,7 +539,7 @@ namespace Android.Text.Method
 				/// onClick
 				/// </java-name>
 				[Dot42.DexImport("onClick", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void OnClick(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void OnClick(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -744,7 +744,7 @@ namespace Android.Text.Method
 				/// lookup
 				/// </java-name>
 				[Dot42.DexImport("lookup", "(Landroid/view/KeyEvent;Landroid/text/Spannable;)I", AccessFlags = 4)]
-				protected internal override int Lookup(global::Android.View.KeyEvent keyEvent, global::Android.Text.ISpannable spannable) /* MethodBuilder.Create */ 
+				protected internal override int Lookup(global::Android.Views.KeyEvent keyEvent, global::Android.Text.ISpannable spannable) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -963,25 +963,25 @@ namespace Android.Text.Method
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				bool OnKeyDown(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+				bool OnKeyDown(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				bool OnKeyUp(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+				bool OnKeyUp(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onKeyOther
 				/// </java-name>
 				[Dot42.DexImport("onKeyOther", "(Landroid/view/View;Landroid/text/Editable;Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				bool OnKeyOther(global::Android.View.View view, global::Android.Text.IEditable editable, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+				bool OnKeyOther(global::Android.Views.View view, global::Android.Text.IEditable editable, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// clearMetaKeyState
 				/// </java-name>
 				[Dot42.DexImport("clearMetaKeyState", "(Landroid/view/View;Landroid/text/Editable;I)V", AccessFlags = 1025)]
-				void ClearMetaKeyState(global::Android.View.View view, global::Android.Text.IEditable editable, int int32) /* MethodBuilder.Create */ ;
+				void ClearMetaKeyState(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -1002,19 +1002,19 @@ namespace Android.Text.Method
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				bool OnKeyDown(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+				bool OnKeyDown(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				bool OnKeyUp(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+				bool OnKeyUp(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onKeyOther
 				/// </java-name>
 				[Dot42.DexImport("onKeyOther", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				bool OnKeyOther(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+				bool OnKeyOther(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onTakeFocus
@@ -1026,19 +1026,19 @@ namespace Android.Text.Method
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				bool OnTrackballEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+				bool OnTrackballEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+				bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				bool OnGenericMotionEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+				bool OnGenericMotionEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// canSelectArbitrarily
@@ -1059,13 +1059,13 @@ namespace Android.Text.Method
 				/// getTransformation
 				/// </java-name>
 				[Dot42.DexImport("getTransformation", "(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;", AccessFlags = 1025)]
-				global::Java.Lang.ICharSequence GetTransformation(global::Java.Lang.ICharSequence charSequence, global::Android.View.View view) /* MethodBuilder.Create */ ;
+				global::Java.Lang.ICharSequence GetTransformation(global::Java.Lang.ICharSequence charSequence, global::Android.Views.View view) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onFocusChanged
 				/// </java-name>
 				[Dot42.DexImport("onFocusChanged", "(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V", AccessFlags = 1025)]
-				void OnFocusChanged(global::Android.View.View view, global::Java.Lang.ICharSequence charSequence, bool boolean, int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ ;
+				void OnFocusChanged(global::Android.Views.View view, global::Java.Lang.ICharSequence charSequence, bool boolean, int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -1085,7 +1085,7 @@ namespace Android.Text.Method
 				/// handleMovementKey
 				/// </java-name>
 				[Dot42.DexImport("handleMovementKey", "(Landroid/widget/TextView;Landroid/text/Spannable;IILandroid/view/KeyEvent;)Z", AccessFlags = 4)]
-				protected internal override bool HandleMovementKey(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				protected internal override bool HandleMovementKey(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1130,7 +1130,7 @@ namespace Android.Text.Method
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1277,7 +1277,7 @@ namespace Android.Text.Method
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyDown(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyDown(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1286,7 +1286,7 @@ namespace Android.Text.Method
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyUp(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyUp(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1295,7 +1295,7 @@ namespace Android.Text.Method
 				/// clearMetaKeyState
 				/// </java-name>
 				[Dot42.DexImport("clearMetaKeyState", "(Landroid/view/View;Landroid/text/Editable;I)V", AccessFlags = 1)]
-				public virtual void ClearMetaKeyState(global::Android.View.View view, global::Android.Text.IEditable editable, int int32) /* MethodBuilder.Create */ 
+				public virtual void ClearMetaKeyState(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1347,7 +1347,7 @@ namespace Android.Text.Method
 				/// handleKeyDown
 				/// </java-name>
 				[Dot42.DexImport("handleKeyDown", "(JILandroid/view/KeyEvent;)J", AccessFlags = 9)]
-				public static long HandleKeyDown(long int64, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public static long HandleKeyDown(long int64, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
@@ -1356,7 +1356,7 @@ namespace Android.Text.Method
 				/// handleKeyUp
 				/// </java-name>
 				[Dot42.DexImport("handleKeyUp", "(JILandroid/view/KeyEvent;)J", AccessFlags = 9)]
-				public static long HandleKeyUp(long int64, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public static long HandleKeyUp(long int64, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
@@ -1407,7 +1407,7 @@ namespace Android.Text.Method
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1474,7 +1474,7 @@ namespace Android.Text.Method
 				/// lookup
 				/// </java-name>
 				[Dot42.DexImport("lookup", "(Landroid/view/KeyEvent;Landroid/text/Spannable;)I", AccessFlags = 4)]
-				protected internal virtual int Lookup(global::Android.View.KeyEvent keyEvent, global::Android.Text.ISpannable spannable) /* MethodBuilder.Create */ 
+				protected internal virtual int Lookup(global::Android.Views.KeyEvent keyEvent, global::Android.Text.ISpannable spannable) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1501,7 +1501,7 @@ namespace Android.Text.Method
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1533,7 +1533,7 @@ namespace Android.Text.Method
 				/// getTransformation
 				/// </java-name>
 				[Dot42.DexImport("getTransformation", "(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetTransformation(global::Java.Lang.ICharSequence charSequence, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.ICharSequence GetTransformation(global::Java.Lang.ICharSequence charSequence, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1575,7 +1575,7 @@ namespace Android.Text.Method
 				/// onFocusChanged
 				/// </java-name>
 				[Dot42.DexImport("onFocusChanged", "(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V", AccessFlags = 1)]
-				public virtual void OnFocusChanged(global::Android.View.View view, global::Java.Lang.ICharSequence charSequence, bool boolean, int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				public virtual void OnFocusChanged(global::Android.Views.View view, global::Java.Lang.ICharSequence charSequence, bool boolean, int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1634,7 +1634,7 @@ namespace Android.Text.Method
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1700,7 +1700,7 @@ namespace Android.Text.Method
 				/// getTransformation
 				/// </java-name>
 				[Dot42.DexImport("getTransformation", "(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetTransformation(global::Java.Lang.ICharSequence charSequence, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.ICharSequence GetTransformation(global::Java.Lang.ICharSequence charSequence, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1709,7 +1709,7 @@ namespace Android.Text.Method
 				/// onFocusChanged
 				/// </java-name>
 				[Dot42.DexImport("onFocusChanged", "(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V", AccessFlags = 1)]
-				public virtual void OnFocusChanged(global::Android.View.View view, global::Java.Lang.ICharSequence charSequence, bool boolean, int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				public virtual void OnFocusChanged(global::Android.Views.View view, global::Java.Lang.ICharSequence charSequence, bool boolean, int int32, global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1857,7 +1857,7 @@ namespace Android.Text.Method
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1885,31 +1885,31 @@ namespace Android.Text.Method
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onKeyDown", "(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public override bool OnKeyDown(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnKeyDown(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onKeyUp", "(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public override bool OnKeyUp(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnKeyUp(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onKeyOther", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				public override bool OnKeyOther(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnKeyOther(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onTrackballEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				public override bool OnTrackballEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnTrackballEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onGenericMotionEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 1025)]
-				public override bool OnGenericMotionEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override bool OnGenericMotionEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
 				}
@@ -2052,7 +2052,7 @@ namespace Android.Text.Method
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2061,7 +2061,7 @@ namespace Android.Text.Method
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(global::Android.View.View view, global::Android.Text.IEditable editable, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2070,7 +2070,7 @@ namespace Android.Text.Method
 				/// onKeyOther
 				/// </java-name>
 				[Dot42.DexImport("onKeyOther", "(Landroid/view/View;Landroid/text/Editable;Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyOther(global::Android.View.View view, global::Android.Text.IEditable editable, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyOther(global::Android.Views.View view, global::Android.Text.IEditable editable, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2288,7 +2288,7 @@ namespace Android.Text.Method
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z", AccessFlags = 9)]
-				public static bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public static bool OnTouchEvent(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}

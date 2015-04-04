@@ -892,13 +892,13 @@ namespace Android.Webkit
 				/// getEmbeddedView
 				/// </java-name>
 				[Dot42.DexImport("getEmbeddedView", "(ILandroid/content/Context;)Landroid/view/View;", AccessFlags = 1025)]
-				global::Android.View.View GetEmbeddedView(int int32, global::Android.Content.Context context) /* MethodBuilder.Create */ ;
+				global::Android.Views.View GetEmbeddedView(int int32, global::Android.Content.Context context) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getFullScreenView
 				/// </java-name>
 				[Dot42.DexImport("getFullScreenView", "(ILandroid/content/Context;)Landroid/view/View;", AccessFlags = 1025)]
-				global::Android.View.View GetFullScreenView(int int32, global::Android.Content.Context context) /* MethodBuilder.Create */ ;
+				global::Android.Views.View GetFullScreenView(int int32, global::Android.Content.Context context) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -1390,7 +1390,7 @@ namespace Android.Webkit
 				/// onShowCustomView
 				/// </java-name>
 				[Dot42.DexImport("onShowCustomView", "(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V", AccessFlags = 1)]
-				public virtual void OnShowCustomView(global::Android.View.View view, global::Android.Webkit.WebChromeClient.ICustomViewCallback customViewCallback) /* MethodBuilder.Create */ 
+				public virtual void OnShowCustomView(global::Android.Views.View view, global::Android.Webkit.WebChromeClient.ICustomViewCallback customViewCallback) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1398,7 +1398,7 @@ namespace Android.Webkit
 				/// onShowCustomView
 				/// </java-name>
 				[Dot42.DexImport("onShowCustomView", "(Landroid/view/View;ILandroid/webkit/WebChromeClient$CustomViewCallback;)V", AccessFlags = 1)]
-				public virtual void OnShowCustomView(global::Android.View.View view, int int32, global::Android.Webkit.WebChromeClient.ICustomViewCallback customViewCallback) /* MethodBuilder.Create */ 
+				public virtual void OnShowCustomView(global::Android.Views.View view, int int32, global::Android.Webkit.WebChromeClient.ICustomViewCallback customViewCallback) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1547,9 +1547,9 @@ namespace Android.Webkit
 				/// getVideoLoadingProgressView
 				/// </java-name>
 				[Dot42.DexImport("getVideoLoadingProgressView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetVideoLoadingProgressView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetVideoLoadingProgressView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -1572,7 +1572,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getVideoLoadingProgressView
 				/// </java-name>
-				public global::Android.View.View VideoLoadingProgressView
+				public global::Android.Views.View VideoLoadingProgressView
 				{
 				[Dot42.DexImport("getVideoLoadingProgressView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetVideoLoadingProgressView(); }
@@ -3656,7 +3656,7 @@ namespace Android.Webkit
 		/// android/webkit/WebView
 		/// </java-name>
 		[Dot42.DexImport("android/webkit/WebView", AccessFlags = 33)]
-		public partial class WebView : global::Android.Widget.AbsoluteLayout, global::Android.View.ViewTreeObserver.IOnGlobalFocusChangeListener, global::Android.View.ViewGroup.IOnHierarchyChangeListener
+		public partial class WebView : global::Android.Widget.AbsoluteLayout, global::Android.Views.ViewTreeObserver.IOnGlobalFocusChangeListener, global::Android.Views.ViewGroup.IOnHierarchyChangeListener
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -3707,7 +3707,7 @@ namespace Android.Webkit
 				/// onInitializeAccessibilityNodeInfo
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityNodeInfo", "(Landroid/view/accessibility/AccessibilityNodeInfo;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityNodeInfo(global::Android.View.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityNodeInfo(global::Android.Views.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3715,7 +3715,7 @@ namespace Android.Webkit
 				/// onInitializeAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4436,7 +4436,7 @@ namespace Android.Webkit
 				/// drawChild
 				/// </java-name>
 				[Dot42.DexImport("drawChild", "(Landroid/graphics/Canvas;Landroid/view/View;J)Z", AccessFlags = 4)]
-				protected internal override bool DrawChild(global::Android.Graphics.Canvas canvas, global::Android.View.View view, long int64) /* MethodBuilder.Create */ 
+				protected internal override bool DrawChild(global::Android.Graphics.Canvas canvas, global::Android.Views.View view, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4453,7 +4453,7 @@ namespace Android.Webkit
 				/// setLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("setLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void SetLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void SetLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4479,16 +4479,16 @@ namespace Android.Webkit
 				/// </java-name>
 				[Dot42.DexImport("onCreateInputConnection", "(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;" +
     "", AccessFlags = 1)]
-				public override global::Android.View.Inputmethod.IInputConnection OnCreateInputConnection(global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Views.Inputmethod.IInputConnection OnCreateInputConnection(global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.IInputConnection);
+						return default(global::Android.Views.Inputmethod.IInputConnection);
 				}
 
 				/// <java-name>
 				/// onKeyMultiple
 				/// </java-name>
 				[Dot42.DexImport("onKeyMultiple", "(IILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyMultiple(int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyMultiple(int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4497,7 +4497,7 @@ namespace Android.Webkit
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4506,7 +4506,7 @@ namespace Android.Webkit
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4539,7 +4539,7 @@ namespace Android.Webkit
 				/// onVisibilityChanged
 				/// </java-name>
 				[Dot42.DexImport("onVisibilityChanged", "(Landroid/view/View;I)V", AccessFlags = 4)]
-				protected internal override void OnVisibilityChanged(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				protected internal override void OnVisibilityChanged(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4547,7 +4547,7 @@ namespace Android.Webkit
 				/// onChildViewAdded
 				/// </java-name>
 				[Dot42.DexImport("onChildViewAdded", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void OnChildViewAdded(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public virtual void OnChildViewAdded(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4555,7 +4555,7 @@ namespace Android.Webkit
 				/// onChildViewRemoved
 				/// </java-name>
 				[Dot42.DexImport("onChildViewRemoved", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void OnChildViewRemoved(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public virtual void OnChildViewRemoved(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4563,7 +4563,7 @@ namespace Android.Webkit
 				/// onGlobalFocusChanged
 				/// </java-name>
 				[Dot42.DexImport("onGlobalFocusChanged", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void OnGlobalFocusChanged(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public virtual void OnGlobalFocusChanged(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4603,7 +4603,7 @@ namespace Android.Webkit
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4612,7 +4612,7 @@ namespace Android.Webkit
 				/// onHoverEvent
 				/// </java-name>
 				[Dot42.DexImport("onHoverEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnHoverEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnHoverEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4621,7 +4621,7 @@ namespace Android.Webkit
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4630,7 +4630,7 @@ namespace Android.Webkit
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4647,7 +4647,7 @@ namespace Android.Webkit
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4664,9 +4664,9 @@ namespace Android.Webkit
 				/// getZoomControls
 				/// </java-name>
 				[Dot42.DexImport("getZoomControls", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetZoomControls() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetZoomControls() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -4726,7 +4726,7 @@ namespace Android.Webkit
 				/// requestChildRectangleOnScreen
 				/// </java-name>
 				[Dot42.DexImport("requestChildRectangleOnScreen", "(Landroid/view/View;Landroid/graphics/Rect;Z)Z", AccessFlags = 1)]
-				public override bool RequestChildRectangleOnScreen(global::Android.View.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
+				public override bool RequestChildRectangleOnScreen(global::Android.Views.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4847,7 +4847,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getZoomControls
 				/// </java-name>
-				public global::Android.View.View ZoomControls
+				public global::Android.Views.View ZoomControls
 				{
 				[Dot42.DexImport("getZoomControls", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetZoomControls(); }
@@ -5215,7 +5215,7 @@ namespace Android.Webkit
 				/// shouldOverrideKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("shouldOverrideKeyEvent", "(Landroid/webkit/WebView;Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool ShouldOverrideKeyEvent(global::Android.Webkit.WebView webView, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool ShouldOverrideKeyEvent(global::Android.Webkit.WebView webView, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5224,7 +5224,7 @@ namespace Android.Webkit
 				/// onUnhandledKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("onUnhandledKeyEvent", "(Landroid/webkit/WebView;Landroid/view/KeyEvent;)V", AccessFlags = 1)]
-				public virtual void OnUnhandledKeyEvent(global::Android.Webkit.WebView webView, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual void OnUnhandledKeyEvent(global::Android.Webkit.WebView webView, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5343,9 +5343,9 @@ namespace Android.Webkit
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroi" +
     "d/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View OnCreateView(global::Android.Views.LayoutInflater layoutInflater, global::Android.Views.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>

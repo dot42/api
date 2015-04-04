@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using Android.Views;
 
 namespace Android.Widget
 {
@@ -25,7 +26,7 @@ namespace Android.Widget
         /// <summary>
         /// Default ctor
         /// </summary>
-	    public ItemClickEventArgs(View.View view, int position, long id)
+	    public ItemClickEventArgs(View view, int position, long id)
 	    {
 	        Id = id;
 	        Position = position;
@@ -35,7 +36,7 @@ namespace Android.Widget
 	    /// <summary>
         /// The view that was clicked (provided by the adapter)
         /// </summary>
-        public View.View View { get; private set; }
+        public View View { get; private set; }
 
         /// <summary>
         /// Position of the view within the adapter

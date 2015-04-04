@@ -17,7 +17,7 @@ using System;
 using Dot42;
 using Java.Lang;
 
-namespace Android.View
+namespace Android.Views
 {
     partial class View
     {

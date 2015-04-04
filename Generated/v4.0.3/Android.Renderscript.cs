@@ -5121,7 +5121,7 @@ namespace Android.Renderscript
 				/// setSurface
 				/// </java-name>
 				[Dot42.DexImport("setSurface", "(Landroid/view/SurfaceHolder;II)V", AccessFlags = 1)]
-				public virtual void SetSurface(global::Android.View.ISurfaceHolder surfaceHolder, int int32, int int321) /* MethodBuilder.Create */ 
+				public virtual void SetSurface(global::Android.Views.ISurfaceHolder surfaceHolder, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5363,7 +5363,7 @@ namespace Android.Renderscript
 		/// android/renderscript/RSSurfaceView
 		/// </java-name>
 		[Dot42.DexImport("android/renderscript/RSSurfaceView", AccessFlags = 33)]
-		public partial class RSSurfaceView : global::Android.View.SurfaceView, global::Android.View.ISurfaceHolder_ICallback
+		public partial class RSSurfaceView : global::Android.Views.SurfaceView, global::Android.Views.ISurfaceHolder_ICallback
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -5380,7 +5380,7 @@ namespace Android.Renderscript
 				/// surfaceCreated
 				/// </java-name>
 				[Dot42.DexImport("surfaceCreated", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SurfaceCreated(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public virtual void SurfaceCreated(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5388,7 +5388,7 @@ namespace Android.Renderscript
 				/// surfaceDestroyed
 				/// </java-name>
 				[Dot42.DexImport("surfaceDestroyed", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SurfaceDestroyed(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public virtual void SurfaceDestroyed(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5396,7 +5396,7 @@ namespace Android.Renderscript
 				/// surfaceChanged
 				/// </java-name>
 				[Dot42.DexImport("surfaceChanged", "(Landroid/view/SurfaceHolder;III)V", AccessFlags = 1)]
-				public virtual void SurfaceChanged(global::Android.View.ISurfaceHolder surfaceHolder, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public virtual void SurfaceChanged(global::Android.Views.ISurfaceHolder surfaceHolder, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5473,7 +5473,7 @@ namespace Android.Renderscript
 		/// android/renderscript/RSTextureView
 		/// </java-name>
 		[Dot42.DexImport("android/renderscript/RSTextureView", AccessFlags = 33)]
-		public partial class RSTextureView : global::Android.View.TextureView, global::Android.View.TextureView.ISurfaceTextureListener
+		public partial class RSTextureView : global::Android.Views.TextureView, global::Android.Views.TextureView.ISurfaceTextureListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]

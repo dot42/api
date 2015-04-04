@@ -3144,7 +3144,7 @@ namespace Android.Media
 				/// setDisplay
 				/// </java-name>
 				[Dot42.DexImport("setDisplay", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SetDisplay(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public virtual void SetDisplay(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3152,7 +3152,7 @@ namespace Android.Media
 				/// setSurface
 				/// </java-name>
 				[Dot42.DexImport("setSurface", "(Landroid/view/Surface;)V", AccessFlags = 1)]
-				public virtual void SetSurface(global::Android.View.Surface surface) /* MethodBuilder.Create */ 
+				public virtual void SetSurface(global::Android.Views.Surface surface) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3170,7 +3170,7 @@ namespace Android.Media
 				/// </java-name>
 				[Dot42.DexImport("create", "(Landroid/content/Context;Landroid/net/Uri;Landroid/view/SurfaceHolder;)Landroid/" +
     "media/MediaPlayer;", AccessFlags = 9)]
-				public static global::Android.Media.MediaPlayer Create(global::Android.Content.Context context, global::Android.Net.Uri uri, global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public static global::Android.Media.MediaPlayer Create(global::Android.Content.Context context, global::Android.Net.Uri uri, global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Media.MediaPlayer);
 				}
@@ -3676,7 +3676,7 @@ namespace Android.Media
 				/// setPreviewDisplay
 				/// </java-name>
 				[Dot42.DexImport("setPreviewDisplay", "(Landroid/view/Surface;)V", AccessFlags = 1)]
-				public virtual void SetPreviewDisplay(global::Android.View.Surface surface) /* MethodBuilder.Create */ 
+				public virtual void SetPreviewDisplay(global::Android.Views.Surface surface) /* MethodBuilder.Create */ 
 				{
 				}
 

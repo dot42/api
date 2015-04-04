@@ -14,11 +14,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Android.View;
+using Android.Views;
 
 namespace Android.Widget
 {
-	public class EditorActionEventArgs : View.ViewEventArgs
+	public class EditorActionEventArgs : Views.ViewEventArgs
 	{
 	    public EditorActionEventArgs(int actionId, KeyEvent @event)
 	    {

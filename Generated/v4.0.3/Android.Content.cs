@@ -5449,7 +5449,7 @@ namespace Android.Content
 				/// onKey
 				/// </java-name>
 				[Dot42.DexImport("onKey", "(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				bool OnKey(global::Android.Content.IDialogInterface dialogInterface, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+				bool OnKey(global::Android.Content.IDialogInterface dialogInterface, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
 
 		}
 

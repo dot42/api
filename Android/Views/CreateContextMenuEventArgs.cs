@@ -1,6 +1,6 @@
 // Copyright (C) 2014 dot42
 //
-// Original filename: KeyEventArgs.cs
+// Original filename: CreateContextMenuEventArgs.cs
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,13 +13,18 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-namespace Android.View
+namespace Android.Views
 {
-	public class KeyEventArgs : InputEventArgs<KeyEvent>
+	public class CreateContextMenuEventArgs : System.EventArgs
 	{
-	    public KeyEventArgs(KeyEvent source) : base(source)
+	    public CreateContextMenuEventArgs(IContextMenu contextMenu, IContextMenu_IContextMenuInfo menuInfo)
 	    {
+	        MenuInfo = menuInfo;
+	        ContextMenu = contextMenu;
 	    }
-	}
+
+	    public IContextMenu ContextMenu { get; private set; }
+        public IContextMenu_IContextMenuInfo MenuInfo { get; private set; }
+    }
 }
 

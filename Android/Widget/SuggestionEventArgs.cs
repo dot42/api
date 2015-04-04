@@ -14,10 +14,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using Android.Views;
 
 namespace Android.Widget
 {
-    public class SuggestionEventArgs : View.ViewEventArgs
+    public class SuggestionEventArgs : ViewEventArgs
 	{
 	    public SuggestionEventArgs(int position)
 	    {

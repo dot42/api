@@ -3759,7 +3759,7 @@ namespace Android.Provider
 						/// </java-name>
 						[Dot42.DexImport("showQuickContact", "(Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;I[Ljava/lang/String" +
     ";)V", AccessFlags = 9)]
-						public static void ShowQuickContact(global::Android.Content.Context context, global::Android.View.View view, global::Android.Net.Uri uri, int int32, string[] @string) /* MethodBuilder.Create */ 
+						public static void ShowQuickContact(global::Android.Content.Context context, global::Android.Views.View view, global::Android.Net.Uri uri, int int32, string[] @string) /* MethodBuilder.Create */ 
 						{
 						}
 

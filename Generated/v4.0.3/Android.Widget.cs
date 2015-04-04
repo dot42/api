@@ -7,7 +7,7 @@ namespace Android.Widget
 		[Dot42.DexImport("android/widget/AbsListView", AccessFlags = 1057, Signature = "Landroid/widget/AdapterView<Landroid/widget/ListAdapter;>;Landroid/text/TextWatch" +
     "er;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/widget/Filter$" +
     "FilterListener;Landroid/view/ViewTreeObserver$OnTouchModeChangeListener;")]
-		public abstract partial class AbsListView : global::Android.Widget.AdapterView<global::Android.Widget.IListAdapter>, global::Android.Text.ITextWatcher, global::Android.View.ViewTreeObserver.IOnGlobalLayoutListener, global::Android.Widget.Filter.IFilterListener, global::Android.View.ViewTreeObserver.IOnTouchModeChangeListener
+		public abstract partial class AbsListView : global::Android.Widget.AdapterView<global::Android.Widget.IListAdapter>, global::Android.Text.ITextWatcher, global::Android.Views.ViewTreeObserver.IOnGlobalLayoutListener, global::Android.Widget.Filter.IFilterListener, global::Android.Views.ViewTreeObserver.IOnTouchModeChangeListener
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -141,7 +141,7 @@ namespace Android.Widget
 				/// performItemClick
 				/// </java-name>
 				[Dot42.DexImport("performItemClick", "(Landroid/view/View;IJ)Z", AccessFlags = 1)]
-				public override bool PerformItemClick(global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				public override bool PerformItemClick(global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -437,9 +437,9 @@ namespace Android.Widget
 				/// getSelectedView
 				/// </java-name>
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetSelectedView() /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetSelectedView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -576,7 +576,7 @@ namespace Android.Widget
 				/// setScrollIndicators
 				/// </java-name>
 				[Dot42.DexImport("setScrollIndicators", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetScrollIndicators(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public virtual void SetScrollIndicators(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -642,16 +642,16 @@ namespace Android.Widget
 				/// getContextMenuInfo
 				/// </java-name>
 				[Dot42.DexImport("getContextMenuInfo", "()Landroid/view/ContextMenu$ContextMenuInfo;", AccessFlags = 4)]
-				protected internal override global::Android.View.IContextMenu_IContextMenuInfo GetContextMenuInfo() /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.IContextMenu_IContextMenuInfo GetContextMenuInfo() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.IContextMenu_IContextMenuInfo);
+						return default(global::Android.Views.IContextMenu_IContextMenuInfo);
 				}
 
 				/// <java-name>
 				/// showContextMenuForChild
 				/// </java-name>
 				[Dot42.DexImport("showContextMenuForChild", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public override bool ShowContextMenuForChild(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override bool ShowContextMenuForChild(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -660,7 +660,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -669,7 +669,7 @@ namespace Android.Widget
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -712,7 +712,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -729,7 +729,7 @@ namespace Android.Widget
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -754,7 +754,7 @@ namespace Android.Widget
 				/// onInterceptTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onInterceptTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnInterceptTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnInterceptTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -763,7 +763,7 @@ namespace Android.Widget
 				/// addTouchables
 				/// </java-name>
 				[Dot42.DexImport("addTouchables", "(Ljava/util/ArrayList;)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;)V")]
-				public override void AddTouchables(global::Java.Util.ArrayList<global::Android.View.View> arrayList) /* MethodBuilder.Create */ 
+				public override void AddTouchables(global::Java.Util.ArrayList<global::Android.Views.View> arrayList) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -861,16 +861,16 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("onCreateInputConnection", "(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;" +
     "", AccessFlags = 1)]
-				public override global::Android.View.Inputmethod.IInputConnection OnCreateInputConnection(global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Views.Inputmethod.IInputConnection OnCreateInputConnection(global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.IInputConnection);
+						return default(global::Android.Views.Inputmethod.IInputConnection);
 				}
 
 				/// <java-name>
 				/// checkInputConnectionProxy
 				/// </java-name>
 				[Dot42.DexImport("checkInputConnectionProxy", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public override bool CheckInputConnectionProxy(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override bool CheckInputConnectionProxy(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -936,9 +936,9 @@ namespace Android.Widget
 				/// generateLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal override global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
@@ -954,7 +954,7 @@ namespace Android.Widget
 				/// checkLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal override bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override bool CheckLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1006,7 +1006,7 @@ namespace Android.Widget
 				/// reclaimViews
 				/// </java-name>
 				[Dot42.DexImport("reclaimViews", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/view/View;>;)V")]
-				public virtual void ReclaimViews(global::Java.Util.IList<global::Android.View.View> list) /* MethodBuilder.Create */ 
+				public virtual void ReclaimViews(global::Java.Util.IList<global::Android.Views.View> list) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1142,7 +1142,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getSelectedView
 				/// </java-name>
-				public global::Android.View.View SelectedView
+				public global::Android.Views.View SelectedView
 				{
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetSelectedView(); }
@@ -1234,7 +1234,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getContextMenuInfo
 				/// </java-name>
-				protected internal global::Android.View.IContextMenu_IContextMenuInfo ContextMenuInfo
+				protected internal global::Android.Views.IContextMenu_IContextMenuInfo ContextMenuInfo
 				{
 				[Dot42.DexImport("getContextMenuInfo", "()Landroid/view/ContextMenu$ContextMenuInfo;", AccessFlags = 4)]
 						get{ return GetContextMenuInfo(); }
@@ -1282,7 +1282,7 @@ namespace Android.Widget
 						/// onMovedToScrapHeap
 						/// </java-name>
 						[Dot42.DexImport("onMovedToScrapHeap", "(Landroid/view/View;)V", AccessFlags = 1025)]
-						void OnMovedToScrapHeap(global::Android.View.View view) /* MethodBuilder.Create */ ;
+						void OnMovedToScrapHeap(global::Android.Views.View view) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -1290,7 +1290,7 @@ namespace Android.Widget
 				/// android/widget/AbsListView$LayoutParams
 				/// </java-name>
 				[Dot42.DexImport("android/widget/AbsListView$LayoutParams", AccessFlags = 9)]
-				public partial class LayoutParams : global::Android.View.ViewGroup.LayoutParams
+				public partial class LayoutParams : global::Android.Views.ViewGroup.LayoutParams
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -1309,7 +1309,7 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1324,14 +1324,14 @@ namespace Android.Widget
 				/// android/widget/AbsListView$MultiChoiceModeListener
 				/// </java-name>
 				[Dot42.DexImport("android/widget/AbsListView$MultiChoiceModeListener", AccessFlags = 1545)]
-				public partial interface IMultiChoiceModeListener : global::Android.View.ActionMode.ICallback
+				public partial interface IMultiChoiceModeListener : global::Android.Views.ActionMode.ICallback
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
 						/// onItemCheckedStateChanged
 						/// </java-name>
 						[Dot42.DexImport("onItemCheckedStateChanged", "(Landroid/view/ActionMode;IJZ)V", AccessFlags = 1025)]
-						void OnItemCheckedStateChanged(global::Android.View.ActionMode actionMode, int int32, long int64, bool boolean) /* MethodBuilder.Create */ ;
+						void OnItemCheckedStateChanged(global::Android.Views.ActionMode actionMode, int int32, long int64, bool boolean) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -1401,7 +1401,7 @@ namespace Android.Widget
 		/// android/widget/AbsoluteLayout
 		/// </java-name>
 		[Dot42.DexImport("android/widget/AbsoluteLayout", AccessFlags = 33)]
-		public partial class AbsoluteLayout : global::Android.View.ViewGroup
+		public partial class AbsoluteLayout : global::Android.Views.ViewGroup
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -1431,9 +1431,9 @@ namespace Android.Widget
 				/// generateDefaultLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateDefaultLayoutParams", "()Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal override global::Android.View.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
@@ -1448,16 +1448,16 @@ namespace Android.Widget
 				/// generateLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 1)]
-				public override global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				public override global::Android.Views.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
 				/// checkLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal override bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override bool CheckLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1466,9 +1466,9 @@ namespace Android.Widget
 				/// generateLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal override global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
@@ -1489,7 +1489,7 @@ namespace Android.Widget
 				/// android/widget/AbsoluteLayout$LayoutParams
 				/// </java-name>
 				[Dot42.DexImport("android/widget/AbsoluteLayout$LayoutParams", AccessFlags = 9)]
-				public partial class LayoutParams : global::Android.View.ViewGroup.LayoutParams
+				public partial class LayoutParams : global::Android.Views.ViewGroup.LayoutParams
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -1513,7 +1513,7 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1660,7 +1660,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1669,7 +1669,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1745,9 +1745,9 @@ namespace Android.Widget
 				/// generateDefaultLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateDefaultLayoutParams", "()Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal override global::Android.View.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
@@ -1770,9 +1770,9 @@ namespace Android.Widget
 				/// getSelectedView
 				/// </java-name>
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetSelectedView() /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetSelectedView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -1835,7 +1835,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getSelectedView
 				/// </java-name>
-				public global::Android.View.View SelectedView
+				public global::Android.Views.View SelectedView
 				{
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetSelectedView(); }
@@ -1867,7 +1867,7 @@ namespace Android.Widget
 		/// android/widget/AdapterView
 		/// </java-name>
 		[Dot42.DexImport("android/widget/AdapterView", AccessFlags = 1057, Signature = "<T::Landroid/widget/Adapter;>Landroid/view/ViewGroup;")]
-		public abstract partial class AdapterView<T> : global::Android.View.ViewGroup
+		public abstract partial class AdapterView<T> : global::Android.Views.ViewGroup
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1926,7 +1926,7 @@ namespace Android.Widget
 				/// performItemClick
 				/// </java-name>
 				[Dot42.DexImport("performItemClick", "(Landroid/view/View;IJ)Z", AccessFlags = 1)]
-				public virtual bool PerformItemClick(global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				public virtual bool PerformItemClick(global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1981,7 +1981,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1989,7 +1989,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;I)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1997,7 +1997,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2005,7 +2005,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2013,7 +2013,7 @@ namespace Android.Widget
 				/// removeView
 				/// </java-name>
 				[Dot42.DexImport("removeView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void RemoveView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void RemoveView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2063,7 +2063,7 @@ namespace Android.Widget
 				/// getSelectedView
 				/// </java-name>
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1025)]
-				public abstract global::Android.View.View GetSelectedView() /* MethodBuilder.Create */ ;
+				public abstract global::Android.Views.View GetSelectedView() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getSelectedItem
@@ -2087,7 +2087,7 @@ namespace Android.Widget
 				/// getPositionForView
 				/// </java-name>
 				[Dot42.DexImport("getPositionForView", "(Landroid/view/View;)I", AccessFlags = 1)]
-				public virtual int GetPositionForView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual int GetPositionForView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2120,7 +2120,7 @@ namespace Android.Widget
 				/// setEmptyView
 				/// </java-name>
 				[Dot42.DexImport("setEmptyView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetEmptyView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetEmptyView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2128,9 +2128,9 @@ namespace Android.Widget
 				/// getEmptyView
 				/// </java-name>
 				[Dot42.DexImport("getEmptyView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetEmptyView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetEmptyView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -2171,7 +2171,7 @@ namespace Android.Widget
 				/// setOnClickListener
 				/// </java-name>
 				[Dot42.DexImport("setOnClickListener", "(Landroid/view/View$OnClickListener;)V", AccessFlags = 1)]
-				public override void SetOnClickListener(global::Android.View.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
+				public override void SetOnClickListener(global::Android.Views.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2203,7 +2203,7 @@ namespace Android.Widget
 				/// dispatchPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2212,7 +2212,7 @@ namespace Android.Widget
 				/// onRequestSendAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onRequestSendAccessibilityEvent", "(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public override bool OnRequestSendAccessibilityEvent(global::Android.View.View view, global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override bool OnRequestSendAccessibilityEvent(global::Android.Views.View view, global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2221,7 +2221,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityNodeInfo
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityNodeInfo", "(Landroid/view/accessibility/AccessibilityNodeInfo;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityNodeInfo(global::Android.View.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityNodeInfo(global::Android.Views.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2229,7 +2229,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2312,7 +2312,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getSelectedView
 				/// </java-name>
-				public global::Android.View.View SelectedView
+				public global::Android.Views.View SelectedView
 				{
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1025)]
 						get{ return GetSelectedView(); }
@@ -2357,7 +2357,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getEmptyView
 				/// </java-name>
-				public global::Android.View.View EmptyView
+				public global::Android.Views.View EmptyView
 				{
 				[Dot42.DexImport("getEmptyView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetEmptyView(); }
@@ -2369,14 +2369,14 @@ namespace Android.Widget
 				/// android/widget/AdapterView$AdapterContextMenuInfo
 				/// </java-name>
 				[Dot42.DexImport("android/widget/AdapterView$AdapterContextMenuInfo", AccessFlags = 9)]
-				public partial class AdapterContextMenuInfo : global::Android.View.IContextMenu_IContextMenuInfo
+				public partial class AdapterContextMenuInfo : global::Android.Views.IContextMenu_IContextMenuInfo
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
 						/// targetView
 						/// </java-name>
 						[Dot42.DexImport("targetView", "Landroid/view/View;", AccessFlags = 1)]
-						public global::Android.View.View TargetView;
+						public global::Android.Views.View TargetView;
 						/// <java-name>
 						/// position
 						/// </java-name>
@@ -2388,7 +2388,7 @@ namespace Android.Widget
 						[Dot42.DexImport("id", "J", AccessFlags = 1)]
 						public long Id;
 						[Dot42.DexImport("<init>", "(Landroid/view/View;IJ)V", AccessFlags = 1)]
-						public AdapterContextMenuInfo(global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+						public AdapterContextMenuInfo(global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -2410,7 +2410,7 @@ namespace Android.Widget
 						/// onItemSelected
 						/// </java-name>
 						[Dot42.DexImport("onItemSelected", "(Landroid/widget/AdapterView;Landroid/view/View;IJ)V", AccessFlags = 1025, Signature = "(Landroid/widget/AdapterView<*>;Landroid/view/View;IJ)V")]
-						void OnItemSelected(global::Android.Widget.AdapterView<object> adapterView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ ;
+						void OnItemSelected(global::Android.Widget.AdapterView<object> adapterView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onNothingSelected
@@ -2431,7 +2431,7 @@ namespace Android.Widget
 						/// onItemLongClick
 						/// </java-name>
 						[Dot42.DexImport("onItemLongClick", "(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z", AccessFlags = 1025, Signature = "(Landroid/widget/AdapterView<*>;Landroid/view/View;IJ)Z")]
-						bool OnItemLongClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ ;
+						bool OnItemLongClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -2446,7 +2446,7 @@ namespace Android.Widget
 						/// onItemClick
 						/// </java-name>
 						[Dot42.DexImport("onItemClick", "(Landroid/widget/AdapterView;Landroid/view/View;IJ)V", AccessFlags = 1025, Signature = "(Landroid/widget/AdapterView<*>;Landroid/view/View;IJ)V")]
-						void OnItemClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ ;
+						void OnItemClick(global::Android.Widget.AdapterView<object> adapterView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -2511,7 +2511,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2553,9 +2553,9 @@ namespace Android.Widget
 				/// getCurrentView
 				/// </java-name>
 				[Dot42.DexImport("getCurrentView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetCurrentView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetCurrentView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -2662,9 +2662,9 @@ namespace Android.Widget
 				/// getSelectedView
 				/// </java-name>
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetSelectedView() /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetSelectedView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -2727,7 +2727,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getCurrentView
 				/// </java-name>
-				public global::Android.View.View CurrentView
+				public global::Android.Views.View CurrentView
 				{
 				[Dot42.DexImport("getCurrentView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetCurrentView(); }
@@ -2778,7 +2778,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getSelectedView
 				/// </java-name>
-				public global::Android.View.View SelectedView
+				public global::Android.Views.View SelectedView
 				{
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetSelectedView(); }
@@ -3023,7 +3023,7 @@ namespace Android.Widget
 		/// android/widget/AnalogClock
 		/// </java-name>
 		[Dot42.DexImport("android/widget/AnalogClock", AccessFlags = 33)]
-		public partial class AnalogClock : global::Android.View.View
+		public partial class AnalogClock : global::Android.Views.View
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -3246,9 +3246,9 @@ namespace Android.Widget
 				/// getView
 				/// </java-name>
 				[Dot42.DexImport("getView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -3263,9 +3263,9 @@ namespace Android.Widget
 				/// getDropDownView
 				/// </java-name>
 				[Dot42.DexImport("getDropDownView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetDropDownView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetDropDownView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -3347,7 +3347,7 @@ namespace Android.Widget
 				/// setOnClickListener
 				/// </java-name>
 				[Dot42.DexImport("setOnClickListener", "(Landroid/view/View$OnClickListener;)V", AccessFlags = 1)]
-				public override void SetOnClickListener(global::Android.View.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
+				public override void SetOnClickListener(global::Android.Views.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3559,7 +3559,7 @@ namespace Android.Widget
 				/// onKeyPreIme
 				/// </java-name>
 				[Dot42.DexImport("onKeyPreIme", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyPreIme(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyPreIme(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3568,7 +3568,7 @@ namespace Android.Widget
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3577,7 +3577,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3654,7 +3654,7 @@ namespace Android.Widget
 				/// onCommitCompletion
 				/// </java-name>
 				[Dot42.DexImport("onCommitCompletion", "(Landroid/view/inputmethod/CompletionInfo;)V", AccessFlags = 1)]
-				public override void OnCommitCompletion(global::Android.View.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ 
+				public override void OnCommitCompletion(global::Android.Views.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4040,9 +4040,9 @@ namespace Android.Widget
 				/// getDropDownView
 				/// </java-name>
 				[Dot42.DexImport("getDropDownView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetDropDownView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetDropDownView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -4091,9 +4091,9 @@ namespace Android.Widget
 				}
 
 				[Dot42.DexImport("android/widget/Adapter", "getView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1025)]
-				public virtual global::Android.View.View GetView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual global::Android.Views.View GetView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -4288,15 +4288,15 @@ namespace Android.Widget
 				}
 
 				[Dot42.DexImport("android/widget/ExpandableListAdapter", "getGroupView", "(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1025)]
-				public virtual global::Android.View.View GetGroupView(int int32, bool boolean, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual global::Android.Views.View GetGroupView(int int32, bool boolean, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				[Dot42.DexImport("android/widget/ExpandableListAdapter", "getChildView", "(IIZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1025)]
-				public virtual global::Android.View.View GetChildView(int int32, int int321, bool boolean, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual global::Android.Views.View GetChildView(int int32, int int321, bool boolean, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				[Dot42.DexImport("android/widget/ExpandableListAdapter", "isChildSelectable", "(II)Z", AccessFlags = 1025)]
@@ -4611,7 +4611,7 @@ namespace Android.Widget
 				/// onPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4722,7 +4722,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4730,7 +4730,7 @@ namespace Android.Widget
 				/// onPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4738,7 +4738,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityNodeInfo
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityNodeInfo", "(Landroid/view/accessibility/AccessibilityNodeInfo;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityNodeInfo(global::Android.View.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityNodeInfo(global::Android.Views.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4993,7 +4993,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5001,7 +5001,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityNodeInfo
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityNodeInfo", "(Landroid/view/accessibility/AccessibilityNodeInfo;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityNodeInfo(global::Android.View.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityNodeInfo(global::Android.Views.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5175,18 +5175,18 @@ namespace Android.Widget
 				/// getView
 				/// </java-name>
 				[Dot42.DexImport("getView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// getDropDownView
 				/// </java-name>
 				[Dot42.DexImport("getDropDownView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetDropDownView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetDropDownView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -5194,23 +5194,23 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("newView", "(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landr" +
     "oid/view/View;", AccessFlags = 1025)]
-				public abstract global::Android.View.View NewView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Views.View NewView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// newDropDownView
 				/// </java-name>
 				[Dot42.DexImport("newDropDownView", "(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landr" +
     "oid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View NewDropDownView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View NewDropDownView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// bindView
 				/// </java-name>
 				[Dot42.DexImport("bindView", "(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V", AccessFlags = 1025)]
-				public abstract void BindView(global::Android.View.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor) /* MethodBuilder.Create */ ;
+				public abstract void BindView(global::Android.Views.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// changeCursor
@@ -5423,9 +5423,9 @@ namespace Android.Widget
 				/// getGroupView
 				/// </java-name>
 				[Dot42.DexImport("getGroupView", "(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetGroupView(int int32, bool boolean, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetGroupView(int int32, bool boolean, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -5433,21 +5433,21 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("newGroupView", "(Landroid/content/Context;Landroid/database/Cursor;ZLandroid/view/ViewGroup;)Land" +
     "roid/view/View;", AccessFlags = 1028)]
-				protected internal abstract global::Android.View.View NewGroupView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
+				protected internal abstract global::Android.Views.View NewGroupView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// bindGroupView
 				/// </java-name>
 				[Dot42.DexImport("bindGroupView", "(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;Z)V", AccessFlags = 1028)]
-				protected internal abstract void BindGroupView(global::Android.View.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean) /* MethodBuilder.Create */ ;
+				protected internal abstract void BindGroupView(global::Android.Views.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getChildView
 				/// </java-name>
 				[Dot42.DexImport("getChildView", "(IIZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetChildView(int int32, int int321, bool boolean, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetChildView(int int32, int int321, bool boolean, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -5455,13 +5455,13 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("newChildView", "(Landroid/content/Context;Landroid/database/Cursor;ZLandroid/view/ViewGroup;)Land" +
     "roid/view/View;", AccessFlags = 1028)]
-				protected internal abstract global::Android.View.View NewChildView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
+				protected internal abstract global::Android.Views.View NewChildView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// bindChildView
 				/// </java-name>
 				[Dot42.DexImport("bindChildView", "(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;Z)V", AccessFlags = 1028)]
-				protected internal abstract void BindChildView(global::Android.View.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean) /* MethodBuilder.Create */ ;
+				protected internal abstract void BindChildView(global::Android.Views.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// isChildSelectable
@@ -5696,7 +5696,7 @@ namespace Android.Widget
 				/// dispatchPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5705,7 +5705,7 @@ namespace Android.Widget
 				/// onPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6001,7 +6001,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -6010,7 +6010,7 @@ namespace Android.Widget
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -6517,7 +6517,7 @@ namespace Android.Widget
 				/// performItemClick
 				/// </java-name>
 				[Dot42.DexImport("performItemClick", "(Landroid/view/View;IJ)Z", AccessFlags = 1)]
-				public override bool PerformItemClick(global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				public override bool PerformItemClick(global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -6784,14 +6784,14 @@ namespace Android.Widget
 				/// android/widget/ExpandableListView$ExpandableListContextMenuInfo
 				/// </java-name>
 				[Dot42.DexImport("android/widget/ExpandableListView$ExpandableListContextMenuInfo", AccessFlags = 9)]
-				public partial class ExpandableListContextMenuInfo : global::Android.View.IContextMenu_IContextMenuInfo
+				public partial class ExpandableListContextMenuInfo : global::Android.Views.IContextMenu_IContextMenuInfo
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
 						/// targetView
 						/// </java-name>
 						[Dot42.DexImport("targetView", "Landroid/view/View;", AccessFlags = 1)]
-						public global::Android.View.View TargetView;
+						public global::Android.Views.View TargetView;
 						/// <java-name>
 						/// packedPosition
 						/// </java-name>
@@ -6803,7 +6803,7 @@ namespace Android.Widget
 						[Dot42.DexImport("id", "J", AccessFlags = 1)]
 						public long Id;
 						[Dot42.DexImport("<init>", "(Landroid/view/View;JJ)V", AccessFlags = 1)]
-						public ExpandableListContextMenuInfo(global::Android.View.View view, long int64, long int641) /* MethodBuilder.Create */ 
+						public ExpandableListContextMenuInfo(global::Android.Views.View view, long int64, long int641) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -6825,7 +6825,7 @@ namespace Android.Widget
 						/// onChildClick
 						/// </java-name>
 						[Dot42.DexImport("onChildClick", "(Landroid/widget/ExpandableListView;Landroid/view/View;IIJ)Z", AccessFlags = 1025)]
-						bool OnChildClick(global::Android.Widget.ExpandableListView expandableListView, global::Android.View.View view, int int32, int int321, long int64) /* MethodBuilder.Create */ ;
+						bool OnChildClick(global::Android.Widget.ExpandableListView expandableListView, global::Android.Views.View view, int int32, int int321, long int64) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -6840,7 +6840,7 @@ namespace Android.Widget
 						/// onGroupClick
 						/// </java-name>
 						[Dot42.DexImport("onGroupClick", "(Landroid/widget/ExpandableListView;Landroid/view/View;IJ)Z", AccessFlags = 1025)]
-						bool OnGroupClick(global::Android.Widget.ExpandableListView expandableListView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ ;
+						bool OnGroupClick(global::Android.Widget.ExpandableListView expandableListView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -6970,7 +6970,7 @@ namespace Android.Widget
 		/// android/widget/FrameLayout
 		/// </java-name>
 		[Dot42.DexImport("android/widget/FrameLayout", AccessFlags = 33)]
-		public partial class FrameLayout : global::Android.View.ViewGroup
+		public partial class FrameLayout : global::Android.Views.ViewGroup
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -7136,7 +7136,7 @@ namespace Android.Widget
 				/// checkLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal override bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override bool CheckLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7145,9 +7145,9 @@ namespace Android.Widget
 				/// generateLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal override global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -7190,7 +7190,7 @@ namespace Android.Widget
 				/// android/widget/FrameLayout$LayoutParams
 				/// </java-name>
 				[Dot42.DexImport("android/widget/FrameLayout$LayoutParams", AccessFlags = 9)]
-				public partial class LayoutParams : global::Android.View.ViewGroup.MarginLayoutParams
+				public partial class LayoutParams : global::Android.Views.ViewGroup.MarginLayoutParams
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -7214,12 +7214,12 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$MarginLayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -7236,7 +7236,7 @@ namespace Android.Widget
 		/// android/widget/Gallery
 		/// </java-name>
 		[Dot42.DexImport("android/widget/Gallery", AccessFlags = 33)]
-		public partial class Gallery : global::Android.Widget.AbsSpinner, global::Android.View.GestureDetector.IOnGestureListener
+		public partial class Gallery : global::Android.Widget.AbsSpinner, global::Android.Views.GestureDetector.IOnGestureListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -7290,7 +7290,7 @@ namespace Android.Widget
 				/// getChildStaticTransformation
 				/// </java-name>
 				[Dot42.DexImport("getChildStaticTransformation", "(Landroid/view/View;Landroid/view/animation/Transformation;)Z", AccessFlags = 4)]
-				protected internal override bool GetChildStaticTransformation(global::Android.View.View view, global::Android.View.Animation.Transformation transformation) /* MethodBuilder.Create */ 
+				protected internal override bool GetChildStaticTransformation(global::Android.Views.View view, global::Android.Views.Animation.Transformation transformation) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7326,7 +7326,7 @@ namespace Android.Widget
 				/// checkLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal override bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override bool CheckLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7335,27 +7335,27 @@ namespace Android.Widget
 				/// generateLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal override global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
 				/// generateLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 1)]
-				public override global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				public override global::Android.Views.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
 				/// generateDefaultLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateDefaultLayoutParams", "()Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal override global::Android.View.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
@@ -7370,7 +7370,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7379,7 +7379,7 @@ namespace Android.Widget
 				/// onSingleTapUp
 				/// </java-name>
 				[Dot42.DexImport("onSingleTapUp", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnSingleTapUp(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnSingleTapUp(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7388,7 +7388,7 @@ namespace Android.Widget
 				/// onFling
 				/// </java-name>
 				[Dot42.DexImport("onFling", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1)]
-				public virtual bool OnFling(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ 
+				public virtual bool OnFling(global::Android.Views.MotionEvent motionEvent, global::Android.Views.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7397,7 +7397,7 @@ namespace Android.Widget
 				/// onScroll
 				/// </java-name>
 				[Dot42.DexImport("onScroll", "(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z", AccessFlags = 1)]
-				public virtual bool OnScroll(global::Android.View.MotionEvent motionEvent, global::Android.View.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ 
+				public virtual bool OnScroll(global::Android.Views.MotionEvent motionEvent, global::Android.Views.MotionEvent motionEvent1, float single, float single1) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7406,7 +7406,7 @@ namespace Android.Widget
 				/// onDown
 				/// </java-name>
 				[Dot42.DexImport("onDown", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnDown(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnDown(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7415,7 +7415,7 @@ namespace Android.Widget
 				/// onLongPress
 				/// </java-name>
 				[Dot42.DexImport("onLongPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
-				public virtual void OnLongPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual void OnLongPress(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7423,7 +7423,7 @@ namespace Android.Widget
 				/// onShowPress
 				/// </java-name>
 				[Dot42.DexImport("onShowPress", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
-				public virtual void OnShowPress(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual void OnShowPress(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7447,16 +7447,16 @@ namespace Android.Widget
 				/// getContextMenuInfo
 				/// </java-name>
 				[Dot42.DexImport("getContextMenuInfo", "()Landroid/view/ContextMenu$ContextMenuInfo;", AccessFlags = 4)]
-				protected internal override global::Android.View.IContextMenu_IContextMenuInfo GetContextMenuInfo() /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.IContextMenu_IContextMenuInfo GetContextMenuInfo() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.IContextMenu_IContextMenuInfo);
+						return default(global::Android.Views.IContextMenu_IContextMenuInfo);
 				}
 
 				/// <java-name>
 				/// showContextMenuForChild
 				/// </java-name>
 				[Dot42.DexImport("showContextMenuForChild", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public override bool ShowContextMenuForChild(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override bool ShowContextMenuForChild(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7474,7 +7474,7 @@ namespace Android.Widget
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7483,7 +7483,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7492,7 +7492,7 @@ namespace Android.Widget
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7530,7 +7530,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getContextMenuInfo
 				/// </java-name>
-				protected internal global::Android.View.IContextMenu_IContextMenuInfo ContextMenuInfo
+				protected internal global::Android.Views.IContextMenu_IContextMenuInfo ContextMenuInfo
 				{
 				[Dot42.DexImport("getContextMenuInfo", "()Landroid/view/ContextMenu$ContextMenuInfo;", AccessFlags = 4)]
 						get{ return GetContextMenuInfo(); }
@@ -7540,7 +7540,7 @@ namespace Android.Widget
 				/// android/widget/Gallery$LayoutParams
 				/// </java-name>
 				[Dot42.DexImport("android/widget/Gallery$LayoutParams", AccessFlags = 9)]
-				public partial class LayoutParams : global::Android.View.ViewGroup.LayoutParams
+				public partial class LayoutParams : global::Android.Views.ViewGroup.LayoutParams
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -7554,7 +7554,7 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -7571,7 +7571,7 @@ namespace Android.Widget
 		/// android/widget/GridLayout
 		/// </java-name>
 		[Dot42.DexImport("android/widget/GridLayout", AccessFlags = 33)]
-		public partial class GridLayout : global::Android.View.ViewGroup
+		public partial class GridLayout : global::Android.Views.ViewGroup
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -7790,7 +7790,7 @@ namespace Android.Widget
 				/// generateLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/widget/GridLayout$LayoutParams;", AccessFlags = 4)]
-				protected internal new virtual global::Android.Widget.GridLayout.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal new virtual global::Android.Widget.GridLayout.LayoutParams GenerateLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Widget.GridLayout.LayoutParams);
 				}
@@ -7973,7 +7973,7 @@ namespace Android.Widget
 				/// android/widget/GridLayout$LayoutParams
 				/// </java-name>
 				[Dot42.DexImport("android/widget/GridLayout$LayoutParams", AccessFlags = 9)]
-				public partial class LayoutParams : global::Android.View.ViewGroup.MarginLayoutParams
+				public partial class LayoutParams : global::Android.Views.ViewGroup.MarginLayoutParams
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -7997,12 +7997,12 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$MarginLayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -8136,7 +8136,7 @@ namespace Android.Widget
 				/// attachLayoutAnimationParameters
 				/// </java-name>
 				[Dot42.DexImport("attachLayoutAnimationParameters", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;II)V", AccessFlags = 4)]
-				protected internal override void AttachLayoutAnimationParameters(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams, int int32, int int321) /* MethodBuilder.Create */ 
+				protected internal override void AttachLayoutAnimationParameters(global::Android.Views.View view, global::Android.Views.ViewGroup.LayoutParams layoutParams, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8160,7 +8160,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8169,7 +8169,7 @@ namespace Android.Widget
 				/// onKeyMultiple
 				/// </java-name>
 				[Dot42.DexImport("onKeyMultiple", "(IILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyMultiple(int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyMultiple(int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8178,7 +8178,7 @@ namespace Android.Widget
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8368,7 +8368,7 @@ namespace Android.Widget
 				/// removeHeader
 				/// </java-name>
 				[Dot42.DexImport("removeHeader", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public virtual bool RemoveHeader(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual bool RemoveHeader(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8377,7 +8377,7 @@ namespace Android.Widget
 				/// removeFooter
 				/// </java-name>
 				[Dot42.DexImport("removeFooter", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public virtual bool RemoveFooter(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual bool RemoveFooter(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8440,9 +8440,9 @@ namespace Android.Widget
 				/// getView
 				/// </java-name>
 				[Dot42.DexImport("getView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -8611,7 +8611,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8619,7 +8619,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;I)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8627,7 +8627,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8635,7 +8635,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8685,7 +8685,7 @@ namespace Android.Widget
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8694,7 +8694,7 @@ namespace Android.Widget
 				/// executeKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("executeKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool ExecuteKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool ExecuteKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8711,7 +8711,7 @@ namespace Android.Widget
 				/// onInterceptTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onInterceptTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnInterceptTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnInterceptTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8720,7 +8720,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8729,7 +8729,7 @@ namespace Android.Widget
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -8755,7 +8755,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityNodeInfo
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityNodeInfo", "(Landroid/view/accessibility/AccessibilityNodeInfo;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityNodeInfo(global::Android.View.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityNodeInfo(global::Android.Views.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8763,7 +8763,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8832,7 +8832,7 @@ namespace Android.Widget
 				/// measureChild
 				/// </java-name>
 				[Dot42.DexImport("measureChild", "(Landroid/view/View;II)V", AccessFlags = 4)]
-				protected internal override void MeasureChild(global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				protected internal override void MeasureChild(global::Android.Views.View view, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8840,7 +8840,7 @@ namespace Android.Widget
 				/// measureChildWithMargins
 				/// </java-name>
 				[Dot42.DexImport("measureChildWithMargins", "(Landroid/view/View;IIII)V", AccessFlags = 4)]
-				protected internal override void MeasureChildWithMargins(global::Android.View.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				protected internal override void MeasureChildWithMargins(global::Android.Views.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8865,7 +8865,7 @@ namespace Android.Widget
 				/// requestChildFocus
 				/// </java-name>
 				[Dot42.DexImport("requestChildFocus", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1)]
-				public override void RequestChildFocus(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public override void RequestChildFocus(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8882,7 +8882,7 @@ namespace Android.Widget
 				/// requestChildRectangleOnScreen
 				/// </java-name>
 				[Dot42.DexImport("requestChildRectangleOnScreen", "(Landroid/view/View;Landroid/graphics/Rect;Z)Z", AccessFlags = 1)]
-				public override bool RequestChildRectangleOnScreen(global::Android.View.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
+				public override bool RequestChildRectangleOnScreen(global::Android.Views.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -9024,7 +9024,7 @@ namespace Android.Widget
 				/// getView
 				/// </java-name>
 				[Dot42.DexImport("getView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1025)]
-				global::Android.View.View GetView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
+				global::Android.Views.View GetView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getItemViewType
@@ -9157,13 +9157,13 @@ namespace Android.Widget
 				/// getGroupView
 				/// </java-name>
 				[Dot42.DexImport("getGroupView", "(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1025)]
-				global::Android.View.View GetGroupView(int int32, bool boolean, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
+				global::Android.Views.View GetGroupView(int int32, bool boolean, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getChildView
 				/// </java-name>
 				[Dot42.DexImport("getChildView", "(IIZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1025)]
-				global::Android.View.View GetChildView(int int32, int int321, bool boolean, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
+				global::Android.Views.View GetChildView(int int32, int int321, bool boolean, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// isChildSelectable
@@ -9383,7 +9383,7 @@ namespace Android.Widget
 		/// android/widget/ImageView
 		/// </java-name>
 		[Dot42.DexImport("android/widget/ImageView", AccessFlags = 33)]
-		public partial class ImageView : global::Android.View.View
+		public partial class ImageView : global::Android.Views.View
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -9439,7 +9439,7 @@ namespace Android.Widget
 				/// onPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9862,7 +9862,7 @@ namespace Android.Widget
 				/// getDropDownView
 				/// </java-name>
 				[Dot42.DexImport("getDropDownView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1025)]
-				global::Android.View.View GetDropDownView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
+				global::Android.Views.View GetDropDownView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -9885,7 +9885,7 @@ namespace Android.Widget
 		/// android/widget/LinearLayout
 		/// </java-name>
 		[Dot42.DexImport("android/widget/LinearLayout", AccessFlags = 33)]
-		public partial class LinearLayout : global::Android.View.ViewGroup
+		public partial class LinearLayout : global::Android.Views.ViewGroup
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -10149,7 +10149,7 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/widget/LinearLayout$LayoutParams;" +
     "", AccessFlags = 4)]
-				protected internal new virtual global::Android.Widget.LinearLayout.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal new virtual global::Android.Widget.LinearLayout.LayoutParams GenerateLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Widget.LinearLayout.LayoutParams);
 				}
@@ -10158,7 +10158,7 @@ namespace Android.Widget
 				/// checkLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal override bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override bool CheckLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -10236,7 +10236,7 @@ namespace Android.Widget
 				/// android/widget/LinearLayout$LayoutParams
 				/// </java-name>
 				[Dot42.DexImport("android/widget/LinearLayout$LayoutParams", AccessFlags = 9)]
-				public partial class LayoutParams : global::Android.View.ViewGroup.MarginLayoutParams
+				public partial class LayoutParams : global::Android.Views.ViewGroup.MarginLayoutParams
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -10265,12 +10265,12 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$MarginLayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -10459,16 +10459,16 @@ namespace Android.Widget
 				/// getAnchorView
 				/// </java-name>
 				[Dot42.DexImport("getAnchorView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetAnchorView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetAnchorView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// setAnchorView
 				/// </java-name>
 				[Dot42.DexImport("setAnchorView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetAnchorView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetAnchorView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10568,7 +10568,7 @@ namespace Android.Widget
 				/// setPromptView
 				/// </java-name>
 				[Dot42.DexImport("setPromptView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetPromptView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetPromptView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10695,9 +10695,9 @@ namespace Android.Widget
 				/// getSelectedView
 				/// </java-name>
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetSelectedView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetSelectedView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -10713,7 +10713,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -10722,7 +10722,7 @@ namespace Android.Widget
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -10731,7 +10731,7 @@ namespace Android.Widget
 				/// onKeyPreIme
 				/// </java-name>
 				[Dot42.DexImport("onKeyPreIme", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyPreIme(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyPreIme(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -10786,7 +10786,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getAnchorView
 				/// </java-name>
-				public global::Android.View.View AnchorView
+				public global::Android.Views.View AnchorView
 				{
 				[Dot42.DexImport("getAnchorView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetAnchorView(); }
@@ -10879,7 +10879,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getSelectedView
 				/// </java-name>
-				public global::Android.View.View SelectedView
+				public global::Android.Views.View SelectedView
 				{
 				[Dot42.DexImport("getSelectedView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetSelectedView(); }
@@ -10931,7 +10931,7 @@ namespace Android.Widget
 				/// addHeaderView
 				/// </java-name>
 				[Dot42.DexImport("addHeaderView", "(Landroid/view/View;Ljava/lang/Object;Z)V", AccessFlags = 1)]
-				public virtual void AddHeaderView(global::Android.View.View view, object @object, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void AddHeaderView(global::Android.Views.View view, object @object, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10939,7 +10939,7 @@ namespace Android.Widget
 				/// addHeaderView
 				/// </java-name>
 				[Dot42.DexImport("addHeaderView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void AddHeaderView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void AddHeaderView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10956,7 +10956,7 @@ namespace Android.Widget
 				/// removeHeaderView
 				/// </java-name>
 				[Dot42.DexImport("removeHeaderView", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public virtual bool RemoveHeaderView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual bool RemoveHeaderView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -10965,7 +10965,7 @@ namespace Android.Widget
 				/// addFooterView
 				/// </java-name>
 				[Dot42.DexImport("addFooterView", "(Landroid/view/View;Ljava/lang/Object;Z)V", AccessFlags = 1)]
-				public virtual void AddFooterView(global::Android.View.View view, object @object, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void AddFooterView(global::Android.Views.View view, object @object, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10973,7 +10973,7 @@ namespace Android.Widget
 				/// addFooterView
 				/// </java-name>
 				[Dot42.DexImport("addFooterView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void AddFooterView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void AddFooterView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10990,7 +10990,7 @@ namespace Android.Widget
 				/// removeFooterView
 				/// </java-name>
 				[Dot42.DexImport("removeFooterView", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public virtual bool RemoveFooterView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual bool RemoveFooterView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11024,7 +11024,7 @@ namespace Android.Widget
 				/// requestChildRectangleOnScreen
 				/// </java-name>
 				[Dot42.DexImport("requestChildRectangleOnScreen", "(Landroid/view/View;Landroid/graphics/Rect;Z)Z", AccessFlags = 1)]
-				public override bool RequestChildRectangleOnScreen(global::Android.View.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
+				public override bool RequestChildRectangleOnScreen(global::Android.Views.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11106,7 +11106,7 @@ namespace Android.Widget
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11115,7 +11115,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11124,7 +11124,7 @@ namespace Android.Widget
 				/// onKeyMultiple
 				/// </java-name>
 				[Dot42.DexImport("onKeyMultiple", "(IILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyMultiple(int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyMultiple(int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11133,7 +11133,7 @@ namespace Android.Widget
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11184,7 +11184,7 @@ namespace Android.Widget
 				/// drawChild
 				/// </java-name>
 				[Dot42.DexImport("drawChild", "(Landroid/graphics/Canvas;Landroid/view/View;J)Z", AccessFlags = 4)]
-				protected internal override bool DrawChild(global::Android.Graphics.Canvas canvas, global::Android.View.View view, long int64) /* MethodBuilder.Create */ 
+				protected internal override bool DrawChild(global::Android.Graphics.Canvas canvas, global::Android.Views.View view, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11293,18 +11293,18 @@ namespace Android.Widget
 				/// findViewTraversal
 				/// </java-name>
 				[Dot42.DexImport("findViewTraversal", "(I)Landroid/view/View;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.View FindViewTraversal(int int32) /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.Views.View FindViewTraversal(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// findViewWithTagTraversal
 				/// </java-name>
 				[Dot42.DexImport("findViewWithTagTraversal", "(Ljava/lang/Object;)Landroid/view/View;", AccessFlags = 4)]
-				protected internal virtual global::Android.View.View FindViewWithTagTraversal(object @object) /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.Views.View FindViewWithTagTraversal(object @object) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -11434,7 +11434,7 @@ namespace Android.Widget
 						/// view
 						/// </java-name>
 						[Dot42.DexImport("view", "Landroid/view/View;", AccessFlags = 1)]
-						public global::Android.View.View View;
+						public global::Android.Views.View View;
 						/// <java-name>
 						/// data
 						/// </java-name>
@@ -11506,7 +11506,7 @@ namespace Android.Widget
 				/// setAnchorView
 				/// </java-name>
 				[Dot42.DexImport("setAnchorView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetAnchorView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetAnchorView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11547,7 +11547,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11556,7 +11556,7 @@ namespace Android.Widget
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11565,7 +11565,7 @@ namespace Android.Widget
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11582,7 +11582,7 @@ namespace Android.Widget
 				/// setPrevNextListeners
 				/// </java-name>
 				[Dot42.DexImport("setPrevNextListeners", "(Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V", AccessFlags = 1)]
-				public virtual void SetPrevNextListeners(global::Android.View.View.IOnClickListener onClickListener, global::Android.View.View.IOnClickListener onClickListener1) /* MethodBuilder.Create */ 
+				public virtual void SetPrevNextListeners(global::Android.Views.View.IOnClickListener onClickListener, global::Android.Views.View.IOnClickListener onClickListener1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11850,7 +11850,7 @@ namespace Android.Widget
 				/// onInterceptTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onInterceptTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnInterceptTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnInterceptTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11859,7 +11859,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11868,7 +11868,7 @@ namespace Android.Widget
 				/// dispatchTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11877,7 +11877,7 @@ namespace Android.Widget
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -11886,7 +11886,7 @@ namespace Android.Widget
 				/// dispatchTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -12278,17 +12278,17 @@ namespace Android.Widget
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/animation/Interpolator;)V", AccessFlags = 1)]
-				public OverScroller(global::Android.Content.Context context, global::Android.View.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
+				public OverScroller(global::Android.Content.Context context, global::Android.Views.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/animation/Interpolator;FF)V", AccessFlags = 1)]
-				public OverScroller(global::Android.Content.Context context, global::Android.View.Animation.IInterpolator interpolator, float single, float single1) /* MethodBuilder.Create */ 
+				public OverScroller(global::Android.Content.Context context, global::Android.Views.Animation.IInterpolator interpolator, float single, float single1) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/animation/Interpolator;FFZ)V", AccessFlags = 1)]
-				public OverScroller(global::Android.Content.Context context, global::Android.View.Animation.IInterpolator interpolator, float single, float single1, bool boolean) /* MethodBuilder.Create */ 
+				public OverScroller(global::Android.Content.Context context, global::Android.Views.Animation.IInterpolator interpolator, float single, float single1, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12541,7 +12541,7 @@ namespace Android.Widget
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/View;)V", AccessFlags = 1)]
-				public PopupMenu(global::Android.Content.Context context, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public PopupMenu(global::Android.Content.Context context, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12549,18 +12549,18 @@ namespace Android.Widget
 				/// getMenu
 				/// </java-name>
 				[Dot42.DexImport("getMenu", "()Landroid/view/Menu;", AccessFlags = 1)]
-				public virtual global::Android.View.IMenu GetMenu() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.IMenu GetMenu() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.IMenu);
+						return default(global::Android.Views.IMenu);
 				}
 
 				/// <java-name>
 				/// getMenuInflater
 				/// </java-name>
 				[Dot42.DexImport("getMenuInflater", "()Landroid/view/MenuInflater;", AccessFlags = 1)]
-				public virtual global::Android.View.MenuInflater GetMenuInflater() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.MenuInflater GetMenuInflater() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.MenuInflater);
+						return default(global::Android.Views.MenuInflater);
 				}
 
 				/// <java-name>
@@ -12611,7 +12611,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getMenu
 				/// </java-name>
-				public global::Android.View.IMenu Menu
+				public global::Android.Views.IMenu Menu
 				{
 				[Dot42.DexImport("getMenu", "()Landroid/view/Menu;", AccessFlags = 1)]
 						get{ return GetMenu(); }
@@ -12620,7 +12620,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getMenuInflater
 				/// </java-name>
-				public global::Android.View.MenuInflater MenuInflater
+				public global::Android.Views.MenuInflater MenuInflater
 				{
 				[Dot42.DexImport("getMenuInflater", "()Landroid/view/MenuInflater;", AccessFlags = 1)]
 						get{ return GetMenuInflater(); }
@@ -12637,7 +12637,7 @@ namespace Android.Widget
 						/// onMenuItemClick
 						/// </java-name>
 						[Dot42.DexImport("onMenuItemClick", "(Landroid/view/MenuItem;)Z", AccessFlags = 1025)]
-						bool OnMenuItemClick(global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ ;
+						bool OnMenuItemClick(global::Android.Views.IMenuItem menuItem) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -12706,7 +12706,7 @@ namespace Android.Widget
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public PopupWindow(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public PopupWindow(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12716,12 +12716,12 @@ namespace Android.Widget
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/view/View;II)V", AccessFlags = 1)]
-				public PopupWindow(global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				public PopupWindow(global::Android.Views.View view, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/view/View;IIZ)V", AccessFlags = 1)]
-				public PopupWindow(global::Android.View.View view, int int32, int int321, bool boolean) /* MethodBuilder.Create */ 
+				public PopupWindow(global::Android.Views.View view, int int32, int int321, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12771,16 +12771,16 @@ namespace Android.Widget
 				/// getContentView
 				/// </java-name>
 				[Dot42.DexImport("getContentView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetContentView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetContentView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// setContentView
 				/// </java-name>
 				[Dot42.DexImport("setContentView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetContentView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetContentView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12788,7 +12788,7 @@ namespace Android.Widget
 				/// setTouchInterceptor
 				/// </java-name>
 				[Dot42.DexImport("setTouchInterceptor", "(Landroid/view/View$OnTouchListener;)V", AccessFlags = 1)]
-				public virtual void SetTouchInterceptor(global::Android.View.View.IOnTouchListener onTouchListener) /* MethodBuilder.Create */ 
+				public virtual void SetTouchInterceptor(global::Android.Views.View.IOnTouchListener onTouchListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12966,7 +12966,7 @@ namespace Android.Widget
 				/// showAtLocation
 				/// </java-name>
 				[Dot42.DexImport("showAtLocation", "(Landroid/view/View;III)V", AccessFlags = 1)]
-				public virtual void ShowAtLocation(global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public virtual void ShowAtLocation(global::Android.Views.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12974,7 +12974,7 @@ namespace Android.Widget
 				/// showAsDropDown
 				/// </java-name>
 				[Dot42.DexImport("showAsDropDown", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void ShowAsDropDown(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void ShowAsDropDown(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12982,7 +12982,7 @@ namespace Android.Widget
 				/// showAsDropDown
 				/// </java-name>
 				[Dot42.DexImport("showAsDropDown", "(Landroid/view/View;II)V", AccessFlags = 1)]
-				public virtual void ShowAsDropDown(global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				public virtual void ShowAsDropDown(global::Android.Views.View view, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -12999,7 +12999,7 @@ namespace Android.Widget
 				/// getMaxAvailableHeight
 				/// </java-name>
 				[Dot42.DexImport("getMaxAvailableHeight", "(Landroid/view/View;)I", AccessFlags = 1)]
-				public virtual int GetMaxAvailableHeight(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual int GetMaxAvailableHeight(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -13008,7 +13008,7 @@ namespace Android.Widget
 				/// getMaxAvailableHeight
 				/// </java-name>
 				[Dot42.DexImport("getMaxAvailableHeight", "(Landroid/view/View;I)I", AccessFlags = 1)]
-				public virtual int GetMaxAvailableHeight(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public virtual int GetMaxAvailableHeight(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -13065,7 +13065,7 @@ namespace Android.Widget
 				/// update
 				/// </java-name>
 				[Dot42.DexImport("update", "(Landroid/view/View;II)V", AccessFlags = 1)]
-				public virtual void Update(global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				public virtual void Update(global::Android.Views.View view, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13073,7 +13073,7 @@ namespace Android.Widget
 				/// update
 				/// </java-name>
 				[Dot42.DexImport("update", "(Landroid/view/View;IIII)V", AccessFlags = 1)]
-				public virtual void Update(global::Android.View.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				public virtual void Update(global::Android.Views.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13100,7 +13100,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getContentView
 				/// </java-name>
-				public global::Android.View.View ContentView
+				public global::Android.Views.View ContentView
 				{
 				[Dot42.DexImport("getContentView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetContentView(); }
@@ -13173,7 +13173,7 @@ namespace Android.Widget
 		/// android/widget/ProgressBar
 		/// </java-name>
 		[Dot42.DexImport("android/widget/ProgressBar", AccessFlags = 33)]
-		public partial class ProgressBar : global::Android.View.View
+		public partial class ProgressBar : global::Android.Views.View
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -13346,7 +13346,7 @@ namespace Android.Widget
 				/// setInterpolator
 				/// </java-name>
 				[Dot42.DexImport("setInterpolator", "(Landroid/view/animation/Interpolator;)V", AccessFlags = 1)]
-				public virtual void SetInterpolator(global::Android.View.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
+				public virtual void SetInterpolator(global::Android.Views.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13354,9 +13354,9 @@ namespace Android.Widget
 				/// getInterpolator
 				/// </java-name>
 				[Dot42.DexImport("getInterpolator", "()Landroid/view/animation/Interpolator;", AccessFlags = 1)]
-				public virtual global::Android.View.Animation.IInterpolator GetInterpolator() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Animation.IInterpolator GetInterpolator() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.IInterpolator);
+						return default(global::Android.Views.Animation.IInterpolator);
 				}
 
 				/// <java-name>
@@ -13371,7 +13371,7 @@ namespace Android.Widget
 				/// onVisibilityChanged
 				/// </java-name>
 				[Dot42.DexImport("onVisibilityChanged", "(Landroid/view/View;I)V", AccessFlags = 4)]
-				protected internal override void OnVisibilityChanged(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				protected internal override void OnVisibilityChanged(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13452,7 +13452,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13519,7 +13519,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getInterpolator
 				/// </java-name>
-				public global::Android.View.Animation.IInterpolator Interpolator
+				public global::Android.Views.Animation.IInterpolator Interpolator
 				{
 				[Dot42.DexImport("getInterpolator", "()Landroid/view/animation/Interpolator;", AccessFlags = 1)]
 						get{ return GetInterpolator(); }
@@ -13533,7 +13533,7 @@ namespace Android.Widget
 		/// android/widget/QuickContactBadge
 		/// </java-name>
 		[Dot42.DexImport("android/widget/QuickContactBadge", AccessFlags = 33)]
-		public partial class QuickContactBadge : global::Android.Widget.ImageView, global::Android.View.View.IOnClickListener
+		public partial class QuickContactBadge : global::Android.Widget.ImageView, global::Android.Views.View.IOnClickListener
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -13616,7 +13616,7 @@ namespace Android.Widget
 				/// onClick
 				/// </java-name>
 				[Dot42.DexImport("onClick", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void OnClick(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void OnClick(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13669,7 +13669,7 @@ namespace Android.Widget
 				/// onPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13701,7 +13701,7 @@ namespace Android.Widget
 				/// setOnHierarchyChangeListener
 				/// </java-name>
 				[Dot42.DexImport("setOnHierarchyChangeListener", "(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V", AccessFlags = 1)]
-				public override void SetOnHierarchyChangeListener(global::Android.View.ViewGroup.IOnHierarchyChangeListener onHierarchyChangeListener) /* MethodBuilder.Create */ 
+				public override void SetOnHierarchyChangeListener(global::Android.Views.ViewGroup.IOnHierarchyChangeListener onHierarchyChangeListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13717,7 +13717,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13767,7 +13767,7 @@ namespace Android.Widget
 				/// checkLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal override bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override bool CheckLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -13833,12 +13833,12 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$MarginLayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -14052,7 +14052,7 @@ namespace Android.Widget
 		/// android/widget/RelativeLayout
 		/// </java-name>
 		[Dot42.DexImport("android/widget/RelativeLayout", AccessFlags = 33)]
-		public partial class RelativeLayout : global::Android.View.ViewGroup
+		public partial class RelativeLayout : global::Android.Views.ViewGroup
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -14242,16 +14242,16 @@ namespace Android.Widget
 				/// generateDefaultLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateDefaultLayoutParams", "()Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal override global::Android.View.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.ViewGroup.LayoutParams GenerateDefaultLayoutParams() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
 				/// checkLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal override bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override bool CheckLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -14260,16 +14260,16 @@ namespace Android.Widget
 				/// generateLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 4)]
-				protected internal override global::Android.View.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.ViewGroup.LayoutParams GenerateLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup.LayoutParams);
+						return default(global::Android.Views.ViewGroup.LayoutParams);
 				}
 
 				/// <java-name>
 				/// dispatchPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -14292,7 +14292,7 @@ namespace Android.Widget
 				/// android/widget/RelativeLayout$LayoutParams
 				/// </java-name>
 				[Dot42.DexImport("android/widget/RelativeLayout$LayoutParams", AccessFlags = 9)]
-				public partial class LayoutParams : global::Android.View.ViewGroup.MarginLayoutParams
+				public partial class LayoutParams : global::Android.Views.ViewGroup.MarginLayoutParams
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -14311,12 +14311,12 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$MarginLayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -14376,7 +14376,7 @@ namespace Android.Widget
 		/// android/widget/RemoteViews
 		/// </java-name>
 		[Dot42.DexImport("android/widget/RemoteViews", AccessFlags = 33)]
-		public partial class RemoteViews : global::Android.OS.IParcelable, global::Android.View.LayoutInflater.IFilter
+		public partial class RemoteViews : global::Android.OS.IParcelable, global::Android.Views.LayoutInflater.IFilter
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -14721,16 +14721,16 @@ namespace Android.Widget
 				/// apply
 				/// </java-name>
 				[Dot42.DexImport("apply", "(Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View Apply(global::Android.Content.Context context, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View Apply(global::Android.Content.Context context, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// reapply
 				/// </java-name>
 				[Dot42.DexImport("reapply", "(Landroid/content/Context;Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void Reapply(global::Android.Content.Context context, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void Reapply(global::Android.Content.Context context, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -14937,9 +14937,9 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("newView", "(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landr" +
     "oid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View NewView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View NewView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -14947,9 +14947,9 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("newDropDownView", "(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landr" +
     "oid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View NewDropDownView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View NewDropDownView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -15002,9 +15002,9 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("newChildView", "(Landroid/content/Context;Landroid/database/Cursor;ZLandroid/view/ViewGroup;)Land" +
     "roid/view/View;", AccessFlags = 1)]
-				protected internal override global::Android.View.View NewChildView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.View NewChildView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -15012,9 +15012,9 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("newGroupView", "(Landroid/content/Context;Landroid/database/Cursor;ZLandroid/view/ViewGroup;)Land" +
     "roid/view/View;", AccessFlags = 1)]
-				protected internal override global::Android.View.View NewGroupView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				protected internal override global::Android.Views.View NewGroupView(global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -15037,12 +15037,12 @@ namespace Android.Widget
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/animation/Interpolator;)V", AccessFlags = 1)]
-				public Scroller(global::Android.Content.Context context, global::Android.View.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
+				public Scroller(global::Android.Content.Context context, global::Android.Views.Animation.IInterpolator interpolator) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/view/animation/Interpolator;Z)V", AccessFlags = 1)]
-				public Scroller(global::Android.Content.Context context, global::Android.View.Animation.IInterpolator interpolator, bool boolean) /* MethodBuilder.Create */ 
+				public Scroller(global::Android.Content.Context context, global::Android.Views.Animation.IInterpolator interpolator, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15362,7 +15362,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15370,7 +15370,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;I)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15378,7 +15378,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15386,7 +15386,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15436,7 +15436,7 @@ namespace Android.Widget
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -15445,7 +15445,7 @@ namespace Android.Widget
 				/// executeKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("executeKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool ExecuteKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool ExecuteKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -15462,7 +15462,7 @@ namespace Android.Widget
 				/// onInterceptTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onInterceptTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnInterceptTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnInterceptTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -15471,7 +15471,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -15480,7 +15480,7 @@ namespace Android.Widget
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -15497,7 +15497,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityNodeInfo
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityNodeInfo", "(Landroid/view/accessibility/AccessibilityNodeInfo;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityNodeInfo(global::Android.View.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityNodeInfo(global::Android.Views.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15505,7 +15505,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15574,7 +15574,7 @@ namespace Android.Widget
 				/// measureChild
 				/// </java-name>
 				[Dot42.DexImport("measureChild", "(Landroid/view/View;II)V", AccessFlags = 4)]
-				protected internal override void MeasureChild(global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				protected internal override void MeasureChild(global::Android.Views.View view, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15582,7 +15582,7 @@ namespace Android.Widget
 				/// measureChildWithMargins
 				/// </java-name>
 				[Dot42.DexImport("measureChildWithMargins", "(Landroid/view/View;IIII)V", AccessFlags = 4)]
-				protected internal override void MeasureChildWithMargins(global::Android.View.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				protected internal override void MeasureChildWithMargins(global::Android.Views.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15607,7 +15607,7 @@ namespace Android.Widget
 				/// requestChildFocus
 				/// </java-name>
 				[Dot42.DexImport("requestChildFocus", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 1)]
-				public override void RequestChildFocus(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public override void RequestChildFocus(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15624,7 +15624,7 @@ namespace Android.Widget
 				/// requestChildRectangleOnScreen
 				/// </java-name>
 				[Dot42.DexImport("requestChildRectangleOnScreen", "(Landroid/view/View;Landroid/graphics/Rect;Z)Z", AccessFlags = 1)]
-				public override bool RequestChildRectangleOnScreen(global::Android.View.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
+				public override bool RequestChildRectangleOnScreen(global::Android.Views.View view, global::Android.Graphics.Rect rect, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -15731,7 +15731,7 @@ namespace Android.Widget
 		/// android/widget/SearchView
 		/// </java-name>
 		[Dot42.DexImport("android/widget/SearchView", AccessFlags = 33)]
-		public partial class SearchView : global::Android.Widget.LinearLayout, global::Android.View.ICollapsibleActionView
+		public partial class SearchView : global::Android.Widget.LinearLayout, global::Android.Views.ICollapsibleActionView
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -15788,7 +15788,7 @@ namespace Android.Widget
 				/// setOnQueryTextFocusChangeListener
 				/// </java-name>
 				[Dot42.DexImport("setOnQueryTextFocusChangeListener", "(Landroid/view/View$OnFocusChangeListener;)V", AccessFlags = 1)]
-				public virtual void SetOnQueryTextFocusChangeListener(global::Android.View.View.IOnFocusChangeListener onFocusChangeListener) /* MethodBuilder.Create */ 
+				public virtual void SetOnQueryTextFocusChangeListener(global::Android.Views.View.IOnFocusChangeListener onFocusChangeListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15804,7 +15804,7 @@ namespace Android.Widget
 				/// setOnSearchClickListener
 				/// </java-name>
 				[Dot42.DexImport("setOnSearchClickListener", "(Landroid/view/View$OnClickListener;)V", AccessFlags = 1)]
-				public virtual void SetOnSearchClickListener(global::Android.View.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
+				public virtual void SetOnSearchClickListener(global::Android.Views.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15946,7 +15946,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -16127,7 +16127,7 @@ namespace Android.Widget
 		/// android/widget/ShareActionProvider
 		/// </java-name>
 		[Dot42.DexImport("android/widget/ShareActionProvider", AccessFlags = 33)]
-		public partial class ShareActionProvider : global::Android.View.ActionProvider
+		public partial class ShareActionProvider : global::Android.Views.ActionProvider
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -16152,9 +16152,9 @@ namespace Android.Widget
 				/// onCreateActionView
 				/// </java-name>
 				[Dot42.DexImport("onCreateActionView", "()Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View OnCreateActionView() /* MethodBuilder.Create */ 
+				public override global::Android.Views.View OnCreateActionView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -16170,7 +16170,7 @@ namespace Android.Widget
 				/// onPrepareSubMenu
 				/// </java-name>
 				[Dot42.DexImport("onPrepareSubMenu", "(Landroid/view/SubMenu;)V", AccessFlags = 1)]
-				public override void OnPrepareSubMenu(global::Android.View.ISubMenu subMenu) /* MethodBuilder.Create */ 
+				public override void OnPrepareSubMenu(global::Android.Views.ISubMenu subMenu) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -16256,9 +16256,9 @@ namespace Android.Widget
 				/// getView
 				/// </java-name>
 				[Dot42.DexImport("getView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -16273,9 +16273,9 @@ namespace Android.Widget
 				/// getDropDownView
 				/// </java-name>
 				[Dot42.DexImport("getDropDownView", "(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetDropDownView(int int32, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetDropDownView(int int32, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -16373,7 +16373,7 @@ namespace Android.Widget
 						/// setViewValue
 						/// </java-name>
 						[Dot42.DexImport("setViewValue", "(Landroid/view/View;Ljava/lang/Object;Ljava/lang/String;)Z", AccessFlags = 1025)]
-						bool SetViewValue(global::Android.View.View view, object @object, string @string) /* MethodBuilder.Create */ ;
+						bool SetViewValue(global::Android.Views.View view, object @object, string @string) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -16400,7 +16400,7 @@ namespace Android.Widget
 				/// bindView
 				/// </java-name>
 				[Dot42.DexImport("bindView", "(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V", AccessFlags = 1)]
-				public override void BindView(global::Android.View.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor) /* MethodBuilder.Create */ 
+				public override void BindView(global::Android.Views.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -16561,7 +16561,7 @@ namespace Android.Widget
 						/// setViewValue
 						/// </java-name>
 						[Dot42.DexImport("setViewValue", "(Landroid/view/View;Landroid/database/Cursor;I)Z", AccessFlags = 1025)]
-						bool SetViewValue(global::Android.View.View view, global::Android.Database.ICursor cursor, int int32) /* MethodBuilder.Create */ ;
+						bool SetViewValue(global::Android.Views.View view, global::Android.Database.ICursor cursor, int int32) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -16613,7 +16613,7 @@ namespace Android.Widget
 				/// bindChildView
 				/// </java-name>
 				[Dot42.DexImport("bindChildView", "(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;Z)V", AccessFlags = 4)]
-				protected internal override void BindChildView(global::Android.View.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean) /* MethodBuilder.Create */ 
+				protected internal override void BindChildView(global::Android.Views.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -16621,7 +16621,7 @@ namespace Android.Widget
 				/// bindGroupView
 				/// </java-name>
 				[Dot42.DexImport("bindGroupView", "(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;Z)V", AccessFlags = 4)]
-				protected internal override void BindGroupView(global::Android.View.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean) /* MethodBuilder.Create */ 
+				protected internal override void BindGroupView(global::Android.Views.View view, global::Android.Content.Context context, global::Android.Database.ICursor cursor, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -16668,7 +16668,7 @@ namespace Android.Widget
 						/// setViewValue
 						/// </java-name>
 						[Dot42.DexImport("setViewValue", "(Landroid/view/View;Landroid/database/Cursor;I)Z", AccessFlags = 1025)]
-						bool SetViewValue(global::Android.View.View view, global::Android.Database.ICursor cursor, int int32) /* MethodBuilder.Create */ ;
+						bool SetViewValue(global::Android.Views.View view, global::Android.Database.ICursor cursor, int int32) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -16727,18 +16727,18 @@ namespace Android.Widget
 				/// getChildView
 				/// </java-name>
 				[Dot42.DexImport("getChildView", "(IIZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetChildView(int int32, int int321, bool boolean, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetChildView(int int32, int int321, bool boolean, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// newChildView
 				/// </java-name>
 				[Dot42.DexImport("newChildView", "(ZLandroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View NewChildView(bool boolean, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View NewChildView(bool boolean, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -16781,18 +16781,18 @@ namespace Android.Widget
 				/// getGroupView
 				/// </java-name>
 				[Dot42.DexImport("getGroupView", "(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View GetGroupView(int int32, bool boolean, global::Android.View.View view, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View GetGroupView(int int32, bool boolean, global::Android.Views.View view, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// newGroupView
 				/// </java-name>
 				[Dot42.DexImport("newGroupView", "(ZLandroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View NewGroupView(bool boolean, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View NewGroupView(bool boolean, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -16833,7 +16833,7 @@ namespace Android.Widget
 		/// android/widget/SlidingDrawer
 		/// </java-name>
 		[Dot42.DexImport("android/widget/SlidingDrawer", AccessFlags = 33)]
-		public partial class SlidingDrawer : global::Android.View.ViewGroup
+		public partial class SlidingDrawer : global::Android.Views.ViewGroup
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -16892,7 +16892,7 @@ namespace Android.Widget
 				/// onInterceptTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onInterceptTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnInterceptTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnInterceptTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -16901,7 +16901,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -16982,18 +16982,18 @@ namespace Android.Widget
 				/// getHandle
 				/// </java-name>
 				[Dot42.DexImport("getHandle", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetHandle() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetHandle() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// getContent
 				/// </java-name>
 				[Dot42.DexImport("getContent", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetContent() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetContent() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -17038,7 +17038,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getHandle
 				/// </java-name>
-				public global::Android.View.View Handle
+				public global::Android.Views.View Handle
 				{
 				[Dot42.DexImport("getHandle", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetHandle(); }
@@ -17047,7 +17047,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public global::Android.View.View Content
+				public global::Android.Views.View Content
 				{
 				[Dot42.DexImport("getContent", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetContent(); }
@@ -17110,7 +17110,7 @@ namespace Android.Widget
 		/// android/widget/Space
 		/// </java-name>
 		[Dot42.DexImport("android/widget/Space", AccessFlags = 49)]
-		public sealed partial class Space : global::Android.View.View
+		public sealed partial class Space : global::Android.Views.View
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
@@ -17377,7 +17377,7 @@ namespace Android.Widget
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -17386,7 +17386,7 @@ namespace Android.Widget
 				/// onInterceptTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onInterceptTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnInterceptTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnInterceptTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -17395,7 +17395,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -17523,7 +17523,7 @@ namespace Android.Widget
 				/// onPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -17531,7 +17531,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -17645,7 +17645,7 @@ namespace Android.Widget
 		/// android/widget/TabHost
 		/// </java-name>
 		[Dot42.DexImport("android/widget/TabHost", AccessFlags = 33)]
-		public partial class TabHost : global::Android.Widget.FrameLayout, global::Android.View.ViewTreeObserver.IOnTouchModeChangeListener
+		public partial class TabHost : global::Android.Widget.FrameLayout, global::Android.Views.ViewTreeObserver.IOnTouchModeChangeListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -17762,18 +17762,18 @@ namespace Android.Widget
 				/// getCurrentTabView
 				/// </java-name>
 				[Dot42.DexImport("getCurrentTabView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetCurrentTabView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetCurrentTabView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// getCurrentView
 				/// </java-name>
 				[Dot42.DexImport("getCurrentView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetCurrentView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetCurrentView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -17797,7 +17797,7 @@ namespace Android.Widget
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -17863,7 +17863,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getCurrentTabView
 				/// </java-name>
-				public global::Android.View.View CurrentTabView
+				public global::Android.Views.View CurrentTabView
 				{
 				[Dot42.DexImport("getCurrentTabView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetCurrentTabView(); }
@@ -17872,7 +17872,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getCurrentView
 				/// </java-name>
-				public global::Android.View.View CurrentView
+				public global::Android.Views.View CurrentView
 				{
 				[Dot42.DexImport("getCurrentView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetCurrentView(); }
@@ -17927,7 +17927,7 @@ namespace Android.Widget
 						/// setIndicator
 						/// </java-name>
 						[Dot42.DexImport("setIndicator", "(Landroid/view/View;)Landroid/widget/TabHost$TabSpec;", AccessFlags = 1)]
-						public virtual TabSpec SetIndicator(global::Android.View.View view) /* MethodBuilder.Create */ 
+						public virtual TabSpec SetIndicator(global::Android.Views.View view) /* MethodBuilder.Create */ 
 						{
 								return default(TabSpec);
 						}
@@ -17995,7 +17995,7 @@ namespace Android.Widget
 						/// createTabContent
 						/// </java-name>
 						[Dot42.DexImport("createTabContent", "(Ljava/lang/String;)Landroid/view/View;", AccessFlags = 1025)]
-						global::Android.View.View CreateTabContent(string @string) /* MethodBuilder.Create */ ;
+						global::Android.Views.View CreateTabContent(string @string) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -18037,7 +18037,7 @@ namespace Android.Widget
 				/// setOnHierarchyChangeListener
 				/// </java-name>
 				[Dot42.DexImport("setOnHierarchyChangeListener", "(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V", AccessFlags = 1)]
-				public override void SetOnHierarchyChangeListener(global::Android.View.ViewGroup.IOnHierarchyChangeListener onHierarchyChangeListener) /* MethodBuilder.Create */ 
+				public override void SetOnHierarchyChangeListener(global::Android.Views.ViewGroup.IOnHierarchyChangeListener onHierarchyChangeListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18138,7 +18138,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18146,7 +18146,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;I)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18154,7 +18154,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18162,7 +18162,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18204,7 +18204,7 @@ namespace Android.Widget
 				/// checkLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal override bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override bool CheckLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -18214,7 +18214,7 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/widget/LinearLayout$LayoutParams;" +
     "", AccessFlags = 4)]
-				protected internal override global::Android.Widget.LinearLayout.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override global::Android.Widget.LinearLayout.LayoutParams GenerateLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Widget.LinearLayout.LayoutParams);
 				}
@@ -18252,12 +18252,12 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$MarginLayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -18294,7 +18294,7 @@ namespace Android.Widget
 				/// setOnHierarchyChangeListener
 				/// </java-name>
 				[Dot42.DexImport("setOnHierarchyChangeListener", "(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V", AccessFlags = 1)]
-				public override void SetOnHierarchyChangeListener(global::Android.View.ViewGroup.IOnHierarchyChangeListener onHierarchyChangeListener) /* MethodBuilder.Create */ 
+				public override void SetOnHierarchyChangeListener(global::Android.Views.ViewGroup.IOnHierarchyChangeListener onHierarchyChangeListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18318,9 +18318,9 @@ namespace Android.Widget
 				/// getVirtualChildAt
 				/// </java-name>
 				[Dot42.DexImport("getVirtualChildAt", "(I)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetVirtualChildAt(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetVirtualChildAt(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -18354,7 +18354,7 @@ namespace Android.Widget
 				/// checkLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("checkLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Z", AccessFlags = 4)]
-				protected internal override bool CheckLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override bool CheckLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -18364,7 +18364,7 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)Landroid/widget/LinearLayout$LayoutParams;" +
     "", AccessFlags = 4)]
-				protected internal override global::Android.Widget.LinearLayout.LayoutParams GenerateLayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				protected internal override global::Android.Widget.LinearLayout.LayoutParams GenerateLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Widget.LinearLayout.LayoutParams);
 				}
@@ -18426,12 +18426,12 @@ namespace Android.Widget
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$MarginLayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.MarginLayoutParams marginLayoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -18451,7 +18451,7 @@ namespace Android.Widget
 		/// android/widget/TabWidget
 		/// </java-name>
 		[Dot42.DexImport("android/widget/TabWidget", AccessFlags = 33)]
-		public partial class TabWidget : global::Android.Widget.LinearLayout, global::Android.View.View.IOnFocusChangeListener
+		public partial class TabWidget : global::Android.Widget.LinearLayout, global::Android.Views.View.IOnFocusChangeListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -18490,9 +18490,9 @@ namespace Android.Widget
 				/// getChildTabViewAt
 				/// </java-name>
 				[Dot42.DexImport("getChildTabViewAt", "(I)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetChildTabViewAt(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetChildTabViewAt(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -18573,7 +18573,7 @@ namespace Android.Widget
 				/// childDrawableStateChanged
 				/// </java-name>
 				[Dot42.DexImport("childDrawableStateChanged", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void ChildDrawableStateChanged(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void ChildDrawableStateChanged(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18597,7 +18597,7 @@ namespace Android.Widget
 				/// dispatchPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -18606,7 +18606,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18630,7 +18630,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18646,7 +18646,7 @@ namespace Android.Widget
 				/// sendAccessibilityEventUnchecked
 				/// </java-name>
 				[Dot42.DexImport("sendAccessibilityEventUnchecked", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void SendAccessibilityEventUnchecked(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void SendAccessibilityEventUnchecked(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18654,7 +18654,7 @@ namespace Android.Widget
 				/// onFocusChange
 				/// </java-name>
 				[Dot42.DexImport("onFocusChange", "(Landroid/view/View;Z)V", AccessFlags = 1)]
-				public virtual void OnFocusChange(global::Android.View.View view, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void OnFocusChange(global::Android.Views.View view, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18695,7 +18695,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18726,7 +18726,7 @@ namespace Android.Widget
 		/// android/widget/TextView
 		/// </java-name>
 		[Dot42.DexImport("android/widget/TextView", AccessFlags = 33)]
-		public partial class TextView : global::Android.View.View, global::Android.View.ViewTreeObserver.IOnPreDrawListener
+		public partial class TextView : global::Android.Views.View, global::Android.Views.ViewTreeObserver.IOnPreDrawListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -19899,7 +19899,7 @@ namespace Android.Widget
 				/// onKeyPreIme
 				/// </java-name>
 				[Dot42.DexImport("onKeyPreIme", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyPreIme(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyPreIme(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -19908,7 +19908,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -19917,7 +19917,7 @@ namespace Android.Widget
 				/// onKeyMultiple
 				/// </java-name>
 				[Dot42.DexImport("onKeyMultiple", "(IILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyMultiple(int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyMultiple(int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -19926,7 +19926,7 @@ namespace Android.Widget
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -19945,9 +19945,9 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("onCreateInputConnection", "(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;" +
     "", AccessFlags = 1)]
-				public override global::Android.View.Inputmethod.IInputConnection OnCreateInputConnection(global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Views.Inputmethod.IInputConnection OnCreateInputConnection(global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.IInputConnection);
+						return default(global::Android.Views.Inputmethod.IInputConnection);
 				}
 
 				/// <java-name>
@@ -19955,7 +19955,7 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("extractText", "(Landroid/view/inputmethod/ExtractedTextRequest;Landroid/view/inputmethod/Extract" +
     "edText;)Z", AccessFlags = 1)]
-				public virtual bool ExtractText(global::Android.View.Inputmethod.ExtractedTextRequest extractedTextRequest, global::Android.View.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
+				public virtual bool ExtractText(global::Android.Views.Inputmethod.ExtractedTextRequest extractedTextRequest, global::Android.Views.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -19964,7 +19964,7 @@ namespace Android.Widget
 				/// setExtractedText
 				/// </java-name>
 				[Dot42.DexImport("setExtractedText", "(Landroid/view/inputmethod/ExtractedText;)V", AccessFlags = 1)]
-				public virtual void SetExtractedText(global::Android.View.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
+				public virtual void SetExtractedText(global::Android.Views.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -19972,7 +19972,7 @@ namespace Android.Widget
 				/// onCommitCompletion
 				/// </java-name>
 				[Dot42.DexImport("onCommitCompletion", "(Landroid/view/inputmethod/CompletionInfo;)V", AccessFlags = 1)]
-				public virtual void OnCommitCompletion(global::Android.View.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ 
+				public virtual void OnCommitCompletion(global::Android.Views.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -19980,7 +19980,7 @@ namespace Android.Widget
 				/// onCommitCorrection
 				/// </java-name>
 				[Dot42.DexImport("onCommitCorrection", "(Landroid/view/inputmethod/CorrectionInfo;)V", AccessFlags = 1)]
-				public virtual void OnCommitCorrection(global::Android.View.Inputmethod.CorrectionInfo correctionInfo) /* MethodBuilder.Create */ 
+				public virtual void OnCommitCorrection(global::Android.Views.Inputmethod.CorrectionInfo correctionInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -20243,7 +20243,7 @@ namespace Android.Widget
 				/// onVisibilityChanged
 				/// </java-name>
 				[Dot42.DexImport("onVisibilityChanged", "(Landroid/view/View;I)V", AccessFlags = 4)]
-				protected internal override void OnVisibilityChanged(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				protected internal override void OnVisibilityChanged(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -20267,7 +20267,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -20276,7 +20276,7 @@ namespace Android.Widget
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -20302,7 +20302,7 @@ namespace Android.Widget
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -20364,7 +20364,7 @@ namespace Android.Widget
 				/// findViewsWithText
 				/// </java-name>
 				[Dot42.DexImport("findViewsWithText", "(Ljava/util/ArrayList;Ljava/lang/CharSequence;I)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/view/View;>;Ljava/lang/CharSequence;I)V")]
-				public override void FindViewsWithText(global::Java.Util.ArrayList<global::Android.View.View> arrayList, global::Java.Lang.ICharSequence charSequence, int int32) /* MethodBuilder.Create */ 
+				public override void FindViewsWithText(global::Java.Util.ArrayList<global::Android.Views.View> arrayList, global::Java.Lang.ICharSequence charSequence, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -20391,7 +20391,7 @@ namespace Android.Widget
 				/// onKeyShortcut
 				/// </java-name>
 				[Dot42.DexImport("onKeyShortcut", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyShortcut(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyShortcut(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -20400,7 +20400,7 @@ namespace Android.Widget
 				/// onPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -20408,7 +20408,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -20416,7 +20416,7 @@ namespace Android.Widget
 				/// onInitializeAccessibilityNodeInfo
 				/// </java-name>
 				[Dot42.DexImport("onInitializeAccessibilityNodeInfo", "(Landroid/view/accessibility/AccessibilityNodeInfo;)V", AccessFlags = 1)]
-				public override void OnInitializeAccessibilityNodeInfo(global::Android.View.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
+				public override void OnInitializeAccessibilityNodeInfo(global::Android.Views.Accessibility.AccessibilityNodeInfo accessibilityNodeInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -20476,7 +20476,7 @@ namespace Android.Widget
 				/// setCustomSelectionActionModeCallback
 				/// </java-name>
 				[Dot42.DexImport("setCustomSelectionActionModeCallback", "(Landroid/view/ActionMode$Callback;)V", AccessFlags = 1)]
-				public virtual void SetCustomSelectionActionModeCallback(global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
+				public virtual void SetCustomSelectionActionModeCallback(global::Android.Views.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -20484,9 +20484,9 @@ namespace Android.Widget
 				/// getCustomSelectionActionModeCallback
 				/// </java-name>
 				[Dot42.DexImport("getCustomSelectionActionModeCallback", "()Landroid/view/ActionMode$Callback;", AccessFlags = 1)]
-				public virtual global::Android.View.ActionMode.ICallback GetCustomSelectionActionModeCallback() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.ActionMode.ICallback GetCustomSelectionActionModeCallback() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ActionMode.ICallback);
+						return default(global::Android.Views.ActionMode.ICallback);
 				}
 
 				/// <java-name>
@@ -20502,7 +20502,7 @@ namespace Android.Widget
 				/// onDragEvent
 				/// </java-name>
 				[Dot42.DexImport("onDragEvent", "(Landroid/view/DragEvent;)Z", AccessFlags = 1)]
-				public override bool OnDragEvent(global::Android.View.DragEvent dragEvent) /* MethodBuilder.Create */ 
+				public override bool OnDragEvent(global::Android.Views.DragEvent dragEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -21074,7 +21074,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getCustomSelectionActionModeCallback
 				/// </java-name>
-				public global::Android.View.ActionMode.ICallback CustomSelectionActionModeCallback
+				public global::Android.Views.ActionMode.ICallback CustomSelectionActionModeCallback
 				{
 				[Dot42.DexImport("getCustomSelectionActionModeCallback", "()Landroid/view/ActionMode$Callback;", AccessFlags = 1)]
 						get{ return GetCustomSelectionActionModeCallback(); }
@@ -21132,7 +21132,7 @@ namespace Android.Widget
 				/// android/widget/TextView$SavedState
 				/// </java-name>
 				[Dot42.DexImport("android/widget/TextView$SavedState", AccessFlags = 9)]
-				public partial class SavedState : global::Android.View.View.BaseSavedState
+				public partial class SavedState : global::Android.Views.View.BaseSavedState
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -21175,7 +21175,7 @@ namespace Android.Widget
 						/// onEditorAction
 						/// </java-name>
 						[Dot42.DexImport("onEditorAction", "(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-						bool OnEditorAction(global::Android.Widget.TextView textView, int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+						bool OnEditorAction(global::Android.Widget.TextView textView, int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -21317,7 +21317,7 @@ namespace Android.Widget
 				/// dispatchPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -21326,7 +21326,7 @@ namespace Android.Widget
 				/// onPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -21425,7 +21425,7 @@ namespace Android.Widget
 				/// setView
 				/// </java-name>
 				[Dot42.DexImport("setView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -21433,9 +21433,9 @@ namespace Android.Widget
 				/// getView
 				/// </java-name>
 				[Dot42.DexImport("getView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -21558,7 +21558,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getView
 				/// </java-name>
-				public global::Android.View.View View
+				public global::Android.Views.View View
 				{
 				[Dot42.DexImport("getView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetView(); }
@@ -21716,7 +21716,7 @@ namespace Android.Widget
 				/// onPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("onPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
-				public override void OnPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public override void OnPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -21826,7 +21826,7 @@ namespace Android.Widget
 		/// android/widget/VideoView
 		/// </java-name>
 		[Dot42.DexImport("android/widget/VideoView", AccessFlags = 33)]
-		public partial class VideoView : global::Android.View.SurfaceView, global::Android.Widget.MediaController.IMediaPlayerControl
+		public partial class VideoView : global::Android.Views.SurfaceView, global::Android.Widget.MediaController.IMediaPlayerControl
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -21921,7 +21921,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -21930,7 +21930,7 @@ namespace Android.Widget
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -21939,7 +21939,7 @@ namespace Android.Widget
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -22135,7 +22135,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -22151,7 +22151,7 @@ namespace Android.Widget
 				/// removeView
 				/// </java-name>
 				[Dot42.DexImport("removeView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void RemoveView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void RemoveView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -22167,7 +22167,7 @@ namespace Android.Widget
 				/// removeViewInLayout
 				/// </java-name>
 				[Dot42.DexImport("removeViewInLayout", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void RemoveViewInLayout(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public override void RemoveViewInLayout(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -22191,25 +22191,25 @@ namespace Android.Widget
 				/// getCurrentView
 				/// </java-name>
 				[Dot42.DexImport("getCurrentView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetCurrentView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetCurrentView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// getInAnimation
 				/// </java-name>
 				[Dot42.DexImport("getInAnimation", "()Landroid/view/animation/Animation;", AccessFlags = 1)]
-				public virtual global::Android.View.Animation.Animation GetInAnimation() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Animation.Animation GetInAnimation() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.Animation);
+						return default(global::Android.Views.Animation.Animation);
 				}
 
 				/// <java-name>
 				/// setInAnimation
 				/// </java-name>
 				[Dot42.DexImport("setInAnimation", "(Landroid/view/animation/Animation;)V", AccessFlags = 1)]
-				public virtual void SetInAnimation(global::Android.View.Animation.Animation animation) /* MethodBuilder.Create */ 
+				public virtual void SetInAnimation(global::Android.Views.Animation.Animation animation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -22217,16 +22217,16 @@ namespace Android.Widget
 				/// getOutAnimation
 				/// </java-name>
 				[Dot42.DexImport("getOutAnimation", "()Landroid/view/animation/Animation;", AccessFlags = 1)]
-				public virtual global::Android.View.Animation.Animation GetOutAnimation() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Animation.Animation GetOutAnimation() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Animation.Animation);
+						return default(global::Android.Views.Animation.Animation);
 				}
 
 				/// <java-name>
 				/// setOutAnimation
 				/// </java-name>
 				[Dot42.DexImport("setOutAnimation", "(Landroid/view/animation/Animation;)V", AccessFlags = 1)]
-				public virtual void SetOutAnimation(global::Android.View.Animation.Animation animation) /* MethodBuilder.Create */ 
+				public virtual void SetOutAnimation(global::Android.Views.Animation.Animation animation) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -22282,7 +22282,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getCurrentView
 				/// </java-name>
-				public global::Android.View.View CurrentView
+				public global::Android.Views.View CurrentView
 				{
 				[Dot42.DexImport("getCurrentView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetCurrentView(); }
@@ -22291,7 +22291,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getInAnimation
 				/// </java-name>
-				public global::Android.View.Animation.Animation InAnimation
+				public global::Android.Views.Animation.Animation InAnimation
 				{
 				[Dot42.DexImport("getInAnimation", "()Landroid/view/animation/Animation;", AccessFlags = 1)]
 						get{ return GetInAnimation(); }
@@ -22302,7 +22302,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getOutAnimation
 				/// </java-name>
-				public global::Android.View.Animation.Animation OutAnimation
+				public global::Android.Views.Animation.Animation OutAnimation
 				{
 				[Dot42.DexImport("getOutAnimation", "()Landroid/view/animation/Animation;", AccessFlags = 1)]
 						get{ return GetOutAnimation(); }
@@ -22440,7 +22440,7 @@ namespace Android.Widget
 				/// addView
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void AddView(global::Android.View.View view, int int32, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public override void AddView(global::Android.Views.View view, int int32, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -22448,9 +22448,9 @@ namespace Android.Widget
 				/// getNextView
 				/// </java-name>
 				[Dot42.DexImport("getNextView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetNextView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetNextView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -22477,7 +22477,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getNextView
 				/// </java-name>
-				public global::Android.View.View NextView
+				public global::Android.Views.View NextView
 				{
 				[Dot42.DexImport("getNextView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetNextView(); }
@@ -22494,7 +22494,7 @@ namespace Android.Widget
 						/// makeView
 						/// </java-name>
 						[Dot42.DexImport("makeView", "()Landroid/view/View;", AccessFlags = 1025)]
-						global::Android.View.View MakeView() /* MethodBuilder.Create */ ;
+						global::Android.Views.View MakeView() /* MethodBuilder.Create */ ;
 
 				}
 
@@ -22504,7 +22504,7 @@ namespace Android.Widget
 		/// android/widget/ZoomButton
 		/// </java-name>
 		[Dot42.DexImport("android/widget/ZoomButton", AccessFlags = 33)]
-		public partial class ZoomButton : global::Android.Widget.ImageButton, global::Android.View.View.IOnLongClickListener
+		public partial class ZoomButton : global::Android.Widget.ImageButton, global::Android.Views.View.IOnLongClickListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -22526,7 +22526,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -22543,7 +22543,7 @@ namespace Android.Widget
 				/// onLongClick
 				/// </java-name>
 				[Dot42.DexImport("onLongClick", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public virtual bool OnLongClick(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual bool OnLongClick(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -22552,7 +22552,7 @@ namespace Android.Widget
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -22569,7 +22569,7 @@ namespace Android.Widget
 				/// dispatchUnhandledMove
 				/// </java-name>
 				[Dot42.DexImport("dispatchUnhandledMove", "(Landroid/view/View;I)Z", AccessFlags = 1)]
-				public override bool DispatchUnhandledMove(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public override bool DispatchUnhandledMove(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -22585,11 +22585,11 @@ namespace Android.Widget
 		/// android/widget/ZoomButtonsController
 		/// </java-name>
 		[Dot42.DexImport("android/widget/ZoomButtonsController", AccessFlags = 33)]
-		public partial class ZoomButtonsController : global::Android.View.View.IOnTouchListener
+		public partial class ZoomButtonsController : global::Android.Views.View.IOnTouchListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public ZoomButtonsController(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public ZoomButtonsController(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -22671,25 +22671,25 @@ namespace Android.Widget
 				/// getContainer
 				/// </java-name>
 				[Dot42.DexImport("getContainer", "()Landroid/view/ViewGroup;", AccessFlags = 1)]
-				public virtual global::Android.View.ViewGroup GetContainer() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.ViewGroup GetContainer() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ViewGroup);
+						return default(global::Android.Views.ViewGroup);
 				}
 
 				/// <java-name>
 				/// getZoomControls
 				/// </java-name>
 				[Dot42.DexImport("getZoomControls", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetZoomControls() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetZoomControls() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onTouch
 				/// </java-name>
 				[Dot42.DexImport("onTouch", "(Landroid/view/View;Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTouch(global::Android.View.View view, global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnTouch(global::Android.Views.View view, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -22702,7 +22702,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getContainer
 				/// </java-name>
-				public global::Android.View.ViewGroup Container
+				public global::Android.Views.ViewGroup Container
 				{
 				[Dot42.DexImport("getContainer", "()Landroid/view/ViewGroup;", AccessFlags = 1)]
 						get{ return GetContainer(); }
@@ -22711,7 +22711,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getZoomControls
 				/// </java-name>
-				public global::Android.View.View ZoomControls
+				public global::Android.Views.View ZoomControls
 				{
 				[Dot42.DexImport("getZoomControls", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetZoomControls(); }
@@ -22761,7 +22761,7 @@ namespace Android.Widget
 				/// setOnZoomInClickListener
 				/// </java-name>
 				[Dot42.DexImport("setOnZoomInClickListener", "(Landroid/view/View$OnClickListener;)V", AccessFlags = 1)]
-				public virtual void SetOnZoomInClickListener(global::Android.View.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
+				public virtual void SetOnZoomInClickListener(global::Android.Views.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -22769,7 +22769,7 @@ namespace Android.Widget
 				/// setOnZoomOutClickListener
 				/// </java-name>
 				[Dot42.DexImport("setOnZoomOutClickListener", "(Landroid/view/View$OnClickListener;)V", AccessFlags = 1)]
-				public virtual void SetOnZoomOutClickListener(global::Android.View.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
+				public virtual void SetOnZoomOutClickListener(global::Android.Views.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -22785,7 +22785,7 @@ namespace Android.Widget
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}

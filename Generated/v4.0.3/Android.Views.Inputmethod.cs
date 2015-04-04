@@ -1,15 +1,15 @@
 ﻿#pragma warning disable 1717
-namespace Android.View.Inputmethod
+namespace Android.Views.Inputmethod
 {
 		/// <java-name>
 		/// android/view/inputmethod/BaseInputConnection
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/BaseInputConnection", AccessFlags = 33)]
-		public partial class BaseInputConnection : global::Android.View.Inputmethod.IInputConnection
+		public partial class BaseInputConnection : global::Android.Views.Inputmethod.IInputConnection
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/view/View;Z)V", AccessFlags = 1)]
-				public BaseInputConnection(global::Android.View.View view, bool boolean) /* MethodBuilder.Create */ 
+				public BaseInputConnection(global::Android.Views.View view, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -87,7 +87,7 @@ namespace Android.View.Inputmethod
 				/// commitCompletion
 				/// </java-name>
 				[Dot42.DexImport("commitCompletion", "(Landroid/view/inputmethod/CompletionInfo;)Z", AccessFlags = 1)]
-				public virtual bool CommitCompletion(global::Android.View.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ 
+				public virtual bool CommitCompletion(global::Android.Views.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -96,7 +96,7 @@ namespace Android.View.Inputmethod
 				/// commitCorrection
 				/// </java-name>
 				[Dot42.DexImport("commitCorrection", "(Landroid/view/inputmethod/CorrectionInfo;)Z", AccessFlags = 1)]
-				public virtual bool CommitCorrection(global::Android.View.Inputmethod.CorrectionInfo correctionInfo) /* MethodBuilder.Create */ 
+				public virtual bool CommitCorrection(global::Android.Views.Inputmethod.CorrectionInfo correctionInfo) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -142,9 +142,9 @@ namespace Android.View.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("getExtractedText", "(Landroid/view/inputmethod/ExtractedTextRequest;I)Landroid/view/inputmethod/Extra" +
     "ctedText;", AccessFlags = 1)]
-				public virtual global::Android.View.Inputmethod.ExtractedText GetExtractedText(global::Android.View.Inputmethod.ExtractedTextRequest extractedTextRequest, int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Inputmethod.ExtractedText GetExtractedText(global::Android.Views.Inputmethod.ExtractedTextRequest extractedTextRequest, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.ExtractedText);
+						return default(global::Android.Views.Inputmethod.ExtractedText);
 				}
 
 				/// <java-name>
@@ -232,7 +232,7 @@ namespace Android.View.Inputmethod
 				/// sendKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("sendKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool SendKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool SendKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -273,7 +273,7 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.CompletionInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Inputmethod.CompletionInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(JILjava/lang/CharSequence;)V", AccessFlags = 1)]
 				public CompletionInfo(long int64, int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
 				{
@@ -400,7 +400,7 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.CorrectionInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Inputmethod.CorrectionInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(ILjava/lang/CharSequence;Ljava/lang/CharSequence;)V", AccessFlags = 1)]
 				public CorrectionInfo(int int32, global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence charSequence1) /* MethodBuilder.Create */ 
 				{
@@ -654,7 +654,7 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.EditorInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Inputmethod.EditorInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public EditorInfo() /* MethodBuilder.Create */ 
 				{
@@ -751,7 +751,7 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.ExtractedText> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Inputmethod.ExtractedText> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ExtractedText() /* MethodBuilder.Create */ 
 				{
@@ -807,7 +807,7 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.ExtractedTextRequest> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Inputmethod.ExtractedTextRequest> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ExtractedTextRequest() /* MethodBuilder.Create */ 
 				{
@@ -868,7 +868,7 @@ namespace Android.View.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("getExtractedText", "(Landroid/view/inputmethod/ExtractedTextRequest;I)Landroid/view/inputmethod/Extra" +
     "ctedText;", AccessFlags = 1025)]
-				global::Android.View.Inputmethod.ExtractedText GetExtractedText(global::Android.View.Inputmethod.ExtractedTextRequest extractedTextRequest, int int32) /* MethodBuilder.Create */ ;
+				global::Android.Views.Inputmethod.ExtractedText GetExtractedText(global::Android.Views.Inputmethod.ExtractedTextRequest extractedTextRequest, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// deleteSurroundingText
@@ -904,13 +904,13 @@ namespace Android.View.Inputmethod
 				/// commitCompletion
 				/// </java-name>
 				[Dot42.DexImport("commitCompletion", "(Landroid/view/inputmethod/CompletionInfo;)Z", AccessFlags = 1025)]
-				bool CommitCompletion(global::Android.View.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ ;
+				bool CommitCompletion(global::Android.Views.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// commitCorrection
 				/// </java-name>
 				[Dot42.DexImport("commitCorrection", "(Landroid/view/inputmethod/CorrectionInfo;)Z", AccessFlags = 1025)]
-				bool CommitCorrection(global::Android.View.Inputmethod.CorrectionInfo correctionInfo) /* MethodBuilder.Create */ ;
+				bool CommitCorrection(global::Android.Views.Inputmethod.CorrectionInfo correctionInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setSelection
@@ -946,7 +946,7 @@ namespace Android.View.Inputmethod
 				/// sendKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("sendKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1025)]
-				bool SendKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
+				bool SendKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// clearMetaKeyStates
@@ -1004,7 +1004,7 @@ namespace Android.View.Inputmethod
 				/// bindInput
 				/// </java-name>
 				[Dot42.DexImport("bindInput", "(Landroid/view/inputmethod/InputBinding;)V", AccessFlags = 1025)]
-				void BindInput(global::Android.View.Inputmethod.InputBinding inputBinding) /* MethodBuilder.Create */ ;
+				void BindInput(global::Android.Views.Inputmethod.InputBinding inputBinding) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// unbindInput
@@ -1017,32 +1017,32 @@ namespace Android.View.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("startInput", "(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)" +
     "V", AccessFlags = 1025)]
-				void StartInput(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ ;
+				void StartInput(global::Android.Views.Inputmethod.IInputConnection inputConnection, global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// restartInput
 				/// </java-name>
 				[Dot42.DexImport("restartInput", "(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)" +
     "V", AccessFlags = 1025)]
-				void RestartInput(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.View.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ ;
+				void RestartInput(global::Android.Views.Inputmethod.IInputConnection inputConnection, global::Android.Views.Inputmethod.EditorInfo editorInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// createSession
 				/// </java-name>
 				[Dot42.DexImport("createSession", "(Landroid/view/inputmethod/InputMethod$SessionCallback;)V", AccessFlags = 1025)]
-				void CreateSession(global::Android.View.Inputmethod.IInputMethod_ISessionCallback inputMethod_ISessionCallback) /* MethodBuilder.Create */ ;
+				void CreateSession(global::Android.Views.Inputmethod.IInputMethod_ISessionCallback inputMethod_ISessionCallback) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setSessionEnabled
 				/// </java-name>
 				[Dot42.DexImport("setSessionEnabled", "(Landroid/view/inputmethod/InputMethodSession;Z)V", AccessFlags = 1025)]
-				void SetSessionEnabled(global::Android.View.Inputmethod.IInputMethodSession inputMethodSession, bool boolean) /* MethodBuilder.Create */ ;
+				void SetSessionEnabled(global::Android.Views.Inputmethod.IInputMethodSession inputMethodSession, bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// revokeSession
 				/// </java-name>
 				[Dot42.DexImport("revokeSession", "(Landroid/view/inputmethod/InputMethodSession;)V", AccessFlags = 1025)]
-				void RevokeSession(global::Android.View.Inputmethod.IInputMethodSession inputMethodSession) /* MethodBuilder.Create */ ;
+				void RevokeSession(global::Android.Views.Inputmethod.IInputMethodSession inputMethodSession) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// showSoftInput
@@ -1060,7 +1060,7 @@ namespace Android.View.Inputmethod
 				/// changeInputMethodSubtype
 				/// </java-name>
 				[Dot42.DexImport("changeInputMethodSubtype", "(Landroid/view/inputmethod/InputMethodSubtype;)V", AccessFlags = 1025)]
-				void ChangeInputMethodSubtype(global::Android.View.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ ;
+				void ChangeInputMethodSubtype(global::Android.Views.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -1075,7 +1075,7 @@ namespace Android.View.Inputmethod
 				/// sessionCreated
 				/// </java-name>
 				[Dot42.DexImport("sessionCreated", "(Landroid/view/inputmethod/InputMethodSession;)V", AccessFlags = 1025)]
-				void SessionCreated(global::Android.View.Inputmethod.IInputMethodSession inputMethodSession) /* MethodBuilder.Create */ ;
+				void SessionCreated(global::Android.Views.Inputmethod.IInputMethodSession inputMethodSession) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -1143,27 +1143,27 @@ namespace Android.View.Inputmethod
 				/// displayCompletions
 				/// </java-name>
 				[Dot42.DexImport("displayCompletions", "([Landroid/view/inputmethod/CompletionInfo;)V", AccessFlags = 1025)]
-				void DisplayCompletions(global::Android.View.Inputmethod.CompletionInfo[] completionInfo) /* MethodBuilder.Create */ ;
+				void DisplayCompletions(global::Android.Views.Inputmethod.CompletionInfo[] completionInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// updateExtractedText
 				/// </java-name>
 				[Dot42.DexImport("updateExtractedText", "(ILandroid/view/inputmethod/ExtractedText;)V", AccessFlags = 1025)]
-				void UpdateExtractedText(int int32, global::Android.View.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ ;
+				void UpdateExtractedText(int int32, global::Android.Views.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(ILandroid/view/KeyEvent;Landroid/view/inputmethod/InputMethodSession$EventCallba" +
     "ck;)V", AccessFlags = 1025)]
-				void DispatchKeyEvent(int int32, global::Android.View.KeyEvent keyEvent, global::Android.View.Inputmethod.IInputMethodSession_IEventCallback inputMethodSession_IEventCallback) /* MethodBuilder.Create */ ;
+				void DispatchKeyEvent(int int32, global::Android.Views.KeyEvent keyEvent, global::Android.Views.Inputmethod.IInputMethodSession_IEventCallback inputMethodSession_IEventCallback) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// dispatchTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchTrackballEvent", "(ILandroid/view/MotionEvent;Landroid/view/inputmethod/InputMethodSession$EventCal" +
     "lback;)V", AccessFlags = 1025)]
-				void DispatchTrackballEvent(int int32, global::Android.View.MotionEvent motionEvent, global::Android.View.Inputmethod.IInputMethodSession_IEventCallback inputMethodSession_IEventCallback) /* MethodBuilder.Create */ ;
+				void DispatchTrackballEvent(int int32, global::Android.Views.MotionEvent motionEvent, global::Android.Views.Inputmethod.IInputMethodSession_IEventCallback inputMethodSession_IEventCallback) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// appPrivateCommand
@@ -1205,15 +1205,15 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.InputBinding> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Inputmethod.InputBinding> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/view/inputmethod/InputConnection;Landroid/os/IBinder;II)V", AccessFlags = 1)]
-				public InputBinding(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.OS.IBinder binder, int int32, int int321) /* MethodBuilder.Create */ 
+				public InputBinding(global::Android.Views.Inputmethod.IInputConnection inputConnection, global::Android.OS.IBinder binder, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/InputBinding" +
     ";)V", AccessFlags = 1)]
-				public InputBinding(global::Android.View.Inputmethod.IInputConnection inputConnection, global::Android.View.Inputmethod.InputBinding inputBinding) /* MethodBuilder.Create */ 
+				public InputBinding(global::Android.Views.Inputmethod.IInputConnection inputConnection, global::Android.Views.Inputmethod.InputBinding inputBinding) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1221,9 +1221,9 @@ namespace Android.View.Inputmethod
 				/// getConnection
 				/// </java-name>
 				[Dot42.DexImport("getConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
-				public global::Android.View.Inputmethod.IInputConnection GetConnection() /* MethodBuilder.Create */ 
+				public global::Android.Views.Inputmethod.IInputConnection GetConnection() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.IInputConnection);
+						return default(global::Android.Views.Inputmethod.IInputConnection);
 				}
 
 				/// <java-name>
@@ -1287,7 +1287,7 @@ namespace Android.View.Inputmethod
 				/// <java-name>
 				/// getConnection
 				/// </java-name>
-				public global::Android.View.Inputmethod.IInputConnection Connection
+				public global::Android.Views.Inputmethod.IInputConnection Connection
 				{
 				[Dot42.DexImport("getConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
 						get{ return GetConnection(); }
@@ -1326,11 +1326,11 @@ namespace Android.View.Inputmethod
 		/// android/view/inputmethod/InputConnectionWrapper
 		/// </java-name>
 		[Dot42.DexImport("android/view/inputmethod/InputConnectionWrapper", AccessFlags = 33)]
-		public partial class InputConnectionWrapper : global::Android.View.Inputmethod.IInputConnection
+		public partial class InputConnectionWrapper : global::Android.Views.Inputmethod.IInputConnection
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/view/inputmethod/InputConnection;Z)V", AccessFlags = 1)]
-				public InputConnectionWrapper(global::Android.View.Inputmethod.IInputConnection inputConnection, bool boolean) /* MethodBuilder.Create */ 
+				public InputConnectionWrapper(global::Android.Views.Inputmethod.IInputConnection inputConnection, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1338,7 +1338,7 @@ namespace Android.View.Inputmethod
 				/// setTarget
 				/// </java-name>
 				[Dot42.DexImport("setTarget", "(Landroid/view/inputmethod/InputConnection;)V", AccessFlags = 1)]
-				public virtual void SetTarget(global::Android.View.Inputmethod.IInputConnection inputConnection) /* MethodBuilder.Create */ 
+				public virtual void SetTarget(global::Android.Views.Inputmethod.IInputConnection inputConnection) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1383,9 +1383,9 @@ namespace Android.View.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("getExtractedText", "(Landroid/view/inputmethod/ExtractedTextRequest;I)Landroid/view/inputmethod/Extra" +
     "ctedText;", AccessFlags = 1)]
-				public virtual global::Android.View.Inputmethod.ExtractedText GetExtractedText(global::Android.View.Inputmethod.ExtractedTextRequest extractedTextRequest, int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Inputmethod.ExtractedText GetExtractedText(global::Android.Views.Inputmethod.ExtractedTextRequest extractedTextRequest, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.ExtractedText);
+						return default(global::Android.Views.Inputmethod.ExtractedText);
 				}
 
 				/// <java-name>
@@ -1437,7 +1437,7 @@ namespace Android.View.Inputmethod
 				/// commitCompletion
 				/// </java-name>
 				[Dot42.DexImport("commitCompletion", "(Landroid/view/inputmethod/CompletionInfo;)Z", AccessFlags = 1)]
-				public virtual bool CommitCompletion(global::Android.View.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ 
+				public virtual bool CommitCompletion(global::Android.Views.Inputmethod.CompletionInfo completionInfo) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1446,7 +1446,7 @@ namespace Android.View.Inputmethod
 				/// commitCorrection
 				/// </java-name>
 				[Dot42.DexImport("commitCorrection", "(Landroid/view/inputmethod/CorrectionInfo;)Z", AccessFlags = 1)]
-				public virtual bool CommitCorrection(global::Android.View.Inputmethod.CorrectionInfo correctionInfo) /* MethodBuilder.Create */ 
+				public virtual bool CommitCorrection(global::Android.Views.Inputmethod.CorrectionInfo correctionInfo) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1500,7 +1500,7 @@ namespace Android.View.Inputmethod
 				/// sendKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("sendKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool SendKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool SendKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1550,7 +1550,7 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.InputMethodInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Inputmethod.InputMethodInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)V", AccessFlags = 1)]
 				public InputMethodInfo(global::Android.Content.Context context, global::Android.Content.Pm.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
 				{
@@ -1647,9 +1647,9 @@ namespace Android.View.Inputmethod
 				/// getSubtypeAt
 				/// </java-name>
 				[Dot42.DexImport("getSubtypeAt", "(I)Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
-				public global::Android.View.Inputmethod.InputMethodSubtype GetSubtypeAt(int int32) /* MethodBuilder.Create */ 
+				public global::Android.Views.Inputmethod.InputMethodSubtype GetSubtypeAt(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.InputMethodSubtype);
+						return default(global::Android.Views.Inputmethod.InputMethodSubtype);
 				}
 
 				/// <java-name>
@@ -1848,18 +1848,18 @@ namespace Android.View.Inputmethod
 				/// getInputMethodList
 				/// </java-name>
 				[Dot42.DexImport("getInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
-				public global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodInfo> GetInputMethodList() /* MethodBuilder.Create */ 
+				public global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo> GetInputMethodList() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodInfo>);
+						return default(global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo>);
 				}
 
 				/// <java-name>
 				/// getEnabledInputMethodList
 				/// </java-name>
 				[Dot42.DexImport("getEnabledInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
-				public global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodInfo> GetEnabledInputMethodList() /* MethodBuilder.Create */ 
+				public global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo> GetEnabledInputMethodList() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodInfo>);
+						return default(global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo>);
 				}
 
 				/// <java-name>
@@ -1867,9 +1867,9 @@ namespace Android.View.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("getEnabledInputMethodSubtypeList", "(Landroid/view/inputmethod/InputMethodInfo;Z)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/view/inputmethod/InputMethodInfo;Z)Ljava/util/List<Landroid/view/inputm" +
     "ethod/InputMethodSubtype;>;")]
-				public global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodSubtype> GetEnabledInputMethodSubtypeList(global::Android.View.Inputmethod.InputMethodInfo inputMethodInfo, bool boolean) /* MethodBuilder.Create */ 
+				public global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodSubtype> GetEnabledInputMethodSubtypeList(global::Android.Views.Inputmethod.InputMethodInfo inputMethodInfo, bool boolean) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodSubtype>);
+						return default(global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodSubtype>);
 				}
 
 				/// <java-name>
@@ -1901,7 +1901,7 @@ namespace Android.View.Inputmethod
 				/// isActive
 				/// </java-name>
 				[Dot42.DexImport("isActive", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public bool IsActive(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public bool IsActive(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1928,7 +1928,7 @@ namespace Android.View.Inputmethod
 				/// displayCompletions
 				/// </java-name>
 				[Dot42.DexImport("displayCompletions", "(Landroid/view/View;[Landroid/view/inputmethod/CompletionInfo;)V", AccessFlags = 1)]
-				public void DisplayCompletions(global::Android.View.View view, global::Android.View.Inputmethod.CompletionInfo[] completionInfo) /* MethodBuilder.Create */ 
+				public void DisplayCompletions(global::Android.Views.View view, global::Android.Views.Inputmethod.CompletionInfo[] completionInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1936,7 +1936,7 @@ namespace Android.View.Inputmethod
 				/// updateExtractedText
 				/// </java-name>
 				[Dot42.DexImport("updateExtractedText", "(Landroid/view/View;ILandroid/view/inputmethod/ExtractedText;)V", AccessFlags = 1)]
-				public void UpdateExtractedText(global::Android.View.View view, int int32, global::Android.View.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
+				public void UpdateExtractedText(global::Android.Views.View view, int int32, global::Android.Views.Inputmethod.ExtractedText extractedText) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1944,7 +1944,7 @@ namespace Android.View.Inputmethod
 				/// showSoftInput
 				/// </java-name>
 				[Dot42.DexImport("showSoftInput", "(Landroid/view/View;I)Z", AccessFlags = 1)]
-				public bool ShowSoftInput(global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public bool ShowSoftInput(global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1953,7 +1953,7 @@ namespace Android.View.Inputmethod
 				/// showSoftInput
 				/// </java-name>
 				[Dot42.DexImport("showSoftInput", "(Landroid/view/View;ILandroid/os/ResultReceiver;)Z", AccessFlags = 1)]
-				public bool ShowSoftInput(global::Android.View.View view, int int32, global::Android.OS.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
+				public bool ShowSoftInput(global::Android.Views.View view, int int32, global::Android.OS.ResultReceiver resultReceiver) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1996,7 +1996,7 @@ namespace Android.View.Inputmethod
 				/// restartInput
 				/// </java-name>
 				[Dot42.DexImport("restartInput", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public void RestartInput(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public void RestartInput(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2004,7 +2004,7 @@ namespace Android.View.Inputmethod
 				/// updateSelection
 				/// </java-name>
 				[Dot42.DexImport("updateSelection", "(Landroid/view/View;IIII)V", AccessFlags = 1)]
-				public void UpdateSelection(global::Android.View.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				public void UpdateSelection(global::Android.Views.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2012,7 +2012,7 @@ namespace Android.View.Inputmethod
 				/// viewClicked
 				/// </java-name>
 				[Dot42.DexImport("viewClicked", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public void ViewClicked(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public void ViewClicked(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2020,7 +2020,7 @@ namespace Android.View.Inputmethod
 				/// isWatchingCursor
 				/// </java-name>
 				[Dot42.DexImport("isWatchingCursor", "(Landroid/view/View;)Z", AccessFlags = 1)]
-				public bool IsWatchingCursor(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public bool IsWatchingCursor(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2029,7 +2029,7 @@ namespace Android.View.Inputmethod
 				/// updateCursor
 				/// </java-name>
 				[Dot42.DexImport("updateCursor", "(Landroid/view/View;IIII)V", AccessFlags = 1)]
-				public void UpdateCursor(global::Android.View.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				public void UpdateCursor(global::Android.Views.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2037,7 +2037,7 @@ namespace Android.View.Inputmethod
 				/// sendAppPrivateCommand
 				/// </java-name>
 				[Dot42.DexImport("sendAppPrivateCommand", "(Landroid/view/View;Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public void SendAppPrivateCommand(global::Android.View.View view, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public void SendAppPrivateCommand(global::Android.Views.View view, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2054,7 +2054,7 @@ namespace Android.View.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("setInputMethodAndSubtype", "(Landroid/os/IBinder;Ljava/lang/String;Landroid/view/inputmethod/InputMethodSubty" +
     "pe;)V", AccessFlags = 1)]
-				public void SetInputMethodAndSubtype(global::Android.OS.IBinder binder, string @string, global::Android.View.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
+				public void SetInputMethodAndSubtype(global::Android.OS.IBinder binder, string @string, global::Android.Views.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2094,16 +2094,16 @@ namespace Android.View.Inputmethod
 				/// getCurrentInputMethodSubtype
 				/// </java-name>
 				[Dot42.DexImport("getCurrentInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
-				public global::Android.View.Inputmethod.InputMethodSubtype GetCurrentInputMethodSubtype() /* MethodBuilder.Create */ 
+				public global::Android.Views.Inputmethod.InputMethodSubtype GetCurrentInputMethodSubtype() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.InputMethodSubtype);
+						return default(global::Android.Views.Inputmethod.InputMethodSubtype);
 				}
 
 				/// <java-name>
 				/// setCurrentInputMethodSubtype
 				/// </java-name>
 				[Dot42.DexImport("setCurrentInputMethodSubtype", "(Landroid/view/inputmethod/InputMethodSubtype;)Z", AccessFlags = 1)]
-				public bool SetCurrentInputMethodSubtype(global::Android.View.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
+				public bool SetCurrentInputMethodSubtype(global::Android.Views.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2113,9 +2113,9 @@ namespace Android.View.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("getShortcutInputMethodsAndSubtypes", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Landroid/view/inputmethod/InputMethodInfo;Ljava/util/List<Landro" +
     "id/view/inputmethod/InputMethodSubtype;>;>;")]
-				public global::Java.Util.IMap<global::Android.View.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodSubtype>> GetShortcutInputMethodsAndSubtypes() /* MethodBuilder.Create */ 
+				public global::Java.Util.IMap<global::Android.Views.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodSubtype>> GetShortcutInputMethodsAndSubtypes() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IMap<global::Android.View.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodSubtype>>);
+						return default(global::Java.Util.IMap<global::Android.Views.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodSubtype>>);
 				}
 
 				/// <java-name>
@@ -2131,7 +2131,7 @@ namespace Android.View.Inputmethod
 				/// setAdditionalInputMethodSubtypes
 				/// </java-name>
 				[Dot42.DexImport("setAdditionalInputMethodSubtypes", "(Ljava/lang/String;[Landroid/view/inputmethod/InputMethodSubtype;)V", AccessFlags = 1)]
-				public void SetAdditionalInputMethodSubtypes(string @string, global::Android.View.Inputmethod.InputMethodSubtype[] inputMethodSubtype) /* MethodBuilder.Create */ 
+				public void SetAdditionalInputMethodSubtypes(string @string, global::Android.Views.Inputmethod.InputMethodSubtype[] inputMethodSubtype) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2139,15 +2139,15 @@ namespace Android.View.Inputmethod
 				/// getLastInputMethodSubtype
 				/// </java-name>
 				[Dot42.DexImport("getLastInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
-				public global::Android.View.Inputmethod.InputMethodSubtype GetLastInputMethodSubtype() /* MethodBuilder.Create */ 
+				public global::Android.Views.Inputmethod.InputMethodSubtype GetLastInputMethodSubtype() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Inputmethod.InputMethodSubtype);
+						return default(global::Android.Views.Inputmethod.InputMethodSubtype);
 				}
 
 				/// <java-name>
 				/// getInputMethodList
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodInfo> InputMethodList
+				public global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo> InputMethodList
 				{
 				[Dot42.DexImport("getInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
 						get{ return GetInputMethodList(); }
@@ -2156,7 +2156,7 @@ namespace Android.View.Inputmethod
 				/// <java-name>
 				/// getEnabledInputMethodList
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodInfo> EnabledInputMethodList
+				public global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo> EnabledInputMethodList
 				{
 				[Dot42.DexImport("getEnabledInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
 						get{ return GetEnabledInputMethodList(); }
@@ -2165,7 +2165,7 @@ namespace Android.View.Inputmethod
 				/// <java-name>
 				/// getCurrentInputMethodSubtype
 				/// </java-name>
-				public global::Android.View.Inputmethod.InputMethodSubtype CurrentInputMethodSubtype
+				public global::Android.Views.Inputmethod.InputMethodSubtype CurrentInputMethodSubtype
 				{
 				[Dot42.DexImport("getCurrentInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
 						get{ return GetCurrentInputMethodSubtype(); }
@@ -2174,7 +2174,7 @@ namespace Android.View.Inputmethod
 				/// <java-name>
 				/// getShortcutInputMethodsAndSubtypes
 				/// </java-name>
-				public global::Java.Util.IMap<global::Android.View.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.View.Inputmethod.InputMethodSubtype>> ShortcutInputMethodsAndSubtypes
+				public global::Java.Util.IMap<global::Android.Views.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodSubtype>> ShortcutInputMethodsAndSubtypes
 				{
 				[Dot42.DexImport("getShortcutInputMethodsAndSubtypes", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Landroid/view/inputmethod/InputMethodInfo;Ljava/util/List<Landro" +
     "id/view/inputmethod/InputMethodSubtype;>;>;")]
@@ -2184,7 +2184,7 @@ namespace Android.View.Inputmethod
 				/// <java-name>
 				/// getLastInputMethodSubtype
 				/// </java-name>
-				public global::Android.View.Inputmethod.InputMethodSubtype LastInputMethodSubtype
+				public global::Android.Views.Inputmethod.InputMethodSubtype LastInputMethodSubtype
 				{
 				[Dot42.DexImport("getLastInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
 						get{ return GetLastInputMethodSubtype(); }
@@ -2203,7 +2203,7 @@ namespace Android.View.Inputmethod
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.View.Inputmethod.InputMethodSubtype> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Inputmethod.InputMethodSubtype> CREATOR;
 				[Dot42.DexImport("<init>", "(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V", AccessFlags = 1)]
 				public InputMethodSubtype(int int32, int int321, string @string, string string1, string string2, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
 				{

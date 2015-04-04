@@ -1,6 +1,6 @@
 // Copyright (C) 2014 dot42
 //
-// Original filename: CreateContextMenuEventArgs.cs
+// Original filename: InputEventArgs.cs
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,18 +13,19 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-namespace Android.View
+namespace Android.Views
 {
-	public class CreateContextMenuEventArgs : System.EventArgs
+	public class InputEventArgs<T> : ViewEventArgs<T>
+#if ANDROID_9P
+        where T : InputEvent
+#endif
 	{
-	    public CreateContextMenuEventArgs(IContextMenu contextMenu, IContextMenu_IContextMenuInfo menuInfo)
+        /// <summary>
+        /// Default ctor
+        /// </summary>
+	    public InputEventArgs(T source) : base(source)
 	    {
-	        MenuInfo = menuInfo;
-	        ContextMenu = contextMenu;
 	    }
-
-	    public IContextMenu ContextMenu { get; private set; }
-        public IContextMenu_IContextMenuInfo MenuInfo { get; private set; }
-    }
+	}
 }
 

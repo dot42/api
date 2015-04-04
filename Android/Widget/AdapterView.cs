@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Android.View;
+using Android.Views;
 using Dot42;
 
 namespace Android.Widget
@@ -140,12 +140,12 @@ namespace Android.Widget
         /// <summary>
         /// Invoke
         /// </summary>
-        public void OnItemClick(AdapterView<object> adapterView, View.View view, int position, long id)
+        public void OnItemClick(AdapterView<object> adapterView, View view, int position, long id)
         {
             Invoke(adapterView, new ItemClickEventArgs(view, position, id));
         }
 
-        public bool OnItemLongClick(AdapterView<object> adapterView, View.View view, int position, long id)
+        public bool OnItemLongClick(AdapterView<object> adapterView, View view, int position, long id)
         {
             var args = new ItemClickEventArgs(view, position, id);
             Invoke(adapterView, args);
@@ -161,7 +161,7 @@ namespace Android.Widget
         internal readonly Dot42.EventHandlerListener<ItemSelectedEventArgs> ItemSelected = new EventHandlerListener<ItemSelectedEventArgs>();
         internal readonly Dot42.EventHandlerListener NothingSelected = new EventHandlerListener();
 
-        public void OnItemSelected(AdapterView<object> adapterView, View.View view, int position, long id)
+        public void OnItemSelected(AdapterView<object> adapterView, View view, int position, long id)
         {
             ItemSelected.Invoke(adapterView, new ItemSelectedEventArgs(view, position, id));
         }

@@ -2369,7 +2369,7 @@ namespace Android.Test
 				/// scrollToBottom
 				/// </java-name>
 				[Dot42.DexImport("scrollToBottom", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/ViewGroup;)V", AccessFlags = 9)]
-				public static void ScrollToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public static void ScrollToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2378,7 +2378,7 @@ namespace Android.Test
 				/// </java-name>
 				[Dot42.DexImport("scrollToBottom", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/ViewGr" +
     "oup;)V", AccessFlags = 9)]
-				public static void ScrollToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public static void ScrollToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2386,7 +2386,7 @@ namespace Android.Test
 				/// scrollToTop
 				/// </java-name>
 				[Dot42.DexImport("scrollToTop", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/ViewGroup;)V", AccessFlags = 9)]
-				public static void ScrollToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public static void ScrollToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2395,7 +2395,7 @@ namespace Android.Test
 				/// </java-name>
 				[Dot42.DexImport("scrollToTop", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/ViewGr" +
     "oup;)V", AccessFlags = 9)]
-				public static void ScrollToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public static void ScrollToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2403,7 +2403,7 @@ namespace Android.Test
 				/// dragViewToBottom
 				/// </java-name>
 				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void DragViewToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void DragViewToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2412,7 +2412,7 @@ namespace Android.Test
 				/// </java-name>
 				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/View;)" +
     "V", AccessFlags = 9)]
-				public static void DragViewToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void DragViewToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2420,7 +2420,7 @@ namespace Android.Test
 				/// dragViewToBottom
 				/// </java-name>
 				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void DragViewToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public static void DragViewToBottom(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2429,7 +2429,7 @@ namespace Android.Test
 				/// </java-name>
 				[Dot42.DexImport("dragViewToBottom", "(Landroid/test/InstrumentationTestCase;Landroid/app/Activity;Landroid/view/View;I" +
     ")V", AccessFlags = 9)]
-				public static void DragViewToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public static void DragViewToBottom(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.App.Activity activity, global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2437,7 +2437,7 @@ namespace Android.Test
 				/// tapView
 				/// </java-name>
 				[Dot42.DexImport("tapView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void TapView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void TapView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2445,7 +2445,7 @@ namespace Android.Test
 				/// touchAndCancelView
 				/// </java-name>
 				[Dot42.DexImport("touchAndCancelView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void TouchAndCancelView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void TouchAndCancelView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2453,7 +2453,7 @@ namespace Android.Test
 				/// clickView
 				/// </java-name>
 				[Dot42.DexImport("clickView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void ClickView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void ClickView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2461,7 +2461,7 @@ namespace Android.Test
 				/// longClickView
 				/// </java-name>
 				[Dot42.DexImport("longClickView", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void LongClickView(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void LongClickView(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2469,7 +2469,7 @@ namespace Android.Test
 				/// longClickView
 				/// </java-name>
 				[Dot42.DexImport("longClickView", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void LongClickView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void LongClickView(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2477,7 +2477,7 @@ namespace Android.Test
 				/// dragViewToTop
 				/// </java-name>
 				[Dot42.DexImport("dragViewToTop", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void DragViewToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void DragViewToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2485,7 +2485,7 @@ namespace Android.Test
 				/// dragViewToTop
 				/// </java-name>
 				[Dot42.DexImport("dragViewToTop", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void DragViewToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public static void DragViewToTop(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2493,7 +2493,7 @@ namespace Android.Test
 				/// dragViewToTop
 				/// </java-name>
 				[Dot42.DexImport("dragViewToTop", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void DragViewToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void DragViewToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2501,7 +2501,7 @@ namespace Android.Test
 				/// dragViewToTop
 				/// </java-name>
 				[Dot42.DexImport("dragViewToTop", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void DragViewToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32) /* MethodBuilder.Create */ 
+				public static void DragViewToTop(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2509,7 +2509,7 @@ namespace Android.Test
 				/// dragViewBy
 				/// </java-name>
 				[Dot42.DexImport("dragViewBy", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
-				public static int DragViewBy(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public static int DragViewBy(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2518,7 +2518,7 @@ namespace Android.Test
 				/// dragViewBy
 				/// </java-name>
 				[Dot42.DexImport("dragViewBy", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
-				public static int DragViewBy(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public static int DragViewBy(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2527,7 +2527,7 @@ namespace Android.Test
 				/// dragViewTo
 				/// </java-name>
 				[Dot42.DexImport("dragViewTo", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
-				public static int DragViewTo(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public static int DragViewTo(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2536,7 +2536,7 @@ namespace Android.Test
 				/// dragViewTo
 				/// </java-name>
 				[Dot42.DexImport("dragViewTo", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;III)I", AccessFlags = 9)]
-				public static int DragViewTo(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public static int DragViewTo(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2545,7 +2545,7 @@ namespace Android.Test
 				/// dragViewToX
 				/// </java-name>
 				[Dot42.DexImport("dragViewToX", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
-				public static int DragViewToX(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				public static int DragViewToX(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.View view, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2554,7 +2554,7 @@ namespace Android.Test
 				/// dragViewToX
 				/// </java-name>
 				[Dot42.DexImport("dragViewToX", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
-				public static int DragViewToX(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				public static int DragViewToX(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2563,7 +2563,7 @@ namespace Android.Test
 				/// dragViewToY
 				/// </java-name>
 				[Dot42.DexImport("dragViewToY", "(Landroid/test/ActivityInstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
-				public static int DragViewToY(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				public static int DragViewToY(global::Android.Test.ActivityInstrumentationTestCase<object> activityInstrumentationTestCase, global::Android.Views.View view, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2572,7 +2572,7 @@ namespace Android.Test
 				/// dragViewToY
 				/// </java-name>
 				[Dot42.DexImport("dragViewToY", "(Landroid/test/InstrumentationTestCase;Landroid/view/View;II)I", AccessFlags = 9)]
-				public static int DragViewToY(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.View.View view, int int32, int int321) /* MethodBuilder.Create */ 
+				public static int DragViewToY(global::Android.Test.InstrumentationTestCase instrumentationTestCase, global::Android.Views.View view, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2611,7 +2611,7 @@ namespace Android.Test
 				/// assertOnScreen
 				/// </java-name>
 				[Dot42.DexImport("assertOnScreen", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertOnScreen(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertOnScreen(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2619,7 +2619,7 @@ namespace Android.Test
 				/// assertOffScreenBelow
 				/// </java-name>
 				[Dot42.DexImport("assertOffScreenBelow", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertOffScreenBelow(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertOffScreenBelow(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2627,7 +2627,7 @@ namespace Android.Test
 				/// assertOffScreenAbove
 				/// </java-name>
 				[Dot42.DexImport("assertOffScreenAbove", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertOffScreenAbove(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertOffScreenAbove(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2635,7 +2635,7 @@ namespace Android.Test
 				/// assertHasScreenCoordinates
 				/// </java-name>
 				[Dot42.DexImport("assertHasScreenCoordinates", "(Landroid/view/View;Landroid/view/View;II)V", AccessFlags = 9)]
-				public static void AssertHasScreenCoordinates(global::Android.View.View view, global::Android.View.View view1, int int32, int int321) /* MethodBuilder.Create */ 
+				public static void AssertHasScreenCoordinates(global::Android.Views.View view, global::Android.Views.View view1, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2643,7 +2643,7 @@ namespace Android.Test
 				/// assertBaselineAligned
 				/// </java-name>
 				[Dot42.DexImport("assertBaselineAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertBaselineAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertBaselineAligned(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2651,7 +2651,7 @@ namespace Android.Test
 				/// assertRightAligned
 				/// </java-name>
 				[Dot42.DexImport("assertRightAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertRightAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertRightAligned(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2659,7 +2659,7 @@ namespace Android.Test
 				/// assertRightAligned
 				/// </java-name>
 				[Dot42.DexImport("assertRightAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void AssertRightAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
+				public static void AssertRightAligned(global::Android.Views.View view, global::Android.Views.View view1, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2667,7 +2667,7 @@ namespace Android.Test
 				/// assertLeftAligned
 				/// </java-name>
 				[Dot42.DexImport("assertLeftAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertLeftAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertLeftAligned(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2675,7 +2675,7 @@ namespace Android.Test
 				/// assertLeftAligned
 				/// </java-name>
 				[Dot42.DexImport("assertLeftAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void AssertLeftAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
+				public static void AssertLeftAligned(global::Android.Views.View view, global::Android.Views.View view1, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2683,7 +2683,7 @@ namespace Android.Test
 				/// assertBottomAligned
 				/// </java-name>
 				[Dot42.DexImport("assertBottomAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertBottomAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertBottomAligned(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2691,7 +2691,7 @@ namespace Android.Test
 				/// assertBottomAligned
 				/// </java-name>
 				[Dot42.DexImport("assertBottomAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void AssertBottomAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
+				public static void AssertBottomAligned(global::Android.Views.View view, global::Android.Views.View view1, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2699,7 +2699,7 @@ namespace Android.Test
 				/// assertTopAligned
 				/// </java-name>
 				[Dot42.DexImport("assertTopAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertTopAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertTopAligned(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2707,7 +2707,7 @@ namespace Android.Test
 				/// assertTopAligned
 				/// </java-name>
 				[Dot42.DexImport("assertTopAligned", "(Landroid/view/View;Landroid/view/View;I)V", AccessFlags = 9)]
-				public static void AssertTopAligned(global::Android.View.View view, global::Android.View.View view1, int int32) /* MethodBuilder.Create */ 
+				public static void AssertTopAligned(global::Android.Views.View view, global::Android.Views.View view1, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2715,7 +2715,7 @@ namespace Android.Test
 				/// assertHorizontalCenterAligned
 				/// </java-name>
 				[Dot42.DexImport("assertHorizontalCenterAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertHorizontalCenterAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertHorizontalCenterAligned(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2723,7 +2723,7 @@ namespace Android.Test
 				/// assertVerticalCenterAligned
 				/// </java-name>
 				[Dot42.DexImport("assertVerticalCenterAligned", "(Landroid/view/View;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertVerticalCenterAligned(global::Android.View.View view, global::Android.View.View view1) /* MethodBuilder.Create */ 
+				public static void AssertVerticalCenterAligned(global::Android.Views.View view, global::Android.Views.View view1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2731,7 +2731,7 @@ namespace Android.Test
 				/// assertGroupIntegrity
 				/// </java-name>
 				[Dot42.DexImport("assertGroupIntegrity", "(Landroid/view/ViewGroup;)V", AccessFlags = 9)]
-				public static void AssertGroupIntegrity(global::Android.View.ViewGroup viewGroup) /* MethodBuilder.Create */ 
+				public static void AssertGroupIntegrity(global::Android.Views.ViewGroup viewGroup) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2739,7 +2739,7 @@ namespace Android.Test
 				/// assertGroupContains
 				/// </java-name>
 				[Dot42.DexImport("assertGroupContains", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertGroupContains(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void AssertGroupContains(global::Android.Views.ViewGroup viewGroup, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2747,7 +2747,7 @@ namespace Android.Test
 				/// assertGroupNotContains
 				/// </java-name>
 				[Dot42.DexImport("assertGroupNotContains", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 9)]
-				public static void AssertGroupNotContains(global::Android.View.ViewGroup viewGroup, global::Android.View.View view) /* MethodBuilder.Create */ 
+				public static void AssertGroupNotContains(global::Android.Views.ViewGroup viewGroup, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 

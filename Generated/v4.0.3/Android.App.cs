@@ -57,13 +57,13 @@ namespace Android.App
 				/// setCustomView
 				/// </java-name>
 				[Dot42.DexImport("setCustomView", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				public abstract void SetCustomView(global::Android.View.View view) /* MethodBuilder.Create */ ;
+				public abstract void SetCustomView(global::Android.Views.View view) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setCustomView
 				/// </java-name>
 				[Dot42.DexImport("setCustomView", "(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V", AccessFlags = 1025)]
-				public abstract void SetCustomView(global::Android.View.View view, global::Android.App.ActionBar.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
+				public abstract void SetCustomView(global::Android.Views.View view, global::Android.App.ActionBar.LayoutParams layoutParams) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setCustomView
@@ -211,7 +211,7 @@ namespace Android.App
 				/// getCustomView
 				/// </java-name>
 				[Dot42.DexImport("getCustomView", "()Landroid/view/View;", AccessFlags = 1025)]
-				public abstract global::Android.View.View GetCustomView() /* MethodBuilder.Create */ ;
+				public abstract global::Android.Views.View GetCustomView() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getTitle
@@ -389,7 +389,7 @@ namespace Android.App
 				/// <java-name>
 				/// getCustomView
 				/// </java-name>
-				public global::Android.View.View CustomView
+				public global::Android.Views.View CustomView
 				{
 				[Dot42.DexImport("getCustomView", "()Landroid/view/View;", AccessFlags = 1025)]
 						get{ return GetCustomView(); }
@@ -481,7 +481,7 @@ namespace Android.App
 				/// android/app/ActionBar$LayoutParams
 				/// </java-name>
 				[Dot42.DexImport("android/app/ActionBar$LayoutParams", AccessFlags = 9)]
-				public partial class LayoutParams : global::Android.View.ViewGroup.MarginLayoutParams
+				public partial class LayoutParams : global::Android.Views.ViewGroup.MarginLayoutParams
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -515,7 +515,7 @@ namespace Android.App
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-						public LayoutParams(global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+						public LayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -616,7 +616,7 @@ namespace Android.App
 						/// setCustomView
 						/// </java-name>
 						[Dot42.DexImport("setCustomView", "(Landroid/view/View;)Landroid/app/ActionBar$Tab;", AccessFlags = 1025)]
-						public abstract Tab SetCustomView(global::Android.View.View view) /* MethodBuilder.Create */ ;
+						public abstract Tab SetCustomView(global::Android.Views.View view) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// setCustomView
@@ -628,7 +628,7 @@ namespace Android.App
 						/// getCustomView
 						/// </java-name>
 						[Dot42.DexImport("getCustomView", "()Landroid/view/View;", AccessFlags = 1025)]
-						public abstract global::Android.View.View GetCustomView() /* MethodBuilder.Create */ ;
+						public abstract global::Android.Views.View GetCustomView() /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// setTag
@@ -702,7 +702,7 @@ namespace Android.App
 						/// <java-name>
 						/// getCustomView
 						/// </java-name>
-						public global::Android.View.View CustomView
+						public global::Android.Views.View CustomView
 						{
 						[Dot42.DexImport("getCustomView", "()Landroid/view/View;", AccessFlags = 1025)]
 								get{ return GetCustomView(); }
@@ -764,7 +764,7 @@ namespace Android.App
 		/// android/app/Activity
 		/// </java-name>
 		[Dot42.DexImport("android/app/Activity", AccessFlags = 33)]
-		public partial class Activity : global::Android.View.ContextThemeWrapper, global::Android.View.LayoutInflater.IFactory2, global::Android.View.Window.ICallback, global::Android.View.KeyEvent.ICallback, global::Android.View.View.IOnCreateContextMenuListener, global::Android.Content.IComponentCallbacks2
+		public partial class Activity : global::Android.Views.ContextThemeWrapper, global::Android.Views.LayoutInflater.IFactory2, global::Android.Views.Window.ICallback, global::Android.Views.KeyEvent.ICallback, global::Android.Views.View.IOnCreateContextMenuListener, global::Android.Content.IComponentCallbacks2
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -865,18 +865,18 @@ namespace Android.App
 				/// getWindowManager
 				/// </java-name>
 				[Dot42.DexImport("getWindowManager", "()Landroid/view/WindowManager;", AccessFlags = 1)]
-				public virtual global::Android.View.IWindowManager GetWindowManager() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.IWindowManager GetWindowManager() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.IWindowManager);
+						return default(global::Android.Views.IWindowManager);
 				}
 
 				/// <java-name>
 				/// getWindow
 				/// </java-name>
 				[Dot42.DexImport("getWindow", "()Landroid/view/Window;", AccessFlags = 1)]
-				public virtual global::Android.View.Window GetWindow() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Window GetWindow() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Window);
+						return default(global::Android.Views.Window);
 				}
 
 				/// <java-name>
@@ -892,9 +892,9 @@ namespace Android.App
 				/// getCurrentFocus
 				/// </java-name>
 				[Dot42.DexImport("getCurrentFocus", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetCurrentFocus() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetCurrentFocus() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -1117,9 +1117,9 @@ namespace Android.App
 				/// findViewById
 				/// </java-name>
 				[Dot42.DexImport("findViewById", "(I)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View FindViewById(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View FindViewById(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -1143,7 +1143,7 @@ namespace Android.App
 				/// setContentView
 				/// </java-name>
 				[Dot42.DexImport("setContentView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetContentView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetContentView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1151,7 +1151,7 @@ namespace Android.App
 				/// setContentView
 				/// </java-name>
 				[Dot42.DexImport("setContentView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void SetContentView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public virtual void SetContentView(global::Android.Views.View view, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1159,7 +1159,7 @@ namespace Android.App
 				/// addContentView
 				/// </java-name>
 				[Dot42.DexImport("addContentView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void AddContentView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public virtual void AddContentView(global::Android.Views.View view, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1183,7 +1183,7 @@ namespace Android.App
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1192,7 +1192,7 @@ namespace Android.App
 				/// onKeyLongPress
 				/// </java-name>
 				[Dot42.DexImport("onKeyLongPress", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyLongPress(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyLongPress(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1201,7 +1201,7 @@ namespace Android.App
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1210,7 +1210,7 @@ namespace Android.App
 				/// onKeyMultiple
 				/// </java-name>
 				[Dot42.DexImport("onKeyMultiple", "(IILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyMultiple(int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyMultiple(int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1227,7 +1227,7 @@ namespace Android.App
 				/// onKeyShortcut
 				/// </java-name>
 				[Dot42.DexImport("onKeyShortcut", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyShortcut(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyShortcut(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1236,7 +1236,7 @@ namespace Android.App
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1245,7 +1245,7 @@ namespace Android.App
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1254,7 +1254,7 @@ namespace Android.App
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1271,7 +1271,7 @@ namespace Android.App
 				/// onWindowAttributesChanged
 				/// </java-name>
 				[Dot42.DexImport("onWindowAttributesChanged", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void OnWindowAttributesChanged(global::Android.View.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ 
+				public virtual void OnWindowAttributesChanged(global::Android.Views.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1320,7 +1320,7 @@ namespace Android.App
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1329,7 +1329,7 @@ namespace Android.App
 				/// dispatchKeyShortcutEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyShortcutEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchKeyShortcutEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchKeyShortcutEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1338,7 +1338,7 @@ namespace Android.App
 				/// dispatchTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1347,7 +1347,7 @@ namespace Android.App
 				/// dispatchTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1356,7 +1356,7 @@ namespace Android.App
 				/// dispatchGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1365,7 +1365,7 @@ namespace Android.App
 				/// dispatchPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1374,16 +1374,16 @@ namespace Android.App
 				/// onCreatePanelView
 				/// </java-name>
 				[Dot42.DexImport("onCreatePanelView", "(I)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View OnCreatePanelView(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View OnCreatePanelView(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onCreatePanelMenu
 				/// </java-name>
 				[Dot42.DexImport("onCreatePanelMenu", "(ILandroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnCreatePanelMenu(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnCreatePanelMenu(int int32, global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1392,7 +1392,7 @@ namespace Android.App
 				/// onPreparePanel
 				/// </java-name>
 				[Dot42.DexImport("onPreparePanel", "(ILandroid/view/View;Landroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnPreparePanel(int int32, global::Android.View.View view, global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnPreparePanel(int int32, global::Android.Views.View view, global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1401,7 +1401,7 @@ namespace Android.App
 				/// onMenuOpened
 				/// </java-name>
 				[Dot42.DexImport("onMenuOpened", "(ILandroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnMenuOpened(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnMenuOpened(int int32, global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1410,7 +1410,7 @@ namespace Android.App
 				/// onMenuItemSelected
 				/// </java-name>
 				[Dot42.DexImport("onMenuItemSelected", "(ILandroid/view/MenuItem;)Z", AccessFlags = 1)]
-				public virtual bool OnMenuItemSelected(int int32, global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ 
+				public virtual bool OnMenuItemSelected(int int32, global::Android.Views.IMenuItem menuItem) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1419,7 +1419,7 @@ namespace Android.App
 				/// onPanelClosed
 				/// </java-name>
 				[Dot42.DexImport("onPanelClosed", "(ILandroid/view/Menu;)V", AccessFlags = 1)]
-				public virtual void OnPanelClosed(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual void OnPanelClosed(int int32, global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1435,7 +1435,7 @@ namespace Android.App
 				/// onCreateOptionsMenu
 				/// </java-name>
 				[Dot42.DexImport("onCreateOptionsMenu", "(Landroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnCreateOptionsMenu(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnCreateOptionsMenu(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1444,7 +1444,7 @@ namespace Android.App
 				/// onPrepareOptionsMenu
 				/// </java-name>
 				[Dot42.DexImport("onPrepareOptionsMenu", "(Landroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnPrepareOptionsMenu(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnPrepareOptionsMenu(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1453,7 +1453,7 @@ namespace Android.App
 				/// onOptionsItemSelected
 				/// </java-name>
 				[Dot42.DexImport("onOptionsItemSelected", "(Landroid/view/MenuItem;)Z", AccessFlags = 1)]
-				public virtual bool OnOptionsItemSelected(global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ 
+				public virtual bool OnOptionsItemSelected(global::Android.Views.IMenuItem menuItem) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1462,7 +1462,7 @@ namespace Android.App
 				/// onOptionsMenuClosed
 				/// </java-name>
 				[Dot42.DexImport("onOptionsMenuClosed", "(Landroid/view/Menu;)V", AccessFlags = 1)]
-				public virtual void OnOptionsMenuClosed(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual void OnOptionsMenuClosed(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1487,7 +1487,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateContextMenu", "(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMe" +
     "nuInfo;)V", AccessFlags = 1)]
-				public virtual void OnCreateContextMenu(global::Android.View.IContextMenu contextMenu, global::Android.View.View view, global::Android.View.IContextMenu_IContextMenuInfo contextMenu_IContextMenuInfo) /* MethodBuilder.Create */ 
+				public virtual void OnCreateContextMenu(global::Android.Views.IContextMenu contextMenu, global::Android.Views.View view, global::Android.Views.IContextMenu_IContextMenuInfo contextMenu_IContextMenuInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1495,7 +1495,7 @@ namespace Android.App
 				/// registerForContextMenu
 				/// </java-name>
 				[Dot42.DexImport("registerForContextMenu", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void RegisterForContextMenu(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void RegisterForContextMenu(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1503,7 +1503,7 @@ namespace Android.App
 				/// unregisterForContextMenu
 				/// </java-name>
 				[Dot42.DexImport("unregisterForContextMenu", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void UnregisterForContextMenu(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void UnregisterForContextMenu(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1511,7 +1511,7 @@ namespace Android.App
 				/// openContextMenu
 				/// </java-name>
 				[Dot42.DexImport("openContextMenu", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void OpenContextMenu(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void OpenContextMenu(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1527,7 +1527,7 @@ namespace Android.App
 				/// onContextItemSelected
 				/// </java-name>
 				[Dot42.DexImport("onContextItemSelected", "(Landroid/view/MenuItem;)Z", AccessFlags = 1)]
-				public virtual bool OnContextItemSelected(global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ 
+				public virtual bool OnContextItemSelected(global::Android.Views.IMenuItem menuItem) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1536,7 +1536,7 @@ namespace Android.App
 				/// onContextMenuClosed
 				/// </java-name>
 				[Dot42.DexImport("onContextMenuClosed", "(Landroid/view/Menu;)V", AccessFlags = 1)]
-				public virtual void OnContextMenuClosed(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual void OnContextMenuClosed(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1685,18 +1685,18 @@ namespace Android.App
 				/// getLayoutInflater
 				/// </java-name>
 				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1)]
-				public virtual global::Android.View.LayoutInflater GetLayoutInflater() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.LayoutInflater GetLayoutInflater() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.LayoutInflater);
+						return default(global::Android.Views.LayoutInflater);
 				}
 
 				/// <java-name>
 				/// getMenuInflater
 				/// </java-name>
 				[Dot42.DexImport("getMenuInflater", "()Landroid/view/MenuInflater;", AccessFlags = 1)]
-				public virtual global::Android.View.MenuInflater GetMenuInflater() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.MenuInflater GetMenuInflater() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.MenuInflater);
+						return default(global::Android.Views.MenuInflater);
 				}
 
 				/// <java-name>
@@ -2123,9 +2123,9 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/" +
     "view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View OnCreateView(string @string, global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View OnCreateView(string @string, global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -2133,9 +2133,9 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/Attr" +
     "ibuteSet;)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View OnCreateView(global::Android.View.View view, string @string, global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View OnCreateView(global::Android.Views.View view, string @string, global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -2151,25 +2151,25 @@ namespace Android.App
 				/// startActionMode
 				/// </java-name>
 				[Dot42.DexImport("startActionMode", "(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;", AccessFlags = 1)]
-				public virtual global::Android.View.ActionMode StartActionMode(global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.ActionMode StartActionMode(global::Android.Views.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ActionMode);
+						return default(global::Android.Views.ActionMode);
 				}
 
 				/// <java-name>
 				/// onWindowStartingActionMode
 				/// </java-name>
 				[Dot42.DexImport("onWindowStartingActionMode", "(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;", AccessFlags = 1)]
-				public virtual global::Android.View.ActionMode OnWindowStartingActionMode(global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.ActionMode OnWindowStartingActionMode(global::Android.Views.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ActionMode);
+						return default(global::Android.Views.ActionMode);
 				}
 
 				/// <java-name>
 				/// onActionModeStarted
 				/// </java-name>
 				[Dot42.DexImport("onActionModeStarted", "(Landroid/view/ActionMode;)V", AccessFlags = 1)]
-				public virtual void OnActionModeStarted(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ 
+				public virtual void OnActionModeStarted(global::Android.Views.ActionMode actionMode) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2177,7 +2177,7 @@ namespace Android.App
 				/// onActionModeFinished
 				/// </java-name>
 				[Dot42.DexImport("onActionModeFinished", "(Landroid/view/ActionMode;)V", AccessFlags = 1)]
-				public virtual void OnActionModeFinished(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ 
+				public virtual void OnActionModeFinished(global::Android.Views.ActionMode actionMode) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2213,7 +2213,7 @@ namespace Android.App
 				/// <java-name>
 				/// getWindowManager
 				/// </java-name>
-				public global::Android.View.IWindowManager WindowManager
+				public global::Android.Views.IWindowManager WindowManager
 				{
 				[Dot42.DexImport("getWindowManager", "()Landroid/view/WindowManager;", AccessFlags = 1)]
 						get{ return GetWindowManager(); }
@@ -2222,7 +2222,7 @@ namespace Android.App
 				/// <java-name>
 				/// getWindow
 				/// </java-name>
-				public global::Android.View.Window Window
+				public global::Android.Views.Window Window
 				{
 				[Dot42.DexImport("getWindow", "()Landroid/view/Window;", AccessFlags = 1)]
 						get{ return GetWindow(); }
@@ -2240,7 +2240,7 @@ namespace Android.App
 				/// <java-name>
 				/// getCurrentFocus
 				/// </java-name>
-				public global::Android.View.View CurrentFocus
+				public global::Android.Views.View CurrentFocus
 				{
 				[Dot42.DexImport("getCurrentFocus", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetCurrentFocus(); }
@@ -2285,7 +2285,7 @@ namespace Android.App
 				/// <java-name>
 				/// getLayoutInflater
 				/// </java-name>
-				public global::Android.View.LayoutInflater LayoutInflater
+				public global::Android.Views.LayoutInflater LayoutInflater
 				{
 				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1)]
 						get{ return GetLayoutInflater(); }
@@ -2294,7 +2294,7 @@ namespace Android.App
 				/// <java-name>
 				/// getMenuInflater
 				/// </java-name>
-				public global::Android.View.MenuInflater MenuInflater
+				public global::Android.Views.MenuInflater MenuInflater
 				{
 				[Dot42.DexImport("getMenuInflater", "()Landroid/view/MenuInflater;", AccessFlags = 1)]
 						get{ return GetMenuInflater(); }
@@ -3517,7 +3517,7 @@ namespace Android.App
 				/// setCustomTitle
 				/// </java-name>
 				[Dot42.DexImport("setCustomTitle", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetCustomTitle(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetCustomTitle(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3533,7 +3533,7 @@ namespace Android.App
 				/// setView
 				/// </java-name>
 				[Dot42.DexImport("setView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3541,7 +3541,7 @@ namespace Android.App
 				/// setView
 				/// </java-name>
 				[Dot42.DexImport("setView", "(Landroid/view/View;IIII)V", AccessFlags = 1)]
-				public virtual void SetView(global::Android.View.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				public virtual void SetView(global::Android.Views.View view, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3653,7 +3653,7 @@ namespace Android.App
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3662,7 +3662,7 @@ namespace Android.App
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3739,7 +3739,7 @@ namespace Android.App
 						/// setCustomTitle
 						/// </java-name>
 						[Dot42.DexImport("setCustomTitle", "(Landroid/view/View;)Landroid/app/AlertDialog$Builder;", AccessFlags = 1)]
-						public virtual Builder SetCustomTitle(global::Android.View.View view) /* MethodBuilder.Create */ 
+						public virtual Builder SetCustomTitle(global::Android.Views.View view) /* MethodBuilder.Create */ 
 						{
 								return default(Builder);
 						}
@@ -4002,7 +4002,7 @@ namespace Android.App
 						/// setView
 						/// </java-name>
 						[Dot42.DexImport("setView", "(Landroid/view/View;)Landroid/app/AlertDialog$Builder;", AccessFlags = 1)]
-						public virtual Builder SetView(global::Android.View.View view) /* MethodBuilder.Create */ 
+						public virtual Builder SetView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 						{
 								return default(Builder);
 						}
@@ -4674,7 +4674,7 @@ namespace Android.App
 		/// android/app/Dialog
 		/// </java-name>
 		[Dot42.DexImport("android/app/Dialog", AccessFlags = 33)]
-		public partial class Dialog : global::Android.Content.IDialogInterface, global::Android.View.Window.ICallback, global::Android.View.KeyEvent.ICallback, global::Android.View.View.IOnCreateContextMenuListener
+		public partial class Dialog : global::Android.Content.IDialogInterface, global::Android.Views.Window.ICallback, global::Android.Views.KeyEvent.ICallback, global::Android.Views.View.IOnCreateContextMenuListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -4805,27 +4805,27 @@ namespace Android.App
 				/// getWindow
 				/// </java-name>
 				[Dot42.DexImport("getWindow", "()Landroid/view/Window;", AccessFlags = 1)]
-				public virtual global::Android.View.Window GetWindow() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Window GetWindow() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Window);
+						return default(global::Android.Views.Window);
 				}
 
 				/// <java-name>
 				/// getCurrentFocus
 				/// </java-name>
 				[Dot42.DexImport("getCurrentFocus", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetCurrentFocus() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetCurrentFocus() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// findViewById
 				/// </java-name>
 				[Dot42.DexImport("findViewById", "(I)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View FindViewById(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View FindViewById(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -4840,7 +4840,7 @@ namespace Android.App
 				/// setContentView
 				/// </java-name>
 				[Dot42.DexImport("setContentView", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void SetContentView(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void SetContentView(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4848,7 +4848,7 @@ namespace Android.App
 				/// setContentView
 				/// </java-name>
 				[Dot42.DexImport("setContentView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void SetContentView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public virtual void SetContentView(global::Android.Views.View view, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4856,7 +4856,7 @@ namespace Android.App
 				/// addContentView
 				/// </java-name>
 				[Dot42.DexImport("addContentView", "(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void AddContentView(global::Android.View.View view, global::Android.View.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
+				public virtual void AddContentView(global::Android.Views.View view, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4880,7 +4880,7 @@ namespace Android.App
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyDown(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyDown(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4889,7 +4889,7 @@ namespace Android.App
 				/// onKeyLongPress
 				/// </java-name>
 				[Dot42.DexImport("onKeyLongPress", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyLongPress(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyLongPress(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4898,7 +4898,7 @@ namespace Android.App
 				/// onKeyUp
 				/// </java-name>
 				[Dot42.DexImport("onKeyUp", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyUp(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyUp(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4907,7 +4907,7 @@ namespace Android.App
 				/// onKeyMultiple
 				/// </java-name>
 				[Dot42.DexImport("onKeyMultiple", "(IILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyMultiple(int int32, int int321, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyMultiple(int int32, int int321, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4924,7 +4924,7 @@ namespace Android.App
 				/// onKeyShortcut
 				/// </java-name>
 				[Dot42.DexImport("onKeyShortcut", "(ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnKeyShortcut(int int32, global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnKeyShortcut(int int32, global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4933,7 +4933,7 @@ namespace Android.App
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4942,7 +4942,7 @@ namespace Android.App
 				/// onTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("onTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4951,7 +4951,7 @@ namespace Android.App
 				/// onGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("onGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool OnGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool OnGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -4960,7 +4960,7 @@ namespace Android.App
 				/// onWindowAttributesChanged
 				/// </java-name>
 				[Dot42.DexImport("onWindowAttributesChanged", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void OnWindowAttributesChanged(global::Android.View.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ 
+				public virtual void OnWindowAttributesChanged(global::Android.Views.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5000,7 +5000,7 @@ namespace Android.App
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5009,7 +5009,7 @@ namespace Android.App
 				/// dispatchKeyShortcutEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyShortcutEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchKeyShortcutEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchKeyShortcutEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5018,7 +5018,7 @@ namespace Android.App
 				/// dispatchTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchTouchEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5027,7 +5027,7 @@ namespace Android.App
 				/// dispatchTrackballEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchTrackballEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchTrackballEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchTrackballEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5036,7 +5036,7 @@ namespace Android.App
 				/// dispatchGenericMotionEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchGenericMotionEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchGenericMotionEvent(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchGenericMotionEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5045,7 +5045,7 @@ namespace Android.App
 				/// dispatchPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
-				public virtual bool DispatchPopulateAccessibilityEvent(global::Android.View.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
+				public virtual bool DispatchPopulateAccessibilityEvent(global::Android.Views.Accessibility.AccessibilityEvent accessibilityEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5054,16 +5054,16 @@ namespace Android.App
 				/// onCreatePanelView
 				/// </java-name>
 				[Dot42.DexImport("onCreatePanelView", "(I)Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View OnCreatePanelView(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View OnCreatePanelView(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onCreatePanelMenu
 				/// </java-name>
 				[Dot42.DexImport("onCreatePanelMenu", "(ILandroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnCreatePanelMenu(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnCreatePanelMenu(int int32, global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5072,7 +5072,7 @@ namespace Android.App
 				/// onPreparePanel
 				/// </java-name>
 				[Dot42.DexImport("onPreparePanel", "(ILandroid/view/View;Landroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnPreparePanel(int int32, global::Android.View.View view, global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnPreparePanel(int int32, global::Android.Views.View view, global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5081,7 +5081,7 @@ namespace Android.App
 				/// onMenuOpened
 				/// </java-name>
 				[Dot42.DexImport("onMenuOpened", "(ILandroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnMenuOpened(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnMenuOpened(int int32, global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5090,7 +5090,7 @@ namespace Android.App
 				/// onMenuItemSelected
 				/// </java-name>
 				[Dot42.DexImport("onMenuItemSelected", "(ILandroid/view/MenuItem;)Z", AccessFlags = 1)]
-				public virtual bool OnMenuItemSelected(int int32, global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ 
+				public virtual bool OnMenuItemSelected(int int32, global::Android.Views.IMenuItem menuItem) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5099,7 +5099,7 @@ namespace Android.App
 				/// onPanelClosed
 				/// </java-name>
 				[Dot42.DexImport("onPanelClosed", "(ILandroid/view/Menu;)V", AccessFlags = 1)]
-				public virtual void OnPanelClosed(int int32, global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual void OnPanelClosed(int int32, global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5107,7 +5107,7 @@ namespace Android.App
 				/// onCreateOptionsMenu
 				/// </java-name>
 				[Dot42.DexImport("onCreateOptionsMenu", "(Landroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnCreateOptionsMenu(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnCreateOptionsMenu(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5116,7 +5116,7 @@ namespace Android.App
 				/// onPrepareOptionsMenu
 				/// </java-name>
 				[Dot42.DexImport("onPrepareOptionsMenu", "(Landroid/view/Menu;)Z", AccessFlags = 1)]
-				public virtual bool OnPrepareOptionsMenu(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual bool OnPrepareOptionsMenu(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5125,7 +5125,7 @@ namespace Android.App
 				/// onOptionsItemSelected
 				/// </java-name>
 				[Dot42.DexImport("onOptionsItemSelected", "(Landroid/view/MenuItem;)Z", AccessFlags = 1)]
-				public virtual bool OnOptionsItemSelected(global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ 
+				public virtual bool OnOptionsItemSelected(global::Android.Views.IMenuItem menuItem) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5134,7 +5134,7 @@ namespace Android.App
 				/// onOptionsMenuClosed
 				/// </java-name>
 				[Dot42.DexImport("onOptionsMenuClosed", "(Landroid/view/Menu;)V", AccessFlags = 1)]
-				public virtual void OnOptionsMenuClosed(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual void OnOptionsMenuClosed(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5167,7 +5167,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateContextMenu", "(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMe" +
     "nuInfo;)V", AccessFlags = 1)]
-				public virtual void OnCreateContextMenu(global::Android.View.IContextMenu contextMenu, global::Android.View.View view, global::Android.View.IContextMenu_IContextMenuInfo contextMenu_IContextMenuInfo) /* MethodBuilder.Create */ 
+				public virtual void OnCreateContextMenu(global::Android.Views.IContextMenu contextMenu, global::Android.Views.View view, global::Android.Views.IContextMenu_IContextMenuInfo contextMenu_IContextMenuInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5175,7 +5175,7 @@ namespace Android.App
 				/// registerForContextMenu
 				/// </java-name>
 				[Dot42.DexImport("registerForContextMenu", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void RegisterForContextMenu(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void RegisterForContextMenu(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5183,7 +5183,7 @@ namespace Android.App
 				/// unregisterForContextMenu
 				/// </java-name>
 				[Dot42.DexImport("unregisterForContextMenu", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void UnregisterForContextMenu(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void UnregisterForContextMenu(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5191,7 +5191,7 @@ namespace Android.App
 				/// openContextMenu
 				/// </java-name>
 				[Dot42.DexImport("openContextMenu", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void OpenContextMenu(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void OpenContextMenu(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5199,7 +5199,7 @@ namespace Android.App
 				/// onContextItemSelected
 				/// </java-name>
 				[Dot42.DexImport("onContextItemSelected", "(Landroid/view/MenuItem;)Z", AccessFlags = 1)]
-				public virtual bool OnContextItemSelected(global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ 
+				public virtual bool OnContextItemSelected(global::Android.Views.IMenuItem menuItem) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5208,7 +5208,7 @@ namespace Android.App
 				/// onContextMenuClosed
 				/// </java-name>
 				[Dot42.DexImport("onContextMenuClosed", "(Landroid/view/Menu;)V", AccessFlags = 1)]
-				public virtual void OnContextMenuClosed(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual void OnContextMenuClosed(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5225,16 +5225,16 @@ namespace Android.App
 				/// onWindowStartingActionMode
 				/// </java-name>
 				[Dot42.DexImport("onWindowStartingActionMode", "(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;", AccessFlags = 1)]
-				public virtual global::Android.View.ActionMode OnWindowStartingActionMode(global::Android.View.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.ActionMode OnWindowStartingActionMode(global::Android.Views.ActionMode.ICallback callback) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.ActionMode);
+						return default(global::Android.Views.ActionMode);
 				}
 
 				/// <java-name>
 				/// onActionModeStarted
 				/// </java-name>
 				[Dot42.DexImport("onActionModeStarted", "(Landroid/view/ActionMode;)V", AccessFlags = 1)]
-				public virtual void OnActionModeStarted(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ 
+				public virtual void OnActionModeStarted(global::Android.Views.ActionMode actionMode) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5242,7 +5242,7 @@ namespace Android.App
 				/// onActionModeFinished
 				/// </java-name>
 				[Dot42.DexImport("onActionModeFinished", "(Landroid/view/ActionMode;)V", AccessFlags = 1)]
-				public virtual void OnActionModeFinished(global::Android.View.ActionMode actionMode) /* MethodBuilder.Create */ 
+				public virtual void OnActionModeFinished(global::Android.Views.ActionMode actionMode) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5299,9 +5299,9 @@ namespace Android.App
 				/// getLayoutInflater
 				/// </java-name>
 				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1)]
-				public virtual global::Android.View.LayoutInflater GetLayoutInflater() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.LayoutInflater GetLayoutInflater() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.LayoutInflater);
+						return default(global::Android.Views.LayoutInflater);
 				}
 
 				/// <java-name>
@@ -5430,7 +5430,7 @@ namespace Android.App
 				/// <java-name>
 				/// getWindow
 				/// </java-name>
-				public global::Android.View.Window Window
+				public global::Android.Views.Window Window
 				{
 				[Dot42.DexImport("getWindow", "()Landroid/view/Window;", AccessFlags = 1)]
 						get{ return GetWindow(); }
@@ -5439,7 +5439,7 @@ namespace Android.App
 				/// <java-name>
 				/// getCurrentFocus
 				/// </java-name>
-				public global::Android.View.View CurrentFocus
+				public global::Android.Views.View CurrentFocus
 				{
 				[Dot42.DexImport("getCurrentFocus", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetCurrentFocus(); }
@@ -5448,7 +5448,7 @@ namespace Android.App
 				/// <java-name>
 				/// getLayoutInflater
 				/// </java-name>
-				public global::Android.View.LayoutInflater LayoutInflater
+				public global::Android.Views.LayoutInflater LayoutInflater
 				{
 				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1)]
 						get{ return GetLayoutInflater(); }
@@ -6203,7 +6203,7 @@ namespace Android.App
 		/// android/app/ExpandableListActivity
 		/// </java-name>
 		[Dot42.DexImport("android/app/ExpandableListActivity", AccessFlags = 33)]
-		public partial class ExpandableListActivity : global::Android.App.Activity, global::Android.View.View.IOnCreateContextMenuListener, global::Android.Widget.ExpandableListView.IOnChildClickListener, global::Android.Widget.ExpandableListView.IOnGroupCollapseListener, global::Android.Widget.ExpandableListView.IOnGroupExpandListener
+		public partial class ExpandableListActivity : global::Android.App.Activity, global::Android.Views.View.IOnCreateContextMenuListener, global::Android.Widget.ExpandableListView.IOnChildClickListener, global::Android.Widget.ExpandableListView.IOnGroupCollapseListener, global::Android.Widget.ExpandableListView.IOnGroupExpandListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -6216,7 +6216,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateContextMenu", "(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMe" +
     "nuInfo;)V", AccessFlags = 1)]
-				public override void OnCreateContextMenu(global::Android.View.IContextMenu contextMenu, global::Android.View.View view, global::Android.View.IContextMenu_IContextMenuInfo contextMenu_IContextMenuInfo) /* MethodBuilder.Create */ 
+				public override void OnCreateContextMenu(global::Android.Views.IContextMenu contextMenu, global::Android.Views.View view, global::Android.Views.IContextMenu_IContextMenuInfo contextMenu_IContextMenuInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6224,7 +6224,7 @@ namespace Android.App
 				/// onChildClick
 				/// </java-name>
 				[Dot42.DexImport("onChildClick", "(Landroid/widget/ExpandableListView;Landroid/view/View;IIJ)Z", AccessFlags = 1)]
-				public virtual bool OnChildClick(global::Android.Widget.ExpandableListView expandableListView, global::Android.View.View view, int int32, int int321, long int64) /* MethodBuilder.Create */ 
+				public virtual bool OnChildClick(global::Android.Widget.ExpandableListView expandableListView, global::Android.Views.View view, int int32, int int321, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -6364,7 +6364,7 @@ namespace Android.App
 		/// android/app/Fragment
 		/// </java-name>
 		[Dot42.DexImport("android/app/Fragment", AccessFlags = 33)]
-		public partial class Fragment : global::Android.Content.IComponentCallbacks2, global::Android.View.View.IOnCreateContextMenuListener
+		public partial class Fragment : global::Android.Content.IComponentCallbacks2, global::Android.Views.View.IOnCreateContextMenuListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -6740,7 +6740,7 @@ namespace Android.App
 				/// onViewCreated
 				/// </java-name>
 				[Dot42.DexImport("onViewCreated", "(Landroid/view/View;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void OnViewCreated(global::Android.View.View view, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void OnViewCreated(global::Android.Views.View view, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6749,18 +6749,18 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroi" +
     "d/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View OnCreateView(global::Android.Views.LayoutInflater layoutInflater, global::Android.Views.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// getView
 				/// </java-name>
 				[Dot42.DexImport("getView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.View.View GetView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.View GetView() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
@@ -6863,7 +6863,7 @@ namespace Android.App
 				/// onCreateOptionsMenu
 				/// </java-name>
 				[Dot42.DexImport("onCreateOptionsMenu", "(Landroid/view/Menu;Landroid/view/MenuInflater;)V", AccessFlags = 1)]
-				public virtual void OnCreateOptionsMenu(global::Android.View.IMenu menu, global::Android.View.MenuInflater menuInflater) /* MethodBuilder.Create */ 
+				public virtual void OnCreateOptionsMenu(global::Android.Views.IMenu menu, global::Android.Views.MenuInflater menuInflater) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6871,7 +6871,7 @@ namespace Android.App
 				/// onPrepareOptionsMenu
 				/// </java-name>
 				[Dot42.DexImport("onPrepareOptionsMenu", "(Landroid/view/Menu;)V", AccessFlags = 1)]
-				public virtual void OnPrepareOptionsMenu(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual void OnPrepareOptionsMenu(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6887,7 +6887,7 @@ namespace Android.App
 				/// onOptionsItemSelected
 				/// </java-name>
 				[Dot42.DexImport("onOptionsItemSelected", "(Landroid/view/MenuItem;)Z", AccessFlags = 1)]
-				public virtual bool OnOptionsItemSelected(global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ 
+				public virtual bool OnOptionsItemSelected(global::Android.Views.IMenuItem menuItem) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -6896,7 +6896,7 @@ namespace Android.App
 				/// onOptionsMenuClosed
 				/// </java-name>
 				[Dot42.DexImport("onOptionsMenuClosed", "(Landroid/view/Menu;)V", AccessFlags = 1)]
-				public virtual void OnOptionsMenuClosed(global::Android.View.IMenu menu) /* MethodBuilder.Create */ 
+				public virtual void OnOptionsMenuClosed(global::Android.Views.IMenu menu) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6905,7 +6905,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateContextMenu", "(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMe" +
     "nuInfo;)V", AccessFlags = 1)]
-				public virtual void OnCreateContextMenu(global::Android.View.IContextMenu contextMenu, global::Android.View.View view, global::Android.View.IContextMenu_IContextMenuInfo contextMenu_IContextMenuInfo) /* MethodBuilder.Create */ 
+				public virtual void OnCreateContextMenu(global::Android.Views.IContextMenu contextMenu, global::Android.Views.View view, global::Android.Views.IContextMenu_IContextMenuInfo contextMenu_IContextMenuInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6913,7 +6913,7 @@ namespace Android.App
 				/// registerForContextMenu
 				/// </java-name>
 				[Dot42.DexImport("registerForContextMenu", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void RegisterForContextMenu(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void RegisterForContextMenu(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6921,7 +6921,7 @@ namespace Android.App
 				/// unregisterForContextMenu
 				/// </java-name>
 				[Dot42.DexImport("unregisterForContextMenu", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public virtual void UnregisterForContextMenu(global::Android.View.View view) /* MethodBuilder.Create */ 
+				public virtual void UnregisterForContextMenu(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6929,7 +6929,7 @@ namespace Android.App
 				/// onContextItemSelected
 				/// </java-name>
 				[Dot42.DexImport("onContextItemSelected", "(Landroid/view/MenuItem;)Z", AccessFlags = 1)]
-				public virtual bool OnContextItemSelected(global::Android.View.IMenuItem menuItem) /* MethodBuilder.Create */ 
+				public virtual bool OnContextItemSelected(global::Android.Views.IMenuItem menuItem) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -7051,7 +7051,7 @@ namespace Android.App
 				/// <java-name>
 				/// getView
 				/// </java-name>
-				public global::Android.View.View View
+				public global::Android.Views.View View
 				{
 				[Dot42.DexImport("getView", "()Landroid/view/View;", AccessFlags = 1)]
 						get{ return GetView(); }
@@ -7118,7 +7118,7 @@ namespace Android.App
 		/// android/app/FragmentBreadCrumbs
 		/// </java-name>
 		[Dot42.DexImport("android/app/FragmentBreadCrumbs", AccessFlags = 33)]
-		public partial class FragmentBreadCrumbs : global::Android.View.ViewGroup, global::Android.App.FragmentManager.IOnBackStackChangedListener
+		public partial class FragmentBreadCrumbs : global::Android.Views.ViewGroup, global::Android.App.FragmentManager.IOnBackStackChangedListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
@@ -7157,7 +7157,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("setParentTitle", "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/view/View$OnClickListen" +
     "er;)V", AccessFlags = 1)]
-				public virtual void SetParentTitle(global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence charSequence1, global::Android.View.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
+				public virtual void SetParentTitle(global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence charSequence1, global::Android.Views.View.IOnClickListener onClickListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7918,7 +7918,7 @@ namespace Android.App
 				/// sendKeySync
 				/// </java-name>
 				[Dot42.DexImport("sendKeySync", "(Landroid/view/KeyEvent;)V", AccessFlags = 1)]
-				public virtual void SendKeySync(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public virtual void SendKeySync(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7942,7 +7942,7 @@ namespace Android.App
 				/// sendPointerSync
 				/// </java-name>
 				[Dot42.DexImport("sendPointerSync", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
-				public virtual void SendPointerSync(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual void SendPointerSync(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7950,7 +7950,7 @@ namespace Android.App
 				/// sendTrackballEventSync
 				/// </java-name>
 				[Dot42.DexImport("sendTrackballEventSync", "(Landroid/view/MotionEvent;)V", AccessFlags = 1)]
-				public virtual void SendTrackballEventSync(global::Android.View.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public virtual void SendTrackballEventSync(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8579,7 +8579,7 @@ namespace Android.App
 				/// onListItemClick
 				/// </java-name>
 				[Dot42.DexImport("onListItemClick", "(Landroid/widget/ListView;Landroid/view/View;IJ)V", AccessFlags = 4)]
-				protected internal override void OnListItemClick(global::Android.Widget.ListView listView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				protected internal override void OnListItemClick(global::Android.Widget.ListView listView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8732,7 +8732,7 @@ namespace Android.App
 				/// onListItemClick
 				/// </java-name>
 				[Dot42.DexImport("onListItemClick", "(Landroid/widget/ListView;Landroid/view/View;IJ)V", AccessFlags = 4)]
-				protected internal virtual void OnListItemClick(global::Android.Widget.ListView listView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				protected internal virtual void OnListItemClick(global::Android.Widget.ListView listView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8869,16 +8869,16 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onCreateView", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroi" +
     "d/view/View;", AccessFlags = 1)]
-				public override global::Android.View.View OnCreateView(global::Android.View.LayoutInflater layoutInflater, global::Android.View.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public override global::Android.Views.View OnCreateView(global::Android.Views.LayoutInflater layoutInflater, global::Android.Views.ViewGroup viewGroup, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.View);
+						return default(global::Android.Views.View);
 				}
 
 				/// <java-name>
 				/// onViewCreated
 				/// </java-name>
 				[Dot42.DexImport("onViewCreated", "(Landroid/view/View;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void OnViewCreated(global::Android.View.View view, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void OnViewCreated(global::Android.Views.View view, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8894,7 +8894,7 @@ namespace Android.App
 				/// onListItemClick
 				/// </java-name>
 				[Dot42.DexImport("onListItemClick", "(Landroid/widget/ListView;Landroid/view/View;IJ)V", AccessFlags = 1)]
-				public virtual void OnListItemClick(global::Android.Widget.ListView listView, global::Android.View.View view, int int32, long int64) /* MethodBuilder.Create */ 
+				public virtual void OnListItemClick(global::Android.Widget.ListView listView, global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9114,18 +9114,18 @@ namespace Android.App
 				/// startActivity
 				/// </java-name>
 				[Dot42.DexImport("startActivity", "(Ljava/lang/String;Landroid/content/Intent;)Landroid/view/Window;", AccessFlags = 1)]
-				public virtual global::Android.View.Window StartActivity(string @string, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Window StartActivity(string @string, global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Window);
+						return default(global::Android.Views.Window);
 				}
 
 				/// <java-name>
 				/// destroyActivity
 				/// </java-name>
 				[Dot42.DexImport("destroyActivity", "(Ljava/lang/String;Z)Landroid/view/Window;", AccessFlags = 1)]
-				public virtual global::Android.View.Window DestroyActivity(string @string, bool boolean) /* MethodBuilder.Create */ 
+				public virtual global::Android.Views.Window DestroyActivity(string @string, bool boolean) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.View.Window);
+						return default(global::Android.Views.Window);
 				}
 
 				/// <java-name>
@@ -9241,7 +9241,7 @@ namespace Android.App
 		/// android/app/NativeActivity
 		/// </java-name>
 		[Dot42.DexImport("android/app/NativeActivity", AccessFlags = 33)]
-		public partial class NativeActivity : global::Android.App.Activity, global::Android.View.ISurfaceHolder_ICallback2, global::Android.View.InputQueue.ICallback, global::Android.View.ViewTreeObserver.IOnGlobalLayoutListener
+		public partial class NativeActivity : global::Android.App.Activity, global::Android.Views.ISurfaceHolder_ICallback2, global::Android.Views.InputQueue.ICallback, global::Android.Views.ViewTreeObserver.IOnGlobalLayoutListener
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -9343,7 +9343,7 @@ namespace Android.App
 				/// dispatchKeyEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchKeyEvent(global::Android.View.KeyEvent keyEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchKeyEvent(global::Android.Views.KeyEvent keyEvent) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -9352,7 +9352,7 @@ namespace Android.App
 				/// surfaceCreated
 				/// </java-name>
 				[Dot42.DexImport("surfaceCreated", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SurfaceCreated(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public virtual void SurfaceCreated(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9360,7 +9360,7 @@ namespace Android.App
 				/// surfaceChanged
 				/// </java-name>
 				[Dot42.DexImport("surfaceChanged", "(Landroid/view/SurfaceHolder;III)V", AccessFlags = 1)]
-				public virtual void SurfaceChanged(global::Android.View.ISurfaceHolder surfaceHolder, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public virtual void SurfaceChanged(global::Android.Views.ISurfaceHolder surfaceHolder, int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9368,7 +9368,7 @@ namespace Android.App
 				/// surfaceRedrawNeeded
 				/// </java-name>
 				[Dot42.DexImport("surfaceRedrawNeeded", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SurfaceRedrawNeeded(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public virtual void SurfaceRedrawNeeded(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9376,7 +9376,7 @@ namespace Android.App
 				/// surfaceDestroyed
 				/// </java-name>
 				[Dot42.DexImport("surfaceDestroyed", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SurfaceDestroyed(global::Android.View.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
+				public virtual void SurfaceDestroyed(global::Android.Views.ISurfaceHolder surfaceHolder) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9384,7 +9384,7 @@ namespace Android.App
 				/// onInputQueueCreated
 				/// </java-name>
 				[Dot42.DexImport("onInputQueueCreated", "(Landroid/view/InputQueue;)V", AccessFlags = 1)]
-				public virtual void OnInputQueueCreated(global::Android.View.InputQueue inputQueue) /* MethodBuilder.Create */ 
+				public virtual void OnInputQueueCreated(global::Android.Views.InputQueue inputQueue) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9392,7 +9392,7 @@ namespace Android.App
 				/// onInputQueueDestroyed
 				/// </java-name>
 				[Dot42.DexImport("onInputQueueDestroyed", "(Landroid/view/InputQueue;)V", AccessFlags = 1)]
-				public virtual void OnInputQueueDestroyed(global::Android.View.InputQueue inputQueue) /* MethodBuilder.Create */ 
+				public virtual void OnInputQueueDestroyed(global::Android.Views.InputQueue inputQueue) /* MethodBuilder.Create */ 
 				{
 				}
 
