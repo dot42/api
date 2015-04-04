@@ -15,7 +15,7 @@
 // limitations under the License.
 using Dot42;
 
-namespace Android.Graphics.Drawable
+namespace Android.Graphics.Drawables
 {
     [ApiEnhancementIgnoreMethods("ScheduleDrawable", "UnscheduleDrawable")] // Already in base class
 	partial class TransitionDrawable

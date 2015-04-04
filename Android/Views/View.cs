@@ -248,7 +248,7 @@ namespace Android.Views
         /// Fired when this view is clicked on long.
         /// </summary>
         [ListenerInterface(typeof(IOnLongClickListener))]
-        public event System.EventHandler<ViewEventArgs> LongClick
+        public event System.EventHandler<LongClickEventArgs> LongClick
         {
             add
             {
@@ -391,7 +391,7 @@ namespace Android.Views
         /// scheduleDrawable
         /// </java-name>
         [Dot42.DexImport("scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1, IgnoreFromJava = true)]
-        public void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable who, global::System.Action what, long when) /* MethodBuilder.Create */
+        public void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable who, global::System.Action what, long when) /* MethodBuilder.Create */
         {
         }
 
@@ -402,7 +402,7 @@ namespace Android.Views
         /// unscheduleDrawable
         /// </java-name>
         [Dot42.DexImport("unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1, IgnoreFromJava = true)]
-        public void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable who, global::System.Action what) /* MethodBuilder.Create */
+        public void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable who, global::System.Action what) /* MethodBuilder.Create */
         {
         }
 
@@ -603,14 +603,14 @@ namespace Android.Views
     /// <summary>
     /// Implementation of the <see cref="LongClick"/> event.
     /// </summary>
-    internal sealed class ViewOnLongClickListener : Dot42.EventHandlerListener<ViewEventArgs>, View.IOnLongClickListener
+    internal sealed class ViewOnLongClickListener : Dot42.EventHandlerListener<LongClickEventArgs>, View.IOnLongClickListener
     {
         /// <summary>
         /// Invoke
         /// </summary>
         public bool OnLongClick(View view)
         {
-            var args = new ViewEventArgs();
+            var args = new LongClickEventArgs();
             Invoke(view, args);
             return args.IsHandled;
         }

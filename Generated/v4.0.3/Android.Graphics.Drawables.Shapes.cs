@@ -1,11 +1,11 @@
 ﻿#pragma warning disable 1717
-namespace Android.Graphics.Drawable.Shapes
+namespace Android.Graphics.Drawables.Shapes
 {
 		/// <java-name>
 		/// android/graphics/drawable/shapes/ArcShape
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/shapes/ArcShape", AccessFlags = 33)]
-		public partial class ArcShape : global::Android.Graphics.Drawable.Shapes.RectShape
+		public partial class ArcShape : global::Android.Graphics.Drawables.Shapes.RectShape
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(FF)V", AccessFlags = 1)]
@@ -32,7 +32,7 @@ namespace Android.Graphics.Drawable.Shapes
 		/// android/graphics/drawable/shapes/OvalShape
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/shapes/OvalShape", AccessFlags = 33)]
-		public partial class OvalShape : global::Android.Graphics.Drawable.Shapes.RectShape
+		public partial class OvalShape : global::Android.Graphics.Drawables.Shapes.RectShape
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -54,7 +54,7 @@ namespace Android.Graphics.Drawable.Shapes
 		/// android/graphics/drawable/shapes/PathShape
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/shapes/PathShape", AccessFlags = 33)]
-		public partial class PathShape : global::Android.Graphics.Drawable.Shapes.Shape
+		public partial class PathShape : global::Android.Graphics.Drawables.Shapes.Shape
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Path;FF)V", AccessFlags = 1)]
@@ -82,9 +82,9 @@ namespace Android.Graphics.Drawable.Shapes
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Landroid/graphics/drawable/shapes/PathShape;", AccessFlags = 1)]
-				public new virtual global::Android.Graphics.Drawable.Shapes.PathShape Clone() /* MethodBuilder.Create */ 
+				public new virtual global::Android.Graphics.Drawables.Shapes.PathShape Clone() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Shapes.PathShape);
+						return default(global::Android.Graphics.Drawables.Shapes.PathShape);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -98,7 +98,7 @@ namespace Android.Graphics.Drawable.Shapes
 		/// android/graphics/drawable/shapes/RectShape
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/shapes/RectShape", AccessFlags = 33)]
-		public partial class RectShape : global::Android.Graphics.Drawable.Shapes.Shape
+		public partial class RectShape : global::Android.Graphics.Drawables.Shapes.Shape
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -135,9 +135,9 @@ namespace Android.Graphics.Drawable.Shapes
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Landroid/graphics/drawable/shapes/RectShape;", AccessFlags = 1)]
-				public new virtual global::Android.Graphics.Drawable.Shapes.RectShape Clone() /* MethodBuilder.Create */ 
+				public new virtual global::Android.Graphics.Drawables.Shapes.RectShape Clone() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Shapes.RectShape);
+						return default(global::Android.Graphics.Drawables.Shapes.RectShape);
 				}
 
 		}
@@ -146,7 +146,7 @@ namespace Android.Graphics.Drawable.Shapes
 		/// android/graphics/drawable/shapes/RoundRectShape
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/shapes/RoundRectShape", AccessFlags = 33)]
-		public partial class RoundRectShape : global::Android.Graphics.Drawable.Shapes.RectShape
+		public partial class RoundRectShape : global::Android.Graphics.Drawables.Shapes.RectShape
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "([FLandroid/graphics/RectF;[F)V", AccessFlags = 1)]
@@ -174,9 +174,9 @@ namespace Android.Graphics.Drawable.Shapes
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Landroid/graphics/drawable/shapes/RoundRectShape;", AccessFlags = 1)]
-				public new virtual global::Android.Graphics.Drawable.Shapes.RoundRectShape Clone() /* MethodBuilder.Create */ 
+				public new virtual global::Android.Graphics.Drawables.Shapes.RoundRectShape Clone() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Shapes.RoundRectShape);
+						return default(global::Android.Graphics.Drawables.Shapes.RoundRectShape);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -251,9 +251,9 @@ namespace Android.Graphics.Drawable.Shapes
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Landroid/graphics/drawable/shapes/Shape;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Shapes.Shape Clone() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Shapes.Shape Clone() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Shapes.Shape);
+						return default(global::Android.Graphics.Drawables.Shapes.Shape);
 				}
 
 				/// <java-name>

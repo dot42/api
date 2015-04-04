@@ -13,7 +13,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-namespace Android.Graphics.Drawable
+namespace Android.Graphics.Drawables
 {
 	partial class InsetDrawable
 	{
@@ -24,7 +24,7 @@ namespace Android.Graphics.Drawable
         /// scheduleDrawable
         /// </java-name>
         [Dot42.DexImport("scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1, IgnoreFromJava = true)]
-        public void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable who, global::System.Action what, long when) 
+        public void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable who, global::System.Action what, long when) 
         {
         }
 
@@ -35,7 +35,7 @@ namespace Android.Graphics.Drawable
         /// unscheduleDrawable
         /// </java-name>
         [Dot42.DexImport("unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1, IgnoreFromJava = true)]
-        public void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable who, global::System.Action what) 
+        public void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable who, global::System.Action what) 
         {
         }
 	}

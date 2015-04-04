@@ -1763,12 +1763,12 @@ namespace Android.Inputmethodservice
 						/// icon
 						/// </java-name>
 						[Dot42.DexImport("icon", "Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						public global::Android.Graphics.Drawable.Drawable Icon;
+						public global::Android.Graphics.Drawables.Drawable Icon;
 						/// <java-name>
 						/// iconPreview
 						/// </java-name>
 						[Dot42.DexImport("iconPreview", "Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						public global::Android.Graphics.Drawable.Drawable IconPreview;
+						public global::Android.Graphics.Drawables.Drawable IconPreview;
 						/// <java-name>
 						/// width
 						/// </java-name>

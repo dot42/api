@@ -74,6 +74,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Android\Text\AfterTextChangedEventArgs.cs" />
+    <Compile Include="Android\Views\LongClickEventArgs.cs" />
     <Compile Include="Generated\v4.0.3\Android.Accessibilityservice.cs" />
     <Compile Include="Generated\v4.0.3\Android.Accounts.cs" />
     <Compile Include="Generated\v4.0.3\Android.Animation.cs" />
@@ -91,8 +93,8 @@
     <Compile Include="Generated\v4.0.3\Android.Drm.cs" />
     <Compile Include="Generated\v4.0.3\Android.Gesture.cs" />
     <Compile Include="Generated\v4.0.3\Android.Graphics.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Graphics.Drawable.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Graphics.Drawable.Shapes.cs" />
+    <Compile Include="Generated\v4.0.3\Android.Graphics.Drawables.cs" />
+    <Compile Include="Generated\v4.0.3\Android.Graphics.Drawables.Shapes.cs" />
     <Compile Include="Generated\v4.0.3\Android.Hardware.cs" />
     <Compile Include="Generated\v4.0.3\Android.Hardware.Usb.cs" />
     <Compile Include="Generated\v4.0.3\Android.Inputmethodservice.cs" />
@@ -254,15 +256,15 @@
     <Compile Include="Android\App\UiAutomation.cs" />
     <Compile Include="Android\Content\DialogInterfaceClickEventArgs.cs" />
     <Compile Include="Android\Database\CursorJoiner.cs" />
-    <Compile Include="Android\Graphics\Drawable\AnimationDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\ClipDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\Drawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\DrawableContainer.cs" />
-    <Compile Include="Android\Graphics\Drawable\InsetDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\LayerDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\RotateDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\ScaleDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\TransitionDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\AnimationDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\ClipDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\Drawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\DrawableContainer.cs" />
+    <Compile Include="Android\Graphics\Drawables\InsetDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\LayerDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\RotateDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\ScaleDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\TransitionDrawable.cs" />
     <Compile Include="Android\Media\BufferingUpdateEventArgs.cs" />
     <Compile Include="Android\Media\VideoSizeEventArgs.cs" />
     <Compile Include="Android\Media\TimedTextEventArgs.cs" />
@@ -285,7 +287,6 @@
     <Compile Include="Android\Views\MotionEventArgs.cs" />
     <Compile Include="Android\Views\ViewPropertyAnimator.cs" />
     <Compile Include="Android\Widget\AdapterView.cs" />
-    <Compile Include="Android\Widget\CheckedChangedEventArgs.cs" />
     <Compile Include="Android\Widget\CompoundButton.cs" />
     <Compile Include="Android\Widget\AbsListView.cs" />
     <Compile Include="Android\Widget\CalendarView.cs" />
@@ -296,7 +297,6 @@
     <Compile Include="Android\Widget\GroupClickEventArgs.cs" />
     <Compile Include="Android\Widget\ExpandableListView.cs" />
     <Compile Include="Android\Widget\RadioGroup.cs" />
-    <Compile Include="Android\Widget\RadioGroupCheckedChangedEventArgs.cs" />
     <Compile Include="Android\Widget\PopupWindow.cs" />
     <Compile Include="Android\Widget\RatingChangedEventArgs.cs" />
     <Compile Include="Android\Widget\RatingBar.cs" />

@@ -1,11 +1,11 @@
 ﻿#pragma warning disable 1717
-namespace Android.Graphics.Drawable
+namespace Android.Graphics.Drawables
 {
 		/// <java-name>
 		/// android/graphics/drawable/AnimationDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/AnimationDrawable", AccessFlags = 33)]
-		public partial class AnimationDrawable : global::Android.Graphics.Drawable.DrawableContainer, global::Java.Lang.IRunnable, global::Android.Graphics.Drawable.IAnimatable
+		public partial class AnimationDrawable : global::Android.Graphics.Drawables.DrawableContainer, global::Java.Lang.IRunnable, global::Android.Graphics.Drawables.IAnimatable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -76,9 +76,9 @@ namespace Android.Graphics.Drawable
 				/// getFrame
 				/// </java-name>
 				[Dot42.DexImport("getFrame", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetFrame(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetFrame(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -111,7 +111,7 @@ namespace Android.Graphics.Drawable
 				/// addFrame
 				/// </java-name>
 				[Dot42.DexImport("addFrame", "(Landroid/graphics/drawable/Drawable;I)V", AccessFlags = 1)]
-				public virtual void AddFrame(global::Android.Graphics.Drawable.Drawable drawable, int int32) /* MethodBuilder.Create */ 
+				public virtual void AddFrame(global::Android.Graphics.Drawables.Drawable drawable, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -128,9 +128,9 @@ namespace Android.Graphics.Drawable
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -148,7 +148,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/BitmapDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/BitmapDrawable", AccessFlags = 33)]
-		public partial class BitmapDrawable : global::Android.Graphics.Drawable.Drawable
+		public partial class BitmapDrawable : global::Android.Graphics.Drawables.Drawable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -361,9 +361,9 @@ namespace Android.Graphics.Drawable
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -406,9 +406,9 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 17)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
@@ -504,7 +504,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/ClipDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/ClipDrawable", AccessFlags = 33)]
-		public partial class ClipDrawable : global::Android.Graphics.Drawable.Drawable, global::Android.Graphics.Drawable.Drawable.ICallback
+		public partial class ClipDrawable : global::Android.Graphics.Drawables.Drawable, global::Android.Graphics.Drawables.Drawable.ICallback
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -518,7 +518,7 @@ namespace Android.Graphics.Drawable
 				[Dot42.DexImport("VERTICAL", "I", AccessFlags = 25)]
 				public const int VERTICAL = 2;
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;II)V", AccessFlags = 1)]
-				public ClipDrawable(global::Android.Graphics.Drawable.Drawable drawable, int int32, int int321) /* MethodBuilder.Create */ 
+				public ClipDrawable(global::Android.Graphics.Drawables.Drawable drawable, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -535,7 +535,7 @@ namespace Android.Graphics.Drawable
 				/// invalidateDrawable
 				/// </java-name>
 				[Dot42.DexImport("invalidateDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void InvalidateDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void InvalidateDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -543,7 +543,7 @@ namespace Android.Graphics.Drawable
 				/// scheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1)]
-				public virtual void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
+				public virtual void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -551,7 +551,7 @@ namespace Android.Graphics.Drawable
 				/// unscheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1)]
-				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
+				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -672,9 +672,9 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -724,7 +724,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/ColorDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/ColorDrawable", AccessFlags = 33)]
-		public partial class ColorDrawable : global::Android.Graphics.Drawable.Drawable
+		public partial class ColorDrawable : global::Android.Graphics.Drawables.Drawable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -818,9 +818,9 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
@@ -962,7 +962,7 @@ namespace Android.Graphics.Drawable
 				/// setCallback
 				/// </java-name>
 				[Dot42.DexImport("setCallback", "(Landroid/graphics/drawable/Drawable$Callback;)V", AccessFlags = 17)]
-				public void SetCallback(global::Android.Graphics.Drawable.Drawable.ICallback callback) /* MethodBuilder.Create */ 
+				public void SetCallback(global::Android.Graphics.Drawables.Drawable.ICallback callback) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -970,9 +970,9 @@ namespace Android.Graphics.Drawable
 				/// getCallback
 				/// </java-name>
 				[Dot42.DexImport("getCallback", "()Landroid/graphics/drawable/Drawable$Callback;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable.ICallback GetCallback() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable.ICallback GetCallback() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ICallback);
+						return default(global::Android.Graphics.Drawables.Drawable.ICallback);
 				}
 
 				/// <java-name>
@@ -1066,9 +1066,9 @@ namespace Android.Graphics.Drawable
 				/// getCurrent
 				/// </java-name>
 				[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetCurrent() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetCurrent() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1206,18 +1206,18 @@ namespace Android.Graphics.Drawable
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// createFromStream
 				/// </java-name>
 				[Dot42.DexImport("createFromStream", "(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 9)]
-				public static global::Android.Graphics.Drawable.Drawable CreateFromStream(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Drawables.Drawable CreateFromStream(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1225,9 +1225,9 @@ namespace Android.Graphics.Drawable
 				/// </java-name>
 				[Dot42.DexImport("createFromResourceStream", "(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Lja" +
     "va/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 9)]
-				public static global::Android.Graphics.Drawable.Drawable CreateFromResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Drawables.Drawable CreateFromResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1236,9 +1236,9 @@ namespace Android.Graphics.Drawable
 				[Dot42.DexImport("createFromResourceStream", "(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Lja" +
     "va/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/drawab" +
     "le/Drawable;", AccessFlags = 9)]
-				public static global::Android.Graphics.Drawable.Drawable CreateFromResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.Io.InputStream inputStream, string @string, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Drawables.Drawable CreateFromResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.Io.InputStream inputStream, string @string, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1246,9 +1246,9 @@ namespace Android.Graphics.Drawable
 				/// </java-name>
 				[Dot42.DexImport("createFromXml", "(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;)Landroid/graphics/" +
     "drawable/Drawable;", AccessFlags = 9)]
-				public static global::Android.Graphics.Drawable.Drawable CreateFromXml(global::Android.Content.Res.Resources resources, global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Drawables.Drawable CreateFromXml(global::Android.Content.Res.Resources resources, global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1256,18 +1256,18 @@ namespace Android.Graphics.Drawable
 				/// </java-name>
 				[Dot42.DexImport("createFromXmlInner", "(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/Attri" +
     "buteSet;)Landroid/graphics/drawable/Drawable;", AccessFlags = 9)]
-				public static global::Android.Graphics.Drawable.Drawable CreateFromXmlInner(global::Android.Content.Res.Resources resources, global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Drawables.Drawable CreateFromXmlInner(global::Android.Content.Res.Resources resources, global::Org.Xmlpull.V1.IXmlPullParser xmlPullParser, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// createFromPath
 				/// </java-name>
 				[Dot42.DexImport("createFromPath", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 9)]
-				public static global::Android.Graphics.Drawable.Drawable CreateFromPath(string @string) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Drawables.Drawable CreateFromPath(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1283,9 +1283,9 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
@@ -1313,7 +1313,7 @@ namespace Android.Graphics.Drawable
 				/// <java-name>
 				/// getCallback
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable.ICallback Callback
+				public global::Android.Graphics.Drawables.Drawable.ICallback Callback
 				{
 				[Dot42.DexImport("getCallback", "()Landroid/graphics/drawable/Drawable$Callback;", AccessFlags = 1)]
 						get{ return GetCallback(); }
@@ -1333,7 +1333,7 @@ namespace Android.Graphics.Drawable
 				/// <java-name>
 				/// getCurrent
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Current
+				public global::Android.Graphics.Drawables.Drawable Current
 				{
 				[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetCurrent(); }
@@ -1418,15 +1418,15 @@ namespace Android.Graphics.Drawable
 						/// newDrawable
 						/// </java-name>
 						[Dot42.DexImport("newDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-						public abstract global::Android.Graphics.Drawable.Drawable NewDrawable() /* MethodBuilder.Create */ ;
+						public abstract global::Android.Graphics.Drawables.Drawable NewDrawable() /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// newDrawable
 						/// </java-name>
 						[Dot42.DexImport("newDrawable", "(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						public virtual global::Android.Graphics.Drawable.Drawable NewDrawable(global::Android.Content.Res.Resources resources) /* MethodBuilder.Create */ 
+						public virtual global::Android.Graphics.Drawables.Drawable NewDrawable(global::Android.Content.Res.Resources resources) /* MethodBuilder.Create */ 
 						{
-								return default(global::Android.Graphics.Drawable.Drawable);
+								return default(global::Android.Graphics.Drawables.Drawable);
 						}
 
 						/// <java-name>
@@ -1457,19 +1457,19 @@ namespace Android.Graphics.Drawable
 						/// invalidateDrawable
 						/// </java-name>
 						[Dot42.DexImport("invalidateDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
-						void InvalidateDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+						void InvalidateDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// scheduleDrawable
 						/// </java-name>
 						[Dot42.DexImport("scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1025)]
-						void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ ;
+						void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// unscheduleDrawable
 						/// </java-name>
 						[Dot42.DexImport("unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1025)]
-						void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ ;
+						void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -1479,7 +1479,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/DrawableContainer
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/DrawableContainer", AccessFlags = 33)]
-		public partial class DrawableContainer : global::Android.Graphics.Drawable.Drawable, global::Android.Graphics.Drawable.Drawable.ICallback
+		public partial class DrawableContainer : global::Android.Graphics.Drawables.Drawable, global::Android.Graphics.Drawables.Drawable.ICallback
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1636,7 +1636,7 @@ namespace Android.Graphics.Drawable
 				/// invalidateDrawable
 				/// </java-name>
 				[Dot42.DexImport("invalidateDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void InvalidateDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void InvalidateDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1644,7 +1644,7 @@ namespace Android.Graphics.Drawable
 				/// scheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1)]
-				public virtual void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
+				public virtual void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1652,7 +1652,7 @@ namespace Android.Graphics.Drawable
 				/// unscheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1)]
-				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
+				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1687,34 +1687,34 @@ namespace Android.Graphics.Drawable
 				/// getCurrent
 				/// </java-name>
 				[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetCurrent() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetCurrent() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// setConstantState
 				/// </java-name>
 				[Dot42.DexImport("setConstantState", "(Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;)V", AccessFlags = 4)]
-				protected internal virtual void SetConstantState(global::Android.Graphics.Drawable.DrawableContainer.DrawableContainerState drawableContainerState) /* MethodBuilder.Create */ 
+				protected internal virtual void SetConstantState(global::Android.Graphics.Drawables.DrawableContainer.DrawableContainerState drawableContainerState) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1775,7 +1775,7 @@ namespace Android.Graphics.Drawable
 				/// <java-name>
 				/// getCurrent
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Current
+				public global::Android.Graphics.Drawables.Drawable Current
 				{
 				[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetCurrent(); }
@@ -1785,7 +1785,7 @@ namespace Android.Graphics.Drawable
 				/// android/graphics/drawable/DrawableContainer$DrawableContainerState
 				/// </java-name>
 				[Dot42.DexImport("android/graphics/drawable/DrawableContainer$DrawableContainerState", AccessFlags = 1033)]
-				public abstract partial class DrawableContainerState : global::Android.Graphics.Drawable.Drawable.ConstantState
+				public abstract partial class DrawableContainerState : global::Android.Graphics.Drawables.Drawable.ConstantState
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -1806,7 +1806,7 @@ namespace Android.Graphics.Drawable
 						/// addChild
 						/// </java-name>
 						[Dot42.DexImport("addChild", "(Landroid/graphics/drawable/Drawable;)I", AccessFlags = 17)]
-						public int AddChild(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+						public int AddChild(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 						{
 								return default(int);
 						}
@@ -1824,9 +1824,9 @@ namespace Android.Graphics.Drawable
 						/// getChildren
 						/// </java-name>
 						[Dot42.DexImport("getChildren", "()[Landroid/graphics/drawable/Drawable;", AccessFlags = 17)]
-						public global::Android.Graphics.Drawable.Drawable[] GetChildren() /* MethodBuilder.Create */ 
+						public global::Android.Graphics.Drawables.Drawable[] GetChildren() /* MethodBuilder.Create */ 
 						{
-								return default(global::Android.Graphics.Drawable.Drawable[]);
+								return default(global::Android.Graphics.Drawables.Drawable[]);
 						}
 
 						/// <java-name>
@@ -1997,7 +1997,7 @@ namespace Android.Graphics.Drawable
 						/// <java-name>
 						/// getChildren
 						/// </java-name>
-						public global::Android.Graphics.Drawable.Drawable[] Children
+						public global::Android.Graphics.Drawables.Drawable[] Children
 						{
 						[Dot42.DexImport("getChildren", "()[Landroid/graphics/drawable/Drawable;", AccessFlags = 17)]
 								get{ return GetChildren(); }
@@ -2087,7 +2087,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/GradientDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/GradientDrawable", AccessFlags = 33)]
-		public partial class GradientDrawable : global::Android.Graphics.Drawable.Drawable
+		public partial class GradientDrawable : global::Android.Graphics.Drawables.Drawable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2131,7 +2131,7 @@ namespace Android.Graphics.Drawable
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V", AccessFlags = 1)]
-				public GradientDrawable(global::Android.Graphics.Drawable.GradientDrawable.Orientation orientation, int[] int32) /* MethodBuilder.Create */ 
+				public GradientDrawable(global::Android.Graphics.Drawables.GradientDrawable.Orientation orientation, int[] int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2330,18 +2330,18 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -2484,16 +2484,16 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/InsetDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/InsetDrawable", AccessFlags = 33)]
-		public partial class InsetDrawable : global::Android.Graphics.Drawable.Drawable, global::Android.Graphics.Drawable.Drawable.ICallback
+		public partial class InsetDrawable : global::Android.Graphics.Drawables.Drawable, global::Android.Graphics.Drawables.Drawable.ICallback
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;I)V", AccessFlags = 1)]
-				public InsetDrawable(global::Android.Graphics.Drawable.Drawable drawable, int int32) /* MethodBuilder.Create */ 
+				public InsetDrawable(global::Android.Graphics.Drawables.Drawable drawable, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;IIII)V", AccessFlags = 1)]
-				public InsetDrawable(global::Android.Graphics.Drawable.Drawable drawable, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				public InsetDrawable(global::Android.Graphics.Drawables.Drawable drawable, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2510,7 +2510,7 @@ namespace Android.Graphics.Drawable
 				/// invalidateDrawable
 				/// </java-name>
 				[Dot42.DexImport("invalidateDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void InvalidateDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void InvalidateDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2518,7 +2518,7 @@ namespace Android.Graphics.Drawable
 				/// scheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1)]
-				public virtual void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
+				public virtual void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2526,7 +2526,7 @@ namespace Android.Graphics.Drawable
 				/// unscheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1)]
-				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
+				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2638,18 +2638,18 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2699,11 +2699,11 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/LayerDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/LayerDrawable", AccessFlags = 33)]
-		public partial class LayerDrawable : global::Android.Graphics.Drawable.Drawable, global::Android.Graphics.Drawable.Drawable.ICallback
+		public partial class LayerDrawable : global::Android.Graphics.Drawables.Drawable, global::Android.Graphics.Drawables.Drawable.ICallback
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "([Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public LayerDrawable(global::Android.Graphics.Drawable.Drawable[] drawable) /* MethodBuilder.Create */ 
+				public LayerDrawable(global::Android.Graphics.Drawables.Drawable[] drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2720,9 +2720,9 @@ namespace Android.Graphics.Drawable
 				/// findDrawableByLayerId
 				/// </java-name>
 				[Dot42.DexImport("findDrawableByLayerId", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable FindDrawableByLayerId(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable FindDrawableByLayerId(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -2746,9 +2746,9 @@ namespace Android.Graphics.Drawable
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -2764,7 +2764,7 @@ namespace Android.Graphics.Drawable
 				/// setDrawableByLayerId
 				/// </java-name>
 				[Dot42.DexImport("setDrawableByLayerId", "(ILandroid/graphics/drawable/Drawable;)Z", AccessFlags = 1)]
-				public virtual bool SetDrawableByLayerId(int int32, global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual bool SetDrawableByLayerId(int int32, global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2781,7 +2781,7 @@ namespace Android.Graphics.Drawable
 				/// invalidateDrawable
 				/// </java-name>
 				[Dot42.DexImport("invalidateDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void InvalidateDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void InvalidateDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2789,7 +2789,7 @@ namespace Android.Graphics.Drawable
 				/// scheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1)]
-				public virtual void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
+				public virtual void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2797,7 +2797,7 @@ namespace Android.Graphics.Drawable
 				/// unscheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1)]
-				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
+				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2934,18 +2934,18 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -3004,7 +3004,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/LevelListDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/LevelListDrawable", AccessFlags = 33)]
-		public partial class LevelListDrawable : global::Android.Graphics.Drawable.DrawableContainer
+		public partial class LevelListDrawable : global::Android.Graphics.Drawables.DrawableContainer
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -3016,7 +3016,7 @@ namespace Android.Graphics.Drawable
 				/// addLevel
 				/// </java-name>
 				[Dot42.DexImport("addLevel", "(IILandroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void AddLevel(int int32, int int321, global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void AddLevel(int int32, int int321, global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3042,9 +3042,9 @@ namespace Android.Graphics.Drawable
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 		}
@@ -3053,7 +3053,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/NinePatchDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/NinePatchDrawable", AccessFlags = 33)]
-		public partial class NinePatchDrawable : global::Android.Graphics.Drawable.Drawable
+		public partial class NinePatchDrawable : global::Android.Graphics.Drawables.Drawable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;[BLandroid/graphics/Rect;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -3246,18 +3246,18 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -3343,7 +3343,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/PaintDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/PaintDrawable", AccessFlags = 33)]
-		public partial class PaintDrawable : global::Android.Graphics.Drawable.ShapeDrawable
+		public partial class PaintDrawable : global::Android.Graphics.Drawables.ShapeDrawable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -3388,7 +3388,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/PictureDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/PictureDrawable", AccessFlags = 33)]
-		public partial class PictureDrawable : global::Android.Graphics.Drawable.Drawable
+		public partial class PictureDrawable : global::Android.Graphics.Drawables.Drawable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Picture;)V", AccessFlags = 1)]
@@ -3529,7 +3529,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/RotateDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/RotateDrawable", AccessFlags = 33)]
-		public partial class RotateDrawable : global::Android.Graphics.Drawable.Drawable, global::Android.Graphics.Drawable.Drawable.ICallback
+		public partial class RotateDrawable : global::Android.Graphics.Drawables.Drawable, global::Android.Graphics.Drawables.Drawable.ICallback
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -3549,9 +3549,9 @@ namespace Android.Graphics.Drawable
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetDrawable() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetDrawable() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -3592,7 +3592,7 @@ namespace Android.Graphics.Drawable
 				/// invalidateDrawable
 				/// </java-name>
 				[Dot42.DexImport("invalidateDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void InvalidateDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void InvalidateDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3600,7 +3600,7 @@ namespace Android.Graphics.Drawable
 				/// scheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1)]
-				public virtual void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
+				public virtual void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3608,7 +3608,7 @@ namespace Android.Graphics.Drawable
 				/// unscheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1)]
-				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
+				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3687,9 +3687,9 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
@@ -3705,15 +3705,15 @@ namespace Android.Graphics.Drawable
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Drawable
+				public global::Android.Graphics.Drawables.Drawable Drawable
 				{
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetDrawable(); }
@@ -3761,11 +3761,11 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/ScaleDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/ScaleDrawable", AccessFlags = 33)]
-		public partial class ScaleDrawable : global::Android.Graphics.Drawable.Drawable, global::Android.Graphics.Drawable.Drawable.ICallback
+		public partial class ScaleDrawable : global::Android.Graphics.Drawables.Drawable, global::Android.Graphics.Drawables.Drawable.ICallback
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;IFF)V", AccessFlags = 1)]
-				public ScaleDrawable(global::Android.Graphics.Drawable.Drawable drawable, int int32, float single, float single1) /* MethodBuilder.Create */ 
+				public ScaleDrawable(global::Android.Graphics.Drawables.Drawable drawable, int int32, float single, float single1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3773,9 +3773,9 @@ namespace Android.Graphics.Drawable
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetDrawable() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetDrawable() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -3791,7 +3791,7 @@ namespace Android.Graphics.Drawable
 				/// invalidateDrawable
 				/// </java-name>
 				[Dot42.DexImport("invalidateDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void InvalidateDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void InvalidateDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3799,7 +3799,7 @@ namespace Android.Graphics.Drawable
 				/// scheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1)]
-				public virtual void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
+				public virtual void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3807,7 +3807,7 @@ namespace Android.Graphics.Drawable
 				/// unscheduleDrawable
 				/// </java-name>
 				[Dot42.DexImport("unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1)]
-				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
+				public virtual void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3928,18 +3928,18 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -3950,7 +3950,7 @@ namespace Android.Graphics.Drawable
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Drawable
+				public global::Android.Graphics.Drawables.Drawable Drawable
 				{
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetDrawable(); }
@@ -3998,7 +3998,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/ShapeDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/ShapeDrawable", AccessFlags = 33)]
-		public partial class ShapeDrawable : global::Android.Graphics.Drawable.Drawable
+		public partial class ShapeDrawable : global::Android.Graphics.Drawables.Drawable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4007,7 +4007,7 @@ namespace Android.Graphics.Drawable
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/shapes/Shape;)V", AccessFlags = 1)]
-				public ShapeDrawable(global::Android.Graphics.Drawable.Shapes.Shape shape) /* MethodBuilder.Create */ 
+				public ShapeDrawable(global::Android.Graphics.Drawables.Shapes.Shape shape) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4015,16 +4015,16 @@ namespace Android.Graphics.Drawable
 				/// getShape
 				/// </java-name>
 				[Dot42.DexImport("getShape", "()Landroid/graphics/drawable/shapes/Shape;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Shapes.Shape GetShape() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Shapes.Shape GetShape() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Shapes.Shape);
+						return default(global::Android.Graphics.Drawables.Shapes.Shape);
 				}
 
 				/// <java-name>
 				/// setShape
 				/// </java-name>
 				[Dot42.DexImport("setShape", "(Landroid/graphics/drawable/shapes/Shape;)V", AccessFlags = 1)]
-				public virtual void SetShape(global::Android.Graphics.Drawable.Shapes.Shape shape) /* MethodBuilder.Create */ 
+				public virtual void SetShape(global::Android.Graphics.Drawables.Shapes.Shape shape) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4032,7 +4032,7 @@ namespace Android.Graphics.Drawable
 				/// setShaderFactory
 				/// </java-name>
 				[Dot42.DexImport("setShaderFactory", "(Landroid/graphics/drawable/ShapeDrawable$ShaderFactory;)V", AccessFlags = 1)]
-				public virtual void SetShaderFactory(global::Android.Graphics.Drawable.ShapeDrawable.ShaderFactory shaderFactory) /* MethodBuilder.Create */ 
+				public virtual void SetShaderFactory(global::Android.Graphics.Drawables.ShapeDrawable.ShaderFactory shaderFactory) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4040,9 +4040,9 @@ namespace Android.Graphics.Drawable
 				/// getShaderFactory
 				/// </java-name>
 				[Dot42.DexImport("getShaderFactory", "()Landroid/graphics/drawable/ShapeDrawable$ShaderFactory;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.ShapeDrawable.ShaderFactory GetShaderFactory() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.ShapeDrawable.ShaderFactory GetShaderFactory() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.ShapeDrawable.ShaderFactory);
+						return default(global::Android.Graphics.Drawables.ShapeDrawable.ShaderFactory);
 				}
 
 				/// <java-name>
@@ -4118,7 +4118,7 @@ namespace Android.Graphics.Drawable
 				/// </java-name>
 				[Dot42.DexImport("onDraw", "(Landroid/graphics/drawable/shapes/Shape;Landroid/graphics/Canvas;Landroid/graphi" +
     "cs/Paint;)V", AccessFlags = 4)]
-				protected internal virtual void OnDraw(global::Android.Graphics.Drawable.Shapes.Shape shape, global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
+				protected internal virtual void OnDraw(global::Android.Graphics.Drawables.Shapes.Shape shape, global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4203,24 +4203,24 @@ namespace Android.Graphics.Drawable
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable.ConstantState GetConstantState() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable.ConstantState);
+						return default(global::Android.Graphics.Drawables.Drawable.ConstantState);
 				}
 
 				/// <java-name>
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getShape
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Shapes.Shape Shape
+				public global::Android.Graphics.Drawables.Shapes.Shape Shape
 				{
 				[Dot42.DexImport("getShape", "()Landroid/graphics/drawable/shapes/Shape;", AccessFlags = 1)]
 						get{ return GetShape(); }
@@ -4299,7 +4299,7 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/StateListDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/StateListDrawable", AccessFlags = 33)]
-		public partial class StateListDrawable : global::Android.Graphics.Drawable.DrawableContainer
+		public partial class StateListDrawable : global::Android.Graphics.Drawables.DrawableContainer
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4311,7 +4311,7 @@ namespace Android.Graphics.Drawable
 				/// addState
 				/// </java-name>
 				[Dot42.DexImport("addState", "([ILandroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void AddState(int[] int32, global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void AddState(int[] int32, global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4346,9 +4346,9 @@ namespace Android.Graphics.Drawable
 				/// mutate
 				/// </java-name>
 				[Dot42.DexImport("mutate", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable Mutate() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 		}
@@ -4357,11 +4357,11 @@ namespace Android.Graphics.Drawable
 		/// android/graphics/drawable/TransitionDrawable
 		/// </java-name>
 		[Dot42.DexImport("android/graphics/drawable/TransitionDrawable", AccessFlags = 33)]
-		public partial class TransitionDrawable : global::Android.Graphics.Drawable.LayerDrawable, global::Android.Graphics.Drawable.Drawable.ICallback
+		public partial class TransitionDrawable : global::Android.Graphics.Drawables.LayerDrawable, global::Android.Graphics.Drawables.Drawable.ICallback
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "([Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public TransitionDrawable(global::Android.Graphics.Drawable.Drawable[] drawable) /* MethodBuilder.Create */ 
+				public TransitionDrawable(global::Android.Graphics.Drawables.Drawable[] drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4420,17 +4420,17 @@ namespace Android.Graphics.Drawable
 				}
 
 				[Dot42.DexImport("android/graphics/drawable/Drawable$Callback", "invalidateDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
-				public override void InvalidateDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override void InvalidateDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 				}
 
 				[Dot42.DexImport("android/graphics/drawable/Drawable$Callback", "scheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V", AccessFlags = 1025)]
-				public override void ScheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override void ScheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable, long int64) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 				}
 
 				[Dot42.DexImport("android/graphics/drawable/Drawable$Callback", "unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1025)]
-				public override void UnscheduleDrawable(global::Android.Graphics.Drawable.Drawable drawable, global::Java.Lang.IRunnable runnable) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 				}
 

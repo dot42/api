@@ -109,7 +109,7 @@ namespace Android.Preference
 				/// setDialogIcon
 				/// </java-name>
 				[Dot42.DexImport("setDialogIcon", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void SetDialogIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void SetDialogIcon(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -125,9 +125,9 @@ namespace Android.Preference
 				/// getDialogIcon
 				/// </java-name>
 				[Dot42.DexImport("getDialogIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetDialogIcon() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetDialogIcon() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -326,7 +326,7 @@ namespace Android.Preference
 				/// <java-name>
 				/// getDialogIcon
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable DialogIcon
+				public global::Android.Graphics.Drawables.Drawable DialogIcon
 				{
 				[Dot42.DexImport("getDialogIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetDialogIcon(); }
@@ -1135,7 +1135,7 @@ namespace Android.Preference
 				/// setIcon
 				/// </java-name>
 				[Dot42.DexImport("setIcon", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void SetIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void SetIcon(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1151,9 +1151,9 @@ namespace Android.Preference
 				/// getIcon
 				/// </java-name>
 				[Dot42.DexImport("getIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetIcon() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetIcon() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1720,7 +1720,7 @@ namespace Android.Preference
 				/// <java-name>
 				/// getIcon
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Icon
+				public global::Android.Graphics.Drawables.Drawable Icon
 				{
 				[Dot42.DexImport("getIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetIcon(); }

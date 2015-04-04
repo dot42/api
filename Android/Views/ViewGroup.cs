@@ -33,7 +33,7 @@ namespace Android.Views
         /// Fired when this view is attached to a window.
         /// </summary>
         [ListenerInterface(typeof(IOnHierarchyChangeListener))]
-        public event System.EventHandler ChildViewAdded
+        public event System.EventHandler<ChildViewAddedEventArgs> ChildViewAdded
         {
             add
             {
@@ -57,7 +57,7 @@ namespace Android.Views
         /// Fired when this view is attached to a window.
         /// </summary>
         [ListenerInterface(typeof(IOnHierarchyChangeListener))]
-        public event System.EventHandler ChildViewRemoved
+        public event System.EventHandler<ChildViewRemovedEventArgs> ChildViewRemoved
         {
             add
             {
@@ -76,6 +76,23 @@ namespace Android.Views
                 if (listener != null) listener.ChildViewRemoved.Remove(value);
             }
         }
+
+        public class ChildViewAddedEventArgs : HierarchyChangeEventArgs
+        {
+            public ChildViewAddedEventArgs(View child)
+                : base(child)
+            {
+            }
+        }
+
+        public class ChildViewRemovedEventArgs : HierarchyChangeEventArgs
+        {
+            public ChildViewRemovedEventArgs(View child)
+                : base(child)
+            {
+            }
+        }
+
     }
 
     /// <summary>
@@ -83,17 +100,17 @@ namespace Android.Views
     /// </summary>
     internal sealed class ViewGroupOnHierarchyChangeListener : ViewGroup.IOnHierarchyChangeListener
     {
-        internal readonly Dot42.EventHandlerListener ChildViewAdded = new EventHandlerListener();
-        internal readonly Dot42.EventHandlerListener ChildViewRemoved = new EventHandlerListener();
+        internal readonly Dot42.EventHandlerListener<ViewGroup.ChildViewAddedEventArgs> ChildViewAdded = new EventHandlerListener<ViewGroup.ChildViewAddedEventArgs>();
+        internal readonly Dot42.EventHandlerListener<ViewGroup.ChildViewRemovedEventArgs> ChildViewRemoved = new EventHandlerListener<ViewGroup.ChildViewRemovedEventArgs>();
 
         public void OnChildViewAdded(View parent, View child)
         {
-            ChildViewAdded.Invoke(parent, new HierarchyChangeEventArgs(child));
+            ChildViewAdded.Invoke(parent, new ViewGroup.ChildViewAddedEventArgs(child));
         }
 
         public void OnChildViewRemoved(View parent, View child)
         {
-            ChildViewRemoved.Invoke(parent, new HierarchyChangeEventArgs(child));
+            ChildViewRemoved.Invoke(parent, new ViewGroup.ChildViewRemovedEventArgs(child));
         }
     }
 }

@@ -1475,18 +1475,18 @@ namespace Android.Content.Res
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getDrawableForDensity
 				/// </java-name>
 				[Dot42.DexImport("getDrawableForDensity", "(II)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetDrawableForDensity(int int32, int int321) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetDrawableForDensity(int int32, int int321) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -2090,9 +2090,9 @@ namespace Android.Content.Res
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>

@@ -895,7 +895,7 @@ namespace Android.Text
 						/// getDrawable
 						/// </java-name>
 						[Dot42.DexImport("getDrawable", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-						global::Android.Graphics.Drawable.Drawable GetDrawable(string @string) /* MethodBuilder.Create */ ;
+						global::Android.Graphics.Drawables.Drawable GetDrawable(string @string) /* MethodBuilder.Create */ ;
 
 				}
 

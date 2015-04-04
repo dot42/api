@@ -483,18 +483,18 @@ namespace Android.Test.Mock
 				/// getWallpaper
 				/// </java-name>
 				[Dot42.DexImport("getWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetWallpaper() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetWallpaper() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// peekWallpaper
 				/// </java-name>
 				[Dot42.DexImport("peekWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable PeekWallpaper() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable PeekWallpaper() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1002,7 +1002,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getWallpaper
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Wallpaper
+				public global::Android.Graphics.Drawables.Drawable Wallpaper
 				{
 				[Dot42.DexImport("getWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetWallpaper(); }
@@ -1802,90 +1802,90 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawab" +
     "le/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetDrawable(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetDrawable(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getActivityIcon
 				/// </java-name>
 				[Dot42.DexImport("getActivityIcon", "(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetActivityIcon(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetActivityIcon(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getActivityIcon
 				/// </java-name>
 				[Dot42.DexImport("getActivityIcon", "(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetActivityIcon(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetActivityIcon(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getDefaultActivityIcon
 				/// </java-name>
 				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetDefaultActivityIcon() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetDefaultActivityIcon() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getApplicationIcon
 				/// </java-name>
 				[Dot42.DexImport("getApplicationIcon", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetApplicationIcon(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetApplicationIcon(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getApplicationIcon
 				/// </java-name>
 				[Dot42.DexImport("getApplicationIcon", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetApplicationIcon(string @string) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetApplicationIcon(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getActivityLogo
 				/// </java-name>
 				[Dot42.DexImport("getActivityLogo", "(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetActivityLogo(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetActivityLogo(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getActivityLogo
 				/// </java-name>
 				[Dot42.DexImport("getActivityLogo", "(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetActivityLogo(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetActivityLogo(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getApplicationLogo
 				/// </java-name>
 				[Dot42.DexImport("getApplicationLogo", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetApplicationLogo(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetApplicationLogo(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getApplicationLogo
 				/// </java-name>
 				[Dot42.DexImport("getApplicationLogo", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetApplicationLogo(string @string) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetApplicationLogo(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -2103,7 +2103,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getDefaultActivityIcon
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable DefaultActivityIcon
+				public global::Android.Graphics.Drawables.Drawable DefaultActivityIcon
 				{
 				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetDefaultActivityIcon(); }
@@ -2279,9 +2279,9 @@ namespace Android.Test.Mock
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>

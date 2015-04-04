@@ -372,12 +372,12 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public DrawableMarginSpan(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public DrawableMarginSpan(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;I)V", AccessFlags = 1)]
-				public DrawableMarginSpan(global::Android.Graphics.Drawable.Drawable drawable, int int32) /* MethodBuilder.Create */ 
+				public DrawableMarginSpan(global::Android.Graphics.Drawables.Drawable drawable, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -459,7 +459,7 @@ namespace Android.Text.Style
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-				public abstract global::Android.Graphics.Drawable.Drawable GetDrawable() /* MethodBuilder.Create */ ;
+				public abstract global::Android.Graphics.Drawables.Drawable GetDrawable() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getSize
@@ -492,7 +492,7 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Drawable
+				public global::Android.Graphics.Drawables.Drawable Drawable
 				{
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
 						get{ return GetDrawable(); }
@@ -970,22 +970,22 @@ namespace Android.Text.Style
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;I)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Drawable.Drawable drawable, int int32) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Drawables.Drawable drawable, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Drawable.Drawable drawable, string @string) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Drawables.Drawable drawable, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Drawable.Drawable drawable, string @string, int int32) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Drawables.Drawable drawable, string @string, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1013,9 +1013,9 @@ namespace Android.Text.Style
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetDrawable() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetDrawable() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1035,7 +1035,7 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Drawable
+				public global::Android.Graphics.Drawables.Drawable Drawable
 				{
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetDrawable(); }

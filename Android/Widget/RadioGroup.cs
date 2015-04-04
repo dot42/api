@@ -32,7 +32,7 @@ namespace Android.Widget
         /// Fired when the checked radio button has changed.
         /// </summary>
         [ListenerInterface(typeof(IOnCheckedChangeListener))]
-        public event EventHandler<RadioGroupCheckedChangedEventArgs> CheckedChanged
+        public event EventHandler<CheckedChangeEventArgs> CheckedChange
         {
             add
             {
@@ -45,6 +45,17 @@ namespace Android.Widget
                 if (listener != null) listener.CheckedChanged.Remove(value);
             }
         }
+
+        public class CheckedChangeEventArgs : EventArgs
+        {
+            public CheckedChangeEventArgs(int checkedId)
+            {
+                CheckedId = checkedId;
+            }
+
+            public int CheckedId { get; private set; }
+        }
+
     }
 
     /// <summary>
@@ -52,11 +63,11 @@ namespace Android.Widget
     /// </summary>
     internal sealed class RadioGroupListener : RadioGroup.IOnCheckedChangeListener
     {
-        internal readonly Dot42.EventHandlerListener<RadioGroupCheckedChangedEventArgs> CheckedChanged = new EventHandlerListener<RadioGroupCheckedChangedEventArgs>();
+        internal readonly Dot42.EventHandlerListener<RadioGroup.CheckedChangeEventArgs> CheckedChanged = new EventHandlerListener<RadioGroup.CheckedChangeEventArgs>();
 
         public void OnCheckedChanged(RadioGroup @group, int checkedId)
         {
-            CheckedChanged.Invoke(@group, new RadioGroupCheckedChangedEventArgs(checkedId));
+            CheckedChanged.Invoke(@group, new RadioGroup.CheckedChangeEventArgs(checkedId));
         }
     }
 }

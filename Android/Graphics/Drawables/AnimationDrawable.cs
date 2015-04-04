@@ -1,6 +1,6 @@
 // Copyright (C) 2014 dot42
 //
-// Original filename: CheckedChangedEventArgs.cs
+// Original filename: AnimationDrawable.cs
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,26 +13,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using System;
+using Dot42;
 
-namespace Android.Widget
+namespace Android.Graphics.Drawables
 {
-	public class CheckedChangedEventArgs : EventArgs
+    [ApiEnhancementIgnoreMethods("ScheduleDrawable", "UnscheduleDrawable", "UnscheduleSelf")] // Already in base class
+    partial class AnimationDrawable
 	{
-	    private readonly bool @checked;
-
-	    public CheckedChangedEventArgs(bool @checked)
-	    {
-	        this.@checked = @checked;
-	    }
-
-        /// <summary>
-        /// Gets the checked state of the sender
-        /// </summary>
-	    public bool IsChecked
-	    {
-	        get { return @checked; }
-	    }
 	}
 }
 

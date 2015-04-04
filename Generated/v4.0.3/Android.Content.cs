@@ -3680,13 +3680,13 @@ namespace Android.Content
 				/// getWallpaper
 				/// </java-name>
 				[Dot42.DexImport("getWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-				public abstract global::Android.Graphics.Drawable.Drawable GetWallpaper() /* MethodBuilder.Create */ ;
+				public abstract global::Android.Graphics.Drawables.Drawable GetWallpaper() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// peekWallpaper
 				/// </java-name>
 				[Dot42.DexImport("peekWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-				public abstract global::Android.Graphics.Drawable.Drawable PeekWallpaper() /* MethodBuilder.Create */ ;
+				public abstract global::Android.Graphics.Drawables.Drawable PeekWallpaper() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getWallpaperDesiredMinimumWidth
@@ -4094,7 +4094,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getWallpaper
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Wallpaper
+				public global::Android.Graphics.Drawables.Drawable Wallpaper
 				{
 				[Dot42.DexImport("getWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
 						get{ return GetWallpaper(); }
@@ -4424,18 +4424,18 @@ namespace Android.Content
 				/// getWallpaper
 				/// </java-name>
 				[Dot42.DexImport("getWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable GetWallpaper() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetWallpaper() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// peekWallpaper
 				/// </java-name>
 				[Dot42.DexImport("peekWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawable.Drawable PeekWallpaper() /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable PeekWallpaper() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -4957,7 +4957,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getWallpaper
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Wallpaper
+				public global::Android.Graphics.Drawables.Drawable Wallpaper
 				{
 				[Dot42.DexImport("getWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetWallpaper(); }

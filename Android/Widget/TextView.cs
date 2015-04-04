@@ -14,8 +14,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using Android.Text;
 using Android.Views;
 using Dot42;
+using Java.Lang;
 
 namespace Android.Widget
 {
@@ -25,6 +27,8 @@ namespace Android.Widget
 #pragma warning disable 649
         [Dot42.ResourceId("__dot42_textview_editoraction_listener")]
         private static readonly int editorActionListenerKey;
+        [Dot42.ResourceId("__dot42_textview_textwatcher_listener")]
+        private static readonly int textwatcherListenerKey;
 #pragma warning restore 649
 #endregion // System resource ID's
 
@@ -51,6 +55,30 @@ namespace Android.Widget
                 if (listener != null) listener.EditorAction.Remove(value);
             }
         }
+
+        /// <summary>
+        /// Fired when an action is being performed.
+        /// </summary>
+        [ListenerInterface(typeof(ITextWatcher))]
+        public event EventHandler<AfterTextChangedEventArgs> AfterTextChanged
+        {
+            add
+            {
+                var listener = (TextViewTextWatcher)GetTag(textwatcherListenerKey);
+                if (listener == null)
+                {
+                    listener = new TextViewTextWatcher();
+                    SetTag(textwatcherListenerKey, listener);
+                    AddTextChangedListener(listener);
+                }
+                listener.AfterTextChangedAction.Add(value);
+            }
+            remove
+            {
+                var listener = (TextViewTextWatcher)GetTag(textwatcherListenerKey);
+                if (listener != null) listener.AfterTextChangedAction.Remove(value);
+            }
+        }
     }
 
     /// <summary>
@@ -65,6 +93,30 @@ namespace Android.Widget
             var args = new EditorActionEventArgs(actionId, @event);
             EditorAction.Invoke(v, args);
             return args.IsHandled;
+        }
+    }
+
+    /// <summary>
+    /// Implementation of the <see cref="EditorAction"/> event.
+    /// </summary>
+    internal sealed class TextViewTextWatcher : ITextWatcher
+    {
+        internal readonly Dot42.EventHandlerListener<AfterTextChangedEventArgs> AfterTextChangedAction = new EventHandlerListener<AfterTextChangedEventArgs>();
+
+        public void BeforeTextChanged(ICharSequence charSequence, int int32, int int321, int int322)
+        {
+            // TODO: implement
+        }
+
+        public void OnTextChanged(ICharSequence charSequence, int int32, int int321, int int322)
+        {
+            // TODO: implement
+        }
+
+        public void AfterTextChanged(IEditable editable)
+        {
+            var args = new AfterTextChangedEventArgs(editable);
+            AfterTextChangedAction.Invoke(editable, args);
         }
     }
 }

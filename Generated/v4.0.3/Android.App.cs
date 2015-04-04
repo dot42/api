@@ -81,7 +81,7 @@ namespace Android.App
 				/// setIcon
 				/// </java-name>
 				[Dot42.DexImport("setIcon", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
-				public abstract void SetIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+				public abstract void SetIcon(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setLogo
@@ -93,7 +93,7 @@ namespace Android.App
 				/// setLogo
 				/// </java-name>
 				[Dot42.DexImport("setLogo", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
-				public abstract void SetLogo(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+				public abstract void SetLogo(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setListNavigationCallbacks
@@ -189,13 +189,13 @@ namespace Android.App
 				/// setBackgroundDrawable
 				/// </java-name>
 				[Dot42.DexImport("setBackgroundDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1025)]
-				public abstract void SetBackgroundDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+				public abstract void SetBackgroundDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setStackedBackgroundDrawable
 				/// </java-name>
 				[Dot42.DexImport("setStackedBackgroundDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void SetStackedBackgroundDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void SetStackedBackgroundDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -203,7 +203,7 @@ namespace Android.App
 				/// setSplitBackgroundDrawable
 				/// </java-name>
 				[Dot42.DexImport("setSplitBackgroundDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void SetSplitBackgroundDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void SetSplitBackgroundDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -580,7 +580,7 @@ namespace Android.App
 						/// getIcon
 						/// </java-name>
 						[Dot42.DexImport("getIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-						public abstract global::Android.Graphics.Drawable.Drawable GetIcon() /* MethodBuilder.Create */ ;
+						public abstract global::Android.Graphics.Drawables.Drawable GetIcon() /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// getText
@@ -592,7 +592,7 @@ namespace Android.App
 						/// setIcon
 						/// </java-name>
 						[Dot42.DexImport("setIcon", "(Landroid/graphics/drawable/Drawable;)Landroid/app/ActionBar$Tab;", AccessFlags = 1025)]
-						public abstract Tab SetIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ ;
+						public abstract Tab SetIcon(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// setIcon
@@ -684,7 +684,7 @@ namespace Android.App
 						/// <java-name>
 						/// getIcon
 						/// </java-name>
-						public global::Android.Graphics.Drawable.Drawable Icon
+						public global::Android.Graphics.Drawables.Drawable Icon
 						{
 						[Dot42.DexImport("getIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
 								get{ return GetIcon(); }
@@ -1669,7 +1669,7 @@ namespace Android.App
 				/// setFeatureDrawable
 				/// </java-name>
 				[Dot42.DexImport("setFeatureDrawable", "(ILandroid/graphics/drawable/Drawable;)V", AccessFlags = 17)]
-				public void SetFeatureDrawable(int int32, global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public void SetFeatureDrawable(int int32, global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3621,7 +3621,7 @@ namespace Android.App
 				/// setIcon
 				/// </java-name>
 				[Dot42.DexImport("setIcon", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void SetIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void SetIcon(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3775,7 +3775,7 @@ namespace Android.App
 						/// setIcon
 						/// </java-name>
 						[Dot42.DexImport("setIcon", "(Landroid/graphics/drawable/Drawable;)Landroid/app/AlertDialog$Builder;", AccessFlags = 1)]
-						public virtual Builder SetIcon(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+						public virtual Builder SetIcon(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 						{
 								return default(Builder);
 						}
@@ -5283,7 +5283,7 @@ namespace Android.App
 				/// setFeatureDrawable
 				/// </java-name>
 				[Dot42.DexImport("setFeatureDrawable", "(ILandroid/graphics/drawable/Drawable;)V", AccessFlags = 17)]
-				public void SetFeatureDrawable(int int32, global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public void SetFeatureDrawable(int int32, global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8658,9 +8658,9 @@ namespace Android.App
 						/// createIconThumbnail
 						/// </java-name>
 						[Dot42.DexImport("createIconThumbnail", "(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						public virtual global::Android.Graphics.Drawable.Drawable CreateIconThumbnail(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+						public virtual global::Android.Graphics.Drawables.Drawable CreateIconThumbnail(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 						{
-								return default(global::Android.Graphics.Drawable.Drawable);
+								return default(global::Android.Graphics.Drawables.Drawable);
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -8691,7 +8691,7 @@ namespace Android.App
 						/// icon
 						/// </java-name>
 						[Dot42.DexImport("icon", "Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						public global::Android.Graphics.Drawable.Drawable Icon;
+						public global::Android.Graphics.Drawables.Drawable Icon;
 						/// <java-name>
 						/// packageName
 						/// </java-name>
@@ -10371,7 +10371,7 @@ namespace Android.App
 				/// setProgressDrawable
 				/// </java-name>
 				[Dot42.DexImport("setProgressDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void SetProgressDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void SetProgressDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10379,7 +10379,7 @@ namespace Android.App
 				/// setIndeterminateDrawable
 				/// </java-name>
 				[Dot42.DexImport("setIndeterminateDrawable", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public virtual void SetIndeterminateDrawable(global::Android.Graphics.Drawable.Drawable drawable) /* MethodBuilder.Create */ 
+				public virtual void SetIndeterminateDrawable(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11794,18 +11794,18 @@ namespace Android.App
 				/// loadIcon
 				/// </java-name>
 				[Dot42.DexImport("loadIcon", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public global::Android.Graphics.Drawable.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// loadThumbnail
 				/// </java-name>
 				[Dot42.DexImport("loadThumbnail", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public global::Android.Graphics.Drawable.Drawable LoadThumbnail(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Android.Graphics.Drawables.Drawable LoadThumbnail(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -11971,36 +11971,36 @@ namespace Android.App
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetDrawable() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetDrawable() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// peekDrawable
 				/// </java-name>
 				[Dot42.DexImport("peekDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable PeekDrawable() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable PeekDrawable() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// getFastDrawable
 				/// </java-name>
 				[Dot42.DexImport("getFastDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable GetFastDrawable() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable GetFastDrawable() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
 				/// peekFastDrawable
 				/// </java-name>
 				[Dot42.DexImport("peekFastDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawable.Drawable PeekFastDrawable() /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable PeekFastDrawable() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Graphics.Drawable.Drawable);
+						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -12113,7 +12113,7 @@ namespace Android.App
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable Drawable
+				public global::Android.Graphics.Drawables.Drawable Drawable
 				{
 				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetDrawable(); }
@@ -12122,7 +12122,7 @@ namespace Android.App
 				/// <java-name>
 				/// getFastDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawable.Drawable FastDrawable
+				public global::Android.Graphics.Drawables.Drawable FastDrawable
 				{
 				[Dot42.DexImport("getFastDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 						get{ return GetFastDrawable(); }
