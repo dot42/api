@@ -4105,7 +4105,7 @@ namespace Android.Widget
 						get{ return GetViewTypeCount(); }
 				}
 
-				public int Count
+				public virtual int Count
 				{
 				[Dot42.DexImport("android/widget/Adapter", "getCount", "()I", AccessFlags = 1025)]
 						get{ return GetCount(); }

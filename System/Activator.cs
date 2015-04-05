@@ -41,7 +41,7 @@ namespace System
         /// <summary>
         /// Create an instance of the given type using the best matching constructor.
         /// </summary>
-        public static object CreateInstance(Type type, object[] args)
+        public static object CreateInstance(Type type, params object[] args)
         {
             if (NullableReflection.TreatAsSystemNullableT(type))
                 return null;

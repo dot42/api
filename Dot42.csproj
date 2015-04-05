@@ -112,8 +112,8 @@
     <Compile Include="Generated\v4.0.3\Android.Nfc.cs" />
     <Compile Include="Generated\v4.0.3\Android.Nfc.Tech.cs" />
     <Compile Include="Generated\v4.0.3\Android.Opengl.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Os.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Os.Storage.cs" />
+    <Compile Include="Generated\v4.0.3\Android.OS.cs" />
+    <Compile Include="Generated\v4.0.3\Android.OS.Storage.cs" />
     <Compile Include="Generated\v4.0.3\Android.Preference.cs" />
     <Compile Include="Generated\v4.0.3\Android.Provider.cs" />
     <Compile Include="Generated\v4.0.3\Android.Renderscript.cs" />
@@ -324,8 +324,6 @@
     <Compile Include="Android\Widget\ScrollEventArgs.cs" />
     <Compile Include="Android\Widget\ScrollState.cs" />
     <Compile Include="Android\Widget\ScrollStateChangedEventArgs.cs" />
-    <Compile Include="Android\Widget\ItemSelectedEventArgs.cs" />
-    <Compile Include="Android\Widget\ItemClickEventArgs.cs" />
     <Compile Include="Android\Widget\ProgressChangedEventArgs.cs" />
     <Compile Include="Android\Widget\SeekBar.cs" />
     <Compile Include="Android\Widget\Spinner.cs" />

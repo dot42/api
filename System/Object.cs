@@ -85,3 +85,19 @@ namespace System
 	}
 }
 
+namespace Java.Lang
+{
+    /// <summary>
+    /// This is the same as System.Object.
+    /// </summary>
+    [Dot42.DexImport("java/lang/Object", AccessFlags = 33)]
+    [Obsolete("use System.Object")]
+    public partial class Object : global::System.Object
+    {
+        [Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+        public Object() /* MethodBuilder.Create */
+        {
+        }
+    }
+}
+
