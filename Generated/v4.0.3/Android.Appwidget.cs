@@ -141,24 +141,6 @@ namespace Android.Appwidget
 				}
 
 				/// <java-name>
-				/// getAppWidgetId
-				/// </java-name>
-				[Dot42.DexImport("getAppWidgetId", "()I", AccessFlags = 1)]
-				public virtual int GetAppWidgetId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAppWidgetInfo
-				/// </java-name>
-				[Dot42.DexImport("getAppWidgetInfo", "()Landroid/appwidget/AppWidgetProviderInfo;", AccessFlags = 1)]
-				public virtual global::Android.Appwidget.AppWidgetProviderInfo GetAppWidgetInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Appwidget.AppWidgetProviderInfo);
-				}
-
-				/// <java-name>
 				/// dispatchSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/util/SparseArray;)V", AccessFlags = 4, Signature = "(Landroid/util/SparseArray<Landroid/os/Parcelable;>;)V")]
@@ -208,24 +190,6 @@ namespace Android.Appwidget
 				{
 				}
 
-				/// <java-name>
-				/// getDefaultView
-				/// </java-name>
-				[Dot42.DexImport("getDefaultView", "()Landroid/view/View;", AccessFlags = 4)]
-				protected internal virtual global::Android.Views.View GetDefaultView() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.View);
-				}
-
-				/// <java-name>
-				/// getErrorView
-				/// </java-name>
-				[Dot42.DexImport("getErrorView", "()Landroid/view/View;", AccessFlags = 4)]
-				protected internal virtual global::Android.Views.View GetErrorView() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.View);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal AppWidgetHostView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -234,37 +198,37 @@ namespace Android.Appwidget
 				/// <java-name>
 				/// getAppWidgetId
 				/// </java-name>
-				public int AppWidgetId
+				public virtual int AppWidgetId
 				{
-				[Dot42.DexImport("getAppWidgetId", "()I", AccessFlags = 1)]
-						get{ return GetAppWidgetId(); }
+						[Dot42.DexImport("getAppWidgetId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAppWidgetInfo
 				/// </java-name>
-				public global::Android.Appwidget.AppWidgetProviderInfo AppWidgetInfo
+				public virtual global::Android.Appwidget.AppWidgetProviderInfo AppWidgetInfo
 				{
-				[Dot42.DexImport("getAppWidgetInfo", "()Landroid/appwidget/AppWidgetProviderInfo;", AccessFlags = 1)]
-						get{ return GetAppWidgetInfo(); }
+						[Dot42.DexImport("getAppWidgetInfo", "()Landroid/appwidget/AppWidgetProviderInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Appwidget.AppWidgetProviderInfo); }
 				}
 
 				/// <java-name>
 				/// getDefaultView
 				/// </java-name>
-				protected internal global::Android.Views.View DefaultView
+				protected internal virtual global::Android.Views.View DefaultView
 				{
-				[Dot42.DexImport("getDefaultView", "()Landroid/view/View;", AccessFlags = 4)]
-						get{ return GetDefaultView(); }
+						[Dot42.DexImport("getDefaultView", "()Landroid/view/View;", AccessFlags = 4)]
+						get{ return default(global::Android.Views.View); }
 				}
 
 				/// <java-name>
 				/// getErrorView
 				/// </java-name>
-				protected internal global::Android.Views.View ErrorView
+				protected internal virtual global::Android.Views.View ErrorView
 				{
-				[Dot42.DexImport("getErrorView", "()Landroid/view/View;", AccessFlags = 4)]
-						get{ return GetErrorView(); }
+						[Dot42.DexImport("getErrorView", "()Landroid/view/View;", AccessFlags = 4)]
+						get{ return default(global::Android.Views.View); }
 				}
 
 		}
@@ -407,15 +371,6 @@ namespace Android.Appwidget
 				}
 
 				/// <java-name>
-				/// getInstalledProviders
-				/// </java-name>
-				[Dot42.DexImport("getInstalledProviders", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/appwidget/AppWidgetProviderInfo;>;")]
-				public virtual global::Java.Util.IList<global::Android.Appwidget.AppWidgetProviderInfo> GetInstalledProviders() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Appwidget.AppWidgetProviderInfo>);
-				}
-
-				/// <java-name>
 				/// getAppWidgetInfo
 				/// </java-name>
 				[Dot42.DexImport("getAppWidgetInfo", "(I)Landroid/appwidget/AppWidgetProviderInfo;", AccessFlags = 1)]
@@ -444,10 +399,10 @@ namespace Android.Appwidget
 				/// <java-name>
 				/// getInstalledProviders
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Appwidget.AppWidgetProviderInfo> InstalledProviders
+				public virtual global::Java.Util.IList<global::Android.Appwidget.AppWidgetProviderInfo> InstalledProviders
 				{
-				[Dot42.DexImport("getInstalledProviders", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/appwidget/AppWidgetProviderInfo;>;")]
-						get{ return GetInstalledProviders(); }
+						[Dot42.DexImport("getInstalledProviders", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/appwidget/AppWidgetProviderInfo;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Appwidget.AppWidgetProviderInfo>); }
 				}
 
 		}

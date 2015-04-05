@@ -120,44 +120,58 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetName() /* MethodBuilder.Create */ ;
+				string Name
+				{
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSpecified
 				/// </java-name>
-				[Dot42.DexImport("getSpecified", "()Z", AccessFlags = 1025)]
-				bool GetSpecified() /* MethodBuilder.Create */ ;
+				bool IsSpecified
+				{
+						[Dot42.DexImport("getSpecified", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getValue
 				/// </java-name>
-				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetValue() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setValue
-				/// </java-name>
-				[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetValue(string @string) /* MethodBuilder.Create */ ;
+				string Value
+				{
+						[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
 
 				/// <java-name>
 				/// getOwnerElement
 				/// </java-name>
-				[Dot42.DexImport("getOwnerElement", "()Lorg/w3c/dom/Element;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.IElement GetOwnerElement() /* MethodBuilder.Create */ ;
+				global::Org.W3c.Dom.IElement OwnerElement
+				{
+						[Dot42.DexImport("getOwnerElement", "()Lorg/w3c/dom/Element;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSchemaTypeInfo
 				/// </java-name>
-				[Dot42.DexImport("getSchemaTypeInfo", "()Lorg/w3c/dom/TypeInfo;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.ITypeInfo GetSchemaTypeInfo() /* MethodBuilder.Create */ ;
+				global::Org.W3c.Dom.ITypeInfo SchemaTypeInfo
+				{
+						[Dot42.DexImport("getSchemaTypeInfo", "()Lorg/w3c/dom/TypeInfo;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// isId
 				/// </java-name>
-				[Dot42.DexImport("isId", "()Z", AccessFlags = 1025)]
-				bool IsId() /* MethodBuilder.Create */ ;
+				bool IsId
+				{
+						[Dot42.DexImport("isId", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -177,24 +191,6 @@ namespace Org.W3c.Dom
 		public partial interface ICharacterData : global::Org.W3c.Dom.INode
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				[Dot42.DexImport("getData", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetData() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setData
-				/// </java-name>
-				[Dot42.DexImport("setData", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetData(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// substringData
 				/// </java-name>
@@ -225,6 +221,26 @@ namespace Org.W3c.Dom
 				[Dot42.DexImport("replaceData", "(IILjava/lang/String;)V", AccessFlags = 1025)]
 				void ReplaceData(int int32, int int321, string @string) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getData
+				/// </java-name>
+				string Data
+				{
+						[Dot42.DexImport("getData", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setData", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getLength
+				/// </java-name>
+				int Length
+				{
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -243,24 +259,6 @@ namespace Org.W3c.Dom
 		public partial interface IDocument : global::Org.W3c.Dom.INode
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getDoctype
-				/// </java-name>
-				[Dot42.DexImport("getDoctype", "()Lorg/w3c/dom/DocumentType;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.IDocumentType GetDoctype() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getImplementation
-				/// </java-name>
-				[Dot42.DexImport("getImplementation", "()Lorg/w3c/dom/DOMImplementation;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.IDOMImplementation GetImplementation() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDocumentElement
-				/// </java-name>
-				[Dot42.DexImport("getDocumentElement", "()Lorg/w3c/dom/Element;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.IElement GetDocumentElement() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// createElement
 				/// </java-name>
@@ -346,76 +344,10 @@ namespace Org.W3c.Dom
 				global::Org.W3c.Dom.IElement GetElementById(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getInputEncoding
-				/// </java-name>
-				[Dot42.DexImport("getInputEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetInputEncoding() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getXmlEncoding
-				/// </java-name>
-				[Dot42.DexImport("getXmlEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetXmlEncoding() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getXmlStandalone
-				/// </java-name>
-				[Dot42.DexImport("getXmlStandalone", "()Z", AccessFlags = 1025)]
-				bool GetXmlStandalone() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setXmlStandalone
-				/// </java-name>
-				[Dot42.DexImport("setXmlStandalone", "(Z)V", AccessFlags = 1025)]
-				void SetXmlStandalone(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getXmlVersion
-				/// </java-name>
-				[Dot42.DexImport("getXmlVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetXmlVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setXmlVersion
-				/// </java-name>
-				[Dot42.DexImport("setXmlVersion", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetXmlVersion(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getStrictErrorChecking
-				/// </java-name>
-				[Dot42.DexImport("getStrictErrorChecking", "()Z", AccessFlags = 1025)]
-				bool GetStrictErrorChecking() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setStrictErrorChecking
-				/// </java-name>
-				[Dot42.DexImport("setStrictErrorChecking", "(Z)V", AccessFlags = 1025)]
-				void SetStrictErrorChecking(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDocumentURI
-				/// </java-name>
-				[Dot42.DexImport("getDocumentURI", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetDocumentURI() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setDocumentURI
-				/// </java-name>
-				[Dot42.DexImport("setDocumentURI", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetDocumentURI(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// adoptNode
 				/// </java-name>
 				[Dot42.DexImport("adoptNode", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", AccessFlags = 1025)]
 				global::Org.W3c.Dom.INode AdoptNode(global::Org.W3c.Dom.INode node) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDomConfig
-				/// </java-name>
-				[Dot42.DexImport("getDomConfig", "()Lorg/w3c/dom/DOMConfiguration;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.IDOMConfiguration GetDomConfig() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// normalizeDocument
@@ -428,6 +360,104 @@ namespace Org.W3c.Dom
 				/// </java-name>
 				[Dot42.DexImport("renameNode", "(Lorg/w3c/dom/Node;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", AccessFlags = 1025)]
 				global::Org.W3c.Dom.INode RenameNode(global::Org.W3c.Dom.INode node, string @string, string string1) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getDoctype
+				/// </java-name>
+				global::Org.W3c.Dom.IDocumentType Doctype
+				{
+						[Dot42.DexImport("getDoctype", "()Lorg/w3c/dom/DocumentType;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getImplementation
+				/// </java-name>
+				global::Org.W3c.Dom.IDOMImplementation Implementation
+				{
+						[Dot42.DexImport("getImplementation", "()Lorg/w3c/dom/DOMImplementation;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDocumentElement
+				/// </java-name>
+				global::Org.W3c.Dom.IElement DocumentElement
+				{
+						[Dot42.DexImport("getDocumentElement", "()Lorg/w3c/dom/Element;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getInputEncoding
+				/// </java-name>
+				string InputEncoding
+				{
+						[Dot42.DexImport("getInputEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getXmlEncoding
+				/// </java-name>
+				string XmlEncoding
+				{
+						[Dot42.DexImport("getXmlEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getXmlStandalone
+				/// </java-name>
+				bool IsXmlStandalone
+				{
+						[Dot42.DexImport("getXmlStandalone", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setXmlStandalone", "(Z)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getXmlVersion
+				/// </java-name>
+				string XmlVersion
+				{
+						[Dot42.DexImport("getXmlVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setXmlVersion", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getStrictErrorChecking
+				/// </java-name>
+				bool IsStrictErrorChecking
+				{
+						[Dot42.DexImport("getStrictErrorChecking", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setStrictErrorChecking", "(Z)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getDocumentURI
+				/// </java-name>
+				string DocumentURI
+				{
+						[Dot42.DexImport("getDocumentURI", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setDocumentURI", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getDomConfig
+				/// </java-name>
+				global::Org.W3c.Dom.IDOMConfiguration DomConfig
+				{
+						[Dot42.DexImport("getDomConfig", "()Lorg/w3c/dom/DOMConfiguration;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -450,38 +480,56 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetName() /* MethodBuilder.Create */ ;
+				string Name
+				{
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getEntities
 				/// </java-name>
-				[Dot42.DexImport("getEntities", "()Lorg/w3c/dom/NamedNodeMap;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INamedNodeMap GetEntities() /* MethodBuilder.Create */ ;
+				global::Org.W3c.Dom.INamedNodeMap Entities
+				{
+						[Dot42.DexImport("getEntities", "()Lorg/w3c/dom/NamedNodeMap;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getNotations
 				/// </java-name>
-				[Dot42.DexImport("getNotations", "()Lorg/w3c/dom/NamedNodeMap;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INamedNodeMap GetNotations() /* MethodBuilder.Create */ ;
+				global::Org.W3c.Dom.INamedNodeMap Notations
+				{
+						[Dot42.DexImport("getNotations", "()Lorg/w3c/dom/NamedNodeMap;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPublicId
 				/// </java-name>
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPublicId() /* MethodBuilder.Create */ ;
+				string PublicId
+				{
+						[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
+				string SystemId
+				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getInternalSubset
 				/// </java-name>
-				[Dot42.DexImport("getInternalSubset", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetInternalSubset() /* MethodBuilder.Create */ ;
+				string InternalSubset
+				{
+						[Dot42.DexImport("getInternalSubset", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -513,8 +561,11 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getParameterNames
 				/// </java-name>
-				[Dot42.DexImport("getParameterNames", "()Lorg/w3c/dom/DOMStringList;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.IDOMStringList GetParameterNames() /* MethodBuilder.Create */ ;
+				global::Org.W3c.Dom.IDOMStringList ParameterNames
+				{
+						[Dot42.DexImport("getParameterNames", "()Lorg/w3c/dom/DOMStringList;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -528,38 +579,56 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getSeverity
 				/// </java-name>
-				[Dot42.DexImport("getSeverity", "()S", AccessFlags = 1025)]
-				short GetSeverity() /* MethodBuilder.Create */ ;
+				short Severity
+				{
+						[Dot42.DexImport("getSeverity", "()S", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getMessage
 				/// </java-name>
-				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetMessage() /* MethodBuilder.Create */ ;
+				string Message
+				{
+						[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetTypeJava() /* MethodBuilder.Create */ ;
+				string Type
+				{
+						[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getRelatedException
 				/// </java-name>
-				[Dot42.DexImport("getRelatedException", "()Ljava/lang/Object;", AccessFlags = 1025)]
-				object GetRelatedException() /* MethodBuilder.Create */ ;
+				object RelatedException
+				{
+						[Dot42.DexImport("getRelatedException", "()Ljava/lang/Object;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getRelatedData
 				/// </java-name>
-				[Dot42.DexImport("getRelatedData", "()Ljava/lang/Object;", AccessFlags = 1025)]
-				object GetRelatedData() /* MethodBuilder.Create */ ;
+				object RelatedData
+				{
+						[Dot42.DexImport("getRelatedData", "()Ljava/lang/Object;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getLocation
 				/// </java-name>
-				[Dot42.DexImport("getLocation", "()Lorg/w3c/dom/DOMLocator;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.IDOMLocator GetLocation() /* MethodBuilder.Create */ ;
+				global::Org.W3c.Dom.IDOMLocator Location
+				{
+						[Dot42.DexImport("getLocation", "()Lorg/w3c/dom/DOMLocator;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -653,8 +722,11 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getLength
 				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
+				int Length
+				{
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -689,38 +761,56 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getLineNumber
 				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1025)]
-				int GetLineNumber() /* MethodBuilder.Create */ ;
+				int LineNumber
+				{
+						[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getColumnNumber
 				/// </java-name>
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1025)]
-				int GetColumnNumber() /* MethodBuilder.Create */ ;
+				int ColumnNumber
+				{
+						[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getByteOffset
 				/// </java-name>
-				[Dot42.DexImport("getByteOffset", "()I", AccessFlags = 1025)]
-				int GetByteOffset() /* MethodBuilder.Create */ ;
+				int ByteOffset
+				{
+						[Dot42.DexImport("getByteOffset", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getUtf16Offset
 				/// </java-name>
-				[Dot42.DexImport("getUtf16Offset", "()I", AccessFlags = 1025)]
-				int GetUtf16Offset() /* MethodBuilder.Create */ ;
+				int Utf16Offset
+				{
+						[Dot42.DexImport("getUtf16Offset", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getRelatedNode
 				/// </java-name>
-				[Dot42.DexImport("getRelatedNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INode GetRelatedNode() /* MethodBuilder.Create */ ;
+				global::Org.W3c.Dom.INode RelatedNode
+				{
+						[Dot42.DexImport("getRelatedNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getUri
 				/// </java-name>
-				[Dot42.DexImport("getUri", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetUri() /* MethodBuilder.Create */ ;
+				string Uri
+				{
+						[Dot42.DexImport("getUri", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -738,16 +828,19 @@ namespace Org.W3c.Dom
 				string Item(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// contains
 				/// </java-name>
 				[Dot42.DexImport("contains", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
 				bool Contains(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getLength
+				/// </java-name>
+				int Length
+				{
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -758,12 +851,6 @@ namespace Org.W3c.Dom
 		public partial interface IElement : global::Org.W3c.Dom.INode
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getTagName
-				/// </java-name>
-				[Dot42.DexImport("getTagName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetTagName() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// getAttribute
 				/// </java-name>
@@ -855,12 +942,6 @@ namespace Org.W3c.Dom
 				bool HasAttributeNS(string @string, string string1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSchemaTypeInfo
-				/// </java-name>
-				[Dot42.DexImport("getSchemaTypeInfo", "()Lorg/w3c/dom/TypeInfo;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.ITypeInfo GetSchemaTypeInfo() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setIdAttribute
 				/// </java-name>
 				[Dot42.DexImport("setIdAttribute", "(Ljava/lang/String;Z)V", AccessFlags = 1025)]
@@ -878,6 +959,24 @@ namespace Org.W3c.Dom
 				[Dot42.DexImport("setIdAttributeNode", "(Lorg/w3c/dom/Attr;Z)V", AccessFlags = 1025)]
 				void SetIdAttributeNode(global::Org.W3c.Dom.IAttr attr, bool boolean) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getTagName
+				/// </java-name>
+				string TagName
+				{
+						[Dot42.DexImport("getTagName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSchemaTypeInfo
+				/// </java-name>
+				global::Org.W3c.Dom.ITypeInfo SchemaTypeInfo
+				{
+						[Dot42.DexImport("getSchemaTypeInfo", "()Lorg/w3c/dom/TypeInfo;", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -890,38 +989,56 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getPublicId
 				/// </java-name>
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPublicId() /* MethodBuilder.Create */ ;
+				string PublicId
+				{
+						[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
+				string SystemId
+				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getNotationName
 				/// </java-name>
-				[Dot42.DexImport("getNotationName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetNotationName() /* MethodBuilder.Create */ ;
+				string NotationName
+				{
+						[Dot42.DexImport("getNotationName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getInputEncoding
 				/// </java-name>
-				[Dot42.DexImport("getInputEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetInputEncoding() /* MethodBuilder.Create */ ;
+				string InputEncoding
+				{
+						[Dot42.DexImport("getInputEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getXmlEncoding
 				/// </java-name>
-				[Dot42.DexImport("getXmlEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetXmlEncoding() /* MethodBuilder.Create */ ;
+				string XmlEncoding
+				{
+						[Dot42.DexImport("getXmlEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getXmlVersion
 				/// </java-name>
-				[Dot42.DexImport("getXmlVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetXmlVersion() /* MethodBuilder.Create */ ;
+				string XmlVersion
+				{
+						[Dot42.DexImport("getXmlVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -966,12 +1083,6 @@ namespace Org.W3c.Dom
 				global::Org.W3c.Dom.INode Item(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getNamedItemNS
 				/// </java-name>
 				[Dot42.DexImport("getNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", AccessFlags = 1025)]
@@ -988,6 +1099,15 @@ namespace Org.W3c.Dom
 				/// </java-name>
 				[Dot42.DexImport("removeNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", AccessFlags = 1025)]
 				global::Org.W3c.Dom.INode RemoveNamedItemNS(string @string, string string1) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getLength
+				/// </java-name>
+				int Length
+				{
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1011,12 +1131,6 @@ namespace Org.W3c.Dom
 				string GetNamespaceURI(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// contains
 				/// </java-name>
 				[Dot42.DexImport("contains", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
@@ -1028,6 +1142,15 @@ namespace Org.W3c.Dom
 				[Dot42.DexImport("containsNS", "(Ljava/lang/String;Ljava/lang/String;)Z", AccessFlags = 1025)]
 				bool ContainsNS(string @string, string string1) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getLength
+				/// </java-name>
+				int Length
+				{
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -1037,78 +1160,6 @@ namespace Org.W3c.Dom
 		public partial interface INode
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getNodeName
-				/// </java-name>
-				[Dot42.DexImport("getNodeName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetNodeName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNodeValue
-				/// </java-name>
-				[Dot42.DexImport("getNodeValue", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetNodeValue() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setNodeValue
-				/// </java-name>
-				[Dot42.DexImport("setNodeValue", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetNodeValue(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNodeType
-				/// </java-name>
-				[Dot42.DexImport("getNodeType", "()S", AccessFlags = 1025)]
-				short GetNodeType() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getParentNode
-				/// </java-name>
-				[Dot42.DexImport("getParentNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INode GetParentNode() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getChildNodes
-				/// </java-name>
-				[Dot42.DexImport("getChildNodes", "()Lorg/w3c/dom/NodeList;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INodeList GetChildNodes() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFirstChild
-				/// </java-name>
-				[Dot42.DexImport("getFirstChild", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INode GetFirstChild() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLastChild
-				/// </java-name>
-				[Dot42.DexImport("getLastChild", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INode GetLastChild() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPreviousSibling
-				/// </java-name>
-				[Dot42.DexImport("getPreviousSibling", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INode GetPreviousSibling() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNextSibling
-				/// </java-name>
-				[Dot42.DexImport("getNextSibling", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INode GetNextSibling() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAttributes
-				/// </java-name>
-				[Dot42.DexImport("getAttributes", "()Lorg/w3c/dom/NamedNodeMap;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INamedNodeMap GetAttributes() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getOwnerDocument
-				/// </java-name>
-				[Dot42.DexImport("getOwnerDocument", "()Lorg/w3c/dom/Document;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.IDocument GetOwnerDocument() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// insertBefore
 				/// </java-name>
@@ -1134,12 +1185,6 @@ namespace Org.W3c.Dom
 				global::Org.W3c.Dom.INode AppendChild(global::Org.W3c.Dom.INode node) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// hasChildNodes
-				/// </java-name>
-				[Dot42.DexImport("hasChildNodes", "()Z", AccessFlags = 1025)]
-				bool HasChildNodes() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// cloneNode
 				/// </java-name>
 				[Dot42.DexImport("cloneNode", "(Z)Lorg/w3c/dom/Node;", AccessFlags = 1025)]
@@ -1158,58 +1203,10 @@ namespace Org.W3c.Dom
 				bool IsSupported(string @string, string string1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getNamespaceURI
-				/// </java-name>
-				[Dot42.DexImport("getNamespaceURI", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetNamespaceURI() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPrefix
-				/// </java-name>
-				[Dot42.DexImport("getPrefix", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPrefix() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setPrefix
-				/// </java-name>
-				[Dot42.DexImport("setPrefix", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetPrefix(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLocalName
-				/// </java-name>
-				[Dot42.DexImport("getLocalName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetLocalName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// hasAttributes
-				/// </java-name>
-				[Dot42.DexImport("hasAttributes", "()Z", AccessFlags = 1025)]
-				bool HasAttributes() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getBaseURI
-				/// </java-name>
-				[Dot42.DexImport("getBaseURI", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetBaseURI() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// compareDocumentPosition
 				/// </java-name>
 				[Dot42.DexImport("compareDocumentPosition", "(Lorg/w3c/dom/Node;)S", AccessFlags = 1025)]
 				short CompareDocumentPosition(global::Org.W3c.Dom.INode node) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTextContent
-				/// </java-name>
-				[Dot42.DexImport("getTextContent", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetTextContent() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setTextContent
-				/// </java-name>
-				[Dot42.DexImport("setTextContent", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetTextContent(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// isSameNode
@@ -1259,6 +1256,174 @@ namespace Org.W3c.Dom
 				/// </java-name>
 				[Dot42.DexImport("getUserData", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1025)]
 				object GetUserData(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getNodeName
+				/// </java-name>
+				string NodeName
+				{
+						[Dot42.DexImport("getNodeName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getNodeValue
+				/// </java-name>
+				string NodeValue
+				{
+						[Dot42.DexImport("getNodeValue", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setNodeValue", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getNodeType
+				/// </java-name>
+				short NodeType
+				{
+						[Dot42.DexImport("getNodeType", "()S", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getParentNode
+				/// </java-name>
+				global::Org.W3c.Dom.INode ParentNode
+				{
+						[Dot42.DexImport("getParentNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getChildNodes
+				/// </java-name>
+				global::Org.W3c.Dom.INodeList ChildNodes
+				{
+						[Dot42.DexImport("getChildNodes", "()Lorg/w3c/dom/NodeList;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getFirstChild
+				/// </java-name>
+				global::Org.W3c.Dom.INode FirstChild
+				{
+						[Dot42.DexImport("getFirstChild", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getLastChild
+				/// </java-name>
+				global::Org.W3c.Dom.INode LastChild
+				{
+						[Dot42.DexImport("getLastChild", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPreviousSibling
+				/// </java-name>
+				global::Org.W3c.Dom.INode PreviousSibling
+				{
+						[Dot42.DexImport("getPreviousSibling", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getNextSibling
+				/// </java-name>
+				global::Org.W3c.Dom.INode NextSibling
+				{
+						[Dot42.DexImport("getNextSibling", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getAttributes
+				/// </java-name>
+				global::Org.W3c.Dom.INamedNodeMap Attributes
+				{
+						[Dot42.DexImport("getAttributes", "()Lorg/w3c/dom/NamedNodeMap;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getOwnerDocument
+				/// </java-name>
+				global::Org.W3c.Dom.IDocument OwnerDocument
+				{
+						[Dot42.DexImport("getOwnerDocument", "()Lorg/w3c/dom/Document;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// hasChildNodes
+				/// </java-name>
+				bool HasChildNodes
+				{
+						[Dot42.DexImport("hasChildNodes", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getNamespaceURI
+				/// </java-name>
+				string NamespaceURI
+				{
+						[Dot42.DexImport("getNamespaceURI", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPrefix
+				/// </java-name>
+				string Prefix
+				{
+						[Dot42.DexImport("getPrefix", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setPrefix", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getLocalName
+				/// </java-name>
+				string LocalName
+				{
+						[Dot42.DexImport("getLocalName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// hasAttributes
+				/// </java-name>
+				bool HasAttributes
+				{
+						[Dot42.DexImport("hasAttributes", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getBaseURI
+				/// </java-name>
+				string BaseURI
+				{
+						[Dot42.DexImport("getBaseURI", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getTextContent
+				/// </java-name>
+				string TextContent
+				{
+						[Dot42.DexImport("getTextContent", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setTextContent", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -1377,8 +1542,11 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getLength
 				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
+				int Length
+				{
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1392,14 +1560,20 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getPublicId
 				/// </java-name>
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPublicId() /* MethodBuilder.Create */ ;
+				string PublicId
+				{
+						[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
+				string SystemId
+				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1413,20 +1587,22 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getTarget
 				/// </java-name>
-				[Dot42.DexImport("getTarget", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetTarget() /* MethodBuilder.Create */ ;
+				string Target
+				{
+						[Dot42.DexImport("getTarget", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				[Dot42.DexImport("getData", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetData() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setData
-				/// </java-name>
-				[Dot42.DexImport("setData", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetData(string @string) /* MethodBuilder.Create */ ;
+				string Data
+				{
+						[Dot42.DexImport("getData", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setData", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -1444,22 +1620,28 @@ namespace Org.W3c.Dom
 				global::Org.W3c.Dom.IText SplitText(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isElementContentWhitespace
-				/// </java-name>
-				[Dot42.DexImport("isElementContentWhitespace", "()Z", AccessFlags = 1025)]
-				bool IsElementContentWhitespace() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getWholeText
-				/// </java-name>
-				[Dot42.DexImport("getWholeText", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetWholeText() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// replaceWholeText
 				/// </java-name>
 				[Dot42.DexImport("replaceWholeText", "(Ljava/lang/String;)Lorg/w3c/dom/Text;", AccessFlags = 1025)]
 				global::Org.W3c.Dom.IText ReplaceWholeText(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isElementContentWhitespace
+				/// </java-name>
+				bool IsElementContentWhitespace
+				{
+						[Dot42.DexImport("isElementContentWhitespace", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getWholeText
+				/// </java-name>
+				string WholeText
+				{
+						[Dot42.DexImport("getWholeText", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1471,22 +1653,28 @@ namespace Org.W3c.Dom
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getTypeName
-				/// </java-name>
-				[Dot42.DexImport("getTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetTypeName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTypeNamespace
-				/// </java-name>
-				[Dot42.DexImport("getTypeNamespace", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetTypeNamespace() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// isDerivedFrom
 				/// </java-name>
 				[Dot42.DexImport("isDerivedFrom", "(Ljava/lang/String;Ljava/lang/String;I)Z", AccessFlags = 1025)]
 				bool IsDerivedFrom(string @string, string string1, int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getTypeName
+				/// </java-name>
+				string TypeName
+				{
+						[Dot42.DexImport("getTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getTypeNamespace
+				/// </java-name>
+				string TypeNamespace
+				{
+						[Dot42.DexImport("getTypeNamespace", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

@@ -64,18 +64,6 @@ namespace Javax.Xml.Parsers
 				public abstract global::Org.W3c.Dom.IDocument Parse(global::Org.Xml.Sax.InputSource inputSource) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1025)]
-				public abstract bool IsNamespaceAware() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isValidating
-				/// </java-name>
-				[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1025)]
-				public abstract bool IsValidating() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setEntityResolver
 				/// </java-name>
 				[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1025)]
@@ -94,45 +82,48 @@ namespace Javax.Xml.Parsers
 				public abstract global::Org.W3c.Dom.IDocument NewDocument() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// isNamespaceAware
+				/// </java-name>
+				public abstract bool IsNamespaceAware
+				{
+						[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isValidating
+				/// </java-name>
+				public abstract bool IsValidating
+				{
+						[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
 				/// getDOMImplementation
 				/// </java-name>
-				[Dot42.DexImport("getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", AccessFlags = 1025)]
-				public abstract global::Org.W3c.Dom.IDOMImplementation GetDOMImplementation() /* MethodBuilder.Create */ ;
+				public abstract global::Org.W3c.Dom.IDOMImplementation DOMImplementation
+				{
+						[Dot42.DexImport("getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSchema
 				/// </java-name>
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema GetSchema() /* MethodBuilder.Create */ 
+				public virtual global::Javax.Xml.Validation.Schema Schema
 				{
-						return default(global::Javax.Xml.Validation.Schema);
+						[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+						get{ return default(global::Javax.Xml.Validation.Schema); }
 				}
 
 				/// <java-name>
 				/// isXIncludeAware
 				/// </java-name>
-				[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsXIncludeAware() /* MethodBuilder.Create */ 
+				public virtual bool IsXIncludeAware
 				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getDOMImplementation
-				/// </java-name>
-				public global::Org.W3c.Dom.IDOMImplementation DOMImplementation
-				{
-				[Dot42.DexImport("getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", AccessFlags = 1025)]
-						get{ return GetDOMImplementation(); }
-				}
-
-				/// <java-name>
-				/// getSchema
-				/// </java-name>
-				public global::Javax.Xml.Validation.Schema Schema
-				{
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-						get{ return GetSchema(); }
+						[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -223,60 +214,6 @@ namespace Javax.Xml.Parsers
 				}
 
 				/// <java-name>
-				/// isNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsNamespaceAware() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isValidating
-				/// </java-name>
-				[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
-				public virtual bool IsValidating() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isIgnoringElementContentWhitespace
-				/// </java-name>
-				[Dot42.DexImport("isIgnoringElementContentWhitespace", "()Z", AccessFlags = 1)]
-				public virtual bool IsIgnoringElementContentWhitespace() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isExpandEntityReferences
-				/// </java-name>
-				[Dot42.DexImport("isExpandEntityReferences", "()Z", AccessFlags = 1)]
-				public virtual bool IsExpandEntityReferences() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isIgnoringComments
-				/// </java-name>
-				[Dot42.DexImport("isIgnoringComments", "()Z", AccessFlags = 1)]
-				public virtual bool IsIgnoringComments() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isCoalescing
-				/// </java-name>
-				[Dot42.DexImport("isCoalescing", "()Z", AccessFlags = 1)]
-				public virtual bool IsCoalescing() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setAttribute
 				/// </java-name>
 				[Dot42.DexImport("setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1025)]
@@ -301,23 +238,6 @@ namespace Javax.Xml.Parsers
 				public abstract bool GetFeature(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSchema
-				/// </java-name>
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema GetSchema() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.Schema);
-				}
-
-				/// <java-name>
-				/// setSchema
-				/// </java-name>
-				[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
-				public virtual void SetSchema(global::Javax.Xml.Validation.Schema schema) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setXIncludeAware
 				/// </java-name>
 				[Dot42.DexImport("setXIncludeAware", "(Z)V", AccessFlags = 1)]
@@ -326,23 +246,77 @@ namespace Javax.Xml.Parsers
 				}
 
 				/// <java-name>
-				/// isXIncludeAware
+				/// isNamespaceAware
 				/// </java-name>
-				[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsXIncludeAware() /* MethodBuilder.Create */ 
+				public virtual bool IsNamespaceAware
 				{
-						return default(bool);
+						[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isValidating
+				/// </java-name>
+				public virtual bool IsValidating
+				{
+						[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isIgnoringElementContentWhitespace
+				/// </java-name>
+				public virtual bool IsIgnoringElementContentWhitespace
+				{
+						[Dot42.DexImport("isIgnoringElementContentWhitespace", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isExpandEntityReferences
+				/// </java-name>
+				public virtual bool IsExpandEntityReferences
+				{
+						[Dot42.DexImport("isExpandEntityReferences", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isIgnoringComments
+				/// </java-name>
+				public virtual bool IsIgnoringComments
+				{
+						[Dot42.DexImport("isIgnoringComments", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isCoalescing
+				/// </java-name>
+				public virtual bool IsCoalescing
+				{
+						[Dot42.DexImport("isCoalescing", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getSchema
 				/// </java-name>
-				public global::Javax.Xml.Validation.Schema Schema
+				public virtual global::Javax.Xml.Validation.Schema Schema
 				{
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-						get{ return GetSchema(); }
-				[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
-						set{ SetSchema(value); }
+						[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+						get{ return default(global::Javax.Xml.Validation.Schema); }
+						[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isXIncludeAware
+				/// </java-name>
+				public virtual bool IsXIncludeAware
+				{
+						[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -386,19 +360,10 @@ namespace Javax.Xml.Parsers
 				/// <java-name>
 				/// getException
 				/// </java-name>
-				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
-				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
+				public virtual global::System.Exception Exception
 				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getException
-				/// </java-name>
-				public global::System.Exception Exception
-				{
-				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
-						get{ return GetException(); }
+						[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
+						get{ return default(global::System.Exception); }
 				}
 
 		}
@@ -523,30 +488,6 @@ namespace Javax.Xml.Parsers
 				}
 
 				/// <java-name>
-				/// getParser
-				/// </java-name>
-				[Dot42.DexImport("getParser", "()Lorg/xml/sax/Parser;", AccessFlags = 1025)]
-				public abstract global::Org.Xml.Sax.IParser GetParser() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getXMLReader
-				/// </java-name>
-				[Dot42.DexImport("getXMLReader", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1025)]
-				public abstract global::Org.Xml.Sax.IXMLReader GetXMLReader() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1025)]
-				public abstract bool IsNamespaceAware() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isValidating
-				/// </java-name>
-				[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1025)]
-				public abstract bool IsValidating() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setProperty
 				/// </java-name>
 				[Dot42.DexImport("setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1025)]
@@ -559,48 +500,57 @@ namespace Javax.Xml.Parsers
 				public abstract object GetProperty(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSchema
-				/// </java-name>
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema GetSchema() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.Schema);
-				}
-
-				/// <java-name>
-				/// isXIncludeAware
-				/// </java-name>
-				[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsXIncludeAware() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getParser
 				/// </java-name>
-				public global::Org.Xml.Sax.IParser Parser
+				public abstract global::Org.Xml.Sax.IParser Parser
 				{
-				[Dot42.DexImport("getParser", "()Lorg/xml/sax/Parser;", AccessFlags = 1025)]
-						get{ return GetParser(); }
+						[Dot42.DexImport("getParser", "()Lorg/xml/sax/Parser;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getXMLReader
 				/// </java-name>
-				public global::Org.Xml.Sax.IXMLReader XMLReader
+				public abstract global::Org.Xml.Sax.IXMLReader XMLReader
 				{
-				[Dot42.DexImport("getXMLReader", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1025)]
-						get{ return GetXMLReader(); }
+						[Dot42.DexImport("getXMLReader", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isNamespaceAware
+				/// </java-name>
+				public abstract bool IsNamespaceAware
+				{
+						[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isValidating
+				/// </java-name>
+				public abstract bool IsValidating
+				{
+						[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSchema
 				/// </java-name>
-				public global::Javax.Xml.Validation.Schema Schema
+				public virtual global::Javax.Xml.Validation.Schema Schema
 				{
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-						get{ return GetSchema(); }
+						[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+						get{ return default(global::Javax.Xml.Validation.Schema); }
+				}
+
+				/// <java-name>
+				/// isXIncludeAware
+				/// </java-name>
+				public virtual bool IsXIncludeAware
+				{
+						[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -658,24 +608,6 @@ namespace Javax.Xml.Parsers
 				}
 
 				/// <java-name>
-				/// isNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsNamespaceAware() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isValidating
-				/// </java-name>
-				[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
-				public virtual bool IsValidating() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setFeature
 				/// </java-name>
 				[Dot42.DexImport("setFeature", "(Ljava/lang/String;Z)V", AccessFlags = 1025)]
@@ -688,23 +620,6 @@ namespace Javax.Xml.Parsers
 				public abstract bool GetFeature(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSchema
-				/// </java-name>
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema GetSchema() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Validation.Schema);
-				}
-
-				/// <java-name>
-				/// setSchema
-				/// </java-name>
-				[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
-				public virtual void SetSchema(global::Javax.Xml.Validation.Schema schema) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setXIncludeAware
 				/// </java-name>
 				[Dot42.DexImport("setXIncludeAware", "(Z)V", AccessFlags = 1)]
@@ -713,23 +628,41 @@ namespace Javax.Xml.Parsers
 				}
 
 				/// <java-name>
-				/// isXIncludeAware
+				/// isNamespaceAware
 				/// </java-name>
-				[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsXIncludeAware() /* MethodBuilder.Create */ 
+				public virtual bool IsNamespaceAware
 				{
-						return default(bool);
+						[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isValidating
+				/// </java-name>
+				public virtual bool IsValidating
+				{
+						[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getSchema
 				/// </java-name>
-				public global::Javax.Xml.Validation.Schema Schema
+				public virtual global::Javax.Xml.Validation.Schema Schema
 				{
-				[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-						get{ return GetSchema(); }
-				[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
-						set{ SetSchema(value); }
+						[Dot42.DexImport("getSchema", "()Ljavax/xml/validation/Schema;", AccessFlags = 1)]
+						get{ return default(global::Javax.Xml.Validation.Schema); }
+						[Dot42.DexImport("setSchema", "(Ljavax/xml/validation/Schema;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isXIncludeAware
+				/// </java-name>
+				public virtual bool IsXIncludeAware
+				{
+						[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

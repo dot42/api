@@ -14,15 +14,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// getCacheFileBaseDir
-				/// </java-name>
-				[Dot42.DexImport("getCacheFileBaseDir", "()Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetCacheFileBaseDir() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
 				/// cacheDisabled
 				/// </java-name>
 				[Dot42.DexImport("cacheDisabled", "()Z", AccessFlags = 9)]
@@ -72,8 +63,8 @@ namespace Android.Webkit
 				/// </java-name>
 				public static global::Java.Io.File CacheFileBaseDir
 				{
-				[Dot42.DexImport("getCacheFileBaseDir", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return GetCacheFileBaseDir(); }
+						[Dot42.DexImport("getCacheFileBaseDir", "()Ljava/io/File;", AccessFlags = 9)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
@@ -91,255 +82,122 @@ namespace Android.Webkit
 						/// <java-name>
 						/// getHttpStatusCode
 						/// </java-name>
-						[Dot42.DexImport("getHttpStatusCode", "()I", AccessFlags = 1)]
-						public virtual int GetHttpStatusCode() /* MethodBuilder.Create */ 
+						public virtual int HttpStatusCode
 						{
-								return default(int);
+								[Dot42.DexImport("getHttpStatusCode", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getContentLength
 						/// </java-name>
-						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						public virtual long GetContentLength() /* MethodBuilder.Create */ 
+						public virtual long ContentLength
 						{
-								return default(long);
+								[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+								get{ return default(long); }
 						}
 
 						/// <java-name>
 						/// getLocalPath
 						/// </java-name>
-						[Dot42.DexImport("getLocalPath", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetLocalPath() /* MethodBuilder.Create */ 
+						public virtual string LocalPath
 						{
-								return default(string);
+								[Dot42.DexImport("getLocalPath", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getExpires
 						/// </java-name>
-						[Dot42.DexImport("getExpires", "()J", AccessFlags = 1)]
-						public virtual long GetExpires() /* MethodBuilder.Create */ 
+						public virtual long Expires
 						{
-								return default(long);
+								[Dot42.DexImport("getExpires", "()J", AccessFlags = 1)]
+								get{ return default(long); }
 						}
 
 						/// <java-name>
 						/// getExpiresString
 						/// </java-name>
-						[Dot42.DexImport("getExpiresString", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetExpiresString() /* MethodBuilder.Create */ 
+						public virtual string ExpiresString
 						{
-								return default(string);
+								[Dot42.DexImport("getExpiresString", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getLastModified
 						/// </java-name>
-						[Dot42.DexImport("getLastModified", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetLastModified() /* MethodBuilder.Create */ 
+						public virtual string LastModified
 						{
-								return default(string);
+								[Dot42.DexImport("getLastModified", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getETag
 						/// </java-name>
-						[Dot42.DexImport("getETag", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetETag() /* MethodBuilder.Create */ 
+						public virtual string ETag
 						{
-								return default(string);
+								[Dot42.DexImport("getETag", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getMimeType
 						/// </java-name>
-						[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetMimeType() /* MethodBuilder.Create */ 
+						public virtual string MimeType
 						{
-								return default(string);
+								[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getLocation
 						/// </java-name>
-						[Dot42.DexImport("getLocation", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetLocation() /* MethodBuilder.Create */ 
+						public virtual string Location
 						{
-								return default(string);
+								[Dot42.DexImport("getLocation", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getEncoding
 						/// </java-name>
-						[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetEncoding() /* MethodBuilder.Create */ 
+						public virtual string Encoding
 						{
-								return default(string);
+								[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
+								[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getContentDisposition
 						/// </java-name>
-						[Dot42.DexImport("getContentDisposition", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetContentDisposition() /* MethodBuilder.Create */ 
+						public virtual string ContentDisposition
 						{
-								return default(string);
+								[Dot42.DexImport("getContentDisposition", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getInputStream
 						/// </java-name>
-						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
+						public virtual global::Java.Io.InputStream InputStream
 						{
-								return default(global::Java.Io.InputStream);
+								[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+								get{ return default(global::Java.Io.InputStream); }
+								[Dot42.DexImport("setInputStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getOutputStream
 						/// </java-name>
-						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						public virtual global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
+						public virtual global::Java.Io.OutputStream OutputStream
 						{
-								return default(global::Java.Io.OutputStream);
-						}
-
-						/// <java-name>
-						/// setInputStream
-						/// </java-name>
-						[Dot42.DexImport("setInputStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-						public virtual void SetInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// setEncoding
-						/// </java-name>
-						[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						public virtual void SetEncoding(string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getHttpStatusCode
-						/// </java-name>
-						public int HttpStatusCode
-						{
-						[Dot42.DexImport("getHttpStatusCode", "()I", AccessFlags = 1)]
-								get{ return GetHttpStatusCode(); }
-						}
-
-						/// <java-name>
-						/// getContentLength
-						/// </java-name>
-						public long ContentLength
-						{
-						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-								get{ return GetContentLength(); }
-						}
-
-						/// <java-name>
-						/// getLocalPath
-						/// </java-name>
-						public string LocalPath
-						{
-						[Dot42.DexImport("getLocalPath", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetLocalPath(); }
-						}
-
-						/// <java-name>
-						/// getExpires
-						/// </java-name>
-						public long Expires
-						{
-						[Dot42.DexImport("getExpires", "()J", AccessFlags = 1)]
-								get{ return GetExpires(); }
-						}
-
-						/// <java-name>
-						/// getExpiresString
-						/// </java-name>
-						public string ExpiresString
-						{
-						[Dot42.DexImport("getExpiresString", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetExpiresString(); }
-						}
-
-						/// <java-name>
-						/// getLastModified
-						/// </java-name>
-						public string LastModified
-						{
-						[Dot42.DexImport("getLastModified", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetLastModified(); }
-						}
-
-						/// <java-name>
-						/// getETag
-						/// </java-name>
-						public string ETag
-						{
-						[Dot42.DexImport("getETag", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetETag(); }
-						}
-
-						/// <java-name>
-						/// getMimeType
-						/// </java-name>
-						public string MimeType
-						{
-						[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetMimeType(); }
-						}
-
-						/// <java-name>
-						/// getLocation
-						/// </java-name>
-						public string Location
-						{
-						[Dot42.DexImport("getLocation", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetLocation(); }
-						}
-
-						/// <java-name>
-						/// getEncoding
-						/// </java-name>
-						public string Encoding
-						{
-						[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetEncoding(); }
-						[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
-								set{ SetEncoding(value); }
-						}
-
-						/// <java-name>
-						/// getContentDisposition
-						/// </java-name>
-						public string ContentDisposition
-						{
-						[Dot42.DexImport("getContentDisposition", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetContentDisposition(); }
-						}
-
-						/// <java-name>
-						/// getInputStream
-						/// </java-name>
-						public global::Java.Io.InputStream InputStream
-						{
-						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-								get{ return GetInputStream(); }
-						[Dot42.DexImport("setInputStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-								set{ SetInputStream(value); }
-						}
-
-						/// <java-name>
-						/// getOutputStream
-						/// </java-name>
-						public global::Java.Io.OutputStream OutputStream
-						{
-						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-								get{ return GetOutputStream(); }
+								[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+								get{ return default(global::Java.Io.OutputStream); }
 						}
 
 				}
@@ -480,15 +338,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/CookieManager;", AccessFlags = 41)]
-				public static global::Android.Webkit.CookieManager GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Webkit.CookieManager);
-				}
-
-				/// <java-name>
 				/// setAcceptCookie
 				/// </java-name>
 				[Dot42.DexImport("setAcceptCookie", "(Z)V", AccessFlags = 33)]
@@ -539,15 +388,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// hasCookies
-				/// </java-name>
-				[Dot42.DexImport("hasCookies", "()Z", AccessFlags = 33)]
-				public bool HasCookies() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// removeExpiredCookie
 				/// </java-name>
 				[Dot42.DexImport("removeExpiredCookie", "()V", AccessFlags = 1)]
@@ -577,8 +417,17 @@ namespace Android.Webkit
 				/// </java-name>
 				public static global::Android.Webkit.CookieManager Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/CookieManager;", AccessFlags = 41)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/webkit/CookieManager;", AccessFlags = 41)]
+						get{ return default(global::Android.Webkit.CookieManager); }
+				}
+
+				/// <java-name>
+				/// hasCookies
+				/// </java-name>
+				public bool HasCookies
+				{
+						[Dot42.DexImport("hasCookies", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -593,15 +442,6 @@ namespace Android.Webkit
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal CookieSyncManager() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/CookieSyncManager;", AccessFlags = 41)]
-				public static global::Android.Webkit.CookieSyncManager GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Webkit.CookieSyncManager);
 				}
 
 				/// <java-name>
@@ -683,8 +523,8 @@ namespace Android.Webkit
 				/// </java-name>
 				public static global::Android.Webkit.CookieSyncManager Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/CookieSyncManager;", AccessFlags = 41)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/webkit/CookieSyncManager;", AccessFlags = 41)]
+						get{ return default(global::Android.Webkit.CookieSyncManager); }
 				}
 
 		}
@@ -753,15 +593,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/GeolocationPermissions;", AccessFlags = 9)]
-				public static global::Android.Webkit.GeolocationPermissions GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Webkit.GeolocationPermissions);
-				}
-
-				/// <java-name>
 				/// getOrigins
 				/// </java-name>
 				[Dot42.DexImport("getOrigins", "(Landroid/webkit/ValueCallback;)V", AccessFlags = 1, Signature = "(Landroid/webkit/ValueCallback<Ljava/util/Set<Ljava/lang/String;>;>;)V")]
@@ -806,8 +637,8 @@ namespace Android.Webkit
 				/// </java-name>
 				public static global::Android.Webkit.GeolocationPermissions Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/GeolocationPermissions;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/webkit/GeolocationPermissions;", AccessFlags = 9)]
+						get{ return default(global::Android.Webkit.GeolocationPermissions); }
 				}
 
 				/// <java-name>
@@ -1042,19 +873,10 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getSingleton
 				/// </java-name>
-				[Dot42.DexImport("getSingleton", "()Landroid/webkit/MimeTypeMap;", AccessFlags = 9)]
-				public static global::Android.Webkit.MimeTypeMap GetSingleton() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Webkit.MimeTypeMap);
-				}
-
-				/// <java-name>
-				/// getSingleton
-				/// </java-name>
 				public static global::Android.Webkit.MimeTypeMap Singleton
 				{
-				[Dot42.DexImport("getSingleton", "()Landroid/webkit/MimeTypeMap;", AccessFlags = 9)]
-						get{ return GetSingleton(); }
+						[Dot42.DexImport("getSingleton", "()Landroid/webkit/MimeTypeMap;", AccessFlags = 9)]
+						get{ return default(global::Android.Webkit.MimeTypeMap); }
 				}
 
 		}
@@ -1269,39 +1091,12 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// getCurrentItem
-				/// </java-name>
-				[Dot42.DexImport("getCurrentItem", "()Landroid/webkit/WebHistoryItem;", AccessFlags = 33)]
-				public virtual global::Android.Webkit.WebHistoryItem GetCurrentItem() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Webkit.WebHistoryItem);
-				}
-
-				/// <java-name>
-				/// getCurrentIndex
-				/// </java-name>
-				[Dot42.DexImport("getCurrentIndex", "()I", AccessFlags = 33)]
-				public virtual int GetCurrentIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getItemAtIndex
 				/// </java-name>
 				[Dot42.DexImport("getItemAtIndex", "(I)Landroid/webkit/WebHistoryItem;", AccessFlags = 33)]
 				public virtual global::Android.Webkit.WebHistoryItem GetItemAtIndex(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Webkit.WebHistoryItem);
-				}
-
-				/// <java-name>
-				/// getSize
-				/// </java-name>
-				[Dot42.DexImport("getSize", "()I", AccessFlags = 33)]
-				public virtual int GetSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1316,28 +1111,28 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getCurrentItem
 				/// </java-name>
-				public global::Android.Webkit.WebHistoryItem CurrentItem
+				public virtual global::Android.Webkit.WebHistoryItem CurrentItem
 				{
-				[Dot42.DexImport("getCurrentItem", "()Landroid/webkit/WebHistoryItem;", AccessFlags = 33)]
-						get{ return GetCurrentItem(); }
+						[Dot42.DexImport("getCurrentItem", "()Landroid/webkit/WebHistoryItem;", AccessFlags = 33)]
+						get{ return default(global::Android.Webkit.WebHistoryItem); }
 				}
 
 				/// <java-name>
 				/// getCurrentIndex
 				/// </java-name>
-				public int CurrentIndex
+				public virtual int CurrentIndex
 				{
-				[Dot42.DexImport("getCurrentIndex", "()I", AccessFlags = 33)]
-						get{ return GetCurrentIndex(); }
+						[Dot42.DexImport("getCurrentIndex", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSize
 				/// </java-name>
-				public int Size
+				public virtual int Size
 				{
-				[Dot42.DexImport("getSize", "()I", AccessFlags = 33)]
-						get{ return GetSize(); }
+						[Dot42.DexImport("getSize", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1535,24 +1330,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// getDefaultVideoPoster
-				/// </java-name>
-				[Dot42.DexImport("getDefaultVideoPoster", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Bitmap GetDefaultVideoPoster() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Bitmap);
-				}
-
-				/// <java-name>
-				/// getVideoLoadingProgressView
-				/// </java-name>
-				[Dot42.DexImport("getVideoLoadingProgressView", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.Views.View GetVideoLoadingProgressView() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.View);
-				}
-
-				/// <java-name>
 				/// getVisitedHistory
 				/// </java-name>
 				[Dot42.DexImport("getVisitedHistory", "(Landroid/webkit/ValueCallback;)V", AccessFlags = 1, Signature = "(Landroid/webkit/ValueCallback<[Ljava/lang/String;>;)V")]
@@ -1563,19 +1340,19 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getDefaultVideoPoster
 				/// </java-name>
-				public global::Android.Graphics.Bitmap DefaultVideoPoster
+				public virtual global::Android.Graphics.Bitmap DefaultVideoPoster
 				{
-				[Dot42.DexImport("getDefaultVideoPoster", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-						get{ return GetDefaultVideoPoster(); }
+						[Dot42.DexImport("getDefaultVideoPoster", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Bitmap); }
 				}
 
 				/// <java-name>
 				/// getVideoLoadingProgressView
 				/// </java-name>
-				public global::Android.Views.View VideoLoadingProgressView
+				public virtual global::Android.Views.View VideoLoadingProgressView
 				{
-				[Dot42.DexImport("getVideoLoadingProgressView", "()Landroid/view/View;", AccessFlags = 1)]
-						get{ return GetVideoLoadingProgressView(); }
+						[Dot42.DexImport("getVideoLoadingProgressView", "()Landroid/view/View;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.View); }
 				}
 
 				/// <java-name>
@@ -1608,51 +1385,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-				public virtual int GetId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getUrl
-				/// </java-name>
-				[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUrl() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getOriginalUrl
-				/// </java-name>
-				[Dot42.DexImport("getOriginalUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetOriginalUrl() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getTitle
-				/// </java-name>
-				[Dot42.DexImport("getTitle", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetTitle() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getFavicon
-				/// </java-name>
-				[Dot42.DexImport("getFavicon", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Bitmap GetFavicon() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Bitmap);
-				}
-
-				/// <java-name>
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Landroid/webkit/WebHistoryItem;", AccessFlags = 36)]
@@ -1664,46 +1396,46 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getId
 				/// </java-name>
-				public int Id
+				public virtual int Id
 				{
-				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getUrl
 				/// </java-name>
-				public string Url
+				public virtual string Url
 				{
-				[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUrl(); }
+						[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getOriginalUrl
 				/// </java-name>
-				public string OriginalUrl
+				public virtual string OriginalUrl
 				{
-				[Dot42.DexImport("getOriginalUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetOriginalUrl(); }
+						[Dot42.DexImport("getOriginalUrl", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getTitle
 				/// </java-name>
-				public string Title
+				public virtual string Title
 				{
-				[Dot42.DexImport("getTitle", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTitle(); }
+						[Dot42.DexImport("getTitle", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getFavicon
 				/// </java-name>
-				public global::Android.Graphics.Bitmap Favicon
+				public virtual global::Android.Graphics.Bitmap Favicon
 				{
-				[Dot42.DexImport("getFavicon", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-						get{ return GetFavicon(); }
+						[Dot42.DexImport("getFavicon", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Bitmap); }
 				}
 
 		}
@@ -1771,19 +1503,10 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getInstance
 				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/WebIconDatabase;", AccessFlags = 9)]
-				public static global::Android.Webkit.WebIconDatabase GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Webkit.WebIconDatabase);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
 				public static global::Android.Webkit.WebIconDatabase Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/WebIconDatabase;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/webkit/WebIconDatabase;", AccessFlags = 9)]
+						get{ return default(global::Android.Webkit.WebIconDatabase); }
 				}
 
 				/// <java-name>
@@ -1815,57 +1538,6 @@ namespace Android.Webkit
 				{
 				}
 
-				/// <java-name>
-				/// setMimeType
-				/// </java-name>
-				[Dot42.DexImport("setMimeType", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetMimeType(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMimeType
-				/// </java-name>
-				[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMimeType() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setEncoding
-				/// </java-name>
-				[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetEncoding(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEncoding
-				/// </java-name>
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEncoding() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setData
-				/// </java-name>
-				[Dot42.DexImport("setData", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void SetData(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				[Dot42.DexImport("getData", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetData() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal WebResourceResponse() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1874,34 +1546,34 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getMimeType
 				/// </java-name>
-				public string MimeType
+				public virtual string MimeType
 				{
-				[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMimeType(); }
-				[Dot42.DexImport("setMimeType", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetMimeType(value); }
+						[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setMimeType", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getEncoding
 				/// </java-name>
-				public string Encoding
+				public virtual string Encoding
 				{
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEncoding(); }
-				[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetEncoding(value); }
+						[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				public global::Java.Io.InputStream Data
+				public virtual global::Java.Io.InputStream Data
 				{
-				[Dot42.DexImport("getData", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetData(); }
-				[Dot42.DexImport("setData", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-						set{ SetData(value); }
+						[Dot42.DexImport("getData", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+						[Dot42.DexImport("setData", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -1944,23 +1616,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// setNavDump
-				/// </java-name>
-				[Dot42.DexImport("setNavDump", "(Z)V", AccessFlags = 1)]
-				public virtual void SetNavDump(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getNavDump
-				/// </java-name>
-				[Dot42.DexImport("getNavDump", "()Z", AccessFlags = 1)]
-				public virtual bool GetNavDump() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setSupportZoom
 				/// </java-name>
 				[Dot42.DexImport("setSupportZoom", "(Z)V", AccessFlags = 1)]
@@ -1973,91 +1628,6 @@ namespace Android.Webkit
 				/// </java-name>
 				[Dot42.DexImport("supportZoom", "()Z", AccessFlags = 1)]
 				public virtual bool SupportZoom() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setBuiltInZoomControls
-				/// </java-name>
-				[Dot42.DexImport("setBuiltInZoomControls", "(Z)V", AccessFlags = 1)]
-				public virtual void SetBuiltInZoomControls(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getBuiltInZoomControls
-				/// </java-name>
-				[Dot42.DexImport("getBuiltInZoomControls", "()Z", AccessFlags = 1)]
-				public virtual bool GetBuiltInZoomControls() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setDisplayZoomControls
-				/// </java-name>
-				[Dot42.DexImport("setDisplayZoomControls", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDisplayZoomControls(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDisplayZoomControls
-				/// </java-name>
-				[Dot42.DexImport("getDisplayZoomControls", "()Z", AccessFlags = 1)]
-				public virtual bool GetDisplayZoomControls() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setAllowFileAccess
-				/// </java-name>
-				[Dot42.DexImport("setAllowFileAccess", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAllowFileAccess(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAllowFileAccess
-				/// </java-name>
-				[Dot42.DexImport("getAllowFileAccess", "()Z", AccessFlags = 1)]
-				public virtual bool GetAllowFileAccess() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setAllowContentAccess
-				/// </java-name>
-				[Dot42.DexImport("setAllowContentAccess", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAllowContentAccess(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAllowContentAccess
-				/// </java-name>
-				[Dot42.DexImport("getAllowContentAccess", "()Z", AccessFlags = 1)]
-				public virtual bool GetAllowContentAccess() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setLoadWithOverviewMode
-				/// </java-name>
-				[Dot42.DexImport("setLoadWithOverviewMode", "(Z)V", AccessFlags = 1)]
-				public virtual void SetLoadWithOverviewMode(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLoadWithOverviewMode
-				/// </java-name>
-				[Dot42.DexImport("getLoadWithOverviewMode", "()Z", AccessFlags = 1)]
-				public virtual bool GetLoadWithOverviewMode() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2080,74 +1650,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// setUseWebViewBackgroundForOverscrollBackground
-				/// </java-name>
-				[Dot42.DexImport("setUseWebViewBackgroundForOverscrollBackground", "(Z)V", AccessFlags = 1)]
-				public virtual void SetUseWebViewBackgroundForOverscrollBackground(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getUseWebViewBackgroundForOverscrollBackground
-				/// </java-name>
-				[Dot42.DexImport("getUseWebViewBackgroundForOverscrollBackground", "()Z", AccessFlags = 1)]
-				public virtual bool GetUseWebViewBackgroundForOverscrollBackground() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setSaveFormData
-				/// </java-name>
-				[Dot42.DexImport("setSaveFormData", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSaveFormData(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSaveFormData
-				/// </java-name>
-				[Dot42.DexImport("getSaveFormData", "()Z", AccessFlags = 1)]
-				public virtual bool GetSaveFormData() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setSavePassword
-				/// </java-name>
-				[Dot42.DexImport("setSavePassword", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSavePassword(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSavePassword
-				/// </java-name>
-				[Dot42.DexImport("getSavePassword", "()Z", AccessFlags = 1)]
-				public virtual bool GetSavePassword() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setTextZoom
-				/// </java-name>
-				[Dot42.DexImport("setTextZoom", "(I)V", AccessFlags = 33)]
-				public virtual void SetTextZoom(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTextZoom
-				/// </java-name>
-				[Dot42.DexImport("getTextZoom", "()I", AccessFlags = 33)]
-				public virtual int GetTextZoom() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setTextSize
 				/// </java-name>
 				[Dot42.DexImport("setTextSize", "(Landroid/webkit/WebSettings$TextSize;)V", AccessFlags = 33)]
@@ -2162,91 +1664,6 @@ namespace Android.Webkit
 				public virtual global::Android.Webkit.WebSettings.TextSize GetTextSize() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Webkit.WebSettings.TextSize);
-				}
-
-				/// <java-name>
-				/// setDefaultZoom
-				/// </java-name>
-				[Dot42.DexImport("setDefaultZoom", "(Landroid/webkit/WebSettings$ZoomDensity;)V", AccessFlags = 1)]
-				public virtual void SetDefaultZoom(global::Android.Webkit.WebSettings.ZoomDensity zoomDensity) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefaultZoom
-				/// </java-name>
-				[Dot42.DexImport("getDefaultZoom", "()Landroid/webkit/WebSettings$ZoomDensity;", AccessFlags = 1)]
-				public virtual global::Android.Webkit.WebSettings.ZoomDensity GetDefaultZoom() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Webkit.WebSettings.ZoomDensity);
-				}
-
-				/// <java-name>
-				/// setLightTouchEnabled
-				/// </java-name>
-				[Dot42.DexImport("setLightTouchEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetLightTouchEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLightTouchEnabled
-				/// </java-name>
-				[Dot42.DexImport("getLightTouchEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool GetLightTouchEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setUseDoubleTree
-				/// </java-name>
-				[Dot42.DexImport("setUseDoubleTree", "(Z)V", AccessFlags = 33)]
-				public virtual void SetUseDoubleTree(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getUseDoubleTree
-				/// </java-name>
-				[Dot42.DexImport("getUseDoubleTree", "()Z", AccessFlags = 33)]
-				public virtual bool GetUseDoubleTree() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setUserAgent
-				/// </java-name>
-				[Dot42.DexImport("setUserAgent", "(I)V", AccessFlags = 33)]
-				public virtual void SetUserAgent(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getUserAgent
-				/// </java-name>
-				[Dot42.DexImport("getUserAgent", "()I", AccessFlags = 33)]
-				public virtual int GetUserAgent() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setUseWideViewPort
-				/// </java-name>
-				[Dot42.DexImport("setUseWideViewPort", "(Z)V", AccessFlags = 33)]
-				public virtual void SetUseWideViewPort(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getUseWideViewPort
-				/// </java-name>
-				[Dot42.DexImport("getUseWideViewPort", "()Z", AccessFlags = 33)]
-				public virtual bool GetUseWideViewPort() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2284,263 +1701,10 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// setStandardFontFamily
-				/// </java-name>
-				[Dot42.DexImport("setStandardFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetStandardFontFamily(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getStandardFontFamily
-				/// </java-name>
-				[Dot42.DexImport("getStandardFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetStandardFontFamily() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setFixedFontFamily
-				/// </java-name>
-				[Dot42.DexImport("setFixedFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetFixedFontFamily(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getFixedFontFamily
-				/// </java-name>
-				[Dot42.DexImport("getFixedFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetFixedFontFamily() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setSansSerifFontFamily
-				/// </java-name>
-				[Dot42.DexImport("setSansSerifFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetSansSerifFontFamily(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSansSerifFontFamily
-				/// </java-name>
-				[Dot42.DexImport("getSansSerifFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetSansSerifFontFamily() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setSerifFontFamily
-				/// </java-name>
-				[Dot42.DexImport("setSerifFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetSerifFontFamily(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSerifFontFamily
-				/// </java-name>
-				[Dot42.DexImport("getSerifFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetSerifFontFamily() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setCursiveFontFamily
-				/// </java-name>
-				[Dot42.DexImport("setCursiveFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetCursiveFontFamily(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCursiveFontFamily
-				/// </java-name>
-				[Dot42.DexImport("getCursiveFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetCursiveFontFamily() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setFantasyFontFamily
-				/// </java-name>
-				[Dot42.DexImport("setFantasyFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetFantasyFontFamily(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getFantasyFontFamily
-				/// </java-name>
-				[Dot42.DexImport("getFantasyFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetFantasyFontFamily() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setMinimumFontSize
-				/// </java-name>
-				[Dot42.DexImport("setMinimumFontSize", "(I)V", AccessFlags = 33)]
-				public virtual void SetMinimumFontSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMinimumFontSize
-				/// </java-name>
-				[Dot42.DexImport("getMinimumFontSize", "()I", AccessFlags = 33)]
-				public virtual int GetMinimumFontSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setMinimumLogicalFontSize
-				/// </java-name>
-				[Dot42.DexImport("setMinimumLogicalFontSize", "(I)V", AccessFlags = 33)]
-				public virtual void SetMinimumLogicalFontSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMinimumLogicalFontSize
-				/// </java-name>
-				[Dot42.DexImport("getMinimumLogicalFontSize", "()I", AccessFlags = 33)]
-				public virtual int GetMinimumLogicalFontSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDefaultFontSize
-				/// </java-name>
-				[Dot42.DexImport("setDefaultFontSize", "(I)V", AccessFlags = 33)]
-				public virtual void SetDefaultFontSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefaultFontSize
-				/// </java-name>
-				[Dot42.DexImport("getDefaultFontSize", "()I", AccessFlags = 33)]
-				public virtual int GetDefaultFontSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDefaultFixedFontSize
-				/// </java-name>
-				[Dot42.DexImport("setDefaultFixedFontSize", "(I)V", AccessFlags = 33)]
-				public virtual void SetDefaultFixedFontSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefaultFixedFontSize
-				/// </java-name>
-				[Dot42.DexImport("getDefaultFixedFontSize", "()I", AccessFlags = 33)]
-				public virtual int GetDefaultFixedFontSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setLoadsImagesAutomatically
-				/// </java-name>
-				[Dot42.DexImport("setLoadsImagesAutomatically", "(Z)V", AccessFlags = 33)]
-				public virtual void SetLoadsImagesAutomatically(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLoadsImagesAutomatically
-				/// </java-name>
-				[Dot42.DexImport("getLoadsImagesAutomatically", "()Z", AccessFlags = 33)]
-				public virtual bool GetLoadsImagesAutomatically() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setBlockNetworkImage
-				/// </java-name>
-				[Dot42.DexImport("setBlockNetworkImage", "(Z)V", AccessFlags = 33)]
-				public virtual void SetBlockNetworkImage(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getBlockNetworkImage
-				/// </java-name>
-				[Dot42.DexImport("getBlockNetworkImage", "()Z", AccessFlags = 33)]
-				public virtual bool GetBlockNetworkImage() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setBlockNetworkLoads
-				/// </java-name>
-				[Dot42.DexImport("setBlockNetworkLoads", "(Z)V", AccessFlags = 33)]
-				public virtual void SetBlockNetworkLoads(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getBlockNetworkLoads
-				/// </java-name>
-				[Dot42.DexImport("getBlockNetworkLoads", "()Z", AccessFlags = 33)]
-				public virtual bool GetBlockNetworkLoads() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setJavaScriptEnabled
-				/// </java-name>
-				[Dot42.DexImport("setJavaScriptEnabled", "(Z)V", AccessFlags = 33)]
-				public virtual void SetJavaScriptEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPluginsEnabled
-				/// </java-name>
-				[Dot42.DexImport("setPluginsEnabled", "(Z)V", AccessFlags = 33)]
-				public virtual void SetPluginsEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setPluginState
 				/// </java-name>
 				[Dot42.DexImport("setPluginState", "(Landroid/webkit/WebSettings$PluginState;)V", AccessFlags = 33)]
 				public virtual void SetPluginState(global::Android.Webkit.WebSettings.PluginState pluginState) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPluginsPath
-				/// </java-name>
-				[Dot42.DexImport("setPluginsPath", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetPluginsPath(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDatabasePath
-				/// </java-name>
-				[Dot42.DexImport("setDatabasePath", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetDatabasePath(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2577,72 +1741,11 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// setDatabaseEnabled
-				/// </java-name>
-				[Dot42.DexImport("setDatabaseEnabled", "(Z)V", AccessFlags = 33)]
-				public virtual void SetDatabaseEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDomStorageEnabled
-				/// </java-name>
-				[Dot42.DexImport("setDomStorageEnabled", "(Z)V", AccessFlags = 33)]
-				public virtual void SetDomStorageEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDomStorageEnabled
-				/// </java-name>
-				[Dot42.DexImport("getDomStorageEnabled", "()Z", AccessFlags = 33)]
-				public virtual bool GetDomStorageEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getDatabasePath
-				/// </java-name>
-				[Dot42.DexImport("getDatabasePath", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetDatabasePath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDatabaseEnabled
-				/// </java-name>
-				[Dot42.DexImport("getDatabaseEnabled", "()Z", AccessFlags = 33)]
-				public virtual bool GetDatabaseEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setGeolocationEnabled
 				/// </java-name>
 				[Dot42.DexImport("setGeolocationEnabled", "(Z)V", AccessFlags = 33)]
 				public virtual void SetGeolocationEnabled(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getJavaScriptEnabled
-				/// </java-name>
-				[Dot42.DexImport("getJavaScriptEnabled", "()Z", AccessFlags = 33)]
-				public virtual bool GetJavaScriptEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getPluginsEnabled
-				/// </java-name>
-				[Dot42.DexImport("getPluginsEnabled", "()Z", AccessFlags = 33)]
-				public virtual bool GetPluginsEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2652,66 +1755,6 @@ namespace Android.Webkit
 				public virtual global::Android.Webkit.WebSettings.PluginState GetPluginState() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Webkit.WebSettings.PluginState);
-				}
-
-				/// <java-name>
-				/// getPluginsPath
-				/// </java-name>
-				[Dot42.DexImport("getPluginsPath", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetPluginsPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setJavaScriptCanOpenWindowsAutomatically
-				/// </java-name>
-				[Dot42.DexImport("setJavaScriptCanOpenWindowsAutomatically", "(Z)V", AccessFlags = 33)]
-				public virtual void SetJavaScriptCanOpenWindowsAutomatically(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getJavaScriptCanOpenWindowsAutomatically
-				/// </java-name>
-				[Dot42.DexImport("getJavaScriptCanOpenWindowsAutomatically", "()Z", AccessFlags = 33)]
-				public virtual bool GetJavaScriptCanOpenWindowsAutomatically() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setDefaultTextEncodingName
-				/// </java-name>
-				[Dot42.DexImport("setDefaultTextEncodingName", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetDefaultTextEncodingName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefaultTextEncodingName
-				/// </java-name>
-				[Dot42.DexImport("getDefaultTextEncodingName", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetDefaultTextEncodingName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setUserAgentString
-				/// </java-name>
-				[Dot42.DexImport("setUserAgentString", "(Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void SetUserAgentString(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getUserAgentString
-				/// </java-name>
-				[Dot42.DexImport("getUserAgentString", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetUserAgentString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -2731,438 +1774,421 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// setCacheMode
-				/// </java-name>
-				[Dot42.DexImport("setCacheMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetCacheMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCacheMode
-				/// </java-name>
-				[Dot42.DexImport("getCacheMode", "()I", AccessFlags = 1)]
-				public virtual int GetCacheMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getNavDump
 				/// </java-name>
-				public bool IsNavDump
+				public virtual bool IsNavDump
 				{
-				[Dot42.DexImport("getNavDump", "()Z", AccessFlags = 1)]
-						get{ return GetNavDump(); }
-				[Dot42.DexImport("setNavDump", "(Z)V", AccessFlags = 1)]
-						set{ SetNavDump(value); }
+						[Dot42.DexImport("getNavDump", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setNavDump", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getBuiltInZoomControls
 				/// </java-name>
-				public bool IsBuiltInZoomControls
+				public virtual bool IsBuiltInZoomControls
 				{
-				[Dot42.DexImport("getBuiltInZoomControls", "()Z", AccessFlags = 1)]
-						get{ return GetBuiltInZoomControls(); }
-				[Dot42.DexImport("setBuiltInZoomControls", "(Z)V", AccessFlags = 1)]
-						set{ SetBuiltInZoomControls(value); }
+						[Dot42.DexImport("getBuiltInZoomControls", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setBuiltInZoomControls", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDisplayZoomControls
 				/// </java-name>
-				public bool IsDisplayZoomControls
+				public virtual bool IsDisplayZoomControls
 				{
-				[Dot42.DexImport("getDisplayZoomControls", "()Z", AccessFlags = 1)]
-						get{ return GetDisplayZoomControls(); }
-				[Dot42.DexImport("setDisplayZoomControls", "(Z)V", AccessFlags = 1)]
-						set{ SetDisplayZoomControls(value); }
+						[Dot42.DexImport("getDisplayZoomControls", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setDisplayZoomControls", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAllowFileAccess
 				/// </java-name>
-				public bool IsAllowFileAccess
+				public virtual bool IsAllowFileAccess
 				{
-				[Dot42.DexImport("getAllowFileAccess", "()Z", AccessFlags = 1)]
-						get{ return GetAllowFileAccess(); }
-				[Dot42.DexImport("setAllowFileAccess", "(Z)V", AccessFlags = 1)]
-						set{ SetAllowFileAccess(value); }
+						[Dot42.DexImport("getAllowFileAccess", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setAllowFileAccess", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAllowContentAccess
 				/// </java-name>
-				public bool IsAllowContentAccess
+				public virtual bool IsAllowContentAccess
 				{
-				[Dot42.DexImport("getAllowContentAccess", "()Z", AccessFlags = 1)]
-						get{ return GetAllowContentAccess(); }
-				[Dot42.DexImport("setAllowContentAccess", "(Z)V", AccessFlags = 1)]
-						set{ SetAllowContentAccess(value); }
+						[Dot42.DexImport("getAllowContentAccess", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setAllowContentAccess", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLoadWithOverviewMode
 				/// </java-name>
-				public bool IsLoadWithOverviewMode
+				public virtual bool IsLoadWithOverviewMode
 				{
-				[Dot42.DexImport("getLoadWithOverviewMode", "()Z", AccessFlags = 1)]
-						get{ return GetLoadWithOverviewMode(); }
-				[Dot42.DexImport("setLoadWithOverviewMode", "(Z)V", AccessFlags = 1)]
-						set{ SetLoadWithOverviewMode(value); }
+						[Dot42.DexImport("getLoadWithOverviewMode", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setLoadWithOverviewMode", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getUseWebViewBackgroundForOverscrollBackground
 				/// </java-name>
-				public bool IsUseWebViewBackgroundForOverscrollBackground
+				public virtual bool IsUseWebViewBackgroundForOverscrollBackground
 				{
-				[Dot42.DexImport("getUseWebViewBackgroundForOverscrollBackground", "()Z", AccessFlags = 1)]
-						get{ return GetUseWebViewBackgroundForOverscrollBackground(); }
-				[Dot42.DexImport("setUseWebViewBackgroundForOverscrollBackground", "(Z)V", AccessFlags = 1)]
-						set{ SetUseWebViewBackgroundForOverscrollBackground(value); }
+						[Dot42.DexImport("getUseWebViewBackgroundForOverscrollBackground", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setUseWebViewBackgroundForOverscrollBackground", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSaveFormData
 				/// </java-name>
-				public bool IsSaveFormData
+				public virtual bool IsSaveFormData
 				{
-				[Dot42.DexImport("getSaveFormData", "()Z", AccessFlags = 1)]
-						get{ return GetSaveFormData(); }
-				[Dot42.DexImport("setSaveFormData", "(Z)V", AccessFlags = 1)]
-						set{ SetSaveFormData(value); }
+						[Dot42.DexImport("getSaveFormData", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setSaveFormData", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSavePassword
 				/// </java-name>
-				public bool IsSavePassword
+				public virtual bool IsSavePassword
 				{
-				[Dot42.DexImport("getSavePassword", "()Z", AccessFlags = 1)]
-						get{ return GetSavePassword(); }
-				[Dot42.DexImport("setSavePassword", "(Z)V", AccessFlags = 1)]
-						set{ SetSavePassword(value); }
+						[Dot42.DexImport("getSavePassword", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setSavePassword", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTextZoom
 				/// </java-name>
-				public int TextZoom
+				public virtual int TextZoom
 				{
-				[Dot42.DexImport("getTextZoom", "()I", AccessFlags = 33)]
-						get{ return GetTextZoom(); }
-				[Dot42.DexImport("setTextZoom", "(I)V", AccessFlags = 33)]
-						set{ SetTextZoom(value); }
+						[Dot42.DexImport("getTextZoom", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setTextZoom", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDefaultZoom
 				/// </java-name>
-				public global::Android.Webkit.WebSettings.ZoomDensity DefaultZoom
+				public virtual global::Android.Webkit.WebSettings.ZoomDensity DefaultZoom
 				{
-				[Dot42.DexImport("getDefaultZoom", "()Landroid/webkit/WebSettings$ZoomDensity;", AccessFlags = 1)]
-						get{ return GetDefaultZoom(); }
-				[Dot42.DexImport("setDefaultZoom", "(Landroid/webkit/WebSettings$ZoomDensity;)V", AccessFlags = 1)]
-						set{ SetDefaultZoom(value); }
+						[Dot42.DexImport("getDefaultZoom", "()Landroid/webkit/WebSettings$ZoomDensity;", AccessFlags = 1)]
+						get{ return default(global::Android.Webkit.WebSettings.ZoomDensity); }
+						[Dot42.DexImport("setDefaultZoom", "(Landroid/webkit/WebSettings$ZoomDensity;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLightTouchEnabled
 				/// </java-name>
-				public bool IsLightTouchEnabled
+				public virtual bool IsLightTouchEnabled
 				{
-				[Dot42.DexImport("getLightTouchEnabled", "()Z", AccessFlags = 1)]
-						get{ return GetLightTouchEnabled(); }
-				[Dot42.DexImport("setLightTouchEnabled", "(Z)V", AccessFlags = 1)]
-						set{ SetLightTouchEnabled(value); }
+						[Dot42.DexImport("getLightTouchEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setLightTouchEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getUseDoubleTree
 				/// </java-name>
-				public bool IsUseDoubleTree
+				public virtual bool IsUseDoubleTree
 				{
-				[Dot42.DexImport("getUseDoubleTree", "()Z", AccessFlags = 33)]
-						get{ return GetUseDoubleTree(); }
-				[Dot42.DexImport("setUseDoubleTree", "(Z)V", AccessFlags = 33)]
-						set{ SetUseDoubleTree(value); }
+						[Dot42.DexImport("getUseDoubleTree", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setUseDoubleTree", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getUserAgent
 				/// </java-name>
-				public int UserAgent
+				public virtual int UserAgent
 				{
-				[Dot42.DexImport("getUserAgent", "()I", AccessFlags = 33)]
-						get{ return GetUserAgent(); }
-				[Dot42.DexImport("setUserAgent", "(I)V", AccessFlags = 33)]
-						set{ SetUserAgent(value); }
+						[Dot42.DexImport("getUserAgent", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setUserAgent", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getUseWideViewPort
 				/// </java-name>
-				public bool IsUseWideViewPort
+				public virtual bool IsUseWideViewPort
 				{
-				[Dot42.DexImport("getUseWideViewPort", "()Z", AccessFlags = 33)]
-						get{ return GetUseWideViewPort(); }
-				[Dot42.DexImport("setUseWideViewPort", "(Z)V", AccessFlags = 33)]
-						set{ SetUseWideViewPort(value); }
+						[Dot42.DexImport("getUseWideViewPort", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setUseWideViewPort", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getStandardFontFamily
 				/// </java-name>
-				public string StandardFontFamily
+				public virtual string StandardFontFamily
 				{
-				[Dot42.DexImport("getStandardFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetStandardFontFamily(); }
-				[Dot42.DexImport("setStandardFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetStandardFontFamily(value); }
+						[Dot42.DexImport("getStandardFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setStandardFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getFixedFontFamily
 				/// </java-name>
-				public string FixedFontFamily
+				public virtual string FixedFontFamily
 				{
-				[Dot42.DexImport("getFixedFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetFixedFontFamily(); }
-				[Dot42.DexImport("setFixedFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetFixedFontFamily(value); }
+						[Dot42.DexImport("getFixedFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setFixedFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSansSerifFontFamily
 				/// </java-name>
-				public string SansSerifFontFamily
+				public virtual string SansSerifFontFamily
 				{
-				[Dot42.DexImport("getSansSerifFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetSansSerifFontFamily(); }
-				[Dot42.DexImport("setSansSerifFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetSansSerifFontFamily(value); }
+						[Dot42.DexImport("getSansSerifFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSansSerifFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSerifFontFamily
 				/// </java-name>
-				public string SerifFontFamily
+				public virtual string SerifFontFamily
 				{
-				[Dot42.DexImport("getSerifFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetSerifFontFamily(); }
-				[Dot42.DexImport("setSerifFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetSerifFontFamily(value); }
+						[Dot42.DexImport("getSerifFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSerifFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCursiveFontFamily
 				/// </java-name>
-				public string CursiveFontFamily
+				public virtual string CursiveFontFamily
 				{
-				[Dot42.DexImport("getCursiveFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetCursiveFontFamily(); }
-				[Dot42.DexImport("setCursiveFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetCursiveFontFamily(value); }
+						[Dot42.DexImport("getCursiveFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setCursiveFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getFantasyFontFamily
 				/// </java-name>
-				public string FantasyFontFamily
+				public virtual string FantasyFontFamily
 				{
-				[Dot42.DexImport("getFantasyFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetFantasyFontFamily(); }
-				[Dot42.DexImport("setFantasyFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetFantasyFontFamily(value); }
+						[Dot42.DexImport("getFantasyFontFamily", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setFantasyFontFamily", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMinimumFontSize
 				/// </java-name>
-				public int MinimumFontSize
+				public virtual int MinimumFontSize
 				{
-				[Dot42.DexImport("getMinimumFontSize", "()I", AccessFlags = 33)]
-						get{ return GetMinimumFontSize(); }
-				[Dot42.DexImport("setMinimumFontSize", "(I)V", AccessFlags = 33)]
-						set{ SetMinimumFontSize(value); }
+						[Dot42.DexImport("getMinimumFontSize", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMinimumFontSize", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMinimumLogicalFontSize
 				/// </java-name>
-				public int MinimumLogicalFontSize
+				public virtual int MinimumLogicalFontSize
 				{
-				[Dot42.DexImport("getMinimumLogicalFontSize", "()I", AccessFlags = 33)]
-						get{ return GetMinimumLogicalFontSize(); }
-				[Dot42.DexImport("setMinimumLogicalFontSize", "(I)V", AccessFlags = 33)]
-						set{ SetMinimumLogicalFontSize(value); }
+						[Dot42.DexImport("getMinimumLogicalFontSize", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMinimumLogicalFontSize", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDefaultFontSize
 				/// </java-name>
-				public int DefaultFontSize
+				public virtual int DefaultFontSize
 				{
-				[Dot42.DexImport("getDefaultFontSize", "()I", AccessFlags = 33)]
-						get{ return GetDefaultFontSize(); }
-				[Dot42.DexImport("setDefaultFontSize", "(I)V", AccessFlags = 33)]
-						set{ SetDefaultFontSize(value); }
+						[Dot42.DexImport("getDefaultFontSize", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setDefaultFontSize", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDefaultFixedFontSize
 				/// </java-name>
-				public int DefaultFixedFontSize
+				public virtual int DefaultFixedFontSize
 				{
-				[Dot42.DexImport("getDefaultFixedFontSize", "()I", AccessFlags = 33)]
-						get{ return GetDefaultFixedFontSize(); }
-				[Dot42.DexImport("setDefaultFixedFontSize", "(I)V", AccessFlags = 33)]
-						set{ SetDefaultFixedFontSize(value); }
+						[Dot42.DexImport("getDefaultFixedFontSize", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setDefaultFixedFontSize", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLoadsImagesAutomatically
 				/// </java-name>
-				public bool IsLoadsImagesAutomatically
+				public virtual bool IsLoadsImagesAutomatically
 				{
-				[Dot42.DexImport("getLoadsImagesAutomatically", "()Z", AccessFlags = 33)]
-						get{ return GetLoadsImagesAutomatically(); }
-				[Dot42.DexImport("setLoadsImagesAutomatically", "(Z)V", AccessFlags = 33)]
-						set{ SetLoadsImagesAutomatically(value); }
+						[Dot42.DexImport("getLoadsImagesAutomatically", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setLoadsImagesAutomatically", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getBlockNetworkImage
 				/// </java-name>
-				public bool IsBlockNetworkImage
+				public virtual bool IsBlockNetworkImage
 				{
-				[Dot42.DexImport("getBlockNetworkImage", "()Z", AccessFlags = 33)]
-						get{ return GetBlockNetworkImage(); }
-				[Dot42.DexImport("setBlockNetworkImage", "(Z)V", AccessFlags = 33)]
-						set{ SetBlockNetworkImage(value); }
+						[Dot42.DexImport("getBlockNetworkImage", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setBlockNetworkImage", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getBlockNetworkLoads
 				/// </java-name>
-				public bool IsBlockNetworkLoads
+				public virtual bool IsBlockNetworkLoads
 				{
-				[Dot42.DexImport("getBlockNetworkLoads", "()Z", AccessFlags = 33)]
-						get{ return GetBlockNetworkLoads(); }
-				[Dot42.DexImport("setBlockNetworkLoads", "(Z)V", AccessFlags = 33)]
-						set{ SetBlockNetworkLoads(value); }
+						[Dot42.DexImport("getBlockNetworkLoads", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setBlockNetworkLoads", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDomStorageEnabled
 				/// </java-name>
-				public bool IsDomStorageEnabled
+				public virtual bool IsDomStorageEnabled
 				{
-				[Dot42.DexImport("getDomStorageEnabled", "()Z", AccessFlags = 33)]
-						get{ return GetDomStorageEnabled(); }
-				[Dot42.DexImport("setDomStorageEnabled", "(Z)V", AccessFlags = 33)]
-						set{ SetDomStorageEnabled(value); }
+						[Dot42.DexImport("getDomStorageEnabled", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setDomStorageEnabled", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDatabasePath
 				/// </java-name>
-				public string DatabasePath
+				public virtual string DatabasePath
 				{
-				[Dot42.DexImport("getDatabasePath", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetDatabasePath(); }
-				[Dot42.DexImport("setDatabasePath", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetDatabasePath(value); }
+						[Dot42.DexImport("getDatabasePath", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setDatabasePath", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDatabaseEnabled
 				/// </java-name>
-				public bool IsDatabaseEnabled
+				public virtual bool IsDatabaseEnabled
 				{
-				[Dot42.DexImport("getDatabaseEnabled", "()Z", AccessFlags = 33)]
-						get{ return GetDatabaseEnabled(); }
-				[Dot42.DexImport("setDatabaseEnabled", "(Z)V", AccessFlags = 33)]
-						set{ SetDatabaseEnabled(value); }
+						[Dot42.DexImport("getDatabaseEnabled", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setDatabaseEnabled", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getJavaScriptEnabled
 				/// </java-name>
-				public bool IsJavaScriptEnabled
+				public virtual bool IsJavaScriptEnabled
 				{
-				[Dot42.DexImport("getJavaScriptEnabled", "()Z", AccessFlags = 33)]
-						get{ return GetJavaScriptEnabled(); }
-				[Dot42.DexImport("setJavaScriptEnabled", "(Z)V", AccessFlags = 33)]
-						set{ SetJavaScriptEnabled(value); }
+						[Dot42.DexImport("getJavaScriptEnabled", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setJavaScriptEnabled", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPluginsEnabled
 				/// </java-name>
-				public bool IsPluginsEnabled
+				public virtual bool IsPluginsEnabled
 				{
-				[Dot42.DexImport("getPluginsEnabled", "()Z", AccessFlags = 33)]
-						get{ return GetPluginsEnabled(); }
-				[Dot42.DexImport("setPluginsEnabled", "(Z)V", AccessFlags = 33)]
-						set{ SetPluginsEnabled(value); }
+						[Dot42.DexImport("getPluginsEnabled", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setPluginsEnabled", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPluginsPath
 				/// </java-name>
-				public string PluginsPath
+				public virtual string PluginsPath
 				{
-				[Dot42.DexImport("getPluginsPath", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetPluginsPath(); }
-				[Dot42.DexImport("setPluginsPath", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetPluginsPath(value); }
+						[Dot42.DexImport("getPluginsPath", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPluginsPath", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getJavaScriptCanOpenWindowsAutomatically
 				/// </java-name>
-				public bool IsJavaScriptCanOpenWindowsAutomatically
+				public virtual bool IsJavaScriptCanOpenWindowsAutomatically
 				{
-				[Dot42.DexImport("getJavaScriptCanOpenWindowsAutomatically", "()Z", AccessFlags = 33)]
-						get{ return GetJavaScriptCanOpenWindowsAutomatically(); }
-				[Dot42.DexImport("setJavaScriptCanOpenWindowsAutomatically", "(Z)V", AccessFlags = 33)]
-						set{ SetJavaScriptCanOpenWindowsAutomatically(value); }
+						[Dot42.DexImport("getJavaScriptCanOpenWindowsAutomatically", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setJavaScriptCanOpenWindowsAutomatically", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDefaultTextEncodingName
 				/// </java-name>
-				public string DefaultTextEncodingName
+				public virtual string DefaultTextEncodingName
 				{
-				[Dot42.DexImport("getDefaultTextEncodingName", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetDefaultTextEncodingName(); }
-				[Dot42.DexImport("setDefaultTextEncodingName", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetDefaultTextEncodingName(value); }
+						[Dot42.DexImport("getDefaultTextEncodingName", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setDefaultTextEncodingName", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getUserAgentString
 				/// </java-name>
-				public string UserAgentString
+				public virtual string UserAgentString
 				{
-				[Dot42.DexImport("getUserAgentString", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetUserAgentString(); }
-				[Dot42.DexImport("setUserAgentString", "(Ljava/lang/String;)V", AccessFlags = 33)]
-						set{ SetUserAgentString(value); }
+						[Dot42.DexImport("getUserAgentString", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
+						[Dot42.DexImport("setUserAgentString", "(Ljava/lang/String;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCacheMode
 				/// </java-name>
-				public int CacheMode
+				public virtual int CacheMode
 				{
-				[Dot42.DexImport("getCacheMode", "()I", AccessFlags = 1)]
-						get{ return GetCacheMode(); }
-				[Dot42.DexImport("setCacheMode", "(I)V", AccessFlags = 1)]
-						set{ SetCacheMode(value); }
+						[Dot42.DexImport("getCacheMode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setCacheMode", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -3470,19 +2496,10 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getInstance
 				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/WebStorage;", AccessFlags = 9)]
-				public static global::Android.Webkit.WebStorage GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Webkit.WebStorage);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
 				public static global::Android.Webkit.WebStorage Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/webkit/WebStorage;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/webkit/WebStorage;", AccessFlags = 9)]
+						get{ return default(global::Android.Webkit.WebStorage); }
 				}
 
 				/// <java-name>
@@ -3509,37 +2526,19 @@ namespace Android.Webkit
 						/// <java-name>
 						/// getQuota
 						/// </java-name>
-						[Dot42.DexImport("getQuota", "()J", AccessFlags = 1)]
-						public virtual long GetQuota() /* MethodBuilder.Create */ 
+						public virtual long Quota
 						{
-								return default(long);
+								[Dot42.DexImport("getQuota", "()J", AccessFlags = 1)]
+								get{ return default(long); }
 						}
 
 						/// <java-name>
 						/// getUsage
 						/// </java-name>
-						[Dot42.DexImport("getUsage", "()J", AccessFlags = 1)]
-						public virtual long GetUsage() /* MethodBuilder.Create */ 
+						public virtual long Usage
 						{
-								return default(long);
-						}
-
-						/// <java-name>
-						/// getQuota
-						/// </java-name>
-						public long Quota
-						{
-						[Dot42.DexImport("getQuota", "()J", AccessFlags = 1)]
-								get{ return GetQuota(); }
-						}
-
-						/// <java-name>
-						/// getUsage
-						/// </java-name>
-						public long Usage
-						{
-						[Dot42.DexImport("getUsage", "()J", AccessFlags = 1)]
-								get{ return GetUsage(); }
+								[Dot42.DexImport("getUsage", "()J", AccessFlags = 1)]
+								get{ return default(long); }
 						}
 
 				}
@@ -3720,22 +2719,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// setOverScrollMode
-				/// </java-name>
-				[Dot42.DexImport("setOverScrollMode", "(I)V", AccessFlags = 1)]
-				public override void SetOverScrollMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setScrollBarStyle
-				/// </java-name>
-				[Dot42.DexImport("setScrollBarStyle", "(I)V", AccessFlags = 1)]
-				public override void SetScrollBarStyle(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setHorizontalScrollbarOverlay
 				/// </java-name>
 				[Dot42.DexImport("setHorizontalScrollbarOverlay", "(Z)V", AccessFlags = 1)]
@@ -3767,32 +2750,6 @@ namespace Android.Webkit
 				public virtual bool OverlayVerticalScrollbar() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getVisibleTitleHeight
-				/// </java-name>
-				[Dot42.DexImport("getVisibleTitleHeight", "()I", AccessFlags = 1)]
-				public virtual int GetVisibleTitleHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCertificate
-				/// </java-name>
-				[Dot42.DexImport("getCertificate", "()Landroid/net/http/SslCertificate;", AccessFlags = 1)]
-				public virtual global::Android.Net.Http.SslCertificate GetCertificate() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Http.SslCertificate);
-				}
-
-				/// <java-name>
-				/// setCertificate
-				/// </java-name>
-				[Dot42.DexImport("setCertificate", "(Landroid/net/http/SslCertificate;)V", AccessFlags = 1)]
-				public virtual void SetCertificate(global::Android.Net.Http.SslCertificate sslCertificate) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -3970,29 +2927,11 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// canGoBack
-				/// </java-name>
-				[Dot42.DexImport("canGoBack", "()Z", AccessFlags = 1)]
-				public virtual bool CanGoBack() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// goBack
 				/// </java-name>
 				[Dot42.DexImport("goBack", "()V", AccessFlags = 1)]
 				public virtual void GoBack() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// canGoForward
-				/// </java-name>
-				[Dot42.DexImport("canGoForward", "()Z", AccessFlags = 1)]
-				public virtual bool CanGoForward() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -4018,15 +2957,6 @@ namespace Android.Webkit
 				[Dot42.DexImport("goBackOrForward", "(I)V", AccessFlags = 1)]
 				public virtual void GoBackOrForward(int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isPrivateBrowsingEnabled
-				/// </java-name>
-				[Dot42.DexImport("isPrivateBrowsingEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsPrivateBrowsingEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -4062,15 +2992,6 @@ namespace Android.Webkit
 				public virtual global::Android.Graphics.Picture CapturePicture() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Picture);
-				}
-
-				/// <java-name>
-				/// getScale
-				/// </java-name>
-				[Dot42.DexImport("getScale", "()F", AccessFlags = 1)]
-				public virtual float GetScale() /* MethodBuilder.Create */ 
-				{
-						return default(float);
 				}
 
 				/// <java-name>
@@ -4165,60 +3086,6 @@ namespace Android.Webkit
 				[Dot42.DexImport("onOverScrolled", "(IIZZ)V", AccessFlags = 4)]
 				protected internal override void OnOverScrolled(int int32, int int321, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getUrl
-				/// </java-name>
-				[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUrl() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getOriginalUrl
-				/// </java-name>
-				[Dot42.DexImport("getOriginalUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetOriginalUrl() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getTitle
-				/// </java-name>
-				[Dot42.DexImport("getTitle", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetTitle() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getFavicon
-				/// </java-name>
-				[Dot42.DexImport("getFavicon", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Bitmap GetFavicon() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Bitmap);
-				}
-
-				/// <java-name>
-				/// getProgress
-				/// </java-name>
-				[Dot42.DexImport("getProgress", "()I", AccessFlags = 1)]
-				public virtual int GetProgress() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getContentHeight
-				/// </java-name>
-				[Dot42.DexImport("getContentHeight", "()I", AccessFlags = 1)]
-				public virtual int GetContentHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -4418,15 +3285,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// getSettings
-				/// </java-name>
-				[Dot42.DexImport("getSettings", "()Landroid/webkit/WebSettings;", AccessFlags = 1)]
-				public virtual global::Android.Webkit.WebSettings GetSettings() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Webkit.WebSettings);
-				}
-
-				/// <java-name>
 				/// finalize
 				/// </java-name>
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
@@ -4446,14 +3304,6 @@ namespace Android.Webkit
 				/// </java-name>
 				[Dot42.DexImport("onDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 4)]
 				protected internal override void OnDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLayoutParams
-				/// </java-name>
-				[Dot42.DexImport("setLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
-				public override void SetLayoutParams(global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4661,33 +3511,6 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// getZoomControls
-				/// </java-name>
-				[Dot42.DexImport("getZoomControls", "()Landroid/view/View;", AccessFlags = 1)]
-				public virtual global::Android.Views.View GetZoomControls() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.View);
-				}
-
-				/// <java-name>
-				/// canZoomIn
-				/// </java-name>
-				[Dot42.DexImport("canZoomIn", "()Z", AccessFlags = 1)]
-				public virtual bool CanZoomIn() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// canZoomOut
-				/// </java-name>
-				[Dot42.DexImport("canZoomOut", "()Z", AccessFlags = 1)]
-				public virtual bool CanZoomOut() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// zoomIn
 				/// </java-name>
 				[Dot42.DexImport("zoomIn", "()Z", AccessFlags = 1)]
@@ -4755,102 +3578,174 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getVisibleTitleHeight
 				/// </java-name>
-				public int VisibleTitleHeight
+				public virtual int VisibleTitleHeight
 				{
-				[Dot42.DexImport("getVisibleTitleHeight", "()I", AccessFlags = 1)]
-						get{ return GetVisibleTitleHeight(); }
+						[Dot42.DexImport("getVisibleTitleHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getCertificate
 				/// </java-name>
-				public global::Android.Net.Http.SslCertificate Certificate
+				public virtual global::Android.Net.Http.SslCertificate Certificate
 				{
-				[Dot42.DexImport("getCertificate", "()Landroid/net/http/SslCertificate;", AccessFlags = 1)]
-						get{ return GetCertificate(); }
-				[Dot42.DexImport("setCertificate", "(Landroid/net/http/SslCertificate;)V", AccessFlags = 1)]
-						set{ SetCertificate(value); }
+						[Dot42.DexImport("getCertificate", "()Landroid/net/http/SslCertificate;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Http.SslCertificate); }
+						[Dot42.DexImport("setCertificate", "(Landroid/net/http/SslCertificate;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// canGoBack
+				/// </java-name>
+				public virtual bool CanGoBack
+				{
+						[Dot42.DexImport("canGoBack", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// canGoForward
+				/// </java-name>
+				public virtual bool CanGoForward
+				{
+						[Dot42.DexImport("canGoForward", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isPrivateBrowsingEnabled
+				/// </java-name>
+				public virtual bool IsPrivateBrowsingEnabled
+				{
+						[Dot42.DexImport("isPrivateBrowsingEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getScale
 				/// </java-name>
-				public float Scale
+				public virtual float Scale
 				{
-				[Dot42.DexImport("getScale", "()F", AccessFlags = 1)]
-						get{ return GetScale(); }
+						[Dot42.DexImport("getScale", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getUrl
 				/// </java-name>
-				public string Url
+				public virtual string Url
 				{
-				[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUrl(); }
+						[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getOriginalUrl
 				/// </java-name>
-				public string OriginalUrl
+				public virtual string OriginalUrl
 				{
-				[Dot42.DexImport("getOriginalUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetOriginalUrl(); }
+						[Dot42.DexImport("getOriginalUrl", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getTitle
 				/// </java-name>
-				public string Title
+				public virtual string Title
 				{
-				[Dot42.DexImport("getTitle", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTitle(); }
+						[Dot42.DexImport("getTitle", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getFavicon
 				/// </java-name>
-				public global::Android.Graphics.Bitmap Favicon
+				public virtual global::Android.Graphics.Bitmap Favicon
 				{
-				[Dot42.DexImport("getFavicon", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-						get{ return GetFavicon(); }
+						[Dot42.DexImport("getFavicon", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Bitmap); }
 				}
 
 				/// <java-name>
 				/// getProgress
 				/// </java-name>
-				public int Progress
+				public virtual int Progress
 				{
-				[Dot42.DexImport("getProgress", "()I", AccessFlags = 1)]
-						get{ return GetProgress(); }
+						[Dot42.DexImport("getProgress", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getContentHeight
 				/// </java-name>
-				public int ContentHeight
+				public virtual int ContentHeight
 				{
-				[Dot42.DexImport("getContentHeight", "()I", AccessFlags = 1)]
-						get{ return GetContentHeight(); }
+						[Dot42.DexImport("getContentHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSettings
 				/// </java-name>
-				public global::Android.Webkit.WebSettings Settings
+				public virtual global::Android.Webkit.WebSettings Settings
 				{
-				[Dot42.DexImport("getSettings", "()Landroid/webkit/WebSettings;", AccessFlags = 1)]
-						get{ return GetSettings(); }
+						[Dot42.DexImport("getSettings", "()Landroid/webkit/WebSettings;", AccessFlags = 1)]
+						get{ return default(global::Android.Webkit.WebSettings); }
 				}
 
 				/// <java-name>
 				/// getZoomControls
 				/// </java-name>
-				public global::Android.Views.View ZoomControls
+				public virtual global::Android.Views.View ZoomControls
 				{
-				[Dot42.DexImport("getZoomControls", "()Landroid/view/View;", AccessFlags = 1)]
-						get{ return GetZoomControls(); }
+						[Dot42.DexImport("getZoomControls", "()Landroid/view/View;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.View); }
+				}
+
+				/// <java-name>
+				/// canZoomIn
+				/// </java-name>
+				public virtual bool CanZoomIn
+				{
+						[Dot42.DexImport("canZoomIn", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// canZoomOut
+				/// </java-name>
+				public virtual bool CanZoomOut
+				{
+						[Dot42.DexImport("canZoomOut", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// setOverScrollMode
+				/// </java-name>
+				public override int OverScrollMode
+				{
+						[Dot42.DexImport("setOverScrollMode", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setScrollBarStyle
+				/// </java-name>
+				public override int ScrollBarStyle
+				{
+						[Dot42.DexImport("setScrollBarStyle", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setLayoutParams
+				/// </java-name>
+				public override global::Android.Views.ViewGroup.LayoutParams LayoutParams
+				{
+						[Dot42.DexImport("setLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -4920,24 +3815,6 @@ namespace Android.Webkit
 						{
 						}
 
-						/// <java-name>
-						/// getType
-						/// </java-name>
-						[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						public virtual int GetTypeJava() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getExtra
-						/// </java-name>
-						[Dot42.DexImport("getExtra", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetExtra() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal HitTestResult() /* TypeBuilder.AddDefaultConstructor */ 
 						{
@@ -4946,19 +3823,19 @@ namespace Android.Webkit
 						/// <java-name>
 						/// getType
 						/// </java-name>
-						public int Type
+						public virtual int Type
 						{
-						[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-								get{ return GetTypeJava(); }
+								[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getExtra
 						/// </java-name>
-						public string Extra
+						public virtual string Extra
 						{
-						[Dot42.DexImport("getExtra", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetExtra(); }
+								[Dot42.DexImport("getExtra", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 				}
@@ -4995,23 +3872,6 @@ namespace Android.Webkit
 						{
 						}
 
-						/// <java-name>
-						/// setWebView
-						/// </java-name>
-						[Dot42.DexImport("setWebView", "(Landroid/webkit/WebView;)V", AccessFlags = 33)]
-						public virtual void SetWebView(global::Android.Webkit.WebView webView) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getWebView
-						/// </java-name>
-						[Dot42.DexImport("getWebView", "()Landroid/webkit/WebView;", AccessFlags = 33)]
-						public virtual global::Android.Webkit.WebView GetWebView() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Webkit.WebView);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal WebViewTransport() /* TypeBuilder.AddDefaultConstructor */ 
 						{
@@ -5020,12 +3880,12 @@ namespace Android.Webkit
 						/// <java-name>
 						/// getWebView
 						/// </java-name>
-						public global::Android.Webkit.WebView WebView
+						public virtual global::Android.Webkit.WebView WebView
 						{
-						[Dot42.DexImport("getWebView", "()Landroid/webkit/WebView;", AccessFlags = 33)]
-								get{ return GetWebView(); }
-						[Dot42.DexImport("setWebView", "(Landroid/webkit/WebView;)V", AccessFlags = 33)]
-								set{ SetWebView(value); }
+								[Dot42.DexImport("getWebView", "()Landroid/webkit/WebView;", AccessFlags = 33)]
+								get{ return default(global::Android.Webkit.WebView); }
+								[Dot42.DexImport("setWebView", "(Landroid/webkit/WebView;)V", AccessFlags = 33)]
+								set{ }
 						}
 
 				}
@@ -5274,29 +4134,11 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// hasUsernamePassword
-				/// </java-name>
-				[Dot42.DexImport("hasUsernamePassword", "()Z", AccessFlags = 1)]
-				public virtual bool HasUsernamePassword() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// clearUsernamePassword
 				/// </java-name>
 				[Dot42.DexImport("clearUsernamePassword", "()V", AccessFlags = 1)]
 				public virtual void ClearUsernamePassword() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// hasHttpAuthUsernamePassword
-				/// </java-name>
-				[Dot42.DexImport("hasHttpAuthUsernamePassword", "()Z", AccessFlags = 1)]
-				public virtual bool HasHttpAuthUsernamePassword() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -5308,20 +4150,38 @@ namespace Android.Webkit
 				}
 
 				/// <java-name>
-				/// hasFormData
-				/// </java-name>
-				[Dot42.DexImport("hasFormData", "()Z", AccessFlags = 1)]
-				public virtual bool HasFormData() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// clearFormData
 				/// </java-name>
 				[Dot42.DexImport("clearFormData", "()V", AccessFlags = 1)]
 				public virtual void ClearFormData() /* MethodBuilder.Create */ 
 				{
+				}
+
+				/// <java-name>
+				/// hasUsernamePassword
+				/// </java-name>
+				public virtual bool HasUsernamePassword
+				{
+						[Dot42.DexImport("hasUsernamePassword", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasHttpAuthUsernamePassword
+				/// </java-name>
+				public virtual bool HasHttpAuthUsernamePassword
+				{
+						[Dot42.DexImport("hasHttpAuthUsernamePassword", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasFormData
+				/// </java-name>
+				public virtual bool HasFormData
+				{
+						[Dot42.DexImport("hasFormData", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -5383,19 +4243,10 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getWebView
 				/// </java-name>
-				[Dot42.DexImport("getWebView", "()Landroid/webkit/WebView;", AccessFlags = 1)]
-				public virtual global::Android.Webkit.WebView GetWebView() /* MethodBuilder.Create */ 
+				public virtual global::Android.Webkit.WebView WebView
 				{
-						return default(global::Android.Webkit.WebView);
-				}
-
-				/// <java-name>
-				/// getWebView
-				/// </java-name>
-				public global::Android.Webkit.WebView WebView
-				{
-				[Dot42.DexImport("getWebView", "()Landroid/webkit/WebView;", AccessFlags = 1)]
-						get{ return GetWebView(); }
+						[Dot42.DexImport("getWebView", "()Landroid/webkit/WebView;", AccessFlags = 1)]
+						get{ return default(global::Android.Webkit.WebView); }
 				}
 
 		}

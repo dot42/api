@@ -20,12 +20,12 @@ namespace System.Reflection
 {
     public class MethodInfo : MethodBase
     {
-        private readonly JavaMethod _method;
+        private readonly Method _method;
         private readonly Type _declaringType;
-        public JavaMethod JavaMethod { get { return _method; } }
+        public Method JavaMethod { get { return _method; } }
 
 
-        public MethodInfo(JavaMethod method, Type declaringType) : base(method)
+        public MethodInfo(Method method, Type declaringType) : base(method)
         {
             _method = method;
             _declaringType = declaringType;
@@ -53,40 +53,40 @@ namespace System.Reflection
         /// <summary>
         /// Is this an abstract method?
         /// </summary>
-        public override bool IsAbstract { get { return Modifier.IsAbstract(_method.GetModifiers()); } }
+        public override bool IsAbstract { get { return Modifier.IsAbstract(_method.Modifiers); } }
 
         /// <summary>
         /// Is this an final method?
         /// </summary>
-        public override bool IsFinal { get { return Modifier.IsFinal(_method.GetModifiers()); } }
+        public override bool IsFinal { get { return Modifier.IsFinal(_method.Modifiers); } }
 
         /// <summary>
         /// Is this an private method?
         /// </summary>
-        public override bool IsPrivate { get { return Modifier.IsPrivate(_method.GetModifiers()); } }
+        public override bool IsPrivate { get { return Modifier.IsPrivate(_method.Modifiers); } }
 
         /// <summary>
         /// Is this an public method?
         /// </summary>
-        public override bool IsPublic { get { return Modifier.IsPublic(_method.GetModifiers()); } }
+        public override bool IsPublic { get { return Modifier.IsPublic(_method.Modifiers); } }
 
         /// <summary>
         /// Is this a static method?
         /// </summary>
-        public override bool IsStatic { get { return Modifier.IsStatic(_method.GetModifiers()); } }
+        public override bool IsStatic { get { return Modifier.IsStatic(_method.Modifiers); } }
 
         /// <summary>
         /// Is this an virtual method?
         /// </summary>
-        public override bool IsVirtual { get { return !Modifier.IsFinal(_method.GetModifiers()); } }
+        public override bool IsVirtual { get { return !Modifier.IsFinal(_method.Modifiers); } }
 
         public Type ReturnType { get { return _method.ReturnType; } }
 
         public MethodInfo GetBaseDefinition()
         {
-            var b = _method.GetDeclaringClass();
+            var b = _method.DeclaringClass;
             if (b == this.DeclaringType) return this;
-            return b.GetMethod(_method.Name, _method.GetParameterTypes());
+            return b.GetMethod(_method.Name, _method.ParameterTypes);
         }
 
         public override object Invoke(object instance, object[] args)

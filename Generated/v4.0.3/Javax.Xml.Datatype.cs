@@ -270,19 +270,10 @@ namespace Javax.Xml.Datatype
 						/// <java-name>
 						/// getId
 						/// </java-name>
-						[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-						public int GetId() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getId
-						/// </java-name>
 						public int Id
 						{
-						[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-								get{ return GetId(); }
+								[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 				}
@@ -516,75 +507,6 @@ namespace Javax.Xml.Datatype
 				}
 
 				/// <java-name>
-				/// getXMLSchemaType
-				/// </java-name>
-				[Dot42.DexImport("getXMLSchemaType", "()Ljavax/xml/namespace/QName;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Namespace.QName GetXMLSchemaType() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Namespace.QName);
-				}
-
-				/// <java-name>
-				/// getSign
-				/// </java-name>
-				[Dot42.DexImport("getSign", "()I", AccessFlags = 1025)]
-				public abstract int GetSign() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getYears
-				/// </java-name>
-				[Dot42.DexImport("getYears", "()I", AccessFlags = 1)]
-				public virtual int GetYears() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMonths
-				/// </java-name>
-				[Dot42.DexImport("getMonths", "()I", AccessFlags = 1)]
-				public virtual int GetMonths() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDays
-				/// </java-name>
-				[Dot42.DexImport("getDays", "()I", AccessFlags = 1)]
-				public virtual int GetDays() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHours
-				/// </java-name>
-				[Dot42.DexImport("getHours", "()I", AccessFlags = 1)]
-				public virtual int GetHours() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinutes
-				/// </java-name>
-				[Dot42.DexImport("getMinutes", "()I", AccessFlags = 1)]
-				public virtual int GetMinutes() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSeconds
-				/// </java-name>
-				[Dot42.DexImport("getSeconds", "()I", AccessFlags = 1)]
-				public virtual int GetSeconds() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getTimeInMillis
 				/// </java-name>
 				[Dot42.DexImport("getTimeInMillis", "(Ljava/util/Calendar;)J", AccessFlags = 1)]
@@ -724,73 +646,73 @@ namespace Javax.Xml.Datatype
 				/// <java-name>
 				/// getXMLSchemaType
 				/// </java-name>
-				public global::Javax.Xml.Namespace.QName XMLSchemaType
+				public virtual global::Javax.Xml.Namespace.QName XMLSchemaType
 				{
-				[Dot42.DexImport("getXMLSchemaType", "()Ljavax/xml/namespace/QName;", AccessFlags = 1)]
-						get{ return GetXMLSchemaType(); }
+						[Dot42.DexImport("getXMLSchemaType", "()Ljavax/xml/namespace/QName;", AccessFlags = 1)]
+						get{ return default(global::Javax.Xml.Namespace.QName); }
 				}
 
 				/// <java-name>
 				/// getSign
 				/// </java-name>
-				public int Sign
+				public abstract int Sign
 				{
-				[Dot42.DexImport("getSign", "()I", AccessFlags = 1025)]
-						get{ return GetSign(); }
+						[Dot42.DexImport("getSign", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getYears
 				/// </java-name>
-				public int Years
+				public virtual int Years
 				{
-				[Dot42.DexImport("getYears", "()I", AccessFlags = 1)]
-						get{ return GetYears(); }
+						[Dot42.DexImport("getYears", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMonths
 				/// </java-name>
-				public int Months
+				public virtual int Months
 				{
-				[Dot42.DexImport("getMonths", "()I", AccessFlags = 1)]
-						get{ return GetMonths(); }
+						[Dot42.DexImport("getMonths", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDays
 				/// </java-name>
-				public int Days
+				public virtual int Days
 				{
-				[Dot42.DexImport("getDays", "()I", AccessFlags = 1)]
-						get{ return GetDays(); }
+						[Dot42.DexImport("getDays", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getHours
 				/// </java-name>
-				public int Hours
+				public virtual int Hours
 				{
-				[Dot42.DexImport("getHours", "()I", AccessFlags = 1)]
-						get{ return GetHours(); }
+						[Dot42.DexImport("getHours", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMinutes
 				/// </java-name>
-				public int Minutes
+				public virtual int Minutes
 				{
-				[Dot42.DexImport("getMinutes", "()I", AccessFlags = 1)]
-						get{ return GetMinutes(); }
+						[Dot42.DexImport("getMinutes", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSeconds
 				/// </java-name>
-				public int Seconds
+				public virtual int Seconds
 				{
-				[Dot42.DexImport("getSeconds", "()I", AccessFlags = 1)]
-						get{ return GetSeconds(); }
+						[Dot42.DexImport("getSeconds", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -826,66 +748,12 @@ namespace Javax.Xml.Datatype
 				public abstract void SetYear(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setYear
-				/// </java-name>
-				[Dot42.DexImport("setYear", "(I)V", AccessFlags = 1025)]
-				public abstract void SetYear(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setMonth
-				/// </java-name>
-				[Dot42.DexImport("setMonth", "(I)V", AccessFlags = 1025)]
-				public abstract void SetMonth(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setDay
-				/// </java-name>
-				[Dot42.DexImport("setDay", "(I)V", AccessFlags = 1025)]
-				public abstract void SetDay(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setTimezone
-				/// </java-name>
-				[Dot42.DexImport("setTimezone", "(I)V", AccessFlags = 1025)]
-				public abstract void SetTimezone(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setTime
 				/// </java-name>
 				[Dot42.DexImport("setTime", "(III)V", AccessFlags = 1)]
 				public virtual void SetTime(int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 				}
-
-				/// <java-name>
-				/// setHour
-				/// </java-name>
-				[Dot42.DexImport("setHour", "(I)V", AccessFlags = 1025)]
-				public abstract void SetHour(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setMinute
-				/// </java-name>
-				[Dot42.DexImport("setMinute", "(I)V", AccessFlags = 1025)]
-				public abstract void SetMinute(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSecond
-				/// </java-name>
-				[Dot42.DexImport("setSecond", "(I)V", AccessFlags = 1025)]
-				public abstract void SetSecond(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setMillisecond
-				/// </java-name>
-				[Dot42.DexImport("setMillisecond", "(I)V", AccessFlags = 1025)]
-				public abstract void SetMillisecond(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFractionalSecond
-				/// </java-name>
-				[Dot42.DexImport("setFractionalSecond", "(Ljava/math/BigDecimal;)V", AccessFlags = 1025)]
-				public abstract void SetFractionalSecond(global::Java.Math.BigDecimal bigDecimal) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setTime
@@ -902,75 +770,6 @@ namespace Javax.Xml.Datatype
 				public virtual void SetTime(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
 				{
 				}
-
-				/// <java-name>
-				/// getEon
-				/// </java-name>
-				[Dot42.DexImport("getEon", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				public abstract global::Java.Math.BigInteger GetEon() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getYear
-				/// </java-name>
-				[Dot42.DexImport("getYear", "()I", AccessFlags = 1025)]
-				public abstract int GetYear() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEonAndYear
-				/// </java-name>
-				[Dot42.DexImport("getEonAndYear", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				public abstract global::Java.Math.BigInteger GetEonAndYear() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMonth
-				/// </java-name>
-				[Dot42.DexImport("getMonth", "()I", AccessFlags = 1025)]
-				public abstract int GetMonth() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDay
-				/// </java-name>
-				[Dot42.DexImport("getDay", "()I", AccessFlags = 1025)]
-				public abstract int GetDay() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTimezone
-				/// </java-name>
-				[Dot42.DexImport("getTimezone", "()I", AccessFlags = 1025)]
-				public abstract int GetTimezone() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getHour
-				/// </java-name>
-				[Dot42.DexImport("getHour", "()I", AccessFlags = 1025)]
-				public abstract int GetHour() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMinute
-				/// </java-name>
-				[Dot42.DexImport("getMinute", "()I", AccessFlags = 1025)]
-				public abstract int GetMinute() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSecond
-				/// </java-name>
-				[Dot42.DexImport("getSecond", "()I", AccessFlags = 1025)]
-				public abstract int GetSecond() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMillisecond
-				/// </java-name>
-				[Dot42.DexImport("getMillisecond", "()I", AccessFlags = 1)]
-				public virtual int GetMillisecond() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFractionalSecond
-				/// </java-name>
-				[Dot42.DexImport("getFractionalSecond", "()Ljava/math/BigDecimal;", AccessFlags = 1025)]
-				public abstract global::Java.Math.BigDecimal GetFractionalSecond() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// compare
@@ -1009,12 +808,6 @@ namespace Javax.Xml.Datatype
 				public abstract string ToXMLFormat() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getXMLSchemaType
-				/// </java-name>
-				[Dot42.DexImport("getXMLSchemaType", "()Ljavax/xml/namespace/QName;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Namespace.QName GetXMLSchemaType() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -1022,12 +815,6 @@ namespace Javax.Xml.Datatype
 				{
 						return default(string);
 				}
-
-				/// <java-name>
-				/// isValid
-				/// </java-name>
-				[Dot42.DexImport("isValid", "()Z", AccessFlags = 1025)]
-				public abstract bool IsValid() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// add
@@ -1063,127 +850,136 @@ namespace Javax.Xml.Datatype
 				/// <java-name>
 				/// getEon
 				/// </java-name>
-				public global::Java.Math.BigInteger Eon
+				public abstract global::Java.Math.BigInteger Eon
 				{
-				[Dot42.DexImport("getEon", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-						get{ return GetEon(); }
+						[Dot42.DexImport("getEon", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getYear
 				/// </java-name>
-				public int Year
+				public abstract int Year
 				{
-				[Dot42.DexImport("getYear", "()I", AccessFlags = 1025)]
-						get{ return GetYear(); }
-				[Dot42.DexImport("setYear", "(I)V", AccessFlags = 1025)]
-						set{ SetYear(value); }
+						[Dot42.DexImport("getYear", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setYear", "(I)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getEonAndYear
 				/// </java-name>
-				public global::Java.Math.BigInteger EonAndYear
+				public abstract global::Java.Math.BigInteger EonAndYear
 				{
-				[Dot42.DexImport("getEonAndYear", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-						get{ return GetEonAndYear(); }
+						[Dot42.DexImport("getEonAndYear", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getMonth
 				/// </java-name>
-				public int Month
+				public abstract int Month
 				{
-				[Dot42.DexImport("getMonth", "()I", AccessFlags = 1025)]
-						get{ return GetMonth(); }
-				[Dot42.DexImport("setMonth", "(I)V", AccessFlags = 1025)]
-						set{ SetMonth(value); }
+						[Dot42.DexImport("getMonth", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setMonth", "(I)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getDay
 				/// </java-name>
-				public int Day
+				public abstract int Day
 				{
-				[Dot42.DexImport("getDay", "()I", AccessFlags = 1025)]
-						get{ return GetDay(); }
-				[Dot42.DexImport("setDay", "(I)V", AccessFlags = 1025)]
-						set{ SetDay(value); }
+						[Dot42.DexImport("getDay", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setDay", "(I)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getTimezone
 				/// </java-name>
-				public int Timezone
+				public abstract int Timezone
 				{
-				[Dot42.DexImport("getTimezone", "()I", AccessFlags = 1025)]
-						get{ return GetTimezone(); }
-				[Dot42.DexImport("setTimezone", "(I)V", AccessFlags = 1025)]
-						set{ SetTimezone(value); }
+						[Dot42.DexImport("getTimezone", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setTimezone", "(I)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getHour
 				/// </java-name>
-				public int Hour
+				public abstract int Hour
 				{
-				[Dot42.DexImport("getHour", "()I", AccessFlags = 1025)]
-						get{ return GetHour(); }
-				[Dot42.DexImport("setHour", "(I)V", AccessFlags = 1025)]
-						set{ SetHour(value); }
+						[Dot42.DexImport("getHour", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setHour", "(I)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getMinute
 				/// </java-name>
-				public int Minute
+				public abstract int Minute
 				{
-				[Dot42.DexImport("getMinute", "()I", AccessFlags = 1025)]
-						get{ return GetMinute(); }
-				[Dot42.DexImport("setMinute", "(I)V", AccessFlags = 1025)]
-						set{ SetMinute(value); }
+						[Dot42.DexImport("getMinute", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setMinute", "(I)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getSecond
 				/// </java-name>
-				public int Second
+				public abstract int Second
 				{
-				[Dot42.DexImport("getSecond", "()I", AccessFlags = 1025)]
-						get{ return GetSecond(); }
-				[Dot42.DexImport("setSecond", "(I)V", AccessFlags = 1025)]
-						set{ SetSecond(value); }
+						[Dot42.DexImport("getSecond", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setSecond", "(I)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getMillisecond
 				/// </java-name>
-				public int Millisecond
+				public virtual int Millisecond
 				{
-				[Dot42.DexImport("getMillisecond", "()I", AccessFlags = 1)]
-						get{ return GetMillisecond(); }
-				[Dot42.DexImport("setMillisecond", "(I)V", AccessFlags = 1025)]
-						set{ SetMillisecond(value); }
+						[Dot42.DexImport("getMillisecond", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMillisecond", "(I)V", AccessFlags = 1025)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getFractionalSecond
 				/// </java-name>
-				public global::Java.Math.BigDecimal FractionalSecond
+				public abstract global::Java.Math.BigDecimal FractionalSecond
 				{
-				[Dot42.DexImport("getFractionalSecond", "()Ljava/math/BigDecimal;", AccessFlags = 1025)]
-						get{ return GetFractionalSecond(); }
-				[Dot42.DexImport("setFractionalSecond", "(Ljava/math/BigDecimal;)V", AccessFlags = 1025)]
-						set{ SetFractionalSecond(value); }
+						[Dot42.DexImport("getFractionalSecond", "()Ljava/math/BigDecimal;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setFractionalSecond", "(Ljava/math/BigDecimal;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getXMLSchemaType
 				/// </java-name>
-				public global::Javax.Xml.Namespace.QName XMLSchemaType
+				public abstract global::Javax.Xml.Namespace.QName XMLSchemaType
 				{
-				[Dot42.DexImport("getXMLSchemaType", "()Ljavax/xml/namespace/QName;", AccessFlags = 1025)]
-						get{ return GetXMLSchemaType(); }
+						[Dot42.DexImport("getXMLSchemaType", "()Ljavax/xml/namespace/QName;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isValid
+				/// </java-name>
+				public abstract bool IsValid
+				{
+						[Dot42.DexImport("isValid", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
 		}

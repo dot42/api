@@ -274,15 +274,6 @@ namespace Android.Content.Pm
 				}
 
 				/// <java-name>
-				/// getThemeResource
-				/// </java-name>
-				[Dot42.DexImport("getThemeResource", "()I", AccessFlags = 17)]
-				public int GetThemeResource() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Landroid/util/Printer;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -321,8 +312,8 @@ namespace Android.Content.Pm
 				/// </java-name>
 				public int ThemeResource
 				{
-				[Dot42.DexImport("getThemeResource", "()I", AccessFlags = 17)]
-						get{ return GetThemeResource(); }
+						[Dot42.DexImport("getThemeResource", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 		}
@@ -700,24 +691,6 @@ namespace Android.Content.Pm
 				}
 
 				/// <java-name>
-				/// isEnabled
-				/// </java-name>
-				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getIconResource
-				/// </java-name>
-				[Dot42.DexImport("getIconResource", "()I", AccessFlags = 17)]
-				public int GetIconResource() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// dumpFront
 				/// </java-name>
 				[Dot42.DexImport("dumpFront", "(Landroid/util/Printer;Ljava/lang/String;)V", AccessFlags = 4)]
@@ -742,12 +715,21 @@ namespace Android.Content.Pm
 				}
 
 				/// <java-name>
+				/// isEnabled
+				/// </java-name>
+				public virtual bool IsEnabled
+				{
+						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getIconResource
 				/// </java-name>
 				public int IconResource
 				{
-				[Dot42.DexImport("getIconResource", "()I", AccessFlags = 17)]
-						get{ return GetIconResource(); }
+						[Dot42.DexImport("getIconResource", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 		}
@@ -843,19 +825,10 @@ namespace Android.Content.Pm
 				/// <java-name>
 				/// getGlEsVersion
 				/// </java-name>
-				[Dot42.DexImport("getGlEsVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetGlEsVersion() /* MethodBuilder.Create */ 
+				public virtual string GlEsVersion
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getGlEsVersion
-				/// </java-name>
-				public string GlEsVersion
-				{
-				[Dot42.DexImport("getGlEsVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetGlEsVersion(); }
+						[Dot42.DexImport("getGlEsVersion", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -936,19 +909,10 @@ namespace Android.Content.Pm
 				/// <java-name>
 				/// getGlEsVersion
 				/// </java-name>
-				[Dot42.DexImport("getGlEsVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetGlEsVersion() /* MethodBuilder.Create */ 
+				public virtual string GlEsVersion
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getGlEsVersion
-				/// </java-name>
-				public string GlEsVersion
-				{
-				[Dot42.DexImport("getGlEsVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetGlEsVersion(); }
+						[Dot42.DexImport("getGlEsVersion", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1066,42 +1030,6 @@ namespace Android.Content.Pm
 				}
 
 				/// <java-name>
-				/// getSourcePackage
-				/// </java-name>
-				[Dot42.DexImport("getSourcePackage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSourcePackage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLabelResource
-				/// </java-name>
-				[Dot42.DexImport("getLabelResource", "()I", AccessFlags = 1)]
-				public virtual int GetLabelResource() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNonLocalizedLabel
-				/// </java-name>
-				[Dot42.DexImport("getNonLocalizedLabel", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetNonLocalizedLabel() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getIconResource
-				/// </java-name>
-				[Dot42.DexImport("getIconResource", "()I", AccessFlags = 1)]
-				public virtual int GetIconResource() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
@@ -1143,37 +1071,37 @@ namespace Android.Content.Pm
 				/// <java-name>
 				/// getSourcePackage
 				/// </java-name>
-				public string SourcePackage
+				public virtual string SourcePackage
 				{
-				[Dot42.DexImport("getSourcePackage", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSourcePackage(); }
+						[Dot42.DexImport("getSourcePackage", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getLabelResource
 				/// </java-name>
-				public int LabelResource
+				public virtual int LabelResource
 				{
-				[Dot42.DexImport("getLabelResource", "()I", AccessFlags = 1)]
-						get{ return GetLabelResource(); }
+						[Dot42.DexImport("getLabelResource", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getNonLocalizedLabel
 				/// </java-name>
-				public global::Java.Lang.ICharSequence NonLocalizedLabel
+				public virtual global::Java.Lang.ICharSequence NonLocalizedLabel
 				{
-				[Dot42.DexImport("getNonLocalizedLabel", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetNonLocalizedLabel(); }
+						[Dot42.DexImport("getNonLocalizedLabel", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
 				}
 
 				/// <java-name>
 				/// getIconResource
 				/// </java-name>
-				public int IconResource
+				public virtual int IconResource
 				{
-				[Dot42.DexImport("getIconResource", "()I", AccessFlags = 1)]
-						get{ return GetIconResource(); }
+						[Dot42.DexImport("getIconResource", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1974,18 +1902,6 @@ namespace Android.Content.Pm
 				public abstract global::Java.Util.IList<global::Android.Content.Pm.ApplicationInfo> GetInstalledApplications(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSystemSharedLibraryNames
-				/// </java-name>
-				[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetSystemSharedLibraryNames() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSystemAvailableFeatures
-				/// </java-name>
-				[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.FeatureInfo[] GetSystemAvailableFeatures() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// hasSystemFeature
 				/// </java-name>
 				[Dot42.DexImport("hasSystemFeature", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
@@ -2071,12 +1987,6 @@ namespace Android.Content.Pm
 				/// </java-name>
 				[Dot42.DexImport("getActivityIcon", "(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
 				public abstract global::Android.Graphics.Drawables.Drawable GetActivityIcon(global::Android.Content.Intent intent) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDefaultActivityIcon
-				/// </java-name>
-				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-				public abstract global::Android.Graphics.Drawables.Drawable GetDefaultActivityIcon() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getApplicationIcon
@@ -2242,36 +2152,39 @@ namespace Android.Content.Pm
 				public abstract int GetApplicationEnabledSetting(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isSafeMode
-				/// </java-name>
-				[Dot42.DexImport("isSafeMode", "()Z", AccessFlags = 1025)]
-				public abstract bool IsSafeMode() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSystemSharedLibraryNames
 				/// </java-name>
-				public string[] SystemSharedLibraryNames
+				public abstract string[] SystemSharedLibraryNames
 				{
-				[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSystemSharedLibraryNames(); }
+						[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSystemAvailableFeatures
 				/// </java-name>
-				public global::Android.Content.Pm.FeatureInfo[] SystemAvailableFeatures
+				public abstract global::Android.Content.Pm.FeatureInfo[] SystemAvailableFeatures
 				{
-				[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1025)]
-						get{ return GetSystemAvailableFeatures(); }
+						[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getDefaultActivityIcon
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable DefaultActivityIcon
+				public abstract global::Android.Graphics.Drawables.Drawable DefaultActivityIcon
 				{
-				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-						get{ return GetDefaultActivityIcon(); }
+						[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isSafeMode
+				/// </java-name>
+				public abstract bool IsSafeMode
+				{
+						[Dot42.DexImport("isSafeMode", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
@@ -2423,24 +2336,6 @@ namespace Android.Content.Pm
 				}
 
 				/// <java-name>
-				/// getReadPermission
-				/// </java-name>
-				[Dot42.DexImport("getReadPermission", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetReadPermission() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getWritePermission
-				/// </java-name>
-				[Dot42.DexImport("getWritePermission", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetWritePermission() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
@@ -2456,19 +2351,19 @@ namespace Android.Content.Pm
 				/// <java-name>
 				/// getReadPermission
 				/// </java-name>
-				public string ReadPermission
+				public virtual string ReadPermission
 				{
-				[Dot42.DexImport("getReadPermission", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetReadPermission(); }
+						[Dot42.DexImport("getReadPermission", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getWritePermission
 				/// </java-name>
-				public string WritePermission
+				public virtual string WritePermission
 				{
-				[Dot42.DexImport("getWritePermission", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetWritePermission(); }
+						[Dot42.DexImport("getWritePermission", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -2832,15 +2727,6 @@ namespace Android.Content.Pm
 				}
 
 				/// <java-name>
-				/// getIconResource
-				/// </java-name>
-				[Dot42.DexImport("getIconResource", "()I", AccessFlags = 17)]
-				public int GetIconResource() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Landroid/util/Printer;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -2879,8 +2765,8 @@ namespace Android.Content.Pm
 				/// </java-name>
 				public int IconResource
 				{
-				[Dot42.DexImport("getIconResource", "()I", AccessFlags = 17)]
-						get{ return GetIconResource(); }
+						[Dot42.DexImport("getIconResource", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>

@@ -34,15 +34,6 @@ namespace Android.Bluetooth
 				}
 
 				/// <java-name>
-				/// getConnectedDevices
-				/// </java-name>
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
-				}
-
-				/// <java-name>
 				/// getDevicesMatchingConnectionStates
 				/// </java-name>
 				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
@@ -74,8 +65,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> ConnectedDevices
 				{
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-						get{ return GetConnectedDevices(); }
+						[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>); }
 				}
 
 		}
@@ -233,39 +224,12 @@ namespace Android.Bluetooth
 				}
 
 				/// <java-name>
-				/// getDefaultAdapter
-				/// </java-name>
-				[Dot42.DexImport("getDefaultAdapter", "()Landroid/bluetooth/BluetoothAdapter;", AccessFlags = 41)]
-				public static global::Android.Bluetooth.BluetoothAdapter GetDefaultAdapter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Bluetooth.BluetoothAdapter);
-				}
-
-				/// <java-name>
 				/// getRemoteDevice
 				/// </java-name>
 				[Dot42.DexImport("getRemoteDevice", "(Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
 				public global::Android.Bluetooth.BluetoothDevice GetRemoteDevice(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Bluetooth.BluetoothDevice);
-				}
-
-				/// <java-name>
-				/// isEnabled
-				/// </java-name>
-				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
-				public bool IsEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-				public int GetState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -287,24 +251,6 @@ namespace Android.Bluetooth
 				}
 
 				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// setName
 				/// </java-name>
 				[Dot42.DexImport("setName", "(Ljava/lang/String;)Z", AccessFlags = 1)]
@@ -314,48 +260,12 @@ namespace Android.Bluetooth
 				}
 
 				/// <java-name>
-				/// getScanMode
-				/// </java-name>
-				[Dot42.DexImport("getScanMode", "()I", AccessFlags = 1)]
-				public int GetScanMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// startDiscovery
 				/// </java-name>
 				[Dot42.DexImport("startDiscovery", "()Z", AccessFlags = 1)]
 				public bool StartDiscovery() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// cancelDiscovery
-				/// </java-name>
-				[Dot42.DexImport("cancelDiscovery", "()Z", AccessFlags = 1)]
-				public bool CancelDiscovery() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isDiscovering
-				/// </java-name>
-				[Dot42.DexImport("isDiscovering", "()Z", AccessFlags = 1)]
-				public bool IsDiscovering() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getBondedDevices
-				/// </java-name>
-				[Dot42.DexImport("getBondedDevices", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;")]
-				public global::Java.Util.ISet<global::Android.Bluetooth.BluetoothDevice> GetBondedDevices() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<global::Android.Bluetooth.BluetoothDevice>);
 				}
 
 				/// <java-name>
@@ -417,8 +327,17 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public static global::Android.Bluetooth.BluetoothAdapter DefaultAdapter
 				{
-				[Dot42.DexImport("getDefaultAdapter", "()Landroid/bluetooth/BluetoothAdapter;", AccessFlags = 41)]
-						get{ return GetDefaultAdapter(); }
+						[Dot42.DexImport("getDefaultAdapter", "()Landroid/bluetooth/BluetoothAdapter;", AccessFlags = 41)]
+						get{ return default(global::Android.Bluetooth.BluetoothAdapter); }
+				}
+
+				/// <java-name>
+				/// isEnabled
+				/// </java-name>
+				public bool IsEnabled
+				{
+						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -426,8 +345,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public int State
 				{
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-						get{ return GetState(); }
+						[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -435,8 +354,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public string Address
 				{
-				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAddress(); }
+						[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -444,8 +363,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -453,8 +372,26 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public int ScanMode
 				{
-				[Dot42.DexImport("getScanMode", "()I", AccessFlags = 1)]
-						get{ return GetScanMode(); }
+						[Dot42.DexImport("getScanMode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// cancelDiscovery
+				/// </java-name>
+				public bool CancelDiscovery
+				{
+						[Dot42.DexImport("cancelDiscovery", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDiscovering
+				/// </java-name>
+				public bool IsDiscovering
+				{
+						[Dot42.DexImport("isDiscovering", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -462,8 +399,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public global::Java.Util.ISet<global::Android.Bluetooth.BluetoothDevice> BondedDevices
 				{
-				[Dot42.DexImport("getBondedDevices", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;")]
-						get{ return GetBondedDevices(); }
+						[Dot42.DexImport("getBondedDevices", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;")]
+						get{ return default(global::Java.Util.ISet<global::Android.Bluetooth.BluetoothDevice>); }
 				}
 
 		}
@@ -1040,28 +977,10 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getMajorDeviceClass
 				/// </java-name>
-				[Dot42.DexImport("getMajorDeviceClass", "()I", AccessFlags = 1)]
-				public int GetMajorDeviceClass() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDeviceClass
-				/// </java-name>
-				[Dot42.DexImport("getDeviceClass", "()I", AccessFlags = 1)]
-				public int GetDeviceClass() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMajorDeviceClass
-				/// </java-name>
 				public int MajorDeviceClass
 				{
-				[Dot42.DexImport("getMajorDeviceClass", "()I", AccessFlags = 1)]
-						get{ return GetMajorDeviceClass(); }
+						[Dot42.DexImport("getMajorDeviceClass", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1069,8 +988,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public int DeviceClass
 				{
-				[Dot42.DexImport("getDeviceClass", "()I", AccessFlags = 1)]
-						get{ return GetDeviceClass(); }
+						[Dot42.DexImport("getDeviceClass", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1624,51 +1543,6 @@ namespace Android.Bluetooth
 				}
 
 				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getBondState
-				/// </java-name>
-				[Dot42.DexImport("getBondState", "()I", AccessFlags = 1)]
-				public int GetBondState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBluetoothClass
-				/// </java-name>
-				[Dot42.DexImport("getBluetoothClass", "()Landroid/bluetooth/BluetoothClass;", AccessFlags = 1)]
-				public global::Android.Bluetooth.BluetoothClass GetBluetoothClass() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Bluetooth.BluetoothClass);
-				}
-
-				/// <java-name>
-				/// getUuids
-				/// </java-name>
-				[Dot42.DexImport("getUuids", "()[Landroid/os/ParcelUuid;", AccessFlags = 1)]
-				public global::Android.OS.ParcelUuid[] GetUuids() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.ParcelUuid[]);
-				}
-
-				/// <java-name>
 				/// fetchUuidsWithSdp
 				/// </java-name>
 				[Dot42.DexImport("fetchUuidsWithSdp", "()Z", AccessFlags = 1)]
@@ -1700,8 +1574,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public string Address
 				{
-				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAddress(); }
+						[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1709,8 +1583,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1718,8 +1592,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public int BondState
 				{
-				[Dot42.DexImport("getBondState", "()I", AccessFlags = 1)]
-						get{ return GetBondState(); }
+						[Dot42.DexImport("getBondState", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1727,8 +1601,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public global::Android.Bluetooth.BluetoothClass BluetoothClass
 				{
-				[Dot42.DexImport("getBluetoothClass", "()Landroid/bluetooth/BluetoothClass;", AccessFlags = 1)]
-						get{ return GetBluetoothClass(); }
+						[Dot42.DexImport("getBluetoothClass", "()Landroid/bluetooth/BluetoothClass;", AccessFlags = 1)]
+						get{ return default(global::Android.Bluetooth.BluetoothClass); }
 				}
 
 				/// <java-name>
@@ -1736,8 +1610,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public global::Android.OS.ParcelUuid[] Uuids
 				{
-				[Dot42.DexImport("getUuids", "()[Landroid/os/ParcelUuid;", AccessFlags = 1)]
-						get{ return GetUuids(); }
+						[Dot42.DexImport("getUuids", "()[Landroid/os/ParcelUuid;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.ParcelUuid[]); }
 				}
 
 		}
@@ -1830,15 +1704,6 @@ namespace Android.Bluetooth
 				}
 
 				/// <java-name>
-				/// getConnectedDevices
-				/// </java-name>
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
-				}
-
-				/// <java-name>
 				/// getDevicesMatchingConnectionStates
 				/// </java-name>
 				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
@@ -1888,8 +1753,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> ConnectedDevices
 				{
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-						get{ return GetConnectedDevices(); }
+						[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>); }
 				}
 
 		}
@@ -2024,15 +1889,6 @@ namespace Android.Bluetooth
 				}
 
 				/// <java-name>
-				/// getConnectedDevices
-				/// </java-name>
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>);
-				}
-
-				/// <java-name>
 				/// getDevicesMatchingConnectionStates
 				/// </java-name>
 				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
@@ -2046,8 +1902,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> ConnectedDevices
 				{
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-						get{ return GetConnectedDevices(); }
+						[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice>); }
 				}
 
 		}
@@ -2106,33 +1962,6 @@ namespace Android.Bluetooth
 				}
 
 				/// <java-name>
-				/// getDataType
-				/// </java-name>
-				[Dot42.DexImport("getDataType", "()I", AccessFlags = 1)]
-				public int GetDataType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRole
-				/// </java-name>
-				[Dot42.DexImport("getRole", "()I", AccessFlags = 1)]
-				public int GetRole() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
@@ -2145,8 +1974,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public int DataType
 				{
-				[Dot42.DexImport("getDataType", "()I", AccessFlags = 1)]
-						get{ return GetDataType(); }
+						[Dot42.DexImport("getDataType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2154,8 +1983,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -2163,8 +1992,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public int Role
 				{
-				[Dot42.DexImport("getRole", "()I", AccessFlags = 1)]
-						get{ return GetRole(); }
+						[Dot42.DexImport("getRole", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2271,46 +2100,10 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getRemoteDevice
 				/// </java-name>
-				[Dot42.DexImport("getRemoteDevice", "()Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
-				public global::Android.Bluetooth.BluetoothDevice GetRemoteDevice() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Bluetooth.BluetoothDevice);
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-				public global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.OutputStream);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getRemoteDevice
-				/// </java-name>
 				public global::Android.Bluetooth.BluetoothDevice RemoteDevice
 				{
-				[Dot42.DexImport("getRemoteDevice", "()Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
-						get{ return GetRemoteDevice(); }
+						[Dot42.DexImport("getRemoteDevice", "()Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
+						get{ return default(global::Android.Bluetooth.BluetoothDevice); }
 				}
 
 				/// <java-name>
@@ -2318,8 +2111,8 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public global::Java.Io.InputStream InputStream
 				{
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetInputStream(); }
+						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
 				}
 
 				/// <java-name>
@@ -2327,8 +2120,17 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public global::Java.Io.OutputStream OutputStream
 				{
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return GetOutputStream(); }
+						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.OutputStream); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -2341,12 +2143,6 @@ namespace Android.Bluetooth
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getConnectedDevices
-				/// </java-name>
-				[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
-				global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> GetConnectedDevices() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getDevicesMatchingConnectionStates
 				/// </java-name>
 				[Dot42.DexImport("getDevicesMatchingConnectionStates", "([I)Ljava/util/List;", AccessFlags = 1025, Signature = "([I)Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
@@ -2357,6 +2153,15 @@ namespace Android.Bluetooth
 				/// </java-name>
 				[Dot42.DexImport("getConnectionState", "(Landroid/bluetooth/BluetoothDevice;)I", AccessFlags = 1025)]
 				int GetConnectionState(global::Android.Bluetooth.BluetoothDevice bluetoothDevice) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getConnectedDevices
+				/// </java-name>
+				global::Java.Util.IList<global::Android.Bluetooth.BluetoothDevice> ConnectedDevices
+				{
+						[Dot42.DexImport("getConnectedDevices", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;")]
+						get;
+				}
 
 		}
 

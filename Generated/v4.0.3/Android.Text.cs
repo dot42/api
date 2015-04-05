@@ -66,15 +66,6 @@ namespace Android.Text
 						return default(string);
 				}
 
-				/// <java-name>
-				/// length
-				/// </java-name>
-				public int Length
-				{
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-						get{ return GetLength(); }
-				}
-
 		}
 
 		/// <java-name>
@@ -198,15 +189,6 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -223,24 +205,6 @@ namespace Android.Text
 				{
 				}
 
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetKey() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetValue() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal Annotation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -249,28 +213,28 @@ namespace Android.Text
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getKey
 				/// </java-name>
-				public string Key
+				public virtual string Key
 				{
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetKey(); }
+						[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getValue
 				/// </java-name>
-				public string Value
+				public virtual string Value
 				{
-				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetValue(); }
+						[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -389,24 +353,6 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-				public override int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLineCount
-				/// </java-name>
-				[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1)]
-				public override int GetLineCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getLineTop
 				/// </java-name>
 				[Dot42.DexImport("getLineTop", "(I)I", AccessFlags = 1)]
@@ -470,24 +416,6 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// getTopPadding
-				/// </java-name>
-				[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1)]
-				public override int GetTopPadding() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBottomPadding
-				/// </java-name>
-				[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1)]
-				public override int GetBottomPadding() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getEllipsisCount
 				/// </java-name>
 				[Dot42.DexImport("getEllipsisCount", "(I)I", AccessFlags = 1)]
@@ -501,15 +429,6 @@ namespace Android.Text
 				/// </java-name>
 				[Dot42.DexImport("getEllipsisStart", "(I)I", AccessFlags = 1)]
 				public override int GetEllipsisStart(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEllipsizedWidth
-				/// </java-name>
-				[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
-				public override int GetEllipsizedWidth() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -538,46 +457,46 @@ namespace Android.Text
 				/// <java-name>
 				/// getHeight
 				/// </java-name>
-				public int Height
+				public override int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getLineCount
 				/// </java-name>
-				public int LineCount
+				public override int LineCount
 				{
-				[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1)]
-						get{ return GetLineCount(); }
+						[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTopPadding
 				/// </java-name>
-				public int TopPadding
+				public override int TopPadding
 				{
-				[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1)]
-						get{ return GetTopPadding(); }
+						[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getBottomPadding
 				/// </java-name>
-				public int BottomPadding
+				public override int BottomPadding
 				{
-				[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1)]
-						get{ return GetBottomPadding(); }
+						[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getEllipsizedWidth
 				/// </java-name>
-				public int EllipsizedWidth
+				public override int EllipsizedWidth
 				{
-				[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
-						get{ return GetEllipsizedWidth(); }
+						[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -625,30 +544,21 @@ namespace Android.Text
 				/// <java-name>
 				/// getText
 				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
-				public abstract global::Java.Lang.ICharSequence GetText() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setText
-				/// </java-name>
-				[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
-				public abstract void SetText(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Lang.ICharSequence Text
+				{
+						[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
+						set;
+				}
 
 				/// <java-name>
 				/// hasText
 				/// </java-name>
-				[Dot42.DexImport("hasText", "()Z", AccessFlags = 1025)]
-				public abstract bool HasText() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				public global::Java.Lang.ICharSequence Text
+				public abstract bool HasText
 				{
-				[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1025)]
-						get{ return GetText(); }
-				[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1025)]
-						set{ SetText(value); }
+						[Dot42.DexImport("hasText", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -676,15 +586,6 @@ namespace Android.Text
     "d/text/Layout$Alignment;FFZLandroid/text/TextUtils$TruncateAt;I)V", AccessFlags = 1)]
 				public DynamicLayout(global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence charSequence1, global::Android.Text.TextPaint textPaint, int int32, global::Android.Text.Layout.Alignment alignment, float single, float single1, bool boolean, global::Android.Text.TextUtils.TruncateAt truncateAt, int int321) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getLineCount
-				/// </java-name>
-				[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1)]
-				public override int GetLineCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -742,33 +643,6 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// getTopPadding
-				/// </java-name>
-				[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1)]
-				public override int GetTopPadding() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBottomPadding
-				/// </java-name>
-				[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1)]
-				public override int GetBottomPadding() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEllipsizedWidth
-				/// </java-name>
-				[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
-				public override int GetEllipsizedWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getEllipsisStart
 				/// </java-name>
 				[Dot42.DexImport("getEllipsisStart", "(I)I", AccessFlags = 1)]
@@ -794,37 +668,37 @@ namespace Android.Text
 				/// <java-name>
 				/// getLineCount
 				/// </java-name>
-				public int LineCount
+				public override int LineCount
 				{
-				[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1)]
-						get{ return GetLineCount(); }
+						[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTopPadding
 				/// </java-name>
-				public int TopPadding
+				public override int TopPadding
 				{
-				[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1)]
-						get{ return GetTopPadding(); }
+						[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getBottomPadding
 				/// </java-name>
-				public int BottomPadding
+				public override int BottomPadding
 				{
-				[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1)]
-						get{ return GetBottomPadding(); }
+						[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getEllipsizedWidth
 				/// </java-name>
-				public int EllipsizedWidth
+				public override int EllipsizedWidth
 				{
-				[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
-						get{ return GetEllipsizedWidth(); }
+						[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -969,16 +843,15 @@ namespace Android.Text
 				void ClearSpans() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setFilters
-				/// </java-name>
-				[Dot42.DexImport("setFilters", "([Landroid/text/InputFilter;)V", AccessFlags = 1025)]
-				void SetFilters(global::Android.Text.IInputFilter[] inputFilter) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getFilters
 				/// </java-name>
-				[Dot42.DexImport("getFilters", "()[Landroid/text/InputFilter;", AccessFlags = 1025)]
-				global::Android.Text.IInputFilter[] GetFilters() /* MethodBuilder.Create */ ;
+				global::Android.Text.IInputFilter[] Filters
+				{
+						[Dot42.DexImport("getFilters", "()[Landroid/text/InputFilter;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setFilters", "([Landroid/text/InputFilter;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -995,15 +868,6 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/Editable$Factory;", AccessFlags = 9)]
-				public static global::Android.Text.IEditable_Factory GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.IEditable_Factory);
-				}
-
-				/// <java-name>
 				/// newEditable
 				/// </java-name>
 				[Dot42.DexImport("newEditable", "(Ljava/lang/CharSequence;)Landroid/text/Editable;", AccessFlags = 1)]
@@ -1017,8 +881,8 @@ namespace Android.Text
 				/// </java-name>
 				public static global::Android.Text.IEditable_Factory Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/Editable$Factory;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/Editable$Factory;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.IEditable_Factory); }
 				}
 
 		}
@@ -1345,8 +1209,11 @@ namespace Android.Text
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1025)]
-				int GetSpanTypeId() /* MethodBuilder.Create */ ;
+				int SpanTypeId
+				{
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1384,15 +1251,6 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/Spannable$Factory;", AccessFlags = 9)]
-				public static global::Android.Text.ISpannable_Factory GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.ISpannable_Factory);
-				}
-
-				/// <java-name>
 				/// newSpannable
 				/// </java-name>
 				[Dot42.DexImport("newSpannable", "(Ljava/lang/CharSequence;)Landroid/text/Spannable;", AccessFlags = 1)]
@@ -1406,8 +1264,8 @@ namespace Android.Text
 				/// </java-name>
 				public static global::Android.Text.ISpannable_Factory Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/Spannable$Factory;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/Spannable$Factory;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.ISpannable_Factory); }
 				}
 
 		}
@@ -1652,56 +1510,11 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 17)]
-				public global::Java.Lang.ICharSequence GetText() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getPaint
-				/// </java-name>
-				[Dot42.DexImport("getPaint", "()Landroid/text/TextPaint;", AccessFlags = 17)]
-				public global::Android.Text.TextPaint GetPaint() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.TextPaint);
-				}
-
-				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 17)]
-				public int GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEllipsizedWidth
-				/// </java-name>
-				[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
-				public virtual int GetEllipsizedWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// increaseWidthTo
 				/// </java-name>
 				[Dot42.DexImport("increaseWidthTo", "(I)V", AccessFlags = 17)]
 				public void IncreaseWidthTo(int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-				public virtual int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1712,30 +1525,6 @@ namespace Android.Text
 				{
 						return default(global::Android.Text.Layout.Alignment);
 				}
-
-				/// <java-name>
-				/// getSpacingMultiplier
-				/// </java-name>
-				[Dot42.DexImport("getSpacingMultiplier", "()F", AccessFlags = 17)]
-				public float GetSpacingMultiplier() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getSpacingAdd
-				/// </java-name>
-				[Dot42.DexImport("getSpacingAdd", "()F", AccessFlags = 17)]
-				public float GetSpacingAdd() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getLineCount
-				/// </java-name>
-				[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1025)]
-				public abstract int GetLineCount() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getLineBounds
@@ -1781,18 +1570,6 @@ namespace Android.Text
 				/// </java-name>
 				[Dot42.DexImport("getLineDirections", "(I)Landroid/text/Layout$Directions;", AccessFlags = 1025)]
 				public abstract global::Android.Text.Layout.Directions GetLineDirections(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTopPadding
-				/// </java-name>
-				[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1025)]
-				public abstract int GetTopPadding() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getBottomPadding
-				/// </java-name>
-				[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1025)]
-				public abstract int GetBottomPadding() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// isRtlCharAt
@@ -1991,15 +1768,6 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// isSpanned
-				/// </java-name>
-				[Dot42.DexImport("isSpanned", "()Z", AccessFlags = 20)]
-				protected internal bool IsSpanned() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getEllipsisStart
 				/// </java-name>
 				[Dot42.DexImport("getEllipsisStart", "(I)I", AccessFlags = 1025)]
@@ -2021,8 +1789,8 @@ namespace Android.Text
 				/// </java-name>
 				public global::Java.Lang.ICharSequence Text
 				{
-				[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 17)]
-						get{ return GetText(); }
+						[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 17)]
+						get{ return default(global::Java.Lang.ICharSequence); }
 				}
 
 				/// <java-name>
@@ -2030,8 +1798,8 @@ namespace Android.Text
 				/// </java-name>
 				public global::Android.Text.TextPaint Paint
 				{
-				[Dot42.DexImport("getPaint", "()Landroid/text/TextPaint;", AccessFlags = 17)]
-						get{ return GetPaint(); }
+						[Dot42.DexImport("getPaint", "()Landroid/text/TextPaint;", AccessFlags = 17)]
+						get{ return default(global::Android.Text.TextPaint); }
 				}
 
 				/// <java-name>
@@ -2039,26 +1807,26 @@ namespace Android.Text
 				/// </java-name>
 				public int Width
 				{
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 17)]
-						get{ return GetWidth(); }
+						[Dot42.DexImport("getWidth", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getEllipsizedWidth
 				/// </java-name>
-				public int EllipsizedWidth
+				public virtual int EllipsizedWidth
 				{
-				[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
-						get{ return GetEllipsizedWidth(); }
+						[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getHeight
 				/// </java-name>
-				public int Height
+				public virtual int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2066,8 +1834,8 @@ namespace Android.Text
 				/// </java-name>
 				public float SpacingMultiplier
 				{
-				[Dot42.DexImport("getSpacingMultiplier", "()F", AccessFlags = 17)]
-						get{ return GetSpacingMultiplier(); }
+						[Dot42.DexImport("getSpacingMultiplier", "()F", AccessFlags = 17)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
@@ -2075,35 +1843,44 @@ namespace Android.Text
 				/// </java-name>
 				public float SpacingAdd
 				{
-				[Dot42.DexImport("getSpacingAdd", "()F", AccessFlags = 17)]
-						get{ return GetSpacingAdd(); }
+						[Dot42.DexImport("getSpacingAdd", "()F", AccessFlags = 17)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getLineCount
 				/// </java-name>
-				public int LineCount
+				public abstract int LineCount
 				{
-				[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1025)]
-						get{ return GetLineCount(); }
+						[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getTopPadding
 				/// </java-name>
-				public int TopPadding
+				public abstract int TopPadding
 				{
-				[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1025)]
-						get{ return GetTopPadding(); }
+						[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getBottomPadding
 				/// </java-name>
-				public int BottomPadding
+				public abstract int BottomPadding
 				{
-				[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1025)]
-						get{ return GetBottomPadding(); }
+						[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isSpanned
+				/// </java-name>
+				protected internal bool IsSpanned
+				{
+						[Dot42.DexImport("isSpanned", "()Z", AccessFlags = 20)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -2626,15 +2403,6 @@ namespace Android.Text
 				{
 				}
 
-				/// <java-name>
-				/// length
-				/// </java-name>
-				public int Length
-				{
-				[Dot42.DexImport("length", "()I", AccessFlags = 17)]
-						get{ return GetLength(); }
-				}
-
 		}
 
 		/// <java-name>
@@ -2870,23 +2638,6 @@ namespace Android.Text
 						return default(int);
 				}
 
-				/// <java-name>
-				/// setFilters
-				/// </java-name>
-				[Dot42.DexImport("setFilters", "([Landroid/text/InputFilter;)V", AccessFlags = 1)]
-				public virtual void SetFilters(global::Android.Text.IInputFilter[] inputFilter) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getFilters
-				/// </java-name>
-				[Dot42.DexImport("getFilters", "()[Landroid/text/InputFilter;", AccessFlags = 1)]
-				public virtual global::Android.Text.IInputFilter[] GetFilters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.IInputFilter[]);
-				}
-
 				[Dot42.DexImport("android/text/Editable", "replace", "(IILjava/lang/CharSequence;II)Landroid/text/Editable;", AccessFlags = 1025)]
 				global::Android.Text.IEditable global::Android.Text.IEditable.Replace(int int32, int int321, global::Java.Lang.ICharSequence charSequence, int int322, int int323) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -2954,23 +2705,14 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// length
-				/// </java-name>
-				public int Length
-				{
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-						get{ return GetLength(); }
-				}
-
-				/// <java-name>
 				/// getFilters
 				/// </java-name>
-				public global::Android.Text.IInputFilter[] Filters
+				public virtual global::Android.Text.IInputFilter[] Filters
 				{
-				[Dot42.DexImport("getFilters", "()[Landroid/text/InputFilter;", AccessFlags = 1)]
-						get{ return GetFilters(); }
-				[Dot42.DexImport("setFilters", "([Landroid/text/InputFilter;)V", AccessFlags = 1)]
-						set{ SetFilters(value); }
+						[Dot42.DexImport("getFilters", "()[Landroid/text/InputFilter;", AccessFlags = 1)]
+						get{ return default(global::Android.Text.IInputFilter[]); }
+						[Dot42.DexImport("setFilters", "([Landroid/text/InputFilter;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -3184,15 +2926,6 @@ namespace Android.Text
 				{
 				}
 
-				/// <java-name>
-				/// length
-				/// </java-name>
-				public int Length
-				{
-				[Dot42.DexImport("length", "()I", AccessFlags = 17)]
-						get{ return GetLength(); }
-				}
-
 		}
 
 		/// <java-name>
@@ -3225,15 +2958,6 @@ namespace Android.Text
 				/// </java-name>
 				[Dot42.DexImport("getLineForVertical", "(I)I", AccessFlags = 1)]
 				public override int GetLineForVertical(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLineCount
-				/// </java-name>
-				[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1)]
-				public override int GetLineCount() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -3293,24 +3017,6 @@ namespace Android.Text
 				}
 
 				/// <java-name>
-				/// getTopPadding
-				/// </java-name>
-				[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1)]
-				public override int GetTopPadding() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBottomPadding
-				/// </java-name>
-				[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1)]
-				public override int GetBottomPadding() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getEllipsisCount
 				/// </java-name>
 				[Dot42.DexImport("getEllipsisCount", "(I)I", AccessFlags = 1)]
@@ -3328,15 +3034,6 @@ namespace Android.Text
 						return default(int);
 				}
 
-				/// <java-name>
-				/// getEllipsizedWidth
-				/// </java-name>
-				[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
-				public override int GetEllipsizedWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal StaticLayout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -3345,37 +3042,37 @@ namespace Android.Text
 				/// <java-name>
 				/// getLineCount
 				/// </java-name>
-				public int LineCount
+				public override int LineCount
 				{
-				[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1)]
-						get{ return GetLineCount(); }
+						[Dot42.DexImport("getLineCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTopPadding
 				/// </java-name>
-				public int TopPadding
+				public override int TopPadding
 				{
-				[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1)]
-						get{ return GetTopPadding(); }
+						[Dot42.DexImport("getTopPadding", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getBottomPadding
 				/// </java-name>
-				public int BottomPadding
+				public override int BottomPadding
 				{
-				[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1)]
-						get{ return GetBottomPadding(); }
+						[Dot42.DexImport("getBottomPadding", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getEllipsizedWidth
 				/// </java-name>
-				public int EllipsizedWidth
+				public override int EllipsizedWidth
 				{
-				[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
-						get{ return GetEllipsizedWidth(); }
+						[Dot42.DexImport("getEllipsizedWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -3882,29 +3579,12 @@ namespace Android.Text
 						}
 
 						/// <java-name>
-						/// setString
-						/// </java-name>
-						[Dot42.DexImport("setString", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						public virtual void SetString(string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
 						/// iterator
 						/// </java-name>
 						[Dot42.DexImport("iterator", "()Ljava/util/Iterator;", AccessFlags = 1, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
 						public virtual global::Java.Util.IIterator<string> Iterator() /* MethodBuilder.Create */ 
 						{
 								return default(global::Java.Util.IIterator<string>);
-						}
-
-						/// <java-name>
-						/// hasNext
-						/// </java-name>
-						[Dot42.DexImport("hasNext", "()Z", AccessFlags = 1)]
-						public virtual bool HasNext() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
 						}
 
 						/// <java-name>
@@ -3927,6 +3607,24 @@ namespace Android.Text
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal SimpleStringSplitter() /* TypeBuilder.AddDefaultConstructor */ 
 						{
+						}
+
+						/// <java-name>
+						/// hasNext
+						/// </java-name>
+						public virtual bool HasNext
+						{
+								[Dot42.DexImport("hasNext", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
+						}
+
+						/// <java-name>
+						/// setString
+						/// </java-name>
+						public virtual string String
+						{
+								[Dot42.DexImport("setString", "(Ljava/lang/String;)V", AccessFlags = 1)]
+								set{ }
 						}
 
 				}

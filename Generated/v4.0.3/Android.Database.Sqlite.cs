@@ -254,15 +254,6 @@ namespace Android.Database.Sqlite
 				}
 
 				/// <java-name>
-				/// getDatabase
-				/// </java-name>
-				[Dot42.DexImport("getDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 1)]
-				public virtual global::Android.Database.Sqlite.SQLiteDatabase GetDatabase() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.Sqlite.SQLiteDatabase);
-				}
-
-				/// <java-name>
 				/// onMove
 				/// </java-name>
 				[Dot42.DexImport("onMove", "(II)Z", AccessFlags = 1)]
@@ -272,30 +263,12 @@ namespace Android.Database.Sqlite
 				}
 
 				/// <java-name>
-				/// getCount
-				/// </java-name>
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-				public override int GetCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getColumnIndex
 				/// </java-name>
 				[Dot42.DexImport("getColumnIndex", "(Ljava/lang/String;)I", AccessFlags = 1)]
 				public override int GetColumnIndex(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// getColumnNames
-				/// </java-name>
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetColumnNames() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
 				}
 
 				/// <java-name>
@@ -353,28 +326,28 @@ namespace Android.Database.Sqlite
 				/// <java-name>
 				/// getDatabase
 				/// </java-name>
-				public global::Android.Database.Sqlite.SQLiteDatabase Database
+				public virtual global::Android.Database.Sqlite.SQLiteDatabase Database
 				{
-				[Dot42.DexImport("getDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 1)]
-						get{ return GetDatabase(); }
+						[Dot42.DexImport("getDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 1)]
+						get{ return default(global::Android.Database.Sqlite.SQLiteDatabase); }
 				}
 
 				/// <java-name>
 				/// getCount
 				/// </java-name>
-				public int Count
+				public override int Count
 				{
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-						get{ return GetCount(); }
+						[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnNames
 				/// </java-name>
-				public string[] ColumnNames
+				public override string[] ColumnNames
 				{
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetColumnNames(); }
+						[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 		}
@@ -534,24 +507,6 @@ namespace Android.Database.Sqlite
 				}
 
 				/// <java-name>
-				/// isDbLockedByCurrentThread
-				/// </java-name>
-				[Dot42.DexImport("isDbLockedByCurrentThread", "()Z", AccessFlags = 1)]
-				public virtual bool IsDbLockedByCurrentThread() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isDbLockedByOtherThreads
-				/// </java-name>
-				[Dot42.DexImport("isDbLockedByOtherThreads", "()Z", AccessFlags = 1)]
-				public virtual bool IsDbLockedByOtherThreads() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// yieldIfContended
 				/// </java-name>
 				[Dot42.DexImport("yieldIfContended", "()Z", AccessFlags = 1)]
@@ -576,15 +531,6 @@ namespace Android.Database.Sqlite
 				public virtual bool YieldIfContendedSafely(long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getSyncedTables
-				/// </java-name>
-				[Dot42.DexImport("getSyncedTables", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-				public virtual global::Java.Util.IMap<string, string> GetSyncedTables() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<string, string>);
 				}
 
 				/// <java-name>
@@ -656,55 +602,12 @@ namespace Android.Database.Sqlite
 				}
 
 				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-				public virtual int GetVersion() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setVersion
-				/// </java-name>
-				[Dot42.DexImport("setVersion", "(I)V", AccessFlags = 1)]
-				public virtual void SetVersion(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMaximumSize
-				/// </java-name>
-				[Dot42.DexImport("getMaximumSize", "()J", AccessFlags = 1)]
-				public virtual long GetMaximumSize() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// setMaximumSize
 				/// </java-name>
 				[Dot42.DexImport("setMaximumSize", "(J)J", AccessFlags = 1)]
 				public virtual long SetMaximumSize(long int64) /* MethodBuilder.Create */ 
 				{
 						return default(long);
-				}
-
-				/// <java-name>
-				/// getPageSize
-				/// </java-name>
-				[Dot42.DexImport("getPageSize", "()J", AccessFlags = 1)]
-				public virtual long GetPageSize() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setPageSize
-				/// </java-name>
-				[Dot42.DexImport("setPageSize", "(J)V", AccessFlags = 1)]
-				public virtual void SetPageSize(long int64) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -900,39 +803,12 @@ namespace Android.Database.Sqlite
 				extern ~SQLiteDatabase() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isReadOnly
-				/// </java-name>
-				[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1)]
-				public virtual bool IsReadOnly() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isOpen
-				/// </java-name>
-				[Dot42.DexImport("isOpen", "()Z", AccessFlags = 1)]
-				public virtual bool IsOpen() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// needUpgrade
 				/// </java-name>
 				[Dot42.DexImport("needUpgrade", "(I)Z", AccessFlags = 1)]
 				public virtual bool NeedUpgrade(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -961,61 +837,79 @@ namespace Android.Database.Sqlite
 				}
 
 				/// <java-name>
-				/// getAttachedDbs
+				/// isDbLockedByCurrentThread
 				/// </java-name>
-				[Dot42.DexImport("getAttachedDbs", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;")]
-				public virtual global::Java.Util.IList<global::Android.Util.Pair<string, string>> GetAttachedDbs() /* MethodBuilder.Create */ 
+				public virtual bool IsDbLockedByCurrentThread
 				{
-						return default(global::Java.Util.IList<global::Android.Util.Pair<string, string>>);
+						[Dot42.DexImport("isDbLockedByCurrentThread", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
-				/// isDatabaseIntegrityOk
+				/// isDbLockedByOtherThreads
 				/// </java-name>
-				[Dot42.DexImport("isDatabaseIntegrityOk", "()Z", AccessFlags = 1)]
-				public virtual bool IsDatabaseIntegrityOk() /* MethodBuilder.Create */ 
+				public virtual bool IsDbLockedByOtherThreads
 				{
-						return default(bool);
+						[Dot42.DexImport("isDbLockedByOtherThreads", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getSyncedTables
 				/// </java-name>
-				public global::Java.Util.IMap<string, string> SyncedTables
+				public virtual global::Java.Util.IMap<string, string> SyncedTables
 				{
-				[Dot42.DexImport("getSyncedTables", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-						get{ return GetSyncedTables(); }
+						[Dot42.DexImport("getSyncedTables", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IMap<string, string>); }
 				}
 
 				/// <java-name>
 				/// getVersion
 				/// </java-name>
-				public int Version
+				public virtual int Version
 				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-						get{ return GetVersion(); }
-				[Dot42.DexImport("setVersion", "(I)V", AccessFlags = 1)]
-						set{ SetVersion(value); }
+						[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setVersion", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMaximumSize
 				/// </java-name>
-				public long MaximumSize
+				public virtual long MaximumSize
 				{
-				[Dot42.DexImport("getMaximumSize", "()J", AccessFlags = 1)]
-						get{ return GetMaximumSize(); }
+						[Dot42.DexImport("getMaximumSize", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getPageSize
 				/// </java-name>
-				public long PageSize
+				public virtual long PageSize
 				{
-				[Dot42.DexImport("getPageSize", "()J", AccessFlags = 1)]
-						get{ return GetPageSize(); }
-				[Dot42.DexImport("setPageSize", "(J)V", AccessFlags = 1)]
-						set{ SetPageSize(value); }
+						[Dot42.DexImport("getPageSize", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setPageSize", "(J)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isReadOnly
+				/// </java-name>
+				public virtual bool IsReadOnly
+				{
+						[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isOpen
+				/// </java-name>
+				public virtual bool IsOpen
+				{
+						[Dot42.DexImport("isOpen", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1023,17 +917,26 @@ namespace Android.Database.Sqlite
 				/// </java-name>
 				public string Path
 				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetPath(); }
+						[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getAttachedDbs
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Util.Pair<string, string>> AttachedDbs
+				public virtual global::Java.Util.IList<global::Android.Util.Pair<string, string>> AttachedDbs
 				{
-				[Dot42.DexImport("getAttachedDbs", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;")]
-						get{ return GetAttachedDbs(); }
+						[Dot42.DexImport("getAttachedDbs", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Util.Pair<string, string>>); }
+				}
+
+				/// <java-name>
+				/// isDatabaseIntegrityOk
+				/// </java-name>
+				public virtual bool IsDatabaseIntegrityOk
+				{
+						[Dot42.DexImport("isDatabaseIntegrityOk", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1227,33 +1130,6 @@ namespace Android.Database.Sqlite
 				}
 
 				/// <java-name>
-				/// getDatabaseName
-				/// </java-name>
-				[Dot42.DexImport("getDatabaseName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDatabaseName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getWritableDatabase
-				/// </java-name>
-				[Dot42.DexImport("getWritableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
-				public virtual global::Android.Database.Sqlite.SQLiteDatabase GetWritableDatabase() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.Sqlite.SQLiteDatabase);
-				}
-
-				/// <java-name>
-				/// getReadableDatabase
-				/// </java-name>
-				[Dot42.DexImport("getReadableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
-				public virtual global::Android.Database.Sqlite.SQLiteDatabase GetReadableDatabase() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.Sqlite.SQLiteDatabase);
-				}
-
-				/// <java-name>
 				/// close
 				/// </java-name>
 				[Dot42.DexImport("close", "()V", AccessFlags = 33)]
@@ -1297,28 +1173,28 @@ namespace Android.Database.Sqlite
 				/// <java-name>
 				/// getDatabaseName
 				/// </java-name>
-				public string DatabaseName
+				public virtual string DatabaseName
 				{
-				[Dot42.DexImport("getDatabaseName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDatabaseName(); }
+						[Dot42.DexImport("getDatabaseName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getWritableDatabase
 				/// </java-name>
-				public global::Android.Database.Sqlite.SQLiteDatabase WritableDatabase
+				public virtual global::Android.Database.Sqlite.SQLiteDatabase WritableDatabase
 				{
-				[Dot42.DexImport("getWritableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
-						get{ return GetWritableDatabase(); }
+						[Dot42.DexImport("getWritableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
+						get{ return default(global::Android.Database.Sqlite.SQLiteDatabase); }
 				}
 
 				/// <java-name>
 				/// getReadableDatabase
 				/// </java-name>
-				public global::Android.Database.Sqlite.SQLiteDatabase ReadableDatabase
+				public virtual global::Android.Database.Sqlite.SQLiteDatabase ReadableDatabase
 				{
-				[Dot42.DexImport("getReadableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
-						get{ return GetReadableDatabase(); }
+						[Dot42.DexImport("getReadableDatabase", "()Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 33)]
+						get{ return default(global::Android.Database.Sqlite.SQLiteDatabase); }
 				}
 
 		}
@@ -1383,15 +1259,6 @@ namespace Android.Database.Sqlite
 				[Dot42.DexImport("onAllReferencesReleasedFromContainer", "()V", AccessFlags = 4)]
 				protected internal override void OnAllReferencesReleasedFromContainer() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getUniqueId
-				/// </java-name>
-				[Dot42.DexImport("getUniqueId", "()I", AccessFlags = 17)]
-				public int GetUniqueId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1543,8 +1410,8 @@ namespace Android.Database.Sqlite
 				/// </java-name>
 				public int UniqueId
 				{
-				[Dot42.DexImport("getUniqueId", "()I", AccessFlags = 17)]
-						get{ return GetUniqueId(); }
+						[Dot42.DexImport("getUniqueId", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1597,23 +1464,6 @@ namespace Android.Database.Sqlite
 				/// </java-name>
 				[Dot42.DexImport("setDistinct", "(Z)V", AccessFlags = 1)]
 				public virtual void SetDistinct(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTables
-				/// </java-name>
-				[Dot42.DexImport("getTables", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetTables() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setTables
-				/// </java-name>
-				[Dot42.DexImport("setTables", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetTables(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1754,12 +1604,12 @@ namespace Android.Database.Sqlite
 				/// <java-name>
 				/// getTables
 				/// </java-name>
-				public string Tables
+				public virtual string Tables
 				{
-				[Dot42.DexImport("getTables", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTables(); }
-				[Dot42.DexImport("setTables", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetTables(value); }
+						[Dot42.DexImport("getTables", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setTables", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

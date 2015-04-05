@@ -899,15 +899,6 @@ namespace Java.Math
 				}
 
 				/// <java-name>
-				/// getLowestSetBit
-				/// </java-name>
-				[Dot42.DexImport("getLowestSetBit", "()I", AccessFlags = 1)]
-				public virtual int GetLowestSetBit() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// bitCount
 				/// </java-name>
 				[Dot42.DexImport("bitCount", "()I", AccessFlags = 1)]
@@ -1176,10 +1167,10 @@ namespace Java.Math
 				/// <java-name>
 				/// getLowestSetBit
 				/// </java-name>
-				public int LowestSetBit
+				public virtual int LowestSetBit
 				{
-				[Dot42.DexImport("getLowestSetBit", "()I", AccessFlags = 1)]
-						get{ return GetLowestSetBit(); }
+						[Dot42.DexImport("getLowestSetBit", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1227,24 +1218,6 @@ namespace Java.Math
 				}
 
 				/// <java-name>
-				/// getPrecision
-				/// </java-name>
-				[Dot42.DexImport("getPrecision", "()I", AccessFlags = 1)]
-				public int GetPrecision() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRoundingMode
-				/// </java-name>
-				[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
-				public global::Java.Math.RoundingMode GetRoundingMode() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.RoundingMode);
-				}
-
-				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
@@ -1281,8 +1254,8 @@ namespace Java.Math
 				/// </java-name>
 				public int Precision
 				{
-				[Dot42.DexImport("getPrecision", "()I", AccessFlags = 1)]
-						get{ return GetPrecision(); }
+						[Dot42.DexImport("getPrecision", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1290,8 +1263,8 @@ namespace Java.Math
 				/// </java-name>
 				public global::Java.Math.RoundingMode RoundingMode
 				{
-				[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
-						get{ return GetRoundingMode(); }
+						[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.RoundingMode); }
 				}
 
 		}

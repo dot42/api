@@ -155,33 +155,6 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-				public virtual int GetId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEnabled
-				/// </java-name>
-				[Dot42.DexImport("getEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool GetEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasControl
-				/// </java-name>
-				[Dot42.DexImport("hasControl", "()Z", AccessFlags = 1)]
-				public virtual bool HasControl() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setEnableStatusListener
 				/// </java-name>
 				[Dot42.DexImport("setEnableStatusListener", "(Landroid/media/audiofx/AudioEffect$OnEnableStatusChangeListener;)V", AccessFlags = 1)]
@@ -200,19 +173,28 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getId
 				/// </java-name>
-				public int Id
+				public virtual int Id
 				{
-				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getEnabled
 				/// </java-name>
-				public bool IsEnabled
+				public virtual bool IsEnabled
 				{
-				[Dot42.DexImport("getEnabled", "()Z", AccessFlags = 1)]
-						get{ return GetEnabled(); }
+						[Dot42.DexImport("getEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasControl
+				/// </java-name>
+				public virtual bool HasControl
+				{
+						[Dot42.DexImport("hasControl", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -315,15 +297,6 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// getStrengthSupported
-				/// </java-name>
-				[Dot42.DexImport("getStrengthSupported", "()Z", AccessFlags = 1)]
-				public virtual bool GetStrengthSupported() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setStrength
 				/// </java-name>
 				[Dot42.DexImport("setStrength", "(S)V", AccessFlags = 1)]
@@ -332,36 +305,10 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// getRoundedStrength
-				/// </java-name>
-				[Dot42.DexImport("getRoundedStrength", "()S", AccessFlags = 1)]
-				public virtual short GetRoundedStrength() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
 				/// setParameterListener
 				/// </java-name>
 				[Dot42.DexImport("setParameterListener", "(Landroid/media/audiofx/BassBoost$OnParameterChangeListener;)V", AccessFlags = 1)]
 				public virtual void SetParameterListener(global::Android.Media.Audiofx.BassBoost.IOnParameterChangeListener onParameterChangeListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProperties
-				/// </java-name>
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/BassBoost$Settings;", AccessFlags = 1)]
-				public virtual global::Android.Media.Audiofx.BassBoost.Settings GetProperties() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Media.Audiofx.BassBoost.Settings);
-				}
-
-				/// <java-name>
-				/// setProperties
-				/// </java-name>
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/BassBoost$Settings;)V", AccessFlags = 1)]
-				public virtual void SetProperties(global::Android.Media.Audiofx.BassBoost.Settings settings) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -373,30 +320,30 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getStrengthSupported
 				/// </java-name>
-				public bool IsStrengthSupported
+				public virtual bool IsStrengthSupported
 				{
-				[Dot42.DexImport("getStrengthSupported", "()Z", AccessFlags = 1)]
-						get{ return GetStrengthSupported(); }
+						[Dot42.DexImport("getStrengthSupported", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getRoundedStrength
 				/// </java-name>
-				public short RoundedStrength
+				public virtual short RoundedStrength
 				{
-				[Dot42.DexImport("getRoundedStrength", "()S", AccessFlags = 1)]
-						get{ return GetRoundedStrength(); }
+						[Dot42.DexImport("getRoundedStrength", "()S", AccessFlags = 1)]
+						get{ return default(short); }
 				}
 
 				/// <java-name>
 				/// getProperties
 				/// </java-name>
-				public global::Android.Media.Audiofx.BassBoost.Settings Properties
+				public virtual global::Android.Media.Audiofx.BassBoost.Settings Properties
 				{
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/BassBoost$Settings;", AccessFlags = 1)]
-						get{ return GetProperties(); }
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/BassBoost$Settings;)V", AccessFlags = 1)]
-						set{ SetProperties(value); }
+						[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/BassBoost$Settings;", AccessFlags = 1)]
+						get{ return default(global::Android.Media.Audiofx.BassBoost.Settings); }
+						[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/BassBoost$Settings;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -512,197 +459,10 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// setRoomLevel
-				/// </java-name>
-				[Dot42.DexImport("setRoomLevel", "(S)V", AccessFlags = 1)]
-				public virtual void SetRoomLevel(short int16) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRoomLevel
-				/// </java-name>
-				[Dot42.DexImport("getRoomLevel", "()S", AccessFlags = 1)]
-				public virtual short GetRoomLevel() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
-				/// setRoomHFLevel
-				/// </java-name>
-				[Dot42.DexImport("setRoomHFLevel", "(S)V", AccessFlags = 1)]
-				public virtual void SetRoomHFLevel(short int16) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRoomHFLevel
-				/// </java-name>
-				[Dot42.DexImport("getRoomHFLevel", "()S", AccessFlags = 1)]
-				public virtual short GetRoomHFLevel() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
-				/// setDecayTime
-				/// </java-name>
-				[Dot42.DexImport("setDecayTime", "(I)V", AccessFlags = 1)]
-				public virtual void SetDecayTime(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDecayTime
-				/// </java-name>
-				[Dot42.DexImport("getDecayTime", "()I", AccessFlags = 1)]
-				public virtual int GetDecayTime() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDecayHFRatio
-				/// </java-name>
-				[Dot42.DexImport("setDecayHFRatio", "(S)V", AccessFlags = 1)]
-				public virtual void SetDecayHFRatio(short int16) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDecayHFRatio
-				/// </java-name>
-				[Dot42.DexImport("getDecayHFRatio", "()S", AccessFlags = 1)]
-				public virtual short GetDecayHFRatio() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
-				/// setReflectionsLevel
-				/// </java-name>
-				[Dot42.DexImport("setReflectionsLevel", "(S)V", AccessFlags = 1)]
-				public virtual void SetReflectionsLevel(short int16) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReflectionsLevel
-				/// </java-name>
-				[Dot42.DexImport("getReflectionsLevel", "()S", AccessFlags = 1)]
-				public virtual short GetReflectionsLevel() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
-				/// setReflectionsDelay
-				/// </java-name>
-				[Dot42.DexImport("setReflectionsDelay", "(I)V", AccessFlags = 1)]
-				public virtual void SetReflectionsDelay(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReflectionsDelay
-				/// </java-name>
-				[Dot42.DexImport("getReflectionsDelay", "()I", AccessFlags = 1)]
-				public virtual int GetReflectionsDelay() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setReverbLevel
-				/// </java-name>
-				[Dot42.DexImport("setReverbLevel", "(S)V", AccessFlags = 1)]
-				public virtual void SetReverbLevel(short int16) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReverbLevel
-				/// </java-name>
-				[Dot42.DexImport("getReverbLevel", "()S", AccessFlags = 1)]
-				public virtual short GetReverbLevel() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
-				/// setReverbDelay
-				/// </java-name>
-				[Dot42.DexImport("setReverbDelay", "(I)V", AccessFlags = 1)]
-				public virtual void SetReverbDelay(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReverbDelay
-				/// </java-name>
-				[Dot42.DexImport("getReverbDelay", "()I", AccessFlags = 1)]
-				public virtual int GetReverbDelay() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDiffusion
-				/// </java-name>
-				[Dot42.DexImport("setDiffusion", "(S)V", AccessFlags = 1)]
-				public virtual void SetDiffusion(short int16) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDiffusion
-				/// </java-name>
-				[Dot42.DexImport("getDiffusion", "()S", AccessFlags = 1)]
-				public virtual short GetDiffusion() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
-				/// setDensity
-				/// </java-name>
-				[Dot42.DexImport("setDensity", "(S)V", AccessFlags = 1)]
-				public virtual void SetDensity(short int16) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDensity
-				/// </java-name>
-				[Dot42.DexImport("getDensity", "()S", AccessFlags = 1)]
-				public virtual short GetDensity() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
 				/// setParameterListener
 				/// </java-name>
 				[Dot42.DexImport("setParameterListener", "(Landroid/media/audiofx/EnvironmentalReverb$OnParameterChangeListener;)V", AccessFlags = 1)]
 				public virtual void SetParameterListener(global::Android.Media.Audiofx.EnvironmentalReverb.IOnParameterChangeListener onParameterChangeListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProperties
-				/// </java-name>
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/EnvironmentalReverb$Settings;", AccessFlags = 1)]
-				public virtual global::Android.Media.Audiofx.EnvironmentalReverb.Settings GetProperties() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Media.Audiofx.EnvironmentalReverb.Settings);
-				}
-
-				/// <java-name>
-				/// setProperties
-				/// </java-name>
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/EnvironmentalReverb$Settings;)V", AccessFlags = 1)]
-				public virtual void SetProperties(global::Android.Media.Audiofx.EnvironmentalReverb.Settings settings) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -714,122 +474,122 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getRoomLevel
 				/// </java-name>
-				public short RoomLevel
+				public virtual short RoomLevel
 				{
-				[Dot42.DexImport("getRoomLevel", "()S", AccessFlags = 1)]
-						get{ return GetRoomLevel(); }
-				[Dot42.DexImport("setRoomLevel", "(S)V", AccessFlags = 1)]
-						set{ SetRoomLevel(value); }
+						[Dot42.DexImport("getRoomLevel", "()S", AccessFlags = 1)]
+						get{ return default(short); }
+						[Dot42.DexImport("setRoomLevel", "(S)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getRoomHFLevel
 				/// </java-name>
-				public short RoomHFLevel
+				public virtual short RoomHFLevel
 				{
-				[Dot42.DexImport("getRoomHFLevel", "()S", AccessFlags = 1)]
-						get{ return GetRoomHFLevel(); }
-				[Dot42.DexImport("setRoomHFLevel", "(S)V", AccessFlags = 1)]
-						set{ SetRoomHFLevel(value); }
+						[Dot42.DexImport("getRoomHFLevel", "()S", AccessFlags = 1)]
+						get{ return default(short); }
+						[Dot42.DexImport("setRoomHFLevel", "(S)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDecayTime
 				/// </java-name>
-				public int DecayTime
+				public virtual int DecayTime
 				{
-				[Dot42.DexImport("getDecayTime", "()I", AccessFlags = 1)]
-						get{ return GetDecayTime(); }
-				[Dot42.DexImport("setDecayTime", "(I)V", AccessFlags = 1)]
-						set{ SetDecayTime(value); }
+						[Dot42.DexImport("getDecayTime", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setDecayTime", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDecayHFRatio
 				/// </java-name>
-				public short DecayHFRatio
+				public virtual short DecayHFRatio
 				{
-				[Dot42.DexImport("getDecayHFRatio", "()S", AccessFlags = 1)]
-						get{ return GetDecayHFRatio(); }
-				[Dot42.DexImport("setDecayHFRatio", "(S)V", AccessFlags = 1)]
-						set{ SetDecayHFRatio(value); }
+						[Dot42.DexImport("getDecayHFRatio", "()S", AccessFlags = 1)]
+						get{ return default(short); }
+						[Dot42.DexImport("setDecayHFRatio", "(S)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getReflectionsLevel
 				/// </java-name>
-				public short ReflectionsLevel
+				public virtual short ReflectionsLevel
 				{
-				[Dot42.DexImport("getReflectionsLevel", "()S", AccessFlags = 1)]
-						get{ return GetReflectionsLevel(); }
-				[Dot42.DexImport("setReflectionsLevel", "(S)V", AccessFlags = 1)]
-						set{ SetReflectionsLevel(value); }
+						[Dot42.DexImport("getReflectionsLevel", "()S", AccessFlags = 1)]
+						get{ return default(short); }
+						[Dot42.DexImport("setReflectionsLevel", "(S)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getReflectionsDelay
 				/// </java-name>
-				public int ReflectionsDelay
+				public virtual int ReflectionsDelay
 				{
-				[Dot42.DexImport("getReflectionsDelay", "()I", AccessFlags = 1)]
-						get{ return GetReflectionsDelay(); }
-				[Dot42.DexImport("setReflectionsDelay", "(I)V", AccessFlags = 1)]
-						set{ SetReflectionsDelay(value); }
+						[Dot42.DexImport("getReflectionsDelay", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setReflectionsDelay", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getReverbLevel
 				/// </java-name>
-				public short ReverbLevel
+				public virtual short ReverbLevel
 				{
-				[Dot42.DexImport("getReverbLevel", "()S", AccessFlags = 1)]
-						get{ return GetReverbLevel(); }
-				[Dot42.DexImport("setReverbLevel", "(S)V", AccessFlags = 1)]
-						set{ SetReverbLevel(value); }
+						[Dot42.DexImport("getReverbLevel", "()S", AccessFlags = 1)]
+						get{ return default(short); }
+						[Dot42.DexImport("setReverbLevel", "(S)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getReverbDelay
 				/// </java-name>
-				public int ReverbDelay
+				public virtual int ReverbDelay
 				{
-				[Dot42.DexImport("getReverbDelay", "()I", AccessFlags = 1)]
-						get{ return GetReverbDelay(); }
-				[Dot42.DexImport("setReverbDelay", "(I)V", AccessFlags = 1)]
-						set{ SetReverbDelay(value); }
+						[Dot42.DexImport("getReverbDelay", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setReverbDelay", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDiffusion
 				/// </java-name>
-				public short Diffusion
+				public virtual short Diffusion
 				{
-				[Dot42.DexImport("getDiffusion", "()S", AccessFlags = 1)]
-						get{ return GetDiffusion(); }
-				[Dot42.DexImport("setDiffusion", "(S)V", AccessFlags = 1)]
-						set{ SetDiffusion(value); }
+						[Dot42.DexImport("getDiffusion", "()S", AccessFlags = 1)]
+						get{ return default(short); }
+						[Dot42.DexImport("setDiffusion", "(S)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDensity
 				/// </java-name>
-				public short Density
+				public virtual short Density
 				{
-				[Dot42.DexImport("getDensity", "()S", AccessFlags = 1)]
-						get{ return GetDensity(); }
-				[Dot42.DexImport("setDensity", "(S)V", AccessFlags = 1)]
-						set{ SetDensity(value); }
+						[Dot42.DexImport("getDensity", "()S", AccessFlags = 1)]
+						get{ return default(short); }
+						[Dot42.DexImport("setDensity", "(S)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getProperties
 				/// </java-name>
-				public global::Android.Media.Audiofx.EnvironmentalReverb.Settings Properties
+				public virtual global::Android.Media.Audiofx.EnvironmentalReverb.Settings Properties
 				{
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/EnvironmentalReverb$Settings;", AccessFlags = 1)]
-						get{ return GetProperties(); }
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/EnvironmentalReverb$Settings;)V", AccessFlags = 1)]
-						set{ SetProperties(value); }
+						[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/EnvironmentalReverb$Settings;", AccessFlags = 1)]
+						get{ return default(global::Android.Media.Audiofx.EnvironmentalReverb.Settings); }
+						[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/EnvironmentalReverb$Settings;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -990,24 +750,6 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// getNumberOfBands
-				/// </java-name>
-				[Dot42.DexImport("getNumberOfBands", "()S", AccessFlags = 1)]
-				public virtual short GetNumberOfBands() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
-				/// getBandLevelRange
-				/// </java-name>
-				[Dot42.DexImport("getBandLevelRange", "()[S", AccessFlags = 1)]
-				public virtual short[] GetBandLevelRange() /* MethodBuilder.Create */ 
-				{
-						return default(short[]);
-				}
-
-				/// <java-name>
 				/// setBandLevel
 				/// </java-name>
 				[Dot42.DexImport("setBandLevel", "(SS)V", AccessFlags = 1)]
@@ -1052,29 +794,11 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// getCurrentPreset
-				/// </java-name>
-				[Dot42.DexImport("getCurrentPreset", "()S", AccessFlags = 1)]
-				public virtual short GetCurrentPreset() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
 				/// usePreset
 				/// </java-name>
 				[Dot42.DexImport("usePreset", "(S)V", AccessFlags = 1)]
 				public virtual void UsePreset(short int16) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getNumberOfPresets
-				/// </java-name>
-				[Dot42.DexImport("getNumberOfPresets", "()S", AccessFlags = 1)]
-				public virtual short GetNumberOfPresets() /* MethodBuilder.Create */ 
-				{
-						return default(short);
 				}
 
 				/// <java-name>
@@ -1094,23 +818,6 @@ namespace Android.Media.Audiofx
 				{
 				}
 
-				/// <java-name>
-				/// getProperties
-				/// </java-name>
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/Equalizer$Settings;", AccessFlags = 1)]
-				public virtual global::Android.Media.Audiofx.Equalizer.Settings GetProperties() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Media.Audiofx.Equalizer.Settings);
-				}
-
-				/// <java-name>
-				/// setProperties
-				/// </java-name>
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/Equalizer$Settings;)V", AccessFlags = 1)]
-				public virtual void SetProperties(global::Android.Media.Audiofx.Equalizer.Settings settings) /* MethodBuilder.Create */ 
-				{
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal Equalizer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1119,48 +826,48 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getNumberOfBands
 				/// </java-name>
-				public short NumberOfBands
+				public virtual short NumberOfBands
 				{
-				[Dot42.DexImport("getNumberOfBands", "()S", AccessFlags = 1)]
-						get{ return GetNumberOfBands(); }
+						[Dot42.DexImport("getNumberOfBands", "()S", AccessFlags = 1)]
+						get{ return default(short); }
 				}
 
 				/// <java-name>
 				/// getBandLevelRange
 				/// </java-name>
-				public short[] BandLevelRange
+				public virtual short[] BandLevelRange
 				{
-				[Dot42.DexImport("getBandLevelRange", "()[S", AccessFlags = 1)]
-						get{ return GetBandLevelRange(); }
+						[Dot42.DexImport("getBandLevelRange", "()[S", AccessFlags = 1)]
+						get{ return default(short[]); }
 				}
 
 				/// <java-name>
 				/// getCurrentPreset
 				/// </java-name>
-				public short CurrentPreset
+				public virtual short CurrentPreset
 				{
-				[Dot42.DexImport("getCurrentPreset", "()S", AccessFlags = 1)]
-						get{ return GetCurrentPreset(); }
+						[Dot42.DexImport("getCurrentPreset", "()S", AccessFlags = 1)]
+						get{ return default(short); }
 				}
 
 				/// <java-name>
 				/// getNumberOfPresets
 				/// </java-name>
-				public short NumberOfPresets
+				public virtual short NumberOfPresets
 				{
-				[Dot42.DexImport("getNumberOfPresets", "()S", AccessFlags = 1)]
-						get{ return GetNumberOfPresets(); }
+						[Dot42.DexImport("getNumberOfPresets", "()S", AccessFlags = 1)]
+						get{ return default(short); }
 				}
 
 				/// <java-name>
 				/// getProperties
 				/// </java-name>
-				public global::Android.Media.Audiofx.Equalizer.Settings Properties
+				public virtual global::Android.Media.Audiofx.Equalizer.Settings Properties
 				{
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/Equalizer$Settings;", AccessFlags = 1)]
-						get{ return GetProperties(); }
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/Equalizer$Settings;)V", AccessFlags = 1)]
-						set{ SetProperties(value); }
+						[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/Equalizer$Settings;", AccessFlags = 1)]
+						get{ return default(global::Android.Media.Audiofx.Equalizer.Settings); }
+						[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/Equalizer$Settings;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1276,44 +983,10 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// setPreset
-				/// </java-name>
-				[Dot42.DexImport("setPreset", "(S)V", AccessFlags = 1)]
-				public virtual void SetPreset(short int16) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPreset
-				/// </java-name>
-				[Dot42.DexImport("getPreset", "()S", AccessFlags = 1)]
-				public virtual short GetPreset() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
 				/// setParameterListener
 				/// </java-name>
 				[Dot42.DexImport("setParameterListener", "(Landroid/media/audiofx/PresetReverb$OnParameterChangeListener;)V", AccessFlags = 1)]
 				public virtual void SetParameterListener(global::Android.Media.Audiofx.PresetReverb.IOnParameterChangeListener onParameterChangeListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProperties
-				/// </java-name>
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/PresetReverb$Settings;", AccessFlags = 1)]
-				public virtual global::Android.Media.Audiofx.PresetReverb.Settings GetProperties() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Media.Audiofx.PresetReverb.Settings);
-				}
-
-				/// <java-name>
-				/// setProperties
-				/// </java-name>
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/PresetReverb$Settings;)V", AccessFlags = 1)]
-				public virtual void SetProperties(global::Android.Media.Audiofx.PresetReverb.Settings settings) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1325,23 +998,23 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getPreset
 				/// </java-name>
-				public short Preset
+				public virtual short Preset
 				{
-				[Dot42.DexImport("getPreset", "()S", AccessFlags = 1)]
-						get{ return GetPreset(); }
-				[Dot42.DexImport("setPreset", "(S)V", AccessFlags = 1)]
-						set{ SetPreset(value); }
+						[Dot42.DexImport("getPreset", "()S", AccessFlags = 1)]
+						get{ return default(short); }
+						[Dot42.DexImport("setPreset", "(S)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getProperties
 				/// </java-name>
-				public global::Android.Media.Audiofx.PresetReverb.Settings Properties
+				public virtual global::Android.Media.Audiofx.PresetReverb.Settings Properties
 				{
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/PresetReverb$Settings;", AccessFlags = 1)]
-						get{ return GetProperties(); }
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/PresetReverb$Settings;)V", AccessFlags = 1)]
-						set{ SetProperties(value); }
+						[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/PresetReverb$Settings;", AccessFlags = 1)]
+						get{ return default(global::Android.Media.Audiofx.PresetReverb.Settings); }
+						[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/PresetReverb$Settings;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1417,15 +1090,6 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// getStrengthSupported
-				/// </java-name>
-				[Dot42.DexImport("getStrengthSupported", "()Z", AccessFlags = 1)]
-				public virtual bool GetStrengthSupported() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setStrength
 				/// </java-name>
 				[Dot42.DexImport("setStrength", "(S)V", AccessFlags = 1)]
@@ -1434,36 +1098,10 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// getRoundedStrength
-				/// </java-name>
-				[Dot42.DexImport("getRoundedStrength", "()S", AccessFlags = 1)]
-				public virtual short GetRoundedStrength() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
 				/// setParameterListener
 				/// </java-name>
 				[Dot42.DexImport("setParameterListener", "(Landroid/media/audiofx/Virtualizer$OnParameterChangeListener;)V", AccessFlags = 1)]
 				public virtual void SetParameterListener(global::Android.Media.Audiofx.Virtualizer.IOnParameterChangeListener onParameterChangeListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProperties
-				/// </java-name>
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/Virtualizer$Settings;", AccessFlags = 1)]
-				public virtual global::Android.Media.Audiofx.Virtualizer.Settings GetProperties() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Media.Audiofx.Virtualizer.Settings);
-				}
-
-				/// <java-name>
-				/// setProperties
-				/// </java-name>
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/Virtualizer$Settings;)V", AccessFlags = 1)]
-				public virtual void SetProperties(global::Android.Media.Audiofx.Virtualizer.Settings settings) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1475,30 +1113,30 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getStrengthSupported
 				/// </java-name>
-				public bool IsStrengthSupported
+				public virtual bool IsStrengthSupported
 				{
-				[Dot42.DexImport("getStrengthSupported", "()Z", AccessFlags = 1)]
-						get{ return GetStrengthSupported(); }
+						[Dot42.DexImport("getStrengthSupported", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getRoundedStrength
 				/// </java-name>
-				public short RoundedStrength
+				public virtual short RoundedStrength
 				{
-				[Dot42.DexImport("getRoundedStrength", "()S", AccessFlags = 1)]
-						get{ return GetRoundedStrength(); }
+						[Dot42.DexImport("getRoundedStrength", "()S", AccessFlags = 1)]
+						get{ return default(short); }
 				}
 
 				/// <java-name>
 				/// getProperties
 				/// </java-name>
-				public global::Android.Media.Audiofx.Virtualizer.Settings Properties
+				public virtual global::Android.Media.Audiofx.Virtualizer.Settings Properties
 				{
-				[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/Virtualizer$Settings;", AccessFlags = 1)]
-						get{ return GetProperties(); }
-				[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/Virtualizer$Settings;)V", AccessFlags = 1)]
-						set{ SetProperties(value); }
+						[Dot42.DexImport("getProperties", "()Landroid/media/audiofx/Virtualizer$Settings;", AccessFlags = 1)]
+						get{ return default(global::Android.Media.Audiofx.Virtualizer.Settings); }
+						[Dot42.DexImport("setProperties", "(Landroid/media/audiofx/Virtualizer$Settings;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1642,55 +1280,10 @@ namespace Android.Media.Audiofx
 				}
 
 				/// <java-name>
-				/// getEnabled
-				/// </java-name>
-				[Dot42.DexImport("getEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool GetEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getCaptureSizeRange
-				/// </java-name>
-				[Dot42.DexImport("getCaptureSizeRange", "()[I", AccessFlags = 265)]
-				public static int[] GetCaptureSizeRange() /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// getMaxCaptureRate
-				/// </java-name>
-				[Dot42.DexImport("getMaxCaptureRate", "()I", AccessFlags = 265)]
-				public static int GetMaxCaptureRate() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setCaptureSize
 				/// </java-name>
 				[Dot42.DexImport("setCaptureSize", "(I)I", AccessFlags = 1)]
 				public virtual int SetCaptureSize(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCaptureSize
-				/// </java-name>
-				[Dot42.DexImport("getCaptureSize", "()I", AccessFlags = 1)]
-				public virtual int GetCaptureSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSamplingRate
-				/// </java-name>
-				[Dot42.DexImport("getSamplingRate", "()I", AccessFlags = 1)]
-				public virtual int GetSamplingRate() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1748,10 +1341,10 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getEnabled
 				/// </java-name>
-				public bool IsEnabled
+				public virtual bool IsEnabled
 				{
-				[Dot42.DexImport("getEnabled", "()Z", AccessFlags = 1)]
-						get{ return GetEnabled(); }
+						[Dot42.DexImport("getEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1759,8 +1352,8 @@ namespace Android.Media.Audiofx
 				/// </java-name>
 				public static int[] CaptureSizeRange
 				{
-				[Dot42.DexImport("getCaptureSizeRange", "()[I", AccessFlags = 265)]
-						get{ return GetCaptureSizeRange(); }
+						[Dot42.DexImport("getCaptureSizeRange", "()[I", AccessFlags = 265)]
+						get{ return default(int[]); }
 				}
 
 				/// <java-name>
@@ -1768,26 +1361,26 @@ namespace Android.Media.Audiofx
 				/// </java-name>
 				public static int MaxCaptureRate
 				{
-				[Dot42.DexImport("getMaxCaptureRate", "()I", AccessFlags = 265)]
-						get{ return GetMaxCaptureRate(); }
+						[Dot42.DexImport("getMaxCaptureRate", "()I", AccessFlags = 265)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getCaptureSize
 				/// </java-name>
-				public int CaptureSize
+				public virtual int CaptureSize
 				{
-				[Dot42.DexImport("getCaptureSize", "()I", AccessFlags = 1)]
-						get{ return GetCaptureSize(); }
+						[Dot42.DexImport("getCaptureSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSamplingRate
 				/// </java-name>
-				public int SamplingRate
+				public virtual int SamplingRate
 				{
-				[Dot42.DexImport("getSamplingRate", "()I", AccessFlags = 1)]
-						get{ return GetSamplingRate(); }
+						[Dot42.DexImport("getSamplingRate", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>

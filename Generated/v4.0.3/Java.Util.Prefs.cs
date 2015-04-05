@@ -42,15 +42,6 @@ namespace Java.Util.Prefs
 				}
 
 				/// <java-name>
-				/// isRemoved
-				/// </java-name>
-				[Dot42.DexImport("isRemoved", "()Z", AccessFlags = 4)]
-				protected internal virtual bool IsRemoved() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// flushSpi
 				/// </java-name>
 				[Dot42.DexImport("flushSpi", "()V", AccessFlags = 1028)]
@@ -224,15 +215,6 @@ namespace Java.Util.Prefs
 				public override long GetLong(string @string, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(long);
-				}
-
-				/// <java-name>
-				/// isUserNode
-				/// </java-name>
-				[Dot42.DexImport("isUserNode", "()Z", AccessFlags = 1)]
-				public override bool IsUserNode() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -414,6 +396,24 @@ namespace Java.Util.Prefs
 				{
 				}
 
+				/// <java-name>
+				/// isRemoved
+				/// </java-name>
+				protected internal virtual bool IsRemoved
+				{
+						[Dot42.DexImport("isRemoved", "()Z", AccessFlags = 4)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isUserNode
+				/// </java-name>
+				public override bool IsUserNode
+				{
+						[Dot42.DexImport("isUserNode", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -538,24 +538,6 @@ namespace Java.Util.Prefs
 				{
 				}
 
-				/// <java-name>
-				/// getParent
-				/// </java-name>
-				[Dot42.DexImport("getParent", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
-				public virtual global::Java.Util.Prefs.Preferences GetParent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Prefs.Preferences);
-				}
-
-				/// <java-name>
-				/// getChild
-				/// </java-name>
-				[Dot42.DexImport("getChild", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
-				public virtual global::Java.Util.Prefs.Preferences GetChild() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Prefs.Preferences);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal NodeChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -564,19 +546,19 @@ namespace Java.Util.Prefs
 				/// <java-name>
 				/// getParent
 				/// </java-name>
-				public global::Java.Util.Prefs.Preferences Parent
+				public virtual global::Java.Util.Prefs.Preferences Parent
 				{
-				[Dot42.DexImport("getParent", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
-						get{ return GetParent(); }
+						[Dot42.DexImport("getParent", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Prefs.Preferences); }
 				}
 
 				/// <java-name>
 				/// getChild
 				/// </java-name>
-				public global::Java.Util.Prefs.Preferences Child
+				public virtual global::Java.Util.Prefs.Preferences Child
 				{
-				[Dot42.DexImport("getChild", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
-						get{ return GetChild(); }
+						[Dot42.DexImport("getChild", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Prefs.Preferences); }
 				}
 
 		}
@@ -593,33 +575,6 @@ namespace Java.Util.Prefs
 				{
 				}
 
-				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetKey() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getNewValue
-				/// </java-name>
-				[Dot42.DexImport("getNewValue", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetNewValue() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getNode
-				/// </java-name>
-				[Dot42.DexImport("getNode", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
-				public virtual global::Java.Util.Prefs.Preferences GetNode() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Prefs.Preferences);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal PreferenceChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -628,28 +583,28 @@ namespace Java.Util.Prefs
 				/// <java-name>
 				/// getKey
 				/// </java-name>
-				public string Key
+				public virtual string Key
 				{
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetKey(); }
+						[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getNewValue
 				/// </java-name>
-				public string NewValue
+				public virtual string NewValue
 				{
-				[Dot42.DexImport("getNewValue", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetNewValue(); }
+						[Dot42.DexImport("getNewValue", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getNode
 				/// </java-name>
-				public global::Java.Util.Prefs.Preferences Node
+				public virtual global::Java.Util.Prefs.Preferences Node
 				{
-				[Dot42.DexImport("getNode", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
-						get{ return GetNode(); }
+						[Dot42.DexImport("getNode", "()Ljava/util/prefs/Preferences;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Prefs.Preferences); }
 				}
 
 		}
@@ -772,12 +727,6 @@ namespace Java.Util.Prefs
 				public static void ImportPreferences(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
-
-				/// <java-name>
-				/// isUserNode
-				/// </java-name>
-				[Dot42.DexImport("isUserNode", "()Z", AccessFlags = 1025)]
-				public abstract bool IsUserNode() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// keys
@@ -942,6 +891,15 @@ namespace Java.Util.Prefs
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
+				}
+
+				/// <java-name>
+				/// isUserNode
+				/// </java-name>
+				public abstract bool IsUserNode
+				{
+						[Dot42.DexImport("isUserNode", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
 		}

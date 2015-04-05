@@ -9,12 +9,6 @@ namespace Android.Speech.Tts
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getMaxBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getMaxBufferSize", "()I", AccessFlags = 1025)]
-				int GetMaxBufferSize() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// start
 				/// </java-name>
 				[Dot42.DexImport("start", "(III)I", AccessFlags = 1025)]
@@ -38,6 +32,15 @@ namespace Android.Speech.Tts
 				[Dot42.DexImport("error", "()V", AccessFlags = 1025)]
 				void Error() /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getMaxBufferSize
+				/// </java-name>
+				int MaxBufferSize
+				{
+						[Dot42.DexImport("getMaxBufferSize", "()I", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -52,69 +55,6 @@ namespace Android.Speech.Tts
 				{
 				}
 
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetText() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLanguage
-				/// </java-name>
-				[Dot42.DexImport("getLanguage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetLanguage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCountry
-				/// </java-name>
-				[Dot42.DexImport("getCountry", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetCountry() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getVariant
-				/// </java-name>
-				[Dot42.DexImport("getVariant", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetVariant() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSpeechRate
-				/// </java-name>
-				[Dot42.DexImport("getSpeechRate", "()I", AccessFlags = 1)]
-				public int GetSpeechRate() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPitch
-				/// </java-name>
-				[Dot42.DexImport("getPitch", "()I", AccessFlags = 1)]
-				public int GetPitch() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getParams
-				/// </java-name>
-				[Dot42.DexImport("getParams", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public global::Android.OS.Bundle GetParams() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Bundle);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal SynthesisRequest() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -125,8 +65,8 @@ namespace Android.Speech.Tts
 				/// </java-name>
 				public string Text
 				{
-				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetText(); }
+						[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -134,8 +74,8 @@ namespace Android.Speech.Tts
 				/// </java-name>
 				public string Language
 				{
-				[Dot42.DexImport("getLanguage", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLanguage(); }
+						[Dot42.DexImport("getLanguage", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -143,8 +83,8 @@ namespace Android.Speech.Tts
 				/// </java-name>
 				public string Country
 				{
-				[Dot42.DexImport("getCountry", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCountry(); }
+						[Dot42.DexImport("getCountry", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -152,8 +92,8 @@ namespace Android.Speech.Tts
 				/// </java-name>
 				public string Variant
 				{
-				[Dot42.DexImport("getVariant", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetVariant(); }
+						[Dot42.DexImport("getVariant", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -161,8 +101,8 @@ namespace Android.Speech.Tts
 				/// </java-name>
 				public int SpeechRate
 				{
-				[Dot42.DexImport("getSpeechRate", "()I", AccessFlags = 1)]
-						get{ return GetSpeechRate(); }
+						[Dot42.DexImport("getSpeechRate", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -170,8 +110,8 @@ namespace Android.Speech.Tts
 				/// </java-name>
 				public int Pitch
 				{
-				[Dot42.DexImport("getPitch", "()I", AccessFlags = 1)]
-						get{ return GetPitch(); }
+						[Dot42.DexImport("getPitch", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -179,8 +119,8 @@ namespace Android.Speech.Tts
 				/// </java-name>
 				public global::Android.OS.Bundle Params
 				{
-				[Dot42.DexImport("getParams", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						get{ return GetParams(); }
+						[Dot42.DexImport("getParams", "()Landroid/os/Bundle;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Bundle); }
 				}
 
 		}
@@ -334,15 +274,6 @@ namespace Android.Speech.Tts
 				}
 
 				/// <java-name>
-				/// isSpeaking
-				/// </java-name>
-				[Dot42.DexImport("isSpeaking", "()Z", AccessFlags = 1)]
-				public virtual bool IsSpeaking() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// stop
 				/// </java-name>
 				[Dot42.DexImport("stop", "()I", AccessFlags = 1)]
@@ -376,15 +307,6 @@ namespace Android.Speech.Tts
 				public virtual int SetLanguage(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// getLanguage
-				/// </java-name>
-				[Dot42.DexImport("getLanguage", "()Ljava/util/Locale;", AccessFlags = 1)]
-				public virtual global::Java.Util.Locale GetLanguage() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Locale);
 				}
 
 				/// <java-name>
@@ -434,15 +356,6 @@ namespace Android.Speech.Tts
 				}
 
 				/// <java-name>
-				/// getDefaultEngine
-				/// </java-name>
-				[Dot42.DexImport("getDefaultEngine", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDefaultEngine() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// areDefaultsEnforced
 				/// </java-name>
 				[Dot42.DexImport("areDefaultsEnforced", "()Z", AccessFlags = 1)]
@@ -451,45 +364,45 @@ namespace Android.Speech.Tts
 						return default(bool);
 				}
 
-				/// <java-name>
-				/// getEngines
-				/// </java-name>
-				[Dot42.DexImport("getEngines", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/speech/tts/TextToSpeech$EngineInfo;>;")]
-				public virtual global::Java.Util.IList<global::Android.Speech.Tts.TextToSpeech.EngineInfo> GetEngines() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Speech.Tts.TextToSpeech.EngineInfo>);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal TextToSpeech() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
+				/// isSpeaking
+				/// </java-name>
+				public virtual bool IsSpeaking
+				{
+						[Dot42.DexImport("isSpeaking", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getLanguage
 				/// </java-name>
-				public global::Java.Util.Locale Language
+				public virtual global::Java.Util.Locale Language
 				{
-				[Dot42.DexImport("getLanguage", "()Ljava/util/Locale;", AccessFlags = 1)]
-						get{ return GetLanguage(); }
+						[Dot42.DexImport("getLanguage", "()Ljava/util/Locale;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Locale); }
 				}
 
 				/// <java-name>
 				/// getDefaultEngine
 				/// </java-name>
-				public string DefaultEngine
+				public virtual string DefaultEngine
 				{
-				[Dot42.DexImport("getDefaultEngine", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDefaultEngine(); }
+						[Dot42.DexImport("getDefaultEngine", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getEngines
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Speech.Tts.TextToSpeech.EngineInfo> Engines
+				public virtual global::Java.Util.IList<global::Android.Speech.Tts.TextToSpeech.EngineInfo> Engines
 				{
-				[Dot42.DexImport("getEngines", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/speech/tts/TextToSpeech$EngineInfo;>;")]
-						get{ return GetEngines(); }
+						[Dot42.DexImport("getEngines", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/speech/tts/TextToSpeech$EngineInfo;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Speech.Tts.TextToSpeech.EngineInfo>); }
 				}
 
 				/// <java-name>

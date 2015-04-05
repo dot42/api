@@ -842,15 +842,6 @@ namespace Android.Text.Format
 				}
 
 				/// <java-name>
-				/// getCurrentTimezone
-				/// </java-name>
-				[Dot42.DexImport("getCurrentTimezone", "()Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetCurrentTimezone() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// setToNow
 				/// </java-name>
 				[Dot42.DexImport("setToNow", "()V", AccessFlags = 257)]
@@ -927,15 +918,6 @@ namespace Android.Text.Format
 				}
 
 				/// <java-name>
-				/// getWeekNumber
-				/// </java-name>
-				[Dot42.DexImport("getWeekNumber", "()I", AccessFlags = 1)]
-				public virtual int GetWeekNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// format3339
 				/// </java-name>
 				[Dot42.DexImport("format3339", "(Z)Ljava/lang/String;", AccessFlags = 1)]
@@ -994,17 +976,17 @@ namespace Android.Text.Format
 				/// </java-name>
 				public static string CurrentTimezone
 				{
-				[Dot42.DexImport("getCurrentTimezone", "()Ljava/lang/String;", AccessFlags = 9)]
-						get{ return GetCurrentTimezone(); }
+						[Dot42.DexImport("getCurrentTimezone", "()Ljava/lang/String;", AccessFlags = 9)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getWeekNumber
 				/// </java-name>
-				public int WeekNumber
+				public virtual int WeekNumber
 				{
-				[Dot42.DexImport("getWeekNumber", "()I", AccessFlags = 1)]
-						get{ return GetWeekNumber(); }
+						[Dot42.DexImport("getWeekNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

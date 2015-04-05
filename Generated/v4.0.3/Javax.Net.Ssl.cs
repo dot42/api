@@ -13,15 +13,6 @@ namespace Javax.Net.Ssl
 				{
 				}
 
-				/// <java-name>
-				/// getParameters
-				/// </java-name>
-				[Dot42.DexImport("getParameters", "()Ljava/security/cert/CertPathParameters;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.ICertPathParameters GetParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.ICertPathParameters);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal CertPathTrustManagerParameters() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -30,10 +21,10 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getParameters
 				/// </java-name>
-				public global::Java.Security.Cert.ICertPathParameters Parameters
+				public virtual global::Java.Security.Cert.ICertPathParameters Parameters
 				{
-				[Dot42.DexImport("getParameters", "()Ljava/security/cert/CertPathParameters;", AccessFlags = 1)]
-						get{ return GetParameters(); }
+						[Dot42.DexImport("getParameters", "()Ljava/security/cert/CertPathParameters;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.ICertPathParameters); }
 				}
 
 		}
@@ -50,78 +41,6 @@ namespace Javax.Net.Ssl
 				{
 				}
 
-				/// <java-name>
-				/// getSession
-				/// </java-name>
-				[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1)]
-				public virtual global::Javax.Net.Ssl.ISSLSession GetSession() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.ISSLSession);
-				}
-
-				/// <java-name>
-				/// getCipherSuite
-				/// </java-name>
-				[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetCipherSuite() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLocalCertificates
-				/// </java-name>
-				[Dot42.DexImport("getLocalCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.Certificate[] GetLocalCertificates() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.Certificate[]);
-				}
-
-				/// <java-name>
-				/// getPeerCertificates
-				/// </java-name>
-				[Dot42.DexImport("getPeerCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.Certificate[] GetPeerCertificates() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.Certificate[]);
-				}
-
-				/// <java-name>
-				/// getPeerCertificateChain
-				/// </java-name>
-				[Dot42.DexImport("getPeerCertificateChain", "()[Ljavax/security/cert/X509Certificate;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Cert.X509Certificate[] GetPeerCertificateChain() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Cert.X509Certificate[]);
-				}
-
-				/// <java-name>
-				/// getPeerPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-				public virtual global::Java.Security.IPrincipal GetPeerPrincipal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.IPrincipal);
-				}
-
-				/// <java-name>
-				/// getLocalPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-				public virtual global::Java.Security.IPrincipal GetLocalPrincipal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.IPrincipal);
-				}
-
-				/// <java-name>
-				/// getSocket
-				/// </java-name>
-				[Dot42.DexImport("getSocket", "()Ljavax/net/ssl/SSLSocket;", AccessFlags = 1)]
-				public virtual global::Javax.Net.Ssl.SSLSocket GetSocket() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLSocket);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal HandshakeCompletedEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -130,73 +49,73 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getSession
 				/// </java-name>
-				public global::Javax.Net.Ssl.ISSLSession Session
+				public virtual global::Javax.Net.Ssl.ISSLSession Session
 				{
-				[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1)]
-						get{ return GetSession(); }
+						[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1)]
+						get{ return default(global::Javax.Net.Ssl.ISSLSession); }
 				}
 
 				/// <java-name>
 				/// getCipherSuite
 				/// </java-name>
-				public string CipherSuite
+				public virtual string CipherSuite
 				{
-				[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCipherSuite(); }
+						[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getLocalCertificates
 				/// </java-name>
-				public global::Java.Security.Cert.Certificate[] LocalCertificates
+				public virtual global::Java.Security.Cert.Certificate[] LocalCertificates
 				{
-				[Dot42.DexImport("getLocalCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
-						get{ return GetLocalCertificates(); }
+						[Dot42.DexImport("getLocalCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.Certificate[]); }
 				}
 
 				/// <java-name>
 				/// getPeerCertificates
 				/// </java-name>
-				public global::Java.Security.Cert.Certificate[] PeerCertificates
+				public virtual global::Java.Security.Cert.Certificate[] PeerCertificates
 				{
-				[Dot42.DexImport("getPeerCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
-						get{ return GetPeerCertificates(); }
+						[Dot42.DexImport("getPeerCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.Certificate[]); }
 				}
 
 				/// <java-name>
 				/// getPeerCertificateChain
 				/// </java-name>
-				public global::Javax.Security.Cert.X509Certificate[] PeerCertificateChain
+				public virtual global::Javax.Security.Cert.X509Certificate[] PeerCertificateChain
 				{
-				[Dot42.DexImport("getPeerCertificateChain", "()[Ljavax/security/cert/X509Certificate;", AccessFlags = 1)]
-						get{ return GetPeerCertificateChain(); }
+						[Dot42.DexImport("getPeerCertificateChain", "()[Ljavax/security/cert/X509Certificate;", AccessFlags = 1)]
+						get{ return default(global::Javax.Security.Cert.X509Certificate[]); }
 				}
 
 				/// <java-name>
 				/// getPeerPrincipal
 				/// </java-name>
-				public global::Java.Security.IPrincipal PeerPrincipal
+				public virtual global::Java.Security.IPrincipal PeerPrincipal
 				{
-				[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-						get{ return GetPeerPrincipal(); }
+						[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.IPrincipal); }
 				}
 
 				/// <java-name>
 				/// getLocalPrincipal
 				/// </java-name>
-				public global::Java.Security.IPrincipal LocalPrincipal
+				public virtual global::Java.Security.IPrincipal LocalPrincipal
 				{
-				[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-						get{ return GetLocalPrincipal(); }
+						[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.IPrincipal); }
 				}
 
 				/// <java-name>
 				/// getSocket
 				/// </java-name>
-				public global::Javax.Net.Ssl.SSLSocket Socket
+				public virtual global::Javax.Net.Ssl.SSLSocket Socket
 				{
-				[Dot42.DexImport("getSocket", "()Ljavax/net/ssl/SSLSocket;", AccessFlags = 1)]
-						get{ return GetSocket(); }
+						[Dot42.DexImport("getSocket", "()Ljavax/net/ssl/SSLSocket;", AccessFlags = 1)]
+						get{ return default(global::Javax.Net.Ssl.SSLSocket); }
 				}
 
 		}
@@ -212,114 +131,10 @@ namespace Javax.Net.Ssl
 				/// hostnameVerifier
 				/// </java-name>
 				[Dot42.DexImport("hostnameVerifier", "Ljavax/net/ssl/HostnameVerifier;", AccessFlags = 4)]
-				protected internal global::Javax.Net.Ssl.IHostnameVerifier HostnameVerifier;
+				protected internal global::Javax.Net.Ssl.IHostnameVerifier @hostnameverifier;
 				[Dot42.DexImport("<init>", "(Ljava/net/URL;)V", AccessFlags = 4)]
 				protected internal HttpsURLConnection(global::Java.Net.URL uRL) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// setDefaultHostnameVerifier
-				/// </java-name>
-				[Dot42.DexImport("setDefaultHostnameVerifier", "(Ljavax/net/ssl/HostnameVerifier;)V", AccessFlags = 9)]
-				public static void SetDefaultHostnameVerifier(global::Javax.Net.Ssl.IHostnameVerifier hostnameVerifier) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefaultHostnameVerifier
-				/// </java-name>
-				[Dot42.DexImport("getDefaultHostnameVerifier", "()Ljavax/net/ssl/HostnameVerifier;", AccessFlags = 9)]
-				public static global::Javax.Net.Ssl.IHostnameVerifier GetDefaultHostnameVerifier() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.IHostnameVerifier);
-				}
-
-				/// <java-name>
-				/// setDefaultSSLSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("setDefaultSSLSocketFactory", "(Ljavax/net/ssl/SSLSocketFactory;)V", AccessFlags = 9)]
-				public static void SetDefaultSSLSocketFactory(global::Javax.Net.Ssl.SSLSocketFactory sSLSocketFactory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefaultSSLSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("getDefaultSSLSocketFactory", "()Ljavax/net/ssl/SSLSocketFactory;", AccessFlags = 9)]
-				public static global::Javax.Net.Ssl.SSLSocketFactory GetDefaultSSLSocketFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLSocketFactory);
-				}
-
-				/// <java-name>
-				/// getCipherSuite
-				/// </java-name>
-				[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetCipherSuite() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLocalCertificates
-				/// </java-name>
-				[Dot42.DexImport("getLocalCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
-				public abstract global::Java.Security.Cert.Certificate[] GetLocalCertificates() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getServerCertificates
-				/// </java-name>
-				[Dot42.DexImport("getServerCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
-				public abstract global::Java.Security.Cert.Certificate[] GetServerCertificates() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPeerPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-				public virtual global::Java.Security.IPrincipal GetPeerPrincipal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.IPrincipal);
-				}
-
-				/// <java-name>
-				/// getLocalPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-				public virtual global::Java.Security.IPrincipal GetLocalPrincipal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.IPrincipal);
-				}
-
-				/// <java-name>
-				/// setHostnameVerifier
-				/// </java-name>
-				[Dot42.DexImport("setHostnameVerifier", "(Ljavax/net/ssl/HostnameVerifier;)V", AccessFlags = 1)]
-				public virtual void SetHostnameVerifier(global::Javax.Net.Ssl.IHostnameVerifier hostnameVerifier) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHostnameVerifier
-				/// </java-name>
-				[Dot42.DexImport("getHostnameVerifier", "()Ljavax/net/ssl/HostnameVerifier;", AccessFlags = 1)]
-				public virtual global::Javax.Net.Ssl.IHostnameVerifier GetHostnameVerifier() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.IHostnameVerifier);
-				}
-
-				/// <java-name>
-				/// setSSLSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("setSSLSocketFactory", "(Ljavax/net/ssl/SSLSocketFactory;)V", AccessFlags = 1)]
-				public virtual void SetSSLSocketFactory(global::Javax.Net.Ssl.SSLSocketFactory sSLSocketFactory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSSLSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("getSSLSocketFactory", "()Ljavax/net/ssl/SSLSocketFactory;", AccessFlags = 1)]
-				public virtual global::Javax.Net.Ssl.SSLSocketFactory GetSSLSocketFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLSocketFactory);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -332,10 +147,10 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public static global::Javax.Net.Ssl.IHostnameVerifier DefaultHostnameVerifier
 				{
-				[Dot42.DexImport("getDefaultHostnameVerifier", "()Ljavax/net/ssl/HostnameVerifier;", AccessFlags = 9)]
-						get{ return GetDefaultHostnameVerifier(); }
-				[Dot42.DexImport("setDefaultHostnameVerifier", "(Ljavax/net/ssl/HostnameVerifier;)V", AccessFlags = 9)]
-						set{ SetDefaultHostnameVerifier(value); }
+						[Dot42.DexImport("getDefaultHostnameVerifier", "()Ljavax/net/ssl/HostnameVerifier;", AccessFlags = 9)]
+						get{ return default(global::Javax.Net.Ssl.IHostnameVerifier); }
+						[Dot42.DexImport("setDefaultHostnameVerifier", "(Ljavax/net/ssl/HostnameVerifier;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -343,66 +158,77 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public static global::Javax.Net.Ssl.SSLSocketFactory DefaultSSLSocketFactory
 				{
-				[Dot42.DexImport("getDefaultSSLSocketFactory", "()Ljavax/net/ssl/SSLSocketFactory;", AccessFlags = 9)]
-						get{ return GetDefaultSSLSocketFactory(); }
-				[Dot42.DexImport("setDefaultSSLSocketFactory", "(Ljavax/net/ssl/SSLSocketFactory;)V", AccessFlags = 9)]
-						set{ SetDefaultSSLSocketFactory(value); }
+						[Dot42.DexImport("getDefaultSSLSocketFactory", "()Ljavax/net/ssl/SSLSocketFactory;", AccessFlags = 9)]
+						get{ return default(global::Javax.Net.Ssl.SSLSocketFactory); }
+						[Dot42.DexImport("setDefaultSSLSocketFactory", "(Ljavax/net/ssl/SSLSocketFactory;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCipherSuite
 				/// </java-name>
-				public string CipherSuite
+				public abstract string CipherSuite
 				{
-				[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetCipherSuite(); }
+						[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getLocalCertificates
 				/// </java-name>
-				public global::Java.Security.Cert.Certificate[] LocalCertificates
+				public abstract global::Java.Security.Cert.Certificate[] LocalCertificates
 				{
-				[Dot42.DexImport("getLocalCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
-						get{ return GetLocalCertificates(); }
+						[Dot42.DexImport("getLocalCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getServerCertificates
 				/// </java-name>
-				public global::Java.Security.Cert.Certificate[] ServerCertificates
+				public abstract global::Java.Security.Cert.Certificate[] ServerCertificates
 				{
-				[Dot42.DexImport("getServerCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
-						get{ return GetServerCertificates(); }
+						[Dot42.DexImport("getServerCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getPeerPrincipal
 				/// </java-name>
-				public global::Java.Security.IPrincipal PeerPrincipal
+				public virtual global::Java.Security.IPrincipal PeerPrincipal
 				{
-				[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-						get{ return GetPeerPrincipal(); }
+						[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.IPrincipal); }
 				}
 
 				/// <java-name>
 				/// getLocalPrincipal
 				/// </java-name>
-				public global::Java.Security.IPrincipal LocalPrincipal
+				public virtual global::Java.Security.IPrincipal LocalPrincipal
 				{
-				[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-						get{ return GetLocalPrincipal(); }
+						[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.IPrincipal); }
+				}
+
+				/// <java-name>
+				/// getHostnameVerifier
+				/// </java-name>
+				public virtual global::Javax.Net.Ssl.IHostnameVerifier HostnameVerifier
+				{
+						[Dot42.DexImport("getHostnameVerifier", "()Ljavax/net/ssl/HostnameVerifier;", AccessFlags = 1)]
+						get{ return default(global::Javax.Net.Ssl.IHostnameVerifier); }
+						[Dot42.DexImport("setHostnameVerifier", "(Ljavax/net/ssl/HostnameVerifier;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSSLSocketFactory
 				/// </java-name>
-				public global::Javax.Net.Ssl.SSLSocketFactory SSLSocketFactory
+				public virtual global::Javax.Net.Ssl.SSLSocketFactory SSLSocketFactory
 				{
-				[Dot42.DexImport("getSSLSocketFactory", "()Ljavax/net/ssl/SSLSocketFactory;", AccessFlags = 1)]
-						get{ return GetSSLSocketFactory(); }
-				[Dot42.DexImport("setSSLSocketFactory", "(Ljavax/net/ssl/SSLSocketFactory;)V", AccessFlags = 1)]
-						set{ SetSSLSocketFactory(value); }
+						[Dot42.DexImport("getSSLSocketFactory", "()Ljavax/net/ssl/SSLSocketFactory;", AccessFlags = 1)]
+						get{ return default(global::Javax.Net.Ssl.SSLSocketFactory); }
+						[Dot42.DexImport("setSSLSocketFactory", "(Ljavax/net/ssl/SSLSocketFactory;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -463,118 +289,16 @@ namespace Javax.Net.Ssl
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getApplicationBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getApplicationBufferSize", "()I", AccessFlags = 1025)]
-				int GetApplicationBufferSize() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCipherSuite
-				/// </java-name>
-				[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetCipherSuite() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCreationTime
-				/// </java-name>
-				[Dot42.DexImport("getCreationTime", "()J", AccessFlags = 1025)]
-				long GetCreationTime() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				byte[] GetId() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLastAccessedTime
-				/// </java-name>
-				[Dot42.DexImport("getLastAccessedTime", "()J", AccessFlags = 1025)]
-				long GetLastAccessedTime() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLocalCertificates
-				/// </java-name>
-				[Dot42.DexImport("getLocalCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
-				global::Java.Security.Cert.Certificate[] GetLocalCertificates() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLocalPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				global::Java.Security.IPrincipal GetLocalPrincipal() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPacketBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getPacketBufferSize", "()I", AccessFlags = 1025)]
-				int GetPacketBufferSize() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPeerCertificateChain
-				/// </java-name>
-				[Dot42.DexImport("getPeerCertificateChain", "()[Ljavax/security/cert/X509Certificate;", AccessFlags = 1025)]
-				global::Javax.Security.Cert.X509Certificate[] GetPeerCertificateChain() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPeerCertificates
-				/// </java-name>
-				[Dot42.DexImport("getPeerCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
-				global::Java.Security.Cert.Certificate[] GetPeerCertificates() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPeerHost
-				/// </java-name>
-				[Dot42.DexImport("getPeerHost", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPeerHost() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPeerPort
-				/// </java-name>
-				[Dot42.DexImport("getPeerPort", "()I", AccessFlags = 1025)]
-				int GetPeerPort() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPeerPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				global::Java.Security.IPrincipal GetPeerPrincipal() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getProtocol
-				/// </java-name>
-				[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetProtocol() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSessionContext
-				/// </java-name>
-				[Dot42.DexImport("getSessionContext", "()Ljavax/net/ssl/SSLSessionContext;", AccessFlags = 1025)]
-				global::Javax.Net.Ssl.ISSLSessionContext GetSessionContext() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getValue
 				/// </java-name>
 				[Dot42.DexImport("getValue", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1025)]
 				object GetValue(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getValueNames
-				/// </java-name>
-				[Dot42.DexImport("getValueNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				string[] GetValueNames() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// invalidate
 				/// </java-name>
 				[Dot42.DexImport("invalidate", "()V", AccessFlags = 1025)]
 				void Invalidate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isValid
-				/// </java-name>
-				[Dot42.DexImport("isValid", "()Z", AccessFlags = 1025)]
-				bool IsValid() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// putValue
@@ -587,6 +311,159 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				[Dot42.DexImport("removeValue", "(Ljava/lang/String;)V", AccessFlags = 1025)]
 				void RemoveValue(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getApplicationBufferSize
+				/// </java-name>
+				int ApplicationBufferSize
+				{
+						[Dot42.DexImport("getApplicationBufferSize", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getCipherSuite
+				/// </java-name>
+				string CipherSuite
+				{
+						[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getCreationTime
+				/// </java-name>
+				long CreationTime
+				{
+						[Dot42.DexImport("getCreationTime", "()J", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getId
+				/// </java-name>
+				byte[] Id
+				{
+						[Dot42.DexImport("getId", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
+				}
+
+				/// <java-name>
+				/// getLastAccessedTime
+				/// </java-name>
+				long LastAccessedTime
+				{
+						[Dot42.DexImport("getLastAccessedTime", "()J", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getLocalCertificates
+				/// </java-name>
+				global::Java.Security.Cert.Certificate[] LocalCertificates
+				{
+						[Dot42.DexImport("getLocalCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getLocalPrincipal
+				/// </java-name>
+				global::Java.Security.IPrincipal LocalPrincipal
+				{
+						[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPacketBufferSize
+				/// </java-name>
+				int PacketBufferSize
+				{
+						[Dot42.DexImport("getPacketBufferSize", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPeerCertificateChain
+				/// </java-name>
+				global::Javax.Security.Cert.X509Certificate[] PeerCertificateChain
+				{
+						[Dot42.DexImport("getPeerCertificateChain", "()[Ljavax/security/cert/X509Certificate;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPeerCertificates
+				/// </java-name>
+				global::Java.Security.Cert.Certificate[] PeerCertificates
+				{
+						[Dot42.DexImport("getPeerCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPeerHost
+				/// </java-name>
+				string PeerHost
+				{
+						[Dot42.DexImport("getPeerHost", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPeerPort
+				/// </java-name>
+				int PeerPort
+				{
+						[Dot42.DexImport("getPeerPort", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPeerPrincipal
+				/// </java-name>
+				global::Java.Security.IPrincipal PeerPrincipal
+				{
+						[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getProtocol
+				/// </java-name>
+				string Protocol
+				{
+						[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSessionContext
+				/// </java-name>
+				global::Javax.Net.Ssl.ISSLSessionContext SessionContext
+				{
+						[Dot42.DexImport("getSessionContext", "()Ljavax/net/ssl/SSLSessionContext;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getValueNames
+				/// </java-name>
+				string[] ValueNames
+				{
+						[Dot42.DexImport("getValueNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isValid
+				/// </java-name>
+				bool IsValid
+				{
+						[Dot42.DexImport("isValid", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -619,40 +496,41 @@ namespace Javax.Net.Ssl
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getIds
-				/// </java-name>
-				[Dot42.DexImport("getIds", "()Ljava/util/Enumeration;", AccessFlags = 1025, Signature = "()Ljava/util/Enumeration<[B>;")]
-				global::Java.Util.IEnumeration<sbyte[]> GetIds() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSession
 				/// </java-name>
 				[Dot42.DexImport("getSession", "([B)Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
 				global::Javax.Net.Ssl.ISSLSession GetSession(sbyte[] sByte) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// getIds
+				/// </java-name>
+				global::Java.Util.IEnumeration<sbyte[]> Ids
+				{
+						[Dot42.DexImport("getIds", "()Ljava/util/Enumeration;", AccessFlags = 1025, Signature = "()Ljava/util/Enumeration<[B>;")]
+						get;
+				}
+
+				/// <java-name>
 				/// getSessionCacheSize
 				/// </java-name>
-				[Dot42.DexImport("getSessionCacheSize", "()I", AccessFlags = 1025)]
-				int GetSessionCacheSize() /* MethodBuilder.Create */ ;
+				int SessionCacheSize
+				{
+						[Dot42.DexImport("getSessionCacheSize", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setSessionCacheSize", "(I)V", AccessFlags = 1025)]
+						set;
+				}
 
 				/// <java-name>
 				/// getSessionTimeout
 				/// </java-name>
-				[Dot42.DexImport("getSessionTimeout", "()I", AccessFlags = 1025)]
-				int GetSessionTimeout() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSessionCacheSize
-				/// </java-name>
-				[Dot42.DexImport("setSessionCacheSize", "(I)V", AccessFlags = 1025)]
-				void SetSessionCacheSize(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSessionTimeout
-				/// </java-name>
-				[Dot42.DexImport("setSessionTimeout", "(I)V", AccessFlags = 1025)]
-				void SetSessionTimeout(int int32) /* MethodBuilder.Create */ ;
+				int SessionTimeout
+				{
+						[Dot42.DexImport("getSessionTimeout", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setSessionTimeout", "(I)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -734,8 +612,11 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getAcceptedIssuers
 				/// </java-name>
-				[Dot42.DexImport("getAcceptedIssuers", "()[Ljava/security/cert/X509Certificate;", AccessFlags = 1025)]
-				global::Java.Security.Cert.X509Certificate[] GetAcceptedIssuers() /* MethodBuilder.Create */ ;
+				global::Java.Security.Cert.X509Certificate[] AcceptedIssuers
+				{
+						[Dot42.DexImport("getAcceptedIssuers", "()[Ljava/security/cert/X509Certificate;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -750,15 +631,6 @@ namespace Javax.Net.Ssl
     "", AccessFlags = 4)]
 				protected internal KeyManagerFactory(global::Javax.Net.Ssl.KeyManagerFactorySpi keyManagerFactorySpi, global::Java.Security.Provider provider, string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getDefaultAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getDefaultAlgorithm", "()Ljava/lang/String;", AccessFlags = 25)]
-				public static string GetDefaultAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -789,24 +661,6 @@ namespace Javax.Net.Ssl
 				}
 
 				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
 				/// init
 				/// </java-name>
 				[Dot42.DexImport("init", "(Ljava/security/KeyStore;[C)V", AccessFlags = 17)]
@@ -822,15 +676,6 @@ namespace Javax.Net.Ssl
 				{
 				}
 
-				/// <java-name>
-				/// getKeyManagers
-				/// </java-name>
-				[Dot42.DexImport("getKeyManagers", "()[Ljavax/net/ssl/KeyManager;", AccessFlags = 17)]
-				public global::Javax.Net.Ssl.IKeyManager[] GetKeyManagers() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.IKeyManager[]);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal KeyManagerFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -841,8 +686,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public static string DefaultAlgorithm
 				{
-				[Dot42.DexImport("getDefaultAlgorithm", "()Ljava/lang/String;", AccessFlags = 25)]
-						get{ return GetDefaultAlgorithm(); }
+						[Dot42.DexImport("getDefaultAlgorithm", "()Ljava/lang/String;", AccessFlags = 25)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -850,8 +695,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -859,8 +704,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 				/// <java-name>
@@ -868,8 +713,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Javax.Net.Ssl.IKeyManager[] KeyManagers
 				{
-				[Dot42.DexImport("getKeyManagers", "()[Ljavax/net/ssl/KeyManager;", AccessFlags = 17)]
-						get{ return GetKeyManagers(); }
+						[Dot42.DexImport("getKeyManagers", "()[Ljavax/net/ssl/KeyManager;", AccessFlags = 17)]
+						get{ return default(global::Javax.Net.Ssl.IKeyManager[]); }
 				}
 
 		}
@@ -923,15 +768,6 @@ namespace Javax.Net.Ssl
 				{
 				}
 
-				/// <java-name>
-				/// getParameters
-				/// </java-name>
-				[Dot42.DexImport("getParameters", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/security/KeyStore$Builder;>;")]
-				public virtual global::Java.Util.IList<global::Java.Security.KeyStore.Builder> GetParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Java.Security.KeyStore.Builder>);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal KeyStoreBuilderParameters() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -940,10 +776,10 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getParameters
 				/// </java-name>
-				public global::Java.Util.IList<global::Java.Security.KeyStore.Builder> Parameters
+				public virtual global::Java.Util.IList<global::Java.Security.KeyStore.Builder> Parameters
 				{
-				[Dot42.DexImport("getParameters", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/security/KeyStore$Builder;>;")]
-						get{ return GetParameters(); }
+						[Dot42.DexImport("getParameters", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/security/KeyStore$Builder;>;")]
+						get{ return default(global::Java.Util.IList<global::Java.Security.KeyStore.Builder>); }
 				}
 
 		}
@@ -957,23 +793,6 @@ namespace Javax.Net.Ssl
 		{
 				[Dot42.DexImport("<init>", "(Ljavax/net/ssl/SSLContextSpi;Ljava/security/Provider;Ljava/lang/String;)V", AccessFlags = 4)]
 				protected internal SSLContext(global::Javax.Net.Ssl.SSLContextSpi sSLContextSpi, global::Java.Security.Provider provider, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Ljavax/net/ssl/SSLContext;", AccessFlags = 9)]
-				public static global::Javax.Net.Ssl.SSLContext GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLContext);
-				}
-
-				/// <java-name>
-				/// setDefault
-				/// </java-name>
-				[Dot42.DexImport("setDefault", "(Ljavax/net/ssl/SSLContext;)V", AccessFlags = 9)]
-				public static void SetDefault(global::Javax.Net.Ssl.SSLContext sSLContext) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1005,48 +824,12 @@ namespace Javax.Net.Ssl
 				}
 
 				/// <java-name>
-				/// getProtocol
-				/// </java-name>
-				[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetProtocol() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
 				/// init
 				/// </java-name>
 				[Dot42.DexImport("init", "([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRan" +
     "dom;)V", AccessFlags = 17)]
 				public void Init(global::Javax.Net.Ssl.IKeyManager[] keyManager, global::Javax.Net.Ssl.ITrustManager[] trustManager, global::Java.Security.SecureRandom secureRandom) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("getSocketFactory", "()Ljavax/net/ssl/SSLSocketFactory;", AccessFlags = 17)]
-				public global::Javax.Net.Ssl.SSLSocketFactory GetSocketFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLSocketFactory);
-				}
-
-				/// <java-name>
-				/// getServerSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("getServerSocketFactory", "()Ljavax/net/ssl/SSLServerSocketFactory;", AccessFlags = 17)]
-				public global::Javax.Net.Ssl.SSLServerSocketFactory GetServerSocketFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLServerSocketFactory);
 				}
 
 				/// <java-name>
@@ -1067,42 +850,6 @@ namespace Javax.Net.Ssl
 						return default(global::Javax.Net.Ssl.SSLEngine);
 				}
 
-				/// <java-name>
-				/// getServerSessionContext
-				/// </java-name>
-				[Dot42.DexImport("getServerSessionContext", "()Ljavax/net/ssl/SSLSessionContext;", AccessFlags = 17)]
-				public global::Javax.Net.Ssl.ISSLSessionContext GetServerSessionContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.ISSLSessionContext);
-				}
-
-				/// <java-name>
-				/// getClientSessionContext
-				/// </java-name>
-				[Dot42.DexImport("getClientSessionContext", "()Ljavax/net/ssl/SSLSessionContext;", AccessFlags = 17)]
-				public global::Javax.Net.Ssl.ISSLSessionContext GetClientSessionContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.ISSLSessionContext);
-				}
-
-				/// <java-name>
-				/// getDefaultSSLParameters
-				/// </java-name>
-				[Dot42.DexImport("getDefaultSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 17)]
-				public global::Javax.Net.Ssl.SSLParameters GetDefaultSSLParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLParameters);
-				}
-
-				/// <java-name>
-				/// getSupportedSSLParameters
-				/// </java-name>
-				[Dot42.DexImport("getSupportedSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 17)]
-				public global::Javax.Net.Ssl.SSLParameters GetSupportedSSLParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLParameters);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal SSLContext() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1113,10 +860,10 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public static global::Javax.Net.Ssl.SSLContext Default
 				{
-				[Dot42.DexImport("getDefault", "()Ljavax/net/ssl/SSLContext;", AccessFlags = 9)]
-						get{ return GetDefault(); }
-				[Dot42.DexImport("setDefault", "(Ljavax/net/ssl/SSLContext;)V", AccessFlags = 9)]
-						set{ SetDefault(value); }
+						[Dot42.DexImport("getDefault", "()Ljavax/net/ssl/SSLContext;", AccessFlags = 9)]
+						get{ return default(global::Javax.Net.Ssl.SSLContext); }
+						[Dot42.DexImport("setDefault", "(Ljavax/net/ssl/SSLContext;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1124,8 +871,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public string Protocol
 				{
-				[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetProtocol(); }
+						[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1133,8 +880,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 				/// <java-name>
@@ -1142,8 +889,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Javax.Net.Ssl.SSLSocketFactory SocketFactory
 				{
-				[Dot42.DexImport("getSocketFactory", "()Ljavax/net/ssl/SSLSocketFactory;", AccessFlags = 17)]
-						get{ return GetSocketFactory(); }
+						[Dot42.DexImport("getSocketFactory", "()Ljavax/net/ssl/SSLSocketFactory;", AccessFlags = 17)]
+						get{ return default(global::Javax.Net.Ssl.SSLSocketFactory); }
 				}
 
 				/// <java-name>
@@ -1151,8 +898,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Javax.Net.Ssl.SSLServerSocketFactory ServerSocketFactory
 				{
-				[Dot42.DexImport("getServerSocketFactory", "()Ljavax/net/ssl/SSLServerSocketFactory;", AccessFlags = 17)]
-						get{ return GetServerSocketFactory(); }
+						[Dot42.DexImport("getServerSocketFactory", "()Ljavax/net/ssl/SSLServerSocketFactory;", AccessFlags = 17)]
+						get{ return default(global::Javax.Net.Ssl.SSLServerSocketFactory); }
 				}
 
 				/// <java-name>
@@ -1160,8 +907,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Javax.Net.Ssl.ISSLSessionContext ServerSessionContext
 				{
-				[Dot42.DexImport("getServerSessionContext", "()Ljavax/net/ssl/SSLSessionContext;", AccessFlags = 17)]
-						get{ return GetServerSessionContext(); }
+						[Dot42.DexImport("getServerSessionContext", "()Ljavax/net/ssl/SSLSessionContext;", AccessFlags = 17)]
+						get{ return default(global::Javax.Net.Ssl.ISSLSessionContext); }
 				}
 
 				/// <java-name>
@@ -1169,8 +916,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Javax.Net.Ssl.ISSLSessionContext ClientSessionContext
 				{
-				[Dot42.DexImport("getClientSessionContext", "()Ljavax/net/ssl/SSLSessionContext;", AccessFlags = 17)]
-						get{ return GetClientSessionContext(); }
+						[Dot42.DexImport("getClientSessionContext", "()Ljavax/net/ssl/SSLSessionContext;", AccessFlags = 17)]
+						get{ return default(global::Javax.Net.Ssl.ISSLSessionContext); }
 				}
 
 				/// <java-name>
@@ -1178,8 +925,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Javax.Net.Ssl.SSLParameters DefaultSSLParameters
 				{
-				[Dot42.DexImport("getDefaultSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 17)]
-						get{ return GetDefaultSSLParameters(); }
+						[Dot42.DexImport("getDefaultSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 17)]
+						get{ return default(global::Javax.Net.Ssl.SSLParameters); }
 				}
 
 				/// <java-name>
@@ -1187,8 +934,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Javax.Net.Ssl.SSLParameters SupportedSSLParameters
 				{
-				[Dot42.DexImport("getSupportedSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 17)]
-						get{ return GetSupportedSSLParameters(); }
+						[Dot42.DexImport("getSupportedSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 17)]
+						get{ return default(global::Javax.Net.Ssl.SSLParameters); }
 				}
 
 		}
@@ -1286,24 +1033,6 @@ namespace Javax.Net.Ssl
 				}
 
 				/// <java-name>
-				/// getPeerHost
-				/// </java-name>
-				[Dot42.DexImport("getPeerHost", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPeerHost() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPeerPort
-				/// </java-name>
-				[Dot42.DexImport("getPeerPort", "()I", AccessFlags = 1)]
-				public virtual int GetPeerPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// beginHandshake
 				/// </java-name>
 				[Dot42.DexImport("beginHandshake", "()V", AccessFlags = 1025)]
@@ -1320,120 +1049,6 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				[Dot42.DexImport("closeOutbound", "()V", AccessFlags = 1025)]
 				public abstract void CloseOutbound() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDelegatedTask
-				/// </java-name>
-				[Dot42.DexImport("getDelegatedTask", "()Ljava/lang/Runnable;", AccessFlags = 1025)]
-				public abstract global::Java.Lang.IRunnable GetDelegatedTask() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEnabledCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getEnabledCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetEnabledCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEnabledProtocols
-				/// </java-name>
-				[Dot42.DexImport("getEnabledProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetEnabledProtocols() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEnableSessionCreation
-				/// </java-name>
-				[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
-				public abstract bool GetEnableSessionCreation() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getHandshakeStatus
-				/// </java-name>
-				[Dot42.DexImport("getHandshakeStatus", "()Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;", AccessFlags = 1025)]
-				public abstract global::Javax.Net.Ssl.SSLEngineResult.HandshakeStatus GetHandshakeStatus() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNeedClientAuth
-				/// </java-name>
-				[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
-				public abstract bool GetNeedClientAuth() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSession
-				/// </java-name>
-				[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
-				public abstract global::Javax.Net.Ssl.ISSLSession GetSession() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSupportedCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetSupportedCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSupportedProtocols
-				/// </java-name>
-				[Dot42.DexImport("getSupportedProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetSupportedProtocols() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getUseClientMode
-				/// </java-name>
-				[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
-				public abstract bool GetUseClientMode() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getWantClientAuth
-				/// </java-name>
-				[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
-				public abstract bool GetWantClientAuth() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isInboundDone
-				/// </java-name>
-				[Dot42.DexImport("isInboundDone", "()Z", AccessFlags = 1025)]
-				public abstract bool IsInboundDone() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isOutboundDone
-				/// </java-name>
-				[Dot42.DexImport("isOutboundDone", "()Z", AccessFlags = 1025)]
-				public abstract bool IsOutboundDone() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEnabledCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("setEnabledCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-				public abstract void SetEnabledCipherSuites(string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEnabledProtocols
-				/// </java-name>
-				[Dot42.DexImport("setEnabledProtocols", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-				public abstract void SetEnabledProtocols(string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEnableSessionCreation
-				/// </java-name>
-				[Dot42.DexImport("setEnableSessionCreation", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetEnableSessionCreation(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setNeedClientAuth
-				/// </java-name>
-				[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetNeedClientAuth(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setUseClientMode
-				/// </java-name>
-				[Dot42.DexImport("setUseClientMode", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetUseClientMode(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setWantClientAuth
-				/// </java-name>
-				[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetWantClientAuth(bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// unwrap
@@ -1484,160 +1099,161 @@ namespace Javax.Net.Ssl
 				}
 
 				/// <java-name>
-				/// getSSLParameters
-				/// </java-name>
-				[Dot42.DexImport("getSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 1)]
-				public virtual global::Javax.Net.Ssl.SSLParameters GetSSLParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLParameters);
-				}
-
-				/// <java-name>
-				/// setSSLParameters
-				/// </java-name>
-				[Dot42.DexImport("setSSLParameters", "(Ljavax/net/ssl/SSLParameters;)V", AccessFlags = 1)]
-				public virtual void SetSSLParameters(global::Javax.Net.Ssl.SSLParameters sSLParameters) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getPeerHost
 				/// </java-name>
-				public string PeerHost
+				public virtual string PeerHost
 				{
-				[Dot42.DexImport("getPeerHost", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPeerHost(); }
+						[Dot42.DexImport("getPeerHost", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPeerPort
 				/// </java-name>
-				public int PeerPort
+				public virtual int PeerPort
 				{
-				[Dot42.DexImport("getPeerPort", "()I", AccessFlags = 1)]
-						get{ return GetPeerPort(); }
+						[Dot42.DexImport("getPeerPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDelegatedTask
 				/// </java-name>
-				public global::Java.Lang.IRunnable DelegatedTask
+				public abstract global::Java.Lang.IRunnable DelegatedTask
 				{
-				[Dot42.DexImport("getDelegatedTask", "()Ljava/lang/Runnable;", AccessFlags = 1025)]
-						get{ return GetDelegatedTask(); }
+						[Dot42.DexImport("getDelegatedTask", "()Ljava/lang/Runnable;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEnabledCipherSuites
 				/// </java-name>
-				public string[] EnabledCipherSuites
+				public abstract string[] EnabledCipherSuites
 				{
-				[Dot42.DexImport("getEnabledCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEnabledCipherSuites(); }
-				[Dot42.DexImport("setEnabledCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-						set{ SetEnabledCipherSuites(value); }
+						[Dot42.DexImport("getEnabledCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEnabledCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getEnabledProtocols
 				/// </java-name>
-				public string[] EnabledProtocols
+				public abstract string[] EnabledProtocols
 				{
-				[Dot42.DexImport("getEnabledProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEnabledProtocols(); }
-				[Dot42.DexImport("setEnabledProtocols", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-						set{ SetEnabledProtocols(value); }
+						[Dot42.DexImport("getEnabledProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEnabledProtocols", "([Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getEnableSessionCreation
 				/// </java-name>
-				public bool IsEnableSessionCreation
+				public abstract bool IsEnableSessionCreation
 				{
-				[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
-						get{ return GetEnableSessionCreation(); }
-				[Dot42.DexImport("setEnableSessionCreation", "(Z)V", AccessFlags = 1025)]
-						set{ SetEnableSessionCreation(value); }
+						[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEnableSessionCreation", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getHandshakeStatus
 				/// </java-name>
-				public global::Javax.Net.Ssl.SSLEngineResult.HandshakeStatus HandshakeStatus
+				public abstract global::Javax.Net.Ssl.SSLEngineResult.HandshakeStatus HandshakeStatus
 				{
-				[Dot42.DexImport("getHandshakeStatus", "()Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;", AccessFlags = 1025)]
-						get{ return GetHandshakeStatus(); }
+						[Dot42.DexImport("getHandshakeStatus", "()Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getNeedClientAuth
 				/// </java-name>
-				public bool IsNeedClientAuth
+				public abstract bool IsNeedClientAuth
 				{
-				[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
-						get{ return GetNeedClientAuth(); }
-				[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1025)]
-						set{ SetNeedClientAuth(value); }
+						[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getSession
 				/// </java-name>
-				public global::Javax.Net.Ssl.ISSLSession Session
+				public abstract global::Javax.Net.Ssl.ISSLSession Session
 				{
-				[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
-						get{ return GetSession(); }
+						[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSupportedCipherSuites
 				/// </java-name>
-				public string[] SupportedCipherSuites
+				public abstract string[] SupportedCipherSuites
 				{
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSupportedCipherSuites(); }
+						[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSupportedProtocols
 				/// </java-name>
-				public string[] SupportedProtocols
+				public abstract string[] SupportedProtocols
 				{
-				[Dot42.DexImport("getSupportedProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSupportedProtocols(); }
+						[Dot42.DexImport("getSupportedProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getUseClientMode
 				/// </java-name>
-				public bool IsUseClientMode
+				public abstract bool IsUseClientMode
 				{
-				[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
-						get{ return GetUseClientMode(); }
-				[Dot42.DexImport("setUseClientMode", "(Z)V", AccessFlags = 1025)]
-						set{ SetUseClientMode(value); }
+						[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setUseClientMode", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getWantClientAuth
 				/// </java-name>
-				public bool IsWantClientAuth
+				public abstract bool IsWantClientAuth
 				{
-				[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
-						get{ return GetWantClientAuth(); }
-				[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1025)]
-						set{ SetWantClientAuth(value); }
+						[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// isInboundDone
+				/// </java-name>
+				public abstract bool IsInboundDone
+				{
+						[Dot42.DexImport("isInboundDone", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isOutboundDone
+				/// </java-name>
+				public abstract bool IsOutboundDone
+				{
+						[Dot42.DexImport("isOutboundDone", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSSLParameters
 				/// </java-name>
-				public global::Javax.Net.Ssl.SSLParameters SSLParameters
+				public virtual global::Javax.Net.Ssl.SSLParameters SSLParameters
 				{
-				[Dot42.DexImport("getSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 1)]
-						get{ return GetSSLParameters(); }
-				[Dot42.DexImport("setSSLParameters", "(Ljavax/net/ssl/SSLParameters;)V", AccessFlags = 1)]
-						set{ SetSSLParameters(value); }
+						[Dot42.DexImport("getSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 1)]
+						get{ return default(global::Javax.Net.Ssl.SSLParameters); }
+						[Dot42.DexImport("setSSLParameters", "(Ljavax/net/ssl/SSLParameters;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -1906,113 +1522,45 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getCipherSuites
 				/// </java-name>
-				[Dot42.DexImport("getCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetCipherSuites() /* MethodBuilder.Create */ 
+				public virtual string[] CipherSuites
 				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// setCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("setCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetCipherSuites(string[] @string) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
+						[Dot42.DexImport("setCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getProtocols
 				/// </java-name>
-				[Dot42.DexImport("getProtocols", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetProtocols() /* MethodBuilder.Create */ 
+				public virtual string[] Protocols
 				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// setProtocols
-				/// </java-name>
-				[Dot42.DexImport("setProtocols", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetProtocols(string[] @string) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getProtocols", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
+						[Dot42.DexImport("setProtocols", "([Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getNeedClientAuth
 				/// </java-name>
-				[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1)]
-				public virtual bool GetNeedClientAuth() /* MethodBuilder.Create */ 
+				public virtual bool IsNeedClientAuth
 				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setNeedClientAuth
-				/// </java-name>
-				[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1)]
-				public virtual void SetNeedClientAuth(bool boolean) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getWantClientAuth
 				/// </java-name>
-				[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1)]
-				public virtual bool GetWantClientAuth() /* MethodBuilder.Create */ 
+				public virtual bool IsWantClientAuth
 				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setWantClientAuth
-				/// </java-name>
-				[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1)]
-				public virtual void SetWantClientAuth(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCipherSuites
-				/// </java-name>
-				public string[] CipherSuites
-				{
-				[Dot42.DexImport("getCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCipherSuites(); }
-				[Dot42.DexImport("setCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetCipherSuites(value); }
-				}
-
-				/// <java-name>
-				/// getProtocols
-				/// </java-name>
-				public string[] Protocols
-				{
-				[Dot42.DexImport("getProtocols", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetProtocols(); }
-				[Dot42.DexImport("setProtocols", "([Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetProtocols(value); }
-				}
-
-				/// <java-name>
-				/// getNeedClientAuth
-				/// </java-name>
-				public bool IsNeedClientAuth
-				{
-				[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1)]
-						get{ return GetNeedClientAuth(); }
-				[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1)]
-						set{ SetNeedClientAuth(value); }
-				}
-
-				/// <java-name>
-				/// getWantClientAuth
-				/// </java-name>
-				public bool IsWantClientAuth
-				{
-				[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1)]
-						get{ return GetWantClientAuth(); }
-				[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1)]
-						set{ SetWantClientAuth(value); }
+						[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -2054,15 +1602,6 @@ namespace Javax.Net.Ssl
 				}
 
 				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// implies
 				/// </java-name>
 				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
@@ -2079,10 +1618,10 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getActions
 				/// </java-name>
-				public string Actions
+				public override string Actions
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
+						[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -2136,169 +1675,85 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getEnabledCipherSuites
 				/// </java-name>
-				[Dot42.DexImport("getEnabledCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetEnabledCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEnabledCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("setEnabledCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-				public abstract void SetEnabledCipherSuites(string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSupportedCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetSupportedCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSupportedProtocols
-				/// </java-name>
-				[Dot42.DexImport("getSupportedProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetSupportedProtocols() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEnabledProtocols
-				/// </java-name>
-				[Dot42.DexImport("getEnabledProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetEnabledProtocols() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEnabledProtocols
-				/// </java-name>
-				[Dot42.DexImport("setEnabledProtocols", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-				public abstract void SetEnabledProtocols(string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setNeedClientAuth
-				/// </java-name>
-				[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetNeedClientAuth(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNeedClientAuth
-				/// </java-name>
-				[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
-				public abstract bool GetNeedClientAuth() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setWantClientAuth
-				/// </java-name>
-				[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetWantClientAuth(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getWantClientAuth
-				/// </java-name>
-				[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
-				public abstract bool GetWantClientAuth() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setUseClientMode
-				/// </java-name>
-				[Dot42.DexImport("setUseClientMode", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetUseClientMode(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getUseClientMode
-				/// </java-name>
-				[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
-				public abstract bool GetUseClientMode() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEnableSessionCreation
-				/// </java-name>
-				[Dot42.DexImport("setEnableSessionCreation", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetEnableSessionCreation(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEnableSessionCreation
-				/// </java-name>
-				[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
-				public abstract bool GetEnableSessionCreation() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEnabledCipherSuites
-				/// </java-name>
-				public string[] EnabledCipherSuites
+				public abstract string[] EnabledCipherSuites
 				{
-				[Dot42.DexImport("getEnabledCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEnabledCipherSuites(); }
-				[Dot42.DexImport("setEnabledCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-						set{ SetEnabledCipherSuites(value); }
+						[Dot42.DexImport("getEnabledCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEnabledCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getSupportedCipherSuites
 				/// </java-name>
-				public string[] SupportedCipherSuites
+				public abstract string[] SupportedCipherSuites
 				{
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSupportedCipherSuites(); }
+						[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSupportedProtocols
 				/// </java-name>
-				public string[] SupportedProtocols
+				public abstract string[] SupportedProtocols
 				{
-				[Dot42.DexImport("getSupportedProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSupportedProtocols(); }
+						[Dot42.DexImport("getSupportedProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEnabledProtocols
 				/// </java-name>
-				public string[] EnabledProtocols
+				public abstract string[] EnabledProtocols
 				{
-				[Dot42.DexImport("getEnabledProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEnabledProtocols(); }
-				[Dot42.DexImport("setEnabledProtocols", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-						set{ SetEnabledProtocols(value); }
+						[Dot42.DexImport("getEnabledProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEnabledProtocols", "([Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getNeedClientAuth
 				/// </java-name>
-				public bool IsNeedClientAuth
+				public abstract bool IsNeedClientAuth
 				{
-				[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
-						get{ return GetNeedClientAuth(); }
-				[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1025)]
-						set{ SetNeedClientAuth(value); }
+						[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getWantClientAuth
 				/// </java-name>
-				public bool IsWantClientAuth
+				public abstract bool IsWantClientAuth
 				{
-				[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
-						get{ return GetWantClientAuth(); }
-				[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1025)]
-						set{ SetWantClientAuth(value); }
+						[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getUseClientMode
 				/// </java-name>
-				public bool IsUseClientMode
+				public abstract bool IsUseClientMode
 				{
-				[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
-						get{ return GetUseClientMode(); }
-				[Dot42.DexImport("setUseClientMode", "(Z)V", AccessFlags = 1025)]
-						set{ SetUseClientMode(value); }
+						[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setUseClientMode", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getEnableSessionCreation
 				/// </java-name>
-				public bool IsEnableSessionCreation
+				public abstract bool IsEnableSessionCreation
 				{
-				[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
-						get{ return GetEnableSessionCreation(); }
-				[Dot42.DexImport("setEnableSessionCreation", "(Z)V", AccessFlags = 1025)]
-						set{ SetEnableSessionCreation(value); }
+						[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEnableSessionCreation", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 		}
@@ -2318,49 +1773,28 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getDefault
 				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Ljavax/net/ServerSocketFactory;", AccessFlags = 41)]
-				public static global::Javax.Net.ServerSocketFactory GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.ServerSocketFactory);
-				}
-
-				/// <java-name>
-				/// getDefaultCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getDefaultCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetDefaultCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSupportedCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetSupportedCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDefault
-				/// </java-name>
 				public static global::Javax.Net.ServerSocketFactory Default
 				{
-				[Dot42.DexImport("getDefault", "()Ljavax/net/ServerSocketFactory;", AccessFlags = 41)]
-						get{ return GetDefault(); }
+						[Dot42.DexImport("getDefault", "()Ljavax/net/ServerSocketFactory;", AccessFlags = 41)]
+						get{ return default(global::Javax.Net.ServerSocketFactory); }
 				}
 
 				/// <java-name>
 				/// getDefaultCipherSuites
 				/// </java-name>
-				public string[] DefaultCipherSuites
+				public abstract string[] DefaultCipherSuites
 				{
-				[Dot42.DexImport("getDefaultCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetDefaultCipherSuites(); }
+						[Dot42.DexImport("getDefaultCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSupportedCipherSuites
 				/// </java-name>
-				public string[] SupportedCipherSuites
+				public abstract string[] SupportedCipherSuites
 				{
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSupportedCipherSuites(); }
+						[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -2377,24 +1811,6 @@ namespace Javax.Net.Ssl
 				{
 				}
 
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSession
-				/// </java-name>
-				[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1)]
-				public virtual global::Javax.Net.Ssl.ISSLSession GetSession() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.ISSLSession);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal SSLSessionBindingEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -2403,19 +1819,19 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSession
 				/// </java-name>
-				public global::Javax.Net.Ssl.ISSLSession Session
+				public virtual global::Javax.Net.Ssl.ISSLSession Session
 				{
-				[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1)]
-						get{ return GetSession(); }
+						[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1)]
+						get{ return default(global::Javax.Net.Ssl.ISSLSession); }
 				}
 
 		}
@@ -2469,48 +1885,6 @@ namespace Javax.Net.Ssl
 				}
 
 				/// <java-name>
-				/// getSupportedCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetSupportedCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEnabledCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getEnabledCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetEnabledCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEnabledCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("setEnabledCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-				public abstract void SetEnabledCipherSuites(string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSupportedProtocols
-				/// </java-name>
-				[Dot42.DexImport("getSupportedProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetSupportedProtocols() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEnabledProtocols
-				/// </java-name>
-				[Dot42.DexImport("getEnabledProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetEnabledProtocols() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEnabledProtocols
-				/// </java-name>
-				[Dot42.DexImport("setEnabledProtocols", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-				public abstract void SetEnabledProtocols(string[] @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSession
-				/// </java-name>
-				[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
-				public abstract global::Javax.Net.Ssl.ISSLSession GetSession() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// addHandshakeCompletedListener
 				/// </java-name>
 				[Dot42.DexImport("addHandshakeCompletedListener", "(Ljavax/net/ssl/HandshakeCompletedListener;)V", AccessFlags = 1025)]
@@ -2529,172 +1903,107 @@ namespace Javax.Net.Ssl
 				public abstract void StartHandshake() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setUseClientMode
-				/// </java-name>
-				[Dot42.DexImport("setUseClientMode", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetUseClientMode(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getUseClientMode
-				/// </java-name>
-				[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
-				public abstract bool GetUseClientMode() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setNeedClientAuth
-				/// </java-name>
-				[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetNeedClientAuth(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setWantClientAuth
-				/// </java-name>
-				[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetWantClientAuth(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNeedClientAuth
-				/// </java-name>
-				[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
-				public abstract bool GetNeedClientAuth() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getWantClientAuth
-				/// </java-name>
-				[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
-				public abstract bool GetWantClientAuth() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setEnableSessionCreation
-				/// </java-name>
-				[Dot42.DexImport("setEnableSessionCreation", "(Z)V", AccessFlags = 1025)]
-				public abstract void SetEnableSessionCreation(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEnableSessionCreation
-				/// </java-name>
-				[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
-				public abstract bool GetEnableSessionCreation() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSSLParameters
-				/// </java-name>
-				[Dot42.DexImport("getSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 1)]
-				public virtual global::Javax.Net.Ssl.SSLParameters GetSSLParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.SSLParameters);
-				}
-
-				/// <java-name>
-				/// setSSLParameters
-				/// </java-name>
-				[Dot42.DexImport("setSSLParameters", "(Ljavax/net/ssl/SSLParameters;)V", AccessFlags = 1)]
-				public virtual void SetSSLParameters(global::Javax.Net.Ssl.SSLParameters sSLParameters) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getSupportedCipherSuites
 				/// </java-name>
-				public string[] SupportedCipherSuites
+				public abstract string[] SupportedCipherSuites
 				{
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSupportedCipherSuites(); }
+						[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEnabledCipherSuites
 				/// </java-name>
-				public string[] EnabledCipherSuites
+				public abstract string[] EnabledCipherSuites
 				{
-				[Dot42.DexImport("getEnabledCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEnabledCipherSuites(); }
-				[Dot42.DexImport("setEnabledCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-						set{ SetEnabledCipherSuites(value); }
+						[Dot42.DexImport("getEnabledCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEnabledCipherSuites", "([Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getSupportedProtocols
 				/// </java-name>
-				public string[] SupportedProtocols
+				public abstract string[] SupportedProtocols
 				{
-				[Dot42.DexImport("getSupportedProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSupportedProtocols(); }
+						[Dot42.DexImport("getSupportedProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEnabledProtocols
 				/// </java-name>
-				public string[] EnabledProtocols
+				public abstract string[] EnabledProtocols
 				{
-				[Dot42.DexImport("getEnabledProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEnabledProtocols(); }
-				[Dot42.DexImport("setEnabledProtocols", "([Ljava/lang/String;)V", AccessFlags = 1025)]
-						set{ SetEnabledProtocols(value); }
+						[Dot42.DexImport("getEnabledProtocols", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEnabledProtocols", "([Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getSession
 				/// </java-name>
-				public global::Javax.Net.Ssl.ISSLSession Session
+				public abstract global::Javax.Net.Ssl.ISSLSession Session
 				{
-				[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
-						get{ return GetSession(); }
+						[Dot42.DexImport("getSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getUseClientMode
 				/// </java-name>
-				public bool IsUseClientMode
+				public abstract bool IsUseClientMode
 				{
-				[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
-						get{ return GetUseClientMode(); }
-				[Dot42.DexImport("setUseClientMode", "(Z)V", AccessFlags = 1025)]
-						set{ SetUseClientMode(value); }
+						[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setUseClientMode", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getNeedClientAuth
 				/// </java-name>
-				public bool IsNeedClientAuth
+				public abstract bool IsNeedClientAuth
 				{
-				[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
-						get{ return GetNeedClientAuth(); }
-				[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1025)]
-						set{ SetNeedClientAuth(value); }
+						[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setNeedClientAuth", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getWantClientAuth
 				/// </java-name>
-				public bool IsWantClientAuth
+				public abstract bool IsWantClientAuth
 				{
-				[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
-						get{ return GetWantClientAuth(); }
-				[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1025)]
-						set{ SetWantClientAuth(value); }
+						[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setWantClientAuth", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getEnableSessionCreation
 				/// </java-name>
-				public bool IsEnableSessionCreation
+				public abstract bool IsEnableSessionCreation
 				{
-				[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
-						get{ return GetEnableSessionCreation(); }
-				[Dot42.DexImport("setEnableSessionCreation", "(Z)V", AccessFlags = 1025)]
-						set{ SetEnableSessionCreation(value); }
+						[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEnableSessionCreation", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getSSLParameters
 				/// </java-name>
-				public global::Javax.Net.Ssl.SSLParameters SSLParameters
+				public virtual global::Javax.Net.Ssl.SSLParameters SSLParameters
 				{
-				[Dot42.DexImport("getSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 1)]
-						get{ return GetSSLParameters(); }
-				[Dot42.DexImport("setSSLParameters", "(Ljavax/net/ssl/SSLParameters;)V", AccessFlags = 1)]
-						set{ SetSSLParameters(value); }
+						[Dot42.DexImport("getSSLParameters", "()Ljavax/net/ssl/SSLParameters;", AccessFlags = 1)]
+						get{ return default(global::Javax.Net.Ssl.SSLParameters); }
+						[Dot42.DexImport("setSSLParameters", "(Ljavax/net/ssl/SSLParameters;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -2712,27 +2021,6 @@ namespace Javax.Net.Ssl
 				}
 
 				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Ljavax/net/SocketFactory;", AccessFlags = 41)]
-				public static global::Javax.Net.SocketFactory GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.SocketFactory);
-				}
-
-				/// <java-name>
-				/// getDefaultCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getDefaultCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetDefaultCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSupportedCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string[] GetSupportedCipherSuites() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// createSocket
 				/// </java-name>
 				[Dot42.DexImport("createSocket", "(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;", AccessFlags = 1025)]
@@ -2743,26 +2031,26 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public static global::Javax.Net.SocketFactory Default
 				{
-				[Dot42.DexImport("getDefault", "()Ljavax/net/SocketFactory;", AccessFlags = 41)]
-						get{ return GetDefault(); }
+						[Dot42.DexImport("getDefault", "()Ljavax/net/SocketFactory;", AccessFlags = 41)]
+						get{ return default(global::Javax.Net.SocketFactory); }
 				}
 
 				/// <java-name>
 				/// getDefaultCipherSuites
 				/// </java-name>
-				public string[] DefaultCipherSuites
+				public abstract string[] DefaultCipherSuites
 				{
-				[Dot42.DexImport("getDefaultCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetDefaultCipherSuites(); }
+						[Dot42.DexImport("getDefaultCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSupportedCipherSuites
 				/// </java-name>
-				public string[] SupportedCipherSuites
+				public abstract string[] SupportedCipherSuites
 				{
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSupportedCipherSuites(); }
+						[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -2778,15 +2066,6 @@ namespace Javax.Net.Ssl
     ")V", AccessFlags = 4)]
 				protected internal TrustManagerFactory(global::Javax.Net.Ssl.TrustManagerFactorySpi trustManagerFactorySpi, global::Java.Security.Provider provider, string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getDefaultAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getDefaultAlgorithm", "()Ljava/lang/String;", AccessFlags = 25)]
-				public static string GetDefaultAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -2817,24 +2096,6 @@ namespace Javax.Net.Ssl
 				}
 
 				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
 				/// init
 				/// </java-name>
 				[Dot42.DexImport("init", "(Ljava/security/KeyStore;)V", AccessFlags = 17)]
@@ -2850,15 +2111,6 @@ namespace Javax.Net.Ssl
 				{
 				}
 
-				/// <java-name>
-				/// getTrustManagers
-				/// </java-name>
-				[Dot42.DexImport("getTrustManagers", "()[Ljavax/net/ssl/TrustManager;", AccessFlags = 17)]
-				public global::Javax.Net.Ssl.ITrustManager[] GetTrustManagers() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.ITrustManager[]);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal TrustManagerFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -2869,8 +2121,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public static string DefaultAlgorithm
 				{
-				[Dot42.DexImport("getDefaultAlgorithm", "()Ljava/lang/String;", AccessFlags = 25)]
-						get{ return GetDefaultAlgorithm(); }
+						[Dot42.DexImport("getDefaultAlgorithm", "()Ljava/lang/String;", AccessFlags = 25)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -2878,8 +2130,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -2887,8 +2139,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 				/// <java-name>
@@ -2896,8 +2148,8 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				public global::Javax.Net.Ssl.ITrustManager[] TrustManagers
 				{
-				[Dot42.DexImport("getTrustManagers", "()[Ljavax/net/ssl/TrustManager;", AccessFlags = 17)]
-						get{ return GetTrustManagers(); }
+						[Dot42.DexImport("getTrustManagers", "()[Ljavax/net/ssl/TrustManager;", AccessFlags = 17)]
+						get{ return default(global::Javax.Net.Ssl.ITrustManager[]); }
 				}
 
 		}

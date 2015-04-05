@@ -77,11 +77,11 @@ namespace System
             return values.OrderBy(p=>p).ToArray();
         }
 
-        private static bool IsEnumMember(JavaField field)
+        private static bool IsEnumMember(Field field)
         {
-            return Modifier.IsStatic(field.GetModifiers())
+            return Modifier.IsStatic(field.Modifiers)
                    && (field.Type == field.DeclaringClass)
-                   && (!field.IsSynthetic())
+                   && (!field.IsSynthetic)
                    && !field.Name.EndsWith("$");
         }
 
@@ -165,7 +165,7 @@ namespace System
             var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (Modifier.IsStatic(field.GetModifiers()) && (field.Type == field.DeclaringClass))
+                if (Modifier.IsStatic(field.Modifiers) && (field.Type == field.DeclaringClass))
                 {
                     if ((!ignoreCase && (field.Name == name)) 
                         || (ignoreCase && field.Name.EqualsIgnoreCase(name)))

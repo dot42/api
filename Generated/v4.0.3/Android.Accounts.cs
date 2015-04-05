@@ -14,15 +14,6 @@ namespace Android.Accounts
 				}
 
 				/// <java-name>
-				/// getIBinder
-				/// </java-name>
-				[Dot42.DexImport("getIBinder", "()Landroid/os/IBinder;", AccessFlags = 17)]
-				public global::Android.OS.IBinder GetIBinder() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.IBinder);
-				}
-
-				/// <java-name>
 				/// editProperties
 				/// </java-name>
 				[Dot42.DexImport("editProperties", "(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;)Landroid/os/Bu" +
@@ -90,8 +81,8 @@ namespace Android.Accounts
 				/// </java-name>
 				public global::Android.OS.IBinder IBinder
 				{
-				[Dot42.DexImport("getIBinder", "()Landroid/os/IBinder;", AccessFlags = 17)]
-						get{ return GetIBinder(); }
+						[Dot42.DexImport("getIBinder", "()Landroid/os/IBinder;", AccessFlags = 17)]
+						get{ return default(global::Android.OS.IBinder); }
 				}
 
 		}
@@ -467,24 +458,6 @@ namespace Android.Accounts
 				}
 
 				/// <java-name>
-				/// getAuthenticatorTypes
-				/// </java-name>
-				[Dot42.DexImport("getAuthenticatorTypes", "()[Landroid/accounts/AuthenticatorDescription;", AccessFlags = 1)]
-				public virtual global::Android.Accounts.AuthenticatorDescription[] GetAuthenticatorTypes() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Accounts.AuthenticatorDescription[]);
-				}
-
-				/// <java-name>
-				/// getAccounts
-				/// </java-name>
-				[Dot42.DexImport("getAccounts", "()[Landroid/accounts/Account;", AccessFlags = 1)]
-				public virtual global::Android.Accounts.Account[] GetAccounts() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Accounts.Account[]);
-				}
-
-				/// <java-name>
 				/// getAccountsByType
 				/// </java-name>
 				[Dot42.DexImport("getAccountsByType", "(Ljava/lang/String;)[Landroid/accounts/Account;", AccessFlags = 1)]
@@ -728,19 +701,19 @@ namespace Android.Accounts
 				/// <java-name>
 				/// getAuthenticatorTypes
 				/// </java-name>
-				public global::Android.Accounts.AuthenticatorDescription[] AuthenticatorTypes
+				public virtual global::Android.Accounts.AuthenticatorDescription[] AuthenticatorTypes
 				{
-				[Dot42.DexImport("getAuthenticatorTypes", "()[Landroid/accounts/AuthenticatorDescription;", AccessFlags = 1)]
-						get{ return GetAuthenticatorTypes(); }
+						[Dot42.DexImport("getAuthenticatorTypes", "()[Landroid/accounts/AuthenticatorDescription;", AccessFlags = 1)]
+						get{ return default(global::Android.Accounts.AuthenticatorDescription[]); }
 				}
 
 				/// <java-name>
 				/// getAccounts
 				/// </java-name>
-				public global::Android.Accounts.Account[] Accounts
+				public virtual global::Android.Accounts.Account[] Accounts
 				{
-				[Dot42.DexImport("getAccounts", "()[Landroid/accounts/Account;", AccessFlags = 1)]
-						get{ return GetAccounts(); }
+						[Dot42.DexImport("getAccounts", "()[Landroid/accounts/Account;", AccessFlags = 1)]
+						get{ return default(global::Android.Accounts.Account[]); }
 				}
 
 		}
@@ -949,28 +922,37 @@ namespace Android.Accounts
 				bool Cancel(bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isCancelled
-				/// </java-name>
-				[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 1025)]
-				bool IsCancelled() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isDone
-				/// </java-name>
-				[Dot42.DexImport("isDone", "()Z", AccessFlags = 1025)]
-				bool IsDone() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResult
-				/// </java-name>
-				[Dot42.DexImport("getResult", "()Ljava/lang/Object;", AccessFlags = 1025, Signature = "()TV;")]
-				V GetResult() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getResult
 				/// </java-name>
 				[Dot42.DexImport("getResult", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(JLjava/util/concurrent/TimeUnit;)TV;")]
 				V GetResult(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isCancelled
+				/// </java-name>
+				bool IsCancelled
+				{
+						[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isDone
+				/// </java-name>
+				bool IsDone
+				{
+						[Dot42.DexImport("isDone", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getResult
+				/// </java-name>
+				V Result
+				{
+						[Dot42.DexImport("getResult", "()Ljava/lang/Object;", AccessFlags = 1025, Signature = "()TV;")]
+						get;
+				}
 
 		}
 

@@ -53,33 +53,6 @@ namespace Java.Nio
 				}
 
 				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 1025)]
-				public abstract bool HasArray() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// hasRemaining
-				/// </java-name>
-				[Dot42.DexImport("hasRemaining", "()Z", AccessFlags = 17)]
-				public bool HasRemaining() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public abstract bool IsDirect() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isReadOnly
-				/// </java-name>
-				[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1025)]
-				public abstract bool IsReadOnly() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// limit
 				/// </java-name>
 				[Dot42.DexImport("limit", "()I", AccessFlags = 17)]
@@ -158,6 +131,42 @@ namespace Java.Nio
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
+				}
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				public abstract bool HasArray
+				{
+						[Dot42.DexImport("hasArray", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// hasRemaining
+				/// </java-name>
+				public bool HasRemaining
+				{
+						[Dot42.DexImport("hasRemaining", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				public abstract bool IsDirect
+				{
+						[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isReadOnly
+				/// </java-name>
+				public abstract bool IsReadOnly
+				{
+						[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -409,20 +418,8 @@ namespace Java.Nio
 				/// <java-name>
 				/// getChar
 				/// </java-name>
-				[Dot42.DexImport("getChar", "()C", AccessFlags = 1025)]
-				public abstract char GetChar() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getChar
-				/// </java-name>
 				[Dot42.DexImport("getChar", "(I)C", AccessFlags = 1025)]
 				public abstract char GetChar(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDouble
-				/// </java-name>
-				[Dot42.DexImport("getDouble", "()D", AccessFlags = 1025)]
-				public abstract double GetDouble() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getDouble
@@ -433,20 +430,8 @@ namespace Java.Nio
 				/// <java-name>
 				/// getFloat
 				/// </java-name>
-				[Dot42.DexImport("getFloat", "()F", AccessFlags = 1025)]
-				public abstract float GetFloat() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFloat
-				/// </java-name>
 				[Dot42.DexImport("getFloat", "(I)F", AccessFlags = 1025)]
 				public abstract float GetFloat(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getInt
-				/// </java-name>
-				[Dot42.DexImport("getInt", "()I", AccessFlags = 1025)]
-				public abstract int GetInt() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getInt
@@ -457,20 +442,8 @@ namespace Java.Nio
 				/// <java-name>
 				/// getLong
 				/// </java-name>
-				[Dot42.DexImport("getLong", "()J", AccessFlags = 1025)]
-				public abstract long GetLong() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLong
-				/// </java-name>
 				[Dot42.DexImport("getLong", "(I)J", AccessFlags = 1025)]
 				public abstract long GetLong(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getShort
-				/// </java-name>
-				[Dot42.DexImport("getShort", "()S", AccessFlags = 1025)]
-				public abstract short GetShort() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getShort
@@ -479,30 +452,12 @@ namespace Java.Nio
 				public abstract short GetShort(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -673,55 +628,73 @@ namespace Java.Nio
 				/// <java-name>
 				/// getChar
 				/// </java-name>
-				public char Char
+				public abstract char Char
 				{
-				[Dot42.DexImport("getChar", "()C", AccessFlags = 1025)]
-						get{ return GetChar(); }
+						[Dot42.DexImport("getChar", "()C", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getDouble
 				/// </java-name>
-				public double Double
+				public abstract double Double
 				{
-				[Dot42.DexImport("getDouble", "()D", AccessFlags = 1025)]
-						get{ return GetDouble(); }
+						[Dot42.DexImport("getDouble", "()D", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getFloat
 				/// </java-name>
-				public float Float
+				public abstract float Float
 				{
-				[Dot42.DexImport("getFloat", "()F", AccessFlags = 1025)]
-						get{ return GetFloat(); }
+						[Dot42.DexImport("getFloat", "()F", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getInt
 				/// </java-name>
-				public int Int
+				public abstract int Int
 				{
-				[Dot42.DexImport("getInt", "()I", AccessFlags = 1025)]
-						get{ return GetInt(); }
+						[Dot42.DexImport("getInt", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getLong
 				/// </java-name>
-				public long Long
+				public abstract long Long
 				{
-				[Dot42.DexImport("getLong", "()J", AccessFlags = 1025)]
-						get{ return GetLong(); }
+						[Dot42.DexImport("getLong", "()J", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getShort
 				/// </java-name>
-				public short Short
+				public abstract short Short
 				{
-				[Dot42.DexImport("getShort", "()S", AccessFlags = 1025)]
-						get{ return GetShort(); }
+						[Dot42.DexImport("getShort", "()S", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				public override bool HasArray
+				{
+						[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				public override bool IsDirect
+				{
+						[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -920,30 +893,12 @@ namespace Java.Nio
 				public abstract char Get(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1097,12 +1052,21 @@ namespace Java.Nio
 				}
 
 				/// <java-name>
-				/// length
+				/// hasArray
 				/// </java-name>
-				public int Length
+				public override bool HasArray
 				{
-				[Dot42.DexImport("length", "()I", AccessFlags = 17)]
-						get{ return GetLength(); }
+						[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				public override bool IsDirect
+				{
+						[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1231,30 +1195,12 @@ namespace Java.Nio
 				public abstract double Get(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1307,6 +1253,24 @@ namespace Java.Nio
 				/// </java-name>
 				[Dot42.DexImport("slice", "()Ljava/nio/DoubleBuffer;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.DoubleBuffer Slice() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				public override bool HasArray
+				{
+						[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				public override bool IsDirect
+				{
+						[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
 
 		}
 
@@ -1434,30 +1398,12 @@ namespace Java.Nio
 				public abstract float Get(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1510,6 +1456,24 @@ namespace Java.Nio
 				/// </java-name>
 				[Dot42.DexImport("slice", "()Ljava/nio/FloatBuffer;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.FloatBuffer Slice() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				public override bool HasArray
+				{
+						[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				public override bool IsDirect
+				{
+						[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
 
 		}
 
@@ -1637,30 +1601,12 @@ namespace Java.Nio
 				public abstract int Get(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1713,6 +1659,24 @@ namespace Java.Nio
 				/// </java-name>
 				[Dot42.DexImport("slice", "()Ljava/nio/IntBuffer;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.IntBuffer Slice() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				public override bool HasArray
+				{
+						[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				public override bool IsDirect
+				{
+						[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
 
 		}
 
@@ -1854,30 +1818,12 @@ namespace Java.Nio
 				public abstract long Get(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1931,6 +1877,24 @@ namespace Java.Nio
 				[Dot42.DexImport("slice", "()Ljava/nio/LongBuffer;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.LongBuffer Slice() /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				public override bool HasArray
+				{
+						[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				public override bool IsDirect
+				{
+						[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -1943,15 +1907,6 @@ namespace Java.Nio
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal MappedByteBuffer() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isLoaded
-				/// </java-name>
-				[Dot42.DexImport("isLoaded", "()Z", AccessFlags = 17)]
-				public bool IsLoaded() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1970,6 +1925,15 @@ namespace Java.Nio
 				public global::Java.Nio.MappedByteBuffer Force() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.MappedByteBuffer);
+				}
+
+				/// <java-name>
+				/// isLoaded
+				/// </java-name>
+				public bool IsLoaded
+				{
+						[Dot42.DexImport("isLoaded", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -2112,30 +2076,12 @@ namespace Java.Nio
 				public abstract short Get(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// hasArray
-				/// </java-name>
-				[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
-				public override bool HasArray() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isDirect
-				/// </java-name>
-				[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
-				public override bool IsDirect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2188,6 +2134,24 @@ namespace Java.Nio
 				/// </java-name>
 				[Dot42.DexImport("slice", "()Ljava/nio/ShortBuffer;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.ShortBuffer Slice() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasArray
+				/// </java-name>
+				public override bool HasArray
+				{
+						[Dot42.DexImport("hasArray", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDirect
+				/// </java-name>
+				public override bool IsDirect
+				{
+						[Dot42.DexImport("isDirect", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
 
 		}
 

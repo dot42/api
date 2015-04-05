@@ -651,55 +651,10 @@ namespace Android.Util
 						/// <java-name>
 						/// getProcessId
 						/// </java-name>
-						[Dot42.DexImport("getProcessId", "()I", AccessFlags = 1)]
-						public int GetProcessId() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getThreadId
-						/// </java-name>
-						[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
-						public int GetThreadId() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getTimeNanos
-						/// </java-name>
-						[Dot42.DexImport("getTimeNanos", "()J", AccessFlags = 1)]
-						public long GetTimeNanos() /* MethodBuilder.Create */ 
-						{
-								return default(long);
-						}
-
-						/// <java-name>
-						/// getTag
-						/// </java-name>
-						[Dot42.DexImport("getTag", "()I", AccessFlags = 1)]
-						public int GetTag() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getData
-						/// </java-name>
-						[Dot42.DexImport("getData", "()Ljava/lang/Object;", AccessFlags = 33)]
-						public object GetData() /* MethodBuilder.Create */ 
-						{
-								return default(object);
-						}
-
-						/// <java-name>
-						/// getProcessId
-						/// </java-name>
 						public int ProcessId
 						{
-						[Dot42.DexImport("getProcessId", "()I", AccessFlags = 1)]
-								get{ return GetProcessId(); }
+								[Dot42.DexImport("getProcessId", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -707,8 +662,8 @@ namespace Android.Util
 						/// </java-name>
 						public int ThreadId
 						{
-						[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
-								get{ return GetThreadId(); }
+								[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -716,8 +671,8 @@ namespace Android.Util
 						/// </java-name>
 						public long TimeNanos
 						{
-						[Dot42.DexImport("getTimeNanos", "()J", AccessFlags = 1)]
-								get{ return GetTimeNanos(); }
+								[Dot42.DexImport("getTimeNanos", "()J", AccessFlags = 1)]
+								get{ return default(long); }
 						}
 
 						/// <java-name>
@@ -725,8 +680,8 @@ namespace Android.Util
 						/// </java-name>
 						public int Tag
 						{
-						[Dot42.DexImport("getTag", "()I", AccessFlags = 1)]
-								get{ return GetTag(); }
+								[Dot42.DexImport("getTag", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -734,8 +689,8 @@ namespace Android.Util
 						/// </java-name>
 						public object Data
 						{
-						[Dot42.DexImport("getData", "()Ljava/lang/Object;", AccessFlags = 33)]
-								get{ return GetData(); }
+								[Dot42.DexImport("getData", "()Ljava/lang/Object;", AccessFlags = 33)]
+								get{ return default(object); }
 						}
 
 				}
@@ -870,12 +825,6 @@ namespace Android.Util
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getAttributeCount
-				/// </java-name>
-				[Dot42.DexImport("getAttributeCount", "()I", AccessFlags = 1025)]
-				int GetAttributeCount() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getAttributeName
 				/// </java-name>
 				[Dot42.DexImport("getAttributeName", "(I)Ljava/lang/String;", AccessFlags = 1025)]
@@ -892,12 +841,6 @@ namespace Android.Util
 				/// </java-name>
 				[Dot42.DexImport("getAttributeValue", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
 				string GetAttributeValue(string @string, string string1) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPositionDescription
-				/// </java-name>
-				[Dot42.DexImport("getPositionDescription", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPositionDescription() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getAttributeNameResource
@@ -978,28 +921,55 @@ namespace Android.Util
 				float GetAttributeFloatValue(int int32, float single) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getIdAttribute
-				/// </java-name>
-				[Dot42.DexImport("getIdAttribute", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetIdAttribute() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getClassAttribute
-				/// </java-name>
-				[Dot42.DexImport("getClassAttribute", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetClassAttribute() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getIdAttributeResourceValue
 				/// </java-name>
 				[Dot42.DexImport("getIdAttributeResourceValue", "(I)I", AccessFlags = 1025)]
 				int GetIdAttributeResourceValue(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// getAttributeCount
+				/// </java-name>
+				int AttributeCount
+				{
+						[Dot42.DexImport("getAttributeCount", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPositionDescription
+				/// </java-name>
+				string PositionDescription
+				{
+						[Dot42.DexImport("getPositionDescription", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getIdAttribute
+				/// </java-name>
+				string IdAttribute
+				{
+						[Dot42.DexImport("getIdAttribute", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getClassAttribute
+				/// </java-name>
+				string ClassAttribute
+				{
+						[Dot42.DexImport("getClassAttribute", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
 				/// getStyleAttribute
 				/// </java-name>
-				[Dot42.DexImport("getStyleAttribute", "()I", AccessFlags = 1025)]
-				int GetStyleAttribute() /* MethodBuilder.Create */ ;
+				int StyleAttribute
+				{
+						[Dot42.DexImport("getStyleAttribute", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1039,15 +1009,6 @@ namespace Android.Util
 				}
 
 				/// <java-name>
-				/// isLenient
-				/// </java-name>
-				[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
-				public bool IsLenient() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// beginArray
 				/// </java-name>
 				[Dot42.DexImport("beginArray", "()V", AccessFlags = 1)]
@@ -1077,15 +1038,6 @@ namespace Android.Util
 				[Dot42.DexImport("endObject", "()V", AccessFlags = 1)]
 				public void EndObject() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// hasNext
-				/// </java-name>
-				[Dot42.DexImport("hasNext", "()Z", AccessFlags = 1)]
-				public bool HasNext() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1187,6 +1139,24 @@ namespace Android.Util
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal JsonReader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// isLenient
+				/// </java-name>
+				public bool IsLenient
+				{
+						[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasNext
+				/// </java-name>
+				public bool HasNext
+				{
+						[Dot42.DexImport("hasNext", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1298,15 +1268,6 @@ namespace Android.Util
 				[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
 				public void SetLenient(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isLenient
-				/// </java-name>
-				[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
-				public bool IsLenient() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1427,6 +1388,15 @@ namespace Android.Util
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal JsonWriter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// isLenient
+				/// </java-name>
+				public bool IsLenient
+				{
+						[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1853,60 +1823,6 @@ namespace Android.Util
 				}
 
 				/// <java-name>
-				/// getYear
-				/// </java-name>
-				[Dot42.DexImport("getYear", "()I", AccessFlags = 1)]
-				public virtual int GetYear() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMonth
-				/// </java-name>
-				[Dot42.DexImport("getMonth", "()I", AccessFlags = 1)]
-				public virtual int GetMonth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getWeekStartDay
-				/// </java-name>
-				[Dot42.DexImport("getWeekStartDay", "()I", AccessFlags = 1)]
-				public virtual int GetWeekStartDay() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFirstDayOfMonth
-				/// </java-name>
-				[Dot42.DexImport("getFirstDayOfMonth", "()I", AccessFlags = 1)]
-				public virtual int GetFirstDayOfMonth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNumberOfDaysInMonth
-				/// </java-name>
-				[Dot42.DexImport("getNumberOfDaysInMonth", "()I", AccessFlags = 1)]
-				public virtual int GetNumberOfDaysInMonth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOffset
-				/// </java-name>
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
-				public virtual int GetOffset() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getDigitsForRow
 				/// </java-name>
 				[Dot42.DexImport("getDigitsForRow", "(I)[I", AccessFlags = 1)]
@@ -1975,55 +1891,55 @@ namespace Android.Util
 				/// <java-name>
 				/// getYear
 				/// </java-name>
-				public int Year
+				public virtual int Year
 				{
-				[Dot42.DexImport("getYear", "()I", AccessFlags = 1)]
-						get{ return GetYear(); }
+						[Dot42.DexImport("getYear", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMonth
 				/// </java-name>
-				public int Month
+				public virtual int Month
 				{
-				[Dot42.DexImport("getMonth", "()I", AccessFlags = 1)]
-						get{ return GetMonth(); }
+						[Dot42.DexImport("getMonth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getWeekStartDay
 				/// </java-name>
-				public int WeekStartDay
+				public virtual int WeekStartDay
 				{
-				[Dot42.DexImport("getWeekStartDay", "()I", AccessFlags = 1)]
-						get{ return GetWeekStartDay(); }
+						[Dot42.DexImport("getWeekStartDay", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getFirstDayOfMonth
 				/// </java-name>
-				public int FirstDayOfMonth
+				public virtual int FirstDayOfMonth
 				{
-				[Dot42.DexImport("getFirstDayOfMonth", "()I", AccessFlags = 1)]
-						get{ return GetFirstDayOfMonth(); }
+						[Dot42.DexImport("getFirstDayOfMonth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getNumberOfDaysInMonth
 				/// </java-name>
-				public int NumberOfDaysInMonth
+				public virtual int NumberOfDaysInMonth
 				{
-				[Dot42.DexImport("getNumberOfDaysInMonth", "()I", AccessFlags = 1)]
-						get{ return GetNumberOfDaysInMonth(); }
+						[Dot42.DexImport("getNumberOfDaysInMonth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOffset
 				/// </java-name>
-				public int Offset
+				public virtual int Offset
 				{
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
-						get{ return GetOffset(); }
+						[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2257,15 +2173,6 @@ namespace Android.Util
 				}
 
 				/// <java-name>
-				/// isReadOnly
-				/// </java-name>
-				[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1)]
-				public virtual bool IsReadOnly() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// set
 				/// </java-name>
 				[Dot42.DexImport("set", "(Ljava/lang/Object;Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TT;TV;)V")]
@@ -2279,45 +2186,36 @@ namespace Android.Util
 				[Dot42.DexImport("get", "(Ljava/lang/Object;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(TT;)TV;")]
 				public abstract V Get(T t) /* MethodBuilder.Create */ ;
 
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<TV;>;")]
-				public virtual global::System.Type GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal Property() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
+				/// isReadOnly
+				/// </java-name>
+				public virtual bool IsReadOnly
+				{
+						[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				public global::System.Type Type
+				public virtual global::System.Type Type
 				{
-				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<TV;>;")]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<TV;>;")]
+						get{ return default(global::System.Type); }
 				}
 
 		}
@@ -2857,19 +2755,10 @@ namespace Android.Util
 				/// <java-name>
 				/// getTimeZoneDatabaseVersion
 				/// </java-name>
-				[Dot42.DexImport("getTimeZoneDatabaseVersion", "()Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetTimeZoneDatabaseVersion() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getTimeZoneDatabaseVersion
-				/// </java-name>
 				public static string TimeZoneDatabaseVersion
 				{
-				[Dot42.DexImport("getTimeZoneDatabaseVersion", "()Ljava/lang/String;", AccessFlags = 9)]
-						get{ return GetTimeZoneDatabaseVersion(); }
+						[Dot42.DexImport("getTimeZoneDatabaseVersion", "()Ljava/lang/String;", AccessFlags = 9)]
+						get{ return default(string); }
 				}
 
 		}
@@ -3163,15 +3052,6 @@ namespace Android.Util
 				}
 
 				/// <java-name>
-				/// getFloat
-				/// </java-name>
-				[Dot42.DexImport("getFloat", "()F", AccessFlags = 17)]
-				public float GetFloat() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
 				/// complexToFloat
 				/// </java-name>
 				[Dot42.DexImport("complexToFloat", "(I)F", AccessFlags = 9)]
@@ -3292,8 +3172,8 @@ namespace Android.Util
 				/// </java-name>
 				public float Float
 				{
-				[Dot42.DexImport("getFloat", "()F", AccessFlags = 17)]
-						get{ return GetFloat(); }
+						[Dot42.DexImport("getFloat", "()F", AccessFlags = 17)]
+						get{ return default(float); }
 				}
 
 		}

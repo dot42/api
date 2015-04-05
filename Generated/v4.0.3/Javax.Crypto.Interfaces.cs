@@ -11,8 +11,11 @@ namespace Javax.Crypto.Interfaces
 				/// <java-name>
 				/// getParams
 				/// </java-name>
-				[Dot42.DexImport("getParams", "()Ljavax/crypto/spec/DHParameterSpec;", AccessFlags = 1025)]
-				global::Javax.Crypto.Spec.DHParameterSpec GetParams() /* MethodBuilder.Create */ ;
+				global::Javax.Crypto.Spec.DHParameterSpec Params
+				{
+						[Dot42.DexImport("getParams", "()Ljavax/crypto/spec/DHParameterSpec;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -26,8 +29,11 @@ namespace Javax.Crypto.Interfaces
 				/// <java-name>
 				/// getX
 				/// </java-name>
-				[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetX() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger X
+				{
+						[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -55,8 +61,11 @@ namespace Javax.Crypto.Interfaces
 				/// <java-name>
 				/// getY
 				/// </java-name>
-				[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetY() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger Y
+				{
+						[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -84,20 +93,29 @@ namespace Javax.Crypto.Interfaces
 				/// <java-name>
 				/// getIterationCount
 				/// </java-name>
-				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 1025)]
-				int GetIterationCount() /* MethodBuilder.Create */ ;
+				int IterationCount
+				{
+						[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSalt
 				/// </java-name>
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				byte[] GetSalt() /* MethodBuilder.Create */ ;
+				byte[] Salt
+				{
+						[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPassword
 				/// </java-name>
-				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 1025)]
-				char[] GetPassword() /* MethodBuilder.Create */ ;
+				char[] Password
+				{
+						[Dot42.DexImport("getPassword", "()[C", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

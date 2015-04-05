@@ -278,15 +278,6 @@ namespace Org.Apache.Http.Params
 						return default(global::Org.Apache.Http.Params.IHttpParams);
 				}
 
-				/// <java-name>
-				/// getDefaults
-				/// </java-name>
-				[Dot42.DexImport("getDefaults", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
-				public global::Org.Apache.Http.Params.IHttpParams GetDefaults() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Params.IHttpParams);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DefaultedHttpParams() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -297,8 +288,8 @@ namespace Org.Apache.Http.Params
 				/// </java-name>
 				public global::Org.Apache.Http.Params.IHttpParams Defaults
 				{
-				[Dot42.DexImport("getDefaults", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
-						get{ return GetDefaults(); }
+						[Dot42.DexImport("getDefaults", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Params.IHttpParams); }
 				}
 
 		}

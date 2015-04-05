@@ -113,12 +113,6 @@ namespace Org.Xml.Sax.Ext
 				{
 				}
 
-				[Dot42.DexImport("org/xml/sax/Attributes", "getLength", "()I", AccessFlags = 1025)]
-				public override int GetLength() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
-				}
-
 				[Dot42.DexImport("org/xml/sax/Attributes", "getURI", "(I)Ljava/lang/String;", AccessFlags = 1025)]
 				public override string GetURI(int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -185,10 +179,10 @@ namespace Org.Xml.Sax.Ext
 						return default(string);
 				}
 
-				public int Length
+				public override int Length
 				{
-				[Dot42.DexImport("org/xml/sax/Attributes", "getLength", "()I", AccessFlags = 1025)]
-						get{ return GetLength(); }
+						[Dot42.DexImport("org/xml/sax/Attributes", "getLength", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
 				}
 
 		}
@@ -486,14 +480,20 @@ namespace Org.Xml.Sax.Ext
 				/// <java-name>
 				/// getXMLVersion
 				/// </java-name>
-				[Dot42.DexImport("getXMLVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetXMLVersion() /* MethodBuilder.Create */ ;
+				string XMLVersion
+				{
+						[Dot42.DexImport("getXMLVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getEncoding
 				/// </java-name>
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetEncoding() /* MethodBuilder.Create */ ;
+				string Encoding
+				{
+						[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -515,24 +515,6 @@ namespace Org.Xml.Sax.Ext
 				}
 
 				/// <java-name>
-				/// getXMLVersion
-				/// </java-name>
-				[Dot42.DexImport("getXMLVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetXMLVersion() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getEncoding
-				/// </java-name>
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEncoding() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// setXMLVersion
 				/// </java-name>
 				[Dot42.DexImport("setXMLVersion", "(Ljava/lang/String;)V", AccessFlags = 1)]
@@ -548,74 +530,46 @@ namespace Org.Xml.Sax.Ext
 				{
 				}
 
-				[Dot42.DexImport("org/xml/sax/Locator", "getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public override string GetPublicId() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(string);
-				}
-
-				[Dot42.DexImport("org/xml/sax/Locator", "getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public override string GetSystemId() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(string);
-				}
-
-				[Dot42.DexImport("org/xml/sax/Locator", "getLineNumber", "()I", AccessFlags = 1025)]
-				public override int GetLineNumber() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
-				}
-
-				[Dot42.DexImport("org/xml/sax/Locator", "getColumnNumber", "()I", AccessFlags = 1025)]
-				public override int GetColumnNumber() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
-				}
-
 				/// <java-name>
 				/// getXMLVersion
 				/// </java-name>
-				public string XMLVersion
+				public virtual string XMLVersion
 				{
-				[Dot42.DexImport("getXMLVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetXMLVersion(); }
-				[Dot42.DexImport("setXMLVersion", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetXMLVersion(value); }
+						[Dot42.DexImport("getXMLVersion", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getEncoding
 				/// </java-name>
-				public string Encoding
+				public virtual string Encoding
 				{
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEncoding(); }
-				[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetEncoding(value); }
+						[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
-				public string PublicId
+				public override string PublicId
 				{
-				[Dot42.DexImport("org/xml/sax/Locator", "getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetPublicId(); }
+						[Dot42.DexImport("org/xml/sax/Locator", "getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get{ return default(string); }
 				}
 
-				public string SystemId
+				public override string SystemId
 				{
-				[Dot42.DexImport("org/xml/sax/Locator", "getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSystemId(); }
+						[Dot42.DexImport("org/xml/sax/Locator", "getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get{ return default(string); }
 				}
 
-				public int LineNumber
+				public override int LineNumber
 				{
-				[Dot42.DexImport("org/xml/sax/Locator", "getLineNumber", "()I", AccessFlags = 1025)]
-						get{ return GetLineNumber(); }
+						[Dot42.DexImport("org/xml/sax/Locator", "getLineNumber", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
 				}
 
-				public int ColumnNumber
+				public override int ColumnNumber
 				{
-				[Dot42.DexImport("org/xml/sax/Locator", "getColumnNumber", "()I", AccessFlags = 1025)]
-						get{ return GetColumnNumber(); }
+						[Dot42.DexImport("org/xml/sax/Locator", "getColumnNumber", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
 				}
 
 		}

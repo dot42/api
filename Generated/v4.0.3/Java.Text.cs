@@ -14,15 +14,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetValue() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -39,10 +30,10 @@ namespace Java.Text
 				/// <java-name>
 				/// getValue
 				/// </java-name>
-				public object Value
+				public virtual object Value
 				{
-				[Dot42.DexImport("getValue", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetValue(); }
+						[Dot42.DexImport("getValue", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object); }
 				}
 
 		}
@@ -108,15 +99,6 @@ namespace Java.Text
 				/// <java-name>
 				/// getIterator
 				/// </java-name>
-				[Dot42.DexImport("getIterator", "()Ljava/text/AttributedCharacterIterator;", AccessFlags = 1)]
-				public virtual global::Java.Text.IAttributedCharacterIterator GetIterator() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.IAttributedCharacterIterator);
-				}
-
-				/// <java-name>
-				/// getIterator
-				/// </java-name>
 				[Dot42.DexImport("getIterator", "([Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/text/AttributedCharacte" +
     "rIterator;", AccessFlags = 1)]
 				public virtual global::Java.Text.IAttributedCharacterIterator GetIterator(global::Java.Text.IAttributedCharacterIterator_Attribute[] iAttributedCharacterIterator_Attribute) /* MethodBuilder.Create */ 
@@ -142,10 +124,10 @@ namespace Java.Text
 				/// <java-name>
 				/// getIterator
 				/// </java-name>
-				public global::Java.Text.IAttributedCharacterIterator Iterator
+				public virtual global::Java.Text.IAttributedCharacterIterator Iterator
 				{
-				[Dot42.DexImport("getIterator", "()Ljava/text/AttributedCharacterIterator;", AccessFlags = 1)]
-						get{ return GetIterator(); }
+						[Dot42.DexImport("getIterator", "()Ljava/text/AttributedCharacterIterator;", AccessFlags = 1)]
+						get{ return default(global::Java.Text.IAttributedCharacterIterator); }
 				}
 
 		}
@@ -216,37 +198,10 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getBaseLevel
-				/// </java-name>
-				[Dot42.DexImport("getBaseLevel", "()I", AccessFlags = 1)]
-				public int GetBaseLevel() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1)]
-				public int GetLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getLevelAt
 				/// </java-name>
 				[Dot42.DexImport("getLevelAt", "(I)I", AccessFlags = 1)]
 				public int GetLevelAt(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRunCount
-				/// </java-name>
-				[Dot42.DexImport("getRunCount", "()I", AccessFlags = 1)]
-				public int GetRunCount() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -276,33 +231,6 @@ namespace Java.Text
 				public int GetRunStart(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isLeftToRight
-				/// </java-name>
-				[Dot42.DexImport("isLeftToRight", "()Z", AccessFlags = 1)]
-				public bool IsLeftToRight() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMixed
-				/// </java-name>
-				[Dot42.DexImport("isMixed", "()Z", AccessFlags = 1)]
-				public bool IsMixed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isRightToLeft
-				/// </java-name>
-				[Dot42.DexImport("isRightToLeft", "()Z", AccessFlags = 1)]
-				public bool IsRightToLeft() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -349,8 +277,8 @@ namespace Java.Text
 				/// </java-name>
 				public int BaseLevel
 				{
-				[Dot42.DexImport("getBaseLevel", "()I", AccessFlags = 1)]
-						get{ return GetBaseLevel(); }
+						[Dot42.DexImport("getBaseLevel", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -358,8 +286,8 @@ namespace Java.Text
 				/// </java-name>
 				public int Length
 				{
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1)]
-						get{ return GetLength(); }
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -367,8 +295,35 @@ namespace Java.Text
 				/// </java-name>
 				public int RunCount
 				{
-				[Dot42.DexImport("getRunCount", "()I", AccessFlags = 1)]
-						get{ return GetRunCount(); }
+						[Dot42.DexImport("getRunCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isLeftToRight
+				/// </java-name>
+				public bool IsLeftToRight
+				{
+						[Dot42.DexImport("isLeftToRight", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMixed
+				/// </java-name>
+				public bool IsMixed
+				{
+						[Dot42.DexImport("isMixed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isRightToLeft
+				/// </java-name>
+				public bool IsRightToLeft
+				{
+						[Dot42.DexImport("isRightToLeft", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -391,37 +346,10 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getAvailableLocales
-				/// </java-name>
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-				public static global::Java.Util.Locale[] GetAvailableLocales() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Locale[]);
-				}
-
-				/// <java-name>
-				/// getCharacterInstance
-				/// </java-name>
-				[Dot42.DexImport("getCharacterInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
-				public static global::Java.Text.BreakIterator GetCharacterInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.BreakIterator);
-				}
-
-				/// <java-name>
 				/// getCharacterInstance
 				/// </java-name>
 				[Dot42.DexImport("getCharacterInstance", "(Ljava/util/Locale;)Ljava/text/BreakIterator;", AccessFlags = 9)]
 				public static global::Java.Text.BreakIterator GetCharacterInstance(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.BreakIterator);
-				}
-
-				/// <java-name>
-				/// getLineInstance
-				/// </java-name>
-				[Dot42.DexImport("getLineInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
-				public static global::Java.Text.BreakIterator GetLineInstance() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.BreakIterator);
 				}
@@ -438,26 +366,8 @@ namespace Java.Text
 				/// <java-name>
 				/// getSentenceInstance
 				/// </java-name>
-				[Dot42.DexImport("getSentenceInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
-				public static global::Java.Text.BreakIterator GetSentenceInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.BreakIterator);
-				}
-
-				/// <java-name>
-				/// getSentenceInstance
-				/// </java-name>
 				[Dot42.DexImport("getSentenceInstance", "(Ljava/util/Locale;)Ljava/text/BreakIterator;", AccessFlags = 9)]
 				public static global::Java.Text.BreakIterator GetSentenceInstance(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.BreakIterator);
-				}
-
-				/// <java-name>
-				/// getWordInstance
-				/// </java-name>
-				[Dot42.DexImport("getWordInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
-				public static global::Java.Text.BreakIterator GetWordInstance() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.BreakIterator);
 				}
@@ -516,12 +426,6 @@ namespace Java.Text
 				public abstract int Following(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/text/CharacterIterator;", AccessFlags = 1025)]
-				public abstract global::Java.Text.ICharacterIterator GetText() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// last
 				/// </java-name>
 				[Dot42.DexImport("last", "()I", AccessFlags = 1025)]
@@ -546,12 +450,6 @@ namespace Java.Text
 				public abstract int Previous() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setText
-				/// </java-name>
-				[Dot42.DexImport("setText", "(Ljava/text/CharacterIterator;)V", AccessFlags = 1025)]
-				public abstract void SetText(global::Java.Text.ICharacterIterator characterIterator) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
@@ -565,8 +463,8 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Util.Locale[] AvailableLocales
 				{
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-						get{ return GetAvailableLocales(); }
+						[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
+						get{ return default(global::Java.Util.Locale[]); }
 				}
 
 				/// <java-name>
@@ -574,8 +472,8 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.BreakIterator CharacterInstance
 				{
-				[Dot42.DexImport("getCharacterInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
-						get{ return GetCharacterInstance(); }
+						[Dot42.DexImport("getCharacterInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
+						get{ return default(global::Java.Text.BreakIterator); }
 				}
 
 				/// <java-name>
@@ -583,8 +481,8 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.BreakIterator LineInstance
 				{
-				[Dot42.DexImport("getLineInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
-						get{ return GetLineInstance(); }
+						[Dot42.DexImport("getLineInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
+						get{ return default(global::Java.Text.BreakIterator); }
 				}
 
 				/// <java-name>
@@ -592,8 +490,8 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.BreakIterator SentenceInstance
 				{
-				[Dot42.DexImport("getSentenceInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
-						get{ return GetSentenceInstance(); }
+						[Dot42.DexImport("getSentenceInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
+						get{ return default(global::Java.Text.BreakIterator); }
 				}
 
 				/// <java-name>
@@ -601,19 +499,19 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.BreakIterator WordInstance
 				{
-				[Dot42.DexImport("getWordInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
-						get{ return GetWordInstance(); }
+						[Dot42.DexImport("getWordInstance", "()Ljava/text/BreakIterator;", AccessFlags = 9)]
+						get{ return default(global::Java.Text.BreakIterator); }
 				}
 
 				/// <java-name>
 				/// getText
 				/// </java-name>
-				public global::Java.Text.ICharacterIterator Text
+				public abstract global::Java.Text.ICharacterIterator Text
 				{
-				[Dot42.DexImport("getText", "()Ljava/text/CharacterIterator;", AccessFlags = 1025)]
-						get{ return GetText(); }
-				[Dot42.DexImport("setText", "(Ljava/text/CharacterIterator;)V", AccessFlags = 1025)]
-						set{ SetText(value); }
+						[Dot42.DexImport("getText", "()Ljava/text/CharacterIterator;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setText", "(Ljava/text/CharacterIterator;)V", AccessFlags = 1025)]
+						set;
 				}
 
 		}
@@ -677,24 +575,6 @@ namespace Java.Text
 				public override global::Java.Lang.StringBuffer Format(long int64, global::Java.Lang.StringBuffer stringBuffer, global::Java.Text.FieldPosition fieldPosition) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
-				/// getFormats
-				/// </java-name>
-				[Dot42.DexImport("getFormats", "()[Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object[] GetFormats() /* MethodBuilder.Create */ 
-				{
-						return default(object[]);
-				}
-
-				/// <java-name>
-				/// getLimits
-				/// </java-name>
-				[Dot42.DexImport("getLimits", "()[D", AccessFlags = 1)]
-				public virtual double[] GetLimits() /* MethodBuilder.Create */ 
-				{
-						return default(double[]);
 				}
 
 				/// <java-name>
@@ -767,19 +647,19 @@ namespace Java.Text
 				/// <java-name>
 				/// getFormats
 				/// </java-name>
-				public object[] Formats
+				public virtual object[] Formats
 				{
-				[Dot42.DexImport("getFormats", "()[Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetFormats(); }
+						[Dot42.DexImport("getFormats", "()[Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object[]); }
 				}
 
 				/// <java-name>
 				/// getLimits
 				/// </java-name>
-				public double[] Limits
+				public virtual double[] Limits
 				{
-				[Dot42.DexImport("getLimits", "()[D", AccessFlags = 1)]
-						get{ return GetLimits(); }
+						[Dot42.DexImport("getLimits", "()[D", AccessFlags = 1)]
+						get{ return default(double[]); }
 				}
 
 		}
@@ -806,15 +686,6 @@ namespace Java.Text
 				/// </java-name>
 				[Dot42.DexImport("getMaxExpansion", "(I)I", AccessFlags = 1)]
 				public int GetMaxExpansion(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOffset
-				/// </java-name>
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
-				public int GetOffset() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -864,14 +735,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setOffset
-				/// </java-name>
-				[Dot42.DexImport("setOffset", "(I)V", AccessFlags = 1)]
-				public void SetOffset(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setText
 				/// </java-name>
 				[Dot42.DexImport("setText", "(Ljava/text/CharacterIterator;)V", AccessFlags = 1)]
@@ -901,10 +764,10 @@ namespace Java.Text
 				/// </java-name>
 				public int Offset
 				{
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
-						get{ return GetOffset(); }
-				[Dot42.DexImport("setOffset", "(I)V", AccessFlags = 1)]
-						set{ SetOffset(value); }
+						[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setOffset", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -928,15 +791,6 @@ namespace Java.Text
 				public virtual int CompareTo(global::Java.Text.CollationKey collationKey) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// getSourceString
-				/// </java-name>
-				[Dot42.DexImport("getSourceString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSourceString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -968,10 +822,10 @@ namespace Java.Text
 				/// <java-name>
 				/// getSourceString
 				/// </java-name>
-				public string SourceString
+				public virtual string SourceString
 				{
-				[Dot42.DexImport("getSourceString", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSourceString(); }
+						[Dot42.DexImport("getSourceString", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1067,37 +921,10 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getAvailableLocales
-				/// </java-name>
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-				public static global::Java.Util.Locale[] GetAvailableLocales() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Locale[]);
-				}
-
-				/// <java-name>
 				/// getCollationKey
 				/// </java-name>
 				[Dot42.DexImport("getCollationKey", "(Ljava/lang/String;)Ljava/text/CollationKey;", AccessFlags = 1025)]
 				public abstract global::Java.Text.CollationKey GetCollationKey(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDecomposition
-				/// </java-name>
-				[Dot42.DexImport("getDecomposition", "()I", AccessFlags = 1)]
-				public virtual int GetDecomposition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Ljava/text/Collator;", AccessFlags = 9)]
-				public static global::Java.Text.Collator GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.Collator);
-				}
 
 				/// <java-name>
 				/// getInstance
@@ -1106,15 +933,6 @@ namespace Java.Text
 				public static global::Java.Text.Collator GetInstance(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.Collator);
-				}
-
-				/// <java-name>
-				/// getStrength
-				/// </java-name>
-				[Dot42.DexImport("getStrength", "()I", AccessFlags = 1)]
-				public virtual int GetStrength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1127,39 +945,23 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setDecomposition
-				/// </java-name>
-				[Dot42.DexImport("setDecomposition", "(I)V", AccessFlags = 1)]
-				public virtual void SetDecomposition(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setStrength
-				/// </java-name>
-				[Dot42.DexImport("setStrength", "(I)V", AccessFlags = 1)]
-				public virtual void SetStrength(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getAvailableLocales
 				/// </java-name>
 				public static global::Java.Util.Locale[] AvailableLocales
 				{
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-						get{ return GetAvailableLocales(); }
+						[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
+						get{ return default(global::Java.Util.Locale[]); }
 				}
 
 				/// <java-name>
 				/// getDecomposition
 				/// </java-name>
-				public int Decomposition
+				public virtual int Decomposition
 				{
-				[Dot42.DexImport("getDecomposition", "()I", AccessFlags = 1)]
-						get{ return GetDecomposition(); }
-				[Dot42.DexImport("setDecomposition", "(I)V", AccessFlags = 1)]
-						set{ SetDecomposition(value); }
+						[Dot42.DexImport("getDecomposition", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setDecomposition", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1167,19 +969,19 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.Collator Instance
 				{
-				[Dot42.DexImport("getInstance", "()Ljava/text/Collator;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Ljava/text/Collator;", AccessFlags = 9)]
+						get{ return default(global::Java.Text.Collator); }
 				}
 
 				/// <java-name>
 				/// getStrength
 				/// </java-name>
-				public int Strength
+				public virtual int Strength
 				{
-				[Dot42.DexImport("getStrength", "()I", AccessFlags = 1)]
-						get{ return GetStrength(); }
-				[Dot42.DexImport("setStrength", "(I)V", AccessFlags = 1)]
-						set{ SetStrength(value); }
+						[Dot42.DexImport("getStrength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setStrength", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -1195,12 +997,12 @@ namespace Java.Text
 				/// calendar
 				/// </java-name>
 				[Dot42.DexImport("calendar", "Ljava/util/Calendar;", AccessFlags = 4)]
-				protected internal global::Java.Util.Calendar Calendar;
+				protected internal global::Java.Util.Calendar @calendar;
 				/// <java-name>
 				/// numberFormat
 				/// </java-name>
 				[Dot42.DexImport("numberFormat", "Ljava/text/NumberFormat;", AccessFlags = 4)]
-				protected internal global::Java.Text.NumberFormat NumberFormat;
+				protected internal global::Java.Text.NumberFormat @numberformat;
 				/// <java-name>
 				/// DEFAULT
 				/// </java-name>
@@ -1366,33 +1168,6 @@ namespace Java.Text
 				public abstract global::Java.Lang.StringBuffer Format(global::Java.Util.Date date, global::Java.Lang.StringBuffer stringBuffer, global::Java.Text.FieldPosition fieldPosition) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getAvailableLocales
-				/// </java-name>
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-				public static global::Java.Util.Locale[] GetAvailableLocales() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Locale[]);
-				}
-
-				/// <java-name>
-				/// getCalendar
-				/// </java-name>
-				[Dot42.DexImport("getCalendar", "()Ljava/util/Calendar;", AccessFlags = 1)]
-				public virtual global::Java.Util.Calendar GetCalendar() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Calendar);
-				}
-
-				/// <java-name>
-				/// getDateInstance
-				/// </java-name>
-				[Dot42.DexImport("getDateInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
-				public static global::Java.Text.DateFormat GetDateInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormat);
-				}
-
-				/// <java-name>
 				/// getDateInstance
 				/// </java-name>
 				[Dot42.DexImport("getDateInstance", "(I)Ljava/text/DateFormat;", AccessFlags = 25)]
@@ -1406,15 +1181,6 @@ namespace Java.Text
 				/// </java-name>
 				[Dot42.DexImport("getDateInstance", "(ILjava/util/Locale;)Ljava/text/DateFormat;", AccessFlags = 25)]
 				public static global::Java.Text.DateFormat GetDateInstance(int int32, global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormat);
-				}
-
-				/// <java-name>
-				/// getDateTimeInstance
-				/// </java-name>
-				[Dot42.DexImport("getDateTimeInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
-				public static global::Java.Text.DateFormat GetDateTimeInstance() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.DateFormat);
 				}
@@ -1438,33 +1204,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
-				public static global::Java.Text.DateFormat GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormat);
-				}
-
-				/// <java-name>
-				/// getNumberFormat
-				/// </java-name>
-				[Dot42.DexImport("getNumberFormat", "()Ljava/text/NumberFormat;", AccessFlags = 1)]
-				public virtual global::Java.Text.NumberFormat GetNumberFormat() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.NumberFormat);
-				}
-
-				/// <java-name>
-				/// getTimeInstance
-				/// </java-name>
-				[Dot42.DexImport("getTimeInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
-				public static global::Java.Text.DateFormat GetTimeInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormat);
-				}
-
-				/// <java-name>
 				/// getTimeInstance
 				/// </java-name>
 				[Dot42.DexImport("getTimeInstance", "(I)Ljava/text/DateFormat;", AccessFlags = 25)]
@@ -1483,30 +1222,12 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getTimeZone
-				/// </java-name>
-				[Dot42.DexImport("getTimeZone", "()Ljava/util/TimeZone;", AccessFlags = 1)]
-				public virtual global::Java.Util.TimeZone GetTimeZone() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.TimeZone);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isLenient
-				/// </java-name>
-				[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
-				public virtual bool IsLenient() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1534,14 +1255,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setCalendar
-				/// </java-name>
-				[Dot42.DexImport("setCalendar", "(Ljava/util/Calendar;)V", AccessFlags = 1)]
-				public virtual void SetCalendar(global::Java.Util.Calendar calendar) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setLenient
 				/// </java-name>
 				[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
@@ -1550,28 +1263,23 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setNumberFormat
-				/// </java-name>
-				[Dot42.DexImport("setNumberFormat", "(Ljava/text/NumberFormat;)V", AccessFlags = 1)]
-				public virtual void SetNumberFormat(global::Java.Text.NumberFormat numberFormat) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTimeZone
-				/// </java-name>
-				[Dot42.DexImport("setTimeZone", "(Ljava/util/TimeZone;)V", AccessFlags = 1)]
-				public virtual void SetTimeZone(global::Java.Util.TimeZone timeZone) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getAvailableLocales
 				/// </java-name>
 				public static global::Java.Util.Locale[] AvailableLocales
 				{
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-						get{ return GetAvailableLocales(); }
+						[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
+						get{ return default(global::Java.Util.Locale[]); }
+				}
+
+				/// <java-name>
+				/// getCalendar
+				/// </java-name>
+				public virtual global::Java.Util.Calendar Calendar
+				{
+						[Dot42.DexImport("getCalendar", "()Ljava/util/Calendar;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Calendar); }
+						[Dot42.DexImport("setCalendar", "(Ljava/util/Calendar;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1579,8 +1287,8 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.DateFormat DateInstance
 				{
-				[Dot42.DexImport("getDateInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
-						get{ return GetDateInstance(); }
+						[Dot42.DexImport("getDateInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.DateFormat); }
 				}
 
 				/// <java-name>
@@ -1588,8 +1296,8 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.DateFormat DateTimeInstance
 				{
-				[Dot42.DexImport("getDateTimeInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
-						get{ return GetDateTimeInstance(); }
+						[Dot42.DexImport("getDateTimeInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.DateFormat); }
 				}
 
 				/// <java-name>
@@ -1597,8 +1305,19 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.DateFormat Instance
 				{
-				[Dot42.DexImport("getInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.DateFormat); }
+				}
+
+				/// <java-name>
+				/// getNumberFormat
+				/// </java-name>
+				public virtual global::Java.Text.NumberFormat NumberFormat
+				{
+						[Dot42.DexImport("getNumberFormat", "()Ljava/text/NumberFormat;", AccessFlags = 1)]
+						get{ return default(global::Java.Text.NumberFormat); }
+						[Dot42.DexImport("setNumberFormat", "(Ljava/text/NumberFormat;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1606,19 +1325,28 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.DateFormat TimeInstance
 				{
-				[Dot42.DexImport("getTimeInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
-						get{ return GetTimeInstance(); }
+						[Dot42.DexImport("getTimeInstance", "()Ljava/text/DateFormat;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.DateFormat); }
 				}
 
 				/// <java-name>
 				/// getTimeZone
 				/// </java-name>
-				public global::Java.Util.TimeZone TimeZone
+				public virtual global::Java.Util.TimeZone TimeZone
 				{
-				[Dot42.DexImport("getTimeZone", "()Ljava/util/TimeZone;", AccessFlags = 1)]
-						get{ return GetTimeZone(); }
-				[Dot42.DexImport("setTimeZone", "(Ljava/util/TimeZone;)V", AccessFlags = 1)]
-						set{ SetTimeZone(value); }
+						[Dot42.DexImport("getTimeZone", "()Ljava/util/TimeZone;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.TimeZone); }
+						[Dot42.DexImport("setTimeZone", "(Ljava/util/TimeZone;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isLenient
+				/// </java-name>
+				public virtual bool IsLenient
+				{
+						[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1724,15 +1452,6 @@ namespace Java.Text
 						}
 
 						/// <java-name>
-						/// getCalendarField
-						/// </java-name>
-						[Dot42.DexImport("getCalendarField", "()I", AccessFlags = 1)]
-						public virtual int GetCalendarField() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
 						/// ofCalendarField
 						/// </java-name>
 						[Dot42.DexImport("ofCalendarField", "(I)Ljava/text/DateFormat$Field;", AccessFlags = 9)]
@@ -1749,10 +1468,10 @@ namespace Java.Text
 						/// <java-name>
 						/// getCalendarField
 						/// </java-name>
-						public int CalendarField
+						public virtual int CalendarField
 						{
-						[Dot42.DexImport("getCalendarField", "()I", AccessFlags = 1)]
-								get{ return GetCalendarField(); }
+								[Dot42.DexImport("getCalendarField", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 				}
@@ -1779,28 +1498,10 @@ namespace Java.Text
 				/// <java-name>
 				/// getInstance
 				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Ljava/text/DateFormatSymbols;", AccessFlags = 25)]
-				public static global::Java.Text.DateFormatSymbols GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormatSymbols);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
 				[Dot42.DexImport("getInstance", "(Ljava/util/Locale;)Ljava/text/DateFormatSymbols;", AccessFlags = 25)]
 				public static global::Java.Text.DateFormatSymbols GetInstance(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.DateFormatSymbols);
-				}
-
-				/// <java-name>
-				/// getAvailableLocales
-				/// </java-name>
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-				public static global::Java.Util.Locale[] GetAvailableLocales() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Locale[]);
 				}
 
 				/// <java-name>
@@ -1831,78 +1532,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getAmPmStrings
-				/// </java-name>
-				[Dot42.DexImport("getAmPmStrings", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetAmPmStrings() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getEras
-				/// </java-name>
-				[Dot42.DexImport("getEras", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetEras() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getLocalPatternChars
-				/// </java-name>
-				[Dot42.DexImport("getLocalPatternChars", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetLocalPatternChars() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMonths
-				/// </java-name>
-				[Dot42.DexImport("getMonths", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetMonths() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getShortMonths
-				/// </java-name>
-				[Dot42.DexImport("getShortMonths", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetShortMonths() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getShortWeekdays
-				/// </java-name>
-				[Dot42.DexImport("getShortWeekdays", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetShortWeekdays() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getWeekdays
-				/// </java-name>
-				[Dot42.DexImport("getWeekdays", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetWeekdays() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getZoneStrings
-				/// </java-name>
-				[Dot42.DexImport("getZoneStrings", "()[[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[][] GetZoneStrings() /* MethodBuilder.Create */ 
-				{
-						return default(string[][]);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
@@ -1912,76 +1541,12 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setAmPmStrings
-				/// </java-name>
-				[Dot42.DexImport("setAmPmStrings", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetAmPmStrings(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setEras
-				/// </java-name>
-				[Dot42.DexImport("setEras", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetEras(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLocalPatternChars
-				/// </java-name>
-				[Dot42.DexImport("setLocalPatternChars", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetLocalPatternChars(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMonths
-				/// </java-name>
-				[Dot42.DexImport("setMonths", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetMonths(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setShortMonths
-				/// </java-name>
-				[Dot42.DexImport("setShortMonths", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetShortMonths(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setShortWeekdays
-				/// </java-name>
-				[Dot42.DexImport("setShortWeekdays", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetShortWeekdays(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setWeekdays
-				/// </java-name>
-				[Dot42.DexImport("setWeekdays", "([Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetWeekdays(string[] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setZoneStrings
-				/// </java-name>
-				[Dot42.DexImport("setZoneStrings", "([[Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetZoneStrings(string[][] @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getInstance
 				/// </java-name>
 				public static global::Java.Text.DateFormatSymbols Instance
 				{
-				[Dot42.DexImport("getInstance", "()Ljava/text/DateFormatSymbols;", AccessFlags = 25)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Ljava/text/DateFormatSymbols;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.DateFormatSymbols); }
 				}
 
 				/// <java-name>
@@ -1989,96 +1554,96 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Util.Locale[] AvailableLocales
 				{
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-						get{ return GetAvailableLocales(); }
+						[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
+						get{ return default(global::Java.Util.Locale[]); }
 				}
 
 				/// <java-name>
 				/// getAmPmStrings
 				/// </java-name>
-				public string[] AmPmStrings
+				public virtual string[] AmPmStrings
 				{
-				[Dot42.DexImport("getAmPmStrings", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAmPmStrings(); }
-				[Dot42.DexImport("setAmPmStrings", "([Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetAmPmStrings(value); }
+						[Dot42.DexImport("getAmPmStrings", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
+						[Dot42.DexImport("setAmPmStrings", "([Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getEras
 				/// </java-name>
-				public string[] Eras
+				public virtual string[] Eras
 				{
-				[Dot42.DexImport("getEras", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEras(); }
-				[Dot42.DexImport("setEras", "([Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetEras(value); }
+						[Dot42.DexImport("getEras", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
+						[Dot42.DexImport("setEras", "([Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLocalPatternChars
 				/// </java-name>
-				public string LocalPatternChars
+				public virtual string LocalPatternChars
 				{
-				[Dot42.DexImport("getLocalPatternChars", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocalPatternChars(); }
-				[Dot42.DexImport("setLocalPatternChars", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetLocalPatternChars(value); }
+						[Dot42.DexImport("getLocalPatternChars", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setLocalPatternChars", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMonths
 				/// </java-name>
-				public string[] Months
+				public virtual string[] Months
 				{
-				[Dot42.DexImport("getMonths", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMonths(); }
-				[Dot42.DexImport("setMonths", "([Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetMonths(value); }
+						[Dot42.DexImport("getMonths", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
+						[Dot42.DexImport("setMonths", "([Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getShortMonths
 				/// </java-name>
-				public string[] ShortMonths
+				public virtual string[] ShortMonths
 				{
-				[Dot42.DexImport("getShortMonths", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetShortMonths(); }
-				[Dot42.DexImport("setShortMonths", "([Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetShortMonths(value); }
+						[Dot42.DexImport("getShortMonths", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
+						[Dot42.DexImport("setShortMonths", "([Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getShortWeekdays
 				/// </java-name>
-				public string[] ShortWeekdays
+				public virtual string[] ShortWeekdays
 				{
-				[Dot42.DexImport("getShortWeekdays", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetShortWeekdays(); }
-				[Dot42.DexImport("setShortWeekdays", "([Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetShortWeekdays(value); }
+						[Dot42.DexImport("getShortWeekdays", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
+						[Dot42.DexImport("setShortWeekdays", "([Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getWeekdays
 				/// </java-name>
-				public string[] Weekdays
+				public virtual string[] Weekdays
 				{
-				[Dot42.DexImport("getWeekdays", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetWeekdays(); }
-				[Dot42.DexImport("setWeekdays", "([Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetWeekdays(value); }
+						[Dot42.DexImport("getWeekdays", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
+						[Dot42.DexImport("setWeekdays", "([Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getZoneStrings
 				/// </java-name>
-				public string[][] ZoneStrings
+				public virtual string[][] ZoneStrings
 				{
-				[Dot42.DexImport("getZoneStrings", "()[[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetZoneStrings(); }
-				[Dot42.DexImport("setZoneStrings", "([[Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetZoneStrings(value); }
+						[Dot42.DexImport("getZoneStrings", "()[[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[][]); }
+						[Dot42.DexImport("setZoneStrings", "([[Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -2177,78 +1742,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getDecimalFormatSymbols
-				/// </java-name>
-				[Dot42.DexImport("getDecimalFormatSymbols", "()Ljava/text/DecimalFormatSymbols;", AccessFlags = 1)]
-				public virtual global::Java.Text.DecimalFormatSymbols GetDecimalFormatSymbols() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DecimalFormatSymbols);
-				}
-
-				/// <java-name>
-				/// getCurrency
-				/// </java-name>
-				[Dot42.DexImport("getCurrency", "()Ljava/util/Currency;", AccessFlags = 1)]
-				public override global::Java.Util.Currency GetCurrency() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Currency);
-				}
-
-				/// <java-name>
-				/// getGroupingSize
-				/// </java-name>
-				[Dot42.DexImport("getGroupingSize", "()I", AccessFlags = 1)]
-				public virtual int GetGroupingSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMultiplier
-				/// </java-name>
-				[Dot42.DexImport("getMultiplier", "()I", AccessFlags = 1)]
-				public virtual int GetMultiplier() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNegativePrefix
-				/// </java-name>
-				[Dot42.DexImport("getNegativePrefix", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetNegativePrefix() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getNegativeSuffix
-				/// </java-name>
-				[Dot42.DexImport("getNegativeSuffix", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetNegativeSuffix() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPositivePrefix
-				/// </java-name>
-				[Dot42.DexImport("getPositivePrefix", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPositivePrefix() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPositiveSuffix
-				/// </java-name>
-				[Dot42.DexImport("getPositiveSuffix", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPositiveSuffix() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
@@ -2258,38 +1751,11 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// isDecimalSeparatorAlwaysShown
-				/// </java-name>
-				[Dot42.DexImport("isDecimalSeparatorAlwaysShown", "()Z", AccessFlags = 1)]
-				public virtual bool IsDecimalSeparatorAlwaysShown() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isParseBigDecimal
-				/// </java-name>
-				[Dot42.DexImport("isParseBigDecimal", "()Z", AccessFlags = 1)]
-				public virtual bool IsParseBigDecimal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setParseIntegerOnly
 				/// </java-name>
 				[Dot42.DexImport("setParseIntegerOnly", "(Z)V", AccessFlags = 1)]
 				public override void SetParseIntegerOnly(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isParseIntegerOnly
-				/// </java-name>
-				[Dot42.DexImport("isParseIntegerOnly", "()Z", AccessFlags = 1)]
-				public override bool IsParseIntegerOnly() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2302,22 +1768,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setDecimalFormatSymbols
-				/// </java-name>
-				[Dot42.DexImport("setDecimalFormatSymbols", "(Ljava/text/DecimalFormatSymbols;)V", AccessFlags = 1)]
-				public virtual void SetDecimalFormatSymbols(global::Java.Text.DecimalFormatSymbols decimalFormatSymbols) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCurrency
-				/// </java-name>
-				[Dot42.DexImport("setCurrency", "(Ljava/util/Currency;)V", AccessFlags = 1)]
-				public override void SetCurrency(global::Java.Util.Currency currency) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setDecimalSeparatorAlwaysShown
 				/// </java-name>
 				[Dot42.DexImport("setDecimalSeparatorAlwaysShown", "(Z)V", AccessFlags = 1)]
@@ -2326,99 +1776,10 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setGroupingSize
-				/// </java-name>
-				[Dot42.DexImport("setGroupingSize", "(I)V", AccessFlags = 1)]
-				public virtual void SetGroupingSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setGroupingUsed
 				/// </java-name>
 				[Dot42.DexImport("setGroupingUsed", "(Z)V", AccessFlags = 1)]
 				public override void SetGroupingUsed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isGroupingUsed
-				/// </java-name>
-				[Dot42.DexImport("isGroupingUsed", "()Z", AccessFlags = 1)]
-				public override bool IsGroupingUsed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setMaximumFractionDigits
-				/// </java-name>
-				[Dot42.DexImport("setMaximumFractionDigits", "(I)V", AccessFlags = 1)]
-				public override void SetMaximumFractionDigits(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMaximumIntegerDigits
-				/// </java-name>
-				[Dot42.DexImport("setMaximumIntegerDigits", "(I)V", AccessFlags = 1)]
-				public override void SetMaximumIntegerDigits(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMinimumFractionDigits
-				/// </java-name>
-				[Dot42.DexImport("setMinimumFractionDigits", "(I)V", AccessFlags = 1)]
-				public override void SetMinimumFractionDigits(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMinimumIntegerDigits
-				/// </java-name>
-				[Dot42.DexImport("setMinimumIntegerDigits", "(I)V", AccessFlags = 1)]
-				public override void SetMinimumIntegerDigits(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMultiplier
-				/// </java-name>
-				[Dot42.DexImport("setMultiplier", "(I)V", AccessFlags = 1)]
-				public virtual void SetMultiplier(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setNegativePrefix
-				/// </java-name>
-				[Dot42.DexImport("setNegativePrefix", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetNegativePrefix(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setNegativeSuffix
-				/// </java-name>
-				[Dot42.DexImport("setNegativeSuffix", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetNegativeSuffix(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPositivePrefix
-				/// </java-name>
-				[Dot42.DexImport("setPositivePrefix", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetPositivePrefix(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPositiveSuffix
-				/// </java-name>
-				[Dot42.DexImport("setPositiveSuffix", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetPositiveSuffix(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2449,119 +1810,174 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getRoundingMode
-				/// </java-name>
-				[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
-				public override global::Java.Math.RoundingMode GetRoundingMode() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.RoundingMode);
-				}
-
-				/// <java-name>
-				/// setRoundingMode
-				/// </java-name>
-				[Dot42.DexImport("setRoundingMode", "(Ljava/math/RoundingMode;)V", AccessFlags = 1)]
-				public override void SetRoundingMode(global::Java.Math.RoundingMode roundingMode) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getDecimalFormatSymbols
 				/// </java-name>
-				public global::Java.Text.DecimalFormatSymbols DecimalFormatSymbols
+				public virtual global::Java.Text.DecimalFormatSymbols DecimalFormatSymbols
 				{
-				[Dot42.DexImport("getDecimalFormatSymbols", "()Ljava/text/DecimalFormatSymbols;", AccessFlags = 1)]
-						get{ return GetDecimalFormatSymbols(); }
-				[Dot42.DexImport("setDecimalFormatSymbols", "(Ljava/text/DecimalFormatSymbols;)V", AccessFlags = 1)]
-						set{ SetDecimalFormatSymbols(value); }
+						[Dot42.DexImport("getDecimalFormatSymbols", "()Ljava/text/DecimalFormatSymbols;", AccessFlags = 1)]
+						get{ return default(global::Java.Text.DecimalFormatSymbols); }
+						[Dot42.DexImport("setDecimalFormatSymbols", "(Ljava/text/DecimalFormatSymbols;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCurrency
 				/// </java-name>
-				public global::Java.Util.Currency Currency
+				public override global::Java.Util.Currency Currency
 				{
-				[Dot42.DexImport("getCurrency", "()Ljava/util/Currency;", AccessFlags = 1)]
-						get{ return GetCurrency(); }
-				[Dot42.DexImport("setCurrency", "(Ljava/util/Currency;)V", AccessFlags = 1)]
-						set{ SetCurrency(value); }
+						[Dot42.DexImport("getCurrency", "()Ljava/util/Currency;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Currency); }
+						[Dot42.DexImport("setCurrency", "(Ljava/util/Currency;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getGroupingSize
 				/// </java-name>
-				public int GroupingSize
+				public virtual int GroupingSize
 				{
-				[Dot42.DexImport("getGroupingSize", "()I", AccessFlags = 1)]
-						get{ return GetGroupingSize(); }
-				[Dot42.DexImport("setGroupingSize", "(I)V", AccessFlags = 1)]
-						set{ SetGroupingSize(value); }
+						[Dot42.DexImport("getGroupingSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setGroupingSize", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMultiplier
 				/// </java-name>
-				public int Multiplier
+				public virtual int Multiplier
 				{
-				[Dot42.DexImport("getMultiplier", "()I", AccessFlags = 1)]
-						get{ return GetMultiplier(); }
-				[Dot42.DexImport("setMultiplier", "(I)V", AccessFlags = 1)]
-						set{ SetMultiplier(value); }
+						[Dot42.DexImport("getMultiplier", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMultiplier", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getNegativePrefix
 				/// </java-name>
-				public string NegativePrefix
+				public virtual string NegativePrefix
 				{
-				[Dot42.DexImport("getNegativePrefix", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetNegativePrefix(); }
-				[Dot42.DexImport("setNegativePrefix", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetNegativePrefix(value); }
+						[Dot42.DexImport("getNegativePrefix", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setNegativePrefix", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getNegativeSuffix
 				/// </java-name>
-				public string NegativeSuffix
+				public virtual string NegativeSuffix
 				{
-				[Dot42.DexImport("getNegativeSuffix", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetNegativeSuffix(); }
-				[Dot42.DexImport("setNegativeSuffix", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetNegativeSuffix(value); }
+						[Dot42.DexImport("getNegativeSuffix", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setNegativeSuffix", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPositivePrefix
 				/// </java-name>
-				public string PositivePrefix
+				public virtual string PositivePrefix
 				{
-				[Dot42.DexImport("getPositivePrefix", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPositivePrefix(); }
-				[Dot42.DexImport("setPositivePrefix", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPositivePrefix(value); }
+						[Dot42.DexImport("getPositivePrefix", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPositivePrefix", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPositiveSuffix
 				/// </java-name>
-				public string PositiveSuffix
+				public virtual string PositiveSuffix
 				{
-				[Dot42.DexImport("getPositiveSuffix", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPositiveSuffix(); }
-				[Dot42.DexImport("setPositiveSuffix", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPositiveSuffix(value); }
+						[Dot42.DexImport("getPositiveSuffix", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPositiveSuffix", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isDecimalSeparatorAlwaysShown
+				/// </java-name>
+				public virtual bool IsDecimalSeparatorAlwaysShown
+				{
+						[Dot42.DexImport("isDecimalSeparatorAlwaysShown", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isParseBigDecimal
+				/// </java-name>
+				public virtual bool IsParseBigDecimal
+				{
+						[Dot42.DexImport("isParseBigDecimal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isParseIntegerOnly
+				/// </java-name>
+				public override bool IsParseIntegerOnly
+				{
+						[Dot42.DexImport("isParseIntegerOnly", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isGroupingUsed
+				/// </java-name>
+				public override bool IsGroupingUsed
+				{
+						[Dot42.DexImport("isGroupingUsed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getRoundingMode
 				/// </java-name>
-				public global::Java.Math.RoundingMode RoundingMode
+				public override global::Java.Math.RoundingMode RoundingMode
 				{
-				[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
-						get{ return GetRoundingMode(); }
-				[Dot42.DexImport("setRoundingMode", "(Ljava/math/RoundingMode;)V", AccessFlags = 1)]
-						set{ SetRoundingMode(value); }
+						[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.RoundingMode); }
+						[Dot42.DexImport("setRoundingMode", "(Ljava/math/RoundingMode;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setMaximumFractionDigits
+				/// </java-name>
+				public override int MaximumFractionDigits
+				{
+						[Dot42.DexImport("setMaximumFractionDigits", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setMaximumIntegerDigits
+				/// </java-name>
+				public override int MaximumIntegerDigits
+				{
+						[Dot42.DexImport("setMaximumIntegerDigits", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setMinimumFractionDigits
+				/// </java-name>
+				public override int MinimumFractionDigits
+				{
+						[Dot42.DexImport("setMinimumFractionDigits", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setMinimumIntegerDigits
+				/// </java-name>
+				public override int MinimumIntegerDigits
+				{
+						[Dot42.DexImport("setMinimumIntegerDigits", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -2586,28 +2002,10 @@ namespace Java.Text
 				/// <java-name>
 				/// getInstance
 				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Ljava/text/DecimalFormatSymbols;", AccessFlags = 9)]
-				public static global::Java.Text.DecimalFormatSymbols GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DecimalFormatSymbols);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
 				[Dot42.DexImport("getInstance", "(Ljava/util/Locale;)Ljava/text/DecimalFormatSymbols;", AccessFlags = 9)]
 				public static global::Java.Text.DecimalFormatSymbols GetInstance(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.DecimalFormatSymbols);
-				}
-
-				/// <java-name>
-				/// getAvailableLocales
-				/// </java-name>
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-				public static global::Java.Util.Locale[] GetAvailableLocales() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Locale[]);
 				}
 
 				/// <java-name>
@@ -2638,141 +2036,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getCurrency
-				/// </java-name>
-				[Dot42.DexImport("getCurrency", "()Ljava/util/Currency;", AccessFlags = 1)]
-				public virtual global::Java.Util.Currency GetCurrency() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Currency);
-				}
-
-				/// <java-name>
-				/// getInternationalCurrencySymbol
-				/// </java-name>
-				[Dot42.DexImport("getInternationalCurrencySymbol", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetInternationalCurrencySymbol() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCurrencySymbol
-				/// </java-name>
-				[Dot42.DexImport("getCurrencySymbol", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetCurrencySymbol() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDecimalSeparator
-				/// </java-name>
-				[Dot42.DexImport("getDecimalSeparator", "()C", AccessFlags = 1)]
-				public virtual char GetDecimalSeparator() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getDigit
-				/// </java-name>
-				[Dot42.DexImport("getDigit", "()C", AccessFlags = 1)]
-				public virtual char GetDigit() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getGroupingSeparator
-				/// </java-name>
-				[Dot42.DexImport("getGroupingSeparator", "()C", AccessFlags = 1)]
-				public virtual char GetGroupingSeparator() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getInfinity
-				/// </java-name>
-				[Dot42.DexImport("getInfinity", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetInfinity() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMinusSign
-				/// </java-name>
-				[Dot42.DexImport("getMinusSign", "()C", AccessFlags = 1)]
-				public virtual char GetMinusSign() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getMonetaryDecimalSeparator
-				/// </java-name>
-				[Dot42.DexImport("getMonetaryDecimalSeparator", "()C", AccessFlags = 1)]
-				public virtual char GetMonetaryDecimalSeparator() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getNaN
-				/// </java-name>
-				[Dot42.DexImport("getNaN", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetNaN() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPatternSeparator
-				/// </java-name>
-				[Dot42.DexImport("getPatternSeparator", "()C", AccessFlags = 1)]
-				public virtual char GetPatternSeparator() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getPercent
-				/// </java-name>
-				[Dot42.DexImport("getPercent", "()C", AccessFlags = 1)]
-				public virtual char GetPercent() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getPerMill
-				/// </java-name>
-				[Dot42.DexImport("getPerMill", "()C", AccessFlags = 1)]
-				public virtual char GetPerMill() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getZeroDigit
-				/// </java-name>
-				[Dot42.DexImport("getZeroDigit", "()C", AccessFlags = 1)]
-				public virtual char GetZeroDigit() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getExponentSeparator
-				/// </java-name>
-				[Dot42.DexImport("getExponentSeparator", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetExponentSeparator() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
@@ -2782,132 +2045,12 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setCurrency
-				/// </java-name>
-				[Dot42.DexImport("setCurrency", "(Ljava/util/Currency;)V", AccessFlags = 1)]
-				public virtual void SetCurrency(global::Java.Util.Currency currency) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setInternationalCurrencySymbol
-				/// </java-name>
-				[Dot42.DexImport("setInternationalCurrencySymbol", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetInternationalCurrencySymbol(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCurrencySymbol
-				/// </java-name>
-				[Dot42.DexImport("setCurrencySymbol", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetCurrencySymbol(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDecimalSeparator
-				/// </java-name>
-				[Dot42.DexImport("setDecimalSeparator", "(C)V", AccessFlags = 1)]
-				public virtual void SetDecimalSeparator(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDigit
-				/// </java-name>
-				[Dot42.DexImport("setDigit", "(C)V", AccessFlags = 1)]
-				public virtual void SetDigit(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setGroupingSeparator
-				/// </java-name>
-				[Dot42.DexImport("setGroupingSeparator", "(C)V", AccessFlags = 1)]
-				public virtual void SetGroupingSeparator(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setInfinity
-				/// </java-name>
-				[Dot42.DexImport("setInfinity", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetInfinity(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMinusSign
-				/// </java-name>
-				[Dot42.DexImport("setMinusSign", "(C)V", AccessFlags = 1)]
-				public virtual void SetMinusSign(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMonetaryDecimalSeparator
-				/// </java-name>
-				[Dot42.DexImport("setMonetaryDecimalSeparator", "(C)V", AccessFlags = 1)]
-				public virtual void SetMonetaryDecimalSeparator(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setNaN
-				/// </java-name>
-				[Dot42.DexImport("setNaN", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetNaN(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPatternSeparator
-				/// </java-name>
-				[Dot42.DexImport("setPatternSeparator", "(C)V", AccessFlags = 1)]
-				public virtual void SetPatternSeparator(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPercent
-				/// </java-name>
-				[Dot42.DexImport("setPercent", "(C)V", AccessFlags = 1)]
-				public virtual void SetPercent(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPerMill
-				/// </java-name>
-				[Dot42.DexImport("setPerMill", "(C)V", AccessFlags = 1)]
-				public virtual void SetPerMill(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setZeroDigit
-				/// </java-name>
-				[Dot42.DexImport("setZeroDigit", "(C)V", AccessFlags = 1)]
-				public virtual void SetZeroDigit(char @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setExponentSeparator
-				/// </java-name>
-				[Dot42.DexImport("setExponentSeparator", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetExponentSeparator(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getInstance
 				/// </java-name>
 				public static global::Java.Text.DecimalFormatSymbols Instance
 				{
-				[Dot42.DexImport("getInstance", "()Ljava/text/DecimalFormatSymbols;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Ljava/text/DecimalFormatSymbols;", AccessFlags = 9)]
+						get{ return default(global::Java.Text.DecimalFormatSymbols); }
 				}
 
 				/// <java-name>
@@ -2915,173 +2058,173 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Util.Locale[] AvailableLocales
 				{
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-						get{ return GetAvailableLocales(); }
+						[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
+						get{ return default(global::Java.Util.Locale[]); }
 				}
 
 				/// <java-name>
 				/// getCurrency
 				/// </java-name>
-				public global::Java.Util.Currency Currency
+				public virtual global::Java.Util.Currency Currency
 				{
-				[Dot42.DexImport("getCurrency", "()Ljava/util/Currency;", AccessFlags = 1)]
-						get{ return GetCurrency(); }
-				[Dot42.DexImport("setCurrency", "(Ljava/util/Currency;)V", AccessFlags = 1)]
-						set{ SetCurrency(value); }
+						[Dot42.DexImport("getCurrency", "()Ljava/util/Currency;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Currency); }
+						[Dot42.DexImport("setCurrency", "(Ljava/util/Currency;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getInternationalCurrencySymbol
 				/// </java-name>
-				public string InternationalCurrencySymbol
+				public virtual string InternationalCurrencySymbol
 				{
-				[Dot42.DexImport("getInternationalCurrencySymbol", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetInternationalCurrencySymbol(); }
-				[Dot42.DexImport("setInternationalCurrencySymbol", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetInternationalCurrencySymbol(value); }
+						[Dot42.DexImport("getInternationalCurrencySymbol", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setInternationalCurrencySymbol", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCurrencySymbol
 				/// </java-name>
-				public string CurrencySymbol
+				public virtual string CurrencySymbol
 				{
-				[Dot42.DexImport("getCurrencySymbol", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCurrencySymbol(); }
-				[Dot42.DexImport("setCurrencySymbol", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetCurrencySymbol(value); }
+						[Dot42.DexImport("getCurrencySymbol", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setCurrencySymbol", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDecimalSeparator
 				/// </java-name>
-				public char DecimalSeparator
+				public virtual char DecimalSeparator
 				{
-				[Dot42.DexImport("getDecimalSeparator", "()C", AccessFlags = 1)]
-						get{ return GetDecimalSeparator(); }
-				[Dot42.DexImport("setDecimalSeparator", "(C)V", AccessFlags = 1)]
-						set{ SetDecimalSeparator(value); }
+						[Dot42.DexImport("getDecimalSeparator", "()C", AccessFlags = 1)]
+						get{ return default(char); }
+						[Dot42.DexImport("setDecimalSeparator", "(C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDigit
 				/// </java-name>
-				public char Digit
+				public virtual char Digit
 				{
-				[Dot42.DexImport("getDigit", "()C", AccessFlags = 1)]
-						get{ return GetDigit(); }
-				[Dot42.DexImport("setDigit", "(C)V", AccessFlags = 1)]
-						set{ SetDigit(value); }
+						[Dot42.DexImport("getDigit", "()C", AccessFlags = 1)]
+						get{ return default(char); }
+						[Dot42.DexImport("setDigit", "(C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getGroupingSeparator
 				/// </java-name>
-				public char GroupingSeparator
+				public virtual char GroupingSeparator
 				{
-				[Dot42.DexImport("getGroupingSeparator", "()C", AccessFlags = 1)]
-						get{ return GetGroupingSeparator(); }
-				[Dot42.DexImport("setGroupingSeparator", "(C)V", AccessFlags = 1)]
-						set{ SetGroupingSeparator(value); }
+						[Dot42.DexImport("getGroupingSeparator", "()C", AccessFlags = 1)]
+						get{ return default(char); }
+						[Dot42.DexImport("setGroupingSeparator", "(C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getInfinity
 				/// </java-name>
-				public string Infinity
+				public virtual string Infinity
 				{
-				[Dot42.DexImport("getInfinity", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetInfinity(); }
-				[Dot42.DexImport("setInfinity", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetInfinity(value); }
+						[Dot42.DexImport("getInfinity", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setInfinity", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMinusSign
 				/// </java-name>
-				public char MinusSign
+				public virtual char MinusSign
 				{
-				[Dot42.DexImport("getMinusSign", "()C", AccessFlags = 1)]
-						get{ return GetMinusSign(); }
-				[Dot42.DexImport("setMinusSign", "(C)V", AccessFlags = 1)]
-						set{ SetMinusSign(value); }
+						[Dot42.DexImport("getMinusSign", "()C", AccessFlags = 1)]
+						get{ return default(char); }
+						[Dot42.DexImport("setMinusSign", "(C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMonetaryDecimalSeparator
 				/// </java-name>
-				public char MonetaryDecimalSeparator
+				public virtual char MonetaryDecimalSeparator
 				{
-				[Dot42.DexImport("getMonetaryDecimalSeparator", "()C", AccessFlags = 1)]
-						get{ return GetMonetaryDecimalSeparator(); }
-				[Dot42.DexImport("setMonetaryDecimalSeparator", "(C)V", AccessFlags = 1)]
-						set{ SetMonetaryDecimalSeparator(value); }
+						[Dot42.DexImport("getMonetaryDecimalSeparator", "()C", AccessFlags = 1)]
+						get{ return default(char); }
+						[Dot42.DexImport("setMonetaryDecimalSeparator", "(C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getNaN
 				/// </java-name>
-				public string NaN
+				public virtual string NaN
 				{
-				[Dot42.DexImport("getNaN", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetNaN(); }
-				[Dot42.DexImport("setNaN", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetNaN(value); }
+						[Dot42.DexImport("getNaN", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setNaN", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPatternSeparator
 				/// </java-name>
-				public char PatternSeparator
+				public virtual char PatternSeparator
 				{
-				[Dot42.DexImport("getPatternSeparator", "()C", AccessFlags = 1)]
-						get{ return GetPatternSeparator(); }
-				[Dot42.DexImport("setPatternSeparator", "(C)V", AccessFlags = 1)]
-						set{ SetPatternSeparator(value); }
+						[Dot42.DexImport("getPatternSeparator", "()C", AccessFlags = 1)]
+						get{ return default(char); }
+						[Dot42.DexImport("setPatternSeparator", "(C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPercent
 				/// </java-name>
-				public char Percent
+				public virtual char Percent
 				{
-				[Dot42.DexImport("getPercent", "()C", AccessFlags = 1)]
-						get{ return GetPercent(); }
-				[Dot42.DexImport("setPercent", "(C)V", AccessFlags = 1)]
-						set{ SetPercent(value); }
+						[Dot42.DexImport("getPercent", "()C", AccessFlags = 1)]
+						get{ return default(char); }
+						[Dot42.DexImport("setPercent", "(C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPerMill
 				/// </java-name>
-				public char PerMill
+				public virtual char PerMill
 				{
-				[Dot42.DexImport("getPerMill", "()C", AccessFlags = 1)]
-						get{ return GetPerMill(); }
-				[Dot42.DexImport("setPerMill", "(C)V", AccessFlags = 1)]
-						set{ SetPerMill(value); }
+						[Dot42.DexImport("getPerMill", "()C", AccessFlags = 1)]
+						get{ return default(char); }
+						[Dot42.DexImport("setPerMill", "(C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getZeroDigit
 				/// </java-name>
-				public char ZeroDigit
+				public virtual char ZeroDigit
 				{
-				[Dot42.DexImport("getZeroDigit", "()C", AccessFlags = 1)]
-						get{ return GetZeroDigit(); }
-				[Dot42.DexImport("setZeroDigit", "(C)V", AccessFlags = 1)]
-						set{ SetZeroDigit(value); }
+						[Dot42.DexImport("getZeroDigit", "()C", AccessFlags = 1)]
+						get{ return default(char); }
+						[Dot42.DexImport("setZeroDigit", "(C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getExponentSeparator
 				/// </java-name>
-				public string ExponentSeparator
+				public virtual string ExponentSeparator
 				{
-				[Dot42.DexImport("getExponentSeparator", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetExponentSeparator(); }
-				[Dot42.DexImport("setExponentSeparator", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetExponentSeparator(value); }
+						[Dot42.DexImport("getExponentSeparator", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setExponentSeparator", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -3118,64 +2261,12 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getBeginIndex
-				/// </java-name>
-				[Dot42.DexImport("getBeginIndex", "()I", AccessFlags = 1)]
-				public virtual int GetBeginIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEndIndex
-				/// </java-name>
-				[Dot42.DexImport("getEndIndex", "()I", AccessFlags = 1)]
-				public virtual int GetEndIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getField
-				/// </java-name>
-				[Dot42.DexImport("getField", "()I", AccessFlags = 1)]
-				public virtual int GetField() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFieldAttribute
-				/// </java-name>
-				[Dot42.DexImport("getFieldAttribute", "()Ljava/text/Format$Field;", AccessFlags = 1)]
-				public virtual global::Java.Text.Format.Field GetFieldAttribute() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.Format.Field);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// setBeginIndex
-				/// </java-name>
-				[Dot42.DexImport("setBeginIndex", "(I)V", AccessFlags = 1)]
-				public virtual void SetBeginIndex(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setEndIndex
-				/// </java-name>
-				[Dot42.DexImport("setEndIndex", "(I)V", AccessFlags = 1)]
-				public virtual void SetEndIndex(int int32) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -3195,41 +2286,41 @@ namespace Java.Text
 				/// <java-name>
 				/// getBeginIndex
 				/// </java-name>
-				public int BeginIndex
+				public virtual int BeginIndex
 				{
-				[Dot42.DexImport("getBeginIndex", "()I", AccessFlags = 1)]
-						get{ return GetBeginIndex(); }
-				[Dot42.DexImport("setBeginIndex", "(I)V", AccessFlags = 1)]
-						set{ SetBeginIndex(value); }
+						[Dot42.DexImport("getBeginIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setBeginIndex", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getEndIndex
 				/// </java-name>
-				public int EndIndex
+				public virtual int EndIndex
 				{
-				[Dot42.DexImport("getEndIndex", "()I", AccessFlags = 1)]
-						get{ return GetEndIndex(); }
-				[Dot42.DexImport("setEndIndex", "(I)V", AccessFlags = 1)]
-						set{ SetEndIndex(value); }
+						[Dot42.DexImport("getEndIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setEndIndex", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getField
 				/// </java-name>
-				public int Field
+				public virtual int Field
 				{
-				[Dot42.DexImport("getField", "()I", AccessFlags = 1)]
-						get{ return GetField(); }
+						[Dot42.DexImport("getField", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getFieldAttribute
 				/// </java-name>
-				public global::Java.Text.Format.Field FieldAttribute
+				public virtual global::Java.Text.Format.Field FieldAttribute
 				{
-				[Dot42.DexImport("getFieldAttribute", "()Ljava/text/Format$Field;", AccessFlags = 1)]
-						get{ return GetFieldAttribute(); }
+						[Dot42.DexImport("getFieldAttribute", "()Ljava/text/Format$Field;", AccessFlags = 1)]
+						get{ return default(global::Java.Text.Format.Field); }
 				}
 
 		}
@@ -3324,29 +2415,10 @@ namespace Java.Text
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getAllAttributeKeys
-				/// </java-name>
-				[Dot42.DexImport("getAllAttributeKeys", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/text/AttributedCharacterIterator$Attribute;>;")]
-				global::Java.Util.ISet<global::Java.Text.IAttributedCharacterIterator_Attribute> GetAllAttributeKeys() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getAttribute
 				/// </java-name>
 				[Dot42.DexImport("getAttribute", "(Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/lang/Object;", AccessFlags = 1025)]
 				object GetAttribute(global::Java.Text.IAttributedCharacterIterator_Attribute iAttributedCharacterIterator_Attribute) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAttributes
-				/// </java-name>
-				[Dot42.DexImport("getAttributes", "()Ljava/util/Map;", AccessFlags = 1025, Signature = "()Ljava/util/Map<Ljava/text/AttributedCharacterIterator$Attribute;Ljava/lang/Obje" +
-    "ct;>;")]
-				global::Java.Util.IMap<global::Java.Text.IAttributedCharacterIterator_Attribute, object> GetAttributes() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getRunLimit
-				/// </java-name>
-				[Dot42.DexImport("getRunLimit", "()I", AccessFlags = 1025)]
-				int GetRunLimit() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getRunLimit
@@ -3363,12 +2435,6 @@ namespace Java.Text
 				/// <java-name>
 				/// getRunStart
 				/// </java-name>
-				[Dot42.DexImport("getRunStart", "()I", AccessFlags = 1025)]
-				int GetRunStart() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getRunStart
-				/// </java-name>
 				[Dot42.DexImport("getRunStart", "(Ljava/text/AttributedCharacterIterator$Attribute;)I", AccessFlags = 1025)]
 				int GetRunStart(global::Java.Text.IAttributedCharacterIterator_Attribute iAttributedCharacterIterator_Attribute) /* MethodBuilder.Create */ ;
 
@@ -3377,6 +2443,43 @@ namespace Java.Text
 				/// </java-name>
 				[Dot42.DexImport("getRunStart", "(Ljava/util/Set;)I", AccessFlags = 1025, Signature = "(Ljava/util/Set<+Ljava/text/AttributedCharacterIterator$Attribute;>;)I")]
 				int GetRunStart(global::Java.Util.ISet<global::Java.Text.IAttributedCharacterIterator_Attribute> set) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getAllAttributeKeys
+				/// </java-name>
+				global::Java.Util.ISet<global::Java.Text.IAttributedCharacterIterator_Attribute> AllAttributeKeys
+				{
+						[Dot42.DexImport("getAllAttributeKeys", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/text/AttributedCharacterIterator$Attribute;>;")]
+						get;
+				}
+
+				/// <java-name>
+				/// getAttributes
+				/// </java-name>
+				global::Java.Util.IMap<global::Java.Text.IAttributedCharacterIterator_Attribute, object> Attributes
+				{
+						[Dot42.DexImport("getAttributes", "()Ljava/util/Map;", AccessFlags = 1025, Signature = "()Ljava/util/Map<Ljava/text/AttributedCharacterIterator$Attribute;Ljava/lang/Obje" +
+    "ct;>;")]
+						get;
+				}
+
+				/// <java-name>
+				/// getRunLimit
+				/// </java-name>
+				int RunLimit
+				{
+						[Dot42.DexImport("getRunLimit", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getRunStart
+				/// </java-name>
+				int RunStart
+				{
+						[Dot42.DexImport("getRunStart", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -3417,15 +2520,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 4)]
-				protected internal virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 17)]
@@ -3460,10 +2554,10 @@ namespace Java.Text
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				protected internal string Name
+				protected internal virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 4)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 4)]
+						get{ return default(string); }
 				}
 
 		}
@@ -3494,24 +2588,6 @@ namespace Java.Text
 				char First() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getBeginIndex
-				/// </java-name>
-				[Dot42.DexImport("getBeginIndex", "()I", AccessFlags = 1025)]
-				int GetBeginIndex() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEndIndex
-				/// </java-name>
-				[Dot42.DexImport("getEndIndex", "()I", AccessFlags = 1025)]
-				int GetEndIndex() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1025)]
-				int GetIndex() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// last
 				/// </java-name>
 				[Dot42.DexImport("last", "()C", AccessFlags = 1025)]
@@ -3534,6 +2610,33 @@ namespace Java.Text
 				/// </java-name>
 				[Dot42.DexImport("setIndex", "(I)C", AccessFlags = 1025)]
 				char SetIndex(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getBeginIndex
+				/// </java-name>
+				int BeginIndex
+				{
+						[Dot42.DexImport("getBeginIndex", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getEndIndex
+				/// </java-name>
+				int EndIndex
+				{
+						[Dot42.DexImport("getEndIndex", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getIndex
+				/// </java-name>
+				int Index
+				{
+						[Dot42.DexImport("getIndex", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -3633,46 +2736,11 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getFormats
-				/// </java-name>
-				[Dot42.DexImport("getFormats", "()[Ljava/text/Format;", AccessFlags = 1)]
-				public virtual global::Java.Text.Format[] GetFormats() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.Format[]);
-				}
-
-				/// <java-name>
-				/// getFormatsByArgumentIndex
-				/// </java-name>
-				[Dot42.DexImport("getFormatsByArgumentIndex", "()[Ljava/text/Format;", AccessFlags = 1)]
-				public virtual global::Java.Text.Format[] GetFormatsByArgumentIndex() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.Format[]);
-				}
-
-				/// <java-name>
 				/// setFormatByArgumentIndex
 				/// </java-name>
 				[Dot42.DexImport("setFormatByArgumentIndex", "(ILjava/text/Format;)V", AccessFlags = 1)]
 				public virtual void SetFormatByArgumentIndex(int int32, global::Java.Text.Format format) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// setFormatsByArgumentIndex
-				/// </java-name>
-				[Dot42.DexImport("setFormatsByArgumentIndex", "([Ljava/text/Format;)V", AccessFlags = 1)]
-				public virtual void SetFormatsByArgumentIndex(global::Java.Text.Format[] format) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLocale
-				/// </java-name>
-				[Dot42.DexImport("getLocale", "()Ljava/util/Locale;", AccessFlags = 1)]
-				public virtual global::Java.Util.Locale GetLocale() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Locale);
 				}
 
 				/// <java-name>
@@ -3720,22 +2788,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setFormats
-				/// </java-name>
-				[Dot42.DexImport("setFormats", "([Ljava/text/Format;)V", AccessFlags = 1)]
-				public virtual void SetFormats(global::Java.Text.Format[] format) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLocale
-				/// </java-name>
-				[Dot42.DexImport("setLocale", "(Ljava/util/Locale;)V", AccessFlags = 1)]
-				public virtual void SetLocale(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// toPattern
 				/// </java-name>
 				[Dot42.DexImport("toPattern", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -3752,34 +2804,34 @@ namespace Java.Text
 				/// <java-name>
 				/// getFormats
 				/// </java-name>
-				public global::Java.Text.Format[] Formats
+				public virtual global::Java.Text.Format[] Formats
 				{
-				[Dot42.DexImport("getFormats", "()[Ljava/text/Format;", AccessFlags = 1)]
-						get{ return GetFormats(); }
-				[Dot42.DexImport("setFormats", "([Ljava/text/Format;)V", AccessFlags = 1)]
-						set{ SetFormats(value); }
+						[Dot42.DexImport("getFormats", "()[Ljava/text/Format;", AccessFlags = 1)]
+						get{ return default(global::Java.Text.Format[]); }
+						[Dot42.DexImport("setFormats", "([Ljava/text/Format;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getFormatsByArgumentIndex
 				/// </java-name>
-				public global::Java.Text.Format[] FormatsByArgumentIndex
+				public virtual global::Java.Text.Format[] FormatsByArgumentIndex
 				{
-				[Dot42.DexImport("getFormatsByArgumentIndex", "()[Ljava/text/Format;", AccessFlags = 1)]
-						get{ return GetFormatsByArgumentIndex(); }
-				[Dot42.DexImport("setFormatsByArgumentIndex", "([Ljava/text/Format;)V", AccessFlags = 1)]
-						set{ SetFormatsByArgumentIndex(value); }
+						[Dot42.DexImport("getFormatsByArgumentIndex", "()[Ljava/text/Format;", AccessFlags = 1)]
+						get{ return default(global::Java.Text.Format[]); }
+						[Dot42.DexImport("setFormatsByArgumentIndex", "([Ljava/text/Format;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLocale
 				/// </java-name>
-				public global::Java.Util.Locale Locale
+				public virtual global::Java.Util.Locale Locale
 				{
-				[Dot42.DexImport("getLocale", "()Ljava/util/Locale;", AccessFlags = 1)]
-						get{ return GetLocale(); }
-				[Dot42.DexImport("setLocale", "(Ljava/util/Locale;)V", AccessFlags = 1)]
-						set{ SetLocale(value); }
+						[Dot42.DexImport("getLocale", "()Ljava/util/Locale;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Locale); }
+						[Dot42.DexImport("setLocale", "(Ljava/util/Locale;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -3972,46 +3024,10 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getAvailableLocales
-				/// </java-name>
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-				public static global::Java.Util.Locale[] GetAvailableLocales() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Locale[]);
-				}
-
-				/// <java-name>
-				/// getCurrency
-				/// </java-name>
-				[Dot42.DexImport("getCurrency", "()Ljava/util/Currency;", AccessFlags = 1)]
-				public virtual global::Java.Util.Currency GetCurrency() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Currency);
-				}
-
-				/// <java-name>
-				/// getCurrencyInstance
-				/// </java-name>
-				[Dot42.DexImport("getCurrencyInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-				public static global::Java.Text.NumberFormat GetCurrencyInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.NumberFormat);
-				}
-
-				/// <java-name>
 				/// getCurrencyInstance
 				/// </java-name>
 				[Dot42.DexImport("getCurrencyInstance", "(Ljava/util/Locale;)Ljava/text/NumberFormat;", AccessFlags = 9)]
 				public static global::Java.Text.NumberFormat GetCurrencyInstance(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.NumberFormat);
-				}
-
-				/// <java-name>
-				/// getIntegerInstance
-				/// </java-name>
-				[Dot42.DexImport("getIntegerInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-				public static global::Java.Text.NumberFormat GetIntegerInstance() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.NumberFormat);
 				}
@@ -4028,62 +3044,8 @@ namespace Java.Text
 				/// <java-name>
 				/// getInstance
 				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-				public static global::Java.Text.NumberFormat GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.NumberFormat);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
 				[Dot42.DexImport("getInstance", "(Ljava/util/Locale;)Ljava/text/NumberFormat;", AccessFlags = 9)]
 				public static global::Java.Text.NumberFormat GetInstance(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.NumberFormat);
-				}
-
-				/// <java-name>
-				/// getMaximumFractionDigits
-				/// </java-name>
-				[Dot42.DexImport("getMaximumFractionDigits", "()I", AccessFlags = 1)]
-				public virtual int GetMaximumFractionDigits() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMaximumIntegerDigits
-				/// </java-name>
-				[Dot42.DexImport("getMaximumIntegerDigits", "()I", AccessFlags = 1)]
-				public virtual int GetMaximumIntegerDigits() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinimumFractionDigits
-				/// </java-name>
-				[Dot42.DexImport("getMinimumFractionDigits", "()I", AccessFlags = 1)]
-				public virtual int GetMinimumFractionDigits() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinimumIntegerDigits
-				/// </java-name>
-				[Dot42.DexImport("getMinimumIntegerDigits", "()I", AccessFlags = 1)]
-				public virtual int GetMinimumIntegerDigits() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNumberInstance
-				/// </java-name>
-				[Dot42.DexImport("getNumberInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-				public static global::Java.Text.NumberFormat GetNumberInstance() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.NumberFormat);
 				}
@@ -4093,15 +3055,6 @@ namespace Java.Text
 				/// </java-name>
 				[Dot42.DexImport("getNumberInstance", "(Ljava/util/Locale;)Ljava/text/NumberFormat;", AccessFlags = 9)]
 				public static global::Java.Text.NumberFormat GetNumberInstance(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.NumberFormat);
-				}
-
-				/// <java-name>
-				/// getPercentInstance
-				/// </java-name>
-				[Dot42.DexImport("getPercentInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-				public static global::Java.Text.NumberFormat GetPercentInstance() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.NumberFormat);
 				}
@@ -4122,24 +3075,6 @@ namespace Java.Text
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isGroupingUsed
-				/// </java-name>
-				[Dot42.DexImport("isGroupingUsed", "()Z", AccessFlags = 1)]
-				public virtual bool IsGroupingUsed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isParseIntegerOnly
-				/// </java-name>
-				[Dot42.DexImport("isParseIntegerOnly", "()Z", AccessFlags = 1)]
-				public virtual bool IsParseIntegerOnly() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -4167,50 +3102,10 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setCurrency
-				/// </java-name>
-				[Dot42.DexImport("setCurrency", "(Ljava/util/Currency;)V", AccessFlags = 1)]
-				public virtual void SetCurrency(global::Java.Util.Currency currency) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setGroupingUsed
 				/// </java-name>
 				[Dot42.DexImport("setGroupingUsed", "(Z)V", AccessFlags = 1)]
 				public virtual void SetGroupingUsed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMaximumFractionDigits
-				/// </java-name>
-				[Dot42.DexImport("setMaximumFractionDigits", "(I)V", AccessFlags = 1)]
-				public virtual void SetMaximumFractionDigits(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMaximumIntegerDigits
-				/// </java-name>
-				[Dot42.DexImport("setMaximumIntegerDigits", "(I)V", AccessFlags = 1)]
-				public virtual void SetMaximumIntegerDigits(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMinimumFractionDigits
-				/// </java-name>
-				[Dot42.DexImport("setMinimumFractionDigits", "(I)V", AccessFlags = 1)]
-				public virtual void SetMinimumFractionDigits(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMinimumIntegerDigits
-				/// </java-name>
-				[Dot42.DexImport("setMinimumIntegerDigits", "(I)V", AccessFlags = 1)]
-				public virtual void SetMinimumIntegerDigits(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4223,40 +3118,23 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getRoundingMode
-				/// </java-name>
-				[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
-				public virtual global::Java.Math.RoundingMode GetRoundingMode() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.RoundingMode);
-				}
-
-				/// <java-name>
-				/// setRoundingMode
-				/// </java-name>
-				[Dot42.DexImport("setRoundingMode", "(Ljava/math/RoundingMode;)V", AccessFlags = 1)]
-				public virtual void SetRoundingMode(global::Java.Math.RoundingMode roundingMode) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getAvailableLocales
 				/// </java-name>
 				public static global::Java.Util.Locale[] AvailableLocales
 				{
-				[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
-						get{ return GetAvailableLocales(); }
+						[Dot42.DexImport("getAvailableLocales", "()[Ljava/util/Locale;", AccessFlags = 9)]
+						get{ return default(global::Java.Util.Locale[]); }
 				}
 
 				/// <java-name>
 				/// getCurrency
 				/// </java-name>
-				public global::Java.Util.Currency Currency
+				public virtual global::Java.Util.Currency Currency
 				{
-				[Dot42.DexImport("getCurrency", "()Ljava/util/Currency;", AccessFlags = 1)]
-						get{ return GetCurrency(); }
-				[Dot42.DexImport("setCurrency", "(Ljava/util/Currency;)V", AccessFlags = 1)]
-						set{ SetCurrency(value); }
+						[Dot42.DexImport("getCurrency", "()Ljava/util/Currency;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Currency); }
+						[Dot42.DexImport("setCurrency", "(Ljava/util/Currency;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -4264,8 +3142,8 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.NumberFormat CurrencyInstance
 				{
-				[Dot42.DexImport("getCurrencyInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-						get{ return GetCurrencyInstance(); }
+						[Dot42.DexImport("getCurrencyInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.NumberFormat); }
 				}
 
 				/// <java-name>
@@ -4273,8 +3151,8 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.NumberFormat IntegerInstance
 				{
-				[Dot42.DexImport("getIntegerInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-						get{ return GetIntegerInstance(); }
+						[Dot42.DexImport("getIntegerInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.NumberFormat); }
 				}
 
 				/// <java-name>
@@ -4282,52 +3160,52 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.NumberFormat Instance
 				{
-				[Dot42.DexImport("getInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.NumberFormat); }
 				}
 
 				/// <java-name>
 				/// getMaximumFractionDigits
 				/// </java-name>
-				public int MaximumFractionDigits
+				public virtual int MaximumFractionDigits
 				{
-				[Dot42.DexImport("getMaximumFractionDigits", "()I", AccessFlags = 1)]
-						get{ return GetMaximumFractionDigits(); }
-				[Dot42.DexImport("setMaximumFractionDigits", "(I)V", AccessFlags = 1)]
-						set{ SetMaximumFractionDigits(value); }
+						[Dot42.DexImport("getMaximumFractionDigits", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMaximumFractionDigits", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMaximumIntegerDigits
 				/// </java-name>
-				public int MaximumIntegerDigits
+				public virtual int MaximumIntegerDigits
 				{
-				[Dot42.DexImport("getMaximumIntegerDigits", "()I", AccessFlags = 1)]
-						get{ return GetMaximumIntegerDigits(); }
-				[Dot42.DexImport("setMaximumIntegerDigits", "(I)V", AccessFlags = 1)]
-						set{ SetMaximumIntegerDigits(value); }
+						[Dot42.DexImport("getMaximumIntegerDigits", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMaximumIntegerDigits", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMinimumFractionDigits
 				/// </java-name>
-				public int MinimumFractionDigits
+				public virtual int MinimumFractionDigits
 				{
-				[Dot42.DexImport("getMinimumFractionDigits", "()I", AccessFlags = 1)]
-						get{ return GetMinimumFractionDigits(); }
-				[Dot42.DexImport("setMinimumFractionDigits", "(I)V", AccessFlags = 1)]
-						set{ SetMinimumFractionDigits(value); }
+						[Dot42.DexImport("getMinimumFractionDigits", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMinimumFractionDigits", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMinimumIntegerDigits
 				/// </java-name>
-				public int MinimumIntegerDigits
+				public virtual int MinimumIntegerDigits
 				{
-				[Dot42.DexImport("getMinimumIntegerDigits", "()I", AccessFlags = 1)]
-						get{ return GetMinimumIntegerDigits(); }
-				[Dot42.DexImport("setMinimumIntegerDigits", "(I)V", AccessFlags = 1)]
-						set{ SetMinimumIntegerDigits(value); }
+						[Dot42.DexImport("getMinimumIntegerDigits", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMinimumIntegerDigits", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -4335,8 +3213,8 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.NumberFormat NumberInstance
 				{
-				[Dot42.DexImport("getNumberInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-						get{ return GetNumberInstance(); }
+						[Dot42.DexImport("getNumberInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.NumberFormat); }
 				}
 
 				/// <java-name>
@@ -4344,19 +3222,37 @@ namespace Java.Text
 				/// </java-name>
 				public static global::Java.Text.NumberFormat PercentInstance
 				{
-				[Dot42.DexImport("getPercentInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
-						get{ return GetPercentInstance(); }
+						[Dot42.DexImport("getPercentInstance", "()Ljava/text/NumberFormat;", AccessFlags = 25)]
+						get{ return default(global::Java.Text.NumberFormat); }
+				}
+
+				/// <java-name>
+				/// isGroupingUsed
+				/// </java-name>
+				public virtual bool IsGroupingUsed
+				{
+						[Dot42.DexImport("isGroupingUsed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isParseIntegerOnly
+				/// </java-name>
+				public virtual bool IsParseIntegerOnly
+				{
+						[Dot42.DexImport("isParseIntegerOnly", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getRoundingMode
 				/// </java-name>
-				public global::Java.Math.RoundingMode RoundingMode
+				public virtual global::Java.Math.RoundingMode RoundingMode
 				{
-				[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
-						get{ return GetRoundingMode(); }
-				[Dot42.DexImport("setRoundingMode", "(Ljava/math/RoundingMode;)V", AccessFlags = 1)]
-						set{ SetRoundingMode(value); }
+						[Dot42.DexImport("getRoundingMode", "()Ljava/math/RoundingMode;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.RoundingMode); }
+						[Dot42.DexImport("setRoundingMode", "(Ljava/math/RoundingMode;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -4447,15 +3343,6 @@ namespace Java.Text
 				{
 				}
 
-				/// <java-name>
-				/// getErrorOffset
-				/// </java-name>
-				[Dot42.DexImport("getErrorOffset", "()I", AccessFlags = 1)]
-				public virtual int GetErrorOffset() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ParseException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -4464,10 +3351,10 @@ namespace Java.Text
 				/// <java-name>
 				/// getErrorOffset
 				/// </java-name>
-				public int ErrorOffset
+				public virtual int ErrorOffset
 				{
-				[Dot42.DexImport("getErrorOffset", "()I", AccessFlags = 1)]
-						get{ return GetErrorOffset(); }
+						[Dot42.DexImport("getErrorOffset", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -4494,46 +3381,12 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// getErrorIndex
-				/// </java-name>
-				[Dot42.DexImport("getErrorIndex", "()I", AccessFlags = 1)]
-				public virtual int GetErrorIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-				public virtual int GetIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// setErrorIndex
-				/// </java-name>
-				[Dot42.DexImport("setErrorIndex", "(I)V", AccessFlags = 1)]
-				public virtual void SetErrorIndex(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIndex
-				/// </java-name>
-				[Dot42.DexImport("setIndex", "(I)V", AccessFlags = 1)]
-				public virtual void SetIndex(int int32) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -4553,23 +3406,23 @@ namespace Java.Text
 				/// <java-name>
 				/// getErrorIndex
 				/// </java-name>
-				public int ErrorIndex
+				public virtual int ErrorIndex
 				{
-				[Dot42.DexImport("getErrorIndex", "()I", AccessFlags = 1)]
-						get{ return GetErrorIndex(); }
-				[Dot42.DexImport("setErrorIndex", "(I)V", AccessFlags = 1)]
-						set{ SetErrorIndex(value); }
+						[Dot42.DexImport("getErrorIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setErrorIndex", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getIndex
 				/// </java-name>
-				public int Index
+				public virtual int Index
 				{
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-						get{ return GetIndex(); }
-				[Dot42.DexImport("setIndex", "(I)V", AccessFlags = 1)]
-						set{ SetIndex(value); }
+						[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setIndex", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -4602,15 +3455,6 @@ namespace Java.Text
 				public virtual global::Java.Text.CollationElementIterator GetCollationElementIterator(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Text.CollationElementIterator);
-				}
-
-				/// <java-name>
-				/// getRules
-				/// </java-name>
-				[Dot42.DexImport("getRules", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetRules() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -4666,10 +3510,10 @@ namespace Java.Text
 				/// <java-name>
 				/// getRules
 				/// </java-name>
-				public string Rules
+				public virtual string Rules
 				{
-				[Dot42.DexImport("getRules", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRules(); }
+						[Dot42.DexImport("getRules", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -4755,24 +3599,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// get2DigitYearStart
-				/// </java-name>
-				[Dot42.DexImport("get2DigitYearStart", "()Ljava/util/Date;", AccessFlags = 1)]
-				public virtual global::Java.Util.Date Get2DigitYearStart() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// getDateFormatSymbols
-				/// </java-name>
-				[Dot42.DexImport("getDateFormatSymbols", "()Ljava/text/DateFormatSymbols;", AccessFlags = 1)]
-				public virtual global::Java.Text.DateFormatSymbols GetDateFormatSymbols() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Text.DateFormatSymbols);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
@@ -4788,22 +3614,6 @@ namespace Java.Text
 				public override global::Java.Util.Date Parse(string @string, global::Java.Text.ParsePosition parsePosition) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// set2DigitYearStart
-				/// </java-name>
-				[Dot42.DexImport("set2DigitYearStart", "(Ljava/util/Date;)V", AccessFlags = 1)]
-				public virtual void Set2DigitYearStart(global::Java.Util.Date date) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDateFormatSymbols
-				/// </java-name>
-				[Dot42.DexImport("setDateFormatSymbols", "(Ljava/text/DateFormatSymbols;)V", AccessFlags = 1)]
-				public virtual void SetDateFormatSymbols(global::Java.Text.DateFormatSymbols dateFormatSymbols) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -4827,23 +3637,23 @@ namespace Java.Text
 				/// <java-name>
 				/// get2DigitYearStart
 				/// </java-name>
-				public global::Java.Util.Date _2DigitYearStart
+				public virtual global::Java.Util.Date _2DigitYearStart
 				{
-				[Dot42.DexImport("get2DigitYearStart", "()Ljava/util/Date;", AccessFlags = 1)]
-						get{ return Get2DigitYearStart(); }
-				[Dot42.DexImport("set2DigitYearStart", "(Ljava/util/Date;)V", AccessFlags = 1)]
-						set{ Set2DigitYearStart(value); }
+						[Dot42.DexImport("get2DigitYearStart", "()Ljava/util/Date;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Date); }
+						[Dot42.DexImport("set2DigitYearStart", "(Ljava/util/Date;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDateFormatSymbols
 				/// </java-name>
-				public global::Java.Text.DateFormatSymbols DateFormatSymbols
+				public virtual global::Java.Text.DateFormatSymbols DateFormatSymbols
 				{
-				[Dot42.DexImport("getDateFormatSymbols", "()Ljava/text/DateFormatSymbols;", AccessFlags = 1)]
-						get{ return GetDateFormatSymbols(); }
-				[Dot42.DexImport("setDateFormatSymbols", "(Ljava/text/DateFormatSymbols;)V", AccessFlags = 1)]
-						set{ SetDateFormatSymbols(value); }
+						[Dot42.DexImport("getDateFormatSymbols", "()Ljava/text/DateFormatSymbols;", AccessFlags = 1)]
+						get{ return default(global::Java.Text.DateFormatSymbols); }
+						[Dot42.DexImport("setDateFormatSymbols", "(Ljava/text/DateFormatSymbols;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -4904,33 +3714,6 @@ namespace Java.Text
 				public char First() /* MethodBuilder.Create */ 
 				{
 						return default(char);
-				}
-
-				/// <java-name>
-				/// getBeginIndex
-				/// </java-name>
-				[Dot42.DexImport("getBeginIndex", "()I", AccessFlags = 1)]
-				public int GetBeginIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEndIndex
-				/// </java-name>
-				[Dot42.DexImport("getEndIndex", "()I", AccessFlags = 1)]
-				public int GetEndIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-				public int GetIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -4996,8 +3779,8 @@ namespace Java.Text
 				/// </java-name>
 				public int BeginIndex
 				{
-				[Dot42.DexImport("getBeginIndex", "()I", AccessFlags = 1)]
-						get{ return GetBeginIndex(); }
+						[Dot42.DexImport("getBeginIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -5005,8 +3788,8 @@ namespace Java.Text
 				/// </java-name>
 				public int EndIndex
 				{
-				[Dot42.DexImport("getEndIndex", "()I", AccessFlags = 1)]
-						get{ return GetEndIndex(); }
+						[Dot42.DexImport("getEndIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -5014,8 +3797,8 @@ namespace Java.Text
 				/// </java-name>
 				public int Index
 				{
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-						get{ return GetIndex(); }
+						[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

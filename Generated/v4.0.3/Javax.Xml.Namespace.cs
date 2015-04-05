@@ -51,33 +51,6 @@ namespace Javax.Xml.Namespace
 				}
 
 				/// <java-name>
-				/// getNamespaceURI
-				/// </java-name>
-				[Dot42.DexImport("getNamespaceURI", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetNamespaceURI() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLocalPart
-				/// </java-name>
-				[Dot42.DexImport("getLocalPart", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetLocalPart() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPrefix
-				/// </java-name>
-				[Dot42.DexImport("getPrefix", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPrefix() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 17)]
@@ -121,28 +94,28 @@ namespace Javax.Xml.Namespace
 				/// <java-name>
 				/// getNamespaceURI
 				/// </java-name>
-				public string NamespaceURI
+				public virtual string NamespaceURI
 				{
-				[Dot42.DexImport("getNamespaceURI", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetNamespaceURI(); }
+						[Dot42.DexImport("getNamespaceURI", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getLocalPart
 				/// </java-name>
-				public string LocalPart
+				public virtual string LocalPart
 				{
-				[Dot42.DexImport("getLocalPart", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocalPart(); }
+						[Dot42.DexImport("getLocalPart", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPrefix
 				/// </java-name>
-				public string Prefix
+				public virtual string Prefix
 				{
-				[Dot42.DexImport("getPrefix", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPrefix(); }
+						[Dot42.DexImport("getPrefix", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}

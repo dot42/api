@@ -224,12 +224,6 @@ namespace Java.Nio.Channels
 				public abstract global::Java.Net.DatagramSocket Socket() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1025)]
-				public abstract bool IsConnected() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// connect
 				/// </java-name>
 				[Dot42.DexImport("connect", "(Ljava/net/SocketAddress;)Ljava/nio/channels/DatagramChannel;", AccessFlags = 1025)]
@@ -312,15 +306,24 @@ namespace Java.Nio.Channels
 				{
 				}
 
-				[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
-				public override bool IsOpen() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/nio/channels/Channel", "close", "()V", AccessFlags = 1025)]
 				public override void Close() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public abstract bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				public override bool IsOpen
+				{
+						[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -481,15 +484,15 @@ namespace Java.Nio.Channels
 						return default(long);
 				}
 
-				[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
-				public new virtual bool IsOpen() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/nio/channels/Channel", "close", "()V", AccessFlags = 1025)]
 				public new virtual void Close() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
+				}
+
+				public new virtual bool IsOpen
+				{
+						[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -572,15 +575,6 @@ namespace Java.Nio.Channels
 				}
 
 				/// <java-name>
-				/// isShared
-				/// </java-name>
-				[Dot42.DexImport("isShared", "()Z", AccessFlags = 17)]
-				public bool IsShared() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// overlaps
 				/// </java-name>
 				[Dot42.DexImport("overlaps", "(JJ)Z", AccessFlags = 17)]
@@ -588,12 +582,6 @@ namespace Java.Nio.Channels
 				{
 						return default(bool);
 				}
-
-				/// <java-name>
-				/// isValid
-				/// </java-name>
-				[Dot42.DexImport("isValid", "()Z", AccessFlags = 1025)]
-				public abstract bool IsValid() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// release
@@ -613,6 +601,24 @@ namespace Java.Nio.Channels
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal FileLock() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// isShared
+				/// </java-name>
+				public bool IsShared
+				{
+						[Dot42.DexImport("isShared", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isValid
+				/// </java-name>
+				public abstract bool IsValid
+				{
+						[Dot42.DexImport("isValid", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -648,16 +654,19 @@ namespace Java.Nio.Channels
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// isOpen
-				/// </java-name>
-				[Dot42.DexImport("isOpen", "()Z", AccessFlags = 1025)]
-				bool IsOpen() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// close
 				/// </java-name>
 				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
 				void Close() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isOpen
+				/// </java-name>
+				bool IsOpen
+				{
+						[Dot42.DexImport("isOpen", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -925,12 +934,6 @@ namespace Java.Nio.Channels
 								return default(int);
 						}
 
-						[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
-						public override bool IsOpen() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-						{
-								return default(bool);
-						}
-
 						[Dot42.DexImport("java/nio/channels/Channel", "close", "()V", AccessFlags = 1025)]
 						public override void Close() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
@@ -946,6 +949,12 @@ namespace Java.Nio.Channels
 						public virtual long Read(global::Java.Nio.ByteBuffer[] byteBuffer, int int32, int int321) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 								return default(long);
+						}
+
+						public override bool IsOpen
+						{
+								[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
+								get{ return default(bool); }
 						}
 
 				}
@@ -982,12 +991,6 @@ namespace Java.Nio.Channels
 								return default(int);
 						}
 
-						[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
-						public override bool IsOpen() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-						{
-								return default(bool);
-						}
-
 						[Dot42.DexImport("java/nio/channels/Channel", "close", "()V", AccessFlags = 1025)]
 						public override void Close() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
@@ -1003,6 +1006,12 @@ namespace Java.Nio.Channels
 						public virtual long Write(global::Java.Nio.ByteBuffer[] byteBuffer, int int32, int int321) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
 								return default(long);
+						}
+
+						public override bool IsOpen
+						{
+								[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
+								get{ return default(bool); }
 						}
 
 				}
@@ -1032,18 +1041,6 @@ namespace Java.Nio.Channels
 				/// </java-name>
 				[Dot42.DexImport("configureBlocking", "(Z)Ljava/nio/channels/SelectableChannel;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.Channels.SelectableChannel ConfigureBlocking(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isBlocking
-				/// </java-name>
-				[Dot42.DexImport("isBlocking", "()Z", AccessFlags = 1025)]
-				public abstract bool IsBlocking() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isRegistered
-				/// </java-name>
-				[Dot42.DexImport("isRegistered", "()Z", AccessFlags = 1025)]
-				public abstract bool IsRegistered() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// keyFor
@@ -1079,15 +1076,33 @@ namespace Java.Nio.Channels
 				[Dot42.DexImport("validOps", "()I", AccessFlags = 1025)]
 				public abstract int ValidOps() /* MethodBuilder.Create */ ;
 
-				[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
-				public new virtual bool IsOpen() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/nio/channels/Channel", "close", "()V", AccessFlags = 1025)]
 				public new virtual void Close() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
+				}
+
+				/// <java-name>
+				/// isBlocking
+				/// </java-name>
+				public abstract bool IsBlocking
+				{
+						[Dot42.DexImport("isBlocking", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isRegistered
+				/// </java-name>
+				public abstract bool IsRegistered
+				{
+						[Dot42.DexImport("isRegistered", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				public new virtual bool IsOpen
+				{
+						[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1167,48 +1182,6 @@ namespace Java.Nio.Channels
 				public abstract global::Java.Nio.Channels.SelectionKey InterestOps(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isAcceptable
-				/// </java-name>
-				[Dot42.DexImport("isAcceptable", "()Z", AccessFlags = 17)]
-				public bool IsAcceptable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isConnectable
-				/// </java-name>
-				[Dot42.DexImport("isConnectable", "()Z", AccessFlags = 17)]
-				public bool IsConnectable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isReadable
-				/// </java-name>
-				[Dot42.DexImport("isReadable", "()Z", AccessFlags = 17)]
-				public bool IsReadable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isValid
-				/// </java-name>
-				[Dot42.DexImport("isValid", "()Z", AccessFlags = 1025)]
-				public abstract bool IsValid() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isWritable
-				/// </java-name>
-				[Dot42.DexImport("isWritable", "()Z", AccessFlags = 17)]
-				public bool IsWritable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// readyOps
 				/// </java-name>
 				[Dot42.DexImport("readyOps", "()I", AccessFlags = 1025)]
@@ -1219,6 +1192,51 @@ namespace Java.Nio.Channels
 				/// </java-name>
 				[Dot42.DexImport("selector", "()Ljava/nio/channels/Selector;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.Channels.Selector Selector() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isAcceptable
+				/// </java-name>
+				public bool IsAcceptable
+				{
+						[Dot42.DexImport("isAcceptable", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isConnectable
+				/// </java-name>
+				public bool IsConnectable
+				{
+						[Dot42.DexImport("isConnectable", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isReadable
+				/// </java-name>
+				public bool IsReadable
+				{
+						[Dot42.DexImport("isReadable", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isValid
+				/// </java-name>
+				public abstract bool IsValid
+				{
+						[Dot42.DexImport("isValid", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isWritable
+				/// </java-name>
+				public bool IsWritable
+				{
+						[Dot42.DexImport("isWritable", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
 
 		}
 
@@ -1248,12 +1266,6 @@ namespace Java.Nio.Channels
 				/// </java-name>
 				[Dot42.DexImport("close", "()V", AccessFlags = 1025)]
 				public abstract void Close() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isOpen
-				/// </java-name>
-				[Dot42.DexImport("isOpen", "()Z", AccessFlags = 1025)]
-				public abstract bool IsOpen() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// keys
@@ -1296,6 +1308,15 @@ namespace Java.Nio.Channels
 				/// </java-name>
 				[Dot42.DexImport("wakeup", "()Ljava/nio/channels/Selector;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.Channels.Selector Wakeup() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isOpen
+				/// </java-name>
+				public abstract bool IsOpen
+				{
+						[Dot42.DexImport("isOpen", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1394,18 +1415,6 @@ namespace Java.Nio.Channels
 				public abstract global::Java.Net.Socket Socket() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1025)]
-				public abstract bool IsConnected() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isConnectionPending
-				/// </java-name>
-				[Dot42.DexImport("isConnectionPending", "()Z", AccessFlags = 1025)]
-				public abstract bool IsConnectionPending() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// connect
 				/// </java-name>
 				[Dot42.DexImport("connect", "(Ljava/net/SocketAddress;)Z", AccessFlags = 1025)]
@@ -1476,15 +1485,33 @@ namespace Java.Nio.Channels
 				{
 				}
 
-				[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
-				public override bool IsOpen() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/nio/channels/Channel", "close", "()V", AccessFlags = 1025)]
 				public override void Close() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public abstract bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isConnectionPending
+				/// </java-name>
+				public abstract bool IsConnectionPending
+				{
+						[Dot42.DexImport("isConnectionPending", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				public override bool IsOpen
+				{
+						[Dot42.DexImport("java/nio/channels/Channel", "isOpen", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}

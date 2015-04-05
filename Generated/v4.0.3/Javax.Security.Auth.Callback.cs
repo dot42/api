@@ -38,41 +38,6 @@ namespace Javax.Security.Auth.Callback
 				}
 
 				/// <java-name>
-				/// getPrompt
-				/// </java-name>
-				[Dot42.DexImport("getPrompt", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPrompt() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isEchoOn
-				/// </java-name>
-				[Dot42.DexImport("isEchoOn", "()Z", AccessFlags = 1)]
-				public virtual bool IsEchoOn() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setPassword
-				/// </java-name>
-				[Dot42.DexImport("setPassword", "([C)V", AccessFlags = 1)]
-				public virtual void SetPassword(char[] @char) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPassword
-				/// </java-name>
-				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 1)]
-				public virtual char[] GetPassword() /* MethodBuilder.Create */ 
-				{
-						return default(char[]);
-				}
-
-				/// <java-name>
 				/// clearPassword
 				/// </java-name>
 				[Dot42.DexImport("clearPassword", "()V", AccessFlags = 1)]
@@ -88,21 +53,30 @@ namespace Javax.Security.Auth.Callback
 				/// <java-name>
 				/// getPrompt
 				/// </java-name>
-				public string Prompt
+				public virtual string Prompt
 				{
-				[Dot42.DexImport("getPrompt", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPrompt(); }
+						[Dot42.DexImport("getPrompt", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isEchoOn
+				/// </java-name>
+				public virtual bool IsEchoOn
+				{
+						[Dot42.DexImport("isEchoOn", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getPassword
 				/// </java-name>
-				public char[] Password
+				public virtual char[] Password
 				{
-				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 1)]
-						get{ return GetPassword(); }
-				[Dot42.DexImport("setPassword", "([C)V", AccessFlags = 1)]
-						set{ SetPassword(value); }
+						[Dot42.DexImport("getPassword", "()[C", AccessFlags = 1)]
+						get{ return default(char[]); }
+						[Dot42.DexImport("setPassword", "([C)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -124,15 +98,6 @@ namespace Javax.Security.Auth.Callback
 				{
 				}
 
-				/// <java-name>
-				/// getCallback
-				/// </java-name>
-				[Dot42.DexImport("getCallback", "()Ljavax/security/auth/callback/Callback;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.Callback.ICallback GetCallback() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.Callback.ICallback);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal UnsupportedCallbackException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -141,10 +106,10 @@ namespace Javax.Security.Auth.Callback
 				/// <java-name>
 				/// getCallback
 				/// </java-name>
-				public global::Javax.Security.Auth.Callback.ICallback Callback
+				public virtual global::Javax.Security.Auth.Callback.ICallback Callback
 				{
-				[Dot42.DexImport("getCallback", "()Ljavax/security/auth/callback/Callback;", AccessFlags = 1)]
-						get{ return GetCallback(); }
+						[Dot42.DexImport("getCallback", "()Ljavax/security/auth/callback/Callback;", AccessFlags = 1)]
+						get{ return default(global::Javax.Security.Auth.Callback.ICallback); }
 				}
 
 		}

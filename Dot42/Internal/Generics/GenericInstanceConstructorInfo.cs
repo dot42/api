@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using Java.Lang.Reflect;
 
 namespace Dot42.Internal.Generics
 {
@@ -8,7 +9,7 @@ namespace Dot42.Internal.Generics
         private readonly Type _declaringType;
         private readonly Type[] _genericParameters;
 
-        public GenericInstanceConstructorInfo(JavaConstructor ctor, Type declaringType, Type[] genericParameters) : base(ctor)
+        public GenericInstanceConstructorInfo(Constructor ctor, Type declaringType, Type[] genericParameters) : base(ctor)
         {
             _declaringType = declaringType;
             _genericParameters = genericParameters;

@@ -14,12 +14,6 @@ namespace Android.Media.Effect
 				}
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// apply
 				/// </java-name>
 				[Dot42.DexImport("apply", "(IIII)V", AccessFlags = 1025)]
@@ -48,10 +42,10 @@ namespace Android.Media.Effect
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public abstract string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -78,15 +72,6 @@ namespace Android.Media.Effect
 				}
 
 				/// <java-name>
-				/// getFactory
-				/// </java-name>
-				[Dot42.DexImport("getFactory", "()Landroid/media/effect/EffectFactory;", AccessFlags = 1)]
-				public virtual global::Android.Media.Effect.EffectFactory GetFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Media.Effect.EffectFactory);
-				}
-
-				/// <java-name>
 				/// release
 				/// </java-name>
 				[Dot42.DexImport("release", "()V", AccessFlags = 1)]
@@ -97,10 +82,10 @@ namespace Android.Media.Effect
 				/// <java-name>
 				/// getFactory
 				/// </java-name>
-				public global::Android.Media.Effect.EffectFactory Factory
+				public virtual global::Android.Media.Effect.EffectFactory Factory
 				{
-				[Dot42.DexImport("getFactory", "()Landroid/media/effect/EffectFactory;", AccessFlags = 1)]
-						get{ return GetFactory(); }
+						[Dot42.DexImport("getFactory", "()Landroid/media/effect/EffectFactory;", AccessFlags = 1)]
+						get{ return default(global::Android.Media.Effect.EffectFactory); }
 				}
 
 		}

@@ -30,34 +30,19 @@ namespace Javax.Microedition.Khronos.Egl
 				/// <java-name>
 				/// getEGL
 				/// </java-name>
-				[Dot42.DexImport("getEGL", "()Ljavax/microedition/khronos/egl/EGL;", AccessFlags = 9)]
-				public static global::Javax.Microedition.Khronos.Egl.IEGL GetEGL() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Microedition.Khronos.Egl.IEGL);
-				}
-
-				/// <java-name>
-				/// getGL
-				/// </java-name>
-				[Dot42.DexImport("getGL", "()Ljavax/microedition/khronos/opengles/GL;", AccessFlags = 1025)]
-				public abstract global::Javax.Microedition.Khronos.Opengles.IGL GetGL() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEGL
-				/// </java-name>
 				public static global::Javax.Microedition.Khronos.Egl.IEGL EGL
 				{
-				[Dot42.DexImport("getEGL", "()Ljavax/microedition/khronos/egl/EGL;", AccessFlags = 9)]
-						get{ return GetEGL(); }
+						[Dot42.DexImport("getEGL", "()Ljavax/microedition/khronos/egl/EGL;", AccessFlags = 9)]
+						get{ return default(global::Javax.Microedition.Khronos.Egl.IEGL); }
 				}
 
 				/// <java-name>
 				/// getGL
 				/// </java-name>
-				public global::Javax.Microedition.Khronos.Opengles.IGL GL
+				public abstract global::Javax.Microedition.Khronos.Opengles.IGL GL
 				{
-				[Dot42.DexImport("getGL", "()Ljavax/microedition/khronos/opengles/GL;", AccessFlags = 1025)]
-						get{ return GetGL(); }
+						[Dot42.DexImport("getGL", "()Ljavax/microedition/khronos/opengles/GL;", AccessFlags = 1025)]
+						get;
 				}
 
 		}

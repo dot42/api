@@ -14,24 +14,6 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public virtual global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public virtual bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// connect
 				/// </java-name>
 				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
@@ -50,10 +32,19 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getTag
 				/// </java-name>
-				public global::Android.Nfc.Tag Tag
+				public virtual global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public virtual bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -80,23 +71,6 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// setTimeout
-				/// </java-name>
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-				public void SetTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTimeout
-				/// </java-name>
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-				public int GetTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getHistoricalBytes
 				/// </java-name>
 				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1)]
@@ -106,30 +80,12 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getHistoricalBytes
-				/// </java-name>
-				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetHistoricalBytes() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// getHiLayerResponse
 				/// </java-name>
 				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1)]
 				public sbyte[] JavaGetHiLayerResponse() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getHiLayerResponse
-				/// </java-name>
-				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetHiLayerResponse() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -148,33 +104,6 @@ namespace Android.Nfc.Tech
 				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -198,10 +127,10 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int Timeout
 				{
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-						get{ return GetTimeout(); }
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetTimeout(value); }
+						[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -209,8 +138,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] HistoricalBytes
 				{
-				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetHistoricalBytes(); }
+						[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -218,8 +147,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] HiLayerResponse
 				{
-				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetHiLayerResponse(); }
+						[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -227,8 +156,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int MaxTransceiveLength
 				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
+						[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -236,8 +165,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -249,12 +187,6 @@ namespace Android.Nfc.Tech
 		public partial interface ITagTechnology : global::Java.Io.ICloseable
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1025)]
-				global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// connect
 				/// </java-name>
@@ -268,10 +200,22 @@ namespace Android.Nfc.Tech
 				void Close() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// getTag
+				/// </java-name>
+				global::Android.Nfc.Tag Tag
+				{
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
 				/// isConnected
 				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1025)]
-				bool IsConnected() /* MethodBuilder.Create */ ;
+				bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -354,42 +298,6 @@ namespace Android.Nfc.Tech
 				public static global::Android.Nfc.Tech.MifareClassic Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Nfc.Tech.MifareClassic);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public int GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSize
-				/// </java-name>
-				[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
-				public int GetSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSectorCount
-				/// </java-name>
-				[Dot42.DexImport("getSectorCount", "()I", AccessFlags = 1)]
-				public int GetSectorCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBlockCount
-				/// </java-name>
-				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 1)]
-				public int GetBlockCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -540,50 +448,6 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setTimeout
-				/// </java-name>
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-				public void SetTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTimeout
-				/// </java-name>
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-				public int GetTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// connect
 				/// </java-name>
 				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
@@ -604,8 +468,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int Type
 				{
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -613,8 +477,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int Size
 				{
-				[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
-						get{ return GetSize(); }
+						[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -622,8 +486,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int SectorCount
 				{
-				[Dot42.DexImport("getSectorCount", "()I", AccessFlags = 1)]
-						get{ return GetSectorCount(); }
+						[Dot42.DexImport("getSectorCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -631,8 +495,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int BlockCount
 				{
-				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 1)]
-						get{ return GetBlockCount(); }
+						[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -640,8 +504,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int MaxTransceiveLength
 				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
+						[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -649,10 +513,10 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int Timeout
 				{
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-						get{ return GetTimeout(); }
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetTimeout(value); }
+						[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -660,8 +524,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -705,15 +578,6 @@ namespace Android.Nfc.Tech
 				public static global::Android.Nfc.Tech.MifareUltralight Get(global::Android.Nfc.Tag tag) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Nfc.Tech.MifareUltralight);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public int GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -769,50 +633,6 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setTimeout
-				/// </java-name>
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-				public void SetTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTimeout
-				/// </java-name>
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-				public int GetTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// connect
 				/// </java-name>
 				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
@@ -833,8 +653,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int Type
 				{
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -842,8 +662,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int MaxTransceiveLength
 				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
+						[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -851,10 +671,10 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int Timeout
 				{
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-						get{ return GetTimeout(); }
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetTimeout(value); }
+						[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -862,8 +682,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -915,51 +744,6 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getCachedNdefMessage
-				/// </java-name>
-				[Dot42.DexImport("getCachedNdefMessage", "()Landroid/nfc/NdefMessage;", AccessFlags = 1)]
-				public global::Android.Nfc.NdefMessage GetCachedNdefMessage() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.NdefMessage);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMaxSize
-				/// </java-name>
-				[Dot42.DexImport("getMaxSize", "()I", AccessFlags = 1)]
-				public int GetMaxSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isWritable
-				/// </java-name>
-				[Dot42.DexImport("isWritable", "()Z", AccessFlags = 1)]
-				public bool IsWritable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getNdefMessage
-				/// </java-name>
-				[Dot42.DexImport("getNdefMessage", "()Landroid/nfc/NdefMessage;", AccessFlags = 1)]
-				public global::Android.Nfc.NdefMessage GetNdefMessage() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.NdefMessage);
-				}
-
-				/// <java-name>
 				/// writeNdefMessage
 				/// </java-name>
 				[Dot42.DexImport("writeNdefMessage", "(Landroid/nfc/NdefMessage;)V", AccessFlags = 1)]
@@ -968,37 +752,10 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// canMakeReadOnly
-				/// </java-name>
-				[Dot42.DexImport("canMakeReadOnly", "()Z", AccessFlags = 1)]
-				public bool CanMakeReadOnly() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// makeReadOnly
 				/// </java-name>
 				[Dot42.DexImport("makeReadOnly", "()Z", AccessFlags = 1)]
 				public bool MakeReadOnly() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1024,8 +781,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.NdefMessage CachedNdefMessage
 				{
-				[Dot42.DexImport("getCachedNdefMessage", "()Landroid/nfc/NdefMessage;", AccessFlags = 1)]
-						get{ return GetCachedNdefMessage(); }
+						[Dot42.DexImport("getCachedNdefMessage", "()Landroid/nfc/NdefMessage;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.NdefMessage); }
 				}
 
 				/// <java-name>
@@ -1033,8 +790,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public string Type
 				{
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1042,8 +799,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int MaxSize
 				{
-				[Dot42.DexImport("getMaxSize", "()I", AccessFlags = 1)]
-						get{ return GetMaxSize(); }
+						[Dot42.DexImport("getMaxSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isWritable
+				/// </java-name>
+				public bool IsWritable
+				{
+						[Dot42.DexImport("isWritable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1051,8 +817,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.NdefMessage NdefMessage
 				{
-				[Dot42.DexImport("getNdefMessage", "()Landroid/nfc/NdefMessage;", AccessFlags = 1)]
-						get{ return GetNdefMessage(); }
+						[Dot42.DexImport("getNdefMessage", "()Landroid/nfc/NdefMessage;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.NdefMessage); }
+				}
+
+				/// <java-name>
+				/// canMakeReadOnly
+				/// </java-name>
+				public bool CanMakeReadOnly
+				{
+						[Dot42.DexImport("canMakeReadOnly", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1060,8 +835,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1104,24 +888,6 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// connect
 				/// </java-name>
 				[Dot42.DexImport("connect", "()V", AccessFlags = 1)]
@@ -1142,8 +908,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1179,24 +954,6 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getAtqa
-				/// </java-name>
-				[Dot42.DexImport("getAtqa", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetAtqa() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getSak
-				/// </java-name>
-				[Dot42.DexImport("getSak", "()S", AccessFlags = 1)]
-				public short GetSak() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
 				/// transceive
 				/// </java-name>
 				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
@@ -1212,50 +969,6 @@ namespace Android.Nfc.Tech
 				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setTimeout
-				/// </java-name>
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-				public void SetTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTimeout
-				/// </java-name>
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-				public int GetTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1279,8 +992,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] Atqa
 				{
-				[Dot42.DexImport("getAtqa", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetAtqa(); }
+						[Dot42.DexImport("getAtqa", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -1288,8 +1001,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public short Sak
 				{
-				[Dot42.DexImport("getSak", "()S", AccessFlags = 1)]
-						get{ return GetSak(); }
+						[Dot42.DexImport("getSak", "()S", AccessFlags = 1)]
+						get{ return default(short); }
 				}
 
 				/// <java-name>
@@ -1297,8 +1010,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int MaxTransceiveLength
 				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
+						[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1306,10 +1019,10 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int Timeout
 				{
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-						get{ return GetTimeout(); }
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetTimeout(value); }
+						[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1317,8 +1030,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1354,30 +1076,12 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getApplicationData
-				/// </java-name>
-				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetApplicationData() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// getProtocolInfo
 				/// </java-name>
 				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1)]
 				public sbyte[] JavaGetProtocolInfo() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getProtocolInfo
-				/// </java-name>
-				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetProtocolInfo() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -1396,33 +1100,6 @@ namespace Android.Nfc.Tech
 				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1446,8 +1123,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] ApplicationData
 				{
-				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetApplicationData(); }
+						[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -1455,8 +1132,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] ProtocolInfo
 				{
-				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetProtocolInfo(); }
+						[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -1464,8 +1141,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int MaxTransceiveLength
 				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
+						[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1473,8 +1150,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1510,30 +1196,12 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getSystemCode
-				/// </java-name>
-				[Dot42.DexImport("getSystemCode", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetSystemCode() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// getManufacturer
 				/// </java-name>
 				[Dot42.DexImport("getManufacturer", "()[B", AccessFlags = 1)]
 				public sbyte[] JavaGetManufacturer() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getManufacturer
-				/// </java-name>
-				[Dot42.DexImport("getManufacturer", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetManufacturer() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -1552,50 +1220,6 @@ namespace Android.Nfc.Tech
 				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setTimeout
-				/// </java-name>
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-				public void SetTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTimeout
-				/// </java-name>
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-				public int GetTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1619,8 +1243,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] SystemCode
 				{
-				[Dot42.DexImport("getSystemCode", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetSystemCode(); }
+						[Dot42.DexImport("getSystemCode", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -1628,8 +1252,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] Manufacturer
 				{
-				[Dot42.DexImport("getManufacturer", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetManufacturer(); }
+						[Dot42.DexImport("getManufacturer", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -1637,8 +1261,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int MaxTransceiveLength
 				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
+						[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1646,10 +1270,10 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int Timeout
 				{
-				[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
-						get{ return GetTimeout(); }
-				[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetTimeout(value); }
+						[Dot42.DexImport("getTimeout", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setTimeout", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1657,8 +1281,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1694,30 +1327,12 @@ namespace Android.Nfc.Tech
 				}
 
 				/// <java-name>
-				/// getResponseFlags
-				/// </java-name>
-				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte GetResponseFlags() /* MethodBuilder.Create */ 
-				{
-						return default(byte);
-				}
-
-				/// <java-name>
 				/// getDsfId
 				/// </java-name>
 				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1)]
 				public sbyte JavaGetDsfId() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
-				}
-
-				/// <java-name>
-				/// getDsfId
-				/// </java-name>
-				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte GetDsfId() /* MethodBuilder.Create */ 
-				{
-						return default(byte);
 				}
 
 				/// <java-name>
@@ -1736,33 +1351,6 @@ namespace Android.Nfc.Tech
 				public byte[] Transceive(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMaxTransceiveLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-				public int GetMaxTransceiveLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTag
-				/// </java-name>
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-				public global::Android.Nfc.Tag GetTag() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.Tag);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1786,8 +1374,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte ResponseFlags
 				{
-				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetResponseFlags(); }
+						[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte); }
 				}
 
 				/// <java-name>
@@ -1795,8 +1383,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte DsfId
 				{
-				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetDsfId(); }
+						[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte); }
 				}
 
 				/// <java-name>
@@ -1804,8 +1392,8 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public int MaxTransceiveLength
 				{
-				[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxTransceiveLength(); }
+						[Dot42.DexImport("getMaxTransceiveLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1813,8 +1401,17 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public global::Android.Nfc.Tag Tag
 				{
-				[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
-						get{ return GetTag(); }
+						[Dot42.DexImport("getTag", "()Landroid/nfc/Tag;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.Tag); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

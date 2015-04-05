@@ -54,15 +54,6 @@ namespace Android.Net.Rtp
 				}
 
 				/// <java-name>
-				/// getCodecs
-				/// </java-name>
-				[Dot42.DexImport("getCodecs", "()[Landroid/net/rtp/AudioCodec;", AccessFlags = 9)]
-				public static global::Android.Net.Rtp.AudioCodec[] GetCodecs() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Rtp.AudioCodec[]);
-				}
-
-				/// <java-name>
 				/// getCodec
 				/// </java-name>
 				[Dot42.DexImport("getCodec", "(ILjava/lang/String;Ljava/lang/String;)Landroid/net/rtp/AudioCodec;", AccessFlags = 9)]
@@ -76,8 +67,8 @@ namespace Android.Net.Rtp
 				/// </java-name>
 				public static global::Android.Net.Rtp.AudioCodec[] Codecs
 				{
-				[Dot42.DexImport("getCodecs", "()[Landroid/net/rtp/AudioCodec;", AccessFlags = 9)]
-						get{ return GetCodecs(); }
+						[Dot42.DexImport("getCodecs", "()[Landroid/net/rtp/AudioCodec;", AccessFlags = 9)]
+						get{ return default(global::Android.Net.Rtp.AudioCodec[]); }
 				}
 
 		}
@@ -115,32 +106,6 @@ namespace Android.Net.Rtp
 				}
 
 				/// <java-name>
-				/// getStreams
-				/// </java-name>
-				[Dot42.DexImport("getStreams", "()[Landroid/net/rtp/AudioStream;", AccessFlags = 1)]
-				public virtual global::Android.Net.Rtp.AudioStream[] GetStreams() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Rtp.AudioStream[]);
-				}
-
-				/// <java-name>
-				/// getMode
-				/// </java-name>
-				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
-				public virtual int GetMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setMode
-				/// </java-name>
-				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// sendDtmf
 				/// </java-name>
 				[Dot42.DexImport("sendDtmf", "(I)V", AccessFlags = 1)]
@@ -165,21 +130,21 @@ namespace Android.Net.Rtp
 				/// <java-name>
 				/// getStreams
 				/// </java-name>
-				public global::Android.Net.Rtp.AudioStream[] Streams
+				public virtual global::Android.Net.Rtp.AudioStream[] Streams
 				{
-				[Dot42.DexImport("getStreams", "()[Landroid/net/rtp/AudioStream;", AccessFlags = 1)]
-						get{ return GetStreams(); }
+						[Dot42.DexImport("getStreams", "()[Landroid/net/rtp/AudioStream;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Rtp.AudioStream[]); }
 				}
 
 				/// <java-name>
 				/// getMode
 				/// </java-name>
-				public int Mode
+				public virtual int Mode
 				{
-				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
-						get{ return GetMode(); }
-				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
-						set{ SetMode(value); }
+						[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -197,62 +162,10 @@ namespace Android.Net.Rtp
 				}
 
 				/// <java-name>
-				/// isBusy
-				/// </java-name>
-				[Dot42.DexImport("isBusy", "()Z", AccessFlags = 17)]
-				public override bool IsBusy() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getGroup
-				/// </java-name>
-				[Dot42.DexImport("getGroup", "()Landroid/net/rtp/AudioGroup;", AccessFlags = 1)]
-				public virtual global::Android.Net.Rtp.AudioGroup GetGroup() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Rtp.AudioGroup);
-				}
-
-				/// <java-name>
 				/// join
 				/// </java-name>
 				[Dot42.DexImport("join", "(Landroid/net/rtp/AudioGroup;)V", AccessFlags = 1)]
 				public virtual void Join(global::Android.Net.Rtp.AudioGroup audioGroup) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCodec
-				/// </java-name>
-				[Dot42.DexImport("getCodec", "()Landroid/net/rtp/AudioCodec;", AccessFlags = 1)]
-				public virtual global::Android.Net.Rtp.AudioCodec GetCodec() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Rtp.AudioCodec);
-				}
-
-				/// <java-name>
-				/// setCodec
-				/// </java-name>
-				[Dot42.DexImport("setCodec", "(Landroid/net/rtp/AudioCodec;)V", AccessFlags = 1)]
-				public virtual void SetCodec(global::Android.Net.Rtp.AudioCodec audioCodec) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDtmfType
-				/// </java-name>
-				[Dot42.DexImport("getDtmfType", "()I", AccessFlags = 1)]
-				public virtual int GetDtmfType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDtmfType
-				/// </java-name>
-				[Dot42.DexImport("setDtmfType", "(I)V", AccessFlags = 1)]
-				public virtual void SetDtmfType(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -262,34 +175,43 @@ namespace Android.Net.Rtp
 				}
 
 				/// <java-name>
+				/// isBusy
+				/// </java-name>
+				public override bool IsBusy
+				{
+						[Dot42.DexImport("isBusy", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getGroup
 				/// </java-name>
-				public global::Android.Net.Rtp.AudioGroup Group
+				public virtual global::Android.Net.Rtp.AudioGroup Group
 				{
-				[Dot42.DexImport("getGroup", "()Landroid/net/rtp/AudioGroup;", AccessFlags = 1)]
-						get{ return GetGroup(); }
+						[Dot42.DexImport("getGroup", "()Landroid/net/rtp/AudioGroup;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Rtp.AudioGroup); }
 				}
 
 				/// <java-name>
 				/// getCodec
 				/// </java-name>
-				public global::Android.Net.Rtp.AudioCodec Codec
+				public virtual global::Android.Net.Rtp.AudioCodec Codec
 				{
-				[Dot42.DexImport("getCodec", "()Landroid/net/rtp/AudioCodec;", AccessFlags = 1)]
-						get{ return GetCodec(); }
-				[Dot42.DexImport("setCodec", "(Landroid/net/rtp/AudioCodec;)V", AccessFlags = 1)]
-						set{ SetCodec(value); }
+						[Dot42.DexImport("getCodec", "()Landroid/net/rtp/AudioCodec;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Rtp.AudioCodec); }
+						[Dot42.DexImport("setCodec", "(Landroid/net/rtp/AudioCodec;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDtmfType
 				/// </java-name>
-				public int DtmfType
+				public virtual int DtmfType
 				{
-				[Dot42.DexImport("getDtmfType", "()I", AccessFlags = 1)]
-						get{ return GetDtmfType(); }
-				[Dot42.DexImport("setDtmfType", "(I)V", AccessFlags = 1)]
-						set{ SetDtmfType(value); }
+						[Dot42.DexImport("getDtmfType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setDtmfType", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -322,68 +244,6 @@ namespace Android.Net.Rtp
 				}
 
 				/// <java-name>
-				/// getLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getLocalPort
-				/// </java-name>
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-				public virtual int GetLocalPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRemoteAddress
-				/// </java-name>
-				[Dot42.DexImport("getRemoteAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetRemoteAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getRemotePort
-				/// </java-name>
-				[Dot42.DexImport("getRemotePort", "()I", AccessFlags = 1)]
-				public virtual int GetRemotePort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isBusy
-				/// </java-name>
-				[Dot42.DexImport("isBusy", "()Z", AccessFlags = 1)]
-				public virtual bool IsBusy() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getMode
-				/// </java-name>
-				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
-				public virtual int GetMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setMode
-				/// </java-name>
-				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// associate
 				/// </java-name>
 				[Dot42.DexImport("associate", "(Ljava/net/InetAddress;I)V", AccessFlags = 1)]
@@ -408,48 +268,57 @@ namespace Android.Net.Rtp
 				/// <java-name>
 				/// getLocalAddress
 				/// </java-name>
-				public global::Java.Net.InetAddress LocalAddress
+				public virtual global::Java.Net.InetAddress LocalAddress
 				{
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetLocalAddress(); }
+						[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getLocalPort
 				/// </java-name>
-				public int LocalPort
+				public virtual int LocalPort
 				{
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-						get{ return GetLocalPort(); }
+						[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getRemoteAddress
 				/// </java-name>
-				public global::Java.Net.InetAddress RemoteAddress
+				public virtual global::Java.Net.InetAddress RemoteAddress
 				{
-				[Dot42.DexImport("getRemoteAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetRemoteAddress(); }
+						[Dot42.DexImport("getRemoteAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getRemotePort
 				/// </java-name>
-				public int RemotePort
+				public virtual int RemotePort
 				{
-				[Dot42.DexImport("getRemotePort", "()I", AccessFlags = 1)]
-						get{ return GetRemotePort(); }
+						[Dot42.DexImport("getRemotePort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isBusy
+				/// </java-name>
+				public virtual bool IsBusy
+				{
+						[Dot42.DexImport("isBusy", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getMode
 				/// </java-name>
-				public int Mode
+				public virtual int Mode
 				{
-				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
-						get{ return GetMode(); }
-				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
-						set{ SetMode(value); }
+						[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

@@ -11,8 +11,11 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getParams
 				/// </java-name>
-				[Dot42.DexImport("getParams", "()Ljava/security/interfaces/DSAParams;", AccessFlags = 1025)]
-				global::Java.Security.Interfaces.IDSAParams GetParams() /* MethodBuilder.Create */ ;
+				global::Java.Security.Interfaces.IDSAParams Params
+				{
+						[Dot42.DexImport("getParams", "()Ljava/security/interfaces/DSAParams;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -47,20 +50,29 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getG
 				/// </java-name>
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetG() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger G
+				{
+						[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getP
 				/// </java-name>
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger P
+				{
+						[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getQ
 				/// </java-name>
-				[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetQ() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger Q
+				{
+						[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -74,8 +86,11 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getX
 				/// </java-name>
-				[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetX() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger X
+				{
+						[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -103,8 +118,11 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getY
 				/// </java-name>
-				[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetY() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger Y
+				{
+						[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -132,8 +150,11 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getParams
 				/// </java-name>
-				[Dot42.DexImport("getParams", "()Ljava/security/spec/ECParameterSpec;", AccessFlags = 1025)]
-				global::Java.Security.Spec.ECParameterSpec GetParams() /* MethodBuilder.Create */ ;
+				global::Java.Security.Spec.ECParameterSpec Params
+				{
+						[Dot42.DexImport("getParams", "()Ljava/security/spec/ECParameterSpec;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -147,8 +168,11 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getS
 				/// </java-name>
-				[Dot42.DexImport("getS", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetS() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger S
+				{
+						[Dot42.DexImport("getS", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -176,8 +200,11 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getW
 				/// </java-name>
-				[Dot42.DexImport("getW", "()Ljava/security/spec/ECPoint;", AccessFlags = 1025)]
-				global::Java.Security.Spec.ECPoint GetW() /* MethodBuilder.Create */ ;
+				global::Java.Security.Spec.ECPoint W
+				{
+						[Dot42.DexImport("getW", "()Ljava/security/spec/ECPoint;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -205,8 +232,11 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getModulus
 				/// </java-name>
-				[Dot42.DexImport("getModulus", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetModulus() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger Modulus
+				{
+						[Dot42.DexImport("getModulus", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -220,44 +250,65 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getCrtCoefficient
 				/// </java-name>
-				[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetCrtCoefficient() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger CrtCoefficient
+				{
+						[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getOtherPrimeInfo
 				/// </java-name>
-				[Dot42.DexImport("getOtherPrimeInfo", "()[Ljava/security/spec/RSAOtherPrimeInfo;", AccessFlags = 1025)]
-				global::Java.Security.Spec.RSAOtherPrimeInfo[] GetOtherPrimeInfo() /* MethodBuilder.Create */ ;
+				global::Java.Security.Spec.RSAOtherPrimeInfo[] OtherPrimeInfo
+				{
+						[Dot42.DexImport("getOtherPrimeInfo", "()[Ljava/security/spec/RSAOtherPrimeInfo;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPrimeP
 				/// </java-name>
-				[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPrimeP() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PrimeP
+				{
+						[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPrimeQ
 				/// </java-name>
-				[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPrimeQ() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PrimeQ
+				{
+						[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPrimeExponentP
 				/// </java-name>
-				[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPrimeExponentP() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PrimeExponentP
+				{
+						[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPrimeExponentQ
 				/// </java-name>
-				[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPrimeExponentQ() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PrimeExponentQ
+				{
+						[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPublicExponent() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PublicExponent
+				{
+						[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -285,38 +336,56 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getCrtCoefficient
 				/// </java-name>
-				[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetCrtCoefficient() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger CrtCoefficient
+				{
+						[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPrimeP
 				/// </java-name>
-				[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPrimeP() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PrimeP
+				{
+						[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPrimeQ
 				/// </java-name>
-				[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPrimeQ() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PrimeQ
+				{
+						[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPrimeExponentP
 				/// </java-name>
-				[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPrimeExponentP() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PrimeExponentP
+				{
+						[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPrimeExponentQ
 				/// </java-name>
-				[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPrimeExponentQ() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PrimeExponentQ
+				{
+						[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPublicExponent() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PublicExponent
+				{
+						[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -344,8 +413,11 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getPrivateExponent
 				/// </java-name>
-				[Dot42.DexImport("getPrivateExponent", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPrivateExponent() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PrivateExponent
+				{
+						[Dot42.DexImport("getPrivateExponent", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -373,8 +445,11 @@ namespace Java.Security.Interfaces
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				global::Java.Math.BigInteger GetPublicExponent() /* MethodBuilder.Create */ ;
+				global::Java.Math.BigInteger PublicExponent
+				{
+						[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

@@ -32,12 +32,13 @@ namespace Dot42.Internal
 	        this.length = length;
 	    }
 
-	    int ICharSequence.GetLength()
-	    {
-	        return length;
-	    }
 
-	    char ICharSequence.CharAt(int int32)
+        int ICharSequence.GetLength()
+        {
+            return length;
+        }
+
+        char ICharSequence.CharAt(int int32)
 	    {
 	        return value;
 	    }
@@ -53,6 +54,8 @@ namespace Dot42.Internal
                 throw new IndexOutOfRangeException();
             return new RepeatingCharSequence(value, end - start);
 	    }
+
+        public int Length { get { return length; } }
 	}
 }
 

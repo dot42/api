@@ -13,33 +13,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getG
-				/// </java-name>
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetG() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getP
-				/// </java-name>
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getQ
-				/// </java-name>
-				[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetQ() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DSAParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -48,28 +21,28 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getG
 				/// </java-name>
-				public global::Java.Math.BigInteger G
+				public virtual global::Java.Math.BigInteger G
 				{
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetG(); }
+						[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getP
 				/// </java-name>
-				public global::Java.Math.BigInteger P
+				public virtual global::Java.Math.BigInteger P
 				{
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetP(); }
+						[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getQ
 				/// </java-name>
-				public global::Java.Math.BigInteger Q
+				public virtual global::Java.Math.BigInteger Q
 				{
-				[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetQ(); }
+						[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -87,42 +60,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getG
-				/// </java-name>
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetG() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getP
-				/// </java-name>
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getQ
-				/// </java-name>
-				[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetQ() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getX
-				/// </java-name>
-				[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetX() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DSAPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -131,37 +68,37 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getG
 				/// </java-name>
-				public global::Java.Math.BigInteger G
+				public virtual global::Java.Math.BigInteger G
 				{
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetG(); }
+						[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getP
 				/// </java-name>
-				public global::Java.Math.BigInteger P
+				public virtual global::Java.Math.BigInteger P
 				{
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetP(); }
+						[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getQ
 				/// </java-name>
-				public global::Java.Math.BigInteger Q
+				public virtual global::Java.Math.BigInteger Q
 				{
-				[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetQ(); }
+						[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getX
 				/// </java-name>
-				public global::Java.Math.BigInteger X
+				public virtual global::Java.Math.BigInteger X
 				{
-				[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetX(); }
+						[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -179,42 +116,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getG
-				/// </java-name>
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetG() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getP
-				/// </java-name>
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getQ
-				/// </java-name>
-				[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetQ() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getY
-				/// </java-name>
-				[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetY() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DSAPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -223,37 +124,37 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getG
 				/// </java-name>
-				public global::Java.Math.BigInteger G
+				public virtual global::Java.Math.BigInteger G
 				{
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetG(); }
+						[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getP
 				/// </java-name>
-				public global::Java.Math.BigInteger P
+				public virtual global::Java.Math.BigInteger P
 				{
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetP(); }
+						[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getQ
 				/// </java-name>
-				public global::Java.Math.BigInteger Q
+				public virtual global::Java.Math.BigInteger Q
 				{
-				[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetQ(); }
+						[Dot42.DexImport("getQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getY
 				/// </java-name>
-				public global::Java.Math.BigInteger Y
+				public virtual global::Java.Math.BigInteger Y
 				{
-				[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetY(); }
+						[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -290,42 +191,6 @@ namespace Java.Security.Spec
 				}
 
 				/// <java-name>
-				/// getFieldSize
-				/// </java-name>
-				[Dot42.DexImport("getFieldSize", "()I", AccessFlags = 1)]
-				public virtual int GetFieldSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getM
-				/// </java-name>
-				[Dot42.DexImport("getM", "()I", AccessFlags = 1)]
-				public virtual int GetM() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMidTermsOfReductionPolynomial
-				/// </java-name>
-				[Dot42.DexImport("getMidTermsOfReductionPolynomial", "()[I", AccessFlags = 1)]
-				public virtual int[] GetMidTermsOfReductionPolynomial() /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// getReductionPolynomial
-				/// </java-name>
-				[Dot42.DexImport("getReductionPolynomial", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetReductionPolynomial() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
@@ -342,37 +207,37 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getFieldSize
 				/// </java-name>
-				public int FieldSize
+				public virtual int FieldSize
 				{
-				[Dot42.DexImport("getFieldSize", "()I", AccessFlags = 1)]
-						get{ return GetFieldSize(); }
+						[Dot42.DexImport("getFieldSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getM
 				/// </java-name>
-				public int M
+				public virtual int M
 				{
-				[Dot42.DexImport("getM", "()I", AccessFlags = 1)]
-						get{ return GetM(); }
+						[Dot42.DexImport("getM", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMidTermsOfReductionPolynomial
 				/// </java-name>
-				public int[] MidTermsOfReductionPolynomial
+				public virtual int[] MidTermsOfReductionPolynomial
 				{
-				[Dot42.DexImport("getMidTermsOfReductionPolynomial", "()[I", AccessFlags = 1)]
-						get{ return GetMidTermsOfReductionPolynomial(); }
+						[Dot42.DexImport("getMidTermsOfReductionPolynomial", "()[I", AccessFlags = 1)]
+						get{ return default(int[]); }
 				}
 
 				/// <java-name>
 				/// getReductionPolynomial
 				/// </java-name>
-				public global::Java.Math.BigInteger ReductionPolynomial
+				public virtual global::Java.Math.BigInteger ReductionPolynomial
 				{
-				[Dot42.DexImport("getReductionPolynomial", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetReductionPolynomial(); }
+						[Dot42.DexImport("getReductionPolynomial", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -387,24 +252,6 @@ namespace Java.Security.Spec
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;)V", AccessFlags = 1)]
 				public ECFieldFp(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getFieldSize
-				/// </java-name>
-				[Dot42.DexImport("getFieldSize", "()I", AccessFlags = 1)]
-				public virtual int GetFieldSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getP
-				/// </java-name>
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
 				}
 
 				/// <java-name>
@@ -433,19 +280,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getFieldSize
 				/// </java-name>
-				public int FieldSize
+				public virtual int FieldSize
 				{
-				[Dot42.DexImport("getFieldSize", "()I", AccessFlags = 1)]
-						get{ return GetFieldSize(); }
+						[Dot42.DexImport("getFieldSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getP
 				/// </java-name>
-				public global::Java.Math.BigInteger P
+				public virtual global::Java.Math.BigInteger P
 				{
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetP(); }
+						[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -462,15 +309,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ECGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -479,10 +317,10 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -500,42 +338,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getCofactor
-				/// </java-name>
-				[Dot42.DexImport("getCofactor", "()I", AccessFlags = 1)]
-				public virtual int GetCofactor() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCurve
-				/// </java-name>
-				[Dot42.DexImport("getCurve", "()Ljava/security/spec/EllipticCurve;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.EllipticCurve GetCurve() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.EllipticCurve);
-				}
-
-				/// <java-name>
-				/// getGenerator
-				/// </java-name>
-				[Dot42.DexImport("getGenerator", "()Ljava/security/spec/ECPoint;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.ECPoint GetGenerator() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.ECPoint);
-				}
-
-				/// <java-name>
-				/// getOrder
-				/// </java-name>
-				[Dot42.DexImport("getOrder", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetOrder() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ECParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -544,37 +346,37 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getCofactor
 				/// </java-name>
-				public int Cofactor
+				public virtual int Cofactor
 				{
-				[Dot42.DexImport("getCofactor", "()I", AccessFlags = 1)]
-						get{ return GetCofactor(); }
+						[Dot42.DexImport("getCofactor", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getCurve
 				/// </java-name>
-				public global::Java.Security.Spec.EllipticCurve Curve
+				public virtual global::Java.Security.Spec.EllipticCurve Curve
 				{
-				[Dot42.DexImport("getCurve", "()Ljava/security/spec/EllipticCurve;", AccessFlags = 1)]
-						get{ return GetCurve(); }
+						[Dot42.DexImport("getCurve", "()Ljava/security/spec/EllipticCurve;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Spec.EllipticCurve); }
 				}
 
 				/// <java-name>
 				/// getGenerator
 				/// </java-name>
-				public global::Java.Security.Spec.ECPoint Generator
+				public virtual global::Java.Security.Spec.ECPoint Generator
 				{
-				[Dot42.DexImport("getGenerator", "()Ljava/security/spec/ECPoint;", AccessFlags = 1)]
-						get{ return GetGenerator(); }
+						[Dot42.DexImport("getGenerator", "()Ljava/security/spec/ECPoint;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Spec.ECPoint); }
 				}
 
 				/// <java-name>
 				/// getOrder
 				/// </java-name>
-				public global::Java.Math.BigInteger Order
+				public virtual global::Java.Math.BigInteger Order
 				{
-				[Dot42.DexImport("getOrder", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetOrder(); }
+						[Dot42.DexImport("getOrder", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -594,24 +396,6 @@ namespace Java.Security.Spec
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;)V", AccessFlags = 1)]
 				public ECPoint(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getAffineX
-				/// </java-name>
-				[Dot42.DexImport("getAffineX", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetAffineX() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getAffineY
-				/// </java-name>
-				[Dot42.DexImport("getAffineY", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetAffineY() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
 				}
 
 				/// <java-name>
@@ -640,19 +424,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getAffineX
 				/// </java-name>
-				public global::Java.Math.BigInteger AffineX
+				public virtual global::Java.Math.BigInteger AffineX
 				{
-				[Dot42.DexImport("getAffineX", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetAffineX(); }
+						[Dot42.DexImport("getAffineX", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getAffineY
 				/// </java-name>
-				public global::Java.Math.BigInteger AffineY
+				public virtual global::Java.Math.BigInteger AffineY
 				{
-				[Dot42.DexImport("getAffineY", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetAffineY(); }
+						[Dot42.DexImport("getAffineY", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -669,24 +453,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getParams
-				/// </java-name>
-				[Dot42.DexImport("getParams", "()Ljava/security/spec/ECParameterSpec;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.ECParameterSpec GetParams() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.ECParameterSpec);
-				}
-
-				/// <java-name>
-				/// getS
-				/// </java-name>
-				[Dot42.DexImport("getS", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetS() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ECPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -695,19 +461,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getParams
 				/// </java-name>
-				public global::Java.Security.Spec.ECParameterSpec Params
+				public virtual global::Java.Security.Spec.ECParameterSpec Params
 				{
-				[Dot42.DexImport("getParams", "()Ljava/security/spec/ECParameterSpec;", AccessFlags = 1)]
-						get{ return GetParams(); }
+						[Dot42.DexImport("getParams", "()Ljava/security/spec/ECParameterSpec;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Spec.ECParameterSpec); }
 				}
 
 				/// <java-name>
 				/// getS
 				/// </java-name>
-				public global::Java.Math.BigInteger S
+				public virtual global::Java.Math.BigInteger S
 				{
-				[Dot42.DexImport("getS", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetS(); }
+						[Dot42.DexImport("getS", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -724,24 +490,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getParams
-				/// </java-name>
-				[Dot42.DexImport("getParams", "()Ljava/security/spec/ECParameterSpec;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.ECParameterSpec GetParams() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.ECParameterSpec);
-				}
-
-				/// <java-name>
-				/// getW
-				/// </java-name>
-				[Dot42.DexImport("getW", "()Ljava/security/spec/ECPoint;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.ECPoint GetW() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.ECPoint);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ECPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -750,19 +498,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getParams
 				/// </java-name>
-				public global::Java.Security.Spec.ECParameterSpec Params
+				public virtual global::Java.Security.Spec.ECParameterSpec Params
 				{
-				[Dot42.DexImport("getParams", "()Ljava/security/spec/ECParameterSpec;", AccessFlags = 1)]
-						get{ return GetParams(); }
+						[Dot42.DexImport("getParams", "()Ljava/security/spec/ECParameterSpec;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Spec.ECParameterSpec); }
 				}
 
 				/// <java-name>
 				/// getW
 				/// </java-name>
-				public global::Java.Security.Spec.ECPoint W
+				public virtual global::Java.Security.Spec.ECPoint W
 				{
-				[Dot42.DexImport("getW", "()Ljava/security/spec/ECPoint;", AccessFlags = 1)]
-						get{ return GetW(); }
+						[Dot42.DexImport("getW", "()Ljava/security/spec/ECPoint;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Spec.ECPoint); }
 				}
 
 		}
@@ -790,48 +538,12 @@ namespace Java.Security.Spec
 				}
 
 				/// <java-name>
-				/// getA
-				/// </java-name>
-				[Dot42.DexImport("getA", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetA() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getB
-				/// </java-name>
-				[Dot42.DexImport("getB", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetB() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getField
-				/// </java-name>
-				[Dot42.DexImport("getField", "()Ljava/security/spec/ECField;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.IECField GetField() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.IECField);
-				}
-
-				/// <java-name>
 				/// getSeed
 				/// </java-name>
 				[Dot42.DexImport("getSeed", "()[B", AccessFlags = 1)]
 				public virtual sbyte[] JavaGetSeed() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getSeed
-				/// </java-name>
-				[Dot42.DexImport("getSeed", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetSeed() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -860,37 +572,37 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getA
 				/// </java-name>
-				public global::Java.Math.BigInteger A
+				public virtual global::Java.Math.BigInteger A
 				{
-				[Dot42.DexImport("getA", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetA(); }
+						[Dot42.DexImport("getA", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getB
 				/// </java-name>
-				public global::Java.Math.BigInteger B
+				public virtual global::Java.Math.BigInteger B
 				{
-				[Dot42.DexImport("getB", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetB(); }
+						[Dot42.DexImport("getB", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getField
 				/// </java-name>
-				public global::Java.Security.Spec.IECField Field
+				public virtual global::Java.Security.Spec.IECField Field
 				{
-				[Dot42.DexImport("getField", "()Ljava/security/spec/ECField;", AccessFlags = 1)]
-						get{ return GetField(); }
+						[Dot42.DexImport("getField", "()Ljava/security/spec/ECField;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Spec.IECField); }
 				}
 
 				/// <java-name>
 				/// getSeed
 				/// </java-name>
-				public byte[] Seed
+				public virtual byte[] Seed
 				{
-				[Dot42.DexImport("getSeed", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetSeed(); }
+						[Dot42.DexImport("getSeed", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -921,21 +633,6 @@ namespace Java.Security.Spec
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetEncoded() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getFormat
-				/// </java-name>
-				[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetFormat() /* MethodBuilder.Create */ ;
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal EncodedKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -944,19 +641,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public virtual byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getFormat
 				/// </java-name>
-				public string Format
+				public abstract string Format
 				{
-				[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetFormat(); }
+						[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -980,8 +677,11 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getFieldSize
 				/// </java-name>
-				[Dot42.DexImport("getFieldSize", "()I", AccessFlags = 1025)]
-				int GetFieldSize() /* MethodBuilder.Create */ ;
+				int FieldSize
+				{
+						[Dot42.DexImport("getFieldSize", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1074,15 +774,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getDigestAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDigestAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal MGF1ParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1091,10 +782,10 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getDigestAlgorithm
 				/// </java-name>
-				public string DigestAlgorithm
+				public virtual string DigestAlgorithm
 				{
-				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDigestAlgorithm(); }
+						[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1125,24 +816,6 @@ namespace Java.Security.Spec
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public override byte[] GetEncoded() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getFormat
-				/// </java-name>
-				[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 17)]
-				public override string GetFormat() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal PKCS8EncodedKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1151,19 +824,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public override byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getFormat
 				/// </java-name>
-				public string Format
+				public override string Format
 				{
-				[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetFormat(); }
+						[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1191,51 +864,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getSaltLength
-				/// </java-name>
-				[Dot42.DexImport("getSaltLength", "()I", AccessFlags = 1)]
-				public virtual int GetSaltLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDigestAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDigestAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMGFAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMGFAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMGFParameters
-				/// </java-name>
-				[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.IAlgorithmParameterSpec GetMGFParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.IAlgorithmParameterSpec);
-				}
-
-				/// <java-name>
-				/// getTrailerField
-				/// </java-name>
-				[Dot42.DexImport("getTrailerField", "()I", AccessFlags = 1)]
-				public virtual int GetTrailerField() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal PSSParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1244,46 +872,46 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getSaltLength
 				/// </java-name>
-				public int SaltLength
+				public virtual int SaltLength
 				{
-				[Dot42.DexImport("getSaltLength", "()I", AccessFlags = 1)]
-						get{ return GetSaltLength(); }
+						[Dot42.DexImport("getSaltLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDigestAlgorithm
 				/// </java-name>
-				public string DigestAlgorithm
+				public virtual string DigestAlgorithm
 				{
-				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDigestAlgorithm(); }
+						[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getMGFAlgorithm
 				/// </java-name>
-				public string MGFAlgorithm
+				public virtual string MGFAlgorithm
 				{
-				[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMGFAlgorithm(); }
+						[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getMGFParameters
 				/// </java-name>
-				public global::Java.Security.Spec.IAlgorithmParameterSpec MGFParameters
+				public virtual global::Java.Security.Spec.IAlgorithmParameterSpec MGFParameters
 				{
-				[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
-						get{ return GetMGFParameters(); }
+						[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Spec.IAlgorithmParameterSpec); }
 				}
 
 				/// <java-name>
 				/// getTrailerField
 				/// </java-name>
-				public int TrailerField
+				public virtual int TrailerField
 				{
-				[Dot42.DexImport("getTrailerField", "()I", AccessFlags = 1)]
-						get{ return GetTrailerField(); }
+						[Dot42.DexImport("getTrailerField", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1310,24 +938,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getKeysize
-				/// </java-name>
-				[Dot42.DexImport("getKeysize", "()I", AccessFlags = 1)]
-				public virtual int GetKeysize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPublicExponent
-				/// </java-name>
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPublicExponent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal RSAKeyGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1336,19 +946,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getKeysize
 				/// </java-name>
-				public int Keysize
+				public virtual int Keysize
 				{
-				[Dot42.DexImport("getKeysize", "()I", AccessFlags = 1)]
-						get{ return GetKeysize(); }
+						[Dot42.DexImport("getKeysize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
-				public global::Java.Math.BigInteger PublicExponent
+				public virtual global::Java.Math.BigInteger PublicExponent
 				{
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPublicExponent(); }
+						[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -1367,69 +977,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getCrtCoefficient
-				/// </java-name>
-				[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetCrtCoefficient() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getOtherPrimeInfo
-				/// </java-name>
-				[Dot42.DexImport("getOtherPrimeInfo", "()[Ljava/security/spec/RSAOtherPrimeInfo;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.RSAOtherPrimeInfo[] GetOtherPrimeInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.RSAOtherPrimeInfo[]);
-				}
-
-				/// <java-name>
-				/// getPrimeExponentP
-				/// </java-name>
-				[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPrimeExponentP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPrimeExponentQ
-				/// </java-name>
-				[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPrimeExponentQ() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPrimeP
-				/// </java-name>
-				[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPrimeP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPrimeQ
-				/// </java-name>
-				[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPrimeQ() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPublicExponent
-				/// </java-name>
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPublicExponent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal RSAMultiPrimePrivateCrtKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1438,64 +985,64 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getCrtCoefficient
 				/// </java-name>
-				public global::Java.Math.BigInteger CrtCoefficient
+				public virtual global::Java.Math.BigInteger CrtCoefficient
 				{
-				[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetCrtCoefficient(); }
+						[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getOtherPrimeInfo
 				/// </java-name>
-				public global::Java.Security.Spec.RSAOtherPrimeInfo[] OtherPrimeInfo
+				public virtual global::Java.Security.Spec.RSAOtherPrimeInfo[] OtherPrimeInfo
 				{
-				[Dot42.DexImport("getOtherPrimeInfo", "()[Ljava/security/spec/RSAOtherPrimeInfo;", AccessFlags = 1)]
-						get{ return GetOtherPrimeInfo(); }
+						[Dot42.DexImport("getOtherPrimeInfo", "()[Ljava/security/spec/RSAOtherPrimeInfo;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Spec.RSAOtherPrimeInfo[]); }
 				}
 
 				/// <java-name>
 				/// getPrimeExponentP
 				/// </java-name>
-				public global::Java.Math.BigInteger PrimeExponentP
+				public virtual global::Java.Math.BigInteger PrimeExponentP
 				{
-				[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPrimeExponentP(); }
+						[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPrimeExponentQ
 				/// </java-name>
-				public global::Java.Math.BigInteger PrimeExponentQ
+				public virtual global::Java.Math.BigInteger PrimeExponentQ
 				{
-				[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPrimeExponentQ(); }
+						[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPrimeP
 				/// </java-name>
-				public global::Java.Math.BigInteger PrimeP
+				public virtual global::Java.Math.BigInteger PrimeP
 				{
-				[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPrimeP(); }
+						[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPrimeQ
 				/// </java-name>
-				public global::Java.Math.BigInteger PrimeQ
+				public virtual global::Java.Math.BigInteger PrimeQ
 				{
-				[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPrimeQ(); }
+						[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
-				public global::Java.Math.BigInteger PublicExponent
+				public virtual global::Java.Math.BigInteger PublicExponent
 				{
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPublicExponent(); }
+						[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -1512,33 +1059,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getCrtCoefficient
-				/// </java-name>
-				[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 17)]
-				public global::Java.Math.BigInteger GetCrtCoefficient() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPrime
-				/// </java-name>
-				[Dot42.DexImport("getPrime", "()Ljava/math/BigInteger;", AccessFlags = 17)]
-				public global::Java.Math.BigInteger GetPrime() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getExponent
-				/// </java-name>
-				[Dot42.DexImport("getExponent", "()Ljava/math/BigInteger;", AccessFlags = 17)]
-				public global::Java.Math.BigInteger GetExponent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal RSAOtherPrimeInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1549,8 +1069,8 @@ namespace Java.Security.Spec
 				/// </java-name>
 				public global::Java.Math.BigInteger CrtCoefficient
 				{
-				[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 17)]
-						get{ return GetCrtCoefficient(); }
+						[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 17)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
@@ -1558,8 +1078,8 @@ namespace Java.Security.Spec
 				/// </java-name>
 				public global::Java.Math.BigInteger Prime
 				{
-				[Dot42.DexImport("getPrime", "()Ljava/math/BigInteger;", AccessFlags = 17)]
-						get{ return GetPrime(); }
+						[Dot42.DexImport("getPrime", "()Ljava/math/BigInteger;", AccessFlags = 17)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
@@ -1567,8 +1087,8 @@ namespace Java.Security.Spec
 				/// </java-name>
 				public global::Java.Math.BigInteger Exponent
 				{
-				[Dot42.DexImport("getExponent", "()Ljava/math/BigInteger;", AccessFlags = 17)]
-						get{ return GetExponent(); }
+						[Dot42.DexImport("getExponent", "()Ljava/math/BigInteger;", AccessFlags = 17)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -1587,60 +1107,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getCrtCoefficient
-				/// </java-name>
-				[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetCrtCoefficient() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPrimeExponentP
-				/// </java-name>
-				[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPrimeExponentP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPrimeExponentQ
-				/// </java-name>
-				[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPrimeExponentQ() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPrimeP
-				/// </java-name>
-				[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPrimeP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPrimeQ
-				/// </java-name>
-				[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPrimeQ() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPublicExponent
-				/// </java-name>
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPublicExponent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal RSAPrivateCrtKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1649,55 +1115,55 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getCrtCoefficient
 				/// </java-name>
-				public global::Java.Math.BigInteger CrtCoefficient
+				public virtual global::Java.Math.BigInteger CrtCoefficient
 				{
-				[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetCrtCoefficient(); }
+						[Dot42.DexImport("getCrtCoefficient", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPrimeExponentP
 				/// </java-name>
-				public global::Java.Math.BigInteger PrimeExponentP
+				public virtual global::Java.Math.BigInteger PrimeExponentP
 				{
-				[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPrimeExponentP(); }
+						[Dot42.DexImport("getPrimeExponentP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPrimeExponentQ
 				/// </java-name>
-				public global::Java.Math.BigInteger PrimeExponentQ
+				public virtual global::Java.Math.BigInteger PrimeExponentQ
 				{
-				[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPrimeExponentQ(); }
+						[Dot42.DexImport("getPrimeExponentQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPrimeP
 				/// </java-name>
-				public global::Java.Math.BigInteger PrimeP
+				public virtual global::Java.Math.BigInteger PrimeP
 				{
-				[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPrimeP(); }
+						[Dot42.DexImport("getPrimeP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPrimeQ
 				/// </java-name>
-				public global::Java.Math.BigInteger PrimeQ
+				public virtual global::Java.Math.BigInteger PrimeQ
 				{
-				[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPrimeQ(); }
+						[Dot42.DexImport("getPrimeQ", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
-				public global::Java.Math.BigInteger PublicExponent
+				public virtual global::Java.Math.BigInteger PublicExponent
 				{
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPublicExponent(); }
+						[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -1714,24 +1180,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getModulus
-				/// </java-name>
-				[Dot42.DexImport("getModulus", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetModulus() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPrivateExponent
-				/// </java-name>
-				[Dot42.DexImport("getPrivateExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPrivateExponent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal RSAPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1740,19 +1188,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getModulus
 				/// </java-name>
-				public global::Java.Math.BigInteger Modulus
+				public virtual global::Java.Math.BigInteger Modulus
 				{
-				[Dot42.DexImport("getModulus", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetModulus(); }
+						[Dot42.DexImport("getModulus", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPrivateExponent
 				/// </java-name>
-				public global::Java.Math.BigInteger PrivateExponent
+				public virtual global::Java.Math.BigInteger PrivateExponent
 				{
-				[Dot42.DexImport("getPrivateExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPrivateExponent(); }
+						[Dot42.DexImport("getPrivateExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -1769,24 +1217,6 @@ namespace Java.Security.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getModulus
-				/// </java-name>
-				[Dot42.DexImport("getModulus", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetModulus() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getPublicExponent
-				/// </java-name>
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetPublicExponent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal RSAPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1795,19 +1225,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getModulus
 				/// </java-name>
-				public global::Java.Math.BigInteger Modulus
+				public virtual global::Java.Math.BigInteger Modulus
 				{
-				[Dot42.DexImport("getModulus", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetModulus(); }
+						[Dot42.DexImport("getModulus", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
-				public global::Java.Math.BigInteger PublicExponent
+				public virtual global::Java.Math.BigInteger PublicExponent
 				{
-				[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetPublicExponent(); }
+						[Dot42.DexImport("getPublicExponent", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -1838,24 +1268,6 @@ namespace Java.Security.Spec
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public override byte[] GetEncoded() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getFormat
-				/// </java-name>
-				[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 17)]
-				public override string GetFormat() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal X509EncodedKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1864,19 +1276,19 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public override byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getFormat
 				/// </java-name>
-				public string Format
+				public override string Format
 				{
-				[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetFormat(); }
+						[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 		}

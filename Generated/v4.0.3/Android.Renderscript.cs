@@ -39,15 +39,6 @@ namespace Android.Renderscript
 				}
 
 				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
-				public virtual global::Android.Renderscript.Type GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Renderscript.Type);
-				}
-
-				/// <java-name>
 				/// syncAll
 				/// </java-name>
 				[Dot42.DexImport("syncAll", "(I)V", AccessFlags = 1)]
@@ -518,10 +509,10 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				public global::Android.Renderscript.Type Type
+				public virtual global::Android.Renderscript.Type Type
 				{
-				[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
+						get{ return default(global::Android.Renderscript.Type); }
 				}
 
 				/// <java-name>
@@ -659,23 +650,6 @@ namespace Android.Renderscript
 				}
 
 				/// <java-name>
-				/// setName
-				/// </java-name>
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// finalize
 				/// </java-name>
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
@@ -710,12 +684,12 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetName(value); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -949,15 +923,6 @@ namespace Android.Renderscript
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal Element() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isComplex
-				/// </java-name>
-				[Dot42.DexImport("isComplex", "()Z", AccessFlags = 1)]
-				public virtual bool IsComplex() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1536,6 +1501,15 @@ namespace Android.Renderscript
 				public virtual bool IsCompatible(global::Android.Renderscript.Element element) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
+				}
+
+				/// <java-name>
+				/// isComplex
+				/// </java-name>
+				public virtual bool IsComplex
+				{
+						[Dot42.DexImport("isComplex", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -2241,15 +2215,6 @@ namespace Android.Renderscript
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-				public byte[] GetData() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal FieldPacker() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -2260,8 +2225,8 @@ namespace Android.Renderscript
 				/// </java-name>
 				public byte[] Data
 				{
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-						get{ return GetData(); }
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -2276,15 +2241,6 @@ namespace Android.Renderscript
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal FileA3D() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getIndexEntryCount
-				/// </java-name>
-				[Dot42.DexImport("getIndexEntryCount", "()I", AccessFlags = 1)]
-				public virtual int GetIndexEntryCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2339,10 +2295,10 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getIndexEntryCount
 				/// </java-name>
-				public int IndexEntryCount
+				public virtual int IndexEntryCount
 				{
-				[Dot42.DexImport("getIndexEntryCount", "()I", AccessFlags = 1)]
-						get{ return GetIndexEntryCount(); }
+						[Dot42.DexImport("getIndexEntryCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2360,73 +2316,37 @@ namespace Android.Renderscript
 						/// <java-name>
 						/// getName
 						/// </java-name>
-						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetName() /* MethodBuilder.Create */ 
+						public virtual string Name
 						{
-								return default(string);
+								[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getEntryType
 						/// </java-name>
-						[Dot42.DexImport("getEntryType", "()Landroid/renderscript/FileA3D$EntryType;", AccessFlags = 1)]
-						public virtual global::Android.Renderscript.FileA3D.EntryType GetEntryType() /* MethodBuilder.Create */ 
+						public virtual global::Android.Renderscript.FileA3D.EntryType EntryType
 						{
-								return default(global::Android.Renderscript.FileA3D.EntryType);
+								[Dot42.DexImport("getEntryType", "()Landroid/renderscript/FileA3D$EntryType;", AccessFlags = 1)]
+								get{ return default(global::Android.Renderscript.FileA3D.EntryType); }
 						}
 
 						/// <java-name>
 						/// getObject
 						/// </java-name>
-						[Dot42.DexImport("getObject", "()Landroid/renderscript/BaseObj;", AccessFlags = 1)]
-						public virtual global::Android.Renderscript.BaseObj GetObject() /* MethodBuilder.Create */ 
+						public virtual global::Android.Renderscript.BaseObj Object
 						{
-								return default(global::Android.Renderscript.BaseObj);
+								[Dot42.DexImport("getObject", "()Landroid/renderscript/BaseObj;", AccessFlags = 1)]
+								get{ return default(global::Android.Renderscript.BaseObj); }
 						}
 
 						/// <java-name>
 						/// getMesh
 						/// </java-name>
-						[Dot42.DexImport("getMesh", "()Landroid/renderscript/Mesh;", AccessFlags = 1)]
-						public virtual global::Android.Renderscript.Mesh GetMesh() /* MethodBuilder.Create */ 
+						public virtual global::Android.Renderscript.Mesh Mesh
 						{
-								return default(global::Android.Renderscript.Mesh);
-						}
-
-						/// <java-name>
-						/// getName
-						/// </java-name>
-						public string Name
-						{
-						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetName(); }
-						}
-
-						/// <java-name>
-						/// getEntryType
-						/// </java-name>
-						public global::Android.Renderscript.FileA3D.EntryType EntryType
-						{
-						[Dot42.DexImport("getEntryType", "()Landroid/renderscript/FileA3D$EntryType;", AccessFlags = 1)]
-								get{ return GetEntryType(); }
-						}
-
-						/// <java-name>
-						/// getObject
-						/// </java-name>
-						public global::Android.Renderscript.BaseObj Object
-						{
-						[Dot42.DexImport("getObject", "()Landroid/renderscript/BaseObj;", AccessFlags = 1)]
-								get{ return GetObject(); }
-						}
-
-						/// <java-name>
-						/// getMesh
-						/// </java-name>
-						public global::Android.Renderscript.Mesh Mesh
-						{
-						[Dot42.DexImport("getMesh", "()Landroid/renderscript/Mesh;", AccessFlags = 1)]
-								get{ return GetMesh(); }
+								[Dot42.DexImport("getMesh", "()Landroid/renderscript/Mesh;", AccessFlags = 1)]
+								get{ return default(global::Android.Renderscript.Mesh); }
 						}
 
 				}
@@ -2913,15 +2833,6 @@ namespace Android.Renderscript
 				}
 
 				/// <java-name>
-				/// getArray
-				/// </java-name>
-				[Dot42.DexImport("getArray", "()[F", AccessFlags = 1)]
-				public virtual float[] GetArray() /* MethodBuilder.Create */ 
-				{
-						return default(float[]);
-				}
-
-				/// <java-name>
 				/// get
 				/// </java-name>
 				[Dot42.DexImport("get", "(II)F", AccessFlags = 1)]
@@ -3013,10 +2924,10 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getArray
 				/// </java-name>
-				public float[] Array
+				public virtual float[] Array
 				{
-				[Dot42.DexImport("getArray", "()[F", AccessFlags = 1)]
-						get{ return GetArray(); }
+						[Dot42.DexImport("getArray", "()[F", AccessFlags = 1)]
+						get{ return default(float[]); }
 				}
 
 		}
@@ -3036,15 +2947,6 @@ namespace Android.Renderscript
 				[Dot42.DexImport("<init>", "([F)V", AccessFlags = 1)]
 				public Matrix3f(float[] single) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getArray
-				/// </java-name>
-				[Dot42.DexImport("getArray", "()[F", AccessFlags = 1)]
-				public virtual float[] GetArray() /* MethodBuilder.Create */ 
-				{
-						return default(float[]);
 				}
 
 				/// <java-name>
@@ -3187,10 +3089,10 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getArray
 				/// </java-name>
-				public float[] Array
+				public virtual float[] Array
 				{
-				[Dot42.DexImport("getArray", "()[F", AccessFlags = 1)]
-						get{ return GetArray(); }
+						[Dot42.DexImport("getArray", "()[F", AccessFlags = 1)]
+						get{ return default(float[]); }
 				}
 
 		}
@@ -3210,15 +3112,6 @@ namespace Android.Renderscript
 				[Dot42.DexImport("<init>", "([F)V", AccessFlags = 1)]
 				public Matrix4f(float[] single) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getArray
-				/// </java-name>
-				[Dot42.DexImport("getArray", "()[F", AccessFlags = 1)]
-				public virtual float[] GetArray() /* MethodBuilder.Create */ 
-				{
-						return default(float[]);
 				}
 
 				/// <java-name>
@@ -3387,10 +3280,10 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getArray
 				/// </java-name>
-				public float[] Array
+				public virtual float[] Array
 				{
-				[Dot42.DexImport("getArray", "()[F", AccessFlags = 1)]
-						get{ return GetArray(); }
+						[Dot42.DexImport("getArray", "()[F", AccessFlags = 1)]
+						get{ return default(float[]); }
 				}
 
 		}
@@ -3408,30 +3301,12 @@ namespace Android.Renderscript
 				}
 
 				/// <java-name>
-				/// getVertexAllocationCount
-				/// </java-name>
-				[Dot42.DexImport("getVertexAllocationCount", "()I", AccessFlags = 1)]
-				public virtual int GetVertexAllocationCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getVertexAllocation
 				/// </java-name>
 				[Dot42.DexImport("getVertexAllocation", "(I)Landroid/renderscript/Allocation;", AccessFlags = 1)]
 				public virtual global::Android.Renderscript.Allocation GetVertexAllocation(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Renderscript.Allocation);
-				}
-
-				/// <java-name>
-				/// getPrimitiveCount
-				/// </java-name>
-				[Dot42.DexImport("getPrimitiveCount", "()I", AccessFlags = 1)]
-				public virtual int GetPrimitiveCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3455,19 +3330,19 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getVertexAllocationCount
 				/// </java-name>
-				public int VertexAllocationCount
+				public virtual int VertexAllocationCount
 				{
-				[Dot42.DexImport("getVertexAllocationCount", "()I", AccessFlags = 1)]
-						get{ return GetVertexAllocationCount(); }
+						[Dot42.DexImport("getVertexAllocationCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getPrimitiveCount
 				/// </java-name>
-				public int PrimitiveCount
+				public virtual int PrimitiveCount
 				{
-				[Dot42.DexImport("getPrimitiveCount", "()I", AccessFlags = 1)]
-						get{ return GetPrimitiveCount(); }
+						[Dot42.DexImport("getPrimitiveCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -3580,24 +3455,6 @@ namespace Android.Renderscript
 						}
 
 						/// <java-name>
-						/// getCurrentVertexTypeIndex
-						/// </java-name>
-						[Dot42.DexImport("getCurrentVertexTypeIndex", "()I", AccessFlags = 1)]
-						public virtual int GetCurrentVertexTypeIndex() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getCurrentIndexSetIndex
-						/// </java-name>
-						[Dot42.DexImport("getCurrentIndexSetIndex", "()I", AccessFlags = 1)]
-						public virtual int GetCurrentIndexSetIndex() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
 						/// addVertexAllocation
 						/// </java-name>
 						[Dot42.DexImport("addVertexAllocation", "(Landroid/renderscript/Allocation;)Landroid/renderscript/Mesh$AllocationBuilder;", AccessFlags = 1)]
@@ -3643,19 +3500,19 @@ namespace Android.Renderscript
 						/// <java-name>
 						/// getCurrentVertexTypeIndex
 						/// </java-name>
-						public int CurrentVertexTypeIndex
+						public virtual int CurrentVertexTypeIndex
 						{
-						[Dot42.DexImport("getCurrentVertexTypeIndex", "()I", AccessFlags = 1)]
-								get{ return GetCurrentVertexTypeIndex(); }
+								[Dot42.DexImport("getCurrentVertexTypeIndex", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getCurrentIndexSetIndex
 						/// </java-name>
-						public int CurrentIndexSetIndex
+						public virtual int CurrentIndexSetIndex
 						{
-						[Dot42.DexImport("getCurrentIndexSetIndex", "()I", AccessFlags = 1)]
-								get{ return GetCurrentIndexSetIndex(); }
+								[Dot42.DexImport("getCurrentIndexSetIndex", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 				}
@@ -3670,24 +3527,6 @@ namespace Android.Renderscript
 						[Dot42.DexImport("<init>", "(Landroid/renderscript/RenderScript;I)V", AccessFlags = 1)]
 						public Builder(global::Android.Renderscript.RenderScript renderScript, int int32) /* MethodBuilder.Create */ 
 						{
-						}
-
-						/// <java-name>
-						/// getCurrentVertexTypeIndex
-						/// </java-name>
-						[Dot42.DexImport("getCurrentVertexTypeIndex", "()I", AccessFlags = 1)]
-						public virtual int GetCurrentVertexTypeIndex() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getCurrentIndexSetIndex
-						/// </java-name>
-						[Dot42.DexImport("getCurrentIndexSetIndex", "()I", AccessFlags = 1)]
-						public virtual int GetCurrentIndexSetIndex() /* MethodBuilder.Create */ 
-						{
-								return default(int);
 						}
 
 						/// <java-name>
@@ -3754,19 +3593,19 @@ namespace Android.Renderscript
 						/// <java-name>
 						/// getCurrentVertexTypeIndex
 						/// </java-name>
-						public int CurrentVertexTypeIndex
+						public virtual int CurrentVertexTypeIndex
 						{
-						[Dot42.DexImport("getCurrentVertexTypeIndex", "()I", AccessFlags = 1)]
-								get{ return GetCurrentVertexTypeIndex(); }
+								[Dot42.DexImport("getCurrentVertexTypeIndex", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getCurrentIndexSetIndex
 						/// </java-name>
-						public int CurrentIndexSetIndex
+						public virtual int CurrentIndexSetIndex
 						{
-						[Dot42.DexImport("getCurrentIndexSetIndex", "()I", AccessFlags = 1)]
-								get{ return GetCurrentIndexSetIndex(); }
+								[Dot42.DexImport("getCurrentIndexSetIndex", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 				}
@@ -3902,24 +3741,6 @@ namespace Android.Renderscript
 						}
 
 						/// <java-name>
-						/// getCurrentConstantIndex
-						/// </java-name>
-						[Dot42.DexImport("getCurrentConstantIndex", "()I", AccessFlags = 1)]
-						public virtual int GetCurrentConstantIndex() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getCurrentTextureIndex
-						/// </java-name>
-						[Dot42.DexImport("getCurrentTextureIndex", "()I", AccessFlags = 1)]
-						public virtual int GetCurrentTextureIndex() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
 						/// addConstant
 						/// </java-name>
 						[Dot42.DexImport("addConstant", "(Landroid/renderscript/Type;)Landroid/renderscript/Program$BaseProgramBuilder;", AccessFlags = 1)]
@@ -3954,19 +3775,19 @@ namespace Android.Renderscript
 						/// <java-name>
 						/// getCurrentConstantIndex
 						/// </java-name>
-						public int CurrentConstantIndex
+						public virtual int CurrentConstantIndex
 						{
-						[Dot42.DexImport("getCurrentConstantIndex", "()I", AccessFlags = 1)]
-								get{ return GetCurrentConstantIndex(); }
+								[Dot42.DexImport("getCurrentConstantIndex", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getCurrentTextureIndex
 						/// </java-name>
-						public int CurrentTextureIndex
+						public virtual int CurrentTextureIndex
 						{
-						[Dot42.DexImport("getCurrentTextureIndex", "()I", AccessFlags = 1)]
-								get{ return GetCurrentTextureIndex(); }
+								[Dot42.DexImport("getCurrentTextureIndex", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 				}
@@ -4879,54 +4700,11 @@ namespace Android.Renderscript
 				}
 
 				/// <java-name>
-				/// setMessageHandler
-				/// </java-name>
-				[Dot42.DexImport("setMessageHandler", "(Landroid/renderscript/RenderScript$RSMessageHandler;)V", AccessFlags = 1)]
-				public virtual void SetMessageHandler(global::Android.Renderscript.RenderScript.RSMessageHandler rSMessageHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMessageHandler
-				/// </java-name>
-				[Dot42.DexImport("getMessageHandler", "()Landroid/renderscript/RenderScript$RSMessageHandler;", AccessFlags = 1)]
-				public virtual global::Android.Renderscript.RenderScript.RSMessageHandler GetMessageHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Renderscript.RenderScript.RSMessageHandler);
-				}
-
-				/// <java-name>
-				/// setErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("setErrorHandler", "(Landroid/renderscript/RenderScript$RSErrorHandler;)V", AccessFlags = 1)]
-				public virtual void SetErrorHandler(global::Android.Renderscript.RenderScript.RSErrorHandler rSErrorHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("getErrorHandler", "()Landroid/renderscript/RenderScript$RSErrorHandler;", AccessFlags = 1)]
-				public virtual global::Android.Renderscript.RenderScript.RSErrorHandler GetErrorHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Renderscript.RenderScript.RSErrorHandler);
-				}
-
-				/// <java-name>
 				/// setPriority
 				/// </java-name>
 				[Dot42.DexImport("setPriority", "(Landroid/renderscript/RenderScript$Priority;)V", AccessFlags = 1)]
 				public virtual void SetPriority(global::Android.Renderscript.RenderScript.Priority priority) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getApplicationContext
-				/// </java-name>
-				[Dot42.DexImport("getApplicationContext", "()Landroid/content/Context;", AccessFlags = 17)]
-				public global::Android.Content.Context GetApplicationContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Context);
 				}
 
 				/// <java-name>
@@ -4965,23 +4743,23 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getMessageHandler
 				/// </java-name>
-				public global::Android.Renderscript.RenderScript.RSMessageHandler MessageHandler
+				public virtual global::Android.Renderscript.RenderScript.RSMessageHandler MessageHandler
 				{
-				[Dot42.DexImport("getMessageHandler", "()Landroid/renderscript/RenderScript$RSMessageHandler;", AccessFlags = 1)]
-						get{ return GetMessageHandler(); }
-				[Dot42.DexImport("setMessageHandler", "(Landroid/renderscript/RenderScript$RSMessageHandler;)V", AccessFlags = 1)]
-						set{ SetMessageHandler(value); }
+						[Dot42.DexImport("getMessageHandler", "()Landroid/renderscript/RenderScript$RSMessageHandler;", AccessFlags = 1)]
+						get{ return default(global::Android.Renderscript.RenderScript.RSMessageHandler); }
+						[Dot42.DexImport("setMessageHandler", "(Landroid/renderscript/RenderScript$RSMessageHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getErrorHandler
 				/// </java-name>
-				public global::Android.Renderscript.RenderScript.RSErrorHandler ErrorHandler
+				public virtual global::Android.Renderscript.RenderScript.RSErrorHandler ErrorHandler
 				{
-				[Dot42.DexImport("getErrorHandler", "()Landroid/renderscript/RenderScript$RSErrorHandler;", AccessFlags = 1)]
-						get{ return GetErrorHandler(); }
-				[Dot42.DexImport("setErrorHandler", "(Landroid/renderscript/RenderScript$RSErrorHandler;)V", AccessFlags = 1)]
-						set{ SetErrorHandler(value); }
+						[Dot42.DexImport("getErrorHandler", "()Landroid/renderscript/RenderScript$RSErrorHandler;", AccessFlags = 1)]
+						get{ return default(global::Android.Renderscript.RenderScript.RSErrorHandler); }
+						[Dot42.DexImport("setErrorHandler", "(Landroid/renderscript/RenderScript$RSErrorHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -4989,8 +4767,8 @@ namespace Android.Renderscript
 				/// </java-name>
 				public global::Android.Content.Context ApplicationContext
 				{
-				[Dot42.DexImport("getApplicationContext", "()Landroid/content/Context;", AccessFlags = 17)]
-						get{ return GetApplicationContext(); }
+						[Dot42.DexImport("getApplicationContext", "()Landroid/content/Context;", AccessFlags = 17)]
+						get{ return default(global::Android.Content.Context); }
 				}
 
 				/// <java-name>
@@ -5134,24 +4912,6 @@ namespace Android.Renderscript
 				}
 
 				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-				public virtual int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-				public virtual int GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// pause
 				/// </java-name>
 				[Dot42.DexImport("pause", "()V", AccessFlags = 1)]
@@ -5215,19 +4975,19 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getHeight
 				/// </java-name>
-				public int Height
+				public virtual int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getWidth
 				/// </java-name>
-				public int Width
+				public virtual int Width
 				{
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-						get{ return GetWidth(); }
+						[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -5434,23 +5194,6 @@ namespace Android.Renderscript
 				{
 				}
 
-				/// <java-name>
-				/// setRenderScriptGL
-				/// </java-name>
-				[Dot42.DexImport("setRenderScriptGL", "(Landroid/renderscript/RenderScriptGL;)V", AccessFlags = 1)]
-				public virtual void SetRenderScriptGL(global::Android.Renderscript.RenderScriptGL renderScriptGL) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRenderScriptGL
-				/// </java-name>
-				[Dot42.DexImport("getRenderScriptGL", "()Landroid/renderscript/RenderScriptGL;", AccessFlags = 1)]
-				public virtual global::Android.Renderscript.RenderScriptGL GetRenderScriptGL() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Renderscript.RenderScriptGL);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal RSSurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -5459,12 +5202,12 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getRenderScriptGL
 				/// </java-name>
-				public global::Android.Renderscript.RenderScriptGL RenderScriptGL
+				public virtual global::Android.Renderscript.RenderScriptGL RenderScriptGL
 				{
-				[Dot42.DexImport("getRenderScriptGL", "()Landroid/renderscript/RenderScriptGL;", AccessFlags = 1)]
-						get{ return GetRenderScriptGL(); }
-				[Dot42.DexImport("setRenderScriptGL", "(Landroid/renderscript/RenderScriptGL;)V", AccessFlags = 1)]
-						set{ SetRenderScriptGL(value); }
+						[Dot42.DexImport("getRenderScriptGL", "()Landroid/renderscript/RenderScriptGL;", AccessFlags = 1)]
+						get{ return default(global::Android.Renderscript.RenderScriptGL); }
+						[Dot42.DexImport("setRenderScriptGL", "(Landroid/renderscript/RenderScriptGL;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -5553,23 +5296,6 @@ namespace Android.Renderscript
 				{
 				}
 
-				/// <java-name>
-				/// setRenderScriptGL
-				/// </java-name>
-				[Dot42.DexImport("setRenderScriptGL", "(Landroid/renderscript/RenderScriptGL;)V", AccessFlags = 1)]
-				public virtual void SetRenderScriptGL(global::Android.Renderscript.RenderScriptGL renderScriptGL) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRenderScriptGL
-				/// </java-name>
-				[Dot42.DexImport("getRenderScriptGL", "()Landroid/renderscript/RenderScriptGL;", AccessFlags = 1)]
-				public virtual global::Android.Renderscript.RenderScriptGL GetRenderScriptGL() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Renderscript.RenderScriptGL);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal RSTextureView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -5578,12 +5304,12 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getRenderScriptGL
 				/// </java-name>
-				public global::Android.Renderscript.RenderScriptGL RenderScriptGL
+				public virtual global::Android.Renderscript.RenderScriptGL RenderScriptGL
 				{
-				[Dot42.DexImport("getRenderScriptGL", "()Landroid/renderscript/RenderScriptGL;", AccessFlags = 1)]
-						get{ return GetRenderScriptGL(); }
-				[Dot42.DexImport("setRenderScriptGL", "(Landroid/renderscript/RenderScriptGL;)V", AccessFlags = 1)]
-						set{ SetRenderScriptGL(value); }
+						[Dot42.DexImport("getRenderScriptGL", "()Landroid/renderscript/RenderScriptGL;", AccessFlags = 1)]
+						get{ return default(global::Android.Renderscript.RenderScriptGL); }
+						[Dot42.DexImport("setRenderScriptGL", "(Landroid/renderscript/RenderScriptGL;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -5933,33 +5659,6 @@ namespace Android.Renderscript
 						}
 
 						/// <java-name>
-						/// getElement
-						/// </java-name>
-						[Dot42.DexImport("getElement", "()Landroid/renderscript/Element;", AccessFlags = 1)]
-						public virtual global::Android.Renderscript.Element GetElement() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Renderscript.Element);
-						}
-
-						/// <java-name>
-						/// getType
-						/// </java-name>
-						[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
-						public virtual global::Android.Renderscript.Type GetTypeJava() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Renderscript.Type);
-						}
-
-						/// <java-name>
-						/// getAllocation
-						/// </java-name>
-						[Dot42.DexImport("getAllocation", "()Landroid/renderscript/Allocation;", AccessFlags = 1)]
-						public virtual global::Android.Renderscript.Allocation GetAllocation() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Renderscript.Allocation);
-						}
-
-						/// <java-name>
 						/// updateAllocation
 						/// </java-name>
 						[Dot42.DexImport("updateAllocation", "()V", AccessFlags = 1)]
@@ -5970,28 +5669,28 @@ namespace Android.Renderscript
 						/// <java-name>
 						/// getElement
 						/// </java-name>
-						public global::Android.Renderscript.Element Element
+						public virtual global::Android.Renderscript.Element Element
 						{
-						[Dot42.DexImport("getElement", "()Landroid/renderscript/Element;", AccessFlags = 1)]
-								get{ return GetElement(); }
+								[Dot42.DexImport("getElement", "()Landroid/renderscript/Element;", AccessFlags = 1)]
+								get{ return default(global::Android.Renderscript.Element); }
 						}
 
 						/// <java-name>
 						/// getType
 						/// </java-name>
-						public global::Android.Renderscript.Type Type
+						public virtual global::Android.Renderscript.Type Type
 						{
-						[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
-								get{ return GetTypeJava(); }
+								[Dot42.DexImport("getType", "()Landroid/renderscript/Type;", AccessFlags = 1)]
+								get{ return default(global::Android.Renderscript.Type); }
 						}
 
 						/// <java-name>
 						/// getAllocation
 						/// </java-name>
-						public global::Android.Renderscript.Allocation Allocation
+						public virtual global::Android.Renderscript.Allocation Allocation
 						{
-						[Dot42.DexImport("getAllocation", "()Landroid/renderscript/Allocation;", AccessFlags = 1)]
-								get{ return GetAllocation(); }
+								[Dot42.DexImport("getAllocation", "()Landroid/renderscript/Allocation;", AccessFlags = 1)]
+								get{ return default(global::Android.Renderscript.Allocation); }
 						}
 
 				}
@@ -6153,109 +5852,64 @@ namespace Android.Renderscript
 				/// <java-name>
 				/// getElement
 				/// </java-name>
-				[Dot42.DexImport("getElement", "()Landroid/renderscript/Element;", AccessFlags = 1)]
-				public virtual global::Android.Renderscript.Element GetElement() /* MethodBuilder.Create */ 
+				public virtual global::Android.Renderscript.Element Element
 				{
-						return default(global::Android.Renderscript.Element);
+						[Dot42.DexImport("getElement", "()Landroid/renderscript/Element;", AccessFlags = 1)]
+						get{ return default(global::Android.Renderscript.Element); }
 				}
 
 				/// <java-name>
 				/// getX
 				/// </java-name>
-				[Dot42.DexImport("getX", "()I", AccessFlags = 1)]
-				public virtual int GetX() /* MethodBuilder.Create */ 
+				public virtual int X
 				{
-						return default(int);
+						[Dot42.DexImport("getX", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getY
 				/// </java-name>
-				[Dot42.DexImport("getY", "()I", AccessFlags = 1)]
-				public virtual int GetY() /* MethodBuilder.Create */ 
+				public virtual int Y
 				{
-						return default(int);
+						[Dot42.DexImport("getY", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getZ
 				/// </java-name>
-				[Dot42.DexImport("getZ", "()I", AccessFlags = 1)]
-				public virtual int GetZ() /* MethodBuilder.Create */ 
+				public virtual int Z
 				{
-						return default(int);
+						[Dot42.DexImport("getZ", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// hasMipmaps
 				/// </java-name>
-				[Dot42.DexImport("hasMipmaps", "()Z", AccessFlags = 1)]
-				public virtual bool HasMipmaps() /* MethodBuilder.Create */ 
+				public virtual bool HasMipmaps
 				{
-						return default(bool);
+						[Dot42.DexImport("hasMipmaps", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// hasFaces
 				/// </java-name>
-				[Dot42.DexImport("hasFaces", "()Z", AccessFlags = 1)]
-				public virtual bool HasFaces() /* MethodBuilder.Create */ 
+				public virtual bool HasFaces
 				{
-						return default(bool);
+						[Dot42.DexImport("hasFaces", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getCount
 				/// </java-name>
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-				public virtual int GetCount() /* MethodBuilder.Create */ 
+				public virtual int Count
 				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getElement
-				/// </java-name>
-				public global::Android.Renderscript.Element Element
-				{
-				[Dot42.DexImport("getElement", "()Landroid/renderscript/Element;", AccessFlags = 1)]
-						get{ return GetElement(); }
-				}
-
-				/// <java-name>
-				/// getX
-				/// </java-name>
-				public int X
-				{
-				[Dot42.DexImport("getX", "()I", AccessFlags = 1)]
-						get{ return GetX(); }
-				}
-
-				/// <java-name>
-				/// getY
-				/// </java-name>
-				public int Y
-				{
-				[Dot42.DexImport("getY", "()I", AccessFlags = 1)]
-						get{ return GetY(); }
-				}
-
-				/// <java-name>
-				/// getZ
-				/// </java-name>
-				public int Z
-				{
-				[Dot42.DexImport("getZ", "()I", AccessFlags = 1)]
-						get{ return GetZ(); }
-				}
-
-				/// <java-name>
-				/// getCount
-				/// </java-name>
-				public int Count
-				{
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-						get{ return GetCount(); }
+						[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>

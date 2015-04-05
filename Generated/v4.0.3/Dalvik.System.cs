@@ -120,15 +120,6 @@ namespace Dalvik.System
 				}
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// close
 				/// </java-name>
 				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
@@ -179,8 +170,8 @@ namespace Dalvik.System
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}

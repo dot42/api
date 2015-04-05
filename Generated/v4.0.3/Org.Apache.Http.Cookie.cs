@@ -44,42 +44,6 @@ namespace Org.Apache.Http.Cookie
 				}
 
 				/// <java-name>
-				/// getHost
-				/// </java-name>
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetHost() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-				public int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1)]
-				public bool IsSecure() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -98,8 +62,8 @@ namespace Org.Apache.Http.Cookie
 				/// </java-name>
 				public string Host
 				{
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetHost(); }
+						[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -107,8 +71,8 @@ namespace Org.Apache.Http.Cookie
 				/// </java-name>
 				public string Path
 				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPath(); }
+						[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -116,8 +80,17 @@ namespace Org.Apache.Http.Cookie
 				/// </java-name>
 				public int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-						get{ return GetPort(); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				public bool IsSecure
+				{
+						[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -200,15 +173,6 @@ namespace Org.Apache.Http.Cookie
 				}
 
 				/// <java-name>
-				/// getSpecNames
-				/// </java-name>
-				[Dot42.DexImport("getSpecNames", "()Ljava/util/List;", AccessFlags = 33, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-				public global::Java.Util.IList<string> GetSpecNames() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<string>);
-				}
-
-				/// <java-name>
 				/// setItems
 				/// </java-name>
 				[Dot42.DexImport("setItems", "(Ljava/util/Map;)V", AccessFlags = 33, Signature = "(Ljava/util/Map<Ljava/lang/String;Lorg/apache/http/cookie/CookieSpecFactory;>;)V")]
@@ -221,8 +185,8 @@ namespace Org.Apache.Http.Cookie
 				/// </java-name>
 				public global::Java.Util.IList<string> SpecNames
 				{
-				[Dot42.DexImport("getSpecNames", "()Ljava/util/List;", AccessFlags = 33, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						get{ return GetSpecNames(); }
+						[Dot42.DexImport("getSpecNames", "()Ljava/util/List;", AccessFlags = 33, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IList<string>); }
 				}
 
 		}
@@ -315,76 +279,109 @@ namespace Org.Apache.Http.Cookie
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetValue() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getComment
-				/// </java-name>
-				[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetComment() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCommentURL
-				/// </java-name>
-				[Dot42.DexImport("getCommentURL", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetCommentURL() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getExpiryDate
-				/// </java-name>
-				[Dot42.DexImport("getExpiryDate", "()Ljava/util/Date;", AccessFlags = 1025)]
-				global::Java.Util.Date GetExpiryDate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isPersistent
-				/// </java-name>
-				[Dot42.DexImport("isPersistent", "()Z", AccessFlags = 1025)]
-				bool IsPersistent() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDomain
-				/// </java-name>
-				[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetDomain() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPath() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPorts
-				/// </java-name>
-				[Dot42.DexImport("getPorts", "()[I", AccessFlags = 1025)]
-				int[] GetPorts() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
-				bool IsSecure() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
-				int GetVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// isExpired
 				/// </java-name>
 				[Dot42.DexImport("isExpired", "(Ljava/util/Date;)Z", AccessFlags = 1025)]
 				bool IsExpired(global::Java.Util.Date date) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				string Name
+				{
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getValue
+				/// </java-name>
+				string Value
+				{
+						[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getComment
+				/// </java-name>
+				string Comment
+				{
+						[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getCommentURL
+				/// </java-name>
+				string CommentURL
+				{
+						[Dot42.DexImport("getCommentURL", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getExpiryDate
+				/// </java-name>
+				global::Java.Util.Date ExpiryDate
+				{
+						[Dot42.DexImport("getExpiryDate", "()Ljava/util/Date;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isPersistent
+				/// </java-name>
+				bool IsPersistent
+				{
+						[Dot42.DexImport("isPersistent", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDomain
+				/// </java-name>
+				string Domain
+				{
+						[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPath
+				/// </java-name>
+				string Path
+				{
+						[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPorts
+				/// </java-name>
+				int[] Ports
+				{
+						[Dot42.DexImport("getPorts", "()[I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				bool IsSecure
+				{
+						[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getVersion
+				/// </java-name>
+				int Version
+				{
+						[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -423,12 +420,6 @@ namespace Org.Apache.Http.Cookie
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
-				int GetVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;", AccessFlags = 1025, Signature = "(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List<Lo" +
@@ -455,10 +446,22 @@ namespace Org.Apache.Http.Cookie
 				global::Java.Util.IList<global::Org.Apache.Http.IHeader> FormatCookies(global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> list) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// getVersion
+				/// </java-name>
+				int Version
+				{
+						[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
 				/// getVersionHeader
 				/// </java-name>
-				[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1025)]
-				global::Org.Apache.Http.IHeader GetVersionHeader() /* MethodBuilder.Create */ ;
+				global::Org.Apache.Http.IHeader VersionHeader
+				{
+						[Dot42.DexImport("getVersionHeader", "()Lorg/apache/http/Header;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

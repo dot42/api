@@ -140,15 +140,6 @@ namespace Android.Opengl
 				}
 
 				/// <java-name>
-				/// isETC1Supported
-				/// </java-name>
-				[Dot42.DexImport("isETC1Supported", "()Z", AccessFlags = 9)]
-				public static bool IsETC1Supported() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// createTexture
 				/// </java-name>
 				[Dot42.DexImport("createTexture", "(Ljava/io/InputStream;)Landroid/opengl/ETC1Util$ETC1Texture;", AccessFlags = 9)]
@@ -175,6 +166,15 @@ namespace Android.Opengl
 				}
 
 				/// <java-name>
+				/// isETC1Supported
+				/// </java-name>
+				public static bool IsETC1Supported
+				{
+						[Dot42.DexImport("isETC1Supported", "()Z", AccessFlags = 9)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// android/opengl/ETC1Util$ETC1Texture
 				/// </java-name>
 				[Dot42.DexImport("android/opengl/ETC1Util$ETC1Texture", AccessFlags = 9)]
@@ -186,33 +186,6 @@ namespace Android.Opengl
 						{
 						}
 
-						/// <java-name>
-						/// getWidth
-						/// </java-name>
-						[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-						public virtual int GetWidth() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getHeight
-						/// </java-name>
-						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						public virtual int GetHeight() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getData
-						/// </java-name>
-						[Dot42.DexImport("getData", "()Ljava/nio/ByteBuffer;", AccessFlags = 1)]
-						public virtual global::Java.Nio.ByteBuffer GetData() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Nio.ByteBuffer);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal ETC1Texture() /* TypeBuilder.AddDefaultConstructor */ 
 						{
@@ -221,28 +194,28 @@ namespace Android.Opengl
 						/// <java-name>
 						/// getWidth
 						/// </java-name>
-						public int Width
+						public virtual int Width
 						{
-						[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-								get{ return GetWidth(); }
+								[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getHeight
 						/// </java-name>
-						public int Height
+						public virtual int Height
 						{
-						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-								get{ return GetHeight(); }
+								[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getData
 						/// </java-name>
-						public global::Java.Nio.ByteBuffer Data
+						public virtual global::Java.Nio.ByteBuffer Data
 						{
-						[Dot42.DexImport("getData", "()Ljava/nio/ByteBuffer;", AccessFlags = 1)]
-								get{ return GetData(); }
+								[Dot42.DexImport("getData", "()Ljava/nio/ByteBuffer;", AccessFlags = 1)]
+								get{ return default(global::Java.Nio.ByteBuffer); }
 						}
 
 				}
@@ -8381,40 +8354,6 @@ namespace Android.Opengl
 				}
 
 				/// <java-name>
-				/// setDebugFlags
-				/// </java-name>
-				[Dot42.DexImport("setDebugFlags", "(I)V", AccessFlags = 1)]
-				public virtual void SetDebugFlags(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDebugFlags
-				/// </java-name>
-				[Dot42.DexImport("getDebugFlags", "()I", AccessFlags = 1)]
-				public virtual int GetDebugFlags() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setPreserveEGLContextOnPause
-				/// </java-name>
-				[Dot42.DexImport("setPreserveEGLContextOnPause", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPreserveEGLContextOnPause(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPreserveEGLContextOnPause
-				/// </java-name>
-				[Dot42.DexImport("getPreserveEGLContextOnPause", "()Z", AccessFlags = 1)]
-				public virtual bool GetPreserveEGLContextOnPause() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setRenderer
 				/// </java-name>
 				[Dot42.DexImport("setRenderer", "(Landroid/opengl/GLSurfaceView$Renderer;)V", AccessFlags = 1)]
@@ -8468,23 +8407,6 @@ namespace Android.Opengl
 				[Dot42.DexImport("setEGLContextClientVersion", "(I)V", AccessFlags = 1)]
 				public virtual void SetEGLContextClientVersion(int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// setRenderMode
-				/// </java-name>
-				[Dot42.DexImport("setRenderMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetRenderMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRenderMode
-				/// </java-name>
-				[Dot42.DexImport("getRenderMode", "()I", AccessFlags = 1)]
-				public virtual int GetRenderMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -8567,34 +8489,34 @@ namespace Android.Opengl
 				/// <java-name>
 				/// getDebugFlags
 				/// </java-name>
-				public int DebugFlags
+				public virtual int DebugFlags
 				{
-				[Dot42.DexImport("getDebugFlags", "()I", AccessFlags = 1)]
-						get{ return GetDebugFlags(); }
-				[Dot42.DexImport("setDebugFlags", "(I)V", AccessFlags = 1)]
-						set{ SetDebugFlags(value); }
+						[Dot42.DexImport("getDebugFlags", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setDebugFlags", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPreserveEGLContextOnPause
 				/// </java-name>
-				public bool IsPreserveEGLContextOnPause
+				public virtual bool IsPreserveEGLContextOnPause
 				{
-				[Dot42.DexImport("getPreserveEGLContextOnPause", "()Z", AccessFlags = 1)]
-						get{ return GetPreserveEGLContextOnPause(); }
-				[Dot42.DexImport("setPreserveEGLContextOnPause", "(Z)V", AccessFlags = 1)]
-						set{ SetPreserveEGLContextOnPause(value); }
+						[Dot42.DexImport("getPreserveEGLContextOnPause", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setPreserveEGLContextOnPause", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getRenderMode
 				/// </java-name>
-				public int RenderMode
+				public virtual int RenderMode
 				{
-				[Dot42.DexImport("getRenderMode", "()I", AccessFlags = 1)]
-						get{ return GetRenderMode(); }
-				[Dot42.DexImport("setRenderMode", "(I)V", AccessFlags = 1)]
-						set{ SetRenderMode(value); }
+						[Dot42.DexImport("getRenderMode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setRenderMode", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

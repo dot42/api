@@ -550,87 +550,6 @@ namespace Android.Net.Wifi
 				}
 
 				/// <java-name>
-				/// getSSID
-				/// </java-name>
-				[Dot42.DexImport("getSSID", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSSID() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getBSSID
-				/// </java-name>
-				[Dot42.DexImport("getBSSID", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetBSSID() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRssi
-				/// </java-name>
-				[Dot42.DexImport("getRssi", "()I", AccessFlags = 1)]
-				public virtual int GetRssi() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLinkSpeed
-				/// </java-name>
-				[Dot42.DexImport("getLinkSpeed", "()I", AccessFlags = 1)]
-				public virtual int GetLinkSpeed() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMacAddress
-				/// </java-name>
-				[Dot42.DexImport("getMacAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMacAddress() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getNetworkId
-				/// </java-name>
-				[Dot42.DexImport("getNetworkId", "()I", AccessFlags = 1)]
-				public virtual int GetNetworkId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSupplicantState
-				/// </java-name>
-				[Dot42.DexImport("getSupplicantState", "()Landroid/net/wifi/SupplicantState;", AccessFlags = 1)]
-				public virtual global::Android.Net.Wifi.SupplicantState GetSupplicantState() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Wifi.SupplicantState);
-				}
-
-				/// <java-name>
-				/// getIpAddress
-				/// </java-name>
-				[Dot42.DexImport("getIpAddress", "()I", AccessFlags = 1)]
-				public virtual int GetIpAddress() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHiddenSSID
-				/// </java-name>
-				[Dot42.DexImport("getHiddenSSID", "()Z", AccessFlags = 1)]
-				public virtual bool GetHiddenSSID() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getDetailedStateOf
 				/// </java-name>
 				[Dot42.DexImport("getDetailedStateOf", "(Landroid/net/wifi/SupplicantState;)Landroid/net/NetworkInfo$DetailedState;", AccessFlags = 9)]
@@ -668,82 +587,82 @@ namespace Android.Net.Wifi
 				/// <java-name>
 				/// getSSID
 				/// </java-name>
-				public string SSID
+				public virtual string SSID
 				{
-				[Dot42.DexImport("getSSID", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSSID(); }
+						[Dot42.DexImport("getSSID", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getBSSID
 				/// </java-name>
-				public string BSSID
+				public virtual string BSSID
 				{
-				[Dot42.DexImport("getBSSID", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetBSSID(); }
+						[Dot42.DexImport("getBSSID", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getRssi
 				/// </java-name>
-				public int Rssi
+				public virtual int Rssi
 				{
-				[Dot42.DexImport("getRssi", "()I", AccessFlags = 1)]
-						get{ return GetRssi(); }
+						[Dot42.DexImport("getRssi", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getLinkSpeed
 				/// </java-name>
-				public int LinkSpeed
+				public virtual int LinkSpeed
 				{
-				[Dot42.DexImport("getLinkSpeed", "()I", AccessFlags = 1)]
-						get{ return GetLinkSpeed(); }
+						[Dot42.DexImport("getLinkSpeed", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMacAddress
 				/// </java-name>
-				public string MacAddress
+				public virtual string MacAddress
 				{
-				[Dot42.DexImport("getMacAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMacAddress(); }
+						[Dot42.DexImport("getMacAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getNetworkId
 				/// </java-name>
-				public int NetworkId
+				public virtual int NetworkId
 				{
-				[Dot42.DexImport("getNetworkId", "()I", AccessFlags = 1)]
-						get{ return GetNetworkId(); }
+						[Dot42.DexImport("getNetworkId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSupplicantState
 				/// </java-name>
-				public global::Android.Net.Wifi.SupplicantState SupplicantState
+				public virtual global::Android.Net.Wifi.SupplicantState SupplicantState
 				{
-				[Dot42.DexImport("getSupplicantState", "()Landroid/net/wifi/SupplicantState;", AccessFlags = 1)]
-						get{ return GetSupplicantState(); }
+						[Dot42.DexImport("getSupplicantState", "()Landroid/net/wifi/SupplicantState;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Wifi.SupplicantState); }
 				}
 
 				/// <java-name>
 				/// getIpAddress
 				/// </java-name>
-				public int IpAddress
+				public virtual int IpAddress
 				{
-				[Dot42.DexImport("getIpAddress", "()I", AccessFlags = 1)]
-						get{ return GetIpAddress(); }
+						[Dot42.DexImport("getIpAddress", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getHiddenSSID
 				/// </java-name>
-				public bool IsHiddenSSID
+				public virtual bool IsHiddenSSID
 				{
-				[Dot42.DexImport("getHiddenSSID", "()Z", AccessFlags = 1)]
-						get{ return GetHiddenSSID(); }
+						[Dot42.DexImport("getHiddenSSID", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -891,15 +810,6 @@ namespace Android.Net.Wifi
 				}
 
 				/// <java-name>
-				/// getConfiguredNetworks
-				/// </java-name>
-				[Dot42.DexImport("getConfiguredNetworks", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;")]
-				public virtual global::Java.Util.IList<global::Android.Net.Wifi.WifiConfiguration> GetConfiguredNetworks() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Net.Wifi.WifiConfiguration>);
-				}
-
-				/// <java-name>
 				/// addNetwork
 				/// </java-name>
 				[Dot42.DexImport("addNetwork", "(Landroid/net/wifi/WifiConfiguration;)I", AccessFlags = 1)]
@@ -990,24 +900,6 @@ namespace Android.Net.Wifi
 				}
 
 				/// <java-name>
-				/// getConnectionInfo
-				/// </java-name>
-				[Dot42.DexImport("getConnectionInfo", "()Landroid/net/wifi/WifiInfo;", AccessFlags = 1)]
-				public virtual global::Android.Net.Wifi.WifiInfo GetConnectionInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Wifi.WifiInfo);
-				}
-
-				/// <java-name>
-				/// getScanResults
-				/// </java-name>
-				[Dot42.DexImport("getScanResults", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/net/wifi/ScanResult;>;")]
-				public virtual global::Java.Util.IList<global::Android.Net.Wifi.ScanResult> GetScanResults() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Net.Wifi.ScanResult>);
-				}
-
-				/// <java-name>
 				/// saveConfiguration
 				/// </java-name>
 				[Dot42.DexImport("saveConfiguration", "()Z", AccessFlags = 1)]
@@ -1017,37 +909,10 @@ namespace Android.Net.Wifi
 				}
 
 				/// <java-name>
-				/// getDhcpInfo
-				/// </java-name>
-				[Dot42.DexImport("getDhcpInfo", "()Landroid/net/DhcpInfo;", AccessFlags = 1)]
-				public virtual global::Android.Net.DhcpInfo GetDhcpInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.DhcpInfo);
-				}
-
-				/// <java-name>
 				/// setWifiEnabled
 				/// </java-name>
 				[Dot42.DexImport("setWifiEnabled", "(Z)Z", AccessFlags = 1)]
 				public virtual bool SetWifiEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getWifiState
-				/// </java-name>
-				[Dot42.DexImport("getWifiState", "()I", AccessFlags = 1)]
-				public virtual int GetWifiState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isWifiEnabled
-				/// </java-name>
-				[Dot42.DexImport("isWifiEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsWifiEnabled() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1100,46 +965,55 @@ namespace Android.Net.Wifi
 				/// <java-name>
 				/// getConfiguredNetworks
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Net.Wifi.WifiConfiguration> ConfiguredNetworks
+				public virtual global::Java.Util.IList<global::Android.Net.Wifi.WifiConfiguration> ConfiguredNetworks
 				{
-				[Dot42.DexImport("getConfiguredNetworks", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;")]
-						get{ return GetConfiguredNetworks(); }
+						[Dot42.DexImport("getConfiguredNetworks", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Net.Wifi.WifiConfiguration>); }
 				}
 
 				/// <java-name>
 				/// getConnectionInfo
 				/// </java-name>
-				public global::Android.Net.Wifi.WifiInfo ConnectionInfo
+				public virtual global::Android.Net.Wifi.WifiInfo ConnectionInfo
 				{
-				[Dot42.DexImport("getConnectionInfo", "()Landroid/net/wifi/WifiInfo;", AccessFlags = 1)]
-						get{ return GetConnectionInfo(); }
+						[Dot42.DexImport("getConnectionInfo", "()Landroid/net/wifi/WifiInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Wifi.WifiInfo); }
 				}
 
 				/// <java-name>
 				/// getScanResults
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Net.Wifi.ScanResult> ScanResults
+				public virtual global::Java.Util.IList<global::Android.Net.Wifi.ScanResult> ScanResults
 				{
-				[Dot42.DexImport("getScanResults", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/net/wifi/ScanResult;>;")]
-						get{ return GetScanResults(); }
+						[Dot42.DexImport("getScanResults", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/net/wifi/ScanResult;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Net.Wifi.ScanResult>); }
 				}
 
 				/// <java-name>
 				/// getDhcpInfo
 				/// </java-name>
-				public global::Android.Net.DhcpInfo DhcpInfo
+				public virtual global::Android.Net.DhcpInfo DhcpInfo
 				{
-				[Dot42.DexImport("getDhcpInfo", "()Landroid/net/DhcpInfo;", AccessFlags = 1)]
-						get{ return GetDhcpInfo(); }
+						[Dot42.DexImport("getDhcpInfo", "()Landroid/net/DhcpInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.DhcpInfo); }
 				}
 
 				/// <java-name>
 				/// getWifiState
 				/// </java-name>
-				public int WifiState
+				public virtual int WifiState
 				{
-				[Dot42.DexImport("getWifiState", "()I", AccessFlags = 1)]
-						get{ return GetWifiState(); }
+						[Dot42.DexImport("getWifiState", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isWifiEnabled
+				/// </java-name>
+				public virtual bool IsWifiEnabled
+				{
+						[Dot42.DexImport("isWifiEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1184,15 +1058,6 @@ namespace Android.Net.Wifi
 						}
 
 						/// <java-name>
-						/// isHeld
-						/// </java-name>
-						[Dot42.DexImport("isHeld", "()Z", AccessFlags = 1)]
-						public virtual bool IsHeld() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
 						/// toString
 						/// </java-name>
 						[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -1210,6 +1075,15 @@ namespace Android.Net.Wifi
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal MulticastLock() /* TypeBuilder.AddDefaultConstructor */ 
 						{
+						}
+
+						/// <java-name>
+						/// isHeld
+						/// </java-name>
+						public virtual bool IsHeld
+						{
+								[Dot42.DexImport("isHeld", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 				}
@@ -1256,15 +1130,6 @@ namespace Android.Net.Wifi
 						}
 
 						/// <java-name>
-						/// isHeld
-						/// </java-name>
-						[Dot42.DexImport("isHeld", "()Z", AccessFlags = 1)]
-						public virtual bool IsHeld() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
 						/// setWorkSource
 						/// </java-name>
 						[Dot42.DexImport("setWorkSource", "(Landroid/os/WorkSource;)V", AccessFlags = 1)]
@@ -1290,6 +1155,15 @@ namespace Android.Net.Wifi
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal WifiLock() /* TypeBuilder.AddDefaultConstructor */ 
 						{
+						}
+
+						/// <java-name>
+						/// isHeld
+						/// </java-name>
+						public virtual bool IsHeld
+						{
+								[Dot42.DexImport("isHeld", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 				}

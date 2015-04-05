@@ -80,51 +80,6 @@ namespace Android.Service.Wallpaper
 						}
 
 						/// <java-name>
-						/// getSurfaceHolder
-						/// </java-name>
-						[Dot42.DexImport("getSurfaceHolder", "()Landroid/view/SurfaceHolder;", AccessFlags = 1)]
-						public virtual global::Android.Views.ISurfaceHolder GetSurfaceHolder() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Views.ISurfaceHolder);
-						}
-
-						/// <java-name>
-						/// getDesiredMinimumWidth
-						/// </java-name>
-						[Dot42.DexImport("getDesiredMinimumWidth", "()I", AccessFlags = 1)]
-						public virtual int GetDesiredMinimumWidth() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getDesiredMinimumHeight
-						/// </java-name>
-						[Dot42.DexImport("getDesiredMinimumHeight", "()I", AccessFlags = 1)]
-						public virtual int GetDesiredMinimumHeight() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// isVisible
-						/// </java-name>
-						[Dot42.DexImport("isVisible", "()Z", AccessFlags = 1)]
-						public virtual bool IsVisible() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// isPreview
-						/// </java-name>
-						[Dot42.DexImport("isPreview", "()Z", AccessFlags = 1)]
-						public virtual bool IsPreview() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
 						/// setTouchEventsEnabled
 						/// </java-name>
 						[Dot42.DexImport("setTouchEventsEnabled", "(Z)V", AccessFlags = 1)]
@@ -246,28 +201,46 @@ namespace Android.Service.Wallpaper
 						/// <java-name>
 						/// getSurfaceHolder
 						/// </java-name>
-						public global::Android.Views.ISurfaceHolder SurfaceHolder
+						public virtual global::Android.Views.ISurfaceHolder SurfaceHolder
 						{
-						[Dot42.DexImport("getSurfaceHolder", "()Landroid/view/SurfaceHolder;", AccessFlags = 1)]
-								get{ return GetSurfaceHolder(); }
+								[Dot42.DexImport("getSurfaceHolder", "()Landroid/view/SurfaceHolder;", AccessFlags = 1)]
+								get{ return default(global::Android.Views.ISurfaceHolder); }
 						}
 
 						/// <java-name>
 						/// getDesiredMinimumWidth
 						/// </java-name>
-						public int DesiredMinimumWidth
+						public virtual int DesiredMinimumWidth
 						{
-						[Dot42.DexImport("getDesiredMinimumWidth", "()I", AccessFlags = 1)]
-								get{ return GetDesiredMinimumWidth(); }
+								[Dot42.DexImport("getDesiredMinimumWidth", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getDesiredMinimumHeight
 						/// </java-name>
-						public int DesiredMinimumHeight
+						public virtual int DesiredMinimumHeight
 						{
-						[Dot42.DexImport("getDesiredMinimumHeight", "()I", AccessFlags = 1)]
-								get{ return GetDesiredMinimumHeight(); }
+								[Dot42.DexImport("getDesiredMinimumHeight", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+						}
+
+						/// <java-name>
+						/// isVisible
+						/// </java-name>
+						public virtual bool IsVisible
+						{
+								[Dot42.DexImport("isVisible", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
+						}
+
+						/// <java-name>
+						/// isPreview
+						/// </java-name>
+						public virtual bool IsPreview
+						{
+								[Dot42.DexImport("isPreview", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 				}

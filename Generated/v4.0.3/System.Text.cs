@@ -311,15 +311,6 @@ namespace System.Text
 				}
 
 				/// <java-name>
-				/// capacity
-				/// </java-name>
-				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
-				public int GetCapacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// charAt
 				/// </java-name>
 				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 1)]
@@ -500,19 +491,8 @@ namespace System.Text
 				/// </java-name>
 				public int Capacity
 				{
-				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
-						get{ return GetCapacity(); }
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				public int Length
-				{
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-						get{ return GetLength(); }
-				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
-						set{ SetLength(value); }
+						[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

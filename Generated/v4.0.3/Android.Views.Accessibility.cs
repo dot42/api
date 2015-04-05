@@ -104,15 +104,6 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// getRecordCount
-				/// </java-name>
-				[Dot42.DexImport("getRecordCount", "()I", AccessFlags = 1)]
-				public int GetRecordCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// appendRecord
 				/// </java-name>
 				[Dot42.DexImport("appendRecord", "(Landroid/view/accessibility/AccessibilityRecord;)V", AccessFlags = 1)]
@@ -127,57 +118,6 @@ namespace Android.Views.Accessibility
 				public global::Android.Views.Accessibility.AccessibilityRecord GetRecord(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Views.Accessibility.AccessibilityRecord);
-				}
-
-				/// <java-name>
-				/// getEventType
-				/// </java-name>
-				[Dot42.DexImport("getEventType", "()I", AccessFlags = 1)]
-				public int GetEventType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setEventType
-				/// </java-name>
-				[Dot42.DexImport("setEventType", "(I)V", AccessFlags = 1)]
-				public void SetEventType(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEventTime
-				/// </java-name>
-				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
-				public long GetEventTime() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setEventTime
-				/// </java-name>
-				[Dot42.DexImport("setEventTime", "(J)V", AccessFlags = 1)]
-				public void SetEventTime(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPackageName
-				/// </java-name>
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence GetPackageName() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setPackageName
-				/// </java-name>
-				[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public void SetPackageName(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -264,8 +204,8 @@ namespace Android.Views.Accessibility
 				/// </java-name>
 				public int RecordCount
 				{
-				[Dot42.DexImport("getRecordCount", "()I", AccessFlags = 1)]
-						get{ return GetRecordCount(); }
+						[Dot42.DexImport("getRecordCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -273,10 +213,10 @@ namespace Android.Views.Accessibility
 				/// </java-name>
 				public int EventType
 				{
-				[Dot42.DexImport("getEventType", "()I", AccessFlags = 1)]
-						get{ return GetEventType(); }
-				[Dot42.DexImport("setEventType", "(I)V", AccessFlags = 1)]
-						set{ SetEventType(value); }
+						[Dot42.DexImport("getEventType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setEventType", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -284,10 +224,10 @@ namespace Android.Views.Accessibility
 				/// </java-name>
 				public long EventTime
 				{
-				[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
-						get{ return GetEventTime(); }
-				[Dot42.DexImport("setEventTime", "(J)V", AccessFlags = 1)]
-						set{ SetEventTime(value); }
+						[Dot42.DexImport("getEventTime", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setEventTime", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -295,10 +235,10 @@ namespace Android.Views.Accessibility
 				/// </java-name>
 				public global::Java.Lang.ICharSequence PackageName
 				{
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetPackageName(); }
-				[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetPackageName(value); }
+						[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -316,24 +256,6 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// isEnabled
-				/// </java-name>
-				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
-				public bool IsEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isTouchExplorationEnabled
-				/// </java-name>
-				[Dot42.DexImport("isTouchExplorationEnabled", "()Z", AccessFlags = 1)]
-				public bool IsTouchExplorationEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// sendAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("sendAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)V", AccessFlags = 1)]
@@ -347,24 +269,6 @@ namespace Android.Views.Accessibility
 				[Dot42.DexImport("interrupt", "()V", AccessFlags = 1)]
 				public void Interrupt() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getAccessibilityServiceList
-				/// </java-name>
-				[Dot42.DexImport("getAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/pm/ServiceInfo;>;")]
-				public global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo> GetAccessibilityServiceList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo>);
-				}
-
-				/// <java-name>
-				/// getInstalledAccessibilityServiceList
-				/// </java-name>
-				[Dot42.DexImport("getInstalledAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
-				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> GetInstalledAccessibilityServiceList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo>);
 				}
 
 				/// <java-name>
@@ -397,12 +301,30 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
+				/// isEnabled
+				/// </java-name>
+				public bool IsEnabled
+				{
+						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isTouchExplorationEnabled
+				/// </java-name>
+				public bool IsTouchExplorationEnabled
+				{
+						[Dot42.DexImport("isTouchExplorationEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getAccessibilityServiceList
 				/// </java-name>
 				public global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo> AccessibilityServiceList
 				{
-				[Dot42.DexImport("getAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/pm/ServiceInfo;>;")]
-						get{ return GetAccessibilityServiceList(); }
+						[Dot42.DexImport("getAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/pm/ServiceInfo;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo>); }
 				}
 
 				/// <java-name>
@@ -410,8 +332,8 @@ namespace Android.Views.Accessibility
 				/// </java-name>
 				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> InstalledAccessibilityServiceList
 				{
-				[Dot42.DexImport("getInstalledAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
-						get{ return GetInstalledAccessibilityServiceList(); }
+						[Dot42.DexImport("getInstalledAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo>); }
 				}
 
 				/// <java-name>
@@ -477,24 +399,6 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// getWindowId
-				/// </java-name>
-				[Dot42.DexImport("getWindowId", "()I", AccessFlags = 1)]
-				public virtual int GetWindowId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getChildCount
-				/// </java-name>
-				[Dot42.DexImport("getChildCount", "()I", AccessFlags = 1)]
-				public virtual int GetChildCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getChild
 				/// </java-name>
 				[Dot42.DexImport("getChild", "(I)Landroid/view/accessibility/AccessibilityNodeInfo;", AccessFlags = 1)]
@@ -509,15 +413,6 @@ namespace Android.Views.Accessibility
 				[Dot42.DexImport("addChild", "(Landroid/view/View;)V", AccessFlags = 1)]
 				public virtual void AddChild(global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()I", AccessFlags = 1)]
-				public virtual int GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -545,15 +440,6 @@ namespace Android.Views.Accessibility
 				public virtual global::Java.Util.IList<global::Android.Views.Accessibility.AccessibilityNodeInfo> FindAccessibilityNodeInfosByText(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Views.Accessibility.AccessibilityNodeInfo>);
-				}
-
-				/// <java-name>
-				/// getParent
-				/// </java-name>
-				[Dot42.DexImport("getParent", "()Landroid/view/accessibility/AccessibilityNodeInfo;", AccessFlags = 1)]
-				public virtual global::Android.Views.Accessibility.AccessibilityNodeInfo GetParent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.Accessibility.AccessibilityNodeInfo);
 				}
 
 				/// <java-name>
@@ -597,29 +483,11 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// isCheckable
-				/// </java-name>
-				[Dot42.DexImport("isCheckable", "()Z", AccessFlags = 1)]
-				public virtual bool IsCheckable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setCheckable
 				/// </java-name>
 				[Dot42.DexImport("setCheckable", "(Z)V", AccessFlags = 1)]
 				public virtual void SetCheckable(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isChecked
-				/// </java-name>
-				[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
-				public virtual bool IsChecked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -631,29 +499,11 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// isFocusable
-				/// </java-name>
-				[Dot42.DexImport("isFocusable", "()Z", AccessFlags = 1)]
-				public virtual bool IsFocusable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setFocusable
 				/// </java-name>
 				[Dot42.DexImport("setFocusable", "(Z)V", AccessFlags = 1)]
 				public virtual void SetFocusable(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isFocused
-				/// </java-name>
-				[Dot42.DexImport("isFocused", "()Z", AccessFlags = 1)]
-				public virtual bool IsFocused() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -665,29 +515,11 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// isSelected
-				/// </java-name>
-				[Dot42.DexImport("isSelected", "()Z", AccessFlags = 1)]
-				public virtual bool IsSelected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setSelected
 				/// </java-name>
 				[Dot42.DexImport("setSelected", "(Z)V", AccessFlags = 1)]
 				public virtual void SetSelected(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isClickable
-				/// </java-name>
-				[Dot42.DexImport("isClickable", "()Z", AccessFlags = 1)]
-				public virtual bool IsClickable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -699,29 +531,11 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// isLongClickable
-				/// </java-name>
-				[Dot42.DexImport("isLongClickable", "()Z", AccessFlags = 1)]
-				public virtual bool IsLongClickable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setLongClickable
 				/// </java-name>
 				[Dot42.DexImport("setLongClickable", "(Z)V", AccessFlags = 1)]
 				public virtual void SetLongClickable(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isEnabled
-				/// </java-name>
-				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -733,15 +547,6 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// isPassword
-				/// </java-name>
-				[Dot42.DexImport("isPassword", "()Z", AccessFlags = 1)]
-				public virtual bool IsPassword() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setPassword
 				/// </java-name>
 				[Dot42.DexImport("setPassword", "(Z)V", AccessFlags = 1)]
@@ -750,87 +555,10 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// isScrollable
-				/// </java-name>
-				[Dot42.DexImport("isScrollable", "()Z", AccessFlags = 1)]
-				public virtual bool IsScrollable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setScrollable
 				/// </java-name>
 				[Dot42.DexImport("setScrollable", "(Z)V", AccessFlags = 1)]
 				public virtual void SetScrollable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPackageName
-				/// </java-name>
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetPackageName() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setPackageName
-				/// </java-name>
-				[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetPackageName(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getClassName
-				/// </java-name>
-				[Dot42.DexImport("getClassName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetClassName() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setClassName
-				/// </java-name>
-				[Dot42.DexImport("setClassName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetClassName(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetText() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setText
-				/// </java-name>
-				[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetText(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentDescription
-				/// </java-name>
-				[Dot42.DexImport("getContentDescription", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetContentDescription() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setContentDescription
-				/// </java-name>
-				[Dot42.DexImport("setContentDescription", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetContentDescription(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -917,81 +645,171 @@ namespace Android.Views.Accessibility
 				/// <java-name>
 				/// getWindowId
 				/// </java-name>
-				public int WindowId
+				public virtual int WindowId
 				{
-				[Dot42.DexImport("getWindowId", "()I", AccessFlags = 1)]
-						get{ return GetWindowId(); }
+						[Dot42.DexImport("getWindowId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getChildCount
 				/// </java-name>
-				public int ChildCount
+				public virtual int ChildCount
 				{
-				[Dot42.DexImport("getChildCount", "()I", AccessFlags = 1)]
-						get{ return GetChildCount(); }
+						[Dot42.DexImport("getChildCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getActions
 				/// </java-name>
-				public int Actions
+				public virtual int Actions
 				{
-				[Dot42.DexImport("getActions", "()I", AccessFlags = 1)]
-						get{ return GetActions(); }
+						[Dot42.DexImport("getActions", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getParent
 				/// </java-name>
-				public global::Android.Views.Accessibility.AccessibilityNodeInfo Parent
+				public virtual global::Android.Views.Accessibility.AccessibilityNodeInfo Parent
 				{
-				[Dot42.DexImport("getParent", "()Landroid/view/accessibility/AccessibilityNodeInfo;", AccessFlags = 1)]
-						get{ return GetParent(); }
+						[Dot42.DexImport("getParent", "()Landroid/view/accessibility/AccessibilityNodeInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.Accessibility.AccessibilityNodeInfo); }
+				}
+
+				/// <java-name>
+				/// isCheckable
+				/// </java-name>
+				public virtual bool IsCheckable
+				{
+						[Dot42.DexImport("isCheckable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isChecked
+				/// </java-name>
+				public virtual bool IsChecked
+				{
+						[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFocusable
+				/// </java-name>
+				public virtual bool IsFocusable
+				{
+						[Dot42.DexImport("isFocusable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFocused
+				/// </java-name>
+				public virtual bool IsFocused
+				{
+						[Dot42.DexImport("isFocused", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isSelected
+				/// </java-name>
+				public virtual bool IsSelected
+				{
+						[Dot42.DexImport("isSelected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isClickable
+				/// </java-name>
+				public virtual bool IsClickable
+				{
+						[Dot42.DexImport("isClickable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLongClickable
+				/// </java-name>
+				public virtual bool IsLongClickable
+				{
+						[Dot42.DexImport("isLongClickable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isEnabled
+				/// </java-name>
+				public virtual bool IsEnabled
+				{
+						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isPassword
+				/// </java-name>
+				public virtual bool IsPassword
+				{
+						[Dot42.DexImport("isPassword", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isScrollable
+				/// </java-name>
+				public virtual bool IsScrollable
+				{
+						[Dot42.DexImport("isScrollable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getPackageName
 				/// </java-name>
-				public global::Java.Lang.ICharSequence PackageName
+				public virtual global::Java.Lang.ICharSequence PackageName
 				{
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetPackageName(); }
-				[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetPackageName(value); }
+						[Dot42.DexImport("getPackageName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setPackageName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getClassName
 				/// </java-name>
-				public global::Java.Lang.ICharSequence ClassName
+				public virtual global::Java.Lang.ICharSequence ClassName
 				{
-				[Dot42.DexImport("getClassName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetClassName(); }
-				[Dot42.DexImport("setClassName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetClassName(value); }
+						[Dot42.DexImport("getClassName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setClassName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getText
 				/// </java-name>
-				public global::Java.Lang.ICharSequence Text
+				public virtual global::Java.Lang.ICharSequence Text
 				{
-				[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetText(); }
-				[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetText(value); }
+						[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getContentDescription
 				/// </java-name>
-				public global::Java.Lang.ICharSequence ContentDescription
+				public virtual global::Java.Lang.ICharSequence ContentDescription
 				{
-				[Dot42.DexImport("getContentDescription", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetContentDescription(); }
-				[Dot42.DexImport("setContentDescription", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetContentDescription(value); }
+						[Dot42.DexImport("getContentDescription", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setContentDescription", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -1017,47 +835,11 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// getSource
-				/// </java-name>
-				[Dot42.DexImport("getSource", "()Landroid/view/accessibility/AccessibilityNodeInfo;", AccessFlags = 1)]
-				public virtual global::Android.Views.Accessibility.AccessibilityNodeInfo GetSource() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.Accessibility.AccessibilityNodeInfo);
-				}
-
-				/// <java-name>
-				/// getWindowId
-				/// </java-name>
-				[Dot42.DexImport("getWindowId", "()I", AccessFlags = 1)]
-				public virtual int GetWindowId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isChecked
-				/// </java-name>
-				[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
-				public virtual bool IsChecked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setChecked
 				/// </java-name>
 				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
 				public virtual void SetChecked(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isEnabled
-				/// </java-name>
-				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1069,29 +851,11 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// isPassword
-				/// </java-name>
-				[Dot42.DexImport("isPassword", "()Z", AccessFlags = 1)]
-				public virtual bool IsPassword() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setPassword
 				/// </java-name>
 				[Dot42.DexImport("setPassword", "(Z)V", AccessFlags = 1)]
 				public virtual void SetPassword(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isFullScreen
-				/// </java-name>
-				[Dot42.DexImport("isFullScreen", "()Z", AccessFlags = 1)]
-				public virtual bool IsFullScreen() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1103,266 +867,10 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// isScrollable
-				/// </java-name>
-				[Dot42.DexImport("isScrollable", "()Z", AccessFlags = 1)]
-				public virtual bool IsScrollable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setScrollable
 				/// </java-name>
 				[Dot42.DexImport("setScrollable", "(Z)V", AccessFlags = 1)]
 				public virtual void SetScrollable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getItemCount
-				/// </java-name>
-				[Dot42.DexImport("getItemCount", "()I", AccessFlags = 1)]
-				public virtual int GetItemCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setItemCount
-				/// </java-name>
-				[Dot42.DexImport("setItemCount", "(I)V", AccessFlags = 1)]
-				public virtual void SetItemCount(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCurrentItemIndex
-				/// </java-name>
-				[Dot42.DexImport("getCurrentItemIndex", "()I", AccessFlags = 1)]
-				public virtual int GetCurrentItemIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setCurrentItemIndex
-				/// </java-name>
-				[Dot42.DexImport("setCurrentItemIndex", "(I)V", AccessFlags = 1)]
-				public virtual void SetCurrentItemIndex(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getFromIndex
-				/// </java-name>
-				[Dot42.DexImport("getFromIndex", "()I", AccessFlags = 1)]
-				public virtual int GetFromIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setFromIndex
-				/// </java-name>
-				[Dot42.DexImport("setFromIndex", "(I)V", AccessFlags = 1)]
-				public virtual void SetFromIndex(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getToIndex
-				/// </java-name>
-				[Dot42.DexImport("getToIndex", "()I", AccessFlags = 1)]
-				public virtual int GetToIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setToIndex
-				/// </java-name>
-				[Dot42.DexImport("setToIndex", "(I)V", AccessFlags = 1)]
-				public virtual void SetToIndex(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getScrollX
-				/// </java-name>
-				[Dot42.DexImport("getScrollX", "()I", AccessFlags = 1)]
-				public virtual int GetScrollX() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setScrollX
-				/// </java-name>
-				[Dot42.DexImport("setScrollX", "(I)V", AccessFlags = 1)]
-				public virtual void SetScrollX(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getScrollY
-				/// </java-name>
-				[Dot42.DexImport("getScrollY", "()I", AccessFlags = 1)]
-				public virtual int GetScrollY() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setScrollY
-				/// </java-name>
-				[Dot42.DexImport("setScrollY", "(I)V", AccessFlags = 1)]
-				public virtual void SetScrollY(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMaxScrollX
-				/// </java-name>
-				[Dot42.DexImport("getMaxScrollX", "()I", AccessFlags = 1)]
-				public virtual int GetMaxScrollX() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setMaxScrollX
-				/// </java-name>
-				[Dot42.DexImport("setMaxScrollX", "(I)V", AccessFlags = 1)]
-				public virtual void SetMaxScrollX(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMaxScrollY
-				/// </java-name>
-				[Dot42.DexImport("getMaxScrollY", "()I", AccessFlags = 1)]
-				public virtual int GetMaxScrollY() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setMaxScrollY
-				/// </java-name>
-				[Dot42.DexImport("setMaxScrollY", "(I)V", AccessFlags = 1)]
-				public virtual void SetMaxScrollY(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAddedCount
-				/// </java-name>
-				[Dot42.DexImport("getAddedCount", "()I", AccessFlags = 1)]
-				public virtual int GetAddedCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setAddedCount
-				/// </java-name>
-				[Dot42.DexImport("setAddedCount", "(I)V", AccessFlags = 1)]
-				public virtual void SetAddedCount(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRemovedCount
-				/// </java-name>
-				[Dot42.DexImport("getRemovedCount", "()I", AccessFlags = 1)]
-				public virtual int GetRemovedCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setRemovedCount
-				/// </java-name>
-				[Dot42.DexImport("setRemovedCount", "(I)V", AccessFlags = 1)]
-				public virtual void SetRemovedCount(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getClassName
-				/// </java-name>
-				[Dot42.DexImport("getClassName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetClassName() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setClassName
-				/// </java-name>
-				[Dot42.DexImport("setClassName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetClassName(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/CharSequence;>;")]
-				public virtual global::Java.Util.IList<global::Java.Lang.ICharSequence> GetText() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Java.Lang.ICharSequence>);
-				}
-
-				/// <java-name>
-				/// getBeforeText
-				/// </java-name>
-				[Dot42.DexImport("getBeforeText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetBeforeText() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setBeforeText
-				/// </java-name>
-				[Dot42.DexImport("setBeforeText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetBeforeText(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentDescription
-				/// </java-name>
-				[Dot42.DexImport("getContentDescription", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence GetContentDescription() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// setContentDescription
-				/// </java-name>
-				[Dot42.DexImport("setContentDescription", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-				public virtual void SetContentDescription(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getParcelableData
-				/// </java-name>
-				[Dot42.DexImport("getParcelableData", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-				public virtual global::Android.OS.IParcelable GetParcelableData() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.IParcelable);
-				}
-
-				/// <java-name>
-				/// setParcelableData
-				/// </java-name>
-				[Dot42.DexImport("setParcelableData", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-				public virtual void SetParcelableData(global::Android.OS.IParcelable parcelable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1405,182 +913,227 @@ namespace Android.Views.Accessibility
 				/// <java-name>
 				/// getSource
 				/// </java-name>
-				public global::Android.Views.Accessibility.AccessibilityNodeInfo Source
+				public virtual global::Android.Views.Accessibility.AccessibilityNodeInfo Source
 				{
-				[Dot42.DexImport("getSource", "()Landroid/view/accessibility/AccessibilityNodeInfo;", AccessFlags = 1)]
-						get{ return GetSource(); }
+						[Dot42.DexImport("getSource", "()Landroid/view/accessibility/AccessibilityNodeInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.Accessibility.AccessibilityNodeInfo); }
 				}
 
 				/// <java-name>
 				/// getWindowId
 				/// </java-name>
-				public int WindowId
+				public virtual int WindowId
 				{
-				[Dot42.DexImport("getWindowId", "()I", AccessFlags = 1)]
-						get{ return GetWindowId(); }
+						[Dot42.DexImport("getWindowId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isChecked
+				/// </java-name>
+				public virtual bool IsChecked
+				{
+						[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isEnabled
+				/// </java-name>
+				public virtual bool IsEnabled
+				{
+						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isPassword
+				/// </java-name>
+				public virtual bool IsPassword
+				{
+						[Dot42.DexImport("isPassword", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFullScreen
+				/// </java-name>
+				public virtual bool IsFullScreen
+				{
+						[Dot42.DexImport("isFullScreen", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isScrollable
+				/// </java-name>
+				public virtual bool IsScrollable
+				{
+						[Dot42.DexImport("isScrollable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getItemCount
 				/// </java-name>
-				public int ItemCount
+				public virtual int ItemCount
 				{
-				[Dot42.DexImport("getItemCount", "()I", AccessFlags = 1)]
-						get{ return GetItemCount(); }
-				[Dot42.DexImport("setItemCount", "(I)V", AccessFlags = 1)]
-						set{ SetItemCount(value); }
+						[Dot42.DexImport("getItemCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setItemCount", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCurrentItemIndex
 				/// </java-name>
-				public int CurrentItemIndex
+				public virtual int CurrentItemIndex
 				{
-				[Dot42.DexImport("getCurrentItemIndex", "()I", AccessFlags = 1)]
-						get{ return GetCurrentItemIndex(); }
-				[Dot42.DexImport("setCurrentItemIndex", "(I)V", AccessFlags = 1)]
-						set{ SetCurrentItemIndex(value); }
+						[Dot42.DexImport("getCurrentItemIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setCurrentItemIndex", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getFromIndex
 				/// </java-name>
-				public int FromIndex
+				public virtual int FromIndex
 				{
-				[Dot42.DexImport("getFromIndex", "()I", AccessFlags = 1)]
-						get{ return GetFromIndex(); }
-				[Dot42.DexImport("setFromIndex", "(I)V", AccessFlags = 1)]
-						set{ SetFromIndex(value); }
+						[Dot42.DexImport("getFromIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setFromIndex", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getToIndex
 				/// </java-name>
-				public int ToIndex
+				public virtual int ToIndex
 				{
-				[Dot42.DexImport("getToIndex", "()I", AccessFlags = 1)]
-						get{ return GetToIndex(); }
-				[Dot42.DexImport("setToIndex", "(I)V", AccessFlags = 1)]
-						set{ SetToIndex(value); }
+						[Dot42.DexImport("getToIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setToIndex", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getScrollX
 				/// </java-name>
-				public int ScrollX
+				public virtual int ScrollX
 				{
-				[Dot42.DexImport("getScrollX", "()I", AccessFlags = 1)]
-						get{ return GetScrollX(); }
-				[Dot42.DexImport("setScrollX", "(I)V", AccessFlags = 1)]
-						set{ SetScrollX(value); }
+						[Dot42.DexImport("getScrollX", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setScrollX", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getScrollY
 				/// </java-name>
-				public int ScrollY
+				public virtual int ScrollY
 				{
-				[Dot42.DexImport("getScrollY", "()I", AccessFlags = 1)]
-						get{ return GetScrollY(); }
-				[Dot42.DexImport("setScrollY", "(I)V", AccessFlags = 1)]
-						set{ SetScrollY(value); }
+						[Dot42.DexImport("getScrollY", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setScrollY", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMaxScrollX
 				/// </java-name>
-				public int MaxScrollX
+				public virtual int MaxScrollX
 				{
-				[Dot42.DexImport("getMaxScrollX", "()I", AccessFlags = 1)]
-						get{ return GetMaxScrollX(); }
-				[Dot42.DexImport("setMaxScrollX", "(I)V", AccessFlags = 1)]
-						set{ SetMaxScrollX(value); }
+						[Dot42.DexImport("getMaxScrollX", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMaxScrollX", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMaxScrollY
 				/// </java-name>
-				public int MaxScrollY
+				public virtual int MaxScrollY
 				{
-				[Dot42.DexImport("getMaxScrollY", "()I", AccessFlags = 1)]
-						get{ return GetMaxScrollY(); }
-				[Dot42.DexImport("setMaxScrollY", "(I)V", AccessFlags = 1)]
-						set{ SetMaxScrollY(value); }
+						[Dot42.DexImport("getMaxScrollY", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMaxScrollY", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAddedCount
 				/// </java-name>
-				public int AddedCount
+				public virtual int AddedCount
 				{
-				[Dot42.DexImport("getAddedCount", "()I", AccessFlags = 1)]
-						get{ return GetAddedCount(); }
-				[Dot42.DexImport("setAddedCount", "(I)V", AccessFlags = 1)]
-						set{ SetAddedCount(value); }
+						[Dot42.DexImport("getAddedCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setAddedCount", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getRemovedCount
 				/// </java-name>
-				public int RemovedCount
+				public virtual int RemovedCount
 				{
-				[Dot42.DexImport("getRemovedCount", "()I", AccessFlags = 1)]
-						get{ return GetRemovedCount(); }
-				[Dot42.DexImport("setRemovedCount", "(I)V", AccessFlags = 1)]
-						set{ SetRemovedCount(value); }
+						[Dot42.DexImport("getRemovedCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setRemovedCount", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getClassName
 				/// </java-name>
-				public global::Java.Lang.ICharSequence ClassName
+				public virtual global::Java.Lang.ICharSequence ClassName
 				{
-				[Dot42.DexImport("getClassName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetClassName(); }
-				[Dot42.DexImport("setClassName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetClassName(value); }
+						[Dot42.DexImport("getClassName", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setClassName", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getText
 				/// </java-name>
-				public global::Java.Util.IList<global::Java.Lang.ICharSequence> Text
+				public virtual global::Java.Util.IList<global::Java.Lang.ICharSequence> Text
 				{
-				[Dot42.DexImport("getText", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/CharSequence;>;")]
-						get{ return GetText(); }
+						[Dot42.DexImport("getText", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/CharSequence;>;")]
+						get{ return default(global::Java.Util.IList<global::Java.Lang.ICharSequence>); }
 				}
 
 				/// <java-name>
 				/// getBeforeText
 				/// </java-name>
-				public global::Java.Lang.ICharSequence BeforeText
+				public virtual global::Java.Lang.ICharSequence BeforeText
 				{
-				[Dot42.DexImport("getBeforeText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetBeforeText(); }
-				[Dot42.DexImport("setBeforeText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetBeforeText(value); }
+						[Dot42.DexImport("getBeforeText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setBeforeText", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getContentDescription
 				/// </java-name>
-				public global::Java.Lang.ICharSequence ContentDescription
+				public virtual global::Java.Lang.ICharSequence ContentDescription
 				{
-				[Dot42.DexImport("getContentDescription", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetContentDescription(); }
-				[Dot42.DexImport("setContentDescription", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ SetContentDescription(value); }
+						[Dot42.DexImport("getContentDescription", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setContentDescription", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getParcelableData
 				/// </java-name>
-				public global::Android.OS.IParcelable ParcelableData
+				public virtual global::Android.OS.IParcelable ParcelableData
 				{
-				[Dot42.DexImport("getParcelableData", "()Landroid/os/Parcelable;", AccessFlags = 1)]
-						get{ return GetParcelableData(); }
-				[Dot42.DexImport("setParcelableData", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
-						set{ SetParcelableData(value); }
+						[Dot42.DexImport("getParcelableData", "()Landroid/os/Parcelable;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.IParcelable); }
+						[Dot42.DexImport("setParcelableData", "(Landroid/os/Parcelable;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

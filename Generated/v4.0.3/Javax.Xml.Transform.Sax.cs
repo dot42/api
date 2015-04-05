@@ -11,20 +11,22 @@ namespace Javax.Xml.Transform.Sax
 				/// <java-name>
 				/// getTemplates
 				/// </java-name>
-				[Dot42.DexImport("getTemplates", "()Ljavax/xml/transform/Templates;", AccessFlags = 1025)]
-				global::Javax.Xml.Transform.ITemplates GetTemplates() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetSystemId(string @string) /* MethodBuilder.Create */ ;
+				global::Javax.Xml.Transform.ITemplates Templates
+				{
+						[Dot42.DexImport("getTemplates", "()Ljavax/xml/transform/Templates;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
+				string SystemId
+				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -42,22 +44,24 @@ namespace Javax.Xml.Transform.Sax
 				void SetResult(global::Javax.Xml.Transform.IResult result) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetSystemId(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
+				string SystemId
+				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
 
 				/// <java-name>
 				/// getTransformer
 				/// </java-name>
-				[Dot42.DexImport("getTransformer", "()Ljavax/xml/transform/Transformer;", AccessFlags = 1025)]
-				global::Javax.Xml.Transform.Transformer GetTransformer() /* MethodBuilder.Create */ ;
+				global::Javax.Xml.Transform.Transformer Transformer
+				{
+						[Dot42.DexImport("getTransformer", "()Ljavax/xml/transform/Transformer;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -84,87 +88,36 @@ namespace Javax.Xml.Transform.Sax
 				}
 
 				/// <java-name>
-				/// setHandler
-				/// </java-name>
-				[Dot42.DexImport("setHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1)]
-				public virtual void SetHandler(global::Org.Xml.Sax.IContentHandler contentHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getHandler
 				/// </java-name>
-				[Dot42.DexImport("getHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IContentHandler GetHandler() /* MethodBuilder.Create */ 
+				public virtual global::Org.Xml.Sax.IContentHandler Handler
 				{
-						return default(global::Org.Xml.Sax.IContentHandler);
-				}
-
-				/// <java-name>
-				/// setLexicalHandler
-				/// </java-name>
-				[Dot42.DexImport("setLexicalHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", AccessFlags = 1)]
-				public virtual void SetLexicalHandler(global::Org.Xml.Sax.Ext.ILexicalHandler lexicalHandler) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IContentHandler); }
+						[Dot42.DexImport("setHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLexicalHandler
 				/// </java-name>
-				[Dot42.DexImport("getLexicalHandler", "()Lorg/xml/sax/ext/LexicalHandler;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.Ext.ILexicalHandler GetLexicalHandler() /* MethodBuilder.Create */ 
+				public virtual global::Org.Xml.Sax.Ext.ILexicalHandler LexicalHandler
 				{
-						return default(global::Org.Xml.Sax.Ext.ILexicalHandler);
-				}
-
-				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSystemId(string @string) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getLexicalHandler", "()Lorg/xml/sax/ext/LexicalHandler;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.Ext.ILexicalHandler); }
+						[Dot42.DexImport("setLexicalHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSystemId() /* MethodBuilder.Create */ 
+				public virtual string SystemId
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getHandler
-				/// </java-name>
-				public global::Org.Xml.Sax.IContentHandler Handler
-				{
-				[Dot42.DexImport("getHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
-						get{ return GetHandler(); }
-				[Dot42.DexImport("setHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1)]
-						set{ SetHandler(value); }
-				}
-
-				/// <java-name>
-				/// getLexicalHandler
-				/// </java-name>
-				public global::Org.Xml.Sax.Ext.ILexicalHandler LexicalHandler
-				{
-				[Dot42.DexImport("getLexicalHandler", "()Lorg/xml/sax/ext/LexicalHandler;", AccessFlags = 1)]
-						get{ return GetLexicalHandler(); }
-				[Dot42.DexImport("setLexicalHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", AccessFlags = 1)]
-						set{ SetLexicalHandler(value); }
-				}
-
-				/// <java-name>
-				/// getSystemId
-				/// </java-name>
-				public string SystemId
-				{
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSystemId(); }
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSystemId(value); }
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -197,57 +150,6 @@ namespace Javax.Xml.Transform.Sax
 				}
 
 				/// <java-name>
-				/// setXMLReader
-				/// </java-name>
-				[Dot42.DexImport("setXMLReader", "(Lorg/xml/sax/XMLReader;)V", AccessFlags = 1)]
-				public virtual void SetXMLReader(global::Org.Xml.Sax.IXMLReader xMLReader) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getXMLReader
-				/// </java-name>
-				[Dot42.DexImport("getXMLReader", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IXMLReader GetXMLReader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IXMLReader);
-				}
-
-				/// <java-name>
-				/// setInputSource
-				/// </java-name>
-				[Dot42.DexImport("setInputSource", "(Lorg/xml/sax/InputSource;)V", AccessFlags = 1)]
-				public virtual void SetInputSource(global::Org.Xml.Sax.InputSource inputSource) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInputSource
-				/// </java-name>
-				[Dot42.DexImport("getInputSource", "()Lorg/xml/sax/InputSource;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.InputSource GetInputSource() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.InputSource);
-				}
-
-				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSystemId(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSystemId
-				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSystemId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// sourceToInputSource
 				/// </java-name>
 				[Dot42.DexImport("sourceToInputSource", "(Ljavax/xml/transform/Source;)Lorg/xml/sax/InputSource;", AccessFlags = 9)]
@@ -259,34 +161,34 @@ namespace Javax.Xml.Transform.Sax
 				/// <java-name>
 				/// getXMLReader
 				/// </java-name>
-				public global::Org.Xml.Sax.IXMLReader XMLReader
+				public virtual global::Org.Xml.Sax.IXMLReader XMLReader
 				{
-				[Dot42.DexImport("getXMLReader", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1)]
-						get{ return GetXMLReader(); }
-				[Dot42.DexImport("setXMLReader", "(Lorg/xml/sax/XMLReader;)V", AccessFlags = 1)]
-						set{ SetXMLReader(value); }
+						[Dot42.DexImport("getXMLReader", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IXMLReader); }
+						[Dot42.DexImport("setXMLReader", "(Lorg/xml/sax/XMLReader;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getInputSource
 				/// </java-name>
-				public global::Org.Xml.Sax.InputSource InputSource
+				public virtual global::Org.Xml.Sax.InputSource InputSource
 				{
-				[Dot42.DexImport("getInputSource", "()Lorg/xml/sax/InputSource;", AccessFlags = 1)]
-						get{ return GetInputSource(); }
-				[Dot42.DexImport("setInputSource", "(Lorg/xml/sax/InputSource;)V", AccessFlags = 1)]
-						set{ SetInputSource(value); }
+						[Dot42.DexImport("getInputSource", "()Lorg/xml/sax/InputSource;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.InputSource); }
+						[Dot42.DexImport("setInputSource", "(Lorg/xml/sax/InputSource;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				public string SystemId
+				public virtual string SystemId
 				{
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSystemId(); }
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSystemId(value); }
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

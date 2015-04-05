@@ -15,42 +15,6 @@ namespace Javax.Xml.Xpath
 				void Reset() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setXPathVariableResolver
-				/// </java-name>
-				[Dot42.DexImport("setXPathVariableResolver", "(Ljavax/xml/xpath/XPathVariableResolver;)V", AccessFlags = 1025)]
-				void SetXPathVariableResolver(global::Javax.Xml.Xpath.IXPathVariableResolver xPathVariableResolver) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getXPathVariableResolver
-				/// </java-name>
-				[Dot42.DexImport("getXPathVariableResolver", "()Ljavax/xml/xpath/XPathVariableResolver;", AccessFlags = 1025)]
-				global::Javax.Xml.Xpath.IXPathVariableResolver GetXPathVariableResolver() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setXPathFunctionResolver
-				/// </java-name>
-				[Dot42.DexImport("setXPathFunctionResolver", "(Ljavax/xml/xpath/XPathFunctionResolver;)V", AccessFlags = 1025)]
-				void SetXPathFunctionResolver(global::Javax.Xml.Xpath.IXPathFunctionResolver xPathFunctionResolver) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getXPathFunctionResolver
-				/// </java-name>
-				[Dot42.DexImport("getXPathFunctionResolver", "()Ljavax/xml/xpath/XPathFunctionResolver;", AccessFlags = 1025)]
-				global::Javax.Xml.Xpath.IXPathFunctionResolver GetXPathFunctionResolver() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setNamespaceContext
-				/// </java-name>
-				[Dot42.DexImport("setNamespaceContext", "(Ljavax/xml/namespace/NamespaceContext;)V", AccessFlags = 1025)]
-				void SetNamespaceContext(global::Javax.Xml.Namespace.INamespaceContext namespaceContext) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNamespaceContext
-				/// </java-name>
-				[Dot42.DexImport("getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", AccessFlags = 1025)]
-				global::Javax.Xml.Namespace.INamespaceContext GetNamespaceContext() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// compile
 				/// </java-name>
 				[Dot42.DexImport("compile", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathExpression;", AccessFlags = 1025)]
@@ -81,6 +45,39 @@ namespace Javax.Xml.Xpath
 				/// </java-name>
 				[Dot42.DexImport("evaluate", "(Ljava/lang/String;Lorg/xml/sax/InputSource;)Ljava/lang/String;", AccessFlags = 1025)]
 				string Evaluate(string @string, global::Org.Xml.Sax.InputSource inputSource) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getXPathVariableResolver
+				/// </java-name>
+				global::Javax.Xml.Xpath.IXPathVariableResolver XPathVariableResolver
+				{
+						[Dot42.DexImport("getXPathVariableResolver", "()Ljavax/xml/xpath/XPathVariableResolver;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setXPathVariableResolver", "(Ljavax/xml/xpath/XPathVariableResolver;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getXPathFunctionResolver
+				/// </java-name>
+				global::Javax.Xml.Xpath.IXPathFunctionResolver XPathFunctionResolver
+				{
+						[Dot42.DexImport("getXPathFunctionResolver", "()Ljavax/xml/xpath/XPathFunctionResolver;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setXPathFunctionResolver", "(Ljavax/xml/xpath/XPathFunctionResolver;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getNamespaceContext
+				/// </java-name>
+				global::Javax.Xml.Namespace.INamespaceContext NamespaceContext
+				{
+						[Dot42.DexImport("getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setNamespaceContext", "(Ljavax/xml/namespace/NamespaceContext;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -224,15 +221,6 @@ namespace Javax.Xml.Xpath
 				}
 
 				/// <java-name>
-				/// getCause
-				/// </java-name>
-				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public override global::System.Exception GetCause() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
 				/// printStackTrace
 				/// </java-name>
 				[Dot42.DexImport("printStackTrace", "(Ljava/io/PrintStream;)V", AccessFlags = 1)]
@@ -259,6 +247,15 @@ namespace Javax.Xml.Xpath
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal XPathException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// getCause
+				/// </java-name>
+				public override global::System.Exception Cause
+				{
+						[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+						get{ return default(global::System.Exception); }
 				}
 
 		}

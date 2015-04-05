@@ -16,6 +16,7 @@
 using System;
 using System.Reflection;
 using Java.Lang.Annotation;
+using Java.Lang.Reflect;
 
 namespace Dot42.Internal
 {
@@ -29,7 +30,7 @@ namespace Dot42.Internal
         /// Gets the method to build an attribute from an annotation.
         /// </summary>
         [Include]
-        JavaMethod AttributeBuilder();
+        Method AttributeBuilder();
 
         /// <summary>
         /// Gets the type of the attribute.

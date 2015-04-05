@@ -42,6 +42,10 @@ namespace System
             }
         }
 
+        public virtual Exception InnerException
+        {
+            get { return Cause; }
+        }
 
 	}
 }

@@ -44,24 +44,6 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// getCount
-				/// </java-name>
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1025)]
-				public virtual int GetCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getColumnNames
-				/// </java-name>
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public virtual string[] GetColumnNames() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
 				/// getString
 				/// </java-name>
 				[Dot42.DexImport("getString", "(I)Ljava/lang/String;", AccessFlags = 1025)]
@@ -152,24 +134,6 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// getWindow
-				/// </java-name>
-				[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1)]
-				public virtual global::Android.Database.CursorWindow GetWindow() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.CursorWindow);
-				}
-
-				/// <java-name>
-				/// getColumnCount
-				/// </java-name>
-				[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1)]
-				public virtual int GetColumnCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// deactivate
 				/// </java-name>
 				[Dot42.DexImport("deactivate", "()V", AccessFlags = 1)]
@@ -182,15 +146,6 @@ namespace Android.Database
 				/// </java-name>
 				[Dot42.DexImport("requery", "()Z", AccessFlags = 1)]
 				public virtual bool Requery() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
-				public virtual bool IsClosed() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -218,15 +173,6 @@ namespace Android.Database
 				[Dot42.DexImport("copyStringToBuffer", "(ILandroid/database/CharArrayBuffer;)V", AccessFlags = 1)]
 				public virtual void CopyStringToBuffer(int int32, global::Android.Database.CharArrayBuffer charArrayBuffer) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPosition
-				/// </java-name>
-				[Dot42.DexImport("getPosition", "()I", AccessFlags = 17)]
-				public int GetPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -287,42 +233,6 @@ namespace Android.Database
 				/// </java-name>
 				[Dot42.DexImport("moveToPrevious", "()Z", AccessFlags = 17)]
 				public bool MoveToPrevious() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isFirst
-				/// </java-name>
-				[Dot42.DexImport("isFirst", "()Z", AccessFlags = 17)]
-				public bool IsFirst() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLast
-				/// </java-name>
-				[Dot42.DexImport("isLast", "()Z", AccessFlags = 17)]
-				public bool IsLast() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isBeforeFirst
-				/// </java-name>
-				[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 17)]
-				public bool IsBeforeFirst() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isAfterLast
-				/// </java-name>
-				[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 17)]
-				public bool IsAfterLast() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -403,33 +313,6 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// getNotificationUri
-				/// </java-name>
-				[Dot42.DexImport("getNotificationUri", "()Landroid/net/Uri;", AccessFlags = 1)]
-				public virtual global::Android.Net.Uri GetNotificationUri() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Uri);
-				}
-
-				/// <java-name>
-				/// getWantsAllOnMoveCalls
-				/// </java-name>
-				[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
-				public virtual bool GetWantsAllOnMoveCalls() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getExtras
-				/// </java-name>
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Bundle);
-				}
-
-				/// <java-name>
 				/// respond
 				/// </java-name>
 				[Dot42.DexImport("respond", "(Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1)]
@@ -473,37 +356,46 @@ namespace Android.Database
 				/// <java-name>
 				/// getCount
 				/// </java-name>
-				public int Count
+				public virtual int Count
 				{
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1025)]
-						get{ return GetCount(); }
+						[Dot42.DexImport("getCount", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnNames
 				/// </java-name>
-				public string[] ColumnNames
+				public virtual string[] ColumnNames
 				{
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetColumnNames(); }
+						[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get{ return default(string[]); }
 				}
 
 				/// <java-name>
 				/// getWindow
 				/// </java-name>
-				public global::Android.Database.CursorWindow Window
+				public virtual global::Android.Database.CursorWindow Window
 				{
-				[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1)]
-						get{ return GetWindow(); }
+						[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1)]
+						get{ return default(global::Android.Database.CursorWindow); }
 				}
 
 				/// <java-name>
 				/// getColumnCount
 				/// </java-name>
-				public int ColumnCount
+				public virtual int ColumnCount
 				{
-				[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1)]
-						get{ return GetColumnCount(); }
+						[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				public virtual bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -511,35 +403,71 @@ namespace Android.Database
 				/// </java-name>
 				public int Position
 				{
-				[Dot42.DexImport("getPosition", "()I", AccessFlags = 17)]
-						get{ return GetPosition(); }
+						[Dot42.DexImport("getPosition", "()I", AccessFlags = 17)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isFirst
+				/// </java-name>
+				public bool IsFirst
+				{
+						[Dot42.DexImport("isFirst", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLast
+				/// </java-name>
+				public bool IsLast
+				{
+						[Dot42.DexImport("isLast", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isBeforeFirst
+				/// </java-name>
+				public bool IsBeforeFirst
+				{
+						[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isAfterLast
+				/// </java-name>
+				public bool IsAfterLast
+				{
+						[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getNotificationUri
 				/// </java-name>
-				public global::Android.Net.Uri NotificationUri
+				public virtual global::Android.Net.Uri NotificationUri
 				{
-				[Dot42.DexImport("getNotificationUri", "()Landroid/net/Uri;", AccessFlags = 1)]
-						get{ return GetNotificationUri(); }
+						[Dot42.DexImport("getNotificationUri", "()Landroid/net/Uri;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Uri); }
 				}
 
 				/// <java-name>
 				/// getWantsAllOnMoveCalls
 				/// </java-name>
-				public bool IsWantsAllOnMoveCalls
+				public virtual bool IsWantsAllOnMoveCalls
 				{
-				[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
-						get{ return GetWantsAllOnMoveCalls(); }
+						[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.OS.Bundle Extras
+				public virtual global::Android.OS.Bundle Extras
 				{
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						get{ return GetExtras(); }
+						[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Bundle); }
 				}
 
 				/// <java-name>
@@ -740,15 +668,6 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// getWindow
-				/// </java-name>
-				[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1)]
-				public override global::Android.Database.CursorWindow GetWindow() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.CursorWindow);
-				}
-
-				/// <java-name>
 				/// setWindow
 				/// </java-name>
 				[Dot42.DexImport("setWindow", "(Landroid/database/CursorWindow;)V", AccessFlags = 1)]
@@ -757,21 +676,21 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// hasWindow
+				/// getWindow
 				/// </java-name>
-				[Dot42.DexImport("hasWindow", "()Z", AccessFlags = 1)]
-				public virtual bool HasWindow() /* MethodBuilder.Create */ 
+				public override global::Android.Database.CursorWindow Window
 				{
-						return default(bool);
+						[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1)]
+						get{ return default(global::Android.Database.CursorWindow); }
 				}
 
 				/// <java-name>
-				/// getWindow
+				/// hasWindow
 				/// </java-name>
-				public global::Android.Database.CursorWindow Window
+				public virtual bool HasWindow
 				{
-				[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1)]
-						get{ return GetWindow(); }
+						[Dot42.DexImport("hasWindow", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -913,15 +832,6 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// getWindow
-				/// </java-name>
-				[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1)]
-				public virtual global::Android.Database.CursorWindow GetWindow() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.CursorWindow);
-				}
-
-				/// <java-name>
 				/// onMove
 				/// </java-name>
 				[Dot42.DexImport("onMove", "(II)Z", AccessFlags = 1)]
@@ -933,18 +843,6 @@ namespace Android.Database
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal CrossProcessCursorWrapper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-				}
-
-				[Dot42.DexImport("android/database/Cursor", "getCount", "()I", AccessFlags = 1025)]
-				public override int GetCount() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
-				}
-
-				[Dot42.DexImport("android/database/Cursor", "getPosition", "()I", AccessFlags = 1025)]
-				public override int GetPosition() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
 				}
 
 				[Dot42.DexImport("android/database/Cursor", "move", "(I)Z", AccessFlags = 1025)]
@@ -983,30 +881,6 @@ namespace Android.Database
 						return default(bool);
 				}
 
-				[Dot42.DexImport("android/database/Cursor", "isFirst", "()Z", AccessFlags = 1025)]
-				public override bool IsFirst() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("android/database/Cursor", "isLast", "()Z", AccessFlags = 1025)]
-				public override bool IsLast() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("android/database/Cursor", "isBeforeFirst", "()Z", AccessFlags = 1025)]
-				public override bool IsBeforeFirst() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("android/database/Cursor", "isAfterLast", "()Z", AccessFlags = 1025)]
-				public override bool IsAfterLast() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("android/database/Cursor", "getColumnIndex", "(Ljava/lang/String;)I", AccessFlags = 1025)]
 				public override int GetColumnIndex(string @string) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -1023,18 +897,6 @@ namespace Android.Database
 				public override string GetColumnName(int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(string);
-				}
-
-				[Dot42.DexImport("android/database/Cursor", "getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				public override string[] GetColumnNames() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(string[]);
-				}
-
-				[Dot42.DexImport("android/database/Cursor", "getColumnCount", "()I", AccessFlags = 1025)]
-				public override int GetColumnCount() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
 				}
 
 				[Dot42.DexImport("android/database/Cursor", "getBlob", "(I)[B", AccessFlags = 1025, IgnoreFromJava = true)]
@@ -1112,12 +974,6 @@ namespace Android.Database
 				{
 				}
 
-				[Dot42.DexImport("android/database/Cursor", "isClosed", "()Z", AccessFlags = 1025)]
-				public override bool IsClosed() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("android/database/Cursor", "registerContentObserver", "(Landroid/database/ContentObserver;)V", AccessFlags = 1025)]
 				public override void RegisterContentObserver(global::Android.Database.ContentObserver contentObserver) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -1143,18 +999,6 @@ namespace Android.Database
 				{
 				}
 
-				[Dot42.DexImport("android/database/Cursor", "getWantsAllOnMoveCalls", "()Z", AccessFlags = 1025)]
-				public override bool GetWantsAllOnMoveCalls() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("android/database/Cursor", "getExtras", "()Landroid/os/Bundle;", AccessFlags = 1025)]
-				public override global::Android.OS.Bundle GetExtras() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Android.OS.Bundle);
-				}
-
 				[Dot42.DexImport("android/database/Cursor", "respond", "(Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
 				public override global::Android.OS.Bundle Respond(global::Android.OS.Bundle bundle) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -1164,46 +1008,76 @@ namespace Android.Database
 				/// <java-name>
 				/// getWindow
 				/// </java-name>
-				public global::Android.Database.CursorWindow Window
+				public virtual global::Android.Database.CursorWindow Window
 				{
-				[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1)]
-						get{ return GetWindow(); }
+						[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1)]
+						get{ return default(global::Android.Database.CursorWindow); }
 				}
 
-				public int Count
+				public override int Count
 				{
-				[Dot42.DexImport("android/database/Cursor", "getCount", "()I", AccessFlags = 1025)]
-						get{ return GetCount(); }
+						[Dot42.DexImport("android/database/Cursor", "getCount", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
 				}
 
-				public int Position
+				public override int Position
 				{
-				[Dot42.DexImport("android/database/Cursor", "getPosition", "()I", AccessFlags = 1025)]
-						get{ return GetPosition(); }
+						[Dot42.DexImport("android/database/Cursor", "getPosition", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
 				}
 
-				public string[] ColumnNames
+				public override bool IsFirst
 				{
-				[Dot42.DexImport("android/database/Cursor", "getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetColumnNames(); }
+						[Dot42.DexImport("android/database/Cursor", "isFirst", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
-				public int ColumnCount
+				public override bool IsLast
 				{
-				[Dot42.DexImport("android/database/Cursor", "getColumnCount", "()I", AccessFlags = 1025)]
-						get{ return GetColumnCount(); }
+						[Dot42.DexImport("android/database/Cursor", "isLast", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
-				public bool IsWantsAllOnMoveCalls
+				public override bool IsBeforeFirst
 				{
-				[Dot42.DexImport("android/database/Cursor", "getWantsAllOnMoveCalls", "()Z", AccessFlags = 1025)]
-						get{ return GetWantsAllOnMoveCalls(); }
+						[Dot42.DexImport("android/database/Cursor", "isBeforeFirst", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
-				public global::Android.OS.Bundle Extras
+				public override bool IsAfterLast
 				{
-				[Dot42.DexImport("android/database/Cursor", "getExtras", "()Landroid/os/Bundle;", AccessFlags = 1025)]
-						get{ return GetExtras(); }
+						[Dot42.DexImport("android/database/Cursor", "isAfterLast", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
+
+				public override string[] ColumnNames
+				{
+						[Dot42.DexImport("android/database/Cursor", "getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get{ return default(string[]); }
+				}
+
+				public override int ColumnCount
+				{
+						[Dot42.DexImport("android/database/Cursor", "getColumnCount", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
+				}
+
+				public override bool IsClosed
+				{
+						[Dot42.DexImport("android/database/Cursor", "isClosed", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
+
+				public override bool IsWantsAllOnMoveCalls
+				{
+						[Dot42.DexImport("android/database/Cursor", "getWantsAllOnMoveCalls", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
+
+				public override global::Android.OS.Bundle Extras
+				{
+						[Dot42.DexImport("android/database/Cursor", "getExtras", "()Landroid/os/Bundle;", AccessFlags = 1025)]
+						get{ return default(global::Android.OS.Bundle); }
 				}
 
 		}
@@ -1256,15 +1130,6 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// hasNext
-				/// </java-name>
-				[Dot42.DexImport("hasNext", "()Z", AccessFlags = 1)]
-				public bool HasNext() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// next
 				/// </java-name>
 				[Dot42.DexImport("next", "()Landroid/database/CursorJoiner$Result;", AccessFlags = 1)]
@@ -1284,6 +1149,15 @@ namespace Android.Database
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal CursorJoiner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// hasNext
+				/// </java-name>
+				public bool HasNext
+				{
+						[Dot42.DexImport("hasNext", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1376,32 +1250,6 @@ namespace Android.Database
 				[Dot42.DexImport("clear", "()V", AccessFlags = 1)]
 				public virtual void Clear() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getStartPosition
-				/// </java-name>
-				[Dot42.DexImport("getStartPosition", "()I", AccessFlags = 1)]
-				public virtual int GetStartPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setStartPosition
-				/// </java-name>
-				[Dot42.DexImport("setStartPosition", "(I)V", AccessFlags = 1)]
-				public virtual void SetStartPosition(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getNumRows
-				/// </java-name>
-				[Dot42.DexImport("getNumRows", "()I", AccessFlags = 1)]
-				public virtual int GetNumRows() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1669,21 +1517,21 @@ namespace Android.Database
 				/// <java-name>
 				/// getStartPosition
 				/// </java-name>
-				public int StartPosition
+				public virtual int StartPosition
 				{
-				[Dot42.DexImport("getStartPosition", "()I", AccessFlags = 1)]
-						get{ return GetStartPosition(); }
-				[Dot42.DexImport("setStartPosition", "(I)V", AccessFlags = 1)]
-						set{ SetStartPosition(value); }
+						[Dot42.DexImport("getStartPosition", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setStartPosition", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getNumRows
 				/// </java-name>
-				public int NumRows
+				public virtual int NumRows
 				{
-				[Dot42.DexImport("getNumRows", "()I", AccessFlags = 1)]
-						get{ return GetNumRows(); }
+						[Dot42.DexImport("getNumRows", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1701,38 +1549,11 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// getWrappedCursor
-				/// </java-name>
-				[Dot42.DexImport("getWrappedCursor", "()Landroid/database/Cursor;", AccessFlags = 1)]
-				public virtual global::Android.Database.ICursor GetWrappedCursor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.ICursor);
-				}
-
-				/// <java-name>
 				/// close
 				/// </java-name>
 				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
 				public virtual void Close() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
-				public virtual bool IsClosed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getCount
-				/// </java-name>
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-				public virtual int GetCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1750,15 +1571,6 @@ namespace Android.Database
 				public virtual bool MoveToFirst() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getColumnCount
-				/// </java-name>
-				[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1)]
-				public virtual int GetColumnCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1789,30 +1601,12 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// getColumnNames
-				/// </java-name>
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetColumnNames() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
 				/// getDouble
 				/// </java-name>
 				[Dot42.DexImport("getDouble", "(I)D", AccessFlags = 1)]
 				public virtual double GetDouble(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(double);
-				}
-
-				/// <java-name>
-				/// getExtras
-				/// </java-name>
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Bundle);
 				}
 
 				/// <java-name>
@@ -1887,51 +1681,6 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// getWantsAllOnMoveCalls
-				/// </java-name>
-				[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
-				public virtual bool GetWantsAllOnMoveCalls() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isAfterLast
-				/// </java-name>
-				[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 1)]
-				public virtual bool IsAfterLast() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isBeforeFirst
-				/// </java-name>
-				[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 1)]
-				public virtual bool IsBeforeFirst() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isFirst
-				/// </java-name>
-				[Dot42.DexImport("isFirst", "()Z", AccessFlags = 1)]
-				public virtual bool IsFirst() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLast
-				/// </java-name>
-				[Dot42.DexImport("isLast", "()Z", AccessFlags = 1)]
-				public virtual bool IsLast() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "(I)I", AccessFlags = 1)]
@@ -1983,15 +1732,6 @@ namespace Android.Database
 				public virtual bool MoveToNext() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getPosition
-				/// </java-name>
-				[Dot42.DexImport("getPosition", "()I", AccessFlags = 1)]
-				public virtual int GetPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2069,64 +1809,109 @@ namespace Android.Database
 				/// <java-name>
 				/// getWrappedCursor
 				/// </java-name>
-				public global::Android.Database.ICursor WrappedCursor
+				public virtual global::Android.Database.ICursor WrappedCursor
 				{
-				[Dot42.DexImport("getWrappedCursor", "()Landroid/database/Cursor;", AccessFlags = 1)]
-						get{ return GetWrappedCursor(); }
+						[Dot42.DexImport("getWrappedCursor", "()Landroid/database/Cursor;", AccessFlags = 1)]
+						get{ return default(global::Android.Database.ICursor); }
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				public virtual bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getCount
 				/// </java-name>
-				public int Count
+				public virtual int Count
 				{
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-						get{ return GetCount(); }
+						[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnCount
 				/// </java-name>
-				public int ColumnCount
+				public virtual int ColumnCount
 				{
-				[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1)]
-						get{ return GetColumnCount(); }
+						[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnNames
 				/// </java-name>
-				public string[] ColumnNames
+				public virtual string[] ColumnNames
 				{
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetColumnNames(); }
+						[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.OS.Bundle Extras
+				public virtual global::Android.OS.Bundle Extras
 				{
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						get{ return GetExtras(); }
+						[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Bundle); }
 				}
 
 				/// <java-name>
 				/// getWantsAllOnMoveCalls
 				/// </java-name>
-				public bool IsWantsAllOnMoveCalls
+				public virtual bool IsWantsAllOnMoveCalls
 				{
-				[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
-						get{ return GetWantsAllOnMoveCalls(); }
+						[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isAfterLast
+				/// </java-name>
+				public virtual bool IsAfterLast
+				{
+						[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isBeforeFirst
+				/// </java-name>
+				public virtual bool IsBeforeFirst
+				{
+						[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFirst
+				/// </java-name>
+				public virtual bool IsFirst
+				{
+						[Dot42.DexImport("isFirst", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLast
+				/// </java-name>
+				public virtual bool IsLast
+				{
+						[Dot42.DexImport("isLast", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getPosition
 				/// </java-name>
-				public int Position
+				public virtual int Position
 				{
-				[Dot42.DexImport("getPosition", "()I", AccessFlags = 1)]
-						get{ return GetPosition(); }
+						[Dot42.DexImport("getPosition", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2843,12 +2628,6 @@ namespace Android.Database
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getWindow
-				/// </java-name>
-				[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1025)]
-				global::Android.Database.CursorWindow GetWindow() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// fillWindow
 				/// </java-name>
 				[Dot42.DexImport("fillWindow", "(ILandroid/database/CursorWindow;)V", AccessFlags = 1025)]
@@ -2860,6 +2639,15 @@ namespace Android.Database
 				[Dot42.DexImport("onMove", "(II)Z", AccessFlags = 1025)]
 				bool OnMove(int int32, int int321) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getWindow
+				/// </java-name>
+				global::Android.Database.CursorWindow Window
+				{
+						[Dot42.DexImport("getWindow", "()Landroid/database/CursorWindow;", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -2869,18 +2657,6 @@ namespace Android.Database
 		public partial interface ICursor
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getCount
-				/// </java-name>
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1025)]
-				int GetCount() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPosition
-				/// </java-name>
-				[Dot42.DexImport("getPosition", "()I", AccessFlags = 1025)]
-				int GetPosition() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// move
 				/// </java-name>
@@ -2918,30 +2694,6 @@ namespace Android.Database
 				bool MoveToPrevious() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isFirst
-				/// </java-name>
-				[Dot42.DexImport("isFirst", "()Z", AccessFlags = 1025)]
-				bool IsFirst() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isLast
-				/// </java-name>
-				[Dot42.DexImport("isLast", "()Z", AccessFlags = 1025)]
-				bool IsLast() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isBeforeFirst
-				/// </java-name>
-				[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 1025)]
-				bool IsBeforeFirst() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isAfterLast
-				/// </java-name>
-				[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 1025)]
-				bool IsAfterLast() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getColumnIndex
 				/// </java-name>
 				[Dot42.DexImport("getColumnIndex", "(Ljava/lang/String;)I", AccessFlags = 1025)]
@@ -2958,18 +2710,6 @@ namespace Android.Database
 				/// </java-name>
 				[Dot42.DexImport("getColumnName", "(I)Ljava/lang/String;", AccessFlags = 1025)]
 				string GetColumnName(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getColumnNames
-				/// </java-name>
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
-				string[] GetColumnNames() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getColumnCount
-				/// </java-name>
-				[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1025)]
-				int GetColumnCount() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getBlob
@@ -3050,12 +2790,6 @@ namespace Android.Database
 				void Close() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1025)]
-				bool IsClosed() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// registerContentObserver
 				/// </java-name>
 				[Dot42.DexImport("registerContentObserver", "(Landroid/database/ContentObserver;)V", AccessFlags = 1025)]
@@ -3086,22 +2820,109 @@ namespace Android.Database
 				void SetNotificationUri(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getWantsAllOnMoveCalls
-				/// </java-name>
-				[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1025)]
-				bool GetWantsAllOnMoveCalls() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getExtras
-				/// </java-name>
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1025)]
-				global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// respond
 				/// </java-name>
 				[Dot42.DexImport("respond", "(Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1025)]
 				global::Android.OS.Bundle Respond(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getCount
+				/// </java-name>
+				int Count
+				{
+						[Dot42.DexImport("getCount", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPosition
+				/// </java-name>
+				int Position
+				{
+						[Dot42.DexImport("getPosition", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isFirst
+				/// </java-name>
+				bool IsFirst
+				{
+						[Dot42.DexImport("isFirst", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isLast
+				/// </java-name>
+				bool IsLast
+				{
+						[Dot42.DexImport("isLast", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isBeforeFirst
+				/// </java-name>
+				bool IsBeforeFirst
+				{
+						[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isAfterLast
+				/// </java-name>
+				bool IsAfterLast
+				{
+						[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getColumnNames
+				/// </java-name>
+				string[] ColumnNames
+				{
+						[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getColumnCount
+				/// </java-name>
+				int ColumnCount
+				{
+						[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getWantsAllOnMoveCalls
+				/// </java-name>
+				bool IsWantsAllOnMoveCalls
+				{
+						[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getExtras
+				/// </java-name>
+				global::Android.OS.Bundle Extras
+				{
+						[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -3194,24 +3015,6 @@ namespace Android.Database
 				[Dot42.DexImport("addRow", "(Ljava/lang/Iterable;)V", AccessFlags = 1, Signature = "(Ljava/lang/Iterable<*>;)V")]
 				public virtual void AddRow(global::Java.Lang.IIterable<object> iterable) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getCount
-				/// </java-name>
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-				public override int GetCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getColumnNames
-				/// </java-name>
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetColumnNames() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
 				}
 
 				/// <java-name>
@@ -3312,19 +3115,19 @@ namespace Android.Database
 				/// <java-name>
 				/// getCount
 				/// </java-name>
-				public int Count
+				public override int Count
 				{
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-						get{ return GetCount(); }
+						[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnNames
 				/// </java-name>
-				public string[] ColumnNames
+				public override string[] ColumnNames
 				{
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetColumnNames(); }
+						[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 				/// <java-name>
@@ -3372,15 +3175,6 @@ namespace Android.Database
 				[Dot42.DexImport("<init>", "([Landroid/database/Cursor;)V", AccessFlags = 1)]
 				public MergeCursor(global::Android.Database.ICursor[] cursor) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getCount
-				/// </java-name>
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-				public override int GetCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3483,15 +3277,6 @@ namespace Android.Database
 				}
 
 				/// <java-name>
-				/// getColumnNames
-				/// </java-name>
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetColumnNames() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
 				/// deactivate
 				/// </java-name>
 				[Dot42.DexImport("deactivate", "()V", AccessFlags = 1)]
@@ -3556,19 +3341,19 @@ namespace Android.Database
 				/// <java-name>
 				/// getCount
 				/// </java-name>
-				public int Count
+				public override int Count
 				{
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-						get{ return GetCount(); }
+						[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnNames
 				/// </java-name>
-				public string[] ColumnNames
+				public override string[] ColumnNames
 				{
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetColumnNames(); }
+						[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 		}

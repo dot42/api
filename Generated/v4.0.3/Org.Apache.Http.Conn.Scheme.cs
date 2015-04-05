@@ -77,15 +77,6 @@ namespace Org.Apache.Http.Conn.Scheme
 				}
 
 				/// <java-name>
-				/// getSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/scheme/PlainSocketFactory;", AccessFlags = 9)]
-				public static global::Org.Apache.Http.Conn.Scheme.PlainSocketFactory GetSocketFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Scheme.PlainSocketFactory);
-				}
-
-				/// <java-name>
 				/// createSocket
 				/// </java-name>
 				[Dot42.DexImport("createSocket", "()Ljava/net/Socket;", AccessFlags = 1)]
@@ -136,8 +127,8 @@ namespace Org.Apache.Http.Conn.Scheme
 				/// </java-name>
 				public static global::Org.Apache.Http.Conn.Scheme.PlainSocketFactory SocketFactory
 				{
-				[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/scheme/PlainSocketFactory;", AccessFlags = 9)]
-						get{ return GetSocketFactory(); }
+						[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/scheme/PlainSocketFactory;", AccessFlags = 9)]
+						get{ return default(global::Org.Apache.Http.Conn.Scheme.PlainSocketFactory); }
 				}
 
 		}
@@ -152,42 +143,6 @@ namespace Org.Apache.Http.Conn.Scheme
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Lorg/apache/http/conn/scheme/SocketFactory;I)V", AccessFlags = 1)]
 				public Scheme(string @string, global::Org.Apache.Http.Conn.Scheme.ISocketFactory socketFactory, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getDefaultPort
-				/// </java-name>
-				[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 17)]
-				public int GetDefaultPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/scheme/SocketFactory;", AccessFlags = 17)]
-				public global::Org.Apache.Http.Conn.Scheme.ISocketFactory GetSocketFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Scheme.ISocketFactory);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isLayered
-				/// </java-name>
-				[Dot42.DexImport("isLayered", "()Z", AccessFlags = 17)]
-				public bool IsLayered() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -236,8 +191,8 @@ namespace Org.Apache.Http.Conn.Scheme
 				/// </java-name>
 				public int DefaultPort
 				{
-				[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 17)]
-						get{ return GetDefaultPort(); }
+						[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -245,8 +200,8 @@ namespace Org.Apache.Http.Conn.Scheme
 				/// </java-name>
 				public global::Org.Apache.Http.Conn.Scheme.ISocketFactory SocketFactory
 				{
-				[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/scheme/SocketFactory;", AccessFlags = 17)]
-						get{ return GetSocketFactory(); }
+						[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/scheme/SocketFactory;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.Conn.Scheme.ISocketFactory); }
 				}
 
 				/// <java-name>
@@ -254,8 +209,17 @@ namespace Org.Apache.Http.Conn.Scheme
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isLayered
+				/// </java-name>
+				public bool IsLayered
+				{
+						[Dot42.DexImport("isLayered", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -318,15 +282,6 @@ namespace Org.Apache.Http.Conn.Scheme
 				}
 
 				/// <java-name>
-				/// getSchemeNames
-				/// </java-name>
-				[Dot42.DexImport("getSchemeNames", "()Ljava/util/List;", AccessFlags = 49, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-				public global::Java.Util.IList<string> GetSchemeNames() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<string>);
-				}
-
-				/// <java-name>
 				/// setItems
 				/// </java-name>
 				[Dot42.DexImport("setItems", "(Ljava/util/Map;)V", AccessFlags = 33, Signature = "(Ljava/util/Map<Ljava/lang/String;Lorg/apache/http/conn/scheme/Scheme;>;)V")]
@@ -339,8 +294,8 @@ namespace Org.Apache.Http.Conn.Scheme
 				/// </java-name>
 				public global::Java.Util.IList<string> SchemeNames
 				{
-				[Dot42.DexImport("getSchemeNames", "()Ljava/util/List;", AccessFlags = 49, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						get{ return GetSchemeNames(); }
+						[Dot42.DexImport("getSchemeNames", "()Ljava/util/List;", AccessFlags = 49, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IList<string>); }
 				}
 
 		}

@@ -59,42 +59,6 @@ namespace Android.App.Admin
 				}
 
 				/// <java-name>
-				/// getPackageName
-				/// </java-name>
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPackageName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getReceiverName
-				/// </java-name>
-				[Dot42.DexImport("getReceiverName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetReceiverName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getActivityInfo
-				/// </java-name>
-				[Dot42.DexImport("getActivityInfo", "()Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ActivityInfo GetActivityInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ActivityInfo);
-				}
-
-				/// <java-name>
-				/// getComponent
-				/// </java-name>
-				[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
-				public global::Android.Content.ComponentName GetComponent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ComponentName);
-				}
-
-				/// <java-name>
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
@@ -119,15 +83,6 @@ namespace Android.App.Admin
 				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
-				}
-
-				/// <java-name>
-				/// isVisible
-				/// </java-name>
-				[Dot42.DexImport("isVisible", "()Z", AccessFlags = 1)]
-				public bool IsVisible() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -192,8 +147,8 @@ namespace Android.App.Admin
 				/// </java-name>
 				public string PackageName
 				{
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPackageName(); }
+						[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -201,8 +156,8 @@ namespace Android.App.Admin
 				/// </java-name>
 				public string ReceiverName
 				{
-				[Dot42.DexImport("getReceiverName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetReceiverName(); }
+						[Dot42.DexImport("getReceiverName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -210,8 +165,8 @@ namespace Android.App.Admin
 				/// </java-name>
 				public global::Android.Content.Pm.ActivityInfo ActivityInfo
 				{
-				[Dot42.DexImport("getActivityInfo", "()Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-						get{ return GetActivityInfo(); }
+						[Dot42.DexImport("getActivityInfo", "()Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Pm.ActivityInfo); }
 				}
 
 				/// <java-name>
@@ -219,8 +174,17 @@ namespace Android.App.Admin
 				/// </java-name>
 				public global::Android.Content.ComponentName Component
 				{
-				[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
-						get{ return GetComponent(); }
+						[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.ComponentName); }
+				}
+
+				/// <java-name>
+				/// isVisible
+				/// </java-name>
+				public bool IsVisible
+				{
+						[Dot42.DexImport("isVisible", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -479,15 +443,6 @@ namespace Android.App.Admin
 				}
 
 				/// <java-name>
-				/// getActiveAdmins
-				/// </java-name>
-				[Dot42.DexImport("getActiveAdmins", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/ComponentName;>;")]
-				public virtual global::Java.Util.IList<global::Android.Content.ComponentName> GetActiveAdmins() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Content.ComponentName>);
-				}
-
-				/// <java-name>
 				/// removeActiveAdmin
 				/// </java-name>
 				[Dot42.DexImport("removeActiveAdmin", "(Landroid/content/ComponentName;)V", AccessFlags = 1)]
@@ -693,24 +648,6 @@ namespace Android.App.Admin
 				}
 
 				/// <java-name>
-				/// isActivePasswordSufficient
-				/// </java-name>
-				[Dot42.DexImport("isActivePasswordSufficient", "()Z", AccessFlags = 1)]
-				public virtual bool IsActivePasswordSufficient() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getCurrentFailedPasswordAttempts
-				/// </java-name>
-				[Dot42.DexImport("getCurrentFailedPasswordAttempts", "()I", AccessFlags = 1)]
-				public virtual int GetCurrentFailedPasswordAttempts() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setMaximumFailedPasswordsForWipe
 				/// </java-name>
 				[Dot42.DexImport("setMaximumFailedPasswordsForWipe", "(Landroid/content/ComponentName;I)V", AccessFlags = 1)]
@@ -788,15 +725,6 @@ namespace Android.App.Admin
 				}
 
 				/// <java-name>
-				/// getStorageEncryptionStatus
-				/// </java-name>
-				[Dot42.DexImport("getStorageEncryptionStatus", "()I", AccessFlags = 1)]
-				public virtual int GetStorageEncryptionStatus() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setCameraDisabled
 				/// </java-name>
 				[Dot42.DexImport("setCameraDisabled", "(Landroid/content/ComponentName;Z)V", AccessFlags = 1)]
@@ -816,28 +744,37 @@ namespace Android.App.Admin
 				/// <java-name>
 				/// getActiveAdmins
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Content.ComponentName> ActiveAdmins
+				public virtual global::Java.Util.IList<global::Android.Content.ComponentName> ActiveAdmins
 				{
-				[Dot42.DexImport("getActiveAdmins", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/ComponentName;>;")]
-						get{ return GetActiveAdmins(); }
+						[Dot42.DexImport("getActiveAdmins", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/ComponentName;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Content.ComponentName>); }
+				}
+
+				/// <java-name>
+				/// isActivePasswordSufficient
+				/// </java-name>
+				public virtual bool IsActivePasswordSufficient
+				{
+						[Dot42.DexImport("isActivePasswordSufficient", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getCurrentFailedPasswordAttempts
 				/// </java-name>
-				public int CurrentFailedPasswordAttempts
+				public virtual int CurrentFailedPasswordAttempts
 				{
-				[Dot42.DexImport("getCurrentFailedPasswordAttempts", "()I", AccessFlags = 1)]
-						get{ return GetCurrentFailedPasswordAttempts(); }
+						[Dot42.DexImport("getCurrentFailedPasswordAttempts", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getStorageEncryptionStatus
 				/// </java-name>
-				public int StorageEncryptionStatus
+				public virtual int StorageEncryptionStatus
 				{
-				[Dot42.DexImport("getStorageEncryptionStatus", "()I", AccessFlags = 1)]
-						get{ return GetStorageEncryptionStatus(); }
+						[Dot42.DexImport("getStorageEncryptionStatus", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

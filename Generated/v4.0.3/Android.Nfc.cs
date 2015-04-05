@@ -48,15 +48,6 @@ namespace Android.Nfc
 				}
 
 				/// <java-name>
-				/// getRecords
-				/// </java-name>
-				[Dot42.DexImport("getRecords", "()[Landroid/nfc/NdefRecord;", AccessFlags = 1)]
-				public global::Android.Nfc.NdefRecord[] GetRecords() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.NdefRecord[]);
-				}
-
-				/// <java-name>
 				/// toByteArray
 				/// </java-name>
 				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
@@ -101,8 +92,8 @@ namespace Android.Nfc
 				/// </java-name>
 				public global::Android.Nfc.NdefRecord[] Records
 				{
-				[Dot42.DexImport("getRecords", "()[Landroid/nfc/NdefRecord;", AccessFlags = 1)]
-						get{ return GetRecords(); }
+						[Dot42.DexImport("getRecords", "()[Landroid/nfc/NdefRecord;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.NdefRecord[]); }
 				}
 
 		}
@@ -210,30 +201,12 @@ namespace Android.Nfc
 				}
 
 				/// <java-name>
-				/// getTnf
-				/// </java-name>
-				[Dot42.DexImport("getTnf", "()S", AccessFlags = 1)]
-				public short GetTnf() /* MethodBuilder.Create */ 
-				{
-						return default(short);
-				}
-
-				/// <java-name>
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "()[B", AccessFlags = 1)]
 				public sbyte[] JavaGetType() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -246,30 +219,12 @@ namespace Android.Nfc
 				}
 
 				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetId() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// getPayload
 				/// </java-name>
 				[Dot42.DexImport("getPayload", "()[B", AccessFlags = 1)]
 				public sbyte[] JavaGetPayload() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getPayload
-				/// </java-name>
-				[Dot42.DexImport("getPayload", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetPayload() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -344,8 +299,8 @@ namespace Android.Nfc
 				/// </java-name>
 				public short Tnf
 				{
-				[Dot42.DexImport("getTnf", "()S", AccessFlags = 1)]
-						get{ return GetTnf(); }
+						[Dot42.DexImport("getTnf", "()S", AccessFlags = 1)]
+						get{ return default(short); }
 				}
 
 				/// <java-name>
@@ -353,8 +308,8 @@ namespace Android.Nfc
 				/// </java-name>
 				public byte[] Type
 				{
-				[Dot42.DexImport("getType", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -362,8 +317,8 @@ namespace Android.Nfc
 				/// </java-name>
 				public byte[] Id
 				{
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -371,8 +326,8 @@ namespace Android.Nfc
 				/// </java-name>
 				public byte[] Payload
 				{
-				[Dot42.DexImport("getPayload", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetPayload(); }
+						[Dot42.DexImport("getPayload", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -426,24 +381,6 @@ namespace Android.Nfc
 				public static global::Android.Nfc.NfcAdapter GetDefaultAdapter(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Nfc.NfcAdapter);
-				}
-
-				/// <java-name>
-				/// getDefaultAdapter
-				/// </java-name>
-				[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 9)]
-				public static global::Android.Nfc.NfcAdapter GetDefaultAdapter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.NfcAdapter);
-				}
-
-				/// <java-name>
-				/// isEnabled
-				/// </java-name>
-				[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
-				public bool IsEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -510,8 +447,17 @@ namespace Android.Nfc
 				/// </java-name>
 				public static global::Android.Nfc.NfcAdapter DefaultAdapter
 				{
-				[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 9)]
-						get{ return GetDefaultAdapter(); }
+						[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 9)]
+						get{ return default(global::Android.Nfc.NfcAdapter); }
+				}
+
+				/// <java-name>
+				/// isEnabled
+				/// </java-name>
+				public bool IsEnabled
+				{
+						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -580,19 +526,10 @@ namespace Android.Nfc
 				/// <java-name>
 				/// getDefaultAdapter
 				/// </java-name>
-				[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 1)]
-				public global::Android.Nfc.NfcAdapter GetDefaultAdapter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Nfc.NfcAdapter);
-				}
-
-				/// <java-name>
-				/// getDefaultAdapter
-				/// </java-name>
 				public global::Android.Nfc.NfcAdapter DefaultAdapter
 				{
-				[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 1)]
-						get{ return GetDefaultAdapter(); }
+						[Dot42.DexImport("getDefaultAdapter", "()Landroid/nfc/NfcAdapter;", AccessFlags = 1)]
+						get{ return default(global::Android.Nfc.NfcAdapter); }
 				}
 
 		}
@@ -621,24 +558,6 @@ namespace Android.Nfc
 				public sbyte[] JavaGetId() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetId() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getTechList
-				/// </java-name>
-				[Dot42.DexImport("getTechList", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public string[] GetTechList() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
 				}
 
 				/// <java-name>
@@ -672,8 +591,8 @@ namespace Android.Nfc
 				/// </java-name>
 				public byte[] Id
 				{
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -681,8 +600,8 @@ namespace Android.Nfc
 				/// </java-name>
 				public string[] TechList
 				{
-				[Dot42.DexImport("getTechList", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTechList(); }
+						[Dot42.DexImport("getTechList", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 		}

@@ -43,14 +43,6 @@ namespace System
         }
 
         /// <summary>
-        /// Gets the number of characters in the string
-        /// </summary>
-        int Java.Lang.ICharSequence.GetLength()
-        {
-            return Length;
-        }
-
-        /// <summary>
         /// Compare strings
         /// </summary>
         [Inline]
@@ -274,7 +266,7 @@ namespace System
         [Inline]
         public int IndexOfAny(char[] array)
         {
-            return IndexOfAny(array, 0, GetLength());
+            return IndexOfAny(array, 0, Length);
         }
 
         /// <summary>
@@ -284,7 +276,7 @@ namespace System
         [Inline]
         public int IndexOfAny(char[] array, int startIndex)
         {
-            return IndexOfAny(array, startIndex, GetLength() - startIndex);
+            return IndexOfAny(array, startIndex, Length - startIndex);
         }
 
         /// <summary>
@@ -295,13 +287,13 @@ namespace System
         {
             if (startIndex < 0) throw new ArgumentOutOfRangeException("startIndex");
             if (count < 0) throw new ArgumentOutOfRangeException("count");
-            var length = GetLength();
+            var length = Length;
             if (startIndex + count > length) throw new ArgumentOutOfRangeException();
             var arrayLen = array.Length;
             var endIndex = startIndex + count;
             for (var i = startIndex; i < endIndex; i++)
             {
-                var ch = CharAt(i);
+                var ch = this[i];
                 for (var j = 0; j < arrayLen; j++)
                 {
                     if (array[j] == ch) return i;
@@ -451,7 +443,7 @@ namespace System
             var index = 0;
             while (index < length)
             {
-                if (Contains(separator, CharAt(index)))
+                if (Contains(separator, this[index]))
                 {
                     // Split here
                     if ((!removeEmptyEntries) || (start != index))

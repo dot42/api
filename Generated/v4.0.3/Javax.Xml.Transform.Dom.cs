@@ -39,87 +39,36 @@ namespace Javax.Xml.Transform.Dom
 				}
 
 				/// <java-name>
-				/// setNode
-				/// </java-name>
-				[Dot42.DexImport("setNode", "(Lorg/w3c/dom/Node;)V", AccessFlags = 1)]
-				public virtual void SetNode(global::Org.W3c.Dom.INode node) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getNode
 				/// </java-name>
-				[Dot42.DexImport("getNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.INode GetNode() /* MethodBuilder.Create */ 
+				public virtual global::Org.W3c.Dom.INode Node
 				{
-						return default(global::Org.W3c.Dom.INode);
-				}
-
-				/// <java-name>
-				/// setNextSibling
-				/// </java-name>
-				[Dot42.DexImport("setNextSibling", "(Lorg/w3c/dom/Node;)V", AccessFlags = 1)]
-				public virtual void SetNextSibling(global::Org.W3c.Dom.INode node) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1)]
+						get{ return default(global::Org.W3c.Dom.INode); }
+						[Dot42.DexImport("setNode", "(Lorg/w3c/dom/Node;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getNextSibling
 				/// </java-name>
-				[Dot42.DexImport("getNextSibling", "()Lorg/w3c/dom/Node;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.INode GetNextSibling() /* MethodBuilder.Create */ 
+				public virtual global::Org.W3c.Dom.INode NextSibling
 				{
-						return default(global::Org.W3c.Dom.INode);
-				}
-
-				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSystemId(string @string) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getNextSibling", "()Lorg/w3c/dom/Node;", AccessFlags = 1)]
+						get{ return default(global::Org.W3c.Dom.INode); }
+						[Dot42.DexImport("setNextSibling", "(Lorg/w3c/dom/Node;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSystemId() /* MethodBuilder.Create */ 
+				public virtual string SystemId
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getNode
-				/// </java-name>
-				public global::Org.W3c.Dom.INode Node
-				{
-				[Dot42.DexImport("getNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1)]
-						get{ return GetNode(); }
-				[Dot42.DexImport("setNode", "(Lorg/w3c/dom/Node;)V", AccessFlags = 1)]
-						set{ SetNode(value); }
-				}
-
-				/// <java-name>
-				/// getNextSibling
-				/// </java-name>
-				public global::Org.W3c.Dom.INode NextSibling
-				{
-				[Dot42.DexImport("getNextSibling", "()Lorg/w3c/dom/Node;", AccessFlags = 1)]
-						get{ return GetNextSibling(); }
-				[Dot42.DexImport("setNextSibling", "(Lorg/w3c/dom/Node;)V", AccessFlags = 1)]
-						set{ SetNextSibling(value); }
-				}
-
-				/// <java-name>
-				/// getSystemId
-				/// </java-name>
-				public string SystemId
-				{
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSystemId(); }
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSystemId(value); }
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -152,59 +101,25 @@ namespace Javax.Xml.Transform.Dom
 				}
 
 				/// <java-name>
-				/// setNode
-				/// </java-name>
-				[Dot42.DexImport("setNode", "(Lorg/w3c/dom/Node;)V", AccessFlags = 1)]
-				public virtual void SetNode(global::Org.W3c.Dom.INode node) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getNode
 				/// </java-name>
-				[Dot42.DexImport("getNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.INode GetNode() /* MethodBuilder.Create */ 
+				public virtual global::Org.W3c.Dom.INode Node
 				{
-						return default(global::Org.W3c.Dom.INode);
-				}
-
-				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSystemId(string @string) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1)]
+						get{ return default(global::Org.W3c.Dom.INode); }
+						[Dot42.DexImport("setNode", "(Lorg/w3c/dom/Node;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSystemId() /* MethodBuilder.Create */ 
+				public virtual string SystemId
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getNode
-				/// </java-name>
-				public global::Org.W3c.Dom.INode Node
-				{
-				[Dot42.DexImport("getNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1)]
-						get{ return GetNode(); }
-				[Dot42.DexImport("setNode", "(Lorg/w3c/dom/Node;)V", AccessFlags = 1)]
-						set{ SetNode(value); }
-				}
-
-				/// <java-name>
-				/// getSystemId
-				/// </java-name>
-				public string SystemId
-				{
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSystemId(); }
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSystemId(value); }
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -219,8 +134,11 @@ namespace Javax.Xml.Transform.Dom
 				/// <java-name>
 				/// getOriginatingNode
 				/// </java-name>
-				[Dot42.DexImport("getOriginatingNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
-				global::Org.W3c.Dom.INode GetOriginatingNode() /* MethodBuilder.Create */ ;
+				global::Org.W3c.Dom.INode OriginatingNode
+				{
+						[Dot42.DexImport("getOriginatingNode", "()Lorg/w3c/dom/Node;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

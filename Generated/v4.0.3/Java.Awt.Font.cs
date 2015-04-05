@@ -159,30 +159,12 @@ namespace Java.Awt.Font
 				}
 
 				/// <java-name>
-				/// getRanges
-				/// </java-name>
-				[Dot42.DexImport("getRanges", "()I", AccessFlags = 1)]
-				public int GetRanges() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getShaper
 				/// </java-name>
 				[Dot42.DexImport("getShaper", "(I)Ljava/awt/font/NumericShaper;", AccessFlags = 9)]
 				public static global::Java.Awt.Font.NumericShaper GetShaper(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Awt.Font.NumericShaper);
-				}
-
-				/// <java-name>
-				/// isContextual
-				/// </java-name>
-				[Dot42.DexImport("isContextual", "()Z", AccessFlags = 1)]
-				public bool IsContextual() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -206,8 +188,17 @@ namespace Java.Awt.Font
 				/// </java-name>
 				public int Ranges
 				{
-				[Dot42.DexImport("getRanges", "()I", AccessFlags = 1)]
-						get{ return GetRanges(); }
+						[Dot42.DexImport("getRanges", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isContextual
+				/// </java-name>
+				public bool IsContextual
+				{
+						[Dot42.DexImport("isContextual", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

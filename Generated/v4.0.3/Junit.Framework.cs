@@ -515,29 +515,12 @@ namespace Junit.Framework
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
+				public virtual string Name
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setName
-				/// </java-name>
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				public string Name
-				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetName(value); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -609,18 +592,18 @@ namespace Junit.Framework
 						return default(string);
 				}
 
-				/// <java-name>
-				/// isFailure
-				/// </java-name>
-				[Dot42.DexImport("isFailure", "()Z", AccessFlags = 1)]
-				public virtual bool IsFailure() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal TestFailure() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// isFailure
+				/// </java-name>
+				public virtual bool IsFailure
+				{
+						[Dot42.DexImport("isFailure", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -859,9 +842,9 @@ namespace Junit.Framework
 				/// getTestConstructor
 				/// </java-name>
 				[Dot42.DexImport("getTestConstructor", "(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;", AccessFlags = 9)]
-				public static global::System.Reflection.JavaConstructor GetTestConstructor(global::System.Type type) /* MethodBuilder.Create */ 
+				public static global::Java.Lang.Reflect.Constructor GetTestConstructor(global::System.Type type) /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaConstructor);
+						return default(global::Java.Lang.Reflect.Constructor);
 				}
 
 				/// <java-name>
@@ -917,31 +900,14 @@ namespace Junit.Framework
 				}
 
 				/// <java-name>
-				/// setName
-				/// </java-name>
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getName
 				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
+				public virtual string Name
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				public string Name
-				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetName(value); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

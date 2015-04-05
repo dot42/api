@@ -19,15 +19,6 @@ namespace Javax.Security.Auth
 				}
 
 				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// implies
 				/// </java-name>
 				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
@@ -44,10 +35,10 @@ namespace Javax.Security.Auth
 				/// <java-name>
 				/// getActions
 				/// </java-name>
-				public string Actions
+				public override string Actions
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
+						[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -87,8 +78,11 @@ namespace Javax.Security.Auth
 				/// <java-name>
 				/// isDestroyed
 				/// </java-name>
-				[Dot42.DexImport("isDestroyed", "()Z", AccessFlags = 1025)]
-				bool IsDestroyed() /* MethodBuilder.Create */ ;
+				bool IsDestroyed
+				{
+						[Dot42.DexImport("isDestroyed", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -102,33 +96,6 @@ namespace Javax.Security.Auth
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public PrivateCredentialPermission(string @string, string string1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPrincipals
-				/// </java-name>
-				[Dot42.DexImport("getPrincipals", "()[[Ljava/lang/String;", AccessFlags = 1)]
-				public string[][] GetPrincipals() /* MethodBuilder.Create */ 
-				{
-						return default(string[][]);
-				}
-
-				/// <java-name>
-				/// getCredentialClass
-				/// </java-name>
-				[Dot42.DexImport("getCredentialClass", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetCredentialClass() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -150,8 +117,8 @@ namespace Javax.Security.Auth
 				/// </java-name>
 				public string[][] Principals
 				{
-				[Dot42.DexImport("getPrincipals", "()[[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPrincipals(); }
+						[Dot42.DexImport("getPrincipals", "()[[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[][]); }
 				}
 
 				/// <java-name>
@@ -159,17 +126,17 @@ namespace Javax.Security.Auth
 				/// </java-name>
 				public string CredentialClass
 				{
-				[Dot42.DexImport("getCredentialClass", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCredentialClass(); }
+						[Dot42.DexImport("getCredentialClass", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getActions
 				/// </java-name>
-				public string Actions
+				public override string Actions
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
+						[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -248,15 +215,6 @@ namespace Javax.Security.Auth
 				/// <java-name>
 				/// getPrincipals
 				/// </java-name>
-				[Dot42.DexImport("getPrincipals", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/security/Principal;>;")]
-				public global::Java.Util.ISet<global::Java.Security.IPrincipal> GetPrincipals() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<global::Java.Security.IPrincipal>);
-				}
-
-				/// <java-name>
-				/// getPrincipals
-				/// </java-name>
 				[Dot42.DexImport("getPrincipals", "(Ljava/lang/Class;)Ljava/util/Set;", AccessFlags = 1, Signature = "<T::Ljava/security/Principal;>(Ljava/lang/Class<TT;>;)Ljava/util/Set<TT;>;")]
 				public global::Java.Util.ISet<T> GetPrincipals<T>(global::System.Type type) /* MethodBuilder.Create */ 
 				{
@@ -266,28 +224,10 @@ namespace Javax.Security.Auth
 				/// <java-name>
 				/// getPrivateCredentials
 				/// </java-name>
-				[Dot42.DexImport("getPrivateCredentials", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/Object;>;")]
-				public global::Java.Util.ISet<object> GetPrivateCredentials() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<object>);
-				}
-
-				/// <java-name>
-				/// getPrivateCredentials
-				/// </java-name>
 				[Dot42.DexImport("getPrivateCredentials", "(Ljava/lang/Class;)Ljava/util/Set;", AccessFlags = 1, Signature = "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)Ljava/util/Set<TT;>;")]
 				public global::Java.Util.ISet<T> GetPrivateCredentials<T>(global::System.Type type) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.ISet<T>);
-				}
-
-				/// <java-name>
-				/// getPublicCredentials
-				/// </java-name>
-				[Dot42.DexImport("getPublicCredentials", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/Object;>;")]
-				public global::Java.Util.ISet<object> GetPublicCredentials() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<object>);
 				}
 
 				/// <java-name>
@@ -317,15 +257,6 @@ namespace Javax.Security.Auth
 				}
 
 				/// <java-name>
-				/// isReadOnly
-				/// </java-name>
-				[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1)]
-				public bool IsReadOnly() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -348,8 +279,8 @@ namespace Javax.Security.Auth
 				/// </java-name>
 				public global::Java.Util.ISet<global::Java.Security.IPrincipal> Principals
 				{
-				[Dot42.DexImport("getPrincipals", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/security/Principal;>;")]
-						get{ return GetPrincipals(); }
+						[Dot42.DexImport("getPrincipals", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/security/Principal;>;")]
+						get{ return default(global::Java.Util.ISet<global::Java.Security.IPrincipal>); }
 				}
 
 				/// <java-name>
@@ -357,8 +288,8 @@ namespace Javax.Security.Auth
 				/// </java-name>
 				public global::Java.Util.ISet<object> PrivateCredentials
 				{
-				[Dot42.DexImport("getPrivateCredentials", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/Object;>;")]
-						get{ return GetPrivateCredentials(); }
+						[Dot42.DexImport("getPrivateCredentials", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/Object;>;")]
+						get{ return default(global::Java.Util.ISet<object>); }
 				}
 
 				/// <java-name>
@@ -366,8 +297,17 @@ namespace Javax.Security.Auth
 				/// </java-name>
 				public global::Java.Util.ISet<object> PublicCredentials
 				{
-				[Dot42.DexImport("getPublicCredentials", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/Object;>;")]
-						get{ return GetPublicCredentials(); }
+						[Dot42.DexImport("getPublicCredentials", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/Object;>;")]
+						get{ return default(global::Java.Util.ISet<object>); }
+				}
+
+				/// <java-name>
+				/// isReadOnly
+				/// </java-name>
+				public bool IsReadOnly
+				{
+						[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -382,15 +322,6 @@ namespace Javax.Security.Auth
 				[Dot42.DexImport("<init>", "(Ljavax/security/auth/Subject;)V", AccessFlags = 1)]
 				public SubjectDomainCombiner(global::Javax.Security.Auth.Subject subject) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSubject
-				/// </java-name>
-				[Dot42.DexImport("getSubject", "()Ljavax/security/auth/Subject;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.Subject GetSubject() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.Subject);
 				}
 
 				/// <java-name>
@@ -411,10 +342,10 @@ namespace Javax.Security.Auth
 				/// <java-name>
 				/// getSubject
 				/// </java-name>
-				public global::Javax.Security.Auth.Subject Subject
+				public virtual global::Javax.Security.Auth.Subject Subject
 				{
-				[Dot42.DexImport("getSubject", "()Ljavax/security/auth/Subject;", AccessFlags = 1)]
-						get{ return GetSubject(); }
+						[Dot42.DexImport("getSubject", "()Ljavax/security/auth/Subject;", AccessFlags = 1)]
+						get{ return default(global::Javax.Security.Auth.Subject); }
 				}
 
 		}

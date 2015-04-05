@@ -14,15 +14,6 @@ namespace Android.Inputmethodservice
 				}
 
 				/// <java-name>
-				/// getKeyDispatcherState
-				/// </java-name>
-				[Dot42.DexImport("getKeyDispatcherState", "()Landroid/view/KeyEvent$DispatcherState;", AccessFlags = 1)]
-				public virtual global::Android.Views.KeyEvent.DispatcherState GetKeyDispatcherState() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.KeyEvent.DispatcherState);
-				}
-
-				/// <java-name>
 				/// onCreateInputMethodInterface
 				/// </java-name>
 				[Dot42.DexImport("onCreateInputMethodInterface", "()Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl;" +
@@ -89,10 +80,10 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getKeyDispatcherState
 				/// </java-name>
-				public global::Android.Views.KeyEvent.DispatcherState KeyDispatcherState
+				public virtual global::Android.Views.KeyEvent.DispatcherState KeyDispatcherState
 				{
-				[Dot42.DexImport("getKeyDispatcherState", "()Landroid/view/KeyEvent$DispatcherState;", AccessFlags = 1)]
-						get{ return GetKeyDispatcherState(); }
+						[Dot42.DexImport("getKeyDispatcherState", "()Landroid/view/KeyEvent$DispatcherState;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.KeyEvent.DispatcherState); }
 				}
 
 				/// <java-name>
@@ -111,24 +102,6 @@ namespace Android.Inputmethodservice
 						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/AbstractInputMethodService;)V", AccessFlags = 1)]
 						public AbstractInputMethodSessionImpl(global::Android.Inputmethodservice.AbstractInputMethodService abstractInputMethodService) /* MethodBuilder.Create */ 
 						{
-						}
-
-						/// <java-name>
-						/// isEnabled
-						/// </java-name>
-						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
-						public virtual bool IsEnabled() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// isRevoked
-						/// </java-name>
-						[Dot42.DexImport("isRevoked", "()Z", AccessFlags = 1)]
-						public virtual bool IsRevoked() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
 						}
 
 						/// <java-name>
@@ -208,6 +181,24 @@ namespace Android.Inputmethodservice
 						[Dot42.DexImport("android/view/inputmethod/InputMethodSession", "toggleSoftInput", "(II)V", AccessFlags = 1025)]
 						public virtual void ToggleSoftInput(int int32, int int321) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 						{
+						}
+
+						/// <java-name>
+						/// isEnabled
+						/// </java-name>
+						public virtual bool IsEnabled
+						{
+								[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
+						}
+
+						/// <java-name>
+						/// isRevoked
+						/// </java-name>
+						public virtual bool IsRevoked
+						{
+								[Dot42.DexImport("isRevoked", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 				}
@@ -376,54 +367,54 @@ namespace Android.Inputmethodservice
 						return default(bool);
 				}
 
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ExtractEditText() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
 				/// <java-name>
 				/// isInputMethodTarget
 				/// </java-name>
-				[Dot42.DexImport("isInputMethodTarget", "()Z", AccessFlags = 1)]
-				public override bool IsInputMethodTarget() /* MethodBuilder.Create */ 
+				public override bool IsInputMethodTarget
 				{
-						return default(bool);
+						[Dot42.DexImport("isInputMethodTarget", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// hasVerticalScrollBar
 				/// </java-name>
-				[Dot42.DexImport("hasVerticalScrollBar", "()Z", AccessFlags = 1)]
-				public virtual bool HasVerticalScrollBar() /* MethodBuilder.Create */ 
+				public virtual bool HasVerticalScrollBar
 				{
-						return default(bool);
+						[Dot42.DexImport("hasVerticalScrollBar", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// hasWindowFocus
 				/// </java-name>
-				[Dot42.DexImport("hasWindowFocus", "()Z", AccessFlags = 1)]
-				public override bool HasWindowFocus() /* MethodBuilder.Create */ 
+				public override bool HasWindowFocus
 				{
-						return default(bool);
+						[Dot42.DexImport("hasWindowFocus", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isFocused
 				/// </java-name>
-				[Dot42.DexImport("isFocused", "()Z", AccessFlags = 1)]
-				public override bool IsFocused() /* MethodBuilder.Create */ 
+				public override bool IsFocused
 				{
-						return default(bool);
+						[Dot42.DexImport("isFocused", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// hasFocus
 				/// </java-name>
-				[Dot42.DexImport("hasFocus", "()Z", AccessFlags = 1)]
-				public override bool HasFocus() /* MethodBuilder.Create */ 
+				public override bool HasFocus
 				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ExtractEditText() /* TypeBuilder.AddDefaultConstructor */ 
-				{
+						[Dot42.DexImport("hasFocus", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -516,86 +507,6 @@ namespace Android.Inputmethodservice
 				}
 
 				/// <java-name>
-				/// getLayoutInflater
-				/// </java-name>
-				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1)]
-				public virtual global::Android.Views.LayoutInflater GetLayoutInflater() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.LayoutInflater);
-				}
-
-				/// <java-name>
-				/// getWindow
-				/// </java-name>
-				[Dot42.DexImport("getWindow", "()Landroid/app/Dialog;", AccessFlags = 1)]
-				public virtual global::Android.App.Dialog GetWindow() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.App.Dialog);
-				}
-
-				/// <java-name>
-				/// setBackDisposition
-				/// </java-name>
-				[Dot42.DexImport("setBackDisposition", "(I)V", AccessFlags = 1)]
-				public virtual void SetBackDisposition(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getBackDisposition
-				/// </java-name>
-				[Dot42.DexImport("getBackDisposition", "()I", AccessFlags = 1)]
-				public virtual int GetBackDisposition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMaxWidth
-				/// </java-name>
-				[Dot42.DexImport("getMaxWidth", "()I", AccessFlags = 1)]
-				public virtual int GetMaxWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCurrentInputBinding
-				/// </java-name>
-				[Dot42.DexImport("getCurrentInputBinding", "()Landroid/view/inputmethod/InputBinding;", AccessFlags = 1)]
-				public virtual global::Android.Views.Inputmethod.InputBinding GetCurrentInputBinding() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.Inputmethod.InputBinding);
-				}
-
-				/// <java-name>
-				/// getCurrentInputConnection
-				/// </java-name>
-				[Dot42.DexImport("getCurrentInputConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
-				public virtual global::Android.Views.Inputmethod.IInputConnection GetCurrentInputConnection() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.Inputmethod.IInputConnection);
-				}
-
-				/// <java-name>
-				/// getCurrentInputStarted
-				/// </java-name>
-				[Dot42.DexImport("getCurrentInputStarted", "()Z", AccessFlags = 1)]
-				public virtual bool GetCurrentInputStarted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getCurrentInputEditorInfo
-				/// </java-name>
-				[Dot42.DexImport("getCurrentInputEditorInfo", "()Landroid/view/inputmethod/EditorInfo;", AccessFlags = 1)]
-				public virtual global::Android.Views.Inputmethod.EditorInfo GetCurrentInputEditorInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.Inputmethod.EditorInfo);
-				}
-
-				/// <java-name>
 				/// updateFullscreenMode
 				/// </java-name>
 				[Dot42.DexImport("updateFullscreenMode", "()V", AccessFlags = 1)]
@@ -609,15 +520,6 @@ namespace Android.Inputmethodservice
 				[Dot42.DexImport("onConfigureWindow", "(Landroid/view/Window;ZZ)V", AccessFlags = 1)]
 				public virtual void OnConfigureWindow(global::Android.Views.Window window, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isFullscreenMode
-				/// </java-name>
-				[Dot42.DexImport("isFullscreenMode", "()Z", AccessFlags = 1)]
-				public virtual bool IsFullscreenMode() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -638,15 +540,6 @@ namespace Android.Inputmethodservice
 				}
 
 				/// <java-name>
-				/// isExtractViewShown
-				/// </java-name>
-				[Dot42.DexImport("isExtractViewShown", "()Z", AccessFlags = 1)]
-				public virtual bool IsExtractViewShown() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// onComputeInsets
 				/// </java-name>
 				[Dot42.DexImport("onComputeInsets", "(Landroid/inputmethodservice/InputMethodService$Insets;)V", AccessFlags = 1)]
@@ -660,24 +553,6 @@ namespace Android.Inputmethodservice
 				[Dot42.DexImport("updateInputViewShown", "()V", AccessFlags = 1)]
 				public virtual void UpdateInputViewShown() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isShowInputRequested
-				/// </java-name>
-				[Dot42.DexImport("isShowInputRequested", "()Z", AccessFlags = 1)]
-				public virtual bool IsShowInputRequested() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isInputViewShown
-				/// </java-name>
-				[Dot42.DexImport("isInputViewShown", "()Z", AccessFlags = 1)]
-				public virtual bool IsInputViewShown() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -695,15 +570,6 @@ namespace Android.Inputmethodservice
 				[Dot42.DexImport("setCandidatesViewShown", "(Z)V", AccessFlags = 1)]
 				public virtual void SetCandidatesViewShown(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getCandidatesHiddenVisibility
-				/// </java-name>
-				[Dot42.DexImport("getCandidatesHiddenVisibility", "()I", AccessFlags = 1)]
-				public virtual int GetCandidatesHiddenVisibility() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1097,84 +963,120 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getLayoutInflater
 				/// </java-name>
-				public global::Android.Views.LayoutInflater LayoutInflater
+				public virtual global::Android.Views.LayoutInflater LayoutInflater
 				{
-				[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1)]
-						get{ return GetLayoutInflater(); }
+						[Dot42.DexImport("getLayoutInflater", "()Landroid/view/LayoutInflater;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.LayoutInflater); }
 				}
 
 				/// <java-name>
 				/// getWindow
 				/// </java-name>
-				public global::Android.App.Dialog Window
+				public virtual global::Android.App.Dialog Window
 				{
-				[Dot42.DexImport("getWindow", "()Landroid/app/Dialog;", AccessFlags = 1)]
-						get{ return GetWindow(); }
+						[Dot42.DexImport("getWindow", "()Landroid/app/Dialog;", AccessFlags = 1)]
+						get{ return default(global::Android.App.Dialog); }
 				}
 
 				/// <java-name>
 				/// getBackDisposition
 				/// </java-name>
-				public int BackDisposition
+				public virtual int BackDisposition
 				{
-				[Dot42.DexImport("getBackDisposition", "()I", AccessFlags = 1)]
-						get{ return GetBackDisposition(); }
-				[Dot42.DexImport("setBackDisposition", "(I)V", AccessFlags = 1)]
-						set{ SetBackDisposition(value); }
+						[Dot42.DexImport("getBackDisposition", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setBackDisposition", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMaxWidth
 				/// </java-name>
-				public int MaxWidth
+				public virtual int MaxWidth
 				{
-				[Dot42.DexImport("getMaxWidth", "()I", AccessFlags = 1)]
-						get{ return GetMaxWidth(); }
+						[Dot42.DexImport("getMaxWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getCurrentInputBinding
 				/// </java-name>
-				public global::Android.Views.Inputmethod.InputBinding CurrentInputBinding
+				public virtual global::Android.Views.Inputmethod.InputBinding CurrentInputBinding
 				{
-				[Dot42.DexImport("getCurrentInputBinding", "()Landroid/view/inputmethod/InputBinding;", AccessFlags = 1)]
-						get{ return GetCurrentInputBinding(); }
+						[Dot42.DexImport("getCurrentInputBinding", "()Landroid/view/inputmethod/InputBinding;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.Inputmethod.InputBinding); }
 				}
 
 				/// <java-name>
 				/// getCurrentInputConnection
 				/// </java-name>
-				public global::Android.Views.Inputmethod.IInputConnection CurrentInputConnection
+				public virtual global::Android.Views.Inputmethod.IInputConnection CurrentInputConnection
 				{
-				[Dot42.DexImport("getCurrentInputConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
-						get{ return GetCurrentInputConnection(); }
+						[Dot42.DexImport("getCurrentInputConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.Inputmethod.IInputConnection); }
 				}
 
 				/// <java-name>
 				/// getCurrentInputStarted
 				/// </java-name>
-				public bool IsCurrentInputStarted
+				public virtual bool IsCurrentInputStarted
 				{
-				[Dot42.DexImport("getCurrentInputStarted", "()Z", AccessFlags = 1)]
-						get{ return GetCurrentInputStarted(); }
+						[Dot42.DexImport("getCurrentInputStarted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getCurrentInputEditorInfo
 				/// </java-name>
-				public global::Android.Views.Inputmethod.EditorInfo CurrentInputEditorInfo
+				public virtual global::Android.Views.Inputmethod.EditorInfo CurrentInputEditorInfo
 				{
-				[Dot42.DexImport("getCurrentInputEditorInfo", "()Landroid/view/inputmethod/EditorInfo;", AccessFlags = 1)]
-						get{ return GetCurrentInputEditorInfo(); }
+						[Dot42.DexImport("getCurrentInputEditorInfo", "()Landroid/view/inputmethod/EditorInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.Inputmethod.EditorInfo); }
+				}
+
+				/// <java-name>
+				/// isFullscreenMode
+				/// </java-name>
+				public virtual bool IsFullscreenMode
+				{
+						[Dot42.DexImport("isFullscreenMode", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isExtractViewShown
+				/// </java-name>
+				public virtual bool IsExtractViewShown
+				{
+						[Dot42.DexImport("isExtractViewShown", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isShowInputRequested
+				/// </java-name>
+				public virtual bool IsShowInputRequested
+				{
+						[Dot42.DexImport("isShowInputRequested", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isInputViewShown
+				/// </java-name>
+				public virtual bool IsInputViewShown
+				{
+						[Dot42.DexImport("isInputViewShown", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getCandidatesHiddenVisibility
 				/// </java-name>
-				public int CandidatesHiddenVisibility
+				public virtual int CandidatesHiddenVisibility
 				{
-				[Dot42.DexImport("getCandidatesHiddenVisibility", "()I", AccessFlags = 1)]
-						get{ return GetCandidatesHiddenVisibility(); }
+						[Dot42.DexImport("getCandidatesHiddenVisibility", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1489,134 +1391,12 @@ namespace Android.Inputmethodservice
 				}
 
 				/// <java-name>
-				/// getKeys
-				/// </java-name>
-				[Dot42.DexImport("getKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> GetKeys() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>);
-				}
-
-				/// <java-name>
-				/// getModifierKeys
-				/// </java-name>
-				[Dot42.DexImport("getModifierKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> GetModifierKeys() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>);
-				}
-
-				/// <java-name>
-				/// getHorizontalGap
-				/// </java-name>
-				[Dot42.DexImport("getHorizontalGap", "()I", AccessFlags = 4)]
-				protected internal virtual int GetHorizontalGap() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setHorizontalGap
-				/// </java-name>
-				[Dot42.DexImport("setHorizontalGap", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetHorizontalGap(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getVerticalGap
-				/// </java-name>
-				[Dot42.DexImport("getVerticalGap", "()I", AccessFlags = 4)]
-				protected internal virtual int GetVerticalGap() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setVerticalGap
-				/// </java-name>
-				[Dot42.DexImport("setVerticalGap", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetVerticalGap(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKeyHeight
-				/// </java-name>
-				[Dot42.DexImport("getKeyHeight", "()I", AccessFlags = 4)]
-				protected internal virtual int GetKeyHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setKeyHeight
-				/// </java-name>
-				[Dot42.DexImport("setKeyHeight", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetKeyHeight(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKeyWidth
-				/// </java-name>
-				[Dot42.DexImport("getKeyWidth", "()I", AccessFlags = 4)]
-				protected internal virtual int GetKeyWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setKeyWidth
-				/// </java-name>
-				[Dot42.DexImport("setKeyWidth", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetKeyWidth(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-				public virtual int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinWidth
-				/// </java-name>
-				[Dot42.DexImport("getMinWidth", "()I", AccessFlags = 1)]
-				public virtual int GetMinWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setShifted
 				/// </java-name>
 				[Dot42.DexImport("setShifted", "(Z)Z", AccessFlags = 1)]
 				public virtual bool SetShifted(bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// isShifted
-				/// </java-name>
-				[Dot42.DexImport("isShifted", "()Z", AccessFlags = 1)]
-				public virtual bool IsShifted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getShiftKeyIndex
-				/// </java-name>
-				[Dot42.DexImport("getShiftKeyIndex", "()I", AccessFlags = 1)]
-				public virtual int GetShiftKeyIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1656,90 +1436,99 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getKeys
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> Keys
+				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> Keys
 				{
-				[Dot42.DexImport("getKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-						get{ return GetKeys(); }
+						[Dot42.DexImport("getKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>); }
 				}
 
 				/// <java-name>
 				/// getModifierKeys
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> ModifierKeys
+				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> ModifierKeys
 				{
-				[Dot42.DexImport("getModifierKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-						get{ return GetModifierKeys(); }
+						[Dot42.DexImport("getModifierKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>); }
 				}
 
 				/// <java-name>
 				/// getHorizontalGap
 				/// </java-name>
-				protected internal int HorizontalGap
+				protected internal virtual int HorizontalGap
 				{
-				[Dot42.DexImport("getHorizontalGap", "()I", AccessFlags = 4)]
-						get{ return GetHorizontalGap(); }
-				[Dot42.DexImport("setHorizontalGap", "(I)V", AccessFlags = 4)]
-						set{ SetHorizontalGap(value); }
+						[Dot42.DexImport("getHorizontalGap", "()I", AccessFlags = 4)]
+						get{ return default(int); }
+						[Dot42.DexImport("setHorizontalGap", "(I)V", AccessFlags = 4)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getVerticalGap
 				/// </java-name>
-				protected internal int VerticalGap
+				protected internal virtual int VerticalGap
 				{
-				[Dot42.DexImport("getVerticalGap", "()I", AccessFlags = 4)]
-						get{ return GetVerticalGap(); }
-				[Dot42.DexImport("setVerticalGap", "(I)V", AccessFlags = 4)]
-						set{ SetVerticalGap(value); }
+						[Dot42.DexImport("getVerticalGap", "()I", AccessFlags = 4)]
+						get{ return default(int); }
+						[Dot42.DexImport("setVerticalGap", "(I)V", AccessFlags = 4)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getKeyHeight
 				/// </java-name>
-				protected internal int KeyHeight
+				protected internal virtual int KeyHeight
 				{
-				[Dot42.DexImport("getKeyHeight", "()I", AccessFlags = 4)]
-						get{ return GetKeyHeight(); }
-				[Dot42.DexImport("setKeyHeight", "(I)V", AccessFlags = 4)]
-						set{ SetKeyHeight(value); }
+						[Dot42.DexImport("getKeyHeight", "()I", AccessFlags = 4)]
+						get{ return default(int); }
+						[Dot42.DexImport("setKeyHeight", "(I)V", AccessFlags = 4)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getKeyWidth
 				/// </java-name>
-				protected internal int KeyWidth
+				protected internal virtual int KeyWidth
 				{
-				[Dot42.DexImport("getKeyWidth", "()I", AccessFlags = 4)]
-						get{ return GetKeyWidth(); }
-				[Dot42.DexImport("setKeyWidth", "(I)V", AccessFlags = 4)]
-						set{ SetKeyWidth(value); }
+						[Dot42.DexImport("getKeyWidth", "()I", AccessFlags = 4)]
+						get{ return default(int); }
+						[Dot42.DexImport("setKeyWidth", "(I)V", AccessFlags = 4)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getHeight
 				/// </java-name>
-				public int Height
+				public virtual int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMinWidth
 				/// </java-name>
-				public int MinWidth
+				public virtual int MinWidth
 				{
-				[Dot42.DexImport("getMinWidth", "()I", AccessFlags = 1)]
-						get{ return GetMinWidth(); }
+						[Dot42.DexImport("getMinWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isShifted
+				/// </java-name>
+				public virtual bool IsShifted
+				{
+						[Dot42.DexImport("isShifted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getShiftKeyIndex
 				/// </java-name>
-				public int ShiftKeyIndex
+				public virtual int ShiftKeyIndex
 				{
-				[Dot42.DexImport("getShiftKeyIndex", "()I", AccessFlags = 1)]
-						get{ return GetShiftKeyIndex(); }
+						[Dot42.DexImport("getShiftKeyIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1884,15 +1673,6 @@ namespace Android.Inputmethodservice
 								return default(int);
 						}
 
-						/// <java-name>
-						/// getCurrentDrawableState
-						/// </java-name>
-						[Dot42.DexImport("getCurrentDrawableState", "()[I", AccessFlags = 1)]
-						public virtual int[] GetCurrentDrawableState() /* MethodBuilder.Create */ 
-						{
-								return default(int[]);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal Key() /* TypeBuilder.AddDefaultConstructor */ 
 						{
@@ -1901,10 +1681,10 @@ namespace Android.Inputmethodservice
 						/// <java-name>
 						/// getCurrentDrawableState
 						/// </java-name>
-						public int[] CurrentDrawableState
+						public virtual int[] CurrentDrawableState
 						{
-						[Dot42.DexImport("getCurrentDrawableState", "()[I", AccessFlags = 1)]
-								get{ return GetCurrentDrawableState(); }
+								[Dot42.DexImport("getCurrentDrawableState", "()[I", AccessFlags = 1)]
+								get{ return default(int[]); }
 						}
 
 				}
@@ -1984,53 +1764,10 @@ namespace Android.Inputmethodservice
 				}
 
 				/// <java-name>
-				/// setOnKeyboardActionListener
-				/// </java-name>
-				[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
-				public virtual void SetOnKeyboardActionListener(global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener onKeyboardActionListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getOnKeyboardActionListener
-				/// </java-name>
-				[Dot42.DexImport("getOnKeyboardActionListener", "()Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;", AccessFlags = 4)]
-				protected internal virtual global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener GetOnKeyboardActionListener() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener);
-				}
-
-				/// <java-name>
-				/// setKeyboard
-				/// </java-name>
-				[Dot42.DexImport("setKeyboard", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
-				public virtual void SetKeyboard(global::Android.Inputmethodservice.Keyboard keyboard) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKeyboard
-				/// </java-name>
-				[Dot42.DexImport("getKeyboard", "()Landroid/inputmethodservice/Keyboard;", AccessFlags = 1)]
-				public virtual global::Android.Inputmethodservice.Keyboard GetKeyboard() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Inputmethodservice.Keyboard);
-				}
-
-				/// <java-name>
 				/// setShifted
 				/// </java-name>
 				[Dot42.DexImport("setShifted", "(Z)Z", AccessFlags = 1)]
 				public virtual bool SetShifted(bool boolean) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isShifted
-				/// </java-name>
-				[Dot42.DexImport("isShifted", "()Z", AccessFlags = 1)]
-				public virtual bool IsShifted() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2041,15 +1778,6 @@ namespace Android.Inputmethodservice
 				[Dot42.DexImport("setPreviewEnabled", "(Z)V", AccessFlags = 1)]
 				public virtual void SetPreviewEnabled(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isPreviewEnabled
-				/// </java-name>
-				[Dot42.DexImport("isPreviewEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsPreviewEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2082,15 +1810,6 @@ namespace Android.Inputmethodservice
 				[Dot42.DexImport("setProximityCorrectionEnabled", "(Z)V", AccessFlags = 1)]
 				public virtual void SetProximityCorrectionEnabled(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isProximityCorrectionEnabled
-				/// </java-name>
-				[Dot42.DexImport("isProximityCorrectionEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsProximityCorrectionEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2233,23 +1952,50 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getOnKeyboardActionListener
 				/// </java-name>
-				protected internal global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener OnKeyboardActionListener
+				protected internal virtual global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener OnKeyboardActionListener
 				{
-				[Dot42.DexImport("getOnKeyboardActionListener", "()Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;", AccessFlags = 4)]
-						get{ return GetOnKeyboardActionListener(); }
-				[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
-						set{ SetOnKeyboardActionListener(value); }
+						[Dot42.DexImport("getOnKeyboardActionListener", "()Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;", AccessFlags = 4)]
+						get{ return default(global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener); }
+						[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getKeyboard
 				/// </java-name>
-				public global::Android.Inputmethodservice.Keyboard Keyboard
+				public virtual global::Android.Inputmethodservice.Keyboard Keyboard
 				{
-				[Dot42.DexImport("getKeyboard", "()Landroid/inputmethodservice/Keyboard;", AccessFlags = 1)]
-						get{ return GetKeyboard(); }
-				[Dot42.DexImport("setKeyboard", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
-						set{ SetKeyboard(value); }
+						[Dot42.DexImport("getKeyboard", "()Landroid/inputmethodservice/Keyboard;", AccessFlags = 1)]
+						get{ return default(global::Android.Inputmethodservice.Keyboard); }
+						[Dot42.DexImport("setKeyboard", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isShifted
+				/// </java-name>
+				public virtual bool IsShifted
+				{
+						[Dot42.DexImport("isShifted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isPreviewEnabled
+				/// </java-name>
+				public virtual bool IsPreviewEnabled
+				{
+						[Dot42.DexImport("isPreviewEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isProximityCorrectionEnabled
+				/// </java-name>
+				public virtual bool IsProximityCorrectionEnabled
+				{
+						[Dot42.DexImport("isProximityCorrectionEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>

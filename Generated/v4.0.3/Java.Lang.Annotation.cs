@@ -38,7 +38,7 @@ namespace Java.Lang.Annotation
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/reflect/Method;Ljava/lang/String;)V", AccessFlags = 1)]
-				public AnnotationTypeMismatchException(global::System.Reflection.JavaMethod javaMethod, string @string) /* MethodBuilder.Create */ 
+				public AnnotationTypeMismatchException(global::Java.Lang.Reflect.Method method, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -46,9 +46,9 @@ namespace Java.Lang.Annotation
 				/// element
 				/// </java-name>
 				[Dot42.DexImport("element", "()Ljava/lang/reflect/Method;", AccessFlags = 1)]
-				public virtual global::System.Reflection.JavaMethod Element() /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.Reflect.Method Element() /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaMethod);
+						return default(global::Java.Lang.Reflect.Method);
 				}
 
 				/// <java-name>

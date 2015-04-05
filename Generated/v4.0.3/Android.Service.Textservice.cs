@@ -86,37 +86,19 @@ namespace Android.Service.Textservice
 						/// <java-name>
 						/// getLocale
 						/// </java-name>
-						[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetLocale() /* MethodBuilder.Create */ 
+						public virtual string Locale
 						{
-								return default(string);
+								[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getBundle
 						/// </java-name>
-						[Dot42.DexImport("getBundle", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						public virtual global::Android.OS.Bundle GetBundle() /* MethodBuilder.Create */ 
+						public virtual global::Android.OS.Bundle Bundle
 						{
-								return default(global::Android.OS.Bundle);
-						}
-
-						/// <java-name>
-						/// getLocale
-						/// </java-name>
-						public string Locale
-						{
-						[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetLocale(); }
-						}
-
-						/// <java-name>
-						/// getBundle
-						/// </java-name>
-						public global::Android.OS.Bundle Bundle
-						{
-						[Dot42.DexImport("getBundle", "()Landroid/os/Bundle;", AccessFlags = 1)]
-								get{ return GetBundle(); }
+								[Dot42.DexImport("getBundle", "()Landroid/os/Bundle;", AccessFlags = 1)]
+								get{ return default(global::Android.OS.Bundle); }
 						}
 
 				}

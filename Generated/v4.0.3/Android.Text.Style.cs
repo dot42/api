@@ -24,15 +24,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -47,24 +38,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSize
-				/// </java-name>
-				[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
-				public virtual int GetSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDip
-				/// </java-name>
-				[Dot42.DexImport("getDip", "()Z", AccessFlags = 1)]
-				public virtual bool GetDip() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -91,28 +64,28 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSize
 				/// </java-name>
-				public int Size
+				public virtual int Size
 				{
-				[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
-						get{ return GetSize(); }
+						[Dot42.DexImport("getSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDip
 				/// </java-name>
-				public bool IsDip
+				public virtual bool IsDip
 				{
-				[Dot42.DexImport("getDip", "()Z", AccessFlags = 1)]
-						get{ return GetDip(); }
+						[Dot42.DexImport("getDip", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -135,15 +108,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -158,15 +122,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getBackgroundColor
-				/// </java-name>
-				[Dot42.DexImport("getBackgroundColor", "()I", AccessFlags = 1)]
-				public virtual int GetBackgroundColor() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -185,19 +140,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getBackgroundColor
 				/// </java-name>
-				public int BackgroundColor
+				public virtual int BackgroundColor
 				{
-				[Dot42.DexImport("getBackgroundColor", "()I", AccessFlags = 1)]
-						get{ return GetBackgroundColor(); }
+						[Dot42.DexImport("getBackgroundColor", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -232,15 +187,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
 				public BulletSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -281,10 +227,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -319,19 +265,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getUnderlying
 				/// </java-name>
-				[Dot42.DexImport("getUnderlying", "()Landroid/text/style/CharacterStyle;", AccessFlags = 1)]
-				public virtual global::Android.Text.Style.CharacterStyle GetUnderlying() /* MethodBuilder.Create */ 
+				public virtual global::Android.Text.Style.CharacterStyle Underlying
 				{
-						return default(global::Android.Text.Style.CharacterStyle);
-				}
-
-				/// <java-name>
-				/// getUnderlying
-				/// </java-name>
-				public global::Android.Text.Style.CharacterStyle Underlying
-				{
-				[Dot42.DexImport("getUnderlying", "()Landroid/text/style/CharacterStyle;", AccessFlags = 1)]
-						get{ return GetUnderlying(); }
+						[Dot42.DexImport("getUnderlying", "()Landroid/text/style/CharacterStyle;", AccessFlags = 1)]
+						get{ return default(global::Android.Text.Style.CharacterStyle); }
 				}
 
 		}
@@ -447,21 +384,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getVerticalAlignment
-				/// </java-name>
-				[Dot42.DexImport("getVerticalAlignment", "()I", AccessFlags = 1)]
-				public virtual int GetVerticalAlignment() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDrawable
-				/// </java-name>
-				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-				public abstract global::Android.Graphics.Drawables.Drawable GetDrawable() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSize
 				/// </java-name>
 				[Dot42.DexImport("getSize", "(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMe" +
@@ -483,19 +405,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getVerticalAlignment
 				/// </java-name>
-				public int VerticalAlignment
+				public virtual int VerticalAlignment
 				{
-				[Dot42.DexImport("getVerticalAlignment", "()I", AccessFlags = 1)]
-						get{ return GetVerticalAlignment(); }
+						[Dot42.DexImport("getVerticalAlignment", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable Drawable
+				public abstract global::Android.Graphics.Drawables.Drawable Drawable
 				{
-				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-						get{ return GetDrawable(); }
+						[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -532,19 +454,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
+				public virtual int SpanTypeId
 				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				public int SpanTypeId
-				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -567,15 +480,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -590,15 +494,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getForegroundColor
-				/// </java-name>
-				[Dot42.DexImport("getForegroundColor", "()I", AccessFlags = 1)]
-				public virtual int GetForegroundColor() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -617,19 +512,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getForegroundColor
 				/// </java-name>
-				public int ForegroundColor
+				public virtual int ForegroundColor
 				{
-				[Dot42.DexImport("getForegroundColor", "()I", AccessFlags = 1)]
-						get{ return GetForegroundColor(); }
+						[Dot42.DexImport("getForegroundColor", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -644,8 +539,11 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getAlignment
 				/// </java-name>
-				[Dot42.DexImport("getAlignment", "()Landroid/text/Layout$Alignment;", AccessFlags = 1025)]
-				global::Android.Text.Layout.Alignment GetAlignment() /* MethodBuilder.Create */ ;
+				global::Android.Text.Layout.Alignment Alignment
+				{
+						[Dot42.DexImport("getAlignment", "()Landroid/text/Layout$Alignment;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -667,15 +565,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -692,15 +581,6 @@ namespace Android.Text.Style
 				{
 				}
 
-				/// <java-name>
-				/// getAlignment
-				/// </java-name>
-				[Dot42.DexImport("getAlignment", "()Landroid/text/Layout$Alignment;", AccessFlags = 1)]
-				public virtual global::Android.Text.Layout.Alignment GetAlignment() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Layout.Alignment);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal IAlignmentSpan_Standard() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -709,19 +589,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAlignment
 				/// </java-name>
-				public global::Android.Text.Layout.Alignment Alignment
+				public virtual global::Android.Text.Layout.Alignment Alignment
 				{
-				[Dot42.DexImport("getAlignment", "()Landroid/text/Layout$Alignment;", AccessFlags = 1)]
-						get{ return GetAlignment(); }
+						[Dot42.DexImport("getAlignment", "()Landroid/text/Layout$Alignment;", AccessFlags = 1)]
+						get{ return default(global::Android.Text.Layout.Alignment); }
 				}
 
 		}
@@ -808,8 +688,11 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getLeadingMarginLineCount
 				/// </java-name>
-				[Dot42.DexImport("getLeadingMarginLineCount", "()I", AccessFlags = 1025)]
-				int GetLeadingMarginLineCount() /* MethodBuilder.Create */ ;
+				int LeadingMarginLineCount
+				{
+						[Dot42.DexImport("getLeadingMarginLineCount", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -833,15 +716,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
 				public ILeadingMarginSpan_Standard(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -887,10 +761,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1009,24 +883,6 @@ namespace Android.Text.Style
 				{
 				}
 
-				/// <java-name>
-				/// getDrawable
-				/// </java-name>
-				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetDrawable() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawables.Drawable);
-				}
-
-				/// <java-name>
-				/// getSource
-				/// </java-name>
-				[Dot42.DexImport("getSource", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSource() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ImageSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1035,19 +891,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable Drawable
+				public override global::Android.Graphics.Drawables.Drawable Drawable
 				{
-				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						get{ return GetDrawable(); }
+						[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Drawables.Drawable); }
 				}
 
 				/// <java-name>
 				/// getSource
 				/// </java-name>
-				public string Source
+				public virtual string Source
 				{
-				[Dot42.DexImport("getSource", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSource(); }
+						[Dot42.DexImport("getSource", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1071,8 +927,11 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getTabStop
 				/// </java-name>
-				[Dot42.DexImport("getTabStop", "()I", AccessFlags = 1025)]
-				int GetTabStop() /* MethodBuilder.Create */ ;
+				int TabStop
+				{
+						[Dot42.DexImport("getTabStop", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1088,15 +947,6 @@ namespace Android.Text.Style
 				{
 				}
 
-				/// <java-name>
-				/// getTabStop
-				/// </java-name>
-				[Dot42.DexImport("getTabStop", "()I", AccessFlags = 1)]
-				public virtual int GetTabStop() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ITabStopSpan_Standard() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1105,10 +955,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getTabStop
 				/// </java-name>
-				public int TabStop
+				public virtual int TabStop
 				{
-				[Dot42.DexImport("getTabStop", "()I", AccessFlags = 1)]
-						get{ return GetTabStop(); }
+						[Dot42.DexImport("getTabStop", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1153,15 +1003,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getMaskFilter
-				/// </java-name>
-				[Dot42.DexImport("getMaskFilter", "()Landroid/graphics/MaskFilter;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.MaskFilter GetMaskFilter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.MaskFilter);
-				}
-
-				/// <java-name>
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
@@ -1177,10 +1018,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getMaskFilter
 				/// </java-name>
-				public global::Android.Graphics.MaskFilter MaskFilter
+				public virtual global::Android.Graphics.MaskFilter MaskFilter
 				{
-				[Dot42.DexImport("getMaskFilter", "()Landroid/graphics/MaskFilter;", AccessFlags = 1)]
-						get{ return GetMaskFilter(); }
+						[Dot42.DexImport("getMaskFilter", "()Landroid/graphics/MaskFilter;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.MaskFilter); }
 				}
 
 		}
@@ -1212,15 +1053,6 @@ namespace Android.Text.Style
 						return default(global::Android.Text.Style.MetricAffectingSpan);
 				}
 
-				/// <java-name>
-				/// getUnderlying
-				/// </java-name>
-				public global::Android.Text.Style.MetricAffectingSpan Underlying
-				{
-				[Dot42.DexImport("getUnderlying", "()Landroid/text/style/MetricAffectingSpan;", AccessFlags = 1)]
-						get{ return GetUnderlying(); }
-				}
-
 		}
 
 		/// <java-name>
@@ -1246,15 +1078,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -1269,15 +1092,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getColor
-				/// </java-name>
-				[Dot42.DexImport("getColor", "()I", AccessFlags = 1)]
-				public virtual int GetColor() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1301,19 +1115,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColor
 				/// </java-name>
-				public int Color
+				public virtual int Color
 				{
-				[Dot42.DexImport("getColor", "()I", AccessFlags = 1)]
-						get{ return GetColor(); }
+						[Dot42.DexImport("getColor", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1328,15 +1142,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Rasterizer;)V", AccessFlags = 1)]
 				public RasterizerSpan(global::Android.Graphics.Rasterizer rasterizer) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getRasterizer
-				/// </java-name>
-				[Dot42.DexImport("getRasterizer", "()Landroid/graphics/Rasterizer;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Rasterizer GetRasterizer() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Rasterizer);
 				}
 
 				/// <java-name>
@@ -1355,10 +1160,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getRasterizer
 				/// </java-name>
-				public global::Android.Graphics.Rasterizer Rasterizer
+				public virtual global::Android.Graphics.Rasterizer Rasterizer
 				{
-				[Dot42.DexImport("getRasterizer", "()Landroid/graphics/Rasterizer;", AccessFlags = 1)]
-						get{ return GetRasterizer(); }
+						[Dot42.DexImport("getRasterizer", "()Landroid/graphics/Rasterizer;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Rasterizer); }
 				}
 
 		}
@@ -1381,15 +1186,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -1404,15 +1200,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSizeChange
-				/// </java-name>
-				[Dot42.DexImport("getSizeChange", "()F", AccessFlags = 1)]
-				public virtual float GetSizeChange() /* MethodBuilder.Create */ 
-				{
-						return default(float);
 				}
 
 				/// <java-name>
@@ -1439,19 +1226,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSizeChange
 				/// </java-name>
-				public float SizeChange
+				public virtual float SizeChange
 				{
-				[Dot42.DexImport("getSizeChange", "()F", AccessFlags = 1)]
-						get{ return GetSizeChange(); }
+						[Dot42.DexImport("getSizeChange", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 		}
@@ -1518,15 +1305,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -1541,15 +1319,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getScaleX
-				/// </java-name>
-				[Dot42.DexImport("getScaleX", "()F", AccessFlags = 1)]
-				public virtual float GetScaleX() /* MethodBuilder.Create */ 
-				{
-						return default(float);
 				}
 
 				/// <java-name>
@@ -1576,19 +1345,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getScaleX
 				/// </java-name>
-				public float ScaleX
+				public virtual float ScaleX
 				{
-				[Dot42.DexImport("getScaleX", "()F", AccessFlags = 1)]
-						get{ return GetScaleX(); }
+						[Dot42.DexImport("getScaleX", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 		}
@@ -1608,15 +1377,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
 				public StrikethroughSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1647,10 +1407,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1673,15 +1433,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -1696,15 +1447,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getStyle
-				/// </java-name>
-				[Dot42.DexImport("getStyle", "()I", AccessFlags = 1)]
-				public virtual int GetStyle() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1731,19 +1473,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getStyle
 				/// </java-name>
-				public int Style
+				public virtual int Style
 				{
-				[Dot42.DexImport("getStyle", "()I", AccessFlags = 1)]
-						get{ return GetStyle(); }
+						[Dot42.DexImport("getStyle", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1763,15 +1505,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
 				public SubscriptSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1810,10 +1543,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1893,41 +1626,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSuggestions
-				/// </java-name>
-				[Dot42.DexImport("getSuggestions", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetSuggestions() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getLocale
-				/// </java-name>
-				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetLocale() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getFlags
-				/// </java-name>
-				[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
-				public virtual int GetFlags() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setFlags
-				/// </java-name>
-				[Dot42.DexImport("setFlags", "(I)V", AccessFlags = 1)]
-				public virtual void SetFlags(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -1942,15 +1640,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1987,39 +1676,39 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSuggestions
 				/// </java-name>
-				public string[] Suggestions
+				public virtual string[] Suggestions
 				{
-				[Dot42.DexImport("getSuggestions", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSuggestions(); }
+						[Dot42.DexImport("getSuggestions", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 				/// <java-name>
 				/// getLocale
 				/// </java-name>
-				public string Locale
+				public virtual string Locale
 				{
-				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocale(); }
+						[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getFlags
 				/// </java-name>
-				public int Flags
+				public virtual int Flags
 				{
-				[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
-						get{ return GetFlags(); }
-				[Dot42.DexImport("setFlags", "(I)V", AccessFlags = 1)]
-						set{ SetFlags(value); }
+						[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setFlags", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2039,15 +1728,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
 				public SuperscriptSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2086,10 +1766,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2123,15 +1803,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -2146,51 +1817,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getFamily
-				/// </java-name>
-				[Dot42.DexImport("getFamily", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetFamily() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getTextColor
-				/// </java-name>
-				[Dot42.DexImport("getTextColor", "()Landroid/content/res/ColorStateList;", AccessFlags = 1)]
-				public virtual global::Android.Content.Res.ColorStateList GetTextColor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.ColorStateList);
-				}
-
-				/// <java-name>
-				/// getLinkTextColor
-				/// </java-name>
-				[Dot42.DexImport("getLinkTextColor", "()Landroid/content/res/ColorStateList;", AccessFlags = 1)]
-				public virtual global::Android.Content.Res.ColorStateList GetLinkTextColor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.ColorStateList);
-				}
-
-				/// <java-name>
-				/// getTextSize
-				/// </java-name>
-				[Dot42.DexImport("getTextSize", "()I", AccessFlags = 1)]
-				public virtual int GetTextSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTextStyle
-				/// </java-name>
-				[Dot42.DexImport("getTextStyle", "()I", AccessFlags = 1)]
-				public virtual int GetTextStyle() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2217,55 +1843,55 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getFamily
 				/// </java-name>
-				public string Family
+				public virtual string Family
 				{
-				[Dot42.DexImport("getFamily", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetFamily(); }
+						[Dot42.DexImport("getFamily", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getTextColor
 				/// </java-name>
-				public global::Android.Content.Res.ColorStateList TextColor
+				public virtual global::Android.Content.Res.ColorStateList TextColor
 				{
-				[Dot42.DexImport("getTextColor", "()Landroid/content/res/ColorStateList;", AccessFlags = 1)]
-						get{ return GetTextColor(); }
+						[Dot42.DexImport("getTextColor", "()Landroid/content/res/ColorStateList;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Res.ColorStateList); }
 				}
 
 				/// <java-name>
 				/// getLinkTextColor
 				/// </java-name>
-				public global::Android.Content.Res.ColorStateList LinkTextColor
+				public virtual global::Android.Content.Res.ColorStateList LinkTextColor
 				{
-				[Dot42.DexImport("getLinkTextColor", "()Landroid/content/res/ColorStateList;", AccessFlags = 1)]
-						get{ return GetLinkTextColor(); }
+						[Dot42.DexImport("getLinkTextColor", "()Landroid/content/res/ColorStateList;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Res.ColorStateList); }
 				}
 
 				/// <java-name>
 				/// getTextSize
 				/// </java-name>
-				public int TextSize
+				public virtual int TextSize
 				{
-				[Dot42.DexImport("getTextSize", "()I", AccessFlags = 1)]
-						get{ return GetTextSize(); }
+						[Dot42.DexImport("getTextSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTextStyle
 				/// </java-name>
-				public int TextStyle
+				public virtual int TextStyle
 				{
-				[Dot42.DexImport("getTextStyle", "()I", AccessFlags = 1)]
-						get{ return GetTextStyle(); }
+						[Dot42.DexImport("getTextStyle", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2288,15 +1914,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -2311,15 +1928,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getFamily
-				/// </java-name>
-				[Dot42.DexImport("getFamily", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetFamily() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -2346,19 +1954,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getFamily
 				/// </java-name>
-				public string Family
+				public virtual string Family
 				{
-				[Dot42.DexImport("getFamily", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetFamily(); }
+						[Dot42.DexImport("getFamily", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -2378,15 +1986,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
 				public UnderlineSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2417,10 +2016,10 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2443,15 +2042,6 @@ namespace Android.Text.Style
 				}
 
 				/// <java-name>
-				/// getSpanTypeId
-				/// </java-name>
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-				public virtual int GetSpanTypeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -2466,15 +2056,6 @@ namespace Android.Text.Style
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
 				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getURL
-				/// </java-name>
-				[Dot42.DexImport("getURL", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetURL() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -2493,19 +2074,19 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
-				public int SpanTypeId
+				public virtual int SpanTypeId
 				{
-				[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
-						get{ return GetSpanTypeId(); }
+						[Dot42.DexImport("getSpanTypeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getURL
 				/// </java-name>
-				public string URL
+				public virtual string URL
 				{
-				[Dot42.DexImport("getURL", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetURL(); }
+						[Dot42.DexImport("getURL", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}

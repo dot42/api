@@ -69,24 +69,6 @@ namespace Android.Net.Http
 				}
 
 				/// <java-name>
-				/// getParams
-				/// </java-name>
-				[Dot42.DexImport("getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
-				public global::Org.Apache.Http.Params.IHttpParams GetParams() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Params.IHttpParams);
-				}
-
-				/// <java-name>
-				/// getConnectionManager
-				/// </java-name>
-				[Dot42.DexImport("getConnectionManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 1)]
-				public global::Org.Apache.Http.Conn.IClientConnectionManager GetConnectionManager() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.IClientConnectionManager);
-				}
-
-				/// <java-name>
 				/// execute
 				/// </java-name>
 				[Dot42.DexImport("execute", "(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;", AccessFlags = 1)]
@@ -227,8 +209,8 @@ namespace Android.Net.Http
 				/// </java-name>
 				public global::Org.Apache.Http.Params.IHttpParams Params
 				{
-				[Dot42.DexImport("getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
-						get{ return GetParams(); }
+						[Dot42.DexImport("getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Params.IHttpParams); }
 				}
 
 				/// <java-name>
@@ -236,8 +218,8 @@ namespace Android.Net.Http
 				/// </java-name>
 				public global::Org.Apache.Http.Conn.IClientConnectionManager ConnectionManager
 				{
-				[Dot42.DexImport("getConnectionManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 1)]
-						get{ return GetConnectionManager(); }
+						[Dot42.DexImport("getConnectionManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Conn.IClientConnectionManager); }
 				}
 
 		}
@@ -252,15 +234,6 @@ namespace Android.Net.Http
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal HttpResponseCache() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getInstalled
-				/// </java-name>
-				[Dot42.DexImport("getInstalled", "()Landroid/net/http/HttpResponseCache;", AccessFlags = 9)]
-				public static global::Android.Net.Http.HttpResponseCache GetInstalled() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Http.HttpResponseCache);
 				}
 
 				/// <java-name>
@@ -318,33 +291,6 @@ namespace Android.Net.Http
 				}
 
 				/// <java-name>
-				/// getNetworkCount
-				/// </java-name>
-				[Dot42.DexImport("getNetworkCount", "()I", AccessFlags = 1)]
-				public int GetNetworkCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHitCount
-				/// </java-name>
-				[Dot42.DexImport("getHitCount", "()I", AccessFlags = 1)]
-				public int GetHitCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRequestCount
-				/// </java-name>
-				[Dot42.DexImport("getRequestCount", "()I", AccessFlags = 1)]
-				public int GetRequestCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// close
 				/// </java-name>
 				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
@@ -365,8 +311,8 @@ namespace Android.Net.Http
 				/// </java-name>
 				public static global::Android.Net.Http.HttpResponseCache Installed
 				{
-				[Dot42.DexImport("getInstalled", "()Landroid/net/http/HttpResponseCache;", AccessFlags = 9)]
-						get{ return GetInstalled(); }
+						[Dot42.DexImport("getInstalled", "()Landroid/net/http/HttpResponseCache;", AccessFlags = 9)]
+						get{ return default(global::Android.Net.Http.HttpResponseCache); }
 				}
 
 				/// <java-name>
@@ -374,8 +320,8 @@ namespace Android.Net.Http
 				/// </java-name>
 				public int NetworkCount
 				{
-				[Dot42.DexImport("getNetworkCount", "()I", AccessFlags = 1)]
-						get{ return GetNetworkCount(); }
+						[Dot42.DexImport("getNetworkCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -383,8 +329,8 @@ namespace Android.Net.Http
 				/// </java-name>
 				public int HitCount
 				{
-				[Dot42.DexImport("getHitCount", "()I", AccessFlags = 1)]
-						get{ return GetHitCount(); }
+						[Dot42.DexImport("getHitCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -392,8 +338,8 @@ namespace Android.Net.Http
 				/// </java-name>
 				public int RequestCount
 				{
-				[Dot42.DexImport("getRequestCount", "()I", AccessFlags = 1)]
-						get{ return GetRequestCount(); }
+						[Dot42.DexImport("getRequestCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -439,60 +385,6 @@ namespace Android.Net.Http
 				}
 
 				/// <java-name>
-				/// getValidNotBeforeDate
-				/// </java-name>
-				[Dot42.DexImport("getValidNotBeforeDate", "()Ljava/util/Date;", AccessFlags = 1)]
-				public virtual global::Java.Util.Date GetValidNotBeforeDate() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// getValidNotBefore
-				/// </java-name>
-				[Dot42.DexImport("getValidNotBefore", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetValidNotBefore() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getValidNotAfterDate
-				/// </java-name>
-				[Dot42.DexImport("getValidNotAfterDate", "()Ljava/util/Date;", AccessFlags = 1)]
-				public virtual global::Java.Util.Date GetValidNotAfterDate() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// getValidNotAfter
-				/// </java-name>
-				[Dot42.DexImport("getValidNotAfter", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetValidNotAfter() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getIssuedTo
-				/// </java-name>
-				[Dot42.DexImport("getIssuedTo", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
-				public virtual global::Android.Net.Http.SslCertificate.DName GetIssuedTo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Http.SslCertificate.DName);
-				}
-
-				/// <java-name>
-				/// getIssuedBy
-				/// </java-name>
-				[Dot42.DexImport("getIssuedBy", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
-				public virtual global::Android.Net.Http.SslCertificate.DName GetIssuedBy() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Http.SslCertificate.DName);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -509,55 +401,55 @@ namespace Android.Net.Http
 				/// <java-name>
 				/// getValidNotBeforeDate
 				/// </java-name>
-				public global::Java.Util.Date ValidNotBeforeDate
+				public virtual global::Java.Util.Date ValidNotBeforeDate
 				{
-				[Dot42.DexImport("getValidNotBeforeDate", "()Ljava/util/Date;", AccessFlags = 1)]
-						get{ return GetValidNotBeforeDate(); }
+						[Dot42.DexImport("getValidNotBeforeDate", "()Ljava/util/Date;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Date); }
 				}
 
 				/// <java-name>
 				/// getValidNotBefore
 				/// </java-name>
-				public string ValidNotBefore
+				public virtual string ValidNotBefore
 				{
-				[Dot42.DexImport("getValidNotBefore", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetValidNotBefore(); }
+						[Dot42.DexImport("getValidNotBefore", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getValidNotAfterDate
 				/// </java-name>
-				public global::Java.Util.Date ValidNotAfterDate
+				public virtual global::Java.Util.Date ValidNotAfterDate
 				{
-				[Dot42.DexImport("getValidNotAfterDate", "()Ljava/util/Date;", AccessFlags = 1)]
-						get{ return GetValidNotAfterDate(); }
+						[Dot42.DexImport("getValidNotAfterDate", "()Ljava/util/Date;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Date); }
 				}
 
 				/// <java-name>
 				/// getValidNotAfter
 				/// </java-name>
-				public string ValidNotAfter
+				public virtual string ValidNotAfter
 				{
-				[Dot42.DexImport("getValidNotAfter", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetValidNotAfter(); }
+						[Dot42.DexImport("getValidNotAfter", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getIssuedTo
 				/// </java-name>
-				public global::Android.Net.Http.SslCertificate.DName IssuedTo
+				public virtual global::Android.Net.Http.SslCertificate.DName IssuedTo
 				{
-				[Dot42.DexImport("getIssuedTo", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
-						get{ return GetIssuedTo(); }
+						[Dot42.DexImport("getIssuedTo", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Http.SslCertificate.DName); }
 				}
 
 				/// <java-name>
 				/// getIssuedBy
 				/// </java-name>
-				public global::Android.Net.Http.SslCertificate.DName IssuedBy
+				public virtual global::Android.Net.Http.SslCertificate.DName IssuedBy
 				{
-				[Dot42.DexImport("getIssuedBy", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
-						get{ return GetIssuedBy(); }
+						[Dot42.DexImport("getIssuedBy", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Http.SslCertificate.DName); }
 				}
 
 				/// <java-name>
@@ -586,33 +478,6 @@ namespace Android.Net.Http
 								return default(string);
 						}
 
-						/// <java-name>
-						/// getCName
-						/// </java-name>
-						[Dot42.DexImport("getCName", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetCName() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// getOName
-						/// </java-name>
-						[Dot42.DexImport("getOName", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetOName() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// getUName
-						/// </java-name>
-						[Dot42.DexImport("getUName", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetUName() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal DName() /* TypeBuilder.AddDefaultConstructor */ 
 						{
@@ -621,28 +486,28 @@ namespace Android.Net.Http
 						/// <java-name>
 						/// getCName
 						/// </java-name>
-						public string CName
+						public virtual string CName
 						{
-						[Dot42.DexImport("getCName", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetCName(); }
+								[Dot42.DexImport("getCName", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getOName
 						/// </java-name>
-						public string OName
+						public virtual string OName
 						{
-						[Dot42.DexImport("getOName", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetOName(); }
+								[Dot42.DexImport("getOName", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getUName
 						/// </java-name>
-						public string UName
+						public virtual string UName
 						{
-						[Dot42.DexImport("getUName", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetUName(); }
+								[Dot42.DexImport("getUName", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 				}
@@ -712,24 +577,6 @@ namespace Android.Net.Http
 				}
 
 				/// <java-name>
-				/// getCertificate
-				/// </java-name>
-				[Dot42.DexImport("getCertificate", "()Landroid/net/http/SslCertificate;", AccessFlags = 1)]
-				public virtual global::Android.Net.Http.SslCertificate GetCertificate() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Http.SslCertificate);
-				}
-
-				/// <java-name>
-				/// getUrl
-				/// </java-name>
-				[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUrl() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// addError
 				/// </java-name>
 				[Dot42.DexImport("addError", "(I)Z", AccessFlags = 1)]
@@ -745,15 +592,6 @@ namespace Android.Net.Http
 				public virtual bool HasError(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getPrimaryError
-				/// </java-name>
-				[Dot42.DexImport("getPrimaryError", "()I", AccessFlags = 1)]
-				public virtual int GetPrimaryError() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -773,28 +611,28 @@ namespace Android.Net.Http
 				/// <java-name>
 				/// getCertificate
 				/// </java-name>
-				public global::Android.Net.Http.SslCertificate Certificate
+				public virtual global::Android.Net.Http.SslCertificate Certificate
 				{
-				[Dot42.DexImport("getCertificate", "()Landroid/net/http/SslCertificate;", AccessFlags = 1)]
-						get{ return GetCertificate(); }
+						[Dot42.DexImport("getCertificate", "()Landroid/net/http/SslCertificate;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Http.SslCertificate); }
 				}
 
 				/// <java-name>
 				/// getUrl
 				/// </java-name>
-				public string Url
+				public virtual string Url
 				{
-				[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUrl(); }
+						[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPrimaryError
 				/// </java-name>
-				public int PrimaryError
+				public virtual int PrimaryError
 				{
-				[Dot42.DexImport("getPrimaryError", "()I", AccessFlags = 1)]
-						get{ return GetPrimaryError(); }
+						[Dot42.DexImport("getPrimaryError", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

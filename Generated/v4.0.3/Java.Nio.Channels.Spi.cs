@@ -14,15 +14,6 @@ namespace Java.Nio.Channels.Spi
 				}
 
 				/// <java-name>
-				/// isOpen
-				/// </java-name>
-				[Dot42.DexImport("isOpen", "()Z", AccessFlags = 49)]
-				public bool IsOpen() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// close
 				/// </java-name>
 				[Dot42.DexImport("close", "()V", AccessFlags = 17)]
@@ -52,6 +43,15 @@ namespace Java.Nio.Channels.Spi
 				[Dot42.DexImport("implCloseChannel", "()V", AccessFlags = 1028)]
 				protected internal abstract void ImplCloseChannel() /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// isOpen
+				/// </java-name>
+				public bool IsOpen
+				{
+						[Dot42.DexImport("isOpen", "()Z", AccessFlags = 49)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -73,15 +73,6 @@ namespace Java.Nio.Channels.Spi
 				public override global::Java.Nio.Channels.Spi.SelectorProvider Provider() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.Channels.Spi.SelectorProvider);
-				}
-
-				/// <java-name>
-				/// isRegistered
-				/// </java-name>
-				[Dot42.DexImport("isRegistered", "()Z", AccessFlags = 49)]
-				public override bool IsRegistered() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -118,15 +109,6 @@ namespace Java.Nio.Channels.Spi
 				protected internal abstract void ImplCloseSelectableChannel() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isBlocking
-				/// </java-name>
-				[Dot42.DexImport("isBlocking", "()Z", AccessFlags = 17)]
-				public override bool IsBlocking() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// blockingLock
 				/// </java-name>
 				[Dot42.DexImport("blockingLock", "()Ljava/lang/Object;", AccessFlags = 17)]
@@ -155,6 +137,24 @@ namespace Java.Nio.Channels.Spi
 				{
 				}
 
+				/// <java-name>
+				/// isRegistered
+				/// </java-name>
+				public override bool IsRegistered
+				{
+						[Dot42.DexImport("isRegistered", "()Z", AccessFlags = 49)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isBlocking
+				/// </java-name>
+				public override bool IsBlocking
+				{
+						[Dot42.DexImport("isBlocking", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -170,20 +170,20 @@ namespace Java.Nio.Channels.Spi
 				}
 
 				/// <java-name>
-				/// isValid
-				/// </java-name>
-				[Dot42.DexImport("isValid", "()Z", AccessFlags = 17)]
-				public override bool IsValid() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// cancel
 				/// </java-name>
 				[Dot42.DexImport("cancel", "()V", AccessFlags = 17)]
 				public override void Cancel() /* MethodBuilder.Create */ 
 				{
+				}
+
+				/// <java-name>
+				/// isValid
+				/// </java-name>
+				public override bool IsValid
+				{
+						[Dot42.DexImport("isValid", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -215,30 +215,12 @@ namespace Java.Nio.Channels.Spi
 				protected internal abstract void ImplCloseSelector() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isOpen
-				/// </java-name>
-				[Dot42.DexImport("isOpen", "()Z", AccessFlags = 17)]
-				public override bool IsOpen() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// provider
 				/// </java-name>
 				[Dot42.DexImport("provider", "()Ljava/nio/channels/spi/SelectorProvider;", AccessFlags = 17)]
 				public override global::Java.Nio.Channels.Spi.SelectorProvider Provider() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.Channels.Spi.SelectorProvider);
-				}
-
-				/// <java-name>
-				/// cancelledKeys
-				/// </java-name>
-				[Dot42.DexImport("cancelledKeys", "()Ljava/util/Set;", AccessFlags = 20, Signature = "()Ljava/util/Set<Ljava/nio/channels/SelectionKey;>;")]
-				protected internal global::Java.Util.ISet<global::Java.Nio.Channels.SelectionKey> CancelledKeys() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<global::Java.Nio.Channels.SelectionKey>);
 				}
 
 				/// <java-name>
@@ -275,6 +257,24 @@ namespace Java.Nio.Channels.Spi
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal AbstractSelector() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// isOpen
+				/// </java-name>
+				public override bool IsOpen
+				{
+						[Dot42.DexImport("isOpen", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// cancelledKeys
+				/// </java-name>
+				protected internal global::Java.Util.ISet<global::Java.Nio.Channels.SelectionKey> CancelledKeys
+				{
+						[Dot42.DexImport("cancelledKeys", "()Ljava/util/Set;", AccessFlags = 20, Signature = "()Ljava/util/Set<Ljava/nio/channels/SelectionKey;>;")]
+						get{ return default(global::Java.Util.ISet<global::Java.Nio.Channels.SelectionKey>); }
 				}
 
 		}

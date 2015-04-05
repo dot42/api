@@ -246,15 +246,6 @@ namespace System.Text
             return JavaSubstring(startIndex, startIndex + length);
         }
 
-        /// <summary>
-        /// Gets the length of this sequence.
-        /// </summary>
-        [Dot42.DexImport("length", "()I")]
-        int ICharSequence.GetLength()
-	    {
-	        return Length;
-	    }
-
         /// <java-name>
         /// charAt
         /// </java-name>

@@ -1,13 +1,15 @@
 ﻿
+using Java.Lang.Reflect;
+
 namespace System.Reflection
 {
     public abstract class MethodBase : JavaMemberInfo
     {
-        public MethodBase(JavaConstructor ctor):base(ctor)
+        public MethodBase(Constructor ctor):base(ctor)
         {
         }
 
-        public MethodBase(JavaMethod method) : base(method)
+        public MethodBase(Method method) : base(method)
         {
         }
 

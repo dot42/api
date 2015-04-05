@@ -9,7 +9,7 @@ namespace Android.Test.Suitebuilder
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/reflect/Method;Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/reflect/Method;Ljava/lang/Class<+Ljunit/framework/TestCase;>;)V")]
-				public TestMethod(global::System.Reflection.JavaMethod javaMethod, global::System.Type type) /* MethodBuilder.Create */ 
+				public TestMethod(global::Java.Lang.Reflect.Method method, global::System.Type type) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -24,39 +24,12 @@ namespace Android.Test.Suitebuilder
 				}
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getEnclosingClassname
-				/// </java-name>
-				[Dot42.DexImport("getEnclosingClassname", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEnclosingClassname() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getAnnotation
 				/// </java-name>
 				[Dot42.DexImport("getAnnotation", "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", AccessFlags = 1, Signature = "<T::Ljava/lang/annotation/Annotation;>(Ljava/lang/Class<TT;>;)TT;")]
 				public virtual T GetAnnotation<T>(global::System.Type type) /* MethodBuilder.Create */ 
 				{
 						return default(T);
-				}
-
-				/// <java-name>
-				/// getEnclosingClass
-				/// </java-name>
-				[Dot42.DexImport("getEnclosingClass", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<+Ljunit/framework/TestCase;>;")]
-				public virtual global::System.Type GetEnclosingClass() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
 				}
 
 				/// <java-name>
@@ -103,28 +76,28 @@ namespace Android.Test.Suitebuilder
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getEnclosingClassname
 				/// </java-name>
-				public string EnclosingClassname
+				public virtual string EnclosingClassname
 				{
-				[Dot42.DexImport("getEnclosingClassname", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEnclosingClassname(); }
+						[Dot42.DexImport("getEnclosingClassname", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getEnclosingClass
 				/// </java-name>
-				public global::System.Type EnclosingClass
+				public virtual global::System.Type EnclosingClass
 				{
-				[Dot42.DexImport("getEnclosingClass", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<+Ljunit/framework/TestCase;>;")]
-						get{ return GetEnclosingClass(); }
+						[Dot42.DexImport("getEnclosingClass", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<+Ljunit/framework/TestCase;>;")]
+						get{ return default(global::System.Type); }
 				}
 
 		}
@@ -202,15 +175,6 @@ namespace Android.Test.Suitebuilder
 				}
 
 				/// <java-name>
-				/// getSuiteName
-				/// </java-name>
-				[Dot42.DexImport("getSuiteName", "()Ljava/lang/String;", AccessFlags = 4)]
-				protected internal virtual string GetSuiteName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// addRequirements
 				/// </java-name>
 				[Dot42.DexImport("addRequirements", "([Lcom/android/internal/util/Predicate;)Landroid/test/suitebuilder/TestSuiteBuild" +
@@ -229,10 +193,10 @@ namespace Android.Test.Suitebuilder
 				/// <java-name>
 				/// getSuiteName
 				/// </java-name>
-				protected internal string SuiteName
+				protected internal virtual string SuiteName
 				{
-				[Dot42.DexImport("getSuiteName", "()Ljava/lang/String;", AccessFlags = 4)]
-						get{ return GetSuiteName(); }
+						[Dot42.DexImport("getSuiteName", "()Ljava/lang/String;", AccessFlags = 4)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>

@@ -136,12 +136,6 @@ namespace Org.Xml.Sax
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getName
 				/// </java-name>
 				[Dot42.DexImport("getName", "(I)Ljava/lang/String;", AccessFlags = 1025)]
@@ -171,6 +165,15 @@ namespace Org.Xml.Sax
 				[Dot42.DexImport("getValue", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
 				string GetValue(string @string) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getLength
+				/// </java-name>
+				int Length
+				{
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -180,12 +183,6 @@ namespace Org.Xml.Sax
 		public partial interface IAttributes
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// getURI
 				/// </java-name>
@@ -251,6 +248,15 @@ namespace Org.Xml.Sax
 				/// </java-name>
 				[Dot42.DexImport("getValue", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
 				string GetValue(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getLength
+				/// </java-name>
+				int Length
+				{
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -460,26 +466,38 @@ namespace Org.Xml.Sax
 				/// <java-name>
 				/// getPublicId
 				/// </java-name>
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPublicId() /* MethodBuilder.Create */ ;
+				string PublicId
+				{
+						[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
+				string SystemId
+				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getLineNumber
 				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1025)]
-				int GetLineNumber() /* MethodBuilder.Create */ ;
+				int LineNumber
+				{
+						[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getColumnNumber
 				/// </java-name>
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1025)]
-				int GetColumnNumber() /* MethodBuilder.Create */ ;
+				int ColumnNumber
+				{
+						[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -511,143 +529,58 @@ namespace Org.Xml.Sax
 				}
 
 				/// <java-name>
-				/// setPublicId
-				/// </java-name>
-				[Dot42.DexImport("setPublicId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetPublicId(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getPublicId
 				/// </java-name>
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPublicId() /* MethodBuilder.Create */ 
+				public virtual string PublicId
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSystemId(string @string) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPublicId", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSystemId() /* MethodBuilder.Create */ 
+				public virtual string SystemId
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setByteStream
-				/// </java-name>
-				[Dot42.DexImport("setByteStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void SetByteStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getByteStream
 				/// </java-name>
-				[Dot42.DexImport("getByteStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetByteStream() /* MethodBuilder.Create */ 
+				public virtual global::Java.Io.InputStream ByteStream
 				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// setEncoding
-				/// </java-name>
-				[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetEncoding(string @string) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getByteStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+						[Dot42.DexImport("setByteStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getEncoding
 				/// </java-name>
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEncoding() /* MethodBuilder.Create */ 
+				public virtual string Encoding
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setCharacterStream
-				/// </java-name>
-				[Dot42.DexImport("setCharacterStream", "(Ljava/io/Reader;)V", AccessFlags = 1)]
-				public virtual void SetCharacterStream(global::Java.Io.Reader reader) /* MethodBuilder.Create */ 
-				{
+						[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCharacterStream
 				/// </java-name>
-				[Dot42.DexImport("getCharacterStream", "()Ljava/io/Reader;", AccessFlags = 1)]
-				public virtual global::Java.Io.Reader GetCharacterStream() /* MethodBuilder.Create */ 
+				public virtual global::Java.Io.Reader CharacterStream
 				{
-						return default(global::Java.Io.Reader);
-				}
-
-				/// <java-name>
-				/// getPublicId
-				/// </java-name>
-				public string PublicId
-				{
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPublicId(); }
-				[Dot42.DexImport("setPublicId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPublicId(value); }
-				}
-
-				/// <java-name>
-				/// getSystemId
-				/// </java-name>
-				public string SystemId
-				{
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSystemId(); }
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSystemId(value); }
-				}
-
-				/// <java-name>
-				/// getByteStream
-				/// </java-name>
-				public global::Java.Io.InputStream ByteStream
-				{
-				[Dot42.DexImport("getByteStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetByteStream(); }
-				[Dot42.DexImport("setByteStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-						set{ SetByteStream(value); }
-				}
-
-				/// <java-name>
-				/// getEncoding
-				/// </java-name>
-				public string Encoding
-				{
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEncoding(); }
-				[Dot42.DexImport("setEncoding", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetEncoding(value); }
-				}
-
-				/// <java-name>
-				/// getCharacterStream
-				/// </java-name>
-				public global::Java.Io.Reader CharacterStream
-				{
-				[Dot42.DexImport("getCharacterStream", "()Ljava/io/Reader;", AccessFlags = 1)]
-						get{ return GetCharacterStream(); }
-				[Dot42.DexImport("setCharacterStream", "(Ljava/io/Reader;)V", AccessFlags = 1)]
-						set{ SetCharacterStream(value); }
+						[Dot42.DexImport("getCharacterStream", "()Ljava/io/Reader;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.Reader); }
+						[Dot42.DexImport("setCharacterStream", "(Ljava/io/Reader;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -711,16 +644,15 @@ namespace Org.Xml.Sax
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// setParent
-				/// </java-name>
-				[Dot42.DexImport("setParent", "(Lorg/xml/sax/XMLReader;)V", AccessFlags = 1025)]
-				void SetParent(global::Org.Xml.Sax.IXMLReader xMLReader) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getParent
 				/// </java-name>
-				[Dot42.DexImport("getParent", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1025)]
-				global::Org.Xml.Sax.IXMLReader GetParent() /* MethodBuilder.Create */ ;
+				global::Org.Xml.Sax.IXMLReader Parent
+				{
+						[Dot42.DexImport("getParent", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setParent", "(Lorg/xml/sax/XMLReader;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -756,54 +688,6 @@ namespace Org.Xml.Sax
 				void SetProperty(string @string, object @object) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setEntityResolver
-				/// </java-name>
-				[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1025)]
-				void SetEntityResolver(global::Org.Xml.Sax.IEntityResolver entityResolver) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEntityResolver
-				/// </java-name>
-				[Dot42.DexImport("getEntityResolver", "()Lorg/xml/sax/EntityResolver;", AccessFlags = 1025)]
-				global::Org.Xml.Sax.IEntityResolver GetEntityResolver() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setDTDHandler
-				/// </java-name>
-				[Dot42.DexImport("setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", AccessFlags = 1025)]
-				void SetDTDHandler(global::Org.Xml.Sax.IDTDHandler dTDHandler) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDTDHandler
-				/// </java-name>
-				[Dot42.DexImport("getDTDHandler", "()Lorg/xml/sax/DTDHandler;", AccessFlags = 1025)]
-				global::Org.Xml.Sax.IDTDHandler GetDTDHandler() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setContentHandler
-				/// </java-name>
-				[Dot42.DexImport("setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1025)]
-				void SetContentHandler(global::Org.Xml.Sax.IContentHandler contentHandler) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getContentHandler
-				/// </java-name>
-				[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1025)]
-				global::Org.Xml.Sax.IContentHandler GetContentHandler() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1025)]
-				void SetErrorHandler(global::Org.Xml.Sax.IErrorHandler errorHandler) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1025)]
-				global::Org.Xml.Sax.IErrorHandler GetErrorHandler() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Lorg/xml/sax/InputSource;)V", AccessFlags = 1025)]
@@ -814,6 +698,50 @@ namespace Org.Xml.Sax
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/lang/String;)V", AccessFlags = 1025)]
 				void Parse(string @string) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getEntityResolver
+				/// </java-name>
+				global::Org.Xml.Sax.IEntityResolver EntityResolver
+				{
+						[Dot42.DexImport("getEntityResolver", "()Lorg/xml/sax/EntityResolver;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getDTDHandler
+				/// </java-name>
+				global::Org.Xml.Sax.IDTDHandler DTDHandler
+				{
+						[Dot42.DexImport("getDTDHandler", "()Lorg/xml/sax/DTDHandler;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getContentHandler
+				/// </java-name>
+				global::Org.Xml.Sax.IContentHandler ContentHandler
+				{
+						[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getErrorHandler
+				/// </java-name>
+				global::Org.Xml.Sax.IErrorHandler ErrorHandler
+				{
+						[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -854,15 +782,6 @@ namespace Org.Xml.Sax
 				}
 
 				/// <java-name>
-				/// getException
-				/// </java-name>
-				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
-				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -874,10 +793,10 @@ namespace Org.Xml.Sax
 				/// <java-name>
 				/// getException
 				/// </java-name>
-				public global::System.Exception Exception
+				public virtual global::System.Exception Exception
 				{
-				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
-						get{ return GetException(); }
+						[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
+						get{ return default(global::System.Exception); }
 				}
 
 		}
@@ -947,42 +866,6 @@ namespace Org.Xml.Sax
 				{
 				}
 
-				/// <java-name>
-				/// getPublicId
-				/// </java-name>
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPublicId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSystemId
-				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSystemId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLineNumber
-				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-				public virtual int GetLineNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getColumnNumber
-				/// </java-name>
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1)]
-				public virtual int GetColumnNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal SAXParseException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -991,37 +874,37 @@ namespace Org.Xml.Sax
 				/// <java-name>
 				/// getPublicId
 				/// </java-name>
-				public string PublicId
+				public virtual string PublicId
 				{
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPublicId(); }
+						[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				public string SystemId
+				public virtual string SystemId
 				{
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSystemId(); }
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getLineNumber
 				/// </java-name>
-				public int LineNumber
+				public virtual int LineNumber
 				{
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-						get{ return GetLineNumber(); }
+						[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnNumber
 				/// </java-name>
-				public int ColumnNumber
+				public virtual int ColumnNumber
 				{
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1)]
-						get{ return GetColumnNumber(); }
+						[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

@@ -29,12 +29,6 @@ namespace Java.Security.Acl
 				void SetName(global::Java.Security.IPrincipal principal, string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// addEntry
 				/// </java-name>
 				[Dot42.DexImport("addEntry", "(Ljava/security/Principal;Ljava/security/acl/AclEntry;)Z", AccessFlags = 1025)]
@@ -71,6 +65,15 @@ namespace Java.Security.Acl
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1025)]
 				string ToString() /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				string Name
+				{
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -87,22 +90,10 @@ namespace Java.Security.Acl
 				bool SetPrincipal(global::Java.Security.IPrincipal principal) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				global::Java.Security.IPrincipal GetPrincipal() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setNegativePermissions
 				/// </java-name>
 				[Dot42.DexImport("setNegativePermissions", "()V", AccessFlags = 1025)]
 				void SetNegativePermissions() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isNegative
-				/// </java-name>
-				[Dot42.DexImport("isNegative", "()Z", AccessFlags = 1025)]
-				bool IsNegative() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// addPermission
@@ -139,6 +130,24 @@ namespace Java.Security.Acl
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1025)]
 				object Clone() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getPrincipal
+				/// </java-name>
+				global::Java.Security.IPrincipal Principal
+				{
+						[Dot42.DexImport("getPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isNegative
+				/// </java-name>
+				bool IsNegative
+				{
+						[Dot42.DexImport("isNegative", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

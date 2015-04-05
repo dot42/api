@@ -67,24 +67,6 @@ namespace Javax.Security.Auth.X500
 				}
 
 				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetEncoded() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getName
 				/// </java-name>
 				[Dot42.DexImport("getName", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
@@ -131,8 +113,8 @@ namespace Javax.Security.Auth.X500
 				/// </java-name>
 				public byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -140,8 +122,8 @@ namespace Javax.Security.Auth.X500
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}

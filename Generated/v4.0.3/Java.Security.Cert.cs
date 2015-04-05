@@ -14,15 +14,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
@@ -47,12 +38,6 @@ namespace Java.Security.Cert
 				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// verify
 				/// </java-name>
 				[Dot42.DexImport("verify", "(Ljava/security/PublicKey;)V", AccessFlags = 1025)]
@@ -74,12 +59,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getPublicKey
-				/// </java-name>
-				[Dot42.DexImport("getPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1025)]
-				public abstract global::Java.Security.IPublicKey GetPublicKey() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// writeReplace
 				/// </java-name>
 				[Dot42.DexImport("writeReplace", "()Ljava/lang/Object;", AccessFlags = 4)]
@@ -98,26 +77,26 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public string Type
 				{
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public abstract byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getPublicKey
 				/// </java-name>
-				public global::Java.Security.IPublicKey PublicKey
+				public abstract global::Java.Security.IPublicKey PublicKey
 				{
-				[Dot42.DexImport("getPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1025)]
-						get{ return GetPublicKey(); }
+						[Dot42.DexImport("getPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
@@ -274,39 +253,12 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// generateCertificate
 				/// </java-name>
 				[Dot42.DexImport("generateCertificate", "(Ljava/io/InputStream;)Ljava/security/cert/Certificate;", AccessFlags = 17)]
 				public global::Java.Security.Cert.Certificate GenerateCertificate(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.Cert.Certificate);
-				}
-
-				/// <java-name>
-				/// getCertPathEncodings
-				/// </java-name>
-				[Dot42.DexImport("getCertPathEncodings", "()Ljava/util/Iterator;", AccessFlags = 17, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
-				public global::Java.Util.IIterator<string> GetCertPathEncodings() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IIterator<string>);
 				}
 
 				/// <java-name>
@@ -374,8 +326,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 				/// <java-name>
@@ -383,8 +335,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public string Type
 				{
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -392,8 +344,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public global::Java.Util.IIterator<string> CertPathEncodings
 				{
-				[Dot42.DexImport("getCertPathEncodings", "()Ljava/util/Iterator;", AccessFlags = 17, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
-						get{ return GetCertPathEncodings(); }
+						[Dot42.DexImport("getCertPathEncodings", "()Ljava/util/Iterator;", AccessFlags = 17, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IIterator<string>); }
 				}
 
 		}
@@ -534,15 +486,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
@@ -570,22 +513,10 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getCertificates
-				/// </java-name>
-				[Dot42.DexImport("getCertificates", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<+Ljava/security/cert/Certificate;>;")]
-				public abstract global::Java.Util.IList<global::Java.Security.Cert.Certificate> GetCertificates() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getEncoded
 				/// </java-name>
 				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
 				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetEncoded() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getEncoded
@@ -598,12 +529,6 @@ namespace Java.Security.Cert
 				/// </java-name>
 				[Dot42.DexImport("getEncoded", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract byte[] GetEncoded(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEncodings
-				/// </java-name>
-				[Dot42.DexImport("getEncodings", "()Ljava/util/Iterator;", AccessFlags = 1025, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
-				public abstract global::Java.Util.IIterator<string> GetEncodings() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// writeReplace
@@ -622,37 +547,37 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				public string Type
+				public virtual string Type
 				{
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getCertificates
 				/// </java-name>
-				public global::Java.Util.IList<global::Java.Security.Cert.Certificate> Certificates
+				public abstract global::Java.Util.IList<global::Java.Security.Cert.Certificate> Certificates
 				{
-				[Dot42.DexImport("getCertificates", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<+Ljava/security/cert/Certificate;>;")]
-						get{ return GetCertificates(); }
+						[Dot42.DexImport("getCertificates", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<+Ljava/security/cert/Certificate;>;")]
+						get;
 				}
 
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public abstract byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEncodings
 				/// </java-name>
-				public global::Java.Util.IIterator<string> Encodings
+				public abstract global::Java.Util.IIterator<string> Encodings
 				{
-				[Dot42.DexImport("getEncodings", "()Ljava/util/Iterator;", AccessFlags = 1025, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
-						get{ return GetEncodings(); }
+						[Dot42.DexImport("getEncodings", "()Ljava/util/Iterator;", AccessFlags = 1025, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
+						get;
 				}
 
 				/// <java-name>
@@ -704,24 +629,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
 				/// getInstance
 				/// </java-name>
 				[Dot42.DexImport("getInstance", "(Ljava/lang/String;)Ljava/security/cert/CertPathBuilder;", AccessFlags = 9)]
@@ -758,15 +665,6 @@ namespace Java.Security.Cert
 						return default(global::Java.Security.Cert.ICertPathBuilderResult);
 				}
 
-				/// <java-name>
-				/// getDefaultType
-				/// </java-name>
-				[Dot42.DexImport("getDefaultType", "()Ljava/lang/String;", AccessFlags = 25)]
-				public static string GetDefaultType() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal CertPathBuilder() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -777,8 +675,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -786,8 +684,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 				/// <java-name>
@@ -795,8 +693,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public static string DefaultType
 				{
-				[Dot42.DexImport("getDefaultType", "()Ljava/lang/String;", AccessFlags = 25)]
-						get{ return GetDefaultType(); }
+						[Dot42.DexImport("getDefaultType", "()Ljava/lang/String;", AccessFlags = 25)]
+						get{ return default(string); }
 				}
 
 		}
@@ -865,24 +763,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
 				/// getInstance
 				/// </java-name>
 				[Dot42.DexImport("getInstance", "(Ljava/lang/String;)Ljava/security/cert/CertPathValidator;", AccessFlags = 9)]
@@ -920,15 +800,6 @@ namespace Java.Security.Cert
 						return default(global::Java.Security.Cert.ICertPathValidatorResult);
 				}
 
-				/// <java-name>
-				/// getDefaultType
-				/// </java-name>
-				[Dot42.DexImport("getDefaultType", "()Ljava/lang/String;", AccessFlags = 25)]
-				public static string GetDefaultType() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal CertPathValidator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -939,8 +810,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -948,8 +819,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 				/// <java-name>
@@ -957,8 +828,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public static string DefaultType
 				{
-				[Dot42.DexImport("getDefaultType", "()Ljava/lang/String;", AccessFlags = 25)]
-						get{ return GetDefaultType(); }
+						[Dot42.DexImport("getDefaultType", "()Ljava/lang/String;", AccessFlags = 25)]
+						get{ return default(string); }
 				}
 
 		}
@@ -998,37 +869,19 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getCertPath
 				/// </java-name>
-				[Dot42.DexImport("getCertPath", "()Ljava/security/cert/CertPath;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.CertPath GetCertPath() /* MethodBuilder.Create */ 
+				public virtual global::Java.Security.Cert.CertPath CertPath
 				{
-						return default(global::Java.Security.Cert.CertPath);
+						[Dot42.DexImport("getCertPath", "()Ljava/security/cert/CertPath;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.CertPath); }
 				}
 
 				/// <java-name>
 				/// getIndex
 				/// </java-name>
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-				public virtual int GetIndex() /* MethodBuilder.Create */ 
+				public virtual int Index
 				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCertPath
-				/// </java-name>
-				public global::Java.Security.Cert.CertPath CertPath
-				{
-				[Dot42.DexImport("getCertPath", "()Ljava/security/cert/CertPath;", AccessFlags = 1)]
-						get{ return GetCertPath(); }
-				}
-
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				public int Index
-				{
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-						get{ return GetIndex(); }
+						[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1098,33 +951,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
-				/// getCertStoreParameters
-				/// </java-name>
-				[Dot42.DexImport("getCertStoreParameters", "()Ljava/security/cert/CertStoreParameters;", AccessFlags = 17)]
-				public global::Java.Security.Cert.ICertStoreParameters GetCertStoreParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.ICertStoreParameters);
-				}
-
-				/// <java-name>
 				/// getCertificates
 				/// </java-name>
 				[Dot42.DexImport("getCertificates", "(Ljava/security/cert/CertSelector;)Ljava/util/Collection;", AccessFlags = 17, Signature = "(Ljava/security/cert/CertSelector;)Ljava/util/Collection<+Ljava/security/cert/Cer" +
@@ -1144,15 +970,6 @@ namespace Java.Security.Cert
 						return default(global::Java.Util.ICollection<global::Java.Security.Cert.CRL>);
 				}
 
-				/// <java-name>
-				/// getDefaultType
-				/// </java-name>
-				[Dot42.DexImport("getDefaultType", "()Ljava/lang/String;", AccessFlags = 25)]
-				public static string GetDefaultType() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal CertStore() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1163,8 +980,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public string Type
 				{
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1172,8 +989,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 				/// <java-name>
@@ -1181,8 +998,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public global::Java.Security.Cert.ICertStoreParameters CertStoreParameters
 				{
-				[Dot42.DexImport("getCertStoreParameters", "()Ljava/security/cert/CertStoreParameters;", AccessFlags = 17)]
-						get{ return GetCertStoreParameters(); }
+						[Dot42.DexImport("getCertStoreParameters", "()Ljava/security/cert/CertStoreParameters;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Cert.ICertStoreParameters); }
 				}
 
 				/// <java-name>
@@ -1190,8 +1007,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public static string DefaultType
 				{
-				[Dot42.DexImport("getDefaultType", "()Ljava/lang/String;", AccessFlags = 25)]
-						get{ return GetDefaultType(); }
+						[Dot42.DexImport("getDefaultType", "()Ljava/lang/String;", AccessFlags = 25)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1285,15 +1102,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getCollection
-				/// </java-name>
-				[Dot42.DexImport("getCollection", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<*>;")]
-				public virtual global::Java.Util.ICollection<object> GetCollection() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<object>);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -1305,10 +1113,10 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getCollection
 				/// </java-name>
-				public global::Java.Util.ICollection<object> Collection
+				public virtual global::Java.Util.ICollection<object> Collection
 				{
-				[Dot42.DexImport("getCollection", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<*>;")]
-						get{ return GetCollection(); }
+						[Dot42.DexImport("getCollection", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<*>;")]
+						get{ return default(global::Java.Util.ICollection<object>); }
 				}
 
 		}
@@ -1323,15 +1131,6 @@ namespace Java.Security.Cert
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 4)]
 				protected internal CRL(string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -1359,8 +1158,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public string Type
 				{
-				[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1410,8 +1209,11 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getCertPath
 				/// </java-name>
-				[Dot42.DexImport("getCertPath", "()Ljava/security/cert/CertPath;", AccessFlags = 1025)]
-				global::Java.Security.Cert.CertPath GetCertPath() /* MethodBuilder.Create */ ;
+				global::Java.Security.Cert.CertPath CertPath
+				{
+						[Dot42.DexImport("getCertPath", "()Ljava/security/cert/CertPath;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1512,44 +1314,65 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getChildren
 				/// </java-name>
-				[Dot42.DexImport("getChildren", "()Ljava/util/Iterator;", AccessFlags = 1025, Signature = "()Ljava/util/Iterator<+Ljava/security/cert/PolicyNode;>;")]
-				global::Java.Util.IIterator<global::Java.Security.Cert.IPolicyNode> GetChildren() /* MethodBuilder.Create */ ;
+				global::Java.Util.IIterator<global::Java.Security.Cert.IPolicyNode> Children
+				{
+						[Dot42.DexImport("getChildren", "()Ljava/util/Iterator;", AccessFlags = 1025, Signature = "()Ljava/util/Iterator<+Ljava/security/cert/PolicyNode;>;")]
+						get;
+				}
 
 				/// <java-name>
 				/// getDepth
 				/// </java-name>
-				[Dot42.DexImport("getDepth", "()I", AccessFlags = 1025)]
-				int GetDepth() /* MethodBuilder.Create */ ;
+				int Depth
+				{
+						[Dot42.DexImport("getDepth", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getExpectedPolicies
 				/// </java-name>
-				[Dot42.DexImport("getExpectedPolicies", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				global::Java.Util.ISet<string> GetExpectedPolicies() /* MethodBuilder.Create */ ;
+				global::Java.Util.ISet<string> ExpectedPolicies
+				{
+						[Dot42.DexImport("getExpectedPolicies", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get;
+				}
 
 				/// <java-name>
 				/// getParent
 				/// </java-name>
-				[Dot42.DexImport("getParent", "()Ljava/security/cert/PolicyNode;", AccessFlags = 1025)]
-				global::Java.Security.Cert.IPolicyNode GetParent() /* MethodBuilder.Create */ ;
+				global::Java.Security.Cert.IPolicyNode Parent
+				{
+						[Dot42.DexImport("getParent", "()Ljava/security/cert/PolicyNode;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPolicyQualifiers
 				/// </java-name>
-				[Dot42.DexImport("getPolicyQualifiers", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<+Ljava/security/cert/PolicyQualifierInfo;>;")]
-				global::Java.Util.ISet<global::Java.Security.Cert.PolicyQualifierInfo> GetPolicyQualifiers() /* MethodBuilder.Create */ ;
+				global::Java.Util.ISet<global::Java.Security.Cert.PolicyQualifierInfo> PolicyQualifiers
+				{
+						[Dot42.DexImport("getPolicyQualifiers", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<+Ljava/security/cert/PolicyQualifierInfo;>;")]
+						get;
+				}
 
 				/// <java-name>
 				/// getValidPolicy
 				/// </java-name>
-				[Dot42.DexImport("getValidPolicy", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetValidPolicy() /* MethodBuilder.Create */ ;
+				string ValidPolicy
+				{
+						[Dot42.DexImport("getValidPolicy", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// isCritical
 				/// </java-name>
-				[Dot42.DexImport("isCritical", "()Z", AccessFlags = 1025)]
-				bool IsCritical() /* MethodBuilder.Create */ ;
+				bool IsCritical
+				{
+						[Dot42.DexImport("isCritical", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1561,28 +1384,37 @@ namespace Java.Security.Cert
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getCriticalExtensionOIDs
-				/// </java-name>
-				[Dot42.DexImport("getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				global::Java.Util.ISet<string> GetCriticalExtensionOIDs() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getExtensionValue
 				/// </java-name>
 				[Dot42.DexImport("getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
 				byte[] GetExtensionValue(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// getCriticalExtensionOIDs
+				/// </java-name>
+				global::Java.Util.ISet<string> CriticalExtensionOIDs
+				{
+						[Dot42.DexImport("getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get;
+				}
+
+				/// <java-name>
 				/// getNonCriticalExtensionOIDs
 				/// </java-name>
-				[Dot42.DexImport("getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				global::Java.Util.ISet<string> GetNonCriticalExtensionOIDs() /* MethodBuilder.Create */ ;
+				global::Java.Util.ISet<string> NonCriticalExtensionOIDs
+				{
+						[Dot42.DexImport("getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get;
+				}
 
 				/// <java-name>
 				/// hasUnsupportedCriticalExtension
 				/// </java-name>
-				[Dot42.DexImport("hasUnsupportedCriticalExtension", "()Z", AccessFlags = 1025)]
-				bool HasUnsupportedCriticalExtension() /* MethodBuilder.Create */ ;
+				bool HasUnsupportedCriticalExtension
+				{
+						[Dot42.DexImport("hasUnsupportedCriticalExtension", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1618,24 +1450,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-				public virtual int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getServerName
-				/// </java-name>
-				[Dot42.DexImport("getServerName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetServerName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -1647,19 +1461,19 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getPort
 				/// </java-name>
-				public int Port
+				public virtual int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-						get{ return GetPort(); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getServerName
 				/// </java-name>
-				public string ServerName
+				public virtual string ServerName
 				{
-				[Dot42.DexImport("getServerName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetServerName(); }
+						[Dot42.DexImport("getServerName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1683,23 +1497,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getMaxPathLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxPathLength", "()I", AccessFlags = 1)]
-				public virtual int GetMaxPathLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setMaxPathLength
-				/// </java-name>
-				[Dot42.DexImport("setMaxPathLength", "(I)V", AccessFlags = 1)]
-				public virtual void SetMaxPathLength(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -1716,12 +1513,12 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getMaxPathLength
 				/// </java-name>
-				public int MaxPathLength
+				public virtual int MaxPathLength
 				{
-				[Dot42.DexImport("getMaxPathLength", "()I", AccessFlags = 1)]
-						get{ return GetMaxPathLength(); }
-				[Dot42.DexImport("setMaxPathLength", "(I)V", AccessFlags = 1)]
-						set{ SetMaxPathLength(value); }
+						[Dot42.DexImport("getMaxPathLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMaxPathLength", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -1737,15 +1534,6 @@ namespace Java.Security.Cert
     "/PolicyNode;Ljava/security/PublicKey;)V", AccessFlags = 1)]
 				public PKIXCertPathBuilderResult(global::Java.Security.Cert.CertPath certPath, global::Java.Security.Cert.TrustAnchor trustAnchor, global::Java.Security.Cert.IPolicyNode policyNode, global::Java.Security.IPublicKey publicKey) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getCertPath
-				/// </java-name>
-				[Dot42.DexImport("getCertPath", "()Ljava/security/cert/CertPath;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.CertPath GetCertPath() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.CertPath);
 				}
 
 				/// <java-name>
@@ -1771,10 +1559,10 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getCertPath
 				/// </java-name>
-				public global::Java.Security.Cert.CertPath CertPath
+				public virtual global::Java.Security.Cert.CertPath CertPath
 				{
-				[Dot42.DexImport("getCertPath", "()Ljava/security/cert/CertPath;", AccessFlags = 1)]
-						get{ return GetCertPath(); }
+						[Dot42.DexImport("getCertPath", "()Ljava/security/cert/CertPath;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.CertPath); }
 				}
 
 		}
@@ -1807,30 +1595,27 @@ namespace Java.Security.Cert
 				public abstract void Init(bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isForwardCheckingSupported
-				/// </java-name>
-				[Dot42.DexImport("isForwardCheckingSupported", "()Z", AccessFlags = 1025)]
-				public abstract bool IsForwardCheckingSupported() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSupportedExtensions
-				/// </java-name>
-				[Dot42.DexImport("getSupportedExtensions", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public abstract global::Java.Util.ISet<string> GetSupportedExtensions() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// check
 				/// </java-name>
 				[Dot42.DexImport("check", "(Ljava/security/cert/Certificate;Ljava/util/Collection;)V", AccessFlags = 1025, Signature = "(Ljava/security/cert/Certificate;Ljava/util/Collection<Ljava/lang/String;>;)V")]
 				public abstract void Check(global::Java.Security.Cert.Certificate certificate, global::Java.Util.ICollection<string> collection) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// isForwardCheckingSupported
+				/// </java-name>
+				public abstract bool IsForwardCheckingSupported
+				{
+						[Dot42.DexImport("isForwardCheckingSupported", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
 				/// getSupportedExtensions
 				/// </java-name>
-				public global::Java.Util.ISet<string> SupportedExtensions
+				public abstract global::Java.Util.ISet<string> SupportedExtensions
 				{
-				[Dot42.DexImport("getSupportedExtensions", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetSupportedExtensions(); }
+						[Dot42.DexImport("getSupportedExtensions", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get;
 				}
 
 		}
@@ -1846,33 +1631,6 @@ namespace Java.Security.Cert
     "blicKey;)V", AccessFlags = 1)]
 				public PKIXCertPathValidatorResult(global::Java.Security.Cert.TrustAnchor trustAnchor, global::Java.Security.Cert.IPolicyNode policyNode, global::Java.Security.IPublicKey publicKey) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPolicyTree
-				/// </java-name>
-				[Dot42.DexImport("getPolicyTree", "()Ljava/security/cert/PolicyNode;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.IPolicyNode GetPolicyTree() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.IPolicyNode);
-				}
-
-				/// <java-name>
-				/// getPublicKey
-				/// </java-name>
-				[Dot42.DexImport("getPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1)]
-				public virtual global::Java.Security.IPublicKey GetPublicKey() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.IPublicKey);
-				}
-
-				/// <java-name>
-				/// getTrustAnchor
-				/// </java-name>
-				[Dot42.DexImport("getTrustAnchor", "()Ljava/security/cert/TrustAnchor;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.TrustAnchor GetTrustAnchor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.TrustAnchor);
 				}
 
 				/// <java-name>
@@ -1901,28 +1659,28 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getPolicyTree
 				/// </java-name>
-				public global::Java.Security.Cert.IPolicyNode PolicyTree
+				public virtual global::Java.Security.Cert.IPolicyNode PolicyTree
 				{
-				[Dot42.DexImport("getPolicyTree", "()Ljava/security/cert/PolicyNode;", AccessFlags = 1)]
-						get{ return GetPolicyTree(); }
+						[Dot42.DexImport("getPolicyTree", "()Ljava/security/cert/PolicyNode;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.IPolicyNode); }
 				}
 
 				/// <java-name>
 				/// getPublicKey
 				/// </java-name>
-				public global::Java.Security.IPublicKey PublicKey
+				public virtual global::Java.Security.IPublicKey PublicKey
 				{
-				[Dot42.DexImport("getPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1)]
-						get{ return GetPublicKey(); }
+						[Dot42.DexImport("getPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.IPublicKey); }
 				}
 
 				/// <java-name>
 				/// getTrustAnchor
 				/// </java-name>
-				public global::Java.Security.Cert.TrustAnchor TrustAnchor
+				public virtual global::Java.Security.Cert.TrustAnchor TrustAnchor
 				{
-				[Dot42.DexImport("getTrustAnchor", "()Ljava/security/cert/TrustAnchor;", AccessFlags = 1)]
-						get{ return GetTrustAnchor(); }
+						[Dot42.DexImport("getTrustAnchor", "()Ljava/security/cert/TrustAnchor;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.TrustAnchor); }
 				}
 
 		}
@@ -1945,53 +1703,10 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getTrustAnchors
-				/// </java-name>
-				[Dot42.DexImport("getTrustAnchors", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/security/cert/TrustAnchor;>;")]
-				public virtual global::Java.Util.ISet<global::Java.Security.Cert.TrustAnchor> GetTrustAnchors() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<global::Java.Security.Cert.TrustAnchor>);
-				}
-
-				/// <java-name>
-				/// setTrustAnchors
-				/// </java-name>
-				[Dot42.DexImport("setTrustAnchors", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/security/cert/TrustAnchor;>;)V")]
-				public virtual void SetTrustAnchors(global::Java.Util.ISet<global::Java.Security.Cert.TrustAnchor> set) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isAnyPolicyInhibited
-				/// </java-name>
-				[Dot42.DexImport("isAnyPolicyInhibited", "()Z", AccessFlags = 1)]
-				public virtual bool IsAnyPolicyInhibited() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setAnyPolicyInhibited
 				/// </java-name>
 				[Dot42.DexImport("setAnyPolicyInhibited", "(Z)V", AccessFlags = 1)]
 				public virtual void SetAnyPolicyInhibited(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCertPathCheckers
-				/// </java-name>
-				[Dot42.DexImport("getCertPathCheckers", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/security/cert/PKIXCertPathChecker;>;")]
-				public virtual global::Java.Util.IList<global::Java.Security.Cert.PKIXCertPathChecker> GetCertPathCheckers() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Java.Security.Cert.PKIXCertPathChecker>);
-				}
-
-				/// <java-name>
-				/// setCertPathCheckers
-				/// </java-name>
-				[Dot42.DexImport("setCertPathCheckers", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/security/cert/PKIXCertPathChecker;>;)V")]
-				public virtual void SetCertPathCheckers(global::Java.Util.IList<global::Java.Security.Cert.PKIXCertPathChecker> list) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2004,54 +1719,11 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getCertStores
-				/// </java-name>
-				[Dot42.DexImport("getCertStores", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/security/cert/CertStore;>;")]
-				public virtual global::Java.Util.IList<global::Java.Security.Cert.CertStore> GetCertStores() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Java.Security.Cert.CertStore>);
-				}
-
-				/// <java-name>
-				/// setCertStores
-				/// </java-name>
-				[Dot42.DexImport("setCertStores", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/security/cert/CertStore;>;)V")]
-				public virtual void SetCertStores(global::Java.Util.IList<global::Java.Security.Cert.CertStore> list) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// addCertStore
 				/// </java-name>
 				[Dot42.DexImport("addCertStore", "(Ljava/security/cert/CertStore;)V", AccessFlags = 1)]
 				public virtual void AddCertStore(global::Java.Security.Cert.CertStore certStore) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getDate
-				/// </java-name>
-				[Dot42.DexImport("getDate", "()Ljava/util/Date;", AccessFlags = 1)]
-				public virtual global::Java.Util.Date GetDate() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// setDate
-				/// </java-name>
-				[Dot42.DexImport("setDate", "(Ljava/util/Date;)V", AccessFlags = 1)]
-				public virtual void SetDate(global::Java.Util.Date date) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isExplicitPolicyRequired
-				/// </java-name>
-				[Dot42.DexImport("isExplicitPolicyRequired", "()Z", AccessFlags = 1)]
-				public virtual bool IsExplicitPolicyRequired() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2063,32 +1735,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getInitialPolicies
-				/// </java-name>
-				[Dot42.DexImport("getInitialPolicies", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetInitialPolicies() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				/// <java-name>
-				/// setInitialPolicies
-				/// </java-name>
-				[Dot42.DexImport("setInitialPolicies", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
-				public virtual void SetInitialPolicies(global::Java.Util.ISet<string> set) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isPolicyMappingInhibited
-				/// </java-name>
-				[Dot42.DexImport("isPolicyMappingInhibited", "()Z", AccessFlags = 1)]
-				public virtual bool IsPolicyMappingInhibited() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setPolicyMappingInhibited
 				/// </java-name>
 				[Dot42.DexImport("setPolicyMappingInhibited", "(Z)V", AccessFlags = 1)]
@@ -2097,70 +1743,10 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getPolicyQualifiersRejected
-				/// </java-name>
-				[Dot42.DexImport("getPolicyQualifiersRejected", "()Z", AccessFlags = 1)]
-				public virtual bool GetPolicyQualifiersRejected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setPolicyQualifiersRejected
-				/// </java-name>
-				[Dot42.DexImport("setPolicyQualifiersRejected", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPolicyQualifiersRejected(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isRevocationEnabled
-				/// </java-name>
-				[Dot42.DexImport("isRevocationEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsRevocationEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setRevocationEnabled
 				/// </java-name>
 				[Dot42.DexImport("setRevocationEnabled", "(Z)V", AccessFlags = 1)]
 				public virtual void SetRevocationEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSigProvider
-				/// </java-name>
-				[Dot42.DexImport("getSigProvider", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSigProvider() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setSigProvider
-				/// </java-name>
-				[Dot42.DexImport("setSigProvider", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSigProvider(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTargetCertConstraints
-				/// </java-name>
-				[Dot42.DexImport("getTargetCertConstraints", "()Ljava/security/cert/CertSelector;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.ICertSelector GetTargetCertConstraints() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.ICertSelector);
-				}
-
-				/// <java-name>
-				/// setTargetCertConstraints
-				/// </java-name>
-				[Dot42.DexImport("setTargetCertConstraints", "(Ljava/security/cert/CertSelector;)V", AccessFlags = 1)]
-				public virtual void SetTargetCertConstraints(global::Java.Security.Cert.ICertSelector certSelector) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2190,89 +1776,125 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getTrustAnchors
 				/// </java-name>
-				public global::Java.Util.ISet<global::Java.Security.Cert.TrustAnchor> TrustAnchors
+				public virtual global::Java.Util.ISet<global::Java.Security.Cert.TrustAnchor> TrustAnchors
 				{
-				[Dot42.DexImport("getTrustAnchors", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/security/cert/TrustAnchor;>;")]
-						get{ return GetTrustAnchors(); }
-				[Dot42.DexImport("setTrustAnchors", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/security/cert/TrustAnchor;>;)V")]
-						set{ SetTrustAnchors(value); }
+						[Dot42.DexImport("getTrustAnchors", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/security/cert/TrustAnchor;>;")]
+						get{ return default(global::Java.Util.ISet<global::Java.Security.Cert.TrustAnchor>); }
+						[Dot42.DexImport("setTrustAnchors", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/security/cert/TrustAnchor;>;)V")]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isAnyPolicyInhibited
+				/// </java-name>
+				public virtual bool IsAnyPolicyInhibited
+				{
+						[Dot42.DexImport("isAnyPolicyInhibited", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getCertPathCheckers
 				/// </java-name>
-				public global::Java.Util.IList<global::Java.Security.Cert.PKIXCertPathChecker> CertPathCheckers
+				public virtual global::Java.Util.IList<global::Java.Security.Cert.PKIXCertPathChecker> CertPathCheckers
 				{
-				[Dot42.DexImport("getCertPathCheckers", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/security/cert/PKIXCertPathChecker;>;")]
-						get{ return GetCertPathCheckers(); }
-				[Dot42.DexImport("setCertPathCheckers", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/security/cert/PKIXCertPathChecker;>;)V")]
-						set{ SetCertPathCheckers(value); }
+						[Dot42.DexImport("getCertPathCheckers", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/security/cert/PKIXCertPathChecker;>;")]
+						get{ return default(global::Java.Util.IList<global::Java.Security.Cert.PKIXCertPathChecker>); }
+						[Dot42.DexImport("setCertPathCheckers", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/security/cert/PKIXCertPathChecker;>;)V")]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCertStores
 				/// </java-name>
-				public global::Java.Util.IList<global::Java.Security.Cert.CertStore> CertStores
+				public virtual global::Java.Util.IList<global::Java.Security.Cert.CertStore> CertStores
 				{
-				[Dot42.DexImport("getCertStores", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/security/cert/CertStore;>;")]
-						get{ return GetCertStores(); }
-				[Dot42.DexImport("setCertStores", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/security/cert/CertStore;>;)V")]
-						set{ SetCertStores(value); }
+						[Dot42.DexImport("getCertStores", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/security/cert/CertStore;>;")]
+						get{ return default(global::Java.Util.IList<global::Java.Security.Cert.CertStore>); }
+						[Dot42.DexImport("setCertStores", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Ljava/security/cert/CertStore;>;)V")]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDate
 				/// </java-name>
-				public global::Java.Util.Date Date
+				public virtual global::Java.Util.Date Date
 				{
-				[Dot42.DexImport("getDate", "()Ljava/util/Date;", AccessFlags = 1)]
-						get{ return GetDate(); }
-				[Dot42.DexImport("setDate", "(Ljava/util/Date;)V", AccessFlags = 1)]
-						set{ SetDate(value); }
+						[Dot42.DexImport("getDate", "()Ljava/util/Date;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Date); }
+						[Dot42.DexImport("setDate", "(Ljava/util/Date;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isExplicitPolicyRequired
+				/// </java-name>
+				public virtual bool IsExplicitPolicyRequired
+				{
+						[Dot42.DexImport("isExplicitPolicyRequired", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getInitialPolicies
 				/// </java-name>
-				public global::Java.Util.ISet<string> InitialPolicies
+				public virtual global::Java.Util.ISet<string> InitialPolicies
 				{
-				[Dot42.DexImport("getInitialPolicies", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetInitialPolicies(); }
-				[Dot42.DexImport("setInitialPolicies", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
-						set{ SetInitialPolicies(value); }
+						[Dot42.DexImport("getInitialPolicies", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
+						[Dot42.DexImport("setInitialPolicies", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isPolicyMappingInhibited
+				/// </java-name>
+				public virtual bool IsPolicyMappingInhibited
+				{
+						[Dot42.DexImport("isPolicyMappingInhibited", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getPolicyQualifiersRejected
 				/// </java-name>
-				public bool IsPolicyQualifiersRejected
+				public virtual bool IsPolicyQualifiersRejected
 				{
-				[Dot42.DexImport("getPolicyQualifiersRejected", "()Z", AccessFlags = 1)]
-						get{ return GetPolicyQualifiersRejected(); }
-				[Dot42.DexImport("setPolicyQualifiersRejected", "(Z)V", AccessFlags = 1)]
-						set{ SetPolicyQualifiersRejected(value); }
+						[Dot42.DexImport("getPolicyQualifiersRejected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setPolicyQualifiersRejected", "(Z)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isRevocationEnabled
+				/// </java-name>
+				public virtual bool IsRevocationEnabled
+				{
+						[Dot42.DexImport("isRevocationEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getSigProvider
 				/// </java-name>
-				public string SigProvider
+				public virtual string SigProvider
 				{
-				[Dot42.DexImport("getSigProvider", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSigProvider(); }
-				[Dot42.DexImport("setSigProvider", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSigProvider(value); }
+						[Dot42.DexImport("getSigProvider", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSigProvider", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTargetCertConstraints
 				/// </java-name>
-				public global::Java.Security.Cert.ICertSelector TargetCertConstraints
+				public virtual global::Java.Security.Cert.ICertSelector TargetCertConstraints
 				{
-				[Dot42.DexImport("getTargetCertConstraints", "()Ljava/security/cert/CertSelector;", AccessFlags = 1)]
-						get{ return GetTargetCertConstraints(); }
-				[Dot42.DexImport("setTargetCertConstraints", "(Ljava/security/cert/CertSelector;)V", AccessFlags = 1)]
-						set{ SetTargetCertConstraints(value); }
+						[Dot42.DexImport("getTargetCertConstraints", "()Ljava/security/cert/CertSelector;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.ICertSelector); }
+						[Dot42.DexImport("setTargetCertConstraints", "(Ljava/security/cert/CertSelector;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -2304,39 +1926,12 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-				public byte[] GetEncoded() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getPolicyQualifierId
-				/// </java-name>
-				[Dot42.DexImport("getPolicyQualifierId", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetPolicyQualifierId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getPolicyQualifier
 				/// </java-name>
 				[Dot42.DexImport("getPolicyQualifier", "()[B", AccessFlags = 17)]
 				public sbyte[] JavaGetPolicyQualifier() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getPolicyQualifier
-				/// </java-name>
-				[Dot42.DexImport("getPolicyQualifier", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-				public byte[] GetPolicyQualifier() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -2358,8 +1953,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -2367,8 +1962,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public string PolicyQualifierId
 				{
-				[Dot42.DexImport("getPolicyQualifierId", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetPolicyQualifierId(); }
+						[Dot42.DexImport("getPolicyQualifierId", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -2376,8 +1971,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public byte[] PolicyQualifier
 				{
-				[Dot42.DexImport("getPolicyQualifier", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-						get{ return GetPolicyQualifier(); }
+						[Dot42.DexImport("getPolicyQualifier", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -2429,51 +2024,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getNameConstraints
-				/// </java-name>
-				[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-				public byte[] GetNameConstraints() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getTrustedCert
-				/// </java-name>
-				[Dot42.DexImport("getTrustedCert", "()Ljava/security/cert/X509Certificate;", AccessFlags = 17)]
-				public global::Java.Security.Cert.X509Certificate GetTrustedCert() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.X509Certificate);
-				}
-
-				/// <java-name>
-				/// getCA
-				/// </java-name>
-				[Dot42.DexImport("getCA", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 17)]
-				public global::Javax.Security.Auth.X500.X500Principal GetCA() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.X500.X500Principal);
-				}
-
-				/// <java-name>
-				/// getCAName
-				/// </java-name>
-				[Dot42.DexImport("getCAName", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetCAName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCAPublicKey
-				/// </java-name>
-				[Dot42.DexImport("getCAPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 17)]
-				public global::Java.Security.IPublicKey GetCAPublicKey() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.IPublicKey);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -2492,8 +2042,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public byte[] NameConstraints
 				{
-				[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-						get{ return GetNameConstraints(); }
+						[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -2501,8 +2051,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public global::Java.Security.Cert.X509Certificate TrustedCert
 				{
-				[Dot42.DexImport("getTrustedCert", "()Ljava/security/cert/X509Certificate;", AccessFlags = 17)]
-						get{ return GetTrustedCert(); }
+						[Dot42.DexImport("getTrustedCert", "()Ljava/security/cert/X509Certificate;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Cert.X509Certificate); }
 				}
 
 				/// <java-name>
@@ -2510,8 +2060,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public global::Javax.Security.Auth.X500.X500Principal CA
 				{
-				[Dot42.DexImport("getCA", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 17)]
-						get{ return GetCA(); }
+						[Dot42.DexImport("getCA", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 17)]
+						get{ return default(global::Javax.Security.Auth.X500.X500Principal); }
 				}
 
 				/// <java-name>
@@ -2519,8 +2069,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public string CAName
 				{
-				[Dot42.DexImport("getCAName", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetCAName(); }
+						[Dot42.DexImport("getCAName", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -2528,8 +2078,8 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public global::Java.Security.IPublicKey CAPublicKey
 				{
-				[Dot42.DexImport("getCAPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 17)]
-						get{ return GetCAPublicKey(); }
+						[Dot42.DexImport("getCAPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.IPublicKey); }
 				}
 
 		}
@@ -2559,70 +2109,10 @@ namespace Java.Security.Cert
 				public abstract void CheckValidity(global::Java.Util.Date date) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
-				public abstract int GetVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSerialNumber
-				/// </java-name>
-				[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				public abstract global::Java.Math.BigInteger GetSerialNumber() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getIssuerDN
-				/// </java-name>
-				[Dot42.DexImport("getIssuerDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				public abstract global::Java.Security.IPrincipal GetIssuerDN() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getIssuerX500Principal
-				/// </java-name>
-				[Dot42.DexImport("getIssuerX500Principal", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.X500.X500Principal GetIssuerX500Principal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.X500.X500Principal);
-				}
-
-				/// <java-name>
-				/// getSubjectDN
-				/// </java-name>
-				[Dot42.DexImport("getSubjectDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				public abstract global::Java.Security.IPrincipal GetSubjectDN() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSubjectX500Principal
-				/// </java-name>
-				[Dot42.DexImport("getSubjectX500Principal", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.X500.X500Principal GetSubjectX500Principal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.X500.X500Principal);
-				}
-
-				/// <java-name>
-				/// getNotBefore
-				/// </java-name>
-				[Dot42.DexImport("getNotBefore", "()Ljava/util/Date;", AccessFlags = 1025)]
-				public abstract global::Java.Util.Date GetNotBefore() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNotAfter
-				/// </java-name>
-				[Dot42.DexImport("getNotAfter", "()Ljava/util/Date;", AccessFlags = 1025)]
-				public abstract global::Java.Util.Date GetNotAfter() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getTBSCertificate
 				/// </java-name>
 				[Dot42.DexImport("getTBSCertificate", "()[B", AccessFlags = 1025)]
 				public abstract sbyte[] JavaGetTBSCertificate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTBSCertificate
-				/// </java-name>
-				[Dot42.DexImport("getTBSCertificate", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetTBSCertificate() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getSignature
@@ -2631,91 +2121,10 @@ namespace Java.Security.Cert
 				public abstract sbyte[] JavaGetSignature() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSignature
-				/// </java-name>
-				[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetSignature() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSigAlgName
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetSigAlgName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSigAlgOID
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgOID", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetSigAlgOID() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSigAlgParams
 				/// </java-name>
 				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025)]
 				public abstract sbyte[] JavaGetSigAlgParams() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSigAlgParams
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetSigAlgParams() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getIssuerUniqueID
-				/// </java-name>
-				[Dot42.DexImport("getIssuerUniqueID", "()[Z", AccessFlags = 1025)]
-				public abstract bool[] GetIssuerUniqueID() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSubjectUniqueID
-				/// </java-name>
-				[Dot42.DexImport("getSubjectUniqueID", "()[Z", AccessFlags = 1025)]
-				public abstract bool[] GetSubjectUniqueID() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getKeyUsage
-				/// </java-name>
-				[Dot42.DexImport("getKeyUsage", "()[Z", AccessFlags = 1025)]
-				public abstract bool[] GetKeyUsage() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getExtendedKeyUsage
-				/// </java-name>
-				[Dot42.DexImport("getExtendedKeyUsage", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.IList<string> GetExtendedKeyUsage() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<string>);
-				}
-
-				/// <java-name>
-				/// getBasicConstraints
-				/// </java-name>
-				[Dot42.DexImport("getBasicConstraints", "()I", AccessFlags = 1025)]
-				public abstract int GetBasicConstraints() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSubjectAlternativeNames
-				/// </java-name>
-				[Dot42.DexImport("getSubjectAlternativeNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
-				public virtual global::Java.Util.ICollection<global::Java.Util.IList<object>> GetSubjectAlternativeNames() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::Java.Util.IList<object>>);
-				}
-
-				/// <java-name>
-				/// getIssuerAlternativeNames
-				/// </java-name>
-				[Dot42.DexImport("getIssuerAlternativeNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
-				public virtual global::Java.Util.ICollection<global::Java.Util.IList<object>> GetIssuerAlternativeNames() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::Java.Util.IList<object>>);
-				}
-
-				[Dot42.DexImport("java/security/cert/X509Extension", "getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetCriticalExtensionOIDs() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
 
 				[Dot42.DexImport("java/security/cert/X509Extension", "getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public virtual byte[] GetExtensionValue(string @string) /* TypeBuilder.AddAbstractInterfaceMethods */ 
@@ -2723,208 +2132,202 @@ namespace Java.Security.Cert
 						return default(byte[]);
 				}
 
-				[Dot42.DexImport("java/security/cert/X509Extension", "getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetNonCriticalExtensionOIDs() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				[Dot42.DexImport("java/security/cert/X509Extension", "hasUnsupportedCriticalExtension", "()Z", AccessFlags = 1025)]
-				public virtual bool HasUnsupportedCriticalExtension() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				/// <java-name>
 				/// getVersion
 				/// </java-name>
-				public int Version
+				public abstract int Version
 				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
-						get{ return GetVersion(); }
+						[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSerialNumber
 				/// </java-name>
-				public global::Java.Math.BigInteger SerialNumber
+				public abstract global::Java.Math.BigInteger SerialNumber
 				{
-				[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-						get{ return GetSerialNumber(); }
+						[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getIssuerDN
 				/// </java-name>
-				public global::Java.Security.IPrincipal IssuerDN
+				public abstract global::Java.Security.IPrincipal IssuerDN
 				{
-				[Dot42.DexImport("getIssuerDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-						get{ return GetIssuerDN(); }
+						[Dot42.DexImport("getIssuerDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getIssuerX500Principal
 				/// </java-name>
-				public global::Javax.Security.Auth.X500.X500Principal IssuerX500Principal
+				public virtual global::Javax.Security.Auth.X500.X500Principal IssuerX500Principal
 				{
-				[Dot42.DexImport("getIssuerX500Principal", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-						get{ return GetIssuerX500Principal(); }
+						[Dot42.DexImport("getIssuerX500Principal", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
+						get{ return default(global::Javax.Security.Auth.X500.X500Principal); }
 				}
 
 				/// <java-name>
 				/// getSubjectDN
 				/// </java-name>
-				public global::Java.Security.IPrincipal SubjectDN
+				public abstract global::Java.Security.IPrincipal SubjectDN
 				{
-				[Dot42.DexImport("getSubjectDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-						get{ return GetSubjectDN(); }
+						[Dot42.DexImport("getSubjectDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSubjectX500Principal
 				/// </java-name>
-				public global::Javax.Security.Auth.X500.X500Principal SubjectX500Principal
+				public virtual global::Javax.Security.Auth.X500.X500Principal SubjectX500Principal
 				{
-				[Dot42.DexImport("getSubjectX500Principal", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-						get{ return GetSubjectX500Principal(); }
+						[Dot42.DexImport("getSubjectX500Principal", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
+						get{ return default(global::Javax.Security.Auth.X500.X500Principal); }
 				}
 
 				/// <java-name>
 				/// getNotBefore
 				/// </java-name>
-				public global::Java.Util.Date NotBefore
+				public abstract global::Java.Util.Date NotBefore
 				{
-				[Dot42.DexImport("getNotBefore", "()Ljava/util/Date;", AccessFlags = 1025)]
-						get{ return GetNotBefore(); }
+						[Dot42.DexImport("getNotBefore", "()Ljava/util/Date;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getNotAfter
 				/// </java-name>
-				public global::Java.Util.Date NotAfter
+				public abstract global::Java.Util.Date NotAfter
 				{
-				[Dot42.DexImport("getNotAfter", "()Ljava/util/Date;", AccessFlags = 1025)]
-						get{ return GetNotAfter(); }
+						[Dot42.DexImport("getNotAfter", "()Ljava/util/Date;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getTBSCertificate
 				/// </java-name>
-				public byte[] TBSCertificate
+				public abstract byte[] TBSCertificate
 				{
-				[Dot42.DexImport("getTBSCertificate", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetTBSCertificate(); }
+						[Dot42.DexImport("getTBSCertificate", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSignature
 				/// </java-name>
-				public byte[] Signature
+				public abstract byte[] Signature
 				{
-				[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetSignature(); }
+						[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSigAlgName
 				/// </java-name>
-				public string SigAlgName
+				public abstract string SigAlgName
 				{
-				[Dot42.DexImport("getSigAlgName", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSigAlgName(); }
+						[Dot42.DexImport("getSigAlgName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSigAlgOID
 				/// </java-name>
-				public string SigAlgOID
+				public abstract string SigAlgOID
 				{
-				[Dot42.DexImport("getSigAlgOID", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSigAlgOID(); }
+						[Dot42.DexImport("getSigAlgOID", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSigAlgParams
 				/// </java-name>
-				public byte[] SigAlgParams
+				public abstract byte[] SigAlgParams
 				{
-				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetSigAlgParams(); }
+						[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getIssuerUniqueID
 				/// </java-name>
-				public bool[] IssuerUniqueID
+				public abstract bool[] IssuerUniqueID
 				{
-				[Dot42.DexImport("getIssuerUniqueID", "()[Z", AccessFlags = 1025)]
-						get{ return GetIssuerUniqueID(); }
+						[Dot42.DexImport("getIssuerUniqueID", "()[Z", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSubjectUniqueID
 				/// </java-name>
-				public bool[] SubjectUniqueID
+				public abstract bool[] SubjectUniqueID
 				{
-				[Dot42.DexImport("getSubjectUniqueID", "()[Z", AccessFlags = 1025)]
-						get{ return GetSubjectUniqueID(); }
+						[Dot42.DexImport("getSubjectUniqueID", "()[Z", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getKeyUsage
 				/// </java-name>
-				public bool[] KeyUsage
+				public abstract bool[] KeyUsage
 				{
-				[Dot42.DexImport("getKeyUsage", "()[Z", AccessFlags = 1025)]
-						get{ return GetKeyUsage(); }
+						[Dot42.DexImport("getKeyUsage", "()[Z", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getExtendedKeyUsage
 				/// </java-name>
-				public global::Java.Util.IList<string> ExtendedKeyUsage
+				public virtual global::Java.Util.IList<string> ExtendedKeyUsage
 				{
-				[Dot42.DexImport("getExtendedKeyUsage", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						get{ return GetExtendedKeyUsage(); }
+						[Dot42.DexImport("getExtendedKeyUsage", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IList<string>); }
 				}
 
 				/// <java-name>
 				/// getBasicConstraints
 				/// </java-name>
-				public int BasicConstraints
+				public abstract int BasicConstraints
 				{
-				[Dot42.DexImport("getBasicConstraints", "()I", AccessFlags = 1025)]
-						get{ return GetBasicConstraints(); }
+						[Dot42.DexImport("getBasicConstraints", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSubjectAlternativeNames
 				/// </java-name>
-				public global::Java.Util.ICollection<global::Java.Util.IList<object>> SubjectAlternativeNames
+				public virtual global::Java.Util.ICollection<global::Java.Util.IList<object>> SubjectAlternativeNames
 				{
-				[Dot42.DexImport("getSubjectAlternativeNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
-						get{ return GetSubjectAlternativeNames(); }
+						[Dot42.DexImport("getSubjectAlternativeNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
+						get{ return default(global::Java.Util.ICollection<global::Java.Util.IList<object>>); }
 				}
 
 				/// <java-name>
 				/// getIssuerAlternativeNames
 				/// </java-name>
-				public global::Java.Util.ICollection<global::Java.Util.IList<object>> IssuerAlternativeNames
+				public virtual global::Java.Util.ICollection<global::Java.Util.IList<object>> IssuerAlternativeNames
 				{
-				[Dot42.DexImport("getIssuerAlternativeNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
-						get{ return GetIssuerAlternativeNames(); }
+						[Dot42.DexImport("getIssuerAlternativeNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
+						get{ return default(global::Java.Util.ICollection<global::Java.Util.IList<object>>); }
 				}
 
-				public global::Java.Util.ISet<string> CriticalExtensionOIDs
+				public virtual global::Java.Util.ISet<string> CriticalExtensionOIDs
 				{
-				[Dot42.DexImport("java/security/cert/X509Extension", "getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetCriticalExtensionOIDs(); }
+						[Dot42.DexImport("java/security/cert/X509Extension", "getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
 				}
 
-				public global::Java.Util.ISet<string> NonCriticalExtensionOIDs
+				public virtual global::Java.Util.ISet<string> NonCriticalExtensionOIDs
 				{
-				[Dot42.DexImport("java/security/cert/X509Extension", "getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetNonCriticalExtensionOIDs(); }
+						[Dot42.DexImport("java/security/cert/X509Extension", "getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
+				}
+
+				public virtual bool HasUnsupportedCriticalExtension
+				{
+						[Dot42.DexImport("java/security/cert/X509Extension", "hasUnsupportedCriticalExtension", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -2942,71 +2345,11 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// setCertificate
-				/// </java-name>
-				[Dot42.DexImport("setCertificate", "(Ljava/security/cert/X509Certificate;)V", AccessFlags = 1)]
-				public virtual void SetCertificate(global::Java.Security.Cert.X509Certificate x509Certificate) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCertificate
-				/// </java-name>
-				[Dot42.DexImport("getCertificate", "()Ljava/security/cert/X509Certificate;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.X509Certificate GetCertificate() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.X509Certificate);
-				}
-
-				/// <java-name>
-				/// setSerialNumber
-				/// </java-name>
-				[Dot42.DexImport("setSerialNumber", "(Ljava/math/BigInteger;)V", AccessFlags = 1)]
-				public virtual void SetSerialNumber(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSerialNumber
-				/// </java-name>
-				[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetSerialNumber() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// setIssuer
-				/// </java-name>
-				[Dot42.DexImport("setIssuer", "(Ljavax/security/auth/x500/X500Principal;)V", AccessFlags = 1)]
-				public virtual void SetIssuer(global::Javax.Security.Auth.X500.X500Principal x500Principal) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getIssuer
-				/// </java-name>
-				[Dot42.DexImport("getIssuer", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.X500.X500Principal GetIssuer() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.X500.X500Principal);
-				}
-
-				/// <java-name>
 				/// setIssuer
 				/// </java-name>
 				[Dot42.DexImport("setIssuer", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public virtual void SetIssuer(string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getIssuerAsString
-				/// </java-name>
-				[Dot42.DexImport("getIssuerAsString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetIssuerAsString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -3035,46 +2378,11 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getIssuerAsBytes
-				/// </java-name>
-				[Dot42.DexImport("getIssuerAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetIssuerAsBytes() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// setSubject
-				/// </java-name>
-				[Dot42.DexImport("setSubject", "(Ljavax/security/auth/x500/X500Principal;)V", AccessFlags = 1)]
-				public virtual void SetSubject(global::Javax.Security.Auth.X500.X500Principal x500Principal) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSubject
-				/// </java-name>
-				[Dot42.DexImport("getSubject", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.X500.X500Principal GetSubject() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.X500.X500Principal);
-				}
-
-				/// <java-name>
 				/// setSubject
 				/// </java-name>
 				[Dot42.DexImport("setSubject", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public virtual void SetSubject(string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSubjectAsString
-				/// </java-name>
-				[Dot42.DexImport("getSubjectAsString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSubjectAsString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -3103,27 +2411,10 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getSubjectAsBytes
-				/// </java-name>
-				[Dot42.DexImport("getSubjectAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetSubjectAsBytes() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// setSubjectKeyIdentifier
 				/// </java-name>
 				[Dot42.DexImport("setSubjectKeyIdentifier", "([B)V", AccessFlags = 1)]
 				public virtual void SetSubjectKeyIdentifier(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSubjectKeyIdentifier
-				/// </java-name>
-				[Dot42.DexImport("setSubjectKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual void SetSubjectKeyIdentifier(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3137,27 +2428,10 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getSubjectKeyIdentifier
-				/// </java-name>
-				[Dot42.DexImport("getSubjectKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetSubjectKeyIdentifier() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// setAuthorityKeyIdentifier
 				/// </java-name>
 				[Dot42.DexImport("setAuthorityKeyIdentifier", "([B)V", AccessFlags = 1)]
 				public virtual void SetAuthorityKeyIdentifier(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setAuthorityKeyIdentifier
-				/// </java-name>
-				[Dot42.DexImport("setAuthorityKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual void SetAuthorityKeyIdentifier(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3168,74 +2442,6 @@ namespace Java.Security.Cert
 				public virtual sbyte[] JavaGetAuthorityKeyIdentifier() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getAuthorityKeyIdentifier
-				/// </java-name>
-				[Dot42.DexImport("getAuthorityKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetAuthorityKeyIdentifier() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// setCertificateValid
-				/// </java-name>
-				[Dot42.DexImport("setCertificateValid", "(Ljava/util/Date;)V", AccessFlags = 1)]
-				public virtual void SetCertificateValid(global::Java.Util.Date date) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCertificateValid
-				/// </java-name>
-				[Dot42.DexImport("getCertificateValid", "()Ljava/util/Date;", AccessFlags = 1)]
-				public virtual global::Java.Util.Date GetCertificateValid() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// setPrivateKeyValid
-				/// </java-name>
-				[Dot42.DexImport("setPrivateKeyValid", "(Ljava/util/Date;)V", AccessFlags = 1)]
-				public virtual void SetPrivateKeyValid(global::Java.Util.Date date) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPrivateKeyValid
-				/// </java-name>
-				[Dot42.DexImport("getPrivateKeyValid", "()Ljava/util/Date;", AccessFlags = 1)]
-				public virtual global::Java.Util.Date GetPrivateKeyValid() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// setSubjectPublicKeyAlgID
-				/// </java-name>
-				[Dot42.DexImport("setSubjectPublicKeyAlgID", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSubjectPublicKeyAlgID(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSubjectPublicKeyAlgID
-				/// </java-name>
-				[Dot42.DexImport("getSubjectPublicKeyAlgID", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSubjectPublicKeyAlgID() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setSubjectPublicKey
-				/// </java-name>
-				[Dot42.DexImport("setSubjectPublicKey", "(Ljava/security/PublicKey;)V", AccessFlags = 1)]
-				public virtual void SetSubjectPublicKey(global::Java.Security.IPublicKey publicKey) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -3251,74 +2457,6 @@ namespace Java.Security.Cert
 				/// </java-name>
 				[Dot42.DexImport("setSubjectPublicKey", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetSubjectPublicKey(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSubjectPublicKey
-				/// </java-name>
-				[Dot42.DexImport("getSubjectPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1)]
-				public virtual global::Java.Security.IPublicKey GetSubjectPublicKey() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.IPublicKey);
-				}
-
-				/// <java-name>
-				/// setKeyUsage
-				/// </java-name>
-				[Dot42.DexImport("setKeyUsage", "([Z)V", AccessFlags = 1)]
-				public virtual void SetKeyUsage(bool[] boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getKeyUsage
-				/// </java-name>
-				[Dot42.DexImport("getKeyUsage", "()[Z", AccessFlags = 1)]
-				public virtual bool[] GetKeyUsage() /* MethodBuilder.Create */ 
-				{
-						return default(bool[]);
-				}
-
-				/// <java-name>
-				/// setExtendedKeyUsage
-				/// </java-name>
-				[Dot42.DexImport("setExtendedKeyUsage", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
-				public virtual void SetExtendedKeyUsage(global::Java.Util.ISet<string> set) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getExtendedKeyUsage
-				/// </java-name>
-				[Dot42.DexImport("getExtendedKeyUsage", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetExtendedKeyUsage() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				/// <java-name>
-				/// setMatchAllSubjectAltNames
-				/// </java-name>
-				[Dot42.DexImport("setMatchAllSubjectAltNames", "(Z)V", AccessFlags = 1)]
-				public virtual void SetMatchAllSubjectAltNames(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMatchAllSubjectAltNames
-				/// </java-name>
-				[Dot42.DexImport("getMatchAllSubjectAltNames", "()Z", AccessFlags = 1)]
-				public virtual bool GetMatchAllSubjectAltNames() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setSubjectAlternativeNames
-				/// </java-name>
-				[Dot42.DexImport("setSubjectAlternativeNames", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<Ljava/util/List<*>;>;)V")]
-				public virtual void SetSubjectAlternativeNames(global::Java.Util.ICollection<global::Java.Util.IList<object>> collection) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3347,27 +2485,10 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getSubjectAlternativeNames
-				/// </java-name>
-				[Dot42.DexImport("getSubjectAlternativeNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
-				public virtual global::Java.Util.ICollection<global::Java.Util.IList<object>> GetSubjectAlternativeNames() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::Java.Util.IList<object>>);
-				}
-
-				/// <java-name>
 				/// setNameConstraints
 				/// </java-name>
 				[Dot42.DexImport("setNameConstraints", "([B)V", AccessFlags = 1)]
 				public virtual void SetNameConstraints(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setNameConstraints
-				/// </java-name>
-				[Dot42.DexImport("setNameConstraints", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual void SetNameConstraints(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3381,61 +2502,10 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getNameConstraints
-				/// </java-name>
-				[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetNameConstraints() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// setBasicConstraints
-				/// </java-name>
-				[Dot42.DexImport("setBasicConstraints", "(I)V", AccessFlags = 1)]
-				public virtual void SetBasicConstraints(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getBasicConstraints
-				/// </java-name>
-				[Dot42.DexImport("getBasicConstraints", "()I", AccessFlags = 1)]
-				public virtual int GetBasicConstraints() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setPolicy
-				/// </java-name>
-				[Dot42.DexImport("setPolicy", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
-				public virtual void SetPolicy(global::Java.Util.ISet<string> set) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPolicy
-				/// </java-name>
-				[Dot42.DexImport("getPolicy", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetPolicy() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				/// <java-name>
 				/// addPathToName
 				/// </java-name>
 				[Dot42.DexImport("addPathToName", "(ILjava/lang/String;)V", AccessFlags = 1)]
 				public virtual void AddPathToName(int int32, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPathToNames
-				/// </java-name>
-				[Dot42.DexImport("setPathToNames", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<Ljava/util/List<*>;>;)V")]
-				public virtual void SetPathToNames(global::Java.Util.ICollection<global::Java.Util.IList<object>> collection) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3453,15 +2523,6 @@ namespace Java.Security.Cert
 				[Dot42.DexImport("addPathToName", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void AddPathToName(int int32, byte[] @byte) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPathToNames
-				/// </java-name>
-				[Dot42.DexImport("getPathToNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
-				public virtual global::Java.Util.ICollection<global::Java.Util.IList<object>> GetPathToNames() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::Java.Util.IList<object>>);
 				}
 
 				/// <java-name>
@@ -3494,235 +2555,235 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getCertificate
 				/// </java-name>
-				public global::Java.Security.Cert.X509Certificate Certificate
+				public virtual global::Java.Security.Cert.X509Certificate Certificate
 				{
-				[Dot42.DexImport("getCertificate", "()Ljava/security/cert/X509Certificate;", AccessFlags = 1)]
-						get{ return GetCertificate(); }
-				[Dot42.DexImport("setCertificate", "(Ljava/security/cert/X509Certificate;)V", AccessFlags = 1)]
-						set{ SetCertificate(value); }
+						[Dot42.DexImport("getCertificate", "()Ljava/security/cert/X509Certificate;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.X509Certificate); }
+						[Dot42.DexImport("setCertificate", "(Ljava/security/cert/X509Certificate;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSerialNumber
 				/// </java-name>
-				public global::Java.Math.BigInteger SerialNumber
+				public virtual global::Java.Math.BigInteger SerialNumber
 				{
-				[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetSerialNumber(); }
-				[Dot42.DexImport("setSerialNumber", "(Ljava/math/BigInteger;)V", AccessFlags = 1)]
-						set{ SetSerialNumber(value); }
+						[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
+						[Dot42.DexImport("setSerialNumber", "(Ljava/math/BigInteger;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getIssuer
 				/// </java-name>
-				public global::Javax.Security.Auth.X500.X500Principal Issuer
+				public virtual global::Javax.Security.Auth.X500.X500Principal Issuer
 				{
-				[Dot42.DexImport("getIssuer", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-						get{ return GetIssuer(); }
-				[Dot42.DexImport("setIssuer", "(Ljavax/security/auth/x500/X500Principal;)V", AccessFlags = 1)]
-						set{ SetIssuer(value); }
+						[Dot42.DexImport("getIssuer", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
+						get{ return default(global::Javax.Security.Auth.X500.X500Principal); }
+						[Dot42.DexImport("setIssuer", "(Ljavax/security/auth/x500/X500Principal;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getIssuerAsString
 				/// </java-name>
-				public string IssuerAsString
+				public virtual string IssuerAsString
 				{
-				[Dot42.DexImport("getIssuerAsString", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetIssuerAsString(); }
+						[Dot42.DexImport("getIssuerAsString", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getIssuerAsBytes
 				/// </java-name>
-				public byte[] IssuerAsBytes
+				public virtual byte[] IssuerAsBytes
 				{
-				[Dot42.DexImport("getIssuerAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetIssuerAsBytes(); }
+						[Dot42.DexImport("getIssuerAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getSubject
 				/// </java-name>
-				public global::Javax.Security.Auth.X500.X500Principal Subject
+				public virtual global::Javax.Security.Auth.X500.X500Principal Subject
 				{
-				[Dot42.DexImport("getSubject", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-						get{ return GetSubject(); }
-				[Dot42.DexImport("setSubject", "(Ljavax/security/auth/x500/X500Principal;)V", AccessFlags = 1)]
-						set{ SetSubject(value); }
+						[Dot42.DexImport("getSubject", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
+						get{ return default(global::Javax.Security.Auth.X500.X500Principal); }
+						[Dot42.DexImport("setSubject", "(Ljavax/security/auth/x500/X500Principal;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSubjectAsString
 				/// </java-name>
-				public string SubjectAsString
+				public virtual string SubjectAsString
 				{
-				[Dot42.DexImport("getSubjectAsString", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSubjectAsString(); }
+						[Dot42.DexImport("getSubjectAsString", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSubjectAsBytes
 				/// </java-name>
-				public byte[] SubjectAsBytes
+				public virtual byte[] SubjectAsBytes
 				{
-				[Dot42.DexImport("getSubjectAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetSubjectAsBytes(); }
+						[Dot42.DexImport("getSubjectAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getSubjectKeyIdentifier
 				/// </java-name>
-				public byte[] SubjectKeyIdentifier
+				public virtual byte[] SubjectKeyIdentifier
 				{
-				[Dot42.DexImport("getSubjectKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetSubjectKeyIdentifier(); }
-				[Dot42.DexImport("setSubjectKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-						set{ SetSubjectKeyIdentifier(value); }
+						[Dot42.DexImport("getSubjectKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
+						[Dot42.DexImport("setSubjectKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAuthorityKeyIdentifier
 				/// </java-name>
-				public byte[] AuthorityKeyIdentifier
+				public virtual byte[] AuthorityKeyIdentifier
 				{
-				[Dot42.DexImport("getAuthorityKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetAuthorityKeyIdentifier(); }
-				[Dot42.DexImport("setAuthorityKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-						set{ SetAuthorityKeyIdentifier(value); }
+						[Dot42.DexImport("getAuthorityKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
+						[Dot42.DexImport("setAuthorityKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCertificateValid
 				/// </java-name>
-				public global::Java.Util.Date CertificateValid
+				public virtual global::Java.Util.Date CertificateValid
 				{
-				[Dot42.DexImport("getCertificateValid", "()Ljava/util/Date;", AccessFlags = 1)]
-						get{ return GetCertificateValid(); }
-				[Dot42.DexImport("setCertificateValid", "(Ljava/util/Date;)V", AccessFlags = 1)]
-						set{ SetCertificateValid(value); }
+						[Dot42.DexImport("getCertificateValid", "()Ljava/util/Date;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Date); }
+						[Dot42.DexImport("setCertificateValid", "(Ljava/util/Date;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPrivateKeyValid
 				/// </java-name>
-				public global::Java.Util.Date PrivateKeyValid
+				public virtual global::Java.Util.Date PrivateKeyValid
 				{
-				[Dot42.DexImport("getPrivateKeyValid", "()Ljava/util/Date;", AccessFlags = 1)]
-						get{ return GetPrivateKeyValid(); }
-				[Dot42.DexImport("setPrivateKeyValid", "(Ljava/util/Date;)V", AccessFlags = 1)]
-						set{ SetPrivateKeyValid(value); }
+						[Dot42.DexImport("getPrivateKeyValid", "()Ljava/util/Date;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Date); }
+						[Dot42.DexImport("setPrivateKeyValid", "(Ljava/util/Date;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSubjectPublicKeyAlgID
 				/// </java-name>
-				public string SubjectPublicKeyAlgID
+				public virtual string SubjectPublicKeyAlgID
 				{
-				[Dot42.DexImport("getSubjectPublicKeyAlgID", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSubjectPublicKeyAlgID(); }
-				[Dot42.DexImport("setSubjectPublicKeyAlgID", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSubjectPublicKeyAlgID(value); }
+						[Dot42.DexImport("getSubjectPublicKeyAlgID", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSubjectPublicKeyAlgID", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSubjectPublicKey
 				/// </java-name>
-				public global::Java.Security.IPublicKey SubjectPublicKey
+				public virtual global::Java.Security.IPublicKey SubjectPublicKey
 				{
-				[Dot42.DexImport("getSubjectPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1)]
-						get{ return GetSubjectPublicKey(); }
-				[Dot42.DexImport("setSubjectPublicKey", "(Ljava/security/PublicKey;)V", AccessFlags = 1)]
-						set{ SetSubjectPublicKey(value); }
+						[Dot42.DexImport("getSubjectPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.IPublicKey); }
+						[Dot42.DexImport("setSubjectPublicKey", "(Ljava/security/PublicKey;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getKeyUsage
 				/// </java-name>
-				public bool[] KeyUsage
+				public virtual bool[] KeyUsage
 				{
-				[Dot42.DexImport("getKeyUsage", "()[Z", AccessFlags = 1)]
-						get{ return GetKeyUsage(); }
-				[Dot42.DexImport("setKeyUsage", "([Z)V", AccessFlags = 1)]
-						set{ SetKeyUsage(value); }
+						[Dot42.DexImport("getKeyUsage", "()[Z", AccessFlags = 1)]
+						get{ return default(bool[]); }
+						[Dot42.DexImport("setKeyUsage", "([Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getExtendedKeyUsage
 				/// </java-name>
-				public global::Java.Util.ISet<string> ExtendedKeyUsage
+				public virtual global::Java.Util.ISet<string> ExtendedKeyUsage
 				{
-				[Dot42.DexImport("getExtendedKeyUsage", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetExtendedKeyUsage(); }
-				[Dot42.DexImport("setExtendedKeyUsage", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
-						set{ SetExtendedKeyUsage(value); }
+						[Dot42.DexImport("getExtendedKeyUsage", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
+						[Dot42.DexImport("setExtendedKeyUsage", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMatchAllSubjectAltNames
 				/// </java-name>
-				public bool IsMatchAllSubjectAltNames
+				public virtual bool IsMatchAllSubjectAltNames
 				{
-				[Dot42.DexImport("getMatchAllSubjectAltNames", "()Z", AccessFlags = 1)]
-						get{ return GetMatchAllSubjectAltNames(); }
-				[Dot42.DexImport("setMatchAllSubjectAltNames", "(Z)V", AccessFlags = 1)]
-						set{ SetMatchAllSubjectAltNames(value); }
+						[Dot42.DexImport("getMatchAllSubjectAltNames", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setMatchAllSubjectAltNames", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSubjectAlternativeNames
 				/// </java-name>
-				public global::Java.Util.ICollection<global::Java.Util.IList<object>> SubjectAlternativeNames
+				public virtual global::Java.Util.ICollection<global::Java.Util.IList<object>> SubjectAlternativeNames
 				{
-				[Dot42.DexImport("getSubjectAlternativeNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
-						get{ return GetSubjectAlternativeNames(); }
-				[Dot42.DexImport("setSubjectAlternativeNames", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<Ljava/util/List<*>;>;)V")]
-						set{ SetSubjectAlternativeNames(value); }
+						[Dot42.DexImport("getSubjectAlternativeNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
+						get{ return default(global::Java.Util.ICollection<global::Java.Util.IList<object>>); }
+						[Dot42.DexImport("setSubjectAlternativeNames", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<Ljava/util/List<*>;>;)V")]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getNameConstraints
 				/// </java-name>
-				public byte[] NameConstraints
+				public virtual byte[] NameConstraints
 				{
-				[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetNameConstraints(); }
-				[Dot42.DexImport("setNameConstraints", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-						set{ SetNameConstraints(value); }
+						[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
+						[Dot42.DexImport("setNameConstraints", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getBasicConstraints
 				/// </java-name>
-				public int BasicConstraints
+				public virtual int BasicConstraints
 				{
-				[Dot42.DexImport("getBasicConstraints", "()I", AccessFlags = 1)]
-						get{ return GetBasicConstraints(); }
-				[Dot42.DexImport("setBasicConstraints", "(I)V", AccessFlags = 1)]
-						set{ SetBasicConstraints(value); }
+						[Dot42.DexImport("getBasicConstraints", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setBasicConstraints", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPolicy
 				/// </java-name>
-				public global::Java.Util.ISet<string> Policy
+				public virtual global::Java.Util.ISet<string> Policy
 				{
-				[Dot42.DexImport("getPolicy", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetPolicy(); }
-				[Dot42.DexImport("setPolicy", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
-						set{ SetPolicy(value); }
+						[Dot42.DexImport("getPolicy", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
+						[Dot42.DexImport("setPolicy", "(Ljava/util/Set;)V", AccessFlags = 1, Signature = "(Ljava/util/Set<Ljava/lang/String;>;)V")]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPathToNames
 				/// </java-name>
-				public global::Java.Util.ICollection<global::Java.Util.IList<object>> PathToNames
+				public virtual global::Java.Util.ICollection<global::Java.Util.IList<object>> PathToNames
 				{
-				[Dot42.DexImport("getPathToNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
-						get{ return GetPathToNames(); }
-				[Dot42.DexImport("setPathToNames", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<Ljava/util/List<*>;>;)V")]
-						set{ SetPathToNames(value); }
+						[Dot42.DexImport("getPathToNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/util/List<*>;>;")]
+						get{ return default(global::Java.Util.ICollection<global::Java.Util.IList<object>>); }
+						[Dot42.DexImport("setPathToNames", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<Ljava/util/List<*>;>;)V")]
+						set{ }
 				}
 
 		}
@@ -3764,12 +2825,6 @@ namespace Java.Security.Cert
 				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// verify
 				/// </java-name>
 				[Dot42.DexImport("verify", "(Ljava/security/PublicKey;)V", AccessFlags = 1025)]
@@ -3780,39 +2835,6 @@ namespace Java.Security.Cert
 				/// </java-name>
 				[Dot42.DexImport("verify", "(Ljava/security/PublicKey;Ljava/lang/String;)V", AccessFlags = 1025)]
 				public abstract void Verify(global::Java.Security.IPublicKey publicKey, string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
-				public abstract int GetVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getIssuerDN
-				/// </java-name>
-				[Dot42.DexImport("getIssuerDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				public abstract global::Java.Security.IPrincipal GetIssuerDN() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getIssuerX500Principal
-				/// </java-name>
-				[Dot42.DexImport("getIssuerX500Principal", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.X500.X500Principal GetIssuerX500Principal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.X500.X500Principal);
-				}
-
-				/// <java-name>
-				/// getThisUpdate
-				/// </java-name>
-				[Dot42.DexImport("getThisUpdate", "()Ljava/util/Date;", AccessFlags = 1025)]
-				public abstract global::Java.Util.Date GetThisUpdate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNextUpdate
-				/// </java-name>
-				[Dot42.DexImport("getNextUpdate", "()Ljava/util/Date;", AccessFlags = 1025)]
-				public abstract global::Java.Util.Date GetNextUpdate() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getRevokedCertificate
@@ -3830,22 +2852,10 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// getRevokedCertificates
-				/// </java-name>
-				[Dot42.DexImport("getRevokedCertificates", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<+Ljava/security/cert/X509CRLEntry;>;")]
-				public abstract global::Java.Util.ISet<global::Java.Security.Cert.X509CRLEntry> GetRevokedCertificates() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getTBSCertList
 				/// </java-name>
 				[Dot42.DexImport("getTBSCertList", "()[B", AccessFlags = 1025)]
 				public abstract sbyte[] JavaGetTBSCertList() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTBSCertList
-				/// </java-name>
-				[Dot42.DexImport("getTBSCertList", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetTBSCertList() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getSignature
@@ -3854,40 +2864,10 @@ namespace Java.Security.Cert
 				public abstract sbyte[] JavaGetSignature() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSignature
-				/// </java-name>
-				[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetSignature() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSigAlgName
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetSigAlgName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSigAlgOID
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgOID", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetSigAlgOID() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSigAlgParams
 				/// </java-name>
 				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025)]
 				public abstract sbyte[] JavaGetSigAlgParams() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSigAlgParams
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetSigAlgParams() /* MethodBuilder.Create */ ;
-
-				[Dot42.DexImport("java/security/cert/X509Extension", "getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetCriticalExtensionOIDs() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
 
 				[Dot42.DexImport("java/security/cert/X509Extension", "getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public virtual byte[] GetExtensionValue(string @string) /* TypeBuilder.AddAbstractInterfaceMethods */ 
@@ -3895,136 +2875,130 @@ namespace Java.Security.Cert
 						return default(byte[]);
 				}
 
-				[Dot42.DexImport("java/security/cert/X509Extension", "getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetNonCriticalExtensionOIDs() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				[Dot42.DexImport("java/security/cert/X509Extension", "hasUnsupportedCriticalExtension", "()Z", AccessFlags = 1025)]
-				public virtual bool HasUnsupportedCriticalExtension() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public abstract byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getVersion
 				/// </java-name>
-				public int Version
+				public abstract int Version
 				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
-						get{ return GetVersion(); }
+						[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getIssuerDN
 				/// </java-name>
-				public global::Java.Security.IPrincipal IssuerDN
+				public abstract global::Java.Security.IPrincipal IssuerDN
 				{
-				[Dot42.DexImport("getIssuerDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-						get{ return GetIssuerDN(); }
+						[Dot42.DexImport("getIssuerDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getIssuerX500Principal
 				/// </java-name>
-				public global::Javax.Security.Auth.X500.X500Principal IssuerX500Principal
+				public virtual global::Javax.Security.Auth.X500.X500Principal IssuerX500Principal
 				{
-				[Dot42.DexImport("getIssuerX500Principal", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-						get{ return GetIssuerX500Principal(); }
+						[Dot42.DexImport("getIssuerX500Principal", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
+						get{ return default(global::Javax.Security.Auth.X500.X500Principal); }
 				}
 
 				/// <java-name>
 				/// getThisUpdate
 				/// </java-name>
-				public global::Java.Util.Date ThisUpdate
+				public abstract global::Java.Util.Date ThisUpdate
 				{
-				[Dot42.DexImport("getThisUpdate", "()Ljava/util/Date;", AccessFlags = 1025)]
-						get{ return GetThisUpdate(); }
+						[Dot42.DexImport("getThisUpdate", "()Ljava/util/Date;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getNextUpdate
 				/// </java-name>
-				public global::Java.Util.Date NextUpdate
+				public abstract global::Java.Util.Date NextUpdate
 				{
-				[Dot42.DexImport("getNextUpdate", "()Ljava/util/Date;", AccessFlags = 1025)]
-						get{ return GetNextUpdate(); }
+						[Dot42.DexImport("getNextUpdate", "()Ljava/util/Date;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getRevokedCertificates
 				/// </java-name>
-				public global::Java.Util.ISet<global::Java.Security.Cert.X509CRLEntry> RevokedCertificates
+				public abstract global::Java.Util.ISet<global::Java.Security.Cert.X509CRLEntry> RevokedCertificates
 				{
-				[Dot42.DexImport("getRevokedCertificates", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<+Ljava/security/cert/X509CRLEntry;>;")]
-						get{ return GetRevokedCertificates(); }
+						[Dot42.DexImport("getRevokedCertificates", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<+Ljava/security/cert/X509CRLEntry;>;")]
+						get;
 				}
 
 				/// <java-name>
 				/// getTBSCertList
 				/// </java-name>
-				public byte[] TBSCertList
+				public abstract byte[] TBSCertList
 				{
-				[Dot42.DexImport("getTBSCertList", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetTBSCertList(); }
+						[Dot42.DexImport("getTBSCertList", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSignature
 				/// </java-name>
-				public byte[] Signature
+				public abstract byte[] Signature
 				{
-				[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetSignature(); }
+						[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSigAlgName
 				/// </java-name>
-				public string SigAlgName
+				public abstract string SigAlgName
 				{
-				[Dot42.DexImport("getSigAlgName", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSigAlgName(); }
+						[Dot42.DexImport("getSigAlgName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSigAlgOID
 				/// </java-name>
-				public string SigAlgOID
+				public abstract string SigAlgOID
 				{
-				[Dot42.DexImport("getSigAlgOID", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSigAlgOID(); }
+						[Dot42.DexImport("getSigAlgOID", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSigAlgParams
 				/// </java-name>
-				public byte[] SigAlgParams
+				public abstract byte[] SigAlgParams
 				{
-				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetSigAlgParams(); }
+						[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
-				public global::Java.Util.ISet<string> CriticalExtensionOIDs
+				public virtual global::Java.Util.ISet<string> CriticalExtensionOIDs
 				{
-				[Dot42.DexImport("java/security/cert/X509Extension", "getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetCriticalExtensionOIDs(); }
+						[Dot42.DexImport("java/security/cert/X509Extension", "getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
 				}
 
-				public global::Java.Util.ISet<string> NonCriticalExtensionOIDs
+				public virtual global::Java.Util.ISet<string> NonCriticalExtensionOIDs
 				{
-				[Dot42.DexImport("java/security/cert/X509Extension", "getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetNonCriticalExtensionOIDs(); }
+						[Dot42.DexImport("java/security/cert/X509Extension", "getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
+				}
+
+				public virtual bool HasUnsupportedCriticalExtension
+				{
+						[Dot42.DexImport("java/security/cert/X509Extension", "hasUnsupportedCriticalExtension", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -4066,39 +3040,6 @@ namespace Java.Security.Cert
 				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSerialNumber
-				/// </java-name>
-				[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				public abstract global::Java.Math.BigInteger GetSerialNumber() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCertificateIssuer
-				/// </java-name>
-				[Dot42.DexImport("getCertificateIssuer", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-				public virtual global::Javax.Security.Auth.X500.X500Principal GetCertificateIssuer() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Security.Auth.X500.X500Principal);
-				}
-
-				/// <java-name>
-				/// getRevocationDate
-				/// </java-name>
-				[Dot42.DexImport("getRevocationDate", "()Ljava/util/Date;", AccessFlags = 1025)]
-				public abstract global::Java.Util.Date GetRevocationDate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// hasExtensions
-				/// </java-name>
-				[Dot42.DexImport("hasExtensions", "()Z", AccessFlags = 1025)]
-				public abstract bool HasExtensions() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1025)]
@@ -4107,76 +3048,73 @@ namespace Java.Security.Cert
 						return default(string);
 				}
 
-				[Dot42.DexImport("java/security/cert/X509Extension", "getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetCriticalExtensionOIDs() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
 				[Dot42.DexImport("java/security/cert/X509Extension", "getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public virtual byte[] GetExtensionValue(string @string) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(byte[]);
 				}
 
-				[Dot42.DexImport("java/security/cert/X509Extension", "getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetNonCriticalExtensionOIDs() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				[Dot42.DexImport("java/security/cert/X509Extension", "hasUnsupportedCriticalExtension", "()Z", AccessFlags = 1025)]
-				public virtual bool HasUnsupportedCriticalExtension() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public abstract byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSerialNumber
 				/// </java-name>
-				public global::Java.Math.BigInteger SerialNumber
+				public abstract global::Java.Math.BigInteger SerialNumber
 				{
-				[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-						get{ return GetSerialNumber(); }
+						[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getCertificateIssuer
 				/// </java-name>
-				public global::Javax.Security.Auth.X500.X500Principal CertificateIssuer
+				public virtual global::Javax.Security.Auth.X500.X500Principal CertificateIssuer
 				{
-				[Dot42.DexImport("getCertificateIssuer", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
-						get{ return GetCertificateIssuer(); }
+						[Dot42.DexImport("getCertificateIssuer", "()Ljavax/security/auth/x500/X500Principal;", AccessFlags = 1)]
+						get{ return default(global::Javax.Security.Auth.X500.X500Principal); }
 				}
 
 				/// <java-name>
 				/// getRevocationDate
 				/// </java-name>
-				public global::Java.Util.Date RevocationDate
+				public abstract global::Java.Util.Date RevocationDate
 				{
-				[Dot42.DexImport("getRevocationDate", "()Ljava/util/Date;", AccessFlags = 1025)]
-						get{ return GetRevocationDate(); }
+						[Dot42.DexImport("getRevocationDate", "()Ljava/util/Date;", AccessFlags = 1025)]
+						get;
 				}
 
-				public global::Java.Util.ISet<string> CriticalExtensionOIDs
+				/// <java-name>
+				/// hasExtensions
+				/// </java-name>
+				public abstract bool HasExtensions
 				{
-				[Dot42.DexImport("java/security/cert/X509Extension", "getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetCriticalExtensionOIDs(); }
+						[Dot42.DexImport("hasExtensions", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
-				public global::Java.Util.ISet<string> NonCriticalExtensionOIDs
+				public virtual global::Java.Util.ISet<string> CriticalExtensionOIDs
 				{
-				[Dot42.DexImport("java/security/cert/X509Extension", "getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetNonCriticalExtensionOIDs(); }
+						[Dot42.DexImport("java/security/cert/X509Extension", "getCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
+				}
+
+				public virtual global::Java.Util.ISet<string> NonCriticalExtensionOIDs
+				{
+						[Dot42.DexImport("java/security/cert/X509Extension", "getNonCriticalExtensionOIDs", "()Ljava/util/Set;", AccessFlags = 1025, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
+				}
+
+				public virtual bool HasUnsupportedCriticalExtension
+				{
+						[Dot42.DexImport("java/security/cert/X509Extension", "hasUnsupportedCriticalExtension", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -4190,22 +3128,6 @@ namespace Java.Security.Cert
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public X509CRLSelector() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIssuers
-				/// </java-name>
-				[Dot42.DexImport("setIssuers", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<Ljavax/security/auth/x500/X500Principal;>;)V")]
-				public virtual void SetIssuers(global::Java.Util.ICollection<global::Javax.Security.Auth.X500.X500Principal> collection) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIssuerNames
-				/// </java-name>
-				[Dot42.DexImport("setIssuerNames", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<*>;)V")]
-				public virtual void SetIssuerNames(global::Java.Util.ICollection<object> collection) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4258,76 +3180,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// setDateAndTime
-				/// </java-name>
-				[Dot42.DexImport("setDateAndTime", "(Ljava/util/Date;)V", AccessFlags = 1)]
-				public virtual void SetDateAndTime(global::Java.Util.Date date) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCertificateChecking
-				/// </java-name>
-				[Dot42.DexImport("setCertificateChecking", "(Ljava/security/cert/X509Certificate;)V", AccessFlags = 1)]
-				public virtual void SetCertificateChecking(global::Java.Security.Cert.X509Certificate x509Certificate) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getIssuers
-				/// </java-name>
-				[Dot42.DexImport("getIssuers", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljavax/security/auth/x500/X500Principal;>;")]
-				public virtual global::Java.Util.ICollection<global::Javax.Security.Auth.X500.X500Principal> GetIssuers() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::Javax.Security.Auth.X500.X500Principal>);
-				}
-
-				/// <java-name>
-				/// getIssuerNames
-				/// </java-name>
-				[Dot42.DexImport("getIssuerNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/lang/Object;>;")]
-				public virtual global::Java.Util.ICollection<object> GetIssuerNames() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<object>);
-				}
-
-				/// <java-name>
-				/// getMinCRL
-				/// </java-name>
-				[Dot42.DexImport("getMinCRL", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetMinCRL() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getMaxCRL
-				/// </java-name>
-				[Dot42.DexImport("getMaxCRL", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetMaxCRL() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getDateAndTime
-				/// </java-name>
-				[Dot42.DexImport("getDateAndTime", "()Ljava/util/Date;", AccessFlags = 1)]
-				public virtual global::Java.Util.Date GetDateAndTime() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Date);
-				}
-
-				/// <java-name>
-				/// getCertificateChecking
-				/// </java-name>
-				[Dot42.DexImport("getCertificateChecking", "()Ljava/security/cert/X509Certificate;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.X509Certificate GetCertificateChecking() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.X509Certificate);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -4357,63 +3209,63 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getIssuers
 				/// </java-name>
-				public global::Java.Util.ICollection<global::Javax.Security.Auth.X500.X500Principal> Issuers
+				public virtual global::Java.Util.ICollection<global::Javax.Security.Auth.X500.X500Principal> Issuers
 				{
-				[Dot42.DexImport("getIssuers", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljavax/security/auth/x500/X500Principal;>;")]
-						get{ return GetIssuers(); }
-				[Dot42.DexImport("setIssuers", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<Ljavax/security/auth/x500/X500Principal;>;)V")]
-						set{ SetIssuers(value); }
+						[Dot42.DexImport("getIssuers", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljavax/security/auth/x500/X500Principal;>;")]
+						get{ return default(global::Java.Util.ICollection<global::Javax.Security.Auth.X500.X500Principal>); }
+						[Dot42.DexImport("setIssuers", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<Ljavax/security/auth/x500/X500Principal;>;)V")]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getIssuerNames
 				/// </java-name>
-				public global::Java.Util.ICollection<object> IssuerNames
+				public virtual global::Java.Util.ICollection<object> IssuerNames
 				{
-				[Dot42.DexImport("getIssuerNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/lang/Object;>;")]
-						get{ return GetIssuerNames(); }
-				[Dot42.DexImport("setIssuerNames", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<*>;)V")]
-						set{ SetIssuerNames(value); }
+						[Dot42.DexImport("getIssuerNames", "()Ljava/util/Collection;", AccessFlags = 1, Signature = "()Ljava/util/Collection<Ljava/lang/Object;>;")]
+						get{ return default(global::Java.Util.ICollection<object>); }
+						[Dot42.DexImport("setIssuerNames", "(Ljava/util/Collection;)V", AccessFlags = 1, Signature = "(Ljava/util/Collection<*>;)V")]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMinCRL
 				/// </java-name>
-				public global::Java.Math.BigInteger MinCRL
+				public virtual global::Java.Math.BigInteger MinCRL
 				{
-				[Dot42.DexImport("getMinCRL", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetMinCRL(); }
+						[Dot42.DexImport("getMinCRL", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getMaxCRL
 				/// </java-name>
-				public global::Java.Math.BigInteger MaxCRL
+				public virtual global::Java.Math.BigInteger MaxCRL
 				{
-				[Dot42.DexImport("getMaxCRL", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetMaxCRL(); }
+						[Dot42.DexImport("getMaxCRL", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getDateAndTime
 				/// </java-name>
-				public global::Java.Util.Date DateAndTime
+				public virtual global::Java.Util.Date DateAndTime
 				{
-				[Dot42.DexImport("getDateAndTime", "()Ljava/util/Date;", AccessFlags = 1)]
-						get{ return GetDateAndTime(); }
-				[Dot42.DexImport("setDateAndTime", "(Ljava/util/Date;)V", AccessFlags = 1)]
-						set{ SetDateAndTime(value); }
+						[Dot42.DexImport("getDateAndTime", "()Ljava/util/Date;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Date); }
+						[Dot42.DexImport("setDateAndTime", "(Ljava/util/Date;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCertificateChecking
 				/// </java-name>
-				public global::Java.Security.Cert.X509Certificate CertificateChecking
+				public virtual global::Java.Security.Cert.X509Certificate CertificateChecking
 				{
-				[Dot42.DexImport("getCertificateChecking", "()Ljava/security/cert/X509Certificate;", AccessFlags = 1)]
-						get{ return GetCertificateChecking(); }
-				[Dot42.DexImport("setCertificateChecking", "(Ljava/security/cert/X509Certificate;)V", AccessFlags = 1)]
-						set{ SetCertificateChecking(value); }
+						[Dot42.DexImport("getCertificateChecking", "()Ljava/security/cert/X509Certificate;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.X509Certificate); }
+						[Dot42.DexImport("setCertificateChecking", "(Ljava/security/cert/X509Certificate;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

@@ -80,24 +80,6 @@ namespace Org.Apache.Http.Conn
 				}
 
 				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
 				/// consumeContent
 				/// </java-name>
 				[Dot42.DexImport("consumeContent", "()V", AccessFlags = 1)]
@@ -170,12 +152,21 @@ namespace Org.Apache.Http.Conn
 				}
 
 				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public override bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public global::Java.Io.InputStream Content
+				public override global::Java.Io.InputStream Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
 				}
 
 		}
@@ -233,15 +224,6 @@ namespace Org.Apache.Http.Conn
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Lorg/apache/http/conn/EofSensorWatcher;)V", AccessFlags = 1)]
 				public EofSensorInputStream(global::Java.Io.InputStream inputStream, global::Org.Apache.Http.Conn.IEofSensorWatcher eofSensorWatcher) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isReadAllowed
-				/// </java-name>
-				[Dot42.DexImport("isReadAllowed", "()Z", AccessFlags = 4)]
-				protected internal virtual bool IsReadAllowed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -351,6 +333,15 @@ namespace Org.Apache.Http.Conn
 				{
 				}
 
+				/// <java-name>
+				/// isReadAllowed
+				/// </java-name>
+				protected internal virtual bool IsReadAllowed
+				{
+						[Dot42.DexImport("isReadAllowed", "()Z", AccessFlags = 4)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -365,15 +356,6 @@ namespace Org.Apache.Http.Conn
 				{
 				}
 
-				/// <java-name>
-				/// getHost
-				/// </java-name>
-				[Dot42.DexImport("getHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.HttpHost GetHost() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.HttpHost);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal HttpHostConnectException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -382,10 +364,10 @@ namespace Org.Apache.Http.Conn
 				/// <java-name>
 				/// getHost
 				/// </java-name>
-				public global::Org.Apache.Http.HttpHost Host
+				public virtual global::Org.Apache.Http.HttpHost Host
 				{
-				[Dot42.DexImport("getHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 1)]
-						get{ return GetHost(); }
+						[Dot42.DexImport("getHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.HttpHost); }
 				}
 
 		}
@@ -397,12 +379,6 @@ namespace Org.Apache.Http.Conn
 		public partial interface IClientConnectionManager
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getSchemeRegistry
-				/// </java-name>
-				[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.Scheme.SchemeRegistry GetSchemeRegistry() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// requestConnection
 				/// </java-name>
@@ -434,6 +410,15 @@ namespace Org.Apache.Http.Conn
 				/// </java-name>
 				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1025)]
 				void Shutdown() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getSchemeRegistry
+				/// </java-name>
+				global::Org.Apache.Http.Conn.Scheme.SchemeRegistry SchemeRegistry
+				{
+						[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -575,24 +560,6 @@ namespace Org.Apache.Http.Conn
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
-				bool IsSecure() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getRoute
-				/// </java-name>
-				[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.Routing.HttpRoute GetRoute() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSSLSession
-				/// </java-name>
-				[Dot42.DexImport("getSSLSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
-				global::Javax.Net.Ssl.ISSLSession GetSSLSession() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// open
 				/// </java-name>
 				[Dot42.DexImport("open", "(Lorg/apache/http/conn/routing/HttpRoute;Lorg/apache/http/protocol/HttpContext;Lo" +
@@ -630,28 +597,57 @@ namespace Org.Apache.Http.Conn
 				void UnmarkReusable() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isMarkedReusable
-				/// </java-name>
-				[Dot42.DexImport("isMarkedReusable", "()Z", AccessFlags = 1025)]
-				bool IsMarkedReusable() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setState
-				/// </java-name>
-				[Dot42.DexImport("setState", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
-				void SetState(object @object) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()Ljava/lang/Object;", AccessFlags = 1025)]
-				object GetState() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setIdleDuration
 				/// </java-name>
 				[Dot42.DexImport("setIdleDuration", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1025)]
 				void SetIdleDuration(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				bool IsSecure
+				{
+						[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getRoute
+				/// </java-name>
+				global::Org.Apache.Http.Conn.Routing.HttpRoute Route
+				{
+						[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSSLSession
+				/// </java-name>
+				global::Javax.Net.Ssl.ISSLSession SSLSession
+				{
+						[Dot42.DexImport("getSSLSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isMarkedReusable
+				/// </java-name>
+				bool IsMarkedReusable
+				{
+						[Dot42.DexImport("isMarkedReusable", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getState
+				/// </java-name>
+				object State
+				{
+						[Dot42.DexImport("getState", "()Ljava/lang/Object;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setState", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -662,24 +658,6 @@ namespace Org.Apache.Http.Conn
 		public partial interface IOperatedClientConnection : global::Org.Apache.Http.IHttpClientConnection, global::Org.Apache.Http.IHttpInetConnection
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getTargetHost
-				/// </java-name>
-				[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 1025)]
-				global::Org.Apache.Http.HttpHost GetTargetHost() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
-				bool IsSecure() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSocket
-				/// </java-name>
-				[Dot42.DexImport("getSocket", "()Ljava/net/Socket;", AccessFlags = 1025)]
-				global::Java.Net.Socket GetSocket() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// opening
 				/// </java-name>
@@ -699,6 +677,33 @@ namespace Org.Apache.Http.Conn
     "V", AccessFlags = 1025)]
 				void Update(global::Java.Net.Socket socket, global::Org.Apache.Http.HttpHost httpHost, bool boolean, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getTargetHost
+				/// </java-name>
+				global::Org.Apache.Http.HttpHost TargetHost
+				{
+						[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				bool IsSecure
+				{
+						[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSocket
+				/// </java-name>
+				global::Java.Net.Socket Socket
+				{
+						[Dot42.DexImport("getSocket", "()Ljava/net/Socket;", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -711,15 +716,6 @@ namespace Org.Apache.Http.Conn
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal MultihomePlainSocketFactory() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/MultihomePlainSocketFactory;", AccessFlags = 9)]
-				public static global::Org.Apache.Http.Conn.MultihomePlainSocketFactory GetSocketFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.MultihomePlainSocketFactory);
 				}
 
 				/// <java-name>
@@ -773,8 +769,8 @@ namespace Org.Apache.Http.Conn
 				/// </java-name>
 				public static global::Org.Apache.Http.Conn.MultihomePlainSocketFactory SocketFactory
 				{
-				[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/MultihomePlainSocketFactory;", AccessFlags = 9)]
-						get{ return GetSocketFactory(); }
+						[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/MultihomePlainSocketFactory;", AccessFlags = 9)]
+						get{ return default(global::Org.Apache.Http.Conn.MultihomePlainSocketFactory); }
 				}
 
 		}

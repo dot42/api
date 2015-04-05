@@ -39,16 +39,19 @@ namespace Org.Apache.Http.Io
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getBytesTransferred
-				/// </java-name>
-				[Dot42.DexImport("getBytesTransferred", "()J", AccessFlags = 1025)]
-				long GetBytesTransferred() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// reset
 				/// </java-name>
 				[Dot42.DexImport("reset", "()V", AccessFlags = 1025)]
 				void Reset() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getBytesTransferred
+				/// </java-name>
+				long BytesTransferred
+				{
+						[Dot42.DexImport("getBytesTransferred", "()J", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -98,8 +101,11 @@ namespace Org.Apache.Http.Io
 				/// <java-name>
 				/// getMetrics
 				/// </java-name>
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Io.IHttpTransportMetrics GetMetrics() /* MethodBuilder.Create */ ;
+				global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
+				{
+						[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -149,8 +155,11 @@ namespace Org.Apache.Http.Io
 				/// <java-name>
 				/// getMetrics
 				/// </java-name>
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Io.IHttpTransportMetrics GetMetrics() /* MethodBuilder.Create */ ;
+				global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
+				{
+						[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

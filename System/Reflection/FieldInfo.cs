@@ -22,11 +22,11 @@ namespace System.Reflection
 {
     public class FieldInfo : JavaMemberInfo
     {
-        private readonly JavaField _field;
+        private readonly Field _field;
         private readonly Type _declaringType;
         private Type _type;
 
-        public FieldInfo(JavaField field, Type declaringType)  : base(field)
+        public FieldInfo(Field field, Type declaringType)  : base(field)
         {
             _field = field;
             _declaringType = declaringType;
@@ -49,32 +49,32 @@ namespace System.Reflection
         /// <summary>
         /// Is this an abstract method?
         /// </summary>
-        public bool IsAbstract { get { return Modifier.IsAbstract(_field.GetModifiers()); } }
+        public bool IsAbstract { get { return Modifier.IsAbstract(_field.Modifiers); } }
 
         /// <summary>
         /// Is this an final method?
         /// </summary>
-        public bool IsFinal { get { return Modifier.IsFinal(_field.GetModifiers()); } }
+        public bool IsFinal { get { return Modifier.IsFinal(_field.Modifiers); } }
 
         /// <summary>
         /// Is this an private method?
         /// </summary>
-        public bool IsPrivate { get { return Modifier.IsPrivate(_field.GetModifiers()); } }
+        public bool IsPrivate { get { return Modifier.IsPrivate(_field.Modifiers); } }
 
         /// <summary>
         /// Is this an public method?
         /// </summary>
-        public bool IsPublic { get { return Modifier.IsPublic(_field.GetModifiers()); } }
+        public bool IsPublic { get { return Modifier.IsPublic(_field.Modifiers); } }
 
         /// <summary>
         /// Is this a static method?
         /// </summary>
-        public bool IsStatic { get { return Modifier.IsStatic(_field.GetModifiers()); } }
+        public bool IsStatic { get { return Modifier.IsStatic(_field.Modifiers); } }
 
         /// <summary>
         /// Is this an virtual method?
         /// </summary>
-        public bool IsVirtual { get { return !Modifier.IsFinal(_field.GetModifiers()); } }
+        public bool IsVirtual { get { return !Modifier.IsFinal(_field.Modifiers); } }
 
         /// <summary>
         /// returns true only for enum fields.

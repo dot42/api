@@ -91,93 +91,12 @@ namespace Org.Apache.Http.Conn.Routing
 				}
 
 				/// <java-name>
-				/// getTargetHost
-				/// </java-name>
-				[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-				public global::Org.Apache.Http.HttpHost GetTargetHost() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.HttpHost);
-				}
-
-				/// <java-name>
-				/// getLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 17)]
-				public global::Java.Net.InetAddress GetLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getHopCount
-				/// </java-name>
-				[Dot42.DexImport("getHopCount", "()I", AccessFlags = 17)]
-				public int GetHopCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getHopTarget
 				/// </java-name>
 				[Dot42.DexImport("getHopTarget", "(I)Lorg/apache/http/HttpHost;", AccessFlags = 17)]
 				public global::Org.Apache.Http.HttpHost GetHopTarget(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Org.Apache.Http.HttpHost);
-				}
-
-				/// <java-name>
-				/// getProxyHost
-				/// </java-name>
-				[Dot42.DexImport("getProxyHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-				public global::Org.Apache.Http.HttpHost GetProxyHost() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.HttpHost);
-				}
-
-				/// <java-name>
-				/// getTunnelType
-				/// </java-name>
-				[Dot42.DexImport("getTunnelType", "()Lorg/apache/http/conn/routing/RouteInfo$TunnelType;", AccessFlags = 17)]
-				public global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType GetTunnelType() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType);
-				}
-
-				/// <java-name>
-				/// isTunnelled
-				/// </java-name>
-				[Dot42.DexImport("isTunnelled", "()Z", AccessFlags = 17)]
-				public bool IsTunnelled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getLayerType
-				/// </java-name>
-				[Dot42.DexImport("getLayerType", "()Lorg/apache/http/conn/routing/RouteInfo$LayerType;", AccessFlags = 17)]
-				public global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType GetLayerType() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType);
-				}
-
-				/// <java-name>
-				/// isLayered
-				/// </java-name>
-				[Dot42.DexImport("isLayered", "()Z", AccessFlags = 17)]
-				public bool IsLayered() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 17)]
-				public bool IsSecure() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -226,8 +145,8 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Org.Apache.Http.HttpHost TargetHost
 				{
-				[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-						get{ return GetTargetHost(); }
+						[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.HttpHost); }
 				}
 
 				/// <java-name>
@@ -235,8 +154,8 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Java.Net.InetAddress LocalAddress
 				{
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 17)]
-						get{ return GetLocalAddress(); }
+						[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 17)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
@@ -244,8 +163,8 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public int HopCount
 				{
-				[Dot42.DexImport("getHopCount", "()I", AccessFlags = 17)]
-						get{ return GetHopCount(); }
+						[Dot42.DexImport("getHopCount", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -253,8 +172,8 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Org.Apache.Http.HttpHost ProxyHost
 				{
-				[Dot42.DexImport("getProxyHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-						get{ return GetProxyHost(); }
+						[Dot42.DexImport("getProxyHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.HttpHost); }
 				}
 
 				/// <java-name>
@@ -262,8 +181,17 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType TunnelType
 				{
-				[Dot42.DexImport("getTunnelType", "()Lorg/apache/http/conn/routing/RouteInfo$TunnelType;", AccessFlags = 17)]
-						get{ return GetTunnelType(); }
+						[Dot42.DexImport("getTunnelType", "()Lorg/apache/http/conn/routing/RouteInfo$TunnelType;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType); }
+				}
+
+				/// <java-name>
+				/// isTunnelled
+				/// </java-name>
+				public bool IsTunnelled
+				{
+						[Dot42.DexImport("isTunnelled", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -271,8 +199,26 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType LayerType
 				{
-				[Dot42.DexImport("getLayerType", "()Lorg/apache/http/conn/routing/RouteInfo$LayerType;", AccessFlags = 17)]
-						get{ return GetLayerType(); }
+						[Dot42.DexImport("getLayerType", "()Lorg/apache/http/conn/routing/RouteInfo$LayerType;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType); }
+				}
+
+				/// <java-name>
+				/// isLayered
+				/// </java-name>
+				public bool IsLayered
+				{
+						[Dot42.DexImport("isLayered", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				public bool IsSecure
+				{
+						[Dot42.DexImport("isSecure", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -361,64 +307,91 @@ namespace Org.Apache.Http.Conn.Routing
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getTargetHost
-				/// </java-name>
-				[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 1025)]
-				global::Org.Apache.Http.HttpHost GetTargetHost() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1025)]
-				global::Java.Net.InetAddress GetLocalAddress() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getHopCount
-				/// </java-name>
-				[Dot42.DexImport("getHopCount", "()I", AccessFlags = 1025)]
-				int GetHopCount() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getHopTarget
 				/// </java-name>
 				[Dot42.DexImport("getHopTarget", "(I)Lorg/apache/http/HttpHost;", AccessFlags = 1025)]
 				global::Org.Apache.Http.HttpHost GetHopTarget(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// getTargetHost
+				/// </java-name>
+				global::Org.Apache.Http.HttpHost TargetHost
+				{
+						[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getLocalAddress
+				/// </java-name>
+				global::Java.Net.InetAddress LocalAddress
+				{
+						[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getHopCount
+				/// </java-name>
+				int HopCount
+				{
+						[Dot42.DexImport("getHopCount", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
 				/// getProxyHost
 				/// </java-name>
-				[Dot42.DexImport("getProxyHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 1025)]
-				global::Org.Apache.Http.HttpHost GetProxyHost() /* MethodBuilder.Create */ ;
+				global::Org.Apache.Http.HttpHost ProxyHost
+				{
+						[Dot42.DexImport("getProxyHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getTunnelType
 				/// </java-name>
-				[Dot42.DexImport("getTunnelType", "()Lorg/apache/http/conn/routing/RouteInfo$TunnelType;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType GetTunnelType() /* MethodBuilder.Create */ ;
+				global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType TunnelType
+				{
+						[Dot42.DexImport("getTunnelType", "()Lorg/apache/http/conn/routing/RouteInfo$TunnelType;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// isTunnelled
 				/// </java-name>
-				[Dot42.DexImport("isTunnelled", "()Z", AccessFlags = 1025)]
-				bool IsTunnelled() /* MethodBuilder.Create */ ;
+				bool IsTunnelled
+				{
+						[Dot42.DexImport("isTunnelled", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getLayerType
 				/// </java-name>
-				[Dot42.DexImport("getLayerType", "()Lorg/apache/http/conn/routing/RouteInfo$LayerType;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType GetLayerType() /* MethodBuilder.Create */ ;
+				global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType LayerType
+				{
+						[Dot42.DexImport("getLayerType", "()Lorg/apache/http/conn/routing/RouteInfo$LayerType;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// isLayered
 				/// </java-name>
-				[Dot42.DexImport("isLayered", "()Z", AccessFlags = 1025)]
-				bool IsLayered() /* MethodBuilder.Create */ ;
+				bool IsLayered
+				{
+						[Dot42.DexImport("isLayered", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// isSecure
 				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
-				bool IsSecure() /* MethodBuilder.Create */ ;
+				bool IsSecure
+				{
+						[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -562,102 +535,12 @@ namespace Org.Apache.Http.Conn.Routing
 				}
 
 				/// <java-name>
-				/// getTargetHost
-				/// </java-name>
-				[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-				public global::Org.Apache.Http.HttpHost GetTargetHost() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.HttpHost);
-				}
-
-				/// <java-name>
-				/// getLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 17)]
-				public global::Java.Net.InetAddress GetLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getHopCount
-				/// </java-name>
-				[Dot42.DexImport("getHopCount", "()I", AccessFlags = 17)]
-				public int GetHopCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getHopTarget
 				/// </java-name>
 				[Dot42.DexImport("getHopTarget", "(I)Lorg/apache/http/HttpHost;", AccessFlags = 17)]
 				public global::Org.Apache.Http.HttpHost GetHopTarget(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Org.Apache.Http.HttpHost);
-				}
-
-				/// <java-name>
-				/// getProxyHost
-				/// </java-name>
-				[Dot42.DexImport("getProxyHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-				public global::Org.Apache.Http.HttpHost GetProxyHost() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.HttpHost);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 17)]
-				public bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getTunnelType
-				/// </java-name>
-				[Dot42.DexImport("getTunnelType", "()Lorg/apache/http/conn/routing/RouteInfo$TunnelType;", AccessFlags = 17)]
-				public global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType GetTunnelType() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType);
-				}
-
-				/// <java-name>
-				/// isTunnelled
-				/// </java-name>
-				[Dot42.DexImport("isTunnelled", "()Z", AccessFlags = 17)]
-				public bool IsTunnelled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getLayerType
-				/// </java-name>
-				[Dot42.DexImport("getLayerType", "()Lorg/apache/http/conn/routing/RouteInfo$LayerType;", AccessFlags = 17)]
-				public global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType GetLayerType() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType);
-				}
-
-				/// <java-name>
-				/// isLayered
-				/// </java-name>
-				[Dot42.DexImport("isLayered", "()Z", AccessFlags = 17)]
-				public bool IsLayered() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 17)]
-				public bool IsSecure() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -715,8 +598,8 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Org.Apache.Http.HttpHost TargetHost
 				{
-				[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-						get{ return GetTargetHost(); }
+						[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.HttpHost); }
 				}
 
 				/// <java-name>
@@ -724,8 +607,8 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Java.Net.InetAddress LocalAddress
 				{
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 17)]
-						get{ return GetLocalAddress(); }
+						[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 17)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
@@ -733,8 +616,8 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public int HopCount
 				{
-				[Dot42.DexImport("getHopCount", "()I", AccessFlags = 17)]
-						get{ return GetHopCount(); }
+						[Dot42.DexImport("getHopCount", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -742,8 +625,17 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Org.Apache.Http.HttpHost ProxyHost
 				{
-				[Dot42.DexImport("getProxyHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-						get{ return GetProxyHost(); }
+						[Dot42.DexImport("getProxyHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.HttpHost); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -751,8 +643,17 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType TunnelType
 				{
-				[Dot42.DexImport("getTunnelType", "()Lorg/apache/http/conn/routing/RouteInfo$TunnelType;", AccessFlags = 17)]
-						get{ return GetTunnelType(); }
+						[Dot42.DexImport("getTunnelType", "()Lorg/apache/http/conn/routing/RouteInfo$TunnelType;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.Conn.Routing.IRouteInfo_TunnelType); }
+				}
+
+				/// <java-name>
+				/// isTunnelled
+				/// </java-name>
+				public bool IsTunnelled
+				{
+						[Dot42.DexImport("isTunnelled", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -760,8 +661,26 @@ namespace Org.Apache.Http.Conn.Routing
 				/// </java-name>
 				public global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType LayerType
 				{
-				[Dot42.DexImport("getLayerType", "()Lorg/apache/http/conn/routing/RouteInfo$LayerType;", AccessFlags = 17)]
-						get{ return GetLayerType(); }
+						[Dot42.DexImport("getLayerType", "()Lorg/apache/http/conn/routing/RouteInfo$LayerType;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.Conn.Routing.IRouteInfo_LayerType); }
+				}
+
+				/// <java-name>
+				/// isLayered
+				/// </java-name>
+				public bool IsLayered
+				{
+						[Dot42.DexImport("isLayered", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				public bool IsSecure
+				{
+						[Dot42.DexImport("isSecure", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 		}

@@ -38,49 +38,16 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// getStartDelay
-				/// </java-name>
-				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1025)]
-				public abstract long GetStartDelay() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setStartDelay
-				/// </java-name>
-				[Dot42.DexImport("setStartDelay", "(J)V", AccessFlags = 1025)]
-				public abstract void SetStartDelay(long int64) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setDuration
 				/// </java-name>
 				[Dot42.DexImport("setDuration", "(J)Landroid/animation/Animator;", AccessFlags = 1025)]
 				public abstract global::Android.Animation.Animator SetDuration(long int64) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getDuration
-				/// </java-name>
-				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1025)]
-				public abstract long GetDuration() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setInterpolator
 				/// </java-name>
 				[Dot42.DexImport("setInterpolator", "(Landroid/animation/TimeInterpolator;)V", AccessFlags = 1025)]
 				public abstract void SetInterpolator(global::Android.Animation.ITimeInterpolator timeInterpolator) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isRunning
-				/// </java-name>
-				[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1025)]
-				public abstract bool IsRunning() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isStarted
-				/// </java-name>
-				[Dot42.DexImport("isStarted", "()Z", AccessFlags = 1)]
-				public virtual bool IsStarted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
 
 				/// <java-name>
 				/// addListener
@@ -96,15 +63,6 @@ namespace Android.Animation
 				[Dot42.DexImport("removeListener", "(Landroid/animation/Animator$AnimatorListener;)V", AccessFlags = 1)]
 				public virtual void RemoveListener(global::Android.Animation.Animator.IAnimatorListener animatorListener) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getListeners
-				/// </java-name>
-				[Dot42.DexImport("getListeners", "()Ljava/util/ArrayList;", AccessFlags = 1, Signature = "()Ljava/util/ArrayList<Landroid/animation/Animator$AnimatorListener;>;")]
-				public virtual global::Java.Util.ArrayList<global::Android.Animation.Animator.IAnimatorListener> GetListeners() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ArrayList<global::Android.Animation.Animator.IAnimatorListener>);
 				}
 
 				/// <java-name>
@@ -151,30 +109,48 @@ namespace Android.Animation
 				/// <java-name>
 				/// getStartDelay
 				/// </java-name>
-				public long StartDelay
+				public abstract long StartDelay
 				{
-				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1025)]
-						get{ return GetStartDelay(); }
-				[Dot42.DexImport("setStartDelay", "(J)V", AccessFlags = 1025)]
-						set{ SetStartDelay(value); }
+						[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setStartDelay", "(J)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getDuration
 				/// </java-name>
-				public long Duration
+				public abstract long Duration
 				{
-				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1025)]
-						get{ return GetDuration(); }
+						[Dot42.DexImport("getDuration", "()J", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isRunning
+				/// </java-name>
+				public abstract bool IsRunning
+				{
+						[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isStarted
+				/// </java-name>
+				public virtual bool IsStarted
+				{
+						[Dot42.DexImport("isStarted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getListeners
 				/// </java-name>
-				public global::Java.Util.ArrayList<global::Android.Animation.Animator.IAnimatorListener> Listeners
+				public virtual global::Java.Util.ArrayList<global::Android.Animation.Animator.IAnimatorListener> Listeners
 				{
-				[Dot42.DexImport("getListeners", "()Ljava/util/ArrayList;", AccessFlags = 1, Signature = "()Ljava/util/ArrayList<Landroid/animation/Animator$AnimatorListener;>;")]
-						get{ return GetListeners(); }
+						[Dot42.DexImport("getListeners", "()Ljava/util/ArrayList;", AccessFlags = 1, Signature = "()Ljava/util/ArrayList<Landroid/animation/Animator$AnimatorListener;>;")]
+						get{ return default(global::Java.Util.ArrayList<global::Android.Animation.Animator.IAnimatorListener>); }
 				}
 
 				/// <java-name>
@@ -326,15 +302,6 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// getChildAnimations
-				/// </java-name>
-				[Dot42.DexImport("getChildAnimations", "()Ljava/util/ArrayList;", AccessFlags = 1, Signature = "()Ljava/util/ArrayList<Landroid/animation/Animator;>;")]
-				public global::Java.Util.ArrayList<global::Android.Animation.Animator> GetChildAnimations() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ArrayList<global::Android.Animation.Animator>);
-				}
-
-				/// <java-name>
 				/// setTarget
 				/// </java-name>
 				[Dot42.DexImport("setTarget", "(Ljava/lang/Object;)V", AccessFlags = 1)]
@@ -373,50 +340,6 @@ namespace Android.Animation
 				[Dot42.DexImport("end", "()V", AccessFlags = 1)]
 				public override void End() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isRunning
-				/// </java-name>
-				[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1)]
-				public override bool IsRunning() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isStarted
-				/// </java-name>
-				[Dot42.DexImport("isStarted", "()Z", AccessFlags = 1)]
-				public override bool IsStarted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getStartDelay
-				/// </java-name>
-				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
-				public override long GetStartDelay() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setStartDelay
-				/// </java-name>
-				[Dot42.DexImport("setStartDelay", "(J)V", AccessFlags = 1)]
-				public override void SetStartDelay(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDuration
-				/// </java-name>
-				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
-				public override long GetDuration() /* MethodBuilder.Create */ 
-				{
-						return default(long);
 				}
 
 				/// <java-name>
@@ -466,28 +389,46 @@ namespace Android.Animation
 				/// </java-name>
 				public global::Java.Util.ArrayList<global::Android.Animation.Animator> ChildAnimations
 				{
-				[Dot42.DexImport("getChildAnimations", "()Ljava/util/ArrayList;", AccessFlags = 1, Signature = "()Ljava/util/ArrayList<Landroid/animation/Animator;>;")]
-						get{ return GetChildAnimations(); }
+						[Dot42.DexImport("getChildAnimations", "()Ljava/util/ArrayList;", AccessFlags = 1, Signature = "()Ljava/util/ArrayList<Landroid/animation/Animator;>;")]
+						get{ return default(global::Java.Util.ArrayList<global::Android.Animation.Animator>); }
+				}
+
+				/// <java-name>
+				/// isRunning
+				/// </java-name>
+				public override bool IsRunning
+				{
+						[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isStarted
+				/// </java-name>
+				public override bool IsStarted
+				{
+						[Dot42.DexImport("isStarted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getStartDelay
 				/// </java-name>
-				public long StartDelay
+				public override long StartDelay
 				{
-				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
-						get{ return GetStartDelay(); }
-				[Dot42.DexImport("setStartDelay", "(J)V", AccessFlags = 1)]
-						set{ SetStartDelay(value); }
+						[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setStartDelay", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDuration
 				/// </java-name>
-				public long Duration
+				public override long Duration
 				{
-				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
-						get{ return GetDuration(); }
+						[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -724,115 +665,60 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// hasValue
-				/// </java-name>
-				[Dot42.DexImport("hasValue", "()Z", AccessFlags = 1)]
-				public virtual bool HasValue() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "()Ljava/lang/Object;", AccessFlags = 1025)]
-				public abstract object GetValue() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setValue
-				/// </java-name>
-				[Dot42.DexImport("setValue", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
-				public abstract void SetValue(object @object) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFraction
-				/// </java-name>
-				[Dot42.DexImport("getFraction", "()F", AccessFlags = 1)]
-				public virtual float GetFraction() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// setFraction
-				/// </java-name>
-				[Dot42.DexImport("setFraction", "(F)V", AccessFlags = 1)]
-				public virtual void SetFraction(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getInterpolator
-				/// </java-name>
-				[Dot42.DexImport("getInterpolator", "()Landroid/animation/TimeInterpolator;", AccessFlags = 1)]
-				public virtual global::Android.Animation.ITimeInterpolator GetInterpolator() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Animation.ITimeInterpolator);
-				}
-
-				/// <java-name>
-				/// setInterpolator
-				/// </java-name>
-				[Dot42.DexImport("setInterpolator", "(Landroid/animation/TimeInterpolator;)V", AccessFlags = 1)]
-				public virtual void SetInterpolator(global::Android.Animation.ITimeInterpolator timeInterpolator) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1)]
-				public virtual global::System.Type GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Landroid/animation/Keyframe;", AccessFlags = 1025)]
 				public abstract global::Android.Animation.Keyframe Clone() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// hasValue
+				/// </java-name>
+				public virtual bool HasValue
+				{
+						[Dot42.DexImport("hasValue", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getValue
 				/// </java-name>
-				public object Value
+				public abstract object Value
 				{
-				[Dot42.DexImport("getValue", "()Ljava/lang/Object;", AccessFlags = 1025)]
-						get{ return GetValue(); }
-				[Dot42.DexImport("setValue", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
-						set{ SetValue(value); }
+						[Dot42.DexImport("getValue", "()Ljava/lang/Object;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setValue", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getFraction
 				/// </java-name>
-				public float Fraction
+				public virtual float Fraction
 				{
-				[Dot42.DexImport("getFraction", "()F", AccessFlags = 1)]
-						get{ return GetFraction(); }
-				[Dot42.DexImport("setFraction", "(F)V", AccessFlags = 1)]
-						set{ SetFraction(value); }
+						[Dot42.DexImport("getFraction", "()F", AccessFlags = 1)]
+						get{ return default(float); }
+						[Dot42.DexImport("setFraction", "(F)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getInterpolator
 				/// </java-name>
-				public global::Android.Animation.ITimeInterpolator Interpolator
+				public virtual global::Android.Animation.ITimeInterpolator Interpolator
 				{
-				[Dot42.DexImport("getInterpolator", "()Landroid/animation/TimeInterpolator;", AccessFlags = 1)]
-						get{ return GetInterpolator(); }
-				[Dot42.DexImport("setInterpolator", "(Landroid/animation/TimeInterpolator;)V", AccessFlags = 1)]
-						set{ SetInterpolator(value); }
+						[Dot42.DexImport("getInterpolator", "()Landroid/animation/TimeInterpolator;", AccessFlags = 1)]
+						get{ return default(global::Android.Animation.ITimeInterpolator); }
+						[Dot42.DexImport("setInterpolator", "(Landroid/animation/TimeInterpolator;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				public global::System.Type Type
+				public virtual global::System.Type Type
 				{
-				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1)]
+						get{ return default(global::System.Type); }
 				}
 
 		}
@@ -971,24 +857,6 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// isChangingLayout
-				/// </java-name>
-				[Dot42.DexImport("isChangingLayout", "()Z", AccessFlags = 1)]
-				public virtual bool IsChangingLayout() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isRunning
-				/// </java-name>
-				[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1)]
-				public virtual bool IsRunning() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// addChild
 				/// </java-name>
 				[Dot42.DexImport("addChild", "(Landroid/view/ViewGroup;Landroid/view/View;)V", AccessFlags = 1)]
@@ -1037,21 +905,30 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// getTransitionListeners
+				/// isChangingLayout
 				/// </java-name>
-				[Dot42.DexImport("getTransitionListeners", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/animation/LayoutTransition$TransitionListener;>;")]
-				public virtual global::Java.Util.IList<global::Android.Animation.LayoutTransition.ITransitionListener> GetTransitionListeners() /* MethodBuilder.Create */ 
+				public virtual bool IsChangingLayout
 				{
-						return default(global::Java.Util.IList<global::Android.Animation.LayoutTransition.ITransitionListener>);
+						[Dot42.DexImport("isChangingLayout", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isRunning
+				/// </java-name>
+				public virtual bool IsRunning
+				{
+						[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getTransitionListeners
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Animation.LayoutTransition.ITransitionListener> TransitionListeners
+				public virtual global::Java.Util.IList<global::Android.Animation.LayoutTransition.ITransitionListener> TransitionListeners
 				{
-				[Dot42.DexImport("getTransitionListeners", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/animation/LayoutTransition$TransitionListener;>;")]
-						get{ return GetTransitionListeners(); }
+						[Dot42.DexImport("getTransitionListeners", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/animation/LayoutTransition$TransitionListener;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Animation.LayoutTransition.ITransitionListener>); }
 				}
 
 				/// <java-name>
@@ -1092,28 +969,11 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// setPropertyName
-				/// </java-name>
-				[Dot42.DexImport("setPropertyName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public void SetPropertyName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setProperty
 				/// </java-name>
 				[Dot42.DexImport("setProperty", "(Landroid/util/Property;)V", AccessFlags = 1)]
 				public void SetProperty(global::Android.Util.Property<object, object> property) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPropertyName
-				/// </java-name>
-				[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPropertyName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -1282,21 +1142,10 @@ namespace Android.Animation
 				/// </java-name>
 				public string PropertyName
 				{
-				[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPropertyName(); }
-				[Dot42.DexImport("setPropertyName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPropertyName(value); }
-				}
-
-				/// <java-name>
-				/// getTarget
-				/// </java-name>
-				public object Target
-				{
-				[Dot42.DexImport("getTarget", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetTarget(); }
-				[Dot42.DexImport("setTarget", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-						set{ SetTarget(value); }
+						[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPropertyName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -1442,28 +1291,11 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// setPropertyName
-				/// </java-name>
-				[Dot42.DexImport("setPropertyName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetPropertyName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setProperty
 				/// </java-name>
 				[Dot42.DexImport("setProperty", "(Landroid/util/Property;)V", AccessFlags = 1)]
 				public virtual void SetProperty(global::Android.Util.Property<object, object> property) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPropertyName
-				/// </java-name>
-				[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPropertyName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -1478,12 +1310,12 @@ namespace Android.Animation
 				/// <java-name>
 				/// getPropertyName
 				/// </java-name>
-				public string PropertyName
+				public virtual string PropertyName
 				{
-				[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPropertyName(); }
-				[Dot42.DexImport("setPropertyName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPropertyName(value); }
+						[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPropertyName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -1577,23 +1409,6 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// setValues
-				/// </java-name>
-				[Dot42.DexImport("setValues", "([Landroid/animation/PropertyValuesHolder;)V", AccessFlags = 129)]
-				public virtual void SetValues(params global::Android.Animation.PropertyValuesHolder[] propertyValuesHolder) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getValues
-				/// </java-name>
-				[Dot42.DexImport("getValues", "()[Landroid/animation/PropertyValuesHolder;", AccessFlags = 1)]
-				public virtual global::Android.Animation.PropertyValuesHolder[] GetValues() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Animation.PropertyValuesHolder[]);
-				}
-
-				/// <java-name>
 				/// setDuration
 				/// </java-name>
 				[Dot42.DexImport("setDuration", "(J)Landroid/animation/ValueAnimator;", AccessFlags = 1)]
@@ -1603,115 +1418,12 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// getDuration
-				/// </java-name>
-				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
-				public override long GetDuration() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setCurrentPlayTime
-				/// </java-name>
-				[Dot42.DexImport("setCurrentPlayTime", "(J)V", AccessFlags = 1)]
-				public virtual void SetCurrentPlayTime(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCurrentPlayTime
-				/// </java-name>
-				[Dot42.DexImport("getCurrentPlayTime", "()J", AccessFlags = 1)]
-				public virtual long GetCurrentPlayTime() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getStartDelay
-				/// </java-name>
-				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
-				public override long GetStartDelay() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setStartDelay
-				/// </java-name>
-				[Dot42.DexImport("setStartDelay", "(J)V", AccessFlags = 1)]
-				public override void SetStartDelay(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getFrameDelay
-				/// </java-name>
-				[Dot42.DexImport("getFrameDelay", "()J", AccessFlags = 9)]
-				public static long GetFrameDelay() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setFrameDelay
-				/// </java-name>
-				[Dot42.DexImport("setFrameDelay", "(J)V", AccessFlags = 9)]
-				public static void SetFrameDelay(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAnimatedValue
-				/// </java-name>
-				[Dot42.DexImport("getAnimatedValue", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetAnimatedValue() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
 				/// getAnimatedValue
 				/// </java-name>
 				[Dot42.DexImport("getAnimatedValue", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1)]
 				public virtual object GetAnimatedValue(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(object);
-				}
-
-				/// <java-name>
-				/// setRepeatCount
-				/// </java-name>
-				[Dot42.DexImport("setRepeatCount", "(I)V", AccessFlags = 1)]
-				public virtual void SetRepeatCount(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRepeatCount
-				/// </java-name>
-				[Dot42.DexImport("getRepeatCount", "()I", AccessFlags = 1)]
-				public virtual int GetRepeatCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setRepeatMode
-				/// </java-name>
-				[Dot42.DexImport("setRepeatMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetRepeatMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRepeatMode
-				/// </java-name>
-				[Dot42.DexImport("getRepeatMode", "()I", AccessFlags = 1)]
-				public virtual int GetRepeatMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1788,38 +1500,11 @@ namespace Android.Animation
 				}
 
 				/// <java-name>
-				/// isRunning
-				/// </java-name>
-				[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1)]
-				public override bool IsRunning() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isStarted
-				/// </java-name>
-				[Dot42.DexImport("isStarted", "()Z", AccessFlags = 1)]
-				public override bool IsStarted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// reverse
 				/// </java-name>
 				[Dot42.DexImport("reverse", "()V", AccessFlags = 1)]
 				public virtual void Reverse() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getAnimatedFraction
-				/// </java-name>
-				[Dot42.DexImport("getAnimatedFraction", "()F", AccessFlags = 1)]
-				public virtual float GetAnimatedFraction() /* MethodBuilder.Create */ 
-				{
-						return default(float);
 				}
 
 				/// <java-name>
@@ -1843,43 +1528,43 @@ namespace Android.Animation
 				/// <java-name>
 				/// getValues
 				/// </java-name>
-				public global::Android.Animation.PropertyValuesHolder[] Values
+				public virtual global::Android.Animation.PropertyValuesHolder[] Values
 				{
-				[Dot42.DexImport("getValues", "()[Landroid/animation/PropertyValuesHolder;", AccessFlags = 1)]
-						get{ return GetValues(); }
-				[Dot42.DexImport("setValues", "([Landroid/animation/PropertyValuesHolder;)V", AccessFlags = 129)]
-						set{ SetValues(value); }
+						[Dot42.DexImport("getValues", "()[Landroid/animation/PropertyValuesHolder;", AccessFlags = 1)]
+						get{ return default(global::Android.Animation.PropertyValuesHolder[]); }
+						[Dot42.DexImport("setValues", "([Landroid/animation/PropertyValuesHolder;)V", AccessFlags = 129)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDuration
 				/// </java-name>
-				public long Duration
+				public override long Duration
 				{
-				[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
-						get{ return GetDuration(); }
+						[Dot42.DexImport("getDuration", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getCurrentPlayTime
 				/// </java-name>
-				public long CurrentPlayTime
+				public virtual long CurrentPlayTime
 				{
-				[Dot42.DexImport("getCurrentPlayTime", "()J", AccessFlags = 1)]
-						get{ return GetCurrentPlayTime(); }
-				[Dot42.DexImport("setCurrentPlayTime", "(J)V", AccessFlags = 1)]
-						set{ SetCurrentPlayTime(value); }
+						[Dot42.DexImport("getCurrentPlayTime", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setCurrentPlayTime", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getStartDelay
 				/// </java-name>
-				public long StartDelay
+				public override long StartDelay
 				{
-				[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
-						get{ return GetStartDelay(); }
-				[Dot42.DexImport("setStartDelay", "(J)V", AccessFlags = 1)]
-						set{ SetStartDelay(value); }
+						[Dot42.DexImport("getStartDelay", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setStartDelay", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1887,61 +1572,68 @@ namespace Android.Animation
 				/// </java-name>
 				public static long FrameDelay
 				{
-				[Dot42.DexImport("getFrameDelay", "()J", AccessFlags = 9)]
-						get{ return GetFrameDelay(); }
-				[Dot42.DexImport("setFrameDelay", "(J)V", AccessFlags = 9)]
-						set{ SetFrameDelay(value); }
+						[Dot42.DexImport("getFrameDelay", "()J", AccessFlags = 9)]
+						get{ return default(long); }
+						[Dot42.DexImport("setFrameDelay", "(J)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAnimatedValue
 				/// </java-name>
-				public object AnimatedValue
+				public virtual object AnimatedValue
 				{
-				[Dot42.DexImport("getAnimatedValue", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetAnimatedValue(); }
+						[Dot42.DexImport("getAnimatedValue", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object); }
 				}
 
 				/// <java-name>
 				/// getRepeatCount
 				/// </java-name>
-				public int RepeatCount
+				public virtual int RepeatCount
 				{
-				[Dot42.DexImport("getRepeatCount", "()I", AccessFlags = 1)]
-						get{ return GetRepeatCount(); }
-				[Dot42.DexImport("setRepeatCount", "(I)V", AccessFlags = 1)]
-						set{ SetRepeatCount(value); }
+						[Dot42.DexImport("getRepeatCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setRepeatCount", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getRepeatMode
 				/// </java-name>
-				public int RepeatMode
+				public virtual int RepeatMode
 				{
-				[Dot42.DexImport("getRepeatMode", "()I", AccessFlags = 1)]
-						get{ return GetRepeatMode(); }
-				[Dot42.DexImport("setRepeatMode", "(I)V", AccessFlags = 1)]
-						set{ SetRepeatMode(value); }
+						[Dot42.DexImport("getRepeatMode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setRepeatMode", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
-				/// getInterpolator
+				/// isRunning
 				/// </java-name>
-				public global::Android.Animation.ITimeInterpolator Interpolator
+				public override bool IsRunning
 				{
-				[Dot42.DexImport("getInterpolator", "()Landroid/animation/TimeInterpolator;", AccessFlags = 1)]
-						get{ return GetInterpolator(); }
-				[Dot42.DexImport("setInterpolator", "(Landroid/animation/TimeInterpolator;)V", AccessFlags = 1)]
-						set{ SetInterpolator(value); }
+						[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isStarted
+				/// </java-name>
+				public override bool IsStarted
+				{
+						[Dot42.DexImport("isStarted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getAnimatedFraction
 				/// </java-name>
-				public float AnimatedFraction
+				public virtual float AnimatedFraction
 				{
-				[Dot42.DexImport("getAnimatedFraction", "()F", AccessFlags = 1)]
-						get{ return GetAnimatedFraction(); }
+						[Dot42.DexImport("getAnimatedFraction", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>

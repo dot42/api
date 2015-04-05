@@ -61,19 +61,10 @@ namespace Java.Sql
 				/// <java-name>
 				/// getUpdateCounts
 				/// </java-name>
-				[Dot42.DexImport("getUpdateCounts", "()[I", AccessFlags = 1)]
-				public virtual int[] GetUpdateCounts() /* MethodBuilder.Create */ 
+				public virtual int[] UpdateCounts
 				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// getUpdateCounts
-				/// </java-name>
-				public int[] UpdateCounts
-				{
-				[Dot42.DexImport("getUpdateCounts", "()[I", AccessFlags = 1)]
-						get{ return GetUpdateCounts(); }
+						[Dot42.DexImport("getUpdateCounts", "()[I", AccessFlags = 1)]
+						get{ return default(int[]); }
 				}
 
 		}
@@ -146,51 +137,6 @@ namespace Java.Sql
 				{
 				}
 
-				/// <java-name>
-				/// getDataSize
-				/// </java-name>
-				[Dot42.DexImport("getDataSize", "()I", AccessFlags = 1)]
-				public virtual int GetDataSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-				public virtual int GetIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getParameter
-				/// </java-name>
-				[Dot42.DexImport("getParameter", "()Z", AccessFlags = 1)]
-				public virtual bool GetParameter() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getRead
-				/// </java-name>
-				[Dot42.DexImport("getRead", "()Z", AccessFlags = 1)]
-				public virtual bool GetRead() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getTransferSize
-				/// </java-name>
-				[Dot42.DexImport("getTransferSize", "()I", AccessFlags = 1)]
-				public virtual int GetTransferSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DataTruncation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -199,46 +145,46 @@ namespace Java.Sql
 				/// <java-name>
 				/// getDataSize
 				/// </java-name>
-				public int DataSize
+				public virtual int DataSize
 				{
-				[Dot42.DexImport("getDataSize", "()I", AccessFlags = 1)]
-						get{ return GetDataSize(); }
+						[Dot42.DexImport("getDataSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIndex
 				/// </java-name>
-				public int Index
+				public virtual int Index
 				{
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-						get{ return GetIndex(); }
+						[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getParameter
 				/// </java-name>
-				public bool IsParameter
+				public virtual bool IsParameter
 				{
-				[Dot42.DexImport("getParameter", "()Z", AccessFlags = 1)]
-						get{ return GetParameter(); }
+						[Dot42.DexImport("getParameter", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getRead
 				/// </java-name>
-				public bool IsRead
+				public virtual bool IsRead
 				{
-				[Dot42.DexImport("getRead", "()Z", AccessFlags = 1)]
-						get{ return GetRead(); }
+						[Dot42.DexImport("getRead", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getTransferSize
 				/// </java-name>
-				public int TransferSize
+				public virtual int TransferSize
 				{
-				[Dot42.DexImport("getTransferSize", "()I", AccessFlags = 1)]
-						get{ return GetTransferSize(); }
+						[Dot42.DexImport("getTransferSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -257,65 +203,6 @@ namespace Java.Sql
 
 				[Dot42.DexImport("<init>", "(J)V", AccessFlags = 1)]
 				public Date(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHours
-				/// </java-name>
-				[Dot42.DexImport("getHours", "()I", AccessFlags = 1)]
-				public override int GetHours() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinutes
-				/// </java-name>
-				[Dot42.DexImport("getMinutes", "()I", AccessFlags = 1)]
-				public override int GetMinutes() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSeconds
-				/// </java-name>
-				[Dot42.DexImport("getSeconds", "()I", AccessFlags = 1)]
-				public override int GetSeconds() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setHours
-				/// </java-name>
-				[Dot42.DexImport("setHours", "(I)V", AccessFlags = 1)]
-				public override void SetHours(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMinutes
-				/// </java-name>
-				[Dot42.DexImport("setMinutes", "(I)V", AccessFlags = 1)]
-				public override void SetMinutes(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSeconds
-				/// </java-name>
-				[Dot42.DexImport("setSeconds", "(I)V", AccessFlags = 1)]
-				public override void SetSeconds(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTime
-				/// </java-name>
-				[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
-				public override void SetTime(long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -345,34 +232,43 @@ namespace Java.Sql
 				/// <java-name>
 				/// getHours
 				/// </java-name>
-				public int Hours
+				public override int Hours
 				{
-				[Dot42.DexImport("getHours", "()I", AccessFlags = 1)]
-						get{ return GetHours(); }
-				[Dot42.DexImport("setHours", "(I)V", AccessFlags = 1)]
-						set{ SetHours(value); }
+						[Dot42.DexImport("getHours", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setHours", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMinutes
 				/// </java-name>
-				public int Minutes
+				public override int Minutes
 				{
-				[Dot42.DexImport("getMinutes", "()I", AccessFlags = 1)]
-						get{ return GetMinutes(); }
-				[Dot42.DexImport("setMinutes", "(I)V", AccessFlags = 1)]
-						set{ SetMinutes(value); }
+						[Dot42.DexImport("getMinutes", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMinutes", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSeconds
 				/// </java-name>
-				public int Seconds
+				public override int Seconds
 				{
-				[Dot42.DexImport("getSeconds", "()I", AccessFlags = 1)]
-						get{ return GetSeconds(); }
-				[Dot42.DexImport("setSeconds", "(I)V", AccessFlags = 1)]
-						set{ SetSeconds(value); }
+						[Dot42.DexImport("getSeconds", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSeconds", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setTime
+				/// </java-name>
+				public override long Time
+				{
+						[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -434,42 +330,6 @@ namespace Java.Sql
 				}
 
 				/// <java-name>
-				/// getDrivers
-				/// </java-name>
-				[Dot42.DexImport("getDrivers", "()Ljava/util/Enumeration;", AccessFlags = 9, Signature = "()Ljava/util/Enumeration<Ljava/sql/Driver;>;")]
-				public static global::Java.Util.IEnumeration<global::Java.Sql.IDriver> GetDrivers() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<global::Java.Sql.IDriver>);
-				}
-
-				/// <java-name>
-				/// getLoginTimeout
-				/// </java-name>
-				[Dot42.DexImport("getLoginTimeout", "()I", AccessFlags = 9)]
-				public static int GetLoginTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLogStream
-				/// </java-name>
-				[Dot42.DexImport("getLogStream", "()Ljava/io/PrintStream;", AccessFlags = 9)]
-				public static global::Java.Io.PrintStream GetLogStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.PrintStream);
-				}
-
-				/// <java-name>
-				/// getLogWriter
-				/// </java-name>
-				[Dot42.DexImport("getLogWriter", "()Ljava/io/PrintWriter;", AccessFlags = 9)]
-				public static global::Java.Io.PrintWriter GetLogWriter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.PrintWriter);
-				}
-
-				/// <java-name>
 				/// println
 				/// </java-name>
 				[Dot42.DexImport("println", "(Ljava/lang/String;)V", AccessFlags = 9)]
@@ -486,36 +346,12 @@ namespace Java.Sql
 				}
 
 				/// <java-name>
-				/// setLoginTimeout
-				/// </java-name>
-				[Dot42.DexImport("setLoginTimeout", "(I)V", AccessFlags = 9)]
-				public static void SetLoginTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLogStream
-				/// </java-name>
-				[Dot42.DexImport("setLogStream", "(Ljava/io/PrintStream;)V", AccessFlags = 9)]
-				public static void SetLogStream(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLogWriter
-				/// </java-name>
-				[Dot42.DexImport("setLogWriter", "(Ljava/io/PrintWriter;)V", AccessFlags = 9)]
-				public static void SetLogWriter(global::Java.Io.PrintWriter printWriter) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getDrivers
 				/// </java-name>
 				public static global::Java.Util.IEnumeration<global::Java.Sql.IDriver> Drivers
 				{
-				[Dot42.DexImport("getDrivers", "()Ljava/util/Enumeration;", AccessFlags = 9, Signature = "()Ljava/util/Enumeration<Ljava/sql/Driver;>;")]
-						get{ return GetDrivers(); }
+						[Dot42.DexImport("getDrivers", "()Ljava/util/Enumeration;", AccessFlags = 9, Signature = "()Ljava/util/Enumeration<Ljava/sql/Driver;>;")]
+						get{ return default(global::Java.Util.IEnumeration<global::Java.Sql.IDriver>); }
 				}
 
 				/// <java-name>
@@ -523,10 +359,10 @@ namespace Java.Sql
 				/// </java-name>
 				public static int LoginTimeout
 				{
-				[Dot42.DexImport("getLoginTimeout", "()I", AccessFlags = 9)]
-						get{ return GetLoginTimeout(); }
-				[Dot42.DexImport("setLoginTimeout", "(I)V", AccessFlags = 9)]
-						set{ SetLoginTimeout(value); }
+						[Dot42.DexImport("getLoginTimeout", "()I", AccessFlags = 9)]
+						get{ return default(int); }
+						[Dot42.DexImport("setLoginTimeout", "(I)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -534,10 +370,10 @@ namespace Java.Sql
 				/// </java-name>
 				public static global::Java.Io.PrintStream LogStream
 				{
-				[Dot42.DexImport("getLogStream", "()Ljava/io/PrintStream;", AccessFlags = 9)]
-						get{ return GetLogStream(); }
-				[Dot42.DexImport("setLogStream", "(Ljava/io/PrintStream;)V", AccessFlags = 9)]
-						set{ SetLogStream(value); }
+						[Dot42.DexImport("getLogStream", "()Ljava/io/PrintStream;", AccessFlags = 9)]
+						get{ return default(global::Java.Io.PrintStream); }
+						[Dot42.DexImport("setLogStream", "(Ljava/io/PrintStream;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -545,10 +381,10 @@ namespace Java.Sql
 				/// </java-name>
 				public static global::Java.Io.PrintWriter LogWriter
 				{
-				[Dot42.DexImport("getLogWriter", "()Ljava/io/PrintWriter;", AccessFlags = 9)]
-						get{ return GetLogWriter(); }
-				[Dot42.DexImport("setLogWriter", "(Ljava/io/PrintWriter;)V", AccessFlags = 9)]
-						set{ SetLogWriter(value); }
+						[Dot42.DexImport("getLogWriter", "()Ljava/io/PrintWriter;", AccessFlags = 9)]
+						get{ return default(global::Java.Io.PrintWriter); }
+						[Dot42.DexImport("setLogWriter", "(Ljava/io/PrintWriter;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 		}
@@ -607,12 +443,6 @@ namespace Java.Sql
 				/// <java-name>
 				/// getArray
 				/// </java-name>
-				[Dot42.DexImport("getArray", "()Ljava/lang/Object;", AccessFlags = 1025)]
-				object GetArray() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getArray
-				/// </java-name>
 				[Dot42.DexImport("getArray", "(JI)Ljava/lang/Object;", AccessFlags = 1025)]
 				object GetArray(long int64, int int32) /* MethodBuilder.Create */ ;
 
@@ -627,24 +457,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("getArray", "(Ljava/util/Map;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<*>;>;)Ljava/lang/Object;")]
 				object GetArray(global::Java.Util.IMap<string, global::System.Type> map) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getBaseType
-				/// </java-name>
-				[Dot42.DexImport("getBaseType", "()I", AccessFlags = 1025)]
-				int GetBaseType() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getBaseTypeName
-				/// </java-name>
-				[Dot42.DexImport("getBaseTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetBaseTypeName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResultSet
-				/// </java-name>
-				[Dot42.DexImport("getResultSet", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetResultSet() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getResultSet
@@ -670,6 +482,42 @@ namespace Java.Sql
 				[Dot42.DexImport("free", "()V", AccessFlags = 1025)]
 				void Free() /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getArray
+				/// </java-name>
+				object Array
+				{
+						[Dot42.DexImport("getArray", "()Ljava/lang/Object;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getBaseType
+				/// </java-name>
+				int BaseType
+				{
+						[Dot42.DexImport("getBaseType", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getBaseTypeName
+				/// </java-name>
+				string BaseTypeName
+				{
+						[Dot42.DexImport("getBaseTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getResultSet
+				/// </java-name>
+				global::Java.Sql.IResultSet ResultSet
+				{
+						[Dot42.DexImport("getResultSet", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -679,12 +527,6 @@ namespace Java.Sql
 		public partial interface IBlob
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getBinaryStream
-				/// </java-name>
-				[Dot42.DexImport("getBinaryStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-				global::Java.Io.InputStream GetBinaryStream() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// getBinaryStream
 				/// </java-name>
@@ -744,6 +586,15 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("free", "()V", AccessFlags = 1025)]
 				void Free() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getBinaryStream
+				/// </java-name>
+				global::Java.Io.InputStream BinaryStream
+				{
+						[Dot42.DexImport("getBinaryStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1431,18 +1282,6 @@ namespace Java.Sql
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getAsciiStream
-				/// </java-name>
-				[Dot42.DexImport("getAsciiStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-				global::Java.Io.InputStream GetAsciiStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCharacterStream
-				/// </java-name>
-				[Dot42.DexImport("getCharacterStream", "()Ljava/io/Reader;", AccessFlags = 1025)]
-				global::Java.Io.Reader GetCharacterStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSubString
 				/// </java-name>
 				[Dot42.DexImport("getSubString", "(JI)Ljava/lang/String;", AccessFlags = 1025)]
@@ -1508,6 +1347,24 @@ namespace Java.Sql
 				[Dot42.DexImport("getCharacterStream", "(JJ)Ljava/io/Reader;", AccessFlags = 1025)]
 				global::Java.Io.Reader GetCharacterStream(long int64, long int641) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getAsciiStream
+				/// </java-name>
+				global::Java.Io.InputStream AsciiStream
+				{
+						[Dot42.DexImport("getAsciiStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getCharacterStream
+				/// </java-name>
+				global::Java.Io.Reader CharacterStream
+				{
+						[Dot42.DexImport("getCharacterStream", "()Ljava/io/Reader;", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -1552,60 +1409,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("createStatement", "(III)Ljava/sql/Statement;", AccessFlags = 1025)]
 				global::Java.Sql.IStatement CreateStatement(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAutoCommit
-				/// </java-name>
-				[Dot42.DexImport("getAutoCommit", "()Z", AccessFlags = 1025)]
-				bool GetAutoCommit() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCatalog
-				/// </java-name>
-				[Dot42.DexImport("getCatalog", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetCatalog() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getHoldability
-				/// </java-name>
-				[Dot42.DexImport("getHoldability", "()I", AccessFlags = 1025)]
-				int GetHoldability() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMetaData
-				/// </java-name>
-				[Dot42.DexImport("getMetaData", "()Ljava/sql/DatabaseMetaData;", AccessFlags = 1025)]
-				global::Java.Sql.IDatabaseMetaData GetMetaData() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTransactionIsolation
-				/// </java-name>
-				[Dot42.DexImport("getTransactionIsolation", "()I", AccessFlags = 1025)]
-				int GetTransactionIsolation() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTypeMap
-				/// </java-name>
-				[Dot42.DexImport("getTypeMap", "()Ljava/util/Map;", AccessFlags = 1025, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<*>;>;")]
-				global::Java.Util.IMap<string, global::System.Type> GetTypeMap() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getWarnings
-				/// </java-name>
-				[Dot42.DexImport("getWarnings", "()Ljava/sql/SQLWarning;", AccessFlags = 1025)]
-				global::Java.Sql.SQLWarning GetWarnings() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1025)]
-				bool IsClosed() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isReadOnly
-				/// </java-name>
-				[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1025)]
-				bool IsReadOnly() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// nativeSQL
@@ -1686,24 +1489,6 @@ namespace Java.Sql
 				void Rollback(global::Java.Sql.ISavepoint savepoint) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setAutoCommit
-				/// </java-name>
-				[Dot42.DexImport("setAutoCommit", "(Z)V", AccessFlags = 1025)]
-				void SetAutoCommit(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setCatalog
-				/// </java-name>
-				[Dot42.DexImport("setCatalog", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetCatalog(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setHoldability
-				/// </java-name>
-				[Dot42.DexImport("setHoldability", "(I)V", AccessFlags = 1025)]
-				void SetHoldability(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setReadOnly
 				/// </java-name>
 				[Dot42.DexImport("setReadOnly", "(Z)V", AccessFlags = 1025)]
@@ -1720,18 +1505,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("setSavepoint", "(Ljava/lang/String;)Ljava/sql/Savepoint;", AccessFlags = 1025)]
 				global::Java.Sql.ISavepoint SetSavepoint(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setTransactionIsolation
-				/// </java-name>
-				[Dot42.DexImport("setTransactionIsolation", "(I)V", AccessFlags = 1025)]
-				void SetTransactionIsolation(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setTypeMap
-				/// </java-name>
-				[Dot42.DexImport("setTypeMap", "(Ljava/util/Map;)V", AccessFlags = 1025, Signature = "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<*>;>;)V")]
-				void SetTypeMap(global::Java.Util.IMap<string, global::System.Type> map) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// createClob
@@ -1770,22 +1543,10 @@ namespace Java.Sql
 				void SetClientInfo(string @string, string string1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setClientInfo
-				/// </java-name>
-				[Dot42.DexImport("setClientInfo", "(Ljava/util/Properties;)V", AccessFlags = 1025)]
-				void SetClientInfo(global::Java.Util.Properties properties) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getClientInfo
 				/// </java-name>
 				[Dot42.DexImport("getClientInfo", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
 				string GetClientInfo(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getClientInfo
-				/// </java-name>
-				[Dot42.DexImport("getClientInfo", "()Ljava/util/Properties;", AccessFlags = 1025)]
-				global::Java.Util.Properties GetClientInfo() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// createArrayOf
@@ -1798,6 +1559,108 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("createStruct", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/sql/Struct;", AccessFlags = 1025)]
 				global::Java.Sql.IStruct CreateStruct(string @string, object[] @object) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getAutoCommit
+				/// </java-name>
+				bool IsAutoCommit
+				{
+						[Dot42.DexImport("getAutoCommit", "()Z", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setAutoCommit", "(Z)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getCatalog
+				/// </java-name>
+				string Catalog
+				{
+						[Dot42.DexImport("getCatalog", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setCatalog", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getHoldability
+				/// </java-name>
+				int Holdability
+				{
+						[Dot42.DexImport("getHoldability", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setHoldability", "(I)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getMetaData
+				/// </java-name>
+				global::Java.Sql.IDatabaseMetaData MetaData
+				{
+						[Dot42.DexImport("getMetaData", "()Ljava/sql/DatabaseMetaData;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getTransactionIsolation
+				/// </java-name>
+				int TransactionIsolation
+				{
+						[Dot42.DexImport("getTransactionIsolation", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setTransactionIsolation", "(I)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getTypeMap
+				/// </java-name>
+				global::Java.Util.IMap<string, global::System.Type> TypeMap
+				{
+						[Dot42.DexImport("getTypeMap", "()Ljava/util/Map;", AccessFlags = 1025, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<*>;>;")]
+						get;
+						[Dot42.DexImport("setTypeMap", "(Ljava/util/Map;)V", AccessFlags = 1025, Signature = "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<*>;>;)V")]
+						set;
+				}
+
+				/// <java-name>
+				/// getWarnings
+				/// </java-name>
+				global::Java.Sql.SQLWarning Warnings
+				{
+						[Dot42.DexImport("getWarnings", "()Ljava/sql/SQLWarning;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isReadOnly
+				/// </java-name>
+				bool IsReadOnly
+				{
+						[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getClientInfo
+				/// </java-name>
+				global::Java.Util.Properties ClientInfo
+				{
+						[Dot42.DexImport("getClientInfo", "()Ljava/util/Properties;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setClientInfo", "(Ljava/util/Properties;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -1892,24 +1755,6 @@ namespace Java.Sql
 				global::Java.Sql.IResultSet GetBestRowIdentifier(string @string, string string1, string string2, int int32, bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getCatalogs
-				/// </java-name>
-				[Dot42.DexImport("getCatalogs", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetCatalogs() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCatalogSeparator
-				/// </java-name>
-				[Dot42.DexImport("getCatalogSeparator", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetCatalogSeparator() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCatalogTerm
-				/// </java-name>
-				[Dot42.DexImport("getCatalogTerm", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetCatalogTerm() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getColumnPrivileges
 				/// </java-name>
 				[Dot42.DexImport("getColumnPrivileges", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/s" +
@@ -1924,12 +1769,6 @@ namespace Java.Sql
 				global::Java.Sql.IResultSet GetColumns(string @string, string string1, string string2, string string3) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getConnection
-				/// </java-name>
-				[Dot42.DexImport("getConnection", "()Ljava/sql/Connection;", AccessFlags = 1025)]
-				global::Java.Sql.IConnection GetConnection() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getCrossReference
 				/// </java-name>
 				[Dot42.DexImport("getCrossReference", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/la" +
@@ -1937,76 +1776,10 @@ namespace Java.Sql
 				global::Java.Sql.IResultSet GetCrossReference(string @string, string string1, string string2, string string3, string string4, string string5) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getDatabaseMajorVersion
-				/// </java-name>
-				[Dot42.DexImport("getDatabaseMajorVersion", "()I", AccessFlags = 1025)]
-				int GetDatabaseMajorVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDatabaseMinorVersion
-				/// </java-name>
-				[Dot42.DexImport("getDatabaseMinorVersion", "()I", AccessFlags = 1025)]
-				int GetDatabaseMinorVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDatabaseProductName
-				/// </java-name>
-				[Dot42.DexImport("getDatabaseProductName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetDatabaseProductName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDatabaseProductVersion
-				/// </java-name>
-				[Dot42.DexImport("getDatabaseProductVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetDatabaseProductVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDefaultTransactionIsolation
-				/// </java-name>
-				[Dot42.DexImport("getDefaultTransactionIsolation", "()I", AccessFlags = 1025)]
-				int GetDefaultTransactionIsolation() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDriverMajorVersion
-				/// </java-name>
-				[Dot42.DexImport("getDriverMajorVersion", "()I", AccessFlags = 1025)]
-				int GetDriverMajorVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDriverMinorVersion
-				/// </java-name>
-				[Dot42.DexImport("getDriverMinorVersion", "()I", AccessFlags = 1025)]
-				int GetDriverMinorVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDriverName
-				/// </java-name>
-				[Dot42.DexImport("getDriverName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetDriverName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getDriverVersion
-				/// </java-name>
-				[Dot42.DexImport("getDriverVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetDriverVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getExportedKeys
 				/// </java-name>
 				[Dot42.DexImport("getExportedKeys", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", AccessFlags = 1025)]
 				global::Java.Sql.IResultSet GetExportedKeys(string @string, string string1, string string2) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getExtraNameCharacters
-				/// </java-name>
-				[Dot42.DexImport("getExtraNameCharacters", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetExtraNameCharacters() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getIdentifierQuoteString
-				/// </java-name>
-				[Dot42.DexImport("getIdentifierQuoteString", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetIdentifierQuoteString() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getImportedKeys
@@ -2019,144 +1792,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("getIndexInfo", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Ljava/sql/ResultSet;", AccessFlags = 1025)]
 				global::Java.Sql.IResultSet GetIndexInfo(string @string, string string1, string string2, bool boolean, bool boolean1) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getJDBCMajorVersion
-				/// </java-name>
-				[Dot42.DexImport("getJDBCMajorVersion", "()I", AccessFlags = 1025)]
-				int GetJDBCMajorVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getJDBCMinorVersion
-				/// </java-name>
-				[Dot42.DexImport("getJDBCMinorVersion", "()I", AccessFlags = 1025)]
-				int GetJDBCMinorVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxBinaryLiteralLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxBinaryLiteralLength", "()I", AccessFlags = 1025)]
-				int GetMaxBinaryLiteralLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxCatalogNameLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxCatalogNameLength", "()I", AccessFlags = 1025)]
-				int GetMaxCatalogNameLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxCharLiteralLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxCharLiteralLength", "()I", AccessFlags = 1025)]
-				int GetMaxCharLiteralLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxColumnNameLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxColumnNameLength", "()I", AccessFlags = 1025)]
-				int GetMaxColumnNameLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxColumnsInGroupBy
-				/// </java-name>
-				[Dot42.DexImport("getMaxColumnsInGroupBy", "()I", AccessFlags = 1025)]
-				int GetMaxColumnsInGroupBy() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxColumnsInIndex
-				/// </java-name>
-				[Dot42.DexImport("getMaxColumnsInIndex", "()I", AccessFlags = 1025)]
-				int GetMaxColumnsInIndex() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxColumnsInOrderBy
-				/// </java-name>
-				[Dot42.DexImport("getMaxColumnsInOrderBy", "()I", AccessFlags = 1025)]
-				int GetMaxColumnsInOrderBy() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxColumnsInSelect
-				/// </java-name>
-				[Dot42.DexImport("getMaxColumnsInSelect", "()I", AccessFlags = 1025)]
-				int GetMaxColumnsInSelect() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxColumnsInTable
-				/// </java-name>
-				[Dot42.DexImport("getMaxColumnsInTable", "()I", AccessFlags = 1025)]
-				int GetMaxColumnsInTable() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxConnections
-				/// </java-name>
-				[Dot42.DexImport("getMaxConnections", "()I", AccessFlags = 1025)]
-				int GetMaxConnections() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxCursorNameLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxCursorNameLength", "()I", AccessFlags = 1025)]
-				int GetMaxCursorNameLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxIndexLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxIndexLength", "()I", AccessFlags = 1025)]
-				int GetMaxIndexLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxProcedureNameLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxProcedureNameLength", "()I", AccessFlags = 1025)]
-				int GetMaxProcedureNameLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxRowSize
-				/// </java-name>
-				[Dot42.DexImport("getMaxRowSize", "()I", AccessFlags = 1025)]
-				int GetMaxRowSize() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxSchemaNameLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxSchemaNameLength", "()I", AccessFlags = 1025)]
-				int GetMaxSchemaNameLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxStatementLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxStatementLength", "()I", AccessFlags = 1025)]
-				int GetMaxStatementLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxStatements
-				/// </java-name>
-				[Dot42.DexImport("getMaxStatements", "()I", AccessFlags = 1025)]
-				int GetMaxStatements() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxTableNameLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxTableNameLength", "()I", AccessFlags = 1025)]
-				int GetMaxTableNameLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxTablesInSelect
-				/// </java-name>
-				[Dot42.DexImport("getMaxTablesInSelect", "()I", AccessFlags = 1025)]
-				int GetMaxTablesInSelect() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxUserNameLength
-				/// </java-name>
-				[Dot42.DexImport("getMaxUserNameLength", "()I", AccessFlags = 1025)]
-				int GetMaxUserNameLength() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNumericFunctions
-				/// </java-name>
-				[Dot42.DexImport("getNumericFunctions", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetNumericFunctions() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getPrimaryKeys
@@ -2178,54 +1813,6 @@ namespace Java.Sql
 				global::Java.Sql.IResultSet GetProcedures(string @string, string string1, string string2) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getProcedureTerm
-				/// </java-name>
-				[Dot42.DexImport("getProcedureTerm", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetProcedureTerm() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResultSetHoldability
-				/// </java-name>
-				[Dot42.DexImport("getResultSetHoldability", "()I", AccessFlags = 1025)]
-				int GetResultSetHoldability() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSchemas
-				/// </java-name>
-				[Dot42.DexImport("getSchemas", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetSchemas() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSchemaTerm
-				/// </java-name>
-				[Dot42.DexImport("getSchemaTerm", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSchemaTerm() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSearchStringEscape
-				/// </java-name>
-				[Dot42.DexImport("getSearchStringEscape", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSearchStringEscape() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSQLKeywords
-				/// </java-name>
-				[Dot42.DexImport("getSQLKeywords", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSQLKeywords() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSQLStateType
-				/// </java-name>
-				[Dot42.DexImport("getSQLStateType", "()I", AccessFlags = 1025)]
-				int GetSQLStateType() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getStringFunctions
-				/// </java-name>
-				[Dot42.DexImport("getStringFunctions", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetStringFunctions() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSuperTables
 				/// </java-name>
 				[Dot42.DexImport("getSuperTables", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", AccessFlags = 1025)]
@@ -2236,12 +1823,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("getSuperTypes", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", AccessFlags = 1025)]
 				global::Java.Sql.IResultSet GetSuperTypes(string @string, string string1, string string2) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSystemFunctions
-				/// </java-name>
-				[Dot42.DexImport("getSystemFunctions", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemFunctions() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getTablePrivileges
@@ -2257,40 +1838,10 @@ namespace Java.Sql
 				global::Java.Sql.IResultSet GetTables(string @string, string string1, string string2, string[] string3) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getTableTypes
-				/// </java-name>
-				[Dot42.DexImport("getTableTypes", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetTableTypes() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTimeDateFunctions
-				/// </java-name>
-				[Dot42.DexImport("getTimeDateFunctions", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetTimeDateFunctions() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTypeInfo
-				/// </java-name>
-				[Dot42.DexImport("getTypeInfo", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetTypeInfo() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getUDTs
 				/// </java-name>
 				[Dot42.DexImport("getUDTs", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[I)Ljava/sql/ResultSet;", AccessFlags = 1025)]
 				global::Java.Sql.IResultSet GetUDTs(string @string, string string1, string string2, int[] int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getURL
-				/// </java-name>
-				[Dot42.DexImport("getURL", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetURL() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getUserName
-				/// </java-name>
-				[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetUserName() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getVersionColumns
@@ -2303,18 +1854,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("insertsAreDetected", "(I)Z", AccessFlags = 1025)]
 				bool InsertsAreDetected(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isCatalogAtStart
-				/// </java-name>
-				[Dot42.DexImport("isCatalogAtStart", "()Z", AccessFlags = 1025)]
-				bool IsCatalogAtStart() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isReadOnly
-				/// </java-name>
-				[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1025)]
-				bool IsReadOnly() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// locatorsUpdateCopy
@@ -2845,12 +2384,6 @@ namespace Java.Sql
 				bool AutoCommitFailureClosesAllResultSets() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getClientInfoProperties
-				/// </java-name>
-				[Dot42.DexImport("getClientInfoProperties", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetClientInfoProperties() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getFunctionColumns
 				/// </java-name>
 				[Dot42.DexImport("getFunctionColumns", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/s" +
@@ -2864,12 +2397,6 @@ namespace Java.Sql
 				global::Java.Sql.IResultSet GetFunctions(string @string, string string1, string string2) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getRowIdLifetime
-				/// </java-name>
-				[Dot42.DexImport("getRowIdLifetime", "()Ljava/sql/RowIdLifetime;", AccessFlags = 1025)]
-				global::Java.Sql.RowIdLifetime GetRowIdLifetime() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSchemas
 				/// </java-name>
 				[Dot42.DexImport("getSchemas", "(Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", AccessFlags = 1025)]
@@ -2880,6 +2407,510 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("supportsStoredFunctionsUsingCallSyntax", "()Z", AccessFlags = 1025)]
 				bool SupportsStoredFunctionsUsingCallSyntax() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getCatalogs
+				/// </java-name>
+				global::Java.Sql.IResultSet Catalogs
+				{
+						[Dot42.DexImport("getCatalogs", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getCatalogSeparator
+				/// </java-name>
+				string CatalogSeparator
+				{
+						[Dot42.DexImport("getCatalogSeparator", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getCatalogTerm
+				/// </java-name>
+				string CatalogTerm
+				{
+						[Dot42.DexImport("getCatalogTerm", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getConnection
+				/// </java-name>
+				global::Java.Sql.IConnection Connection
+				{
+						[Dot42.DexImport("getConnection", "()Ljava/sql/Connection;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDatabaseMajorVersion
+				/// </java-name>
+				int DatabaseMajorVersion
+				{
+						[Dot42.DexImport("getDatabaseMajorVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDatabaseMinorVersion
+				/// </java-name>
+				int DatabaseMinorVersion
+				{
+						[Dot42.DexImport("getDatabaseMinorVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDatabaseProductName
+				/// </java-name>
+				string DatabaseProductName
+				{
+						[Dot42.DexImport("getDatabaseProductName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDatabaseProductVersion
+				/// </java-name>
+				string DatabaseProductVersion
+				{
+						[Dot42.DexImport("getDatabaseProductVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDefaultTransactionIsolation
+				/// </java-name>
+				int DefaultTransactionIsolation
+				{
+						[Dot42.DexImport("getDefaultTransactionIsolation", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDriverMajorVersion
+				/// </java-name>
+				int DriverMajorVersion
+				{
+						[Dot42.DexImport("getDriverMajorVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDriverMinorVersion
+				/// </java-name>
+				int DriverMinorVersion
+				{
+						[Dot42.DexImport("getDriverMinorVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDriverName
+				/// </java-name>
+				string DriverName
+				{
+						[Dot42.DexImport("getDriverName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDriverVersion
+				/// </java-name>
+				string DriverVersion
+				{
+						[Dot42.DexImport("getDriverVersion", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getExtraNameCharacters
+				/// </java-name>
+				string ExtraNameCharacters
+				{
+						[Dot42.DexImport("getExtraNameCharacters", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getIdentifierQuoteString
+				/// </java-name>
+				string IdentifierQuoteString
+				{
+						[Dot42.DexImport("getIdentifierQuoteString", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getJDBCMajorVersion
+				/// </java-name>
+				int JDBCMajorVersion
+				{
+						[Dot42.DexImport("getJDBCMajorVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getJDBCMinorVersion
+				/// </java-name>
+				int JDBCMinorVersion
+				{
+						[Dot42.DexImport("getJDBCMinorVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxBinaryLiteralLength
+				/// </java-name>
+				int MaxBinaryLiteralLength
+				{
+						[Dot42.DexImport("getMaxBinaryLiteralLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxCatalogNameLength
+				/// </java-name>
+				int MaxCatalogNameLength
+				{
+						[Dot42.DexImport("getMaxCatalogNameLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxCharLiteralLength
+				/// </java-name>
+				int MaxCharLiteralLength
+				{
+						[Dot42.DexImport("getMaxCharLiteralLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxColumnNameLength
+				/// </java-name>
+				int MaxColumnNameLength
+				{
+						[Dot42.DexImport("getMaxColumnNameLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxColumnsInGroupBy
+				/// </java-name>
+				int MaxColumnsInGroupBy
+				{
+						[Dot42.DexImport("getMaxColumnsInGroupBy", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxColumnsInIndex
+				/// </java-name>
+				int MaxColumnsInIndex
+				{
+						[Dot42.DexImport("getMaxColumnsInIndex", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxColumnsInOrderBy
+				/// </java-name>
+				int MaxColumnsInOrderBy
+				{
+						[Dot42.DexImport("getMaxColumnsInOrderBy", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxColumnsInSelect
+				/// </java-name>
+				int MaxColumnsInSelect
+				{
+						[Dot42.DexImport("getMaxColumnsInSelect", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxColumnsInTable
+				/// </java-name>
+				int MaxColumnsInTable
+				{
+						[Dot42.DexImport("getMaxColumnsInTable", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxConnections
+				/// </java-name>
+				int MaxConnections
+				{
+						[Dot42.DexImport("getMaxConnections", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxCursorNameLength
+				/// </java-name>
+				int MaxCursorNameLength
+				{
+						[Dot42.DexImport("getMaxCursorNameLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxIndexLength
+				/// </java-name>
+				int MaxIndexLength
+				{
+						[Dot42.DexImport("getMaxIndexLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxProcedureNameLength
+				/// </java-name>
+				int MaxProcedureNameLength
+				{
+						[Dot42.DexImport("getMaxProcedureNameLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxRowSize
+				/// </java-name>
+				int MaxRowSize
+				{
+						[Dot42.DexImport("getMaxRowSize", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxSchemaNameLength
+				/// </java-name>
+				int MaxSchemaNameLength
+				{
+						[Dot42.DexImport("getMaxSchemaNameLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxStatementLength
+				/// </java-name>
+				int MaxStatementLength
+				{
+						[Dot42.DexImport("getMaxStatementLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxStatements
+				/// </java-name>
+				int MaxStatements
+				{
+						[Dot42.DexImport("getMaxStatements", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxTableNameLength
+				/// </java-name>
+				int MaxTableNameLength
+				{
+						[Dot42.DexImport("getMaxTableNameLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxTablesInSelect
+				/// </java-name>
+				int MaxTablesInSelect
+				{
+						[Dot42.DexImport("getMaxTablesInSelect", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxUserNameLength
+				/// </java-name>
+				int MaxUserNameLength
+				{
+						[Dot42.DexImport("getMaxUserNameLength", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getNumericFunctions
+				/// </java-name>
+				string NumericFunctions
+				{
+						[Dot42.DexImport("getNumericFunctions", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getProcedureTerm
+				/// </java-name>
+				string ProcedureTerm
+				{
+						[Dot42.DexImport("getProcedureTerm", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getResultSetHoldability
+				/// </java-name>
+				int ResultSetHoldability
+				{
+						[Dot42.DexImport("getResultSetHoldability", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSchemas
+				/// </java-name>
+				global::Java.Sql.IResultSet Schemas
+				{
+						[Dot42.DexImport("getSchemas", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSchemaTerm
+				/// </java-name>
+				string SchemaTerm
+				{
+						[Dot42.DexImport("getSchemaTerm", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSearchStringEscape
+				/// </java-name>
+				string SearchStringEscape
+				{
+						[Dot42.DexImport("getSearchStringEscape", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSQLKeywords
+				/// </java-name>
+				string SQLKeywords
+				{
+						[Dot42.DexImport("getSQLKeywords", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSQLStateType
+				/// </java-name>
+				int SQLStateType
+				{
+						[Dot42.DexImport("getSQLStateType", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getStringFunctions
+				/// </java-name>
+				string StringFunctions
+				{
+						[Dot42.DexImport("getStringFunctions", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getSystemFunctions
+				/// </java-name>
+				string SystemFunctions
+				{
+						[Dot42.DexImport("getSystemFunctions", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getTableTypes
+				/// </java-name>
+				global::Java.Sql.IResultSet TableTypes
+				{
+						[Dot42.DexImport("getTableTypes", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getTimeDateFunctions
+				/// </java-name>
+				string TimeDateFunctions
+				{
+						[Dot42.DexImport("getTimeDateFunctions", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getTypeInfo
+				/// </java-name>
+				global::Java.Sql.IResultSet TypeInfo
+				{
+						[Dot42.DexImport("getTypeInfo", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getURL
+				/// </java-name>
+				string URL
+				{
+						[Dot42.DexImport("getURL", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getUserName
+				/// </java-name>
+				string UserName
+				{
+						[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isCatalogAtStart
+				/// </java-name>
+				bool IsCatalogAtStart
+				{
+						[Dot42.DexImport("isCatalogAtStart", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isReadOnly
+				/// </java-name>
+				bool IsReadOnly
+				{
+						[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getClientInfoProperties
+				/// </java-name>
+				global::Java.Sql.IResultSet ClientInfoProperties
+				{
+						[Dot42.DexImport("getClientInfoProperties", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getRowIdLifetime
+				/// </java-name>
+				global::Java.Sql.RowIdLifetime RowIdLifetime
+				{
+						[Dot42.DexImport("getRowIdLifetime", "()Ljava/sql/RowIdLifetime;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -3217,18 +3248,6 @@ namespace Java.Sql
 				global::Java.Sql.IConnection Connect(string @string, global::Java.Util.Properties properties) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getMajorVersion
-				/// </java-name>
-				[Dot42.DexImport("getMajorVersion", "()I", AccessFlags = 1025)]
-				int GetMajorVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMinorVersion
-				/// </java-name>
-				[Dot42.DexImport("getMinorVersion", "()I", AccessFlags = 1025)]
-				int GetMinorVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getPropertyInfo
 				/// </java-name>
 				[Dot42.DexImport("getPropertyInfo", "(Ljava/lang/String;Ljava/util/Properties;)[Ljava/sql/DriverPropertyInfo;", AccessFlags = 1025)]
@@ -3239,6 +3258,24 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("jdbcCompliant", "()Z", AccessFlags = 1025)]
 				bool JdbcCompliant() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getMajorVersion
+				/// </java-name>
+				int MajorVersion
+				{
+						[Dot42.DexImport("getMajorVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMinorVersion
+				/// </java-name>
+				int MinorVersion
+				{
+						[Dot42.DexImport("getMinorVersion", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -3263,12 +3300,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("getParameterClassName", "(I)Ljava/lang/String;", AccessFlags = 1025)]
 				string GetParameterClassName(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getParameterCount
-				/// </java-name>
-				[Dot42.DexImport("getParameterCount", "()I", AccessFlags = 1025)]
-				int GetParameterCount() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getParameterMode
@@ -3311,6 +3342,15 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("isSigned", "(I)Z", AccessFlags = 1025)]
 				bool IsSigned(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getParameterCount
+				/// </java-name>
+				int ParameterCount
+				{
+						[Dot42.DexImport("getParameterCount", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -3394,18 +3434,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("executeUpdate", "()I", AccessFlags = 1025)]
 				int ExecuteUpdate() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMetaData
-				/// </java-name>
-				[Dot42.DexImport("getMetaData", "()Ljava/sql/ResultSetMetaData;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSetMetaData GetMetaData() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getParameterMetaData
-				/// </java-name>
-				[Dot42.DexImport("getParameterMetaData", "()Ljava/sql/ParameterMetaData;", AccessFlags = 1025)]
-				global::Java.Sql.IParameterMetaData GetParameterMetaData() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setArray
@@ -3695,6 +3723,24 @@ namespace Java.Sql
 				[Dot42.DexImport("setNClob", "(ILjava/io/Reader;)V", AccessFlags = 1025)]
 				void SetNClob(int int32, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getMetaData
+				/// </java-name>
+				global::Java.Sql.IResultSetMetaData MetaData
+				{
+						[Dot42.DexImport("getMetaData", "()Ljava/sql/ResultSetMetaData;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getParameterMetaData
+				/// </java-name>
+				global::Java.Sql.IParameterMetaData ParameterMetaData
+				{
+						[Dot42.DexImport("getParameterMetaData", "()Ljava/sql/ParameterMetaData;", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -3705,28 +3751,30 @@ namespace Java.Sql
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getBaseTypeName
-				/// </java-name>
-				[Dot42.DexImport("getBaseTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetBaseTypeName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getObject
-				/// </java-name>
-				[Dot42.DexImport("getObject", "()Ljava/lang/Object;", AccessFlags = 1025)]
-				object GetObject() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getObject
 				/// </java-name>
 				[Dot42.DexImport("getObject", "(Ljava/util/Map;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<*>;>;)Ljava/lang/Object;")]
 				object GetObject(global::Java.Util.IMap<string, global::System.Type> map) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setObject
+				/// getBaseTypeName
 				/// </java-name>
-				[Dot42.DexImport("setObject", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
-				void SetObject(object @object) /* MethodBuilder.Create */ ;
+				string BaseTypeName
+				{
+						[Dot42.DexImport("getBaseTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getObject
+				/// </java-name>
+				object Object
+				{
+						[Dot42.DexImport("getObject", "()Ljava/lang/Object;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setObject", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -3924,18 +3972,6 @@ namespace Java.Sql
 				global::Java.Sql.IClob GetClob(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getConcurrency
-				/// </java-name>
-				[Dot42.DexImport("getConcurrency", "()I", AccessFlags = 1025)]
-				int GetConcurrency() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCursorName
-				/// </java-name>
-				[Dot42.DexImport("getCursorName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetCursorName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getDate
 				/// </java-name>
 				[Dot42.DexImport("getDate", "(I)Ljava/sql/Date;", AccessFlags = 1025)]
@@ -3972,18 +4008,6 @@ namespace Java.Sql
 				double GetDouble(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getFetchDirection
-				/// </java-name>
-				[Dot42.DexImport("getFetchDirection", "()I", AccessFlags = 1025)]
-				int GetFetchDirection() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFetchSize
-				/// </java-name>
-				[Dot42.DexImport("getFetchSize", "()I", AccessFlags = 1025)]
-				int GetFetchSize() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getFloat
 				/// </java-name>
 				[Dot42.DexImport("getFloat", "(I)F", AccessFlags = 1025)]
@@ -4018,12 +4042,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("getLong", "(Ljava/lang/String;)J", AccessFlags = 1025)]
 				long GetLong(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMetaData
-				/// </java-name>
-				[Dot42.DexImport("getMetaData", "()Ljava/sql/ResultSetMetaData;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSetMetaData GetMetaData() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getObject
@@ -4063,12 +4081,6 @@ namespace Java.Sql
 				global::Java.Sql.IRef GetRef(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getRow
-				/// </java-name>
-				[Dot42.DexImport("getRow", "()I", AccessFlags = 1025)]
-				int GetRow() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getShort
 				/// </java-name>
 				[Dot42.DexImport("getShort", "(I)S", AccessFlags = 1025)]
@@ -4079,12 +4091,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("getShort", "(Ljava/lang/String;)S", AccessFlags = 1025)]
 				short GetShort(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getStatement
-				/// </java-name>
-				[Dot42.DexImport("getStatement", "()Ljava/sql/Statement;", AccessFlags = 1025)]
-				global::Java.Sql.IStatement GetStatement() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getString
@@ -4147,12 +4153,6 @@ namespace Java.Sql
 				global::Java.Sql.Timestamp GetTimestamp(string @string, global::Java.Util.Calendar calendar) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1025)]
-				int GetTypeJava() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getUnicodeStream
 				/// </java-name>
 				[Dot42.DexImport("getUnicodeStream", "(I)Ljava/io/InputStream;", AccessFlags = 1025)]
@@ -4177,40 +4177,10 @@ namespace Java.Sql
 				global::Java.Net.URL GetURL(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getWarnings
-				/// </java-name>
-				[Dot42.DexImport("getWarnings", "()Ljava/sql/SQLWarning;", AccessFlags = 1025)]
-				global::Java.Sql.SQLWarning GetWarnings() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// insertRow
 				/// </java-name>
 				[Dot42.DexImport("insertRow", "()V", AccessFlags = 1025)]
 				void InsertRow() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isAfterLast
-				/// </java-name>
-				[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 1025)]
-				bool IsAfterLast() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isBeforeFirst
-				/// </java-name>
-				[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 1025)]
-				bool IsBeforeFirst() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isFirst
-				/// </java-name>
-				[Dot42.DexImport("isFirst", "()Z", AccessFlags = 1025)]
-				bool IsFirst() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isLast
-				/// </java-name>
-				[Dot42.DexImport("isLast", "()Z", AccessFlags = 1025)]
-				bool IsLast() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// last
@@ -4271,18 +4241,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("rowUpdated", "()Z", AccessFlags = 1025)]
 				bool RowUpdated() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFetchDirection
-				/// </java-name>
-				[Dot42.DexImport("setFetchDirection", "(I)V", AccessFlags = 1025)]
-				void SetFetchDirection(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFetchSize
-				/// </java-name>
-				[Dot42.DexImport("setFetchSize", "(I)V", AccessFlags = 1025)]
-				void SetFetchSize(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// updateArray
@@ -4597,18 +4555,6 @@ namespace Java.Sql
 				void UpdateRowId(string @string, global::Java.Sql.IRowId rowId) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getHoldability
-				/// </java-name>
-				[Dot42.DexImport("getHoldability", "()I", AccessFlags = 1025)]
-				int GetHoldability() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1025)]
-				bool IsClosed() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// updateNString
 				/// </java-name>
 				[Dot42.DexImport("updateNString", "(ILjava/lang/String;)V", AccessFlags = 1025)]
@@ -4860,6 +4806,145 @@ namespace Java.Sql
 				[Dot42.DexImport("updateNClob", "(Ljava/lang/String;Ljava/io/Reader;)V", AccessFlags = 1025)]
 				void UpdateNClob(string @string, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getConcurrency
+				/// </java-name>
+				int Concurrency
+				{
+						[Dot42.DexImport("getConcurrency", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getCursorName
+				/// </java-name>
+				string CursorName
+				{
+						[Dot42.DexImport("getCursorName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getFetchDirection
+				/// </java-name>
+				int FetchDirection
+				{
+						[Dot42.DexImport("getFetchDirection", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setFetchDirection", "(I)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getFetchSize
+				/// </java-name>
+				int FetchSize
+				{
+						[Dot42.DexImport("getFetchSize", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setFetchSize", "(I)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getMetaData
+				/// </java-name>
+				global::Java.Sql.IResultSetMetaData MetaData
+				{
+						[Dot42.DexImport("getMetaData", "()Ljava/sql/ResultSetMetaData;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getRow
+				/// </java-name>
+				int Row
+				{
+						[Dot42.DexImport("getRow", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getStatement
+				/// </java-name>
+				global::Java.Sql.IStatement Statement
+				{
+						[Dot42.DexImport("getStatement", "()Ljava/sql/Statement;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getType
+				/// </java-name>
+				int Type
+				{
+						[Dot42.DexImport("getType", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getWarnings
+				/// </java-name>
+				global::Java.Sql.SQLWarning Warnings
+				{
+						[Dot42.DexImport("getWarnings", "()Ljava/sql/SQLWarning;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isAfterLast
+				/// </java-name>
+				bool IsAfterLast
+				{
+						[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isBeforeFirst
+				/// </java-name>
+				bool IsBeforeFirst
+				{
+						[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isFirst
+				/// </java-name>
+				bool IsFirst
+				{
+						[Dot42.DexImport("isFirst", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isLast
+				/// </java-name>
+				bool IsLast
+				{
+						[Dot42.DexImport("isLast", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getHoldability
+				/// </java-name>
+				int Holdability
+				{
+						[Dot42.DexImport("getHoldability", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -4939,12 +5024,6 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("getColumnClassName", "(I)Ljava/lang/String;", AccessFlags = 1025)]
 				string GetColumnClassName(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getColumnCount
-				/// </java-name>
-				[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1025)]
-				int GetColumnCount() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getColumnDisplaySize
@@ -5054,6 +5133,15 @@ namespace Java.Sql
 				[Dot42.DexImport("isWritable", "(I)Z", AccessFlags = 1025)]
 				bool IsWritable(int int32) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getColumnCount
+				/// </java-name>
+				int ColumnCount
+				{
+						[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -5094,12 +5182,6 @@ namespace Java.Sql
 				bool Equals(object @object) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getBytes
-				/// </java-name>
-				[Dot42.DexImport("getBytes", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				byte[] GetBytes() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1025)]
@@ -5110,6 +5192,15 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1025)]
 				int GetHashCode() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getBytes
+				/// </java-name>
+				byte[] Bytes
+				{
+						[Dot42.DexImport("getBytes", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
+				}
 
 		}
 
@@ -5123,14 +5214,20 @@ namespace Java.Sql
 				/// <java-name>
 				/// getSavepointId
 				/// </java-name>
-				[Dot42.DexImport("getSavepointId", "()I", AccessFlags = 1025)]
-				int GetSavepointId() /* MethodBuilder.Create */ ;
+				int SavepointId
+				{
+						[Dot42.DexImport("getSavepointId", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSavepointName
 				/// </java-name>
-				[Dot42.DexImport("getSavepointName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSavepointName() /* MethodBuilder.Create */ ;
+				string SavepointName
+				{
+						[Dot42.DexImport("getSavepointName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -5142,12 +5239,6 @@ namespace Java.Sql
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getSQLTypeName
-				/// </java-name>
-				[Dot42.DexImport("getSQLTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSQLTypeName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// readSQL
 				/// </java-name>
 				[Dot42.DexImport("readSQL", "(Ljava/sql/SQLInput;Ljava/lang/String;)V", AccessFlags = 1025)]
@@ -5158,6 +5249,15 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("writeSQL", "(Ljava/sql/SQLOutput;)V", AccessFlags = 1025)]
 				void WriteSQL(global::Java.Sql.ISQLOutput sQLOutput) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getSQLTypeName
+				/// </java-name>
+				string SQLTypeName
+				{
+						[Dot42.DexImport("getSQLTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -5517,40 +5617,16 @@ namespace Java.Sql
 				void Free() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getBinaryStream
-				/// </java-name>
-				[Dot42.DexImport("getBinaryStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-				global::Java.Io.InputStream GetBinaryStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setBinaryStream
 				/// </java-name>
 				[Dot42.DexImport("setBinaryStream", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
 				global::Java.Io.OutputStream SetBinaryStream() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getCharacterStream
-				/// </java-name>
-				[Dot42.DexImport("getCharacterStream", "()Ljava/io/Reader;", AccessFlags = 1025)]
-				global::Java.Io.Reader GetCharacterStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setCharacterStream
 				/// </java-name>
 				[Dot42.DexImport("setCharacterStream", "()Ljava/io/Writer;", AccessFlags = 1025)]
 				global::Java.Io.Writer SetCharacterStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getString
-				/// </java-name>
-				[Dot42.DexImport("getString", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetString() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setString
-				/// </java-name>
-				[Dot42.DexImport("setString", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetString(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getSource
@@ -5563,6 +5639,35 @@ namespace Java.Sql
 				/// </java-name>
 				[Dot42.DexImport("setResult", "(Ljava/lang/Class;)Ljavax/xml/transform/Result;", AccessFlags = 1025, Signature = "<T::Ljavax/xml/transform/Result;>(Ljava/lang/Class<TT;>;)TT;")]
 				T SetResult<T>(global::System.Type type) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getBinaryStream
+				/// </java-name>
+				global::Java.Io.InputStream BinaryStream
+				{
+						[Dot42.DexImport("getBinaryStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getCharacterStream
+				/// </java-name>
+				global::Java.Io.Reader CharacterStream
+				{
+						[Dot42.DexImport("getCharacterStream", "()Ljava/io/Reader;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getString
+				/// </java-name>
+				string String
+				{
+						[Dot42.DexImport("getString", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setString", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -5664,94 +5769,10 @@ namespace Java.Sql
 				int ExecuteUpdate(string @string, string[] string1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getConnection
-				/// </java-name>
-				[Dot42.DexImport("getConnection", "()Ljava/sql/Connection;", AccessFlags = 1025)]
-				global::Java.Sql.IConnection GetConnection() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFetchDirection
-				/// </java-name>
-				[Dot42.DexImport("getFetchDirection", "()I", AccessFlags = 1025)]
-				int GetFetchDirection() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFetchSize
-				/// </java-name>
-				[Dot42.DexImport("getFetchSize", "()I", AccessFlags = 1025)]
-				int GetFetchSize() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getGeneratedKeys
-				/// </java-name>
-				[Dot42.DexImport("getGeneratedKeys", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetGeneratedKeys() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxFieldSize
-				/// </java-name>
-				[Dot42.DexImport("getMaxFieldSize", "()I", AccessFlags = 1025)]
-				int GetMaxFieldSize() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMaxRows
-				/// </java-name>
-				[Dot42.DexImport("getMaxRows", "()I", AccessFlags = 1025)]
-				int GetMaxRows() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getMoreResults
-				/// </java-name>
-				[Dot42.DexImport("getMoreResults", "()Z", AccessFlags = 1025)]
-				bool GetMoreResults() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getMoreResults
 				/// </java-name>
 				[Dot42.DexImport("getMoreResults", "(I)Z", AccessFlags = 1025)]
 				bool GetMoreResults(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getQueryTimeout
-				/// </java-name>
-				[Dot42.DexImport("getQueryTimeout", "()I", AccessFlags = 1025)]
-				int GetQueryTimeout() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResultSet
-				/// </java-name>
-				[Dot42.DexImport("getResultSet", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
-				global::Java.Sql.IResultSet GetResultSet() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResultSetConcurrency
-				/// </java-name>
-				[Dot42.DexImport("getResultSetConcurrency", "()I", AccessFlags = 1025)]
-				int GetResultSetConcurrency() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResultSetHoldability
-				/// </java-name>
-				[Dot42.DexImport("getResultSetHoldability", "()I", AccessFlags = 1025)]
-				int GetResultSetHoldability() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResultSetType
-				/// </java-name>
-				[Dot42.DexImport("getResultSetType", "()I", AccessFlags = 1025)]
-				int GetResultSetType() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getUpdateCount
-				/// </java-name>
-				[Dot42.DexImport("getUpdateCount", "()I", AccessFlags = 1025)]
-				int GetUpdateCount() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getWarnings
-				/// </java-name>
-				[Dot42.DexImport("getWarnings", "()Ljava/sql/SQLWarning;", AccessFlags = 1025)]
-				global::Java.Sql.SQLWarning GetWarnings() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setCursorName
@@ -5766,52 +5787,164 @@ namespace Java.Sql
 				void SetEscapeProcessing(bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setFetchDirection
-				/// </java-name>
-				[Dot42.DexImport("setFetchDirection", "(I)V", AccessFlags = 1025)]
-				void SetFetchDirection(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFetchSize
-				/// </java-name>
-				[Dot42.DexImport("setFetchSize", "(I)V", AccessFlags = 1025)]
-				void SetFetchSize(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setMaxFieldSize
-				/// </java-name>
-				[Dot42.DexImport("setMaxFieldSize", "(I)V", AccessFlags = 1025)]
-				void SetMaxFieldSize(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setMaxRows
-				/// </java-name>
-				[Dot42.DexImport("setMaxRows", "(I)V", AccessFlags = 1025)]
-				void SetMaxRows(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setQueryTimeout
-				/// </java-name>
-				[Dot42.DexImport("setQueryTimeout", "(I)V", AccessFlags = 1025)]
-				void SetQueryTimeout(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1025)]
-				bool IsClosed() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setPoolable
 				/// </java-name>
 				[Dot42.DexImport("setPoolable", "(Z)V", AccessFlags = 1025)]
 				void SetPoolable(bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// getConnection
+				/// </java-name>
+				global::Java.Sql.IConnection Connection
+				{
+						[Dot42.DexImport("getConnection", "()Ljava/sql/Connection;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getFetchDirection
+				/// </java-name>
+				int FetchDirection
+				{
+						[Dot42.DexImport("getFetchDirection", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setFetchDirection", "(I)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getFetchSize
+				/// </java-name>
+				int FetchSize
+				{
+						[Dot42.DexImport("getFetchSize", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setFetchSize", "(I)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getGeneratedKeys
+				/// </java-name>
+				global::Java.Sql.IResultSet GeneratedKeys
+				{
+						[Dot42.DexImport("getGeneratedKeys", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getMaxFieldSize
+				/// </java-name>
+				int MaxFieldSize
+				{
+						[Dot42.DexImport("getMaxFieldSize", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setMaxFieldSize", "(I)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getMaxRows
+				/// </java-name>
+				int MaxRows
+				{
+						[Dot42.DexImport("getMaxRows", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setMaxRows", "(I)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getMoreResults
+				/// </java-name>
+				bool IsMoreResults
+				{
+						[Dot42.DexImport("getMoreResults", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getQueryTimeout
+				/// </java-name>
+				int QueryTimeout
+				{
+						[Dot42.DexImport("getQueryTimeout", "()I", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setQueryTimeout", "(I)V", AccessFlags = 1025)]
+						set;
+				}
+
+				/// <java-name>
+				/// getResultSet
+				/// </java-name>
+				global::Java.Sql.IResultSet ResultSet
+				{
+						[Dot42.DexImport("getResultSet", "()Ljava/sql/ResultSet;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getResultSetConcurrency
+				/// </java-name>
+				int ResultSetConcurrency
+				{
+						[Dot42.DexImport("getResultSetConcurrency", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getResultSetHoldability
+				/// </java-name>
+				int ResultSetHoldability
+				{
+						[Dot42.DexImport("getResultSetHoldability", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getResultSetType
+				/// </java-name>
+				int ResultSetType
+				{
+						[Dot42.DexImport("getResultSetType", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getUpdateCount
+				/// </java-name>
+				int UpdateCount
+				{
+						[Dot42.DexImport("getUpdateCount", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getWarnings
+				/// </java-name>
+				global::Java.Sql.SQLWarning Warnings
+				{
+						[Dot42.DexImport("getWarnings", "()Ljava/sql/SQLWarning;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
 				/// isPoolable
 				/// </java-name>
-				[Dot42.DexImport("isPoolable", "()Z", AccessFlags = 1025)]
-				bool IsPoolable() /* MethodBuilder.Create */ ;
+				bool IsPoolable
+				{
+						[Dot42.DexImport("isPoolable", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -5867,22 +6000,28 @@ namespace Java.Sql
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getSQLTypeName
-				/// </java-name>
-				[Dot42.DexImport("getSQLTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSQLTypeName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAttributes
-				/// </java-name>
-				[Dot42.DexImport("getAttributes", "()[Ljava/lang/Object;", AccessFlags = 1025)]
-				object[] GetAttributes() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getAttributes
 				/// </java-name>
 				[Dot42.DexImport("getAttributes", "(Ljava/util/Map;)[Ljava/lang/Object;", AccessFlags = 1025, Signature = "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<*>;>;)[Ljava/lang/Object;")]
 				object[] GetAttributes(global::Java.Util.IMap<string, global::System.Type> map) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getSQLTypeName
+				/// </java-name>
+				string SQLTypeName
+				{
+						[Dot42.DexImport("getSQLTypeName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getAttributes
+				/// </java-name>
+				object[] Attributes
+				{
+						[Dot42.DexImport("getAttributes", "()[Ljava/lang/Object;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -6025,19 +6164,10 @@ namespace Java.Sql
 				/// <java-name>
 				/// getFailedProperties
 				/// </java-name>
-				[Dot42.DexImport("getFailedProperties", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/sql/ClientInfoStatus;>;")]
-				public virtual global::Java.Util.IMap<string, global::Java.Sql.ClientInfoStatus> GetFailedProperties() /* MethodBuilder.Create */ 
+				public virtual global::Java.Util.IMap<string, global::Java.Sql.ClientInfoStatus> FailedProperties
 				{
-						return default(global::Java.Util.IMap<string, global::Java.Sql.ClientInfoStatus>);
-				}
-
-				/// <java-name>
-				/// getFailedProperties
-				/// </java-name>
-				public global::Java.Util.IMap<string, global::Java.Sql.ClientInfoStatus> FailedProperties
-				{
-				[Dot42.DexImport("getFailedProperties", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/sql/ClientInfoStatus;>;")]
-						get{ return GetFailedProperties(); }
+						[Dot42.DexImport("getFailedProperties", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/sql/ClientInfoStatus;>;")]
+						get{ return default(global::Java.Util.IMap<string, global::Java.Sql.ClientInfoStatus>); }
 				}
 
 		}
@@ -6140,41 +6270,6 @@ namespace Java.Sql
 				}
 
 				/// <java-name>
-				/// getErrorCode
-				/// </java-name>
-				[Dot42.DexImport("getErrorCode", "()I", AccessFlags = 1)]
-				public virtual int GetErrorCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNextException
-				/// </java-name>
-				[Dot42.DexImport("getNextException", "()Ljava/sql/SQLException;", AccessFlags = 1)]
-				public virtual global::Java.Sql.SQLException GetNextException() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Sql.SQLException);
-				}
-
-				/// <java-name>
-				/// getSQLState
-				/// </java-name>
-				[Dot42.DexImport("getSQLState", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSQLState() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setNextException
-				/// </java-name>
-				[Dot42.DexImport("setNextException", "(Ljava/sql/SQLException;)V", AccessFlags = 1)]
-				public virtual void SetNextException(global::Java.Sql.SQLException sQLException) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// iterator
 				/// </java-name>
 				[Dot42.DexImport("iterator", "()Ljava/util/Iterator;", AccessFlags = 1, Signature = "()Ljava/util/Iterator<Ljava/lang/Throwable;>;")]
@@ -6186,30 +6281,30 @@ namespace Java.Sql
 				/// <java-name>
 				/// getErrorCode
 				/// </java-name>
-				public int ErrorCode
+				public virtual int ErrorCode
 				{
-				[Dot42.DexImport("getErrorCode", "()I", AccessFlags = 1)]
-						get{ return GetErrorCode(); }
+						[Dot42.DexImport("getErrorCode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getNextException
 				/// </java-name>
-				public global::Java.Sql.SQLException NextException
+				public virtual global::Java.Sql.SQLException NextException
 				{
-				[Dot42.DexImport("getNextException", "()Ljava/sql/SQLException;", AccessFlags = 1)]
-						get{ return GetNextException(); }
-				[Dot42.DexImport("setNextException", "(Ljava/sql/SQLException;)V", AccessFlags = 1)]
-						set{ SetNextException(value); }
+						[Dot42.DexImport("getNextException", "()Ljava/sql/SQLException;", AccessFlags = 1)]
+						get{ return default(global::Java.Sql.SQLException); }
+						[Dot42.DexImport("setNextException", "(Ljava/sql/SQLException;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSQLState
 				/// </java-name>
-				public string SQLState
+				public virtual string SQLState
 				{
-				[Dot42.DexImport("getSQLState", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSQLState(); }
+						[Dot42.DexImport("getSQLState", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -6477,15 +6572,6 @@ namespace Java.Sql
 				}
 
 				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// implies
 				/// </java-name>
 				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
@@ -6507,10 +6593,10 @@ namespace Java.Sql
 				/// <java-name>
 				/// getActions
 				/// </java-name>
-				public string Actions
+				public override string Actions
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
+						[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -6859,29 +6945,12 @@ namespace Java.Sql
 				/// <java-name>
 				/// getNextWarning
 				/// </java-name>
-				[Dot42.DexImport("getNextWarning", "()Ljava/sql/SQLWarning;", AccessFlags = 1)]
-				public virtual global::Java.Sql.SQLWarning GetNextWarning() /* MethodBuilder.Create */ 
+				public virtual global::Java.Sql.SQLWarning NextWarning
 				{
-						return default(global::Java.Sql.SQLWarning);
-				}
-
-				/// <java-name>
-				/// setNextWarning
-				/// </java-name>
-				[Dot42.DexImport("setNextWarning", "(Ljava/sql/SQLWarning;)V", AccessFlags = 1)]
-				public virtual void SetNextWarning(global::Java.Sql.SQLWarning sQLWarning) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getNextWarning
-				/// </java-name>
-				public global::Java.Sql.SQLWarning NextWarning
-				{
-				[Dot42.DexImport("getNextWarning", "()Ljava/sql/SQLWarning;", AccessFlags = 1)]
-						get{ return GetNextWarning(); }
-				[Dot42.DexImport("setNextWarning", "(Ljava/sql/SQLWarning;)V", AccessFlags = 1)]
-						set{ SetNextWarning(value); }
+						[Dot42.DexImport("getNextWarning", "()Ljava/sql/SQLWarning;", AccessFlags = 1)]
+						get{ return default(global::Java.Sql.SQLWarning); }
+						[Dot42.DexImport("setNextWarning", "(Ljava/sql/SQLWarning;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -6913,53 +6982,10 @@ namespace Java.Sql
 				}
 
 				/// <java-name>
-				/// getDay
-				/// </java-name>
-				[Dot42.DexImport("getDay", "()I", AccessFlags = 1)]
-				public override int GetDay() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMonth
-				/// </java-name>
-				[Dot42.DexImport("getMonth", "()I", AccessFlags = 1)]
-				public override int GetMonth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getYear
-				/// </java-name>
-				[Dot42.DexImport("getYear", "()I", AccessFlags = 1)]
-				public override int GetYear() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setDate
 				/// </java-name>
 				[Dot42.DexImport("setDate", "(I)V", AccessFlags = 1)]
 				public override void SetDate(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMonth
-				/// </java-name>
-				[Dot42.DexImport("setMonth", "(I)V", AccessFlags = 1)]
-				public override void SetMonth(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setYear
-				/// </java-name>
-				[Dot42.DexImport("setYear", "(I)V", AccessFlags = 1)]
-				public override void SetYear(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6997,32 +7023,32 @@ namespace Java.Sql
 				/// <java-name>
 				/// getDay
 				/// </java-name>
-				public int Day
+				public override int Day
 				{
-				[Dot42.DexImport("getDay", "()I", AccessFlags = 1)]
-						get{ return GetDay(); }
+						[Dot42.DexImport("getDay", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMonth
 				/// </java-name>
-				public int Month
+				public override int Month
 				{
-				[Dot42.DexImport("getMonth", "()I", AccessFlags = 1)]
-						get{ return GetMonth(); }
-				[Dot42.DexImport("setMonth", "(I)V", AccessFlags = 1)]
-						set{ SetMonth(value); }
+						[Dot42.DexImport("getMonth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMonth", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getYear
 				/// </java-name>
-				public int Year
+				public override int Year
 				{
-				[Dot42.DexImport("getYear", "()I", AccessFlags = 1)]
-						get{ return GetYear(); }
-				[Dot42.DexImport("setYear", "(I)V", AccessFlags = 1)]
-						set{ SetYear(value); }
+						[Dot42.DexImport("getYear", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setYear", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -7099,40 +7125,6 @@ namespace Java.Sql
 				}
 
 				/// <java-name>
-				/// getNanos
-				/// </java-name>
-				[Dot42.DexImport("getNanos", "()I", AccessFlags = 1)]
-				public virtual int GetNanos() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTime
-				/// </java-name>
-				[Dot42.DexImport("getTime", "()J", AccessFlags = 1)]
-				public override long GetTime() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setNanos
-				/// </java-name>
-				[Dot42.DexImport("setNanos", "(I)V", AccessFlags = 1)]
-				public virtual void SetNanos(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTime
-				/// </java-name>
-				[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
-				public override void SetTime(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -7158,23 +7150,23 @@ namespace Java.Sql
 				/// <java-name>
 				/// getNanos
 				/// </java-name>
-				public int Nanos
+				public virtual int Nanos
 				{
-				[Dot42.DexImport("getNanos", "()I", AccessFlags = 1)]
-						get{ return GetNanos(); }
-				[Dot42.DexImport("setNanos", "(I)V", AccessFlags = 1)]
-						set{ SetNanos(value); }
+						[Dot42.DexImport("getNanos", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setNanos", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTime
 				/// </java-name>
-				public long Time
+				public override long Time
 				{
-				[Dot42.DexImport("getTime", "()J", AccessFlags = 1)]
-						get{ return GetTime(); }
-				[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
-						set{ SetTime(value); }
+						[Dot42.DexImport("getTime", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

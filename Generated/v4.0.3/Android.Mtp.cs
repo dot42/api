@@ -365,48 +365,12 @@ namespace Android.Mtp
 				extern ~MtpDevice() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getDeviceName
-				/// </java-name>
-				[Dot42.DexImport("getDeviceName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetDeviceName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDeviceId
-				/// </java-name>
-				[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1)]
-				public int GetDeviceId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// getDeviceInfo
-				/// </java-name>
-				[Dot42.DexImport("getDeviceInfo", "()Landroid/mtp/MtpDeviceInfo;", AccessFlags = 1)]
-				public global::Android.Mtp.MtpDeviceInfo GetDeviceInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Mtp.MtpDeviceInfo);
-				}
-
-				/// <java-name>
-				/// getStorageIds
-				/// </java-name>
-				[Dot42.DexImport("getStorageIds", "()[I", AccessFlags = 1)]
-				public int[] GetStorageIds() /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
 				}
 
 				/// <java-name>
@@ -518,8 +482,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public string DeviceName
 				{
-				[Dot42.DexImport("getDeviceName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDeviceName(); }
+						[Dot42.DexImport("getDeviceName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -527,8 +491,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int DeviceId
 				{
-				[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1)]
-						get{ return GetDeviceId(); }
+						[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -536,8 +500,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public global::Android.Mtp.MtpDeviceInfo DeviceInfo
 				{
-				[Dot42.DexImport("getDeviceInfo", "()Landroid/mtp/MtpDeviceInfo;", AccessFlags = 1)]
-						get{ return GetDeviceInfo(); }
+						[Dot42.DexImport("getDeviceInfo", "()Landroid/mtp/MtpDeviceInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Mtp.MtpDeviceInfo); }
 				}
 
 				/// <java-name>
@@ -545,8 +509,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int[] StorageIds
 				{
-				[Dot42.DexImport("getStorageIds", "()[I", AccessFlags = 1)]
-						get{ return GetStorageIds(); }
+						[Dot42.DexImport("getStorageIds", "()[I", AccessFlags = 1)]
+						get{ return default(int[]); }
 				}
 
 		}
@@ -566,46 +530,10 @@ namespace Android.Mtp
 				/// <java-name>
 				/// getManufacturer
 				/// </java-name>
-				[Dot42.DexImport("getManufacturer", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetManufacturer() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getModel
-				/// </java-name>
-				[Dot42.DexImport("getModel", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetModel() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetVersion() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSerialNumber
-				/// </java-name>
-				[Dot42.DexImport("getSerialNumber", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetSerialNumber() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getManufacturer
-				/// </java-name>
 				public string Manufacturer
 				{
-				[Dot42.DexImport("getManufacturer", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetManufacturer(); }
+						[Dot42.DexImport("getManufacturer", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -613,8 +541,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public string Model
 				{
-				[Dot42.DexImport("getModel", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetModel(); }
+						[Dot42.DexImport("getModel", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -622,8 +550,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public string Version
 				{
-				[Dot42.DexImport("getVersion", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetVersion(); }
+						[Dot42.DexImport("getVersion", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -631,8 +559,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public string SerialNumber
 				{
-				[Dot42.DexImport("getSerialNumber", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetSerialNumber(); }
+						[Dot42.DexImport("getSerialNumber", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 		}
@@ -652,190 +580,10 @@ namespace Android.Mtp
 				/// <java-name>
 				/// getObjectHandle
 				/// </java-name>
-				[Dot42.DexImport("getObjectHandle", "()I", AccessFlags = 17)]
-				public int GetObjectHandle() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getStorageId
-				/// </java-name>
-				[Dot42.DexImport("getStorageId", "()I", AccessFlags = 17)]
-				public int GetStorageId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFormat
-				/// </java-name>
-				[Dot42.DexImport("getFormat", "()I", AccessFlags = 17)]
-				public int GetFormat() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getProtectionStatus
-				/// </java-name>
-				[Dot42.DexImport("getProtectionStatus", "()I", AccessFlags = 17)]
-				public int GetProtectionStatus() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCompressedSize
-				/// </java-name>
-				[Dot42.DexImport("getCompressedSize", "()I", AccessFlags = 17)]
-				public int GetCompressedSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getThumbFormat
-				/// </java-name>
-				[Dot42.DexImport("getThumbFormat", "()I", AccessFlags = 17)]
-				public int GetThumbFormat() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getThumbCompressedSize
-				/// </java-name>
-				[Dot42.DexImport("getThumbCompressedSize", "()I", AccessFlags = 17)]
-				public int GetThumbCompressedSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getThumbPixWidth
-				/// </java-name>
-				[Dot42.DexImport("getThumbPixWidth", "()I", AccessFlags = 17)]
-				public int GetThumbPixWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getThumbPixHeight
-				/// </java-name>
-				[Dot42.DexImport("getThumbPixHeight", "()I", AccessFlags = 17)]
-				public int GetThumbPixHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getImagePixWidth
-				/// </java-name>
-				[Dot42.DexImport("getImagePixWidth", "()I", AccessFlags = 17)]
-				public int GetImagePixWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getImagePixHeight
-				/// </java-name>
-				[Dot42.DexImport("getImagePixHeight", "()I", AccessFlags = 17)]
-				public int GetImagePixHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getImagePixDepth
-				/// </java-name>
-				[Dot42.DexImport("getImagePixDepth", "()I", AccessFlags = 17)]
-				public int GetImagePixDepth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getParent
-				/// </java-name>
-				[Dot42.DexImport("getParent", "()I", AccessFlags = 17)]
-				public int GetParent() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAssociationType
-				/// </java-name>
-				[Dot42.DexImport("getAssociationType", "()I", AccessFlags = 17)]
-				public int GetAssociationType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAssociationDesc
-				/// </java-name>
-				[Dot42.DexImport("getAssociationDesc", "()I", AccessFlags = 17)]
-				public int GetAssociationDesc() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSequenceNumber
-				/// </java-name>
-				[Dot42.DexImport("getSequenceNumber", "()I", AccessFlags = 17)]
-				public int GetSequenceNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDateCreated
-				/// </java-name>
-				[Dot42.DexImport("getDateCreated", "()J", AccessFlags = 17)]
-				public long GetDateCreated() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getDateModified
-				/// </java-name>
-				[Dot42.DexImport("getDateModified", "()J", AccessFlags = 17)]
-				public long GetDateModified() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getKeywords
-				/// </java-name>
-				[Dot42.DexImport("getKeywords", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetKeywords() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getObjectHandle
-				/// </java-name>
 				public int ObjectHandle
 				{
-				[Dot42.DexImport("getObjectHandle", "()I", AccessFlags = 17)]
-						get{ return GetObjectHandle(); }
+						[Dot42.DexImport("getObjectHandle", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -843,8 +591,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int StorageId
 				{
-				[Dot42.DexImport("getStorageId", "()I", AccessFlags = 17)]
-						get{ return GetStorageId(); }
+						[Dot42.DexImport("getStorageId", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -852,8 +600,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int Format
 				{
-				[Dot42.DexImport("getFormat", "()I", AccessFlags = 17)]
-						get{ return GetFormat(); }
+						[Dot42.DexImport("getFormat", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -861,8 +609,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int ProtectionStatus
 				{
-				[Dot42.DexImport("getProtectionStatus", "()I", AccessFlags = 17)]
-						get{ return GetProtectionStatus(); }
+						[Dot42.DexImport("getProtectionStatus", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -870,8 +618,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int CompressedSize
 				{
-				[Dot42.DexImport("getCompressedSize", "()I", AccessFlags = 17)]
-						get{ return GetCompressedSize(); }
+						[Dot42.DexImport("getCompressedSize", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -879,8 +627,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int ThumbFormat
 				{
-				[Dot42.DexImport("getThumbFormat", "()I", AccessFlags = 17)]
-						get{ return GetThumbFormat(); }
+						[Dot42.DexImport("getThumbFormat", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -888,8 +636,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int ThumbCompressedSize
 				{
-				[Dot42.DexImport("getThumbCompressedSize", "()I", AccessFlags = 17)]
-						get{ return GetThumbCompressedSize(); }
+						[Dot42.DexImport("getThumbCompressedSize", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -897,8 +645,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int ThumbPixWidth
 				{
-				[Dot42.DexImport("getThumbPixWidth", "()I", AccessFlags = 17)]
-						get{ return GetThumbPixWidth(); }
+						[Dot42.DexImport("getThumbPixWidth", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -906,8 +654,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int ThumbPixHeight
 				{
-				[Dot42.DexImport("getThumbPixHeight", "()I", AccessFlags = 17)]
-						get{ return GetThumbPixHeight(); }
+						[Dot42.DexImport("getThumbPixHeight", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -915,8 +663,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int ImagePixWidth
 				{
-				[Dot42.DexImport("getImagePixWidth", "()I", AccessFlags = 17)]
-						get{ return GetImagePixWidth(); }
+						[Dot42.DexImport("getImagePixWidth", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -924,8 +672,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int ImagePixHeight
 				{
-				[Dot42.DexImport("getImagePixHeight", "()I", AccessFlags = 17)]
-						get{ return GetImagePixHeight(); }
+						[Dot42.DexImport("getImagePixHeight", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -933,8 +681,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int ImagePixDepth
 				{
-				[Dot42.DexImport("getImagePixDepth", "()I", AccessFlags = 17)]
-						get{ return GetImagePixDepth(); }
+						[Dot42.DexImport("getImagePixDepth", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -942,8 +690,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int Parent
 				{
-				[Dot42.DexImport("getParent", "()I", AccessFlags = 17)]
-						get{ return GetParent(); }
+						[Dot42.DexImport("getParent", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -951,8 +699,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int AssociationType
 				{
-				[Dot42.DexImport("getAssociationType", "()I", AccessFlags = 17)]
-						get{ return GetAssociationType(); }
+						[Dot42.DexImport("getAssociationType", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -960,8 +708,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int AssociationDesc
 				{
-				[Dot42.DexImport("getAssociationDesc", "()I", AccessFlags = 17)]
-						get{ return GetAssociationDesc(); }
+						[Dot42.DexImport("getAssociationDesc", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -969,8 +717,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public int SequenceNumber
 				{
-				[Dot42.DexImport("getSequenceNumber", "()I", AccessFlags = 17)]
-						get{ return GetSequenceNumber(); }
+						[Dot42.DexImport("getSequenceNumber", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -978,8 +726,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -987,8 +735,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public long DateCreated
 				{
-				[Dot42.DexImport("getDateCreated", "()J", AccessFlags = 17)]
-						get{ return GetDateCreated(); }
+						[Dot42.DexImport("getDateCreated", "()J", AccessFlags = 17)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -996,8 +744,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public long DateModified
 				{
-				[Dot42.DexImport("getDateModified", "()J", AccessFlags = 17)]
-						get{ return GetDateModified(); }
+						[Dot42.DexImport("getDateModified", "()J", AccessFlags = 17)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1005,8 +753,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public string Keywords
 				{
-				[Dot42.DexImport("getKeywords", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetKeywords(); }
+						[Dot42.DexImport("getKeywords", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1026,55 +774,10 @@ namespace Android.Mtp
 				/// <java-name>
 				/// getStorageId
 				/// </java-name>
-				[Dot42.DexImport("getStorageId", "()I", AccessFlags = 17)]
-				public int GetStorageId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMaxCapacity
-				/// </java-name>
-				[Dot42.DexImport("getMaxCapacity", "()J", AccessFlags = 17)]
-				public long GetMaxCapacity() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getFreeSpace
-				/// </java-name>
-				[Dot42.DexImport("getFreeSpace", "()J", AccessFlags = 17)]
-				public long GetFreeSpace() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getDescription
-				/// </java-name>
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetDescription() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getVolumeIdentifier
-				/// </java-name>
-				[Dot42.DexImport("getVolumeIdentifier", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetVolumeIdentifier() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getStorageId
-				/// </java-name>
 				public int StorageId
 				{
-				[Dot42.DexImport("getStorageId", "()I", AccessFlags = 17)]
-						get{ return GetStorageId(); }
+						[Dot42.DexImport("getStorageId", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1082,8 +785,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public long MaxCapacity
 				{
-				[Dot42.DexImport("getMaxCapacity", "()J", AccessFlags = 17)]
-						get{ return GetMaxCapacity(); }
+						[Dot42.DexImport("getMaxCapacity", "()J", AccessFlags = 17)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1091,8 +794,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public long FreeSpace
 				{
-				[Dot42.DexImport("getFreeSpace", "()J", AccessFlags = 17)]
-						get{ return GetFreeSpace(); }
+						[Dot42.DexImport("getFreeSpace", "()J", AccessFlags = 17)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1100,8 +803,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public string Description
 				{
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetDescription(); }
+						[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1109,8 +812,8 @@ namespace Android.Mtp
 				/// </java-name>
 				public string VolumeIdentifier
 				{
-				[Dot42.DexImport("getVolumeIdentifier", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetVolumeIdentifier(); }
+						[Dot42.DexImport("getVolumeIdentifier", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 		}

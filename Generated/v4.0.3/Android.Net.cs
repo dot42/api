@@ -118,47 +118,12 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// setNetworkPreference
-				/// </java-name>
-				[Dot42.DexImport("setNetworkPreference", "(I)V", AccessFlags = 1)]
-				public virtual void SetNetworkPreference(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getNetworkPreference
-				/// </java-name>
-				[Dot42.DexImport("getNetworkPreference", "()I", AccessFlags = 1)]
-				public virtual int GetNetworkPreference() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getActiveNetworkInfo
-				/// </java-name>
-				[Dot42.DexImport("getActiveNetworkInfo", "()Landroid/net/NetworkInfo;", AccessFlags = 1)]
-				public virtual global::Android.Net.NetworkInfo GetActiveNetworkInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.NetworkInfo);
-				}
-
-				/// <java-name>
 				/// getNetworkInfo
 				/// </java-name>
 				[Dot42.DexImport("getNetworkInfo", "(I)Landroid/net/NetworkInfo;", AccessFlags = 1)]
 				public virtual global::Android.Net.NetworkInfo GetNetworkInfo(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Net.NetworkInfo);
-				}
-
-				/// <java-name>
-				/// getAllNetworkInfo
-				/// </java-name>
-				[Dot42.DexImport("getAllNetworkInfo", "()[Landroid/net/NetworkInfo;", AccessFlags = 1)]
-				public virtual global::Android.Net.NetworkInfo[] GetAllNetworkInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.NetworkInfo[]);
 				}
 
 				/// <java-name>
@@ -189,50 +154,41 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// getBackgroundDataSetting
-				/// </java-name>
-				[Dot42.DexImport("getBackgroundDataSetting", "()Z", AccessFlags = 1)]
-				public virtual bool GetBackgroundDataSetting() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getNetworkPreference
 				/// </java-name>
-				public int NetworkPreference
+				public virtual int NetworkPreference
 				{
-				[Dot42.DexImport("getNetworkPreference", "()I", AccessFlags = 1)]
-						get{ return GetNetworkPreference(); }
-				[Dot42.DexImport("setNetworkPreference", "(I)V", AccessFlags = 1)]
-						set{ SetNetworkPreference(value); }
+						[Dot42.DexImport("getNetworkPreference", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setNetworkPreference", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getActiveNetworkInfo
 				/// </java-name>
-				public global::Android.Net.NetworkInfo ActiveNetworkInfo
+				public virtual global::Android.Net.NetworkInfo ActiveNetworkInfo
 				{
-				[Dot42.DexImport("getActiveNetworkInfo", "()Landroid/net/NetworkInfo;", AccessFlags = 1)]
-						get{ return GetActiveNetworkInfo(); }
+						[Dot42.DexImport("getActiveNetworkInfo", "()Landroid/net/NetworkInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.NetworkInfo); }
 				}
 
 				/// <java-name>
 				/// getAllNetworkInfo
 				/// </java-name>
-				public global::Android.Net.NetworkInfo[] AllNetworkInfo
+				public virtual global::Android.Net.NetworkInfo[] AllNetworkInfo
 				{
-				[Dot42.DexImport("getAllNetworkInfo", "()[Landroid/net/NetworkInfo;", AccessFlags = 1)]
-						get{ return GetAllNetworkInfo(); }
+						[Dot42.DexImport("getAllNetworkInfo", "()[Landroid/net/NetworkInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.NetworkInfo[]); }
 				}
 
 				/// <java-name>
 				/// getBackgroundDataSetting
 				/// </java-name>
-				public bool IsBackgroundDataSetting
+				public virtual bool IsBackgroundDataSetting
 				{
-				[Dot42.DexImport("getBackgroundDataSetting", "()Z", AccessFlags = 1)]
-						get{ return GetBackgroundDataSetting(); }
+						[Dot42.DexImport("getBackgroundDataSetting", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -249,33 +205,6 @@ namespace Android.Net
 				{
 				}
 
-				/// <java-name>
-				/// getPid
-				/// </java-name>
-				[Dot42.DexImport("getPid", "()I", AccessFlags = 1)]
-				public virtual int GetPid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getUid
-				/// </java-name>
-				[Dot42.DexImport("getUid", "()I", AccessFlags = 1)]
-				public virtual int GetUid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGid
-				/// </java-name>
-				[Dot42.DexImport("getGid", "()I", AccessFlags = 1)]
-				public virtual int GetGid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal Credentials() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -284,28 +213,28 @@ namespace Android.Net
 				/// <java-name>
 				/// getPid
 				/// </java-name>
-				public int Pid
+				public virtual int Pid
 				{
-				[Dot42.DexImport("getPid", "()I", AccessFlags = 1)]
-						get{ return GetPid(); }
+						[Dot42.DexImport("getPid", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getUid
 				/// </java-name>
-				public int Uid
+				public virtual int Uid
 				{
-				[Dot42.DexImport("getUid", "()I", AccessFlags = 1)]
-						get{ return GetUid(); }
+						[Dot42.DexImport("getUid", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getGid
 				/// </java-name>
-				public int Gid
+				public virtual int Gid
 				{
-				[Dot42.DexImport("getGid", "()I", AccessFlags = 1)]
-						get{ return GetGid(); }
+						[Dot42.DexImport("getGid", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -403,30 +332,12 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// getLocalSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalSocketAddress", "()Landroid/net/LocalSocketAddress;", AccessFlags = 1)]
-				public virtual global::Android.Net.LocalSocketAddress GetLocalSocketAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.LocalSocketAddress);
-				}
-
-				/// <java-name>
 				/// accept
 				/// </java-name>
 				[Dot42.DexImport("accept", "()Landroid/net/LocalSocket;", AccessFlags = 1)]
 				public virtual global::Android.Net.LocalSocket Accept() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Net.LocalSocket);
-				}
-
-				/// <java-name>
-				/// getFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-				public virtual global::Java.Io.FileDescriptor GetFileDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor);
 				}
 
 				/// <java-name>
@@ -445,19 +356,19 @@ namespace Android.Net
 				/// <java-name>
 				/// getLocalSocketAddress
 				/// </java-name>
-				public global::Android.Net.LocalSocketAddress LocalSocketAddress
+				public virtual global::Android.Net.LocalSocketAddress LocalSocketAddress
 				{
-				[Dot42.DexImport("getLocalSocketAddress", "()Landroid/net/LocalSocketAddress;", AccessFlags = 1)]
-						get{ return GetLocalSocketAddress(); }
+						[Dot42.DexImport("getLocalSocketAddress", "()Landroid/net/LocalSocketAddress;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.LocalSocketAddress); }
 				}
 
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				public global::Java.Io.FileDescriptor FileDescriptor
+				public virtual global::Java.Io.FileDescriptor FileDescriptor
 				{
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return GetFileDescriptor(); }
+						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.FileDescriptor); }
 				}
 
 		}
@@ -500,33 +411,6 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// getLocalSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalSocketAddress", "()Landroid/net/LocalSocketAddress;", AccessFlags = 1)]
-				public virtual global::Android.Net.LocalSocketAddress GetLocalSocketAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.LocalSocketAddress);
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.OutputStream);
-				}
-
-				/// <java-name>
 				/// close
 				/// </java-name>
 				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
@@ -551,111 +435,6 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// setReceiveBufferSize
-				/// </java-name>
-				[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 1)]
-				public virtual void SetReceiveBufferSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReceiveBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 1)]
-				public virtual int GetReceiveBufferSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setSoTimeout
-				/// </java-name>
-				[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 1)]
-				public virtual void SetSoTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSoTimeout
-				/// </java-name>
-				[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 1)]
-				public virtual int GetSoTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setSendBufferSize
-				/// </java-name>
-				[Dot42.DexImport("setSendBufferSize", "(I)V", AccessFlags = 1)]
-				public virtual void SetSendBufferSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSendBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getSendBufferSize", "()I", AccessFlags = 1)]
-				public virtual int GetSendBufferSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRemoteSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("getRemoteSocketAddress", "()Landroid/net/LocalSocketAddress;", AccessFlags = 1)]
-				public virtual global::Android.Net.LocalSocketAddress GetRemoteSocketAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.LocalSocketAddress);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 33)]
-				public virtual bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
-				public virtual bool IsClosed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isBound
-				/// </java-name>
-				[Dot42.DexImport("isBound", "()Z", AccessFlags = 33)]
-				public virtual bool IsBound() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isOutputShutdown
-				/// </java-name>
-				[Dot42.DexImport("isOutputShutdown", "()Z", AccessFlags = 1)]
-				public virtual bool IsOutputShutdown() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isInputShutdown
-				/// </java-name>
-				[Dot42.DexImport("isInputShutdown", "()Z", AccessFlags = 1)]
-				public virtual bool IsInputShutdown() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// connect
 				/// </java-name>
 				[Dot42.DexImport("connect", "(Landroid/net/LocalSocketAddress;I)V", AccessFlags = 1)]
@@ -672,126 +451,144 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// getAncillaryFileDescriptors
-				/// </java-name>
-				[Dot42.DexImport("getAncillaryFileDescriptors", "()[Ljava/io/FileDescriptor;", AccessFlags = 1)]
-				public virtual global::Java.Io.FileDescriptor[] GetAncillaryFileDescriptors() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor[]);
-				}
-
-				/// <java-name>
-				/// getPeerCredentials
-				/// </java-name>
-				[Dot42.DexImport("getPeerCredentials", "()Landroid/net/Credentials;", AccessFlags = 1)]
-				public virtual global::Android.Net.Credentials GetPeerCredentials() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Credentials);
-				}
-
-				/// <java-name>
-				/// getFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-				public virtual global::Java.Io.FileDescriptor GetFileDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor);
-				}
-
-				/// <java-name>
 				/// getLocalSocketAddress
 				/// </java-name>
-				public global::Android.Net.LocalSocketAddress LocalSocketAddress
+				public virtual global::Android.Net.LocalSocketAddress LocalSocketAddress
 				{
-				[Dot42.DexImport("getLocalSocketAddress", "()Landroid/net/LocalSocketAddress;", AccessFlags = 1)]
-						get{ return GetLocalSocketAddress(); }
+						[Dot42.DexImport("getLocalSocketAddress", "()Landroid/net/LocalSocketAddress;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.LocalSocketAddress); }
 				}
 
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public global::Java.Io.InputStream InputStream
+				public virtual global::Java.Io.InputStream InputStream
 				{
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetInputStream(); }
+						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
 				}
 
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public global::Java.Io.OutputStream OutputStream
+				public virtual global::Java.Io.OutputStream OutputStream
 				{
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return GetOutputStream(); }
+						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.OutputStream); }
 				}
 
 				/// <java-name>
 				/// getReceiveBufferSize
 				/// </java-name>
-				public int ReceiveBufferSize
+				public virtual int ReceiveBufferSize
 				{
-				[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 1)]
-						get{ return GetReceiveBufferSize(); }
-				[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 1)]
-						set{ SetReceiveBufferSize(value); }
+						[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSoTimeout
 				/// </java-name>
-				public int SoTimeout
+				public virtual int SoTimeout
 				{
-				[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 1)]
-						get{ return GetSoTimeout(); }
-				[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetSoTimeout(value); }
+						[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSendBufferSize
 				/// </java-name>
-				public int SendBufferSize
+				public virtual int SendBufferSize
 				{
-				[Dot42.DexImport("getSendBufferSize", "()I", AccessFlags = 1)]
-						get{ return GetSendBufferSize(); }
-				[Dot42.DexImport("setSendBufferSize", "(I)V", AccessFlags = 1)]
-						set{ SetSendBufferSize(value); }
+						[Dot42.DexImport("getSendBufferSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSendBufferSize", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getRemoteSocketAddress
 				/// </java-name>
-				public global::Android.Net.LocalSocketAddress RemoteSocketAddress
+				public virtual global::Android.Net.LocalSocketAddress RemoteSocketAddress
 				{
-				[Dot42.DexImport("getRemoteSocketAddress", "()Landroid/net/LocalSocketAddress;", AccessFlags = 1)]
-						get{ return GetRemoteSocketAddress(); }
+						[Dot42.DexImport("getRemoteSocketAddress", "()Landroid/net/LocalSocketAddress;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.LocalSocketAddress); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public virtual bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				public virtual bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isBound
+				/// </java-name>
+				public virtual bool IsBound
+				{
+						[Dot42.DexImport("isBound", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isOutputShutdown
+				/// </java-name>
+				public virtual bool IsOutputShutdown
+				{
+						[Dot42.DexImport("isOutputShutdown", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isInputShutdown
+				/// </java-name>
+				public virtual bool IsInputShutdown
+				{
+						[Dot42.DexImport("isInputShutdown", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getAncillaryFileDescriptors
 				/// </java-name>
-				public global::Java.Io.FileDescriptor[] AncillaryFileDescriptors
+				public virtual global::Java.Io.FileDescriptor[] AncillaryFileDescriptors
 				{
-				[Dot42.DexImport("getAncillaryFileDescriptors", "()[Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return GetAncillaryFileDescriptors(); }
+						[Dot42.DexImport("getAncillaryFileDescriptors", "()[Ljava/io/FileDescriptor;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.FileDescriptor[]); }
 				}
 
 				/// <java-name>
 				/// getPeerCredentials
 				/// </java-name>
-				public global::Android.Net.Credentials PeerCredentials
+				public virtual global::Android.Net.Credentials PeerCredentials
 				{
-				[Dot42.DexImport("getPeerCredentials", "()Landroid/net/Credentials;", AccessFlags = 1)]
-						get{ return GetPeerCredentials(); }
+						[Dot42.DexImport("getPeerCredentials", "()Landroid/net/Credentials;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Credentials); }
 				}
 
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				public global::Java.Io.FileDescriptor FileDescriptor
+				public virtual global::Java.Io.FileDescriptor FileDescriptor
 				{
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return GetFileDescriptor(); }
+						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.FileDescriptor); }
 				}
 
 		}
@@ -814,15 +611,6 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getNamespace
 				/// </java-name>
 				[Dot42.DexImport("getNamespace", "()Landroid/net/LocalSocketAddress$Namespace;", AccessFlags = 1)]
@@ -839,10 +627,10 @@ namespace Android.Net
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -929,51 +717,6 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// getTo
-				/// </java-name>
-				[Dot42.DexImport("getTo", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetTo() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCc
-				/// </java-name>
-				[Dot42.DexImport("getCc", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetCc() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSubject
-				/// </java-name>
-				[Dot42.DexImport("getSubject", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSubject() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getBody
-				/// </java-name>
-				[Dot42.DexImport("getBody", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetBody() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getHeaders
-				/// </java-name>
-				[Dot42.DexImport("getHeaders", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-				public virtual global::Java.Util.IMap<string, string> GetHeaders() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<string, string>);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -985,46 +728,46 @@ namespace Android.Net
 				/// <java-name>
 				/// getTo
 				/// </java-name>
-				public string To
+				public virtual string To
 				{
-				[Dot42.DexImport("getTo", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTo(); }
+						[Dot42.DexImport("getTo", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getCc
 				/// </java-name>
-				public string Cc
+				public virtual string Cc
 				{
-				[Dot42.DexImport("getCc", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCc(); }
+						[Dot42.DexImport("getCc", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSubject
 				/// </java-name>
-				public string Subject
+				public virtual string Subject
 				{
-				[Dot42.DexImport("getSubject", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSubject(); }
+						[Dot42.DexImport("getSubject", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getBody
 				/// </java-name>
-				public string Body
+				public virtual string Body
 				{
-				[Dot42.DexImport("getBody", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetBody(); }
+						[Dot42.DexImport("getBody", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getHeaders
 				/// </java-name>
-				public global::Java.Util.IMap<string, string> Headers
+				public virtual global::Java.Util.IMap<string, string> Headers
 				{
-				[Dot42.DexImport("getHeaders", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-						get{ return GetHeaders(); }
+						[Dot42.DexImport("getHeaders", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IMap<string, string>); }
 				}
 
 		}
@@ -1039,87 +782,6 @@ namespace Android.Net
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal NetworkInfo() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public virtual int GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSubtype
-				/// </java-name>
-				[Dot42.DexImport("getSubtype", "()I", AccessFlags = 1)]
-				public virtual int GetSubtype() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTypeName
-				/// </java-name>
-				[Dot42.DexImport("getTypeName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetTypeName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSubtypeName
-				/// </java-name>
-				[Dot42.DexImport("getSubtypeName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSubtypeName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isConnectedOrConnecting
-				/// </java-name>
-				[Dot42.DexImport("isConnectedOrConnecting", "()Z", AccessFlags = 1)]
-				public virtual bool IsConnectedOrConnecting() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public virtual bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isAvailable
-				/// </java-name>
-				[Dot42.DexImport("isAvailable", "()Z", AccessFlags = 1)]
-				public virtual bool IsAvailable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isFailover
-				/// </java-name>
-				[Dot42.DexImport("isFailover", "()Z", AccessFlags = 1)]
-				public virtual bool IsFailover() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isRoaming
-				/// </java-name>
-				[Dot42.DexImport("isRoaming", "()Z", AccessFlags = 1)]
-				public virtual bool IsRoaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1138,24 +800,6 @@ namespace Android.Net
 				public virtual global::Android.Net.NetworkInfo.DetailedState GetDetailedState() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Net.NetworkInfo.DetailedState);
-				}
-
-				/// <java-name>
-				/// getReason
-				/// </java-name>
-				[Dot42.DexImport("getReason", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetReason() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getExtraInfo
-				/// </java-name>
-				[Dot42.DexImport("getExtraInfo", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetExtraInfo() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -1187,55 +831,100 @@ namespace Android.Net
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				public int Type
+				public virtual int Type
 				{
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSubtype
 				/// </java-name>
-				public int Subtype
+				public virtual int Subtype
 				{
-				[Dot42.DexImport("getSubtype", "()I", AccessFlags = 1)]
-						get{ return GetSubtype(); }
+						[Dot42.DexImport("getSubtype", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTypeName
 				/// </java-name>
-				public string TypeName
+				public virtual string TypeName
 				{
-				[Dot42.DexImport("getTypeName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTypeName(); }
+						[Dot42.DexImport("getTypeName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSubtypeName
 				/// </java-name>
-				public string SubtypeName
+				public virtual string SubtypeName
 				{
-				[Dot42.DexImport("getSubtypeName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSubtypeName(); }
+						[Dot42.DexImport("getSubtypeName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isConnectedOrConnecting
+				/// </java-name>
+				public virtual bool IsConnectedOrConnecting
+				{
+						[Dot42.DexImport("isConnectedOrConnecting", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public virtual bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isAvailable
+				/// </java-name>
+				public virtual bool IsAvailable
+				{
+						[Dot42.DexImport("isAvailable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFailover
+				/// </java-name>
+				public virtual bool IsFailover
+				{
+						[Dot42.DexImport("isFailover", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isRoaming
+				/// </java-name>
+				public virtual bool IsRoaming
+				{
+						[Dot42.DexImport("isRoaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getReason
 				/// </java-name>
-				public string Reason
+				public virtual string Reason
 				{
-				[Dot42.DexImport("getReason", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetReason(); }
+						[Dot42.DexImport("getReason", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getExtraInfo
 				/// </java-name>
-				public string ExtraInfo
+				public virtual string ExtraInfo
 				{
-				[Dot42.DexImport("getExtraInfo", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetExtraInfo(); }
+						[Dot42.DexImport("getExtraInfo", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1444,28 +1133,10 @@ namespace Android.Net
 				/// <java-name>
 				/// getDefaultHost
 				/// </java-name>
-				[Dot42.DexImport("getDefaultHost", "()Ljava/lang/String;", AccessFlags = 25)]
-				public static string GetDefaultHost() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDefaultPort
-				/// </java-name>
-				[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 25)]
-				public static int GetDefaultPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDefaultHost
-				/// </java-name>
 				public static string DefaultHost
 				{
-				[Dot42.DexImport("getDefaultHost", "()Ljava/lang/String;", AccessFlags = 25)]
-						get{ return GetDefaultHost(); }
+						[Dot42.DexImport("getDefaultHost", "()Ljava/lang/String;", AccessFlags = 25)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1473,8 +1144,8 @@ namespace Android.Net
 				/// </java-name>
 				public static int DefaultPort
 				{
-				[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 25)]
-						get{ return GetDefaultPort(); }
+						[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 25)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1597,24 +1268,6 @@ namespace Android.Net
 						return default(global::Java.Net.Socket);
 				}
 
-				/// <java-name>
-				/// getDefaultCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getDefaultCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetDefaultCipherSuites() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getSupportedCipherSuites
-				/// </java-name>
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetSupportedCipherSuites() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal SSLCertificateSocketFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1623,19 +1276,19 @@ namespace Android.Net
 				/// <java-name>
 				/// getDefaultCipherSuites
 				/// </java-name>
-				public string[] DefaultCipherSuites
+				public override string[] DefaultCipherSuites
 				{
-				[Dot42.DexImport("getDefaultCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDefaultCipherSuites(); }
+						[Dot42.DexImport("getDefaultCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 				/// <java-name>
 				/// getSupportedCipherSuites
 				/// </java-name>
-				public string[] SupportedCipherSuites
+				public override string[] SupportedCipherSuites
 				{
-				[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSupportedCipherSuites(); }
+						[Dot42.DexImport("getSupportedCipherSuites", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 		}
@@ -1682,23 +1335,6 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// setThreadStatsTag
-				/// </java-name>
-				[Dot42.DexImport("setThreadStatsTag", "(I)V", AccessFlags = 9)]
-				public static void SetThreadStatsTag(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getThreadStatsTag
-				/// </java-name>
-				[Dot42.DexImport("getThreadStatsTag", "()I", AccessFlags = 9)]
-				public static int GetThreadStatsTag() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// clearThreadStatsTag
 				/// </java-name>
 				[Dot42.DexImport("clearThreadStatsTag", "()V", AccessFlags = 9)]
@@ -1736,78 +1372,6 @@ namespace Android.Net
 				[Dot42.DexImport("incrementOperationCount", "(II)V", AccessFlags = 9)]
 				public static void IncrementOperationCount(int int32, int int321) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getMobileTxPackets
-				/// </java-name>
-				[Dot42.DexImport("getMobileTxPackets", "()J", AccessFlags = 265)]
-				public static long GetMobileTxPackets() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getMobileRxPackets
-				/// </java-name>
-				[Dot42.DexImport("getMobileRxPackets", "()J", AccessFlags = 265)]
-				public static long GetMobileRxPackets() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getMobileTxBytes
-				/// </java-name>
-				[Dot42.DexImport("getMobileTxBytes", "()J", AccessFlags = 265)]
-				public static long GetMobileTxBytes() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getMobileRxBytes
-				/// </java-name>
-				[Dot42.DexImport("getMobileRxBytes", "()J", AccessFlags = 265)]
-				public static long GetMobileRxBytes() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getTotalTxPackets
-				/// </java-name>
-				[Dot42.DexImport("getTotalTxPackets", "()J", AccessFlags = 265)]
-				public static long GetTotalTxPackets() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getTotalRxPackets
-				/// </java-name>
-				[Dot42.DexImport("getTotalRxPackets", "()J", AccessFlags = 265)]
-				public static long GetTotalRxPackets() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getTotalTxBytes
-				/// </java-name>
-				[Dot42.DexImport("getTotalTxBytes", "()J", AccessFlags = 265)]
-				public static long GetTotalTxBytes() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getTotalRxBytes
-				/// </java-name>
-				[Dot42.DexImport("getTotalRxBytes", "()J", AccessFlags = 265)]
-				public static long GetTotalRxBytes() /* MethodBuilder.Create */ 
-				{
-						return default(long);
 				}
 
 				/// <java-name>
@@ -1923,10 +1487,10 @@ namespace Android.Net
 				/// </java-name>
 				public static int ThreadStatsTag
 				{
-				[Dot42.DexImport("getThreadStatsTag", "()I", AccessFlags = 9)]
-						get{ return GetThreadStatsTag(); }
-				[Dot42.DexImport("setThreadStatsTag", "(I)V", AccessFlags = 9)]
-						set{ SetThreadStatsTag(value); }
+						[Dot42.DexImport("getThreadStatsTag", "()I", AccessFlags = 9)]
+						get{ return default(int); }
+						[Dot42.DexImport("setThreadStatsTag", "(I)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1934,8 +1498,8 @@ namespace Android.Net
 				/// </java-name>
 				public static long MobileTxPackets
 				{
-				[Dot42.DexImport("getMobileTxPackets", "()J", AccessFlags = 265)]
-						get{ return GetMobileTxPackets(); }
+						[Dot42.DexImport("getMobileTxPackets", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1943,8 +1507,8 @@ namespace Android.Net
 				/// </java-name>
 				public static long MobileRxPackets
 				{
-				[Dot42.DexImport("getMobileRxPackets", "()J", AccessFlags = 265)]
-						get{ return GetMobileRxPackets(); }
+						[Dot42.DexImport("getMobileRxPackets", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1952,8 +1516,8 @@ namespace Android.Net
 				/// </java-name>
 				public static long MobileTxBytes
 				{
-				[Dot42.DexImport("getMobileTxBytes", "()J", AccessFlags = 265)]
-						get{ return GetMobileTxBytes(); }
+						[Dot42.DexImport("getMobileTxBytes", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1961,8 +1525,8 @@ namespace Android.Net
 				/// </java-name>
 				public static long MobileRxBytes
 				{
-				[Dot42.DexImport("getMobileRxBytes", "()J", AccessFlags = 265)]
-						get{ return GetMobileRxBytes(); }
+						[Dot42.DexImport("getMobileRxBytes", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1970,8 +1534,8 @@ namespace Android.Net
 				/// </java-name>
 				public static long TotalTxPackets
 				{
-				[Dot42.DexImport("getTotalTxPackets", "()J", AccessFlags = 265)]
-						get{ return GetTotalTxPackets(); }
+						[Dot42.DexImport("getTotalTxPackets", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1979,8 +1543,8 @@ namespace Android.Net
 				/// </java-name>
 				public static long TotalRxPackets
 				{
-				[Dot42.DexImport("getTotalRxPackets", "()J", AccessFlags = 265)]
-						get{ return GetTotalRxPackets(); }
+						[Dot42.DexImport("getTotalRxPackets", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1988,8 +1552,8 @@ namespace Android.Net
 				/// </java-name>
 				public static long TotalTxBytes
 				{
-				[Dot42.DexImport("getTotalTxBytes", "()J", AccessFlags = 265)]
-						get{ return GetTotalTxBytes(); }
+						[Dot42.DexImport("getTotalTxBytes", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -1997,8 +1561,8 @@ namespace Android.Net
 				/// </java-name>
 				public static long TotalRxBytes
 				{
-				[Dot42.DexImport("getTotalRxBytes", "()J", AccessFlags = 265)]
-						get{ return GetTotalRxBytes(); }
+						[Dot42.DexImport("getTotalRxBytes", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 		}
@@ -2025,138 +1589,6 @@ namespace Android.Net
 				internal Uri() /* MethodBuilder.Create */ 
 				{
 				}
-
-				/// <java-name>
-				/// isHierarchical
-				/// </java-name>
-				[Dot42.DexImport("isHierarchical", "()Z", AccessFlags = 1025)]
-				public abstract bool IsHierarchical() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isOpaque
-				/// </java-name>
-				[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 1)]
-				public virtual bool IsOpaque() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isRelative
-				/// </java-name>
-				[Dot42.DexImport("isRelative", "()Z", AccessFlags = 1025)]
-				public abstract bool IsRelative() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isAbsolute
-				/// </java-name>
-				[Dot42.DexImport("isAbsolute", "()Z", AccessFlags = 1)]
-				public virtual bool IsAbsolute() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getScheme
-				/// </java-name>
-				[Dot42.DexImport("getScheme", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetScheme() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSchemeSpecificPart
-				/// </java-name>
-				[Dot42.DexImport("getSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetSchemeSpecificPart() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEncodedSchemeSpecificPart
-				/// </java-name>
-				[Dot42.DexImport("getEncodedSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetEncodedSchemeSpecificPart() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAuthority
-				/// </java-name>
-				[Dot42.DexImport("getAuthority", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetAuthority() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEncodedAuthority
-				/// </java-name>
-				[Dot42.DexImport("getEncodedAuthority", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetEncodedAuthority() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getUserInfo
-				/// </java-name>
-				[Dot42.DexImport("getUserInfo", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetUserInfo() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEncodedUserInfo
-				/// </java-name>
-				[Dot42.DexImport("getEncodedUserInfo", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetEncodedUserInfo() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getHost
-				/// </java-name>
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetHost() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1025)]
-				public abstract int GetPort() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetPath() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEncodedPath
-				/// </java-name>
-				[Dot42.DexImport("getEncodedPath", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetEncodedPath() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getQuery
-				/// </java-name>
-				[Dot42.DexImport("getQuery", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetQuery() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEncodedQuery
-				/// </java-name>
-				[Dot42.DexImport("getEncodedQuery", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetEncodedQuery() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFragment
-				/// </java-name>
-				[Dot42.DexImport("getFragment", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetFragment() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getEncodedFragment
-				/// </java-name>
-				[Dot42.DexImport("getEncodedFragment", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetEncodedFragment() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPathSegments
-				/// </java-name>
-				[Dot42.DexImport("getPathSegments", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-				public abstract global::Java.Util.IList<string> GetPathSegments() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLastPathSegment
-				/// </java-name>
-				[Dot42.DexImport("getLastPathSegment", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetLastPathSegment() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// equals
@@ -2225,15 +1657,6 @@ namespace Android.Net
 				public static global::Android.Net.Uri FromParts(string @string, string string1, string string2) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Net.Uri);
-				}
-
-				/// <java-name>
-				/// getQueryParameterNames
-				/// </java-name>
-				[Dot42.DexImport("getQueryParameterNames", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetQueryParameterNames() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<string>);
 				}
 
 				/// <java-name>
@@ -2319,165 +1742,201 @@ namespace Android.Net
 				}
 
 				/// <java-name>
+				/// isHierarchical
+				/// </java-name>
+				public abstract bool IsHierarchical
+				{
+						[Dot42.DexImport("isHierarchical", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isOpaque
+				/// </java-name>
+				public virtual bool IsOpaque
+				{
+						[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isRelative
+				/// </java-name>
+				public abstract bool IsRelative
+				{
+						[Dot42.DexImport("isRelative", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isAbsolute
+				/// </java-name>
+				public virtual bool IsAbsolute
+				{
+						[Dot42.DexImport("isAbsolute", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getScheme
 				/// </java-name>
-				public string Scheme
+				public abstract string Scheme
 				{
-				[Dot42.DexImport("getScheme", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetScheme(); }
+						[Dot42.DexImport("getScheme", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSchemeSpecificPart
 				/// </java-name>
-				public string SchemeSpecificPart
+				public abstract string SchemeSpecificPart
 				{
-				[Dot42.DexImport("getSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSchemeSpecificPart(); }
+						[Dot42.DexImport("getSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEncodedSchemeSpecificPart
 				/// </java-name>
-				public string EncodedSchemeSpecificPart
+				public abstract string EncodedSchemeSpecificPart
 				{
-				[Dot42.DexImport("getEncodedSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEncodedSchemeSpecificPart(); }
+						[Dot42.DexImport("getEncodedSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getAuthority
 				/// </java-name>
-				public string Authority
+				public abstract string Authority
 				{
-				[Dot42.DexImport("getAuthority", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetAuthority(); }
+						[Dot42.DexImport("getAuthority", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEncodedAuthority
 				/// </java-name>
-				public string EncodedAuthority
+				public abstract string EncodedAuthority
 				{
-				[Dot42.DexImport("getEncodedAuthority", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEncodedAuthority(); }
+						[Dot42.DexImport("getEncodedAuthority", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getUserInfo
 				/// </java-name>
-				public string UserInfo
+				public abstract string UserInfo
 				{
-				[Dot42.DexImport("getUserInfo", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetUserInfo(); }
+						[Dot42.DexImport("getUserInfo", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEncodedUserInfo
 				/// </java-name>
-				public string EncodedUserInfo
+				public abstract string EncodedUserInfo
 				{
-				[Dot42.DexImport("getEncodedUserInfo", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEncodedUserInfo(); }
+						[Dot42.DexImport("getEncodedUserInfo", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getHost
 				/// </java-name>
-				public string Host
+				public abstract string Host
 				{
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetHost(); }
+						[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getPort
 				/// </java-name>
-				public int Port
+				public abstract int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1025)]
-						get{ return GetPort(); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getPath
 				/// </java-name>
-				public string Path
+				public abstract string Path
 				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetPath(); }
+						[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEncodedPath
 				/// </java-name>
-				public string EncodedPath
+				public abstract string EncodedPath
 				{
-				[Dot42.DexImport("getEncodedPath", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEncodedPath(); }
+						[Dot42.DexImport("getEncodedPath", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getQuery
 				/// </java-name>
-				public string Query
+				public abstract string Query
 				{
-				[Dot42.DexImport("getQuery", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetQuery(); }
+						[Dot42.DexImport("getQuery", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEncodedQuery
 				/// </java-name>
-				public string EncodedQuery
+				public abstract string EncodedQuery
 				{
-				[Dot42.DexImport("getEncodedQuery", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEncodedQuery(); }
+						[Dot42.DexImport("getEncodedQuery", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getFragment
 				/// </java-name>
-				public string Fragment
+				public abstract string Fragment
 				{
-				[Dot42.DexImport("getFragment", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetFragment(); }
+						[Dot42.DexImport("getFragment", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getEncodedFragment
 				/// </java-name>
-				public string EncodedFragment
+				public abstract string EncodedFragment
 				{
-				[Dot42.DexImport("getEncodedFragment", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetEncodedFragment(); }
+						[Dot42.DexImport("getEncodedFragment", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getPathSegments
 				/// </java-name>
-				public global::Java.Util.IList<string> PathSegments
+				public abstract global::Java.Util.IList<string> PathSegments
 				{
-				[Dot42.DexImport("getPathSegments", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						get{ return GetPathSegments(); }
+						[Dot42.DexImport("getPathSegments", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+						get;
 				}
 
 				/// <java-name>
 				/// getLastPathSegment
 				/// </java-name>
-				public string LastPathSegment
+				public abstract string LastPathSegment
 				{
-				[Dot42.DexImport("getLastPathSegment", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetLastPathSegment(); }
+						[Dot42.DexImport("getLastPathSegment", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getQueryParameterNames
 				/// </java-name>
-				public global::Java.Util.ISet<string> QueryParameterNames
+				public virtual global::Java.Util.ISet<string> QueryParameterNames
 				{
-				[Dot42.DexImport("getQueryParameterNames", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetQueryParameterNames(); }
+						[Dot42.DexImport("getQueryParameterNames", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
 				}
 
 				/// <java-name>
@@ -2667,104 +2126,6 @@ namespace Android.Net
 				}
 
 				/// <java-name>
-				/// getUnregisteredParameterValueSanitizer
-				/// </java-name>
-				[Dot42.DexImport("getUnregisteredParameterValueSanitizer", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 1)]
-				public virtual global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetUnregisteredParameterValueSanitizer() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
-				/// setUnregisteredParameterValueSanitizer
-				/// </java-name>
-				[Dot42.DexImport("setUnregisteredParameterValueSanitizer", "(Landroid/net/UrlQuerySanitizer$ValueSanitizer;)V", AccessFlags = 1)]
-				public virtual void SetUnregisteredParameterValueSanitizer(global::Android.Net.UrlQuerySanitizer.IValueSanitizer valueSanitizer) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAllIllegal
-				/// </java-name>
-				[Dot42.DexImport("getAllIllegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetAllIllegal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
-				/// getAllButNulLegal
-				/// </java-name>
-				[Dot42.DexImport("getAllButNulLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetAllButNulLegal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
-				/// getAllButWhitespaceLegal
-				/// </java-name>
-				[Dot42.DexImport("getAllButWhitespaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetAllButWhitespaceLegal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
-				/// getUrlLegal
-				/// </java-name>
-				[Dot42.DexImport("getUrlLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetUrlLegal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
-				/// getUrlAndSpaceLegal
-				/// </java-name>
-				[Dot42.DexImport("getUrlAndSpaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetUrlAndSpaceLegal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
-				/// getAmpLegal
-				/// </java-name>
-				[Dot42.DexImport("getAmpLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetAmpLegal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
-				/// getAmpAndSpaceLegal
-				/// </java-name>
-				[Dot42.DexImport("getAmpAndSpaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetAmpAndSpaceLegal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
-				/// getSpaceLegal
-				/// </java-name>
-				[Dot42.DexImport("getSpaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetSpaceLegal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
-				/// getAllButNulAndAngleBracketsLegal
-				/// </java-name>
-				[Dot42.DexImport("getAllButNulAndAngleBracketsLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer GetAllButNulAndAngleBracketsLegal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer);
-				}
-
-				/// <java-name>
 				/// parseUrl
 				/// </java-name>
 				[Dot42.DexImport("parseUrl", "(Ljava/lang/String;)V", AccessFlags = 1)]
@@ -2778,24 +2139,6 @@ namespace Android.Net
 				[Dot42.DexImport("parseQuery", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public virtual void ParseQuery(string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getParameterSet
-				/// </java-name>
-				[Dot42.DexImport("getParameterSet", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.ISet<string> GetParameterSet() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ISet<string>);
-				}
-
-				/// <java-name>
-				/// getParameterList
-				/// </java-name>
-				[Dot42.DexImport("getParameterList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/net/UrlQuerySanitizer$ParameterValuePair;>;")]
-				public virtual global::Java.Util.IList<global::Android.Net.UrlQuerySanitizer.ParameterValuePair> GetParameterList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Net.UrlQuerySanitizer.ParameterValuePair>);
 				}
 
 				/// <java-name>
@@ -2830,40 +2173,6 @@ namespace Android.Net
 				[Dot42.DexImport("registerParameters", "([Ljava/lang/String;Landroid/net/UrlQuerySanitizer$ValueSanitizer;)V", AccessFlags = 1)]
 				public virtual void RegisterParameters(string[] @string, global::Android.Net.UrlQuerySanitizer.IValueSanitizer valueSanitizer) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// setAllowUnregisteredParamaters
-				/// </java-name>
-				[Dot42.DexImport("setAllowUnregisteredParamaters", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAllowUnregisteredParamaters(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAllowUnregisteredParamaters
-				/// </java-name>
-				[Dot42.DexImport("getAllowUnregisteredParamaters", "()Z", AccessFlags = 1)]
-				public virtual bool GetAllowUnregisteredParamaters() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setPreferFirstRepeatedParameter
-				/// </java-name>
-				[Dot42.DexImport("setPreferFirstRepeatedParameter", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPreferFirstRepeatedParameter(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPreferFirstRepeatedParameter
-				/// </java-name>
-				[Dot42.DexImport("getPreferFirstRepeatedParameter", "()Z", AccessFlags = 1)]
-				public virtual bool GetPreferFirstRepeatedParameter() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2938,12 +2247,12 @@ namespace Android.Net
 				/// <java-name>
 				/// getUnregisteredParameterValueSanitizer
 				/// </java-name>
-				public global::Android.Net.UrlQuerySanitizer.IValueSanitizer UnregisteredParameterValueSanitizer
+				public virtual global::Android.Net.UrlQuerySanitizer.IValueSanitizer UnregisteredParameterValueSanitizer
 				{
-				[Dot42.DexImport("getUnregisteredParameterValueSanitizer", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 1)]
-						get{ return GetUnregisteredParameterValueSanitizer(); }
-				[Dot42.DexImport("setUnregisteredParameterValueSanitizer", "(Landroid/net/UrlQuerySanitizer$ValueSanitizer;)V", AccessFlags = 1)]
-						set{ SetUnregisteredParameterValueSanitizer(value); }
+						[Dot42.DexImport("getUnregisteredParameterValueSanitizer", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
+						[Dot42.DexImport("setUnregisteredParameterValueSanitizer", "(Landroid/net/UrlQuerySanitizer$ValueSanitizer;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -2951,8 +2260,8 @@ namespace Android.Net
 				/// </java-name>
 				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer AllIllegal
 				{
-				[Dot42.DexImport("getAllIllegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-						get{ return GetAllIllegal(); }
+						[Dot42.DexImport("getAllIllegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
 				}
 
 				/// <java-name>
@@ -2960,8 +2269,8 @@ namespace Android.Net
 				/// </java-name>
 				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer AllButNulLegal
 				{
-				[Dot42.DexImport("getAllButNulLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-						get{ return GetAllButNulLegal(); }
+						[Dot42.DexImport("getAllButNulLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
 				}
 
 				/// <java-name>
@@ -2969,8 +2278,8 @@ namespace Android.Net
 				/// </java-name>
 				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer AllButWhitespaceLegal
 				{
-				[Dot42.DexImport("getAllButWhitespaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-						get{ return GetAllButWhitespaceLegal(); }
+						[Dot42.DexImport("getAllButWhitespaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
 				}
 
 				/// <java-name>
@@ -2978,8 +2287,8 @@ namespace Android.Net
 				/// </java-name>
 				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer UrlLegal
 				{
-				[Dot42.DexImport("getUrlLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-						get{ return GetUrlLegal(); }
+						[Dot42.DexImport("getUrlLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
 				}
 
 				/// <java-name>
@@ -2987,8 +2296,8 @@ namespace Android.Net
 				/// </java-name>
 				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer UrlAndSpaceLegal
 				{
-				[Dot42.DexImport("getUrlAndSpaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-						get{ return GetUrlAndSpaceLegal(); }
+						[Dot42.DexImport("getUrlAndSpaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
 				}
 
 				/// <java-name>
@@ -2996,8 +2305,8 @@ namespace Android.Net
 				/// </java-name>
 				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer AmpLegal
 				{
-				[Dot42.DexImport("getAmpLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-						get{ return GetAmpLegal(); }
+						[Dot42.DexImport("getAmpLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
 				}
 
 				/// <java-name>
@@ -3005,8 +2314,8 @@ namespace Android.Net
 				/// </java-name>
 				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer AmpAndSpaceLegal
 				{
-				[Dot42.DexImport("getAmpAndSpaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-						get{ return GetAmpAndSpaceLegal(); }
+						[Dot42.DexImport("getAmpAndSpaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
 				}
 
 				/// <java-name>
@@ -3014,8 +2323,8 @@ namespace Android.Net
 				/// </java-name>
 				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer SpaceLegal
 				{
-				[Dot42.DexImport("getSpaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-						get{ return GetSpaceLegal(); }
+						[Dot42.DexImport("getSpaceLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
 				}
 
 				/// <java-name>
@@ -3023,48 +2332,48 @@ namespace Android.Net
 				/// </java-name>
 				public static global::Android.Net.UrlQuerySanitizer.IValueSanitizer AllButNulAndAngleBracketsLegal
 				{
-				[Dot42.DexImport("getAllButNulAndAngleBracketsLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
-						get{ return GetAllButNulAndAngleBracketsLegal(); }
+						[Dot42.DexImport("getAllButNulAndAngleBracketsLegal", "()Landroid/net/UrlQuerySanitizer$ValueSanitizer;", AccessFlags = 25)]
+						get{ return default(global::Android.Net.UrlQuerySanitizer.IValueSanitizer); }
 				}
 
 				/// <java-name>
 				/// getParameterSet
 				/// </java-name>
-				public global::Java.Util.ISet<string> ParameterSet
+				public virtual global::Java.Util.ISet<string> ParameterSet
 				{
-				[Dot42.DexImport("getParameterSet", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
-						get{ return GetParameterSet(); }
+						[Dot42.DexImport("getParameterSet", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.ISet<string>); }
 				}
 
 				/// <java-name>
 				/// getParameterList
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Net.UrlQuerySanitizer.ParameterValuePair> ParameterList
+				public virtual global::Java.Util.IList<global::Android.Net.UrlQuerySanitizer.ParameterValuePair> ParameterList
 				{
-				[Dot42.DexImport("getParameterList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/net/UrlQuerySanitizer$ParameterValuePair;>;")]
-						get{ return GetParameterList(); }
+						[Dot42.DexImport("getParameterList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/net/UrlQuerySanitizer$ParameterValuePair;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Net.UrlQuerySanitizer.ParameterValuePair>); }
 				}
 
 				/// <java-name>
 				/// getAllowUnregisteredParamaters
 				/// </java-name>
-				public bool IsAllowUnregisteredParamaters
+				public virtual bool IsAllowUnregisteredParamaters
 				{
-				[Dot42.DexImport("getAllowUnregisteredParamaters", "()Z", AccessFlags = 1)]
-						get{ return GetAllowUnregisteredParamaters(); }
-				[Dot42.DexImport("setAllowUnregisteredParamaters", "(Z)V", AccessFlags = 1)]
-						set{ SetAllowUnregisteredParamaters(value); }
+						[Dot42.DexImport("getAllowUnregisteredParamaters", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setAllowUnregisteredParamaters", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPreferFirstRepeatedParameter
 				/// </java-name>
-				public bool IsPreferFirstRepeatedParameter
+				public virtual bool IsPreferFirstRepeatedParameter
 				{
-				[Dot42.DexImport("getPreferFirstRepeatedParameter", "()Z", AccessFlags = 1)]
-						get{ return GetPreferFirstRepeatedParameter(); }
-				[Dot42.DexImport("setPreferFirstRepeatedParameter", "(Z)V", AccessFlags = 1)]
-						set{ SetPreferFirstRepeatedParameter(value); }
+						[Dot42.DexImport("getPreferFirstRepeatedParameter", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setPreferFirstRepeatedParameter", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

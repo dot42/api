@@ -80,15 +80,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// isCancelled
-				/// </java-name>
-				[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 17)]
-				public bool IsCancelled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// cancel
 				/// </java-name>
 				[Dot42.DexImport("cancel", "(Z)Z", AccessFlags = 17)]
@@ -148,6 +139,15 @@ namespace Android.OS
 				[Dot42.DexImport("publishProgress", "([Ljava/lang/Object;)V", AccessFlags = 148, Signature = "([TProgress;)V")]
 				protected internal void PublishProgress(params Progress[] p) /* MethodBuilder.Create */ 
 				{
+				}
+
+				/// <java-name>
+				/// isCancelled
+				/// </java-name>
+				public bool IsCancelled
+				{
+						[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -369,24 +369,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getCallingPid
-				/// </java-name>
-				[Dot42.DexImport("getCallingPid", "()I", AccessFlags = 281)]
-				public static int GetCallingPid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getCallingUid
-				/// </java-name>
-				[Dot42.DexImport("getCallingUid", "()I", AccessFlags = 281)]
-				public static int GetCallingUid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// clearCallingIdentity
 				/// </java-name>
 				[Dot42.DexImport("clearCallingIdentity", "()J", AccessFlags = 281)]
@@ -428,28 +410,10 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getInterfaceDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetInterfaceDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// pingBinder
 				/// </java-name>
 				[Dot42.DexImport("pingBinder", "()Z", AccessFlags = 1)]
 				public virtual bool PingBinder() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isBinderAlive
-				/// </java-name>
-				[Dot42.DexImport("isBinderAlive", "()Z", AccessFlags = 1)]
-				public virtual bool IsBinderAlive() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -533,8 +497,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int CallingPid
 				{
-				[Dot42.DexImport("getCallingPid", "()I", AccessFlags = 281)]
-						get{ return GetCallingPid(); }
+						[Dot42.DexImport("getCallingPid", "()I", AccessFlags = 281)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -542,17 +506,26 @@ namespace Android.OS
 				/// </java-name>
 				public static int CallingUid
 				{
-				[Dot42.DexImport("getCallingUid", "()I", AccessFlags = 281)]
-						get{ return GetCallingUid(); }
+						[Dot42.DexImport("getCallingUid", "()I", AccessFlags = 281)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getInterfaceDescriptor
 				/// </java-name>
-				public string InterfaceDescriptor
+				public virtual string InterfaceDescriptor
 				{
-				[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetInterfaceDescriptor(); }
+						[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isBinderAlive
+				/// </java-name>
+				public virtual bool IsBinderAlive
+				{
+						[Dot42.DexImport("isBinderAlive", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -677,19 +650,10 @@ namespace Android.OS
 				/// <java-name>
 				/// getRadioVersion
 				/// </java-name>
-				[Dot42.DexImport("getRadioVersion", "()Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetRadioVersion() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRadioVersion
-				/// </java-name>
 				public static string RadioVersion
 				{
-				[Dot42.DexImport("getRadioVersion", "()Ljava/lang/String;", AccessFlags = 9)]
-						get{ return GetRadioVersion(); }
+						[Dot42.DexImport("getRadioVersion", "()Ljava/lang/String;", AccessFlags = 9)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -865,23 +829,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// setClassLoader
-				/// </java-name>
-				[Dot42.DexImport("setClassLoader", "(Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-				public void SetClassLoader(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getClassLoader
-				/// </java-name>
-				[Dot42.DexImport("getClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-				public global::Java.Lang.ClassLoader GetClassLoader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ClassLoader);
-				}
-
-				/// <java-name>
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
@@ -897,15 +844,6 @@ namespace Android.OS
 				public int Size() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -957,15 +895,6 @@ namespace Android.OS
 				public global::Java.Util.ISet<string> KeySet() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.ISet<string>);
-				}
-
-				/// <java-name>
-				/// hasFileDescriptors
-				/// </java-name>
-				[Dot42.DexImport("hasFileDescriptors", "()Z", AccessFlags = 1)]
-				public bool HasFileDescriptors() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1633,10 +1562,28 @@ namespace Android.OS
 				/// </java-name>
 				public global::Java.Lang.ClassLoader ClassLoader
 				{
-				[Dot42.DexImport("getClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-						get{ return GetClassLoader(); }
-				[Dot42.DexImport("setClassLoader", "(Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-						set{ SetClassLoader(value); }
+						[Dot42.DexImport("getClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ClassLoader); }
+						[Dot42.DexImport("setClassLoader", "(Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasFileDescriptors
+				/// </java-name>
+				public bool HasFileDescriptors
+				{
+						[Dot42.DexImport("hasFileDescriptors", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1805,15 +1752,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// isDebuggerConnected
-				/// </java-name>
-				[Dot42.DexImport("isDebuggerConnected", "()Z", AccessFlags = 9)]
-				public static bool IsDebuggerConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// changeDebugPort
 				/// </java-name>
 				[Dot42.DexImport("changeDebugPort", "(I)V", AccessFlags = 9)]
@@ -1908,150 +1846,6 @@ namespace Android.OS
 				[Dot42.DexImport("stopAllocCounting", "()V", AccessFlags = 9)]
 				public static void StopAllocCounting() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getGlobalAllocCount
-				/// </java-name>
-				[Dot42.DexImport("getGlobalAllocCount", "()I", AccessFlags = 9)]
-				public static int GetGlobalAllocCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalAllocSize
-				/// </java-name>
-				[Dot42.DexImport("getGlobalAllocSize", "()I", AccessFlags = 9)]
-				public static int GetGlobalAllocSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalFreedCount
-				/// </java-name>
-				[Dot42.DexImport("getGlobalFreedCount", "()I", AccessFlags = 9)]
-				public static int GetGlobalFreedCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalFreedSize
-				/// </java-name>
-				[Dot42.DexImport("getGlobalFreedSize", "()I", AccessFlags = 9)]
-				public static int GetGlobalFreedSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalClassInitCount
-				/// </java-name>
-				[Dot42.DexImport("getGlobalClassInitCount", "()I", AccessFlags = 9)]
-				public static int GetGlobalClassInitCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalClassInitTime
-				/// </java-name>
-				[Dot42.DexImport("getGlobalClassInitTime", "()I", AccessFlags = 9)]
-				public static int GetGlobalClassInitTime() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalExternalAllocCount
-				/// </java-name>
-				[Dot42.DexImport("getGlobalExternalAllocCount", "()I", AccessFlags = 9)]
-				public static int GetGlobalExternalAllocCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalExternalAllocSize
-				/// </java-name>
-				[Dot42.DexImport("getGlobalExternalAllocSize", "()I", AccessFlags = 9)]
-				public static int GetGlobalExternalAllocSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalExternalFreedCount
-				/// </java-name>
-				[Dot42.DexImport("getGlobalExternalFreedCount", "()I", AccessFlags = 9)]
-				public static int GetGlobalExternalFreedCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalExternalFreedSize
-				/// </java-name>
-				[Dot42.DexImport("getGlobalExternalFreedSize", "()I", AccessFlags = 9)]
-				public static int GetGlobalExternalFreedSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getGlobalGcInvocationCount
-				/// </java-name>
-				[Dot42.DexImport("getGlobalGcInvocationCount", "()I", AccessFlags = 9)]
-				public static int GetGlobalGcInvocationCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getThreadAllocCount
-				/// </java-name>
-				[Dot42.DexImport("getThreadAllocCount", "()I", AccessFlags = 9)]
-				public static int GetThreadAllocCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getThreadAllocSize
-				/// </java-name>
-				[Dot42.DexImport("getThreadAllocSize", "()I", AccessFlags = 9)]
-				public static int GetThreadAllocSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getThreadExternalAllocCount
-				/// </java-name>
-				[Dot42.DexImport("getThreadExternalAllocCount", "()I", AccessFlags = 9)]
-				public static int GetThreadExternalAllocCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getThreadExternalAllocSize
-				/// </java-name>
-				[Dot42.DexImport("getThreadExternalAllocSize", "()I", AccessFlags = 9)]
-				public static int GetThreadExternalAllocSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getThreadGcInvocationCount
-				/// </java-name>
-				[Dot42.DexImport("getThreadGcInvocationCount", "()I", AccessFlags = 9)]
-				public static int GetThreadGcInvocationCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2191,47 +1985,11 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getNativeHeapSize
-				/// </java-name>
-				[Dot42.DexImport("getNativeHeapSize", "()J", AccessFlags = 265)]
-				public static long GetNativeHeapSize() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getNativeHeapAllocatedSize
-				/// </java-name>
-				[Dot42.DexImport("getNativeHeapAllocatedSize", "()J", AccessFlags = 265)]
-				public static long GetNativeHeapAllocatedSize() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getNativeHeapFreeSize
-				/// </java-name>
-				[Dot42.DexImport("getNativeHeapFreeSize", "()J", AccessFlags = 265)]
-				public static long GetNativeHeapFreeSize() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// getMemoryInfo
 				/// </java-name>
 				[Dot42.DexImport("getMemoryInfo", "(Landroid/os/Debug$MemoryInfo;)V", AccessFlags = 265)]
 				public static void GetMemoryInfo(global::Android.OS.Debug.MemoryInfo memoryInfo) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPss
-				/// </java-name>
-				[Dot42.DexImport("getPss", "()J", AccessFlags = 265)]
-				public static long GetPss() /* MethodBuilder.Create */ 
-				{
-						return default(long);
 				}
 
 				/// <java-name>
@@ -2261,65 +2019,11 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getLoadedClassCount
-				/// </java-name>
-				[Dot42.DexImport("getLoadedClassCount", "()I", AccessFlags = 9)]
-				public static int GetLoadedClassCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// dumpHprofData
 				/// </java-name>
 				[Dot42.DexImport("dumpHprofData", "(Ljava/lang/String;)V", AccessFlags = 9)]
 				public static void DumpHprofData(string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getBinderSentTransactions
-				/// </java-name>
-				[Dot42.DexImport("getBinderSentTransactions", "()I", AccessFlags = 265)]
-				public static int GetBinderSentTransactions() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBinderReceivedTransactions
-				/// </java-name>
-				[Dot42.DexImport("getBinderReceivedTransactions", "()I", AccessFlags = 265)]
-				public static int GetBinderReceivedTransactions() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBinderLocalObjectCount
-				/// </java-name>
-				[Dot42.DexImport("getBinderLocalObjectCount", "()I", AccessFlags = 281)]
-				public static int GetBinderLocalObjectCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBinderProxyObjectCount
-				/// </java-name>
-				[Dot42.DexImport("getBinderProxyObjectCount", "()I", AccessFlags = 281)]
-				public static int GetBinderProxyObjectCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBinderDeathObjectCount
-				/// </java-name>
-				[Dot42.DexImport("getBinderDeathObjectCount", "()I", AccessFlags = 281)]
-				public static int GetBinderDeathObjectCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2332,12 +2036,21 @@ namespace Android.OS
 				}
 
 				/// <java-name>
+				/// isDebuggerConnected
+				/// </java-name>
+				public static bool IsDebuggerConnected
+				{
+						[Dot42.DexImport("isDebuggerConnected", "()Z", AccessFlags = 9)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getGlobalAllocCount
 				/// </java-name>
 				public static int GlobalAllocCount
 				{
-				[Dot42.DexImport("getGlobalAllocCount", "()I", AccessFlags = 9)]
-						get{ return GetGlobalAllocCount(); }
+						[Dot42.DexImport("getGlobalAllocCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2345,8 +2058,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalAllocSize
 				{
-				[Dot42.DexImport("getGlobalAllocSize", "()I", AccessFlags = 9)]
-						get{ return GetGlobalAllocSize(); }
+						[Dot42.DexImport("getGlobalAllocSize", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2354,8 +2067,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalFreedCount
 				{
-				[Dot42.DexImport("getGlobalFreedCount", "()I", AccessFlags = 9)]
-						get{ return GetGlobalFreedCount(); }
+						[Dot42.DexImport("getGlobalFreedCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2363,8 +2076,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalFreedSize
 				{
-				[Dot42.DexImport("getGlobalFreedSize", "()I", AccessFlags = 9)]
-						get{ return GetGlobalFreedSize(); }
+						[Dot42.DexImport("getGlobalFreedSize", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2372,8 +2085,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalClassInitCount
 				{
-				[Dot42.DexImport("getGlobalClassInitCount", "()I", AccessFlags = 9)]
-						get{ return GetGlobalClassInitCount(); }
+						[Dot42.DexImport("getGlobalClassInitCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2381,8 +2094,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalClassInitTime
 				{
-				[Dot42.DexImport("getGlobalClassInitTime", "()I", AccessFlags = 9)]
-						get{ return GetGlobalClassInitTime(); }
+						[Dot42.DexImport("getGlobalClassInitTime", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2390,8 +2103,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalExternalAllocCount
 				{
-				[Dot42.DexImport("getGlobalExternalAllocCount", "()I", AccessFlags = 9)]
-						get{ return GetGlobalExternalAllocCount(); }
+						[Dot42.DexImport("getGlobalExternalAllocCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2399,8 +2112,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalExternalAllocSize
 				{
-				[Dot42.DexImport("getGlobalExternalAllocSize", "()I", AccessFlags = 9)]
-						get{ return GetGlobalExternalAllocSize(); }
+						[Dot42.DexImport("getGlobalExternalAllocSize", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2408,8 +2121,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalExternalFreedCount
 				{
-				[Dot42.DexImport("getGlobalExternalFreedCount", "()I", AccessFlags = 9)]
-						get{ return GetGlobalExternalFreedCount(); }
+						[Dot42.DexImport("getGlobalExternalFreedCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2417,8 +2130,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalExternalFreedSize
 				{
-				[Dot42.DexImport("getGlobalExternalFreedSize", "()I", AccessFlags = 9)]
-						get{ return GetGlobalExternalFreedSize(); }
+						[Dot42.DexImport("getGlobalExternalFreedSize", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2426,8 +2139,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int GlobalGcInvocationCount
 				{
-				[Dot42.DexImport("getGlobalGcInvocationCount", "()I", AccessFlags = 9)]
-						get{ return GetGlobalGcInvocationCount(); }
+						[Dot42.DexImport("getGlobalGcInvocationCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2435,8 +2148,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int ThreadAllocCount
 				{
-				[Dot42.DexImport("getThreadAllocCount", "()I", AccessFlags = 9)]
-						get{ return GetThreadAllocCount(); }
+						[Dot42.DexImport("getThreadAllocCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2444,8 +2157,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int ThreadAllocSize
 				{
-				[Dot42.DexImport("getThreadAllocSize", "()I", AccessFlags = 9)]
-						get{ return GetThreadAllocSize(); }
+						[Dot42.DexImport("getThreadAllocSize", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2453,8 +2166,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int ThreadExternalAllocCount
 				{
-				[Dot42.DexImport("getThreadExternalAllocCount", "()I", AccessFlags = 9)]
-						get{ return GetThreadExternalAllocCount(); }
+						[Dot42.DexImport("getThreadExternalAllocCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2462,8 +2175,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int ThreadExternalAllocSize
 				{
-				[Dot42.DexImport("getThreadExternalAllocSize", "()I", AccessFlags = 9)]
-						get{ return GetThreadExternalAllocSize(); }
+						[Dot42.DexImport("getThreadExternalAllocSize", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2471,8 +2184,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int ThreadGcInvocationCount
 				{
-				[Dot42.DexImport("getThreadGcInvocationCount", "()I", AccessFlags = 9)]
-						get{ return GetThreadGcInvocationCount(); }
+						[Dot42.DexImport("getThreadGcInvocationCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2480,8 +2193,8 @@ namespace Android.OS
 				/// </java-name>
 				public static long NativeHeapSize
 				{
-				[Dot42.DexImport("getNativeHeapSize", "()J", AccessFlags = 265)]
-						get{ return GetNativeHeapSize(); }
+						[Dot42.DexImport("getNativeHeapSize", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -2489,8 +2202,8 @@ namespace Android.OS
 				/// </java-name>
 				public static long NativeHeapAllocatedSize
 				{
-				[Dot42.DexImport("getNativeHeapAllocatedSize", "()J", AccessFlags = 265)]
-						get{ return GetNativeHeapAllocatedSize(); }
+						[Dot42.DexImport("getNativeHeapAllocatedSize", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -2498,8 +2211,8 @@ namespace Android.OS
 				/// </java-name>
 				public static long NativeHeapFreeSize
 				{
-				[Dot42.DexImport("getNativeHeapFreeSize", "()J", AccessFlags = 265)]
-						get{ return GetNativeHeapFreeSize(); }
+						[Dot42.DexImport("getNativeHeapFreeSize", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -2507,8 +2220,8 @@ namespace Android.OS
 				/// </java-name>
 				public static long Pss
 				{
-				[Dot42.DexImport("getPss", "()J", AccessFlags = 265)]
-						get{ return GetPss(); }
+						[Dot42.DexImport("getPss", "()J", AccessFlags = 265)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -2516,8 +2229,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int LoadedClassCount
 				{
-				[Dot42.DexImport("getLoadedClassCount", "()I", AccessFlags = 9)]
-						get{ return GetLoadedClassCount(); }
+						[Dot42.DexImport("getLoadedClassCount", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2525,8 +2238,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int BinderSentTransactions
 				{
-				[Dot42.DexImport("getBinderSentTransactions", "()I", AccessFlags = 265)]
-						get{ return GetBinderSentTransactions(); }
+						[Dot42.DexImport("getBinderSentTransactions", "()I", AccessFlags = 265)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2534,8 +2247,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int BinderReceivedTransactions
 				{
-				[Dot42.DexImport("getBinderReceivedTransactions", "()I", AccessFlags = 265)]
-						get{ return GetBinderReceivedTransactions(); }
+						[Dot42.DexImport("getBinderReceivedTransactions", "()I", AccessFlags = 265)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2543,8 +2256,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int BinderLocalObjectCount
 				{
-				[Dot42.DexImport("getBinderLocalObjectCount", "()I", AccessFlags = 281)]
-						get{ return GetBinderLocalObjectCount(); }
+						[Dot42.DexImport("getBinderLocalObjectCount", "()I", AccessFlags = 281)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2552,8 +2265,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int BinderProxyObjectCount
 				{
-				[Dot42.DexImport("getBinderProxyObjectCount", "()I", AccessFlags = 281)]
-						get{ return GetBinderProxyObjectCount(); }
+						[Dot42.DexImport("getBinderProxyObjectCount", "()I", AccessFlags = 281)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2561,8 +2274,8 @@ namespace Android.OS
 				/// </java-name>
 				public static int BinderDeathObjectCount
 				{
-				[Dot42.DexImport("getBinderDeathObjectCount", "()I", AccessFlags = 281)]
-						get{ return GetBinderDeathObjectCount(); }
+						[Dot42.DexImport("getBinderDeathObjectCount", "()I", AccessFlags = 281)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2678,33 +2391,6 @@ namespace Android.OS
 						}
 
 						/// <java-name>
-						/// getTotalPss
-						/// </java-name>
-						[Dot42.DexImport("getTotalPss", "()I", AccessFlags = 1)]
-						public virtual int GetTotalPss() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getTotalPrivateDirty
-						/// </java-name>
-						[Dot42.DexImport("getTotalPrivateDirty", "()I", AccessFlags = 1)]
-						public virtual int GetTotalPrivateDirty() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getTotalSharedDirty
-						/// </java-name>
-						[Dot42.DexImport("getTotalSharedDirty", "()I", AccessFlags = 1)]
-						public virtual int GetTotalSharedDirty() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
 						/// getOtherPss
 						/// </java-name>
 						[Dot42.DexImport("getOtherPss", "(I)I", AccessFlags = 1)]
@@ -2768,28 +2454,28 @@ namespace Android.OS
 						/// <java-name>
 						/// getTotalPss
 						/// </java-name>
-						public int TotalPss
+						public virtual int TotalPss
 						{
-						[Dot42.DexImport("getTotalPss", "()I", AccessFlags = 1)]
-								get{ return GetTotalPss(); }
+								[Dot42.DexImport("getTotalPss", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getTotalPrivateDirty
 						/// </java-name>
-						public int TotalPrivateDirty
+						public virtual int TotalPrivateDirty
 						{
-						[Dot42.DexImport("getTotalPrivateDirty", "()I", AccessFlags = 1)]
-								get{ return GetTotalPrivateDirty(); }
+								[Dot42.DexImport("getTotalPrivateDirty", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getTotalSharedDirty
 						/// </java-name>
-						public int TotalSharedDirty
+						public virtual int TotalSharedDirty
 						{
-						[Dot42.DexImport("getTotalSharedDirty", "()I", AccessFlags = 1)]
-								get{ return GetTotalSharedDirty(); }
+								[Dot42.DexImport("getTotalSharedDirty", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 				}
@@ -2939,48 +2625,12 @@ namespace Android.OS
 						}
 
 						/// <java-name>
-						/// getTag
-						/// </java-name>
-						[Dot42.DexImport("getTag", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetTag() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// getTimeMillis
-						/// </java-name>
-						[Dot42.DexImport("getTimeMillis", "()J", AccessFlags = 1)]
-						public virtual long GetTimeMillis() /* MethodBuilder.Create */ 
-						{
-								return default(long);
-						}
-
-						/// <java-name>
-						/// getFlags
-						/// </java-name>
-						[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
-						public virtual int GetFlags() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
 						/// getText
 						/// </java-name>
 						[Dot42.DexImport("getText", "(I)Ljava/lang/String;", AccessFlags = 1)]
 						public virtual string GetText(int int32) /* MethodBuilder.Create */ 
 						{
 								return default(string);
-						}
-
-						/// <java-name>
-						/// getInputStream
-						/// </java-name>
-						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Io.InputStream);
 						}
 
 						/// <java-name>
@@ -3008,37 +2658,37 @@ namespace Android.OS
 						/// <java-name>
 						/// getTag
 						/// </java-name>
-						public string Tag
+						public virtual string Tag
 						{
-						[Dot42.DexImport("getTag", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetTag(); }
+								[Dot42.DexImport("getTag", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <java-name>
 						/// getTimeMillis
 						/// </java-name>
-						public long TimeMillis
+						public virtual long TimeMillis
 						{
-						[Dot42.DexImport("getTimeMillis", "()J", AccessFlags = 1)]
-								get{ return GetTimeMillis(); }
+								[Dot42.DexImport("getTimeMillis", "()J", AccessFlags = 1)]
+								get{ return default(long); }
 						}
 
 						/// <java-name>
 						/// getFlags
 						/// </java-name>
-						public int Flags
+						public virtual int Flags
 						{
-						[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
-								get{ return GetFlags(); }
+								[Dot42.DexImport("getFlags", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getInputStream
 						/// </java-name>
-						public global::Java.Io.InputStream InputStream
+						public virtual global::Java.Io.InputStream InputStream
 						{
-						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-								get{ return GetInputStream(); }
+								[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+								get{ return default(global::Java.Io.InputStream); }
 						}
 
 				}
@@ -3148,33 +2798,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getRootDirectory
-				/// </java-name>
-				[Dot42.DexImport("getRootDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetRootDirectory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getDataDirectory
-				/// </java-name>
-				[Dot42.DexImport("getDataDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetDataDirectory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getExternalStorageDirectory
-				/// </java-name>
-				[Dot42.DexImport("getExternalStorageDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetExternalStorageDirectory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
 				/// getExternalStoragePublicDirectory
 				/// </java-name>
 				[Dot42.DexImport("getExternalStoragePublicDirectory", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 9)]
@@ -3184,48 +2807,12 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getDownloadCacheDirectory
-				/// </java-name>
-				[Dot42.DexImport("getDownloadCacheDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetDownloadCacheDirectory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getExternalStorageState
-				/// </java-name>
-				[Dot42.DexImport("getExternalStorageState", "()Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetExternalStorageState() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isExternalStorageRemovable
-				/// </java-name>
-				[Dot42.DexImport("isExternalStorageRemovable", "()Z", AccessFlags = 9)]
-				public static bool IsExternalStorageRemovable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isExternalStorageEmulated
-				/// </java-name>
-				[Dot42.DexImport("isExternalStorageEmulated", "()Z", AccessFlags = 9)]
-				public static bool IsExternalStorageEmulated() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getRootDirectory
 				/// </java-name>
 				public static global::Java.Io.File RootDirectory
 				{
-				[Dot42.DexImport("getRootDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return GetRootDirectory(); }
+						[Dot42.DexImport("getRootDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
@@ -3233,8 +2820,8 @@ namespace Android.OS
 				/// </java-name>
 				public static global::Java.Io.File DataDirectory
 				{
-				[Dot42.DexImport("getDataDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return GetDataDirectory(); }
+						[Dot42.DexImport("getDataDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
@@ -3242,8 +2829,8 @@ namespace Android.OS
 				/// </java-name>
 				public static global::Java.Io.File ExternalStorageDirectory
 				{
-				[Dot42.DexImport("getExternalStorageDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return GetExternalStorageDirectory(); }
+						[Dot42.DexImport("getExternalStorageDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
@@ -3251,8 +2838,8 @@ namespace Android.OS
 				/// </java-name>
 				public static global::Java.Io.File DownloadCacheDirectory
 				{
-				[Dot42.DexImport("getDownloadCacheDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return GetDownloadCacheDirectory(); }
+						[Dot42.DexImport("getDownloadCacheDirectory", "()Ljava/io/File;", AccessFlags = 9)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
@@ -3260,8 +2847,26 @@ namespace Android.OS
 				/// </java-name>
 				public static string ExternalStorageState
 				{
-				[Dot42.DexImport("getExternalStorageState", "()Ljava/lang/String;", AccessFlags = 9)]
-						get{ return GetExternalStorageState(); }
+						[Dot42.DexImport("getExternalStorageState", "()Ljava/lang/String;", AccessFlags = 9)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isExternalStorageRemovable
+				/// </java-name>
+				public static bool IsExternalStorageRemovable
+				{
+						[Dot42.DexImport("isExternalStorageRemovable", "()Z", AccessFlags = 9)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isExternalStorageEmulated
+				/// </java-name>
+				public static bool IsExternalStorageEmulated
+				{
+						[Dot42.DexImport("isExternalStorageEmulated", "()Z", AccessFlags = 9)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -3647,15 +3252,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getLooper
-				/// </java-name>
-				[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 17)]
-				public global::Android.OS.Looper GetLooper() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Looper);
-				}
-
-				/// <java-name>
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Landroid/util/Printer;Ljava/lang/String;)V", AccessFlags = 17)]
@@ -3677,8 +3273,8 @@ namespace Android.OS
 				/// </java-name>
 				public global::Android.OS.Looper Looper
 				{
-				[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 17)]
-						get{ return GetLooper(); }
+						[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 17)]
+						get{ return default(global::Android.OS.Looper); }
 				}
 
 				/// <java-name>
@@ -3732,30 +3328,12 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getLooper
-				/// </java-name>
-				[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
-				public virtual global::Android.OS.Looper GetLooper() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Looper);
-				}
-
-				/// <java-name>
 				/// quit
 				/// </java-name>
 				[Dot42.DexImport("quit", "()Z", AccessFlags = 1)]
 				public virtual bool Quit() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getThreadId
-				/// </java-name>
-				[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
-				public virtual int GetThreadId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -3766,19 +3344,19 @@ namespace Android.OS
 				/// <java-name>
 				/// getLooper
 				/// </java-name>
-				public global::Android.OS.Looper Looper
+				public virtual global::Android.OS.Looper Looper
 				{
-				[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
-						get{ return GetLooper(); }
+						[Dot42.DexImport("getLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Looper); }
 				}
 
 				/// <java-name>
 				/// getThreadId
 				/// </java-name>
-				public int ThreadId
+				public virtual int ThreadId
 				{
-				[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
-						get{ return GetThreadId(); }
+						[Dot42.DexImport("getThreadId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -3791,22 +3369,10 @@ namespace Android.OS
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getInterfaceDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetInterfaceDescriptor() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// pingBinder
 				/// </java-name>
 				[Dot42.DexImport("pingBinder", "()Z", AccessFlags = 1025)]
 				bool PingBinder() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isBinderAlive
-				/// </java-name>
-				[Dot42.DexImport("isBinderAlive", "()Z", AccessFlags = 1025)]
-				bool IsBinderAlive() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// queryLocalInterface
@@ -3843,6 +3409,24 @@ namespace Android.OS
 				/// </java-name>
 				[Dot42.DexImport("unlinkToDeath", "(Landroid/os/IBinder$DeathRecipient;I)Z", AccessFlags = 1025)]
 				bool UnlinkToDeath(global::Android.OS.IBinder_IDeathRecipient binder_IDeathRecipient, int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getInterfaceDescriptor
+				/// </java-name>
+				string InterfaceDescriptor
+				{
+						[Dot42.DexImport("getInterfaceDescriptor", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isBinderAlive
+				/// </java-name>
+				bool IsBinderAlive
+				{
+						[Dot42.DexImport("isBinderAlive", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -4030,15 +3614,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getMainLooper
-				/// </java-name>
-				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 41)]
-				public static global::Android.OS.Looper GetMainLooper() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Looper);
-				}
-
-				/// <java-name>
 				/// loop
 				/// </java-name>
 				[Dot42.DexImport("loop", "()V", AccessFlags = 9)]
@@ -4081,15 +3656,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getThread
-				/// </java-name>
-				[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 1)]
-				public virtual global::System.Threading.Thread GetThread() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
-				}
-
-				/// <java-name>
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Landroid/util/Printer;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -4111,17 +3677,17 @@ namespace Android.OS
 				/// </java-name>
 				public static global::Android.OS.Looper MainLooper
 				{
-				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 41)]
-						get{ return GetMainLooper(); }
+						[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 41)]
+						get{ return default(global::Android.OS.Looper); }
 				}
 
 				/// <java-name>
 				/// getThread
 				/// </java-name>
-				public global::System.Threading.Thread Thread
+				public virtual global::System.Threading.Thread Thread
 				{
-				[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 1)]
-						get{ return GetThread(); }
+						[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 1)]
+						get{ return default(global::System.Threading.Thread); }
 				}
 
 		}
@@ -4162,39 +3728,12 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// isPurgingAllowed
-				/// </java-name>
-				[Dot42.DexImport("isPurgingAllowed", "()Z", AccessFlags = 1)]
-				public virtual bool IsPurgingAllowed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// allowPurging
 				/// </java-name>
 				[Dot42.DexImport("allowPurging", "(Z)Z", AccessFlags = 33)]
 				public virtual bool AllowPurging(bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.OutputStream);
 				}
 
 				/// <java-name>
@@ -4237,21 +3776,30 @@ namespace Android.OS
 				}
 
 				/// <java-name>
+				/// isPurgingAllowed
+				/// </java-name>
+				public virtual bool IsPurgingAllowed
+				{
+						[Dot42.DexImport("isPurgingAllowed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public global::Java.Io.InputStream InputStream
+				public virtual global::Java.Io.InputStream InputStream
 				{
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetInputStream(); }
+						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
 				}
 
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public global::Java.Io.OutputStream OutputStream
+				public virtual global::Java.Io.OutputStream OutputStream
 				{
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return GetOutputStream(); }
+						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.OutputStream); }
 				}
 
 		}
@@ -4387,64 +3935,12 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getWhen
-				/// </java-name>
-				[Dot42.DexImport("getWhen", "()J", AccessFlags = 1)]
-				public long GetWhen() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setTarget
-				/// </java-name>
-				[Dot42.DexImport("setTarget", "(Landroid/os/Handler;)V", AccessFlags = 1)]
-				public void SetTarget(global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTarget
-				/// </java-name>
-				[Dot42.DexImport("getTarget", "()Landroid/os/Handler;", AccessFlags = 1)]
-				public global::Android.OS.Handler GetTarget() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Handler);
-				}
-
-				/// <java-name>
-				/// getCallback
-				/// </java-name>
-				[Dot42.DexImport("getCallback", "()Ljava/lang/Runnable;", AccessFlags = 1)]
-				public global::Java.Lang.IRunnable GetCallback() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.IRunnable);
-				}
-
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				[Dot42.DexImport("getData", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public global::Android.OS.Bundle GetData() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Bundle);
-				}
-
-				/// <java-name>
 				/// peekData
 				/// </java-name>
 				[Dot42.DexImport("peekData", "()Landroid/os/Bundle;", AccessFlags = 1)]
 				public global::Android.OS.Bundle PeekData() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.OS.Bundle);
-				}
-
-				/// <java-name>
-				/// setData
-				/// </java-name>
-				[Dot42.DexImport("setData", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public void SetData(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -4486,8 +3982,8 @@ namespace Android.OS
 				/// </java-name>
 				public long When
 				{
-				[Dot42.DexImport("getWhen", "()J", AccessFlags = 1)]
-						get{ return GetWhen(); }
+						[Dot42.DexImport("getWhen", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -4495,10 +3991,10 @@ namespace Android.OS
 				/// </java-name>
 				public global::Android.OS.Handler Target
 				{
-				[Dot42.DexImport("getTarget", "()Landroid/os/Handler;", AccessFlags = 1)]
-						get{ return GetTarget(); }
-				[Dot42.DexImport("setTarget", "(Landroid/os/Handler;)V", AccessFlags = 1)]
-						set{ SetTarget(value); }
+						[Dot42.DexImport("getTarget", "()Landroid/os/Handler;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Handler); }
+						[Dot42.DexImport("setTarget", "(Landroid/os/Handler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -4506,8 +4002,8 @@ namespace Android.OS
 				/// </java-name>
 				public global::Java.Lang.IRunnable Callback
 				{
-				[Dot42.DexImport("getCallback", "()Ljava/lang/Runnable;", AccessFlags = 1)]
-						get{ return GetCallback(); }
+						[Dot42.DexImport("getCallback", "()Ljava/lang/Runnable;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.IRunnable); }
 				}
 
 				/// <java-name>
@@ -4515,10 +4011,10 @@ namespace Android.OS
 				/// </java-name>
 				public global::Android.OS.Bundle Data
 				{
-				[Dot42.DexImport("getData", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						get{ return GetData(); }
-				[Dot42.DexImport("setData", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						set{ SetData(value); }
+						[Dot42.DexImport("getData", "()Landroid/os/Bundle;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Bundle); }
+						[Dot42.DexImport("setData", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -4605,15 +4101,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getBinder
-				/// </java-name>
-				[Dot42.DexImport("getBinder", "()Landroid/os/IBinder;", AccessFlags = 1)]
-				public global::Android.OS.IBinder GetBinder() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.IBinder);
-				}
-
-				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
@@ -4675,8 +4162,8 @@ namespace Android.OS
 				/// </java-name>
 				public global::Android.OS.IBinder Binder
 				{
-				[Dot42.DexImport("getBinder", "()Landroid/os/IBinder;", AccessFlags = 1)]
-						get{ return GetBinder(); }
+						[Dot42.DexImport("getBinder", "()Landroid/os/IBinder;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.IBinder); }
 				}
 
 		}
@@ -4829,15 +4316,6 @@ namespace Android.OS
 				[Dot42.DexImport("appendFrom", "(Landroid/os/Parcel;II)V", AccessFlags = 273)]
 				public void AppendFrom(global::Android.OS.Parcel parcel, int int32, int int321) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// hasFileDescriptors
-				/// </java-name>
-				[Dot42.DexImport("hasFileDescriptors", "()Z", AccessFlags = 273)]
-				public bool HasFileDescriptors() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -5627,6 +5105,15 @@ namespace Android.OS
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
 				extern ~Parcel() /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// hasFileDescriptors
+				/// </java-name>
+				public bool HasFileDescriptors
+				{
+						[Dot42.DexImport("hasFileDescriptors", "()Z", AccessFlags = 273)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -5759,33 +5246,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-				public virtual global::Java.Io.FileDescriptor GetFileDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor);
-				}
-
-				/// <java-name>
-				/// getStatSize
-				/// </java-name>
-				[Dot42.DexImport("getStatSize", "()J", AccessFlags = 257)]
-				public virtual long GetStatSize() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getFd
-				/// </java-name>
-				[Dot42.DexImport("getFd", "()I", AccessFlags = 1)]
-				public virtual int GetFd() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// detachFd
 				/// </java-name>
 				[Dot42.DexImport("detachFd", "()I", AccessFlags = 1)]
@@ -5842,28 +5302,28 @@ namespace Android.OS
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				public global::Java.Io.FileDescriptor FileDescriptor
+				public virtual global::Java.Io.FileDescriptor FileDescriptor
 				{
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return GetFileDescriptor(); }
+						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.FileDescriptor); }
 				}
 
 				/// <java-name>
 				/// getStatSize
 				/// </java-name>
-				public long StatSize
+				public virtual long StatSize
 				{
-				[Dot42.DexImport("getStatSize", "()J", AccessFlags = 257)]
-						get{ return GetStatSize(); }
+						[Dot42.DexImport("getStatSize", "()J", AccessFlags = 257)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getFd
 				/// </java-name>
-				public int Fd
+				public virtual int Fd
 				{
-				[Dot42.DexImport("getFd", "()I", AccessFlags = 1)]
-						get{ return GetFd(); }
+						[Dot42.DexImport("getFd", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -5968,15 +5428,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getUuid
-				/// </java-name>
-				[Dot42.DexImport("getUuid", "()Ljava/util/UUID;", AccessFlags = 1)]
-				public global::Java.Util.UUID GetUuid() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.UUID);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -6030,8 +5481,8 @@ namespace Android.OS
 				/// </java-name>
 				public global::Java.Util.UUID Uuid
 				{
-				[Dot42.DexImport("getUuid", "()Ljava/util/UUID;", AccessFlags = 1)]
-						get{ return GetUuid(); }
+						[Dot42.DexImport("getUuid", "()Ljava/util/UUID;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.UUID); }
 				}
 
 		}
@@ -6071,24 +5522,6 @@ namespace Android.OS
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
 				public PatternMatcher(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 17)]
-				public int GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -6136,8 +5569,8 @@ namespace Android.OS
 				/// </java-name>
 				public string Path
 				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetPath(); }
+						[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6145,8 +5578,8 @@ namespace Android.OS
 				/// </java-name>
 				public int Type
 				{
-				[Dot42.DexImport("getType", "()I", AccessFlags = 17)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 		}
@@ -6219,20 +5652,20 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// isScreenOn
-				/// </java-name>
-				[Dot42.DexImport("isScreenOn", "()Z", AccessFlags = 1)]
-				public virtual bool IsScreenOn() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// reboot
 				/// </java-name>
 				[Dot42.DexImport("reboot", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public virtual void Reboot(string @string) /* MethodBuilder.Create */ 
 				{
+				}
+
+				/// <java-name>
+				/// isScreenOn
+				/// </java-name>
+				public virtual bool IsScreenOn
+				{
+						[Dot42.DexImport("isScreenOn", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -6285,15 +5718,6 @@ namespace Android.OS
 						}
 
 						/// <java-name>
-						/// isHeld
-						/// </java-name>
-						[Dot42.DexImport("isHeld", "()Z", AccessFlags = 1)]
-						public virtual bool IsHeld() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
 						/// setWorkSource
 						/// </java-name>
 						[Dot42.DexImport("setWorkSource", "(Landroid/os/WorkSource;)V", AccessFlags = 1)]
@@ -6319,6 +5743,15 @@ namespace Android.OS
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal WakeLock() /* TypeBuilder.AddDefaultConstructor */ 
 						{
+						}
+
+						/// <java-name>
+						/// isHeld
+						/// </java-name>
+						public virtual bool IsHeld
+						{
+								[Dot42.DexImport("isHeld", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 				}
@@ -6428,15 +5861,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// getElapsedCpuTime
-				/// </java-name>
-				[Dot42.DexImport("getElapsedCpuTime", "()J", AccessFlags = 281)]
-				public static long GetElapsedCpuTime() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// myPid
 				/// </java-name>
 				[Dot42.DexImport("myPid", "()I", AccessFlags = 281)]
@@ -6536,8 +5960,8 @@ namespace Android.OS
 				/// </java-name>
 				public static long ElapsedCpuTime
 				{
-				[Dot42.DexImport("getElapsedCpuTime", "()J", AccessFlags = 281)]
-						get{ return GetElapsedCpuTime(); }
+						[Dot42.DexImport("getElapsedCpuTime", "()J", AccessFlags = 281)]
+						get{ return default(long); }
 				}
 
 		}
@@ -6805,42 +6229,6 @@ namespace Android.OS
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
 				extern ~StatFs() /* MethodBuilder.Create */ ;
 
-				/// <java-name>
-				/// getBlockSize
-				/// </java-name>
-				[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 257)]
-				public virtual int GetBlockSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBlockCount
-				/// </java-name>
-				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 257)]
-				public virtual int GetBlockCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFreeBlocks
-				/// </java-name>
-				[Dot42.DexImport("getFreeBlocks", "()I", AccessFlags = 257)]
-				public virtual int GetFreeBlocks() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAvailableBlocks
-				/// </java-name>
-				[Dot42.DexImport("getAvailableBlocks", "()I", AccessFlags = 257)]
-				public virtual int GetAvailableBlocks() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal StatFs() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -6849,37 +6237,37 @@ namespace Android.OS
 				/// <java-name>
 				/// getBlockSize
 				/// </java-name>
-				public int BlockSize
+				public virtual int BlockSize
 				{
-				[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 257)]
-						get{ return GetBlockSize(); }
+						[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getBlockCount
 				/// </java-name>
-				public int BlockCount
+				public virtual int BlockCount
 				{
-				[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 257)]
-						get{ return GetBlockCount(); }
+						[Dot42.DexImport("getBlockCount", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getFreeBlocks
 				/// </java-name>
-				public int FreeBlocks
+				public virtual int FreeBlocks
 				{
-				[Dot42.DexImport("getFreeBlocks", "()I", AccessFlags = 257)]
-						get{ return GetFreeBlocks(); }
+						[Dot42.DexImport("getFreeBlocks", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAvailableBlocks
 				/// </java-name>
-				public int AvailableBlocks
+				public virtual int AvailableBlocks
 				{
-				[Dot42.DexImport("getAvailableBlocks", "()I", AccessFlags = 257)]
-						get{ return GetAvailableBlocks(); }
+						[Dot42.DexImport("getAvailableBlocks", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 		}
@@ -7401,15 +6789,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// isAcquired
-				/// </java-name>
-				[Dot42.DexImport("isAcquired", "()Z", AccessFlags = 1)]
-				public virtual bool IsAcquired() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "()V", AccessFlags = 1)]
@@ -7420,6 +6799,15 @@ namespace Android.OS
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal TokenWatcher() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// isAcquired
+				/// </java-name>
+				public virtual bool IsAcquired
+				{
+						[Dot42.DexImport("isAcquired", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -7451,15 +6839,6 @@ namespace Android.OS
 				}
 
 				/// <java-name>
-				/// hasVibrator
-				/// </java-name>
-				[Dot42.DexImport("hasVibrator", "()Z", AccessFlags = 1)]
-				public virtual bool HasVibrator() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// vibrate
 				/// </java-name>
 				[Dot42.DexImport("vibrate", "(J)V", AccessFlags = 1)]
@@ -7481,6 +6860,15 @@ namespace Android.OS
 				[Dot42.DexImport("cancel", "()V", AccessFlags = 1)]
 				public virtual void Cancel() /* MethodBuilder.Create */ 
 				{
+				}
+
+				/// <java-name>
+				/// hasVibrator
+				/// </java-name>
+				public virtual bool HasVibrator
+				{
+						[Dot42.DexImport("hasVibrator", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

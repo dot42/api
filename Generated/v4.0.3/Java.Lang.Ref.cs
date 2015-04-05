@@ -70,10 +70,10 @@ namespace Java.Lang.Ref
 				/// <java-name>
 				/// isEnqueued
 				/// </java-name>
-				[Dot42.DexImport("isEnqueued", "()Z", AccessFlags = 1)]
-				public virtual bool IsEnqueued() /* MethodBuilder.Create */ 
+				public virtual bool IsEnqueued
 				{
-						return default(bool);
+						[Dot42.DexImport("isEnqueued", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

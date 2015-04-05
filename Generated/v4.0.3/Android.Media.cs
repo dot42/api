@@ -642,15 +642,6 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// getRingerMode
-				/// </java-name>
-				[Dot42.DexImport("getRingerMode", "()I", AccessFlags = 1)]
-				public virtual int GetRingerMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getStreamMaxVolume
 				/// </java-name>
 				[Dot42.DexImport("getStreamMaxVolume", "(I)I", AccessFlags = 1)]
@@ -666,14 +657,6 @@ namespace Android.Media
 				public virtual int GetStreamVolume(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// setRingerMode
-				/// </java-name>
-				[Dot42.DexImport("setRingerMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetRingerMode(int int32) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -735,24 +718,6 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// isSpeakerphoneOn
-				/// </java-name>
-				[Dot42.DexImport("isSpeakerphoneOn", "()Z", AccessFlags = 1)]
-				public virtual bool IsSpeakerphoneOn() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isBluetoothScoAvailableOffCall
-				/// </java-name>
-				[Dot42.DexImport("isBluetoothScoAvailableOffCall", "()Z", AccessFlags = 1)]
-				public virtual bool IsBluetoothScoAvailableOffCall() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// startBluetoothSco
 				/// </java-name>
 				[Dot42.DexImport("startBluetoothSco", "()V", AccessFlags = 1)]
@@ -777,29 +742,11 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// isBluetoothScoOn
-				/// </java-name>
-				[Dot42.DexImport("isBluetoothScoOn", "()Z", AccessFlags = 1)]
-				public virtual bool IsBluetoothScoOn() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setBluetoothA2dpOn
 				/// </java-name>
 				[Dot42.DexImport("setBluetoothA2dpOn", "(Z)V", AccessFlags = 1)]
 				public virtual void SetBluetoothA2dpOn(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isBluetoothA2dpOn
-				/// </java-name>
-				[Dot42.DexImport("isBluetoothA2dpOn", "()Z", AccessFlags = 1)]
-				public virtual bool IsBluetoothA2dpOn() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -811,46 +758,11 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// isWiredHeadsetOn
-				/// </java-name>
-				[Dot42.DexImport("isWiredHeadsetOn", "()Z", AccessFlags = 1)]
-				public virtual bool IsWiredHeadsetOn() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setMicrophoneMute
 				/// </java-name>
 				[Dot42.DexImport("setMicrophoneMute", "(Z)V", AccessFlags = 1)]
 				public virtual void SetMicrophoneMute(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isMicrophoneMute
-				/// </java-name>
-				[Dot42.DexImport("isMicrophoneMute", "()Z", AccessFlags = 1)]
-				public virtual bool IsMicrophoneMute() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setMode
-				/// </java-name>
-				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetMode(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMode
-				/// </java-name>
-				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
-				public virtual int GetMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -868,15 +780,6 @@ namespace Android.Media
 				public virtual int GetRouting(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isMusicActive
-				/// </java-name>
-				[Dot42.DexImport("isMusicActive", "()Z", AccessFlags = 1)]
-				public virtual bool IsMusicActive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -981,23 +884,86 @@ namespace Android.Media
 				/// <java-name>
 				/// getRingerMode
 				/// </java-name>
-				public int RingerMode
+				public virtual int RingerMode
 				{
-				[Dot42.DexImport("getRingerMode", "()I", AccessFlags = 1)]
-						get{ return GetRingerMode(); }
-				[Dot42.DexImport("setRingerMode", "(I)V", AccessFlags = 1)]
-						set{ SetRingerMode(value); }
+						[Dot42.DexImport("getRingerMode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setRingerMode", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isSpeakerphoneOn
+				/// </java-name>
+				public virtual bool IsSpeakerphoneOn
+				{
+						[Dot42.DexImport("isSpeakerphoneOn", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isBluetoothScoAvailableOffCall
+				/// </java-name>
+				public virtual bool IsBluetoothScoAvailableOffCall
+				{
+						[Dot42.DexImport("isBluetoothScoAvailableOffCall", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isBluetoothScoOn
+				/// </java-name>
+				public virtual bool IsBluetoothScoOn
+				{
+						[Dot42.DexImport("isBluetoothScoOn", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isBluetoothA2dpOn
+				/// </java-name>
+				public virtual bool IsBluetoothA2dpOn
+				{
+						[Dot42.DexImport("isBluetoothA2dpOn", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isWiredHeadsetOn
+				/// </java-name>
+				public virtual bool IsWiredHeadsetOn
+				{
+						[Dot42.DexImport("isWiredHeadsetOn", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMicrophoneMute
+				/// </java-name>
+				public virtual bool IsMicrophoneMute
+				{
+						[Dot42.DexImport("isMicrophoneMute", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getMode
 				/// </java-name>
-				public int Mode
+				public virtual int Mode
 				{
-				[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
-						get{ return GetMode(); }
-				[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
-						set{ SetMode(value); }
+						[Dot42.DexImport("getMode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMode", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isMusicActive
+				/// </java-name>
+				public virtual bool IsMusicActive
+				{
+						[Dot42.DexImport("isMusicActive", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1082,87 +1048,6 @@ namespace Android.Media
 				/// </java-name>
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
 				extern ~AudioRecord() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSampleRate
-				/// </java-name>
-				[Dot42.DexImport("getSampleRate", "()I", AccessFlags = 1)]
-				public virtual int GetSampleRate() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAudioSource
-				/// </java-name>
-				[Dot42.DexImport("getAudioSource", "()I", AccessFlags = 1)]
-				public virtual int GetAudioSource() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAudioFormat
-				/// </java-name>
-				[Dot42.DexImport("getAudioFormat", "()I", AccessFlags = 1)]
-				public virtual int GetAudioFormat() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getChannelConfiguration
-				/// </java-name>
-				[Dot42.DexImport("getChannelConfiguration", "()I", AccessFlags = 1)]
-				public virtual int GetChannelConfiguration() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getChannelCount
-				/// </java-name>
-				[Dot42.DexImport("getChannelCount", "()I", AccessFlags = 1)]
-				public virtual int GetChannelCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-				public virtual int GetState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRecordingState
-				/// </java-name>
-				[Dot42.DexImport("getRecordingState", "()I", AccessFlags = 1)]
-				public virtual int GetRecordingState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNotificationMarkerPosition
-				/// </java-name>
-				[Dot42.DexImport("getNotificationMarkerPosition", "()I", AccessFlags = 1)]
-				public virtual int GetNotificationMarkerPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPositionNotificationPeriod
-				/// </java-name>
-				[Dot42.DexImport("getPositionNotificationPeriod", "()I", AccessFlags = 1)]
-				public virtual int GetPositionNotificationPeriod() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
 
 				/// <java-name>
 				/// getMinBufferSize
@@ -1268,82 +1153,82 @@ namespace Android.Media
 				/// <java-name>
 				/// getSampleRate
 				/// </java-name>
-				public int SampleRate
+				public virtual int SampleRate
 				{
-				[Dot42.DexImport("getSampleRate", "()I", AccessFlags = 1)]
-						get{ return GetSampleRate(); }
+						[Dot42.DexImport("getSampleRate", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAudioSource
 				/// </java-name>
-				public int AudioSource
+				public virtual int AudioSource
 				{
-				[Dot42.DexImport("getAudioSource", "()I", AccessFlags = 1)]
-						get{ return GetAudioSource(); }
+						[Dot42.DexImport("getAudioSource", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAudioFormat
 				/// </java-name>
-				public int AudioFormat
+				public virtual int AudioFormat
 				{
-				[Dot42.DexImport("getAudioFormat", "()I", AccessFlags = 1)]
-						get{ return GetAudioFormat(); }
+						[Dot42.DexImport("getAudioFormat", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getChannelConfiguration
 				/// </java-name>
-				public int ChannelConfiguration
+				public virtual int ChannelConfiguration
 				{
-				[Dot42.DexImport("getChannelConfiguration", "()I", AccessFlags = 1)]
-						get{ return GetChannelConfiguration(); }
+						[Dot42.DexImport("getChannelConfiguration", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getChannelCount
 				/// </java-name>
-				public int ChannelCount
+				public virtual int ChannelCount
 				{
-				[Dot42.DexImport("getChannelCount", "()I", AccessFlags = 1)]
-						get{ return GetChannelCount(); }
+						[Dot42.DexImport("getChannelCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getState
 				/// </java-name>
-				public int State
+				public virtual int State
 				{
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-						get{ return GetState(); }
+						[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getRecordingState
 				/// </java-name>
-				public int RecordingState
+				public virtual int RecordingState
 				{
-				[Dot42.DexImport("getRecordingState", "()I", AccessFlags = 1)]
-						get{ return GetRecordingState(); }
+						[Dot42.DexImport("getRecordingState", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getNotificationMarkerPosition
 				/// </java-name>
-				public int NotificationMarkerPosition
+				public virtual int NotificationMarkerPosition
 				{
-				[Dot42.DexImport("getNotificationMarkerPosition", "()I", AccessFlags = 1)]
-						get{ return GetNotificationMarkerPosition(); }
+						[Dot42.DexImport("getNotificationMarkerPosition", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getPositionNotificationPeriod
 				/// </java-name>
-				public int PositionNotificationPeriod
+				public virtual int PositionNotificationPeriod
 				{
-				[Dot42.DexImport("getPositionNotificationPeriod", "()I", AccessFlags = 1)]
-						get{ return GetPositionNotificationPeriod(); }
+						[Dot42.DexImport("getPositionNotificationPeriod", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1461,132 +1346,6 @@ namespace Android.Media
 				extern ~AudioTrack() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getMinVolume
-				/// </java-name>
-				[Dot42.DexImport("getMinVolume", "()F", AccessFlags = 9)]
-				public static float GetMinVolume() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getMaxVolume
-				/// </java-name>
-				[Dot42.DexImport("getMaxVolume", "()F", AccessFlags = 9)]
-				public static float GetMaxVolume() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getSampleRate
-				/// </java-name>
-				[Dot42.DexImport("getSampleRate", "()I", AccessFlags = 1)]
-				public virtual int GetSampleRate() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPlaybackRate
-				/// </java-name>
-				[Dot42.DexImport("getPlaybackRate", "()I", AccessFlags = 1)]
-				public virtual int GetPlaybackRate() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAudioFormat
-				/// </java-name>
-				[Dot42.DexImport("getAudioFormat", "()I", AccessFlags = 1)]
-				public virtual int GetAudioFormat() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getStreamType
-				/// </java-name>
-				[Dot42.DexImport("getStreamType", "()I", AccessFlags = 1)]
-				public virtual int GetStreamType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getChannelConfiguration
-				/// </java-name>
-				[Dot42.DexImport("getChannelConfiguration", "()I", AccessFlags = 1)]
-				public virtual int GetChannelConfiguration() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getChannelCount
-				/// </java-name>
-				[Dot42.DexImport("getChannelCount", "()I", AccessFlags = 1)]
-				public virtual int GetChannelCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-				public virtual int GetState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPlayState
-				/// </java-name>
-				[Dot42.DexImport("getPlayState", "()I", AccessFlags = 1)]
-				public virtual int GetPlayState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNativeFrameCount
-				/// </java-name>
-				[Dot42.DexImport("getNativeFrameCount", "()I", AccessFlags = 4)]
-				protected internal virtual int GetNativeFrameCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNotificationMarkerPosition
-				/// </java-name>
-				[Dot42.DexImport("getNotificationMarkerPosition", "()I", AccessFlags = 1)]
-				public virtual int GetNotificationMarkerPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPositionNotificationPeriod
-				/// </java-name>
-				[Dot42.DexImport("getPositionNotificationPeriod", "()I", AccessFlags = 1)]
-				public virtual int GetPositionNotificationPeriod() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPlaybackHeadPosition
-				/// </java-name>
-				[Dot42.DexImport("getPlaybackHeadPosition", "()I", AccessFlags = 1)]
-				public virtual int GetPlaybackHeadPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getNativeOutputSampleRate
 				/// </java-name>
 				[Dot42.DexImport("getNativeOutputSampleRate", "(I)I", AccessFlags = 9)]
@@ -1600,15 +1359,6 @@ namespace Android.Media
 				/// </java-name>
 				[Dot42.DexImport("getMinBufferSize", "(III)I", AccessFlags = 9)]
 				public static int GetMinBufferSize(int int32, int int321, int int322) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAudioSessionId
-				/// </java-name>
-				[Dot42.DexImport("getAudioSessionId", "()I", AccessFlags = 1)]
-				public virtual int GetAudioSessionId() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1682,14 +1432,6 @@ namespace Android.Media
 				public virtual int SetLoopPoints(int int32, int int321, int int322) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// setState
-				/// </java-name>
-				[Dot42.DexImport("setState", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetState(int int32) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -1788,8 +1530,8 @@ namespace Android.Media
 				/// </java-name>
 				public static float MinVolume
 				{
-				[Dot42.DexImport("getMinVolume", "()F", AccessFlags = 9)]
-						get{ return GetMinVolume(); }
+						[Dot42.DexImport("getMinVolume", "()F", AccessFlags = 9)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
@@ -1797,127 +1539,127 @@ namespace Android.Media
 				/// </java-name>
 				public static float MaxVolume
 				{
-				[Dot42.DexImport("getMaxVolume", "()F", AccessFlags = 9)]
-						get{ return GetMaxVolume(); }
+						[Dot42.DexImport("getMaxVolume", "()F", AccessFlags = 9)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getSampleRate
 				/// </java-name>
-				public int SampleRate
+				public virtual int SampleRate
 				{
-				[Dot42.DexImport("getSampleRate", "()I", AccessFlags = 1)]
-						get{ return GetSampleRate(); }
+						[Dot42.DexImport("getSampleRate", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getPlaybackRate
 				/// </java-name>
-				public int PlaybackRate
+				public virtual int PlaybackRate
 				{
-				[Dot42.DexImport("getPlaybackRate", "()I", AccessFlags = 1)]
-						get{ return GetPlaybackRate(); }
+						[Dot42.DexImport("getPlaybackRate", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAudioFormat
 				/// </java-name>
-				public int AudioFormat
+				public virtual int AudioFormat
 				{
-				[Dot42.DexImport("getAudioFormat", "()I", AccessFlags = 1)]
-						get{ return GetAudioFormat(); }
+						[Dot42.DexImport("getAudioFormat", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getStreamType
 				/// </java-name>
-				public int StreamType
+				public virtual int StreamType
 				{
-				[Dot42.DexImport("getStreamType", "()I", AccessFlags = 1)]
-						get{ return GetStreamType(); }
+						[Dot42.DexImport("getStreamType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getChannelConfiguration
 				/// </java-name>
-				public int ChannelConfiguration
+				public virtual int ChannelConfiguration
 				{
-				[Dot42.DexImport("getChannelConfiguration", "()I", AccessFlags = 1)]
-						get{ return GetChannelConfiguration(); }
+						[Dot42.DexImport("getChannelConfiguration", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getChannelCount
 				/// </java-name>
-				public int ChannelCount
+				public virtual int ChannelCount
 				{
-				[Dot42.DexImport("getChannelCount", "()I", AccessFlags = 1)]
-						get{ return GetChannelCount(); }
+						[Dot42.DexImport("getChannelCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getState
 				/// </java-name>
-				public int State
+				public virtual int State
 				{
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-						get{ return GetState(); }
-				[Dot42.DexImport("setState", "(I)V", AccessFlags = 4)]
-						set{ SetState(value); }
+						[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setState", "(I)V", AccessFlags = 4)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPlayState
 				/// </java-name>
-				public int PlayState
+				public virtual int PlayState
 				{
-				[Dot42.DexImport("getPlayState", "()I", AccessFlags = 1)]
-						get{ return GetPlayState(); }
+						[Dot42.DexImport("getPlayState", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getNativeFrameCount
 				/// </java-name>
-				protected internal int NativeFrameCount
+				protected internal virtual int NativeFrameCount
 				{
-				[Dot42.DexImport("getNativeFrameCount", "()I", AccessFlags = 4)]
-						get{ return GetNativeFrameCount(); }
+						[Dot42.DexImport("getNativeFrameCount", "()I", AccessFlags = 4)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getNotificationMarkerPosition
 				/// </java-name>
-				public int NotificationMarkerPosition
+				public virtual int NotificationMarkerPosition
 				{
-				[Dot42.DexImport("getNotificationMarkerPosition", "()I", AccessFlags = 1)]
-						get{ return GetNotificationMarkerPosition(); }
+						[Dot42.DexImport("getNotificationMarkerPosition", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getPositionNotificationPeriod
 				/// </java-name>
-				public int PositionNotificationPeriod
+				public virtual int PositionNotificationPeriod
 				{
-				[Dot42.DexImport("getPositionNotificationPeriod", "()I", AccessFlags = 1)]
-						get{ return GetPositionNotificationPeriod(); }
+						[Dot42.DexImport("getPositionNotificationPeriod", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getPlaybackHeadPosition
 				/// </java-name>
-				public int PlaybackHeadPosition
+				public virtual int PlaybackHeadPosition
 				{
-				[Dot42.DexImport("getPlaybackHeadPosition", "()I", AccessFlags = 1)]
-						get{ return GetPlaybackHeadPosition(); }
+						[Dot42.DexImport("getPlaybackHeadPosition", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAudioSessionId
 				/// </java-name>
-				public int AudioSessionId
+				public virtual int AudioSessionId
 				{
-				[Dot42.DexImport("getAudioSessionId", "()I", AccessFlags = 1)]
-						get{ return GetAudioSessionId(); }
+						[Dot42.DexImport("getAudioSessionId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2396,30 +2138,12 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// hasThumbnail
-				/// </java-name>
-				[Dot42.DexImport("hasThumbnail", "()Z", AccessFlags = 1)]
-				public virtual bool HasThumbnail() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getThumbnail
 				/// </java-name>
 				[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1)]
 				public virtual sbyte[] JavaGetThumbnail() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getThumbnail
-				/// </java-name>
-				[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetThumbnail() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -2446,12 +2170,21 @@ namespace Android.Media
 				}
 
 				/// <java-name>
+				/// hasThumbnail
+				/// </java-name>
+				public virtual bool HasThumbnail
+				{
+						[Dot42.DexImport("hasThumbnail", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getThumbnail
 				/// </java-name>
-				public byte[] Thumbnail
+				public virtual byte[] Thumbnail
 				{
-				[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetThumbnail(); }
+						[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -2614,15 +2347,6 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// getMaxTracks
-				/// </java-name>
-				[Dot42.DexImport("getMaxTracks", "()I", AccessFlags = 9)]
-				public static int GetMaxTracks() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// loadJetFile
 				/// </java-name>
 				[Dot42.DexImport("loadJetFile", "(Ljava/lang/String;)Z", AccessFlags = 1)]
@@ -2769,8 +2493,8 @@ namespace Android.Media
 				/// </java-name>
 				public static int MaxTracks
 				{
-				[Dot42.DexImport("getMaxTracks", "()I", AccessFlags = 9)]
-						get{ return GetMaxTracks(); }
+						[Dot42.DexImport("getMaxTracks", "()I", AccessFlags = 9)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -3018,30 +2742,12 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// getFrameAtTime
-				/// </java-name>
-				[Dot42.DexImport("getFrameAtTime", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Bitmap GetFrameAtTime() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Bitmap);
-				}
-
-				/// <java-name>
 				/// getEmbeddedPicture
 				/// </java-name>
 				[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1)]
 				public virtual sbyte[] JavaGetEmbeddedPicture() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getEmbeddedPicture
-				/// </java-name>
-				[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetEmbeddedPicture() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -3061,19 +2767,19 @@ namespace Android.Media
 				/// <java-name>
 				/// getFrameAtTime
 				/// </java-name>
-				public global::Android.Graphics.Bitmap FrameAtTime
+				public virtual global::Android.Graphics.Bitmap FrameAtTime
 				{
-				[Dot42.DexImport("getFrameAtTime", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
-						get{ return GetFrameAtTime(); }
+						[Dot42.DexImport("getFrameAtTime", "()Landroid/graphics/Bitmap;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Bitmap); }
 				}
 
 				/// <java-name>
 				/// getEmbeddedPicture
 				/// </java-name>
-				public byte[] EmbeddedPicture
+				public virtual byte[] EmbeddedPicture
 				{
-				[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetEmbeddedPicture(); }
+						[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -3282,56 +2988,11 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// getVideoWidth
-				/// </java-name>
-				[Dot42.DexImport("getVideoWidth", "()I", AccessFlags = 257)]
-				public virtual int GetVideoWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getVideoHeight
-				/// </java-name>
-				[Dot42.DexImport("getVideoHeight", "()I", AccessFlags = 257)]
-				public virtual int GetVideoHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isPlaying
-				/// </java-name>
-				[Dot42.DexImport("isPlaying", "()Z", AccessFlags = 257)]
-				public virtual bool IsPlaying() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// seekTo
 				/// </java-name>
 				[Dot42.DexImport("seekTo", "(I)V", AccessFlags = 257)]
 				public virtual void SeekTo(int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getCurrentPosition
-				/// </java-name>
-				[Dot42.DexImport("getCurrentPosition", "()I", AccessFlags = 257)]
-				public virtual int GetCurrentPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDuration
-				/// </java-name>
-				[Dot42.DexImport("getDuration", "()I", AccessFlags = 257)]
-				public virtual int GetDuration() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3367,37 +3028,11 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// isLooping
-				/// </java-name>
-				[Dot42.DexImport("isLooping", "()Z", AccessFlags = 257)]
-				public virtual bool IsLooping() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setVolume
 				/// </java-name>
 				[Dot42.DexImport("setVolume", "(FF)V", AccessFlags = 257)]
 				public virtual void SetVolume(float single, float single1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// setAudioSessionId
-				/// </java-name>
-				[Dot42.DexImport("setAudioSessionId", "(I)V", AccessFlags = 257)]
-				public virtual void SetAudioSessionId(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAudioSessionId
-				/// </java-name>
-				[Dot42.DexImport("getAudioSessionId", "()I", AccessFlags = 257)]
-				public virtual int GetAudioSessionId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3481,48 +3116,66 @@ namespace Android.Media
 				/// <java-name>
 				/// getVideoWidth
 				/// </java-name>
-				public int VideoWidth
+				public virtual int VideoWidth
 				{
-				[Dot42.DexImport("getVideoWidth", "()I", AccessFlags = 257)]
-						get{ return GetVideoWidth(); }
+						[Dot42.DexImport("getVideoWidth", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getVideoHeight
 				/// </java-name>
-				public int VideoHeight
+				public virtual int VideoHeight
 				{
-				[Dot42.DexImport("getVideoHeight", "()I", AccessFlags = 257)]
-						get{ return GetVideoHeight(); }
+						[Dot42.DexImport("getVideoHeight", "()I", AccessFlags = 257)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isPlaying
+				/// </java-name>
+				public virtual bool IsPlaying
+				{
+						[Dot42.DexImport("isPlaying", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getCurrentPosition
 				/// </java-name>
-				public int CurrentPosition
+				public virtual int CurrentPosition
 				{
-				[Dot42.DexImport("getCurrentPosition", "()I", AccessFlags = 257)]
-						get{ return GetCurrentPosition(); }
+						[Dot42.DexImport("getCurrentPosition", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDuration
 				/// </java-name>
-				public int Duration
+				public virtual int Duration
 				{
-				[Dot42.DexImport("getDuration", "()I", AccessFlags = 257)]
-						get{ return GetDuration(); }
+						[Dot42.DexImport("getDuration", "()I", AccessFlags = 257)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isLooping
+				/// </java-name>
+				public virtual bool IsLooping
+				{
+						[Dot42.DexImport("isLooping", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getAudioSessionId
 				/// </java-name>
-				public int AudioSessionId
+				public virtual int AudioSessionId
 				{
-				[Dot42.DexImport("getAudioSessionId", "()I", AccessFlags = 257)]
-						get{ return GetAudioSessionId(); }
-				[Dot42.DexImport("setAudioSessionId", "(I)V", AccessFlags = 257)]
-						set{ SetAudioSessionId(value); }
+						[Dot42.DexImport("getAudioSessionId", "()I", AccessFlags = 257)]
+						get{ return default(int); }
+						[Dot42.DexImport("setAudioSessionId", "(I)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -3686,15 +3339,6 @@ namespace Android.Media
 				[Dot42.DexImport("setAudioSource", "(I)V", AccessFlags = 257)]
 				public virtual void SetAudioSource(int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getAudioSourceMax
-				/// </java-name>
-				[Dot42.DexImport("getAudioSourceMax", "()I", AccessFlags = 25)]
-				public static int GetAudioSourceMax() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3890,15 +3534,6 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// getMaxAmplitude
-				/// </java-name>
-				[Dot42.DexImport("getMaxAmplitude", "()I", AccessFlags = 257)]
-				public virtual int GetMaxAmplitude() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setOnErrorListener
 				/// </java-name>
 				[Dot42.DexImport("setOnErrorListener", "(Landroid/media/MediaRecorder$OnErrorListener;)V", AccessFlags = 1)]
@@ -3933,17 +3568,17 @@ namespace Android.Media
 				/// </java-name>
 				public static int AudioSourceMax
 				{
-				[Dot42.DexImport("getAudioSourceMax", "()I", AccessFlags = 25)]
-						get{ return GetAudioSourceMax(); }
+						[Dot42.DexImport("getAudioSourceMax", "()I", AccessFlags = 25)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMaxAmplitude
 				/// </java-name>
-				public int MaxAmplitude
+				public virtual int MaxAmplitude
 				{
-				[Dot42.DexImport("getMaxAmplitude", "()I", AccessFlags = 257)]
-						get{ return GetMaxAmplitude(); }
+						[Dot42.DexImport("getMaxAmplitude", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -4248,15 +3883,6 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 33)]
-				public virtual bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// scanFile
 				/// </java-name>
 				[Dot42.DexImport("scanFile", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -4292,6 +3918,15 @@ namespace Android.Media
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal MediaScannerConnection() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public virtual bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 33)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -4551,23 +4186,6 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// setStreamType
-				/// </java-name>
-				[Dot42.DexImport("setStreamType", "(I)V", AccessFlags = 1)]
-				public virtual void SetStreamType(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getStreamType
-				/// </java-name>
-				[Dot42.DexImport("getStreamType", "()I", AccessFlags = 1)]
-				public virtual int GetStreamType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getTitle
 				/// </java-name>
 				[Dot42.DexImport("getTitle", "(Landroid/content/Context;)Ljava/lang/String;", AccessFlags = 1)]
@@ -4593,23 +4211,23 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// isPlaying
+				/// getStreamType
 				/// </java-name>
-				[Dot42.DexImport("isPlaying", "()Z", AccessFlags = 1)]
-				public virtual bool IsPlaying() /* MethodBuilder.Create */ 
+				public virtual int StreamType
 				{
-						return default(bool);
+						[Dot42.DexImport("getStreamType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setStreamType", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
-				/// getStreamType
+				/// isPlaying
 				/// </java-name>
-				public int StreamType
+				public virtual bool IsPlaying
 				{
-				[Dot42.DexImport("getStreamType", "()I", AccessFlags = 1)]
-						get{ return GetStreamType(); }
-				[Dot42.DexImport("setStreamType", "(I)V", AccessFlags = 1)]
-						set{ SetStreamType(value); }
+						[Dot42.DexImport("isPlaying", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -4729,54 +4347,11 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// setStopPreviousRingtone
-				/// </java-name>
-				[Dot42.DexImport("setStopPreviousRingtone", "(Z)V", AccessFlags = 1)]
-				public virtual void SetStopPreviousRingtone(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getStopPreviousRingtone
-				/// </java-name>
-				[Dot42.DexImport("getStopPreviousRingtone", "()Z", AccessFlags = 1)]
-				public virtual bool GetStopPreviousRingtone() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// stopPreviousRingtone
 				/// </java-name>
 				[Dot42.DexImport("stopPreviousRingtone", "()V", AccessFlags = 1)]
 				public virtual void StopPreviousRingtone() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getIncludeDrm
-				/// </java-name>
-				[Dot42.DexImport("getIncludeDrm", "()Z", AccessFlags = 1)]
-				public virtual bool GetIncludeDrm() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setIncludeDrm
-				/// </java-name>
-				[Dot42.DexImport("setIncludeDrm", "(Z)V", AccessFlags = 1)]
-				public virtual void SetIncludeDrm(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCursor
-				/// </java-name>
-				[Dot42.DexImport("getCursor", "()Landroid/database/Cursor;", AccessFlags = 1)]
-				public virtual global::Android.Database.ICursor GetCursor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Database.ICursor);
 				}
 
 				/// <java-name>
@@ -4876,32 +4451,32 @@ namespace Android.Media
 				/// <java-name>
 				/// getStopPreviousRingtone
 				/// </java-name>
-				public bool IsStopPreviousRingtone
+				public virtual bool IsStopPreviousRingtone
 				{
-				[Dot42.DexImport("getStopPreviousRingtone", "()Z", AccessFlags = 1)]
-						get{ return GetStopPreviousRingtone(); }
-				[Dot42.DexImport("setStopPreviousRingtone", "(Z)V", AccessFlags = 1)]
-						set{ SetStopPreviousRingtone(value); }
+						[Dot42.DexImport("getStopPreviousRingtone", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setStopPreviousRingtone", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getIncludeDrm
 				/// </java-name>
-				public bool IsIncludeDrm
+				public virtual bool IsIncludeDrm
 				{
-				[Dot42.DexImport("getIncludeDrm", "()Z", AccessFlags = 1)]
-						get{ return GetIncludeDrm(); }
-				[Dot42.DexImport("setIncludeDrm", "(Z)V", AccessFlags = 1)]
-						set{ SetIncludeDrm(value); }
+						[Dot42.DexImport("getIncludeDrm", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setIncludeDrm", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCursor
 				/// </java-name>
-				public global::Android.Database.ICursor Cursor
+				public virtual global::Android.Database.ICursor Cursor
 				{
-				[Dot42.DexImport("getCursor", "()Landroid/database/Cursor;", AccessFlags = 1)]
-						get{ return GetCursor(); }
+						[Dot42.DexImport("getCursor", "()Landroid/database/Cursor;", AccessFlags = 1)]
+						get{ return default(global::Android.Database.ICursor); }
 				}
 
 		}

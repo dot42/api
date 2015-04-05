@@ -90,15 +90,6 @@ namespace System.Threading
 				}
 
 				/// <java-name>
-				/// currentThread
-				/// </java-name>
-				[Dot42.DexImport("currentThread", "()Ljava/lang/Thread;", AccessFlags = 9)]
-				public static global::System.Threading.Thread GetCurrentThread() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
-				}
-
-				/// <java-name>
 				/// destroy
 				/// </java-name>
 				[Dot42.DexImport("destroy", "()V", AccessFlags = 1)]
@@ -124,93 +115,12 @@ namespace System.Threading
 				}
 
 				/// <java-name>
-				/// getAllStackTraces
-				/// </java-name>
-				[Dot42.DexImport("getAllStackTraces", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/Thread;[Ljava/lang/StackTraceElement;>;")]
-				public static global::Java.Util.IMap<global::System.Threading.Thread, global::Java.Lang.StackTraceElement[]> GetAllStackTraces() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<global::System.Threading.Thread, global::Java.Lang.StackTraceElement[]>);
-				}
-
-				/// <java-name>
-				/// getContextClassLoader
-				/// </java-name>
-				[Dot42.DexImport("getContextClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ClassLoader GetContextClassLoader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ClassLoader);
-				}
-
-				/// <java-name>
-				/// getDefaultUncaughtExceptionHandler
-				/// </java-name>
-				[Dot42.DexImport("getDefaultUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 9)]
-				public static global::System.Threading.Thread.IUncaughtExceptionHandler GetDefaultUncaughtExceptionHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread.IUncaughtExceptionHandler);
-				}
-
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()J", AccessFlags = 1)]
-				public virtual long GetId() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPriority
-				/// </java-name>
-				[Dot42.DexImport("getPriority", "()I", AccessFlags = 17)]
-				public int GetPriority() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getStackTrace
-				/// </java-name>
-				[Dot42.DexImport("getStackTrace", "()[Ljava/lang/StackTraceElement;", AccessFlags = 1)]
-				public virtual global::Java.Lang.StackTraceElement[] GetStackTrace() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StackTraceElement[]);
-				}
-
-				/// <java-name>
 				/// getState
 				/// </java-name>
 				[Dot42.DexImport("getState", "()Ljava/lang/Thread$State;", AccessFlags = 1)]
 				public virtual global::System.Threading.Thread.State GetState() /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Threading.Thread.State);
-				}
-
-				/// <java-name>
-				/// getThreadGroup
-				/// </java-name>
-				[Dot42.DexImport("getThreadGroup", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
-				public global::Java.Lang.ThreadGroup GetThreadGroup() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ThreadGroup);
-				}
-
-				/// <java-name>
-				/// getUncaughtExceptionHandler
-				/// </java-name>
-				[Dot42.DexImport("getUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 1)]
-				public virtual global::System.Threading.Thread.IUncaughtExceptionHandler GetUncaughtExceptionHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread.IUncaughtExceptionHandler);
 				}
 
 				/// <java-name>
@@ -226,33 +136,6 @@ namespace System.Threading
 				/// </java-name>
 				[Dot42.DexImport("interrupted", "()Z", AccessFlags = 9)]
 				public static bool Interrupted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isAlive
-				/// </java-name>
-				[Dot42.DexImport("isAlive", "()Z", AccessFlags = 17)]
-				public bool IsAlive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isDaemon
-				/// </java-name>
-				[Dot42.DexImport("isDaemon", "()Z", AccessFlags = 17)]
-				public bool IsDaemon() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isInterrupted
-				/// </java-name>
-				[Dot42.DexImport("isInterrupted", "()Z", AccessFlags = 1)]
-				public virtual bool IsInterrupted() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -298,50 +181,10 @@ namespace System.Threading
 				}
 
 				/// <java-name>
-				/// setContextClassLoader
-				/// </java-name>
-				[Dot42.DexImport("setContextClassLoader", "(Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-				public virtual void SetContextClassLoader(global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setDaemon
 				/// </java-name>
 				[Dot42.DexImport("setDaemon", "(Z)V", AccessFlags = 17)]
 				public void SetDaemon(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDefaultUncaughtExceptionHandler
-				/// </java-name>
-				[Dot42.DexImport("setDefaultUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 9)]
-				public static void SetDefaultUncaughtExceptionHandler(global::System.Threading.Thread.IUncaughtExceptionHandler uncaughtExceptionHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setName
-				/// </java-name>
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 17)]
-				public void SetName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPriority
-				/// </java-name>
-				[Dot42.DexImport("setPriority", "(I)V", AccessFlags = 17)]
-				public void SetPriority(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setUncaughtExceptionHandler
-				/// </java-name>
-				[Dot42.DexImport("setUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 1)]
-				public virtual void SetUncaughtExceptionHandler(global::System.Threading.Thread.IUncaughtExceptionHandler uncaughtExceptionHandler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -424,8 +267,8 @@ namespace System.Threading
 				/// </java-name>
 				public static global::System.Threading.Thread CurrentThread
 				{
-				[Dot42.DexImport("currentThread", "()Ljava/lang/Thread;", AccessFlags = 9)]
-						get{ return GetCurrentThread(); }
+						[Dot42.DexImport("currentThread", "()Ljava/lang/Thread;", AccessFlags = 9)]
+						get{ return default(global::System.Threading.Thread); }
 				}
 
 				/// <java-name>
@@ -433,19 +276,19 @@ namespace System.Threading
 				/// </java-name>
 				public static global::Java.Util.IMap<global::System.Threading.Thread, global::Java.Lang.StackTraceElement[]> AllStackTraces
 				{
-				[Dot42.DexImport("getAllStackTraces", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/Thread;[Ljava/lang/StackTraceElement;>;")]
-						get{ return GetAllStackTraces(); }
+						[Dot42.DexImport("getAllStackTraces", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/Thread;[Ljava/lang/StackTraceElement;>;")]
+						get{ return default(global::Java.Util.IMap<global::System.Threading.Thread, global::Java.Lang.StackTraceElement[]>); }
 				}
 
 				/// <java-name>
 				/// getContextClassLoader
 				/// </java-name>
-				public global::Java.Lang.ClassLoader ContextClassLoader
+				public virtual global::Java.Lang.ClassLoader ContextClassLoader
 				{
-				[Dot42.DexImport("getContextClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-						get{ return GetContextClassLoader(); }
-				[Dot42.DexImport("setContextClassLoader", "(Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-						set{ SetContextClassLoader(value); }
+						[Dot42.DexImport("getContextClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ClassLoader); }
+						[Dot42.DexImport("setContextClassLoader", "(Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -453,19 +296,19 @@ namespace System.Threading
 				/// </java-name>
 				public static global::System.Threading.Thread.IUncaughtExceptionHandler DefaultUncaughtExceptionHandler
 				{
-				[Dot42.DexImport("getDefaultUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 9)]
-						get{ return GetDefaultUncaughtExceptionHandler(); }
-				[Dot42.DexImport("setDefaultUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 9)]
-						set{ SetDefaultUncaughtExceptionHandler(value); }
+						[Dot42.DexImport("getDefaultUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 9)]
+						get{ return default(global::System.Threading.Thread.IUncaughtExceptionHandler); }
+						[Dot42.DexImport("setDefaultUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getId
 				/// </java-name>
-				public long Id
+				public virtual long Id
 				{
-				[Dot42.DexImport("getId", "()J", AccessFlags = 1)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -473,10 +316,10 @@ namespace System.Threading
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetName(); }
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 17)]
-						set{ SetName(value); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
+						[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 17)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -484,19 +327,19 @@ namespace System.Threading
 				/// </java-name>
 				public int Priority
 				{
-				[Dot42.DexImport("getPriority", "()I", AccessFlags = 17)]
-						get{ return GetPriority(); }
-				[Dot42.DexImport("setPriority", "(I)V", AccessFlags = 17)]
-						set{ SetPriority(value); }
+						[Dot42.DexImport("getPriority", "()I", AccessFlags = 17)]
+						get{ return default(int); }
+						[Dot42.DexImport("setPriority", "(I)V", AccessFlags = 17)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getStackTrace
 				/// </java-name>
-				public global::Java.Lang.StackTraceElement[] StackTrace
+				public virtual global::Java.Lang.StackTraceElement[] StackTrace
 				{
-				[Dot42.DexImport("getStackTrace", "()[Ljava/lang/StackTraceElement;", AccessFlags = 1)]
-						get{ return GetStackTrace(); }
+						[Dot42.DexImport("getStackTrace", "()[Ljava/lang/StackTraceElement;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.StackTraceElement[]); }
 				}
 
 				/// <java-name>
@@ -504,19 +347,46 @@ namespace System.Threading
 				/// </java-name>
 				public global::Java.Lang.ThreadGroup ThreadGroup
 				{
-				[Dot42.DexImport("getThreadGroup", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
-						get{ return GetThreadGroup(); }
+						[Dot42.DexImport("getThreadGroup", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
+						get{ return default(global::Java.Lang.ThreadGroup); }
 				}
 
 				/// <java-name>
 				/// getUncaughtExceptionHandler
 				/// </java-name>
-				public global::System.Threading.Thread.IUncaughtExceptionHandler UncaughtExceptionHandler
+				public virtual global::System.Threading.Thread.IUncaughtExceptionHandler UncaughtExceptionHandler
 				{
-				[Dot42.DexImport("getUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 1)]
-						get{ return GetUncaughtExceptionHandler(); }
-				[Dot42.DexImport("setUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 1)]
-						set{ SetUncaughtExceptionHandler(value); }
+						[Dot42.DexImport("getUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 1)]
+						get{ return default(global::System.Threading.Thread.IUncaughtExceptionHandler); }
+						[Dot42.DexImport("setUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isAlive
+				/// </java-name>
+				public bool IsAlive
+				{
+						[Dot42.DexImport("isAlive", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDaemon
+				/// </java-name>
+				public bool IsDaemon
+				{
+						[Dot42.DexImport("isDaemon", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isInterrupted
+				/// </java-name>
+				public virtual bool IsInterrupted
+				{
+						[Dot42.DexImport("isInterrupted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>

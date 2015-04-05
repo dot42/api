@@ -114,18 +114,6 @@ namespace Java.Util.Concurrent
 						return default(global::Java.Util.IList<global::Java.Lang.IRunnable>);
 				}
 
-				[Dot42.DexImport("java/util/concurrent/ExecutorService", "isShutdown", "()Z", AccessFlags = 1025)]
-				public virtual bool IsShutdown() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("java/util/concurrent/ExecutorService", "isTerminated", "()Z", AccessFlags = 1025)]
-				public virtual bool IsTerminated() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/util/concurrent/ExecutorService", "awaitTermination", "(JLjava/util/concurrent/TimeUnit;)Z", AccessFlags = 1025)]
 				public virtual bool AwaitTermination(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -135,6 +123,18 @@ namespace Java.Util.Concurrent
 				[Dot42.DexImport("java/util/concurrent/Executor", "execute", "(Ljava/lang/Runnable;)V", AccessFlags = 1025)]
 				public virtual void Execute(global::Java.Lang.IRunnable runnable) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
+				}
+
+				public virtual bool IsShutdown
+				{
+						[Dot42.DexImport("java/util/concurrent/ExecutorService", "isShutdown", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
+
+				public virtual bool IsTerminated
+				{
+						[Dot42.DexImport("java/util/concurrent/ExecutorService", "isTerminated", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -372,12 +372,6 @@ namespace Java.Util.Concurrent
 						return default(int);
 				}
 
-				[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
-				public override bool IsEmpty() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/util/Collection", "removeAll", "(Ljava/util/Collection;)Z", AccessFlags = 1025, Signature = "(Ljava/util/Collection<*>;)Z")]
 				public override bool RemoveAll(global::Java.Util.ICollection<object> collection) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -388,6 +382,12 @@ namespace Java.Util.Concurrent
 				public override bool RetainAll(global::Java.Util.ICollection<object> collection) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
+				}
+
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -461,15 +461,6 @@ namespace Java.Util.Concurrent
 				[Dot42.DexImport("<init>", "(Ljava/util/Map;)V", AccessFlags = 1, Signature = "(Ljava/util/Map<+TK;+TV;>;)V")]
 				public ConcurrentHashMap(global::Java.Util.IMap<K, V> map) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public override bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -644,6 +635,15 @@ namespace Java.Util.Concurrent
 						return default(int);
 				}
 
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -698,15 +698,6 @@ namespace Java.Util.Concurrent
 				public override E Peek() /* MethodBuilder.Create */ 
 				{
 						return default(E);
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public override bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -819,6 +810,15 @@ namespace Java.Util.Concurrent
 						return default(bool);
 				}
 
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -911,15 +911,6 @@ namespace Java.Util.Concurrent
 				public override int Size() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public override bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1279,6 +1270,15 @@ namespace Java.Util.Concurrent
 				{
 				}
 
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -1325,15 +1325,6 @@ namespace Java.Util.Concurrent
 				public override int Size() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public override bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1605,6 +1596,15 @@ namespace Java.Util.Concurrent
 						return default(T[]);
 				}
 
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -1709,15 +1709,6 @@ namespace Java.Util.Concurrent
 				public virtual int LastIndexOf(object @object) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public virtual bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1907,6 +1898,15 @@ namespace Java.Util.Concurrent
 						return default(E);
 				}
 
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public virtual bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -1933,15 +1933,6 @@ namespace Java.Util.Concurrent
 				public override int Size() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public override bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2051,6 +2042,15 @@ namespace Java.Util.Concurrent
 						return default(bool);
 				}
 
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -2091,15 +2091,6 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
-				/// getCount
-				/// </java-name>
-				[Dot42.DexImport("getCount", "()J", AccessFlags = 1)]
-				public virtual long GetCount() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -2116,10 +2107,10 @@ namespace Java.Util.Concurrent
 				/// <java-name>
 				/// getCount
 				/// </java-name>
-				public long Count
+				public virtual long Count
 				{
-				[Dot42.DexImport("getCount", "()J", AccessFlags = 1)]
-						get{ return GetCount(); }
+						[Dot42.DexImport("getCount", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 		}
@@ -2142,15 +2133,6 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
-				/// getParties
-				/// </java-name>
-				[Dot42.DexImport("getParties", "()I", AccessFlags = 1)]
-				public virtual int GetParties() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// await
 				/// </java-name>
 				[Dot42.DexImport("await", "()I", AccessFlags = 1)]
@@ -2169,29 +2151,11 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
-				/// isBroken
-				/// </java-name>
-				[Dot42.DexImport("isBroken", "()Z", AccessFlags = 1)]
-				public virtual bool IsBroken() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// reset
 				/// </java-name>
 				[Dot42.DexImport("reset", "()V", AccessFlags = 1)]
 				public virtual void Reset() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getNumberWaiting
-				/// </java-name>
-				[Dot42.DexImport("getNumberWaiting", "()I", AccessFlags = 1)]
-				public virtual int GetNumberWaiting() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2202,19 +2166,28 @@ namespace Java.Util.Concurrent
 				/// <java-name>
 				/// getParties
 				/// </java-name>
-				public int Parties
+				public virtual int Parties
 				{
-				[Dot42.DexImport("getParties", "()I", AccessFlags = 1)]
-						get{ return GetParties(); }
+						[Dot42.DexImport("getParties", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isBroken
+				/// </java-name>
+				public virtual bool IsBroken
+				{
+						[Dot42.DexImport("isBroken", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getNumberWaiting
 				/// </java-name>
-				public int NumberWaiting
+				public virtual int NumberWaiting
 				{
-				[Dot42.DexImport("getNumberWaiting", "()I", AccessFlags = 1)]
-						get{ return GetNumberWaiting(); }
+						[Dot42.DexImport("getNumberWaiting", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2430,12 +2403,6 @@ namespace Java.Util.Concurrent
 						return default(int);
 				}
 
-				[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
-				public override bool IsEmpty() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/util/Collection", "removeAll", "(Ljava/util/Collection;)Z", AccessFlags = 1025, Signature = "(Ljava/util/Collection<*>;)Z")]
 				public override bool RemoveAll(global::Java.Util.ICollection<object> collection) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -2446,6 +2413,12 @@ namespace Java.Util.Concurrent
 				public override bool RetainAll(global::Java.Util.ICollection<object> collection) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
+				}
+
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -2803,24 +2776,6 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
-				/// isCancelled
-				/// </java-name>
-				[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 1)]
-				public virtual bool IsCancelled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isDone
-				/// </java-name>
-				[Dot42.DexImport("isDone", "()Z", AccessFlags = 1)]
-				public virtual bool IsDone() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// cancel
 				/// </java-name>
 				[Dot42.DexImport("cancel", "(Z)Z", AccessFlags = 1)]
@@ -2891,6 +2846,24 @@ namespace Java.Util.Concurrent
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal FutureTask() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// isCancelled
+				/// </java-name>
+				public virtual bool IsCancelled
+				{
+						[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDone
+				/// </java-name>
+				public virtual bool IsDone
+				{
+						[Dot42.DexImport("isDone", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -3364,18 +3337,6 @@ namespace Java.Util.Concurrent
 				global::Java.Util.IList<global::Java.Lang.IRunnable> ShutdownNow() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isShutdown
-				/// </java-name>
-				[Dot42.DexImport("isShutdown", "()Z", AccessFlags = 1025)]
-				bool IsShutdown() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isTerminated
-				/// </java-name>
-				[Dot42.DexImport("isTerminated", "()Z", AccessFlags = 1025)]
-				bool IsTerminated() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// awaitTermination
 				/// </java-name>
 				[Dot42.DexImport("awaitTermination", "(JLjava/util/concurrent/TimeUnit;)Z", AccessFlags = 1025)]
@@ -3430,6 +3391,24 @@ namespace Java.Util.Concurrent
     ";>;JLjava/util/concurrent/TimeUnit;)TT;")]
 				T InvokeAny<T>(global::Java.Util.ICollection<global::Java.Util.Concurrent.ICallable<T>> collection, long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// isShutdown
+				/// </java-name>
+				bool IsShutdown
+				{
+						[Dot42.DexImport("isShutdown", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isTerminated
+				/// </java-name>
+				bool IsTerminated
+				{
+						[Dot42.DexImport("isTerminated", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -3446,18 +3425,6 @@ namespace Java.Util.Concurrent
 				bool Cancel(bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// isCancelled
-				/// </java-name>
-				[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 1025)]
-				bool IsCancelled() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isDone
-				/// </java-name>
-				[Dot42.DexImport("isDone", "()Z", AccessFlags = 1025)]
-				bool IsDone() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// get
 				/// </java-name>
 				[Dot42.DexImport("get", "()Ljava/lang/Object;", AccessFlags = 1025, Signature = "()TV;")]
@@ -3468,6 +3435,24 @@ namespace Java.Util.Concurrent
 				/// </java-name>
 				[Dot42.DexImport("get", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;", AccessFlags = 1025, Signature = "(JLjava/util/concurrent/TimeUnit;)TV;")]
 				V Get(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// isCancelled
+				/// </java-name>
+				bool IsCancelled
+				{
+						[Dot42.DexImport("isCancelled", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isDone
+				/// </java-name>
+				bool IsDone
+				{
+						[Dot42.DexImport("isDone", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -3513,8 +3498,11 @@ namespace Java.Util.Concurrent
 				/// <java-name>
 				/// isPeriodic
 				/// </java-name>
-				[Dot42.DexImport("isPeriodic", "()Z", AccessFlags = 1025)]
-				bool IsPeriodic() /* MethodBuilder.Create */ ;
+				bool IsPeriodic
+				{
+						[Dot42.DexImport("isPeriodic", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -3743,24 +3731,6 @@ namespace Java.Util.Concurrent
 				/// </java-name>
 				[Dot42.DexImport("pollLast", "(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;", AccessFlags = 1, Signature = "(JLjava/util/concurrent/TimeUnit;)TE;")]
 				public virtual E PollLast(long int64, global::Java.Util.Concurrent.TimeUnit timeUnit) /* MethodBuilder.Create */ 
-				{
-						return default(E);
-				}
-
-				/// <java-name>
-				/// getFirst
-				/// </java-name>
-				[Dot42.DexImport("getFirst", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TE;")]
-				public virtual E GetFirst() /* MethodBuilder.Create */ 
-				{
-						return default(E);
-				}
-
-				/// <java-name>
-				/// getLast
-				/// </java-name>
-				[Dot42.DexImport("getLast", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TE;")]
-				public virtual E GetLast() /* MethodBuilder.Create */ 
 				{
 						return default(E);
 				}
@@ -4038,12 +4008,6 @@ namespace Java.Util.Concurrent
 						return default(int);
 				}
 
-				[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
-				public override bool IsEmpty() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/util/Collection", "removeAll", "(Ljava/util/Collection;)Z", AccessFlags = 1025, Signature = "(Ljava/util/Collection<*>;)Z")]
 				public override bool RemoveAll(global::Java.Util.ICollection<object> collection) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -4059,19 +4023,25 @@ namespace Java.Util.Concurrent
 				/// <java-name>
 				/// getFirst
 				/// </java-name>
-				public E First
+				public virtual E First
 				{
-				[Dot42.DexImport("getFirst", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TE;")]
-						get{ return GetFirst(); }
+						[Dot42.DexImport("getFirst", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TE;")]
+						get{ return default(E); }
 				}
 
 				/// <java-name>
 				/// getLast
 				/// </java-name>
-				public E Last
+				public virtual E Last
 				{
-				[Dot42.DexImport("getLast", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TE;")]
-						get{ return GetLast(); }
+						[Dot42.DexImport("getLast", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TE;")]
+						get{ return default(E); }
+				}
+
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -4301,12 +4271,6 @@ namespace Java.Util.Concurrent
 						return default(int);
 				}
 
-				[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
-				public override bool IsEmpty() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/util/Collection", "removeAll", "(Ljava/util/Collection;)Z", AccessFlags = 1025, Signature = "(Ljava/util/Collection<*>;)Z")]
 				public override bool RemoveAll(global::Java.Util.ICollection<object> collection) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -4317,6 +4281,12 @@ namespace Java.Util.Concurrent
 				public override bool RetainAll(global::Java.Util.ICollection<object> collection) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
+				}
+
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -4563,12 +4533,6 @@ namespace Java.Util.Concurrent
 						return default(int);
 				}
 
-				[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
-				public override bool IsEmpty() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				[Dot42.DexImport("java/util/Collection", "removeAll", "(Ljava/util/Collection;)Z", AccessFlags = 1025, Signature = "(Ljava/util/Collection<*>;)Z")]
 				public override bool RemoveAll(global::Java.Util.ICollection<object> collection) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -4579,6 +4543,12 @@ namespace Java.Util.Concurrent
 				public override bool RetainAll(global::Java.Util.ICollection<object> collection) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(bool);
+				}
+
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("java/util/Collection", "isEmpty", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -4745,40 +4715,6 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
-				/// setContinueExistingPeriodicTasksAfterShutdownPolicy
-				/// </java-name>
-				[Dot42.DexImport("setContinueExistingPeriodicTasksAfterShutdownPolicy", "(Z)V", AccessFlags = 1)]
-				public virtual void SetContinueExistingPeriodicTasksAfterShutdownPolicy(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContinueExistingPeriodicTasksAfterShutdownPolicy
-				/// </java-name>
-				[Dot42.DexImport("getContinueExistingPeriodicTasksAfterShutdownPolicy", "()Z", AccessFlags = 1)]
-				public virtual bool GetContinueExistingPeriodicTasksAfterShutdownPolicy() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setExecuteExistingDelayedTasksAfterShutdownPolicy
-				/// </java-name>
-				[Dot42.DexImport("setExecuteExistingDelayedTasksAfterShutdownPolicy", "(Z)V", AccessFlags = 1)]
-				public virtual void SetExecuteExistingDelayedTasksAfterShutdownPolicy(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getExecuteExistingDelayedTasksAfterShutdownPolicy
-				/// </java-name>
-				[Dot42.DexImport("getExecuteExistingDelayedTasksAfterShutdownPolicy", "()Z", AccessFlags = 1)]
-				public virtual bool GetExecuteExistingDelayedTasksAfterShutdownPolicy() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// shutdown
 				/// </java-name>
 				[Dot42.DexImport("shutdown", "()V", AccessFlags = 1)]
@@ -4795,30 +4731,9 @@ namespace Java.Util.Concurrent
 						return default(global::Java.Util.IList<global::Java.Lang.IRunnable>);
 				}
 
-				/// <java-name>
-				/// getQueue
-				/// </java-name>
-				[Dot42.DexImport("getQueue", "()Ljava/util/concurrent/BlockingQueue;", AccessFlags = 1, Signature = "()Ljava/util/concurrent/BlockingQueue<Ljava/lang/Runnable;>;")]
-				public override global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable> GetQueue() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable>);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ScheduledThreadPoolExecutor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-				}
-
-				[Dot42.DexImport("java/util/concurrent/ExecutorService", "isShutdown", "()Z", AccessFlags = 1025)]
-				public override bool IsShutdown() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("java/util/concurrent/ExecutorService", "isTerminated", "()Z", AccessFlags = 1025)]
-				public override bool IsTerminated() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
 				}
 
 				[Dot42.DexImport("java/util/concurrent/ExecutorService", "awaitTermination", "(JLjava/util/concurrent/TimeUnit;)Z", AccessFlags = 1025)]
@@ -4859,32 +4774,44 @@ namespace Java.Util.Concurrent
 				/// <java-name>
 				/// getContinueExistingPeriodicTasksAfterShutdownPolicy
 				/// </java-name>
-				public bool IsContinueExistingPeriodicTasksAfterShutdownPolicy
+				public virtual bool IsContinueExistingPeriodicTasksAfterShutdownPolicy
 				{
-				[Dot42.DexImport("getContinueExistingPeriodicTasksAfterShutdownPolicy", "()Z", AccessFlags = 1)]
-						get{ return GetContinueExistingPeriodicTasksAfterShutdownPolicy(); }
-				[Dot42.DexImport("setContinueExistingPeriodicTasksAfterShutdownPolicy", "(Z)V", AccessFlags = 1)]
-						set{ SetContinueExistingPeriodicTasksAfterShutdownPolicy(value); }
+						[Dot42.DexImport("getContinueExistingPeriodicTasksAfterShutdownPolicy", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setContinueExistingPeriodicTasksAfterShutdownPolicy", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getExecuteExistingDelayedTasksAfterShutdownPolicy
 				/// </java-name>
-				public bool IsExecuteExistingDelayedTasksAfterShutdownPolicy
+				public virtual bool IsExecuteExistingDelayedTasksAfterShutdownPolicy
 				{
-				[Dot42.DexImport("getExecuteExistingDelayedTasksAfterShutdownPolicy", "()Z", AccessFlags = 1)]
-						get{ return GetExecuteExistingDelayedTasksAfterShutdownPolicy(); }
-				[Dot42.DexImport("setExecuteExistingDelayedTasksAfterShutdownPolicy", "(Z)V", AccessFlags = 1)]
-						set{ SetExecuteExistingDelayedTasksAfterShutdownPolicy(value); }
+						[Dot42.DexImport("getExecuteExistingDelayedTasksAfterShutdownPolicy", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setExecuteExistingDelayedTasksAfterShutdownPolicy", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getQueue
 				/// </java-name>
-				public global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable> Queue
+				public override global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable> Queue
 				{
-				[Dot42.DexImport("getQueue", "()Ljava/util/concurrent/BlockingQueue;", AccessFlags = 1, Signature = "()Ljava/util/concurrent/BlockingQueue<Ljava/lang/Runnable;>;")]
-						get{ return GetQueue(); }
+						[Dot42.DexImport("getQueue", "()Ljava/util/concurrent/BlockingQueue;", AccessFlags = 1, Signature = "()Ljava/util/concurrent/BlockingQueue<Ljava/lang/Runnable;>;")]
+						get{ return default(global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable>); }
+				}
+
+				public override bool IsShutdown
+				{
+						[Dot42.DexImport("java/util/concurrent/ExecutorService", "isShutdown", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
+
+				public override bool IsTerminated
+				{
+						[Dot42.DexImport("java/util/concurrent/ExecutorService", "isTerminated", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -5017,42 +4944,6 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
-				/// isFair
-				/// </java-name>
-				[Dot42.DexImport("isFair", "()Z", AccessFlags = 1)]
-				public virtual bool IsFair() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
-				public bool HasQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getQueueLength
-				/// </java-name>
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-				public int GetQueueLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> GetQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -5067,21 +4958,39 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
+				/// isFair
+				/// </java-name>
+				public virtual bool IsFair
+				{
+						[Dot42.DexImport("isFair", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasQueuedThreads
+				/// </java-name>
+				public bool HasQueuedThreads
+				{
+						[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getQueueLength
 				/// </java-name>
 				public int QueueLength
 				{
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-						get{ return GetQueueLength(); }
+						[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getQueuedThreads
 				/// </java-name>
-				protected internal global::Java.Util.ICollection<global::System.Threading.Thread> QueuedThreads
+				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> QueuedThreads
 				{
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetQueuedThreads(); }
+						[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 		}
@@ -5155,15 +5064,6 @@ namespace Java.Util.Concurrent
 				public override E Poll() /* MethodBuilder.Create */ 
 				{
 						return default(E);
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public override bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -5327,6 +5227,15 @@ namespace Java.Util.Concurrent
 						return default(int);
 				}
 
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public override bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -5390,33 +5299,6 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
-				/// isShutdown
-				/// </java-name>
-				[Dot42.DexImport("isShutdown", "()Z", AccessFlags = 1)]
-				public override bool IsShutdown() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isTerminating
-				/// </java-name>
-				[Dot42.DexImport("isTerminating", "()Z", AccessFlags = 1)]
-				public virtual bool IsTerminating() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isTerminated
-				/// </java-name>
-				[Dot42.DexImport("isTerminated", "()Z", AccessFlags = 1)]
-				public override bool IsTerminated() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// awaitTermination
 				/// </java-name>
 				[Dot42.DexImport("awaitTermination", "(JLjava/util/concurrent/TimeUnit;)Z", AccessFlags = 1)]
@@ -5430,57 +5312,6 @@ namespace Java.Util.Concurrent
 				/// </java-name>
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
 				extern ~ThreadPoolExecutor() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setThreadFactory
-				/// </java-name>
-				[Dot42.DexImport("setThreadFactory", "(Ljava/util/concurrent/ThreadFactory;)V", AccessFlags = 1)]
-				public virtual void SetThreadFactory(global::Java.Util.Concurrent.IThreadFactory threadFactory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getThreadFactory
-				/// </java-name>
-				[Dot42.DexImport("getThreadFactory", "()Ljava/util/concurrent/ThreadFactory;", AccessFlags = 1)]
-				public virtual global::Java.Util.Concurrent.IThreadFactory GetThreadFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Concurrent.IThreadFactory);
-				}
-
-				/// <java-name>
-				/// setRejectedExecutionHandler
-				/// </java-name>
-				[Dot42.DexImport("setRejectedExecutionHandler", "(Ljava/util/concurrent/RejectedExecutionHandler;)V", AccessFlags = 1)]
-				public virtual void SetRejectedExecutionHandler(global::Java.Util.Concurrent.IRejectedExecutionHandler rejectedExecutionHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getRejectedExecutionHandler
-				/// </java-name>
-				[Dot42.DexImport("getRejectedExecutionHandler", "()Ljava/util/concurrent/RejectedExecutionHandler;", AccessFlags = 1)]
-				public virtual global::Java.Util.Concurrent.IRejectedExecutionHandler GetRejectedExecutionHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Concurrent.IRejectedExecutionHandler);
-				}
-
-				/// <java-name>
-				/// setCorePoolSize
-				/// </java-name>
-				[Dot42.DexImport("setCorePoolSize", "(I)V", AccessFlags = 1)]
-				public virtual void SetCorePoolSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCorePoolSize
-				/// </java-name>
-				[Dot42.DexImport("getCorePoolSize", "()I", AccessFlags = 1)]
-				public virtual int GetCorePoolSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
 
 				/// <java-name>
 				/// prestartCoreThread
@@ -5518,23 +5349,6 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
-				/// setMaximumPoolSize
-				/// </java-name>
-				[Dot42.DexImport("setMaximumPoolSize", "(I)V", AccessFlags = 1)]
-				public virtual void SetMaximumPoolSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMaximumPoolSize
-				/// </java-name>
-				[Dot42.DexImport("getMaximumPoolSize", "()I", AccessFlags = 1)]
-				public virtual int GetMaximumPoolSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setKeepAliveTime
 				/// </java-name>
 				[Dot42.DexImport("setKeepAliveTime", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1)]
@@ -5552,15 +5366,6 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
-				/// getQueue
-				/// </java-name>
-				[Dot42.DexImport("getQueue", "()Ljava/util/concurrent/BlockingQueue;", AccessFlags = 1, Signature = "()Ljava/util/concurrent/BlockingQueue<Ljava/lang/Runnable;>;")]
-				public virtual global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable> GetQueue() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable>);
-				}
-
-				/// <java-name>
 				/// remove
 				/// </java-name>
 				[Dot42.DexImport("remove", "(Ljava/lang/Runnable;)Z", AccessFlags = 1)]
@@ -5575,51 +5380,6 @@ namespace Java.Util.Concurrent
 				[Dot42.DexImport("purge", "()V", AccessFlags = 1)]
 				public virtual void Purge() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPoolSize
-				/// </java-name>
-				[Dot42.DexImport("getPoolSize", "()I", AccessFlags = 1)]
-				public virtual int GetPoolSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getActiveCount
-				/// </java-name>
-				[Dot42.DexImport("getActiveCount", "()I", AccessFlags = 1)]
-				public virtual int GetActiveCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLargestPoolSize
-				/// </java-name>
-				[Dot42.DexImport("getLargestPoolSize", "()I", AccessFlags = 1)]
-				public virtual int GetLargestPoolSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTaskCount
-				/// </java-name>
-				[Dot42.DexImport("getTaskCount", "()J", AccessFlags = 1)]
-				public virtual long GetTaskCount() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getCompletedTaskCount
-				/// </java-name>
-				[Dot42.DexImport("getCompletedTaskCount", "()J", AccessFlags = 1)]
-				public virtual long GetCompletedTaskCount() /* MethodBuilder.Create */ 
-				{
-						return default(long);
 				}
 
 				/// <java-name>
@@ -5661,101 +5421,128 @@ namespace Java.Util.Concurrent
 				}
 
 				/// <java-name>
+				/// isShutdown
+				/// </java-name>
+				public override bool IsShutdown
+				{
+						[Dot42.DexImport("isShutdown", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isTerminating
+				/// </java-name>
+				public virtual bool IsTerminating
+				{
+						[Dot42.DexImport("isTerminating", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isTerminated
+				/// </java-name>
+				public override bool IsTerminated
+				{
+						[Dot42.DexImport("isTerminated", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getThreadFactory
 				/// </java-name>
-				public global::Java.Util.Concurrent.IThreadFactory ThreadFactory
+				public virtual global::Java.Util.Concurrent.IThreadFactory ThreadFactory
 				{
-				[Dot42.DexImport("getThreadFactory", "()Ljava/util/concurrent/ThreadFactory;", AccessFlags = 1)]
-						get{ return GetThreadFactory(); }
-				[Dot42.DexImport("setThreadFactory", "(Ljava/util/concurrent/ThreadFactory;)V", AccessFlags = 1)]
-						set{ SetThreadFactory(value); }
+						[Dot42.DexImport("getThreadFactory", "()Ljava/util/concurrent/ThreadFactory;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Concurrent.IThreadFactory); }
+						[Dot42.DexImport("setThreadFactory", "(Ljava/util/concurrent/ThreadFactory;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getRejectedExecutionHandler
 				/// </java-name>
-				public global::Java.Util.Concurrent.IRejectedExecutionHandler RejectedExecutionHandler
+				public virtual global::Java.Util.Concurrent.IRejectedExecutionHandler RejectedExecutionHandler
 				{
-				[Dot42.DexImport("getRejectedExecutionHandler", "()Ljava/util/concurrent/RejectedExecutionHandler;", AccessFlags = 1)]
-						get{ return GetRejectedExecutionHandler(); }
-				[Dot42.DexImport("setRejectedExecutionHandler", "(Ljava/util/concurrent/RejectedExecutionHandler;)V", AccessFlags = 1)]
-						set{ SetRejectedExecutionHandler(value); }
+						[Dot42.DexImport("getRejectedExecutionHandler", "()Ljava/util/concurrent/RejectedExecutionHandler;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Concurrent.IRejectedExecutionHandler); }
+						[Dot42.DexImport("setRejectedExecutionHandler", "(Ljava/util/concurrent/RejectedExecutionHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCorePoolSize
 				/// </java-name>
-				public int CorePoolSize
+				public virtual int CorePoolSize
 				{
-				[Dot42.DexImport("getCorePoolSize", "()I", AccessFlags = 1)]
-						get{ return GetCorePoolSize(); }
-				[Dot42.DexImport("setCorePoolSize", "(I)V", AccessFlags = 1)]
-						set{ SetCorePoolSize(value); }
+						[Dot42.DexImport("getCorePoolSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setCorePoolSize", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMaximumPoolSize
 				/// </java-name>
-				public int MaximumPoolSize
+				public virtual int MaximumPoolSize
 				{
-				[Dot42.DexImport("getMaximumPoolSize", "()I", AccessFlags = 1)]
-						get{ return GetMaximumPoolSize(); }
-				[Dot42.DexImport("setMaximumPoolSize", "(I)V", AccessFlags = 1)]
-						set{ SetMaximumPoolSize(value); }
+						[Dot42.DexImport("getMaximumPoolSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMaximumPoolSize", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getQueue
 				/// </java-name>
-				public global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable> Queue
+				public virtual global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable> Queue
 				{
-				[Dot42.DexImport("getQueue", "()Ljava/util/concurrent/BlockingQueue;", AccessFlags = 1, Signature = "()Ljava/util/concurrent/BlockingQueue<Ljava/lang/Runnable;>;")]
-						get{ return GetQueue(); }
+						[Dot42.DexImport("getQueue", "()Ljava/util/concurrent/BlockingQueue;", AccessFlags = 1, Signature = "()Ljava/util/concurrent/BlockingQueue<Ljava/lang/Runnable;>;")]
+						get{ return default(global::Java.Util.Concurrent.IBlockingQueue<global::Java.Lang.IRunnable>); }
 				}
 
 				/// <java-name>
 				/// getPoolSize
 				/// </java-name>
-				public int PoolSize
+				public virtual int PoolSize
 				{
-				[Dot42.DexImport("getPoolSize", "()I", AccessFlags = 1)]
-						get{ return GetPoolSize(); }
+						[Dot42.DexImport("getPoolSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getActiveCount
 				/// </java-name>
-				public int ActiveCount
+				public virtual int ActiveCount
 				{
-				[Dot42.DexImport("getActiveCount", "()I", AccessFlags = 1)]
-						get{ return GetActiveCount(); }
+						[Dot42.DexImport("getActiveCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getLargestPoolSize
 				/// </java-name>
-				public int LargestPoolSize
+				public virtual int LargestPoolSize
 				{
-				[Dot42.DexImport("getLargestPoolSize", "()I", AccessFlags = 1)]
-						get{ return GetLargestPoolSize(); }
+						[Dot42.DexImport("getLargestPoolSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTaskCount
 				/// </java-name>
-				public long TaskCount
+				public virtual long TaskCount
 				{
-				[Dot42.DexImport("getTaskCount", "()J", AccessFlags = 1)]
-						get{ return GetTaskCount(); }
+						[Dot42.DexImport("getTaskCount", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getCompletedTaskCount
 				/// </java-name>
-				public long CompletedTaskCount
+				public virtual long CompletedTaskCount
 				{
-				[Dot42.DexImport("getCompletedTaskCount", "()J", AccessFlags = 1)]
-						get{ return GetCompletedTaskCount(); }
+						[Dot42.DexImport("getCompletedTaskCount", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>

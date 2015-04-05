@@ -19,60 +19,6 @@ namespace Android.Hardware.Usb
 				}
 
 				/// <java-name>
-				/// getManufacturer
-				/// </java-name>
-				[Dot42.DexImport("getManufacturer", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetManufacturer() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getModel
-				/// </java-name>
-				[Dot42.DexImport("getModel", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetModel() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDescription
-				/// </java-name>
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDescription() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetVersion() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getUri
-				/// </java-name>
-				[Dot42.DexImport("getUri", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUri() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSerial
-				/// </java-name>
-				[Dot42.DexImport("getSerial", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSerial() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
@@ -119,55 +65,55 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// getManufacturer
 				/// </java-name>
-				public string Manufacturer
+				public virtual string Manufacturer
 				{
-				[Dot42.DexImport("getManufacturer", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetManufacturer(); }
+						[Dot42.DexImport("getManufacturer", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getModel
 				/// </java-name>
-				public string Model
+				public virtual string Model
 				{
-				[Dot42.DexImport("getModel", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetModel(); }
+						[Dot42.DexImport("getModel", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getDescription
 				/// </java-name>
-				public string Description
+				public virtual string Description
 				{
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDescription(); }
+						[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getVersion
 				/// </java-name>
-				public string Version
+				public virtual string Version
 				{
-				[Dot42.DexImport("getVersion", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetVersion(); }
+						[Dot42.DexImport("getVersion", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getUri
 				/// </java-name>
-				public string Uri
+				public virtual string Uri
 				{
-				[Dot42.DexImport("getUri", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUri(); }
+						[Dot42.DexImport("getUri", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSerial
 				/// </java-name>
-				public string Serial
+				public virtual string Serial
 				{
-				[Dot42.DexImport("getSerial", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSerial(); }
+						[Dot42.DexImport("getSerial", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -369,78 +315,6 @@ namespace Android.Hardware.Usb
 				}
 
 				/// <java-name>
-				/// getDeviceName
-				/// </java-name>
-				[Dot42.DexImport("getDeviceName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDeviceName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDeviceId
-				/// </java-name>
-				[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1)]
-				public virtual int GetDeviceId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getVendorId
-				/// </java-name>
-				[Dot42.DexImport("getVendorId", "()I", AccessFlags = 1)]
-				public virtual int GetVendorId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getProductId
-				/// </java-name>
-				[Dot42.DexImport("getProductId", "()I", AccessFlags = 1)]
-				public virtual int GetProductId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDeviceClass
-				/// </java-name>
-				[Dot42.DexImport("getDeviceClass", "()I", AccessFlags = 1)]
-				public virtual int GetDeviceClass() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDeviceSubclass
-				/// </java-name>
-				[Dot42.DexImport("getDeviceSubclass", "()I", AccessFlags = 1)]
-				public virtual int GetDeviceSubclass() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDeviceProtocol
-				/// </java-name>
-				[Dot42.DexImport("getDeviceProtocol", "()I", AccessFlags = 1)]
-				public virtual int GetDeviceProtocol() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getInterfaceCount
-				/// </java-name>
-				[Dot42.DexImport("getInterfaceCount", "()I", AccessFlags = 1)]
-				public virtual int GetInterfaceCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getInterface
 				/// </java-name>
 				[Dot42.DexImport("getInterface", "(I)Landroid/hardware/usb/UsbInterface;", AccessFlags = 1)]
@@ -514,73 +388,73 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// getDeviceName
 				/// </java-name>
-				public string DeviceName
+				public virtual string DeviceName
 				{
-				[Dot42.DexImport("getDeviceName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDeviceName(); }
+						[Dot42.DexImport("getDeviceName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getDeviceId
 				/// </java-name>
-				public int DeviceId
+				public virtual int DeviceId
 				{
-				[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1)]
-						get{ return GetDeviceId(); }
+						[Dot42.DexImport("getDeviceId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getVendorId
 				/// </java-name>
-				public int VendorId
+				public virtual int VendorId
 				{
-				[Dot42.DexImport("getVendorId", "()I", AccessFlags = 1)]
-						get{ return GetVendorId(); }
+						[Dot42.DexImport("getVendorId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getProductId
 				/// </java-name>
-				public int ProductId
+				public virtual int ProductId
 				{
-				[Dot42.DexImport("getProductId", "()I", AccessFlags = 1)]
-						get{ return GetProductId(); }
+						[Dot42.DexImport("getProductId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDeviceClass
 				/// </java-name>
-				public int DeviceClass
+				public virtual int DeviceClass
 				{
-				[Dot42.DexImport("getDeviceClass", "()I", AccessFlags = 1)]
-						get{ return GetDeviceClass(); }
+						[Dot42.DexImport("getDeviceClass", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDeviceSubclass
 				/// </java-name>
-				public int DeviceSubclass
+				public virtual int DeviceSubclass
 				{
-				[Dot42.DexImport("getDeviceSubclass", "()I", AccessFlags = 1)]
-						get{ return GetDeviceSubclass(); }
+						[Dot42.DexImport("getDeviceSubclass", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDeviceProtocol
 				/// </java-name>
-				public int DeviceProtocol
+				public virtual int DeviceProtocol
 				{
-				[Dot42.DexImport("getDeviceProtocol", "()I", AccessFlags = 1)]
-						get{ return GetDeviceProtocol(); }
+						[Dot42.DexImport("getDeviceProtocol", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getInterfaceCount
 				/// </java-name>
-				public int InterfaceCount
+				public virtual int InterfaceCount
 				{
-				[Dot42.DexImport("getInterfaceCount", "()I", AccessFlags = 1)]
-						get{ return GetInterfaceCount(); }
+						[Dot42.DexImport("getInterfaceCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -606,30 +480,12 @@ namespace Android.Hardware.Usb
 				}
 
 				/// <java-name>
-				/// getFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getFileDescriptor", "()I", AccessFlags = 1)]
-				public virtual int GetFileDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getRawDescriptors
 				/// </java-name>
 				[Dot42.DexImport("getRawDescriptors", "()[B", AccessFlags = 1)]
 				public virtual sbyte[] JavaGetRawDescriptors() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getRawDescriptors
-				/// </java-name>
-				[Dot42.DexImport("getRawDescriptors", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetRawDescriptors() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -696,39 +552,30 @@ namespace Android.Hardware.Usb
 				}
 
 				/// <java-name>
-				/// getSerial
-				/// </java-name>
-				[Dot42.DexImport("getSerial", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSerial() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				public int FileDescriptor
+				public virtual int FileDescriptor
 				{
-				[Dot42.DexImport("getFileDescriptor", "()I", AccessFlags = 1)]
-						get{ return GetFileDescriptor(); }
+						[Dot42.DexImport("getFileDescriptor", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getRawDescriptors
 				/// </java-name>
-				public byte[] RawDescriptors
+				public virtual byte[] RawDescriptors
 				{
-				[Dot42.DexImport("getRawDescriptors", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetRawDescriptors(); }
+						[Dot42.DexImport("getRawDescriptors", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getSerial
 				/// </java-name>
-				public string Serial
+				public virtual string Serial
 				{
-				[Dot42.DexImport("getSerial", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSerial(); }
+						[Dot42.DexImport("getSerial", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -748,69 +595,6 @@ namespace Android.Hardware.Usb
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal UsbEndpoint() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				[Dot42.DexImport("getAddress", "()I", AccessFlags = 1)]
-				public virtual int GetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEndpointNumber
-				/// </java-name>
-				[Dot42.DexImport("getEndpointNumber", "()I", AccessFlags = 1)]
-				public virtual int GetEndpointNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDirection
-				/// </java-name>
-				[Dot42.DexImport("getDirection", "()I", AccessFlags = 1)]
-				public virtual int GetDirection() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAttributes
-				/// </java-name>
-				[Dot42.DexImport("getAttributes", "()I", AccessFlags = 1)]
-				public virtual int GetAttributes() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public virtual int GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMaxPacketSize
-				/// </java-name>
-				[Dot42.DexImport("getMaxPacketSize", "()I", AccessFlags = 1)]
-				public virtual int GetMaxPacketSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getInterval
-				/// </java-name>
-				[Dot42.DexImport("getInterval", "()I", AccessFlags = 1)]
-				public virtual int GetInterval() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -842,64 +626,64 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// getAddress
 				/// </java-name>
-				public int Address
+				public virtual int Address
 				{
-				[Dot42.DexImport("getAddress", "()I", AccessFlags = 1)]
-						get{ return GetAddress(); }
+						[Dot42.DexImport("getAddress", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getEndpointNumber
 				/// </java-name>
-				public int EndpointNumber
+				public virtual int EndpointNumber
 				{
-				[Dot42.DexImport("getEndpointNumber", "()I", AccessFlags = 1)]
-						get{ return GetEndpointNumber(); }
+						[Dot42.DexImport("getEndpointNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDirection
 				/// </java-name>
-				public int Direction
+				public virtual int Direction
 				{
-				[Dot42.DexImport("getDirection", "()I", AccessFlags = 1)]
-						get{ return GetDirection(); }
+						[Dot42.DexImport("getDirection", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAttributes
 				/// </java-name>
-				public int Attributes
+				public virtual int Attributes
 				{
-				[Dot42.DexImport("getAttributes", "()I", AccessFlags = 1)]
-						get{ return GetAttributes(); }
+						[Dot42.DexImport("getAttributes", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				public int Type
+				public virtual int Type
 				{
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMaxPacketSize
 				/// </java-name>
-				public int MaxPacketSize
+				public virtual int MaxPacketSize
 				{
-				[Dot42.DexImport("getMaxPacketSize", "()I", AccessFlags = 1)]
-						get{ return GetMaxPacketSize(); }
+						[Dot42.DexImport("getMaxPacketSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getInterval
 				/// </java-name>
-				public int Interval
+				public virtual int Interval
 				{
-				[Dot42.DexImport("getInterval", "()I", AccessFlags = 1)]
-						get{ return GetInterval(); }
+						[Dot42.DexImport("getInterval", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -919,51 +703,6 @@ namespace Android.Hardware.Usb
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal UsbInterface() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-				public virtual int GetId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getInterfaceClass
-				/// </java-name>
-				[Dot42.DexImport("getInterfaceClass", "()I", AccessFlags = 1)]
-				public virtual int GetInterfaceClass() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getInterfaceSubclass
-				/// </java-name>
-				[Dot42.DexImport("getInterfaceSubclass", "()I", AccessFlags = 1)]
-				public virtual int GetInterfaceSubclass() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getInterfaceProtocol
-				/// </java-name>
-				[Dot42.DexImport("getInterfaceProtocol", "()I", AccessFlags = 1)]
-				public virtual int GetInterfaceProtocol() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEndpointCount
-				/// </java-name>
-				[Dot42.DexImport("getEndpointCount", "()I", AccessFlags = 1)]
-				public virtual int GetEndpointCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1004,46 +743,46 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// getId
 				/// </java-name>
-				public int Id
+				public virtual int Id
 				{
-				[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getInterfaceClass
 				/// </java-name>
-				public int InterfaceClass
+				public virtual int InterfaceClass
 				{
-				[Dot42.DexImport("getInterfaceClass", "()I", AccessFlags = 1)]
-						get{ return GetInterfaceClass(); }
+						[Dot42.DexImport("getInterfaceClass", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getInterfaceSubclass
 				/// </java-name>
-				public int InterfaceSubclass
+				public virtual int InterfaceSubclass
 				{
-				[Dot42.DexImport("getInterfaceSubclass", "()I", AccessFlags = 1)]
-						get{ return GetInterfaceSubclass(); }
+						[Dot42.DexImport("getInterfaceSubclass", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getInterfaceProtocol
 				/// </java-name>
-				public int InterfaceProtocol
+				public virtual int InterfaceProtocol
 				{
-				[Dot42.DexImport("getInterfaceProtocol", "()I", AccessFlags = 1)]
-						get{ return GetInterfaceProtocol(); }
+						[Dot42.DexImport("getInterfaceProtocol", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getEndpointCount
 				/// </java-name>
-				public int EndpointCount
+				public virtual int EndpointCount
 				{
-				[Dot42.DexImport("getEndpointCount", "()I", AccessFlags = 1)]
-						get{ return GetEndpointCount(); }
+						[Dot42.DexImport("getEndpointCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1096,30 +835,12 @@ namespace Android.Hardware.Usb
 				}
 
 				/// <java-name>
-				/// getDeviceList
-				/// </java-name>
-				[Dot42.DexImport("getDeviceList", "()Ljava/util/HashMap;", AccessFlags = 1, Signature = "()Ljava/util/HashMap<Ljava/lang/String;Landroid/hardware/usb/UsbDevice;>;")]
-				public virtual global::Java.Util.HashMap<string, global::Android.Hardware.Usb.UsbDevice> GetDeviceList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.HashMap<string, global::Android.Hardware.Usb.UsbDevice>);
-				}
-
-				/// <java-name>
 				/// openDevice
 				/// </java-name>
 				[Dot42.DexImport("openDevice", "(Landroid/hardware/usb/UsbDevice;)Landroid/hardware/usb/UsbDeviceConnection;", AccessFlags = 1)]
 				public virtual global::Android.Hardware.Usb.UsbDeviceConnection OpenDevice(global::Android.Hardware.Usb.UsbDevice usbDevice) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Hardware.Usb.UsbDeviceConnection);
-				}
-
-				/// <java-name>
-				/// getAccessoryList
-				/// </java-name>
-				[Dot42.DexImport("getAccessoryList", "()[Landroid/hardware/usb/UsbAccessory;", AccessFlags = 1)]
-				public virtual global::Android.Hardware.Usb.UsbAccessory[] GetAccessoryList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Hardware.Usb.UsbAccessory[]);
 				}
 
 				/// <java-name>
@@ -1168,19 +889,19 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// getDeviceList
 				/// </java-name>
-				public global::Java.Util.HashMap<string, global::Android.Hardware.Usb.UsbDevice> DeviceList
+				public virtual global::Java.Util.HashMap<string, global::Android.Hardware.Usb.UsbDevice> DeviceList
 				{
-				[Dot42.DexImport("getDeviceList", "()Ljava/util/HashMap;", AccessFlags = 1, Signature = "()Ljava/util/HashMap<Ljava/lang/String;Landroid/hardware/usb/UsbDevice;>;")]
-						get{ return GetDeviceList(); }
+						[Dot42.DexImport("getDeviceList", "()Ljava/util/HashMap;", AccessFlags = 1, Signature = "()Ljava/util/HashMap<Ljava/lang/String;Landroid/hardware/usb/UsbDevice;>;")]
+						get{ return default(global::Java.Util.HashMap<string, global::Android.Hardware.Usb.UsbDevice>); }
 				}
 
 				/// <java-name>
 				/// getAccessoryList
 				/// </java-name>
-				public global::Android.Hardware.Usb.UsbAccessory[] AccessoryList
+				public virtual global::Android.Hardware.Usb.UsbAccessory[] AccessoryList
 				{
-				[Dot42.DexImport("getAccessoryList", "()[Landroid/hardware/usb/UsbAccessory;", AccessFlags = 1)]
-						get{ return GetAccessoryList(); }
+						[Dot42.DexImport("getAccessoryList", "()[Landroid/hardware/usb/UsbAccessory;", AccessFlags = 1)]
+						get{ return default(global::Android.Hardware.Usb.UsbAccessory[]); }
 				}
 
 		}
@@ -1221,32 +942,6 @@ namespace Android.Hardware.Usb
 				extern ~UsbRequest() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getEndpoint
-				/// </java-name>
-				[Dot42.DexImport("getEndpoint", "()Landroid/hardware/usb/UsbEndpoint;", AccessFlags = 1)]
-				public virtual global::Android.Hardware.Usb.UsbEndpoint GetEndpoint() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Hardware.Usb.UsbEndpoint);
-				}
-
-				/// <java-name>
-				/// getClientData
-				/// </java-name>
-				[Dot42.DexImport("getClientData", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetClientData() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// setClientData
-				/// </java-name>
-				[Dot42.DexImport("setClientData", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-				public virtual void SetClientData(object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// queue
 				/// </java-name>
 				[Dot42.DexImport("queue", "(Ljava/nio/ByteBuffer;I)Z", AccessFlags = 1)]
@@ -1256,32 +951,32 @@ namespace Android.Hardware.Usb
 				}
 
 				/// <java-name>
-				/// cancel
-				/// </java-name>
-				[Dot42.DexImport("cancel", "()Z", AccessFlags = 1)]
-				public virtual bool Cancel() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getEndpoint
 				/// </java-name>
-				public global::Android.Hardware.Usb.UsbEndpoint Endpoint
+				public virtual global::Android.Hardware.Usb.UsbEndpoint Endpoint
 				{
-				[Dot42.DexImport("getEndpoint", "()Landroid/hardware/usb/UsbEndpoint;", AccessFlags = 1)]
-						get{ return GetEndpoint(); }
+						[Dot42.DexImport("getEndpoint", "()Landroid/hardware/usb/UsbEndpoint;", AccessFlags = 1)]
+						get{ return default(global::Android.Hardware.Usb.UsbEndpoint); }
 				}
 
 				/// <java-name>
 				/// getClientData
 				/// </java-name>
-				public object ClientData
+				public virtual object ClientData
 				{
-				[Dot42.DexImport("getClientData", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetClientData(); }
-				[Dot42.DexImport("setClientData", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-						set{ SetClientData(value); }
+						[Dot42.DexImport("getClientData", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object); }
+						[Dot42.DexImport("setClientData", "(Ljava/lang/Object;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// cancel
+				/// </java-name>
+				public virtual bool Cancel
+				{
+						[Dot42.DexImport("cancel", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

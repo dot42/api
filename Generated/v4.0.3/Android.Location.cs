@@ -19,24 +19,6 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// getLocale
-				/// </java-name>
-				[Dot42.DexImport("getLocale", "()Ljava/util/Locale;", AccessFlags = 1)]
-				public virtual global::Java.Util.Locale GetLocale() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Locale);
-				}
-
-				/// <java-name>
-				/// getMaxAddressLineIndex
-				/// </java-name>
-				[Dot42.DexImport("getMaxAddressLineIndex", "()I", AccessFlags = 1)]
-				public virtual int GetMaxAddressLineIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getAddressLine
 				/// </java-name>
 				[Dot42.DexImport("getAddressLine", "(I)Ljava/lang/String;", AccessFlags = 1)]
@@ -54,219 +36,6 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// getFeatureName
-				/// </java-name>
-				[Dot42.DexImport("getFeatureName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetFeatureName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setFeatureName
-				/// </java-name>
-				[Dot42.DexImport("setFeatureName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetFeatureName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAdminArea
-				/// </java-name>
-				[Dot42.DexImport("getAdminArea", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAdminArea() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setAdminArea
-				/// </java-name>
-				[Dot42.DexImport("setAdminArea", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetAdminArea(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSubAdminArea
-				/// </java-name>
-				[Dot42.DexImport("getSubAdminArea", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSubAdminArea() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setSubAdminArea
-				/// </java-name>
-				[Dot42.DexImport("setSubAdminArea", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSubAdminArea(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLocality
-				/// </java-name>
-				[Dot42.DexImport("getLocality", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetLocality() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setLocality
-				/// </java-name>
-				[Dot42.DexImport("setLocality", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetLocality(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSubLocality
-				/// </java-name>
-				[Dot42.DexImport("getSubLocality", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSubLocality() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setSubLocality
-				/// </java-name>
-				[Dot42.DexImport("setSubLocality", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSubLocality(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getThoroughfare
-				/// </java-name>
-				[Dot42.DexImport("getThoroughfare", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetThoroughfare() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setThoroughfare
-				/// </java-name>
-				[Dot42.DexImport("setThoroughfare", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetThoroughfare(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSubThoroughfare
-				/// </java-name>
-				[Dot42.DexImport("getSubThoroughfare", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSubThoroughfare() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setSubThoroughfare
-				/// </java-name>
-				[Dot42.DexImport("setSubThoroughfare", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetSubThoroughfare(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPremises
-				/// </java-name>
-				[Dot42.DexImport("getPremises", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPremises() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setPremises
-				/// </java-name>
-				[Dot42.DexImport("setPremises", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetPremises(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPostalCode
-				/// </java-name>
-				[Dot42.DexImport("getPostalCode", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPostalCode() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setPostalCode
-				/// </java-name>
-				[Dot42.DexImport("setPostalCode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetPostalCode(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCountryCode
-				/// </java-name>
-				[Dot42.DexImport("getCountryCode", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetCountryCode() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setCountryCode
-				/// </java-name>
-				[Dot42.DexImport("setCountryCode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetCountryCode(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCountryName
-				/// </java-name>
-				[Dot42.DexImport("getCountryName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetCountryName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setCountryName
-				/// </java-name>
-				[Dot42.DexImport("setCountryName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetCountryName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// hasLatitude
-				/// </java-name>
-				[Dot42.DexImport("hasLatitude", "()Z", AccessFlags = 1)]
-				public virtual bool HasLatitude() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getLatitude
-				/// </java-name>
-				[Dot42.DexImport("getLatitude", "()D", AccessFlags = 1)]
-				public virtual double GetLatitude() /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// setLatitude
-				/// </java-name>
-				[Dot42.DexImport("setLatitude", "(D)V", AccessFlags = 1)]
-				public virtual void SetLatitude(double @double) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// clearLatitude
 				/// </java-name>
 				[Dot42.DexImport("clearLatitude", "()V", AccessFlags = 1)]
@@ -275,87 +44,10 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// hasLongitude
-				/// </java-name>
-				[Dot42.DexImport("hasLongitude", "()Z", AccessFlags = 1)]
-				public virtual bool HasLongitude() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getLongitude
-				/// </java-name>
-				[Dot42.DexImport("getLongitude", "()D", AccessFlags = 1)]
-				public virtual double GetLongitude() /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// setLongitude
-				/// </java-name>
-				[Dot42.DexImport("setLongitude", "(D)V", AccessFlags = 1)]
-				public virtual void SetLongitude(double @double) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// clearLongitude
 				/// </java-name>
 				[Dot42.DexImport("clearLongitude", "()V", AccessFlags = 1)]
 				public virtual void ClearLongitude() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPhone
-				/// </java-name>
-				[Dot42.DexImport("getPhone", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPhone() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setPhone
-				/// </java-name>
-				[Dot42.DexImport("setPhone", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetPhone(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getUrl
-				/// </java-name>
-				[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUrl() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setUrl
-				/// </java-name>
-				[Dot42.DexImport("setUrl", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetUrl(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getExtras
-				/// </java-name>
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Bundle);
-				}
-
-				/// <java-name>
-				/// setExtras
-				/// </java-name>
-				[Dot42.DexImport("setExtras", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void SetExtras(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -393,195 +85,213 @@ namespace Android.Location
 				/// <java-name>
 				/// getLocale
 				/// </java-name>
-				public global::Java.Util.Locale Locale
+				public virtual global::Java.Util.Locale Locale
 				{
-				[Dot42.DexImport("getLocale", "()Ljava/util/Locale;", AccessFlags = 1)]
-						get{ return GetLocale(); }
+						[Dot42.DexImport("getLocale", "()Ljava/util/Locale;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Locale); }
 				}
 
 				/// <java-name>
 				/// getMaxAddressLineIndex
 				/// </java-name>
-				public int MaxAddressLineIndex
+				public virtual int MaxAddressLineIndex
 				{
-				[Dot42.DexImport("getMaxAddressLineIndex", "()I", AccessFlags = 1)]
-						get{ return GetMaxAddressLineIndex(); }
+						[Dot42.DexImport("getMaxAddressLineIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getFeatureName
 				/// </java-name>
-				public string FeatureName
+				public virtual string FeatureName
 				{
-				[Dot42.DexImport("getFeatureName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetFeatureName(); }
-				[Dot42.DexImport("setFeatureName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetFeatureName(value); }
+						[Dot42.DexImport("getFeatureName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setFeatureName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAdminArea
 				/// </java-name>
-				public string AdminArea
+				public virtual string AdminArea
 				{
-				[Dot42.DexImport("getAdminArea", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAdminArea(); }
-				[Dot42.DexImport("setAdminArea", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetAdminArea(value); }
+						[Dot42.DexImport("getAdminArea", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setAdminArea", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSubAdminArea
 				/// </java-name>
-				public string SubAdminArea
+				public virtual string SubAdminArea
 				{
-				[Dot42.DexImport("getSubAdminArea", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSubAdminArea(); }
-				[Dot42.DexImport("setSubAdminArea", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSubAdminArea(value); }
+						[Dot42.DexImport("getSubAdminArea", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSubAdminArea", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLocality
 				/// </java-name>
-				public string Locality
+				public virtual string Locality
 				{
-				[Dot42.DexImport("getLocality", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocality(); }
-				[Dot42.DexImport("setLocality", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetLocality(value); }
+						[Dot42.DexImport("getLocality", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setLocality", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSubLocality
 				/// </java-name>
-				public string SubLocality
+				public virtual string SubLocality
 				{
-				[Dot42.DexImport("getSubLocality", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSubLocality(); }
-				[Dot42.DexImport("setSubLocality", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSubLocality(value); }
+						[Dot42.DexImport("getSubLocality", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSubLocality", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getThoroughfare
 				/// </java-name>
-				public string Thoroughfare
+				public virtual string Thoroughfare
 				{
-				[Dot42.DexImport("getThoroughfare", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetThoroughfare(); }
-				[Dot42.DexImport("setThoroughfare", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetThoroughfare(value); }
+						[Dot42.DexImport("getThoroughfare", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setThoroughfare", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSubThoroughfare
 				/// </java-name>
-				public string SubThoroughfare
+				public virtual string SubThoroughfare
 				{
-				[Dot42.DexImport("getSubThoroughfare", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSubThoroughfare(); }
-				[Dot42.DexImport("setSubThoroughfare", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSubThoroughfare(value); }
+						[Dot42.DexImport("getSubThoroughfare", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setSubThoroughfare", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPremises
 				/// </java-name>
-				public string Premises
+				public virtual string Premises
 				{
-				[Dot42.DexImport("getPremises", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPremises(); }
-				[Dot42.DexImport("setPremises", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPremises(value); }
+						[Dot42.DexImport("getPremises", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPremises", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPostalCode
 				/// </java-name>
-				public string PostalCode
+				public virtual string PostalCode
 				{
-				[Dot42.DexImport("getPostalCode", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPostalCode(); }
-				[Dot42.DexImport("setPostalCode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPostalCode(value); }
+						[Dot42.DexImport("getPostalCode", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPostalCode", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCountryCode
 				/// </java-name>
-				public string CountryCode
+				public virtual string CountryCode
 				{
-				[Dot42.DexImport("getCountryCode", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCountryCode(); }
-				[Dot42.DexImport("setCountryCode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetCountryCode(value); }
+						[Dot42.DexImport("getCountryCode", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setCountryCode", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCountryName
 				/// </java-name>
-				public string CountryName
+				public virtual string CountryName
 				{
-				[Dot42.DexImport("getCountryName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCountryName(); }
-				[Dot42.DexImport("setCountryName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetCountryName(value); }
+						[Dot42.DexImport("getCountryName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setCountryName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// hasLatitude
+				/// </java-name>
+				public virtual bool HasLatitude
+				{
+						[Dot42.DexImport("hasLatitude", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getLatitude
 				/// </java-name>
-				public double Latitude
+				public virtual double Latitude
 				{
-				[Dot42.DexImport("getLatitude", "()D", AccessFlags = 1)]
-						get{ return GetLatitude(); }
-				[Dot42.DexImport("setLatitude", "(D)V", AccessFlags = 1)]
-						set{ SetLatitude(value); }
+						[Dot42.DexImport("getLatitude", "()D", AccessFlags = 1)]
+						get{ return default(double); }
+						[Dot42.DexImport("setLatitude", "(D)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// hasLongitude
+				/// </java-name>
+				public virtual bool HasLongitude
+				{
+						[Dot42.DexImport("hasLongitude", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getLongitude
 				/// </java-name>
-				public double Longitude
+				public virtual double Longitude
 				{
-				[Dot42.DexImport("getLongitude", "()D", AccessFlags = 1)]
-						get{ return GetLongitude(); }
-				[Dot42.DexImport("setLongitude", "(D)V", AccessFlags = 1)]
-						set{ SetLongitude(value); }
+						[Dot42.DexImport("getLongitude", "()D", AccessFlags = 1)]
+						get{ return default(double); }
+						[Dot42.DexImport("setLongitude", "(D)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPhone
 				/// </java-name>
-				public string Phone
+				public virtual string Phone
 				{
-				[Dot42.DexImport("getPhone", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPhone(); }
-				[Dot42.DexImport("setPhone", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPhone(value); }
+						[Dot42.DexImport("getPhone", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPhone", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getUrl
 				/// </java-name>
-				public string Url
+				public virtual string Url
 				{
-				[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUrl(); }
-				[Dot42.DexImport("setUrl", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetUrl(value); }
+						[Dot42.DexImport("getUrl", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setUrl", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.OS.Bundle Extras
+				public virtual global::Android.OS.Bundle Extras
 				{
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						get{ return GetExtras(); }
-				[Dot42.DexImport("setExtras", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						set{ SetExtras(value); }
+						[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Bundle); }
+						[Dot42.DexImport("setExtras", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -654,122 +364,11 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// setHorizontalAccuracy
-				/// </java-name>
-				[Dot42.DexImport("setHorizontalAccuracy", "(I)V", AccessFlags = 1)]
-				public virtual void SetHorizontalAccuracy(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHorizontalAccuracy
-				/// </java-name>
-				[Dot42.DexImport("getHorizontalAccuracy", "()I", AccessFlags = 1)]
-				public virtual int GetHorizontalAccuracy() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setVerticalAccuracy
-				/// </java-name>
-				[Dot42.DexImport("setVerticalAccuracy", "(I)V", AccessFlags = 1)]
-				public virtual void SetVerticalAccuracy(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getVerticalAccuracy
-				/// </java-name>
-				[Dot42.DexImport("getVerticalAccuracy", "()I", AccessFlags = 1)]
-				public virtual int GetVerticalAccuracy() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setSpeedAccuracy
-				/// </java-name>
-				[Dot42.DexImport("setSpeedAccuracy", "(I)V", AccessFlags = 1)]
-				public virtual void SetSpeedAccuracy(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSpeedAccuracy
-				/// </java-name>
-				[Dot42.DexImport("getSpeedAccuracy", "()I", AccessFlags = 1)]
-				public virtual int GetSpeedAccuracy() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setBearingAccuracy
-				/// </java-name>
-				[Dot42.DexImport("setBearingAccuracy", "(I)V", AccessFlags = 1)]
-				public virtual void SetBearingAccuracy(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getBearingAccuracy
-				/// </java-name>
-				[Dot42.DexImport("getBearingAccuracy", "()I", AccessFlags = 1)]
-				public virtual int GetBearingAccuracy() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setAccuracy
-				/// </java-name>
-				[Dot42.DexImport("setAccuracy", "(I)V", AccessFlags = 1)]
-				public virtual void SetAccuracy(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAccuracy
-				/// </java-name>
-				[Dot42.DexImport("getAccuracy", "()I", AccessFlags = 1)]
-				public virtual int GetAccuracy() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setPowerRequirement
-				/// </java-name>
-				[Dot42.DexImport("setPowerRequirement", "(I)V", AccessFlags = 1)]
-				public virtual void SetPowerRequirement(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPowerRequirement
-				/// </java-name>
-				[Dot42.DexImport("getPowerRequirement", "()I", AccessFlags = 1)]
-				public virtual int GetPowerRequirement() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setCostAllowed
 				/// </java-name>
 				[Dot42.DexImport("setCostAllowed", "(Z)V", AccessFlags = 1)]
 				public virtual void SetCostAllowed(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isCostAllowed
-				/// </java-name>
-				[Dot42.DexImport("isCostAllowed", "()Z", AccessFlags = 1)]
-				public virtual bool IsCostAllowed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -781,15 +380,6 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// isAltitudeRequired
-				/// </java-name>
-				[Dot42.DexImport("isAltitudeRequired", "()Z", AccessFlags = 1)]
-				public virtual bool IsAltitudeRequired() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setSpeedRequired
 				/// </java-name>
 				[Dot42.DexImport("setSpeedRequired", "(Z)V", AccessFlags = 1)]
@@ -798,29 +388,11 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// isSpeedRequired
-				/// </java-name>
-				[Dot42.DexImport("isSpeedRequired", "()Z", AccessFlags = 1)]
-				public virtual bool IsSpeedRequired() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setBearingRequired
 				/// </java-name>
 				[Dot42.DexImport("setBearingRequired", "(Z)V", AccessFlags = 1)]
 				public virtual void SetBearingRequired(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isBearingRequired
-				/// </java-name>
-				[Dot42.DexImport("isBearingRequired", "()Z", AccessFlags = 1)]
-				public virtual bool IsBearingRequired() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -843,67 +415,103 @@ namespace Android.Location
 				/// <java-name>
 				/// getHorizontalAccuracy
 				/// </java-name>
-				public int HorizontalAccuracy
+				public virtual int HorizontalAccuracy
 				{
-				[Dot42.DexImport("getHorizontalAccuracy", "()I", AccessFlags = 1)]
-						get{ return GetHorizontalAccuracy(); }
-				[Dot42.DexImport("setHorizontalAccuracy", "(I)V", AccessFlags = 1)]
-						set{ SetHorizontalAccuracy(value); }
+						[Dot42.DexImport("getHorizontalAccuracy", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setHorizontalAccuracy", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getVerticalAccuracy
 				/// </java-name>
-				public int VerticalAccuracy
+				public virtual int VerticalAccuracy
 				{
-				[Dot42.DexImport("getVerticalAccuracy", "()I", AccessFlags = 1)]
-						get{ return GetVerticalAccuracy(); }
-				[Dot42.DexImport("setVerticalAccuracy", "(I)V", AccessFlags = 1)]
-						set{ SetVerticalAccuracy(value); }
+						[Dot42.DexImport("getVerticalAccuracy", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setVerticalAccuracy", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSpeedAccuracy
 				/// </java-name>
-				public int SpeedAccuracy
+				public virtual int SpeedAccuracy
 				{
-				[Dot42.DexImport("getSpeedAccuracy", "()I", AccessFlags = 1)]
-						get{ return GetSpeedAccuracy(); }
-				[Dot42.DexImport("setSpeedAccuracy", "(I)V", AccessFlags = 1)]
-						set{ SetSpeedAccuracy(value); }
+						[Dot42.DexImport("getSpeedAccuracy", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSpeedAccuracy", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getBearingAccuracy
 				/// </java-name>
-				public int BearingAccuracy
+				public virtual int BearingAccuracy
 				{
-				[Dot42.DexImport("getBearingAccuracy", "()I", AccessFlags = 1)]
-						get{ return GetBearingAccuracy(); }
-				[Dot42.DexImport("setBearingAccuracy", "(I)V", AccessFlags = 1)]
-						set{ SetBearingAccuracy(value); }
+						[Dot42.DexImport("getBearingAccuracy", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setBearingAccuracy", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAccuracy
 				/// </java-name>
-				public int Accuracy
+				public virtual int Accuracy
 				{
-				[Dot42.DexImport("getAccuracy", "()I", AccessFlags = 1)]
-						get{ return GetAccuracy(); }
-				[Dot42.DexImport("setAccuracy", "(I)V", AccessFlags = 1)]
-						set{ SetAccuracy(value); }
+						[Dot42.DexImport("getAccuracy", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setAccuracy", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPowerRequirement
 				/// </java-name>
-				public int PowerRequirement
+				public virtual int PowerRequirement
 				{
-				[Dot42.DexImport("getPowerRequirement", "()I", AccessFlags = 1)]
-						get{ return GetPowerRequirement(); }
-				[Dot42.DexImport("setPowerRequirement", "(I)V", AccessFlags = 1)]
-						set{ SetPowerRequirement(value); }
+						[Dot42.DexImport("getPowerRequirement", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setPowerRequirement", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isCostAllowed
+				/// </java-name>
+				public virtual bool IsCostAllowed
+				{
+						[Dot42.DexImport("isCostAllowed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isAltitudeRequired
+				/// </java-name>
+				public virtual bool IsAltitudeRequired
+				{
+						[Dot42.DexImport("isAltitudeRequired", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isSpeedRequired
+				/// </java-name>
+				public virtual bool IsSpeedRequired
+				{
+						[Dot42.DexImport("isSpeedRequired", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isBearingRequired
+				/// </java-name>
+				public virtual bool IsBearingRequired
+				{
+						[Dot42.DexImport("isBearingRequired", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -923,15 +531,6 @@ namespace Android.Location
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
 				public Geocoder(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isPresent
-				/// </java-name>
-				[Dot42.DexImport("isPresent", "()Z", AccessFlags = 9)]
-				public static bool IsPresent() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -966,6 +565,15 @@ namespace Android.Location
 				{
 				}
 
+				/// <java-name>
+				/// isPresent
+				/// </java-name>
+				public static bool IsPresent
+				{
+						[Dot42.DexImport("isPresent", "()Z", AccessFlags = 9)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -978,60 +586,6 @@ namespace Android.Location
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal GpsSatellite() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPrn
-				/// </java-name>
-				[Dot42.DexImport("getPrn", "()I", AccessFlags = 1)]
-				public int GetPrn() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSnr
-				/// </java-name>
-				[Dot42.DexImport("getSnr", "()F", AccessFlags = 1)]
-				public float GetSnr() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getElevation
-				/// </java-name>
-				[Dot42.DexImport("getElevation", "()F", AccessFlags = 1)]
-				public float GetElevation() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getAzimuth
-				/// </java-name>
-				[Dot42.DexImport("getAzimuth", "()F", AccessFlags = 1)]
-				public float GetAzimuth() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// hasEphemeris
-				/// </java-name>
-				[Dot42.DexImport("hasEphemeris", "()Z", AccessFlags = 1)]
-				public bool HasEphemeris() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasAlmanac
-				/// </java-name>
-				[Dot42.DexImport("hasAlmanac", "()Z", AccessFlags = 1)]
-				public bool HasAlmanac() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1048,8 +602,8 @@ namespace Android.Location
 				/// </java-name>
 				public int Prn
 				{
-				[Dot42.DexImport("getPrn", "()I", AccessFlags = 1)]
-						get{ return GetPrn(); }
+						[Dot42.DexImport("getPrn", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1057,8 +611,8 @@ namespace Android.Location
 				/// </java-name>
 				public float Snr
 				{
-				[Dot42.DexImport("getSnr", "()F", AccessFlags = 1)]
-						get{ return GetSnr(); }
+						[Dot42.DexImport("getSnr", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
@@ -1066,8 +620,8 @@ namespace Android.Location
 				/// </java-name>
 				public float Elevation
 				{
-				[Dot42.DexImport("getElevation", "()F", AccessFlags = 1)]
-						get{ return GetElevation(); }
+						[Dot42.DexImport("getElevation", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
@@ -1075,8 +629,26 @@ namespace Android.Location
 				/// </java-name>
 				public float Azimuth
 				{
-				[Dot42.DexImport("getAzimuth", "()F", AccessFlags = 1)]
-						get{ return GetAzimuth(); }
+						[Dot42.DexImport("getAzimuth", "()F", AccessFlags = 1)]
+						get{ return default(float); }
+				}
+
+				/// <java-name>
+				/// hasEphemeris
+				/// </java-name>
+				public bool HasEphemeris
+				{
+						[Dot42.DexImport("hasEphemeris", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasAlmanac
+				/// </java-name>
+				public bool HasAlmanac
+				{
+						[Dot42.DexImport("hasAlmanac", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1116,37 +688,10 @@ namespace Android.Location
 				/// <java-name>
 				/// getTimeToFirstFix
 				/// </java-name>
-				[Dot42.DexImport("getTimeToFirstFix", "()I", AccessFlags = 1)]
-				public int GetTimeToFirstFix() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSatellites
-				/// </java-name>
-				[Dot42.DexImport("getSatellites", "()Ljava/lang/Iterable;", AccessFlags = 1, Signature = "()Ljava/lang/Iterable<Landroid/location/GpsSatellite;>;")]
-				public global::Java.Lang.IIterable<global::Android.Location.GpsSatellite> GetSatellites() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.IIterable<global::Android.Location.GpsSatellite>);
-				}
-
-				/// <java-name>
-				/// getMaxSatellites
-				/// </java-name>
-				[Dot42.DexImport("getMaxSatellites", "()I", AccessFlags = 1)]
-				public int GetMaxSatellites() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTimeToFirstFix
-				/// </java-name>
 				public int TimeToFirstFix
 				{
-				[Dot42.DexImport("getTimeToFirstFix", "()I", AccessFlags = 1)]
-						get{ return GetTimeToFirstFix(); }
+						[Dot42.DexImport("getTimeToFirstFix", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1154,8 +699,8 @@ namespace Android.Location
 				/// </java-name>
 				public global::Java.Lang.IIterable<global::Android.Location.GpsSatellite> Satellites
 				{
-				[Dot42.DexImport("getSatellites", "()Ljava/lang/Iterable;", AccessFlags = 1, Signature = "()Ljava/lang/Iterable<Landroid/location/GpsSatellite;>;")]
-						get{ return GetSatellites(); }
+						[Dot42.DexImport("getSatellites", "()Ljava/lang/Iterable;", AccessFlags = 1, Signature = "()Ljava/lang/Iterable<Landroid/location/GpsSatellite;>;")]
+						get{ return default(global::Java.Lang.IIterable<global::Android.Location.GpsSatellite>); }
 				}
 
 				/// <java-name>
@@ -1163,8 +708,8 @@ namespace Android.Location
 				/// </java-name>
 				public int MaxSatellites
 				{
-				[Dot42.DexImport("getMaxSatellites", "()I", AccessFlags = 1)]
-						get{ return GetMaxSatellites(); }
+						[Dot42.DexImport("getMaxSatellites", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1338,130 +883,10 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setProvider
-				/// </java-name>
-				[Dot42.DexImport("setProvider", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetProvider(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTime
-				/// </java-name>
-				[Dot42.DexImport("getTime", "()J", AccessFlags = 1)]
-				public virtual long GetTime() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setTime
-				/// </java-name>
-				[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
-				public virtual void SetTime(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLatitude
-				/// </java-name>
-				[Dot42.DexImport("getLatitude", "()D", AccessFlags = 1)]
-				public virtual double GetLatitude() /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// setLatitude
-				/// </java-name>
-				[Dot42.DexImport("setLatitude", "(D)V", AccessFlags = 1)]
-				public virtual void SetLatitude(double @double) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLongitude
-				/// </java-name>
-				[Dot42.DexImport("getLongitude", "()D", AccessFlags = 1)]
-				public virtual double GetLongitude() /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// setLongitude
-				/// </java-name>
-				[Dot42.DexImport("setLongitude", "(D)V", AccessFlags = 1)]
-				public virtual void SetLongitude(double @double) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// hasAltitude
-				/// </java-name>
-				[Dot42.DexImport("hasAltitude", "()Z", AccessFlags = 1)]
-				public virtual bool HasAltitude() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getAltitude
-				/// </java-name>
-				[Dot42.DexImport("getAltitude", "()D", AccessFlags = 1)]
-				public virtual double GetAltitude() /* MethodBuilder.Create */ 
-				{
-						return default(double);
-				}
-
-				/// <java-name>
-				/// setAltitude
-				/// </java-name>
-				[Dot42.DexImport("setAltitude", "(D)V", AccessFlags = 1)]
-				public virtual void SetAltitude(double @double) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// removeAltitude
 				/// </java-name>
 				[Dot42.DexImport("removeAltitude", "()V", AccessFlags = 1)]
 				public virtual void RemoveAltitude() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// hasSpeed
-				/// </java-name>
-				[Dot42.DexImport("hasSpeed", "()Z", AccessFlags = 1)]
-				public virtual bool HasSpeed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getSpeed
-				/// </java-name>
-				[Dot42.DexImport("getSpeed", "()F", AccessFlags = 1)]
-				public virtual float GetSpeed() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// setSpeed
-				/// </java-name>
-				[Dot42.DexImport("setSpeed", "(F)V", AccessFlags = 1)]
-				public virtual void SetSpeed(float single) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1474,32 +899,6 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// hasBearing
-				/// </java-name>
-				[Dot42.DexImport("hasBearing", "()Z", AccessFlags = 1)]
-				public virtual bool HasBearing() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getBearing
-				/// </java-name>
-				[Dot42.DexImport("getBearing", "()F", AccessFlags = 1)]
-				public virtual float GetBearing() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// setBearing
-				/// </java-name>
-				[Dot42.DexImport("setBearing", "(F)V", AccessFlags = 1)]
-				public virtual void SetBearing(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// removeBearing
 				/// </java-name>
 				[Dot42.DexImport("removeBearing", "()V", AccessFlags = 1)]
@@ -1508,53 +907,10 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// hasAccuracy
-				/// </java-name>
-				[Dot42.DexImport("hasAccuracy", "()Z", AccessFlags = 1)]
-				public virtual bool HasAccuracy() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getAccuracy
-				/// </java-name>
-				[Dot42.DexImport("getAccuracy", "()F", AccessFlags = 1)]
-				public virtual float GetAccuracy() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// setAccuracy
-				/// </java-name>
-				[Dot42.DexImport("setAccuracy", "(F)V", AccessFlags = 1)]
-				public virtual void SetAccuracy(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// removeAccuracy
 				/// </java-name>
 				[Dot42.DexImport("removeAccuracy", "()V", AccessFlags = 1)]
 				public virtual void RemoveAccuracy() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getExtras
-				/// </java-name>
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Bundle);
-				}
-
-				/// <java-name>
-				/// setExtras
-				/// </java-name>
-				[Dot42.DexImport("setExtras", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void SetExtras(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1592,100 +948,136 @@ namespace Android.Location
 				/// <java-name>
 				/// getProvider
 				/// </java-name>
-				public string Provider
+				public virtual string Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetProvider(); }
-				[Dot42.DexImport("setProvider", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetProvider(value); }
+						[Dot42.DexImport("getProvider", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setProvider", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTime
 				/// </java-name>
-				public long Time
+				public virtual long Time
 				{
-				[Dot42.DexImport("getTime", "()J", AccessFlags = 1)]
-						get{ return GetTime(); }
-				[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
-						set{ SetTime(value); }
+						[Dot42.DexImport("getTime", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLatitude
 				/// </java-name>
-				public double Latitude
+				public virtual double Latitude
 				{
-				[Dot42.DexImport("getLatitude", "()D", AccessFlags = 1)]
-						get{ return GetLatitude(); }
-				[Dot42.DexImport("setLatitude", "(D)V", AccessFlags = 1)]
-						set{ SetLatitude(value); }
+						[Dot42.DexImport("getLatitude", "()D", AccessFlags = 1)]
+						get{ return default(double); }
+						[Dot42.DexImport("setLatitude", "(D)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLongitude
 				/// </java-name>
-				public double Longitude
+				public virtual double Longitude
 				{
-				[Dot42.DexImport("getLongitude", "()D", AccessFlags = 1)]
-						get{ return GetLongitude(); }
-				[Dot42.DexImport("setLongitude", "(D)V", AccessFlags = 1)]
-						set{ SetLongitude(value); }
+						[Dot42.DexImport("getLongitude", "()D", AccessFlags = 1)]
+						get{ return default(double); }
+						[Dot42.DexImport("setLongitude", "(D)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// hasAltitude
+				/// </java-name>
+				public virtual bool HasAltitude
+				{
+						[Dot42.DexImport("hasAltitude", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getAltitude
 				/// </java-name>
-				public double Altitude
+				public virtual double Altitude
 				{
-				[Dot42.DexImport("getAltitude", "()D", AccessFlags = 1)]
-						get{ return GetAltitude(); }
-				[Dot42.DexImport("setAltitude", "(D)V", AccessFlags = 1)]
-						set{ SetAltitude(value); }
+						[Dot42.DexImport("getAltitude", "()D", AccessFlags = 1)]
+						get{ return default(double); }
+						[Dot42.DexImport("setAltitude", "(D)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// hasSpeed
+				/// </java-name>
+				public virtual bool HasSpeed
+				{
+						[Dot42.DexImport("hasSpeed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getSpeed
 				/// </java-name>
-				public float Speed
+				public virtual float Speed
 				{
-				[Dot42.DexImport("getSpeed", "()F", AccessFlags = 1)]
-						get{ return GetSpeed(); }
-				[Dot42.DexImport("setSpeed", "(F)V", AccessFlags = 1)]
-						set{ SetSpeed(value); }
+						[Dot42.DexImport("getSpeed", "()F", AccessFlags = 1)]
+						get{ return default(float); }
+						[Dot42.DexImport("setSpeed", "(F)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// hasBearing
+				/// </java-name>
+				public virtual bool HasBearing
+				{
+						[Dot42.DexImport("hasBearing", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getBearing
 				/// </java-name>
-				public float Bearing
+				public virtual float Bearing
 				{
-				[Dot42.DexImport("getBearing", "()F", AccessFlags = 1)]
-						get{ return GetBearing(); }
-				[Dot42.DexImport("setBearing", "(F)V", AccessFlags = 1)]
-						set{ SetBearing(value); }
+						[Dot42.DexImport("getBearing", "()F", AccessFlags = 1)]
+						get{ return default(float); }
+						[Dot42.DexImport("setBearing", "(F)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// hasAccuracy
+				/// </java-name>
+				public virtual bool HasAccuracy
+				{
+						[Dot42.DexImport("hasAccuracy", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getAccuracy
 				/// </java-name>
-				public float Accuracy
+				public virtual float Accuracy
 				{
-				[Dot42.DexImport("getAccuracy", "()F", AccessFlags = 1)]
-						get{ return GetAccuracy(); }
-				[Dot42.DexImport("setAccuracy", "(F)V", AccessFlags = 1)]
-						set{ SetAccuracy(value); }
+						[Dot42.DexImport("getAccuracy", "()F", AccessFlags = 1)]
+						get{ return default(float); }
+						[Dot42.DexImport("setAccuracy", "(F)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.OS.Bundle Extras
+				public virtual global::Android.OS.Bundle Extras
 				{
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						get{ return GetExtras(); }
-				[Dot42.DexImport("setExtras", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						set{ SetExtras(value); }
+						[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Bundle); }
+						[Dot42.DexImport("setExtras", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -1740,15 +1132,6 @@ namespace Android.Location
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal LocationManager() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getAllProviders
-				/// </java-name>
-				[Dot42.DexImport("getAllProviders", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.IList<string> GetAllProviders() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<string>);
 				}
 
 				/// <java-name>
@@ -2030,10 +1413,10 @@ namespace Android.Location
 				/// <java-name>
 				/// getAllProviders
 				/// </java-name>
-				public global::Java.Util.IList<string> AllProviders
+				public virtual global::Java.Util.IList<string> AllProviders
 				{
-				[Dot42.DexImport("getAllProviders", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						get{ return GetAllProviders(); }
+						[Dot42.DexImport("getAllProviders", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IList<string>); }
 				}
 
 		}
@@ -2066,15 +1449,6 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// meetsCriteria
 				/// </java-name>
 				[Dot42.DexImport("meetsCriteria", "(Landroid/location/Criteria;)Z", AccessFlags = 1)]
@@ -2102,12 +1476,6 @@ namespace Android.Location
 				public abstract bool RequiresCell() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// hasMonetaryCost
-				/// </java-name>
-				[Dot42.DexImport("hasMonetaryCost", "()Z", AccessFlags = 1025)]
-				public abstract bool HasMonetaryCost() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// supportsAltitude
 				/// </java-name>
 				[Dot42.DexImport("supportsAltitude", "()Z", AccessFlags = 1025)]
@@ -2126,42 +1494,39 @@ namespace Android.Location
 				public abstract bool SupportsBearing() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getPowerRequirement
-				/// </java-name>
-				[Dot42.DexImport("getPowerRequirement", "()I", AccessFlags = 1025)]
-				public abstract int GetPowerRequirement() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAccuracy
-				/// </java-name>
-				[Dot42.DexImport("getAccuracy", "()I", AccessFlags = 1025)]
-				public abstract int GetAccuracy() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// hasMonetaryCost
+				/// </java-name>
+				public abstract bool HasMonetaryCost
+				{
+						[Dot42.DexImport("hasMonetaryCost", "()Z", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getPowerRequirement
 				/// </java-name>
-				public int PowerRequirement
+				public abstract int PowerRequirement
 				{
-				[Dot42.DexImport("getPowerRequirement", "()I", AccessFlags = 1025)]
-						get{ return GetPowerRequirement(); }
+						[Dot42.DexImport("getPowerRequirement", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getAccuracy
 				/// </java-name>
-				public int Accuracy
+				public abstract int Accuracy
 				{
-				[Dot42.DexImport("getAccuracy", "()I", AccessFlags = 1025)]
-						get{ return GetAccuracy(); }
+						[Dot42.DexImport("getAccuracy", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 		}

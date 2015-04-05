@@ -95,33 +95,6 @@ namespace Javax.Crypto
 				}
 
 				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getBlockSize
-				/// </java-name>
-				[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 17)]
-				public int GetBlockSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getOutputSize
 				/// </java-name>
 				[Dot42.DexImport("getOutputSize", "(I)I", AccessFlags = 17)]
@@ -137,33 +110,6 @@ namespace Javax.Crypto
 				public sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getIV
-				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-				public byte[] GetIV() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getParameters
-				/// </java-name>
-				[Dot42.DexImport("getParameters", "()Ljava/security/AlgorithmParameters;", AccessFlags = 17)]
-				public global::Java.Security.AlgorithmParameters GetParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.AlgorithmParameters);
-				}
-
-				/// <java-name>
-				/// getExemptionMechanism
-				/// </java-name>
-				[Dot42.DexImport("getExemptionMechanism", "()Ljavax/crypto/ExemptionMechanism;", AccessFlags = 17)]
-				public global::Javax.Crypto.ExemptionMechanism GetExemptionMechanism() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Crypto.ExemptionMechanism);
 				}
 
 				/// <java-name>
@@ -494,8 +440,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 				/// <java-name>
@@ -503,8 +449,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -512,8 +458,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public int BlockSize
 				{
-				[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 17)]
-						get{ return GetBlockSize(); }
+						[Dot42.DexImport("getBlockSize", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -521,8 +467,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public byte[] IV
 				{
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-						get{ return GetIV(); }
+						[Dot42.DexImport("getIV", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -530,8 +476,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public global::Java.Security.AlgorithmParameters Parameters
 				{
-				[Dot42.DexImport("getParameters", "()Ljava/security/AlgorithmParameters;", AccessFlags = 17)]
-						get{ return GetParameters(); }
+						[Dot42.DexImport("getParameters", "()Ljava/security/AlgorithmParameters;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.AlgorithmParameters); }
 				}
 
 				/// <java-name>
@@ -539,8 +485,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public global::Javax.Crypto.ExemptionMechanism ExemptionMechanism
 				{
-				[Dot42.DexImport("getExemptionMechanism", "()Ljavax/crypto/ExemptionMechanism;", AccessFlags = 17)]
-						get{ return GetExemptionMechanism(); }
+						[Dot42.DexImport("getExemptionMechanism", "()Ljavax/crypto/ExemptionMechanism;", AccessFlags = 17)]
+						get{ return default(global::Javax.Crypto.ExemptionMechanism); }
 				}
 
 		}
@@ -920,39 +866,12 @@ namespace Javax.Crypto
 				}
 
 				/// <java-name>
-				/// getAlgName
-				/// </java-name>
-				[Dot42.DexImport("getAlgName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAlgName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAlgParameters
-				/// </java-name>
-				[Dot42.DexImport("getAlgParameters", "()Ljava/security/AlgorithmParameters;", AccessFlags = 1)]
-				public virtual global::Java.Security.AlgorithmParameters GetAlgParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.AlgorithmParameters);
-				}
-
-				/// <java-name>
 				/// getEncryptedData
 				/// </java-name>
 				[Dot42.DexImport("getEncryptedData", "()[B", AccessFlags = 1)]
 				public virtual sbyte[] JavaGetEncryptedData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getEncryptedData
-				/// </java-name>
-				[Dot42.DexImport("getEncryptedData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetEncryptedData() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -1001,15 +920,6 @@ namespace Javax.Crypto
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetEncoded() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal EncryptedPrivateKeyInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1018,37 +928,37 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// getAlgName
 				/// </java-name>
-				public string AlgName
+				public virtual string AlgName
 				{
-				[Dot42.DexImport("getAlgName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAlgName(); }
+						[Dot42.DexImport("getAlgName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getAlgParameters
 				/// </java-name>
-				public global::Java.Security.AlgorithmParameters AlgParameters
+				public virtual global::Java.Security.AlgorithmParameters AlgParameters
 				{
-				[Dot42.DexImport("getAlgParameters", "()Ljava/security/AlgorithmParameters;", AccessFlags = 1)]
-						get{ return GetAlgParameters(); }
+						[Dot42.DexImport("getAlgParameters", "()Ljava/security/AlgorithmParameters;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.AlgorithmParameters); }
 				}
 
 				/// <java-name>
 				/// getEncryptedData
 				/// </java-name>
-				public byte[] EncryptedData
+				public virtual byte[] EncryptedData
 				{
-				[Dot42.DexImport("getEncryptedData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetEncryptedData(); }
+						[Dot42.DexImport("getEncryptedData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public virtual byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -1064,15 +974,6 @@ namespace Javax.Crypto
     "", AccessFlags = 4)]
 				protected internal ExemptionMechanism(global::Javax.Crypto.ExemptionMechanismSpi exemptionMechanismSpi, global::Java.Security.Provider provider, string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -1100,15 +1001,6 @@ namespace Javax.Crypto
 				public static global::Javax.Crypto.ExemptionMechanism GetInstance(string @string, global::Java.Security.Provider provider) /* MethodBuilder.Create */ 
 				{
 						return default(global::Javax.Crypto.ExemptionMechanism);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
 				}
 
 				/// <java-name>
@@ -1223,8 +1115,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1232,8 +1124,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 		}
@@ -1374,24 +1266,6 @@ namespace Javax.Crypto
 				}
 
 				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
 				/// getInstance
 				/// </java-name>
 				[Dot42.DexImport("getInstance", "(Ljava/lang/String;)Ljavax/crypto/KeyAgreement;", AccessFlags = 25)]
@@ -1515,8 +1389,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1524,8 +1398,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 		}
@@ -1603,24 +1477,6 @@ namespace Javax.Crypto
 				[Dot42.DexImport("<init>", "(Ljavax/crypto/KeyGeneratorSpi;Ljava/security/Provider;Ljava/lang/String;)V", AccessFlags = 4)]
 				protected internal KeyGenerator(global::Javax.Crypto.KeyGeneratorSpi keyGeneratorSpi, global::Java.Security.Provider provider, string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
 				}
 
 				/// <java-name>
@@ -1709,8 +1565,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1718,8 +1574,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 		}
@@ -1775,24 +1631,6 @@ namespace Javax.Crypto
 				}
 
 				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
-				}
-
-				/// <java-name>
 				/// getInstance
 				/// </java-name>
 				[Dot42.DexImport("getInstance", "(Ljava/lang/String;)Ljavax/crypto/Mac;", AccessFlags = 25)]
@@ -1817,15 +1655,6 @@ namespace Javax.Crypto
 				public static global::Javax.Crypto.Mac GetInstance(string @string, global::Java.Security.Provider provider) /* MethodBuilder.Create */ 
 				{
 						return default(global::Javax.Crypto.Mac);
-				}
-
-				/// <java-name>
-				/// getMacLength
-				/// </java-name>
-				[Dot42.DexImport("getMacLength", "()I", AccessFlags = 17)]
-				public int GetMacLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1979,8 +1808,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1988,8 +1817,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 				/// <java-name>
@@ -1997,8 +1826,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public int MacLength
 				{
-				[Dot42.DexImport("getMacLength", "()I", AccessFlags = 17)]
-						get{ return GetMacLength(); }
+						[Dot42.DexImport("getMacLength", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2144,15 +1973,6 @@ namespace Javax.Crypto
 				}
 
 				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getObject
 				/// </java-name>
 				[Dot42.DexImport("getObject", "(Ljava/security/Key;)Ljava/lang/Object;", AccessFlags = 17)]
@@ -2189,8 +2009,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 		}
@@ -2205,24 +2025,6 @@ namespace Javax.Crypto
 				[Dot42.DexImport("<init>", "(Ljavax/crypto/SecretKeyFactorySpi;Ljava/security/Provider;Ljava/lang/String;)V", AccessFlags = 4)]
 				protected internal SecretKeyFactory(global::Javax.Crypto.SecretKeyFactorySpi secretKeyFactorySpi, global::Java.Security.Provider provider, string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProvider
-				/// </java-name>
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-				public global::Java.Security.Provider GetProvider() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Provider);
 				}
 
 				/// <java-name>
@@ -2289,8 +2091,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -2298,8 +2100,8 @@ namespace Javax.Crypto
 				/// </java-name>
 				public global::Java.Security.Provider Provider
 				{
-				[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
-						get{ return GetProvider(); }
+						[Dot42.DexImport("getProvider", "()Ljava/security/Provider;", AccessFlags = 17)]
+						get{ return default(global::Java.Security.Provider); }
 				}
 
 		}

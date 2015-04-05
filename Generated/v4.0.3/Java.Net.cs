@@ -14,60 +14,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getPasswordAuthentication
-				/// </java-name>
-				[Dot42.DexImport("getPasswordAuthentication", "()Ljava/net/PasswordAuthentication;", AccessFlags = 4)]
-				protected internal virtual global::Java.Net.PasswordAuthentication GetPasswordAuthentication() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.PasswordAuthentication);
-				}
-
-				/// <java-name>
-				/// getRequestingPort
-				/// </java-name>
-				[Dot42.DexImport("getRequestingPort", "()I", AccessFlags = 20)]
-				protected internal int GetRequestingPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRequestingSite
-				/// </java-name>
-				[Dot42.DexImport("getRequestingSite", "()Ljava/net/InetAddress;", AccessFlags = 20)]
-				protected internal global::Java.Net.InetAddress GetRequestingSite() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getRequestingPrompt
-				/// </java-name>
-				[Dot42.DexImport("getRequestingPrompt", "()Ljava/lang/String;", AccessFlags = 20)]
-				protected internal string GetRequestingPrompt() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRequestingProtocol
-				/// </java-name>
-				[Dot42.DexImport("getRequestingProtocol", "()Ljava/lang/String;", AccessFlags = 20)]
-				protected internal string GetRequestingProtocol() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRequestingScheme
-				/// </java-name>
-				[Dot42.DexImport("getRequestingScheme", "()Ljava/lang/String;", AccessFlags = 20)]
-				protected internal string GetRequestingScheme() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// requestPasswordAuthentication
 				/// </java-name>
 				[Dot42.DexImport("requestPasswordAuthentication", "(Ljava/net/InetAddress;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lj" +
@@ -96,15 +42,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getRequestingHost
-				/// </java-name>
-				[Dot42.DexImport("getRequestingHost", "()Ljava/lang/String;", AccessFlags = 20)]
-				protected internal string GetRequestingHost() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// requestPasswordAuthentication
 				/// </java-name>
 				[Dot42.DexImport("requestPasswordAuthentication", "(Ljava/lang/String;Ljava/net/InetAddress;ILjava/lang/String;Ljava/lang/String;Lja" +
@@ -113,15 +50,6 @@ namespace Java.Net
 				public static global::Java.Net.PasswordAuthentication RequestPasswordAuthentication(string @string, global::Java.Net.InetAddress inetAddress, int int32, string string1, string string2, string string3, global::Java.Net.URL uRL, global::Java.Net.Authenticator.RequestorType requestorType) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.PasswordAuthentication);
-				}
-
-				/// <java-name>
-				/// getRequestingURL
-				/// </java-name>
-				[Dot42.DexImport("getRequestingURL", "()Ljava/net/URL;", AccessFlags = 4)]
-				protected internal virtual global::Java.Net.URL GetRequestingURL() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.URL);
 				}
 
 				/// <java-name>
@@ -136,10 +64,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getPasswordAuthentication
 				/// </java-name>
-				protected internal global::Java.Net.PasswordAuthentication PasswordAuthentication
+				protected internal virtual global::Java.Net.PasswordAuthentication PasswordAuthentication
 				{
-				[Dot42.DexImport("getPasswordAuthentication", "()Ljava/net/PasswordAuthentication;", AccessFlags = 4)]
-						get{ return GetPasswordAuthentication(); }
+						[Dot42.DexImport("getPasswordAuthentication", "()Ljava/net/PasswordAuthentication;", AccessFlags = 4)]
+						get{ return default(global::Java.Net.PasswordAuthentication); }
 				}
 
 				/// <java-name>
@@ -147,8 +75,8 @@ namespace Java.Net
 				/// </java-name>
 				protected internal int RequestingPort
 				{
-				[Dot42.DexImport("getRequestingPort", "()I", AccessFlags = 20)]
-						get{ return GetRequestingPort(); }
+						[Dot42.DexImport("getRequestingPort", "()I", AccessFlags = 20)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -156,8 +84,8 @@ namespace Java.Net
 				/// </java-name>
 				protected internal global::Java.Net.InetAddress RequestingSite
 				{
-				[Dot42.DexImport("getRequestingSite", "()Ljava/net/InetAddress;", AccessFlags = 20)]
-						get{ return GetRequestingSite(); }
+						[Dot42.DexImport("getRequestingSite", "()Ljava/net/InetAddress;", AccessFlags = 20)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
@@ -165,8 +93,8 @@ namespace Java.Net
 				/// </java-name>
 				protected internal string RequestingPrompt
 				{
-				[Dot42.DexImport("getRequestingPrompt", "()Ljava/lang/String;", AccessFlags = 20)]
-						get{ return GetRequestingPrompt(); }
+						[Dot42.DexImport("getRequestingPrompt", "()Ljava/lang/String;", AccessFlags = 20)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -174,8 +102,8 @@ namespace Java.Net
 				/// </java-name>
 				protected internal string RequestingProtocol
 				{
-				[Dot42.DexImport("getRequestingProtocol", "()Ljava/lang/String;", AccessFlags = 20)]
-						get{ return GetRequestingProtocol(); }
+						[Dot42.DexImport("getRequestingProtocol", "()Ljava/lang/String;", AccessFlags = 20)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -183,8 +111,8 @@ namespace Java.Net
 				/// </java-name>
 				protected internal string RequestingScheme
 				{
-				[Dot42.DexImport("getRequestingScheme", "()Ljava/lang/String;", AccessFlags = 20)]
-						get{ return GetRequestingScheme(); }
+						[Dot42.DexImport("getRequestingScheme", "()Ljava/lang/String;", AccessFlags = 20)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -192,17 +120,17 @@ namespace Java.Net
 				/// </java-name>
 				protected internal string RequestingHost
 				{
-				[Dot42.DexImport("getRequestingHost", "()Ljava/lang/String;", AccessFlags = 20)]
-						get{ return GetRequestingHost(); }
+						[Dot42.DexImport("getRequestingHost", "()Ljava/lang/String;", AccessFlags = 20)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getRequestingURL
 				/// </java-name>
-				protected internal global::Java.Net.URL RequestingURL
+				protected internal virtual global::Java.Net.URL RequestingURL
 				{
-				[Dot42.DexImport("getRequestingURL", "()Ljava/net/URL;", AccessFlags = 4)]
-						get{ return GetRequestingURL(); }
+						[Dot42.DexImport("getRequestingURL", "()Ljava/net/URL;", AccessFlags = 4)]
+						get{ return default(global::Java.Net.URL); }
 				}
 
 				/// <java-name>
@@ -288,16 +216,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getBody
 				/// </java-name>
-				[Dot42.DexImport("getBody", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
-				public abstract global::Java.Io.OutputStream GetBody() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getBody
-				/// </java-name>
-				public global::Java.Io.OutputStream Body
+				public abstract global::Java.Io.OutputStream Body
 				{
-				[Dot42.DexImport("getBody", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
-						get{ return GetBody(); }
+						[Dot42.DexImport("getBody", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -317,31 +239,19 @@ namespace Java.Net
 				/// <java-name>
 				/// getBody
 				/// </java-name>
-				[Dot42.DexImport("getBody", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-				public abstract global::Java.Io.InputStream GetBody() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getHeaders
-				/// </java-name>
-				[Dot42.DexImport("getHeaders", "()Ljava/util/Map;", AccessFlags = 1025, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;")]
-				public abstract global::Java.Util.IMap<string, global::Java.Util.IList<string>> GetHeaders() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getBody
-				/// </java-name>
-				public global::Java.Io.InputStream Body
+				public abstract global::Java.Io.InputStream Body
 				{
-				[Dot42.DexImport("getBody", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-						get{ return GetBody(); }
+						[Dot42.DexImport("getBody", "()Ljava/io/InputStream;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getHeaders
 				/// </java-name>
-				public global::Java.Util.IMap<string, global::Java.Util.IList<string>> Headers
+				public abstract global::Java.Util.IMap<string, global::Java.Util.IList<string>> Headers
 				{
-				[Dot42.DexImport("getHeaders", "()Ljava/util/Map;", AccessFlags = 1025, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;")]
-						get{ return GetHeaders(); }
+						[Dot42.DexImport("getHeaders", "()Ljava/util/Map;", AccessFlags = 1025, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;")]
+						get;
 				}
 
 		}
@@ -407,23 +317,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Ljava/net/CookieHandler;", AccessFlags = 9)]
-				public static global::Java.Net.CookieHandler GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.CookieHandler);
-				}
-
-				/// <java-name>
-				/// setDefault
-				/// </java-name>
-				[Dot42.DexImport("setDefault", "(Ljava/net/CookieHandler;)V", AccessFlags = 9)]
-				public static void SetDefault(global::Java.Net.CookieHandler cookieHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// get
 				/// </java-name>
 				[Dot42.DexImport("get", "(Ljava/net/URI;Ljava/util/Map;)Ljava/util/Map;", AccessFlags = 1025, Signature = "(Ljava/net/URI;Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String" +
@@ -442,10 +335,10 @@ namespace Java.Net
 				/// </java-name>
 				public static global::Java.Net.CookieHandler Default
 				{
-				[Dot42.DexImport("getDefault", "()Ljava/net/CookieHandler;", AccessFlags = 9)]
-						get{ return GetDefault(); }
-				[Dot42.DexImport("setDefault", "(Ljava/net/CookieHandler;)V", AccessFlags = 9)]
-						set{ SetDefault(value); }
+						[Dot42.DexImport("getDefault", "()Ljava/net/CookieHandler;", AccessFlags = 9)]
+						get{ return default(global::Java.Net.CookieHandler); }
+						[Dot42.DexImport("setDefault", "(Ljava/net/CookieHandler;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 		}
@@ -497,19 +390,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getCookieStore
 				/// </java-name>
-				[Dot42.DexImport("getCookieStore", "()Ljava/net/CookieStore;", AccessFlags = 1)]
-				public virtual global::Java.Net.ICookieStore GetCookieStore() /* MethodBuilder.Create */ 
+				public virtual global::Java.Net.ICookieStore CookieStore
 				{
-						return default(global::Java.Net.ICookieStore);
-				}
-
-				/// <java-name>
-				/// getCookieStore
-				/// </java-name>
-				public global::Java.Net.ICookieStore CookieStore
-				{
-				[Dot42.DexImport("getCookieStore", "()Ljava/net/CookieStore;", AccessFlags = 1)]
-						get{ return GetCookieStore(); }
+						[Dot42.DexImport("getCookieStore", "()Ljava/net/CookieStore;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.ICookieStore); }
 				}
 
 		}
@@ -582,65 +466,12 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				[Dot42.DexImport("getAddress", "()Ljava/net/InetAddress;", AccessFlags = 33)]
-				public global::Java.Net.InetAddress GetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
 				/// getData
 				/// </java-name>
 				[Dot42.DexImport("getData", "()[B", AccessFlags = 33)]
 				public sbyte[] JavaGetData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 33, IgnoreFromJava = true)]
-				public byte[] GetData() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 33)]
-				public int GetLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOffset
-				/// </java-name>
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 33)]
-				public int GetOffset() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 33)]
-				public int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setAddress
-				/// </java-name>
-				[Dot42.DexImport("setAddress", "(Ljava/net/InetAddress;)V", AccessFlags = 33)]
-				public void SetAddress(global::Java.Net.InetAddress inetAddress) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -667,47 +498,6 @@ namespace Java.Net
 				{
 				}
 
-				/// <java-name>
-				/// setData
-				/// </java-name>
-				[Dot42.DexImport("setData", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
-				public void SetData(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLength
-				/// </java-name>
-				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 33)]
-				public void SetLength(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPort
-				/// </java-name>
-				[Dot42.DexImport("setPort", "(I)V", AccessFlags = 33)]
-				public void SetPort(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("getSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 33)]
-				public global::Java.Net.SocketAddress GetSocketAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.SocketAddress);
-				}
-
-				/// <java-name>
-				/// setSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("setSocketAddress", "(Ljava/net/SocketAddress;)V", AccessFlags = 33)]
-				public void SetSocketAddress(global::Java.Net.SocketAddress socketAddress) /* MethodBuilder.Create */ 
-				{
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DatagramPacket() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -718,10 +508,10 @@ namespace Java.Net
 				/// </java-name>
 				public global::Java.Net.InetAddress Address
 				{
-				[Dot42.DexImport("getAddress", "()Ljava/net/InetAddress;", AccessFlags = 33)]
-						get{ return GetAddress(); }
-				[Dot42.DexImport("setAddress", "(Ljava/net/InetAddress;)V", AccessFlags = 33)]
-						set{ SetAddress(value); }
+						[Dot42.DexImport("getAddress", "()Ljava/net/InetAddress;", AccessFlags = 33)]
+						get{ return default(global::Java.Net.InetAddress); }
+						[Dot42.DexImport("setAddress", "(Ljava/net/InetAddress;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -729,10 +519,10 @@ namespace Java.Net
 				/// </java-name>
 				public byte[] Data
 				{
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 33, IgnoreFromJava = true)]
-						get{ return GetData(); }
-				[Dot42.DexImport("setData", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
-						set{ SetData(value); }
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 33, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
+						[Dot42.DexImport("setData", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -740,10 +530,10 @@ namespace Java.Net
 				/// </java-name>
 				public int Length
 				{
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 33)]
-						get{ return GetLength(); }
-				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 33)]
-						set{ SetLength(value); }
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setLength", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -751,8 +541,8 @@ namespace Java.Net
 				/// </java-name>
 				public int Offset
 				{
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 33)]
-						get{ return GetOffset(); }
+						[Dot42.DexImport("getOffset", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -760,10 +550,10 @@ namespace Java.Net
 				/// </java-name>
 				public int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 33)]
-						get{ return GetPort(); }
-				[Dot42.DexImport("setPort", "(I)V", AccessFlags = 33)]
-						set{ SetPort(value); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setPort", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -771,10 +561,10 @@ namespace Java.Net
 				/// </java-name>
 				public global::Java.Net.SocketAddress SocketAddress
 				{
-				[Dot42.DexImport("getSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 33)]
-						get{ return GetSocketAddress(); }
-				[Dot42.DexImport("setSocketAddress", "(Ljava/net/SocketAddress;)V", AccessFlags = 33)]
-						set{ SetSocketAddress(value); }
+						[Dot42.DexImport("getSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 33)]
+						get{ return default(global::Java.Net.SocketAddress); }
+						[Dot42.DexImport("setSocketAddress", "(Ljava/net/SocketAddress;)V", AccessFlags = 33)]
+						set{ }
 				}
 
 		}
@@ -828,69 +618,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getInetAddress
-				/// </java-name>
-				[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetInetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getLocalPort
-				/// </java-name>
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-				public virtual int GetLocalPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-				public virtual int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getReceiveBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 33)]
-				public virtual int GetReceiveBufferSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSendBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getSendBufferSize", "()I", AccessFlags = 33)]
-				public virtual int GetSendBufferSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSoTimeout
-				/// </java-name>
-				[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 33)]
-				public virtual int GetSoTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// receive
 				/// </java-name>
 				[Dot42.DexImport("receive", "(Ljava/net/DatagramPacket;)V", AccessFlags = 33)]
@@ -903,30 +630,6 @@ namespace Java.Net
 				/// </java-name>
 				[Dot42.DexImport("send", "(Ljava/net/DatagramPacket;)V", AccessFlags = 1)]
 				public virtual void Send(global::Java.Net.DatagramPacket datagramPacket) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSendBufferSize
-				/// </java-name>
-				[Dot42.DexImport("setSendBufferSize", "(I)V", AccessFlags = 33)]
-				public virtual void SetSendBufferSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setReceiveBufferSize
-				/// </java-name>
-				[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 33)]
-				public virtual void SetReceiveBufferSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSoTimeout
-				/// </java-name>
-				[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 33)]
-				public virtual void SetSoTimeout(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -963,237 +666,159 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// isBound
-				/// </java-name>
-				[Dot42.DexImport("isBound", "()Z", AccessFlags = 1)]
-				public virtual bool IsBound() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public virtual bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getRemoteSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("getRemoteSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.SocketAddress GetRemoteSocketAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.SocketAddress);
-				}
-
-				/// <java-name>
-				/// getLocalSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.SocketAddress GetLocalSocketAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.SocketAddress);
-				}
-
-				/// <java-name>
-				/// setReuseAddress
-				/// </java-name>
-				[Dot42.DexImport("setReuseAddress", "(Z)V", AccessFlags = 1)]
-				public virtual void SetReuseAddress(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReuseAddress
-				/// </java-name>
-				[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
-				public virtual bool GetReuseAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setBroadcast
-				/// </java-name>
-				[Dot42.DexImport("setBroadcast", "(Z)V", AccessFlags = 1)]
-				public virtual void SetBroadcast(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getBroadcast
-				/// </java-name>
-				[Dot42.DexImport("getBroadcast", "()Z", AccessFlags = 1)]
-				public virtual bool GetBroadcast() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setTrafficClass
-				/// </java-name>
-				[Dot42.DexImport("setTrafficClass", "(I)V", AccessFlags = 1)]
-				public virtual void SetTrafficClass(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTrafficClass
-				/// </java-name>
-				[Dot42.DexImport("getTrafficClass", "()I", AccessFlags = 1)]
-				public virtual int GetTrafficClass() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
-				public virtual bool IsClosed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getChannel
-				/// </java-name>
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/DatagramChannel;", AccessFlags = 1)]
-				public virtual global::Java.Nio.Channels.DatagramChannel GetChannel() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.Channels.DatagramChannel);
-				}
-
-				/// <java-name>
 				/// getInetAddress
 				/// </java-name>
-				public global::Java.Net.InetAddress InetAddress
+				public virtual global::Java.Net.InetAddress InetAddress
 				{
-				[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetInetAddress(); }
+						[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getLocalAddress
 				/// </java-name>
-				public global::Java.Net.InetAddress LocalAddress
+				public virtual global::Java.Net.InetAddress LocalAddress
 				{
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetLocalAddress(); }
+						[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getLocalPort
 				/// </java-name>
-				public int LocalPort
+				public virtual int LocalPort
 				{
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-						get{ return GetLocalPort(); }
+						[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getPort
 				/// </java-name>
-				public int Port
+				public virtual int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-						get{ return GetPort(); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getReceiveBufferSize
 				/// </java-name>
-				public int ReceiveBufferSize
+				public virtual int ReceiveBufferSize
 				{
-				[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 33)]
-						get{ return GetReceiveBufferSize(); }
-				[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 33)]
-						set{ SetReceiveBufferSize(value); }
+						[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSendBufferSize
 				/// </java-name>
-				public int SendBufferSize
+				public virtual int SendBufferSize
 				{
-				[Dot42.DexImport("getSendBufferSize", "()I", AccessFlags = 33)]
-						get{ return GetSendBufferSize(); }
-				[Dot42.DexImport("setSendBufferSize", "(I)V", AccessFlags = 33)]
-						set{ SetSendBufferSize(value); }
+						[Dot42.DexImport("getSendBufferSize", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSendBufferSize", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSoTimeout
 				/// </java-name>
-				public int SoTimeout
+				public virtual int SoTimeout
 				{
-				[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 33)]
-						get{ return GetSoTimeout(); }
-				[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 33)]
-						set{ SetSoTimeout(value); }
+						[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 33)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isBound
+				/// </java-name>
+				public virtual bool IsBound
+				{
+						[Dot42.DexImport("isBound", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public virtual bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getRemoteSocketAddress
 				/// </java-name>
-				public global::Java.Net.SocketAddress RemoteSocketAddress
+				public virtual global::Java.Net.SocketAddress RemoteSocketAddress
 				{
-				[Dot42.DexImport("getRemoteSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-						get{ return GetRemoteSocketAddress(); }
+						[Dot42.DexImport("getRemoteSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.SocketAddress); }
 				}
 
 				/// <java-name>
 				/// getLocalSocketAddress
 				/// </java-name>
-				public global::Java.Net.SocketAddress LocalSocketAddress
+				public virtual global::Java.Net.SocketAddress LocalSocketAddress
 				{
-				[Dot42.DexImport("getLocalSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-						get{ return GetLocalSocketAddress(); }
+						[Dot42.DexImport("getLocalSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.SocketAddress); }
 				}
 
 				/// <java-name>
 				/// getReuseAddress
 				/// </java-name>
-				public bool IsReuseAddress
+				public virtual bool IsReuseAddress
 				{
-				[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
-						get{ return GetReuseAddress(); }
-				[Dot42.DexImport("setReuseAddress", "(Z)V", AccessFlags = 1)]
-						set{ SetReuseAddress(value); }
+						[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setReuseAddress", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getBroadcast
 				/// </java-name>
-				public bool IsBroadcast
+				public virtual bool IsBroadcast
 				{
-				[Dot42.DexImport("getBroadcast", "()Z", AccessFlags = 1)]
-						get{ return GetBroadcast(); }
-				[Dot42.DexImport("setBroadcast", "(Z)V", AccessFlags = 1)]
-						set{ SetBroadcast(value); }
+						[Dot42.DexImport("getBroadcast", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setBroadcast", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTrafficClass
 				/// </java-name>
-				public int TrafficClass
+				public virtual int TrafficClass
 				{
-				[Dot42.DexImport("getTrafficClass", "()I", AccessFlags = 1)]
-						get{ return GetTrafficClass(); }
-				[Dot42.DexImport("setTrafficClass", "(I)V", AccessFlags = 1)]
-						set{ SetTrafficClass(value); }
+						[Dot42.DexImport("getTrafficClass", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setTrafficClass", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				public virtual bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getChannel
 				/// </java-name>
-				public global::Java.Nio.Channels.DatagramChannel Channel
+				public virtual global::Java.Nio.Channels.DatagramChannel Channel
 				{
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/DatagramChannel;", AccessFlags = 1)]
-						get{ return GetChannel(); }
+						[Dot42.DexImport("getChannel", "()Ljava/nio/channels/DatagramChannel;", AccessFlags = 1)]
+						get{ return default(global::Java.Nio.Channels.DatagramChannel); }
 				}
 
 		}
@@ -1214,7 +839,7 @@ namespace Java.Net
 				/// localPort
 				/// </java-name>
 				[Dot42.DexImport("localPort", "I", AccessFlags = 4)]
-				protected internal int LocalPort;
+				protected internal int @localport;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public DatagramSocketImpl() /* MethodBuilder.Create */ 
 				{
@@ -1239,40 +864,10 @@ namespace Java.Net
 				protected internal abstract void Create() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 4)]
-				protected internal virtual global::Java.Io.FileDescriptor GetFileDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor);
-				}
-
-				/// <java-name>
-				/// getLocalPort
-				/// </java-name>
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 4)]
-				protected internal virtual int GetLocalPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getTTL
 				/// </java-name>
 				[Dot42.DexImport("getTTL", "()B", AccessFlags = 1028)]
 				protected internal abstract sbyte JavaGetTTL() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTTL
-				/// </java-name>
-				[Dot42.DexImport("getTTL", "()B", AccessFlags = 1028, IgnoreFromJava = true)]
-				protected internal abstract byte GetTTL() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getTimeToLive
-				/// </java-name>
-				[Dot42.DexImport("getTimeToLive", "()I", AccessFlags = 1028)]
-				protected internal abstract int GetTimeToLive() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// join
@@ -1317,22 +912,10 @@ namespace Java.Net
 				protected internal abstract void Send(global::Java.Net.DatagramPacket datagramPacket) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setTimeToLive
-				/// </java-name>
-				[Dot42.DexImport("setTimeToLive", "(I)V", AccessFlags = 1028)]
-				protected internal abstract void SetTimeToLive(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setTTL
 				/// </java-name>
 				[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1028)]
 				protected internal abstract void SetTTL(sbyte sByte) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setTTL
-				/// </java-name>
-				[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1028, IgnoreFromJava = true)]
-				protected internal abstract void SetTTL(byte @byte) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// connect
@@ -1370,32 +953,41 @@ namespace Java.Net
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				protected internal global::Java.Io.FileDescriptor FileDescriptor
+				protected internal virtual global::Java.Io.FileDescriptor FileDescriptor
 				{
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 4)]
-						get{ return GetFileDescriptor(); }
+						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 4)]
+						get{ return default(global::Java.Io.FileDescriptor); }
+				}
+
+				/// <java-name>
+				/// getLocalPort
+				/// </java-name>
+				protected internal virtual int LocalPort
+				{
+						[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 4)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTTL
 				/// </java-name>
-				protected internal byte TTL
+				protected internal abstract byte TTL
 				{
-				[Dot42.DexImport("getTTL", "()B", AccessFlags = 1028, IgnoreFromJava = true)]
-						get{ return GetTTL(); }
-				[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1028, IgnoreFromJava = true)]
-						set{ SetTTL(value); }
+						[Dot42.DexImport("getTTL", "()B", AccessFlags = 1028, IgnoreFromJava = true)]
+						get;
+						[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1028, IgnoreFromJava = true)]
+						set;
 				}
 
 				/// <java-name>
 				/// getTimeToLive
 				/// </java-name>
-				protected internal int TimeToLive
+				protected internal abstract int TimeToLive
 				{
-				[Dot42.DexImport("getTimeToLive", "()I", AccessFlags = 1028)]
-						get{ return GetTimeToLive(); }
-				[Dot42.DexImport("setTimeToLive", "(I)V", AccessFlags = 1028)]
-						set{ SetTimeToLive(value); }
+						[Dot42.DexImport("getTimeToLive", "()I", AccessFlags = 1028)]
+						get;
+						[Dot42.DexImport("setTimeToLive", "(I)V", AccessFlags = 1028)]
+						set;
 				}
 
 		}
@@ -1428,194 +1020,6 @@ namespace Java.Net
 				public static global::Java.Util.IList<global::Java.Net.HttpCookie> Parse(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Java.Net.HttpCookie>);
-				}
-
-				/// <java-name>
-				/// getComment
-				/// </java-name>
-				[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetComment() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCommentURL
-				/// </java-name>
-				[Dot42.DexImport("getCommentURL", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetCommentURL() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDiscard
-				/// </java-name>
-				[Dot42.DexImport("getDiscard", "()Z", AccessFlags = 1)]
-				public bool GetDiscard() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getDomain
-				/// </java-name>
-				[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetDomain() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMaxAge
-				/// </java-name>
-				[Dot42.DexImport("getMaxAge", "()J", AccessFlags = 1)]
-				public long GetMaxAge() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPortlist
-				/// </java-name>
-				[Dot42.DexImport("getPortlist", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPortlist() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSecure
-				/// </java-name>
-				[Dot42.DexImport("getSecure", "()Z", AccessFlags = 1)]
-				public bool GetSecure() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetValue() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-				public int GetVersion() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// hasExpired
-				/// </java-name>
-				[Dot42.DexImport("hasExpired", "()Z", AccessFlags = 1)]
-				public bool HasExpired() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setComment
-				/// </java-name>
-				[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public void SetComment(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCommentURL
-				/// </java-name>
-				[Dot42.DexImport("setCommentURL", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public void SetCommentURL(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDiscard
-				/// </java-name>
-				[Dot42.DexImport("setDiscard", "(Z)V", AccessFlags = 1)]
-				public void SetDiscard(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDomain
-				/// </java-name>
-				[Dot42.DexImport("setDomain", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public void SetDomain(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMaxAge
-				/// </java-name>
-				[Dot42.DexImport("setMaxAge", "(J)V", AccessFlags = 1)]
-				public void SetMaxAge(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPath
-				/// </java-name>
-				[Dot42.DexImport("setPath", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public void SetPath(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPortlist
-				/// </java-name>
-				[Dot42.DexImport("setPortlist", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public void SetPortlist(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSecure
-				/// </java-name>
-				[Dot42.DexImport("setSecure", "(Z)V", AccessFlags = 1)]
-				public void SetSecure(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setValue
-				/// </java-name>
-				[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public void SetValue(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setVersion
-				/// </java-name>
-				[Dot42.DexImport("setVersion", "(I)V", AccessFlags = 1)]
-				public void SetVersion(int int32) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -1664,10 +1068,10 @@ namespace Java.Net
 				/// </java-name>
 				public string Comment
 				{
-				[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetComment(); }
-				[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetComment(value); }
+						[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1675,10 +1079,10 @@ namespace Java.Net
 				/// </java-name>
 				public string CommentURL
 				{
-				[Dot42.DexImport("getCommentURL", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCommentURL(); }
-				[Dot42.DexImport("setCommentURL", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetCommentURL(value); }
+						[Dot42.DexImport("getCommentURL", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setCommentURL", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1686,10 +1090,10 @@ namespace Java.Net
 				/// </java-name>
 				public bool IsDiscard
 				{
-				[Dot42.DexImport("getDiscard", "()Z", AccessFlags = 1)]
-						get{ return GetDiscard(); }
-				[Dot42.DexImport("setDiscard", "(Z)V", AccessFlags = 1)]
-						set{ SetDiscard(value); }
+						[Dot42.DexImport("getDiscard", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setDiscard", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1697,10 +1101,10 @@ namespace Java.Net
 				/// </java-name>
 				public string Domain
 				{
-				[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDomain(); }
-				[Dot42.DexImport("setDomain", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetDomain(value); }
+						[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setDomain", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1708,10 +1112,10 @@ namespace Java.Net
 				/// </java-name>
 				public long MaxAge
 				{
-				[Dot42.DexImport("getMaxAge", "()J", AccessFlags = 1)]
-						get{ return GetMaxAge(); }
-				[Dot42.DexImport("setMaxAge", "(J)V", AccessFlags = 1)]
-						set{ SetMaxAge(value); }
+						[Dot42.DexImport("getMaxAge", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setMaxAge", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1719,8 +1123,8 @@ namespace Java.Net
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1728,10 +1132,10 @@ namespace Java.Net
 				/// </java-name>
 				public string Path
 				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPath(); }
-				[Dot42.DexImport("setPath", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPath(value); }
+						[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPath", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1739,10 +1143,10 @@ namespace Java.Net
 				/// </java-name>
 				public string Portlist
 				{
-				[Dot42.DexImport("getPortlist", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPortlist(); }
-				[Dot42.DexImport("setPortlist", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPortlist(value); }
+						[Dot42.DexImport("getPortlist", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setPortlist", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1750,10 +1154,10 @@ namespace Java.Net
 				/// </java-name>
 				public bool IsSecure
 				{
-				[Dot42.DexImport("getSecure", "()Z", AccessFlags = 1)]
-						get{ return GetSecure(); }
-				[Dot42.DexImport("setSecure", "(Z)V", AccessFlags = 1)]
-						set{ SetSecure(value); }
+						[Dot42.DexImport("getSecure", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setSecure", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1761,10 +1165,10 @@ namespace Java.Net
 				/// </java-name>
 				public string Value
 				{
-				[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetValue(); }
-				[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetValue(value); }
+						[Dot42.DexImport("getValue", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setValue", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1772,10 +1176,19 @@ namespace Java.Net
 				/// </java-name>
 				public int Version
 				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-						get{ return GetVersion(); }
-				[Dot42.DexImport("setVersion", "(I)V", AccessFlags = 1)]
-						set{ SetVersion(value); }
+						[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setVersion", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// hasExpired
+				/// </java-name>
+				public bool HasExpired
+				{
+						[Dot42.DexImport("hasExpired", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1798,24 +1211,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getLocation
-				/// </java-name>
-				[Dot42.DexImport("getLocation", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetLocation() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getReason
-				/// </java-name>
-				[Dot42.DexImport("getReason", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetReason() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// responseCode
 				/// </java-name>
 				[Dot42.DexImport("responseCode", "()I", AccessFlags = 1)]
@@ -1832,19 +1227,19 @@ namespace Java.Net
 				/// <java-name>
 				/// getLocation
 				/// </java-name>
-				public string Location
+				public virtual string Location
 				{
-				[Dot42.DexImport("getLocation", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocation(); }
+						[Dot42.DexImport("getLocation", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getReason
 				/// </java-name>
-				public string Reason
+				public virtual string Reason
 				{
-				[Dot42.DexImport("getReason", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetReason(); }
+						[Dot42.DexImport("getReason", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1865,12 +1260,12 @@ namespace Java.Net
 				/// responseCode
 				/// </java-name>
 				[Dot42.DexImport("responseCode", "I", AccessFlags = 4)]
-				protected internal int ResponseCode;
+				protected internal int @responsecode;
 				/// <java-name>
 				/// responseMessage
 				/// </java-name>
 				[Dot42.DexImport("responseMessage", "Ljava/lang/String;", AccessFlags = 4)]
-				protected internal string ResponseMessage;
+				protected internal string @responsemessage;
 				/// <java-name>
 				/// instanceFollowRedirects
 				/// </java-name>
@@ -2078,106 +1473,10 @@ namespace Java.Net
 				public abstract void Disconnect() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getErrorStream
-				/// </java-name>
-				[Dot42.DexImport("getErrorStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetErrorStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getFollowRedirects
-				/// </java-name>
-				[Dot42.DexImport("getFollowRedirects", "()Z", AccessFlags = 9)]
-				public static bool GetFollowRedirects() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getPermission
-				/// </java-name>
-				[Dot42.DexImport("getPermission", "()Ljava/security/Permission;", AccessFlags = 1)]
-				public override global::Java.Security.Permission GetPermission() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Permission);
-				}
-
-				/// <java-name>
-				/// getRequestMethod
-				/// </java-name>
-				[Dot42.DexImport("getRequestMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetRequestMethod() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getResponseCode
-				/// </java-name>
-				[Dot42.DexImport("getResponseCode", "()I", AccessFlags = 1)]
-				public virtual int GetResponseCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getResponseMessage
-				/// </java-name>
-				[Dot42.DexImport("getResponseMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetResponseMessage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setFollowRedirects
-				/// </java-name>
-				[Dot42.DexImport("setFollowRedirects", "(Z)V", AccessFlags = 9)]
-				public static void SetFollowRedirects(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setRequestMethod
-				/// </java-name>
-				[Dot42.DexImport("setRequestMethod", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetRequestMethod(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// usingProxy
 				/// </java-name>
 				[Dot42.DexImport("usingProxy", "()Z", AccessFlags = 1025)]
 				public abstract bool UsingProxy() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getContentEncoding
-				/// </java-name>
-				[Dot42.DexImport("getContentEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetContentEncoding() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getInstanceFollowRedirects
-				/// </java-name>
-				[Dot42.DexImport("getInstanceFollowRedirects", "()Z", AccessFlags = 1)]
-				public virtual bool GetInstanceFollowRedirects() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setInstanceFollowRedirects
-				/// </java-name>
-				[Dot42.DexImport("setInstanceFollowRedirects", "(Z)V", AccessFlags = 1)]
-				public virtual void SetInstanceFollowRedirects(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
 
 				/// <java-name>
 				/// getHeaderFieldDate
@@ -2212,10 +1511,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getErrorStream
 				/// </java-name>
-				public global::Java.Io.InputStream ErrorStream
+				public virtual global::Java.Io.InputStream ErrorStream
 				{
-				[Dot42.DexImport("getErrorStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetErrorStream(); }
+						[Dot42.DexImport("getErrorStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
 				}
 
 				/// <java-name>
@@ -2223,50 +1522,68 @@ namespace Java.Net
 				/// </java-name>
 				public static bool IsFollowRedirects
 				{
-				[Dot42.DexImport("getFollowRedirects", "()Z", AccessFlags = 9)]
-						get{ return GetFollowRedirects(); }
-				[Dot42.DexImport("setFollowRedirects", "(Z)V", AccessFlags = 9)]
-						set{ SetFollowRedirects(value); }
+						[Dot42.DexImport("getFollowRedirects", "()Z", AccessFlags = 9)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setFollowRedirects", "(Z)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPermission
 				/// </java-name>
-				public global::Java.Security.Permission Permission
+				public override global::Java.Security.Permission Permission
 				{
-				[Dot42.DexImport("getPermission", "()Ljava/security/Permission;", AccessFlags = 1)]
-						get{ return GetPermission(); }
+						[Dot42.DexImport("getPermission", "()Ljava/security/Permission;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Permission); }
 				}
 
 				/// <java-name>
 				/// getRequestMethod
 				/// </java-name>
-				public string RequestMethod
+				public virtual string RequestMethod
 				{
-				[Dot42.DexImport("getRequestMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRequestMethod(); }
-				[Dot42.DexImport("setRequestMethod", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetRequestMethod(value); }
+						[Dot42.DexImport("getRequestMethod", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setRequestMethod", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// getResponseCode
+				/// </java-name>
+				public virtual int ResponseCode
+				{
+						[Dot42.DexImport("getResponseCode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// getResponseMessage
+				/// </java-name>
+				public virtual string ResponseMessage
+				{
+						[Dot42.DexImport("getResponseMessage", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getContentEncoding
 				/// </java-name>
-				public string ContentEncoding
+				public override string ContentEncoding
 				{
-				[Dot42.DexImport("getContentEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetContentEncoding(); }
+						[Dot42.DexImport("getContentEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getInstanceFollowRedirects
 				/// </java-name>
-				public bool IsInstanceFollowRedirects
+				public virtual bool IsInstanceFollowRedirects
 				{
-				[Dot42.DexImport("getInstanceFollowRedirects", "()Z", AccessFlags = 1)]
-						get{ return GetInstanceFollowRedirects(); }
-				[Dot42.DexImport("setInstanceFollowRedirects", "(Z)V", AccessFlags = 1)]
-						set{ SetInstanceFollowRedirects(value); }
+						[Dot42.DexImport("getInstanceFollowRedirects", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setInstanceFollowRedirects", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -2345,18 +1662,6 @@ namespace Java.Net
 				global::Java.Util.IList<global::Java.Net.HttpCookie> Get(global::System.Uri uri) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getCookies
-				/// </java-name>
-				[Dot42.DexImport("getCookies", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/net/HttpCookie;>;")]
-				global::Java.Util.IList<global::Java.Net.HttpCookie> GetCookies() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getURIs
-				/// </java-name>
-				[Dot42.DexImport("getURIs", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/net/URI;>;")]
-				global::Java.Util.IList<global::System.Uri> GetURIs() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// remove
 				/// </java-name>
 				[Dot42.DexImport("remove", "(Ljava/net/URI;Ljava/net/HttpCookie;)Z", AccessFlags = 1025)]
@@ -2367,6 +1672,24 @@ namespace Java.Net
 				/// </java-name>
 				[Dot42.DexImport("removeAll", "()Z", AccessFlags = 1025)]
 				bool RemoveAll() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getCookies
+				/// </java-name>
+				global::Java.Util.IList<global::Java.Net.HttpCookie> Cookies
+				{
+						[Dot42.DexImport("getCookies", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/net/HttpCookie;>;")]
+						get;
+				}
+
+				/// <java-name>
+				/// getURIs
+				/// </java-name>
+				global::Java.Util.IList<global::System.Uri> URIs
+				{
+						[Dot42.DexImport("getURIs", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/net/URI;>;")]
+						get;
+				}
 
 		}
 
@@ -2475,91 +1798,91 @@ namespace Java.Net
 				/// <java-name>
 				/// isAnyLocalAddress
 				/// </java-name>
-				[Dot42.DexImport("isAnyLocalAddress", "()Z", AccessFlags = 1)]
-				public override bool IsAnyLocalAddress() /* MethodBuilder.Create */ 
+				public override bool IsAnyLocalAddress
 				{
-						return default(bool);
+						[Dot42.DexImport("isAnyLocalAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isLinkLocalAddress
 				/// </java-name>
-				[Dot42.DexImport("isLinkLocalAddress", "()Z", AccessFlags = 1)]
-				public override bool IsLinkLocalAddress() /* MethodBuilder.Create */ 
+				public override bool IsLinkLocalAddress
 				{
-						return default(bool);
+						[Dot42.DexImport("isLinkLocalAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isLoopbackAddress
 				/// </java-name>
-				[Dot42.DexImport("isLoopbackAddress", "()Z", AccessFlags = 1)]
-				public override bool IsLoopbackAddress() /* MethodBuilder.Create */ 
+				public override bool IsLoopbackAddress
 				{
-						return default(bool);
+						[Dot42.DexImport("isLoopbackAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isMCGlobal
 				/// </java-name>
-				[Dot42.DexImport("isMCGlobal", "()Z", AccessFlags = 1)]
-				public override bool IsMCGlobal() /* MethodBuilder.Create */ 
+				public override bool IsMCGlobal
 				{
-						return default(bool);
+						[Dot42.DexImport("isMCGlobal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isMCLinkLocal
 				/// </java-name>
-				[Dot42.DexImport("isMCLinkLocal", "()Z", AccessFlags = 1)]
-				public override bool IsMCLinkLocal() /* MethodBuilder.Create */ 
+				public override bool IsMCLinkLocal
 				{
-						return default(bool);
+						[Dot42.DexImport("isMCLinkLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isMCNodeLocal
 				/// </java-name>
-				[Dot42.DexImport("isMCNodeLocal", "()Z", AccessFlags = 1)]
-				public override bool IsMCNodeLocal() /* MethodBuilder.Create */ 
+				public override bool IsMCNodeLocal
 				{
-						return default(bool);
+						[Dot42.DexImport("isMCNodeLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isMCOrgLocal
 				/// </java-name>
-				[Dot42.DexImport("isMCOrgLocal", "()Z", AccessFlags = 1)]
-				public override bool IsMCOrgLocal() /* MethodBuilder.Create */ 
+				public override bool IsMCOrgLocal
 				{
-						return default(bool);
+						[Dot42.DexImport("isMCOrgLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isMCSiteLocal
 				/// </java-name>
-				[Dot42.DexImport("isMCSiteLocal", "()Z", AccessFlags = 1)]
-				public override bool IsMCSiteLocal() /* MethodBuilder.Create */ 
+				public override bool IsMCSiteLocal
 				{
-						return default(bool);
+						[Dot42.DexImport("isMCSiteLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isMulticastAddress
 				/// </java-name>
-				[Dot42.DexImport("isMulticastAddress", "()Z", AccessFlags = 1)]
-				public override bool IsMulticastAddress() /* MethodBuilder.Create */ 
+				public override bool IsMulticastAddress
 				{
-						return default(bool);
+						[Dot42.DexImport("isMulticastAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isSiteLocalAddress
 				/// </java-name>
-				[Dot42.DexImport("isSiteLocalAddress", "()Z", AccessFlags = 1)]
-				public override bool IsSiteLocalAddress() /* MethodBuilder.Create */ 
+				public override bool IsSiteLocalAddress
 				{
-						return default(bool);
+						[Dot42.DexImport("isSiteLocalAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -2613,123 +1936,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// isAnyLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("isAnyLocalAddress", "()Z", AccessFlags = 1)]
-				public override bool IsAnyLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isIPv4CompatibleAddress
-				/// </java-name>
-				[Dot42.DexImport("isIPv4CompatibleAddress", "()Z", AccessFlags = 1)]
-				public bool IsIPv4CompatibleAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLinkLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("isLinkLocalAddress", "()Z", AccessFlags = 1)]
-				public override bool IsLinkLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLoopbackAddress
-				/// </java-name>
-				[Dot42.DexImport("isLoopbackAddress", "()Z", AccessFlags = 1)]
-				public override bool IsLoopbackAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCGlobal
-				/// </java-name>
-				[Dot42.DexImport("isMCGlobal", "()Z", AccessFlags = 1)]
-				public override bool IsMCGlobal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCLinkLocal
-				/// </java-name>
-				[Dot42.DexImport("isMCLinkLocal", "()Z", AccessFlags = 1)]
-				public override bool IsMCLinkLocal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCNodeLocal
-				/// </java-name>
-				[Dot42.DexImport("isMCNodeLocal", "()Z", AccessFlags = 1)]
-				public override bool IsMCNodeLocal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCOrgLocal
-				/// </java-name>
-				[Dot42.DexImport("isMCOrgLocal", "()Z", AccessFlags = 1)]
-				public override bool IsMCOrgLocal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCSiteLocal
-				/// </java-name>
-				[Dot42.DexImport("isMCSiteLocal", "()Z", AccessFlags = 1)]
-				public override bool IsMCSiteLocal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMulticastAddress
-				/// </java-name>
-				[Dot42.DexImport("isMulticastAddress", "()Z", AccessFlags = 1)]
-				public override bool IsMulticastAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isSiteLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("isSiteLocalAddress", "()Z", AccessFlags = 1)]
-				public override bool IsSiteLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getScopeId
-				/// </java-name>
-				[Dot42.DexImport("getScopeId", "()I", AccessFlags = 1)]
-				public int GetScopeId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getScopedInterface
-				/// </java-name>
-				[Dot42.DexImport("getScopedInterface", "()Ljava/net/NetworkInterface;", AccessFlags = 1)]
-				public global::Java.Net.NetworkInterface GetScopedInterface() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.NetworkInterface);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -2739,12 +1945,111 @@ namespace Java.Net
 				}
 
 				/// <java-name>
+				/// isAnyLocalAddress
+				/// </java-name>
+				public override bool IsAnyLocalAddress
+				{
+						[Dot42.DexImport("isAnyLocalAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isIPv4CompatibleAddress
+				/// </java-name>
+				public bool IsIPv4CompatibleAddress
+				{
+						[Dot42.DexImport("isIPv4CompatibleAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLinkLocalAddress
+				/// </java-name>
+				public override bool IsLinkLocalAddress
+				{
+						[Dot42.DexImport("isLinkLocalAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLoopbackAddress
+				/// </java-name>
+				public override bool IsLoopbackAddress
+				{
+						[Dot42.DexImport("isLoopbackAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCGlobal
+				/// </java-name>
+				public override bool IsMCGlobal
+				{
+						[Dot42.DexImport("isMCGlobal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCLinkLocal
+				/// </java-name>
+				public override bool IsMCLinkLocal
+				{
+						[Dot42.DexImport("isMCLinkLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCNodeLocal
+				/// </java-name>
+				public override bool IsMCNodeLocal
+				{
+						[Dot42.DexImport("isMCNodeLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCOrgLocal
+				/// </java-name>
+				public override bool IsMCOrgLocal
+				{
+						[Dot42.DexImport("isMCOrgLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCSiteLocal
+				/// </java-name>
+				public override bool IsMCSiteLocal
+				{
+						[Dot42.DexImport("isMCSiteLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMulticastAddress
+				/// </java-name>
+				public override bool IsMulticastAddress
+				{
+						[Dot42.DexImport("isMulticastAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isSiteLocalAddress
+				/// </java-name>
+				public override bool IsSiteLocalAddress
+				{
+						[Dot42.DexImport("isSiteLocalAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getScopeId
 				/// </java-name>
 				public int ScopeId
 				{
-				[Dot42.DexImport("getScopeId", "()I", AccessFlags = 1)]
-						get{ return GetScopeId(); }
+						[Dot42.DexImport("getScopeId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2752,8 +2057,8 @@ namespace Java.Net
 				/// </java-name>
 				public global::Java.Net.NetworkInterface ScopedInterface
 				{
-				[Dot42.DexImport("getScopedInterface", "()Ljava/net/NetworkInterface;", AccessFlags = 1)]
-						get{ return GetScopedInterface(); }
+						[Dot42.DexImport("getScopedInterface", "()Ljava/net/NetworkInterface;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.NetworkInterface); }
 				}
 
 		}
@@ -2789,15 +2094,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				[Dot42.DexImport("getAddress", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// getAllByName
 				/// </java-name>
 				[Dot42.DexImport("getAllByName", "(Ljava/lang/String;)[Ljava/net/InetAddress;", AccessFlags = 9)]
@@ -2811,42 +2107,6 @@ namespace Java.Net
 				/// </java-name>
 				[Dot42.DexImport("getByName", "(Ljava/lang/String;)Ljava/net/InetAddress;", AccessFlags = 9)]
 				public static global::Java.Net.InetAddress GetByName(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getHostAddress
-				/// </java-name>
-				[Dot42.DexImport("getHostAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetHostAddress() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getHostName
-				/// </java-name>
-				[Dot42.DexImport("getHostName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetHostName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCanonicalHostName
-				/// </java-name>
-				[Dot42.DexImport("getCanonicalHostName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetCanonicalHostName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLocalHost
-				/// </java-name>
-				[Dot42.DexImport("getLocalHost", "()Ljava/net/InetAddress;", AccessFlags = 9)]
-				public static global::Java.Net.InetAddress GetLocalHost() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.InetAddress);
 				}
@@ -2867,96 +2127,6 @@ namespace Java.Net
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// isAnyLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("isAnyLocalAddress", "()Z", AccessFlags = 1)]
-				public virtual bool IsAnyLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLinkLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("isLinkLocalAddress", "()Z", AccessFlags = 1)]
-				public virtual bool IsLinkLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLoopbackAddress
-				/// </java-name>
-				[Dot42.DexImport("isLoopbackAddress", "()Z", AccessFlags = 1)]
-				public virtual bool IsLoopbackAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCGlobal
-				/// </java-name>
-				[Dot42.DexImport("isMCGlobal", "()Z", AccessFlags = 1)]
-				public virtual bool IsMCGlobal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCLinkLocal
-				/// </java-name>
-				[Dot42.DexImport("isMCLinkLocal", "()Z", AccessFlags = 1)]
-				public virtual bool IsMCLinkLocal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCNodeLocal
-				/// </java-name>
-				[Dot42.DexImport("isMCNodeLocal", "()Z", AccessFlags = 1)]
-				public virtual bool IsMCNodeLocal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCOrgLocal
-				/// </java-name>
-				[Dot42.DexImport("isMCOrgLocal", "()Z", AccessFlags = 1)]
-				public virtual bool IsMCOrgLocal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMCSiteLocal
-				/// </java-name>
-				[Dot42.DexImport("isMCSiteLocal", "()Z", AccessFlags = 1)]
-				public virtual bool IsMCSiteLocal() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMulticastAddress
-				/// </java-name>
-				[Dot42.DexImport("isMulticastAddress", "()Z", AccessFlags = 1)]
-				public virtual bool IsMulticastAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isSiteLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("isSiteLocalAddress", "()Z", AccessFlags = 1)]
-				public virtual bool IsSiteLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -3016,37 +2186,37 @@ namespace Java.Net
 				/// <java-name>
 				/// getAddress
 				/// </java-name>
-				public byte[] Address
+				public virtual byte[] Address
 				{
-				[Dot42.DexImport("getAddress", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetAddress(); }
+						[Dot42.DexImport("getAddress", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getHostAddress
 				/// </java-name>
-				public string HostAddress
+				public virtual string HostAddress
 				{
-				[Dot42.DexImport("getHostAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetHostAddress(); }
+						[Dot42.DexImport("getHostAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getHostName
 				/// </java-name>
-				public string HostName
+				public virtual string HostName
 				{
-				[Dot42.DexImport("getHostName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetHostName(); }
+						[Dot42.DexImport("getHostName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getCanonicalHostName
 				/// </java-name>
-				public string CanonicalHostName
+				public virtual string CanonicalHostName
 				{
-				[Dot42.DexImport("getCanonicalHostName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCanonicalHostName(); }
+						[Dot42.DexImport("getCanonicalHostName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -3054,8 +2224,98 @@ namespace Java.Net
 				/// </java-name>
 				public static global::Java.Net.InetAddress LocalHost
 				{
-				[Dot42.DexImport("getLocalHost", "()Ljava/net/InetAddress;", AccessFlags = 9)]
-						get{ return GetLocalHost(); }
+						[Dot42.DexImport("getLocalHost", "()Ljava/net/InetAddress;", AccessFlags = 9)]
+						get{ return default(global::Java.Net.InetAddress); }
+				}
+
+				/// <java-name>
+				/// isAnyLocalAddress
+				/// </java-name>
+				public virtual bool IsAnyLocalAddress
+				{
+						[Dot42.DexImport("isAnyLocalAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLinkLocalAddress
+				/// </java-name>
+				public virtual bool IsLinkLocalAddress
+				{
+						[Dot42.DexImport("isLinkLocalAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLoopbackAddress
+				/// </java-name>
+				public virtual bool IsLoopbackAddress
+				{
+						[Dot42.DexImport("isLoopbackAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCGlobal
+				/// </java-name>
+				public virtual bool IsMCGlobal
+				{
+						[Dot42.DexImport("isMCGlobal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCLinkLocal
+				/// </java-name>
+				public virtual bool IsMCLinkLocal
+				{
+						[Dot42.DexImport("isMCLinkLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCNodeLocal
+				/// </java-name>
+				public virtual bool IsMCNodeLocal
+				{
+						[Dot42.DexImport("isMCNodeLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCOrgLocal
+				/// </java-name>
+				public virtual bool IsMCOrgLocal
+				{
+						[Dot42.DexImport("isMCOrgLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMCSiteLocal
+				/// </java-name>
+				public virtual bool IsMCSiteLocal
+				{
+						[Dot42.DexImport("isMCSiteLocal", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isMulticastAddress
+				/// </java-name>
+				public virtual bool IsMulticastAddress
+				{
+						[Dot42.DexImport("isMulticastAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isSiteLocalAddress
+				/// </java-name>
+				public virtual bool IsSiteLocalAddress
+				{
+						[Dot42.DexImport("isSiteLocalAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -3089,42 +2349,6 @@ namespace Java.Net
 				public static global::Java.Net.InetSocketAddress CreateUnresolved(string @string, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.InetSocketAddress);
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 17)]
-				public int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				[Dot42.DexImport("getAddress", "()Ljava/net/InetAddress;", AccessFlags = 17)]
-				public global::Java.Net.InetAddress GetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getHostName
-				/// </java-name>
-				[Dot42.DexImport("getHostName", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetHostName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isUnresolved
-				/// </java-name>
-				[Dot42.DexImport("isUnresolved", "()Z", AccessFlags = 17)]
-				public bool IsUnresolved() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -3164,8 +2388,8 @@ namespace Java.Net
 				/// </java-name>
 				public int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 17)]
-						get{ return GetPort(); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -3173,8 +2397,8 @@ namespace Java.Net
 				/// </java-name>
 				public global::Java.Net.InetAddress Address
 				{
-				[Dot42.DexImport("getAddress", "()Ljava/net/InetAddress;", AccessFlags = 17)]
-						get{ return GetAddress(); }
+						[Dot42.DexImport("getAddress", "()Ljava/net/InetAddress;", AccessFlags = 17)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
@@ -3182,8 +2406,17 @@ namespace Java.Net
 				/// </java-name>
 				public string HostName
 				{
-				[Dot42.DexImport("getHostName", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetHostName(); }
+						[Dot42.DexImport("getHostName", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isUnresolved
+				/// </java-name>
+				public bool IsUnresolved
+				{
+						[Dot42.DexImport("isUnresolved", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -3230,55 +2463,28 @@ namespace Java.Net
 				/// <java-name>
 				/// getAddress
 				/// </java-name>
-				[Dot42.DexImport("getAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetAddress() /* MethodBuilder.Create */ 
+				public virtual global::Java.Net.InetAddress Address
 				{
-						return default(global::Java.Net.InetAddress);
+						[Dot42.DexImport("getAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getBroadcast
 				/// </java-name>
-				[Dot42.DexImport("getBroadcast", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetBroadcast() /* MethodBuilder.Create */ 
+				public virtual global::Java.Net.InetAddress Broadcast
 				{
-						return default(global::Java.Net.InetAddress);
+						[Dot42.DexImport("getBroadcast", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getNetworkPrefixLength
 				/// </java-name>
-				[Dot42.DexImport("getNetworkPrefixLength", "()S", AccessFlags = 1)]
-				public virtual short GetNetworkPrefixLength() /* MethodBuilder.Create */ 
+				public virtual short NetworkPrefixLength
 				{
-						return default(short);
-				}
-
-				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				public global::Java.Net.InetAddress Address
-				{
-				[Dot42.DexImport("getAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetAddress(); }
-				}
-
-				/// <java-name>
-				/// getBroadcast
-				/// </java-name>
-				public global::Java.Net.InetAddress Broadcast
-				{
-				[Dot42.DexImport("getBroadcast", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetBroadcast(); }
-				}
-
-				/// <java-name>
-				/// getNetworkPrefixLength
-				/// </java-name>
-				public short NetworkPrefixLength
-				{
-				[Dot42.DexImport("getNetworkPrefixLength", "()S", AccessFlags = 1)]
-						get{ return GetNetworkPrefixLength(); }
+						[Dot42.DexImport("getNetworkPrefixLength", "()S", AccessFlags = 1)]
+						get{ return default(short); }
 				}
 
 		}
@@ -3430,75 +2636,6 @@ namespace Java.Net
 				{
 				}
 
-				/// <java-name>
-				/// getAttributes
-				/// </java-name>
-				[Dot42.DexImport("getAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
-				public virtual global::Java.Util.Jar.Attributes GetAttributes() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Jar.Attributes);
-				}
-
-				/// <java-name>
-				/// getCertificates
-				/// </java-name>
-				[Dot42.DexImport("getCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.Certificate[] GetCertificates() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.Certificate[]);
-				}
-
-				/// <java-name>
-				/// getEntryName
-				/// </java-name>
-				[Dot42.DexImport("getEntryName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEntryName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getJarEntry
-				/// </java-name>
-				[Dot42.DexImport("getJarEntry", "()Ljava/util/jar/JarEntry;", AccessFlags = 1)]
-				public virtual global::Java.Util.Jar.JarEntry GetJarEntry() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Jar.JarEntry);
-				}
-
-				/// <java-name>
-				/// getManifest
-				/// </java-name>
-				[Dot42.DexImport("getManifest", "()Ljava/util/jar/Manifest;", AccessFlags = 1)]
-				public virtual global::Java.Util.Jar.Manifest GetManifest() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Jar.Manifest);
-				}
-
-				/// <java-name>
-				/// getJarFile
-				/// </java-name>
-				[Dot42.DexImport("getJarFile", "()Ljava/util/jar/JarFile;", AccessFlags = 1025)]
-				public abstract global::Java.Util.Jar.JarFile GetJarFile() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getJarFileURL
-				/// </java-name>
-				[Dot42.DexImport("getJarFileURL", "()Ljava/net/URL;", AccessFlags = 1)]
-				public virtual global::Java.Net.URL GetJarFileURL() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.URL);
-				}
-
-				/// <java-name>
-				/// getMainAttributes
-				/// </java-name>
-				[Dot42.DexImport("getMainAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
-				public virtual global::Java.Util.Jar.Attributes GetMainAttributes() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Jar.Attributes);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal JarURLConnection() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -3507,73 +2644,73 @@ namespace Java.Net
 				/// <java-name>
 				/// getAttributes
 				/// </java-name>
-				public global::Java.Util.Jar.Attributes Attributes
+				public virtual global::Java.Util.Jar.Attributes Attributes
 				{
-				[Dot42.DexImport("getAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
-						get{ return GetAttributes(); }
+						[Dot42.DexImport("getAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Jar.Attributes); }
 				}
 
 				/// <java-name>
 				/// getCertificates
 				/// </java-name>
-				public global::Java.Security.Cert.Certificate[] Certificates
+				public virtual global::Java.Security.Cert.Certificate[] Certificates
 				{
-				[Dot42.DexImport("getCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
-						get{ return GetCertificates(); }
+						[Dot42.DexImport("getCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.Certificate[]); }
 				}
 
 				/// <java-name>
 				/// getEntryName
 				/// </java-name>
-				public string EntryName
+				public virtual string EntryName
 				{
-				[Dot42.DexImport("getEntryName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEntryName(); }
+						[Dot42.DexImport("getEntryName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getJarEntry
 				/// </java-name>
-				public global::Java.Util.Jar.JarEntry JarEntry
+				public virtual global::Java.Util.Jar.JarEntry JarEntry
 				{
-				[Dot42.DexImport("getJarEntry", "()Ljava/util/jar/JarEntry;", AccessFlags = 1)]
-						get{ return GetJarEntry(); }
+						[Dot42.DexImport("getJarEntry", "()Ljava/util/jar/JarEntry;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Jar.JarEntry); }
 				}
 
 				/// <java-name>
 				/// getManifest
 				/// </java-name>
-				public global::Java.Util.Jar.Manifest Manifest
+				public virtual global::Java.Util.Jar.Manifest Manifest
 				{
-				[Dot42.DexImport("getManifest", "()Ljava/util/jar/Manifest;", AccessFlags = 1)]
-						get{ return GetManifest(); }
+						[Dot42.DexImport("getManifest", "()Ljava/util/jar/Manifest;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Jar.Manifest); }
 				}
 
 				/// <java-name>
 				/// getJarFile
 				/// </java-name>
-				public global::Java.Util.Jar.JarFile JarFile
+				public abstract global::Java.Util.Jar.JarFile JarFile
 				{
-				[Dot42.DexImport("getJarFile", "()Ljava/util/jar/JarFile;", AccessFlags = 1025)]
-						get{ return GetJarFile(); }
+						[Dot42.DexImport("getJarFile", "()Ljava/util/jar/JarFile;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getJarFileURL
 				/// </java-name>
-				public global::Java.Net.URL JarFileURL
+				public virtual global::Java.Net.URL JarFileURL
 				{
-				[Dot42.DexImport("getJarFileURL", "()Ljava/net/URL;", AccessFlags = 1)]
-						get{ return GetJarFileURL(); }
+						[Dot42.DexImport("getJarFileURL", "()Ljava/net/URL;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.URL); }
 				}
 
 				/// <java-name>
 				/// getMainAttributes
 				/// </java-name>
-				public global::Java.Util.Jar.Attributes MainAttributes
+				public virtual global::Java.Util.Jar.Attributes MainAttributes
 				{
-				[Dot42.DexImport("getMainAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
-						get{ return GetMainAttributes(); }
+						[Dot42.DexImport("getMainAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Jar.Attributes); }
 				}
 
 		}
@@ -3620,48 +2757,12 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getInterface
-				/// </java-name>
-				[Dot42.DexImport("getInterface", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetInterface() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getNetworkInterface
-				/// </java-name>
-				[Dot42.DexImport("getNetworkInterface", "()Ljava/net/NetworkInterface;", AccessFlags = 1)]
-				public virtual global::Java.Net.NetworkInterface GetNetworkInterface() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.NetworkInterface);
-				}
-
-				/// <java-name>
-				/// getTimeToLive
-				/// </java-name>
-				[Dot42.DexImport("getTimeToLive", "()I", AccessFlags = 1)]
-				public virtual int GetTimeToLive() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getTTL
 				/// </java-name>
 				[Dot42.DexImport("getTTL", "()B", AccessFlags = 1)]
 				public virtual sbyte JavaGetTTL() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
-				}
-
-				/// <java-name>
-				/// getTTL
-				/// </java-name>
-				[Dot42.DexImport("getTTL", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte GetTTL() /* MethodBuilder.Create */ 
-				{
-						return default(byte);
 				}
 
 				/// <java-name>
@@ -3713,30 +2814,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// setInterface
-				/// </java-name>
-				[Dot42.DexImport("setInterface", "(Ljava/net/InetAddress;)V", AccessFlags = 1)]
-				public virtual void SetInterface(global::Java.Net.InetAddress inetAddress) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setNetworkInterface
-				/// </java-name>
-				[Dot42.DexImport("setNetworkInterface", "(Ljava/net/NetworkInterface;)V", AccessFlags = 1)]
-				public virtual void SetNetworkInterface(global::Java.Net.NetworkInterface networkInterface) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTimeToLive
-				/// </java-name>
-				[Dot42.DexImport("setTimeToLive", "(I)V", AccessFlags = 1)]
-				public virtual void SetTimeToLive(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setTTL
 				/// </java-name>
 				[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1)]
@@ -3745,83 +2822,58 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// setTTL
-				/// </java-name>
-				[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual void SetTTL(byte @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getLoopbackMode
-				/// </java-name>
-				[Dot42.DexImport("getLoopbackMode", "()Z", AccessFlags = 1)]
-				public virtual bool GetLoopbackMode() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setLoopbackMode
-				/// </java-name>
-				[Dot42.DexImport("setLoopbackMode", "(Z)V", AccessFlags = 1)]
-				public virtual void SetLoopbackMode(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getInterface
 				/// </java-name>
-				public global::Java.Net.InetAddress Interface
+				public virtual global::Java.Net.InetAddress Interface
 				{
-				[Dot42.DexImport("getInterface", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetInterface(); }
-				[Dot42.DexImport("setInterface", "(Ljava/net/InetAddress;)V", AccessFlags = 1)]
-						set{ SetInterface(value); }
+						[Dot42.DexImport("getInterface", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
+						[Dot42.DexImport("setInterface", "(Ljava/net/InetAddress;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getNetworkInterface
 				/// </java-name>
-				public global::Java.Net.NetworkInterface NetworkInterface
+				public virtual global::Java.Net.NetworkInterface NetworkInterface
 				{
-				[Dot42.DexImport("getNetworkInterface", "()Ljava/net/NetworkInterface;", AccessFlags = 1)]
-						get{ return GetNetworkInterface(); }
-				[Dot42.DexImport("setNetworkInterface", "(Ljava/net/NetworkInterface;)V", AccessFlags = 1)]
-						set{ SetNetworkInterface(value); }
+						[Dot42.DexImport("getNetworkInterface", "()Ljava/net/NetworkInterface;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.NetworkInterface); }
+						[Dot42.DexImport("setNetworkInterface", "(Ljava/net/NetworkInterface;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTimeToLive
 				/// </java-name>
-				public int TimeToLive
+				public virtual int TimeToLive
 				{
-				[Dot42.DexImport("getTimeToLive", "()I", AccessFlags = 1)]
-						get{ return GetTimeToLive(); }
-				[Dot42.DexImport("setTimeToLive", "(I)V", AccessFlags = 1)]
-						set{ SetTimeToLive(value); }
+						[Dot42.DexImport("getTimeToLive", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setTimeToLive", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTTL
 				/// </java-name>
-				public byte TTL
+				public virtual byte TTL
 				{
-				[Dot42.DexImport("getTTL", "()B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetTTL(); }
-				[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1, IgnoreFromJava = true)]
-						set{ SetTTL(value); }
+						[Dot42.DexImport("getTTL", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte); }
+						[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLoopbackMode
 				/// </java-name>
-				public bool IsLoopbackMode
+				public virtual bool IsLoopbackMode
 				{
-				[Dot42.DexImport("getLoopbackMode", "()Z", AccessFlags = 1)]
-						get{ return GetLoopbackMode(); }
-				[Dot42.DexImport("setLoopbackMode", "(Z)V", AccessFlags = 1)]
-						set{ SetLoopbackMode(value); }
+						[Dot42.DexImport("getLoopbackMode", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setLoopbackMode", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -3844,15 +2896,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// implies
 				/// </java-name>
 				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
@@ -3869,10 +2912,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getActions
 				/// </java-name>
-				public string Actions
+				public override string Actions
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
+						[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -3887,33 +2930,6 @@ namespace Java.Net
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal NetworkInterface() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getInetAddresses
-				/// </java-name>
-				[Dot42.DexImport("getInetAddresses", "()Ljava/util/Enumeration;", AccessFlags = 1, Signature = "()Ljava/util/Enumeration<Ljava/net/InetAddress;>;")]
-				public global::Java.Util.IEnumeration<global::Java.Net.InetAddress> GetInetAddresses() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<global::Java.Net.InetAddress>);
-				}
-
-				/// <java-name>
-				/// getDisplayName
-				/// </java-name>
-				[Dot42.DexImport("getDisplayName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetDisplayName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -3932,15 +2948,6 @@ namespace Java.Net
 				public static global::Java.Net.NetworkInterface GetByInetAddress(global::Java.Net.InetAddress inetAddress) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.NetworkInterface);
-				}
-
-				/// <java-name>
-				/// getNetworkInterfaces
-				/// </java-name>
-				[Dot42.DexImport("getNetworkInterfaces", "()Ljava/util/Enumeration;", AccessFlags = 9, Signature = "()Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;")]
-				public static global::Java.Util.IEnumeration<global::Java.Net.NetworkInterface> GetNetworkInterfaces() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<global::Java.Net.NetworkInterface>);
 				}
 
 				/// <java-name>
@@ -3971,60 +2978,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getInterfaceAddresses
-				/// </java-name>
-				[Dot42.DexImport("getInterfaceAddresses", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/net/InterfaceAddress;>;")]
-				public global::Java.Util.IList<global::Java.Net.InterfaceAddress> GetInterfaceAddresses() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Java.Net.InterfaceAddress>);
-				}
-
-				/// <java-name>
-				/// getSubInterfaces
-				/// </java-name>
-				[Dot42.DexImport("getSubInterfaces", "()Ljava/util/Enumeration;", AccessFlags = 1, Signature = "()Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;")]
-				public global::Java.Util.IEnumeration<global::Java.Net.NetworkInterface> GetSubInterfaces() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<global::Java.Net.NetworkInterface>);
-				}
-
-				/// <java-name>
-				/// getParent
-				/// </java-name>
-				[Dot42.DexImport("getParent", "()Ljava/net/NetworkInterface;", AccessFlags = 1)]
-				public global::Java.Net.NetworkInterface GetParent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.NetworkInterface);
-				}
-
-				/// <java-name>
-				/// isUp
-				/// </java-name>
-				[Dot42.DexImport("isUp", "()Z", AccessFlags = 1)]
-				public bool IsUp() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLoopback
-				/// </java-name>
-				[Dot42.DexImport("isLoopback", "()Z", AccessFlags = 1)]
-				public bool IsLoopback() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isPointToPoint
-				/// </java-name>
-				[Dot42.DexImport("isPointToPoint", "()Z", AccessFlags = 1)]
-				public bool IsPointToPoint() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// supportsMulticast
 				/// </java-name>
 				[Dot42.DexImport("supportsMulticast", "()Z", AccessFlags = 1)]
@@ -4043,39 +2996,12 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getHardwareAddress
-				/// </java-name>
-				[Dot42.DexImport("getHardwareAddress", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetHardwareAddress() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMTU
-				/// </java-name>
-				[Dot42.DexImport("getMTU", "()I", AccessFlags = 1)]
-				public int GetMTU() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isVirtual
-				/// </java-name>
-				[Dot42.DexImport("isVirtual", "()Z", AccessFlags = 1)]
-				public bool IsVirtual() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getName
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -4083,8 +3009,8 @@ namespace Java.Net
 				/// </java-name>
 				public global::Java.Util.IEnumeration<global::Java.Net.InetAddress> InetAddresses
 				{
-				[Dot42.DexImport("getInetAddresses", "()Ljava/util/Enumeration;", AccessFlags = 1, Signature = "()Ljava/util/Enumeration<Ljava/net/InetAddress;>;")]
-						get{ return GetInetAddresses(); }
+						[Dot42.DexImport("getInetAddresses", "()Ljava/util/Enumeration;", AccessFlags = 1, Signature = "()Ljava/util/Enumeration<Ljava/net/InetAddress;>;")]
+						get{ return default(global::Java.Util.IEnumeration<global::Java.Net.InetAddress>); }
 				}
 
 				/// <java-name>
@@ -4092,8 +3018,8 @@ namespace Java.Net
 				/// </java-name>
 				public string DisplayName
 				{
-				[Dot42.DexImport("getDisplayName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDisplayName(); }
+						[Dot42.DexImport("getDisplayName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -4101,8 +3027,8 @@ namespace Java.Net
 				/// </java-name>
 				public static global::Java.Util.IEnumeration<global::Java.Net.NetworkInterface> NetworkInterfaces
 				{
-				[Dot42.DexImport("getNetworkInterfaces", "()Ljava/util/Enumeration;", AccessFlags = 9, Signature = "()Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;")]
-						get{ return GetNetworkInterfaces(); }
+						[Dot42.DexImport("getNetworkInterfaces", "()Ljava/util/Enumeration;", AccessFlags = 9, Signature = "()Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;")]
+						get{ return default(global::Java.Util.IEnumeration<global::Java.Net.NetworkInterface>); }
 				}
 
 				/// <java-name>
@@ -4110,8 +3036,8 @@ namespace Java.Net
 				/// </java-name>
 				public global::Java.Util.IList<global::Java.Net.InterfaceAddress> InterfaceAddresses
 				{
-				[Dot42.DexImport("getInterfaceAddresses", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/net/InterfaceAddress;>;")]
-						get{ return GetInterfaceAddresses(); }
+						[Dot42.DexImport("getInterfaceAddresses", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/net/InterfaceAddress;>;")]
+						get{ return default(global::Java.Util.IList<global::Java.Net.InterfaceAddress>); }
 				}
 
 				/// <java-name>
@@ -4119,8 +3045,8 @@ namespace Java.Net
 				/// </java-name>
 				public global::Java.Util.IEnumeration<global::Java.Net.NetworkInterface> SubInterfaces
 				{
-				[Dot42.DexImport("getSubInterfaces", "()Ljava/util/Enumeration;", AccessFlags = 1, Signature = "()Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;")]
-						get{ return GetSubInterfaces(); }
+						[Dot42.DexImport("getSubInterfaces", "()Ljava/util/Enumeration;", AccessFlags = 1, Signature = "()Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;")]
+						get{ return default(global::Java.Util.IEnumeration<global::Java.Net.NetworkInterface>); }
 				}
 
 				/// <java-name>
@@ -4128,8 +3054,35 @@ namespace Java.Net
 				/// </java-name>
 				public global::Java.Net.NetworkInterface Parent
 				{
-				[Dot42.DexImport("getParent", "()Ljava/net/NetworkInterface;", AccessFlags = 1)]
-						get{ return GetParent(); }
+						[Dot42.DexImport("getParent", "()Ljava/net/NetworkInterface;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.NetworkInterface); }
+				}
+
+				/// <java-name>
+				/// isUp
+				/// </java-name>
+				public bool IsUp
+				{
+						[Dot42.DexImport("isUp", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLoopback
+				/// </java-name>
+				public bool IsLoopback
+				{
+						[Dot42.DexImport("isLoopback", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isPointToPoint
+				/// </java-name>
+				public bool IsPointToPoint
+				{
+						[Dot42.DexImport("isPointToPoint", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -4137,8 +3090,8 @@ namespace Java.Net
 				/// </java-name>
 				public byte[] HardwareAddress
 				{
-				[Dot42.DexImport("getHardwareAddress", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetHardwareAddress(); }
+						[Dot42.DexImport("getHardwareAddress", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -4146,8 +3099,17 @@ namespace Java.Net
 				/// </java-name>
 				public int MTU
 				{
-				[Dot42.DexImport("getMTU", "()I", AccessFlags = 1)]
-						get{ return GetMTU(); }
+						[Dot42.DexImport("getMTU", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isVirtual
+				/// </java-name>
+				public bool IsVirtual
+				{
+						[Dot42.DexImport("isVirtual", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -4183,24 +3145,6 @@ namespace Java.Net
 				{
 				}
 
-				/// <java-name>
-				/// getPassword
-				/// </java-name>
-				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 1)]
-				public char[] GetPassword() /* MethodBuilder.Create */ 
-				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// getUserName
-				/// </java-name>
-				[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetUserName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal PasswordAuthentication() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -4211,8 +3155,8 @@ namespace Java.Net
 				/// </java-name>
 				public char[] Password
 				{
-				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 1)]
-						get{ return GetPassword(); }
+						[Dot42.DexImport("getPassword", "()[C", AccessFlags = 1)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
@@ -4220,8 +3164,8 @@ namespace Java.Net
 				/// </java-name>
 				public string UserName
 				{
-				[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUserName(); }
+						[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -4392,23 +3336,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Ljava/net/ProxySelector;", AccessFlags = 9)]
-				public static global::Java.Net.ProxySelector GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.ProxySelector);
-				}
-
-				/// <java-name>
-				/// setDefault
-				/// </java-name>
-				[Dot42.DexImport("setDefault", "(Ljava/net/ProxySelector;)V", AccessFlags = 9)]
-				public static void SetDefault(global::Java.Net.ProxySelector proxySelector) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// select
 				/// </java-name>
 				[Dot42.DexImport("select", "(Ljava/net/URI;)Ljava/util/List;", AccessFlags = 1025, Signature = "(Ljava/net/URI;)Ljava/util/List<Ljava/net/Proxy;>;")]
@@ -4425,10 +3352,10 @@ namespace Java.Net
 				/// </java-name>
 				public static global::Java.Net.ProxySelector Default
 				{
-				[Dot42.DexImport("getDefault", "()Ljava/net/ProxySelector;", AccessFlags = 9)]
-						get{ return GetDefault(); }
-				[Dot42.DexImport("setDefault", "(Ljava/net/ProxySelector;)V", AccessFlags = 9)]
-						set{ SetDefault(value); }
+						[Dot42.DexImport("getDefault", "()Ljava/net/ProxySelector;", AccessFlags = 9)]
+						get{ return default(global::Java.Net.ProxySelector); }
+						[Dot42.DexImport("setDefault", "(Ljava/net/ProxySelector;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 		}
@@ -4442,23 +3369,6 @@ namespace Java.Net
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ResponseCache() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Ljava/net/ResponseCache;", AccessFlags = 9)]
-				public static global::Java.Net.ResponseCache GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.ResponseCache);
-				}
-
-				/// <java-name>
-				/// setDefault
-				/// </java-name>
-				[Dot42.DexImport("setDefault", "(Ljava/net/ResponseCache;)V", AccessFlags = 9)]
-				public static void SetDefault(global::Java.Net.ResponseCache responseCache) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4480,10 +3390,10 @@ namespace Java.Net
 				/// </java-name>
 				public static global::Java.Net.ResponseCache Default
 				{
-				[Dot42.DexImport("getDefault", "()Ljava/net/ResponseCache;", AccessFlags = 9)]
-						get{ return GetDefault(); }
-				[Dot42.DexImport("setDefault", "(Ljava/net/ResponseCache;)V", AccessFlags = 9)]
-						set{ SetDefault(value); }
+						[Dot42.DexImport("getDefault", "()Ljava/net/ResponseCache;", AccessFlags = 9)]
+						get{ return default(global::Java.Net.ResponseCache); }
+						[Dot42.DexImport("setDefault", "(Ljava/net/ResponseCache;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 		}
@@ -4503,76 +3413,46 @@ namespace Java.Net
 				/// <java-name>
 				/// getCipherSuite
 				/// </java-name>
-				[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetCipherSuite() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLocalCertificateChain
-				/// </java-name>
-				[Dot42.DexImport("getLocalCertificateChain", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/security/cert/Certificate;>;")]
-				public abstract global::Java.Util.IList<global::Java.Security.Cert.Certificate> GetLocalCertificateChain() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getServerCertificateChain
-				/// </java-name>
-				[Dot42.DexImport("getServerCertificateChain", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/security/cert/Certificate;>;")]
-				public abstract global::Java.Util.IList<global::Java.Security.Cert.Certificate> GetServerCertificateChain() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPeerPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				public abstract global::Java.Security.IPrincipal GetPeerPrincipal() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLocalPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				public abstract global::Java.Security.IPrincipal GetLocalPrincipal() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getCipherSuite
-				/// </java-name>
-				public string CipherSuite
+				public abstract string CipherSuite
 				{
-				[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetCipherSuite(); }
+						[Dot42.DexImport("getCipherSuite", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getLocalCertificateChain
 				/// </java-name>
-				public global::Java.Util.IList<global::Java.Security.Cert.Certificate> LocalCertificateChain
+				public abstract global::Java.Util.IList<global::Java.Security.Cert.Certificate> LocalCertificateChain
 				{
-				[Dot42.DexImport("getLocalCertificateChain", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/security/cert/Certificate;>;")]
-						get{ return GetLocalCertificateChain(); }
+						[Dot42.DexImport("getLocalCertificateChain", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/security/cert/Certificate;>;")]
+						get;
 				}
 
 				/// <java-name>
 				/// getServerCertificateChain
 				/// </java-name>
-				public global::Java.Util.IList<global::Java.Security.Cert.Certificate> ServerCertificateChain
+				public abstract global::Java.Util.IList<global::Java.Security.Cert.Certificate> ServerCertificateChain
 				{
-				[Dot42.DexImport("getServerCertificateChain", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/security/cert/Certificate;>;")]
-						get{ return GetServerCertificateChain(); }
+						[Dot42.DexImport("getServerCertificateChain", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Ljava/security/cert/Certificate;>;")]
+						get;
 				}
 
 				/// <java-name>
 				/// getPeerPrincipal
 				/// </java-name>
-				public global::Java.Security.IPrincipal PeerPrincipal
+				public abstract global::Java.Security.IPrincipal PeerPrincipal
 				{
-				[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
-						get{ return GetPeerPrincipal(); }
+						[Dot42.DexImport("getPeerPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getLocalPrincipal
 				/// </java-name>
-				public global::Java.Security.IPrincipal LocalPrincipal
+				public abstract global::Java.Security.IPrincipal LocalPrincipal
 				{
-				[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
-						get{ return GetLocalPrincipal(); }
+						[Dot42.DexImport("getLocalPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -4622,33 +3502,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getInetAddress
-				/// </java-name>
-				[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetInetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getLocalPort
-				/// </java-name>
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-				public virtual int GetLocalPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSoTimeout
-				/// </java-name>
-				[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 33)]
-				public virtual int GetSoTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// implAccept
 				/// </java-name>
 				[Dot42.DexImport("implAccept", "(Ljava/net/Socket;)V", AccessFlags = 20)]
@@ -4661,14 +3514,6 @@ namespace Java.Net
 				/// </java-name>
 				[Dot42.DexImport("setSocketFactory", "(Ljava/net/SocketImplFactory;)V", AccessFlags = 41)]
 				public static void SetSocketFactory(global::Java.Net.ISocketImplFactory socketImplFactory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSoTimeout
-				/// </java-name>
-				[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 33)]
-				public virtual void SetSoTimeout(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4698,76 +3543,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getLocalSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.SocketAddress GetLocalSocketAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.SocketAddress);
-				}
-
-				/// <java-name>
-				/// isBound
-				/// </java-name>
-				[Dot42.DexImport("isBound", "()Z", AccessFlags = 1)]
-				public virtual bool IsBound() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
-				public virtual bool IsClosed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setReuseAddress
-				/// </java-name>
-				[Dot42.DexImport("setReuseAddress", "(Z)V", AccessFlags = 1)]
-				public virtual void SetReuseAddress(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReuseAddress
-				/// </java-name>
-				[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
-				public virtual bool GetReuseAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setReceiveBufferSize
-				/// </java-name>
-				[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 1)]
-				public virtual void SetReceiveBufferSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReceiveBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 1)]
-				public virtual int GetReceiveBufferSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getChannel
-				/// </java-name>
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/ServerSocketChannel;", AccessFlags = 1)]
-				public virtual global::Java.Nio.Channels.ServerSocketChannel GetChannel() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.Channels.ServerSocketChannel);
-				}
-
-				/// <java-name>
 				/// setPerformancePreferences
 				/// </java-name>
 				[Dot42.DexImport("setPerformancePreferences", "(III)V", AccessFlags = 1)]
@@ -4778,70 +3553,88 @@ namespace Java.Net
 				/// <java-name>
 				/// getInetAddress
 				/// </java-name>
-				public global::Java.Net.InetAddress InetAddress
+				public virtual global::Java.Net.InetAddress InetAddress
 				{
-				[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetInetAddress(); }
+						[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getLocalPort
 				/// </java-name>
-				public int LocalPort
+				public virtual int LocalPort
 				{
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-						get{ return GetLocalPort(); }
+						[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSoTimeout
 				/// </java-name>
-				public int SoTimeout
+				public virtual int SoTimeout
 				{
-				[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 33)]
-						get{ return GetSoTimeout(); }
-				[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 33)]
-						set{ SetSoTimeout(value); }
+						[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLocalSocketAddress
 				/// </java-name>
-				public global::Java.Net.SocketAddress LocalSocketAddress
+				public virtual global::Java.Net.SocketAddress LocalSocketAddress
 				{
-				[Dot42.DexImport("getLocalSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-						get{ return GetLocalSocketAddress(); }
+						[Dot42.DexImport("getLocalSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.SocketAddress); }
+				}
+
+				/// <java-name>
+				/// isBound
+				/// </java-name>
+				public virtual bool IsBound
+				{
+						[Dot42.DexImport("isBound", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				public virtual bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getReuseAddress
 				/// </java-name>
-				public bool IsReuseAddress
+				public virtual bool IsReuseAddress
 				{
-				[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
-						get{ return GetReuseAddress(); }
-				[Dot42.DexImport("setReuseAddress", "(Z)V", AccessFlags = 1)]
-						set{ SetReuseAddress(value); }
+						[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setReuseAddress", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getReceiveBufferSize
 				/// </java-name>
-				public int ReceiveBufferSize
+				public virtual int ReceiveBufferSize
 				{
-				[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 1)]
-						get{ return GetReceiveBufferSize(); }
-				[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 1)]
-						set{ SetReceiveBufferSize(value); }
+						[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getChannel
 				/// </java-name>
-				public global::Java.Nio.Channels.ServerSocketChannel Channel
+				public virtual global::Java.Nio.Channels.ServerSocketChannel Channel
 				{
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/ServerSocketChannel;", AccessFlags = 1)]
-						get{ return GetChannel(); }
+						[Dot42.DexImport("getChannel", "()Ljava/nio/channels/ServerSocketChannel;", AccessFlags = 1)]
+						get{ return default(global::Java.Nio.Channels.ServerSocketChannel); }
 				}
 
 		}
@@ -4907,122 +3700,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getInetAddress
-				/// </java-name>
-				[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetInetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getKeepAlive
-				/// </java-name>
-				[Dot42.DexImport("getKeepAlive", "()Z", AccessFlags = 1)]
-				public virtual bool GetKeepAlive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getLocalPort
-				/// </java-name>
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-				public virtual int GetLocalPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.OutputStream);
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-				public virtual int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSoLinger
-				/// </java-name>
-				[Dot42.DexImport("getSoLinger", "()I", AccessFlags = 1)]
-				public virtual int GetSoLinger() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getReceiveBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 33)]
-				public virtual int GetReceiveBufferSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSendBufferSize
-				/// </java-name>
-				[Dot42.DexImport("getSendBufferSize", "()I", AccessFlags = 33)]
-				public virtual int GetSendBufferSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSoTimeout
-				/// </java-name>
-				[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 33)]
-				public virtual int GetSoTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTcpNoDelay
-				/// </java-name>
-				[Dot42.DexImport("getTcpNoDelay", "()Z", AccessFlags = 1)]
-				public virtual bool GetTcpNoDelay() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setKeepAlive
-				/// </java-name>
-				[Dot42.DexImport("setKeepAlive", "(Z)V", AccessFlags = 1)]
-				public virtual void SetKeepAlive(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setSocketImplFactory
 				/// </java-name>
 				[Dot42.DexImport("setSocketImplFactory", "(Ljava/net/SocketImplFactory;)V", AccessFlags = 41)]
@@ -5031,42 +3708,10 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// setSendBufferSize
-				/// </java-name>
-				[Dot42.DexImport("setSendBufferSize", "(I)V", AccessFlags = 33)]
-				public virtual void SetSendBufferSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setReceiveBufferSize
-				/// </java-name>
-				[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 33)]
-				public virtual void SetReceiveBufferSize(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setSoLinger
 				/// </java-name>
 				[Dot42.DexImport("setSoLinger", "(ZI)V", AccessFlags = 1)]
 				public virtual void SetSoLinger(bool boolean, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSoTimeout
-				/// </java-name>
-				[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 33)]
-				public virtual void SetSoTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTcpNoDelay
-				/// </java-name>
-				[Dot42.DexImport("setTcpNoDelay", "(Z)V", AccessFlags = 1)]
-				public virtual void SetTcpNoDelay(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5096,51 +3741,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getLocalSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.SocketAddress GetLocalSocketAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.SocketAddress);
-				}
-
-				/// <java-name>
-				/// getRemoteSocketAddress
-				/// </java-name>
-				[Dot42.DexImport("getRemoteSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.SocketAddress GetRemoteSocketAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.SocketAddress);
-				}
-
-				/// <java-name>
-				/// isBound
-				/// </java-name>
-				[Dot42.DexImport("isBound", "()Z", AccessFlags = 1)]
-				public virtual bool IsBound() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isConnected
-				/// </java-name>
-				[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
-				public virtual bool IsConnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
-				public virtual bool IsClosed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// bind
 				/// </java-name>
 				[Dot42.DexImport("bind", "(Ljava/net/SocketAddress;)V", AccessFlags = 1)]
@@ -5165,89 +3765,11 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// isInputShutdown
-				/// </java-name>
-				[Dot42.DexImport("isInputShutdown", "()Z", AccessFlags = 1)]
-				public virtual bool IsInputShutdown() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isOutputShutdown
-				/// </java-name>
-				[Dot42.DexImport("isOutputShutdown", "()Z", AccessFlags = 1)]
-				public virtual bool IsOutputShutdown() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setReuseAddress
-				/// </java-name>
-				[Dot42.DexImport("setReuseAddress", "(Z)V", AccessFlags = 1)]
-				public virtual void SetReuseAddress(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReuseAddress
-				/// </java-name>
-				[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
-				public virtual bool GetReuseAddress() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setOOBInline
-				/// </java-name>
-				[Dot42.DexImport("setOOBInline", "(Z)V", AccessFlags = 1)]
-				public virtual void SetOOBInline(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getOOBInline
-				/// </java-name>
-				[Dot42.DexImport("getOOBInline", "()Z", AccessFlags = 1)]
-				public virtual bool GetOOBInline() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setTrafficClass
-				/// </java-name>
-				[Dot42.DexImport("setTrafficClass", "(I)V", AccessFlags = 1)]
-				public virtual void SetTrafficClass(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTrafficClass
-				/// </java-name>
-				[Dot42.DexImport("getTrafficClass", "()I", AccessFlags = 1)]
-				public virtual int GetTrafficClass() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// sendUrgentData
 				/// </java-name>
 				[Dot42.DexImport("sendUrgentData", "(I)V", AccessFlags = 1)]
 				public virtual void SendUrgentData(int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getChannel
-				/// </java-name>
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/SocketChannel;", AccessFlags = 1)]
-				public virtual global::Java.Nio.Channels.SocketChannel GetChannel() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.Channels.SocketChannel);
 				}
 
 				/// <java-name>
@@ -5261,179 +3783,224 @@ namespace Java.Net
 				/// <java-name>
 				/// getInetAddress
 				/// </java-name>
-				public global::Java.Net.InetAddress InetAddress
+				public virtual global::Java.Net.InetAddress InetAddress
 				{
-				[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetInetAddress(); }
+						[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public global::Java.Io.InputStream InputStream
+				public virtual global::Java.Io.InputStream InputStream
 				{
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetInputStream(); }
+						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
 				}
 
 				/// <java-name>
 				/// getKeepAlive
 				/// </java-name>
-				public bool IsKeepAlive
+				public virtual bool IsKeepAlive
 				{
-				[Dot42.DexImport("getKeepAlive", "()Z", AccessFlags = 1)]
-						get{ return GetKeepAlive(); }
-				[Dot42.DexImport("setKeepAlive", "(Z)V", AccessFlags = 1)]
-						set{ SetKeepAlive(value); }
+						[Dot42.DexImport("getKeepAlive", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setKeepAlive", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLocalAddress
 				/// </java-name>
-				public global::Java.Net.InetAddress LocalAddress
+				public virtual global::Java.Net.InetAddress LocalAddress
 				{
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetLocalAddress(); }
+						[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getLocalPort
 				/// </java-name>
-				public int LocalPort
+				public virtual int LocalPort
 				{
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-						get{ return GetLocalPort(); }
+						[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public global::Java.Io.OutputStream OutputStream
+				public virtual global::Java.Io.OutputStream OutputStream
 				{
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return GetOutputStream(); }
+						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.OutputStream); }
 				}
 
 				/// <java-name>
 				/// getPort
 				/// </java-name>
-				public int Port
+				public virtual int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-						get{ return GetPort(); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSoLinger
 				/// </java-name>
-				public int SoLinger
+				public virtual int SoLinger
 				{
-				[Dot42.DexImport("getSoLinger", "()I", AccessFlags = 1)]
-						get{ return GetSoLinger(); }
+						[Dot42.DexImport("getSoLinger", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getReceiveBufferSize
 				/// </java-name>
-				public int ReceiveBufferSize
+				public virtual int ReceiveBufferSize
 				{
-				[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 33)]
-						get{ return GetReceiveBufferSize(); }
-				[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 33)]
-						set{ SetReceiveBufferSize(value); }
+						[Dot42.DexImport("getReceiveBufferSize", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setReceiveBufferSize", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSendBufferSize
 				/// </java-name>
-				public int SendBufferSize
+				public virtual int SendBufferSize
 				{
-				[Dot42.DexImport("getSendBufferSize", "()I", AccessFlags = 33)]
-						get{ return GetSendBufferSize(); }
-				[Dot42.DexImport("setSendBufferSize", "(I)V", AccessFlags = 33)]
-						set{ SetSendBufferSize(value); }
+						[Dot42.DexImport("getSendBufferSize", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSendBufferSize", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getSoTimeout
 				/// </java-name>
-				public int SoTimeout
+				public virtual int SoTimeout
 				{
-				[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 33)]
-						get{ return GetSoTimeout(); }
-				[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 33)]
-						set{ SetSoTimeout(value); }
+						[Dot42.DexImport("getSoTimeout", "()I", AccessFlags = 33)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSoTimeout", "(I)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTcpNoDelay
 				/// </java-name>
-				public bool IsTcpNoDelay
+				public virtual bool IsTcpNoDelay
 				{
-				[Dot42.DexImport("getTcpNoDelay", "()Z", AccessFlags = 1)]
-						get{ return GetTcpNoDelay(); }
-				[Dot42.DexImport("setTcpNoDelay", "(Z)V", AccessFlags = 1)]
-						set{ SetTcpNoDelay(value); }
+						[Dot42.DexImport("getTcpNoDelay", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setTcpNoDelay", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLocalSocketAddress
 				/// </java-name>
-				public global::Java.Net.SocketAddress LocalSocketAddress
+				public virtual global::Java.Net.SocketAddress LocalSocketAddress
 				{
-				[Dot42.DexImport("getLocalSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-						get{ return GetLocalSocketAddress(); }
+						[Dot42.DexImport("getLocalSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.SocketAddress); }
 				}
 
 				/// <java-name>
 				/// getRemoteSocketAddress
 				/// </java-name>
-				public global::Java.Net.SocketAddress RemoteSocketAddress
+				public virtual global::Java.Net.SocketAddress RemoteSocketAddress
 				{
-				[Dot42.DexImport("getRemoteSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
-						get{ return GetRemoteSocketAddress(); }
+						[Dot42.DexImport("getRemoteSocketAddress", "()Ljava/net/SocketAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.SocketAddress); }
+				}
+
+				/// <java-name>
+				/// isBound
+				/// </java-name>
+				public virtual bool IsBound
+				{
+						[Dot42.DexImport("isBound", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isConnected
+				/// </java-name>
+				public virtual bool IsConnected
+				{
+						[Dot42.DexImport("isConnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				public virtual bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isInputShutdown
+				/// </java-name>
+				public virtual bool IsInputShutdown
+				{
+						[Dot42.DexImport("isInputShutdown", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isOutputShutdown
+				/// </java-name>
+				public virtual bool IsOutputShutdown
+				{
+						[Dot42.DexImport("isOutputShutdown", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getReuseAddress
 				/// </java-name>
-				public bool IsReuseAddress
+				public virtual bool IsReuseAddress
 				{
-				[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
-						get{ return GetReuseAddress(); }
-				[Dot42.DexImport("setReuseAddress", "(Z)V", AccessFlags = 1)]
-						set{ SetReuseAddress(value); }
+						[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setReuseAddress", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getOOBInline
 				/// </java-name>
-				public bool IsOOBInline
+				public virtual bool IsOOBInline
 				{
-				[Dot42.DexImport("getOOBInline", "()Z", AccessFlags = 1)]
-						get{ return GetOOBInline(); }
-				[Dot42.DexImport("setOOBInline", "(Z)V", AccessFlags = 1)]
-						set{ SetOOBInline(value); }
+						[Dot42.DexImport("getOOBInline", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setOOBInline", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTrafficClass
 				/// </java-name>
-				public int TrafficClass
+				public virtual int TrafficClass
 				{
-				[Dot42.DexImport("getTrafficClass", "()I", AccessFlags = 1)]
-						get{ return GetTrafficClass(); }
-				[Dot42.DexImport("setTrafficClass", "(I)V", AccessFlags = 1)]
-						set{ SetTrafficClass(value); }
+						[Dot42.DexImport("getTrafficClass", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setTrafficClass", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getChannel
 				/// </java-name>
-				public global::Java.Nio.Channels.SocketChannel Channel
+				public virtual global::Java.Nio.Channels.SocketChannel Channel
 				{
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/SocketChannel;", AccessFlags = 1)]
-						get{ return GetChannel(); }
+						[Dot42.DexImport("getChannel", "()Ljava/nio/channels/SocketChannel;", AccessFlags = 1)]
+						get{ return default(global::Java.Nio.Channels.SocketChannel); }
 				}
 
 		}
@@ -5487,7 +4054,7 @@ namespace Java.Net
 				/// port
 				/// </java-name>
 				[Dot42.DexImport("port", "I", AccessFlags = 4)]
-				protected internal int Port;
+				protected internal int @port;
 				/// <java-name>
 				/// fd
 				/// </java-name>
@@ -5544,54 +4111,6 @@ namespace Java.Net
 				/// </java-name>
 				[Dot42.DexImport("create", "(Z)V", AccessFlags = 1028)]
 				protected internal abstract void Create(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getFileDescriptor
-				/// </java-name>
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 4)]
-				protected internal virtual global::Java.Io.FileDescriptor GetFileDescriptor() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor);
-				}
-
-				/// <java-name>
-				/// getInetAddress
-				/// </java-name>
-				[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 4)]
-				protected internal virtual global::Java.Net.InetAddress GetInetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1028)]
-				protected internal abstract global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLocalPort
-				/// </java-name>
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 4)]
-				protected internal virtual int GetLocalPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1028)]
-				protected internal abstract global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 4)]
-				protected internal virtual int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
 
 				/// <java-name>
 				/// listen
@@ -5667,46 +4186,55 @@ namespace Java.Net
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				protected internal global::Java.Io.FileDescriptor FileDescriptor
+				protected internal virtual global::Java.Io.FileDescriptor FileDescriptor
 				{
-				[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 4)]
-						get{ return GetFileDescriptor(); }
+						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 4)]
+						get{ return default(global::Java.Io.FileDescriptor); }
 				}
 
 				/// <java-name>
 				/// getInetAddress
 				/// </java-name>
-				protected internal global::Java.Net.InetAddress InetAddress
+				protected internal virtual global::Java.Net.InetAddress InetAddress
 				{
-				[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 4)]
-						get{ return GetInetAddress(); }
+						[Dot42.DexImport("getInetAddress", "()Ljava/net/InetAddress;", AccessFlags = 4)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				protected internal global::Java.Io.InputStream InputStream
+				protected internal abstract global::Java.Io.InputStream InputStream
 				{
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1028)]
-						get{ return GetInputStream(); }
+						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1028)]
+						get;
 				}
 
 				/// <java-name>
 				/// getLocalPort
 				/// </java-name>
-				protected internal int LocalPort
+				protected internal virtual int LocalPort
 				{
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 4)]
-						get{ return GetLocalPort(); }
+						[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 4)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				protected internal global::Java.Io.OutputStream OutputStream
+				protected internal abstract global::Java.Io.OutputStream OutputStream
 				{
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1028)]
-						get{ return GetOutputStream(); }
+						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1028)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPort
+				/// </java-name>
+				protected internal virtual int Port
+				{
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 4)]
+						get{ return default(int); }
 				}
 
 		}
@@ -5721,15 +4249,6 @@ namespace Java.Net
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public SocketPermission(string @string, string string1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -5749,10 +4268,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getActions
 				/// </java-name>
-				public string Actions
+				public override string Actions
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
+						[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -5832,33 +4351,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-				public virtual int GetIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getReason
-				/// </java-name>
-				[Dot42.DexImport("getReason", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetReason() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getInput
-				/// </java-name>
-				[Dot42.DexImport("getInput", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetInput() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getMessage
 				/// </java-name>
 				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -5875,28 +4367,28 @@ namespace Java.Net
 				/// <java-name>
 				/// getIndex
 				/// </java-name>
-				public int Index
+				public virtual int Index
 				{
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-						get{ return GetIndex(); }
+						[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getReason
 				/// </java-name>
-				public string Reason
+				public virtual string Reason
 				{
-				[Dot42.DexImport("getReason", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetReason(); }
+						[Dot42.DexImport("getReason", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getInput
 				/// </java-name>
-				public string Input
+				public virtual string Input
 				{
-				[Dot42.DexImport("getInput", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetInput(); }
+						[Dot42.DexImport("getInput", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -5985,15 +4477,6 @@ namespace Java.Net
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/lang/Object;", AccessFlags = 17)]
-				public object GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
 				[Dot42.DexImport("getContent", "([Ljava/lang/Class;)Ljava/lang/Object;", AccessFlags = 17)]
 				public object GetContent(global::System.Type[] type) /* MethodBuilder.Create */ 
 				{
@@ -6055,96 +4538,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getProtocol
-				/// </java-name>
-				[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetProtocol() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAuthority
-				/// </java-name>
-				[Dot42.DexImport("getAuthority", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetAuthority() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getUserInfo
-				/// </java-name>
-				[Dot42.DexImport("getUserInfo", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetUserInfo() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getHost
-				/// </java-name>
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetHost() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-				public int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDefaultPort
-				/// </java-name>
-				[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 1)]
-				public int GetDefaultPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getFile
-				/// </java-name>
-				[Dot42.DexImport("getFile", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetFile() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getQuery
-				/// </java-name>
-				[Dot42.DexImport("getQuery", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetQuery() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRef
-				/// </java-name>
-				[Dot42.DexImport("getRef", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetRef() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// set
 				/// </java-name>
 				[Dot42.DexImport("set", "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/l" +
@@ -6163,8 +4556,8 @@ namespace Java.Net
 				/// </java-name>
 				public object Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/lang/Object;", AccessFlags = 17)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/lang/Object;", AccessFlags = 17)]
+						get{ return default(object); }
 				}
 
 				/// <java-name>
@@ -6172,8 +4565,8 @@ namespace Java.Net
 				/// </java-name>
 				public string Protocol
 				{
-				[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetProtocol(); }
+						[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6181,8 +4574,8 @@ namespace Java.Net
 				/// </java-name>
 				public string Authority
 				{
-				[Dot42.DexImport("getAuthority", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAuthority(); }
+						[Dot42.DexImport("getAuthority", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6190,8 +4583,8 @@ namespace Java.Net
 				/// </java-name>
 				public string UserInfo
 				{
-				[Dot42.DexImport("getUserInfo", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUserInfo(); }
+						[Dot42.DexImport("getUserInfo", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6199,8 +4592,8 @@ namespace Java.Net
 				/// </java-name>
 				public string Host
 				{
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetHost(); }
+						[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6208,8 +4601,8 @@ namespace Java.Net
 				/// </java-name>
 				public int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-						get{ return GetPort(); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -6217,8 +4610,8 @@ namespace Java.Net
 				/// </java-name>
 				public int DefaultPort
 				{
-				[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 1)]
-						get{ return GetDefaultPort(); }
+						[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -6226,8 +4619,8 @@ namespace Java.Net
 				/// </java-name>
 				public string File
 				{
-				[Dot42.DexImport("getFile", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetFile(); }
+						[Dot42.DexImport("getFile", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6235,8 +4628,8 @@ namespace Java.Net
 				/// </java-name>
 				public string Path
 				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPath(); }
+						[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6244,8 +4637,8 @@ namespace Java.Net
 				/// </java-name>
 				public string Query
 				{
-				[Dot42.DexImport("getQuery", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetQuery(); }
+						[Dot42.DexImport("getQuery", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6253,8 +4646,8 @@ namespace Java.Net
 				/// </java-name>
 				public string Ref
 				{
-				[Dot42.DexImport("getRef", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRef(); }
+						[Dot42.DexImport("getRef", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -6305,15 +4698,6 @@ namespace Java.Net
 				protected internal override global::Java.Security.PermissionCollection GetPermissions(global::Java.Security.CodeSource codeSource) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.PermissionCollection);
-				}
-
-				/// <java-name>
-				/// getURLs
-				/// </java-name>
-				[Dot42.DexImport("getURLs", "()[Ljava/net/URL;", AccessFlags = 1)]
-				public virtual global::Java.Net.URL[] GetURLs() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.URL[]);
 				}
 
 				/// <java-name>
@@ -6369,10 +4753,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getURLs
 				/// </java-name>
-				public global::Java.Net.URL[] URLs
+				public virtual global::Java.Net.URL[] URLs
 				{
-				[Dot42.DexImport("getURLs", "()[Ljava/net/URL;", AccessFlags = 1)]
-						get{ return GetURLs(); }
+						[Dot42.DexImport("getURLs", "()[Ljava/net/URL;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.URL[]); }
 				}
 
 		}
@@ -6393,7 +4777,7 @@ namespace Java.Net
 				/// ifModifiedSince
 				/// </java-name>
 				[Dot42.DexImport("ifModifiedSince", "J", AccessFlags = 4)]
-				protected internal long IfModifiedSince;
+				protected internal long @ifmodifiedsince;
 				/// <java-name>
 				/// useCaches
 				/// </java-name>
@@ -6431,75 +4815,12 @@ namespace Java.Net
 				public abstract void Connect() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getAllowUserInteraction
-				/// </java-name>
-				[Dot42.DexImport("getAllowUserInteraction", "()Z", AccessFlags = 1)]
-				public virtual bool GetAllowUserInteraction() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
 				/// getContent
 				/// </java-name>
 				[Dot42.DexImport("getContent", "([Ljava/lang/Class;)Ljava/lang/Object;", AccessFlags = 1)]
 				public virtual object GetContent(global::System.Type[] type) /* MethodBuilder.Create */ 
 				{
 						return default(object);
-				}
-
-				/// <java-name>
-				/// getContentEncoding
-				/// </java-name>
-				[Dot42.DexImport("getContentEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetContentEncoding() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()I", AccessFlags = 1)]
-				public virtual int GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getContentType
-				/// </java-name>
-				[Dot42.DexImport("getContentType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetContentType() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDate
-				/// </java-name>
-				[Dot42.DexImport("getDate", "()J", AccessFlags = 1)]
-				public virtual long GetDate() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getDefaultAllowUserInteraction
-				/// </java-name>
-				[Dot42.DexImport("getDefaultAllowUserInteraction", "()Z", AccessFlags = 9)]
-				public static bool GetDefaultAllowUserInteraction() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -6512,75 +4833,12 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getDefaultUseCaches
-				/// </java-name>
-				[Dot42.DexImport("getDefaultUseCaches", "()Z", AccessFlags = 1)]
-				public virtual bool GetDefaultUseCaches() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getDoInput
-				/// </java-name>
-				[Dot42.DexImport("getDoInput", "()Z", AccessFlags = 1)]
-				public virtual bool GetDoInput() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getDoOutput
-				/// </java-name>
-				[Dot42.DexImport("getDoOutput", "()Z", AccessFlags = 1)]
-				public virtual bool GetDoOutput() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getExpiration
-				/// </java-name>
-				[Dot42.DexImport("getExpiration", "()J", AccessFlags = 1)]
-				public virtual long GetExpiration() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getFileNameMap
-				/// </java-name>
-				[Dot42.DexImport("getFileNameMap", "()Ljava/net/FileNameMap;", AccessFlags = 9)]
-				public static global::Java.Net.IFileNameMap GetFileNameMap() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.IFileNameMap);
-				}
-
-				/// <java-name>
 				/// getHeaderField
 				/// </java-name>
 				[Dot42.DexImport("getHeaderField", "(I)Ljava/lang/String;", AccessFlags = 1)]
 				public virtual string GetHeaderField(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// getHeaderFields
-				/// </java-name>
-				[Dot42.DexImport("getHeaderFields", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;")]
-				public virtual global::Java.Util.IMap<string, global::Java.Util.IList<string>> GetHeaderFields() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<string, global::Java.Util.IList<string>>);
-				}
-
-				/// <java-name>
-				/// getRequestProperties
-				/// </java-name>
-				[Dot42.DexImport("getRequestProperties", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;")]
-				public virtual global::Java.Util.IMap<string, global::Java.Util.IList<string>> GetRequestProperties() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<string, global::Java.Util.IList<string>>);
 				}
 
 				/// <java-name>
@@ -6628,75 +4886,12 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getIfModifiedSince
-				/// </java-name>
-				[Dot42.DexImport("getIfModifiedSince", "()J", AccessFlags = 1)]
-				public virtual long GetIfModifiedSince() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getInputStream
-				/// </java-name>
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetInputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getLastModified
-				/// </java-name>
-				[Dot42.DexImport("getLastModified", "()J", AccessFlags = 1)]
-				public virtual long GetLastModified() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getOutputStream
-				/// </java-name>
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.OutputStream GetOutputStream() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.OutputStream);
-				}
-
-				/// <java-name>
-				/// getPermission
-				/// </java-name>
-				[Dot42.DexImport("getPermission", "()Ljava/security/Permission;", AccessFlags = 1)]
-				public virtual global::Java.Security.Permission GetPermission() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Permission);
-				}
-
-				/// <java-name>
 				/// getRequestProperty
 				/// </java-name>
 				[Dot42.DexImport("getRequestProperty", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
 				public virtual string GetRequestProperty(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// getURL
-				/// </java-name>
-				[Dot42.DexImport("getURL", "()Ljava/net/URL;", AccessFlags = 1)]
-				public virtual global::Java.Net.URL GetURL() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.URL);
-				}
-
-				/// <java-name>
-				/// getUseCaches
-				/// </java-name>
-				[Dot42.DexImport("getUseCaches", "()Z", AccessFlags = 1)]
-				public virtual bool GetUseCaches() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -6718,26 +4913,10 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// setAllowUserInteraction
-				/// </java-name>
-				[Dot42.DexImport("setAllowUserInteraction", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAllowUserInteraction(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setContentHandlerFactory
 				/// </java-name>
 				[Dot42.DexImport("setContentHandlerFactory", "(Ljava/net/ContentHandlerFactory;)V", AccessFlags = 41)]
 				public static void SetContentHandlerFactory(global::Java.Net.IContentHandlerFactory contentHandlerFactory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDefaultAllowUserInteraction
-				/// </java-name>
-				[Dot42.DexImport("setDefaultAllowUserInteraction", "(Z)V", AccessFlags = 9)]
-				public static void SetDefaultAllowUserInteraction(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6750,93 +4929,11 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// setDefaultUseCaches
-				/// </java-name>
-				[Dot42.DexImport("setDefaultUseCaches", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDefaultUseCaches(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDoInput
-				/// </java-name>
-				[Dot42.DexImport("setDoInput", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDoInput(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDoOutput
-				/// </java-name>
-				[Dot42.DexImport("setDoOutput", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDoOutput(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFileNameMap
-				/// </java-name>
-				[Dot42.DexImport("setFileNameMap", "(Ljava/net/FileNameMap;)V", AccessFlags = 9)]
-				public static void SetFileNameMap(global::Java.Net.IFileNameMap fileNameMap) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIfModifiedSince
-				/// </java-name>
-				[Dot42.DexImport("setIfModifiedSince", "(J)V", AccessFlags = 1)]
-				public virtual void SetIfModifiedSince(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setRequestProperty
 				/// </java-name>
 				[Dot42.DexImport("setRequestProperty", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public virtual void SetRequestProperty(string @string, string string1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// setUseCaches
-				/// </java-name>
-				[Dot42.DexImport("setUseCaches", "(Z)V", AccessFlags = 1)]
-				public virtual void SetUseCaches(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setConnectTimeout
-				/// </java-name>
-				[Dot42.DexImport("setConnectTimeout", "(I)V", AccessFlags = 1)]
-				public virtual void SetConnectTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getConnectTimeout
-				/// </java-name>
-				[Dot42.DexImport("getConnectTimeout", "()I", AccessFlags = 1)]
-				public virtual int GetConnectTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setReadTimeout
-				/// </java-name>
-				[Dot42.DexImport("setReadTimeout", "(I)V", AccessFlags = 1)]
-				public virtual void SetReadTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getReadTimeout
-				/// </java-name>
-				[Dot42.DexImport("getReadTimeout", "()I", AccessFlags = 1)]
-				public virtual int GetReadTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -6856,57 +4953,57 @@ namespace Java.Net
 				/// <java-name>
 				/// getAllowUserInteraction
 				/// </java-name>
-				public bool IsAllowUserInteraction
+				public virtual bool IsAllowUserInteraction
 				{
-				[Dot42.DexImport("getAllowUserInteraction", "()Z", AccessFlags = 1)]
-						get{ return GetAllowUserInteraction(); }
-				[Dot42.DexImport("setAllowUserInteraction", "(Z)V", AccessFlags = 1)]
-						set{ SetAllowUserInteraction(value); }
+						[Dot42.DexImport("getAllowUserInteraction", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setAllowUserInteraction", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public object Content
+				public virtual object Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object); }
 				}
 
 				/// <java-name>
 				/// getContentEncoding
 				/// </java-name>
-				public string ContentEncoding
+				public virtual string ContentEncoding
 				{
-				[Dot42.DexImport("getContentEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetContentEncoding(); }
+						[Dot42.DexImport("getContentEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public int ContentLength
+				public virtual int ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()I", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getContentType
 				/// </java-name>
-				public string ContentType
+				public virtual string ContentType
 				{
-				[Dot42.DexImport("getContentType", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetContentType(); }
+						[Dot42.DexImport("getContentType", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getDate
 				/// </java-name>
-				public long Date
+				public virtual long Date
 				{
-				[Dot42.DexImport("getDate", "()J", AccessFlags = 1)]
-						get{ return GetDate(); }
+						[Dot42.DexImport("getDate", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -6914,52 +5011,52 @@ namespace Java.Net
 				/// </java-name>
 				public static bool IsDefaultAllowUserInteraction
 				{
-				[Dot42.DexImport("getDefaultAllowUserInteraction", "()Z", AccessFlags = 9)]
-						get{ return GetDefaultAllowUserInteraction(); }
-				[Dot42.DexImport("setDefaultAllowUserInteraction", "(Z)V", AccessFlags = 9)]
-						set{ SetDefaultAllowUserInteraction(value); }
+						[Dot42.DexImport("getDefaultAllowUserInteraction", "()Z", AccessFlags = 9)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setDefaultAllowUserInteraction", "(Z)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDefaultUseCaches
 				/// </java-name>
-				public bool IsDefaultUseCaches
+				public virtual bool IsDefaultUseCaches
 				{
-				[Dot42.DexImport("getDefaultUseCaches", "()Z", AccessFlags = 1)]
-						get{ return GetDefaultUseCaches(); }
-				[Dot42.DexImport("setDefaultUseCaches", "(Z)V", AccessFlags = 1)]
-						set{ SetDefaultUseCaches(value); }
+						[Dot42.DexImport("getDefaultUseCaches", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setDefaultUseCaches", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDoInput
 				/// </java-name>
-				public bool IsDoInput
+				public virtual bool IsDoInput
 				{
-				[Dot42.DexImport("getDoInput", "()Z", AccessFlags = 1)]
-						get{ return GetDoInput(); }
-				[Dot42.DexImport("setDoInput", "(Z)V", AccessFlags = 1)]
-						set{ SetDoInput(value); }
+						[Dot42.DexImport("getDoInput", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setDoInput", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDoOutput
 				/// </java-name>
-				public bool IsDoOutput
+				public virtual bool IsDoOutput
 				{
-				[Dot42.DexImport("getDoOutput", "()Z", AccessFlags = 1)]
-						get{ return GetDoOutput(); }
-				[Dot42.DexImport("setDoOutput", "(Z)V", AccessFlags = 1)]
-						set{ SetDoOutput(value); }
+						[Dot42.DexImport("getDoOutput", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setDoOutput", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getExpiration
 				/// </java-name>
-				public long Expiration
+				public virtual long Expiration
 				{
-				[Dot42.DexImport("getExpiration", "()J", AccessFlags = 1)]
-						get{ return GetExpiration(); }
+						[Dot42.DexImport("getExpiration", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -6967,106 +5064,117 @@ namespace Java.Net
 				/// </java-name>
 				public static global::Java.Net.IFileNameMap FileNameMap
 				{
-				[Dot42.DexImport("getFileNameMap", "()Ljava/net/FileNameMap;", AccessFlags = 9)]
-						get{ return GetFileNameMap(); }
-				[Dot42.DexImport("setFileNameMap", "(Ljava/net/FileNameMap;)V", AccessFlags = 9)]
-						set{ SetFileNameMap(value); }
+						[Dot42.DexImport("getFileNameMap", "()Ljava/net/FileNameMap;", AccessFlags = 9)]
+						get{ return default(global::Java.Net.IFileNameMap); }
+						[Dot42.DexImport("setFileNameMap", "(Ljava/net/FileNameMap;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getHeaderFields
 				/// </java-name>
-				public global::Java.Util.IMap<string, global::Java.Util.IList<string>> HeaderFields
+				public virtual global::Java.Util.IMap<string, global::Java.Util.IList<string>> HeaderFields
 				{
-				[Dot42.DexImport("getHeaderFields", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;")]
-						get{ return GetHeaderFields(); }
+						[Dot42.DexImport("getHeaderFields", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;")]
+						get{ return default(global::Java.Util.IMap<string, global::Java.Util.IList<string>>); }
 				}
 
 				/// <java-name>
 				/// getRequestProperties
 				/// </java-name>
-				public global::Java.Util.IMap<string, global::Java.Util.IList<string>> RequestProperties
+				public virtual global::Java.Util.IMap<string, global::Java.Util.IList<string>> RequestProperties
 				{
-				[Dot42.DexImport("getRequestProperties", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;")]
-						get{ return GetRequestProperties(); }
+						[Dot42.DexImport("getRequestProperties", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;")]
+						get{ return default(global::Java.Util.IMap<string, global::Java.Util.IList<string>>); }
+				}
+
+				/// <java-name>
+				/// getIfModifiedSince
+				/// </java-name>
+				public virtual long IfModifiedSince
+				{
+						[Dot42.DexImport("getIfModifiedSince", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setIfModifiedSince", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public global::Java.Io.InputStream InputStream
+				public virtual global::Java.Io.InputStream InputStream
 				{
-				[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetInputStream(); }
+						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
 				}
 
 				/// <java-name>
 				/// getLastModified
 				/// </java-name>
-				public long LastModified
+				public virtual long LastModified
 				{
-				[Dot42.DexImport("getLastModified", "()J", AccessFlags = 1)]
-						get{ return GetLastModified(); }
+						[Dot42.DexImport("getLastModified", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public global::Java.Io.OutputStream OutputStream
+				public virtual global::Java.Io.OutputStream OutputStream
 				{
-				[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return GetOutputStream(); }
+						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.OutputStream); }
 				}
 
 				/// <java-name>
 				/// getPermission
 				/// </java-name>
-				public global::Java.Security.Permission Permission
+				public virtual global::Java.Security.Permission Permission
 				{
-				[Dot42.DexImport("getPermission", "()Ljava/security/Permission;", AccessFlags = 1)]
-						get{ return GetPermission(); }
+						[Dot42.DexImport("getPermission", "()Ljava/security/Permission;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Permission); }
 				}
 
 				/// <java-name>
 				/// getURL
 				/// </java-name>
-				public global::Java.Net.URL URL
+				public virtual global::Java.Net.URL URL
 				{
-				[Dot42.DexImport("getURL", "()Ljava/net/URL;", AccessFlags = 1)]
-						get{ return GetURL(); }
+						[Dot42.DexImport("getURL", "()Ljava/net/URL;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.URL); }
 				}
 
 				/// <java-name>
 				/// getUseCaches
 				/// </java-name>
-				public bool IsUseCaches
+				public virtual bool IsUseCaches
 				{
-				[Dot42.DexImport("getUseCaches", "()Z", AccessFlags = 1)]
-						get{ return GetUseCaches(); }
-				[Dot42.DexImport("setUseCaches", "(Z)V", AccessFlags = 1)]
-						set{ SetUseCaches(value); }
+						[Dot42.DexImport("getUseCaches", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setUseCaches", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getConnectTimeout
 				/// </java-name>
-				public int ConnectTimeout
+				public virtual int ConnectTimeout
 				{
-				[Dot42.DexImport("getConnectTimeout", "()I", AccessFlags = 1)]
-						get{ return GetConnectTimeout(); }
-				[Dot42.DexImport("setConnectTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetConnectTimeout(value); }
+						[Dot42.DexImport("getConnectTimeout", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setConnectTimeout", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getReadTimeout
 				/// </java-name>
-				public int ReadTimeout
+				public virtual int ReadTimeout
 				{
-				[Dot42.DexImport("getReadTimeout", "()I", AccessFlags = 1)]
-						get{ return GetReadTimeout(); }
-				[Dot42.DexImport("setReadTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetReadTimeout(value); }
+						[Dot42.DexImport("getReadTimeout", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setReadTimeout", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -7207,15 +5315,6 @@ namespace Java.Net
 				}
 
 				/// <java-name>
-				/// getDefaultPort
-				/// </java-name>
-				[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 4)]
-				protected internal virtual int GetDefaultPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getHostAddress
 				/// </java-name>
 				[Dot42.DexImport("getHostAddress", "(Ljava/net/URL;)Ljava/net/InetAddress;", AccessFlags = 4)]
@@ -7254,10 +5353,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getDefaultPort
 				/// </java-name>
-				protected internal int DefaultPort
+				protected internal virtual int DefaultPort
 				{
-				[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 4)]
-						get{ return GetDefaultPort(); }
+						[Dot42.DexImport("getDefaultPort", "()I", AccessFlags = 4)]
+						get{ return default(int); }
 				}
 
 		}

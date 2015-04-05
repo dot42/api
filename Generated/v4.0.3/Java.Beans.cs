@@ -13,15 +13,6 @@ namespace Java.Beans
 				{
 				}
 
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-				public virtual int GetIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal IndexedPropertyChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -30,10 +21,10 @@ namespace Java.Beans
 				/// <java-name>
 				/// getIndex
 				/// </java-name>
-				public int Index
+				public virtual int Index
 				{
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-						get{ return GetIndex(); }
+						[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -65,50 +56,6 @@ namespace Java.Beans
 				{
 				}
 
-				/// <java-name>
-				/// getPropertyName
-				/// </java-name>
-				[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPropertyName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setPropagationId
-				/// </java-name>
-				[Dot42.DexImport("setPropagationId", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-				public virtual void SetPropagationId(object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPropagationId
-				/// </java-name>
-				[Dot42.DexImport("getPropagationId", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetPropagationId() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// getOldValue
-				/// </java-name>
-				[Dot42.DexImport("getOldValue", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetOldValue() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// getNewValue
-				/// </java-name>
-				[Dot42.DexImport("getNewValue", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetNewValue() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal PropertyChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -117,39 +64,39 @@ namespace Java.Beans
 				/// <java-name>
 				/// getPropertyName
 				/// </java-name>
-				public string PropertyName
+				public virtual string PropertyName
 				{
-				[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPropertyName(); }
+						[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPropagationId
 				/// </java-name>
-				public object PropagationId
+				public virtual object PropagationId
 				{
-				[Dot42.DexImport("getPropagationId", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetPropagationId(); }
-				[Dot42.DexImport("setPropagationId", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-						set{ SetPropagationId(value); }
+						[Dot42.DexImport("getPropagationId", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object); }
+						[Dot42.DexImport("setPropagationId", "(Ljava/lang/Object;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getOldValue
 				/// </java-name>
-				public object OldValue
+				public virtual object OldValue
 				{
-				[Dot42.DexImport("getOldValue", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetOldValue(); }
+						[Dot42.DexImport("getOldValue", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object); }
 				}
 
 				/// <java-name>
 				/// getNewValue
 				/// </java-name>
-				public object NewValue
+				public virtual object NewValue
 				{
-				[Dot42.DexImport("getNewValue", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetNewValue(); }
+						[Dot42.DexImport("getNewValue", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object); }
 				}
 
 		}
@@ -164,15 +111,6 @@ namespace Java.Beans
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/beans/PropertyChangeListener;)V", AccessFlags = 1)]
 				public PropertyChangeListenerProxy(string @string, global::Java.Beans.IPropertyChangeListener propertyChangeListener) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getPropertyName
-				/// </java-name>
-				[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPropertyName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -191,10 +129,10 @@ namespace Java.Beans
 				/// <java-name>
 				/// getPropertyName
 				/// </java-name>
-				public string PropertyName
+				public virtual string PropertyName
 				{
-				[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPropertyName(); }
+						[Dot42.DexImport("getPropertyName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -310,15 +248,6 @@ namespace Java.Beans
 				}
 
 				/// <java-name>
-				/// getPropertyChangeListeners
-				/// </java-name>
-				[Dot42.DexImport("getPropertyChangeListeners", "()[Ljava/beans/PropertyChangeListener;", AccessFlags = 1)]
-				public virtual global::Java.Beans.IPropertyChangeListener[] GetPropertyChangeListeners() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Beans.IPropertyChangeListener[]);
-				}
-
-				/// <java-name>
 				/// firePropertyChange
 				/// </java-name>
 				[Dot42.DexImport("firePropertyChange", "(Ljava/beans/PropertyChangeEvent;)V", AccessFlags = 1)]
@@ -334,10 +263,10 @@ namespace Java.Beans
 				/// <java-name>
 				/// getPropertyChangeListeners
 				/// </java-name>
-				public global::Java.Beans.IPropertyChangeListener[] PropertyChangeListeners
+				public virtual global::Java.Beans.IPropertyChangeListener[] PropertyChangeListeners
 				{
-				[Dot42.DexImport("getPropertyChangeListeners", "()[Ljava/beans/PropertyChangeListener;", AccessFlags = 1)]
-						get{ return GetPropertyChangeListeners(); }
+						[Dot42.DexImport("getPropertyChangeListeners", "()[Ljava/beans/PropertyChangeListener;", AccessFlags = 1)]
+						get{ return default(global::Java.Beans.IPropertyChangeListener[]); }
 				}
 
 		}

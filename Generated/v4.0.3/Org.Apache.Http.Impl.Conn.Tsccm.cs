@@ -143,24 +143,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				/// <java-name>
-				/// getManager
-				/// </java-name>
-				[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
-				protected internal override global::Org.Apache.Http.Conn.IClientConnectionManager GetManager() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.IClientConnectionManager);
-				}
-
-				/// <java-name>
-				/// getPoolEntry
-				/// </java-name>
-				[Dot42.DexImport("getPoolEntry", "()Lorg/apache/http/impl/conn/AbstractPoolEntry;", AccessFlags = 4)]
-				protected internal virtual global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry GetPoolEntry() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry);
-				}
-
-				/// <java-name>
 				/// detach
 				/// </java-name>
 				[Dot42.DexImport("detach", "()V", AccessFlags = 4)]
@@ -176,19 +158,19 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// <java-name>
 				/// getManager
 				/// </java-name>
-				protected internal global::Org.Apache.Http.Conn.IClientConnectionManager Manager
+				protected internal override global::Org.Apache.Http.Conn.IClientConnectionManager Manager
 				{
-				[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
-						get{ return GetManager(); }
+						[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
+						get{ return default(global::Org.Apache.Http.Conn.IClientConnectionManager); }
 				}
 
 				/// <java-name>
 				/// getPoolEntry
 				/// </java-name>
-				protected internal global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry PoolEntry
+				protected internal virtual global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry PoolEntry
 				{
-				[Dot42.DexImport("getPoolEntry", "()Lorg/apache/http/impl/conn/AbstractPoolEntry;", AccessFlags = 4)]
-						get{ return GetPoolEntry(); }
+						[Dot42.DexImport("getPoolEntry", "()Lorg/apache/http/impl/conn/AbstractPoolEntry;", AccessFlags = 4)]
+						get{ return default(global::Org.Apache.Http.Impl.Conn.AbstractPoolEntry); }
 				}
 
 		}
@@ -207,33 +189,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				{
 				}
 
-				/// <java-name>
-				/// getConnection
-				/// </java-name>
-				[Dot42.DexImport("getConnection", "()Lorg/apache/http/conn/OperatedClientConnection;", AccessFlags = 20)]
-				protected internal global::Org.Apache.Http.Conn.IOperatedClientConnection GetConnection() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.IOperatedClientConnection);
-				}
-
-				/// <java-name>
-				/// getPlannedRoute
-				/// </java-name>
-				[Dot42.DexImport("getPlannedRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 20)]
-				protected internal global::Org.Apache.Http.Conn.Routing.HttpRoute GetPlannedRoute() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Routing.HttpRoute);
-				}
-
-				/// <java-name>
-				/// getWeakRef
-				/// </java-name>
-				[Dot42.DexImport("getWeakRef", "()Lorg/apache/http/impl/conn/tsccm/BasicPoolEntryRef;", AccessFlags = 20)]
-				protected internal global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntryRef GetWeakRef() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntryRef);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal BasicPoolEntry() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -244,8 +199,8 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// </java-name>
 				protected internal global::Org.Apache.Http.Conn.IOperatedClientConnection Connection
 				{
-				[Dot42.DexImport("getConnection", "()Lorg/apache/http/conn/OperatedClientConnection;", AccessFlags = 20)]
-						get{ return GetConnection(); }
+						[Dot42.DexImport("getConnection", "()Lorg/apache/http/conn/OperatedClientConnection;", AccessFlags = 20)]
+						get{ return default(global::Org.Apache.Http.Conn.IOperatedClientConnection); }
 				}
 
 				/// <java-name>
@@ -253,8 +208,8 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// </java-name>
 				protected internal global::Org.Apache.Http.Conn.Routing.HttpRoute PlannedRoute
 				{
-				[Dot42.DexImport("getPlannedRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 20)]
-						get{ return GetPlannedRoute(); }
+						[Dot42.DexImport("getPlannedRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 20)]
+						get{ return default(global::Org.Apache.Http.Conn.Routing.HttpRoute); }
 				}
 
 				/// <java-name>
@@ -262,8 +217,8 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// </java-name>
 				protected internal global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntryRef WeakRef
 				{
-				[Dot42.DexImport("getWeakRef", "()Lorg/apache/http/impl/conn/tsccm/BasicPoolEntryRef;", AccessFlags = 20)]
-						get{ return GetWeakRef(); }
+						[Dot42.DexImport("getWeakRef", "()Lorg/apache/http/impl/conn/tsccm/BasicPoolEntryRef;", AccessFlags = 20)]
+						get{ return default(global::Org.Apache.Http.Impl.Conn.Tsccm.BasicPoolEntryRef); }
 				}
 
 		}
@@ -282,15 +237,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				{
 				}
 
-				/// <java-name>
-				/// getRoute
-				/// </java-name>
-				[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 17)]
-				public global::Org.Apache.Http.Conn.Routing.HttpRoute GetRoute() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Routing.HttpRoute);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal BasicPoolEntryRef() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -301,8 +247,8 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// </java-name>
 				public global::Org.Apache.Http.Conn.Routing.HttpRoute Route
 				{
-				[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 17)]
-						get{ return GetRoute(); }
+						[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.Conn.Routing.HttpRoute); }
 				}
 
 		}
@@ -626,12 +572,12 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// route
 				/// </java-name>
 				[Dot42.DexImport("route", "Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 20)]
-				protected internal readonly global::Org.Apache.Http.Conn.Routing.HttpRoute Route;
+				protected internal readonly global::Org.Apache.Http.Conn.Routing.HttpRoute @route;
 				/// <java-name>
 				/// maxEntries
 				/// </java-name>
 				[Dot42.DexImport("maxEntries", "I", AccessFlags = 20)]
-				protected internal readonly int MaxEntries;
+				protected internal readonly int @maxentries;
 				/// <java-name>
 				/// freeEntries
 				/// </java-name>
@@ -650,51 +596,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/conn/routing/HttpRoute;I)V", AccessFlags = 1)]
 				public RouteSpecificPool(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getRoute
-				/// </java-name>
-				[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 17)]
-				public global::Org.Apache.Http.Conn.Routing.HttpRoute GetRoute() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Routing.HttpRoute);
-				}
-
-				/// <java-name>
-				/// getMaxEntries
-				/// </java-name>
-				[Dot42.DexImport("getMaxEntries", "()I", AccessFlags = 17)]
-				public int GetMaxEntries() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isUnused
-				/// </java-name>
-				[Dot42.DexImport("isUnused", "()Z", AccessFlags = 1)]
-				public virtual bool IsUnused() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getCapacity
-				/// </java-name>
-				[Dot42.DexImport("getCapacity", "()I", AccessFlags = 1)]
-				public virtual int GetCapacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getEntryCount
-				/// </java-name>
-				[Dot42.DexImport("getEntryCount", "()I", AccessFlags = 17)]
-				public int GetEntryCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -748,15 +649,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				/// <java-name>
-				/// hasThread
-				/// </java-name>
-				[Dot42.DexImport("hasThread", "()Z", AccessFlags = 1)]
-				public virtual bool HasThread() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// nextThread
 				/// </java-name>
 				[Dot42.DexImport("nextThread", "()Lorg/apache/http/impl/conn/tsccm/WaitingThread;", AccessFlags = 1)]
@@ -779,12 +671,39 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				/// <java-name>
+				/// getRoute
+				/// </java-name>
+				public global::Org.Apache.Http.Conn.Routing.HttpRoute Route
+				{
+						[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.Conn.Routing.HttpRoute); }
+				}
+
+				/// <java-name>
+				/// getMaxEntries
+				/// </java-name>
+				public int MaxEntries
+				{
+						[Dot42.DexImport("getMaxEntries", "()I", AccessFlags = 17)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isUnused
+				/// </java-name>
+				public virtual bool IsUnused
+				{
+						[Dot42.DexImport("isUnused", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getCapacity
 				/// </java-name>
-				public int Capacity
+				public virtual int Capacity
 				{
-				[Dot42.DexImport("getCapacity", "()I", AccessFlags = 1)]
-						get{ return GetCapacity(); }
+						[Dot42.DexImport("getCapacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -792,8 +711,17 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// </java-name>
 				public int EntryCount
 				{
-				[Dot42.DexImport("getEntryCount", "()I", AccessFlags = 17)]
-						get{ return GetEntryCount(); }
+						[Dot42.DexImport("getEntryCount", "()I", AccessFlags = 17)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// hasThread
+				/// </java-name>
+				public virtual bool HasThread
+				{
+						[Dot42.DexImport("hasThread", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -809,7 +737,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// schemeRegistry
 				/// </java-name>
 				[Dot42.DexImport("schemeRegistry", "Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry SchemeRegistry;
+				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry @schemeregistry;
 				/// <java-name>
 				/// connectionPool
 				/// </java-name>
@@ -853,15 +781,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				/// <java-name>
-				/// getSchemeRegistry
-				/// </java-name>
-				[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Conn.Scheme.SchemeRegistry GetSchemeRegistry() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry);
-				}
-
-				/// <java-name>
 				/// requestConnection
 				/// </java-name>
 				[Dot42.DexImport("requestConnection", "(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;)Lorg/apache/http/conn" +
@@ -898,15 +817,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				/// <java-name>
-				/// getConnectionsInPool
-				/// </java-name>
-				[Dot42.DexImport("getConnectionsInPool", "()I", AccessFlags = 1)]
-				public virtual int GetConnectionsInPool() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// closeIdleConnections
 				/// </java-name>
 				[Dot42.DexImport("closeIdleConnections", "(JLjava/util/concurrent/TimeUnit;)V", AccessFlags = 1)]
@@ -928,12 +838,21 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				/// <java-name>
+				/// getSchemeRegistry
+				/// </java-name>
+				public virtual global::Org.Apache.Http.Conn.Scheme.SchemeRegistry SchemeRegistry
+				{
+						[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry); }
+				}
+
+				/// <java-name>
 				/// getConnectionsInPool
 				/// </java-name>
-				public int ConnectionsInPool
+				public virtual int ConnectionsInPool
 				{
-				[Dot42.DexImport("getConnectionsInPool", "()I", AccessFlags = 1)]
-						get{ return GetConnectionsInPool(); }
+						[Dot42.DexImport("getConnectionsInPool", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -949,33 +868,6 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
     "ificPool;)V", AccessFlags = 1)]
 				public WaitingThread(global::Java.Util.Concurrent.Locks.ICondition condition, global::Org.Apache.Http.Impl.Conn.Tsccm.RouteSpecificPool routeSpecificPool) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getCondition
-				/// </java-name>
-				[Dot42.DexImport("getCondition", "()Ljava/util/concurrent/locks/Condition;", AccessFlags = 17)]
-				public global::Java.Util.Concurrent.Locks.ICondition GetCondition() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Concurrent.Locks.ICondition);
-				}
-
-				/// <java-name>
-				/// getPool
-				/// </java-name>
-				[Dot42.DexImport("getPool", "()Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;", AccessFlags = 17)]
-				public global::Org.Apache.Http.Impl.Conn.Tsccm.RouteSpecificPool GetPool() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Impl.Conn.Tsccm.RouteSpecificPool);
-				}
-
-				/// <java-name>
-				/// getThread
-				/// </java-name>
-				[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
-				public global::System.Threading.Thread GetThread() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
 				}
 
 				/// <java-name>
@@ -1013,8 +905,8 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// </java-name>
 				public global::Java.Util.Concurrent.Locks.ICondition Condition
 				{
-				[Dot42.DexImport("getCondition", "()Ljava/util/concurrent/locks/Condition;", AccessFlags = 17)]
-						get{ return GetCondition(); }
+						[Dot42.DexImport("getCondition", "()Ljava/util/concurrent/locks/Condition;", AccessFlags = 17)]
+						get{ return default(global::Java.Util.Concurrent.Locks.ICondition); }
 				}
 
 				/// <java-name>
@@ -1022,8 +914,8 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// </java-name>
 				public global::Org.Apache.Http.Impl.Conn.Tsccm.RouteSpecificPool Pool
 				{
-				[Dot42.DexImport("getPool", "()Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;", AccessFlags = 17)]
-						get{ return GetPool(); }
+						[Dot42.DexImport("getPool", "()Lorg/apache/http/impl/conn/tsccm/RouteSpecificPool;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.Impl.Conn.Tsccm.RouteSpecificPool); }
 				}
 
 				/// <java-name>
@@ -1031,8 +923,8 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// </java-name>
 				public global::System.Threading.Thread Thread
 				{
-				[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
-						get{ return GetThread(); }
+						[Dot42.DexImport("getThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
+						get{ return default(global::System.Threading.Thread); }
 				}
 
 		}

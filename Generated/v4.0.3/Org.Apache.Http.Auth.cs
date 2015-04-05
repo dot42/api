@@ -98,15 +98,6 @@ namespace Org.Apache.Http.Auth
 				}
 
 				/// <java-name>
-				/// getSchemeNames
-				/// </java-name>
-				[Dot42.DexImport("getSchemeNames", "()Ljava/util/List;", AccessFlags = 33, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-				public global::Java.Util.IList<string> GetSchemeNames() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<string>);
-				}
-
-				/// <java-name>
 				/// setItems
 				/// </java-name>
 				[Dot42.DexImport("setItems", "(Ljava/util/Map;)V", AccessFlags = 33, Signature = "(Ljava/util/Map<Ljava/lang/String;Lorg/apache/http/auth/AuthSchemeFactory;>;)V")]
@@ -119,8 +110,8 @@ namespace Org.Apache.Http.Auth
 				/// </java-name>
 				public global::Java.Util.IList<string> SchemeNames
 				{
-				[Dot42.DexImport("getSchemeNames", "()Ljava/util/List;", AccessFlags = 33, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						get{ return GetSchemeNames(); }
+						[Dot42.DexImport("getSchemeNames", "()Ljava/util/List;", AccessFlags = 33, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IList<string>); }
 				}
 
 		}
@@ -178,42 +169,6 @@ namespace Org.Apache.Http.Auth
 				}
 
 				/// <java-name>
-				/// getHost
-				/// </java-name>
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetHost() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-				public virtual int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRealm
-				/// </java-name>
-				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetRealm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getScheme
-				/// </java-name>
-				[Dot42.DexImport("getScheme", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetScheme() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// match
 				/// </java-name>
 				[Dot42.DexImport("match", "(Lorg/apache/http/auth/AuthScope;)I", AccessFlags = 1)]
@@ -257,37 +212,37 @@ namespace Org.Apache.Http.Auth
 				/// <java-name>
 				/// getHost
 				/// </java-name>
-				public string Host
+				public virtual string Host
 				{
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetHost(); }
+						[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPort
 				/// </java-name>
-				public int Port
+				public virtual int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-						get{ return GetPort(); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getRealm
 				/// </java-name>
-				public string Realm
+				public virtual string Realm
 				{
-				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRealm(); }
+						[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getScheme
 				/// </java-name>
-				public string Scheme
+				public virtual string Scheme
 				{
-				[Dot42.DexImport("getScheme", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetScheme(); }
+						[Dot42.DexImport("getScheme", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -313,66 +268,6 @@ namespace Org.Apache.Http.Auth
 				}
 
 				/// <java-name>
-				/// isValid
-				/// </java-name>
-				[Dot42.DexImport("isValid", "()Z", AccessFlags = 1)]
-				public virtual bool IsValid() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setAuthScheme
-				/// </java-name>
-				[Dot42.DexImport("setAuthScheme", "(Lorg/apache/http/auth/AuthScheme;)V", AccessFlags = 1)]
-				public virtual void SetAuthScheme(global::Org.Apache.Http.Auth.IAuthScheme authScheme) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAuthScheme
-				/// </java-name>
-				[Dot42.DexImport("getAuthScheme", "()Lorg/apache/http/auth/AuthScheme;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Auth.IAuthScheme GetAuthScheme() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Auth.IAuthScheme);
-				}
-
-				/// <java-name>
-				/// getCredentials
-				/// </java-name>
-				[Dot42.DexImport("getCredentials", "()Lorg/apache/http/auth/Credentials;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Auth.ICredentials GetCredentials() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Auth.ICredentials);
-				}
-
-				/// <java-name>
-				/// setCredentials
-				/// </java-name>
-				[Dot42.DexImport("setCredentials", "(Lorg/apache/http/auth/Credentials;)V", AccessFlags = 1)]
-				public virtual void SetCredentials(global::Org.Apache.Http.Auth.ICredentials credentials) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAuthScope
-				/// </java-name>
-				[Dot42.DexImport("getAuthScope", "()Lorg/apache/http/auth/AuthScope;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Auth.AuthScope GetAuthScope() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Auth.AuthScope);
-				}
-
-				/// <java-name>
-				/// setAuthScope
-				/// </java-name>
-				[Dot42.DexImport("setAuthScope", "(Lorg/apache/http/auth/AuthScope;)V", AccessFlags = 1)]
-				public virtual void SetAuthScope(global::Org.Apache.Http.Auth.AuthScope authScope) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -382,36 +277,45 @@ namespace Org.Apache.Http.Auth
 				}
 
 				/// <java-name>
+				/// isValid
+				/// </java-name>
+				public virtual bool IsValid
+				{
+						[Dot42.DexImport("isValid", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getAuthScheme
 				/// </java-name>
-				public global::Org.Apache.Http.Auth.IAuthScheme AuthScheme
+				public virtual global::Org.Apache.Http.Auth.IAuthScheme AuthScheme
 				{
-				[Dot42.DexImport("getAuthScheme", "()Lorg/apache/http/auth/AuthScheme;", AccessFlags = 1)]
-						get{ return GetAuthScheme(); }
-				[Dot42.DexImport("setAuthScheme", "(Lorg/apache/http/auth/AuthScheme;)V", AccessFlags = 1)]
-						set{ SetAuthScheme(value); }
+						[Dot42.DexImport("getAuthScheme", "()Lorg/apache/http/auth/AuthScheme;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Auth.IAuthScheme); }
+						[Dot42.DexImport("setAuthScheme", "(Lorg/apache/http/auth/AuthScheme;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCredentials
 				/// </java-name>
-				public global::Org.Apache.Http.Auth.ICredentials Credentials
+				public virtual global::Org.Apache.Http.Auth.ICredentials Credentials
 				{
-				[Dot42.DexImport("getCredentials", "()Lorg/apache/http/auth/Credentials;", AccessFlags = 1)]
-						get{ return GetCredentials(); }
-				[Dot42.DexImport("setCredentials", "(Lorg/apache/http/auth/Credentials;)V", AccessFlags = 1)]
-						set{ SetCredentials(value); }
+						[Dot42.DexImport("getCredentials", "()Lorg/apache/http/auth/Credentials;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Auth.ICredentials); }
+						[Dot42.DexImport("setCredentials", "(Lorg/apache/http/auth/Credentials;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAuthScope
 				/// </java-name>
-				public global::Org.Apache.Http.Auth.AuthScope AuthScope
+				public virtual global::Org.Apache.Http.Auth.AuthScope AuthScope
 				{
-				[Dot42.DexImport("getAuthScope", "()Lorg/apache/http/auth/AuthScope;", AccessFlags = 1)]
-						get{ return GetAuthScope(); }
-				[Dot42.DexImport("setAuthScope", "(Lorg/apache/http/auth/AuthScope;)V", AccessFlags = 1)]
-						set{ SetAuthScope(value); }
+						[Dot42.DexImport("getAuthScope", "()Lorg/apache/http/auth/AuthScope;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Auth.AuthScope); }
+						[Dot42.DexImport("setAuthScope", "(Lorg/apache/http/auth/AuthScope;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -426,15 +330,6 @@ namespace Org.Apache.Http.Auth
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public BasicUserPrincipal(string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -474,8 +369,8 @@ namespace Org.Apache.Http.Auth
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -494,34 +389,10 @@ namespace Org.Apache.Http.Auth
 				void ProcessChallenge(global::Org.Apache.Http.IHeader header) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSchemeName
-				/// </java-name>
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSchemeName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getParameter
 				/// </java-name>
 				[Dot42.DexImport("getParameter", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
 				string GetParameter(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getRealm
-				/// </java-name>
-				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetRealm() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isConnectionBased
-				/// </java-name>
-				[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1025)]
-				bool IsConnectionBased() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isComplete
-				/// </java-name>
-				[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1025)]
-				bool IsComplete() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// authenticate
@@ -529,6 +400,42 @@ namespace Org.Apache.Http.Auth
 				[Dot42.DexImport("authenticate", "(Lorg/apache/http/auth/Credentials;Lorg/apache/http/HttpRequest;)Lorg/apache/http" +
     "/Header;", AccessFlags = 1025)]
 				global::Org.Apache.Http.IHeader Authenticate(global::Org.Apache.Http.Auth.ICredentials credentials, global::Org.Apache.Http.IHttpRequest httpRequest) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getSchemeName
+				/// </java-name>
+				string SchemeName
+				{
+						[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getRealm
+				/// </java-name>
+				string Realm
+				{
+						[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isConnectionBased
+				/// </java-name>
+				bool IsConnectionBased
+				{
+						[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isComplete
+				/// </java-name>
+				bool IsComplete
+				{
+						[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -557,14 +464,20 @@ namespace Org.Apache.Http.Auth
 				/// <java-name>
 				/// getUserPrincipal
 				/// </java-name>
-				[Dot42.DexImport("getUserPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				global::Java.Security.IPrincipal GetUserPrincipal() /* MethodBuilder.Create */ ;
+				global::Java.Security.IPrincipal UserPrincipal
+				{
+						[Dot42.DexImport("getUserPrincipal", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getPassword
 				/// </java-name>
-				[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPassword() /* MethodBuilder.Create */ ;
+				string Password
+				{
+						[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -634,51 +547,6 @@ namespace Org.Apache.Http.Auth
 				}
 
 				/// <java-name>
-				/// getUserPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getUserPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-				public virtual global::Java.Security.IPrincipal GetUserPrincipal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.IPrincipal);
-				}
-
-				/// <java-name>
-				/// getUserName
-				/// </java-name>
-				[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUserName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPassword
-				/// </java-name>
-				[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPassword() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDomain
-				/// </java-name>
-				[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDomain() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getWorkstation
-				/// </java-name>
-				[Dot42.DexImport("getWorkstation", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetWorkstation() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
@@ -713,46 +581,46 @@ namespace Org.Apache.Http.Auth
 				/// <java-name>
 				/// getUserPrincipal
 				/// </java-name>
-				public global::Java.Security.IPrincipal UserPrincipal
+				public virtual global::Java.Security.IPrincipal UserPrincipal
 				{
-				[Dot42.DexImport("getUserPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-						get{ return GetUserPrincipal(); }
+						[Dot42.DexImport("getUserPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.IPrincipal); }
 				}
 
 				/// <java-name>
 				/// getUserName
 				/// </java-name>
-				public string UserName
+				public virtual string UserName
 				{
-				[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUserName(); }
+						[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPassword
 				/// </java-name>
-				public string Password
+				public virtual string Password
 				{
-				[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPassword(); }
+						[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getDomain
 				/// </java-name>
-				public string Domain
+				public virtual string Domain
 				{
-				[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDomain(); }
+						[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getWorkstation
 				/// </java-name>
-				public string Workstation
+				public virtual string Workstation
 				{
-				[Dot42.DexImport("getWorkstation", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetWorkstation(); }
+						[Dot42.DexImport("getWorkstation", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -767,33 +635,6 @@ namespace Org.Apache.Http.Auth
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public NTUserPrincipal(string @string, string string1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDomain
-				/// </java-name>
-				[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDomain() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getUsername
-				/// </java-name>
-				[Dot42.DexImport("getUsername", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUsername() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -831,28 +672,28 @@ namespace Org.Apache.Http.Auth
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getDomain
 				/// </java-name>
-				public string Domain
+				public virtual string Domain
 				{
-				[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDomain(); }
+						[Dot42.DexImport("getDomain", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getUsername
 				/// </java-name>
-				public string Username
+				public virtual string Username
 				{
-				[Dot42.DexImport("getUsername", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUsername(); }
+						[Dot42.DexImport("getUsername", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -872,33 +713,6 @@ namespace Org.Apache.Http.Auth
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public UsernamePasswordCredentials(string @string, string string1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getUserPrincipal
-				/// </java-name>
-				[Dot42.DexImport("getUserPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-				public virtual global::Java.Security.IPrincipal GetUserPrincipal() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.IPrincipal);
-				}
-
-				/// <java-name>
-				/// getUserName
-				/// </java-name>
-				[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUserName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPassword
-				/// </java-name>
-				[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPassword() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -936,28 +750,28 @@ namespace Org.Apache.Http.Auth
 				/// <java-name>
 				/// getUserPrincipal
 				/// </java-name>
-				public global::Java.Security.IPrincipal UserPrincipal
+				public virtual global::Java.Security.IPrincipal UserPrincipal
 				{
-				[Dot42.DexImport("getUserPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
-						get{ return GetUserPrincipal(); }
+						[Dot42.DexImport("getUserPrincipal", "()Ljava/security/Principal;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.IPrincipal); }
 				}
 
 				/// <java-name>
 				/// getUserName
 				/// </java-name>
-				public string UserName
+				public virtual string UserName
 				{
-				[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUserName(); }
+						[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPassword
 				/// </java-name>
-				public string Password
+				public virtual string Password
 				{
-				[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPassword(); }
+						[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}

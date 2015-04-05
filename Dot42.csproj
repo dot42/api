@@ -137,7 +137,7 @@
     <Compile Include="Generated\v4.0.3\Android.Text.Util.cs" />
     <Compile Include="Generated\v4.0.3\Android.Util.cs" />
     <Compile Include="Generated\v4.0.3\Android.Views.Accessibility.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Views.Animation.cs" />
+    <Compile Include="Generated\v4.0.3\Android.Views.Animations.cs" />
     <Compile Include="Generated\v4.0.3\Android.Views.cs" />
     <Compile Include="Generated\v4.0.3\Android.Views.Inputmethod.cs" />
     <Compile Include="Generated\v4.0.3\Android.Views.Textservice.cs" />
@@ -1060,9 +1060,6 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System, Version=4.0.3.0, Culture=neutral, PublicKeyToken=0a72796057571e65, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->

@@ -164,15 +164,6 @@ namespace Org.Apache.Http.Conn.Params
 				}
 
 				/// <java-name>
-				/// getDefaultMax
-				/// </java-name>
-				[Dot42.DexImport("getDefaultMax", "()I", AccessFlags = 1)]
-				public int GetDefaultMax() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setDefaultMaxPerRoute
 				/// </java-name>
 				[Dot42.DexImport("setDefaultMaxPerRoute", "(I)V", AccessFlags = 1)]
@@ -210,8 +201,8 @@ namespace Org.Apache.Http.Conn.Params
 				/// </java-name>
 				public int DefaultMax
 				{
-				[Dot42.DexImport("getDefaultMax", "()I", AccessFlags = 1)]
-						get{ return GetDefaultMax(); }
+						[Dot42.DexImport("getDefaultMax", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

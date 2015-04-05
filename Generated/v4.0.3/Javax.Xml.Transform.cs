@@ -36,16 +36,15 @@ namespace Javax.Xml.Transform
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetSystemId(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
+				string SystemId
+				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -76,16 +75,15 @@ namespace Javax.Xml.Transform
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// setSystemId
-				/// </java-name>
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetSystemId(string @string) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
+				string SystemId
+				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1025)]
+						set;
+				}
 
 		}
 
@@ -99,26 +97,38 @@ namespace Javax.Xml.Transform
 				/// <java-name>
 				/// getPublicId
 				/// </java-name>
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPublicId() /* MethodBuilder.Create */ ;
+				string PublicId
+				{
+						[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetSystemId() /* MethodBuilder.Create */ ;
+				string SystemId
+				{
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getLineNumber
 				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1025)]
-				int GetLineNumber() /* MethodBuilder.Create */ ;
+				int LineNumber
+				{
+						[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 				/// <java-name>
 				/// getColumnNumber
 				/// </java-name>
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1025)]
-				int GetColumnNumber() /* MethodBuilder.Create */ ;
+				int ColumnNumber
+				{
+						[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -138,8 +148,11 @@ namespace Javax.Xml.Transform
 				/// <java-name>
 				/// getOutputProperties
 				/// </java-name>
-				[Dot42.DexImport("getOutputProperties", "()Ljava/util/Properties;", AccessFlags = 1025)]
-				global::Java.Util.Properties GetOutputProperties() /* MethodBuilder.Create */ ;
+				global::Java.Util.Properties OutputProperties
+				{
+						[Dot42.DexImport("getOutputProperties", "()Ljava/util/Properties;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -267,30 +280,6 @@ namespace Javax.Xml.Transform
 				public abstract void ClearParameters() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setURIResolver
-				/// </java-name>
-				[Dot42.DexImport("setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", AccessFlags = 1025)]
-				public abstract void SetURIResolver(global::Javax.Xml.Transform.IURIResolver uRIResolver) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getURIResolver
-				/// </java-name>
-				[Dot42.DexImport("getURIResolver", "()Ljavax/xml/transform/URIResolver;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Transform.IURIResolver GetURIResolver() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setOutputProperties
-				/// </java-name>
-				[Dot42.DexImport("setOutputProperties", "(Ljava/util/Properties;)V", AccessFlags = 1025)]
-				public abstract void SetOutputProperties(global::Java.Util.Properties properties) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getOutputProperties
-				/// </java-name>
-				[Dot42.DexImport("getOutputProperties", "()Ljava/util/Properties;", AccessFlags = 1025)]
-				public abstract global::Java.Util.Properties GetOutputProperties() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setOutputProperty
 				/// </java-name>
 				[Dot42.DexImport("setOutputProperty", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1025)]
@@ -303,48 +292,36 @@ namespace Javax.Xml.Transform
 				public abstract string GetOutputProperty(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setErrorListener
-				/// </java-name>
-				[Dot42.DexImport("setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", AccessFlags = 1025)]
-				public abstract void SetErrorListener(global::Javax.Xml.Transform.IErrorListener errorListener) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getErrorListener
-				/// </java-name>
-				[Dot42.DexImport("getErrorListener", "()Ljavax/xml/transform/ErrorListener;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Transform.IErrorListener GetErrorListener() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getURIResolver
 				/// </java-name>
-				public global::Javax.Xml.Transform.IURIResolver URIResolver
+				public abstract global::Javax.Xml.Transform.IURIResolver URIResolver
 				{
-				[Dot42.DexImport("getURIResolver", "()Ljavax/xml/transform/URIResolver;", AccessFlags = 1025)]
-						get{ return GetURIResolver(); }
-				[Dot42.DexImport("setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", AccessFlags = 1025)]
-						set{ SetURIResolver(value); }
+						[Dot42.DexImport("getURIResolver", "()Ljavax/xml/transform/URIResolver;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getOutputProperties
 				/// </java-name>
-				public global::Java.Util.Properties OutputProperties
+				public abstract global::Java.Util.Properties OutputProperties
 				{
-				[Dot42.DexImport("getOutputProperties", "()Ljava/util/Properties;", AccessFlags = 1025)]
-						get{ return GetOutputProperties(); }
-				[Dot42.DexImport("setOutputProperties", "(Ljava/util/Properties;)V", AccessFlags = 1025)]
-						set{ SetOutputProperties(value); }
+						[Dot42.DexImport("getOutputProperties", "()Ljava/util/Properties;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setOutputProperties", "(Ljava/util/Properties;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getErrorListener
 				/// </java-name>
-				public global::Javax.Xml.Transform.IErrorListener ErrorListener
+				public abstract global::Javax.Xml.Transform.IErrorListener ErrorListener
 				{
-				[Dot42.DexImport("getErrorListener", "()Ljavax/xml/transform/ErrorListener;", AccessFlags = 1025)]
-						get{ return GetErrorListener(); }
-				[Dot42.DexImport("setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", AccessFlags = 1025)]
-						set{ SetErrorListener(value); }
+						[Dot42.DexImport("getErrorListener", "()Ljavax/xml/transform/ErrorListener;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", AccessFlags = 1025)]
+						set;
 				}
 
 		}
@@ -421,65 +398,12 @@ namespace Javax.Xml.Transform
 				}
 
 				/// <java-name>
-				/// getLocator
-				/// </java-name>
-				[Dot42.DexImport("getLocator", "()Ljavax/xml/transform/SourceLocator;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Transform.ISourceLocator GetLocator() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Xml.Transform.ISourceLocator);
-				}
-
-				/// <java-name>
-				/// setLocator
-				/// </java-name>
-				[Dot42.DexImport("setLocator", "(Ljavax/xml/transform/SourceLocator;)V", AccessFlags = 1)]
-				public virtual void SetLocator(global::Javax.Xml.Transform.ISourceLocator sourceLocator) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getException
-				/// </java-name>
-				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getCause
-				/// </java-name>
-				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public override global::System.Exception GetCause() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
 				/// initCause
 				/// </java-name>
 				[Dot42.DexImport("initCause", "(Ljava/lang/Throwable;)Ljava/lang/Throwable;", AccessFlags = 33)]
 				public override global::System.Exception InitCause(global::System.Exception exception) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getMessageAndLocation
-				/// </java-name>
-				[Dot42.DexImport("getMessageAndLocation", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMessageAndLocation() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLocationAsString
-				/// </java-name>
-				[Dot42.DexImport("getLocationAsString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetLocationAsString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -514,39 +438,48 @@ namespace Javax.Xml.Transform
 				/// <java-name>
 				/// getLocator
 				/// </java-name>
-				public global::Javax.Xml.Transform.ISourceLocator Locator
+				public virtual global::Javax.Xml.Transform.ISourceLocator Locator
 				{
-				[Dot42.DexImport("getLocator", "()Ljavax/xml/transform/SourceLocator;", AccessFlags = 1)]
-						get{ return GetLocator(); }
-				[Dot42.DexImport("setLocator", "(Ljavax/xml/transform/SourceLocator;)V", AccessFlags = 1)]
-						set{ SetLocator(value); }
+						[Dot42.DexImport("getLocator", "()Ljavax/xml/transform/SourceLocator;", AccessFlags = 1)]
+						get{ return default(global::Javax.Xml.Transform.ISourceLocator); }
+						[Dot42.DexImport("setLocator", "(Ljavax/xml/transform/SourceLocator;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getException
 				/// </java-name>
-				public global::System.Exception Exception
+				public virtual global::System.Exception Exception
 				{
-				[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-						get{ return GetException(); }
+						[Dot42.DexImport("getException", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+						get{ return default(global::System.Exception); }
+				}
+
+				/// <java-name>
+				/// getCause
+				/// </java-name>
+				public override global::System.Exception Cause
+				{
+						[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+						get{ return default(global::System.Exception); }
 				}
 
 				/// <java-name>
 				/// getMessageAndLocation
 				/// </java-name>
-				public string MessageAndLocation
+				public virtual string MessageAndLocation
 				{
-				[Dot42.DexImport("getMessageAndLocation", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMessageAndLocation(); }
+						[Dot42.DexImport("getMessageAndLocation", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getLocationAsString
 				/// </java-name>
-				public string LocationAsString
+				public virtual string LocationAsString
 				{
-				[Dot42.DexImport("getLocationAsString", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocationAsString(); }
+						[Dot42.DexImport("getLocationAsString", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -608,18 +541,6 @@ namespace Javax.Xml.Transform
 				public abstract global::Javax.Xml.Transform.ISource GetAssociatedStylesheet(global::Javax.Xml.Transform.ISource source, string @string, string string1, string string2) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setURIResolver
-				/// </java-name>
-				[Dot42.DexImport("setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", AccessFlags = 1025)]
-				public abstract void SetURIResolver(global::Javax.Xml.Transform.IURIResolver uRIResolver) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getURIResolver
-				/// </java-name>
-				[Dot42.DexImport("getURIResolver", "()Ljavax/xml/transform/URIResolver;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Transform.IURIResolver GetURIResolver() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setFeature
 				/// </java-name>
 				[Dot42.DexImport("setFeature", "(Ljava/lang/String;Z)V", AccessFlags = 1025)]
@@ -644,37 +565,25 @@ namespace Javax.Xml.Transform
 				public abstract object GetAttribute(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setErrorListener
-				/// </java-name>
-				[Dot42.DexImport("setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", AccessFlags = 1025)]
-				public abstract void SetErrorListener(global::Javax.Xml.Transform.IErrorListener errorListener) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getErrorListener
-				/// </java-name>
-				[Dot42.DexImport("getErrorListener", "()Ljavax/xml/transform/ErrorListener;", AccessFlags = 1025)]
-				public abstract global::Javax.Xml.Transform.IErrorListener GetErrorListener() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getURIResolver
 				/// </java-name>
-				public global::Javax.Xml.Transform.IURIResolver URIResolver
+				public abstract global::Javax.Xml.Transform.IURIResolver URIResolver
 				{
-				[Dot42.DexImport("getURIResolver", "()Ljavax/xml/transform/URIResolver;", AccessFlags = 1025)]
-						get{ return GetURIResolver(); }
-				[Dot42.DexImport("setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", AccessFlags = 1025)]
-						set{ SetURIResolver(value); }
+						[Dot42.DexImport("getURIResolver", "()Ljavax/xml/transform/URIResolver;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
 				/// getErrorListener
 				/// </java-name>
-				public global::Javax.Xml.Transform.IErrorListener ErrorListener
+				public abstract global::Javax.Xml.Transform.IErrorListener ErrorListener
 				{
-				[Dot42.DexImport("getErrorListener", "()Ljavax/xml/transform/ErrorListener;", AccessFlags = 1025)]
-						get{ return GetErrorListener(); }
-				[Dot42.DexImport("setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", AccessFlags = 1025)]
-						set{ SetErrorListener(value); }
+						[Dot42.DexImport("getErrorListener", "()Ljavax/xml/transform/ErrorListener;", AccessFlags = 1025)]
+						get;
+						[Dot42.DexImport("setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", AccessFlags = 1025)]
+						set;
 				}
 
 		}
@@ -718,19 +627,10 @@ namespace Javax.Xml.Transform
 				/// <java-name>
 				/// getException
 				/// </java-name>
-				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
-				public virtual global::System.Exception GetException() /* MethodBuilder.Create */ 
+				public virtual global::System.Exception Exception
 				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getException
-				/// </java-name>
-				public global::System.Exception Exception
-				{
-				[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
-						get{ return GetException(); }
+						[Dot42.DexImport("getException", "()Ljava/lang/Exception;", AccessFlags = 1)]
+						get{ return default(global::System.Exception); }
 				}
 
 		}

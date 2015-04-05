@@ -180,15 +180,6 @@ namespace Android.Sax
 				{
 				}
 
-				/// <java-name>
-				/// getContentHandler
-				/// </java-name>
-				[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IContentHandler GetContentHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IContentHandler);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal RootElement() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -197,10 +188,10 @@ namespace Android.Sax
 				/// <java-name>
 				/// getContentHandler
 				/// </java-name>
-				public global::Org.Xml.Sax.IContentHandler ContentHandler
+				public virtual global::Org.Xml.Sax.IContentHandler ContentHandler
 				{
-				[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
-						get{ return GetContentHandler(); }
+						[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IContentHandler); }
 				}
 
 		}

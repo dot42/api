@@ -19,33 +19,6 @@ namespace Android.Views.Textservice
 				}
 
 				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getComponent
-				/// </java-name>
-				[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
-				public global::Android.Content.ComponentName GetComponent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ComponentName);
-				}
-
-				/// <java-name>
-				/// getPackageName
-				/// </java-name>
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPackageName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
@@ -72,33 +45,6 @@ namespace Android.Views.Textservice
 				}
 
 				/// <java-name>
-				/// getServiceInfo
-				/// </java-name>
-				[Dot42.DexImport("getServiceInfo", "()Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ServiceInfo GetServiceInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ServiceInfo);
-				}
-
-				/// <java-name>
-				/// getSettingsActivity
-				/// </java-name>
-				[Dot42.DexImport("getSettingsActivity", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetSettingsActivity() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSubtypeCount
-				/// </java-name>
-				[Dot42.DexImport("getSubtypeCount", "()I", AccessFlags = 1)]
-				public int GetSubtypeCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getSubtypeAt
 				/// </java-name>
 				[Dot42.DexImport("getSubtypeAt", "(I)Landroid/view/textservice/SpellCheckerSubtype;", AccessFlags = 1)]
@@ -121,8 +67,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public string Id
 				{
-				[Dot42.DexImport("getId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -130,8 +76,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public global::Android.Content.ComponentName Component
 				{
-				[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
-						get{ return GetComponent(); }
+						[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.ComponentName); }
 				}
 
 				/// <java-name>
@@ -139,8 +85,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public string PackageName
 				{
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPackageName(); }
+						[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -148,8 +94,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public global::Android.Content.Pm.ServiceInfo ServiceInfo
 				{
-				[Dot42.DexImport("getServiceInfo", "()Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-						get{ return GetServiceInfo(); }
+						[Dot42.DexImport("getServiceInfo", "()Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Pm.ServiceInfo); }
 				}
 
 				/// <java-name>
@@ -157,8 +103,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public string SettingsActivity
 				{
-				[Dot42.DexImport("getSettingsActivity", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSettingsActivity(); }
+						[Dot42.DexImport("getSettingsActivity", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -166,8 +112,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public int SubtypeCount
 				{
-				[Dot42.DexImport("getSubtypeCount", "()I", AccessFlags = 1)]
-						get{ return GetSubtypeCount(); }
+						[Dot42.DexImport("getSubtypeCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -187,24 +133,6 @@ namespace Android.Views.Textservice
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal SpellCheckerSession() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isSessionDisconnected
-				/// </java-name>
-				[Dot42.DexImport("isSessionDisconnected", "()Z", AccessFlags = 1)]
-				public virtual bool IsSessionDisconnected() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getSpellChecker
-				/// </java-name>
-				[Dot42.DexImport("getSpellChecker", "()Landroid/view/textservice/SpellCheckerInfo;", AccessFlags = 1)]
-				public virtual global::Android.Views.Textservice.SpellCheckerInfo GetSpellChecker() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.Textservice.SpellCheckerInfo);
 				}
 
 				/// <java-name>
@@ -246,12 +174,21 @@ namespace Android.Views.Textservice
 				extern ~SpellCheckerSession() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// isSessionDisconnected
+				/// </java-name>
+				public virtual bool IsSessionDisconnected
+				{
+						[Dot42.DexImport("isSessionDisconnected", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getSpellChecker
 				/// </java-name>
-				public global::Android.Views.Textservice.SpellCheckerInfo SpellChecker
+				public virtual global::Android.Views.Textservice.SpellCheckerInfo SpellChecker
 				{
-				[Dot42.DexImport("getSpellChecker", "()Landroid/view/textservice/SpellCheckerInfo;", AccessFlags = 1)]
-						get{ return GetSpellChecker(); }
+						[Dot42.DexImport("getSpellChecker", "()Landroid/view/textservice/SpellCheckerInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.Textservice.SpellCheckerInfo); }
 				}
 
 				/// <java-name>
@@ -286,33 +223,6 @@ namespace Android.Views.Textservice
 				[Dot42.DexImport("<init>", "(ILjava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public SpellCheckerSubtype(int int32, string @string, string string1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getNameResId
-				/// </java-name>
-				[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
-				public int GetNameResId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLocale
-				/// </java-name>
-				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetLocale() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getExtraValue
-				/// </java-name>
-				[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetExtraValue() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -370,8 +280,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public int NameResId
 				{
-				[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
-						get{ return GetNameResId(); }
+						[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -379,8 +289,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public string Locale
 				{
-				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocale(); }
+						[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -388,8 +298,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public string ExtraValue
 				{
-				[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetExtraValue(); }
+						[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -453,42 +363,6 @@ namespace Android.Views.Textservice
 				}
 
 				/// <java-name>
-				/// getCookie
-				/// </java-name>
-				[Dot42.DexImport("getCookie", "()I", AccessFlags = 1)]
-				public int GetCookie() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSequence
-				/// </java-name>
-				[Dot42.DexImport("getSequence", "()I", AccessFlags = 1)]
-				public int GetSequence() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSuggestionsAttributes
-				/// </java-name>
-				[Dot42.DexImport("getSuggestionsAttributes", "()I", AccessFlags = 1)]
-				public int GetSuggestionsAttributes() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSuggestionsCount
-				/// </java-name>
-				[Dot42.DexImport("getSuggestionsCount", "()I", AccessFlags = 1)]
-				public int GetSuggestionsCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getSuggestionAt
 				/// </java-name>
 				[Dot42.DexImport("getSuggestionAt", "(I)Ljava/lang/String;", AccessFlags = 1)]
@@ -516,8 +390,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public int Cookie
 				{
-				[Dot42.DexImport("getCookie", "()I", AccessFlags = 1)]
-						get{ return GetCookie(); }
+						[Dot42.DexImport("getCookie", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -525,8 +399,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public int Sequence
 				{
-				[Dot42.DexImport("getSequence", "()I", AccessFlags = 1)]
-						get{ return GetSequence(); }
+						[Dot42.DexImport("getSequence", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -534,8 +408,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public int SuggestionsAttributes
 				{
-				[Dot42.DexImport("getSuggestionsAttributes", "()I", AccessFlags = 1)]
-						get{ return GetSuggestionsAttributes(); }
+						[Dot42.DexImport("getSuggestionsAttributes", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -543,8 +417,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public int SuggestionsCount
 				{
-				[Dot42.DexImport("getSuggestionsCount", "()I", AccessFlags = 1)]
-						get{ return GetSuggestionsCount(); }
+						[Dot42.DexImport("getSuggestionsCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -585,33 +459,6 @@ namespace Android.Views.Textservice
 				}
 
 				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetText() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCookie
-				/// </java-name>
-				[Dot42.DexImport("getCookie", "()I", AccessFlags = 1)]
-				public int GetCookie() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSequence
-				/// </java-name>
-				[Dot42.DexImport("getSequence", "()I", AccessFlags = 1)]
-				public int GetSequence() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -630,8 +477,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public string Text
 				{
-				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetText(); }
+						[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -639,8 +486,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public int Cookie
 				{
-				[Dot42.DexImport("getCookie", "()I", AccessFlags = 1)]
-						get{ return GetCookie(); }
+						[Dot42.DexImport("getCookie", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -648,8 +495,8 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				public int Sequence
 				{
-				[Dot42.DexImport("getSequence", "()I", AccessFlags = 1)]
-						get{ return GetSequence(); }
+						[Dot42.DexImport("getSequence", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

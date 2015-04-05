@@ -14,31 +14,14 @@ namespace Java.Util.Concurrent.Locks
 				}
 
 				/// <java-name>
-				/// setExclusiveOwnerThread
-				/// </java-name>
-				[Dot42.DexImport("setExclusiveOwnerThread", "(Ljava/lang/Thread;)V", AccessFlags = 20)]
-				protected internal void SetExclusiveOwnerThread(global::System.Threading.Thread thread) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getExclusiveOwnerThread
-				/// </java-name>
-				[Dot42.DexImport("getExclusiveOwnerThread", "()Ljava/lang/Thread;", AccessFlags = 20)]
-				protected internal global::System.Threading.Thread GetExclusiveOwnerThread() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
-				}
-
-				/// <java-name>
 				/// getExclusiveOwnerThread
 				/// </java-name>
 				protected internal global::System.Threading.Thread ExclusiveOwnerThread
 				{
-				[Dot42.DexImport("getExclusiveOwnerThread", "()Ljava/lang/Thread;", AccessFlags = 20)]
-						get{ return GetExclusiveOwnerThread(); }
-				[Dot42.DexImport("setExclusiveOwnerThread", "(Ljava/lang/Thread;)V", AccessFlags = 20)]
-						set{ SetExclusiveOwnerThread(value); }
+						[Dot42.DexImport("getExclusiveOwnerThread", "()Ljava/lang/Thread;", AccessFlags = 20)]
+						get{ return default(global::System.Threading.Thread); }
+						[Dot42.DexImport("setExclusiveOwnerThread", "(Ljava/lang/Thread;)V", AccessFlags = 20)]
+						set{ }
 				}
 
 		}
@@ -52,23 +35,6 @@ namespace Java.Util.Concurrent.Locks
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
 				protected internal AbstractQueuedLongSynchronizer() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()J", AccessFlags = 20)]
-				protected internal long GetState() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// setState
-				/// </java-name>
-				[Dot42.DexImport("setState", "(J)V", AccessFlags = 20)]
-				protected internal void SetState(long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -113,15 +79,6 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				[Dot42.DexImport("tryReleaseShared", "(J)Z", AccessFlags = 4)]
 				protected internal virtual bool TryReleaseShared(long int64) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isHeldExclusively
-				/// </java-name>
-				[Dot42.DexImport("isHeldExclusively", "()Z", AccessFlags = 4)]
-				protected internal virtual bool IsHeldExclusively() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -195,75 +152,12 @@ namespace Java.Util.Concurrent.Locks
 				}
 
 				/// <java-name>
-				/// hasQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
-				public bool HasQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasContended
-				/// </java-name>
-				[Dot42.DexImport("hasContended", "()Z", AccessFlags = 17)]
-				public bool HasContended() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getFirstQueuedThread
-				/// </java-name>
-				[Dot42.DexImport("getFirstQueuedThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
-				public global::System.Threading.Thread GetFirstQueuedThread() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
-				}
-
-				/// <java-name>
 				/// isQueued
 				/// </java-name>
 				[Dot42.DexImport("isQueued", "(Ljava/lang/Thread;)Z", AccessFlags = 17)]
 				public bool IsQueued(global::System.Threading.Thread thread) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getQueueLength
-				/// </java-name>
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-				public int GetQueueLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				public global::Java.Util.ICollection<global::System.Threading.Thread> GetQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
-				}
-
-				/// <java-name>
-				/// getExclusiveQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("getExclusiveQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				public global::Java.Util.ICollection<global::System.Threading.Thread> GetExclusiveQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
-				}
-
-				/// <java-name>
-				/// getSharedQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("getSharedQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				public global::Java.Util.ICollection<global::System.Threading.Thread> GetSharedQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
 				}
 
 				/// <java-name>
@@ -318,10 +212,37 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				protected internal long State
 				{
-				[Dot42.DexImport("getState", "()J", AccessFlags = 20)]
-						get{ return GetState(); }
-				[Dot42.DexImport("setState", "(J)V", AccessFlags = 20)]
-						set{ SetState(value); }
+						[Dot42.DexImport("getState", "()J", AccessFlags = 20)]
+						get{ return default(long); }
+						[Dot42.DexImport("setState", "(J)V", AccessFlags = 20)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isHeldExclusively
+				/// </java-name>
+				protected internal virtual bool IsHeldExclusively
+				{
+						[Dot42.DexImport("isHeldExclusively", "()Z", AccessFlags = 4)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasQueuedThreads
+				/// </java-name>
+				public bool HasQueuedThreads
+				{
+						[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasContended
+				/// </java-name>
+				public bool HasContended
+				{
+						[Dot42.DexImport("hasContended", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -329,8 +250,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public global::System.Threading.Thread FirstQueuedThread
 				{
-				[Dot42.DexImport("getFirstQueuedThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
-						get{ return GetFirstQueuedThread(); }
+						[Dot42.DexImport("getFirstQueuedThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
+						get{ return default(global::System.Threading.Thread); }
 				}
 
 				/// <java-name>
@@ -338,8 +259,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public int QueueLength
 				{
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-						get{ return GetQueueLength(); }
+						[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -347,8 +268,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public global::Java.Util.ICollection<global::System.Threading.Thread> QueuedThreads
 				{
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetQueuedThreads(); }
+						[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 				/// <java-name>
@@ -356,8 +277,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public global::Java.Util.ICollection<global::System.Threading.Thread> ExclusiveQueuedThreads
 				{
-				[Dot42.DexImport("getExclusiveQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetExclusiveQueuedThreads(); }
+						[Dot42.DexImport("getExclusiveQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 				/// <java-name>
@@ -365,8 +286,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public global::Java.Util.ICollection<global::System.Threading.Thread> SharedQueuedThreads
 				{
-				[Dot42.DexImport("getSharedQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetSharedQueuedThreads(); }
+						[Dot42.DexImport("getSharedQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 				/// <java-name>
@@ -445,36 +366,18 @@ namespace Java.Util.Concurrent.Locks
 								return default(bool);
 						}
 
-						/// <java-name>
-						/// hasWaiters
-						/// </java-name>
-						[Dot42.DexImport("hasWaiters", "()Z", AccessFlags = 20)]
-						protected internal bool HasWaiters() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// getWaitQueueLength
-						/// </java-name>
-						[Dot42.DexImport("getWaitQueueLength", "()I", AccessFlags = 20)]
-						protected internal int GetWaitQueueLength() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getWaitingThreads
-						/// </java-name>
-						[Dot42.DexImport("getWaitingThreads", "()Ljava/util/Collection;", AccessFlags = 20, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						protected internal global::Java.Util.ICollection<global::System.Threading.Thread> GetWaitingThreads() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal ConditionObject() /* TypeBuilder.AddDefaultConstructor */ 
 						{
+						}
+
+						/// <java-name>
+						/// hasWaiters
+						/// </java-name>
+						protected internal bool HasWaiters
+						{
+								[Dot42.DexImport("hasWaiters", "()Z", AccessFlags = 20)]
+								get{ return default(bool); }
 						}
 
 						/// <java-name>
@@ -482,8 +385,8 @@ namespace Java.Util.Concurrent.Locks
 						/// </java-name>
 						protected internal int WaitQueueLength
 						{
-						[Dot42.DexImport("getWaitQueueLength", "()I", AccessFlags = 20)]
-								get{ return GetWaitQueueLength(); }
+								[Dot42.DexImport("getWaitQueueLength", "()I", AccessFlags = 20)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -491,8 +394,8 @@ namespace Java.Util.Concurrent.Locks
 						/// </java-name>
 						protected internal global::Java.Util.ICollection<global::System.Threading.Thread> WaitingThreads
 						{
-						[Dot42.DexImport("getWaitingThreads", "()Ljava/util/Collection;", AccessFlags = 20, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-								get{ return GetWaitingThreads(); }
+								[Dot42.DexImport("getWaitingThreads", "()Ljava/util/Collection;", AccessFlags = 20, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+								get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 						}
 
 				}
@@ -508,23 +411,6 @@ namespace Java.Util.Concurrent.Locks
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
 				protected internal AbstractQueuedSynchronizer() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()I", AccessFlags = 20)]
-				protected internal int GetState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setState
-				/// </java-name>
-				[Dot42.DexImport("setState", "(I)V", AccessFlags = 20)]
-				protected internal void SetState(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -569,15 +455,6 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				[Dot42.DexImport("tryReleaseShared", "(I)Z", AccessFlags = 4)]
 				protected internal virtual bool TryReleaseShared(int int32) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isHeldExclusively
-				/// </java-name>
-				[Dot42.DexImport("isHeldExclusively", "()Z", AccessFlags = 4)]
-				protected internal virtual bool IsHeldExclusively() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -651,75 +528,12 @@ namespace Java.Util.Concurrent.Locks
 				}
 
 				/// <java-name>
-				/// hasQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
-				public bool HasQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasContended
-				/// </java-name>
-				[Dot42.DexImport("hasContended", "()Z", AccessFlags = 17)]
-				public bool HasContended() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getFirstQueuedThread
-				/// </java-name>
-				[Dot42.DexImport("getFirstQueuedThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
-				public global::System.Threading.Thread GetFirstQueuedThread() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
-				}
-
-				/// <java-name>
 				/// isQueued
 				/// </java-name>
 				[Dot42.DexImport("isQueued", "(Ljava/lang/Thread;)Z", AccessFlags = 17)]
 				public bool IsQueued(global::System.Threading.Thread thread) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getQueueLength
-				/// </java-name>
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-				public int GetQueueLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				public global::Java.Util.ICollection<global::System.Threading.Thread> GetQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
-				}
-
-				/// <java-name>
-				/// getExclusiveQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("getExclusiveQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				public global::Java.Util.ICollection<global::System.Threading.Thread> GetExclusiveQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
-				}
-
-				/// <java-name>
-				/// getSharedQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("getSharedQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				public global::Java.Util.ICollection<global::System.Threading.Thread> GetSharedQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
 				}
 
 				/// <java-name>
@@ -774,10 +588,37 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				protected internal int State
 				{
-				[Dot42.DexImport("getState", "()I", AccessFlags = 20)]
-						get{ return GetState(); }
-				[Dot42.DexImport("setState", "(I)V", AccessFlags = 20)]
-						set{ SetState(value); }
+						[Dot42.DexImport("getState", "()I", AccessFlags = 20)]
+						get{ return default(int); }
+						[Dot42.DexImport("setState", "(I)V", AccessFlags = 20)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isHeldExclusively
+				/// </java-name>
+				protected internal virtual bool IsHeldExclusively
+				{
+						[Dot42.DexImport("isHeldExclusively", "()Z", AccessFlags = 4)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasQueuedThreads
+				/// </java-name>
+				public bool HasQueuedThreads
+				{
+						[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasContended
+				/// </java-name>
+				public bool HasContended
+				{
+						[Dot42.DexImport("hasContended", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -785,8 +626,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public global::System.Threading.Thread FirstQueuedThread
 				{
-				[Dot42.DexImport("getFirstQueuedThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
-						get{ return GetFirstQueuedThread(); }
+						[Dot42.DexImport("getFirstQueuedThread", "()Ljava/lang/Thread;", AccessFlags = 17)]
+						get{ return default(global::System.Threading.Thread); }
 				}
 
 				/// <java-name>
@@ -794,8 +635,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public int QueueLength
 				{
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-						get{ return GetQueueLength(); }
+						[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -803,8 +644,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public global::Java.Util.ICollection<global::System.Threading.Thread> QueuedThreads
 				{
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetQueuedThreads(); }
+						[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 				/// <java-name>
@@ -812,8 +653,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public global::Java.Util.ICollection<global::System.Threading.Thread> ExclusiveQueuedThreads
 				{
-				[Dot42.DexImport("getExclusiveQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetExclusiveQueuedThreads(); }
+						[Dot42.DexImport("getExclusiveQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 				/// <java-name>
@@ -821,8 +662,8 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public global::Java.Util.ICollection<global::System.Threading.Thread> SharedQueuedThreads
 				{
-				[Dot42.DexImport("getSharedQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetSharedQueuedThreads(); }
+						[Dot42.DexImport("getSharedQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 17, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 				/// <java-name>
@@ -901,36 +742,18 @@ namespace Java.Util.Concurrent.Locks
 								return default(bool);
 						}
 
-						/// <java-name>
-						/// hasWaiters
-						/// </java-name>
-						[Dot42.DexImport("hasWaiters", "()Z", AccessFlags = 20)]
-						protected internal bool HasWaiters() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// getWaitQueueLength
-						/// </java-name>
-						[Dot42.DexImport("getWaitQueueLength", "()I", AccessFlags = 20)]
-						protected internal int GetWaitQueueLength() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getWaitingThreads
-						/// </java-name>
-						[Dot42.DexImport("getWaitingThreads", "()Ljava/util/Collection;", AccessFlags = 20, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						protected internal global::Java.Util.ICollection<global::System.Threading.Thread> GetWaitingThreads() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal ConditionObject() /* TypeBuilder.AddDefaultConstructor */ 
 						{
+						}
+
+						/// <java-name>
+						/// hasWaiters
+						/// </java-name>
+						protected internal bool HasWaiters
+						{
+								[Dot42.DexImport("hasWaiters", "()Z", AccessFlags = 20)]
+								get{ return default(bool); }
 						}
 
 						/// <java-name>
@@ -938,8 +761,8 @@ namespace Java.Util.Concurrent.Locks
 						/// </java-name>
 						protected internal int WaitQueueLength
 						{
-						[Dot42.DexImport("getWaitQueueLength", "()I", AccessFlags = 20)]
-								get{ return GetWaitQueueLength(); }
+								[Dot42.DexImport("getWaitQueueLength", "()I", AccessFlags = 20)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -947,8 +770,8 @@ namespace Java.Util.Concurrent.Locks
 						/// </java-name>
 						protected internal global::Java.Util.ICollection<global::System.Threading.Thread> WaitingThreads
 						{
-						[Dot42.DexImport("getWaitingThreads", "()Ljava/util/Collection;", AccessFlags = 20, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-								get{ return GetWaitingThreads(); }
+								[Dot42.DexImport("getWaitingThreads", "()Ljava/util/Collection;", AccessFlags = 20, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+								get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 						}
 
 				}
@@ -1220,84 +1043,12 @@ namespace Java.Util.Concurrent.Locks
 				}
 
 				/// <java-name>
-				/// getHoldCount
-				/// </java-name>
-				[Dot42.DexImport("getHoldCount", "()I", AccessFlags = 1)]
-				public virtual int GetHoldCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isHeldByCurrentThread
-				/// </java-name>
-				[Dot42.DexImport("isHeldByCurrentThread", "()Z", AccessFlags = 1)]
-				public virtual bool IsHeldByCurrentThread() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLocked
-				/// </java-name>
-				[Dot42.DexImport("isLocked", "()Z", AccessFlags = 1)]
-				public virtual bool IsLocked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isFair
-				/// </java-name>
-				[Dot42.DexImport("isFair", "()Z", AccessFlags = 17)]
-				public bool IsFair() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getOwner
-				/// </java-name>
-				[Dot42.DexImport("getOwner", "()Ljava/lang/Thread;", AccessFlags = 4)]
-				protected internal virtual global::System.Threading.Thread GetOwner() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
-				}
-
-				/// <java-name>
-				/// hasQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
-				public bool HasQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// hasQueuedThread
 				/// </java-name>
 				[Dot42.DexImport("hasQueuedThread", "(Ljava/lang/Thread;)Z", AccessFlags = 17)]
 				public bool HasQueuedThread(global::System.Threading.Thread thread) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getQueueLength
-				/// </java-name>
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-				public int GetQueueLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> GetQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
 				}
 
 				/// <java-name>
@@ -1340,19 +1091,55 @@ namespace Java.Util.Concurrent.Locks
 				/// <java-name>
 				/// getHoldCount
 				/// </java-name>
-				public int HoldCount
+				public virtual int HoldCount
 				{
-				[Dot42.DexImport("getHoldCount", "()I", AccessFlags = 1)]
-						get{ return GetHoldCount(); }
+						[Dot42.DexImport("getHoldCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isHeldByCurrentThread
+				/// </java-name>
+				public virtual bool IsHeldByCurrentThread
+				{
+						[Dot42.DexImport("isHeldByCurrentThread", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLocked
+				/// </java-name>
+				public virtual bool IsLocked
+				{
+						[Dot42.DexImport("isLocked", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFair
+				/// </java-name>
+				public bool IsFair
+				{
+						[Dot42.DexImport("isFair", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getOwner
 				/// </java-name>
-				protected internal global::System.Threading.Thread Owner
+				protected internal virtual global::System.Threading.Thread Owner
 				{
-				[Dot42.DexImport("getOwner", "()Ljava/lang/Thread;", AccessFlags = 4)]
-						get{ return GetOwner(); }
+						[Dot42.DexImport("getOwner", "()Ljava/lang/Thread;", AccessFlags = 4)]
+						get{ return default(global::System.Threading.Thread); }
+				}
+
+				/// <java-name>
+				/// hasQueuedThreads
+				/// </java-name>
+				public bool HasQueuedThreads
+				{
+						[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1360,17 +1147,17 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public int QueueLength
 				{
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-						get{ return GetQueueLength(); }
+						[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getQueuedThreads
 				/// </java-name>
-				protected internal global::Java.Util.ICollection<global::System.Threading.Thread> QueuedThreads
+				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> QueuedThreads
 				{
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetQueuedThreads(); }
+						[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 		}
@@ -1411,120 +1198,12 @@ namespace Java.Util.Concurrent.Locks
 				}
 
 				/// <java-name>
-				/// isFair
-				/// </java-name>
-				[Dot42.DexImport("isFair", "()Z", AccessFlags = 17)]
-				public bool IsFair() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getOwner
-				/// </java-name>
-				[Dot42.DexImport("getOwner", "()Ljava/lang/Thread;", AccessFlags = 4)]
-				protected internal virtual global::System.Threading.Thread GetOwner() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
-				}
-
-				/// <java-name>
-				/// getReadLockCount
-				/// </java-name>
-				[Dot42.DexImport("getReadLockCount", "()I", AccessFlags = 1)]
-				public virtual int GetReadLockCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isWriteLocked
-				/// </java-name>
-				[Dot42.DexImport("isWriteLocked", "()Z", AccessFlags = 1)]
-				public virtual bool IsWriteLocked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isWriteLockedByCurrentThread
-				/// </java-name>
-				[Dot42.DexImport("isWriteLockedByCurrentThread", "()Z", AccessFlags = 1)]
-				public virtual bool IsWriteLockedByCurrentThread() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getWriteHoldCount
-				/// </java-name>
-				[Dot42.DexImport("getWriteHoldCount", "()I", AccessFlags = 1)]
-				public virtual int GetWriteHoldCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getReadHoldCount
-				/// </java-name>
-				[Dot42.DexImport("getReadHoldCount", "()I", AccessFlags = 1)]
-				public virtual int GetReadHoldCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getQueuedWriterThreads
-				/// </java-name>
-				[Dot42.DexImport("getQueuedWriterThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> GetQueuedWriterThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
-				}
-
-				/// <java-name>
-				/// getQueuedReaderThreads
-				/// </java-name>
-				[Dot42.DexImport("getQueuedReaderThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> GetQueuedReaderThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
-				}
-
-				/// <java-name>
-				/// hasQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
-				public bool HasQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// hasQueuedThread
 				/// </java-name>
 				[Dot42.DexImport("hasQueuedThread", "(Ljava/lang/Thread;)Z", AccessFlags = 17)]
 				public bool HasQueuedThread(global::System.Threading.Thread thread) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getQueueLength
-				/// </java-name>
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-				public int GetQueueLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getQueuedThreads
-				/// </java-name>
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> GetQueuedThreads() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.ICollection<global::System.Threading.Thread>);
 				}
 
 				/// <java-name>
@@ -1577,57 +1256,93 @@ namespace Java.Util.Concurrent.Locks
 				}
 
 				/// <java-name>
+				/// isFair
+				/// </java-name>
+				public bool IsFair
+				{
+						[Dot42.DexImport("isFair", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getOwner
 				/// </java-name>
-				protected internal global::System.Threading.Thread Owner
+				protected internal virtual global::System.Threading.Thread Owner
 				{
-				[Dot42.DexImport("getOwner", "()Ljava/lang/Thread;", AccessFlags = 4)]
-						get{ return GetOwner(); }
+						[Dot42.DexImport("getOwner", "()Ljava/lang/Thread;", AccessFlags = 4)]
+						get{ return default(global::System.Threading.Thread); }
 				}
 
 				/// <java-name>
 				/// getReadLockCount
 				/// </java-name>
-				public int ReadLockCount
+				public virtual int ReadLockCount
 				{
-				[Dot42.DexImport("getReadLockCount", "()I", AccessFlags = 1)]
-						get{ return GetReadLockCount(); }
+						[Dot42.DexImport("getReadLockCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isWriteLocked
+				/// </java-name>
+				public virtual bool IsWriteLocked
+				{
+						[Dot42.DexImport("isWriteLocked", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isWriteLockedByCurrentThread
+				/// </java-name>
+				public virtual bool IsWriteLockedByCurrentThread
+				{
+						[Dot42.DexImport("isWriteLockedByCurrentThread", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getWriteHoldCount
 				/// </java-name>
-				public int WriteHoldCount
+				public virtual int WriteHoldCount
 				{
-				[Dot42.DexImport("getWriteHoldCount", "()I", AccessFlags = 1)]
-						get{ return GetWriteHoldCount(); }
+						[Dot42.DexImport("getWriteHoldCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getReadHoldCount
 				/// </java-name>
-				public int ReadHoldCount
+				public virtual int ReadHoldCount
 				{
-				[Dot42.DexImport("getReadHoldCount", "()I", AccessFlags = 1)]
-						get{ return GetReadHoldCount(); }
+						[Dot42.DexImport("getReadHoldCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getQueuedWriterThreads
 				/// </java-name>
-				protected internal global::Java.Util.ICollection<global::System.Threading.Thread> QueuedWriterThreads
+				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> QueuedWriterThreads
 				{
-				[Dot42.DexImport("getQueuedWriterThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetQueuedWriterThreads(); }
+						[Dot42.DexImport("getQueuedWriterThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 				/// <java-name>
 				/// getQueuedReaderThreads
 				/// </java-name>
-				protected internal global::Java.Util.ICollection<global::System.Threading.Thread> QueuedReaderThreads
+				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> QueuedReaderThreads
 				{
-				[Dot42.DexImport("getQueuedReaderThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetQueuedReaderThreads(); }
+						[Dot42.DexImport("getQueuedReaderThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
+				}
+
+				/// <java-name>
+				/// hasQueuedThreads
+				/// </java-name>
+				public bool HasQueuedThreads
+				{
+						[Dot42.DexImport("hasQueuedThreads", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1635,17 +1350,17 @@ namespace Java.Util.Concurrent.Locks
 				/// </java-name>
 				public int QueueLength
 				{
-				[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
-						get{ return GetQueueLength(); }
+						[Dot42.DexImport("getQueueLength", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getQueuedThreads
 				/// </java-name>
-				protected internal global::Java.Util.ICollection<global::System.Threading.Thread> QueuedThreads
+				protected internal virtual global::Java.Util.ICollection<global::System.Threading.Thread> QueuedThreads
 				{
-				[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
-						get{ return GetQueuedThreads(); }
+						[Dot42.DexImport("getQueuedThreads", "()Ljava/util/Collection;", AccessFlags = 4, Signature = "()Ljava/util/Collection<Ljava/lang/Thread;>;")]
+						get{ return default(global::Java.Util.ICollection<global::System.Threading.Thread>); }
 				}
 
 				/// <java-name>
@@ -1720,36 +1435,27 @@ namespace Java.Util.Concurrent.Locks
 								return default(string);
 						}
 
-						/// <java-name>
-						/// isHeldByCurrentThread
-						/// </java-name>
-						[Dot42.DexImport("isHeldByCurrentThread", "()Z", AccessFlags = 1)]
-						public virtual bool IsHeldByCurrentThread() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// getHoldCount
-						/// </java-name>
-						[Dot42.DexImport("getHoldCount", "()I", AccessFlags = 1)]
-						public virtual int GetHoldCount() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal JavaWriteLock() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
 						/// <java-name>
+						/// isHeldByCurrentThread
+						/// </java-name>
+						public virtual bool IsHeldByCurrentThread
+						{
+								[Dot42.DexImport("isHeldByCurrentThread", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
+						}
+
+						/// <java-name>
 						/// getHoldCount
 						/// </java-name>
-						public int HoldCount
+						public virtual int HoldCount
 						{
-						[Dot42.DexImport("getHoldCount", "()I", AccessFlags = 1)]
-								get{ return GetHoldCount(); }
+								[Dot42.DexImport("getHoldCount", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 				}

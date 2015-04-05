@@ -244,15 +244,6 @@ namespace Org.Apache.Http.Conn.Ssl
 				}
 
 				/// <java-name>
-				/// getSocketFactory
-				/// </java-name>
-				[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/ssl/SSLSocketFactory;", AccessFlags = 9)]
-				public static global::Org.Apache.Http.Conn.Ssl.SSLSocketFactory GetSocketFactory() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Ssl.SSLSocketFactory);
-				}
-
-				/// <java-name>
 				/// createSocket
 				/// </java-name>
 				[Dot42.DexImport("createSocket", "()Ljava/net/Socket;", AccessFlags = 1)]
@@ -289,23 +280,6 @@ namespace Org.Apache.Http.Conn.Ssl
 						return default(global::Java.Net.Socket);
 				}
 
-				/// <java-name>
-				/// setHostnameVerifier
-				/// </java-name>
-				[Dot42.DexImport("setHostnameVerifier", "(Lorg/apache/http/conn/ssl/X509HostnameVerifier;)V", AccessFlags = 1)]
-				public virtual void SetHostnameVerifier(global::Org.Apache.Http.Conn.Ssl.IX509HostnameVerifier x509HostnameVerifier) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHostnameVerifier
-				/// </java-name>
-				[Dot42.DexImport("getHostnameVerifier", "()Lorg/apache/http/conn/ssl/X509HostnameVerifier;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Conn.Ssl.IX509HostnameVerifier GetHostnameVerifier() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Ssl.IX509HostnameVerifier);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal SSLSocketFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -316,19 +290,19 @@ namespace Org.Apache.Http.Conn.Ssl
 				/// </java-name>
 				public static global::Org.Apache.Http.Conn.Ssl.SSLSocketFactory SocketFactory
 				{
-				[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/ssl/SSLSocketFactory;", AccessFlags = 9)]
-						get{ return GetSocketFactory(); }
+						[Dot42.DexImport("getSocketFactory", "()Lorg/apache/http/conn/ssl/SSLSocketFactory;", AccessFlags = 9)]
+						get{ return default(global::Org.Apache.Http.Conn.Ssl.SSLSocketFactory); }
 				}
 
 				/// <java-name>
 				/// getHostnameVerifier
 				/// </java-name>
-				public global::Org.Apache.Http.Conn.Ssl.IX509HostnameVerifier HostnameVerifier
+				public virtual global::Org.Apache.Http.Conn.Ssl.IX509HostnameVerifier HostnameVerifier
 				{
-				[Dot42.DexImport("getHostnameVerifier", "()Lorg/apache/http/conn/ssl/X509HostnameVerifier;", AccessFlags = 1)]
-						get{ return GetHostnameVerifier(); }
-				[Dot42.DexImport("setHostnameVerifier", "(Lorg/apache/http/conn/ssl/X509HostnameVerifier;)V", AccessFlags = 1)]
-						set{ SetHostnameVerifier(value); }
+						[Dot42.DexImport("getHostnameVerifier", "()Lorg/apache/http/conn/ssl/X509HostnameVerifier;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Conn.Ssl.IX509HostnameVerifier); }
+						[Dot42.DexImport("setHostnameVerifier", "(Lorg/apache/http/conn/ssl/X509HostnameVerifier;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

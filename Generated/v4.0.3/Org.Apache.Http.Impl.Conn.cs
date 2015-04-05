@@ -23,24 +23,6 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				/// <java-name>
-				/// getWrappedConnection
-				/// </java-name>
-				[Dot42.DexImport("getWrappedConnection", "()Lorg/apache/http/conn/OperatedClientConnection;", AccessFlags = 4)]
-				protected internal virtual global::Org.Apache.Http.Conn.IOperatedClientConnection GetWrappedConnection() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.IOperatedClientConnection);
-				}
-
-				/// <java-name>
-				/// getManager
-				/// </java-name>
-				[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
-				protected internal virtual global::Org.Apache.Http.Conn.IClientConnectionManager GetManager() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.IClientConnectionManager);
-				}
-
-				/// <java-name>
 				/// assertNotAborted
 				/// </java-name>
 				[Dot42.DexImport("assertNotAborted", "()V", AccessFlags = 20)]
@@ -54,50 +36,6 @@ namespace Org.Apache.Http.Impl.Conn
 				[Dot42.DexImport("assertValid", "(Lorg/apache/http/conn/OperatedClientConnection;)V", AccessFlags = 20)]
 				protected internal void AssertValid(global::Org.Apache.Http.Conn.IOperatedClientConnection operatedClientConnection) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isOpen
-				/// </java-name>
-				[Dot42.DexImport("isOpen", "()Z", AccessFlags = 1)]
-				public virtual bool IsOpen() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isStale
-				/// </java-name>
-				[Dot42.DexImport("isStale", "()Z", AccessFlags = 1)]
-				public virtual bool IsStale() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setSocketTimeout
-				/// </java-name>
-				[Dot42.DexImport("setSocketTimeout", "(I)V", AccessFlags = 1)]
-				public virtual void SetSocketTimeout(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getSocketTimeout
-				/// </java-name>
-				[Dot42.DexImport("getSocketTimeout", "()I", AccessFlags = 1)]
-				public virtual int GetSocketTimeout() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMetrics
-				/// </java-name>
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/HttpConnectionMetrics;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IHttpConnectionMetrics GetMetrics() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHttpConnectionMetrics);
 				}
 
 				/// <java-name>
@@ -151,60 +89,6 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				/// <java-name>
-				/// getLocalAddress
-				/// </java-name>
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetLocalAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getLocalPort
-				/// </java-name>
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-				public virtual int GetLocalPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRemoteAddress
-				/// </java-name>
-				[Dot42.DexImport("getRemoteAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-				public virtual global::Java.Net.InetAddress GetRemoteAddress() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				/// <java-name>
-				/// getRemotePort
-				/// </java-name>
-				[Dot42.DexImport("getRemotePort", "()I", AccessFlags = 1)]
-				public virtual int GetRemotePort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1)]
-				public virtual bool IsSecure() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getSSLSession
-				/// </java-name>
-				[Dot42.DexImport("getSSLSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1)]
-				public virtual global::Javax.Net.Ssl.ISSLSession GetSSLSession() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.Ssl.ISSLSession);
-				}
-
-				/// <java-name>
 				/// markReusable
 				/// </java-name>
 				[Dot42.DexImport("markReusable", "()V", AccessFlags = 1)]
@@ -218,15 +102,6 @@ namespace Org.Apache.Http.Impl.Conn
 				[Dot42.DexImport("unmarkReusable", "()V", AccessFlags = 1)]
 				public virtual void UnmarkReusable() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isMarkedReusable
-				/// </java-name>
-				[Dot42.DexImport("isMarkedReusable", "()Z", AccessFlags = 1)]
-				public virtual bool IsMarkedReusable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -258,12 +133,6 @@ namespace Org.Apache.Http.Impl.Conn
 				{
 				}
 
-				[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1025)]
-				public virtual global::Org.Apache.Http.Conn.Routing.HttpRoute GetRoute() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Routing.HttpRoute);
-				}
-
 				[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "open", "(Lorg/apache/http/conn/routing/HttpRoute;Lorg/apache/http/protocol/HttpContext;Lo" +
     "rg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
 				public virtual void Open(global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute, global::Org.Apache.Http.Protocol.IHttpContext httpContext, global::Org.Apache.Http.Params.IHttpParams httpParams) /* TypeBuilder.AddAbstractInterfaceMethods */ 
@@ -285,17 +154,6 @@ namespace Org.Apache.Http.Impl.Conn
 				{
 				}
 
-				[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "setState", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
-				public virtual void SetState(object @object) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-				}
-
-				[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "getState", "()Ljava/lang/Object;", AccessFlags = 1025)]
-				public virtual object GetState() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(object);
-				}
-
 				[Dot42.DexImport("org/apache/http/HttpConnection", "close", "()V", AccessFlags = 1025)]
 				public virtual void Close() /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -309,98 +167,134 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// getWrappedConnection
 				/// </java-name>
-				protected internal global::Org.Apache.Http.Conn.IOperatedClientConnection WrappedConnection
+				protected internal virtual global::Org.Apache.Http.Conn.IOperatedClientConnection WrappedConnection
 				{
-				[Dot42.DexImport("getWrappedConnection", "()Lorg/apache/http/conn/OperatedClientConnection;", AccessFlags = 4)]
-						get{ return GetWrappedConnection(); }
+						[Dot42.DexImport("getWrappedConnection", "()Lorg/apache/http/conn/OperatedClientConnection;", AccessFlags = 4)]
+						get{ return default(global::Org.Apache.Http.Conn.IOperatedClientConnection); }
 				}
 
 				/// <java-name>
 				/// getManager
 				/// </java-name>
-				protected internal global::Org.Apache.Http.Conn.IClientConnectionManager Manager
+				protected internal virtual global::Org.Apache.Http.Conn.IClientConnectionManager Manager
 				{
-				[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
-						get{ return GetManager(); }
+						[Dot42.DexImport("getManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 4)]
+						get{ return default(global::Org.Apache.Http.Conn.IClientConnectionManager); }
+				}
+
+				/// <java-name>
+				/// isOpen
+				/// </java-name>
+				public virtual bool IsOpen
+				{
+						[Dot42.DexImport("isOpen", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isStale
+				/// </java-name>
+				public virtual bool IsStale
+				{
+						[Dot42.DexImport("isStale", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getSocketTimeout
 				/// </java-name>
-				public int SocketTimeout
+				public virtual int SocketTimeout
 				{
-				[Dot42.DexImport("getSocketTimeout", "()I", AccessFlags = 1)]
-						get{ return GetSocketTimeout(); }
-				[Dot42.DexImport("setSocketTimeout", "(I)V", AccessFlags = 1)]
-						set{ SetSocketTimeout(value); }
+						[Dot42.DexImport("getSocketTimeout", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setSocketTimeout", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMetrics
 				/// </java-name>
-				public global::Org.Apache.Http.IHttpConnectionMetrics Metrics
+				public virtual global::Org.Apache.Http.IHttpConnectionMetrics Metrics
 				{
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/HttpConnectionMetrics;", AccessFlags = 1)]
-						get{ return GetMetrics(); }
+						[Dot42.DexImport("getMetrics", "()Lorg/apache/http/HttpConnectionMetrics;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.IHttpConnectionMetrics); }
 				}
 
 				/// <java-name>
 				/// getLocalAddress
 				/// </java-name>
-				public global::Java.Net.InetAddress LocalAddress
+				public virtual global::Java.Net.InetAddress LocalAddress
 				{
-				[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetLocalAddress(); }
+						[Dot42.DexImport("getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getLocalPort
 				/// </java-name>
-				public int LocalPort
+				public virtual int LocalPort
 				{
-				[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
-						get{ return GetLocalPort(); }
+						[Dot42.DexImport("getLocalPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getRemoteAddress
 				/// </java-name>
-				public global::Java.Net.InetAddress RemoteAddress
+				public virtual global::Java.Net.InetAddress RemoteAddress
 				{
-				[Dot42.DexImport("getRemoteAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
-						get{ return GetRemoteAddress(); }
+						[Dot42.DexImport("getRemoteAddress", "()Ljava/net/InetAddress;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
 				/// <java-name>
 				/// getRemotePort
 				/// </java-name>
-				public int RemotePort
+				public virtual int RemotePort
 				{
-				[Dot42.DexImport("getRemotePort", "()I", AccessFlags = 1)]
-						get{ return GetRemotePort(); }
+						[Dot42.DexImport("getRemotePort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				public virtual bool IsSecure
+				{
+						[Dot42.DexImport("isSecure", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getSSLSession
 				/// </java-name>
-				public global::Javax.Net.Ssl.ISSLSession SSLSession
+				public virtual global::Javax.Net.Ssl.ISSLSession SSLSession
 				{
-				[Dot42.DexImport("getSSLSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1)]
-						get{ return GetSSLSession(); }
+						[Dot42.DexImport("getSSLSession", "()Ljavax/net/ssl/SSLSession;", AccessFlags = 1)]
+						get{ return default(global::Javax.Net.Ssl.ISSLSession); }
 				}
 
-				public global::Org.Apache.Http.Conn.Routing.HttpRoute Route
+				/// <java-name>
+				/// isMarkedReusable
+				/// </java-name>
+				public virtual bool IsMarkedReusable
 				{
-				[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1025)]
-						get{ return GetRoute(); }
+						[Dot42.DexImport("isMarkedReusable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
-				public object State
+				public virtual global::Org.Apache.Http.Conn.Routing.HttpRoute Route
 				{
-				[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "getState", "()Ljava/lang/Object;", AccessFlags = 1025)]
-						get{ return GetState(); }
-				[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "setState", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
-						set{ SetState(value); }
+						[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1025)]
+						get{ return default(global::Org.Apache.Http.Conn.Routing.HttpRoute); }
+				}
+
+				public virtual object State
+				{
+						[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "getState", "()Ljava/lang/Object;", AccessFlags = 1025)]
+						get{ return default(object); }
+						[Dot42.DexImport("org/apache/http/conn/ManagedClientConnection", "setState", "(Ljava/lang/Object;)V", AccessFlags = 1025)]
+						set{ }
 				}
 
 		}
@@ -437,15 +331,6 @@ namespace Org.Apache.Http.Impl.Conn
 				[Dot42.DexImport("detach", "()V", AccessFlags = 4)]
 				protected internal override void Detach() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getRoute
-				/// </java-name>
-				[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1)]
-				public override global::Org.Apache.Http.Conn.Routing.HttpRoute GetRoute() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Routing.HttpRoute);
 				}
 
 				/// <java-name>
@@ -497,23 +382,6 @@ namespace Org.Apache.Http.Impl.Conn
 				{
 				}
 
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public override object GetState() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// setState
-				/// </java-name>
-				[Dot42.DexImport("setState", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-				public override void SetState(object @object) /* MethodBuilder.Create */ 
-				{
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal AbstractPooledConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -522,21 +390,21 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// getRoute
 				/// </java-name>
-				public global::Org.Apache.Http.Conn.Routing.HttpRoute Route
+				public override global::Org.Apache.Http.Conn.Routing.HttpRoute Route
 				{
-				[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1)]
-						get{ return GetRoute(); }
+						[Dot42.DexImport("getRoute", "()Lorg/apache/http/conn/routing/HttpRoute;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Conn.Routing.HttpRoute); }
 				}
 
 				/// <java-name>
 				/// getState
 				/// </java-name>
-				public object State
+				public override object State
 				{
-				[Dot42.DexImport("getState", "()Ljava/lang/Object;", AccessFlags = 1)]
-						get{ return GetState(); }
-				[Dot42.DexImport("setState", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-						set{ SetState(value); }
+						[Dot42.DexImport("getState", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object); }
+						[Dot42.DexImport("setState", "(Ljava/lang/Object;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -567,7 +435,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// state
 				/// </java-name>
 				[Dot42.DexImport("state", "Ljava/lang/Object;", AccessFlags = 68)]
-				protected internal object State;
+				protected internal object @state;
 				/// <java-name>
 				/// tracker
 				/// </java-name>
@@ -576,23 +444,6 @@ namespace Org.Apache.Http.Impl.Conn
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/conn/ClientConnectionOperator;Lorg/apache/http/conn/routing/Htt" +
     "pRoute;)V", AccessFlags = 4)]
 				protected internal AbstractPoolEntry(global::Org.Apache.Http.Conn.IClientConnectionOperator clientConnectionOperator, global::Org.Apache.Http.Conn.Routing.HttpRoute httpRoute) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()Ljava/lang/Object;", AccessFlags = 1)]
-				public virtual object GetState() /* MethodBuilder.Create */ 
-				{
-						return default(object);
-				}
-
-				/// <java-name>
-				/// setState
-				/// </java-name>
-				[Dot42.DexImport("setState", "(Ljava/lang/Object;)V", AccessFlags = 1)]
-				public virtual void SetState(object @object) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -642,6 +493,17 @@ namespace Org.Apache.Http.Impl.Conn
 				{
 				}
 
+				/// <java-name>
+				/// getState
+				/// </java-name>
+				public virtual object State
+				{
+						[Dot42.DexImport("getState", "()Ljava/lang/Object;", AccessFlags = 1)]
+						get{ return default(object); }
+						[Dot42.DexImport("setState", "(Ljava/lang/Object;)V", AccessFlags = 1)]
+						set{ }
+				}
+
 		}
 
 		/// <java-name>
@@ -654,33 +516,6 @@ namespace Org.Apache.Http.Impl.Conn
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public DefaultClientConnection() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getTargetHost
-				/// </java-name>
-				[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-				public global::Org.Apache.Http.HttpHost GetTargetHost() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.HttpHost);
-				}
-
-				/// <java-name>
-				/// isSecure
-				/// </java-name>
-				[Dot42.DexImport("isSecure", "()Z", AccessFlags = 17)]
-				public bool IsSecure() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getSocket
-				/// </java-name>
-				[Dot42.DexImport("getSocket", "()Ljava/net/Socket;", AccessFlags = 17)]
-				public new global::Java.Net.Socket GetSocket() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.Socket);
 				}
 
 				/// <java-name>
@@ -792,113 +627,81 @@ namespace Org.Apache.Http.Impl.Conn
 				{
 				}
 
-				[Dot42.DexImport("org/apache/http/HttpInetConnection", "getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1025)]
-				public override global::Java.Net.InetAddress GetLocalAddress() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpInetConnection", "getLocalPort", "()I", AccessFlags = 1025)]
-				public override int GetLocalPort() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpInetConnection", "getRemoteAddress", "()Ljava/net/InetAddress;", AccessFlags = 1025)]
-				public override global::Java.Net.InetAddress GetRemoteAddress() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Net.InetAddress);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpInetConnection", "getRemotePort", "()I", AccessFlags = 1025)]
-				public override int GetRemotePort() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpConnection", "isOpen", "()Z", AccessFlags = 1025)]
-				public override bool IsOpen() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpConnection", "isStale", "()Z", AccessFlags = 1025)]
-				public override bool IsStale() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpConnection", "setSocketTimeout", "(I)V", AccessFlags = 1025)]
-				public override void SetSocketTimeout(int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpConnection", "getSocketTimeout", "()I", AccessFlags = 1025)]
-				public override int GetSocketTimeout() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpConnection", "getMetrics", "()Lorg/apache/http/HttpConnectionMetrics;", AccessFlags = 1025)]
-				public override global::Org.Apache.Http.IHttpConnectionMetrics GetMetrics() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Org.Apache.Http.IHttpConnectionMetrics);
-				}
-
 				/// <java-name>
 				/// getTargetHost
 				/// </java-name>
 				public global::Org.Apache.Http.HttpHost TargetHost
 				{
-				[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
-						get{ return GetTargetHost(); }
+						[Dot42.DexImport("getTargetHost", "()Lorg/apache/http/HttpHost;", AccessFlags = 17)]
+						get{ return default(global::Org.Apache.Http.HttpHost); }
+				}
+
+				/// <java-name>
+				/// isSecure
+				/// </java-name>
+				public bool IsSecure
+				{
+						[Dot42.DexImport("isSecure", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getSocket
 				/// </java-name>
-				public global::Java.Net.Socket Socket
+				public new global::Java.Net.Socket Socket
 				{
-				[Dot42.DexImport("getSocket", "()Ljava/net/Socket;", AccessFlags = 17)]
-						get{ return GetSocket(); }
+						[Dot42.DexImport("getSocket", "()Ljava/net/Socket;", AccessFlags = 17)]
+						get{ return default(global::Java.Net.Socket); }
 				}
 
-				public global::Java.Net.InetAddress LocalAddress
+				public override global::Java.Net.InetAddress LocalAddress
 				{
-				[Dot42.DexImport("org/apache/http/HttpInetConnection", "getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1025)]
-						get{ return GetLocalAddress(); }
+						[Dot42.DexImport("org/apache/http/HttpInetConnection", "getLocalAddress", "()Ljava/net/InetAddress;", AccessFlags = 1025)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
-				public int LocalPort
+				public override int LocalPort
 				{
-				[Dot42.DexImport("org/apache/http/HttpInetConnection", "getLocalPort", "()I", AccessFlags = 1025)]
-						get{ return GetLocalPort(); }
+						[Dot42.DexImport("org/apache/http/HttpInetConnection", "getLocalPort", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
 				}
 
-				public global::Java.Net.InetAddress RemoteAddress
+				public override global::Java.Net.InetAddress RemoteAddress
 				{
-				[Dot42.DexImport("org/apache/http/HttpInetConnection", "getRemoteAddress", "()Ljava/net/InetAddress;", AccessFlags = 1025)]
-						get{ return GetRemoteAddress(); }
+						[Dot42.DexImport("org/apache/http/HttpInetConnection", "getRemoteAddress", "()Ljava/net/InetAddress;", AccessFlags = 1025)]
+						get{ return default(global::Java.Net.InetAddress); }
 				}
 
-				public int RemotePort
+				public override int RemotePort
 				{
-				[Dot42.DexImport("org/apache/http/HttpInetConnection", "getRemotePort", "()I", AccessFlags = 1025)]
-						get{ return GetRemotePort(); }
+						[Dot42.DexImport("org/apache/http/HttpInetConnection", "getRemotePort", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
 				}
 
-				public int SocketTimeout
+				public override bool IsOpen
 				{
-				[Dot42.DexImport("org/apache/http/HttpConnection", "getSocketTimeout", "()I", AccessFlags = 1025)]
-						get{ return GetSocketTimeout(); }
-				[Dot42.DexImport("org/apache/http/HttpConnection", "setSocketTimeout", "(I)V", AccessFlags = 1025)]
-						set{ SetSocketTimeout(value); }
+						[Dot42.DexImport("org/apache/http/HttpConnection", "isOpen", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
-				public global::Org.Apache.Http.IHttpConnectionMetrics Metrics
+				public override bool IsStale
 				{
-				[Dot42.DexImport("org/apache/http/HttpConnection", "getMetrics", "()Lorg/apache/http/HttpConnectionMetrics;", AccessFlags = 1025)]
-						get{ return GetMetrics(); }
+						[Dot42.DexImport("org/apache/http/HttpConnection", "isStale", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
+
+				public override int SocketTimeout
+				{
+						[Dot42.DexImport("org/apache/http/HttpConnection", "getSocketTimeout", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
+						[Dot42.DexImport("org/apache/http/HttpConnection", "setSocketTimeout", "(I)V", AccessFlags = 1025)]
+						set{ }
+				}
+
+				public override global::Org.Apache.Http.IHttpConnectionMetrics Metrics
+				{
+						[Dot42.DexImport("org/apache/http/HttpConnection", "getMetrics", "()Lorg/apache/http/HttpConnectionMetrics;", AccessFlags = 1025)]
+						get{ return default(global::Org.Apache.Http.IHttpConnectionMetrics); }
 				}
 
 		}
@@ -1166,15 +969,6 @@ namespace Org.Apache.Http.Impl.Conn
 						return default(int);
 				}
 
-				/// <java-name>
-				/// getMetrics
-				/// </java-name>
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Io.IHttpTransportMetrics GetMetrics() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Io.IHttpTransportMetrics);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal LoggingSessionInputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1183,10 +977,10 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// getMetrics
 				/// </java-name>
-				public global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
+				public virtual global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
 				{
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
-						get{ return GetMetrics(); }
+						[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Io.IHttpTransportMetrics); }
 				}
 
 		}
@@ -1267,15 +1061,6 @@ namespace Org.Apache.Http.Impl.Conn
 				{
 				}
 
-				/// <java-name>
-				/// getMetrics
-				/// </java-name>
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Io.IHttpTransportMetrics GetMetrics() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Io.IHttpTransportMetrics);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal LoggingSessionOutputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1284,10 +1069,10 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// getMetrics
 				/// </java-name>
-				public global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
+				public virtual global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
 				{
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
-						get{ return GetMetrics(); }
+						[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Io.IHttpTransportMetrics); }
 				}
 
 		}
@@ -1308,26 +1093,9 @@ namespace Org.Apache.Http.Impl.Conn
 				/// proxySelector
 				/// </java-name>
 				[Dot42.DexImport("proxySelector", "Ljava/net/ProxySelector;", AccessFlags = 4)]
-				protected internal global::Java.Net.ProxySelector ProxySelector;
+				protected internal global::Java.Net.ProxySelector @proxyselector;
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/conn/scheme/SchemeRegistry;Ljava/net/ProxySelector;)V", AccessFlags = 1)]
 				public ProxySelectorRoutePlanner(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry schemeRegistry, global::Java.Net.ProxySelector proxySelector) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getProxySelector
-				/// </java-name>
-				[Dot42.DexImport("getProxySelector", "()Ljava/net/ProxySelector;", AccessFlags = 1)]
-				public virtual global::Java.Net.ProxySelector GetProxySelector() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Net.ProxySelector);
-				}
-
-				/// <java-name>
-				/// setProxySelector
-				/// </java-name>
-				[Dot42.DexImport("setProxySelector", "(Ljava/net/ProxySelector;)V", AccessFlags = 1)]
-				public virtual void SetProxySelector(global::Java.Net.ProxySelector proxySelector) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1376,6 +1144,17 @@ namespace Org.Apache.Http.Impl.Conn
 				{
 				}
 
+				/// <java-name>
+				/// getProxySelector
+				/// </java-name>
+				public virtual global::Java.Net.ProxySelector ProxySelector
+				{
+						[Dot42.DexImport("getProxySelector", "()Ljava/net/ProxySelector;", AccessFlags = 1)]
+						get{ return default(global::Java.Net.ProxySelector); }
+						[Dot42.DexImport("setProxySelector", "(Ljava/net/ProxySelector;)V", AccessFlags = 1)]
+						set{ }
+				}
+
 		}
 
 		/// <java-name>
@@ -1395,7 +1174,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// schemeRegistry
 				/// </java-name>
 				[Dot42.DexImport("schemeRegistry", "Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry SchemeRegistry;
+				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry @schemeregistry;
 				/// <java-name>
 				/// connOperator
 				/// </java-name>
@@ -1442,15 +1221,6 @@ namespace Org.Apache.Http.Impl.Conn
 				/// </java-name>
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
 				extern ~SingleClientConnManager() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSchemeRegistry
-				/// </java-name>
-				[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Conn.Scheme.SchemeRegistry GetSchemeRegistry() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry);
-				}
 
 				/// <java-name>
 				/// createConnectionOperator
@@ -1534,6 +1304,15 @@ namespace Org.Apache.Http.Impl.Conn
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal SingleClientConnManager() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// getSchemeRegistry
+				/// </java-name>
+				public virtual global::Org.Apache.Http.Conn.Scheme.SchemeRegistry SchemeRegistry
+				{
+						[Dot42.DexImport("getSchemeRegistry", "()Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry); }
 				}
 
 				/// <java-name>

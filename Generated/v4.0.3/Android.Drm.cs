@@ -157,33 +157,6 @@ namespace Android.Drm
 				}
 
 				/// <java-name>
-				/// getUniqueId
-				/// </java-name>
-				[Dot42.DexImport("getUniqueId", "()I", AccessFlags = 1)]
-				public virtual int GetUniqueId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public virtual int GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMessage
-				/// </java-name>
-				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMessage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getAttribute
 				/// </java-name>
 				[Dot42.DexImport("getAttribute", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1)]
@@ -200,28 +173,28 @@ namespace Android.Drm
 				/// <java-name>
 				/// getUniqueId
 				/// </java-name>
-				public int UniqueId
+				public virtual int UniqueId
 				{
-				[Dot42.DexImport("getUniqueId", "()I", AccessFlags = 1)]
-						get{ return GetUniqueId(); }
+						[Dot42.DexImport("getUniqueId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				public int Type
+				public virtual int Type
 				{
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMessage
 				/// </java-name>
-				public string Message
+				public virtual string Message
 				{
-				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMessage(); }
+						[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -292,33 +265,6 @@ namespace Android.Drm
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetData() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMimeType
-				/// </java-name>
-				[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMimeType() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getInfoType
-				/// </java-name>
-				[Dot42.DexImport("getInfoType", "()I", AccessFlags = 1)]
-				public virtual int GetInfoType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DrmInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -327,28 +273,28 @@ namespace Android.Drm
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				public byte[] Data
+				public virtual byte[] Data
 				{
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetData(); }
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getMimeType
 				/// </java-name>
-				public string MimeType
+				public virtual string MimeType
 				{
-				[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMimeType(); }
+						[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getInfoType
 				/// </java-name>
-				public int InfoType
+				public virtual int InfoType
 				{
-				[Dot42.DexImport("getInfoType", "()I", AccessFlags = 1)]
-						get{ return GetInfoType(); }
+						[Dot42.DexImport("getInfoType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -450,24 +396,6 @@ namespace Android.Drm
 				}
 
 				/// <java-name>
-				/// getMimeType
-				/// </java-name>
-				[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMimeType() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getInfoType
-				/// </java-name>
-				[Dot42.DexImport("getInfoType", "()I", AccessFlags = 1)]
-				public virtual int GetInfoType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// put
 				/// </java-name>
 				[Dot42.DexImport("put", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1)]
@@ -510,19 +438,19 @@ namespace Android.Drm
 				/// <java-name>
 				/// getMimeType
 				/// </java-name>
-				public string MimeType
+				public virtual string MimeType
 				{
-				[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMimeType(); }
+						[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getInfoType
 				/// </java-name>
-				public int InfoType
+				public virtual int InfoType
 				{
-				[Dot42.DexImport("getInfoType", "()I", AccessFlags = 1)]
-						get{ return GetInfoType(); }
+						[Dot42.DexImport("getInfoType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -626,15 +554,6 @@ namespace Android.Drm
 				[Dot42.DexImport("setOnErrorListener", "(Landroid/drm/DrmManagerClient$OnErrorListener;)V", AccessFlags = 33)]
 				public virtual void SetOnErrorListener(global::Android.Drm.DrmManagerClient.IOnErrorListener onErrorListener) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getAvailableDrmEngines
-				/// </java-name>
-				[Dot42.DexImport("getAvailableDrmEngines", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetAvailableDrmEngines() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
 				}
 
 				/// <java-name>
@@ -870,10 +789,10 @@ namespace Android.Drm
 				/// <java-name>
 				/// getAvailableDrmEngines
 				/// </java-name>
-				public string[] AvailableDrmEngines
+				public virtual string[] AvailableDrmEngines
 				{
-				[Dot42.DexImport("getAvailableDrmEngines", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAvailableDrmEngines(); }
+						[Dot42.DexImport("getAvailableDrmEngines", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 				/// <java-name>
@@ -964,42 +883,6 @@ namespace Android.Drm
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetData() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMimeType
-				/// </java-name>
-				[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMimeType() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAccountId
-				/// </java-name>
-				[Dot42.DexImport("getAccountId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAccountId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSubscriptionId
-				/// </java-name>
-				[Dot42.DexImport("getSubscriptionId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSubscriptionId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DrmRights() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -1008,37 +891,37 @@ namespace Android.Drm
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				public byte[] Data
+				public virtual byte[] Data
 				{
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetData(); }
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getMimeType
 				/// </java-name>
-				public string MimeType
+				public virtual string MimeType
 				{
-				[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMimeType(); }
+						[Dot42.DexImport("getMimeType", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getAccountId
 				/// </java-name>
-				public string AccountId
+				public virtual string AccountId
 				{
-				[Dot42.DexImport("getAccountId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAccountId(); }
+						[Dot42.DexImport("getAccountId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSubscriptionId
 				/// </java-name>
-				public string SubscriptionId
+				public virtual string SubscriptionId
 				{
-				[Dot42.DexImport("getSubscriptionId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSubscriptionId(); }
+						[Dot42.DexImport("getSubscriptionId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1290,38 +1173,11 @@ namespace Android.Drm
 				}
 
 				/// <java-name>
-				/// getMimeTypeIterator
-				/// </java-name>
-				[Dot42.DexImport("getMimeTypeIterator", "()Ljava/util/Iterator;", AccessFlags = 1, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.IIterator<string> GetMimeTypeIterator() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IIterator<string>);
-				}
-
-				/// <java-name>
-				/// getFileSuffixIterator
-				/// </java-name>
-				[Dot42.DexImport("getFileSuffixIterator", "()Ljava/util/Iterator;", AccessFlags = 1, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.IIterator<string> GetFileSuffixIterator() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IIterator<string>);
-				}
-
-				/// <java-name>
 				/// setDescription
 				/// </java-name>
 				[Dot42.DexImport("setDescription", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public virtual void SetDescription(string @string) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getDescriprition
-				/// </java-name>
-				[Dot42.DexImport("getDescriprition", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDescriprition() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -1345,28 +1201,28 @@ namespace Android.Drm
 				/// <java-name>
 				/// getMimeTypeIterator
 				/// </java-name>
-				public global::Java.Util.IIterator<string> MimeTypeIterator
+				public virtual global::Java.Util.IIterator<string> MimeTypeIterator
 				{
-				[Dot42.DexImport("getMimeTypeIterator", "()Ljava/util/Iterator;", AccessFlags = 1, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
-						get{ return GetMimeTypeIterator(); }
+						[Dot42.DexImport("getMimeTypeIterator", "()Ljava/util/Iterator;", AccessFlags = 1, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IIterator<string>); }
 				}
 
 				/// <java-name>
 				/// getFileSuffixIterator
 				/// </java-name>
-				public global::Java.Util.IIterator<string> FileSuffixIterator
+				public virtual global::Java.Util.IIterator<string> FileSuffixIterator
 				{
-				[Dot42.DexImport("getFileSuffixIterator", "()Ljava/util/Iterator;", AccessFlags = 1, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
-						get{ return GetFileSuffixIterator(); }
+						[Dot42.DexImport("getFileSuffixIterator", "()Ljava/util/Iterator;", AccessFlags = 1, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IIterator<string>); }
 				}
 
 				/// <java-name>
 				/// getDescriprition
 				/// </java-name>
-				public string Descriprition
+				public virtual string Descriprition
 				{
-				[Dot42.DexImport("getDescriprition", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDescriprition(); }
+						[Dot42.DexImport("getDescriprition", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1468,55 +1324,28 @@ namespace Android.Drm
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetData() /* MethodBuilder.Create */ 
+				public virtual byte[] Data
 				{
-						return default(byte[]);
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getAccountId
 				/// </java-name>
-				[Dot42.DexImport("getAccountId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAccountId() /* MethodBuilder.Create */ 
+				public virtual string AccountId
 				{
-						return default(string);
+						[Dot42.DexImport("getAccountId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSubscriptionId
 				/// </java-name>
-				[Dot42.DexImport("getSubscriptionId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSubscriptionId() /* MethodBuilder.Create */ 
+				public virtual string SubscriptionId
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getData
-				/// </java-name>
-				public byte[] Data
-				{
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetData(); }
-				}
-
-				/// <java-name>
-				/// getAccountId
-				/// </java-name>
-				public string AccountId
-				{
-				[Dot42.DexImport("getAccountId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAccountId(); }
-				}
-
-				/// <java-name>
-				/// getSubscriptionId
-				/// </java-name>
-				public string SubscriptionId
-				{
-				[Dot42.DexImport("getSubscriptionId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSubscriptionId(); }
+						[Dot42.DexImport("getSubscriptionId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}

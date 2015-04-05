@@ -130,15 +130,6 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				/// <java-name>
-				/// hasBufferedData
-				/// </java-name>
-				[Dot42.DexImport("hasBufferedData", "()Z", AccessFlags = 4)]
-				protected internal virtual bool HasBufferedData() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// read
 				/// </java-name>
 				[Dot42.DexImport("read", "()I", AccessFlags = 1)]
@@ -201,15 +192,6 @@ namespace Org.Apache.Http.Impl.Io
 						return default(string);
 				}
 
-				/// <java-name>
-				/// getMetrics
-				/// </java-name>
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Io.IHttpTransportMetrics GetMetrics() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Io.IHttpTransportMetrics);
-				}
-
 				[Dot42.DexImport("org/apache/http/io/SessionInputBuffer", "isDataAvailable", "(I)Z", AccessFlags = 1025)]
 				public virtual bool IsDataAvailable(int int32) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -217,12 +199,21 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				/// <java-name>
+				/// hasBufferedData
+				/// </java-name>
+				protected internal virtual bool HasBufferedData
+				{
+						[Dot42.DexImport("hasBufferedData", "()Z", AccessFlags = 4)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getMetrics
 				/// </java-name>
-				public global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
+				public virtual global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
 				{
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
-						get{ return GetMetrics(); }
+						[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Io.IHttpTransportMetrics); }
 				}
 
 		}
@@ -322,19 +313,10 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// getMetrics
 				/// </java-name>
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Io.IHttpTransportMetrics GetMetrics() /* MethodBuilder.Create */ 
+				public virtual global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
 				{
-						return default(global::Org.Apache.Http.Io.IHttpTransportMetrics);
-				}
-
-				/// <java-name>
-				/// getMetrics
-				/// </java-name>
-				public global::Org.Apache.Http.Io.IHttpTransportMetrics Metrics
-				{
-				[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
-						get{ return GetMetrics(); }
+						[Dot42.DexImport("getMetrics", "()Lorg/apache/http/io/HttpTransportMetrics;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Io.IHttpTransportMetrics); }
 				}
 
 		}
@@ -404,15 +386,6 @@ namespace Org.Apache.Http.Impl.Io
 				{
 				}
 
-				/// <java-name>
-				/// getFooters
-				/// </java-name>
-				[Dot42.DexImport("getFooters", "()[Lorg/apache/http/Header;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IHeader[] GetFooters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader[]);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ChunkedInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -421,10 +394,10 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// getFooters
 				/// </java-name>
-				public global::Org.Apache.Http.IHeader[] Footers
+				public virtual global::Org.Apache.Http.IHeader[] Footers
 				{
-				[Dot42.DexImport("getFooters", "()[Lorg/apache/http/Header;", AccessFlags = 1)]
-						get{ return GetFooters(); }
+						[Dot42.DexImport("getFooters", "()[Lorg/apache/http/Header;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.IHeader[]); }
 				}
 
 		}
@@ -832,15 +805,6 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				/// <java-name>
-				/// getBytesTransferred
-				/// </java-name>
-				[Dot42.DexImport("getBytesTransferred", "()J", AccessFlags = 1)]
-				public virtual long GetBytesTransferred() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// setBytesTransferred
 				/// </java-name>
 				[Dot42.DexImport("setBytesTransferred", "(J)V", AccessFlags = 1)]
@@ -867,12 +831,10 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// getBytesTransferred
 				/// </java-name>
-				public long BytesTransferred
+				public virtual long BytesTransferred
 				{
-				[Dot42.DexImport("getBytesTransferred", "()J", AccessFlags = 1)]
-						get{ return GetBytesTransferred(); }
-				[Dot42.DexImport("setBytesTransferred", "(J)V", AccessFlags = 1)]
-						set{ SetBytesTransferred(value); }
+						[Dot42.DexImport("getBytesTransferred", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 		}

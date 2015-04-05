@@ -152,57 +152,6 @@ namespace Android.Text.Util
 				}
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAddress
-				/// </java-name>
-				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAddress() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getComment
-				/// </java-name>
-				[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetComment() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// setName
-				/// </java-name>
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetName(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setAddress
-				/// </java-name>
-				[Dot42.DexImport("setAddress", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetAddress(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setComment
-				/// </java-name>
-				[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetComment(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -264,34 +213,34 @@ namespace Android.Text.Util
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetName(value); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAddress
 				/// </java-name>
-				public string Address
+				public virtual string Address
 				{
-				[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAddress(); }
-				[Dot42.DexImport("setAddress", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetAddress(value); }
+						[Dot42.DexImport("getAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setAddress", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getComment
 				/// </java-name>
-				public string Comment
+				public virtual string Comment
 				{
-				[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetComment(); }
-				[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetComment(value); }
+						[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

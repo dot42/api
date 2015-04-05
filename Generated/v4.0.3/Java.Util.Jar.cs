@@ -74,15 +74,6 @@ namespace Java.Util.Jar
 				}
 
 				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public virtual bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// keySet
 				/// </java-name>
 				[Dot42.DexImport("keySet", "()Ljava/util/Set;", AccessFlags = 1, Signature = "()Ljava/util/Set<Ljava/lang/Object;>;")]
@@ -187,6 +178,15 @@ namespace Java.Util.Jar
 				public virtual string PutValue(string @string, string string1) /* MethodBuilder.Create */ 
 				{
 						return default(string);
+				}
+
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public virtual bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -344,33 +344,6 @@ namespace Java.Util.Jar
 				{
 				}
 
-				/// <java-name>
-				/// getAttributes
-				/// </java-name>
-				[Dot42.DexImport("getAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
-				public virtual global::Java.Util.Jar.Attributes GetAttributes() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Jar.Attributes);
-				}
-
-				/// <java-name>
-				/// getCertificates
-				/// </java-name>
-				[Dot42.DexImport("getCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.Certificate[] GetCertificates() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Cert.Certificate[]);
-				}
-
-				/// <java-name>
-				/// getCodeSigners
-				/// </java-name>
-				[Dot42.DexImport("getCodeSigners", "()[Ljava/security/CodeSigner;", AccessFlags = 1)]
-				public virtual global::Java.Security.CodeSigner[] GetCodeSigners() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.CodeSigner[]);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal JarEntry() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -379,28 +352,28 @@ namespace Java.Util.Jar
 				/// <java-name>
 				/// getAttributes
 				/// </java-name>
-				public global::Java.Util.Jar.Attributes Attributes
+				public virtual global::Java.Util.Jar.Attributes Attributes
 				{
-				[Dot42.DexImport("getAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
-						get{ return GetAttributes(); }
+						[Dot42.DexImport("getAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Jar.Attributes); }
 				}
 
 				/// <java-name>
 				/// getCertificates
 				/// </java-name>
-				public global::Java.Security.Cert.Certificate[] Certificates
+				public virtual global::Java.Security.Cert.Certificate[] Certificates
 				{
-				[Dot42.DexImport("getCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
-						get{ return GetCertificates(); }
+						[Dot42.DexImport("getCertificates", "()[Ljava/security/cert/Certificate;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Cert.Certificate[]); }
 				}
 
 				/// <java-name>
 				/// getCodeSigners
 				/// </java-name>
-				public global::Java.Security.CodeSigner[] CodeSigners
+				public virtual global::Java.Security.CodeSigner[] CodeSigners
 				{
-				[Dot42.DexImport("getCodeSigners", "()[Ljava/security/CodeSigner;", AccessFlags = 1)]
-						get{ return GetCodeSigners(); }
+						[Dot42.DexImport("getCodeSigners", "()[Ljava/security/CodeSigner;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.CodeSigner[]); }
 				}
 
 		}
@@ -465,7 +438,7 @@ namespace Java.Util.Jar
 				/// entries
 				/// </java-name>
 				[Dot42.DexImport("entries", "()Ljava/util/Enumeration;", AccessFlags = 1, Signature = "()Ljava/util/Enumeration<Ljava/util/jar/JarEntry;>;")]
-				public new global::Java.Util.IEnumeration<global::Java.Util.Jar.JarEntry> Entries() /* MethodBuilder.Create */ 
+				public override global::Java.Util.IEnumeration<global::Java.Util.Jar.JarEntry> Entries() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IEnumeration<global::Java.Util.Jar.JarEntry>);
 				}
@@ -477,15 +450,6 @@ namespace Java.Util.Jar
 				public virtual global::Java.Util.Jar.JarEntry GetJarEntry(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.Jar.JarEntry);
-				}
-
-				/// <java-name>
-				/// getManifest
-				/// </java-name>
-				[Dot42.DexImport("getManifest", "()Ljava/util/jar/Manifest;", AccessFlags = 1)]
-				public virtual global::Java.Util.Jar.Manifest GetManifest() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Jar.Manifest);
 				}
 
 				/// <java-name>
@@ -522,10 +486,10 @@ namespace Java.Util.Jar
 				/// <java-name>
 				/// getManifest
 				/// </java-name>
-				public global::Java.Util.Jar.Manifest Manifest
+				public virtual global::Java.Util.Jar.Manifest Manifest
 				{
-				[Dot42.DexImport("getManifest", "()Ljava/util/jar/Manifest;", AccessFlags = 1)]
-						get{ return GetManifest(); }
+						[Dot42.DexImport("getManifest", "()Ljava/util/jar/Manifest;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Jar.Manifest); }
 				}
 
 		}
@@ -548,24 +512,6 @@ namespace Java.Util.Jar
 				}
 
 				/// <java-name>
-				/// getManifest
-				/// </java-name>
-				[Dot42.DexImport("getManifest", "()Ljava/util/jar/Manifest;", AccessFlags = 1)]
-				public virtual global::Java.Util.Jar.Manifest GetManifest() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Jar.Manifest);
-				}
-
-				/// <java-name>
-				/// getNextJarEntry
-				/// </java-name>
-				[Dot42.DexImport("getNextJarEntry", "()Ljava/util/jar/JarEntry;", AccessFlags = 1)]
-				public virtual global::Java.Util.Jar.JarEntry GetNextJarEntry() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Jar.JarEntry);
-				}
-
-				/// <java-name>
 				/// read
 				/// </java-name>
 				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
@@ -581,15 +527,6 @@ namespace Java.Util.Jar
 				public override int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// getNextEntry
-				/// </java-name>
-				[Dot42.DexImport("getNextEntry", "()Ljava/util/zip/ZipEntry;", AccessFlags = 1)]
-				public override global::Java.Util.Zip.ZipEntry GetNextEntry() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Zip.ZipEntry);
 				}
 
 				/// <java-name>
@@ -609,28 +546,28 @@ namespace Java.Util.Jar
 				/// <java-name>
 				/// getManifest
 				/// </java-name>
-				public global::Java.Util.Jar.Manifest Manifest
+				public virtual global::Java.Util.Jar.Manifest Manifest
 				{
-				[Dot42.DexImport("getManifest", "()Ljava/util/jar/Manifest;", AccessFlags = 1)]
-						get{ return GetManifest(); }
+						[Dot42.DexImport("getManifest", "()Ljava/util/jar/Manifest;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Jar.Manifest); }
 				}
 
 				/// <java-name>
 				/// getNextJarEntry
 				/// </java-name>
-				public global::Java.Util.Jar.JarEntry NextJarEntry
+				public virtual global::Java.Util.Jar.JarEntry NextJarEntry
 				{
-				[Dot42.DexImport("getNextJarEntry", "()Ljava/util/jar/JarEntry;", AccessFlags = 1)]
-						get{ return GetNextJarEntry(); }
+						[Dot42.DexImport("getNextJarEntry", "()Ljava/util/jar/JarEntry;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Jar.JarEntry); }
 				}
 
 				/// <java-name>
 				/// getNextEntry
 				/// </java-name>
-				public global::Java.Util.Zip.ZipEntry NextEntry
+				public override global::Java.Util.Zip.ZipEntry NextEntry
 				{
-				[Dot42.DexImport("getNextEntry", "()Ljava/util/zip/ZipEntry;", AccessFlags = 1)]
-						get{ return GetNextEntry(); }
+						[Dot42.DexImport("getNextEntry", "()Ljava/util/zip/ZipEntry;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Zip.ZipEntry); }
 				}
 
 		}
@@ -707,24 +644,6 @@ namespace Java.Util.Jar
 				}
 
 				/// <java-name>
-				/// getEntries
-				/// </java-name>
-				[Dot42.DexImport("getEntries", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/jar/Attributes;>;")]
-				public virtual global::Java.Util.IMap<string, global::Java.Util.Jar.Attributes> GetEntries() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<string, global::Java.Util.Jar.Attributes>);
-				}
-
-				/// <java-name>
-				/// getMainAttributes
-				/// </java-name>
-				[Dot42.DexImport("getMainAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
-				public virtual global::Java.Util.Jar.Attributes GetMainAttributes() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Jar.Attributes);
-				}
-
-				/// <java-name>
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
@@ -770,19 +689,19 @@ namespace Java.Util.Jar
 				/// <java-name>
 				/// getEntries
 				/// </java-name>
-				public global::Java.Util.IMap<string, global::Java.Util.Jar.Attributes> Entries
+				public virtual global::Java.Util.IMap<string, global::Java.Util.Jar.Attributes> Entries
 				{
-				[Dot42.DexImport("getEntries", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/jar/Attributes;>;")]
-						get{ return GetEntries(); }
+						[Dot42.DexImport("getEntries", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/util/jar/Attributes;>;")]
+						get{ return default(global::Java.Util.IMap<string, global::Java.Util.Jar.Attributes>); }
 				}
 
 				/// <java-name>
 				/// getMainAttributes
 				/// </java-name>
-				public global::Java.Util.Jar.Attributes MainAttributes
+				public virtual global::Java.Util.Jar.Attributes MainAttributes
 				{
-				[Dot42.DexImport("getMainAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
-						get{ return GetMainAttributes(); }
+						[Dot42.DexImport("getMainAttributes", "()Ljava/util/jar/Attributes;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Jar.Attributes); }
 				}
 
 		}

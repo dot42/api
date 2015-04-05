@@ -45,12 +45,6 @@ namespace Org.Xmlpull.V1
 				void SetInput(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getInputEncoding
-				/// </java-name>
-				[Dot42.DexImport("getInputEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetInputEncoding() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// defineEntityReplacementText
 				/// </java-name>
 				[Dot42.DexImport("defineEntityReplacementText", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1025)]
@@ -81,76 +75,10 @@ namespace Org.Xmlpull.V1
 				string GetNamespace(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getDepth
-				/// </java-name>
-				[Dot42.DexImport("getDepth", "()I", AccessFlags = 1025)]
-				int GetDepth() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPositionDescription
-				/// </java-name>
-				[Dot42.DexImport("getPositionDescription", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPositionDescription() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getLineNumber
-				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1025)]
-				int GetLineNumber() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getColumnNumber
-				/// </java-name>
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1025)]
-				int GetColumnNumber() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isWhitespace
-				/// </java-name>
-				[Dot42.DexImport("isWhitespace", "()Z", AccessFlags = 1025)]
-				bool IsWhitespace() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetText() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getTextCharacters
 				/// </java-name>
 				[Dot42.DexImport("getTextCharacters", "([I)[C", AccessFlags = 1025)]
 				char[] GetTextCharacters(int[] int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNamespace
-				/// </java-name>
-				[Dot42.DexImport("getNamespace", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetNamespace() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getPrefix
-				/// </java-name>
-				[Dot42.DexImport("getPrefix", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetPrefix() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// isEmptyElementTag
-				/// </java-name>
-				[Dot42.DexImport("isEmptyElementTag", "()Z", AccessFlags = 1025)]
-				bool IsEmptyElementTag() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getAttributeCount
-				/// </java-name>
-				[Dot42.DexImport("getAttributeCount", "()I", AccessFlags = 1025)]
-				int GetAttributeCount() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getAttributeNamespace
@@ -195,12 +123,6 @@ namespace Org.Xmlpull.V1
 				string GetAttributeValue(string @string, string string1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getEventType
-				/// </java-name>
-				[Dot42.DexImport("getEventType", "()I", AccessFlags = 1025)]
-				int GetEventType() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// next
 				/// </java-name>
 				[Dot42.DexImport("next", "()I", AccessFlags = 1025)]
@@ -229,6 +151,123 @@ namespace Org.Xmlpull.V1
 				/// </java-name>
 				[Dot42.DexImport("nextTag", "()I", AccessFlags = 1025)]
 				int NextTag() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getInputEncoding
+				/// </java-name>
+				string InputEncoding
+				{
+						[Dot42.DexImport("getInputEncoding", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getDepth
+				/// </java-name>
+				int Depth
+				{
+						[Dot42.DexImport("getDepth", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPositionDescription
+				/// </java-name>
+				string PositionDescription
+				{
+						[Dot42.DexImport("getPositionDescription", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getLineNumber
+				/// </java-name>
+				int LineNumber
+				{
+						[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getColumnNumber
+				/// </java-name>
+				int ColumnNumber
+				{
+						[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isWhitespace
+				/// </java-name>
+				bool IsWhitespace
+				{
+						[Dot42.DexImport("isWhitespace", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getText
+				/// </java-name>
+				string Text
+				{
+						[Dot42.DexImport("getText", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getNamespace
+				/// </java-name>
+				string Namespace
+				{
+						[Dot42.DexImport("getNamespace", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				string Name
+				{
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getPrefix
+				/// </java-name>
+				string Prefix
+				{
+						[Dot42.DexImport("getPrefix", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// isEmptyElementTag
+				/// </java-name>
+				bool IsEmptyElementTag
+				{
+						[Dot42.DexImport("isEmptyElementTag", "()Z", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getAttributeCount
+				/// </java-name>
+				int AttributeCount
+				{
+						[Dot42.DexImport("getAttributeCount", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getEventType
+				/// </java-name>
+				int EventType
+				{
+						[Dot42.DexImport("getEventType", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -394,24 +433,6 @@ namespace Org.Xmlpull.V1
 				string GetPrefix(string @string, bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getDepth
-				/// </java-name>
-				[Dot42.DexImport("getDepth", "()I", AccessFlags = 1025)]
-				int GetDepth() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNamespace
-				/// </java-name>
-				[Dot42.DexImport("getNamespace", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetNamespace() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// startTag
 				/// </java-name>
 				[Dot42.DexImport("startTag", "(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;", AccessFlags = 1025)]
@@ -484,6 +505,33 @@ namespace Org.Xmlpull.V1
 				[Dot42.DexImport("flush", "()V", AccessFlags = 1025)]
 				void Flush() /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getDepth
+				/// </java-name>
+				int Depth
+				{
+						[Dot42.DexImport("getDepth", "()I", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getNamespace
+				/// </java-name>
+				string Namespace
+				{
+						[Dot42.DexImport("getNamespace", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getName
+				/// </java-name>
+				string Name
+				{
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -497,7 +545,7 @@ namespace Org.Xmlpull.V1
 				/// detail
 				/// </java-name>
 				[Dot42.DexImport("detail", "Ljava/lang/Throwable;", AccessFlags = 4)]
-				protected internal global::System.Exception Detail;
+				protected internal global::System.Exception @detail;
 				/// <java-name>
 				/// row
 				/// </java-name>
@@ -519,33 +567,6 @@ namespace Org.Xmlpull.V1
 				}
 
 				/// <java-name>
-				/// getDetail
-				/// </java-name>
-				[Dot42.DexImport("getDetail", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public virtual global::System.Exception GetDetail() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
-				/// getLineNumber
-				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-				public virtual int GetLineNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getColumnNumber
-				/// </java-name>
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1)]
-				public virtual int GetColumnNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// printStackTrace
 				/// </java-name>
 				[Dot42.DexImport("printStackTrace", "()V", AccessFlags = 1)]
@@ -559,21 +580,30 @@ namespace Org.Xmlpull.V1
 				}
 
 				/// <java-name>
+				/// getDetail
+				/// </java-name>
+				public virtual global::System.Exception Detail
+				{
+						[Dot42.DexImport("getDetail", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+						get{ return default(global::System.Exception); }
+				}
+
+				/// <java-name>
 				/// getLineNumber
 				/// </java-name>
-				public int LineNumber
+				public virtual int LineNumber
 				{
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-						get{ return GetLineNumber(); }
+						[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnNumber
 				/// </java-name>
-				public int ColumnNumber
+				public virtual int ColumnNumber
 				{
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1)]
-						get{ return GetColumnNumber(); }
+						[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -641,29 +671,11 @@ namespace Org.Xmlpull.V1
 				}
 
 				/// <java-name>
-				/// isNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
-				public virtual bool IsNamespaceAware() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setValidating
 				/// </java-name>
 				[Dot42.DexImport("setValidating", "(Z)V", AccessFlags = 1)]
 				public virtual void SetValidating(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isValidating
-				/// </java-name>
-				[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
-				public virtual bool IsValidating() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -700,6 +712,24 @@ namespace Org.Xmlpull.V1
 				public static global::Org.Xmlpull.V1.XmlPullParserFactory NewInstance(string @string, global::System.Type type) /* MethodBuilder.Create */ 
 				{
 						return default(global::Org.Xmlpull.V1.XmlPullParserFactory);
+				}
+
+				/// <java-name>
+				/// isNamespaceAware
+				/// </java-name>
+				public virtual bool IsNamespaceAware
+				{
+						[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isValidating
+				/// </java-name>
+				public virtual bool IsValidating
+				{
+						[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

@@ -966,24 +966,6 @@ namespace Java.Util.Concurrent.Atomic
 				}
 
 				/// <java-name>
-				/// getReference
-				/// </java-name>
-				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
-				public virtual V GetReference() /* MethodBuilder.Create */ 
-				{
-						return default(V);
-				}
-
-				/// <java-name>
-				/// isMarked
-				/// </java-name>
-				[Dot42.DexImport("isMarked", "()Z", AccessFlags = 1)]
-				public virtual bool IsMarked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// get
 				/// </java-name>
 				[Dot42.DexImport("get", "([Z)Ljava/lang/Object;", AccessFlags = 1, Signature = "([Z)TV;")]
@@ -1035,10 +1017,19 @@ namespace Java.Util.Concurrent.Atomic
 				/// <java-name>
 				/// getReference
 				/// </java-name>
-				public V Reference
+				public virtual V Reference
 				{
-				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
-						get{ return GetReference(); }
+						[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
+						get{ return default(V); }
+				}
+
+				/// <java-name>
+				/// isMarked
+				/// </java-name>
+				public virtual bool IsMarked
+				{
+						[Dot42.DexImport("isMarked", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1295,24 +1286,6 @@ namespace Java.Util.Concurrent.Atomic
 				}
 
 				/// <java-name>
-				/// getReference
-				/// </java-name>
-				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
-				public virtual V GetReference() /* MethodBuilder.Create */ 
-				{
-						return default(V);
-				}
-
-				/// <java-name>
-				/// getStamp
-				/// </java-name>
-				[Dot42.DexImport("getStamp", "()I", AccessFlags = 1)]
-				public virtual int GetStamp() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// get
 				/// </java-name>
 				[Dot42.DexImport("get", "([I)Ljava/lang/Object;", AccessFlags = 1, Signature = "([I)TV;")]
@@ -1364,19 +1337,19 @@ namespace Java.Util.Concurrent.Atomic
 				/// <java-name>
 				/// getReference
 				/// </java-name>
-				public V Reference
+				public virtual V Reference
 				{
-				[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
-						get{ return GetReference(); }
+						[Dot42.DexImport("getReference", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TV;")]
+						get{ return default(V); }
 				}
 
 				/// <java-name>
 				/// getStamp
 				/// </java-name>
-				public int Stamp
+				public virtual int Stamp
 				{
-				[Dot42.DexImport("getStamp", "()I", AccessFlags = 1)]
-						get{ return GetStamp(); }
+						[Dot42.DexImport("getStamp", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

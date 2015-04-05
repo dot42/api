@@ -66,15 +66,6 @@ namespace Org.Apache.Http.Client
 				{
 				}
 
-				/// <java-name>
-				/// getStatusCode
-				/// </java-name>
-				[Dot42.DexImport("getStatusCode", "()I", AccessFlags = 1)]
-				public virtual int GetStatusCode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal HttpResponseException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -83,10 +74,10 @@ namespace Org.Apache.Http.Client
 				/// <java-name>
 				/// getStatusCode
 				/// </java-name>
-				public int StatusCode
+				public virtual int StatusCode
 				{
-				[Dot42.DexImport("getStatusCode", "()I", AccessFlags = 1)]
-						get{ return GetStatusCode(); }
+						[Dot42.DexImport("getStatusCode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -137,12 +128,6 @@ namespace Org.Apache.Http.Client
 				void AddCookie(global::Org.Apache.Http.Cookie.ICookie cookie) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getCookies
-				/// </java-name>
-				[Dot42.DexImport("getCookies", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;")]
-				global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> GetCookies() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// clearExpired
 				/// </java-name>
 				[Dot42.DexImport("clearExpired", "(Ljava/util/Date;)Z", AccessFlags = 1025)]
@@ -153,6 +138,15 @@ namespace Org.Apache.Http.Client
 				/// </java-name>
 				[Dot42.DexImport("clear", "()V", AccessFlags = 1025)]
 				void Clear() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getCookies
+				/// </java-name>
+				global::Java.Util.IList<global::Org.Apache.Http.Cookie.ICookie> Cookies
+				{
+						[Dot42.DexImport("getCookies", "()Ljava/util/List;", AccessFlags = 1025, Signature = "()Ljava/util/List<Lorg/apache/http/cookie/Cookie;>;")]
+						get;
+				}
 
 		}
 
@@ -190,18 +184,6 @@ namespace Org.Apache.Http.Client
 		public partial interface IHttpClient
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getParams
-				/// </java-name>
-				[Dot42.DexImport("getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Params.IHttpParams GetParams() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getConnectionManager
-				/// </java-name>
-				[Dot42.DexImport("getConnectionManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 1025)]
-				global::Org.Apache.Http.Conn.IClientConnectionManager GetConnectionManager() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// execute
 				/// </java-name>
@@ -261,6 +243,24 @@ namespace Org.Apache.Http.Client
     "g/apache/http/client/ResponseHandler<+TT;>;Lorg/apache/http/protocol/HttpContext" +
     ";)TT;")]
 				T Execute<T>(global::Org.Apache.Http.HttpHost httpHost, global::Org.Apache.Http.IHttpRequest httpRequest, global::Org.Apache.Http.Client.IResponseHandler<T> responseHandler, global::Org.Apache.Http.Protocol.IHttpContext httpContext) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getParams
+				/// </java-name>
+				global::Org.Apache.Http.Params.IHttpParams Params
+				{
+						[Dot42.DexImport("getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getConnectionManager
+				/// </java-name>
+				global::Org.Apache.Http.Conn.IClientConnectionManager ConnectionManager
+				{
+						[Dot42.DexImport("getConnectionManager", "()Lorg/apache/http/conn/ClientConnectionManager;", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

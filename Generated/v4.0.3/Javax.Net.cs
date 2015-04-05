@@ -14,15 +14,6 @@ namespace Javax.Net
 				}
 
 				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Ljavax/net/ServerSocketFactory;", AccessFlags = 41)]
-				public static global::Javax.Net.ServerSocketFactory GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.ServerSocketFactory);
-				}
-
-				/// <java-name>
 				/// createServerSocket
 				/// </java-name>
 				[Dot42.DexImport("createServerSocket", "()Ljava/net/ServerSocket;", AccessFlags = 1)]
@@ -54,8 +45,8 @@ namespace Javax.Net
 				/// </java-name>
 				public static global::Javax.Net.ServerSocketFactory Default
 				{
-				[Dot42.DexImport("getDefault", "()Ljavax/net/ServerSocketFactory;", AccessFlags = 41)]
-						get{ return GetDefault(); }
+						[Dot42.DexImport("getDefault", "()Ljavax/net/ServerSocketFactory;", AccessFlags = 41)]
+						get{ return default(global::Javax.Net.ServerSocketFactory); }
 				}
 
 		}
@@ -70,15 +61,6 @@ namespace Javax.Net
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
 				protected internal SocketFactory() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getDefault
-				/// </java-name>
-				[Dot42.DexImport("getDefault", "()Ljavax/net/SocketFactory;", AccessFlags = 41)]
-				public static global::Javax.Net.SocketFactory GetDefault() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Net.SocketFactory);
 				}
 
 				/// <java-name>
@@ -119,8 +101,8 @@ namespace Javax.Net
 				/// </java-name>
 				public static global::Javax.Net.SocketFactory Default
 				{
-				[Dot42.DexImport("getDefault", "()Ljavax/net/SocketFactory;", AccessFlags = 41)]
-						get{ return GetDefault(); }
+						[Dot42.DexImport("getDefault", "()Ljavax/net/SocketFactory;", AccessFlags = 41)]
+						get{ return default(global::Javax.Net.SocketFactory); }
 				}
 
 		}

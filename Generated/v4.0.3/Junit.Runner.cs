@@ -27,23 +27,6 @@ namespace Junit.Runner
 				}
 
 				/// <java-name>
-				/// setPreferences
-				/// </java-name>
-				[Dot42.DexImport("setPreferences", "(Ljava/util/Properties;)V", AccessFlags = 12)]
-				protected internal static void SetPreferences(global::Java.Util.Properties properties) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getPreferences
-				/// </java-name>
-				[Dot42.DexImport("getPreferences", "()Ljava/util/Properties;", AccessFlags = 12)]
-				protected internal static global::Java.Util.Properties GetPreferences() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Properties);
-				}
-
-				/// <java-name>
 				/// savePreferences
 				/// </java-name>
 				[Dot42.DexImport("savePreferences", "()V", AccessFlags = 9)]
@@ -178,15 +161,6 @@ namespace Junit.Runner
 				}
 
 				/// <java-name>
-				/// getLoader
-				/// </java-name>
-				[Dot42.DexImport("getLoader", "()Ljunit/runner/TestSuiteLoader;", AccessFlags = 1)]
-				public virtual global::Junit.Runner.ITestSuiteLoader GetLoader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Junit.Runner.ITestSuiteLoader);
-				}
-
-				/// <java-name>
 				/// useReloadingTestSuiteLoader
 				/// </java-name>
 				[Dot42.DexImport("useReloadingTestSuiteLoader", "()Z", AccessFlags = 4)]
@@ -254,19 +228,19 @@ namespace Junit.Runner
 				/// </java-name>
 				protected internal static global::Java.Util.Properties Preferences
 				{
-				[Dot42.DexImport("getPreferences", "()Ljava/util/Properties;", AccessFlags = 12)]
-						get{ return GetPreferences(); }
-				[Dot42.DexImport("setPreferences", "(Ljava/util/Properties;)V", AccessFlags = 12)]
-						set{ SetPreferences(value); }
+						[Dot42.DexImport("getPreferences", "()Ljava/util/Properties;", AccessFlags = 12)]
+						get{ return default(global::Java.Util.Properties); }
+						[Dot42.DexImport("setPreferences", "(Ljava/util/Properties;)V", AccessFlags = 12)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getLoader
 				/// </java-name>
-				public global::Junit.Runner.ITestSuiteLoader Loader
+				public virtual global::Junit.Runner.ITestSuiteLoader Loader
 				{
-				[Dot42.DexImport("getLoader", "()Ljunit/runner/TestSuiteLoader;", AccessFlags = 1)]
-						get{ return GetLoader(); }
+						[Dot42.DexImport("getLoader", "()Ljunit/runner/TestSuiteLoader;", AccessFlags = 1)]
+						get{ return default(global::Junit.Runner.ITestSuiteLoader); }
 				}
 
 		}

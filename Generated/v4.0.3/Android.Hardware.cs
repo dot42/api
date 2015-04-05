@@ -34,15 +34,6 @@ namespace Android.Hardware
 				}
 
 				/// <java-name>
-				/// getNumberOfCameras
-				/// </java-name>
-				[Dot42.DexImport("getNumberOfCameras", "()I", AccessFlags = 265)]
-				public static int GetNumberOfCameras() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getCameraInfo
 				/// </java-name>
 				[Dot42.DexImport("getCameraInfo", "(ILandroid/hardware/Camera$CameraInfo;)V", AccessFlags = 265)]
@@ -299,8 +290,8 @@ namespace Android.Hardware
 				/// </java-name>
 				public static int NumberOfCameras
 				{
-				[Dot42.DexImport("getNumberOfCameras", "()I", AccessFlags = 265)]
-						get{ return GetNumberOfCameras(); }
+						[Dot42.DexImport("getNumberOfCameras", "()I", AccessFlags = 265)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -658,125 +649,11 @@ namespace Android.Hardware
 						}
 
 						/// <java-name>
-						/// getPreviewSize
-						/// </java-name>
-						[Dot42.DexImport("getPreviewSize", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
-						public virtual global::Android.Hardware.Camera.Size GetPreviewSize() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Hardware.Camera.Size);
-						}
-
-						/// <java-name>
-						/// getSupportedPreviewSizes
-						/// </java-name>
-						[Dot42.DexImport("getSupportedPreviewSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
-						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Size> GetSupportedPreviewSizes() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<global::Android.Hardware.Camera.Size>);
-						}
-
-						/// <java-name>
-						/// getSupportedVideoSizes
-						/// </java-name>
-						[Dot42.DexImport("getSupportedVideoSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
-						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Size> GetSupportedVideoSizes() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<global::Android.Hardware.Camera.Size>);
-						}
-
-						/// <java-name>
-						/// getPreferredPreviewSizeForVideo
-						/// </java-name>
-						[Dot42.DexImport("getPreferredPreviewSizeForVideo", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
-						public virtual global::Android.Hardware.Camera.Size GetPreferredPreviewSizeForVideo() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Hardware.Camera.Size);
-						}
-
-						/// <java-name>
 						/// setJpegThumbnailSize
 						/// </java-name>
 						[Dot42.DexImport("setJpegThumbnailSize", "(II)V", AccessFlags = 1)]
 						public virtual void SetJpegThumbnailSize(int int32, int int321) /* MethodBuilder.Create */ 
 						{
-						}
-
-						/// <java-name>
-						/// getJpegThumbnailSize
-						/// </java-name>
-						[Dot42.DexImport("getJpegThumbnailSize", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
-						public virtual global::Android.Hardware.Camera.Size GetJpegThumbnailSize() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Hardware.Camera.Size);
-						}
-
-						/// <java-name>
-						/// getSupportedJpegThumbnailSizes
-						/// </java-name>
-						[Dot42.DexImport("getSupportedJpegThumbnailSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
-						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Size> GetSupportedJpegThumbnailSizes() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<global::Android.Hardware.Camera.Size>);
-						}
-
-						/// <java-name>
-						/// setJpegThumbnailQuality
-						/// </java-name>
-						[Dot42.DexImport("setJpegThumbnailQuality", "(I)V", AccessFlags = 1)]
-						public virtual void SetJpegThumbnailQuality(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getJpegThumbnailQuality
-						/// </java-name>
-						[Dot42.DexImport("getJpegThumbnailQuality", "()I", AccessFlags = 1)]
-						public virtual int GetJpegThumbnailQuality() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// setJpegQuality
-						/// </java-name>
-						[Dot42.DexImport("setJpegQuality", "(I)V", AccessFlags = 1)]
-						public virtual void SetJpegQuality(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getJpegQuality
-						/// </java-name>
-						[Dot42.DexImport("getJpegQuality", "()I", AccessFlags = 1)]
-						public virtual int GetJpegQuality() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// setPreviewFrameRate
-						/// </java-name>
-						[Dot42.DexImport("setPreviewFrameRate", "(I)V", AccessFlags = 1)]
-						public virtual void SetPreviewFrameRate(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getPreviewFrameRate
-						/// </java-name>
-						[Dot42.DexImport("getPreviewFrameRate", "()I", AccessFlags = 1)]
-						public virtual int GetPreviewFrameRate() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getSupportedPreviewFrameRates
-						/// </java-name>
-						[Dot42.DexImport("getSupportedPreviewFrameRates", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
-						public virtual global::Java.Util.IList<int?> GetSupportedPreviewFrameRates() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<int?>);
 						}
 
 						/// <java-name>
@@ -796,90 +673,11 @@ namespace Android.Hardware
 						}
 
 						/// <java-name>
-						/// getSupportedPreviewFpsRange
-						/// </java-name>
-						[Dot42.DexImport("getSupportedPreviewFpsRange", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<[I>;")]
-						public virtual global::Java.Util.IList<int[]> GetSupportedPreviewFpsRange() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<int[]>);
-						}
-
-						/// <java-name>
-						/// setPreviewFormat
-						/// </java-name>
-						[Dot42.DexImport("setPreviewFormat", "(I)V", AccessFlags = 1)]
-						public virtual void SetPreviewFormat(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getPreviewFormat
-						/// </java-name>
-						[Dot42.DexImport("getPreviewFormat", "()I", AccessFlags = 1)]
-						public virtual int GetPreviewFormat() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getSupportedPreviewFormats
-						/// </java-name>
-						[Dot42.DexImport("getSupportedPreviewFormats", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
-						public virtual global::Java.Util.IList<int?> GetSupportedPreviewFormats() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<int?>);
-						}
-
-						/// <java-name>
 						/// setPictureSize
 						/// </java-name>
 						[Dot42.DexImport("setPictureSize", "(II)V", AccessFlags = 1)]
 						public virtual void SetPictureSize(int int32, int int321) /* MethodBuilder.Create */ 
 						{
-						}
-
-						/// <java-name>
-						/// getPictureSize
-						/// </java-name>
-						[Dot42.DexImport("getPictureSize", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
-						public virtual global::Android.Hardware.Camera.Size GetPictureSize() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Hardware.Camera.Size);
-						}
-
-						/// <java-name>
-						/// getSupportedPictureSizes
-						/// </java-name>
-						[Dot42.DexImport("getSupportedPictureSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
-						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Size> GetSupportedPictureSizes() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<global::Android.Hardware.Camera.Size>);
-						}
-
-						/// <java-name>
-						/// setPictureFormat
-						/// </java-name>
-						[Dot42.DexImport("setPictureFormat", "(I)V", AccessFlags = 1)]
-						public virtual void SetPictureFormat(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getPictureFormat
-						/// </java-name>
-						[Dot42.DexImport("getPictureFormat", "()I", AccessFlags = 1)]
-						public virtual int GetPictureFormat() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getSupportedPictureFormats
-						/// </java-name>
-						[Dot42.DexImport("getSupportedPictureFormats", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
-						public virtual global::Java.Util.IList<int?> GetSupportedPictureFormats() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<int?>);
 						}
 
 						/// <java-name>
@@ -939,404 +737,11 @@ namespace Android.Hardware
 						}
 
 						/// <java-name>
-						/// getWhiteBalance
-						/// </java-name>
-						[Dot42.DexImport("getWhiteBalance", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetWhiteBalance() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// setWhiteBalance
-						/// </java-name>
-						[Dot42.DexImport("setWhiteBalance", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						public virtual void SetWhiteBalance(string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getSupportedWhiteBalance
-						/// </java-name>
-						[Dot42.DexImport("getSupportedWhiteBalance", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						public virtual global::Java.Util.IList<string> GetSupportedWhiteBalance() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<string>);
-						}
-
-						/// <java-name>
-						/// getColorEffect
-						/// </java-name>
-						[Dot42.DexImport("getColorEffect", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetColorEffect() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// setColorEffect
-						/// </java-name>
-						[Dot42.DexImport("setColorEffect", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						public virtual void SetColorEffect(string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getSupportedColorEffects
-						/// </java-name>
-						[Dot42.DexImport("getSupportedColorEffects", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						public virtual global::Java.Util.IList<string> GetSupportedColorEffects() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<string>);
-						}
-
-						/// <java-name>
-						/// getAntibanding
-						/// </java-name>
-						[Dot42.DexImport("getAntibanding", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetAntibanding() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// setAntibanding
-						/// </java-name>
-						[Dot42.DexImport("setAntibanding", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						public virtual void SetAntibanding(string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getSupportedAntibanding
-						/// </java-name>
-						[Dot42.DexImport("getSupportedAntibanding", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						public virtual global::Java.Util.IList<string> GetSupportedAntibanding() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<string>);
-						}
-
-						/// <java-name>
-						/// getSceneMode
-						/// </java-name>
-						[Dot42.DexImport("getSceneMode", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetSceneMode() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// setSceneMode
-						/// </java-name>
-						[Dot42.DexImport("setSceneMode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						public virtual void SetSceneMode(string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getSupportedSceneModes
-						/// </java-name>
-						[Dot42.DexImport("getSupportedSceneModes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						public virtual global::Java.Util.IList<string> GetSupportedSceneModes() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<string>);
-						}
-
-						/// <java-name>
-						/// getFlashMode
-						/// </java-name>
-						[Dot42.DexImport("getFlashMode", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetFlashMode() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// setFlashMode
-						/// </java-name>
-						[Dot42.DexImport("setFlashMode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						public virtual void SetFlashMode(string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getSupportedFlashModes
-						/// </java-name>
-						[Dot42.DexImport("getSupportedFlashModes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						public virtual global::Java.Util.IList<string> GetSupportedFlashModes() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<string>);
-						}
-
-						/// <java-name>
-						/// getFocusMode
-						/// </java-name>
-						[Dot42.DexImport("getFocusMode", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetFocusMode() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <java-name>
-						/// setFocusMode
-						/// </java-name>
-						[Dot42.DexImport("setFocusMode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						public virtual void SetFocusMode(string @string) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getSupportedFocusModes
-						/// </java-name>
-						[Dot42.DexImport("getSupportedFocusModes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-						public virtual global::Java.Util.IList<string> GetSupportedFocusModes() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<string>);
-						}
-
-						/// <java-name>
-						/// getFocalLength
-						/// </java-name>
-						[Dot42.DexImport("getFocalLength", "()F", AccessFlags = 1)]
-						public virtual float GetFocalLength() /* MethodBuilder.Create */ 
-						{
-								return default(float);
-						}
-
-						/// <java-name>
-						/// getHorizontalViewAngle
-						/// </java-name>
-						[Dot42.DexImport("getHorizontalViewAngle", "()F", AccessFlags = 1)]
-						public virtual float GetHorizontalViewAngle() /* MethodBuilder.Create */ 
-						{
-								return default(float);
-						}
-
-						/// <java-name>
-						/// getVerticalViewAngle
-						/// </java-name>
-						[Dot42.DexImport("getVerticalViewAngle", "()F", AccessFlags = 1)]
-						public virtual float GetVerticalViewAngle() /* MethodBuilder.Create */ 
-						{
-								return default(float);
-						}
-
-						/// <java-name>
-						/// getExposureCompensation
-						/// </java-name>
-						[Dot42.DexImport("getExposureCompensation", "()I", AccessFlags = 1)]
-						public virtual int GetExposureCompensation() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// setExposureCompensation
-						/// </java-name>
-						[Dot42.DexImport("setExposureCompensation", "(I)V", AccessFlags = 1)]
-						public virtual void SetExposureCompensation(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getMaxExposureCompensation
-						/// </java-name>
-						[Dot42.DexImport("getMaxExposureCompensation", "()I", AccessFlags = 1)]
-						public virtual int GetMaxExposureCompensation() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getMinExposureCompensation
-						/// </java-name>
-						[Dot42.DexImport("getMinExposureCompensation", "()I", AccessFlags = 1)]
-						public virtual int GetMinExposureCompensation() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getExposureCompensationStep
-						/// </java-name>
-						[Dot42.DexImport("getExposureCompensationStep", "()F", AccessFlags = 1)]
-						public virtual float GetExposureCompensationStep() /* MethodBuilder.Create */ 
-						{
-								return default(float);
-						}
-
-						/// <java-name>
-						/// setAutoExposureLock
-						/// </java-name>
-						[Dot42.DexImport("setAutoExposureLock", "(Z)V", AccessFlags = 1)]
-						public virtual void SetAutoExposureLock(bool boolean) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getAutoExposureLock
-						/// </java-name>
-						[Dot42.DexImport("getAutoExposureLock", "()Z", AccessFlags = 1)]
-						public virtual bool GetAutoExposureLock() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// isAutoExposureLockSupported
-						/// </java-name>
-						[Dot42.DexImport("isAutoExposureLockSupported", "()Z", AccessFlags = 1)]
-						public virtual bool IsAutoExposureLockSupported() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// setAutoWhiteBalanceLock
-						/// </java-name>
-						[Dot42.DexImport("setAutoWhiteBalanceLock", "(Z)V", AccessFlags = 1)]
-						public virtual void SetAutoWhiteBalanceLock(bool boolean) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getAutoWhiteBalanceLock
-						/// </java-name>
-						[Dot42.DexImport("getAutoWhiteBalanceLock", "()Z", AccessFlags = 1)]
-						public virtual bool GetAutoWhiteBalanceLock() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// isAutoWhiteBalanceLockSupported
-						/// </java-name>
-						[Dot42.DexImport("isAutoWhiteBalanceLockSupported", "()Z", AccessFlags = 1)]
-						public virtual bool IsAutoWhiteBalanceLockSupported() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// getZoom
-						/// </java-name>
-						[Dot42.DexImport("getZoom", "()I", AccessFlags = 1)]
-						public virtual int GetZoom() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// setZoom
-						/// </java-name>
-						[Dot42.DexImport("setZoom", "(I)V", AccessFlags = 1)]
-						public virtual void SetZoom(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// isZoomSupported
-						/// </java-name>
-						[Dot42.DexImport("isZoomSupported", "()Z", AccessFlags = 1)]
-						public virtual bool IsZoomSupported() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// getMaxZoom
-						/// </java-name>
-						[Dot42.DexImport("getMaxZoom", "()I", AccessFlags = 1)]
-						public virtual int GetMaxZoom() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getZoomRatios
-						/// </java-name>
-						[Dot42.DexImport("getZoomRatios", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
-						public virtual global::Java.Util.IList<int?> GetZoomRatios() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<int?>);
-						}
-
-						/// <java-name>
-						/// isSmoothZoomSupported
-						/// </java-name>
-						[Dot42.DexImport("isSmoothZoomSupported", "()Z", AccessFlags = 1)]
-						public virtual bool IsSmoothZoomSupported() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
 						/// getFocusDistances
 						/// </java-name>
 						[Dot42.DexImport("getFocusDistances", "([F)V", AccessFlags = 1)]
 						public virtual void GetFocusDistances(float[] single) /* MethodBuilder.Create */ 
 						{
-						}
-
-						/// <java-name>
-						/// getMaxNumFocusAreas
-						/// </java-name>
-						[Dot42.DexImport("getMaxNumFocusAreas", "()I", AccessFlags = 1)]
-						public virtual int GetMaxNumFocusAreas() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getFocusAreas
-						/// </java-name>
-						[Dot42.DexImport("getFocusAreas", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Area;>;")]
-						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Area> GetFocusAreas() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<global::Android.Hardware.Camera.Area>);
-						}
-
-						/// <java-name>
-						/// setFocusAreas
-						/// </java-name>
-						[Dot42.DexImport("setFocusAreas", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/hardware/Camera$Area;>;)V")]
-						public virtual void SetFocusAreas(global::Java.Util.IList<global::Android.Hardware.Camera.Area> list) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getMaxNumMeteringAreas
-						/// </java-name>
-						[Dot42.DexImport("getMaxNumMeteringAreas", "()I", AccessFlags = 1)]
-						public virtual int GetMaxNumMeteringAreas() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getMeteringAreas
-						/// </java-name>
-						[Dot42.DexImport("getMeteringAreas", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Area;>;")]
-						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Area> GetMeteringAreas() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Util.IList<global::Android.Hardware.Camera.Area>);
-						}
-
-						/// <java-name>
-						/// setMeteringAreas
-						/// </java-name>
-						[Dot42.DexImport("setMeteringAreas", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/hardware/Camera$Area;>;)V")]
-						public virtual void SetMeteringAreas(global::Java.Util.IList<global::Android.Hardware.Camera.Area> list) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getMaxNumDetectedFaces
-						/// </java-name>
-						[Dot42.DexImport("getMaxNumDetectedFaces", "()I", AccessFlags = 1)]
-						public virtual int GetMaxNumDetectedFaces() /* MethodBuilder.Create */ 
-						{
-								return default(int);
 						}
 
 						/// <java-name>
@@ -1347,41 +752,6 @@ namespace Android.Hardware
 						{
 						}
 
-						/// <java-name>
-						/// isVideoSnapshotSupported
-						/// </java-name>
-						[Dot42.DexImport("isVideoSnapshotSupported", "()Z", AccessFlags = 1)]
-						public virtual bool IsVideoSnapshotSupported() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// setVideoStabilization
-						/// </java-name>
-						[Dot42.DexImport("setVideoStabilization", "(Z)V", AccessFlags = 1)]
-						public virtual void SetVideoStabilization(bool boolean) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getVideoStabilization
-						/// </java-name>
-						[Dot42.DexImport("getVideoStabilization", "()Z", AccessFlags = 1)]
-						public virtual bool GetVideoStabilization() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// isVideoStabilizationSupported
-						/// </java-name>
-						[Dot42.DexImport("isVideoStabilizationSupported", "()Z", AccessFlags = 1)]
-						public virtual bool IsVideoStabilizationSupported() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal Parameters() /* TypeBuilder.AddDefaultConstructor */ 
 						{
@@ -1390,460 +760,514 @@ namespace Android.Hardware
 						/// <java-name>
 						/// getPreviewSize
 						/// </java-name>
-						public global::Android.Hardware.Camera.Size PreviewSize
+						public virtual global::Android.Hardware.Camera.Size PreviewSize
 						{
-						[Dot42.DexImport("getPreviewSize", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
-								get{ return GetPreviewSize(); }
+								[Dot42.DexImport("getPreviewSize", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
+								get{ return default(global::Android.Hardware.Camera.Size); }
 						}
 
 						/// <java-name>
 						/// getSupportedPreviewSizes
 						/// </java-name>
-						public global::Java.Util.IList<global::Android.Hardware.Camera.Size> SupportedPreviewSizes
+						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Size> SupportedPreviewSizes
 						{
-						[Dot42.DexImport("getSupportedPreviewSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
-								get{ return GetSupportedPreviewSizes(); }
+								[Dot42.DexImport("getSupportedPreviewSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
+								get{ return default(global::Java.Util.IList<global::Android.Hardware.Camera.Size>); }
 						}
 
 						/// <java-name>
 						/// getSupportedVideoSizes
 						/// </java-name>
-						public global::Java.Util.IList<global::Android.Hardware.Camera.Size> SupportedVideoSizes
+						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Size> SupportedVideoSizes
 						{
-						[Dot42.DexImport("getSupportedVideoSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
-								get{ return GetSupportedVideoSizes(); }
+								[Dot42.DexImport("getSupportedVideoSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
+								get{ return default(global::Java.Util.IList<global::Android.Hardware.Camera.Size>); }
 						}
 
 						/// <java-name>
 						/// getPreferredPreviewSizeForVideo
 						/// </java-name>
-						public global::Android.Hardware.Camera.Size PreferredPreviewSizeForVideo
+						public virtual global::Android.Hardware.Camera.Size PreferredPreviewSizeForVideo
 						{
-						[Dot42.DexImport("getPreferredPreviewSizeForVideo", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
-								get{ return GetPreferredPreviewSizeForVideo(); }
+								[Dot42.DexImport("getPreferredPreviewSizeForVideo", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
+								get{ return default(global::Android.Hardware.Camera.Size); }
 						}
 
 						/// <java-name>
 						/// getJpegThumbnailSize
 						/// </java-name>
-						public global::Android.Hardware.Camera.Size JpegThumbnailSize
+						public virtual global::Android.Hardware.Camera.Size JpegThumbnailSize
 						{
-						[Dot42.DexImport("getJpegThumbnailSize", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
-								get{ return GetJpegThumbnailSize(); }
+								[Dot42.DexImport("getJpegThumbnailSize", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
+								get{ return default(global::Android.Hardware.Camera.Size); }
 						}
 
 						/// <java-name>
 						/// getSupportedJpegThumbnailSizes
 						/// </java-name>
-						public global::Java.Util.IList<global::Android.Hardware.Camera.Size> SupportedJpegThumbnailSizes
+						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Size> SupportedJpegThumbnailSizes
 						{
-						[Dot42.DexImport("getSupportedJpegThumbnailSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
-								get{ return GetSupportedJpegThumbnailSizes(); }
+								[Dot42.DexImport("getSupportedJpegThumbnailSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
+								get{ return default(global::Java.Util.IList<global::Android.Hardware.Camera.Size>); }
 						}
 
 						/// <java-name>
 						/// getJpegThumbnailQuality
 						/// </java-name>
-						public int JpegThumbnailQuality
+						public virtual int JpegThumbnailQuality
 						{
-						[Dot42.DexImport("getJpegThumbnailQuality", "()I", AccessFlags = 1)]
-								get{ return GetJpegThumbnailQuality(); }
-						[Dot42.DexImport("setJpegThumbnailQuality", "(I)V", AccessFlags = 1)]
-								set{ SetJpegThumbnailQuality(value); }
+								[Dot42.DexImport("getJpegThumbnailQuality", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+								[Dot42.DexImport("setJpegThumbnailQuality", "(I)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getJpegQuality
 						/// </java-name>
-						public int JpegQuality
+						public virtual int JpegQuality
 						{
-						[Dot42.DexImport("getJpegQuality", "()I", AccessFlags = 1)]
-								get{ return GetJpegQuality(); }
-						[Dot42.DexImport("setJpegQuality", "(I)V", AccessFlags = 1)]
-								set{ SetJpegQuality(value); }
+								[Dot42.DexImport("getJpegQuality", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+								[Dot42.DexImport("setJpegQuality", "(I)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getPreviewFrameRate
 						/// </java-name>
-						public int PreviewFrameRate
+						public virtual int PreviewFrameRate
 						{
-						[Dot42.DexImport("getPreviewFrameRate", "()I", AccessFlags = 1)]
-								get{ return GetPreviewFrameRate(); }
-						[Dot42.DexImport("setPreviewFrameRate", "(I)V", AccessFlags = 1)]
-								set{ SetPreviewFrameRate(value); }
+								[Dot42.DexImport("getPreviewFrameRate", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+								[Dot42.DexImport("setPreviewFrameRate", "(I)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getSupportedPreviewFrameRates
 						/// </java-name>
-						public global::Java.Util.IList<int?> SupportedPreviewFrameRates
+						public virtual global::Java.Util.IList<int?> SupportedPreviewFrameRates
 						{
-						[Dot42.DexImport("getSupportedPreviewFrameRates", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
-								get{ return GetSupportedPreviewFrameRates(); }
+								[Dot42.DexImport("getSupportedPreviewFrameRates", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
+								get{ return default(global::Java.Util.IList<int?>); }
 						}
 
 						/// <java-name>
 						/// getSupportedPreviewFpsRange
 						/// </java-name>
-						public global::Java.Util.IList<int[]> SupportedPreviewFpsRange
+						public virtual global::Java.Util.IList<int[]> SupportedPreviewFpsRange
 						{
-						[Dot42.DexImport("getSupportedPreviewFpsRange", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<[I>;")]
-								get{ return GetSupportedPreviewFpsRange(); }
+								[Dot42.DexImport("getSupportedPreviewFpsRange", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<[I>;")]
+								get{ return default(global::Java.Util.IList<int[]>); }
 						}
 
 						/// <java-name>
 						/// getPreviewFormat
 						/// </java-name>
-						public int PreviewFormat
+						public virtual int PreviewFormat
 						{
-						[Dot42.DexImport("getPreviewFormat", "()I", AccessFlags = 1)]
-								get{ return GetPreviewFormat(); }
-						[Dot42.DexImport("setPreviewFormat", "(I)V", AccessFlags = 1)]
-								set{ SetPreviewFormat(value); }
+								[Dot42.DexImport("getPreviewFormat", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+								[Dot42.DexImport("setPreviewFormat", "(I)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getSupportedPreviewFormats
 						/// </java-name>
-						public global::Java.Util.IList<int?> SupportedPreviewFormats
+						public virtual global::Java.Util.IList<int?> SupportedPreviewFormats
 						{
-						[Dot42.DexImport("getSupportedPreviewFormats", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
-								get{ return GetSupportedPreviewFormats(); }
+								[Dot42.DexImport("getSupportedPreviewFormats", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
+								get{ return default(global::Java.Util.IList<int?>); }
 						}
 
 						/// <java-name>
 						/// getPictureSize
 						/// </java-name>
-						public global::Android.Hardware.Camera.Size PictureSize
+						public virtual global::Android.Hardware.Camera.Size PictureSize
 						{
-						[Dot42.DexImport("getPictureSize", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
-								get{ return GetPictureSize(); }
+								[Dot42.DexImport("getPictureSize", "()Landroid/hardware/Camera$Size;", AccessFlags = 1)]
+								get{ return default(global::Android.Hardware.Camera.Size); }
 						}
 
 						/// <java-name>
 						/// getSupportedPictureSizes
 						/// </java-name>
-						public global::Java.Util.IList<global::Android.Hardware.Camera.Size> SupportedPictureSizes
+						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Size> SupportedPictureSizes
 						{
-						[Dot42.DexImport("getSupportedPictureSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
-								get{ return GetSupportedPictureSizes(); }
+								[Dot42.DexImport("getSupportedPictureSizes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Size;>;")]
+								get{ return default(global::Java.Util.IList<global::Android.Hardware.Camera.Size>); }
 						}
 
 						/// <java-name>
 						/// getPictureFormat
 						/// </java-name>
-						public int PictureFormat
+						public virtual int PictureFormat
 						{
-						[Dot42.DexImport("getPictureFormat", "()I", AccessFlags = 1)]
-								get{ return GetPictureFormat(); }
-						[Dot42.DexImport("setPictureFormat", "(I)V", AccessFlags = 1)]
-								set{ SetPictureFormat(value); }
+								[Dot42.DexImport("getPictureFormat", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+								[Dot42.DexImport("setPictureFormat", "(I)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getSupportedPictureFormats
 						/// </java-name>
-						public global::Java.Util.IList<int?> SupportedPictureFormats
+						public virtual global::Java.Util.IList<int?> SupportedPictureFormats
 						{
-						[Dot42.DexImport("getSupportedPictureFormats", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
-								get{ return GetSupportedPictureFormats(); }
+								[Dot42.DexImport("getSupportedPictureFormats", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
+								get{ return default(global::Java.Util.IList<int?>); }
 						}
 
 						/// <java-name>
 						/// getWhiteBalance
 						/// </java-name>
-						public string WhiteBalance
+						public virtual string WhiteBalance
 						{
-						[Dot42.DexImport("getWhiteBalance", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetWhiteBalance(); }
-						[Dot42.DexImport("setWhiteBalance", "(Ljava/lang/String;)V", AccessFlags = 1)]
-								set{ SetWhiteBalance(value); }
+								[Dot42.DexImport("getWhiteBalance", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
+								[Dot42.DexImport("setWhiteBalance", "(Ljava/lang/String;)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getSupportedWhiteBalance
 						/// </java-name>
-						public global::Java.Util.IList<string> SupportedWhiteBalance
+						public virtual global::Java.Util.IList<string> SupportedWhiteBalance
 						{
-						[Dot42.DexImport("getSupportedWhiteBalance", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-								get{ return GetSupportedWhiteBalance(); }
+								[Dot42.DexImport("getSupportedWhiteBalance", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+								get{ return default(global::Java.Util.IList<string>); }
 						}
 
 						/// <java-name>
 						/// getColorEffect
 						/// </java-name>
-						public string ColorEffect
+						public virtual string ColorEffect
 						{
-						[Dot42.DexImport("getColorEffect", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetColorEffect(); }
-						[Dot42.DexImport("setColorEffect", "(Ljava/lang/String;)V", AccessFlags = 1)]
-								set{ SetColorEffect(value); }
+								[Dot42.DexImport("getColorEffect", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
+								[Dot42.DexImport("setColorEffect", "(Ljava/lang/String;)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getSupportedColorEffects
 						/// </java-name>
-						public global::Java.Util.IList<string> SupportedColorEffects
+						public virtual global::Java.Util.IList<string> SupportedColorEffects
 						{
-						[Dot42.DexImport("getSupportedColorEffects", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-								get{ return GetSupportedColorEffects(); }
+								[Dot42.DexImport("getSupportedColorEffects", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+								get{ return default(global::Java.Util.IList<string>); }
 						}
 
 						/// <java-name>
 						/// getAntibanding
 						/// </java-name>
-						public string Antibanding
+						public virtual string Antibanding
 						{
-						[Dot42.DexImport("getAntibanding", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetAntibanding(); }
-						[Dot42.DexImport("setAntibanding", "(Ljava/lang/String;)V", AccessFlags = 1)]
-								set{ SetAntibanding(value); }
+								[Dot42.DexImport("getAntibanding", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
+								[Dot42.DexImport("setAntibanding", "(Ljava/lang/String;)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getSupportedAntibanding
 						/// </java-name>
-						public global::Java.Util.IList<string> SupportedAntibanding
+						public virtual global::Java.Util.IList<string> SupportedAntibanding
 						{
-						[Dot42.DexImport("getSupportedAntibanding", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-								get{ return GetSupportedAntibanding(); }
+								[Dot42.DexImport("getSupportedAntibanding", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+								get{ return default(global::Java.Util.IList<string>); }
 						}
 
 						/// <java-name>
 						/// getSceneMode
 						/// </java-name>
-						public string SceneMode
+						public virtual string SceneMode
 						{
-						[Dot42.DexImport("getSceneMode", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetSceneMode(); }
-						[Dot42.DexImport("setSceneMode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-								set{ SetSceneMode(value); }
+								[Dot42.DexImport("getSceneMode", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
+								[Dot42.DexImport("setSceneMode", "(Ljava/lang/String;)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getSupportedSceneModes
 						/// </java-name>
-						public global::Java.Util.IList<string> SupportedSceneModes
+						public virtual global::Java.Util.IList<string> SupportedSceneModes
 						{
-						[Dot42.DexImport("getSupportedSceneModes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-								get{ return GetSupportedSceneModes(); }
+								[Dot42.DexImport("getSupportedSceneModes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+								get{ return default(global::Java.Util.IList<string>); }
 						}
 
 						/// <java-name>
 						/// getFlashMode
 						/// </java-name>
-						public string FlashMode
+						public virtual string FlashMode
 						{
-						[Dot42.DexImport("getFlashMode", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetFlashMode(); }
-						[Dot42.DexImport("setFlashMode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-								set{ SetFlashMode(value); }
+								[Dot42.DexImport("getFlashMode", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
+								[Dot42.DexImport("setFlashMode", "(Ljava/lang/String;)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getSupportedFlashModes
 						/// </java-name>
-						public global::Java.Util.IList<string> SupportedFlashModes
+						public virtual global::Java.Util.IList<string> SupportedFlashModes
 						{
-						[Dot42.DexImport("getSupportedFlashModes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-								get{ return GetSupportedFlashModes(); }
+								[Dot42.DexImport("getSupportedFlashModes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+								get{ return default(global::Java.Util.IList<string>); }
 						}
 
 						/// <java-name>
 						/// getFocusMode
 						/// </java-name>
-						public string FocusMode
+						public virtual string FocusMode
 						{
-						[Dot42.DexImport("getFocusMode", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetFocusMode(); }
-						[Dot42.DexImport("setFocusMode", "(Ljava/lang/String;)V", AccessFlags = 1)]
-								set{ SetFocusMode(value); }
+								[Dot42.DexImport("getFocusMode", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
+								[Dot42.DexImport("setFocusMode", "(Ljava/lang/String;)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getSupportedFocusModes
 						/// </java-name>
-						public global::Java.Util.IList<string> SupportedFocusModes
+						public virtual global::Java.Util.IList<string> SupportedFocusModes
 						{
-						[Dot42.DexImport("getSupportedFocusModes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
-								get{ return GetSupportedFocusModes(); }
+								[Dot42.DexImport("getSupportedFocusModes", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/String;>;")]
+								get{ return default(global::Java.Util.IList<string>); }
 						}
 
 						/// <java-name>
 						/// getFocalLength
 						/// </java-name>
-						public float FocalLength
+						public virtual float FocalLength
 						{
-						[Dot42.DexImport("getFocalLength", "()F", AccessFlags = 1)]
-								get{ return GetFocalLength(); }
+								[Dot42.DexImport("getFocalLength", "()F", AccessFlags = 1)]
+								get{ return default(float); }
 						}
 
 						/// <java-name>
 						/// getHorizontalViewAngle
 						/// </java-name>
-						public float HorizontalViewAngle
+						public virtual float HorizontalViewAngle
 						{
-						[Dot42.DexImport("getHorizontalViewAngle", "()F", AccessFlags = 1)]
-								get{ return GetHorizontalViewAngle(); }
+								[Dot42.DexImport("getHorizontalViewAngle", "()F", AccessFlags = 1)]
+								get{ return default(float); }
 						}
 
 						/// <java-name>
 						/// getVerticalViewAngle
 						/// </java-name>
-						public float VerticalViewAngle
+						public virtual float VerticalViewAngle
 						{
-						[Dot42.DexImport("getVerticalViewAngle", "()F", AccessFlags = 1)]
-								get{ return GetVerticalViewAngle(); }
+								[Dot42.DexImport("getVerticalViewAngle", "()F", AccessFlags = 1)]
+								get{ return default(float); }
 						}
 
 						/// <java-name>
 						/// getExposureCompensation
 						/// </java-name>
-						public int ExposureCompensation
+						public virtual int ExposureCompensation
 						{
-						[Dot42.DexImport("getExposureCompensation", "()I", AccessFlags = 1)]
-								get{ return GetExposureCompensation(); }
-						[Dot42.DexImport("setExposureCompensation", "(I)V", AccessFlags = 1)]
-								set{ SetExposureCompensation(value); }
+								[Dot42.DexImport("getExposureCompensation", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+								[Dot42.DexImport("setExposureCompensation", "(I)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getMaxExposureCompensation
 						/// </java-name>
-						public int MaxExposureCompensation
+						public virtual int MaxExposureCompensation
 						{
-						[Dot42.DexImport("getMaxExposureCompensation", "()I", AccessFlags = 1)]
-								get{ return GetMaxExposureCompensation(); }
+								[Dot42.DexImport("getMaxExposureCompensation", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getMinExposureCompensation
 						/// </java-name>
-						public int MinExposureCompensation
+						public virtual int MinExposureCompensation
 						{
-						[Dot42.DexImport("getMinExposureCompensation", "()I", AccessFlags = 1)]
-								get{ return GetMinExposureCompensation(); }
+								[Dot42.DexImport("getMinExposureCompensation", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getExposureCompensationStep
 						/// </java-name>
-						public float ExposureCompensationStep
+						public virtual float ExposureCompensationStep
 						{
-						[Dot42.DexImport("getExposureCompensationStep", "()F", AccessFlags = 1)]
-								get{ return GetExposureCompensationStep(); }
+								[Dot42.DexImport("getExposureCompensationStep", "()F", AccessFlags = 1)]
+								get{ return default(float); }
 						}
 
 						/// <java-name>
 						/// getAutoExposureLock
 						/// </java-name>
-						public bool IsAutoExposureLock
+						public virtual bool IsAutoExposureLock
 						{
-						[Dot42.DexImport("getAutoExposureLock", "()Z", AccessFlags = 1)]
-								get{ return GetAutoExposureLock(); }
-						[Dot42.DexImport("setAutoExposureLock", "(Z)V", AccessFlags = 1)]
-								set{ SetAutoExposureLock(value); }
+								[Dot42.DexImport("getAutoExposureLock", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
+								[Dot42.DexImport("setAutoExposureLock", "(Z)V", AccessFlags = 1)]
+								set{ }
+						}
+
+						/// <java-name>
+						/// isAutoExposureLockSupported
+						/// </java-name>
+						public virtual bool IsAutoExposureLockSupported
+						{
+								[Dot42.DexImport("isAutoExposureLockSupported", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 						/// <java-name>
 						/// getAutoWhiteBalanceLock
 						/// </java-name>
-						public bool IsAutoWhiteBalanceLock
+						public virtual bool IsAutoWhiteBalanceLock
 						{
-						[Dot42.DexImport("getAutoWhiteBalanceLock", "()Z", AccessFlags = 1)]
-								get{ return GetAutoWhiteBalanceLock(); }
-						[Dot42.DexImport("setAutoWhiteBalanceLock", "(Z)V", AccessFlags = 1)]
-								set{ SetAutoWhiteBalanceLock(value); }
+								[Dot42.DexImport("getAutoWhiteBalanceLock", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
+								[Dot42.DexImport("setAutoWhiteBalanceLock", "(Z)V", AccessFlags = 1)]
+								set{ }
+						}
+
+						/// <java-name>
+						/// isAutoWhiteBalanceLockSupported
+						/// </java-name>
+						public virtual bool IsAutoWhiteBalanceLockSupported
+						{
+								[Dot42.DexImport("isAutoWhiteBalanceLockSupported", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 						/// <java-name>
 						/// getZoom
 						/// </java-name>
-						public int Zoom
+						public virtual int Zoom
 						{
-						[Dot42.DexImport("getZoom", "()I", AccessFlags = 1)]
-								get{ return GetZoom(); }
-						[Dot42.DexImport("setZoom", "(I)V", AccessFlags = 1)]
-								set{ SetZoom(value); }
+								[Dot42.DexImport("getZoom", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+								[Dot42.DexImport("setZoom", "(I)V", AccessFlags = 1)]
+								set{ }
+						}
+
+						/// <java-name>
+						/// isZoomSupported
+						/// </java-name>
+						public virtual bool IsZoomSupported
+						{
+								[Dot42.DexImport("isZoomSupported", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 						/// <java-name>
 						/// getMaxZoom
 						/// </java-name>
-						public int MaxZoom
+						public virtual int MaxZoom
 						{
-						[Dot42.DexImport("getMaxZoom", "()I", AccessFlags = 1)]
-								get{ return GetMaxZoom(); }
+								[Dot42.DexImport("getMaxZoom", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getZoomRatios
 						/// </java-name>
-						public global::Java.Util.IList<int?> ZoomRatios
+						public virtual global::Java.Util.IList<int?> ZoomRatios
 						{
-						[Dot42.DexImport("getZoomRatios", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
-								get{ return GetZoomRatios(); }
+								[Dot42.DexImport("getZoomRatios", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Ljava/lang/Integer;>;")]
+								get{ return default(global::Java.Util.IList<int?>); }
+						}
+
+						/// <java-name>
+						/// isSmoothZoomSupported
+						/// </java-name>
+						public virtual bool IsSmoothZoomSupported
+						{
+								[Dot42.DexImport("isSmoothZoomSupported", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 						/// <java-name>
 						/// getMaxNumFocusAreas
 						/// </java-name>
-						public int MaxNumFocusAreas
+						public virtual int MaxNumFocusAreas
 						{
-						[Dot42.DexImport("getMaxNumFocusAreas", "()I", AccessFlags = 1)]
-								get{ return GetMaxNumFocusAreas(); }
+								[Dot42.DexImport("getMaxNumFocusAreas", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getFocusAreas
 						/// </java-name>
-						public global::Java.Util.IList<global::Android.Hardware.Camera.Area> FocusAreas
+						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Area> FocusAreas
 						{
-						[Dot42.DexImport("getFocusAreas", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Area;>;")]
-								get{ return GetFocusAreas(); }
-						[Dot42.DexImport("setFocusAreas", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/hardware/Camera$Area;>;)V")]
-								set{ SetFocusAreas(value); }
+								[Dot42.DexImport("getFocusAreas", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Area;>;")]
+								get{ return default(global::Java.Util.IList<global::Android.Hardware.Camera.Area>); }
+								[Dot42.DexImport("setFocusAreas", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/hardware/Camera$Area;>;)V")]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getMaxNumMeteringAreas
 						/// </java-name>
-						public int MaxNumMeteringAreas
+						public virtual int MaxNumMeteringAreas
 						{
-						[Dot42.DexImport("getMaxNumMeteringAreas", "()I", AccessFlags = 1)]
-								get{ return GetMaxNumMeteringAreas(); }
+								[Dot42.DexImport("getMaxNumMeteringAreas", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
 						/// getMeteringAreas
 						/// </java-name>
-						public global::Java.Util.IList<global::Android.Hardware.Camera.Area> MeteringAreas
+						public virtual global::Java.Util.IList<global::Android.Hardware.Camera.Area> MeteringAreas
 						{
-						[Dot42.DexImport("getMeteringAreas", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Area;>;")]
-								get{ return GetMeteringAreas(); }
-						[Dot42.DexImport("setMeteringAreas", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/hardware/Camera$Area;>;)V")]
-								set{ SetMeteringAreas(value); }
+								[Dot42.DexImport("getMeteringAreas", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/hardware/Camera$Area;>;")]
+								get{ return default(global::Java.Util.IList<global::Android.Hardware.Camera.Area>); }
+								[Dot42.DexImport("setMeteringAreas", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/hardware/Camera$Area;>;)V")]
+								set{ }
 						}
 
 						/// <java-name>
 						/// getMaxNumDetectedFaces
 						/// </java-name>
-						public int MaxNumDetectedFaces
+						public virtual int MaxNumDetectedFaces
 						{
-						[Dot42.DexImport("getMaxNumDetectedFaces", "()I", AccessFlags = 1)]
-								get{ return GetMaxNumDetectedFaces(); }
+								[Dot42.DexImport("getMaxNumDetectedFaces", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+						}
+
+						/// <java-name>
+						/// isVideoSnapshotSupported
+						/// </java-name>
+						public virtual bool IsVideoSnapshotSupported
+						{
+								[Dot42.DexImport("isVideoSnapshotSupported", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 						/// <java-name>
 						/// getVideoStabilization
 						/// </java-name>
-						public bool IsVideoStabilization
+						public virtual bool IsVideoStabilization
 						{
-						[Dot42.DexImport("getVideoStabilization", "()Z", AccessFlags = 1)]
-								get{ return GetVideoStabilization(); }
-						[Dot42.DexImport("setVideoStabilization", "(Z)V", AccessFlags = 1)]
-								set{ SetVideoStabilization(value); }
+								[Dot42.DexImport("getVideoStabilization", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
+								[Dot42.DexImport("setVideoStabilization", "(Z)V", AccessFlags = 1)]
+								set{ }
+						}
+
+						/// <java-name>
+						/// isVideoStabilizationSupported
+						/// </java-name>
+						public virtual bool IsVideoStabilizationSupported
+						{
+								[Dot42.DexImport("isVideoStabilizationSupported", "()Z", AccessFlags = 1)]
+								get{ return default(bool); }
 						}
 
 				}
@@ -2135,69 +1559,6 @@ namespace Android.Hardware
 				{
 				}
 
-				/// <java-name>
-				/// getX
-				/// </java-name>
-				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
-				public virtual float GetX() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getY
-				/// </java-name>
-				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
-				public virtual float GetY() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getZ
-				/// </java-name>
-				[Dot42.DexImport("getZ", "()F", AccessFlags = 1)]
-				public virtual float GetZ() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getDeclination
-				/// </java-name>
-				[Dot42.DexImport("getDeclination", "()F", AccessFlags = 1)]
-				public virtual float GetDeclination() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getInclination
-				/// </java-name>
-				[Dot42.DexImport("getInclination", "()F", AccessFlags = 1)]
-				public virtual float GetInclination() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getHorizontalStrength
-				/// </java-name>
-				[Dot42.DexImport("getHorizontalStrength", "()F", AccessFlags = 1)]
-				public virtual float GetHorizontalStrength() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getFieldStrength
-				/// </java-name>
-				[Dot42.DexImport("getFieldStrength", "()F", AccessFlags = 1)]
-				public virtual float GetFieldStrength() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal GeomagneticField() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -2206,64 +1567,64 @@ namespace Android.Hardware
 				/// <java-name>
 				/// getX
 				/// </java-name>
-				public float X
+				public virtual float X
 				{
-				[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
-						get{ return GetX(); }
+						[Dot42.DexImport("getX", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getY
 				/// </java-name>
-				public float Y
+				public virtual float Y
 				{
-				[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
-						get{ return GetY(); }
+						[Dot42.DexImport("getY", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getZ
 				/// </java-name>
-				public float Z
+				public virtual float Z
 				{
-				[Dot42.DexImport("getZ", "()F", AccessFlags = 1)]
-						get{ return GetZ(); }
+						[Dot42.DexImport("getZ", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getDeclination
 				/// </java-name>
-				public float Declination
+				public virtual float Declination
 				{
-				[Dot42.DexImport("getDeclination", "()F", AccessFlags = 1)]
-						get{ return GetDeclination(); }
+						[Dot42.DexImport("getDeclination", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getInclination
 				/// </java-name>
-				public float Inclination
+				public virtual float Inclination
 				{
-				[Dot42.DexImport("getInclination", "()F", AccessFlags = 1)]
-						get{ return GetInclination(); }
+						[Dot42.DexImport("getInclination", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getHorizontalStrength
 				/// </java-name>
-				public float HorizontalStrength
+				public virtual float HorizontalStrength
 				{
-				[Dot42.DexImport("getHorizontalStrength", "()F", AccessFlags = 1)]
-						get{ return GetHorizontalStrength(); }
+						[Dot42.DexImport("getHorizontalStrength", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getFieldStrength
 				/// </java-name>
-				public float FieldStrength
+				public virtual float FieldStrength
 				{
-				[Dot42.DexImport("getFieldStrength", "()F", AccessFlags = 1)]
-						get{ return GetFieldStrength(); }
+						[Dot42.DexImport("getFieldStrength", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 		}
@@ -2395,145 +1756,73 @@ namespace Android.Hardware
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
+				public virtual string Name
 				{
-						return default(string);
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getVendor
 				/// </java-name>
-				[Dot42.DexImport("getVendor", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetVendor() /* MethodBuilder.Create */ 
+				public virtual string Vendor
 				{
-						return default(string);
+						[Dot42.DexImport("getVendor", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-				public virtual int GetTypeJava() /* MethodBuilder.Create */ 
+				public virtual int Type
 				{
-						return default(int);
+						[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getVersion
 				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-				public virtual int GetVersion() /* MethodBuilder.Create */ 
+				public virtual int Version
 				{
-						return default(int);
+						[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMaximumRange
 				/// </java-name>
-				[Dot42.DexImport("getMaximumRange", "()F", AccessFlags = 1)]
-				public virtual float GetMaximumRange() /* MethodBuilder.Create */ 
+				public virtual float MaximumRange
 				{
-						return default(float);
+						[Dot42.DexImport("getMaximumRange", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getResolution
 				/// </java-name>
-				[Dot42.DexImport("getResolution", "()F", AccessFlags = 1)]
-				public virtual float GetResolution() /* MethodBuilder.Create */ 
+				public virtual float Resolution
 				{
-						return default(float);
+						[Dot42.DexImport("getResolution", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getPower
 				/// </java-name>
-				[Dot42.DexImport("getPower", "()F", AccessFlags = 1)]
-				public virtual float GetPower() /* MethodBuilder.Create */ 
+				public virtual float Power
 				{
-						return default(float);
+						[Dot42.DexImport("getPower", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
 				/// getMinDelay
 				/// </java-name>
-				[Dot42.DexImport("getMinDelay", "()I", AccessFlags = 1)]
-				public virtual int GetMinDelay() /* MethodBuilder.Create */ 
+				public virtual int MinDelay
 				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				public string Name
-				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
-				}
-
-				/// <java-name>
-				/// getVendor
-				/// </java-name>
-				public string Vendor
-				{
-				[Dot42.DexImport("getVendor", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetVendor(); }
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				public int Type
-				{
-				[Dot42.DexImport("getType", "()I", AccessFlags = 1)]
-						get{ return GetTypeJava(); }
-				}
-
-				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				public int Version
-				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-						get{ return GetVersion(); }
-				}
-
-				/// <java-name>
-				/// getMaximumRange
-				/// </java-name>
-				public float MaximumRange
-				{
-				[Dot42.DexImport("getMaximumRange", "()F", AccessFlags = 1)]
-						get{ return GetMaximumRange(); }
-				}
-
-				/// <java-name>
-				/// getResolution
-				/// </java-name>
-				public float Resolution
-				{
-				[Dot42.DexImport("getResolution", "()F", AccessFlags = 1)]
-						get{ return GetResolution(); }
-				}
-
-				/// <java-name>
-				/// getPower
-				/// </java-name>
-				public float Power
-				{
-				[Dot42.DexImport("getPower", "()F", AccessFlags = 1)]
-						get{ return GetPower(); }
-				}
-
-				/// <java-name>
-				/// getMinDelay
-				/// </java-name>
-				public int MinDelay
-				{
-				[Dot42.DexImport("getMinDelay", "()I", AccessFlags = 1)]
-						get{ return GetMinDelay(); }
+						[Dot42.DexImport("getMinDelay", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2870,15 +2159,6 @@ namespace Android.Hardware
 				}
 
 				/// <java-name>
-				/// getSensors
-				/// </java-name>
-				[Dot42.DexImport("getSensors", "()I", AccessFlags = 1)]
-				public virtual int GetSensors() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getSensorList
 				/// </java-name>
 				[Dot42.DexImport("getSensorList", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/hardware/Sensor;>;")]
@@ -3037,10 +2317,10 @@ namespace Android.Hardware
 				/// <java-name>
 				/// getSensors
 				/// </java-name>
-				public int Sensors
+				public virtual int Sensors
 				{
-				[Dot42.DexImport("getSensors", "()I", AccessFlags = 1)]
-						get{ return GetSensors(); }
+						[Dot42.DexImport("getSensors", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

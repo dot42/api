@@ -27,43 +27,10 @@ namespace Org.Apache.Http.Impl.Auth
 				[Dot42.DexImport("parseChallenge", "(Lorg/apache/http/util/CharArrayBuffer;II)V", AccessFlags = 1028)]
 				protected internal abstract void ParseChallenge(global::Org.Apache.Http.Util.CharArrayBuffer charArrayBuffer, int int32, int int321) /* MethodBuilder.Create */ ;
 
-				/// <java-name>
-				/// isProxy
-				/// </java-name>
-				[Dot42.DexImport("isProxy", "()Z", AccessFlags = 1)]
-				public virtual bool IsProxy() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("org/apache/http/auth/AuthScheme", "getSchemeName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public virtual string GetSchemeName() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(string);
-				}
-
 				[Dot42.DexImport("org/apache/http/auth/AuthScheme", "getParameter", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
 				public virtual string GetParameter(string @string) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(string);
-				}
-
-				[Dot42.DexImport("org/apache/http/auth/AuthScheme", "getRealm", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public virtual string GetRealm() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(string);
-				}
-
-				[Dot42.DexImport("org/apache/http/auth/AuthScheme", "isConnectionBased", "()Z", AccessFlags = 1025)]
-				public virtual bool IsConnectionBased() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("org/apache/http/auth/AuthScheme", "isComplete", "()Z", AccessFlags = 1025)]
-				public virtual bool IsComplete() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
 				}
 
 				[Dot42.DexImport("org/apache/http/auth/AuthScheme", "authenticate", "(Lorg/apache/http/auth/Credentials;Lorg/apache/http/HttpRequest;)Lorg/apache/http" +
@@ -73,16 +40,37 @@ namespace Org.Apache.Http.Impl.Auth
 						return default(global::Org.Apache.Http.IHeader);
 				}
 
-				public string SchemeName
+				/// <java-name>
+				/// isProxy
+				/// </java-name>
+				public virtual bool IsProxy
 				{
-				[Dot42.DexImport("org/apache/http/auth/AuthScheme", "getSchemeName", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSchemeName(); }
+						[Dot42.DexImport("isProxy", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
-				public string Realm
+				public virtual string SchemeName
 				{
-				[Dot42.DexImport("org/apache/http/auth/AuthScheme", "getRealm", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetRealm(); }
+						[Dot42.DexImport("org/apache/http/auth/AuthScheme", "getSchemeName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get{ return default(string); }
+				}
+
+				public virtual string Realm
+				{
+						[Dot42.DexImport("org/apache/http/auth/AuthScheme", "getRealm", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get{ return default(string); }
+				}
+
+				public virtual bool IsConnectionBased
+				{
+						[Dot42.DexImport("org/apache/http/auth/AuthScheme", "isConnectionBased", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
+
+				public virtual bool IsComplete
+				{
+						[Dot42.DexImport("org/apache/http/auth/AuthScheme", "isComplete", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -100,38 +88,11 @@ namespace Org.Apache.Http.Impl.Auth
 				}
 
 				/// <java-name>
-				/// getSchemeName
-				/// </java-name>
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetSchemeName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// processChallenge
 				/// </java-name>
 				[Dot42.DexImport("processChallenge", "(Lorg/apache/http/Header;)V", AccessFlags = 1)]
 				public override void ProcessChallenge(global::Org.Apache.Http.IHeader header) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isComplete
-				/// </java-name>
-				[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
-				public override bool IsComplete() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isConnectionBased
-				/// </java-name>
-				[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
-				public override bool IsConnectionBased() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -156,10 +117,28 @@ namespace Org.Apache.Http.Impl.Auth
 				/// <java-name>
 				/// getSchemeName
 				/// </java-name>
-				public string SchemeName
+				public override string SchemeName
 				{
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSchemeName(); }
+						[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isComplete
+				/// </java-name>
+				public override bool IsComplete
+				{
+						[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isConnectionBased
+				/// </java-name>
+				public override bool IsConnectionBased
+				{
+						[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -208,33 +187,6 @@ namespace Org.Apache.Http.Impl.Auth
 				}
 
 				/// <java-name>
-				/// isComplete
-				/// </java-name>
-				[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
-				public override bool IsComplete() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getSchemeName
-				/// </java-name>
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetSchemeName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isConnectionBased
-				/// </java-name>
-				[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
-				public override bool IsConnectionBased() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// overrideParamter
 				/// </java-name>
 				[Dot42.DexImport("overrideParamter", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -262,12 +214,30 @@ namespace Org.Apache.Http.Impl.Auth
 				}
 
 				/// <java-name>
+				/// isComplete
+				/// </java-name>
+				public override bool IsComplete
+				{
+						[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getSchemeName
 				/// </java-name>
-				public string SchemeName
+				public override string SchemeName
 				{
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSchemeName(); }
+						[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isConnectionBased
+				/// </java-name>
+				public override bool IsConnectionBased
+				{
+						[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -354,39 +324,12 @@ namespace Org.Apache.Http.Impl.Auth
 				}
 
 				/// <java-name>
-				/// getSchemeName
-				/// </java-name>
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetSchemeName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getParameter
 				/// </java-name>
 				[Dot42.DexImport("getParameter", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
 				public override string GetParameter(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// getRealm
-				/// </java-name>
-				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetRealm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isConnectionBased
-				/// </java-name>
-				[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
-				public override bool IsConnectionBased() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -407,15 +350,6 @@ namespace Org.Apache.Http.Impl.Auth
 						return default(global::Org.Apache.Http.IHeader);
 				}
 
-				/// <java-name>
-				/// isComplete
-				/// </java-name>
-				[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
-				public override bool IsComplete() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal NTLMScheme() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -424,19 +358,37 @@ namespace Org.Apache.Http.Impl.Auth
 				/// <java-name>
 				/// getSchemeName
 				/// </java-name>
-				public string SchemeName
+				public override string SchemeName
 				{
-				[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSchemeName(); }
+						[Dot42.DexImport("getSchemeName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getRealm
 				/// </java-name>
-				public string Realm
+				public override string Realm
 				{
-				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRealm(); }
+						[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isConnectionBased
+				/// </java-name>
+				public override bool IsConnectionBased
+				{
+						[Dot42.DexImport("isConnectionBased", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isComplete
+				/// </java-name>
+				public override bool IsComplete
+				{
+						[Dot42.DexImport("isComplete", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -462,15 +414,6 @@ namespace Org.Apache.Http.Impl.Auth
 				}
 
 				/// <java-name>
-				/// getParameters
-				/// </java-name>
-				[Dot42.DexImport("getParameters", "()Ljava/util/Map;", AccessFlags = 4, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-				protected internal virtual global::Java.Util.IMap<string, string> GetParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<string, string>);
-				}
-
-				/// <java-name>
 				/// getParameter
 				/// </java-name>
 				[Dot42.DexImport("getParameter", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
@@ -480,30 +423,21 @@ namespace Org.Apache.Http.Impl.Auth
 				}
 
 				/// <java-name>
-				/// getRealm
-				/// </java-name>
-				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetRealm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getParameters
 				/// </java-name>
-				protected internal global::Java.Util.IMap<string, string> Parameters
+				protected internal virtual global::Java.Util.IMap<string, string> Parameters
 				{
-				[Dot42.DexImport("getParameters", "()Ljava/util/Map;", AccessFlags = 4, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-						get{ return GetParameters(); }
+						[Dot42.DexImport("getParameters", "()Ljava/util/Map;", AccessFlags = 4, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
+						get{ return default(global::Java.Util.IMap<string, string>); }
 				}
 
 				/// <java-name>
 				/// getRealm
 				/// </java-name>
-				public string Realm
+				public override string Realm
 				{
-				[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRealm(); }
+						[Dot42.DexImport("getRealm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}

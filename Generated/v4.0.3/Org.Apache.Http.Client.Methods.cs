@@ -31,19 +31,10 @@ namespace Org.Apache.Http.Client.Methods
 				/// <java-name>
 				/// getMethod
 				/// </java-name>
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMethod() /* MethodBuilder.Create */ 
+				public override string Method
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				public string Method
-				{
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMethod(); }
+						[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -57,23 +48,6 @@ namespace Org.Apache.Http.Client.Methods
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public HttpEntityEnclosingRequestBase() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEntity
-				/// </java-name>
-				[Dot42.DexImport("getEntity", "()Lorg/apache/http/HttpEntity;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IHttpEntity GetEntity() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHttpEntity);
-				}
-
-				/// <java-name>
-				/// setEntity
-				/// </java-name>
-				[Dot42.DexImport("setEntity", "(Lorg/apache/http/HttpEntity;)V", AccessFlags = 1)]
-				public virtual void SetEntity(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -93,18 +67,6 @@ namespace Org.Apache.Http.Client.Methods
 				public override object Clone() /* MethodBuilder.Create */ 
 				{
 						return default(object);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpRequest", "getRequestLine", "()Lorg/apache/http/RequestLine;", AccessFlags = 1025)]
-				public override global::Org.Apache.Http.IRequestLine GetRequestLine() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Org.Apache.Http.IRequestLine);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpMessage", "getProtocolVersion", "()Lorg/apache/http/ProtocolVersion;", AccessFlags = 1025)]
-				public override global::Org.Apache.Http.ProtocolVersion GetProtocolVersion() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Org.Apache.Http.ProtocolVersion);
 				}
 
 				[Dot42.DexImport("org/apache/http/HttpMessage", "containsHeader", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
@@ -129,12 +91,6 @@ namespace Org.Apache.Http.Client.Methods
 				public override global::Org.Apache.Http.IHeader GetLastHeader(string @string) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpMessage", "getAllHeaders", "()[Lorg/apache/http/Header;", AccessFlags = 1025)]
-				public override global::Org.Apache.Http.IHeader[] GetAllHeaders() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Org.Apache.Http.IHeader[]);
 				}
 
 				[Dot42.DexImport("org/apache/http/HttpMessage", "addHeader", "(Lorg/apache/http/Header;)V", AccessFlags = 1025)]
@@ -184,52 +140,41 @@ namespace Org.Apache.Http.Client.Methods
 						return default(global::Org.Apache.Http.IHeaderIterator);
 				}
 
-				[Dot42.DexImport("org/apache/http/HttpMessage", "getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-				public override global::Org.Apache.Http.Params.IHttpParams GetParams() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Org.Apache.Http.Params.IHttpParams);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpMessage", "setParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
-				public override void SetParams(global::Org.Apache.Http.Params.IHttpParams httpParams) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-				}
-
 				/// <java-name>
 				/// getEntity
 				/// </java-name>
-				public global::Org.Apache.Http.IHttpEntity Entity
+				public virtual global::Org.Apache.Http.IHttpEntity Entity
 				{
-				[Dot42.DexImport("getEntity", "()Lorg/apache/http/HttpEntity;", AccessFlags = 1)]
-						get{ return GetEntity(); }
-				[Dot42.DexImport("setEntity", "(Lorg/apache/http/HttpEntity;)V", AccessFlags = 1)]
-						set{ SetEntity(value); }
+						[Dot42.DexImport("getEntity", "()Lorg/apache/http/HttpEntity;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.IHttpEntity); }
+						[Dot42.DexImport("setEntity", "(Lorg/apache/http/HttpEntity;)V", AccessFlags = 1)]
+						set{ }
 				}
 
-				public global::Org.Apache.Http.IRequestLine RequestLine
+				public override global::Org.Apache.Http.IRequestLine RequestLine
 				{
-				[Dot42.DexImport("org/apache/http/HttpRequest", "getRequestLine", "()Lorg/apache/http/RequestLine;", AccessFlags = 1025)]
-						get{ return GetRequestLine(); }
+						[Dot42.DexImport("org/apache/http/HttpRequest", "getRequestLine", "()Lorg/apache/http/RequestLine;", AccessFlags = 1025)]
+						get{ return default(global::Org.Apache.Http.IRequestLine); }
 				}
 
-				public global::Org.Apache.Http.ProtocolVersion ProtocolVersion
+				public override global::Org.Apache.Http.ProtocolVersion ProtocolVersion
 				{
-				[Dot42.DexImport("org/apache/http/HttpMessage", "getProtocolVersion", "()Lorg/apache/http/ProtocolVersion;", AccessFlags = 1025)]
-						get{ return GetProtocolVersion(); }
+						[Dot42.DexImport("org/apache/http/HttpMessage", "getProtocolVersion", "()Lorg/apache/http/ProtocolVersion;", AccessFlags = 1025)]
+						get{ return default(global::Org.Apache.Http.ProtocolVersion); }
 				}
 
-				public global::Org.Apache.Http.IHeader[] AllHeaders
+				public override global::Org.Apache.Http.IHeader[] AllHeaders
 				{
-				[Dot42.DexImport("org/apache/http/HttpMessage", "getAllHeaders", "()[Lorg/apache/http/Header;", AccessFlags = 1025)]
-						get{ return GetAllHeaders(); }
+						[Dot42.DexImport("org/apache/http/HttpMessage", "getAllHeaders", "()[Lorg/apache/http/Header;", AccessFlags = 1025)]
+						get{ return default(global::Org.Apache.Http.IHeader[]); }
 				}
 
-				public global::Org.Apache.Http.Params.IHttpParams Params
+				public override global::Org.Apache.Http.Params.IHttpParams Params
 				{
-				[Dot42.DexImport("org/apache/http/HttpMessage", "getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-						get{ return GetParams(); }
-				[Dot42.DexImport("org/apache/http/HttpMessage", "setParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
-						set{ SetParams(value); }
+						[Dot42.DexImport("org/apache/http/HttpMessage", "getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
+						get{ return default(global::Org.Apache.Http.Params.IHttpParams); }
+						[Dot42.DexImport("org/apache/http/HttpMessage", "setParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
+						set{ }
 				}
 
 		}
@@ -264,19 +209,10 @@ namespace Org.Apache.Http.Client.Methods
 				/// <java-name>
 				/// getMethod
 				/// </java-name>
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMethod() /* MethodBuilder.Create */ 
+				public override string Method
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				public string Method
-				{
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMethod(); }
+						[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -311,19 +247,10 @@ namespace Org.Apache.Http.Client.Methods
 				/// <java-name>
 				/// getMethod
 				/// </java-name>
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMethod() /* MethodBuilder.Create */ 
+				public override string Method
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				public string Method
-				{
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMethod(); }
+						[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -356,15 +283,6 @@ namespace Org.Apache.Http.Client.Methods
 				}
 
 				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMethod() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getAllowedMethods
 				/// </java-name>
 				[Dot42.DexImport("getAllowedMethods", "(Lorg/apache/http/HttpResponse;)Ljava/util/Set;", AccessFlags = 1, Signature = "(Lorg/apache/http/HttpResponse;)Ljava/util/Set<Ljava/lang/String;>;")]
@@ -376,10 +294,10 @@ namespace Org.Apache.Http.Client.Methods
 				/// <java-name>
 				/// getMethod
 				/// </java-name>
-				public string Method
+				public override string Method
 				{
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMethod(); }
+						[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -414,19 +332,10 @@ namespace Org.Apache.Http.Client.Methods
 				/// <java-name>
 				/// getMethod
 				/// </java-name>
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMethod() /* MethodBuilder.Create */ 
+				public override string Method
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				public string Method
-				{
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMethod(); }
+						[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -461,19 +370,10 @@ namespace Org.Apache.Http.Client.Methods
 				/// <java-name>
 				/// getMethod
 				/// </java-name>
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMethod() /* MethodBuilder.Create */ 
+				public override string Method
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				public string Method
-				{
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMethod(); }
+						[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -488,42 +388,6 @@ namespace Org.Apache.Http.Client.Methods
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public HttpRequestBase() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public virtual string GetMethod() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getProtocolVersion
-				/// </java-name>
-				[Dot42.DexImport("getProtocolVersion", "()Lorg/apache/http/ProtocolVersion;", AccessFlags = 1)]
-				public override global::Org.Apache.Http.ProtocolVersion GetProtocolVersion() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.ProtocolVersion);
-				}
-
-				/// <java-name>
-				/// getURI
-				/// </java-name>
-				[Dot42.DexImport("getURI", "()Ljava/net/URI;", AccessFlags = 1)]
-				public virtual global::System.Uri GetURI() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Uri);
-				}
-
-				/// <java-name>
-				/// getRequestLine
-				/// </java-name>
-				[Dot42.DexImport("getRequestLine", "()Lorg/apache/http/RequestLine;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IRequestLine GetRequestLine() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IRequestLine);
 				}
 
 				/// <java-name>
@@ -559,15 +423,6 @@ namespace Org.Apache.Http.Client.Methods
 				}
 
 				/// <java-name>
-				/// isAborted
-				/// </java-name>
-				[Dot42.DexImport("isAborted", "()Z", AccessFlags = 1)]
-				public virtual bool IsAborted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// clone
 				/// </java-name>
 				[Dot42.DexImport("clone", "()Ljava/lang/Object;", AccessFlags = 1)]
@@ -598,12 +453,6 @@ namespace Org.Apache.Http.Client.Methods
 				public override global::Org.Apache.Http.IHeader GetLastHeader(string @string) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpMessage", "getAllHeaders", "()[Lorg/apache/http/Header;", AccessFlags = 1025)]
-				public override global::Org.Apache.Http.IHeader[] GetAllHeaders() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Org.Apache.Http.IHeader[]);
 				}
 
 				[Dot42.DexImport("org/apache/http/HttpMessage", "addHeader", "(Lorg/apache/http/Header;)V", AccessFlags = 1025)]
@@ -653,59 +502,63 @@ namespace Org.Apache.Http.Client.Methods
 						return default(global::Org.Apache.Http.IHeaderIterator);
 				}
 
-				[Dot42.DexImport("org/apache/http/HttpMessage", "getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
-				public override global::Org.Apache.Http.Params.IHttpParams GetParams() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Org.Apache.Http.Params.IHttpParams);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpMessage", "setParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
-				public override void SetParams(global::Org.Apache.Http.Params.IHttpParams httpParams) /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-				}
-
 				/// <java-name>
 				/// getMethod
 				/// </java-name>
-				public string Method
+				public virtual string Method
 				{
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetMethod(); }
+						[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getProtocolVersion
 				/// </java-name>
-				public global::Org.Apache.Http.ProtocolVersion ProtocolVersion
+				public override global::Org.Apache.Http.ProtocolVersion ProtocolVersion
 				{
-				[Dot42.DexImport("getProtocolVersion", "()Lorg/apache/http/ProtocolVersion;", AccessFlags = 1)]
-						get{ return GetProtocolVersion(); }
+						[Dot42.DexImport("getProtocolVersion", "()Lorg/apache/http/ProtocolVersion;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.ProtocolVersion); }
 				}
 
 				/// <java-name>
 				/// getURI
 				/// </java-name>
-				public global::System.Uri URI
+				public virtual global::System.Uri URI
 				{
-				[Dot42.DexImport("getURI", "()Ljava/net/URI;", AccessFlags = 1)]
-						get{ return GetURI(); }
-				[Dot42.DexImport("setURI", "(Ljava/net/URI;)V", AccessFlags = 1)]
-						set{ SetURI(value); }
+						[Dot42.DexImport("getURI", "()Ljava/net/URI;", AccessFlags = 1)]
+						get{ return default(global::System.Uri); }
 				}
 
 				/// <java-name>
 				/// getRequestLine
 				/// </java-name>
-				public global::Org.Apache.Http.IRequestLine RequestLine
+				public virtual global::Org.Apache.Http.IRequestLine RequestLine
 				{
-				[Dot42.DexImport("getRequestLine", "()Lorg/apache/http/RequestLine;", AccessFlags = 1)]
-						get{ return GetRequestLine(); }
+						[Dot42.DexImport("getRequestLine", "()Lorg/apache/http/RequestLine;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.IRequestLine); }
 				}
 
-				public global::Org.Apache.Http.IHeader[] AllHeaders
+				/// <java-name>
+				/// isAborted
+				/// </java-name>
+				public virtual bool IsAborted
 				{
-				[Dot42.DexImport("org/apache/http/HttpMessage", "getAllHeaders", "()[Lorg/apache/http/Header;", AccessFlags = 1025)]
-						get{ return GetAllHeaders(); }
+						[Dot42.DexImport("isAborted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				public override global::Org.Apache.Http.IHeader[] AllHeaders
+				{
+						[Dot42.DexImport("org/apache/http/HttpMessage", "getAllHeaders", "()[Lorg/apache/http/Header;", AccessFlags = 1025)]
+						get{ return default(global::Org.Apache.Http.IHeader[]); }
+				}
+
+				public override global::Org.Apache.Http.Params.IHttpParams Params
+				{
+						[Dot42.DexImport("org/apache/http/HttpMessage", "getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1025)]
+						get{ return default(global::Org.Apache.Http.Params.IHttpParams); }
+						[Dot42.DexImport("org/apache/http/HttpMessage", "setParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1025)]
+						set{ }
 				}
 
 		}
@@ -740,19 +593,10 @@ namespace Org.Apache.Http.Client.Methods
 				/// <java-name>
 				/// getMethod
 				/// </java-name>
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetMethod() /* MethodBuilder.Create */ 
+				public override string Method
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				public string Method
-				{
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMethod(); }
+						[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -792,28 +636,37 @@ namespace Org.Apache.Http.Client.Methods
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1025)]
-				string GetMethod() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getURI
-				/// </java-name>
-				[Dot42.DexImport("getURI", "()Ljava/net/URI;", AccessFlags = 1025)]
-				global::System.Uri GetURI() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// abort
 				/// </java-name>
 				[Dot42.DexImport("abort", "()V", AccessFlags = 1025)]
 				void Abort() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// getMethod
+				/// </java-name>
+				string Method
+				{
+						[Dot42.DexImport("getMethod", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
+				/// getURI
+				/// </java-name>
+				global::System.Uri URI
+				{
+						[Dot42.DexImport("getURI", "()Ljava/net/URI;", AccessFlags = 1025)]
+						get;
+				}
+
+				/// <java-name>
 				/// isAborted
 				/// </java-name>
-				[Dot42.DexImport("isAborted", "()Z", AccessFlags = 1025)]
-				bool IsAborted() /* MethodBuilder.Create */ ;
+				bool IsAborted
+				{
+						[Dot42.DexImport("isAborted", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

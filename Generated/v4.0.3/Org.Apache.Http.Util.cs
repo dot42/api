@@ -132,27 +132,27 @@ namespace Org.Apache.Http.Util
 				{
 				}
 
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal ByteArrayBuffer() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
 				/// <java-name>
 				/// isEmpty
 				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public bool IsEmpty() /* MethodBuilder.Create */ 
+				public bool IsEmpty
 				{
-						return default(bool);
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// isFull
 				/// </java-name>
-				[Dot42.DexImport("isFull", "()Z", AccessFlags = 1)]
-				public bool IsFull() /* MethodBuilder.Create */ 
+				public bool IsFull
 				{
-						return default(bool);
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ByteArrayBuffer() /* TypeBuilder.AddDefaultConstructor */ 
-				{
+						[Dot42.DexImport("isFull", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -311,24 +311,6 @@ namespace Org.Apache.Http.Util
 				}
 
 				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isFull
-				/// </java-name>
-				[Dot42.DexImport("isFull", "()Z", AccessFlags = 1)]
-				public bool IsFull() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// indexOf
 				/// </java-name>
 				[Dot42.DexImport("indexOf", "(III)I", AccessFlags = 1)]
@@ -376,6 +358,24 @@ namespace Org.Apache.Http.Util
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal CharArrayBuffer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFull
+				/// </java-name>
+				public bool IsFull
+				{
+						[Dot42.DexImport("isFull", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -691,51 +691,6 @@ namespace Org.Apache.Http.Util
 				}
 
 				/// <java-name>
-				/// getPackage
-				/// </java-name>
-				[Dot42.DexImport("getPackage", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetPackage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getModule
-				/// </java-name>
-				[Dot42.DexImport("getModule", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetModule() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRelease
-				/// </java-name>
-				[Dot42.DexImport("getRelease", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetRelease() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getTimestamp
-				/// </java-name>
-				[Dot42.DexImport("getTimestamp", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetTimestamp() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getClassloader
-				/// </java-name>
-				[Dot42.DexImport("getClassloader", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetClassloader() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -782,8 +737,8 @@ namespace Org.Apache.Http.Util
 				/// </java-name>
 				public string Package
 				{
-				[Dot42.DexImport("getPackage", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetPackage(); }
+						[Dot42.DexImport("getPackage", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -791,8 +746,8 @@ namespace Org.Apache.Http.Util
 				/// </java-name>
 				public string Module
 				{
-				[Dot42.DexImport("getModule", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetModule(); }
+						[Dot42.DexImport("getModule", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -800,8 +755,8 @@ namespace Org.Apache.Http.Util
 				/// </java-name>
 				public string Release
 				{
-				[Dot42.DexImport("getRelease", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetRelease(); }
+						[Dot42.DexImport("getRelease", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -809,8 +764,8 @@ namespace Org.Apache.Http.Util
 				/// </java-name>
 				public string Timestamp
 				{
-				[Dot42.DexImport("getTimestamp", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetTimestamp(); }
+						[Dot42.DexImport("getTimestamp", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -818,8 +773,8 @@ namespace Org.Apache.Http.Util
 				/// </java-name>
 				public string Classloader
 				{
-				[Dot42.DexImport("getClassloader", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetClassloader(); }
+						[Dot42.DexImport("getClassloader", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
 				}
 
 		}

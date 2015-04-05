@@ -140,51 +140,6 @@ namespace Android.Accessibilityservice
 				}
 
 				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getResolveInfo
-				/// </java-name>
-				[Dot42.DexImport("getResolveInfo", "()Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
-				public virtual global::Android.Content.Pm.ResolveInfo GetResolveInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ResolveInfo);
-				}
-
-				/// <java-name>
-				/// getSettingsActivityName
-				/// </java-name>
-				[Dot42.DexImport("getSettingsActivityName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSettingsActivityName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCanRetrieveWindowContent
-				/// </java-name>
-				[Dot42.DexImport("getCanRetrieveWindowContent", "()Z", AccessFlags = 1)]
-				public virtual bool GetCanRetrieveWindowContent() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getDescription
-				/// </java-name>
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDescription() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -231,46 +186,46 @@ namespace Android.Accessibilityservice
 				/// <java-name>
 				/// getId
 				/// </java-name>
-				public string Id
+				public virtual string Id
 				{
-				[Dot42.DexImport("getId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getResolveInfo
 				/// </java-name>
-				public global::Android.Content.Pm.ResolveInfo ResolveInfo
+				public virtual global::Android.Content.Pm.ResolveInfo ResolveInfo
 				{
-				[Dot42.DexImport("getResolveInfo", "()Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
-						get{ return GetResolveInfo(); }
+						[Dot42.DexImport("getResolveInfo", "()Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Pm.ResolveInfo); }
 				}
 
 				/// <java-name>
 				/// getSettingsActivityName
 				/// </java-name>
-				public string SettingsActivityName
+				public virtual string SettingsActivityName
 				{
-				[Dot42.DexImport("getSettingsActivityName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSettingsActivityName(); }
+						[Dot42.DexImport("getSettingsActivityName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getCanRetrieveWindowContent
 				/// </java-name>
-				public bool IsCanRetrieveWindowContent
+				public virtual bool CanRetrieveWindowContent
 				{
-				[Dot42.DexImport("getCanRetrieveWindowContent", "()Z", AccessFlags = 1)]
-						get{ return GetCanRetrieveWindowContent(); }
+						[Dot42.DexImport("getCanRetrieveWindowContent", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getDescription
 				/// </java-name>
-				public string Description
+				public virtual string Description
 				{
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDescription(); }
+						[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}

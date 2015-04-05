@@ -139,24 +139,6 @@ namespace Android.App.Backup
 				}
 
 				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetKey() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getDataSize
-				/// </java-name>
-				[Dot42.DexImport("getDataSize", "()I", AccessFlags = 1)]
-				public virtual int GetDataSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// readEntityData
 				/// </java-name>
 				[Dot42.DexImport("readEntityData", "([BII)I", AccessFlags = 1)]
@@ -185,19 +167,19 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// getKey
 				/// </java-name>
-				public string Key
+				public virtual string Key
 				{
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetKey(); }
+						[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getDataSize
 				/// </java-name>
-				public int DataSize
+				public virtual int DataSize
 				{
-				[Dot42.DexImport("getDataSize", "()I", AccessFlags = 1)]
-						get{ return GetDataSize(); }
+						[Dot42.DexImport("getDataSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -260,15 +242,6 @@ namespace Android.App.Backup
 				}
 
 				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetKey() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// size
 				/// </java-name>
 				[Dot42.DexImport("size", "()I", AccessFlags = 1)]
@@ -280,10 +253,10 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// getKey
 				/// </java-name>
-				public string Key
+				public virtual string Key
 				{
-				[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetKey(); }
+						[Dot42.DexImport("getKey", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}

@@ -2122,15 +2122,6 @@ namespace System
 				/// <java-name>
 				/// isInfinite
 				/// </java-name>
-				[Dot42.DexImport("isInfinite", "()Z", AccessFlags = 1)]
-				public bool IsInfinite() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isInfinite
-				/// </java-name>
 				[Dot42.DexImport("isInfinite", "(D)Z", AccessFlags = 9)]
 				public static bool IsInfinity(double @double) /* MethodBuilder.Create */ 
 				{
@@ -2245,6 +2236,15 @@ namespace System
 						return default(string);
 				}
 
+				/// <java-name>
+				/// isInfinite
+				/// </java-name>
+				public bool IsInfinite
+				{
+						[Dot42.DexImport("isInfinite", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		public abstract partial class Enum
@@ -2299,32 +2299,6 @@ namespace System
 				}
 
 				/// <java-name>
-				/// getLocalizedMessage
-				/// </java-name>
-				[Dot42.DexImport("getLocalizedMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetLocalizedMessage() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getStackTrace
-				/// </java-name>
-				[Dot42.DexImport("getStackTrace", "()[Ljava/lang/StackTraceElement;", AccessFlags = 1)]
-				public virtual global::Java.Lang.StackTraceElement[] GetStackTrace() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StackTraceElement[]);
-				}
-
-				/// <java-name>
-				/// setStackTrace
-				/// </java-name>
-				[Dot42.DexImport("setStackTrace", "([Ljava/lang/StackTraceElement;)V", AccessFlags = 1)]
-				public virtual void SetStackTrace(global::Java.Lang.StackTraceElement[] stackTraceElement) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// printStackTrace
 				/// </java-name>
 				[Dot42.DexImport("printStackTrace", "()V", AccessFlags = 1)]
@@ -2367,41 +2341,32 @@ namespace System
 				}
 
 				/// <java-name>
-				/// getCause
-				/// </java-name>
-				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public virtual global::System.Exception GetCause() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
-				/// <java-name>
 				/// getLocalizedMessage
 				/// </java-name>
-				public string LocalizedMessage
+				public virtual string LocalizedMessage
 				{
-				[Dot42.DexImport("getLocalizedMessage", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocalizedMessage(); }
+						[Dot42.DexImport("getLocalizedMessage", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getStackTrace
 				/// </java-name>
-				public global::Java.Lang.StackTraceElement[] JavaStackTrace
+				public virtual global::Java.Lang.StackTraceElement[] JavaStackTrace
 				{
-				[Dot42.DexImport("getStackTrace", "()[Ljava/lang/StackTraceElement;", AccessFlags = 1)]
-						get{ return GetStackTrace(); }
-				[Dot42.DexImport("setStackTrace", "([Ljava/lang/StackTraceElement;)V", AccessFlags = 1)]
-						set{ SetStackTrace(value); }
+						[Dot42.DexImport("getStackTrace", "()[Ljava/lang/StackTraceElement;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.StackTraceElement[]); }
+						[Dot42.DexImport("setStackTrace", "([Ljava/lang/StackTraceElement;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCause
 				/// </java-name>
-				public global::System.Exception InnerException
+				public virtual global::System.Exception Cause
 				{
-				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-						get{ return GetCause(); }
+						[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+						get{ return default(global::System.Exception); }
 				}
 
 		}
@@ -4517,15 +4482,6 @@ namespace System
 				/// <java-name>
 				/// isInfinite
 				/// </java-name>
-				[Dot42.DexImport("isInfinite", "()Z", AccessFlags = 1)]
-				public bool IsInfinite() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isInfinite
-				/// </java-name>
 				[Dot42.DexImport("isInfinite", "(F)Z", AccessFlags = 9)]
 				public static bool IsInfinity(float single) /* MethodBuilder.Create */ 
 				{
@@ -4629,6 +4585,15 @@ namespace System
 				public static string ToHexString(float single) /* MethodBuilder.Create */ 
 				{
 						return default(string);
+				}
+
+				/// <java-name>
+				/// isInfinite
+				/// </java-name>
+				public bool IsInfinite
+				{
+						[Dot42.DexImport("isInfinite", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -4991,15 +4956,6 @@ namespace System
 				public string Intern() /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 257)]
-				public bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -5403,22 +5359,12 @@ namespace System
 				}
 
 				/// <java-name>
-				/// charAt
+				/// isEmpty
 				/// </java-name>
-				[global::System.Runtime.CompilerServices.IndexerName("Chars")]
-				public char this[int index]
+				public bool IsEmpty
 				{
-				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 257)]
-						get{ return CharAt(index); }
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				public int Length
-				{
-				[Dot42.DexImport("length", "()I", AccessFlags = 257)]
-						get{ return GetLength(); }
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -5543,9 +5489,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getConstructor", "([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;", AccessFlags = 129, Signature = "([Ljava/lang/Class<*>;)Ljava/lang/reflect/Constructor<TT;>;")]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaConstructor JavaGetConstructor(params global::System.Type[] type) /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Constructor JavaGetConstructor(params global::System.Type[] type) /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaConstructor);
+						return default(global::Java.Lang.Reflect.Constructor);
 				}
 
 				/// <java-name>
@@ -5553,9 +5499,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getConstructors", "()[Ljava/lang/reflect/Constructor;", AccessFlags = 1, Signature = "()[Ljava/lang/reflect/Constructor<*>;")]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaConstructor[] JavaGetConstructors() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Constructor[] JavaGetConstructors() /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaConstructor[]);
+						return default(global::Java.Lang.Reflect.Constructor[]);
 				}
 
 				/// <java-name>
@@ -5581,9 +5527,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getDeclaredConstructor", "([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;", AccessFlags = 129, Signature = "([Ljava/lang/Class<*>;)Ljava/lang/reflect/Constructor<TT;>;")]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaConstructor JavaGetDeclaredConstructor(params global::System.Type[] type) /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Constructor JavaGetDeclaredConstructor(params global::System.Type[] type) /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaConstructor);
+						return default(global::Java.Lang.Reflect.Constructor);
 				}
 
 				/// <java-name>
@@ -5591,9 +5537,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getDeclaredConstructors", "()[Ljava/lang/reflect/Constructor;", AccessFlags = 1, Signature = "()[Ljava/lang/reflect/Constructor<*>;")]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaConstructor[] JavaGetDeclaredConstructors() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Constructor[] JavaGetDeclaredConstructors() /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaConstructor[]);
+						return default(global::Java.Lang.Reflect.Constructor[]);
 				}
 
 				/// <java-name>
@@ -5601,9 +5547,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getDeclaredField", "(Ljava/lang/String;)Ljava/lang/reflect/Field;", AccessFlags = 1)]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaField JavaGetDeclaredField(string @string) /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Field JavaGetDeclaredField(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaField);
+						return default(global::Java.Lang.Reflect.Field);
 				}
 
 				/// <java-name>
@@ -5611,9 +5557,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getDeclaredFields", "()[Ljava/lang/reflect/Field;", AccessFlags = 1)]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaField[] JavaGetDeclaredFields() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Field[] JavaGetDeclaredFields() /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaField[]);
+						return default(global::Java.Lang.Reflect.Field[]);
 				}
 
 				/// <java-name>
@@ -5621,9 +5567,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getDeclaredMethod", "(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;", AccessFlags = 129, Signature = "(Ljava/lang/String;[Ljava/lang/Class<*>;)Ljava/lang/reflect/Method;")]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaMethod JavaGetDeclaredMethod(string @string, params global::System.Type[] type) /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Method JavaGetDeclaredMethod(string @string, params global::System.Type[] type) /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaMethod);
+						return default(global::Java.Lang.Reflect.Method);
 				}
 
 				/// <java-name>
@@ -5631,9 +5577,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getDeclaredMethods", "()[Ljava/lang/reflect/Method;", AccessFlags = 1)]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaMethod[] JavaGetDeclaredMethods() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Method[] JavaGetDeclaredMethods() /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaMethod[]);
+						return default(global::Java.Lang.Reflect.Method[]);
 				}
 
 				/// <java-name>
@@ -5658,18 +5604,18 @@ namespace System
 				/// getEnclosingConstructor
 				/// </java-name>
 				[Dot42.DexImport("getEnclosingConstructor", "()Ljava/lang/reflect/Constructor;", AccessFlags = 257, Signature = "()Ljava/lang/reflect/Constructor<*>;")]
-				public global::System.Reflection.JavaConstructor GetEnclosingConstructor() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Constructor GetEnclosingConstructor() /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaConstructor);
+						return default(global::Java.Lang.Reflect.Constructor);
 				}
 
 				/// <java-name>
 				/// getEnclosingMethod
 				/// </java-name>
 				[Dot42.DexImport("getEnclosingMethod", "()Ljava/lang/reflect/Method;", AccessFlags = 257)]
-				public global::System.Reflection.JavaMethod GetEnclosingMethod() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Method GetEnclosingMethod() /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaMethod);
+						return default(global::Java.Lang.Reflect.Method);
 				}
 
 				/// <java-name>
@@ -5686,9 +5632,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getField", "(Ljava/lang/String;)Ljava/lang/reflect/Field;", AccessFlags = 1)]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaField JavaGetField(string @string) /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Field JavaGetField(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaField);
+						return default(global::Java.Lang.Reflect.Field);
 				}
 
 				/// <java-name>
@@ -5696,9 +5642,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getFields", "()[Ljava/lang/reflect/Field;", AccessFlags = 1)]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaField[] JavaGetFields() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Field[] JavaGetFields() /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaField[]);
+						return default(global::Java.Lang.Reflect.Field[]);
 				}
 
 				/// <java-name>
@@ -5734,9 +5680,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getMethod", "(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;", AccessFlags = 129, Signature = "(Ljava/lang/String;[Ljava/lang/Class<*>;)Ljava/lang/reflect/Method;")]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaMethod JavaGetMethod(string @string, params global::System.Type[] type) /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Method JavaGetMethod(string @string, params global::System.Type[] type) /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaMethod);
+						return default(global::Java.Lang.Reflect.Method);
 				}
 
 				/// <java-name>
@@ -5744,9 +5690,9 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("getMethods", "()[Ljava/lang/reflect/Method;", AccessFlags = 1)]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				public global::System.Reflection.JavaMethod[] JavaGetMethods() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.Method[] JavaGetMethods() /* MethodBuilder.Create */ 
 				{
-						return default(global::System.Reflection.JavaMethod[]);
+						return default(global::Java.Lang.Reflect.Method[]);
 				}
 
 				/// <java-name>
@@ -5826,18 +5772,9 @@ namespace System
 				/// getTypeParameters
 				/// </java-name>
 				[Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;", AccessFlags = 33, Signature = "()[Ljava/lang/reflect/TypeVariable<Ljava/lang/Class<TT;>;>;")]
-				public global::Java.Lang.Reflect.ITypeVariable<object>[] GetTypeParameters() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.ITypeVariable<global::System.Type>[] GetTypeParameters() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
-				}
-
-				/// <java-name>
-				/// isAnnotation
-				/// </java-name>
-				[Dot42.DexImport("isAnnotation", "()Z", AccessFlags = 1)]
-				public bool GetIsAnnotation() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
+						return default(global::Java.Lang.Reflect.ITypeVariable<global::System.Type>[]);
 				}
 
 				/// <java-name>
@@ -5845,24 +5782,6 @@ namespace System
 				/// </java-name>
 				[Dot42.DexImport("isAnnotationPresent", "(Ljava/lang/Class;)Z", AccessFlags = 1, Signature = "(Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;)Z")]
 				public bool IsAnnotationPresent(global::System.Type type) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isAnonymousClass
-				/// </java-name>
-				[Dot42.DexImport("isAnonymousClass", "()Z", AccessFlags = 257)]
-				public bool GetIsAnonymousClass() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isArray
-				/// </java-name>
-				[Dot42.DexImport("isArray", "()Z", AccessFlags = 1)]
-				public bool GetIsArray() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -5893,51 +5812,6 @@ namespace System
 				[Dot42.DexImport("isInstance", "(Ljava/lang/Object;)Z", AccessFlags = 257)]
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				public bool JavaIsInstance(object @object) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isInterface
-				/// </java-name>
-				[Dot42.DexImport("isInterface", "()Z", AccessFlags = 257)]
-				public bool GetIsInterface() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLocalClass
-				/// </java-name>
-				[Dot42.DexImport("isLocalClass", "()Z", AccessFlags = 1)]
-				public bool GetIsLocalClass() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMemberClass
-				/// </java-name>
-				[Dot42.DexImport("isMemberClass", "()Z", AccessFlags = 1)]
-				public bool GetIsMemberClass() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isPrimitive
-				/// </java-name>
-				[Dot42.DexImport("isPrimitive", "()Z", AccessFlags = 257)]
-				public bool GetIsPrimitive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isSynthetic
-				/// </java-name>
-				[Dot42.DexImport("isSynthetic", "()Z", AccessFlags = 1)]
-				public bool GetIsSynthetic() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -6007,8 +5881,8 @@ namespace System
 				/// </java-name>
 				public bool IsAnnotation
 				{
-				[Dot42.DexImport("isAnnotation", "()Z", AccessFlags = 1)]
-						get{ return GetIsAnnotation(); }
+						[Dot42.DexImport("isAnnotation", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -6016,8 +5890,8 @@ namespace System
 				/// </java-name>
 				public bool IsAnonymousClass
 				{
-				[Dot42.DexImport("isAnonymousClass", "()Z", AccessFlags = 257)]
-						get{ return GetIsAnonymousClass(); }
+						[Dot42.DexImport("isAnonymousClass", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -6025,8 +5899,8 @@ namespace System
 				/// </java-name>
 				public bool IsArray
 				{
-				[Dot42.DexImport("isArray", "()Z", AccessFlags = 1)]
-						get{ return GetIsArray(); }
+						[Dot42.DexImport("isArray", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -6034,8 +5908,8 @@ namespace System
 				/// </java-name>
 				public bool IsInterface
 				{
-				[Dot42.DexImport("isInterface", "()Z", AccessFlags = 257)]
-						get{ return GetIsInterface(); }
+						[Dot42.DexImport("isInterface", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -6043,8 +5917,8 @@ namespace System
 				/// </java-name>
 				public bool IsLocalClass
 				{
-				[Dot42.DexImport("isLocalClass", "()Z", AccessFlags = 1)]
-						get{ return GetIsLocalClass(); }
+						[Dot42.DexImport("isLocalClass", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -6052,8 +5926,8 @@ namespace System
 				/// </java-name>
 				public bool IsMemberClass
 				{
-				[Dot42.DexImport("isMemberClass", "()Z", AccessFlags = 1)]
-						get{ return GetIsMemberClass(); }
+						[Dot42.DexImport("isMemberClass", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -6061,8 +5935,8 @@ namespace System
 				/// </java-name>
 				public bool IsPrimitive
 				{
-				[Dot42.DexImport("isPrimitive", "()Z", AccessFlags = 257)]
-						get{ return GetIsPrimitive(); }
+						[Dot42.DexImport("isPrimitive", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -6070,8 +5944,8 @@ namespace System
 				/// </java-name>
 				public bool IsSynthetic
 				{
-				[Dot42.DexImport("isSynthetic", "()Z", AccessFlags = 1)]
-						get{ return GetIsSynthetic(); }
+						[Dot42.DexImport("isSynthetic", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -6158,165 +6032,12 @@ namespace System
 				}
 
 				/// <java-name>
-				/// getScheme
-				/// </java-name>
-				[Dot42.DexImport("getScheme", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetScheme() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSchemeSpecificPart
-				/// </java-name>
-				[Dot42.DexImport("getSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetSchemeSpecificPart() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRawSchemeSpecificPart
-				/// </java-name>
-				[Dot42.DexImport("getRawSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetRawSchemeSpecificPart() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAuthority
-				/// </java-name>
-				[Dot42.DexImport("getAuthority", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetAuthority() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRawAuthority
-				/// </java-name>
-				[Dot42.DexImport("getRawAuthority", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetRawAuthority() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getUserInfo
-				/// </java-name>
-				[Dot42.DexImport("getUserInfo", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetUserInfo() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRawUserInfo
-				/// </java-name>
-				[Dot42.DexImport("getRawUserInfo", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetRawUserInfo() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getHost
-				/// </java-name>
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetHost() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-				public int GetPort() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRawPath
-				/// </java-name>
-				[Dot42.DexImport("getRawPath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetRawPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getQuery
-				/// </java-name>
-				[Dot42.DexImport("getQuery", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetQuery() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRawQuery
-				/// </java-name>
-				[Dot42.DexImport("getRawQuery", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetRawQuery() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getFragment
-				/// </java-name>
-				[Dot42.DexImport("getFragment", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetFragment() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getRawFragment
-				/// </java-name>
-				[Dot42.DexImport("getRawFragment", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetRawFragment() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isAbsolute
-				/// </java-name>
-				[Dot42.DexImport("isAbsolute", "()Z", AccessFlags = 1)]
-				public bool IsAbsolute() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isOpaque
-				/// </java-name>
-				[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 1)]
-				public bool IsOpaque() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -6401,8 +6122,8 @@ namespace System
 				/// </java-name>
 				public string Scheme
 				{
-				[Dot42.DexImport("getScheme", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetScheme(); }
+						[Dot42.DexImport("getScheme", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6410,8 +6131,8 @@ namespace System
 				/// </java-name>
 				public string SchemeSpecificPart
 				{
-				[Dot42.DexImport("getSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSchemeSpecificPart(); }
+						[Dot42.DexImport("getSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6419,8 +6140,8 @@ namespace System
 				/// </java-name>
 				public string RawSchemeSpecificPart
 				{
-				[Dot42.DexImport("getRawSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRawSchemeSpecificPart(); }
+						[Dot42.DexImport("getRawSchemeSpecificPart", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6428,8 +6149,8 @@ namespace System
 				/// </java-name>
 				public string Authority
 				{
-				[Dot42.DexImport("getAuthority", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAuthority(); }
+						[Dot42.DexImport("getAuthority", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6437,8 +6158,8 @@ namespace System
 				/// </java-name>
 				public string RawAuthority
 				{
-				[Dot42.DexImport("getRawAuthority", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRawAuthority(); }
+						[Dot42.DexImport("getRawAuthority", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6446,8 +6167,8 @@ namespace System
 				/// </java-name>
 				public string UserInfo
 				{
-				[Dot42.DexImport("getUserInfo", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUserInfo(); }
+						[Dot42.DexImport("getUserInfo", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6455,8 +6176,8 @@ namespace System
 				/// </java-name>
 				public string RawUserInfo
 				{
-				[Dot42.DexImport("getRawUserInfo", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRawUserInfo(); }
+						[Dot42.DexImport("getRawUserInfo", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6464,8 +6185,8 @@ namespace System
 				/// </java-name>
 				public string Host
 				{
-				[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetHost(); }
+						[Dot42.DexImport("getHost", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6473,8 +6194,8 @@ namespace System
 				/// </java-name>
 				public int Port
 				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-						get{ return GetPort(); }
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -6482,8 +6203,8 @@ namespace System
 				/// </java-name>
 				public string AbsolutePath
 				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPath(); }
+						[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6491,8 +6212,8 @@ namespace System
 				/// </java-name>
 				public string RawPath
 				{
-				[Dot42.DexImport("getRawPath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRawPath(); }
+						[Dot42.DexImport("getRawPath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6500,8 +6221,8 @@ namespace System
 				/// </java-name>
 				public string Query
 				{
-				[Dot42.DexImport("getQuery", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetQuery(); }
+						[Dot42.DexImport("getQuery", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6509,8 +6230,8 @@ namespace System
 				/// </java-name>
 				public string RawQuery
 				{
-				[Dot42.DexImport("getRawQuery", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRawQuery(); }
+						[Dot42.DexImport("getRawQuery", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6518,8 +6239,8 @@ namespace System
 				/// </java-name>
 				public string Fragment
 				{
-				[Dot42.DexImport("getFragment", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetFragment(); }
+						[Dot42.DexImport("getFragment", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -6527,8 +6248,26 @@ namespace System
 				/// </java-name>
 				public string RawFragment
 				{
-				[Dot42.DexImport("getRawFragment", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetRawFragment(); }
+						[Dot42.DexImport("getRawFragment", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isAbsolute
+				/// </java-name>
+				public bool IsAbsolute
+				{
+						[Dot42.DexImport("isAbsolute", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isOpaque
+				/// </java-name>
+				public bool IsOpaque
+				{
+						[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

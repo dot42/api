@@ -12,12 +12,12 @@ namespace Org.Apache.Http.Entity
 				/// contentType
 				/// </java-name>
 				[Dot42.DexImport("contentType", "Lorg/apache/http/Header;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.IHeader ContentType;
+				protected internal global::Org.Apache.Http.IHeader @contenttype;
 				/// <java-name>
 				/// contentEncoding
 				/// </java-name>
 				[Dot42.DexImport("contentEncoding", "Lorg/apache/http/Header;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.IHeader ContentEncoding;
+				protected internal global::Org.Apache.Http.IHeader @contentencoding;
 				/// <java-name>
 				/// chunked
 				/// </java-name>
@@ -26,33 +26,6 @@ namespace Org.Apache.Http.Entity
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
 				protected internal AbstractHttpEntity() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getContentType
-				/// </java-name>
-				[Dot42.DexImport("getContentType", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IHeader GetContentType() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// getContentEncoding
-				/// </java-name>
-				[Dot42.DexImport("getContentEncoding", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IHeader GetContentEncoding() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// isChunked
-				/// </java-name>
-				[Dot42.DexImport("isChunked", "()Z", AccessFlags = 1)]
-				public virtual bool IsChunked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -103,45 +76,60 @@ namespace Org.Apache.Http.Entity
 				{
 				}
 
-				[Dot42.DexImport("org/apache/http/HttpEntity", "isRepeatable", "()Z", AccessFlags = 1025)]
-				public virtual bool IsRepeatable() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpEntity", "getContentLength", "()J", AccessFlags = 1025)]
-				public virtual long GetContentLength() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(long);
-				}
-
-				[Dot42.DexImport("org/apache/http/HttpEntity", "getContent", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-				public virtual global::Java.Io.InputStream GetContent() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
 				[Dot42.DexImport("org/apache/http/HttpEntity", "writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
 				public virtual void WriteTo(global::Java.Io.OutputStream outputStream) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 				}
 
-				[Dot42.DexImport("org/apache/http/HttpEntity", "isStreaming", "()Z", AccessFlags = 1025)]
-				public virtual bool IsStreaming() /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				/// <java-name>
+				/// getContentType
+				/// </java-name>
+				public virtual global::Org.Apache.Http.IHeader ContentType
 				{
-						return default(bool);
+						[Dot42.DexImport("getContentType", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.IHeader); }
 				}
 
-				public long ContentLength
+				/// <java-name>
+				/// getContentEncoding
+				/// </java-name>
+				public virtual global::Org.Apache.Http.IHeader ContentEncoding
 				{
-				[Dot42.DexImport("org/apache/http/HttpEntity", "getContentLength", "()J", AccessFlags = 1025)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentEncoding", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.IHeader); }
 				}
 
-				public global::Java.Io.InputStream Content
+				/// <java-name>
+				/// isChunked
+				/// </java-name>
+				public virtual bool IsChunked
 				{
-				[Dot42.DexImport("org/apache/http/HttpEntity", "getContent", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("isChunked", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				public virtual bool IsRepeatable
+				{
+						[Dot42.DexImport("org/apache/http/HttpEntity", "isRepeatable", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
+				}
+
+				public virtual long ContentLength
+				{
+						[Dot42.DexImport("org/apache/http/HttpEntity", "getContentLength", "()J", AccessFlags = 1025)]
+						get{ return default(long); }
+				}
+
+				public virtual global::Java.Io.InputStream Content
+				{
+						[Dot42.DexImport("org/apache/http/HttpEntity", "getContent", "()Ljava/io/InputStream;", AccessFlags = 1025)]
+						get{ return default(global::Java.Io.InputStream); }
+				}
+
+				public virtual bool IsStreaming
+				{
+						[Dot42.DexImport("org/apache/http/HttpEntity", "isStreaming", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -156,33 +144,6 @@ namespace Org.Apache.Http.Entity
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public BasicHttpEntity() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -210,15 +171,6 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// consumeContent
 				/// </java-name>
 				[Dot42.DexImport("consumeContent", "()V", AccessFlags = 1)]
@@ -229,19 +181,37 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public long ContentLength
+				public override long ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public global::Java.Io.InputStream Content
+				public override global::Java.Io.InputStream Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public override bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				public override bool IsStreaming
+				{
+						[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -259,56 +229,11 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// isChunked
-				/// </java-name>
-				[Dot42.DexImport("isChunked", "()Z", AccessFlags = 1)]
-				public override bool IsChunked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
 				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -319,19 +244,46 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public long ContentLength
+				public override long ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public global::Java.Io.InputStream Content
+				public override global::Java.Io.InputStream Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+				}
+
+				/// <java-name>
+				/// isChunked
+				/// </java-name>
+				public override bool IsChunked
+				{
+						[Dot42.DexImport("isChunked", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public override bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				public override bool IsStreaming
+				{
+						[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -347,7 +299,7 @@ namespace Org.Apache.Http.Entity
 				/// content
 				/// </java-name>
 				[Dot42.DexImport("content", "[B", AccessFlags = 20)]
-				protected internal readonly sbyte[] Content;
+				protected internal readonly sbyte[] @content;
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public ByteArrayEntity(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
@@ -359,47 +311,11 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
 				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -417,12 +333,39 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public override bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public long ContentLength
+				public override long ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				public override global::Java.Io.InputStream Content
+				{
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				public override bool IsStreaming
+				{
+						[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -440,47 +383,11 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
 				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -499,19 +406,37 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public long ContentLength
+				public override long ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public global::Java.Io.InputStream Content
+				public override global::Java.Io.InputStream Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public override bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				public override bool IsStreaming
+				{
+						[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -534,47 +459,11 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
 				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -592,21 +481,39 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public override bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public long ContentLength
+				public override long ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public global::Java.Io.InputStream Content
+				public override global::Java.Io.InputStream Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				public override bool IsStreaming
+				{
+						[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -629,74 +536,11 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public virtual bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isChunked
-				/// </java-name>
-				[Dot42.DexImport("isChunked", "()Z", AccessFlags = 1)]
-				public virtual bool IsChunked() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public virtual long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContentType
-				/// </java-name>
-				[Dot42.DexImport("getContentType", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IHeader GetContentType() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// getContentEncoding
-				/// </java-name>
-				[Dot42.DexImport("getContentEncoding", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.IHeader GetContentEncoding() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.IHeader);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
 				public virtual void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public virtual bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -713,39 +557,66 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public virtual bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isChunked
+				/// </java-name>
+				public virtual bool IsChunked
+				{
+						[Dot42.DexImport("isChunked", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public long ContentLength
+				public virtual long ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getContentType
 				/// </java-name>
-				public global::Org.Apache.Http.IHeader ContentType
+				public virtual global::Org.Apache.Http.IHeader ContentType
 				{
-				[Dot42.DexImport("getContentType", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-						get{ return GetContentType(); }
+						[Dot42.DexImport("getContentType", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.IHeader); }
 				}
 
 				/// <java-name>
 				/// getContentEncoding
 				/// </java-name>
-				public global::Org.Apache.Http.IHeader ContentEncoding
+				public virtual global::Org.Apache.Http.IHeader ContentEncoding
 				{
-				[Dot42.DexImport("getContentEncoding", "()Lorg/apache/http/Header;", AccessFlags = 1)]
-						get{ return GetContentEncoding(); }
+						[Dot42.DexImport("getContentEncoding", "()Lorg/apache/http/Header;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.IHeader); }
 				}
 
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public global::Java.Io.InputStream Content
+				public virtual global::Java.Io.InputStream Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				public virtual bool IsStreaming
+				{
+						[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -812,47 +683,11 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
 				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -869,21 +704,39 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public override bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public long ContentLength
+				public override long ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public global::Java.Io.InputStream Content
+				public override global::Java.Io.InputStream Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				public override bool IsStreaming
+				{
+						[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -898,42 +751,6 @@ namespace Org.Apache.Http.Entity
 				[Dot42.DexImport("<init>", "(Ljava/io/Serializable;Z)V", AccessFlags = 1)]
 				public SerializableEntity(global::Java.Io.ISerializable serializable, bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -952,19 +769,37 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public global::Java.Io.InputStream Content
+				public override global::Java.Io.InputStream Content
 				{
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return GetContent(); }
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
 				}
 
 				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public long ContentLength
+				public override long ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+				}
+
+				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public override bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				public override bool IsStreaming
+				{
+						[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -980,7 +815,7 @@ namespace Org.Apache.Http.Entity
 				/// content
 				/// </java-name>
 				[Dot42.DexImport("content", "[B", AccessFlags = 20)]
-				protected internal readonly sbyte[] Content;
+				protected internal readonly sbyte[] @content;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public StringEntity(string @string, string string1) /* MethodBuilder.Create */ 
 				{
@@ -992,47 +827,11 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
-				/// isRepeatable
-				/// </java-name>
-				[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
-				public override bool IsRepeatable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getContentLength
-				/// </java-name>
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-				public override long GetContentLength() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getContent
-				/// </java-name>
-				[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetContent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.InputStream);
-				}
-
-				/// <java-name>
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
 				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isStreaming
-				/// </java-name>
-				[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
-				public override bool IsStreaming() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1050,12 +849,39 @@ namespace Org.Apache.Http.Entity
 				}
 
 				/// <java-name>
+				/// isRepeatable
+				/// </java-name>
+				public override bool IsRepeatable
+				{
+						[Dot42.DexImport("isRepeatable", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getContentLength
 				/// </java-name>
-				public long ContentLength
+				public override long ContentLength
 				{
-				[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
-						get{ return GetContentLength(); }
+						[Dot42.DexImport("getContentLength", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+				}
+
+				/// <java-name>
+				/// getContent
+				/// </java-name>
+				public override global::Java.Io.InputStream Content
+				{
+						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.InputStream); }
+				}
+
+				/// <java-name>
+				/// isStreaming
+				/// </java-name>
+				public override bool IsStreaming
+				{
+						[Dot42.DexImport("isStreaming", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

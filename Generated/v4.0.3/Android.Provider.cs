@@ -7437,15 +7437,6 @@ namespace Android.Provider
 				}
 
 				/// <java-name>
-				/// getMediaScannerUri
-				/// </java-name>
-				[Dot42.DexImport("getMediaScannerUri", "()Landroid/net/Uri;", AccessFlags = 9)]
-				public static global::Android.Net.Uri GetMediaScannerUri() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Uri);
-				}
-
-				/// <java-name>
 				/// getVersion
 				/// </java-name>
 				[Dot42.DexImport("getVersion", "(Landroid/content/Context;)Ljava/lang/String;", AccessFlags = 9)]
@@ -7459,8 +7450,8 @@ namespace Android.Provider
 				/// </java-name>
 				public static global::Android.Net.Uri MediaScannerUri
 				{
-				[Dot42.DexImport("getMediaScannerUri", "()Landroid/net/Uri;", AccessFlags = 9)]
-						get{ return GetMediaScannerUri(); }
+						[Dot42.DexImport("getMediaScannerUri", "()Landroid/net/Uri;", AccessFlags = 9)]
+						get{ return default(global::Android.Net.Uri); }
 				}
 
 				/// <java-name>

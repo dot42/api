@@ -14,15 +14,6 @@ namespace Java.Util.Zip
 				}
 
 				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "()J", AccessFlags = 1)]
-				public virtual long GetValue() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// reset
 				/// </java-name>
 				[Dot42.DexImport("reset", "()V", AccessFlags = 1)]
@@ -73,10 +64,10 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// getValue
 				/// </java-name>
-				public long Value
+				public virtual long Value
 				{
-				[Dot42.DexImport("getValue", "()J", AccessFlags = 1)]
-						get{ return GetValue(); }
+						[Dot42.DexImport("getValue", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 		}
@@ -121,15 +112,6 @@ namespace Java.Util.Zip
 				}
 
 				/// <java-name>
-				/// getChecksum
-				/// </java-name>
-				[Dot42.DexImport("getChecksum", "()Ljava/util/zip/Checksum;", AccessFlags = 1)]
-				public virtual global::Java.Util.Zip.IChecksum GetChecksum() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Zip.IChecksum);
-				}
-
-				/// <java-name>
 				/// skip
 				/// </java-name>
 				[Dot42.DexImport("skip", "(J)J", AccessFlags = 1)]
@@ -146,10 +128,10 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// getChecksum
 				/// </java-name>
-				public global::Java.Util.Zip.IChecksum Checksum
+				public virtual global::Java.Util.Zip.IChecksum Checksum
 				{
-				[Dot42.DexImport("getChecksum", "()Ljava/util/zip/Checksum;", AccessFlags = 1)]
-						get{ return GetChecksum(); }
+						[Dot42.DexImport("getChecksum", "()Ljava/util/zip/Checksum;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Zip.IChecksum); }
 				}
 
 		}
@@ -164,15 +146,6 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/util/zip/Checksum;)V", AccessFlags = 1)]
 				public CheckedOutputStream(global::Java.Io.OutputStream outputStream, global::Java.Util.Zip.IChecksum checksum) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getChecksum
-				/// </java-name>
-				[Dot42.DexImport("getChecksum", "()Ljava/util/zip/Checksum;", AccessFlags = 1)]
-				public virtual global::Java.Util.Zip.IChecksum GetChecksum() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Zip.IChecksum);
 				}
 
 				/// <java-name>
@@ -207,10 +180,10 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// getChecksum
 				/// </java-name>
-				public global::Java.Util.Zip.IChecksum Checksum
+				public virtual global::Java.Util.Zip.IChecksum Checksum
 				{
-				[Dot42.DexImport("getChecksum", "()Ljava/util/zip/Checksum;", AccessFlags = 1)]
-						get{ return GetChecksum(); }
+						[Dot42.DexImport("getChecksum", "()Ljava/util/zip/Checksum;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Zip.IChecksum); }
 				}
 
 		}
@@ -225,15 +198,6 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public CRC32() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "()J", AccessFlags = 1)]
-				public virtual long GetValue() /* MethodBuilder.Create */ 
-				{
-						return default(long);
 				}
 
 				/// <java-name>
@@ -287,10 +251,10 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// getValue
 				/// </java-name>
-				public long Value
+				public virtual long Value
 				{
-				[Dot42.DexImport("getValue", "()J", AccessFlags = 1)]
-						get{ return GetValue(); }
+						[Dot42.DexImport("getValue", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 		}
@@ -444,33 +408,6 @@ namespace Java.Util.Zip
 				}
 
 				/// <java-name>
-				/// getAdler
-				/// </java-name>
-				[Dot42.DexImport("getAdler", "()I", AccessFlags = 33)]
-				public virtual int GetAdler() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTotalIn
-				/// </java-name>
-				[Dot42.DexImport("getTotalIn", "()I", AccessFlags = 33)]
-				public virtual int GetTotalIn() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTotalOut
-				/// </java-name>
-				[Dot42.DexImport("getTotalOut", "()I", AccessFlags = 33)]
-				public virtual int GetTotalOut() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// needsInput
 				/// </java-name>
 				[Dot42.DexImport("needsInput", "()Z", AccessFlags = 33)]
@@ -568,66 +505,48 @@ namespace Java.Util.Zip
 				}
 
 				/// <java-name>
-				/// getBytesRead
-				/// </java-name>
-				[Dot42.DexImport("getBytesRead", "()J", AccessFlags = 33)]
-				public virtual long GetBytesRead() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getBytesWritten
-				/// </java-name>
-				[Dot42.DexImport("getBytesWritten", "()J", AccessFlags = 33)]
-				public virtual long GetBytesWritten() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// getAdler
 				/// </java-name>
-				public int Adler
+				public virtual int Adler
 				{
-				[Dot42.DexImport("getAdler", "()I", AccessFlags = 33)]
-						get{ return GetAdler(); }
+						[Dot42.DexImport("getAdler", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTotalIn
 				/// </java-name>
-				public int TotalIn
+				public virtual int TotalIn
 				{
-				[Dot42.DexImport("getTotalIn", "()I", AccessFlags = 33)]
-						get{ return GetTotalIn(); }
+						[Dot42.DexImport("getTotalIn", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTotalOut
 				/// </java-name>
-				public int TotalOut
+				public virtual int TotalOut
 				{
-				[Dot42.DexImport("getTotalOut", "()I", AccessFlags = 33)]
-						get{ return GetTotalOut(); }
+						[Dot42.DexImport("getTotalOut", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getBytesRead
 				/// </java-name>
-				public long BytesRead
+				public virtual long BytesRead
 				{
-				[Dot42.DexImport("getBytesRead", "()J", AccessFlags = 33)]
-						get{ return GetBytesRead(); }
+						[Dot42.DexImport("getBytesRead", "()J", AccessFlags = 33)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getBytesWritten
 				/// </java-name>
-				public long BytesWritten
+				public virtual long BytesWritten
 				{
-				[Dot42.DexImport("getBytesWritten", "()J", AccessFlags = 33)]
-						get{ return GetBytesWritten(); }
+						[Dot42.DexImport("getBytesWritten", "()J", AccessFlags = 33)]
+						get{ return default(long); }
 				}
 
 		}
@@ -970,12 +889,6 @@ namespace Java.Util.Zip
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// getValue
-				/// </java-name>
-				[Dot42.DexImport("getValue", "()J", AccessFlags = 1025)]
-				long GetValue() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// reset
 				/// </java-name>
 				[Dot42.DexImport("reset", "()V", AccessFlags = 1025)]
@@ -992,6 +905,15 @@ namespace Java.Util.Zip
 				/// </java-name>
 				[Dot42.DexImport("update", "(I)V", AccessFlags = 1025)]
 				void Update(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getValue
+				/// </java-name>
+				long Value
+				{
+						[Dot42.DexImport("getValue", "()J", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1033,60 +955,6 @@ namespace Java.Util.Zip
 				public virtual bool Finished() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getAdler
-				/// </java-name>
-				[Dot42.DexImport("getAdler", "()I", AccessFlags = 33)]
-				public virtual int GetAdler() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBytesRead
-				/// </java-name>
-				[Dot42.DexImport("getBytesRead", "()J", AccessFlags = 33)]
-				public virtual long GetBytesRead() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getBytesWritten
-				/// </java-name>
-				[Dot42.DexImport("getBytesWritten", "()J", AccessFlags = 33)]
-				public virtual long GetBytesWritten() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getRemaining
-				/// </java-name>
-				[Dot42.DexImport("getRemaining", "()I", AccessFlags = 33)]
-				public virtual int GetRemaining() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTotalIn
-				/// </java-name>
-				[Dot42.DexImport("getTotalIn", "()I", AccessFlags = 33)]
-				public virtual int GetTotalIn() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTotalOut
-				/// </java-name>
-				[Dot42.DexImport("getTotalOut", "()I", AccessFlags = 33)]
-				public virtual int GetTotalOut() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1218,55 +1086,55 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// getAdler
 				/// </java-name>
-				public int Adler
+				public virtual int Adler
 				{
-				[Dot42.DexImport("getAdler", "()I", AccessFlags = 33)]
-						get{ return GetAdler(); }
+						[Dot42.DexImport("getAdler", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getBytesRead
 				/// </java-name>
-				public long BytesRead
+				public virtual long BytesRead
 				{
-				[Dot42.DexImport("getBytesRead", "()J", AccessFlags = 33)]
-						get{ return GetBytesRead(); }
+						[Dot42.DexImport("getBytesRead", "()J", AccessFlags = 33)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getBytesWritten
 				/// </java-name>
-				public long BytesWritten
+				public virtual long BytesWritten
 				{
-				[Dot42.DexImport("getBytesWritten", "()J", AccessFlags = 33)]
-						get{ return GetBytesWritten(); }
+						[Dot42.DexImport("getBytesWritten", "()J", AccessFlags = 33)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getRemaining
 				/// </java-name>
-				public int Remaining
+				public virtual int Remaining
 				{
-				[Dot42.DexImport("getRemaining", "()I", AccessFlags = 33)]
-						get{ return GetRemaining(); }
+						[Dot42.DexImport("getRemaining", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTotalIn
 				/// </java-name>
-				public int TotalIn
+				public virtual int TotalIn
 				{
-				[Dot42.DexImport("getTotalIn", "()I", AccessFlags = 33)]
-						get{ return GetTotalIn(); }
+						[Dot42.DexImport("getTotalIn", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTotalOut
 				/// </java-name>
-				public int TotalOut
+				public virtual int TotalOut
 				{
-				[Dot42.DexImport("getTotalOut", "()I", AccessFlags = 33)]
-						get{ return GetTotalOut(); }
+						[Dot42.DexImport("getTotalOut", "()I", AccessFlags = 33)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1516,33 +1384,6 @@ namespace Java.Util.Zip
 				}
 
 				/// <java-name>
-				/// getComment
-				/// </java-name>
-				[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetComment() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCompressedSize
-				/// </java-name>
-				[Dot42.DexImport("getCompressedSize", "()J", AccessFlags = 1)]
-				public virtual long GetCompressedSize() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getCrc
-				/// </java-name>
-				[Dot42.DexImport("getCrc", "()J", AccessFlags = 1)]
-				public virtual long GetCrc() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// getExtra
 				/// </java-name>
 				[Dot42.DexImport("getExtra", "()[B", AccessFlags = 1)]
@@ -1552,120 +1393,10 @@ namespace Java.Util.Zip
 				}
 
 				/// <java-name>
-				/// getExtra
-				/// </java-name>
-				[Dot42.DexImport("getExtra", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetExtra() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getMethod
-				/// </java-name>
-				[Dot42.DexImport("getMethod", "()I", AccessFlags = 1)]
-				public virtual int GetMethod() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSize
-				/// </java-name>
-				[Dot42.DexImport("getSize", "()J", AccessFlags = 1)]
-				public virtual long GetSize() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getTime
-				/// </java-name>
-				[Dot42.DexImport("getTime", "()J", AccessFlags = 1)]
-				public virtual long GetTime() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// isDirectory
-				/// </java-name>
-				[Dot42.DexImport("isDirectory", "()Z", AccessFlags = 1)]
-				public virtual bool IsDirectory() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setComment
-				/// </java-name>
-				[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetComment(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCompressedSize
-				/// </java-name>
-				[Dot42.DexImport("setCompressedSize", "(J)V", AccessFlags = 1)]
-				public virtual void SetCompressedSize(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCrc
-				/// </java-name>
-				[Dot42.DexImport("setCrc", "(J)V", AccessFlags = 1)]
-				public virtual void SetCrc(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setExtra
 				/// </java-name>
 				[Dot42.DexImport("setExtra", "([B)V", AccessFlags = 1)]
 				public virtual void SetExtra(sbyte[] sByte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setExtra
-				/// </java-name>
-				[Dot42.DexImport("setExtra", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual void SetExtra(byte[] @byte) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMethod
-				/// </java-name>
-				[Dot42.DexImport("setMethod", "(I)V", AccessFlags = 1)]
-				public virtual void SetMethod(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSize
-				/// </java-name>
-				[Dot42.DexImport("setSize", "(J)V", AccessFlags = 1)]
-				public virtual void SetSize(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTime
-				/// </java-name>
-				[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
-				public virtual void SetTime(long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1704,87 +1435,96 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// getComment
 				/// </java-name>
-				public string Comment
+				public virtual string Comment
 				{
-				[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetComment(); }
-				[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetComment(value); }
+						[Dot42.DexImport("getComment", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+						[Dot42.DexImport("setComment", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCompressedSize
 				/// </java-name>
-				public long CompressedSize
+				public virtual long CompressedSize
 				{
-				[Dot42.DexImport("getCompressedSize", "()J", AccessFlags = 1)]
-						get{ return GetCompressedSize(); }
-				[Dot42.DexImport("setCompressedSize", "(J)V", AccessFlags = 1)]
-						set{ SetCompressedSize(value); }
+						[Dot42.DexImport("getCompressedSize", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setCompressedSize", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCrc
 				/// </java-name>
-				public long Crc
+				public virtual long Crc
 				{
-				[Dot42.DexImport("getCrc", "()J", AccessFlags = 1)]
-						get{ return GetCrc(); }
-				[Dot42.DexImport("setCrc", "(J)V", AccessFlags = 1)]
-						set{ SetCrc(value); }
+						[Dot42.DexImport("getCrc", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setCrc", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getExtra
 				/// </java-name>
-				public byte[] Extra
+				public virtual byte[] Extra
 				{
-				[Dot42.DexImport("getExtra", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetExtra(); }
-				[Dot42.DexImport("setExtra", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-						set{ SetExtra(value); }
+						[Dot42.DexImport("getExtra", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
+						[Dot42.DexImport("setExtra", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMethod
 				/// </java-name>
-				public int Method
+				public virtual int Method
 				{
-				[Dot42.DexImport("getMethod", "()I", AccessFlags = 1)]
-						get{ return GetMethod(); }
-				[Dot42.DexImport("setMethod", "(I)V", AccessFlags = 1)]
-						set{ SetMethod(value); }
+						[Dot42.DexImport("getMethod", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setMethod", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSize
 				/// </java-name>
-				public long Size
+				public virtual long Size
 				{
-				[Dot42.DexImport("getSize", "()J", AccessFlags = 1)]
-						get{ return GetSize(); }
-				[Dot42.DexImport("setSize", "(J)V", AccessFlags = 1)]
-						set{ SetSize(value); }
+						[Dot42.DexImport("getSize", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setSize", "(J)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTime
 				/// </java-name>
-				public long Time
+				public virtual long Time
 				{
-				[Dot42.DexImport("getTime", "()J", AccessFlags = 1)]
-						get{ return GetTime(); }
-				[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
-						set{ SetTime(value); }
+						[Dot42.DexImport("getTime", "()J", AccessFlags = 1)]
+						get{ return default(long); }
+						[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isDirectory
+				/// </java-name>
+				public virtual bool IsDirectory
+				{
+						[Dot42.DexImport("isDirectory", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1901,15 +1641,6 @@ namespace Java.Util.Zip
 				}
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// size
 				/// </java-name>
 				[Dot42.DexImport("size", "()I", AccessFlags = 1)]
@@ -1926,10 +1657,10 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -1960,15 +1691,6 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("closeEntry", "()V", AccessFlags = 1)]
 				public virtual void CloseEntry() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getNextEntry
-				/// </java-name>
-				[Dot42.DexImport("getNextEntry", "()Ljava/util/zip/ZipEntry;", AccessFlags = 1)]
-				public virtual global::Java.Util.Zip.ZipEntry GetNextEntry() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.Zip.ZipEntry);
 				}
 
 				/// <java-name>
@@ -2015,10 +1737,10 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// getNextEntry
 				/// </java-name>
-				public global::Java.Util.Zip.ZipEntry NextEntry
+				public virtual global::Java.Util.Zip.ZipEntry NextEntry
 				{
-				[Dot42.DexImport("getNextEntry", "()Ljava/util/zip/ZipEntry;", AccessFlags = 1)]
-						get{ return GetNextEntry(); }
+						[Dot42.DexImport("getNextEntry", "()Ljava/util/zip/ZipEntry;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.Zip.ZipEntry); }
 				}
 
 		}

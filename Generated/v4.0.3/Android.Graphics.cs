@@ -84,46 +84,11 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getDensity
-				/// </java-name>
-				[Dot42.DexImport("getDensity", "()I", AccessFlags = 1)]
-				public int GetDensity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDensity
-				/// </java-name>
-				[Dot42.DexImport("setDensity", "(I)V", AccessFlags = 1)]
-				public void SetDensity(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// recycle
 				/// </java-name>
 				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
 				public void Recycle() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isRecycled
-				/// </java-name>
-				[Dot42.DexImport("isRecycled", "()Z", AccessFlags = 17)]
-				public bool IsRecycled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getGenerationId
-				/// </java-name>
-				[Dot42.DexImport("getGenerationId", "()I", AccessFlags = 1)]
-				public int GetGenerationId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -225,48 +190,12 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getNinePatchChunk
-				/// </java-name>
-				[Dot42.DexImport("getNinePatchChunk", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public byte[] GetNinePatchChunk() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// compress
 				/// </java-name>
 				[Dot42.DexImport("compress", "(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z", AccessFlags = 1)]
 				public bool Compress(global::Android.Graphics.Bitmap.CompressFormat compressFormat, int int32, global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// isMutable
-				/// </java-name>
-				[Dot42.DexImport("isMutable", "()Z", AccessFlags = 17)]
-				public bool IsMutable() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 17)]
-				public int GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 17)]
-				public int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -324,47 +253,12 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getRowBytes
-				/// </java-name>
-				[Dot42.DexImport("getRowBytes", "()I", AccessFlags = 17)]
-				public int GetRowBytes() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getByteCount
-				/// </java-name>
-				[Dot42.DexImport("getByteCount", "()I", AccessFlags = 17)]
-				public int GetByteCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getConfig
 				/// </java-name>
 				[Dot42.DexImport("getConfig", "()Landroid/graphics/Bitmap$Config;", AccessFlags = 17)]
 				public global::Android.Graphics.Bitmap.Config GetConfig() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap.Config);
-				}
-
-				/// <java-name>
-				/// hasAlpha
-				/// </java-name>
-				[Dot42.DexImport("hasAlpha", "()Z", AccessFlags = 17)]
-				public bool HasAlpha() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setHasAlpha
-				/// </java-name>
-				[Dot42.DexImport("setHasAlpha", "(Z)V", AccessFlags = 1)]
-				public void SetHasAlpha(bool boolean) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -465,10 +359,19 @@ namespace Android.Graphics
 				/// </java-name>
 				public int Density
 				{
-				[Dot42.DexImport("getDensity", "()I", AccessFlags = 1)]
-						get{ return GetDensity(); }
-				[Dot42.DexImport("setDensity", "(I)V", AccessFlags = 1)]
-						set{ SetDensity(value); }
+						[Dot42.DexImport("getDensity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setDensity", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isRecycled
+				/// </java-name>
+				public bool IsRecycled
+				{
+						[Dot42.DexImport("isRecycled", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -476,8 +379,8 @@ namespace Android.Graphics
 				/// </java-name>
 				public int GenerationId
 				{
-				[Dot42.DexImport("getGenerationId", "()I", AccessFlags = 1)]
-						get{ return GetGenerationId(); }
+						[Dot42.DexImport("getGenerationId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -485,8 +388,17 @@ namespace Android.Graphics
 				/// </java-name>
 				public byte[] NinePatchChunk
 				{
-				[Dot42.DexImport("getNinePatchChunk", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetNinePatchChunk(); }
+						[Dot42.DexImport("getNinePatchChunk", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
+				}
+
+				/// <java-name>
+				/// isMutable
+				/// </java-name>
+				public bool IsMutable
+				{
+						[Dot42.DexImport("isMutable", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -494,8 +406,8 @@ namespace Android.Graphics
 				/// </java-name>
 				public int Width
 				{
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 17)]
-						get{ return GetWidth(); }
+						[Dot42.DexImport("getWidth", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -503,8 +415,8 @@ namespace Android.Graphics
 				/// </java-name>
 				public int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 17)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -512,8 +424,8 @@ namespace Android.Graphics
 				/// </java-name>
 				public int RowBytes
 				{
-				[Dot42.DexImport("getRowBytes", "()I", AccessFlags = 17)]
-						get{ return GetRowBytes(); }
+						[Dot42.DexImport("getRowBytes", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -521,8 +433,19 @@ namespace Android.Graphics
 				/// </java-name>
 				public int ByteCount
 				{
-				[Dot42.DexImport("getByteCount", "()I", AccessFlags = 17)]
-						get{ return GetByteCount(); }
+						[Dot42.DexImport("getByteCount", "()I", AccessFlags = 17)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// hasAlpha
+				/// </java-name>
+				public bool HasAlpha
+				{
+						[Dot42.DexImport("hasAlpha", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setHasAlpha", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -941,38 +864,11 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-				public int GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-				public int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// recycle
 				/// </java-name>
 				[Dot42.DexImport("recycle", "()V", AccessFlags = 1)]
 				public void Recycle() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isRecycled
-				/// </java-name>
-				[Dot42.DexImport("isRecycled", "()Z", AccessFlags = 17)]
-				public bool IsRecycled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -986,8 +882,8 @@ namespace Android.Graphics
 				/// </java-name>
 				public int Width
 				{
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-						get{ return GetWidth(); }
+						[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -995,8 +891,17 @@ namespace Android.Graphics
 				/// </java-name>
 				public int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isRecycled
+				/// </java-name>
+				public bool IsRecycled
+				{
+						[Dot42.DexImport("isRecycled", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1248,82 +1153,11 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// isHardwareAccelerated
-				/// </java-name>
-				[Dot42.DexImport("isHardwareAccelerated", "()Z", AccessFlags = 1)]
-				public virtual bool IsHardwareAccelerated() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setBitmap
 				/// </java-name>
 				[Dot42.DexImport("setBitmap", "(Landroid/graphics/Bitmap;)V", AccessFlags = 1)]
 				public virtual void SetBitmap(global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isOpaque
-				/// </java-name>
-				[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 257)]
-				public virtual bool IsOpaque() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 257)]
-				public virtual int GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 257)]
-				public virtual int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getDensity
-				/// </java-name>
-				[Dot42.DexImport("getDensity", "()I", AccessFlags = 1)]
-				public virtual int GetDensity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setDensity
-				/// </java-name>
-				[Dot42.DexImport("setDensity", "(I)V", AccessFlags = 1)]
-				public virtual void SetDensity(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getMaximumBitmapWidth
-				/// </java-name>
-				[Dot42.DexImport("getMaximumBitmapWidth", "()I", AccessFlags = 1)]
-				public virtual int GetMaximumBitmapWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMaximumBitmapHeight
-				/// </java-name>
-				[Dot42.DexImport("getMaximumBitmapHeight", "()I", AccessFlags = 1)]
-				public virtual int GetMaximumBitmapHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1386,15 +1220,6 @@ namespace Android.Graphics
 				[Dot42.DexImport("restore", "()V", AccessFlags = 257)]
 				public virtual void Restore() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getSaveCount
-				/// </java-name>
-				[Dot42.DexImport("getSaveCount", "()I", AccessFlags = 257)]
-				public virtual int GetSaveCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1462,28 +1287,11 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// setMatrix
-				/// </java-name>
-				[Dot42.DexImport("setMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
-				public virtual void SetMatrix(global::Android.Graphics.Matrix matrix) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getMatrix
 				/// </java-name>
 				[Dot42.DexImport("getMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
 				public virtual void GetMatrix(global::Android.Graphics.Matrix matrix) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getMatrix
-				/// </java-name>
-				[Dot42.DexImport("getMatrix", "()Landroid/graphics/Matrix;", AccessFlags = 17)]
-				public global::Android.Graphics.Matrix GetMatrix() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Matrix);
 				}
 
 				/// <java-name>
@@ -1586,23 +1394,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getDrawFilter
-				/// </java-name>
-				[Dot42.DexImport("getDrawFilter", "()Landroid/graphics/DrawFilter;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.DrawFilter GetDrawFilter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.DrawFilter);
-				}
-
-				/// <java-name>
-				/// setDrawFilter
-				/// </java-name>
-				[Dot42.DexImport("setDrawFilter", "(Landroid/graphics/DrawFilter;)V", AccessFlags = 1)]
-				public virtual void SetDrawFilter(global::Android.Graphics.DrawFilter drawFilter) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// quickReject
 				/// </java-name>
 				[Dot42.DexImport("quickReject", "(Landroid/graphics/RectF;Landroid/graphics/Canvas$EdgeType;)Z", AccessFlags = 1)]
@@ -1636,15 +1427,6 @@ namespace Android.Graphics
 				public virtual bool GetClipBounds(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getClipBounds
-				/// </java-name>
-				[Dot42.DexImport("getClipBounds", "()Landroid/graphics/Rect;", AccessFlags = 17)]
-				public global::Android.Graphics.Rect GetClipBounds() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Rect);
 				}
 
 				/// <java-name>
@@ -1954,59 +1736,77 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
+				/// isHardwareAccelerated
+				/// </java-name>
+				public virtual bool IsHardwareAccelerated
+				{
+						[Dot42.DexImport("isHardwareAccelerated", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isOpaque
+				/// </java-name>
+				public virtual bool IsOpaque
+				{
+						[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getWidth
 				/// </java-name>
-				public int Width
+				public virtual int Width
 				{
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 257)]
-						get{ return GetWidth(); }
+						[Dot42.DexImport("getWidth", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getHeight
 				/// </java-name>
-				public int Height
+				public virtual int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 257)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getDensity
 				/// </java-name>
-				public int Density
+				public virtual int Density
 				{
-				[Dot42.DexImport("getDensity", "()I", AccessFlags = 1)]
-						get{ return GetDensity(); }
-				[Dot42.DexImport("setDensity", "(I)V", AccessFlags = 1)]
-						set{ SetDensity(value); }
+						[Dot42.DexImport("getDensity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setDensity", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getMaximumBitmapWidth
 				/// </java-name>
-				public int MaximumBitmapWidth
+				public virtual int MaximumBitmapWidth
 				{
-				[Dot42.DexImport("getMaximumBitmapWidth", "()I", AccessFlags = 1)]
-						get{ return GetMaximumBitmapWidth(); }
+						[Dot42.DexImport("getMaximumBitmapWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMaximumBitmapHeight
 				/// </java-name>
-				public int MaximumBitmapHeight
+				public virtual int MaximumBitmapHeight
 				{
-				[Dot42.DexImport("getMaximumBitmapHeight", "()I", AccessFlags = 1)]
-						get{ return GetMaximumBitmapHeight(); }
+						[Dot42.DexImport("getMaximumBitmapHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSaveCount
 				/// </java-name>
-				public int SaveCount
+				public virtual int SaveCount
 				{
-				[Dot42.DexImport("getSaveCount", "()I", AccessFlags = 257)]
-						get{ return GetSaveCount(); }
+						[Dot42.DexImport("getSaveCount", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2014,21 +1814,21 @@ namespace Android.Graphics
 				/// </java-name>
 				public global::Android.Graphics.Matrix Matrix
 				{
-				[Dot42.DexImport("getMatrix", "()Landroid/graphics/Matrix;", AccessFlags = 17)]
-						get{ return GetMatrix(); }
-				[Dot42.DexImport("setMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
-						set{ SetMatrix(value); }
+						[Dot42.DexImport("getMatrix", "()Landroid/graphics/Matrix;", AccessFlags = 17)]
+						get{ return default(global::Android.Graphics.Matrix); }
+						[Dot42.DexImport("setMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDrawFilter
 				/// </java-name>
-				public global::Android.Graphics.DrawFilter DrawFilter
+				public virtual global::Android.Graphics.DrawFilter DrawFilter
 				{
-				[Dot42.DexImport("getDrawFilter", "()Landroid/graphics/DrawFilter;", AccessFlags = 1)]
-						get{ return GetDrawFilter(); }
-				[Dot42.DexImport("setDrawFilter", "(Landroid/graphics/DrawFilter;)V", AccessFlags = 1)]
-						set{ SetDrawFilter(value); }
+						[Dot42.DexImport("getDrawFilter", "()Landroid/graphics/DrawFilter;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.DrawFilter); }
+						[Dot42.DexImport("setDrawFilter", "(Landroid/graphics/DrawFilter;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -2036,8 +1836,8 @@ namespace Android.Graphics
 				/// </java-name>
 				public global::Android.Graphics.Rect ClipBounds
 				{
-				[Dot42.DexImport("getClipBounds", "()Landroid/graphics/Rect;", AccessFlags = 17)]
-						get{ return GetClipBounds(); }
+						[Dot42.DexImport("getClipBounds", "()Landroid/graphics/Rect;", AccessFlags = 17)]
+						get{ return default(global::Android.Graphics.Rect); }
 				}
 
 				/// <java-name>
@@ -2343,15 +2143,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getArray
-				/// </java-name>
-				[Dot42.DexImport("getArray", "()[F", AccessFlags = 17)]
-				public float[] GetArray() /* MethodBuilder.Create */ 
-				{
-						return default(float[]);
-				}
-
-				/// <java-name>
 				/// reset
 				/// </java-name>
 				[Dot42.DexImport("reset", "()V", AccessFlags = 1)]
@@ -2444,8 +2235,8 @@ namespace Android.Graphics
 				/// </java-name>
 				public float[] Array
 				{
-				[Dot42.DexImport("getArray", "()[F", AccessFlags = 17)]
-						get{ return GetArray(); }
+						[Dot42.DexImport("getArray", "()[F", AccessFlags = 17)]
+						get{ return default(float[]); }
 				}
 
 		}
@@ -2706,24 +2497,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getKeyFrameCount
-				/// </java-name>
-				[Dot42.DexImport("getKeyFrameCount", "()I", AccessFlags = 17)]
-				public int GetKeyFrameCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getValueCount
-				/// </java-name>
-				[Dot42.DexImport("getValueCount", "()I", AccessFlags = 17)]
-				public int GetValueCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setKeyFrame
 				/// </java-name>
 				[Dot42.DexImport("setKeyFrame", "(II[F)V", AccessFlags = 1)]
@@ -2781,8 +2554,8 @@ namespace Android.Graphics
 				/// </java-name>
 				public int KeyFrameCount
 				{
-				[Dot42.DexImport("getKeyFrameCount", "()I", AccessFlags = 17)]
-						get{ return GetKeyFrameCount(); }
+						[Dot42.DexImport("getKeyFrameCount", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2790,8 +2563,8 @@ namespace Android.Graphics
 				/// </java-name>
 				public int ValueCount
 				{
-				[Dot42.DexImport("getValueCount", "()I", AccessFlags = 17)]
-						get{ return GetValueCount(); }
+						[Dot42.DexImport("getValueCount", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2995,15 +2768,6 @@ namespace Android.Graphics
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
 				public Matrix(global::Android.Graphics.Matrix matrix) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isIdentity
-				/// </java-name>
-				[Dot42.DexImport("isIdentity", "()Z", AccessFlags = 1)]
-				public virtual bool IsIdentity() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -3409,6 +3173,15 @@ namespace Android.Graphics
 				extern ~Matrix() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// isIdentity
+				/// </java-name>
+				public virtual bool IsIdentity
+				{
+						[Dot42.DexImport("isIdentity", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// android/graphics/Matrix$ScaleToFit
 				/// </java-name>
 				[Dot42.DexImport("android/graphics/Matrix$ScaleToFit", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/graphics/Matrix$ScaleToFit;>;")]
@@ -3492,15 +3265,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// isOpaque
-				/// </java-name>
-				[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 257)]
-				public virtual bool IsOpaque() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// duration
 				/// </java-name>
 				[Dot42.DexImport("duration", "()I", AccessFlags = 257)]
@@ -3576,6 +3340,15 @@ namespace Android.Graphics
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
 				extern ~Movie() /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// isOpaque
+				/// </java-name>
+				public virtual bool IsOpaque
+				{
+						[Dot42.DexImport("isOpaque", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -3628,42 +3401,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getDensity
-				/// </java-name>
-				[Dot42.DexImport("getDensity", "()I", AccessFlags = 1)]
-				public virtual int GetDensity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-				public virtual int GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-				public virtual int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// hasAlpha
-				/// </java-name>
-				[Dot42.DexImport("hasAlpha", "()Z", AccessFlags = 17)]
-				public bool HasAlpha() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getTransparentRegion
 				/// </java-name>
 				[Dot42.DexImport("getTransparentRegion", "(Landroid/graphics/Rect;)Landroid/graphics/Region;", AccessFlags = 17)]
@@ -3698,28 +3435,37 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getDensity
 				/// </java-name>
-				public int Density
+				public virtual int Density
 				{
-				[Dot42.DexImport("getDensity", "()I", AccessFlags = 1)]
-						get{ return GetDensity(); }
+						[Dot42.DexImport("getDensity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getWidth
 				/// </java-name>
-				public int Width
+				public virtual int Width
 				{
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-						get{ return GetWidth(); }
+						[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getHeight
 				/// </java-name>
-				public int Height
+				public virtual int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// hasAlpha
+				/// </java-name>
+				public bool HasAlpha
+				{
+						[Dot42.DexImport("hasAlpha", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -3818,63 +3564,11 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getFlags
-				/// </java-name>
-				[Dot42.DexImport("getFlags", "()I", AccessFlags = 257)]
-				public virtual int GetFlags() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setFlags
-				/// </java-name>
-				[Dot42.DexImport("setFlags", "(I)V", AccessFlags = 257)]
-				public virtual void SetFlags(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getHinting
-				/// </java-name>
-				[Dot42.DexImport("getHinting", "()I", AccessFlags = 257)]
-				public virtual int GetHinting() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setHinting
-				/// </java-name>
-				[Dot42.DexImport("setHinting", "(I)V", AccessFlags = 257)]
-				public virtual void SetHinting(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// isAntiAlias
-				/// </java-name>
-				[Dot42.DexImport("isAntiAlias", "()Z", AccessFlags = 17)]
-				public bool IsAntiAlias() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setAntiAlias
 				/// </java-name>
 				[Dot42.DexImport("setAntiAlias", "(Z)V", AccessFlags = 257)]
 				public virtual void SetAntiAlias(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isDither
-				/// </java-name>
-				[Dot42.DexImport("isDither", "()Z", AccessFlags = 17)]
-				public bool IsDither() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -3886,29 +3580,11 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// isLinearText
-				/// </java-name>
-				[Dot42.DexImport("isLinearText", "()Z", AccessFlags = 17)]
-				public bool IsLinearText() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setLinearText
 				/// </java-name>
 				[Dot42.DexImport("setLinearText", "(Z)V", AccessFlags = 257)]
 				public virtual void SetLinearText(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isSubpixelText
-				/// </java-name>
-				[Dot42.DexImport("isSubpixelText", "()Z", AccessFlags = 17)]
-				public bool IsSubpixelText() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -3920,29 +3596,11 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// isUnderlineText
-				/// </java-name>
-				[Dot42.DexImport("isUnderlineText", "()Z", AccessFlags = 17)]
-				public bool IsUnderlineText() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setUnderlineText
 				/// </java-name>
 				[Dot42.DexImport("setUnderlineText", "(Z)V", AccessFlags = 257)]
 				public virtual void SetUnderlineText(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isStrikeThruText
-				/// </java-name>
-				[Dot42.DexImport("isStrikeThruText", "()Z", AccessFlags = 17)]
-				public bool IsStrikeThruText() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -3954,29 +3612,11 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// isFakeBoldText
-				/// </java-name>
-				[Dot42.DexImport("isFakeBoldText", "()Z", AccessFlags = 17)]
-				public bool IsFakeBoldText() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setFakeBoldText
 				/// </java-name>
 				[Dot42.DexImport("setFakeBoldText", "(Z)V", AccessFlags = 257)]
 				public virtual void SetFakeBoldText(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isFilterBitmap
-				/// </java-name>
-				[Dot42.DexImport("isFilterBitmap", "()Z", AccessFlags = 17)]
-				public bool IsFilterBitmap() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -4005,112 +3645,10 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getColor
-				/// </java-name>
-				[Dot42.DexImport("getColor", "()I", AccessFlags = 257)]
-				public virtual int GetColor() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setColor
-				/// </java-name>
-				[Dot42.DexImport("setColor", "(I)V", AccessFlags = 257)]
-				public virtual void SetColor(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getAlpha
-				/// </java-name>
-				[Dot42.DexImport("getAlpha", "()I", AccessFlags = 257)]
-				public virtual int GetAlpha() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setAlpha
-				/// </java-name>
-				[Dot42.DexImport("setAlpha", "(I)V", AccessFlags = 257)]
-				public virtual void SetAlpha(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setARGB
 				/// </java-name>
 				[Dot42.DexImport("setARGB", "(IIII)V", AccessFlags = 1)]
 				public virtual void SetARGB(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getStrokeWidth
-				/// </java-name>
-				[Dot42.DexImport("getStrokeWidth", "()F", AccessFlags = 257)]
-				public virtual float GetStrokeWidth() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// setStrokeWidth
-				/// </java-name>
-				[Dot42.DexImport("setStrokeWidth", "(F)V", AccessFlags = 257)]
-				public virtual void SetStrokeWidth(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getStrokeMiter
-				/// </java-name>
-				[Dot42.DexImport("getStrokeMiter", "()F", AccessFlags = 257)]
-				public virtual float GetStrokeMiter() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// setStrokeMiter
-				/// </java-name>
-				[Dot42.DexImport("setStrokeMiter", "(F)V", AccessFlags = 257)]
-				public virtual void SetStrokeMiter(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getStrokeCap
-				/// </java-name>
-				[Dot42.DexImport("getStrokeCap", "()Landroid/graphics/Paint$Cap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Paint.Cap GetStrokeCap() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Paint.Cap);
-				}
-
-				/// <java-name>
-				/// setStrokeCap
-				/// </java-name>
-				[Dot42.DexImport("setStrokeCap", "(Landroid/graphics/Paint$Cap;)V", AccessFlags = 1)]
-				public virtual void SetStrokeCap(global::Android.Graphics.Paint.Cap cap) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getStrokeJoin
-				/// </java-name>
-				[Dot42.DexImport("getStrokeJoin", "()Landroid/graphics/Paint$Join;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Paint.Join GetStrokeJoin() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Paint.Join);
-				}
-
-				/// <java-name>
-				/// setStrokeJoin
-				/// </java-name>
-				[Dot42.DexImport("setStrokeJoin", "(Landroid/graphics/Paint$Join;)V", AccessFlags = 1)]
-				public virtual void SetStrokeJoin(global::Android.Graphics.Paint.Join join) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4124,30 +3662,12 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getShader
-				/// </java-name>
-				[Dot42.DexImport("getShader", "()Landroid/graphics/Shader;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Shader GetShader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Shader);
-				}
-
-				/// <java-name>
 				/// setShader
 				/// </java-name>
 				[Dot42.DexImport("setShader", "(Landroid/graphics/Shader;)Landroid/graphics/Shader;", AccessFlags = 1)]
 				public virtual global::Android.Graphics.Shader SetShader(global::Android.Graphics.Shader shader) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Shader);
-				}
-
-				/// <java-name>
-				/// getColorFilter
-				/// </java-name>
-				[Dot42.DexImport("getColorFilter", "()Landroid/graphics/ColorFilter;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.ColorFilter GetColorFilter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.ColorFilter);
 				}
 
 				/// <java-name>
@@ -4160,30 +3680,12 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getXfermode
-				/// </java-name>
-				[Dot42.DexImport("getXfermode", "()Landroid/graphics/Xfermode;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Xfermode GetXfermode() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Xfermode);
-				}
-
-				/// <java-name>
 				/// setXfermode
 				/// </java-name>
 				[Dot42.DexImport("setXfermode", "(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;", AccessFlags = 1)]
 				public virtual global::Android.Graphics.Xfermode SetXfermode(global::Android.Graphics.Xfermode xfermode) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Xfermode);
-				}
-
-				/// <java-name>
-				/// getPathEffect
-				/// </java-name>
-				[Dot42.DexImport("getPathEffect", "()Landroid/graphics/PathEffect;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.PathEffect GetPathEffect() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.PathEffect);
 				}
 
 				/// <java-name>
@@ -4196,15 +3698,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getMaskFilter
-				/// </java-name>
-				[Dot42.DexImport("getMaskFilter", "()Landroid/graphics/MaskFilter;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.MaskFilter GetMaskFilter() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.MaskFilter);
-				}
-
-				/// <java-name>
 				/// setMaskFilter
 				/// </java-name>
 				[Dot42.DexImport("setMaskFilter", "(Landroid/graphics/MaskFilter;)Landroid/graphics/MaskFilter;", AccessFlags = 1)]
@@ -4214,30 +3707,12 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getTypeface
-				/// </java-name>
-				[Dot42.DexImport("getTypeface", "()Landroid/graphics/Typeface;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Typeface GetTypeface() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Typeface);
-				}
-
-				/// <java-name>
 				/// setTypeface
 				/// </java-name>
 				[Dot42.DexImport("setTypeface", "(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;", AccessFlags = 1)]
 				public virtual global::Android.Graphics.Typeface SetTypeface(global::Android.Graphics.Typeface typeface) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Typeface);
-				}
-
-				/// <java-name>
-				/// getRasterizer
-				/// </java-name>
-				[Dot42.DexImport("getRasterizer", "()Landroid/graphics/Rasterizer;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Rasterizer GetRasterizer() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Rasterizer);
 				}
 
 				/// <java-name>
@@ -4262,74 +3737,6 @@ namespace Android.Graphics
 				/// </java-name>
 				[Dot42.DexImport("clearShadowLayer", "()V", AccessFlags = 1)]
 				public virtual void ClearShadowLayer() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTextAlign
-				/// </java-name>
-				[Dot42.DexImport("getTextAlign", "()Landroid/graphics/Paint$Align;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Paint.Align GetTextAlign() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Paint.Align);
-				}
-
-				/// <java-name>
-				/// setTextAlign
-				/// </java-name>
-				[Dot42.DexImport("setTextAlign", "(Landroid/graphics/Paint$Align;)V", AccessFlags = 1)]
-				public virtual void SetTextAlign(global::Android.Graphics.Paint.Align align) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTextSize
-				/// </java-name>
-				[Dot42.DexImport("getTextSize", "()F", AccessFlags = 257)]
-				public virtual float GetTextSize() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// setTextSize
-				/// </java-name>
-				[Dot42.DexImport("setTextSize", "(F)V", AccessFlags = 257)]
-				public virtual void SetTextSize(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTextScaleX
-				/// </java-name>
-				[Dot42.DexImport("getTextScaleX", "()F", AccessFlags = 257)]
-				public virtual float GetTextScaleX() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// setTextScaleX
-				/// </java-name>
-				[Dot42.DexImport("setTextScaleX", "(F)V", AccessFlags = 257)]
-				public virtual void SetTextScaleX(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getTextSkewX
-				/// </java-name>
-				[Dot42.DexImport("getTextSkewX", "()F", AccessFlags = 257)]
-				public virtual float GetTextSkewX() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// setTextSkewX
-				/// </java-name>
-				[Dot42.DexImport("setTextSkewX", "(F)V", AccessFlags = 257)]
-				public virtual void SetTextSkewX(float single) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4385,15 +3792,6 @@ namespace Android.Graphics
 				public virtual global::Android.Graphics.Paint.FontMetricsInt GetFontMetricsInt() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Paint.FontMetricsInt);
-				}
-
-				/// <java-name>
-				/// getFontSpacing
-				/// </java-name>
-				[Dot42.DexImport("getFontSpacing", "()F", AccessFlags = 1)]
-				public virtual float GetFontSpacing() /* MethodBuilder.Create */ 
-				{
-						return default(float);
 				}
 
 				/// <java-name>
@@ -4536,205 +3934,277 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getFlags
 				/// </java-name>
-				public int Flags
+				public virtual int Flags
 				{
-				[Dot42.DexImport("getFlags", "()I", AccessFlags = 257)]
-						get{ return GetFlags(); }
-				[Dot42.DexImport("setFlags", "(I)V", AccessFlags = 257)]
-						set{ SetFlags(value); }
+						[Dot42.DexImport("getFlags", "()I", AccessFlags = 257)]
+						get{ return default(int); }
+						[Dot42.DexImport("setFlags", "(I)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getHinting
 				/// </java-name>
-				public int Hinting
+				public virtual int Hinting
 				{
-				[Dot42.DexImport("getHinting", "()I", AccessFlags = 257)]
-						get{ return GetHinting(); }
-				[Dot42.DexImport("setHinting", "(I)V", AccessFlags = 257)]
-						set{ SetHinting(value); }
+						[Dot42.DexImport("getHinting", "()I", AccessFlags = 257)]
+						get{ return default(int); }
+						[Dot42.DexImport("setHinting", "(I)V", AccessFlags = 257)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isAntiAlias
+				/// </java-name>
+				public bool IsAntiAlias
+				{
+						[Dot42.DexImport("isAntiAlias", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDither
+				/// </java-name>
+				public bool IsDither
+				{
+						[Dot42.DexImport("isDither", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLinearText
+				/// </java-name>
+				public bool IsLinearText
+				{
+						[Dot42.DexImport("isLinearText", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isSubpixelText
+				/// </java-name>
+				public bool IsSubpixelText
+				{
+						[Dot42.DexImport("isSubpixelText", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isUnderlineText
+				/// </java-name>
+				public bool IsUnderlineText
+				{
+						[Dot42.DexImport("isUnderlineText", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isStrikeThruText
+				/// </java-name>
+				public bool IsStrikeThruText
+				{
+						[Dot42.DexImport("isStrikeThruText", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFakeBoldText
+				/// </java-name>
+				public bool IsFakeBoldText
+				{
+						[Dot42.DexImport("isFakeBoldText", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFilterBitmap
+				/// </java-name>
+				public bool IsFilterBitmap
+				{
+						[Dot42.DexImport("isFilterBitmap", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getColor
 				/// </java-name>
-				public int Color
+				public virtual int Color
 				{
-				[Dot42.DexImport("getColor", "()I", AccessFlags = 257)]
-						get{ return GetColor(); }
-				[Dot42.DexImport("setColor", "(I)V", AccessFlags = 257)]
-						set{ SetColor(value); }
+						[Dot42.DexImport("getColor", "()I", AccessFlags = 257)]
+						get{ return default(int); }
+						[Dot42.DexImport("setColor", "(I)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getAlpha
 				/// </java-name>
-				public int Alpha
+				public virtual int Alpha
 				{
-				[Dot42.DexImport("getAlpha", "()I", AccessFlags = 257)]
-						get{ return GetAlpha(); }
-				[Dot42.DexImport("setAlpha", "(I)V", AccessFlags = 257)]
-						set{ SetAlpha(value); }
+						[Dot42.DexImport("getAlpha", "()I", AccessFlags = 257)]
+						get{ return default(int); }
+						[Dot42.DexImport("setAlpha", "(I)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getStrokeWidth
 				/// </java-name>
-				public float StrokeWidth
+				public virtual float StrokeWidth
 				{
-				[Dot42.DexImport("getStrokeWidth", "()F", AccessFlags = 257)]
-						get{ return GetStrokeWidth(); }
-				[Dot42.DexImport("setStrokeWidth", "(F)V", AccessFlags = 257)]
-						set{ SetStrokeWidth(value); }
+						[Dot42.DexImport("getStrokeWidth", "()F", AccessFlags = 257)]
+						get{ return default(float); }
+						[Dot42.DexImport("setStrokeWidth", "(F)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getStrokeMiter
 				/// </java-name>
-				public float StrokeMiter
+				public virtual float StrokeMiter
 				{
-				[Dot42.DexImport("getStrokeMiter", "()F", AccessFlags = 257)]
-						get{ return GetStrokeMiter(); }
-				[Dot42.DexImport("setStrokeMiter", "(F)V", AccessFlags = 257)]
-						set{ SetStrokeMiter(value); }
+						[Dot42.DexImport("getStrokeMiter", "()F", AccessFlags = 257)]
+						get{ return default(float); }
+						[Dot42.DexImport("setStrokeMiter", "(F)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getStrokeCap
 				/// </java-name>
-				public global::Android.Graphics.Paint.Cap StrokeCap
+				public virtual global::Android.Graphics.Paint.Cap StrokeCap
 				{
-				[Dot42.DexImport("getStrokeCap", "()Landroid/graphics/Paint$Cap;", AccessFlags = 1)]
-						get{ return GetStrokeCap(); }
-				[Dot42.DexImport("setStrokeCap", "(Landroid/graphics/Paint$Cap;)V", AccessFlags = 1)]
-						set{ SetStrokeCap(value); }
+						[Dot42.DexImport("getStrokeCap", "()Landroid/graphics/Paint$Cap;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Paint.Cap); }
+						[Dot42.DexImport("setStrokeCap", "(Landroid/graphics/Paint$Cap;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getStrokeJoin
 				/// </java-name>
-				public global::Android.Graphics.Paint.Join StrokeJoin
+				public virtual global::Android.Graphics.Paint.Join StrokeJoin
 				{
-				[Dot42.DexImport("getStrokeJoin", "()Landroid/graphics/Paint$Join;", AccessFlags = 1)]
-						get{ return GetStrokeJoin(); }
-				[Dot42.DexImport("setStrokeJoin", "(Landroid/graphics/Paint$Join;)V", AccessFlags = 1)]
-						set{ SetStrokeJoin(value); }
+						[Dot42.DexImport("getStrokeJoin", "()Landroid/graphics/Paint$Join;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Paint.Join); }
+						[Dot42.DexImport("setStrokeJoin", "(Landroid/graphics/Paint$Join;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getShader
 				/// </java-name>
-				public global::Android.Graphics.Shader Shader
+				public virtual global::Android.Graphics.Shader Shader
 				{
-				[Dot42.DexImport("getShader", "()Landroid/graphics/Shader;", AccessFlags = 1)]
-						get{ return GetShader(); }
+						[Dot42.DexImport("getShader", "()Landroid/graphics/Shader;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Shader); }
 				}
 
 				/// <java-name>
 				/// getColorFilter
 				/// </java-name>
-				public global::Android.Graphics.ColorFilter ColorFilter
+				public virtual global::Android.Graphics.ColorFilter ColorFilter
 				{
-				[Dot42.DexImport("getColorFilter", "()Landroid/graphics/ColorFilter;", AccessFlags = 1)]
-						get{ return GetColorFilter(); }
+						[Dot42.DexImport("getColorFilter", "()Landroid/graphics/ColorFilter;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.ColorFilter); }
 				}
 
 				/// <java-name>
 				/// getXfermode
 				/// </java-name>
-				public global::Android.Graphics.Xfermode Xfermode
+				public virtual global::Android.Graphics.Xfermode Xfermode
 				{
-				[Dot42.DexImport("getXfermode", "()Landroid/graphics/Xfermode;", AccessFlags = 1)]
-						get{ return GetXfermode(); }
+						[Dot42.DexImport("getXfermode", "()Landroid/graphics/Xfermode;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Xfermode); }
 				}
 
 				/// <java-name>
 				/// getPathEffect
 				/// </java-name>
-				public global::Android.Graphics.PathEffect PathEffect
+				public virtual global::Android.Graphics.PathEffect PathEffect
 				{
-				[Dot42.DexImport("getPathEffect", "()Landroid/graphics/PathEffect;", AccessFlags = 1)]
-						get{ return GetPathEffect(); }
+						[Dot42.DexImport("getPathEffect", "()Landroid/graphics/PathEffect;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.PathEffect); }
 				}
 
 				/// <java-name>
 				/// getMaskFilter
 				/// </java-name>
-				public global::Android.Graphics.MaskFilter MaskFilter
+				public virtual global::Android.Graphics.MaskFilter MaskFilter
 				{
-				[Dot42.DexImport("getMaskFilter", "()Landroid/graphics/MaskFilter;", AccessFlags = 1)]
-						get{ return GetMaskFilter(); }
+						[Dot42.DexImport("getMaskFilter", "()Landroid/graphics/MaskFilter;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.MaskFilter); }
 				}
 
 				/// <java-name>
 				/// getTypeface
 				/// </java-name>
-				public global::Android.Graphics.Typeface Typeface
+				public virtual global::Android.Graphics.Typeface Typeface
 				{
-				[Dot42.DexImport("getTypeface", "()Landroid/graphics/Typeface;", AccessFlags = 1)]
-						get{ return GetTypeface(); }
+						[Dot42.DexImport("getTypeface", "()Landroid/graphics/Typeface;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Typeface); }
 				}
 
 				/// <java-name>
 				/// getRasterizer
 				/// </java-name>
-				public global::Android.Graphics.Rasterizer Rasterizer
+				public virtual global::Android.Graphics.Rasterizer Rasterizer
 				{
-				[Dot42.DexImport("getRasterizer", "()Landroid/graphics/Rasterizer;", AccessFlags = 1)]
-						get{ return GetRasterizer(); }
+						[Dot42.DexImport("getRasterizer", "()Landroid/graphics/Rasterizer;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Rasterizer); }
 				}
 
 				/// <java-name>
 				/// getTextAlign
 				/// </java-name>
-				public global::Android.Graphics.Paint.Align TextAlign
+				public virtual global::Android.Graphics.Paint.Align TextAlign
 				{
-				[Dot42.DexImport("getTextAlign", "()Landroid/graphics/Paint$Align;", AccessFlags = 1)]
-						get{ return GetTextAlign(); }
-				[Dot42.DexImport("setTextAlign", "(Landroid/graphics/Paint$Align;)V", AccessFlags = 1)]
-						set{ SetTextAlign(value); }
+						[Dot42.DexImport("getTextAlign", "()Landroid/graphics/Paint$Align;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Paint.Align); }
+						[Dot42.DexImport("setTextAlign", "(Landroid/graphics/Paint$Align;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTextSize
 				/// </java-name>
-				public float TextSize
+				public virtual float TextSize
 				{
-				[Dot42.DexImport("getTextSize", "()F", AccessFlags = 257)]
-						get{ return GetTextSize(); }
-				[Dot42.DexImport("setTextSize", "(F)V", AccessFlags = 257)]
-						set{ SetTextSize(value); }
+						[Dot42.DexImport("getTextSize", "()F", AccessFlags = 257)]
+						get{ return default(float); }
+						[Dot42.DexImport("setTextSize", "(F)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTextScaleX
 				/// </java-name>
-				public float TextScaleX
+				public virtual float TextScaleX
 				{
-				[Dot42.DexImport("getTextScaleX", "()F", AccessFlags = 257)]
-						get{ return GetTextScaleX(); }
-				[Dot42.DexImport("setTextScaleX", "(F)V", AccessFlags = 257)]
-						set{ SetTextScaleX(value); }
+						[Dot42.DexImport("getTextScaleX", "()F", AccessFlags = 257)]
+						get{ return default(float); }
+						[Dot42.DexImport("setTextScaleX", "(F)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTextSkewX
 				/// </java-name>
-				public float TextSkewX
+				public virtual float TextSkewX
 				{
-				[Dot42.DexImport("getTextSkewX", "()F", AccessFlags = 257)]
-						get{ return GetTextSkewX(); }
-				[Dot42.DexImport("setTextSkewX", "(F)V", AccessFlags = 257)]
-						set{ SetTextSkewX(value); }
+						[Dot42.DexImport("getTextSkewX", "()F", AccessFlags = 257)]
+						get{ return default(float); }
+						[Dot42.DexImport("setTextSkewX", "(F)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getFontSpacing
 				/// </java-name>
-				public float FontSpacing
+				public virtual float FontSpacing
 				{
-				[Dot42.DexImport("getFontSpacing", "()F", AccessFlags = 1)]
-						get{ return GetFontSpacing(); }
+						[Dot42.DexImport("getFontSpacing", "()F", AccessFlags = 1)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
@@ -5088,29 +4558,11 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// isInverseFillType
-				/// </java-name>
-				[Dot42.DexImport("isInverseFillType", "()Z", AccessFlags = 1)]
-				public virtual bool IsInverseFillType() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// toggleInverseFillType
 				/// </java-name>
 				[Dot42.DexImport("toggleInverseFillType", "()V", AccessFlags = 1)]
 				public virtual void ToggleInverseFillType() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
-				public virtual bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -5353,6 +4805,24 @@ namespace Android.Graphics
 				extern ~Path() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// isInverseFillType
+				/// </java-name>
+				public virtual bool IsInverseFillType
+				{
+						[Dot42.DexImport("isInverseFillType", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public virtual bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// android/graphics/Path$Direction
 				/// </java-name>
 				[Dot42.DexImport("android/graphics/Path$Direction", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/graphics/Path$Direction;>;")]
@@ -5567,15 +5037,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()F", AccessFlags = 1)]
-				public virtual float GetLength() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
 				/// getPosTan
 				/// </java-name>
 				[Dot42.DexImport("getPosTan", "(F[F[F)Z", AccessFlags = 1)]
@@ -5603,15 +5064,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
-				public virtual bool IsClosed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// nextContour
 				/// </java-name>
 				[Dot42.DexImport("nextContour", "()Z", AccessFlags = 1)]
@@ -5629,10 +5081,19 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getLength
 				/// </java-name>
-				public float Length
+				public virtual float Length
 				{
-				[Dot42.DexImport("getLength", "()F", AccessFlags = 1)]
-						get{ return GetLength(); }
+						[Dot42.DexImport("getLength", "()F", AccessFlags = 1)]
+						get{ return default(float); }
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				public virtual bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -5672,24 +5133,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 257)]
-				public virtual int GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 257)]
-				public virtual int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// draw
 				/// </java-name>
 				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
@@ -5723,19 +5166,19 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getWidth
 				/// </java-name>
-				public int Width
+				public virtual int Width
 				{
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 257)]
-						get{ return GetWidth(); }
+						[Dot42.DexImport("getWidth", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getHeight
 				/// </java-name>
-				public int Height
+				public virtual int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 257)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 257)]
+						get{ return default(int); }
 				}
 
 		}
@@ -6447,15 +5890,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 17)]
-				public bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// width
 				/// </java-name>
 				[Dot42.DexImport("width", "()I", AccessFlags = 17)]
@@ -6686,6 +6120,15 @@ namespace Android.Graphics
 				{
 				}
 
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -6756,15 +6199,6 @@ namespace Android.Graphics
 				public virtual string ToShortString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 17)]
-				public bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -7004,6 +6438,15 @@ namespace Android.Graphics
 				{
 				}
 
+				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -7083,57 +6526,12 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// isEmpty
-				/// </java-name>
-				[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 257)]
-				public virtual bool IsEmpty() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isRect
-				/// </java-name>
-				[Dot42.DexImport("isRect", "()Z", AccessFlags = 257)]
-				public virtual bool IsRect() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isComplex
-				/// </java-name>
-				[Dot42.DexImport("isComplex", "()Z", AccessFlags = 257)]
-				public virtual bool IsComplex() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getBounds
-				/// </java-name>
-				[Dot42.DexImport("getBounds", "()Landroid/graphics/Rect;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Rect GetBounds() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Rect);
-				}
-
-				/// <java-name>
 				/// getBounds
 				/// </java-name>
 				[Dot42.DexImport("getBounds", "(Landroid/graphics/Rect;)Z", AccessFlags = 1)]
 				public virtual bool GetBounds(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getBoundaryPath
-				/// </java-name>
-				[Dot42.DexImport("getBoundaryPath", "()Landroid/graphics/Path;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Path GetBoundaryPath() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Path);
 				}
 
 				/// <java-name>
@@ -7312,21 +6710,48 @@ namespace Android.Graphics
 				extern ~Region() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// isEmpty
+				/// </java-name>
+				public virtual bool IsEmpty
+				{
+						[Dot42.DexImport("isEmpty", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isRect
+				/// </java-name>
+				public virtual bool IsRect
+				{
+						[Dot42.DexImport("isRect", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isComplex
+				/// </java-name>
+				public virtual bool IsComplex
+				{
+						[Dot42.DexImport("isComplex", "()Z", AccessFlags = 257)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getBounds
 				/// </java-name>
-				public global::Android.Graphics.Rect Bounds
+				public virtual global::Android.Graphics.Rect Bounds
 				{
-				[Dot42.DexImport("getBounds", "()Landroid/graphics/Rect;", AccessFlags = 1)]
-						get{ return GetBounds(); }
+						[Dot42.DexImport("getBounds", "()Landroid/graphics/Rect;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Rect); }
 				}
 
 				/// <java-name>
 				/// getBoundaryPath
 				/// </java-name>
-				public global::Android.Graphics.Path BoundaryPath
+				public virtual global::Android.Graphics.Path BoundaryPath
 				{
-				[Dot42.DexImport("getBoundaryPath", "()Landroid/graphics/Path;", AccessFlags = 1)]
-						get{ return GetBoundaryPath(); }
+						[Dot42.DexImport("getBoundaryPath", "()Landroid/graphics/Path;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Path); }
 				}
 
 				/// <java-name>
@@ -7573,15 +6998,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getTimestamp
-				/// </java-name>
-				[Dot42.DexImport("getTimestamp", "()J", AccessFlags = 1)]
-				public virtual long GetTimestamp() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// release
 				/// </java-name>
 				[Dot42.DexImport("release", "()V", AccessFlags = 1)]
@@ -7603,10 +7019,10 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getTimestamp
 				/// </java-name>
-				public long Timestamp
+				public virtual long Timestamp
 				{
-				[Dot42.DexImport("getTimestamp", "()J", AccessFlags = 1)]
-						get{ return GetTimestamp(); }
+						[Dot42.DexImport("getTimestamp", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -7727,33 +7143,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// getStyle
-				/// </java-name>
-				[Dot42.DexImport("getStyle", "()I", AccessFlags = 1)]
-				public virtual int GetStyle() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isBold
-				/// </java-name>
-				[Dot42.DexImport("isBold", "()Z", AccessFlags = 17)]
-				public bool IsBold() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isItalic
-				/// </java-name>
-				[Dot42.DexImport("isItalic", "()Z", AccessFlags = 17)]
-				public bool IsItalic() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// create
 				/// </java-name>
 				[Dot42.DexImport("create", "(Ljava/lang/String;I)Landroid/graphics/Typeface;", AccessFlags = 9)]
@@ -7817,10 +7206,28 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getStyle
 				/// </java-name>
-				public int Style
+				public virtual int Style
 				{
-				[Dot42.DexImport("getStyle", "()I", AccessFlags = 1)]
-						get{ return GetStyle(); }
+						[Dot42.DexImport("getStyle", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isBold
+				/// </java-name>
+				public bool IsBold
+				{
+						[Dot42.DexImport("isBold", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isItalic
+				/// </java-name>
+				public bool IsItalic
+				{
+						[Dot42.DexImport("isItalic", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -7880,51 +7287,6 @@ namespace Android.Graphics
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getYuvData
-				/// </java-name>
-				[Dot42.DexImport("getYuvData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetYuvData() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getYuvFormat
-				/// </java-name>
-				[Dot42.DexImport("getYuvFormat", "()I", AccessFlags = 1)]
-				public virtual int GetYuvFormat() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getStrides
-				/// </java-name>
-				[Dot42.DexImport("getStrides", "()[I", AccessFlags = 1)]
-				public virtual int[] GetStrides() /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-				public virtual int GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-				public virtual int GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal YuvImage() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -7933,46 +7295,46 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getYuvData
 				/// </java-name>
-				public byte[] YuvData
+				public virtual byte[] YuvData
 				{
-				[Dot42.DexImport("getYuvData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetYuvData(); }
+						[Dot42.DexImport("getYuvData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getYuvFormat
 				/// </java-name>
-				public int YuvFormat
+				public virtual int YuvFormat
 				{
-				[Dot42.DexImport("getYuvFormat", "()I", AccessFlags = 1)]
-						get{ return GetYuvFormat(); }
+						[Dot42.DexImport("getYuvFormat", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getStrides
 				/// </java-name>
-				public int[] Strides
+				public virtual int[] Strides
 				{
-				[Dot42.DexImport("getStrides", "()[I", AccessFlags = 1)]
-						get{ return GetStrides(); }
+						[Dot42.DexImport("getStrides", "()[I", AccessFlags = 1)]
+						get{ return default(int[]); }
 				}
 
 				/// <java-name>
 				/// getWidth
 				/// </java-name>
-				public int Width
+				public virtual int Width
 				{
-				[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-						get{ return GetWidth(); }
+						[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getHeight
 				/// </java-name>
-				public int Height
+				public virtual int Height
 				{
-				[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

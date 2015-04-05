@@ -38,12 +38,6 @@ namespace Javax.Security.Cert
 				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// verify
 				/// </java-name>
 				[Dot42.DexImport("verify", "(Ljava/security/PublicKey;)V", AccessFlags = 1025)]
@@ -65,27 +59,21 @@ namespace Javax.Security.Cert
 				}
 
 				/// <java-name>
-				/// getPublicKey
-				/// </java-name>
-				[Dot42.DexImport("getPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1025)]
-				public abstract global::Java.Security.IPublicKey GetPublicKey() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public abstract byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 				/// <java-name>
 				/// getPublicKey
 				/// </java-name>
-				public global::Java.Security.IPublicKey PublicKey
+				public abstract global::Java.Security.IPublicKey PublicKey
 				{
-				[Dot42.DexImport("getPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1025)]
-						get{ return GetPublicKey(); }
+						[Dot42.DexImport("getPublicKey", "()Ljava/security/PublicKey;", AccessFlags = 1025)]
+						get;
 				}
 
 		}
@@ -237,144 +225,90 @@ namespace Javax.Security.Cert
 				public abstract void CheckValidity(global::Java.Util.Date date) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
-				public abstract int GetVersion() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSerialNumber
-				/// </java-name>
-				[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-				public abstract global::Java.Math.BigInteger GetSerialNumber() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getIssuerDN
-				/// </java-name>
-				[Dot42.DexImport("getIssuerDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				public abstract global::Java.Security.IPrincipal GetIssuerDN() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSubjectDN
-				/// </java-name>
-				[Dot42.DexImport("getSubjectDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-				public abstract global::Java.Security.IPrincipal GetSubjectDN() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNotBefore
-				/// </java-name>
-				[Dot42.DexImport("getNotBefore", "()Ljava/util/Date;", AccessFlags = 1025)]
-				public abstract global::Java.Util.Date GetNotBefore() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getNotAfter
-				/// </java-name>
-				[Dot42.DexImport("getNotAfter", "()Ljava/util/Date;", AccessFlags = 1025)]
-				public abstract global::Java.Util.Date GetNotAfter() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSigAlgName
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgName", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetSigAlgName() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getSigAlgOID
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgOID", "()Ljava/lang/String;", AccessFlags = 1025)]
-				public abstract string GetSigAlgOID() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getSigAlgParams
 				/// </java-name>
 				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025)]
 				public abstract sbyte[] JavaGetSigAlgParams() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getSigAlgParams
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-				public abstract byte[] GetSigAlgParams() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getVersion
 				/// </java-name>
-				public int Version
+				public abstract int Version
 				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
-						get{ return GetVersion(); }
+						[Dot42.DexImport("getVersion", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSerialNumber
 				/// </java-name>
-				public global::Java.Math.BigInteger SerialNumber
+				public abstract global::Java.Math.BigInteger SerialNumber
 				{
-				[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
-						get{ return GetSerialNumber(); }
+						[Dot42.DexImport("getSerialNumber", "()Ljava/math/BigInteger;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getIssuerDN
 				/// </java-name>
-				public global::Java.Security.IPrincipal IssuerDN
+				public abstract global::Java.Security.IPrincipal IssuerDN
 				{
-				[Dot42.DexImport("getIssuerDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-						get{ return GetIssuerDN(); }
+						[Dot42.DexImport("getIssuerDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSubjectDN
 				/// </java-name>
-				public global::Java.Security.IPrincipal SubjectDN
+				public abstract global::Java.Security.IPrincipal SubjectDN
 				{
-				[Dot42.DexImport("getSubjectDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
-						get{ return GetSubjectDN(); }
+						[Dot42.DexImport("getSubjectDN", "()Ljava/security/Principal;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getNotBefore
 				/// </java-name>
-				public global::Java.Util.Date NotBefore
+				public abstract global::Java.Util.Date NotBefore
 				{
-				[Dot42.DexImport("getNotBefore", "()Ljava/util/Date;", AccessFlags = 1025)]
-						get{ return GetNotBefore(); }
+						[Dot42.DexImport("getNotBefore", "()Ljava/util/Date;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getNotAfter
 				/// </java-name>
-				public global::Java.Util.Date NotAfter
+				public abstract global::Java.Util.Date NotAfter
 				{
-				[Dot42.DexImport("getNotAfter", "()Ljava/util/Date;", AccessFlags = 1025)]
-						get{ return GetNotAfter(); }
+						[Dot42.DexImport("getNotAfter", "()Ljava/util/Date;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSigAlgName
 				/// </java-name>
-				public string SigAlgName
+				public abstract string SigAlgName
 				{
-				[Dot42.DexImport("getSigAlgName", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSigAlgName(); }
+						[Dot42.DexImport("getSigAlgName", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSigAlgOID
 				/// </java-name>
-				public string SigAlgOID
+				public abstract string SigAlgOID
 				{
-				[Dot42.DexImport("getSigAlgOID", "()Ljava/lang/String;", AccessFlags = 1025)]
-						get{ return GetSigAlgOID(); }
+						[Dot42.DexImport("getSigAlgOID", "()Ljava/lang/String;", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getSigAlgParams
 				/// </java-name>
-				public byte[] SigAlgParams
+				public abstract byte[] SigAlgParams
 				{
-				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
-						get{ return GetSigAlgParams(); }
+						[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						get;
 				}
 
 		}

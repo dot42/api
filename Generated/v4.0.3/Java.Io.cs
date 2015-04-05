@@ -1441,33 +1441,6 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// canExecute
-				/// </java-name>
-				[Dot42.DexImport("canExecute", "()Z", AccessFlags = 1)]
-				public virtual bool CanExecute() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// canRead
-				/// </java-name>
-				[Dot42.DexImport("canRead", "()Z", AccessFlags = 1)]
-				public virtual bool CanRead() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// canWrite
-				/// </java-name>
-				[Dot42.DexImport("canWrite", "()Z", AccessFlags = 1)]
-				public virtual bool CanWrite() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// compareTo
 				/// </java-name>
 				[Dot42.DexImport("compareTo", "(Ljava/io/File;)I", AccessFlags = 1)]
@@ -1512,120 +1485,12 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// getAbsolutePath
-				/// </java-name>
-				[Dot42.DexImport("getAbsolutePath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAbsolutePath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getAbsoluteFile
-				/// </java-name>
-				[Dot42.DexImport("getAbsoluteFile", "()Ljava/io/File;", AccessFlags = 1)]
-				public virtual global::Java.Io.File GetAbsoluteFile() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getCanonicalPath
-				/// </java-name>
-				[Dot42.DexImport("getCanonicalPath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetCanonicalPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCanonicalFile
-				/// </java-name>
-				[Dot42.DexImport("getCanonicalFile", "()Ljava/io/File;", AccessFlags = 1)]
-				public virtual global::Java.Io.File GetCanonicalFile() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getParent
-				/// </java-name>
-				[Dot42.DexImport("getParent", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetParent() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getParentFile
-				/// </java-name>
-				[Dot42.DexImport("getParentFile", "()Ljava/io/File;", AccessFlags = 1)]
-				public virtual global::Java.Io.File GetParentFile() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getPath
-				/// </java-name>
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
 				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isAbsolute
-				/// </java-name>
-				[Dot42.DexImport("isAbsolute", "()Z", AccessFlags = 1)]
-				public virtual bool IsAbsolute() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isDirectory
-				/// </java-name>
-				[Dot42.DexImport("isDirectory", "()Z", AccessFlags = 1)]
-				public virtual bool IsDirectory() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isFile
-				/// </java-name>
-				[Dot42.DexImport("isFile", "()Z", AccessFlags = 1)]
-				public virtual bool IsFile() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isHidden
-				/// </java-name>
-				[Dot42.DexImport("isHidden", "()Z", AccessFlags = 1)]
-				public virtual bool IsHidden() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1844,135 +1709,171 @@ namespace Java.Io
 						return default(global::Java.Net.URL);
 				}
 
-				/// <java-name>
-				/// getTotalSpace
-				/// </java-name>
-				[Dot42.DexImport("getTotalSpace", "()J", AccessFlags = 1)]
-				public virtual long GetTotalSpace() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getUsableSpace
-				/// </java-name>
-				[Dot42.DexImport("getUsableSpace", "()J", AccessFlags = 1)]
-				public virtual long GetUsableSpace() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getFreeSpace
-				/// </java-name>
-				[Dot42.DexImport("getFreeSpace", "()J", AccessFlags = 1)]
-				public virtual long GetFreeSpace() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal File() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <java-name>
+				/// canExecute
+				/// </java-name>
+				public virtual bool CanExecute
+				{
+						[Dot42.DexImport("canExecute", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// canRead
+				/// </java-name>
+				public virtual bool CanRead
+				{
+						[Dot42.DexImport("canRead", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// canWrite
+				/// </java-name>
+				public virtual bool CanWrite
+				{
+						[Dot42.DexImport("canWrite", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getAbsolutePath
 				/// </java-name>
-				public string AbsolutePath
+				public virtual string AbsolutePath
 				{
-				[Dot42.DexImport("getAbsolutePath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAbsolutePath(); }
+						[Dot42.DexImport("getAbsolutePath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getAbsoluteFile
 				/// </java-name>
-				public global::Java.Io.File AbsoluteFile
+				public virtual global::Java.Io.File AbsoluteFile
 				{
-				[Dot42.DexImport("getAbsoluteFile", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return GetAbsoluteFile(); }
+						[Dot42.DexImport("getAbsoluteFile", "()Ljava/io/File;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
 				/// getCanonicalPath
 				/// </java-name>
-				public string CanonicalPath
+				public virtual string CanonicalPath
 				{
-				[Dot42.DexImport("getCanonicalPath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCanonicalPath(); }
+						[Dot42.DexImport("getCanonicalPath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getCanonicalFile
 				/// </java-name>
-				public global::Java.Io.File CanonicalFile
+				public virtual global::Java.Io.File CanonicalFile
 				{
-				[Dot42.DexImport("getCanonicalFile", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return GetCanonicalFile(); }
+						[Dot42.DexImport("getCanonicalFile", "()Ljava/io/File;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getParent
 				/// </java-name>
-				public string Parent
+				public virtual string Parent
 				{
-				[Dot42.DexImport("getParent", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetParent(); }
+						[Dot42.DexImport("getParent", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getParentFile
 				/// </java-name>
-				public global::Java.Io.File ParentFile
+				public virtual global::Java.Io.File ParentFile
 				{
-				[Dot42.DexImport("getParentFile", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return GetParentFile(); }
+						[Dot42.DexImport("getParentFile", "()Ljava/io/File;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
 				/// getPath
 				/// </java-name>
-				public string Path
+				public virtual string Path
 				{
-				[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPath(); }
+						[Dot42.DexImport("getPath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isAbsolute
+				/// </java-name>
+				public virtual bool IsAbsolute
+				{
+						[Dot42.DexImport("isAbsolute", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isDirectory
+				/// </java-name>
+				public virtual bool IsDirectory
+				{
+						[Dot42.DexImport("isDirectory", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFile
+				/// </java-name>
+				public virtual bool IsFile
+				{
+						[Dot42.DexImport("isFile", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isHidden
+				/// </java-name>
+				public virtual bool IsHidden
+				{
+						[Dot42.DexImport("isHidden", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getTotalSpace
 				/// </java-name>
-				public long TotalSpace
+				public virtual long TotalSpace
 				{
-				[Dot42.DexImport("getTotalSpace", "()J", AccessFlags = 1)]
-						get{ return GetTotalSpace(); }
+						[Dot42.DexImport("getTotalSpace", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getUsableSpace
 				/// </java-name>
-				public long UsableSpace
+				public virtual long UsableSpace
 				{
-				[Dot42.DexImport("getUsableSpace", "()J", AccessFlags = 1)]
-						get{ return GetUsableSpace(); }
+						[Dot42.DexImport("getUsableSpace", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
 				/// getFreeSpace
 				/// </java-name>
-				public long FreeSpace
+				public virtual long FreeSpace
 				{
-				[Dot42.DexImport("getFreeSpace", "()J", AccessFlags = 1)]
-						get{ return GetFreeSpace(); }
+						[Dot42.DexImport("getFreeSpace", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 		}
@@ -2078,24 +1979,6 @@ namespace Java.Io
 				extern ~FileInputStream() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getChannel
-				/// </java-name>
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/FileChannel;", AccessFlags = 1)]
-				public virtual global::Java.Nio.Channels.FileChannel GetChannel() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.Channels.FileChannel);
-				}
-
-				/// <java-name>
-				/// getFD
-				/// </java-name>
-				[Dot42.DexImport("getFD", "()Ljava/io/FileDescriptor;", AccessFlags = 17)]
-				public global::Java.Io.FileDescriptor GetFD() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor);
-				}
-
-				/// <java-name>
 				/// read
 				/// </java-name>
 				[Dot42.DexImport("read", "()I", AccessFlags = 1)]
@@ -2139,10 +2022,10 @@ namespace Java.Io
 				/// <java-name>
 				/// getChannel
 				/// </java-name>
-				public global::Java.Nio.Channels.FileChannel Channel
+				public virtual global::Java.Nio.Channels.FileChannel Channel
 				{
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/FileChannel;", AccessFlags = 1)]
-						get{ return GetChannel(); }
+						[Dot42.DexImport("getChannel", "()Ljava/nio/channels/FileChannel;", AccessFlags = 1)]
+						get{ return default(global::Java.Nio.Channels.FileChannel); }
 				}
 
 				/// <java-name>
@@ -2150,8 +2033,8 @@ namespace Java.Io
 				/// </java-name>
 				public global::Java.Io.FileDescriptor FD
 				{
-				[Dot42.DexImport("getFD", "()Ljava/io/FileDescriptor;", AccessFlags = 17)]
-						get{ return GetFD(); }
+						[Dot42.DexImport("getFD", "()Ljava/io/FileDescriptor;", AccessFlags = 17)]
+						get{ return default(global::Java.Io.FileDescriptor); }
 				}
 
 		}
@@ -2203,24 +2086,6 @@ namespace Java.Io
 				extern ~FileOutputStream() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getChannel
-				/// </java-name>
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/FileChannel;", AccessFlags = 1)]
-				public virtual global::Java.Nio.Channels.FileChannel GetChannel() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.Channels.FileChannel);
-				}
-
-				/// <java-name>
-				/// getFD
-				/// </java-name>
-				[Dot42.DexImport("getFD", "()Ljava/io/FileDescriptor;", AccessFlags = 17)]
-				public global::Java.Io.FileDescriptor GetFD() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor);
-				}
-
-				/// <java-name>
 				/// write
 				/// </java-name>
 				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
@@ -2252,10 +2117,10 @@ namespace Java.Io
 				/// <java-name>
 				/// getChannel
 				/// </java-name>
-				public global::Java.Nio.Channels.FileChannel Channel
+				public virtual global::Java.Nio.Channels.FileChannel Channel
 				{
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/FileChannel;", AccessFlags = 1)]
-						get{ return GetChannel(); }
+						[Dot42.DexImport("getChannel", "()Ljava/nio/channels/FileChannel;", AccessFlags = 1)]
+						get{ return default(global::Java.Nio.Channels.FileChannel); }
 				}
 
 				/// <java-name>
@@ -2263,8 +2128,8 @@ namespace Java.Io
 				/// </java-name>
 				public global::Java.Io.FileDescriptor FD
 				{
-				[Dot42.DexImport("getFD", "()Ljava/io/FileDescriptor;", AccessFlags = 17)]
-						get{ return GetFD(); }
+						[Dot42.DexImport("getFD", "()Ljava/io/FileDescriptor;", AccessFlags = 17)]
+						get{ return default(global::Java.Io.FileDescriptor); }
 				}
 
 		}
@@ -2279,15 +2144,6 @@ namespace Java.Io
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public FilePermission(string @string, string string1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -2307,10 +2163,10 @@ namespace Java.Io
 				/// <java-name>
 				/// getActions
 				/// </java-name>
-				public string Actions
+				public override string Actions
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
+						[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -3122,15 +2978,6 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// getEncoding
-				/// </java-name>
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEncoding() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// read
 				/// </java-name>
 				[Dot42.DexImport("read", "()I", AccessFlags = 1)]
@@ -3165,10 +3012,10 @@ namespace Java.Io
 				/// <java-name>
 				/// getEncoding
 				/// </java-name>
-				public string Encoding
+				public virtual string Encoding
 				{
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEncoding(); }
+						[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -3578,15 +3425,6 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// getLineNumber
-				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-				public virtual int GetLineNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// mark
 				/// </java-name>
 				[Dot42.DexImport("mark", "(I)V", AccessFlags = 1)]
@@ -3630,14 +3468,6 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// setLineNumber
-				/// </java-name>
-				[Dot42.DexImport("setLineNumber", "(I)V", AccessFlags = 1)]
-				public virtual void SetLineNumber(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// skip
 				/// </java-name>
 				[Dot42.DexImport("skip", "(J)J", AccessFlags = 1)]
@@ -3654,12 +3484,12 @@ namespace Java.Io
 				/// <java-name>
 				/// getLineNumber
 				/// </java-name>
-				public int LineNumber
+				public virtual int LineNumber
 				{
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-						get{ return GetLineNumber(); }
-				[Dot42.DexImport("setLineNumber", "(I)V", AccessFlags = 1)]
-						set{ SetLineNumber(value); }
+						[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setLineNumber", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -3679,15 +3509,6 @@ namespace Java.Io
 				[Dot42.DexImport("<init>", "(Ljava/io/Reader;I)V", AccessFlags = 1)]
 				public LineNumberReader(global::Java.Io.Reader reader, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getLineNumber
-				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-				public virtual int GetLineNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3734,14 +3555,6 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// setLineNumber
-				/// </java-name>
-				[Dot42.DexImport("setLineNumber", "(I)V", AccessFlags = 1)]
-				public virtual void SetLineNumber(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// skip
 				/// </java-name>
 				[Dot42.DexImport("skip", "(J)J", AccessFlags = 1)]
@@ -3758,12 +3571,12 @@ namespace Java.Io
 				/// <java-name>
 				/// getLineNumber
 				/// </java-name>
-				public int LineNumber
+				public virtual int LineNumber
 				{
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-						get{ return GetLineNumber(); }
-				[Dot42.DexImport("setLineNumber", "(I)V", AccessFlags = 1)]
-						set{ SetLineNumber(value); }
+						[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setLineNumber", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -4155,12 +3968,6 @@ namespace Java.Io
 						}
 
 						/// <java-name>
-						/// getObjectStreamClass
-						/// </java-name>
-						[Dot42.DexImport("getObjectStreamClass", "()Ljava/io/ObjectStreamClass;", AccessFlags = 1025)]
-						public abstract global::Java.Io.ObjectStreamClass GetObjectStreamClass() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
 						/// defaulted
 						/// </java-name>
 						[Dot42.DexImport("defaulted", "(Ljava/lang/String;)Z", AccessFlags = 1025)]
@@ -4229,10 +4036,10 @@ namespace Java.Io
 						/// <java-name>
 						/// getObjectStreamClass
 						/// </java-name>
-						public global::Java.Io.ObjectStreamClass ObjectStreamClass
+						public abstract global::Java.Io.ObjectStreamClass ObjectStreamClass
 						{
-						[Dot42.DexImport("getObjectStreamClass", "()Ljava/io/ObjectStreamClass;", AccessFlags = 1025)]
-								get{ return GetObjectStreamClass(); }
+								[Dot42.DexImport("getObjectStreamClass", "()Ljava/io/ObjectStreamClass;", AccessFlags = 1025)]
+								get;
 						}
 
 				}
@@ -4630,33 +4437,6 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// getFields
-				/// </java-name>
-				[Dot42.DexImport("getFields", "()[Ljava/io/ObjectStreamField;", AccessFlags = 1)]
-				public virtual global::Java.Io.ObjectStreamField[] GetFields() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.ObjectStreamField[]);
-				}
-
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSerialVersionUID
-				/// </java-name>
-				[Dot42.DexImport("getSerialVersionUID", "()J", AccessFlags = 1)]
-				public virtual long GetSerialVersionUID() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// lookup
 				/// </java-name>
 				[Dot42.DexImport("lookup", "(Ljava/lang/Class;)Ljava/io/ObjectStreamClass;", AccessFlags = 9, Signature = "(Ljava/lang/Class<*>;)Ljava/io/ObjectStreamClass;")]
@@ -4686,28 +4466,28 @@ namespace Java.Io
 				/// <java-name>
 				/// getFields
 				/// </java-name>
-				public global::Java.Io.ObjectStreamField[] Fields
+				public virtual global::Java.Io.ObjectStreamField[] Fields
 				{
-				[Dot42.DexImport("getFields", "()[Ljava/io/ObjectStreamField;", AccessFlags = 1)]
-						get{ return GetFields(); }
+						[Dot42.DexImport("getFields", "()[Ljava/io/ObjectStreamField;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.ObjectStreamField[]); }
 				}
 
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSerialVersionUID
 				/// </java-name>
-				public long SerialVersionUID
+				public virtual long SerialVersionUID
 				{
-				[Dot42.DexImport("getSerialVersionUID", "()J", AccessFlags = 1)]
-						get{ return GetSerialVersionUID(); }
+						[Dot42.DexImport("getSerialVersionUID", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 		}
@@ -4758,83 +4538,12 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getOffset
-				/// </java-name>
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
-				public virtual int GetOffset() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<*>;")]
-				public virtual global::System.Type GetTypeJava() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Type);
-				}
-
-				/// <java-name>
-				/// getTypeCode
-				/// </java-name>
-				[Dot42.DexImport("getTypeCode", "()C", AccessFlags = 1)]
-				public virtual char GetTypeCode() /* MethodBuilder.Create */ 
-				{
-						return default(char);
-				}
-
-				/// <java-name>
-				/// getTypeString
-				/// </java-name>
-				[Dot42.DexImport("getTypeString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetTypeString() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isPrimitive
-				/// </java-name>
-				[Dot42.DexImport("isPrimitive", "()Z", AccessFlags = 1)]
-				public virtual bool IsPrimitive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// setOffset
-				/// </java-name>
-				[Dot42.DexImport("setOffset", "(I)V", AccessFlags = 4)]
-				protected internal virtual void SetOffset(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
 				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// isUnshared
-				/// </java-name>
-				[Dot42.DexImport("isUnshared", "()Z", AccessFlags = 1)]
-				public virtual bool IsUnshared() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -4845,48 +4554,66 @@ namespace Java.Io
 				/// <java-name>
 				/// getName
 				/// </java-name>
-				public string Name
+				public virtual string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetName(); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getOffset
 				/// </java-name>
-				public int Offset
+				public virtual int Offset
 				{
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
-						get{ return GetOffset(); }
-				[Dot42.DexImport("setOffset", "(I)V", AccessFlags = 4)]
-						set{ SetOffset(value); }
+						[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setOffset", "(I)V", AccessFlags = 4)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				public global::System.Type Type
+				public virtual global::System.Type Type
 				{
-				[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<*>;")]
-						get{ return GetTypeJava(); }
+						[Dot42.DexImport("getType", "()Ljava/lang/Class;", AccessFlags = 1, Signature = "()Ljava/lang/Class<*>;")]
+						get{ return default(global::System.Type); }
 				}
 
 				/// <java-name>
 				/// getTypeCode
 				/// </java-name>
-				public char TypeCode
+				public virtual char TypeCode
 				{
-				[Dot42.DexImport("getTypeCode", "()C", AccessFlags = 1)]
-						get{ return GetTypeCode(); }
+						[Dot42.DexImport("getTypeCode", "()C", AccessFlags = 1)]
+						get{ return default(char); }
 				}
 
 				/// <java-name>
 				/// getTypeString
 				/// </java-name>
-				public string TypeString
+				public virtual string TypeString
 				{
-				[Dot42.DexImport("getTypeString", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetTypeString(); }
+						[Dot42.DexImport("getTypeString", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isPrimitive
+				/// </java-name>
+				public virtual bool IsPrimitive
+				{
+						[Dot42.DexImport("isPrimitive", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isUnshared
+				/// </java-name>
+				public virtual bool IsUnshared
+				{
+						[Dot42.DexImport("isUnshared", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -5027,15 +4754,6 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// getEncoding
-				/// </java-name>
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetEncoding() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// write
 				/// </java-name>
 				[Dot42.DexImport("write", "([CII)V", AccessFlags = 1)]
@@ -5067,10 +4785,10 @@ namespace Java.Io
 				/// <java-name>
 				/// getEncoding
 				/// </java-name>
-				public string Encoding
+				public virtual string Encoding
 				{
-				[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetEncoding(); }
+						[Dot42.DexImport("getEncoding", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -6385,33 +6103,6 @@ namespace Java.Io
 				extern ~RandomAccessFile() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getChannel
-				/// </java-name>
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/FileChannel;", AccessFlags = 49)]
-				public global::Java.Nio.Channels.FileChannel GetChannel() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Nio.Channels.FileChannel);
-				}
-
-				/// <java-name>
-				/// getFD
-				/// </java-name>
-				[Dot42.DexImport("getFD", "()Ljava/io/FileDescriptor;", AccessFlags = 17)]
-				public global::Java.Io.FileDescriptor GetFD() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.FileDescriptor);
-				}
-
-				/// <java-name>
-				/// getFilePointer
-				/// </java-name>
-				[Dot42.DexImport("getFilePointer", "()J", AccessFlags = 1)]
-				public virtual long GetFilePointer() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()J", AccessFlags = 1)]
@@ -6777,8 +6468,8 @@ namespace Java.Io
 				/// </java-name>
 				public global::Java.Nio.Channels.FileChannel Channel
 				{
-				[Dot42.DexImport("getChannel", "()Ljava/nio/channels/FileChannel;", AccessFlags = 49)]
-						get{ return GetChannel(); }
+						[Dot42.DexImport("getChannel", "()Ljava/nio/channels/FileChannel;", AccessFlags = 49)]
+						get{ return default(global::Java.Nio.Channels.FileChannel); }
 				}
 
 				/// <java-name>
@@ -6786,17 +6477,17 @@ namespace Java.Io
 				/// </java-name>
 				public global::Java.Io.FileDescriptor FD
 				{
-				[Dot42.DexImport("getFD", "()Ljava/io/FileDescriptor;", AccessFlags = 17)]
-						get{ return GetFD(); }
+						[Dot42.DexImport("getFD", "()Ljava/io/FileDescriptor;", AccessFlags = 17)]
+						get{ return default(global::Java.Io.FileDescriptor); }
 				}
 
 				/// <java-name>
 				/// getFilePointer
 				/// </java-name>
-				public long FilePointer
+				public virtual long FilePointer
 				{
-				[Dot42.DexImport("getFilePointer", "()J", AccessFlags = 1)]
-						get{ return GetFilePointer(); }
+						[Dot42.DexImport("getFilePointer", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 		}
@@ -6995,15 +6686,6 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// getActions
-				/// </java-name>
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetActions() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// implies
 				/// </java-name>
 				[Dot42.DexImport("implies", "(Ljava/security/Permission;)Z", AccessFlags = 1)]
@@ -7020,10 +6702,10 @@ namespace Java.Io
 				/// <java-name>
 				/// getActions
 				/// </java-name>
-				public string Actions
+				public override string Actions
 				{
-				[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetActions(); }
+						[Dot42.DexImport("getActions", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 		}
@@ -7446,15 +7128,6 @@ namespace Java.Io
 				}
 
 				/// <java-name>
-				/// getBuffer
-				/// </java-name>
-				[Dot42.DexImport("getBuffer", "()Ljava/lang/StringBuffer;", AccessFlags = 1)]
-				public virtual global::Java.Lang.StringBuffer GetBuffer() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StringBuffer);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -7525,10 +7198,10 @@ namespace Java.Io
 				/// <java-name>
 				/// getBuffer
 				/// </java-name>
-				public global::Java.Lang.StringBuffer Buffer
+				public virtual global::Java.Lang.StringBuffer Buffer
 				{
-				[Dot42.DexImport("getBuffer", "()Ljava/lang/StringBuffer;", AccessFlags = 1)]
-						get{ return GetBuffer(); }
+						[Dot42.DexImport("getBuffer", "()Ljava/lang/StringBuffer;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.StringBuffer); }
 				}
 
 		}
@@ -7616,18 +7289,18 @@ namespace Java.Io
 						return default(string);
 				}
 
-				/// <java-name>
-				/// getCause
-				/// </java-name>
-				[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
-				public override global::System.Exception GetCause() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Exception);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal WriteAbortedException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// getCause
+				/// </java-name>
+				public override global::System.Exception Cause
+				{
+						[Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+						get{ return default(global::System.Exception); }
 				}
 
 		}

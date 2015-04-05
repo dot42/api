@@ -209,119 +209,11 @@ namespace Android.Test.Mock
 				}
 
 				/// <java-name>
-				/// getAssets
-				/// </java-name>
-				[Dot42.DexImport("getAssets", "()Landroid/content/res/AssetManager;", AccessFlags = 1)]
-				public override global::Android.Content.Res.AssetManager GetAssets() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.AssetManager);
-				}
-
-				/// <java-name>
-				/// getResources
-				/// </java-name>
-				[Dot42.DexImport("getResources", "()Landroid/content/res/Resources;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Resources GetResources() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.Resources);
-				}
-
-				/// <java-name>
-				/// getPackageManager
-				/// </java-name>
-				[Dot42.DexImport("getPackageManager", "()Landroid/content/pm/PackageManager;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.PackageManager GetPackageManager() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.PackageManager);
-				}
-
-				/// <java-name>
-				/// getContentResolver
-				/// </java-name>
-				[Dot42.DexImport("getContentResolver", "()Landroid/content/ContentResolver;", AccessFlags = 1)]
-				public override global::Android.Content.ContentResolver GetContentResolver() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ContentResolver);
-				}
-
-				/// <java-name>
-				/// getMainLooper
-				/// </java-name>
-				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
-				public override global::Android.OS.Looper GetMainLooper() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Looper);
-				}
-
-				/// <java-name>
-				/// getApplicationContext
-				/// </java-name>
-				[Dot42.DexImport("getApplicationContext", "()Landroid/content/Context;", AccessFlags = 1)]
-				public override global::Android.Content.Context GetApplicationContext() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Context);
-				}
-
-				/// <java-name>
 				/// setTheme
 				/// </java-name>
 				[Dot42.DexImport("setTheme", "(I)V", AccessFlags = 1)]
 				public override void SetTheme(int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getTheme
-				/// </java-name>
-				[Dot42.DexImport("getTheme", "()Landroid/content/res/Resources$Theme;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Resources.Theme GetTheme() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.Resources.Theme);
-				}
-
-				/// <java-name>
-				/// getClassLoader
-				/// </java-name>
-				[Dot42.DexImport("getClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-				public override global::Java.Lang.ClassLoader GetClassLoader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ClassLoader);
-				}
-
-				/// <java-name>
-				/// getPackageName
-				/// </java-name>
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetPackageName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getApplicationInfo
-				/// </java-name>
-				[Dot42.DexImport("getApplicationInfo", "()Landroid/content/pm/ApplicationInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.ApplicationInfo GetApplicationInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ApplicationInfo);
-				}
-
-				/// <java-name>
-				/// getPackageResourcePath
-				/// </java-name>
-				[Dot42.DexImport("getPackageResourcePath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetPackageResourcePath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPackageCodePath
-				/// </java-name>
-				[Dot42.DexImport("getPackageCodePath", "()Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetPackageCodePath() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -379,46 +271,10 @@ namespace Android.Test.Mock
 				}
 
 				/// <java-name>
-				/// getFilesDir
-				/// </java-name>
-				[Dot42.DexImport("getFilesDir", "()Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetFilesDir() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
 				/// getExternalFilesDir
 				/// </java-name>
 				[Dot42.DexImport("getExternalFilesDir", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1)]
 				public override global::Java.Io.File GetExternalFilesDir(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getObbDir
-				/// </java-name>
-				[Dot42.DexImport("getObbDir", "()Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetObbDir() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getCacheDir
-				/// </java-name>
-				[Dot42.DexImport("getCacheDir", "()Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetCacheDir() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Io.File);
-				}
-
-				/// <java-name>
-				/// getExternalCacheDir
-				/// </java-name>
-				[Dot42.DexImport("getExternalCacheDir", "()Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetExternalCacheDir() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Io.File);
 				}
@@ -480,39 +336,12 @@ namespace Android.Test.Mock
 				}
 
 				/// <java-name>
-				/// getWallpaper
-				/// </java-name>
-				[Dot42.DexImport("getWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetWallpaper() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawables.Drawable);
-				}
-
-				/// <java-name>
 				/// peekWallpaper
 				/// </java-name>
 				[Dot42.DexImport("peekWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
 				public override global::Android.Graphics.Drawables.Drawable PeekWallpaper() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
-				}
-
-				/// <java-name>
-				/// getWallpaperDesiredMinimumWidth
-				/// </java-name>
-				[Dot42.DexImport("getWallpaperDesiredMinimumWidth", "()I", AccessFlags = 1)]
-				public override int GetWallpaperDesiredMinimumWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getWallpaperDesiredMinimumHeight
-				/// </java-name>
-				[Dot42.DexImport("getWallpaperDesiredMinimumHeight", "()I", AccessFlags = 1)]
-				public override int GetWallpaperDesiredMinimumHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -847,183 +676,183 @@ namespace Android.Test.Mock
 				}
 
 				/// <java-name>
-				/// isRestricted
-				/// </java-name>
-				[Dot42.DexImport("isRestricted", "()Z", AccessFlags = 1)]
-				public override bool IsRestricted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getAssets
 				/// </java-name>
-				public global::Android.Content.Res.AssetManager Assets
+				public override global::Android.Content.Res.AssetManager Assets
 				{
-				[Dot42.DexImport("getAssets", "()Landroid/content/res/AssetManager;", AccessFlags = 1)]
-						get{ return GetAssets(); }
+						[Dot42.DexImport("getAssets", "()Landroid/content/res/AssetManager;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Res.AssetManager); }
 				}
 
 				/// <java-name>
 				/// getResources
 				/// </java-name>
-				public global::Android.Content.Res.Resources Resources
+				public override global::Android.Content.Res.Resources Resources
 				{
-				[Dot42.DexImport("getResources", "()Landroid/content/res/Resources;", AccessFlags = 1)]
-						get{ return GetResources(); }
+						[Dot42.DexImport("getResources", "()Landroid/content/res/Resources;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Res.Resources); }
 				}
 
 				/// <java-name>
 				/// getPackageManager
 				/// </java-name>
-				public global::Android.Content.Pm.PackageManager PackageManager
+				public override global::Android.Content.Pm.PackageManager PackageManager
 				{
-				[Dot42.DexImport("getPackageManager", "()Landroid/content/pm/PackageManager;", AccessFlags = 1)]
-						get{ return GetPackageManager(); }
+						[Dot42.DexImport("getPackageManager", "()Landroid/content/pm/PackageManager;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Pm.PackageManager); }
 				}
 
 				/// <java-name>
 				/// getContentResolver
 				/// </java-name>
-				public global::Android.Content.ContentResolver ContentResolver
+				public override global::Android.Content.ContentResolver ContentResolver
 				{
-				[Dot42.DexImport("getContentResolver", "()Landroid/content/ContentResolver;", AccessFlags = 1)]
-						get{ return GetContentResolver(); }
+						[Dot42.DexImport("getContentResolver", "()Landroid/content/ContentResolver;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.ContentResolver); }
 				}
 
 				/// <java-name>
 				/// getMainLooper
 				/// </java-name>
-				public global::Android.OS.Looper MainLooper
+				public override global::Android.OS.Looper MainLooper
 				{
-				[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
-						get{ return GetMainLooper(); }
+						[Dot42.DexImport("getMainLooper", "()Landroid/os/Looper;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Looper); }
 				}
 
 				/// <java-name>
 				/// getApplicationContext
 				/// </java-name>
-				public global::Android.Content.Context ApplicationContext
+				public override global::Android.Content.Context ApplicationContext
 				{
-				[Dot42.DexImport("getApplicationContext", "()Landroid/content/Context;", AccessFlags = 1)]
-						get{ return GetApplicationContext(); }
+						[Dot42.DexImport("getApplicationContext", "()Landroid/content/Context;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Context); }
 				}
 
 				/// <java-name>
 				/// getTheme
 				/// </java-name>
-				public global::Android.Content.Res.Resources.Theme Theme
+				public override global::Android.Content.Res.Resources.Theme Theme
 				{
-				[Dot42.DexImport("getTheme", "()Landroid/content/res/Resources$Theme;", AccessFlags = 1)]
-						get{ return GetTheme(); }
+						[Dot42.DexImport("getTheme", "()Landroid/content/res/Resources$Theme;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Res.Resources.Theme); }
 				}
 
 				/// <java-name>
 				/// getClassLoader
 				/// </java-name>
-				public global::Java.Lang.ClassLoader ClassLoader
+				public override global::Java.Lang.ClassLoader ClassLoader
 				{
-				[Dot42.DexImport("getClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-						get{ return GetClassLoader(); }
+						[Dot42.DexImport("getClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ClassLoader); }
 				}
 
 				/// <java-name>
 				/// getPackageName
 				/// </java-name>
-				public string PackageName
+				public override string PackageName
 				{
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPackageName(); }
+						[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getApplicationInfo
 				/// </java-name>
-				public global::Android.Content.Pm.ApplicationInfo ApplicationInfo
+				public override global::Android.Content.Pm.ApplicationInfo ApplicationInfo
 				{
-				[Dot42.DexImport("getApplicationInfo", "()Landroid/content/pm/ApplicationInfo;", AccessFlags = 1)]
-						get{ return GetApplicationInfo(); }
+						[Dot42.DexImport("getApplicationInfo", "()Landroid/content/pm/ApplicationInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Pm.ApplicationInfo); }
 				}
 
 				/// <java-name>
 				/// getPackageResourcePath
 				/// </java-name>
-				public string PackageResourcePath
+				public override string PackageResourcePath
 				{
-				[Dot42.DexImport("getPackageResourcePath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPackageResourcePath(); }
+						[Dot42.DexImport("getPackageResourcePath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPackageCodePath
 				/// </java-name>
-				public string PackageCodePath
+				public override string PackageCodePath
 				{
-				[Dot42.DexImport("getPackageCodePath", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPackageCodePath(); }
+						[Dot42.DexImport("getPackageCodePath", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getFilesDir
 				/// </java-name>
-				public global::Java.Io.File FilesDir
+				public override global::Java.Io.File FilesDir
 				{
-				[Dot42.DexImport("getFilesDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return GetFilesDir(); }
+						[Dot42.DexImport("getFilesDir", "()Ljava/io/File;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
 				/// getObbDir
 				/// </java-name>
-				public global::Java.Io.File ObbDir
+				public override global::Java.Io.File ObbDir
 				{
-				[Dot42.DexImport("getObbDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return GetObbDir(); }
+						[Dot42.DexImport("getObbDir", "()Ljava/io/File;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
 				/// getCacheDir
 				/// </java-name>
-				public global::Java.Io.File CacheDir
+				public override global::Java.Io.File CacheDir
 				{
-				[Dot42.DexImport("getCacheDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return GetCacheDir(); }
+						[Dot42.DexImport("getCacheDir", "()Ljava/io/File;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
 				/// getExternalCacheDir
 				/// </java-name>
-				public global::Java.Io.File ExternalCacheDir
+				public override global::Java.Io.File ExternalCacheDir
 				{
-				[Dot42.DexImport("getExternalCacheDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return GetExternalCacheDir(); }
+						[Dot42.DexImport("getExternalCacheDir", "()Ljava/io/File;", AccessFlags = 1)]
+						get{ return default(global::Java.Io.File); }
 				}
 
 				/// <java-name>
 				/// getWallpaper
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable Wallpaper
+				public override global::Android.Graphics.Drawables.Drawable Wallpaper
 				{
-				[Dot42.DexImport("getWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						get{ return GetWallpaper(); }
+						[Dot42.DexImport("getWallpaper", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Drawables.Drawable); }
 				}
 
 				/// <java-name>
 				/// getWallpaperDesiredMinimumWidth
 				/// </java-name>
-				public int WallpaperDesiredMinimumWidth
+				public override int WallpaperDesiredMinimumWidth
 				{
-				[Dot42.DexImport("getWallpaperDesiredMinimumWidth", "()I", AccessFlags = 1)]
-						get{ return GetWallpaperDesiredMinimumWidth(); }
+						[Dot42.DexImport("getWallpaperDesiredMinimumWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getWallpaperDesiredMinimumHeight
 				/// </java-name>
-				public int WallpaperDesiredMinimumHeight
+				public override int WallpaperDesiredMinimumHeight
 				{
-				[Dot42.DexImport("getWallpaperDesiredMinimumHeight", "()I", AccessFlags = 1)]
-						get{ return GetWallpaperDesiredMinimumHeight(); }
+						[Dot42.DexImport("getWallpaperDesiredMinimumHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isRestricted
+				/// </java-name>
+				public override bool IsRestricted
+				{
+						[Dot42.DexImport("isRestricted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1038,15 +867,6 @@ namespace Android.Test.Mock
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public MockCursor() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getColumnCount
-				/// </java-name>
-				[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1)]
-				public virtual int GetColumnCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1074,24 +894,6 @@ namespace Android.Test.Mock
 				public virtual string GetColumnName(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// getColumnNames
-				/// </java-name>
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string[] GetColumnNames() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getCount
-				/// </java-name>
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-				public virtual int GetCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1176,60 +978,6 @@ namespace Android.Test.Mock
 				}
 
 				/// <java-name>
-				/// getExtras
-				/// </java-name>
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.OS.Bundle GetExtras() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.Bundle);
-				}
-
-				/// <java-name>
-				/// getPosition
-				/// </java-name>
-				[Dot42.DexImport("getPosition", "()I", AccessFlags = 1)]
-				public virtual int GetPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isAfterLast
-				/// </java-name>
-				[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 1)]
-				public virtual bool IsAfterLast() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isBeforeFirst
-				/// </java-name>
-				[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 1)]
-				public virtual bool IsBeforeFirst() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isFirst
-				/// </java-name>
-				[Dot42.DexImport("isFirst", "()Z", AccessFlags = 1)]
-				public virtual bool IsFirst() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isLast
-				/// </java-name>
-				[Dot42.DexImport("isLast", "()Z", AccessFlags = 1)]
-				public virtual bool IsLast() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// move
 				/// </java-name>
 				[Dot42.DexImport("move", "(I)Z", AccessFlags = 1)]
@@ -1308,15 +1056,6 @@ namespace Android.Test.Mock
 				}
 
 				/// <java-name>
-				/// isClosed
-				/// </java-name>
-				[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
-				public virtual bool IsClosed() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// requery
 				/// </java-name>
 				[Dot42.DexImport("requery", "()Z", AccessFlags = 1)]
@@ -1348,15 +1087,6 @@ namespace Android.Test.Mock
 				public virtual global::Android.OS.Bundle Respond(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.OS.Bundle);
-				}
-
-				/// <java-name>
-				/// getWantsAllOnMoveCalls
-				/// </java-name>
-				[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
-				public virtual bool GetWantsAllOnMoveCalls() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -1395,55 +1125,100 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getColumnCount
 				/// </java-name>
-				public int ColumnCount
+				public virtual int ColumnCount
 				{
-				[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1)]
-						get{ return GetColumnCount(); }
+						[Dot42.DexImport("getColumnCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnNames
 				/// </java-name>
-				public string[] ColumnNames
+				public virtual string[] ColumnNames
 				{
-				[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetColumnNames(); }
+						[Dot42.DexImport("getColumnNames", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 				/// <java-name>
 				/// getCount
 				/// </java-name>
-				public int Count
+				public virtual int Count
 				{
-				[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
-						get{ return GetCount(); }
+						[Dot42.DexImport("getCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
-				public global::Android.OS.Bundle Extras
+				public virtual global::Android.OS.Bundle Extras
 				{
-				[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
-						get{ return GetExtras(); }
+						[Dot42.DexImport("getExtras", "()Landroid/os/Bundle;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.Bundle); }
 				}
 
 				/// <java-name>
 				/// getPosition
 				/// </java-name>
-				public int Position
+				public virtual int Position
 				{
-				[Dot42.DexImport("getPosition", "()I", AccessFlags = 1)]
-						get{ return GetPosition(); }
+						[Dot42.DexImport("getPosition", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isAfterLast
+				/// </java-name>
+				public virtual bool IsAfterLast
+				{
+						[Dot42.DexImport("isAfterLast", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isBeforeFirst
+				/// </java-name>
+				public virtual bool IsBeforeFirst
+				{
+						[Dot42.DexImport("isBeforeFirst", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isFirst
+				/// </java-name>
+				public virtual bool IsFirst
+				{
+						[Dot42.DexImport("isFirst", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isLast
+				/// </java-name>
+				public virtual bool IsLast
+				{
+						[Dot42.DexImport("isLast", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isClosed
+				/// </java-name>
+				public virtual bool IsClosed
+				{
+						[Dot42.DexImport("isClosed", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getWantsAllOnMoveCalls
 				/// </java-name>
-				public bool IsWantsAllOnMoveCalls
+				public virtual bool IsWantsAllOnMoveCalls
 				{
-				[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
-						get{ return GetWantsAllOnMoveCalls(); }
+						[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1826,15 +1601,6 @@ namespace Android.Test.Mock
 				}
 
 				/// <java-name>
-				/// getDefaultActivityIcon
-				/// </java-name>
-				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetDefaultActivityIcon() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawables.Drawable);
-				}
-
-				/// <java-name>
 				/// getApplicationIcon
 				/// </java-name>
 				[Dot42.DexImport("getApplicationIcon", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
@@ -2057,37 +1823,10 @@ namespace Android.Test.Mock
 				}
 
 				/// <java-name>
-				/// getSystemSharedLibraryNames
-				/// </java-name>
-				[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetSystemSharedLibraryNames() /* MethodBuilder.Create */ 
-				{
-						return default(string[]);
-				}
-
-				/// <java-name>
-				/// getSystemAvailableFeatures
-				/// </java-name>
-				[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1)]
-				public override global::Android.Content.Pm.FeatureInfo[] GetSystemAvailableFeatures() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.FeatureInfo[]);
-				}
-
-				/// <java-name>
 				/// hasSystemFeature
 				/// </java-name>
 				[Dot42.DexImport("hasSystemFeature", "(Ljava/lang/String;)Z", AccessFlags = 1)]
 				public override bool HasSystemFeature(string @string) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isSafeMode
-				/// </java-name>
-				[Dot42.DexImport("isSafeMode", "()Z", AccessFlags = 1)]
-				public override bool IsSafeMode() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2103,28 +1842,37 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getDefaultActivityIcon
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable DefaultActivityIcon
+				public override global::Android.Graphics.Drawables.Drawable DefaultActivityIcon
 				{
-				[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						get{ return GetDefaultActivityIcon(); }
+						[Dot42.DexImport("getDefaultActivityIcon", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Drawables.Drawable); }
 				}
 
 				/// <java-name>
 				/// getSystemSharedLibraryNames
 				/// </java-name>
-				public string[] SystemSharedLibraryNames
+				public override string[] SystemSharedLibraryNames
 				{
-				[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSystemSharedLibraryNames(); }
+						[Dot42.DexImport("getSystemSharedLibraryNames", "()[Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string[]); }
 				}
 
 				/// <java-name>
 				/// getSystemAvailableFeatures
 				/// </java-name>
-				public global::Android.Content.Pm.FeatureInfo[] SystemAvailableFeatures
+				public override global::Android.Content.Pm.FeatureInfo[] SystemAvailableFeatures
 				{
-				[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1)]
-						get{ return GetSystemAvailableFeatures(); }
+						[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Pm.FeatureInfo[]); }
+				}
+
+				/// <java-name>
+				/// isSafeMode
+				/// </java-name>
+				public override bool IsSafeMode
+				{
+						[Dot42.DexImport("isSafeMode", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -2391,24 +2139,6 @@ namespace Android.Test.Mock
 				}
 
 				/// <java-name>
-				/// getDisplayMetrics
-				/// </java-name>
-				[Dot42.DexImport("getDisplayMetrics", "()Landroid/util/DisplayMetrics;", AccessFlags = 1)]
-				public override global::Android.Util.DisplayMetrics GetDisplayMetrics() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Util.DisplayMetrics);
-				}
-
-				/// <java-name>
-				/// getConfiguration
-				/// </java-name>
-				[Dot42.DexImport("getConfiguration", "()Landroid/content/res/Configuration;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Configuration GetConfiguration() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Res.Configuration);
-				}
-
-				/// <java-name>
 				/// getIdentifier
 				/// </java-name>
 				[Dot42.DexImport("getIdentifier", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
@@ -2456,19 +2186,19 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getDisplayMetrics
 				/// </java-name>
-				public global::Android.Util.DisplayMetrics DisplayMetrics
+				public override global::Android.Util.DisplayMetrics DisplayMetrics
 				{
-				[Dot42.DexImport("getDisplayMetrics", "()Landroid/util/DisplayMetrics;", AccessFlags = 1)]
-						get{ return GetDisplayMetrics(); }
+						[Dot42.DexImport("getDisplayMetrics", "()Landroid/util/DisplayMetrics;", AccessFlags = 1)]
+						get{ return default(global::Android.Util.DisplayMetrics); }
 				}
 
 				/// <java-name>
 				/// getConfiguration
 				/// </java-name>
-				public global::Android.Content.Res.Configuration Configuration
+				public override global::Android.Content.Res.Configuration Configuration
 				{
-				[Dot42.DexImport("getConfiguration", "()Landroid/content/res/Configuration;", AccessFlags = 1)]
-						get{ return GetConfiguration(); }
+						[Dot42.DexImport("getConfiguration", "()Landroid/content/res/Configuration;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Res.Configuration); }
 				}
 
 		}

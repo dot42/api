@@ -43,15 +43,6 @@ namespace Javax.Crypto.Spec
 				}
 
 				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetKey() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// isParityAdjusted
 				/// </java-name>
 				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
@@ -77,10 +68,10 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getKey
 				/// </java-name>
-				public byte[] Key
+				public virtual byte[] Key
 				{
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetKey(); }
+						[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -127,15 +118,6 @@ namespace Javax.Crypto.Spec
 				}
 
 				/// <java-name>
-				/// getKey
-				/// </java-name>
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetKey() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
 				/// isParityAdjusted
 				/// </java-name>
 				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
@@ -179,10 +161,10 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getKey
 				/// </java-name>
-				public byte[] Key
+				public virtual byte[] Key
 				{
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetKey(); }
+						[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -199,24 +181,6 @@ namespace Javax.Crypto.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getPrimeSize
-				/// </java-name>
-				[Dot42.DexImport("getPrimeSize", "()I", AccessFlags = 1)]
-				public virtual int GetPrimeSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getExponentSize
-				/// </java-name>
-				[Dot42.DexImport("getExponentSize", "()I", AccessFlags = 1)]
-				public virtual int GetExponentSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DHGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -225,19 +189,19 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getPrimeSize
 				/// </java-name>
-				public int PrimeSize
+				public virtual int PrimeSize
 				{
-				[Dot42.DexImport("getPrimeSize", "()I", AccessFlags = 1)]
-						get{ return GetPrimeSize(); }
+						[Dot42.DexImport("getPrimeSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getExponentSize
 				/// </java-name>
-				public int ExponentSize
+				public virtual int ExponentSize
 				{
-				[Dot42.DexImport("getExponentSize", "()I", AccessFlags = 1)]
-						get{ return GetExponentSize(); }
+						[Dot42.DexImport("getExponentSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -259,33 +223,6 @@ namespace Javax.Crypto.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getP
-				/// </java-name>
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getG
-				/// </java-name>
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetG() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getL
-				/// </java-name>
-				[Dot42.DexImport("getL", "()I", AccessFlags = 1)]
-				public virtual int GetL() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DHParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -294,28 +231,28 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getP
 				/// </java-name>
-				public global::Java.Math.BigInteger P
+				public virtual global::Java.Math.BigInteger P
 				{
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetP(); }
+						[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getG
 				/// </java-name>
-				public global::Java.Math.BigInteger G
+				public virtual global::Java.Math.BigInteger G
 				{
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetG(); }
+						[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getL
 				/// </java-name>
-				public int L
+				public virtual int L
 				{
-				[Dot42.DexImport("getL", "()I", AccessFlags = 1)]
-						get{ return GetL(); }
+						[Dot42.DexImport("getL", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -332,33 +269,6 @@ namespace Javax.Crypto.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getX
-				/// </java-name>
-				[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetX() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getP
-				/// </java-name>
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getG
-				/// </java-name>
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetG() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DHPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -367,28 +277,28 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getX
 				/// </java-name>
-				public global::Java.Math.BigInteger X
+				public virtual global::Java.Math.BigInteger X
 				{
-				[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetX(); }
+						[Dot42.DexImport("getX", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getP
 				/// </java-name>
-				public global::Java.Math.BigInteger P
+				public virtual global::Java.Math.BigInteger P
 				{
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetP(); }
+						[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getG
 				/// </java-name>
-				public global::Java.Math.BigInteger G
+				public virtual global::Java.Math.BigInteger G
 				{
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetG(); }
+						[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -405,33 +315,6 @@ namespace Javax.Crypto.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getY
-				/// </java-name>
-				[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetY() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getP
-				/// </java-name>
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetP() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
-				/// <java-name>
-				/// getG
-				/// </java-name>
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger GetG() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Math.BigInteger);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DHPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -440,28 +323,28 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getY
 				/// </java-name>
-				public global::Java.Math.BigInteger Y
+				public virtual global::Java.Math.BigInteger Y
 				{
-				[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetY(); }
+						[Dot42.DexImport("getY", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getP
 				/// </java-name>
-				public global::Java.Math.BigInteger P
+				public virtual global::Java.Math.BigInteger P
 				{
-				[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetP(); }
+						[Dot42.DexImport("getP", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 				/// <java-name>
 				/// getG
 				/// </java-name>
-				public global::Java.Math.BigInteger G
+				public virtual global::Java.Math.BigInteger G
 				{
-				[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
-						get{ return GetG(); }
+						[Dot42.DexImport("getG", "()Ljava/math/BigInteger;", AccessFlags = 1)]
+						get{ return default(global::Java.Math.BigInteger); }
 				}
 
 		}
@@ -502,15 +385,6 @@ namespace Javax.Crypto.Spec
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getIV
-				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetIV() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal IvParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -519,10 +393,10 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getIV
 				/// </java-name>
-				public byte[] IV
+				public virtual byte[] IV
 				{
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetIV(); }
+						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -545,42 +419,6 @@ namespace Javax.Crypto.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getDigestAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDigestAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMGFAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetMGFAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMGFParameters
-				/// </java-name>
-				[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
-				public virtual global::Java.Security.Spec.IAlgorithmParameterSpec GetMGFParameters() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Security.Spec.IAlgorithmParameterSpec);
-				}
-
-				/// <java-name>
-				/// getPSource
-				/// </java-name>
-				[Dot42.DexImport("getPSource", "()Ljavax/crypto/spec/PSource;", AccessFlags = 1)]
-				public virtual global::Javax.Crypto.Spec.PSource GetPSource() /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Crypto.Spec.PSource);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal OAEPParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -589,37 +427,37 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getDigestAlgorithm
 				/// </java-name>
-				public string DigestAlgorithm
+				public virtual string DigestAlgorithm
 				{
-				[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDigestAlgorithm(); }
+						[Dot42.DexImport("getDigestAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getMGFAlgorithm
 				/// </java-name>
-				public string MGFAlgorithm
+				public virtual string MGFAlgorithm
 				{
-				[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMGFAlgorithm(); }
+						[Dot42.DexImport("getMGFAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getMGFParameters
 				/// </java-name>
-				public global::Java.Security.Spec.IAlgorithmParameterSpec MGFParameters
+				public virtual global::Java.Security.Spec.IAlgorithmParameterSpec MGFParameters
 				{
-				[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
-						get{ return GetMGFParameters(); }
+						[Dot42.DexImport("getMGFParameters", "()Ljava/security/spec/AlgorithmParameterSpec;", AccessFlags = 1)]
+						get{ return default(global::Java.Security.Spec.IAlgorithmParameterSpec); }
 				}
 
 				/// <java-name>
 				/// getPSource
 				/// </java-name>
-				public global::Javax.Crypto.Spec.PSource PSource
+				public virtual global::Javax.Crypto.Spec.PSource PSource
 				{
-				[Dot42.DexImport("getPSource", "()Ljavax/crypto/spec/PSource;", AccessFlags = 1)]
-						get{ return GetPSource(); }
+						[Dot42.DexImport("getPSource", "()Ljavax/crypto/spec/PSource;", AccessFlags = 1)]
+						get{ return default(global::Javax.Crypto.Spec.PSource); }
 				}
 
 		}
@@ -665,48 +503,12 @@ namespace Javax.Crypto.Spec
 				}
 
 				/// <java-name>
-				/// getPassword
-				/// </java-name>
-				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 17)]
-				public char[] GetPassword() /* MethodBuilder.Create */ 
-				{
-						return default(char[]);
-				}
-
-				/// <java-name>
 				/// getSalt
 				/// </java-name>
 				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17)]
 				public sbyte[] JavaGetSalt() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getSalt
-				/// </java-name>
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-				public byte[] GetSalt() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getIterationCount
-				/// </java-name>
-				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 17)]
-				public int GetIterationCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getKeyLength
-				/// </java-name>
-				[Dot42.DexImport("getKeyLength", "()I", AccessFlags = 17)]
-				public int GetKeyLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -719,8 +521,8 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public char[] Password
 				{
-				[Dot42.DexImport("getPassword", "()[C", AccessFlags = 17)]
-						get{ return GetPassword(); }
+						[Dot42.DexImport("getPassword", "()[C", AccessFlags = 17)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
@@ -728,8 +530,8 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public byte[] Salt
 				{
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
-						get{ return GetSalt(); }
+						[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
@@ -737,8 +539,8 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public int IterationCount
 				{
-				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 17)]
-						get{ return GetIterationCount(); }
+						[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -746,8 +548,8 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public int KeyLength
 				{
-				[Dot42.DexImport("getKeyLength", "()I", AccessFlags = 17)]
-						get{ return GetKeyLength(); }
+						[Dot42.DexImport("getKeyLength", "()I", AccessFlags = 17)]
+						get{ return default(int); }
 				}
 
 		}
@@ -778,24 +580,6 @@ namespace Javax.Crypto.Spec
 						return default(sbyte[]);
 				}
 
-				/// <java-name>
-				/// getSalt
-				/// </java-name>
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetSalt() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
-				}
-
-				/// <java-name>
-				/// getIterationCount
-				/// </java-name>
-				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 1)]
-				public virtual int GetIterationCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal PBEParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -804,19 +588,19 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getSalt
 				/// </java-name>
-				public byte[] Salt
+				public virtual byte[] Salt
 				{
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetSalt(); }
+						[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 				/// <java-name>
 				/// getIterationCount
 				/// </java-name>
-				public int IterationCount
+				public virtual int IterationCount
 				{
-				[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 1)]
-						get{ return GetIterationCount(); }
+						[Dot42.DexImport("getIterationCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -833,15 +617,6 @@ namespace Javax.Crypto.Spec
 				{
 				}
 
-				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal PSource() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -850,10 +625,10 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getAlgorithm
 				/// </java-name>
-				public string Algorithm
+				public virtual string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -887,15 +662,6 @@ namespace Javax.Crypto.Spec
 								return default(sbyte[]);
 						}
 
-						/// <java-name>
-						/// getValue
-						/// </java-name>
-						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						public byte[] GetValue() /* MethodBuilder.Create */ 
-						{
-								return default(byte[]);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 						internal PSpecified() /* TypeBuilder.AddDefaultConstructor */ 
 						{
@@ -906,8 +672,8 @@ namespace Javax.Crypto.Spec
 						/// </java-name>
 						public byte[] Value
 						{
-						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-								get{ return GetValue(); }
+								[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+								get{ return default(byte[]); }
 						}
 
 				}
@@ -947,30 +713,12 @@ namespace Javax.Crypto.Spec
 				}
 
 				/// <java-name>
-				/// getEffectiveKeyBits
-				/// </java-name>
-				[Dot42.DexImport("getEffectiveKeyBits", "()I", AccessFlags = 1)]
-				public virtual int GetEffectiveKeyBits() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getIV
 				/// </java-name>
 				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
 				public virtual sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getIV
-				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetIV() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -999,19 +747,19 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getEffectiveKeyBits
 				/// </java-name>
-				public int EffectiveKeyBits
+				public virtual int EffectiveKeyBits
 				{
-				[Dot42.DexImport("getEffectiveKeyBits", "()I", AccessFlags = 1)]
-						get{ return GetEffectiveKeyBits(); }
+						[Dot42.DexImport("getEffectiveKeyBits", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIV
 				/// </java-name>
-				public byte[] IV
+				public virtual byte[] IV
 				{
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetIV(); }
+						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -1049,48 +797,12 @@ namespace Javax.Crypto.Spec
 				}
 
 				/// <java-name>
-				/// getVersion
-				/// </java-name>
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-				public virtual int GetVersion() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getRounds
-				/// </java-name>
-				[Dot42.DexImport("getRounds", "()I", AccessFlags = 1)]
-				public virtual int GetRounds() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getWordSize
-				/// </java-name>
-				[Dot42.DexImport("getWordSize", "()I", AccessFlags = 1)]
-				public virtual int GetWordSize() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getIV
 				/// </java-name>
 				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
 				public virtual sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getIV
-				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetIV() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -1119,37 +831,37 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getVersion
 				/// </java-name>
-				public int Version
+				public virtual int Version
 				{
-				[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
-						get{ return GetVersion(); }
+						[Dot42.DexImport("getVersion", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getRounds
 				/// </java-name>
-				public int Rounds
+				public virtual int Rounds
 				{
-				[Dot42.DexImport("getRounds", "()I", AccessFlags = 1)]
-						get{ return GetRounds(); }
+						[Dot42.DexImport("getRounds", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getWordSize
 				/// </java-name>
-				public int WordSize
+				public virtual int WordSize
 				{
-				[Dot42.DexImport("getWordSize", "()I", AccessFlags = 1)]
-						get{ return GetWordSize(); }
+						[Dot42.DexImport("getWordSize", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIV
 				/// </java-name>
-				public byte[] IV
+				public virtual byte[] IV
 				{
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetIV(); }
+						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}
@@ -1182,39 +894,12 @@ namespace Javax.Crypto.Spec
 				}
 
 				/// <java-name>
-				/// getAlgorithm
-				/// </java-name>
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAlgorithm() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getFormat
-				/// </java-name>
-				[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetFormat() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getEncoded
 				/// </java-name>
 				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
 				public virtual sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
-				}
-
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetEncoded() /* MethodBuilder.Create */ 
-				{
-						return default(byte[]);
 				}
 
 				/// <java-name>
@@ -1243,28 +928,28 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getAlgorithm
 				/// </java-name>
-				public string Algorithm
+				public virtual string Algorithm
 				{
-				[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAlgorithm(); }
+						[Dot42.DexImport("getAlgorithm", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getFormat
 				/// </java-name>
-				public string Format
+				public virtual string Format
 				{
-				[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetFormat(); }
+						[Dot42.DexImport("getFormat", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				public byte[] Encoded
+				public virtual byte[] Encoded
 				{
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
-						get{ return GetEncoded(); }
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						get{ return default(byte[]); }
 				}
 
 		}

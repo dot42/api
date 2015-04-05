@@ -39,15 +39,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// isRunning
-				/// </java-name>
-				[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1)]
-				public virtual bool IsRunning() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// run
 				/// </java-name>
 				[Dot42.DexImport("run", "()V", AccessFlags = 1)]
@@ -61,15 +52,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("unscheduleSelf", "(Ljava/lang/Runnable;)V", AccessFlags = 1)]
 				public override void UnscheduleSelf(global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getNumberOfFrames
-				/// </java-name>
-				[Dot42.DexImport("getNumberOfFrames", "()I", AccessFlags = 1)]
-				public virtual int GetNumberOfFrames() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -88,15 +70,6 @@ namespace Android.Graphics.Drawables
 				public virtual int GetDuration(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isOneShot
-				/// </java-name>
-				[Dot42.DexImport("isOneShot", "()Z", AccessFlags = 1)]
-				public virtual bool IsOneShot() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -134,12 +107,30 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
+				/// isRunning
+				/// </java-name>
+				public virtual bool IsRunning
+				{
+						[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getNumberOfFrames
 				/// </java-name>
-				public int NumberOfFrames
+				public virtual int NumberOfFrames
 				{
-				[Dot42.DexImport("getNumberOfFrames", "()I", AccessFlags = 1)]
-						get{ return GetNumberOfFrames(); }
+						[Dot42.DexImport("getNumberOfFrames", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isOneShot
+				/// </java-name>
+				public virtual bool IsOneShot
+				{
+						[Dot42.DexImport("isOneShot", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -192,24 +183,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getPaint
-				/// </java-name>
-				[Dot42.DexImport("getPaint", "()Landroid/graphics/Paint;", AccessFlags = 17)]
-				public global::Android.Graphics.Paint GetPaint() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Paint);
-				}
-
-				/// <java-name>
-				/// getBitmap
-				/// </java-name>
-				[Dot42.DexImport("getBitmap", "()Landroid/graphics/Bitmap;", AccessFlags = 17)]
-				public global::Android.Graphics.Bitmap GetBitmap() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Bitmap);
-				}
-
-				/// <java-name>
 				/// setTargetDensity
 				/// </java-name>
 				[Dot42.DexImport("setTargetDensity", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
@@ -230,23 +203,6 @@ namespace Android.Graphics.Drawables
 				/// </java-name>
 				[Dot42.DexImport("setTargetDensity", "(I)V", AccessFlags = 1)]
 				public virtual void SetTargetDensity(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getGravity
-				/// </java-name>
-				[Dot42.DexImport("getGravity", "()I", AccessFlags = 1)]
-				public virtual int GetGravity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setGravity
-				/// </java-name>
-				[Dot42.DexImport("setGravity", "(I)V", AccessFlags = 1)]
-				public virtual void SetGravity(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -275,54 +231,11 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getTileModeX
-				/// </java-name>
-				[Dot42.DexImport("getTileModeX", "()Landroid/graphics/Shader$TileMode;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Shader.TileMode GetTileModeX() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Shader.TileMode);
-				}
-
-				/// <java-name>
-				/// getTileModeY
-				/// </java-name>
-				[Dot42.DexImport("getTileModeY", "()Landroid/graphics/Shader$TileMode;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Shader.TileMode GetTileModeY() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Shader.TileMode);
-				}
-
-				/// <java-name>
-				/// setTileModeX
-				/// </java-name>
-				[Dot42.DexImport("setTileModeX", "(Landroid/graphics/Shader$TileMode;)V", AccessFlags = 1)]
-				public virtual void SetTileModeX(global::Android.Graphics.Shader.TileMode tileMode) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTileModeY
-				/// </java-name>
-				[Dot42.DexImport("setTileModeY", "(Landroid/graphics/Shader$TileMode;)V", AccessFlags = 17)]
-				public void SetTileModeY(global::Android.Graphics.Shader.TileMode tileMode) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setTileModeXY
 				/// </java-name>
 				[Dot42.DexImport("setTileModeXY", "(Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V", AccessFlags = 1)]
 				public virtual void SetTileModeXY(global::Android.Graphics.Shader.TileMode tileMode, global::Android.Graphics.Shader.TileMode tileMode1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -376,33 +289,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 17)]
@@ -416,8 +302,8 @@ namespace Android.Graphics.Drawables
 				/// </java-name>
 				public global::Android.Graphics.Paint Paint
 				{
-				[Dot42.DexImport("getPaint", "()Landroid/graphics/Paint;", AccessFlags = 17)]
-						get{ return GetPaint(); }
+						[Dot42.DexImport("getPaint", "()Landroid/graphics/Paint;", AccessFlags = 17)]
+						get{ return default(global::Android.Graphics.Paint); }
 				}
 
 				/// <java-name>
@@ -425,77 +311,77 @@ namespace Android.Graphics.Drawables
 				/// </java-name>
 				public global::Android.Graphics.Bitmap Bitmap
 				{
-				[Dot42.DexImport("getBitmap", "()Landroid/graphics/Bitmap;", AccessFlags = 17)]
-						get{ return GetBitmap(); }
+						[Dot42.DexImport("getBitmap", "()Landroid/graphics/Bitmap;", AccessFlags = 17)]
+						get{ return default(global::Android.Graphics.Bitmap); }
 				}
 
 				/// <java-name>
 				/// getGravity
 				/// </java-name>
-				public int Gravity
+				public virtual int Gravity
 				{
-				[Dot42.DexImport("getGravity", "()I", AccessFlags = 1)]
-						get{ return GetGravity(); }
-				[Dot42.DexImport("setGravity", "(I)V", AccessFlags = 1)]
-						set{ SetGravity(value); }
+						[Dot42.DexImport("getGravity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setGravity", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTileModeX
 				/// </java-name>
-				public global::Android.Graphics.Shader.TileMode TileModeX
+				public virtual global::Android.Graphics.Shader.TileMode TileModeX
 				{
-				[Dot42.DexImport("getTileModeX", "()Landroid/graphics/Shader$TileMode;", AccessFlags = 1)]
-						get{ return GetTileModeX(); }
-				[Dot42.DexImport("setTileModeX", "(Landroid/graphics/Shader$TileMode;)V", AccessFlags = 1)]
-						set{ SetTileModeX(value); }
+						[Dot42.DexImport("getTileModeX", "()Landroid/graphics/Shader$TileMode;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Shader.TileMode); }
+						[Dot42.DexImport("setTileModeX", "(Landroid/graphics/Shader$TileMode;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getTileModeY
 				/// </java-name>
-				public global::Android.Graphics.Shader.TileMode TileModeY
+				public virtual global::Android.Graphics.Shader.TileMode TileModeY
 				{
-				[Dot42.DexImport("getTileModeY", "()Landroid/graphics/Shader$TileMode;", AccessFlags = 1)]
-						get{ return GetTileModeY(); }
-				[Dot42.DexImport("setTileModeY", "(Landroid/graphics/Shader$TileMode;)V", AccessFlags = 17)]
-						set{ SetTileModeY(value); }
+						[Dot42.DexImport("getTileModeY", "()Landroid/graphics/Shader$TileMode;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Shader.TileMode); }
+						[Dot42.DexImport("setTileModeY", "(Landroid/graphics/Shader$TileMode;)V", AccessFlags = 17)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -556,15 +442,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getPadding
 				/// </java-name>
 				[Dot42.DexImport("getPadding", "(Landroid/graphics/Rect;)Z", AccessFlags = 1)]
@@ -596,24 +473,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("setColorFilter", "(Landroid/graphics/ColorFilter;)V", AccessFlags = 1)]
 				public override void SetColorFilter(global::Android.Graphics.ColorFilter colorFilter) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isStateful
-				/// </java-name>
-				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
-				public override bool IsStateful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -651,24 +510,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
@@ -685,37 +526,46 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isStateful
+				/// </java-name>
+				public override bool IsStateful
+				{
+						[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -738,36 +588,10 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// draw
 				/// </java-name>
 				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
 				public override void Draw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getColor
-				/// </java-name>
-				[Dot42.DexImport("getColor", "()I", AccessFlags = 1)]
-				public virtual int GetColor() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// setColor
-				/// </java-name>
-				[Dot42.DexImport("setColor", "(I)V", AccessFlags = 1)]
-				public virtual void SetColor(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -797,15 +621,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// inflate
 				/// </java-name>
 				[Dot42.DexImport("inflate", "(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/Attri" +
@@ -826,41 +641,30 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColor
 				/// </java-name>
-				public int Color
+				public virtual int Color
 				{
-				[Dot42.DexImport("getColor", "()I", AccessFlags = 1)]
-						get{ return GetColor(); }
-				[Dot42.DexImport("setColor", "(I)V", AccessFlags = 1)]
-						set{ SetColor(value); }
-				}
-
-				/// <java-name>
-				/// getAlpha
-				/// </java-name>
-				public int Alpha
-				{
-				[Dot42.DexImport("getAlpha", "()I", AccessFlags = 1)]
-						get{ return GetAlpha(); }
-				[Dot42.DexImport("setAlpha", "(I)V", AccessFlags = 1)]
-						set{ SetAlpha(value); }
+						[Dot42.DexImport("getColor", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setColor", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -892,14 +696,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// setBounds
-				/// </java-name>
-				[Dot42.DexImport("setBounds", "(Landroid/graphics/Rect;)V", AccessFlags = 1)]
-				public virtual void SetBounds(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// copyBounds
 				/// </java-name>
 				[Dot42.DexImport("copyBounds", "(Landroid/graphics/Rect;)V", AccessFlags = 17)]
@@ -917,32 +713,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getBounds
-				/// </java-name>
-				[Dot42.DexImport("getBounds", "()Landroid/graphics/Rect;", AccessFlags = 17)]
-				public global::Android.Graphics.Rect GetBounds() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Rect);
-				}
-
-				/// <java-name>
-				/// setChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("setChangingConfigurations", "(I)V", AccessFlags = 1)]
-				public virtual void SetChangingConfigurations(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public virtual int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setDither
 				/// </java-name>
 				[Dot42.DexImport("setDither", "(Z)V", AccessFlags = 1)]
@@ -956,23 +726,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("setFilterBitmap", "(Z)V", AccessFlags = 1)]
 				public virtual void SetFilterBitmap(bool boolean) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// setCallback
-				/// </java-name>
-				[Dot42.DexImport("setCallback", "(Landroid/graphics/drawable/Drawable$Callback;)V", AccessFlags = 17)]
-				public void SetCallback(global::Android.Graphics.Drawables.Drawable.ICallback callback) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getCallback
-				/// </java-name>
-				[Dot42.DexImport("getCallback", "()Landroid/graphics/drawable/Drawable$Callback;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawables.Drawable.ICallback GetCallback() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawables.Drawable.ICallback);
 				}
 
 				/// <java-name>
@@ -1028,15 +781,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// isStateful
-				/// </java-name>
-				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
-				public virtual bool IsStateful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setState
 				/// </java-name>
 				[Dot42.DexImport("setState", "([I)Z", AccessFlags = 1)]
@@ -1046,29 +790,11 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()[I", AccessFlags = 1)]
-				public virtual int[] GetState() /* MethodBuilder.Create */ 
-				{
-						return default(int[]);
-				}
-
-				/// <java-name>
 				/// jumpToCurrentState
 				/// </java-name>
 				[Dot42.DexImport("jumpToCurrentState", "()V", AccessFlags = 1)]
 				public virtual void JumpToCurrentState() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getCurrent
-				/// </java-name>
-				[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawables.Drawable GetCurrent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1081,15 +807,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getLevel
-				/// </java-name>
-				[Dot42.DexImport("getLevel", "()I", AccessFlags = 17)]
-				public int GetLevel() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setVisible
 				/// </java-name>
 				[Dot42.DexImport("setVisible", "(ZZ)Z", AccessFlags = 1)]
@@ -1099,36 +816,12 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// isVisible
-				/// </java-name>
-				[Dot42.DexImport("isVisible", "()Z", AccessFlags = 17)]
-				public bool IsVisible() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1025)]
-				public abstract int GetOpacity() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// resolveOpacity
 				/// </java-name>
 				[Dot42.DexImport("resolveOpacity", "(II)I", AccessFlags = 9)]
 				public static int ResolveOpacity(int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// getTransparentRegion
-				/// </java-name>
-				[Dot42.DexImport("getTransparentRegion", "()Landroid/graphics/Region;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Region GetTransparentRegion() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Region);
 				}
 
 				/// <java-name>
@@ -1155,42 +848,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("onBoundsChange", "(Landroid/graphics/Rect;)V", AccessFlags = 4)]
 				protected internal virtual void OnBoundsChange(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public virtual int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public virtual int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinimumWidth
-				/// </java-name>
-				[Dot42.DexImport("getMinimumWidth", "()I", AccessFlags = 1)]
-				public virtual int GetMinimumWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinimumHeight
-				/// </java-name>
-				[Dot42.DexImport("getMinimumHeight", "()I", AccessFlags = 1)]
-				public virtual int GetMinimumHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1293,50 +950,59 @@ namespace Android.Graphics.Drawables
 				/// </java-name>
 				public global::Android.Graphics.Rect Bounds
 				{
-				[Dot42.DexImport("getBounds", "()Landroid/graphics/Rect;", AccessFlags = 17)]
-						get{ return GetBounds(); }
-				[Dot42.DexImport("setBounds", "(Landroid/graphics/Rect;)V", AccessFlags = 1)]
-						set{ SetBounds(value); }
+						[Dot42.DexImport("getBounds", "()Landroid/graphics/Rect;", AccessFlags = 17)]
+						get{ return default(global::Android.Graphics.Rect); }
+						[Dot42.DexImport("setBounds", "(Landroid/graphics/Rect;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public virtual int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
-				[Dot42.DexImport("setChangingConfigurations", "(I)V", AccessFlags = 1)]
-						set{ SetChangingConfigurations(value); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setChangingConfigurations", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getCallback
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable.ICallback Callback
+				public virtual global::Android.Graphics.Drawables.Drawable.ICallback Callback
 				{
-				[Dot42.DexImport("getCallback", "()Landroid/graphics/drawable/Drawable$Callback;", AccessFlags = 1)]
-						get{ return GetCallback(); }
-				[Dot42.DexImport("setCallback", "(Landroid/graphics/drawable/Drawable$Callback;)V", AccessFlags = 17)]
-						set{ SetCallback(value); }
+						[Dot42.DexImport("getCallback", "()Landroid/graphics/drawable/Drawable$Callback;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Drawables.Drawable.ICallback); }
+						[Dot42.DexImport("setCallback", "(Landroid/graphics/drawable/Drawable$Callback;)V", AccessFlags = 17)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// isStateful
+				/// </java-name>
+				public virtual bool IsStateful
+				{
+						[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getState
 				/// </java-name>
-				public int[] State
+				public virtual int[] State
 				{
-				[Dot42.DexImport("getState", "()[I", AccessFlags = 1)]
-						get{ return GetState(); }
+						[Dot42.DexImport("getState", "()[I", AccessFlags = 1)]
+						get{ return default(int[]); }
 				}
 
 				/// <java-name>
 				/// getCurrent
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable Current
+				public virtual global::Android.Graphics.Drawables.Drawable Current
 				{
-				[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						get{ return GetCurrent(); }
+						[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Drawables.Drawable); }
 				}
 
 				/// <java-name>
@@ -1344,62 +1010,71 @@ namespace Android.Graphics.Drawables
 				/// </java-name>
 				public int Level
 				{
-				[Dot42.DexImport("getLevel", "()I", AccessFlags = 17)]
-						get{ return GetLevel(); }
+						[Dot42.DexImport("getLevel", "()I", AccessFlags = 17)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isVisible
+				/// </java-name>
+				public bool IsVisible
+				{
+						[Dot42.DexImport("isVisible", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public abstract int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1025)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1025)]
+						get;
 				}
 
 				/// <java-name>
 				/// getTransparentRegion
 				/// </java-name>
-				public global::Android.Graphics.Region TransparentRegion
+				public virtual global::Android.Graphics.Region TransparentRegion
 				{
-				[Dot42.DexImport("getTransparentRegion", "()Landroid/graphics/Region;", AccessFlags = 1)]
-						get{ return GetTransparentRegion(); }
+						[Dot42.DexImport("getTransparentRegion", "()Landroid/graphics/Region;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Region); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public virtual int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public virtual int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMinimumWidth
 				/// </java-name>
-				public int MinimumWidth
+				public virtual int MinimumWidth
 				{
-				[Dot42.DexImport("getMinimumWidth", "()I", AccessFlags = 1)]
-						get{ return GetMinimumWidth(); }
+						[Dot42.DexImport("getMinimumWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMinimumHeight
 				/// </java-name>
-				public int MinimumHeight
+				public virtual int MinimumHeight
 				{
-				[Dot42.DexImport("getMinimumHeight", "()I", AccessFlags = 1)]
-						get{ return GetMinimumHeight(); }
+						[Dot42.DexImport("getMinimumHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1432,16 +1107,10 @@ namespace Android.Graphics.Drawables
 						/// <java-name>
 						/// getChangingConfigurations
 						/// </java-name>
-						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1025)]
-						public abstract int GetChangingConfigurations() /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// getChangingConfigurations
-						/// </java-name>
-						public int ChangingConfigurations
+						public abstract int ChangingConfigurations
 						{
-						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1025)]
-								get{ return GetChangingConfigurations(); }
+								[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1025)]
+								get;
 						}
 
 				}
@@ -1493,15 +1162,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
 				public override void Draw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1562,15 +1222,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// isStateful
-				/// </java-name>
-				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
-				public override bool IsStateful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// jumpToCurrentState
 				/// </java-name>
 				[Dot42.DexImport("jumpToCurrentState", "()V", AccessFlags = 1)]
@@ -1594,42 +1245,6 @@ namespace Android.Graphics.Drawables
 				protected internal override bool OnLevelChange(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinimumWidth
-				/// </java-name>
-				[Dot42.DexImport("getMinimumWidth", "()I", AccessFlags = 1)]
-				public override int GetMinimumWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinimumHeight
-				/// </java-name>
-				[Dot42.DexImport("getMinimumHeight", "()I", AccessFlags = 1)]
-				public override int GetMinimumHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1666,30 +1281,12 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// selectDrawable
 				/// </java-name>
 				[Dot42.DexImport("selectDrawable", "(I)Z", AccessFlags = 1)]
 				public virtual bool SelectDrawable(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getCurrent
-				/// </java-name>
-				[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetCurrent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -1721,64 +1318,73 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isStateful
+				/// </java-name>
+				public override bool IsStateful
+				{
+						[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMinimumWidth
 				/// </java-name>
-				public int MinimumWidth
+				public override int MinimumWidth
 				{
-				[Dot42.DexImport("getMinimumWidth", "()I", AccessFlags = 1)]
-						get{ return GetMinimumWidth(); }
+						[Dot42.DexImport("getMinimumWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMinimumHeight
 				/// </java-name>
-				public int MinimumHeight
+				public override int MinimumHeight
 				{
-				[Dot42.DexImport("getMinimumHeight", "()I", AccessFlags = 1)]
-						get{ return GetMinimumHeight(); }
+						[Dot42.DexImport("getMinimumHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getCurrent
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable Current
+				public override global::Android.Graphics.Drawables.Drawable Current
 				{
-				[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						get{ return GetCurrent(); }
+						[Dot42.DexImport("getCurrent", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Drawables.Drawable); }
 				}
 
 				/// <java-name>
@@ -1794,39 +1400,12 @@ namespace Android.Graphics.Drawables
 						}
 
 						/// <java-name>
-						/// getChangingConfigurations
-						/// </java-name>
-						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
 						/// addChild
 						/// </java-name>
 						[Dot42.DexImport("addChild", "(Landroid/graphics/drawable/Drawable;)I", AccessFlags = 17)]
 						public int AddChild(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
 						{
 								return default(int);
-						}
-
-						/// <java-name>
-						/// getChildCount
-						/// </java-name>
-						[Dot42.DexImport("getChildCount", "()I", AccessFlags = 17)]
-						public int GetChildCount() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getChildren
-						/// </java-name>
-						[Dot42.DexImport("getChildren", "()[Landroid/graphics/drawable/Drawable;", AccessFlags = 17)]
-						public global::Android.Graphics.Drawables.Drawable[] GetChildren() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Graphics.Drawables.Drawable[]);
 						}
 
 						/// <java-name>
@@ -1838,65 +1417,11 @@ namespace Android.Graphics.Drawables
 						}
 
 						/// <java-name>
-						/// getConstantPadding
-						/// </java-name>
-						[Dot42.DexImport("getConstantPadding", "()Landroid/graphics/Rect;", AccessFlags = 17)]
-						public global::Android.Graphics.Rect GetConstantPadding() /* MethodBuilder.Create */ 
-						{
-								return default(global::Android.Graphics.Rect);
-						}
-
-						/// <java-name>
 						/// setConstantSize
 						/// </java-name>
 						[Dot42.DexImport("setConstantSize", "(Z)V", AccessFlags = 17)]
 						public void SetConstantSize(bool boolean) /* MethodBuilder.Create */ 
 						{
-						}
-
-						/// <java-name>
-						/// isConstantSize
-						/// </java-name>
-						[Dot42.DexImport("isConstantSize", "()Z", AccessFlags = 17)]
-						public bool IsConstantSize() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
-						/// getConstantWidth
-						/// </java-name>
-						[Dot42.DexImport("getConstantWidth", "()I", AccessFlags = 17)]
-						public int GetConstantWidth() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getConstantHeight
-						/// </java-name>
-						[Dot42.DexImport("getConstantHeight", "()I", AccessFlags = 17)]
-						public int GetConstantHeight() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getConstantMinimumWidth
-						/// </java-name>
-						[Dot42.DexImport("getConstantMinimumWidth", "()I", AccessFlags = 17)]
-						public int GetConstantMinimumWidth() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getConstantMinimumHeight
-						/// </java-name>
-						[Dot42.DexImport("getConstantMinimumHeight", "()I", AccessFlags = 17)]
-						public int GetConstantMinimumHeight() /* MethodBuilder.Create */ 
-						{
-								return default(int);
 						}
 
 						/// <java-name>
@@ -1908,58 +1433,6 @@ namespace Android.Graphics.Drawables
 						}
 
 						/// <java-name>
-						/// setEnterFadeDuration
-						/// </java-name>
-						[Dot42.DexImport("setEnterFadeDuration", "(I)V", AccessFlags = 17)]
-						public void SetEnterFadeDuration(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getEnterFadeDuration
-						/// </java-name>
-						[Dot42.DexImport("getEnterFadeDuration", "()I", AccessFlags = 17)]
-						public int GetEnterFadeDuration() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// setExitFadeDuration
-						/// </java-name>
-						[Dot42.DexImport("setExitFadeDuration", "(I)V", AccessFlags = 17)]
-						public void SetExitFadeDuration(int int32) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
-						/// getExitFadeDuration
-						/// </java-name>
-						[Dot42.DexImport("getExitFadeDuration", "()I", AccessFlags = 17)]
-						public int GetExitFadeDuration() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// getOpacity
-						/// </java-name>
-						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 17)]
-						public int GetOpacity() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <java-name>
-						/// isStateful
-						/// </java-name>
-						[Dot42.DexImport("isStateful", "()Z", AccessFlags = 17)]
-						public bool IsStateful() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
 						/// growArray
 						/// </java-name>
 						[Dot42.DexImport("growArray", "(II)V", AccessFlags = 1)]
@@ -1968,21 +1441,12 @@ namespace Android.Graphics.Drawables
 						}
 
 						/// <java-name>
-						/// canConstantState
-						/// </java-name>
-						[Dot42.DexImport("canConstantState", "()Z", AccessFlags = 33)]
-						public virtual bool CanConstantState() /* MethodBuilder.Create */ 
-						{
-								return default(bool);
-						}
-
-						/// <java-name>
 						/// getChangingConfigurations
 						/// </java-name>
-						public int ChangingConfigurations
+						public override int ChangingConfigurations
 						{
-						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-								get{ return GetChangingConfigurations(); }
+								[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -1990,8 +1454,8 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public int ChildCount
 						{
-						[Dot42.DexImport("getChildCount", "()I", AccessFlags = 17)]
-								get{ return GetChildCount(); }
+								[Dot42.DexImport("getChildCount", "()I", AccessFlags = 17)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -1999,8 +1463,8 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public global::Android.Graphics.Drawables.Drawable[] Children
 						{
-						[Dot42.DexImport("getChildren", "()[Landroid/graphics/drawable/Drawable;", AccessFlags = 17)]
-								get{ return GetChildren(); }
+								[Dot42.DexImport("getChildren", "()[Landroid/graphics/drawable/Drawable;", AccessFlags = 17)]
+								get{ return default(global::Android.Graphics.Drawables.Drawable[]); }
 						}
 
 						/// <java-name>
@@ -2008,8 +1472,17 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public global::Android.Graphics.Rect ConstantPadding
 						{
-						[Dot42.DexImport("getConstantPadding", "()Landroid/graphics/Rect;", AccessFlags = 17)]
-								get{ return GetConstantPadding(); }
+								[Dot42.DexImport("getConstantPadding", "()Landroid/graphics/Rect;", AccessFlags = 17)]
+								get{ return default(global::Android.Graphics.Rect); }
+						}
+
+						/// <java-name>
+						/// isConstantSize
+						/// </java-name>
+						public bool IsConstantSize
+						{
+								[Dot42.DexImport("isConstantSize", "()Z", AccessFlags = 17)]
+								get{ return default(bool); }
 						}
 
 						/// <java-name>
@@ -2017,8 +1490,8 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public int ConstantWidth
 						{
-						[Dot42.DexImport("getConstantWidth", "()I", AccessFlags = 17)]
-								get{ return GetConstantWidth(); }
+								[Dot42.DexImport("getConstantWidth", "()I", AccessFlags = 17)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -2026,8 +1499,8 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public int ConstantHeight
 						{
-						[Dot42.DexImport("getConstantHeight", "()I", AccessFlags = 17)]
-								get{ return GetConstantHeight(); }
+								[Dot42.DexImport("getConstantHeight", "()I", AccessFlags = 17)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -2035,8 +1508,8 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public int ConstantMinimumWidth
 						{
-						[Dot42.DexImport("getConstantMinimumWidth", "()I", AccessFlags = 17)]
-								get{ return GetConstantMinimumWidth(); }
+								[Dot42.DexImport("getConstantMinimumWidth", "()I", AccessFlags = 17)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -2044,8 +1517,8 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public int ConstantMinimumHeight
 						{
-						[Dot42.DexImport("getConstantMinimumHeight", "()I", AccessFlags = 17)]
-								get{ return GetConstantMinimumHeight(); }
+								[Dot42.DexImport("getConstantMinimumHeight", "()I", AccessFlags = 17)]
+								get{ return default(int); }
 						}
 
 						/// <java-name>
@@ -2053,10 +1526,10 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public int EnterFadeDuration
 						{
-						[Dot42.DexImport("getEnterFadeDuration", "()I", AccessFlags = 17)]
-								get{ return GetEnterFadeDuration(); }
-						[Dot42.DexImport("setEnterFadeDuration", "(I)V", AccessFlags = 17)]
-								set{ SetEnterFadeDuration(value); }
+								[Dot42.DexImport("getEnterFadeDuration", "()I", AccessFlags = 17)]
+								get{ return default(int); }
+								[Dot42.DexImport("setEnterFadeDuration", "(I)V", AccessFlags = 17)]
+								set{ }
 						}
 
 						/// <java-name>
@@ -2064,10 +1537,10 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public int ExitFadeDuration
 						{
-						[Dot42.DexImport("getExitFadeDuration", "()I", AccessFlags = 17)]
-								get{ return GetExitFadeDuration(); }
-						[Dot42.DexImport("setExitFadeDuration", "(I)V", AccessFlags = 17)]
-								set{ SetExitFadeDuration(value); }
+								[Dot42.DexImport("getExitFadeDuration", "()I", AccessFlags = 17)]
+								get{ return default(int); }
+								[Dot42.DexImport("setExitFadeDuration", "(I)V", AccessFlags = 17)]
+								set{ }
 						}
 
 						/// <java-name>
@@ -2075,8 +1548,26 @@ namespace Android.Graphics.Drawables
 						/// </java-name>
 						public int Opacity
 						{
-						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 17)]
-								get{ return GetOpacity(); }
+								[Dot42.DexImport("getOpacity", "()I", AccessFlags = 17)]
+								get{ return default(int); }
+						}
+
+						/// <java-name>
+						/// isStateful
+						/// </java-name>
+						public bool IsStateful
+						{
+								[Dot42.DexImport("isStateful", "()Z", AccessFlags = 17)]
+								get{ return default(bool); }
+						}
+
+						/// <java-name>
+						/// canConstantState
+						/// </java-name>
+						public virtual bool CanConstantState
+						{
+								[Dot42.DexImport("canConstantState", "()Z", AccessFlags = 33)]
+								get{ return default(bool); }
 						}
 
 				}
@@ -2241,15 +1732,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setAlpha
 				/// </java-name>
 				[Dot42.DexImport("setAlpha", "(I)V", AccessFlags = 1)]
@@ -2271,15 +1753,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("setColorFilter", "(Landroid/graphics/ColorFilter;)V", AccessFlags = 1)]
 				public override void SetColorFilter(global::Android.Graphics.ColorFilter colorFilter) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2309,24 +1782,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
@@ -2347,37 +1802,37 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2475,8 +1930,11 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// isRunning
 				/// </java-name>
-				[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1025)]
-				bool IsRunning() /* MethodBuilder.Create */ ;
+				bool IsRunning
+				{
+						[Dot42.DexImport("isRunning", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -2539,15 +1997,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getPadding
 				/// </java-name>
 				[Dot42.DexImport("getPadding", "(Landroid/graphics/Rect;)Z", AccessFlags = 1)]
@@ -2582,24 +2031,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isStateful
-				/// </java-name>
-				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
-				public override bool IsStateful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// onStateChange
 				/// </java-name>
 				[Dot42.DexImport("onStateChange", "([I)Z", AccessFlags = 4)]
@@ -2614,24 +2045,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("onBoundsChange", "(Landroid/graphics/Rect;)V", AccessFlags = 4)]
 				protected internal override void OnBoundsChange(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2660,37 +2073,46 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isStateful
+				/// </java-name>
+				public override bool IsStateful
+				{
+						[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -2731,15 +2153,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("setId", "(II)V", AccessFlags = 1)]
 				public virtual void SetId(int int32, int int321) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getNumberOfLayers
-				/// </java-name>
-				[Dot42.DexImport("getNumberOfLayers", "()I", AccessFlags = 1)]
-				public virtual int GetNumberOfLayers() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2810,15 +2223,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getPadding
 				/// </java-name>
 				[Dot42.DexImport("getPadding", "(Landroid/graphics/Rect;)Z", AccessFlags = 1)]
@@ -2869,24 +2273,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isStateful
-				/// </java-name>
-				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
-				public override bool IsStateful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// onStateChange
 				/// </java-name>
 				[Dot42.DexImport("onStateChange", "([I)Z", AccessFlags = 4)]
@@ -2910,24 +2296,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("onBoundsChange", "(Landroid/graphics/Rect;)V", AccessFlags = 4)]
 				protected internal override void OnBoundsChange(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2956,46 +2324,55 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getNumberOfLayers
 				/// </java-name>
-				public int NumberOfLayers
+				public virtual int NumberOfLayers
 				{
-				[Dot42.DexImport("getNumberOfLayers", "()I", AccessFlags = 1)]
-						get{ return GetNumberOfLayers(); }
+						[Dot42.DexImport("getNumberOfLayers", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isStateful
+				/// </java-name>
+				public override bool IsStateful
+				{
+						[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -3121,15 +2498,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getPadding
 				/// </java-name>
 				[Dot42.DexImport("getPadding", "(Landroid/graphics/Rect;)Z", AccessFlags = 1)]
@@ -3180,69 +2548,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getPaint
-				/// </java-name>
-				[Dot42.DexImport("getPaint", "()Landroid/graphics/Paint;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Paint GetPaint() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Paint);
-				}
-
-				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinimumWidth
-				/// </java-name>
-				[Dot42.DexImport("getMinimumWidth", "()I", AccessFlags = 1)]
-				public override int GetMinimumWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getMinimumHeight
-				/// </java-name>
-				[Dot42.DexImport("getMinimumHeight", "()I", AccessFlags = 1)]
-				public override int GetMinimumHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getTransparentRegion
-				/// </java-name>
-				[Dot42.DexImport("getTransparentRegion", "()Landroid/graphics/Region;", AccessFlags = 1)]
-				public override global::Android.Graphics.Region GetTransparentRegion() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Region);
-				}
-
-				/// <java-name>
 				/// getConstantState
 				/// </java-name>
 				[Dot42.DexImport("getConstantState", "()Landroid/graphics/drawable/Drawable$ConstantState;", AccessFlags = 1)]
@@ -3268,73 +2573,73 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getPaint
 				/// </java-name>
-				public global::Android.Graphics.Paint Paint
+				public virtual global::Android.Graphics.Paint Paint
 				{
-				[Dot42.DexImport("getPaint", "()Landroid/graphics/Paint;", AccessFlags = 1)]
-						get{ return GetPaint(); }
+						[Dot42.DexImport("getPaint", "()Landroid/graphics/Paint;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Paint); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMinimumWidth
 				/// </java-name>
-				public int MinimumWidth
+				public override int MinimumWidth
 				{
-				[Dot42.DexImport("getMinimumWidth", "()I", AccessFlags = 1)]
-						get{ return GetMinimumWidth(); }
+						[Dot42.DexImport("getMinimumWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getMinimumHeight
 				/// </java-name>
-				public int MinimumHeight
+				public override int MinimumHeight
 				{
-				[Dot42.DexImport("getMinimumHeight", "()I", AccessFlags = 1)]
-						get{ return GetMinimumHeight(); }
+						[Dot42.DexImport("getMinimumHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getTransparentRegion
 				/// </java-name>
-				public global::Android.Graphics.Region TransparentRegion
+				public override global::Android.Graphics.Region TransparentRegion
 				{
-				[Dot42.DexImport("getTransparentRegion", "()Landroid/graphics/Region;", AccessFlags = 1)]
-						get{ return GetTransparentRegion(); }
+						[Dot42.DexImport("getTransparentRegion", "()Landroid/graphics/Region;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Region); }
 				}
 
 		}
@@ -3397,55 +2702,11 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getPicture
-				/// </java-name>
-				[Dot42.DexImport("getPicture", "()Landroid/graphics/Picture;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Picture GetPicture() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Picture);
-				}
-
-				/// <java-name>
-				/// setPicture
-				/// </java-name>
-				[Dot42.DexImport("setPicture", "(Landroid/graphics/Picture;)V", AccessFlags = 1)]
-				public virtual void SetPicture(global::Android.Graphics.Picture picture) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// draw
 				/// </java-name>
 				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;)V", AccessFlags = 1)]
 				public override void Draw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3488,39 +2749,39 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getPicture
 				/// </java-name>
-				public global::Android.Graphics.Picture Picture
+				public virtual global::Android.Graphics.Picture Picture
 				{
-				[Dot42.DexImport("getPicture", "()Landroid/graphics/Picture;", AccessFlags = 1)]
-						get{ return GetPicture(); }
-				[Dot42.DexImport("setPicture", "(Landroid/graphics/Picture;)V", AccessFlags = 1)]
-						set{ SetPicture(value); }
+						[Dot42.DexImport("getPicture", "()Landroid/graphics/Picture;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Picture); }
+						[Dot42.DexImport("setPicture", "(Landroid/graphics/Picture;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -3546,24 +2807,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getDrawable
-				/// </java-name>
-				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawables.Drawable GetDrawable() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawables.Drawable);
-				}
-
-				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setAlpha
 				/// </java-name>
 				[Dot42.DexImport("setAlpha", "(I)V", AccessFlags = 1)]
@@ -3577,15 +2820,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("setColorFilter", "(Landroid/graphics/ColorFilter;)V", AccessFlags = 1)]
 				public override void SetColorFilter(global::Android.Graphics.ColorFilter colorFilter) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3631,15 +2865,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// isStateful
-				/// </java-name>
-				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
-				public override bool IsStateful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// onStateChange
 				/// </java-name>
 				[Dot42.DexImport("onStateChange", "([I)Z", AccessFlags = 4)]
@@ -3663,24 +2888,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("onBoundsChange", "(Landroid/graphics/Rect;)V", AccessFlags = 4)]
 				protected internal override void OnBoundsChange(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3713,46 +2920,55 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable Drawable
+				public virtual global::Android.Graphics.Drawables.Drawable Drawable
 				{
-				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						get{ return GetDrawable(); }
+						[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Drawables.Drawable); }
 				}
 
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isStateful
+				/// </java-name>
+				public override bool IsStateful
+				{
+						[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -3767,15 +2983,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;IFF)V", AccessFlags = 1)]
 				public ScaleDrawable(global::Android.Graphics.Drawables.Drawable drawable, int int32, float single, float single1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getDrawable
-				/// </java-name>
-				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawables.Drawable GetDrawable() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawables.Drawable);
 				}
 
 				/// <java-name>
@@ -3820,15 +3027,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getPadding
 				/// </java-name>
 				[Dot42.DexImport("getPadding", "(Landroid/graphics/Rect;)Z", AccessFlags = 1)]
@@ -3863,24 +3061,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// isStateful
-				/// </java-name>
-				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
-				public override bool IsStateful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// onStateChange
 				/// </java-name>
 				[Dot42.DexImport("onStateChange", "([I)Z", AccessFlags = 4)]
@@ -3904,24 +3084,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("onBoundsChange", "(Landroid/graphics/Rect;)V", AccessFlags = 4)]
 				protected internal override void OnBoundsChange(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -3950,46 +3112,55 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Drawable Drawable
+				public virtual global::Android.Graphics.Drawables.Drawable Drawable
 				{
-				[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-						get{ return GetDrawable(); }
+						[Dot42.DexImport("getDrawable", "()Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Drawables.Drawable); }
 				}
 
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isStateful
+				/// </java-name>
+				public override bool IsStateful
+				{
+						[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -4012,23 +3183,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getShape
-				/// </java-name>
-				[Dot42.DexImport("getShape", "()Landroid/graphics/drawable/shapes/Shape;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawables.Shapes.Shape GetShape() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Drawables.Shapes.Shape);
-				}
-
-				/// <java-name>
-				/// setShape
-				/// </java-name>
-				[Dot42.DexImport("setShape", "(Landroid/graphics/drawable/shapes/Shape;)V", AccessFlags = 1)]
-				public virtual void SetShape(global::Android.Graphics.Drawables.Shapes.Shape shape) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setShaderFactory
 				/// </java-name>
 				[Dot42.DexImport("setShaderFactory", "(Landroid/graphics/drawable/ShapeDrawable$ShaderFactory;)V", AccessFlags = 1)]
@@ -4043,15 +3197,6 @@ namespace Android.Graphics.Drawables
 				public virtual global::Android.Graphics.Drawables.ShapeDrawable.ShaderFactory GetShaderFactory() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.ShapeDrawable.ShaderFactory);
-				}
-
-				/// <java-name>
-				/// getPaint
-				/// </java-name>
-				[Dot42.DexImport("getPaint", "()Landroid/graphics/Paint;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Paint GetPaint() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Graphics.Paint);
 				}
 
 				/// <java-name>
@@ -4087,24 +3232,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getIntrinsicWidth
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicWidth() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIntrinsicHeight
-				/// </java-name>
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-				public override int GetIntrinsicHeight() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getPadding
 				/// </java-name>
 				[Dot42.DexImport("getPadding", "(Landroid/graphics/Rect;)Z", AccessFlags = 1)]
@@ -4131,15 +3258,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// getChangingConfigurations
-				/// </java-name>
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-				public override int GetChangingConfigurations() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setAlpha
 				/// </java-name>
 				[Dot42.DexImport("setAlpha", "(I)V", AccessFlags = 1)]
@@ -4153,15 +3271,6 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("setColorFilter", "(Landroid/graphics/ColorFilter;)V", AccessFlags = 1)]
 				public override void SetColorFilter(global::Android.Graphics.ColorFilter colorFilter) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getOpacity
-				/// </java-name>
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-				public override int GetOpacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -4220,57 +3329,57 @@ namespace Android.Graphics.Drawables
 				/// <java-name>
 				/// getShape
 				/// </java-name>
-				public global::Android.Graphics.Drawables.Shapes.Shape Shape
+				public virtual global::Android.Graphics.Drawables.Shapes.Shape Shape
 				{
-				[Dot42.DexImport("getShape", "()Landroid/graphics/drawable/shapes/Shape;", AccessFlags = 1)]
-						get{ return GetShape(); }
-				[Dot42.DexImport("setShape", "(Landroid/graphics/drawable/shapes/Shape;)V", AccessFlags = 1)]
-						set{ SetShape(value); }
+						[Dot42.DexImport("getShape", "()Landroid/graphics/drawable/shapes/Shape;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Drawables.Shapes.Shape); }
+						[Dot42.DexImport("setShape", "(Landroid/graphics/drawable/shapes/Shape;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getPaint
 				/// </java-name>
-				public global::Android.Graphics.Paint Paint
+				public virtual global::Android.Graphics.Paint Paint
 				{
-				[Dot42.DexImport("getPaint", "()Landroid/graphics/Paint;", AccessFlags = 1)]
-						get{ return GetPaint(); }
+						[Dot42.DexImport("getPaint", "()Landroid/graphics/Paint;", AccessFlags = 1)]
+						get{ return default(global::Android.Graphics.Paint); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicWidth
 				/// </java-name>
-				public int IntrinsicWidth
+				public override int IntrinsicWidth
 				{
-				[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicWidth(); }
+						[Dot42.DexImport("getIntrinsicWidth", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getIntrinsicHeight
 				/// </java-name>
-				public int IntrinsicHeight
+				public override int IntrinsicHeight
 				{
-				[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
-						get{ return GetIntrinsicHeight(); }
+						[Dot42.DexImport("getIntrinsicHeight", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getChangingConfigurations
 				/// </java-name>
-				public int ChangingConfigurations
+				public override int ChangingConfigurations
 				{
-				[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
-						get{ return GetChangingConfigurations(); }
+						[Dot42.DexImport("getChangingConfigurations", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getOpacity
 				/// </java-name>
-				public int Opacity
+				public override int Opacity
 				{
-				[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
-						get{ return GetOpacity(); }
+						[Dot42.DexImport("getOpacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -4316,15 +3425,6 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
-				/// isStateful
-				/// </java-name>
-				[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
-				public override bool IsStateful() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// onStateChange
 				/// </java-name>
 				[Dot42.DexImport("onStateChange", "([I)Z", AccessFlags = 4)]
@@ -4349,6 +3449,15 @@ namespace Android.Graphics.Drawables
 				public override global::Android.Graphics.Drawables.Drawable Mutate() /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
+				}
+
+				/// <java-name>
+				/// isStateful
+				/// </java-name>
+				public override bool IsStateful
+				{
+						[Dot42.DexImport("isStateful", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -4405,15 +3514,6 @@ namespace Android.Graphics.Drawables
 				{
 				}
 
-				/// <java-name>
-				/// isCrossFadeEnabled
-				/// </java-name>
-				[Dot42.DexImport("isCrossFadeEnabled", "()Z", AccessFlags = 1)]
-				public virtual bool IsCrossFadeEnabled() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal TransitionDrawable() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -4432,6 +3532,15 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("android/graphics/drawable/Drawable$Callback", "unscheduleDrawable", "(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V", AccessFlags = 1025)]
 				public override void UnscheduleDrawable(global::Android.Graphics.Drawables.Drawable drawable, global::Java.Lang.IRunnable runnable) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
+				}
+
+				/// <java-name>
+				/// isCrossFadeEnabled
+				/// </java-name>
+				public virtual bool IsCrossFadeEnabled
+				{
+						[Dot42.DexImport("isCrossFadeEnabled", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

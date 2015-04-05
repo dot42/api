@@ -48,15 +48,6 @@ namespace Android.Views.Inputmethod
 				}
 
 				/// <java-name>
-				/// getEditable
-				/// </java-name>
-				[Dot42.DexImport("getEditable", "()Landroid/text/Editable;", AccessFlags = 1)]
-				public virtual global::Android.Text.IEditable GetEditable() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.IEditable);
-				}
-
-				/// <java-name>
 				/// beginBatchEdit
 				/// </java-name>
 				[Dot42.DexImport("beginBatchEdit", "()Z", AccessFlags = 1)]
@@ -254,10 +245,10 @@ namespace Android.Views.Inputmethod
 				/// <java-name>
 				/// getEditable
 				/// </java-name>
-				public global::Android.Text.IEditable Editable
+				public virtual global::Android.Text.IEditable Editable
 				{
-				[Dot42.DexImport("getEditable", "()Landroid/text/Editable;", AccessFlags = 1)]
-						get{ return GetEditable(); }
+						[Dot42.DexImport("getEditable", "()Landroid/text/Editable;", AccessFlags = 1)]
+						get{ return default(global::Android.Text.IEditable); }
 				}
 
 		}
@@ -282,42 +273,6 @@ namespace Android.Views.Inputmethod
 				[Dot42.DexImport("<init>", "(JILjava/lang/CharSequence;Ljava/lang/CharSequence;)V", AccessFlags = 1)]
 				public CompletionInfo(long int64, int int32, global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence charSequence1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()J", AccessFlags = 1)]
-				public long GetId() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <java-name>
-				/// getPosition
-				/// </java-name>
-				[Dot42.DexImport("getPosition", "()I", AccessFlags = 1)]
-				public int GetPosition() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getText
-				/// </java-name>
-				[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence GetText() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getLabel
-				/// </java-name>
-				[Dot42.DexImport("getLabel", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence GetLabel() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
 				}
 
 				/// <java-name>
@@ -356,8 +311,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public long Id
 				{
-				[Dot42.DexImport("getId", "()J", AccessFlags = 1)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <java-name>
@@ -365,8 +320,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public int Position
 				{
-				[Dot42.DexImport("getPosition", "()I", AccessFlags = 1)]
-						get{ return GetPosition(); }
+						[Dot42.DexImport("getPosition", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -374,8 +329,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Java.Lang.ICharSequence Text
 				{
-				[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetText(); }
+						[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
 				}
 
 				/// <java-name>
@@ -383,8 +338,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Java.Lang.ICharSequence Label
 				{
-				[Dot42.DexImport("getLabel", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetLabel(); }
+						[Dot42.DexImport("getLabel", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
 				}
 
 		}
@@ -404,33 +359,6 @@ namespace Android.Views.Inputmethod
 				[Dot42.DexImport("<init>", "(ILjava/lang/CharSequence;Ljava/lang/CharSequence;)V", AccessFlags = 1)]
 				public CorrectionInfo(int int32, global::Java.Lang.ICharSequence charSequence, global::Java.Lang.ICharSequence charSequence1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getOffset
-				/// </java-name>
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
-				public int GetOffset() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getOldText
-				/// </java-name>
-				[Dot42.DexImport("getOldText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence GetOldText() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getNewText
-				/// </java-name>
-				[Dot42.DexImport("getNewText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence GetNewText() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ICharSequence);
 				}
 
 				/// <java-name>
@@ -469,8 +397,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public int Offset
 				{
-				[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
-						get{ return GetOffset(); }
+						[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -478,8 +406,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Java.Lang.ICharSequence OldText
 				{
-				[Dot42.DexImport("getOldText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetOldText(); }
+						[Dot42.DexImport("getOldText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
 				}
 
 				/// <java-name>
@@ -487,8 +415,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Java.Lang.ICharSequence NewText
 				{
-				[Dot42.DexImport("getNewText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
-						get{ return GetNewText(); }
+						[Dot42.DexImport("getNewText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ICharSequence); }
 				}
 
 		}
@@ -1218,42 +1146,6 @@ namespace Android.Views.Inputmethod
 				}
 
 				/// <java-name>
-				/// getConnection
-				/// </java-name>
-				[Dot42.DexImport("getConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
-				public global::Android.Views.Inputmethod.IInputConnection GetConnection() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.Inputmethod.IInputConnection);
-				}
-
-				/// <java-name>
-				/// getConnectionToken
-				/// </java-name>
-				[Dot42.DexImport("getConnectionToken", "()Landroid/os/IBinder;", AccessFlags = 1)]
-				public global::Android.OS.IBinder GetConnectionToken() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.OS.IBinder);
-				}
-
-				/// <java-name>
-				/// getUid
-				/// </java-name>
-				[Dot42.DexImport("getUid", "()I", AccessFlags = 1)]
-				public int GetUid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getPid
-				/// </java-name>
-				[Dot42.DexImport("getPid", "()I", AccessFlags = 1)]
-				public int GetPid() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -1289,8 +1181,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Android.Views.Inputmethod.IInputConnection Connection
 				{
-				[Dot42.DexImport("getConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
-						get{ return GetConnection(); }
+						[Dot42.DexImport("getConnection", "()Landroid/view/inputmethod/InputConnection;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.Inputmethod.IInputConnection); }
 				}
 
 				/// <java-name>
@@ -1298,8 +1190,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Android.OS.IBinder ConnectionToken
 				{
-				[Dot42.DexImport("getConnectionToken", "()Landroid/os/IBinder;", AccessFlags = 1)]
-						get{ return GetConnectionToken(); }
+						[Dot42.DexImport("getConnectionToken", "()Landroid/os/IBinder;", AccessFlags = 1)]
+						get{ return default(global::Android.OS.IBinder); }
 				}
 
 				/// <java-name>
@@ -1307,8 +1199,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public int Uid
 				{
-				[Dot42.DexImport("getUid", "()I", AccessFlags = 1)]
-						get{ return GetUid(); }
+						[Dot42.DexImport("getUid", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1316,8 +1208,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public int Pid
 				{
-				[Dot42.DexImport("getPid", "()I", AccessFlags = 1)]
-						get{ return GetPid(); }
+						[Dot42.DexImport("getPid", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1563,51 +1455,6 @@ namespace Android.Views.Inputmethod
 				}
 
 				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getPackageName
-				/// </java-name>
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetPackageName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getServiceName
-				/// </java-name>
-				[Dot42.DexImport("getServiceName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetServiceName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getServiceInfo
-				/// </java-name>
-				[Dot42.DexImport("getServiceInfo", "()Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ServiceInfo GetServiceInfo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.Pm.ServiceInfo);
-				}
-
-				/// <java-name>
-				/// getComponent
-				/// </java-name>
-				[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
-				public global::Android.Content.ComponentName GetComponent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Content.ComponentName);
-				}
-
-				/// <java-name>
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
@@ -1626,39 +1473,12 @@ namespace Android.Views.Inputmethod
 				}
 
 				/// <java-name>
-				/// getSettingsActivity
-				/// </java-name>
-				[Dot42.DexImport("getSettingsActivity", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetSettingsActivity() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSubtypeCount
-				/// </java-name>
-				[Dot42.DexImport("getSubtypeCount", "()I", AccessFlags = 1)]
-				public int GetSubtypeCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getSubtypeAt
 				/// </java-name>
 				[Dot42.DexImport("getSubtypeAt", "(I)Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
 				public global::Android.Views.Inputmethod.InputMethodSubtype GetSubtypeAt(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Views.Inputmethod.InputMethodSubtype);
-				}
-
-				/// <java-name>
-				/// getIsDefaultResourceId
-				/// </java-name>
-				[Dot42.DexImport("getIsDefaultResourceId", "()I", AccessFlags = 1)]
-				public int GetIsDefaultResourceId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1723,8 +1543,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public string Id
 				{
-				[Dot42.DexImport("getId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1732,8 +1552,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public string PackageName
 				{
-				[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPackageName(); }
+						[Dot42.DexImport("getPackageName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1741,8 +1561,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public string ServiceName
 				{
-				[Dot42.DexImport("getServiceName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetServiceName(); }
+						[Dot42.DexImport("getServiceName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1750,8 +1570,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Android.Content.Pm.ServiceInfo ServiceInfo
 				{
-				[Dot42.DexImport("getServiceInfo", "()Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-						get{ return GetServiceInfo(); }
+						[Dot42.DexImport("getServiceInfo", "()Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.Pm.ServiceInfo); }
 				}
 
 				/// <java-name>
@@ -1759,8 +1579,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Android.Content.ComponentName Component
 				{
-				[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
-						get{ return GetComponent(); }
+						[Dot42.DexImport("getComponent", "()Landroid/content/ComponentName;", AccessFlags = 1)]
+						get{ return default(global::Android.Content.ComponentName); }
 				}
 
 				/// <java-name>
@@ -1768,8 +1588,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public string SettingsActivity
 				{
-				[Dot42.DexImport("getSettingsActivity", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSettingsActivity(); }
+						[Dot42.DexImport("getSettingsActivity", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1777,8 +1597,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public int SubtypeCount
 				{
-				[Dot42.DexImport("getSubtypeCount", "()I", AccessFlags = 1)]
-						get{ return GetSubtypeCount(); }
+						[Dot42.DexImport("getSubtypeCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -1786,8 +1606,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public int IsDefaultResourceId
 				{
-				[Dot42.DexImport("getIsDefaultResourceId", "()I", AccessFlags = 1)]
-						get{ return GetIsDefaultResourceId(); }
+						[Dot42.DexImport("getIsDefaultResourceId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1845,24 +1665,6 @@ namespace Android.Views.Inputmethod
 				}
 
 				/// <java-name>
-				/// getInputMethodList
-				/// </java-name>
-				[Dot42.DexImport("getInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
-				public global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo> GetInputMethodList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo>);
-				}
-
-				/// <java-name>
-				/// getEnabledInputMethodList
-				/// </java-name>
-				[Dot42.DexImport("getEnabledInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
-				public global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo> GetEnabledInputMethodList() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo>);
-				}
-
-				/// <java-name>
 				/// getEnabledInputMethodSubtypeList
 				/// </java-name>
 				[Dot42.DexImport("getEnabledInputMethodSubtypeList", "(Landroid/view/inputmethod/InputMethodInfo;Z)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/view/inputmethod/InputMethodInfo;Z)Ljava/util/List<Landroid/view/inputm" +
@@ -1889,15 +1691,6 @@ namespace Android.Views.Inputmethod
 				}
 
 				/// <java-name>
-				/// isFullscreenMode
-				/// </java-name>
-				[Dot42.DexImport("isFullscreenMode", "()Z", AccessFlags = 1)]
-				public bool IsFullscreenMode() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// isActive
 				/// </java-name>
 				[Dot42.DexImport("isActive", "(Landroid/view/View;)Z", AccessFlags = 1)]
@@ -1911,15 +1704,6 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("isActive", "()Z", AccessFlags = 1)]
 				public bool IsActive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isAcceptingText
-				/// </java-name>
-				[Dot42.DexImport("isAcceptingText", "()Z", AccessFlags = 1)]
-				public bool IsAcceptingText() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2091,31 +1875,12 @@ namespace Android.Views.Inputmethod
 				}
 
 				/// <java-name>
-				/// getCurrentInputMethodSubtype
-				/// </java-name>
-				[Dot42.DexImport("getCurrentInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
-				public global::Android.Views.Inputmethod.InputMethodSubtype GetCurrentInputMethodSubtype() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.Inputmethod.InputMethodSubtype);
-				}
-
-				/// <java-name>
 				/// setCurrentInputMethodSubtype
 				/// </java-name>
 				[Dot42.DexImport("setCurrentInputMethodSubtype", "(Landroid/view/inputmethod/InputMethodSubtype;)Z", AccessFlags = 1)]
 				public bool SetCurrentInputMethodSubtype(global::Android.Views.Inputmethod.InputMethodSubtype inputMethodSubtype) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getShortcutInputMethodsAndSubtypes
-				/// </java-name>
-				[Dot42.DexImport("getShortcutInputMethodsAndSubtypes", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Landroid/view/inputmethod/InputMethodInfo;Ljava/util/List<Landro" +
-    "id/view/inputmethod/InputMethodSubtype;>;>;")]
-				public global::Java.Util.IMap<global::Android.Views.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodSubtype>> GetShortcutInputMethodsAndSubtypes() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<global::Android.Views.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodSubtype>>);
 				}
 
 				/// <java-name>
@@ -2136,21 +1901,12 @@ namespace Android.Views.Inputmethod
 				}
 
 				/// <java-name>
-				/// getLastInputMethodSubtype
-				/// </java-name>
-				[Dot42.DexImport("getLastInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
-				public global::Android.Views.Inputmethod.InputMethodSubtype GetLastInputMethodSubtype() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Views.Inputmethod.InputMethodSubtype);
-				}
-
-				/// <java-name>
 				/// getInputMethodList
 				/// </java-name>
 				public global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo> InputMethodList
 				{
-				[Dot42.DexImport("getInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
-						get{ return GetInputMethodList(); }
+						[Dot42.DexImport("getInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo>); }
 				}
 
 				/// <java-name>
@@ -2158,8 +1914,26 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo> EnabledInputMethodList
 				{
-				[Dot42.DexImport("getEnabledInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
-						get{ return GetEnabledInputMethodList(); }
+						[Dot42.DexImport("getEnabledInputMethodList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;")]
+						get{ return default(global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodInfo>); }
+				}
+
+				/// <java-name>
+				/// isFullscreenMode
+				/// </java-name>
+				public bool IsFullscreenMode
+				{
+						[Dot42.DexImport("isFullscreenMode", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isAcceptingText
+				/// </java-name>
+				public bool IsAcceptingText
+				{
+						[Dot42.DexImport("isAcceptingText", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -2167,8 +1941,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Android.Views.Inputmethod.InputMethodSubtype CurrentInputMethodSubtype
 				{
-				[Dot42.DexImport("getCurrentInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
-						get{ return GetCurrentInputMethodSubtype(); }
+						[Dot42.DexImport("getCurrentInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.Inputmethod.InputMethodSubtype); }
 				}
 
 				/// <java-name>
@@ -2176,9 +1950,9 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Java.Util.IMap<global::Android.Views.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodSubtype>> ShortcutInputMethodsAndSubtypes
 				{
-				[Dot42.DexImport("getShortcutInputMethodsAndSubtypes", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Landroid/view/inputmethod/InputMethodInfo;Ljava/util/List<Landro" +
+						[Dot42.DexImport("getShortcutInputMethodsAndSubtypes", "()Ljava/util/Map;", AccessFlags = 1, Signature = "()Ljava/util/Map<Landroid/view/inputmethod/InputMethodInfo;Ljava/util/List<Landro" +
     "id/view/inputmethod/InputMethodSubtype;>;>;")]
-						get{ return GetShortcutInputMethodsAndSubtypes(); }
+						get{ return default(global::Java.Util.IMap<global::Android.Views.Inputmethod.InputMethodInfo, global::Java.Util.IList<global::Android.Views.Inputmethod.InputMethodSubtype>>); }
 				}
 
 				/// <java-name>
@@ -2186,8 +1960,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public global::Android.Views.Inputmethod.InputMethodSubtype LastInputMethodSubtype
 				{
-				[Dot42.DexImport("getLastInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
-						get{ return GetLastInputMethodSubtype(); }
+						[Dot42.DexImport("getLastInputMethodSubtype", "()Landroid/view/inputmethod/InputMethodSubtype;", AccessFlags = 1)]
+						get{ return default(global::Android.Views.Inputmethod.InputMethodSubtype); }
 				}
 
 		}
@@ -2207,60 +1981,6 @@ namespace Android.Views.Inputmethod
 				[Dot42.DexImport("<init>", "(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V", AccessFlags = 1)]
 				public InputMethodSubtype(int int32, int int321, string @string, string string1, string string2, bool boolean, bool boolean1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getNameResId
-				/// </java-name>
-				[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
-				public int GetNameResId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getIconResId
-				/// </java-name>
-				[Dot42.DexImport("getIconResId", "()I", AccessFlags = 1)]
-				public int GetIconResId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getLocale
-				/// </java-name>
-				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetLocale() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getMode
-				/// </java-name>
-				[Dot42.DexImport("getMode", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetMode() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getExtraValue
-				/// </java-name>
-				[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetExtraValue() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// isAuxiliary
-				/// </java-name>
-				[Dot42.DexImport("isAuxiliary", "()Z", AccessFlags = 1)]
-				public bool IsAuxiliary() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -2345,8 +2065,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public int NameResId
 				{
-				[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
-						get{ return GetNameResId(); }
+						[Dot42.DexImport("getNameResId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2354,8 +2074,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public int IconResId
 				{
-				[Dot42.DexImport("getIconResId", "()I", AccessFlags = 1)]
-						get{ return GetIconResId(); }
+						[Dot42.DexImport("getIconResId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2363,8 +2083,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public string Locale
 				{
-				[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocale(); }
+						[Dot42.DexImport("getLocale", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -2372,8 +2092,8 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public string Mode
 				{
-				[Dot42.DexImport("getMode", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetMode(); }
+						[Dot42.DexImport("getMode", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -2381,8 +2101,17 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				public string ExtraValue
 				{
-				[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetExtraValue(); }
+						[Dot42.DexImport("getExtraValue", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
+				}
+
+				/// <java-name>
+				/// isAuxiliary
+				/// </java-name>
+				public bool IsAuxiliary
+				{
+						[Dot42.DexImport("isAuxiliary", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

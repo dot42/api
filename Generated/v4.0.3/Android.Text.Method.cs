@@ -140,15 +140,6 @@ namespace Android.Text.Method
 				}
 
 				/// <java-name>
-				/// canSelectArbitrarily
-				/// </java-name>
-				[Dot42.DexImport("canSelectArbitrarily", "()Z", AccessFlags = 1)]
-				public override bool CanSelectArbitrarily() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// initialize
 				/// </java-name>
 				[Dot42.DexImport("initialize", "(Landroid/widget/TextView;Landroid/text/Spannable;)V", AccessFlags = 1)]
@@ -162,15 +153,6 @@ namespace Android.Text.Method
 				[Dot42.DexImport("onTakeFocus", "(Landroid/widget/TextView;Landroid/text/Spannable;I)V", AccessFlags = 1)]
 				public override void OnTakeFocus(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/MovementMethod;", AccessFlags = 9)]
-				public static global::Android.Text.Method.IMovementMethod GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.IMovementMethod);
 				}
 
 				[Dot42.DexImport("android/text/method/MovementMethod", "onKeyDown", "(Landroid/widget/TextView;Landroid/text/Spannable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
@@ -204,12 +186,21 @@ namespace Android.Text.Method
 				}
 
 				/// <java-name>
+				/// canSelectArbitrarily
+				/// </java-name>
+				public override bool CanSelectArbitrarily
+				{
+						[Dot42.DexImport("canSelectArbitrarily", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getInstance
 				/// </java-name>
 				public static global::Android.Text.Method.IMovementMethod Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/MovementMethod;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/MovementMethod;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.IMovementMethod); }
 				}
 
 		}
@@ -262,12 +253,6 @@ namespace Android.Text.Method
 						return default(bool);
 				}
 
-				[Dot42.DexImport("android/text/method/KeyListener", "getInputType", "()I", AccessFlags = 1025)]
-				public virtual int GetInputType() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(int);
-				}
-
 				[Dot42.DexImport("android/text/method/KeyListener", "onKeyUp", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1025)]
 				public override bool OnKeyUp(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32, global::Android.Views.KeyEvent keyEvent) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -279,10 +264,10 @@ namespace Android.Text.Method
 				{
 				}
 
-				public int InputType
+				public virtual int InputType
 				{
-				[Dot42.DexImport("android/text/method/KeyListener", "getInputType", "()I", AccessFlags = 1025)]
-						get{ return GetInputType(); }
+						[Dot42.DexImport("android/text/method/KeyListener", "getInputType", "()I", AccessFlags = 1025)]
+						get{ return default(int); }
 				}
 
 		}
@@ -297,15 +282,6 @@ namespace Android.Text.Method
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public BaseMovementMethod() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// canSelectArbitrarily
-				/// </java-name>
-				[Dot42.DexImport("canSelectArbitrarily", "()Z", AccessFlags = 1)]
-				public virtual bool CanSelectArbitrarily() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -504,6 +480,15 @@ namespace Android.Text.Method
 						return default(bool);
 				}
 
+				/// <java-name>
+				/// canSelectArbitrarily
+				/// </java-name>
+				public virtual bool CanSelectArbitrarily
+				{
+						[Dot42.DexImport("canSelectArbitrarily", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
 		}
 
 		/// <java-name>
@@ -570,46 +555,19 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getInputType
 				/// </java-name>
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-				public override int GetInputType() /* MethodBuilder.Create */ 
+				public override int InputType
 				{
-						return default(int);
+						[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAcceptedChars
 				/// </java-name>
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-				protected internal override char[] GetAcceptedChars() /* MethodBuilder.Create */ 
+				protected internal override char[] AcceptedChars
 				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/DateKeyListener;", AccessFlags = 9)]
-				public static global::Android.Text.Method.DateKeyListener GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.DateKeyListener);
-				}
-
-				/// <java-name>
-				/// getInputType
-				/// </java-name>
-				public int InputType
-				{
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-						get{ return GetInputType(); }
-				}
-
-				/// <java-name>
-				/// getAcceptedChars
-				/// </java-name>
-				protected internal char[] AcceptedChars
-				{
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-						get{ return GetAcceptedChars(); }
+						[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
@@ -617,8 +575,8 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.DateKeyListener Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/DateKeyListener;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/DateKeyListener;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.DateKeyListener); }
 				}
 
 		}
@@ -643,46 +601,19 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getInputType
 				/// </java-name>
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-				public override int GetInputType() /* MethodBuilder.Create */ 
+				public override int InputType
 				{
-						return default(int);
+						[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAcceptedChars
 				/// </java-name>
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-				protected internal override char[] GetAcceptedChars() /* MethodBuilder.Create */ 
+				protected internal override char[] AcceptedChars
 				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/DateTimeKeyListener;", AccessFlags = 9)]
-				public static global::Android.Text.Method.DateTimeKeyListener GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.DateTimeKeyListener);
-				}
-
-				/// <java-name>
-				/// getInputType
-				/// </java-name>
-				public int InputType
-				{
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-						get{ return GetInputType(); }
-				}
-
-				/// <java-name>
-				/// getAcceptedChars
-				/// </java-name>
-				protected internal char[] AcceptedChars
-				{
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-						get{ return GetAcceptedChars(); }
+						[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
@@ -690,8 +621,8 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.DateTimeKeyListener Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/DateTimeKeyListener;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/DateTimeKeyListener;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.DateTimeKeyListener); }
 				}
 
 		}
@@ -714,33 +645,6 @@ namespace Android.Text.Method
 				}
 
 				/// <java-name>
-				/// getAcceptedChars
-				/// </java-name>
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-				protected internal override char[] GetAcceptedChars() /* MethodBuilder.Create */ 
-				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/DialerKeyListener;", AccessFlags = 9)]
-				public static global::Android.Text.Method.DialerKeyListener GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.DialerKeyListener);
-				}
-
-				/// <java-name>
-				/// getInputType
-				/// </java-name>
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-				public override int GetInputType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// lookup
 				/// </java-name>
 				[Dot42.DexImport("lookup", "(Landroid/view/KeyEvent;Landroid/text/Spannable;)I", AccessFlags = 4)]
@@ -752,10 +656,10 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getAcceptedChars
 				/// </java-name>
-				protected internal char[] AcceptedChars
+				protected internal override char[] AcceptedChars
 				{
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-						get{ return GetAcceptedChars(); }
+						[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
@@ -763,17 +667,17 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.DialerKeyListener Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/DialerKeyListener;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/DialerKeyListener;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.DialerKeyListener); }
 				}
 
 				/// <java-name>
 				/// getInputType
 				/// </java-name>
-				public int InputType
+				public override int InputType
 				{
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-						get{ return GetInputType(); }
+						[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -796,24 +700,6 @@ namespace Android.Text.Method
 				}
 
 				/// <java-name>
-				/// getAcceptedChars
-				/// </java-name>
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-				protected internal override char[] GetAcceptedChars() /* MethodBuilder.Create */ 
-				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/DigitsKeyListener;", AccessFlags = 9)]
-				public static global::Android.Text.Method.DigitsKeyListener GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.DigitsKeyListener);
-				}
-
-				/// <java-name>
 				/// getInstance
 				/// </java-name>
 				[Dot42.DexImport("getInstance", "(ZZ)Landroid/text/method/DigitsKeyListener;", AccessFlags = 9)]
@@ -832,15 +718,6 @@ namespace Android.Text.Method
 				}
 
 				/// <java-name>
-				/// getInputType
-				/// </java-name>
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-				public override int GetInputType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// filter
 				/// </java-name>
 				[Dot42.DexImport("filter", "(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;", AccessFlags = 1)]
@@ -852,10 +729,10 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getAcceptedChars
 				/// </java-name>
-				protected internal char[] AcceptedChars
+				protected internal override char[] AcceptedChars
 				{
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-						get{ return GetAcceptedChars(); }
+						[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
@@ -863,17 +740,17 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.DigitsKeyListener Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/DigitsKeyListener;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/DigitsKeyListener;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.DigitsKeyListener); }
 				}
 
 				/// <java-name>
 				/// getInputType
 				/// </java-name>
-				public int InputType
+				public override int InputType
 				{
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-						get{ return GetInputType(); }
+						[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -893,46 +770,19 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getOriginal
 				/// </java-name>
-				[Dot42.DexImport("getOriginal", "()[C", AccessFlags = 4)]
-				protected internal override char[] GetOriginal() /* MethodBuilder.Create */ 
+				protected internal override char[] Original
 				{
-						return default(char[]);
+						[Dot42.DexImport("getOriginal", "()[C", AccessFlags = 4)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
 				/// getReplacement
 				/// </java-name>
-				[Dot42.DexImport("getReplacement", "()[C", AccessFlags = 4)]
-				protected internal override char[] GetReplacement() /* MethodBuilder.Create */ 
+				protected internal override char[] Replacement
 				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/HideReturnsTransformationMethod;", AccessFlags = 9)]
-				public static global::Android.Text.Method.HideReturnsTransformationMethod GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.HideReturnsTransformationMethod);
-				}
-
-				/// <java-name>
-				/// getOriginal
-				/// </java-name>
-				protected internal char[] Original
-				{
-				[Dot42.DexImport("getOriginal", "()[C", AccessFlags = 4)]
-						get{ return GetOriginal(); }
-				}
-
-				/// <java-name>
-				/// getReplacement
-				/// </java-name>
-				protected internal char[] Replacement
-				{
-				[Dot42.DexImport("getReplacement", "()[C", AccessFlags = 4)]
-						get{ return GetReplacement(); }
+						[Dot42.DexImport("getReplacement", "()[C", AccessFlags = 4)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
@@ -940,8 +790,8 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.HideReturnsTransformationMethod Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/HideReturnsTransformationMethod;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/HideReturnsTransformationMethod;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.HideReturnsTransformationMethod); }
 				}
 
 		}
@@ -953,12 +803,6 @@ namespace Android.Text.Method
 		public partial interface IKeyListener
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// getInputType
-				/// </java-name>
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1025)]
-				int GetInputType() /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// onKeyDown
 				/// </java-name>
@@ -982,6 +826,15 @@ namespace Android.Text.Method
 				/// </java-name>
 				[Dot42.DexImport("clearMetaKeyState", "(Landroid/view/View;Landroid/text/Editable;I)V", AccessFlags = 1025)]
 				void ClearMetaKeyState(global::Android.Views.View view, global::Android.Text.IEditable editable, int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getInputType
+				/// </java-name>
+				int InputType
+				{
+						[Dot42.DexImport("getInputType", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1043,8 +896,11 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// canSelectArbitrarily
 				/// </java-name>
-				[Dot42.DexImport("canSelectArbitrarily", "()Z", AccessFlags = 1025)]
-				bool CanSelectArbitrarily() /* MethodBuilder.Create */ ;
+				bool CanSelectArbitrarily
+				{
+						[Dot42.DexImport("canSelectArbitrarily", "()Z", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 
@@ -1154,19 +1010,10 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getInstance
 				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/MovementMethod;", AccessFlags = 9)]
-				public static global::Android.Text.Method.IMovementMethod GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.IMovementMethod);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
 				public static global::Android.Text.Method.IMovementMethod Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/MovementMethod;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/MovementMethod;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.IMovementMethod); }
 				}
 
 		}
@@ -1395,15 +1242,6 @@ namespace Android.Text.Method
 				}
 
 				/// <java-name>
-				/// getInputType
-				/// </java-name>
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-				public override int GetInputType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// onKeyDown
 				/// </java-name>
 				[Dot42.DexImport("onKeyDown", "(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z", AccessFlags = 1)]
@@ -1444,10 +1282,10 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getInputType
 				/// </java-name>
-				public int InputType
+				public override int InputType
 				{
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-						get{ return GetInputType(); }
+						[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1463,12 +1301,6 @@ namespace Android.Text.Method
 				public NumberKeyListener() /* MethodBuilder.Create */ 
 				{
 				}
-
-				/// <java-name>
-				/// getAcceptedChars
-				/// </java-name>
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 1028)]
-				protected internal abstract char[] GetAcceptedChars() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// lookup
@@ -1509,10 +1341,10 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getAcceptedChars
 				/// </java-name>
-				protected internal char[] AcceptedChars
+				protected internal abstract char[] AcceptedChars
 				{
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 1028)]
-						get{ return GetAcceptedChars(); }
+						[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 1028)]
+						get;
 				}
 
 		}
@@ -1536,15 +1368,6 @@ namespace Android.Text.Method
 				public virtual global::Java.Lang.ICharSequence GetTransformation(global::Java.Lang.ICharSequence charSequence, global::Android.Views.View view) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/PasswordTransformationMethod;", AccessFlags = 9)]
-				public static global::Android.Text.Method.PasswordTransformationMethod GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.PasswordTransformationMethod);
 				}
 
 				/// <java-name>
@@ -1584,8 +1407,8 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.PasswordTransformationMethod Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/PasswordTransformationMethod;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/PasswordTransformationMethod;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.PasswordTransformationMethod); }
 				}
 
 		}
@@ -1610,24 +1433,6 @@ namespace Android.Text.Method
 				public static global::Android.Text.Method.QwertyKeyListener GetInstance(bool boolean, global::Android.Text.Method.TextKeyListener.Capitalize capitalize) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Text.Method.QwertyKeyListener);
-				}
-
-				/// <java-name>
-				/// getInstanceForFullKeyboard
-				/// </java-name>
-				[Dot42.DexImport("getInstanceForFullKeyboard", "()Landroid/text/method/QwertyKeyListener;", AccessFlags = 9)]
-				public static global::Android.Text.Method.QwertyKeyListener GetInstanceForFullKeyboard() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.QwertyKeyListener);
-				}
-
-				/// <java-name>
-				/// getInputType
-				/// </java-name>
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-				public override int GetInputType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -1657,17 +1462,17 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.QwertyKeyListener InstanceForFullKeyboard
 				{
-				[Dot42.DexImport("getInstanceForFullKeyboard", "()Landroid/text/method/QwertyKeyListener;", AccessFlags = 9)]
-						get{ return GetInstanceForFullKeyboard(); }
+						[Dot42.DexImport("getInstanceForFullKeyboard", "()Landroid/text/method/QwertyKeyListener;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.QwertyKeyListener); }
 				}
 
 				/// <java-name>
 				/// getInputType
 				/// </java-name>
-				public int InputType
+				public override int InputType
 				{
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-						get{ return GetInputType(); }
+						[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -1683,18 +1488,6 @@ namespace Android.Text.Method
 				public ReplacementTransformationMethod() /* MethodBuilder.Create */ 
 				{
 				}
-
-				/// <java-name>
-				/// getOriginal
-				/// </java-name>
-				[Dot42.DexImport("getOriginal", "()[C", AccessFlags = 1028)]
-				protected internal abstract char[] GetOriginal() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getReplacement
-				/// </java-name>
-				[Dot42.DexImport("getReplacement", "()[C", AccessFlags = 1028)]
-				protected internal abstract char[] GetReplacement() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getTransformation
@@ -1716,19 +1509,19 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getOriginal
 				/// </java-name>
-				protected internal char[] Original
+				protected internal abstract char[] Original
 				{
-				[Dot42.DexImport("getOriginal", "()[C", AccessFlags = 1028)]
-						get{ return GetOriginal(); }
+						[Dot42.DexImport("getOriginal", "()[C", AccessFlags = 1028)]
+						get;
 				}
 
 				/// <java-name>
 				/// getReplacement
 				/// </java-name>
-				protected internal char[] Replacement
+				protected internal abstract char[] Replacement
 				{
-				[Dot42.DexImport("getReplacement", "()[C", AccessFlags = 1028)]
-						get{ return GetReplacement(); }
+						[Dot42.DexImport("getReplacement", "()[C", AccessFlags = 1028)]
+						get;
 				}
 
 		}
@@ -1870,15 +1663,6 @@ namespace Android.Text.Method
 				{
 				}
 
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/MovementMethod;", AccessFlags = 9)]
-				public static global::Android.Text.Method.IMovementMethod GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.IMovementMethod);
-				}
-
 				[Dot42.DexImport("android/text/method/MovementMethod", "initialize", "(Landroid/widget/TextView;Landroid/text/Spannable;)V", AccessFlags = 1025)]
 				public override void Initialize(global::Android.Widget.TextView textView, global::Android.Text.ISpannable spannable) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
@@ -1914,19 +1698,19 @@ namespace Android.Text.Method
 						return default(bool);
 				}
 
-				[Dot42.DexImport("android/text/method/MovementMethod", "canSelectArbitrarily", "()Z", AccessFlags = 1025)]
-				public override bool CanSelectArbitrarily() /* TypeBuilder.AddAbstractInterfaceMethods */ 
-				{
-						return default(bool);
-				}
-
 				/// <java-name>
 				/// getInstance
 				/// </java-name>
 				public static global::Android.Text.Method.IMovementMethod Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/MovementMethod;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/MovementMethod;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.IMovementMethod); }
+				}
+
+				public override bool CanSelectArbitrarily
+				{
+						[Dot42.DexImport("android/text/method/MovementMethod", "canSelectArbitrarily", "()Z", AccessFlags = 1025)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -1946,46 +1730,19 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getOriginal
 				/// </java-name>
-				[Dot42.DexImport("getOriginal", "()[C", AccessFlags = 4)]
-				protected internal override char[] GetOriginal() /* MethodBuilder.Create */ 
+				protected internal override char[] Original
 				{
-						return default(char[]);
+						[Dot42.DexImport("getOriginal", "()[C", AccessFlags = 4)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
 				/// getReplacement
 				/// </java-name>
-				[Dot42.DexImport("getReplacement", "()[C", AccessFlags = 4)]
-				protected internal override char[] GetReplacement() /* MethodBuilder.Create */ 
+				protected internal override char[] Replacement
 				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/SingleLineTransformationMethod;", AccessFlags = 9)]
-				public static global::Android.Text.Method.SingleLineTransformationMethod GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.SingleLineTransformationMethod);
-				}
-
-				/// <java-name>
-				/// getOriginal
-				/// </java-name>
-				protected internal char[] Original
-				{
-				[Dot42.DexImport("getOriginal", "()[C", AccessFlags = 4)]
-						get{ return GetOriginal(); }
-				}
-
-				/// <java-name>
-				/// getReplacement
-				/// </java-name>
-				protected internal char[] Replacement
-				{
-				[Dot42.DexImport("getReplacement", "()[C", AccessFlags = 4)]
-						get{ return GetReplacement(); }
+						[Dot42.DexImport("getReplacement", "()[C", AccessFlags = 4)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
@@ -1993,8 +1750,8 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.SingleLineTransformationMethod Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/SingleLineTransformationMethod;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/SingleLineTransformationMethod;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.SingleLineTransformationMethod); }
 				}
 
 		}
@@ -2022,30 +1779,12 @@ namespace Android.Text.Method
 				}
 
 				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/TextKeyListener;", AccessFlags = 9)]
-				public static global::Android.Text.Method.TextKeyListener GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.TextKeyListener);
-				}
-
-				/// <java-name>
 				/// shouldCap
 				/// </java-name>
 				[Dot42.DexImport("shouldCap", "(Landroid/text/method/TextKeyListener$Capitalize;Ljava/lang/CharSequence;I)Z", AccessFlags = 9)]
 				public static bool ShouldCap(global::Android.Text.Method.TextKeyListener.Capitalize capitalize, global::Java.Lang.ICharSequence charSequence, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// getInputType
-				/// </java-name>
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-				public override int GetInputType() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -2125,17 +1864,17 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.TextKeyListener Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/TextKeyListener;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/TextKeyListener;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.TextKeyListener); }
 				}
 
 				/// <java-name>
 				/// getInputType
 				/// </java-name>
-				public int InputType
+				public override int InputType
 				{
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-						get{ return GetInputType(); }
+						[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -2211,46 +1950,19 @@ namespace Android.Text.Method
 				/// <java-name>
 				/// getInputType
 				/// </java-name>
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-				public override int GetInputType() /* MethodBuilder.Create */ 
+				public override int InputType
 				{
-						return default(int);
+						[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getAcceptedChars
 				/// </java-name>
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-				protected internal override char[] GetAcceptedChars() /* MethodBuilder.Create */ 
+				protected internal override char[] AcceptedChars
 				{
-						return default(char[]);
-				}
-
-				/// <java-name>
-				/// getInstance
-				/// </java-name>
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/TimeKeyListener;", AccessFlags = 9)]
-				public static global::Android.Text.Method.TimeKeyListener GetInstance() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Text.Method.TimeKeyListener);
-				}
-
-				/// <java-name>
-				/// getInputType
-				/// </java-name>
-				public int InputType
-				{
-				[Dot42.DexImport("getInputType", "()I", AccessFlags = 1)]
-						get{ return GetInputType(); }
-				}
-
-				/// <java-name>
-				/// getAcceptedChars
-				/// </java-name>
-				protected internal char[] AcceptedChars
-				{
-				[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
-						get{ return GetAcceptedChars(); }
+						[Dot42.DexImport("getAcceptedChars", "()[C", AccessFlags = 4)]
+						get{ return default(char[]); }
 				}
 
 				/// <java-name>
@@ -2258,8 +1970,8 @@ namespace Android.Text.Method
 				/// </java-name>
 				public static global::Android.Text.Method.TimeKeyListener Instance
 				{
-				[Dot42.DexImport("getInstance", "()Landroid/text/method/TimeKeyListener;", AccessFlags = 9)]
-						get{ return GetInstance(); }
+						[Dot42.DexImport("getInstance", "()Landroid/text/method/TimeKeyListener;", AccessFlags = 9)]
+						get{ return default(global::Android.Text.Method.TimeKeyListener); }
 				}
 
 		}

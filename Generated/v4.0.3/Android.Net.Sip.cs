@@ -57,56 +57,11 @@ namespace Android.Net.Sip
 				}
 
 				/// <java-name>
-				/// isInCall
-				/// </java-name>
-				[Dot42.DexImport("isInCall", "()Z", AccessFlags = 1)]
-				public virtual bool IsInCall() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// isOnHold
-				/// </java-name>
-				[Dot42.DexImport("isOnHold", "()Z", AccessFlags = 1)]
-				public virtual bool IsOnHold() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// close
 				/// </java-name>
 				[Dot42.DexImport("close", "()V", AccessFlags = 1)]
 				public virtual void Close() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getLocalProfile
-				/// </java-name>
-				[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-				public virtual global::Android.Net.Sip.SipProfile GetLocalProfile() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Sip.SipProfile);
-				}
-
-				/// <java-name>
-				/// getPeerProfile
-				/// </java-name>
-				[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-				public virtual global::Android.Net.Sip.SipProfile GetPeerProfile() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Sip.SipProfile);
-				}
-
-				/// <java-name>
-				/// getState
-				/// </java-name>
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-				public virtual int GetState() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -166,15 +121,6 @@ namespace Android.Net.Sip
 				}
 
 				/// <java-name>
-				/// isMuted
-				/// </java-name>
-				[Dot42.DexImport("isMuted", "()Z", AccessFlags = 1)]
-				public virtual bool IsMuted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// setSpeakerMode
 				/// </java-name>
 				[Dot42.DexImport("setSpeakerMode", "(Z)V", AccessFlags = 1)]
@@ -212,30 +158,57 @@ namespace Android.Net.Sip
 				}
 
 				/// <java-name>
+				/// isInCall
+				/// </java-name>
+				public virtual bool IsInCall
+				{
+						[Dot42.DexImport("isInCall", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// isOnHold
+				/// </java-name>
+				public virtual bool IsOnHold
+				{
+						[Dot42.DexImport("isOnHold", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
 				/// getLocalProfile
 				/// </java-name>
-				public global::Android.Net.Sip.SipProfile LocalProfile
+				public virtual global::Android.Net.Sip.SipProfile LocalProfile
 				{
-				[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-						get{ return GetLocalProfile(); }
+						[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Sip.SipProfile); }
 				}
 
 				/// <java-name>
 				/// getPeerProfile
 				/// </java-name>
-				public global::Android.Net.Sip.SipProfile PeerProfile
+				public virtual global::Android.Net.Sip.SipProfile PeerProfile
 				{
-				[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-						get{ return GetPeerProfile(); }
+						[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Sip.SipProfile); }
 				}
 
 				/// <java-name>
 				/// getState
 				/// </java-name>
-				public int State
+				public virtual int State
 				{
-				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
-						get{ return GetState(); }
+						[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// isMuted
+				/// </java-name>
+				public virtual bool IsMuted
+				{
+						[Dot42.DexImport("isMuted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -691,217 +664,109 @@ namespace Android.Net.Sip
 				/// <java-name>
 				/// getUriString
 				/// </java-name>
-				[Dot42.DexImport("getUriString", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUriString() /* MethodBuilder.Create */ 
+				public virtual string UriString
 				{
-						return default(string);
+						[Dot42.DexImport("getUriString", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getDisplayName
 				/// </java-name>
-				[Dot42.DexImport("getDisplayName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDisplayName() /* MethodBuilder.Create */ 
+				public virtual string DisplayName
 				{
-						return default(string);
+						[Dot42.DexImport("getDisplayName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getUserName
 				/// </java-name>
-				[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetUserName() /* MethodBuilder.Create */ 
+				public virtual string UserName
 				{
-						return default(string);
+						[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getAuthUserName
 				/// </java-name>
-				[Dot42.DexImport("getAuthUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetAuthUserName() /* MethodBuilder.Create */ 
+				public virtual string AuthUserName
 				{
-						return default(string);
+						[Dot42.DexImport("getAuthUserName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPassword
 				/// </java-name>
-				[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPassword() /* MethodBuilder.Create */ 
+				public virtual string Password
 				{
-						return default(string);
+						[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSipDomain
 				/// </java-name>
-				[Dot42.DexImport("getSipDomain", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSipDomain() /* MethodBuilder.Create */ 
+				public virtual string SipDomain
 				{
-						return default(string);
+						[Dot42.DexImport("getSipDomain", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getPort
 				/// </java-name>
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-				public virtual int GetPort() /* MethodBuilder.Create */ 
+				public virtual int Port
 				{
-						return default(int);
+						[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getProtocol
 				/// </java-name>
-				[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetProtocol() /* MethodBuilder.Create */ 
+				public virtual string Protocol
 				{
-						return default(string);
+						[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getProxyAddress
 				/// </java-name>
-				[Dot42.DexImport("getProxyAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetProxyAddress() /* MethodBuilder.Create */ 
+				public virtual string ProxyAddress
 				{
-						return default(string);
+						[Dot42.DexImport("getProxyAddress", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getProfileName
 				/// </java-name>
-				[Dot42.DexImport("getProfileName", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetProfileName() /* MethodBuilder.Create */ 
+				public virtual string ProfileName
 				{
-						return default(string);
+						[Dot42.DexImport("getProfileName", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSendKeepAlive
 				/// </java-name>
-				[Dot42.DexImport("getSendKeepAlive", "()Z", AccessFlags = 1)]
-				public virtual bool GetSendKeepAlive() /* MethodBuilder.Create */ 
+				public virtual bool IsSendKeepAlive
 				{
-						return default(bool);
+						[Dot42.DexImport("getSendKeepAlive", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
 				/// getAutoRegistration
 				/// </java-name>
-				[Dot42.DexImport("getAutoRegistration", "()Z", AccessFlags = 1)]
-				public virtual bool GetAutoRegistration() /* MethodBuilder.Create */ 
+				public virtual bool IsAutoRegistration
 				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getUriString
-				/// </java-name>
-				public string UriString
-				{
-				[Dot42.DexImport("getUriString", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUriString(); }
-				}
-
-				/// <java-name>
-				/// getDisplayName
-				/// </java-name>
-				public string DisplayName
-				{
-				[Dot42.DexImport("getDisplayName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDisplayName(); }
-				}
-
-				/// <java-name>
-				/// getUserName
-				/// </java-name>
-				public string UserName
-				{
-				[Dot42.DexImport("getUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetUserName(); }
-				}
-
-				/// <java-name>
-				/// getAuthUserName
-				/// </java-name>
-				public string AuthUserName
-				{
-				[Dot42.DexImport("getAuthUserName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetAuthUserName(); }
-				}
-
-				/// <java-name>
-				/// getPassword
-				/// </java-name>
-				public string Password
-				{
-				[Dot42.DexImport("getPassword", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPassword(); }
-				}
-
-				/// <java-name>
-				/// getSipDomain
-				/// </java-name>
-				public string SipDomain
-				{
-				[Dot42.DexImport("getSipDomain", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSipDomain(); }
-				}
-
-				/// <java-name>
-				/// getPort
-				/// </java-name>
-				public int Port
-				{
-				[Dot42.DexImport("getPort", "()I", AccessFlags = 1)]
-						get{ return GetPort(); }
-				}
-
-				/// <java-name>
-				/// getProtocol
-				/// </java-name>
-				public string Protocol
-				{
-				[Dot42.DexImport("getProtocol", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetProtocol(); }
-				}
-
-				/// <java-name>
-				/// getProxyAddress
-				/// </java-name>
-				public string ProxyAddress
-				{
-				[Dot42.DexImport("getProxyAddress", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetProxyAddress(); }
-				}
-
-				/// <java-name>
-				/// getProfileName
-				/// </java-name>
-				public string ProfileName
-				{
-				[Dot42.DexImport("getProfileName", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetProfileName(); }
-				}
-
-				/// <java-name>
-				/// getSendKeepAlive
-				/// </java-name>
-				public bool IsSendKeepAlive
-				{
-				[Dot42.DexImport("getSendKeepAlive", "()Z", AccessFlags = 1)]
-						get{ return GetSendKeepAlive(); }
-				}
-
-				/// <java-name>
-				/// getAutoRegistration
-				/// </java-name>
-				public bool IsAutoRegistration
-				{
-				[Dot42.DexImport("getAutoRegistration", "()Z", AccessFlags = 1)]
-						get{ return GetAutoRegistration(); }
+						[Dot42.DexImport("getAutoRegistration", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1038,57 +903,12 @@ namespace Android.Net.Sip
 				}
 
 				/// <java-name>
-				/// getLocalIp
-				/// </java-name>
-				[Dot42.DexImport("getLocalIp", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetLocalIp() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLocalProfile
-				/// </java-name>
-				[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-				public global::Android.Net.Sip.SipProfile GetLocalProfile() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Sip.SipProfile);
-				}
-
-				/// <java-name>
-				/// getPeerProfile
-				/// </java-name>
-				[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-				public global::Android.Net.Sip.SipProfile GetPeerProfile() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Sip.SipProfile);
-				}
-
-				/// <java-name>
 				/// getState
 				/// </java-name>
 				[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
 				public int GetState() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// isInCall
-				/// </java-name>
-				[Dot42.DexImport("isInCall", "()Z", AccessFlags = 1)]
-				public bool IsInCall() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// getCallId
-				/// </java-name>
-				[Dot42.DexImport("getCallId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public string GetCallId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
 				}
 
 				/// <java-name>
@@ -1152,8 +972,8 @@ namespace Android.Net.Sip
 				/// </java-name>
 				public string LocalIp
 				{
-				[Dot42.DexImport("getLocalIp", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetLocalIp(); }
+						[Dot42.DexImport("getLocalIp", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
@@ -1161,8 +981,8 @@ namespace Android.Net.Sip
 				/// </java-name>
 				public global::Android.Net.Sip.SipProfile LocalProfile
 				{
-				[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-						get{ return GetLocalProfile(); }
+						[Dot42.DexImport("getLocalProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Sip.SipProfile); }
 				}
 
 				/// <java-name>
@@ -1170,8 +990,17 @@ namespace Android.Net.Sip
 				/// </java-name>
 				public global::Android.Net.Sip.SipProfile PeerProfile
 				{
-				[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
-						get{ return GetPeerProfile(); }
+						[Dot42.DexImport("getPeerProfile", "()Landroid/net/sip/SipProfile;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Sip.SipProfile); }
+				}
+
+				/// <java-name>
+				/// isInCall
+				/// </java-name>
+				public bool IsInCall
+				{
+						[Dot42.DexImport("isInCall", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>
@@ -1179,8 +1008,8 @@ namespace Android.Net.Sip
 				/// </java-name>
 				public string CallId
 				{
-				[Dot42.DexImport("getCallId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetCallId(); }
+						[Dot42.DexImport("getCallId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>

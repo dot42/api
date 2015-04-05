@@ -125,15 +125,6 @@ namespace Org.Apache.Http.Protocol
 				}
 
 				/// <java-name>
-				/// getRequestInterceptorCount
-				/// </java-name>
-				[Dot42.DexImport("getRequestInterceptorCount", "()I", AccessFlags = 1)]
-				public int GetRequestInterceptorCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getRequestInterceptor
 				/// </java-name>
 				[Dot42.DexImport("getRequestInterceptor", "(I)Lorg/apache/http/HttpRequestInterceptor;", AccessFlags = 1)]
@@ -172,15 +163,6 @@ namespace Org.Apache.Http.Protocol
 				[Dot42.DexImport("addInterceptor", "(Lorg/apache/http/HttpResponseInterceptor;I)V", AccessFlags = 17)]
 				public void AddInterceptor(global::Org.Apache.Http.IHttpResponseInterceptor httpResponseInterceptor, int int32) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getResponseInterceptorCount
-				/// </java-name>
-				[Dot42.DexImport("getResponseInterceptorCount", "()I", AccessFlags = 1)]
-				public int GetResponseInterceptorCount() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -263,8 +245,8 @@ namespace Org.Apache.Http.Protocol
 				/// </java-name>
 				public int RequestInterceptorCount
 				{
-				[Dot42.DexImport("getRequestInterceptorCount", "()I", AccessFlags = 1)]
-						get{ return GetRequestInterceptorCount(); }
+						[Dot42.DexImport("getRequestInterceptorCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
@@ -272,8 +254,8 @@ namespace Org.Apache.Http.Protocol
 				/// </java-name>
 				public int ResponseInterceptorCount
 				{
-				[Dot42.DexImport("getResponseInterceptorCount", "()I", AccessFlags = 1)]
-						get{ return GetResponseInterceptorCount(); }
+						[Dot42.DexImport("getResponseInterceptorCount", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -316,15 +298,6 @@ namespace Org.Apache.Http.Protocol
 				{
 				}
 
-				/// <java-name>
-				/// getDefaults
-				/// </java-name>
-				[Dot42.DexImport("getDefaults", "()Lorg/apache/http/protocol/HttpContext;", AccessFlags = 1)]
-				public global::Org.Apache.Http.Protocol.IHttpContext GetDefaults() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Protocol.IHttpContext);
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal DefaultedHttpContext() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -335,8 +308,8 @@ namespace Org.Apache.Http.Protocol
 				/// </java-name>
 				public global::Org.Apache.Http.Protocol.IHttpContext Defaults
 				{
-				[Dot42.DexImport("getDefaults", "()Lorg/apache/http/protocol/HttpContext;", AccessFlags = 1)]
-						get{ return GetDefaults(); }
+						[Dot42.DexImport("getDefaults", "()Lorg/apache/http/protocol/HttpContext;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Protocol.IHttpContext); }
 				}
 
 		}
@@ -539,19 +512,10 @@ namespace Org.Apache.Http.Protocol
 				/// <java-name>
 				/// getCurrentDate
 				/// </java-name>
-				[Dot42.DexImport("getCurrentDate", "()Ljava/lang/String;", AccessFlags = 33)]
-				public virtual string GetCurrentDate() /* MethodBuilder.Create */ 
+				public virtual string CurrentDate
 				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getCurrentDate
-				/// </java-name>
-				public string CurrentDate
-				{
-				[Dot42.DexImport("getCurrentDate", "()Ljava/lang/String;", AccessFlags = 33)]
-						get{ return GetCurrentDate(); }
+						[Dot42.DexImport("getCurrentDate", "()Ljava/lang/String;", AccessFlags = 33)]
+						get{ return default(string); }
 				}
 
 		}
@@ -737,23 +701,6 @@ namespace Org.Apache.Http.Protocol
 				}
 
 				/// <java-name>
-				/// getParams
-				/// </java-name>
-				[Dot42.DexImport("getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
-				public virtual global::Org.Apache.Http.Params.IHttpParams GetParams() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Apache.Http.Params.IHttpParams);
-				}
-
-				/// <java-name>
-				/// setParams
-				/// </java-name>
-				[Dot42.DexImport("setParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1)]
-				public virtual void SetParams(global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// handleRequest
 				/// </java-name>
 				[Dot42.DexImport("handleRequest", "(Lorg/apache/http/HttpServerConnection;Lorg/apache/http/protocol/HttpContext;)V", AccessFlags = 1)]
@@ -786,12 +733,12 @@ namespace Org.Apache.Http.Protocol
 				/// <java-name>
 				/// getParams
 				/// </java-name>
-				public global::Org.Apache.Http.Params.IHttpParams Params
+				public virtual global::Org.Apache.Http.Params.IHttpParams Params
 				{
-				[Dot42.DexImport("getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
-						get{ return GetParams(); }
-				[Dot42.DexImport("setParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1)]
-						set{ SetParams(value); }
+						[Dot42.DexImport("getParams", "()Lorg/apache/http/params/HttpParams;", AccessFlags = 1)]
+						get{ return default(global::Org.Apache.Http.Params.IHttpParams); }
+						[Dot42.DexImport("setParams", "(Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -961,12 +908,6 @@ namespace Org.Apache.Http.Protocol
 				void AddRequestInterceptor(global::Org.Apache.Http.IHttpRequestInterceptor httpRequestInterceptor, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// getRequestInterceptorCount
-				/// </java-name>
-				[Dot42.DexImport("getRequestInterceptorCount", "()I", AccessFlags = 1025)]
-				int GetRequestInterceptorCount() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getRequestInterceptor
 				/// </java-name>
 				[Dot42.DexImport("getRequestInterceptor", "(I)Lorg/apache/http/HttpRequestInterceptor;", AccessFlags = 1025)]
@@ -990,6 +931,15 @@ namespace Org.Apache.Http.Protocol
 				[Dot42.DexImport("setInterceptors", "(Ljava/util/List;)V", AccessFlags = 1025)]
 				void SetInterceptors(global::Java.Util.IList<object> list) /* MethodBuilder.Create */ ;
 
+				/// <java-name>
+				/// getRequestInterceptorCount
+				/// </java-name>
+				int RequestInterceptorCount
+				{
+						[Dot42.DexImport("getRequestInterceptorCount", "()I", AccessFlags = 1025)]
+						get;
+				}
+
 		}
 
 		/// <java-name>
@@ -1010,12 +960,6 @@ namespace Org.Apache.Http.Protocol
 				/// </java-name>
 				[Dot42.DexImport("addResponseInterceptor", "(Lorg/apache/http/HttpResponseInterceptor;I)V", AccessFlags = 1025)]
 				void AddResponseInterceptor(global::Org.Apache.Http.IHttpResponseInterceptor httpResponseInterceptor, int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getResponseInterceptorCount
-				/// </java-name>
-				[Dot42.DexImport("getResponseInterceptorCount", "()I", AccessFlags = 1025)]
-				int GetResponseInterceptorCount() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getResponseInterceptor
@@ -1040,6 +984,15 @@ namespace Org.Apache.Http.Protocol
 				/// </java-name>
 				[Dot42.DexImport("setInterceptors", "(Ljava/util/List;)V", AccessFlags = 1025)]
 				void SetInterceptors(global::Java.Util.IList<object> list) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getResponseInterceptorCount
+				/// </java-name>
+				int ResponseInterceptorCount
+				{
+						[Dot42.DexImport("getResponseInterceptorCount", "()I", AccessFlags = 1025)]
+						get;
+				}
 
 		}
 

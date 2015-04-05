@@ -19,11 +19,11 @@ namespace System.Reflection
 {
     public class ConstructorInfo : MethodBase
     {
-        private readonly JavaConstructor _ctor;
+        private readonly Constructor _ctor;
 
-        public JavaConstructor JavaConstructor { get { return _ctor; } }
+        public Constructor JavaConstructor { get { return _ctor; } }
 
-        public ConstructorInfo(JavaConstructor ctor) : base(ctor)
+        public ConstructorInfo(Constructor ctor) : base(ctor)
         {
             _ctor = ctor;
         }
@@ -35,38 +35,38 @@ namespace System.Reflection
         /// <summary>
         /// Is this an abstract method?
         /// </summary>
-        public override bool IsAbstract { get { return Modifier.IsAbstract(_ctor.GetModifiers()); } }
+        public override bool IsAbstract { get { return Modifier.IsAbstract(_ctor.Modifiers); } }
 
         /// <summary>
         /// Is this an final method?
         /// </summary>
-        public override bool IsFinal { get { return Modifier.IsFinal(_ctor.GetModifiers()); } }
+        public override bool IsFinal { get { return Modifier.IsFinal(_ctor.Modifiers); } }
 
         /// <summary>
         /// Is this an private method?
         /// </summary>
-        public override bool IsPrivate { get { return Modifier.IsPrivate(_ctor.GetModifiers()); } }
+        public override bool IsPrivate { get { return Modifier.IsPrivate(_ctor.Modifiers); } }
 
         /// <summary>
         /// Is this an public method?
         /// </summary>
-        public override bool IsPublic { get { return Modifier.IsPublic(_ctor.GetModifiers()); } }
+        public override bool IsPublic { get { return Modifier.IsPublic(_ctor.Modifiers); } }
 
         /// <summary>
         /// Is this a static method?
         /// </summary>
-        public override bool IsStatic { get { return Modifier.IsStatic(_ctor.GetModifiers()); } }
+        public override bool IsStatic { get { return Modifier.IsStatic(_ctor.Modifiers); } }
 
         /// <summary>
         /// Is this an virtual method?
         /// </summary>
-        public override bool IsVirtual { get { return !Modifier.IsFinal(_ctor.GetModifiers()); } }
+        public override bool IsVirtual { get { return !Modifier.IsFinal(_ctor.Modifiers); } }
 
         public override bool ContainsGenericParameters { get { return _ctor.GenericParameterTypes.Length > 0; } }
 
         public override ParameterInfo[] GetParameters()
         {
-            var types = _ctor.GetParameterTypes();
+            var types = _ctor.ParameterTypes;
             var length = types.Length;
 
             ParameterInfo[] ret = new ParameterInfo[length];

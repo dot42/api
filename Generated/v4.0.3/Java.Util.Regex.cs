@@ -272,30 +272,12 @@ namespace Java.Util.Regex
 				}
 
 				/// <java-name>
-				/// hasAnchoringBounds
-				/// </java-name>
-				[Dot42.DexImport("hasAnchoringBounds", "()Z", AccessFlags = 1)]
-				public bool HasAnchoringBounds() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// useTransparentBounds
 				/// </java-name>
 				[Dot42.DexImport("useTransparentBounds", "(Z)Ljava/util/regex/Matcher;", AccessFlags = 1)]
 				public global::Java.Util.Regex.Matcher UseTransparentBounds(bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.Regex.Matcher);
-				}
-
-				/// <java-name>
-				/// hasTransparentBounds
-				/// </java-name>
-				[Dot42.DexImport("hasTransparentBounds", "()Z", AccessFlags = 1)]
-				public bool HasTransparentBounds() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -339,6 +321,24 @@ namespace Java.Util.Regex
 				/// </java-name>
 				[Dot42.DexImport("finalize", "()V", AccessFlags = 4)]
 				extern ~Matcher() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// hasAnchoringBounds
+				/// </java-name>
+				public bool HasAnchoringBounds
+				{
+						[Dot42.DexImport("hasAnchoringBounds", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// hasTransparentBounds
+				/// </java-name>
+				public bool HasTransparentBounds
+				{
+						[Dot42.DexImport("hasTransparentBounds", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
 
 		}
 
@@ -505,39 +505,12 @@ namespace Java.Util.Regex
 				}
 
 				/// <java-name>
-				/// getPattern
-				/// </java-name>
-				[Dot42.DexImport("getPattern", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPattern() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
 				/// getMessage
 				/// </java-name>
 				[Dot42.DexImport("getMessage", "()Ljava/lang/String;", AccessFlags = 1)]
 				public override string GetMessage() /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <java-name>
-				/// getDescription
-				/// </java-name>
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetDescription() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getIndex
-				/// </java-name>
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-				public virtual int GetIndex() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -548,28 +521,28 @@ namespace Java.Util.Regex
 				/// <java-name>
 				/// getPattern
 				/// </java-name>
-				public string Pattern
+				public virtual string Pattern
 				{
-				[Dot42.DexImport("getPattern", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPattern(); }
+						[Dot42.DexImport("getPattern", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getDescription
 				/// </java-name>
-				public string Description
+				public virtual string Description
 				{
-				[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetDescription(); }
+						[Dot42.DexImport("getDescription", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getIndex
 				/// </java-name>
-				public int Index
+				public virtual int Index
 				{
-				[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
-						get{ return GetIndex(); }
+						[Dot42.DexImport("getIndex", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}

@@ -51,15 +51,6 @@ namespace Org.Xml.Sax.Helpers
 				}
 
 				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1)]
-				public virtual int GetLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// getName
 				/// </java-name>
 				[Dot42.DexImport("getName", "(I)Ljava/lang/String;", AccessFlags = 1)]
@@ -107,10 +98,10 @@ namespace Org.Xml.Sax.Helpers
 				/// <java-name>
 				/// getLength
 				/// </java-name>
-				public int Length
+				public virtual int Length
 				{
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1)]
-						get{ return GetLength(); }
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -130,15 +121,6 @@ namespace Org.Xml.Sax.Helpers
 				[Dot42.DexImport("<init>", "(Lorg/xml/sax/Attributes;)V", AccessFlags = 1)]
 				public AttributesImpl(global::Org.Xml.Sax.IAttributes attributes) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// getLength
-				/// </java-name>
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1)]
-				public virtual int GetLength() /* MethodBuilder.Create */ 
-				{
-						return default(int);
 				}
 
 				/// <java-name>
@@ -325,10 +307,10 @@ namespace Org.Xml.Sax.Helpers
 				/// <java-name>
 				/// getLength
 				/// </java-name>
-				public int Length
+				public virtual int Length
 				{
-				[Dot42.DexImport("getLength", "()I", AccessFlags = 1)]
-						get{ return GetLength(); }
+						[Dot42.DexImport("getLength", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -503,42 +485,6 @@ namespace Org.Xml.Sax.Helpers
 				}
 
 				/// <java-name>
-				/// getPublicId
-				/// </java-name>
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetPublicId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getSystemId
-				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetSystemId() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <java-name>
-				/// getLineNumber
-				/// </java-name>
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-				public virtual int GetLineNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getColumnNumber
-				/// </java-name>
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1)]
-				public virtual int GetColumnNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setPublicId
 				/// </java-name>
 				[Dot42.DexImport("setPublicId", "(Ljava/lang/String;)V", AccessFlags = 1)]
@@ -573,45 +519,37 @@ namespace Org.Xml.Sax.Helpers
 				/// <java-name>
 				/// getPublicId
 				/// </java-name>
-				public string PublicId
+				public virtual string PublicId
 				{
-				[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetPublicId(); }
-				[Dot42.DexImport("setPublicId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetPublicId(value); }
+						[Dot42.DexImport("getPublicId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				public string SystemId
+				public virtual string SystemId
 				{
-				[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetSystemId(); }
-				[Dot42.DexImport("setSystemId", "(Ljava/lang/String;)V", AccessFlags = 1)]
-						set{ SetSystemId(value); }
+						[Dot42.DexImport("getSystemId", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <java-name>
 				/// getLineNumber
 				/// </java-name>
-				public int LineNumber
+				public virtual int LineNumber
 				{
-				[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
-						get{ return GetLineNumber(); }
-				[Dot42.DexImport("setLineNumber", "(I)V", AccessFlags = 1)]
-						set{ SetLineNumber(value); }
+						[Dot42.DexImport("getLineNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getColumnNumber
 				/// </java-name>
-				public int ColumnNumber
+				public virtual int ColumnNumber
 				{
-				[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1)]
-						get{ return GetColumnNumber(); }
-				[Dot42.DexImport("setColumnNumber", "(I)V", AccessFlags = 1)]
-						set{ SetColumnNumber(value); }
+						[Dot42.DexImport("getColumnNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
@@ -690,15 +628,6 @@ namespace Org.Xml.Sax.Helpers
 				}
 
 				/// <java-name>
-				/// getPrefixes
-				/// </java-name>
-				[Dot42.DexImport("getPrefixes", "()Ljava/util/Enumeration;", AccessFlags = 1)]
-				public virtual global::Java.Util.IEnumeration<object> GetPrefixes() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<object>);
-				}
-
-				/// <java-name>
 				/// getPrefix
 				/// </java-name>
 				[Dot42.DexImport("getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
@@ -717,15 +646,6 @@ namespace Org.Xml.Sax.Helpers
 				}
 
 				/// <java-name>
-				/// getDeclaredPrefixes
-				/// </java-name>
-				[Dot42.DexImport("getDeclaredPrefixes", "()Ljava/util/Enumeration;", AccessFlags = 1)]
-				public virtual global::Java.Util.IEnumeration<object> GetDeclaredPrefixes() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IEnumeration<object>);
-				}
-
-				/// <java-name>
 				/// setNamespaceDeclUris
 				/// </java-name>
 				[Dot42.DexImport("setNamespaceDeclUris", "(Z)V", AccessFlags = 1)]
@@ -734,30 +654,30 @@ namespace Org.Xml.Sax.Helpers
 				}
 
 				/// <java-name>
-				/// isNamespaceDeclUris
-				/// </java-name>
-				[Dot42.DexImport("isNamespaceDeclUris", "()Z", AccessFlags = 1)]
-				public virtual bool IsNamespaceDeclUris() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
 				/// getPrefixes
 				/// </java-name>
-				public global::Java.Util.IEnumeration<object> Prefixes
+				public virtual global::Java.Util.IEnumeration<object> Prefixes
 				{
-				[Dot42.DexImport("getPrefixes", "()Ljava/util/Enumeration;", AccessFlags = 1)]
-						get{ return GetPrefixes(); }
+						[Dot42.DexImport("getPrefixes", "()Ljava/util/Enumeration;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.IEnumeration<object>); }
 				}
 
 				/// <java-name>
 				/// getDeclaredPrefixes
 				/// </java-name>
-				public global::Java.Util.IEnumeration<object> DeclaredPrefixes
+				public virtual global::Java.Util.IEnumeration<object> DeclaredPrefixes
 				{
-				[Dot42.DexImport("getDeclaredPrefixes", "()Ljava/util/Enumeration;", AccessFlags = 1)]
-						get{ return GetDeclaredPrefixes(); }
+						[Dot42.DexImport("getDeclaredPrefixes", "()Ljava/util/Enumeration;", AccessFlags = 1)]
+						get{ return default(global::Java.Util.IEnumeration<object>); }
+				}
+
+				/// <java-name>
+				/// isNamespaceDeclUris
+				/// </java-name>
+				public virtual bool IsNamespaceDeclUris
+				{
+						[Dot42.DexImport("isNamespaceDeclUris", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}
@@ -811,74 +731,6 @@ namespace Org.Xml.Sax.Helpers
 				public virtual object GetProperty(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(object);
-				}
-
-				/// <java-name>
-				/// setEntityResolver
-				/// </java-name>
-				[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1)]
-				public virtual void SetEntityResolver(global::Org.Xml.Sax.IEntityResolver entityResolver) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEntityResolver
-				/// </java-name>
-				[Dot42.DexImport("getEntityResolver", "()Lorg/xml/sax/EntityResolver;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IEntityResolver GetEntityResolver() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IEntityResolver);
-				}
-
-				/// <java-name>
-				/// setDTDHandler
-				/// </java-name>
-				[Dot42.DexImport("setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", AccessFlags = 1)]
-				public virtual void SetDTDHandler(global::Org.Xml.Sax.IDTDHandler dTDHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDTDHandler
-				/// </java-name>
-				[Dot42.DexImport("getDTDHandler", "()Lorg/xml/sax/DTDHandler;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IDTDHandler GetDTDHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IDTDHandler);
-				}
-
-				/// <java-name>
-				/// setContentHandler
-				/// </java-name>
-				[Dot42.DexImport("setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1)]
-				public virtual void SetContentHandler(global::Org.Xml.Sax.IContentHandler contentHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentHandler
-				/// </java-name>
-				[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IContentHandler GetContentHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IContentHandler);
-				}
-
-				/// <java-name>
-				/// setErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1)]
-				public virtual void SetErrorHandler(global::Org.Xml.Sax.IErrorHandler errorHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IErrorHandler GetErrorHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IErrorHandler);
 				}
 
 				/// <java-name>
@@ -964,45 +816,45 @@ namespace Org.Xml.Sax.Helpers
 				/// <java-name>
 				/// getEntityResolver
 				/// </java-name>
-				public global::Org.Xml.Sax.IEntityResolver EntityResolver
+				public virtual global::Org.Xml.Sax.IEntityResolver EntityResolver
 				{
-				[Dot42.DexImport("getEntityResolver", "()Lorg/xml/sax/EntityResolver;", AccessFlags = 1)]
-						get{ return GetEntityResolver(); }
-				[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1)]
-						set{ SetEntityResolver(value); }
+						[Dot42.DexImport("getEntityResolver", "()Lorg/xml/sax/EntityResolver;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IEntityResolver); }
+						[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDTDHandler
 				/// </java-name>
-				public global::Org.Xml.Sax.IDTDHandler DTDHandler
+				public virtual global::Org.Xml.Sax.IDTDHandler DTDHandler
 				{
-				[Dot42.DexImport("getDTDHandler", "()Lorg/xml/sax/DTDHandler;", AccessFlags = 1)]
-						get{ return GetDTDHandler(); }
-				[Dot42.DexImport("setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", AccessFlags = 1)]
-						set{ SetDTDHandler(value); }
+						[Dot42.DexImport("getDTDHandler", "()Lorg/xml/sax/DTDHandler;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IDTDHandler); }
+						[Dot42.DexImport("setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getContentHandler
 				/// </java-name>
-				public global::Org.Xml.Sax.IContentHandler ContentHandler
+				public virtual global::Org.Xml.Sax.IContentHandler ContentHandler
 				{
-				[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
-						get{ return GetContentHandler(); }
-				[Dot42.DexImport("setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1)]
-						set{ SetContentHandler(value); }
+						[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IContentHandler); }
+						[Dot42.DexImport("setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getErrorHandler
 				/// </java-name>
-				public global::Org.Xml.Sax.IErrorHandler ErrorHandler
+				public virtual global::Org.Xml.Sax.IErrorHandler ErrorHandler
 				{
-				[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1)]
-						get{ return GetErrorHandler(); }
-				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1)]
-						set{ SetErrorHandler(value); }
+						[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IErrorHandler); }
+						[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -1057,23 +909,6 @@ namespace Org.Xml.Sax.Helpers
 				}
 
 				/// <java-name>
-				/// setParent
-				/// </java-name>
-				[Dot42.DexImport("setParent", "(Lorg/xml/sax/XMLReader;)V", AccessFlags = 1)]
-				public virtual void SetParent(global::Org.Xml.Sax.IXMLReader xMLReader) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getParent
-				/// </java-name>
-				[Dot42.DexImport("getParent", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IXMLReader GetParent() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IXMLReader);
-				}
-
-				/// <java-name>
 				/// setFeature
 				/// </java-name>
 				[Dot42.DexImport("setFeature", "(Ljava/lang/String;Z)V", AccessFlags = 1)]
@@ -1105,74 +940,6 @@ namespace Org.Xml.Sax.Helpers
 				public virtual object GetProperty(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(object);
-				}
-
-				/// <java-name>
-				/// setEntityResolver
-				/// </java-name>
-				[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1)]
-				public virtual void SetEntityResolver(global::Org.Xml.Sax.IEntityResolver entityResolver) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getEntityResolver
-				/// </java-name>
-				[Dot42.DexImport("getEntityResolver", "()Lorg/xml/sax/EntityResolver;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IEntityResolver GetEntityResolver() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IEntityResolver);
-				}
-
-				/// <java-name>
-				/// setDTDHandler
-				/// </java-name>
-				[Dot42.DexImport("setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", AccessFlags = 1)]
-				public virtual void SetDTDHandler(global::Org.Xml.Sax.IDTDHandler dTDHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getDTDHandler
-				/// </java-name>
-				[Dot42.DexImport("getDTDHandler", "()Lorg/xml/sax/DTDHandler;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IDTDHandler GetDTDHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IDTDHandler);
-				}
-
-				/// <java-name>
-				/// setContentHandler
-				/// </java-name>
-				[Dot42.DexImport("setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1)]
-				public virtual void SetContentHandler(global::Org.Xml.Sax.IContentHandler contentHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getContentHandler
-				/// </java-name>
-				[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IContentHandler GetContentHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IContentHandler);
-				}
-
-				/// <java-name>
-				/// setErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1)]
-				public virtual void SetErrorHandler(global::Org.Xml.Sax.IErrorHandler errorHandler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// getErrorHandler
-				/// </java-name>
-				[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1)]
-				public virtual global::Org.Xml.Sax.IErrorHandler GetErrorHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::Org.Xml.Sax.IErrorHandler);
 				}
 
 				/// <java-name>
@@ -1332,56 +1099,56 @@ namespace Org.Xml.Sax.Helpers
 				/// <java-name>
 				/// getParent
 				/// </java-name>
-				public global::Org.Xml.Sax.IXMLReader Parent
+				public virtual global::Org.Xml.Sax.IXMLReader Parent
 				{
-				[Dot42.DexImport("getParent", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1)]
-						get{ return GetParent(); }
-				[Dot42.DexImport("setParent", "(Lorg/xml/sax/XMLReader;)V", AccessFlags = 1)]
-						set{ SetParent(value); }
+						[Dot42.DexImport("getParent", "()Lorg/xml/sax/XMLReader;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IXMLReader); }
+						[Dot42.DexImport("setParent", "(Lorg/xml/sax/XMLReader;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getEntityResolver
 				/// </java-name>
-				public global::Org.Xml.Sax.IEntityResolver EntityResolver
+				public virtual global::Org.Xml.Sax.IEntityResolver EntityResolver
 				{
-				[Dot42.DexImport("getEntityResolver", "()Lorg/xml/sax/EntityResolver;", AccessFlags = 1)]
-						get{ return GetEntityResolver(); }
-				[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1)]
-						set{ SetEntityResolver(value); }
+						[Dot42.DexImport("getEntityResolver", "()Lorg/xml/sax/EntityResolver;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IEntityResolver); }
+						[Dot42.DexImport("setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getDTDHandler
 				/// </java-name>
-				public global::Org.Xml.Sax.IDTDHandler DTDHandler
+				public virtual global::Org.Xml.Sax.IDTDHandler DTDHandler
 				{
-				[Dot42.DexImport("getDTDHandler", "()Lorg/xml/sax/DTDHandler;", AccessFlags = 1)]
-						get{ return GetDTDHandler(); }
-				[Dot42.DexImport("setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", AccessFlags = 1)]
-						set{ SetDTDHandler(value); }
+						[Dot42.DexImport("getDTDHandler", "()Lorg/xml/sax/DTDHandler;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IDTDHandler); }
+						[Dot42.DexImport("setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getContentHandler
 				/// </java-name>
-				public global::Org.Xml.Sax.IContentHandler ContentHandler
+				public virtual global::Org.Xml.Sax.IContentHandler ContentHandler
 				{
-				[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
-						get{ return GetContentHandler(); }
-				[Dot42.DexImport("setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1)]
-						set{ SetContentHandler(value); }
+						[Dot42.DexImport("getContentHandler", "()Lorg/xml/sax/ContentHandler;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IContentHandler); }
+						[Dot42.DexImport("setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getErrorHandler
 				/// </java-name>
-				public global::Org.Xml.Sax.IErrorHandler ErrorHandler
+				public virtual global::Org.Xml.Sax.IErrorHandler ErrorHandler
 				{
-				[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1)]
-						get{ return GetErrorHandler(); }
-				[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1)]
-						set{ SetErrorHandler(value); }
+						[Dot42.DexImport("getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", AccessFlags = 1)]
+						get{ return default(global::Org.Xml.Sax.IErrorHandler); }
+						[Dot42.DexImport("setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

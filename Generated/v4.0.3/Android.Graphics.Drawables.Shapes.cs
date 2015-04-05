@@ -199,24 +199,6 @@ namespace Android.Graphics.Drawables.Shapes
 				}
 
 				/// <java-name>
-				/// getWidth
-				/// </java-name>
-				[Dot42.DexImport("getWidth", "()F", AccessFlags = 17)]
-				public float GetWidth() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
-				/// getHeight
-				/// </java-name>
-				[Dot42.DexImport("getHeight", "()F", AccessFlags = 17)]
-				public float GetHeight() /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <java-name>
 				/// draw
 				/// </java-name>
 				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V", AccessFlags = 1025)]
@@ -228,15 +210,6 @@ namespace Android.Graphics.Drawables.Shapes
 				[Dot42.DexImport("resize", "(FF)V", AccessFlags = 17)]
 				public void Resize(float single, float single1) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <java-name>
-				/// hasAlpha
-				/// </java-name>
-				[Dot42.DexImport("hasAlpha", "()Z", AccessFlags = 1)]
-				public virtual bool HasAlpha() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
 				}
 
 				/// <java-name>
@@ -261,8 +234,8 @@ namespace Android.Graphics.Drawables.Shapes
 				/// </java-name>
 				public float Width
 				{
-				[Dot42.DexImport("getWidth", "()F", AccessFlags = 17)]
-						get{ return GetWidth(); }
+						[Dot42.DexImport("getWidth", "()F", AccessFlags = 17)]
+						get{ return default(float); }
 				}
 
 				/// <java-name>
@@ -270,8 +243,17 @@ namespace Android.Graphics.Drawables.Shapes
 				/// </java-name>
 				public float Height
 				{
-				[Dot42.DexImport("getHeight", "()F", AccessFlags = 17)]
-						get{ return GetHeight(); }
+						[Dot42.DexImport("getHeight", "()F", AccessFlags = 17)]
+						get{ return default(float); }
+				}
+
+				/// <java-name>
+				/// hasAlpha
+				/// </java-name>
+				public virtual bool HasAlpha
+				{
+						[Dot42.DexImport("hasAlpha", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 		}

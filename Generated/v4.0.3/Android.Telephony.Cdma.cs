@@ -19,51 +19,6 @@ namespace Android.Telephony.Cdma
 				}
 
 				/// <java-name>
-				/// getBaseStationId
-				/// </java-name>
-				[Dot42.DexImport("getBaseStationId", "()I", AccessFlags = 1)]
-				public virtual int GetBaseStationId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBaseStationLatitude
-				/// </java-name>
-				[Dot42.DexImport("getBaseStationLatitude", "()I", AccessFlags = 1)]
-				public virtual int GetBaseStationLatitude() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getBaseStationLongitude
-				/// </java-name>
-				[Dot42.DexImport("getBaseStationLongitude", "()I", AccessFlags = 1)]
-				public virtual int GetBaseStationLongitude() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getSystemId
-				/// </java-name>
-				[Dot42.DexImport("getSystemId", "()I", AccessFlags = 1)]
-				public virtual int GetSystemId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// getNetworkId
-				/// </java-name>
-				[Dot42.DexImport("getNetworkId", "()I", AccessFlags = 1)]
-				public virtual int GetNetworkId() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// setStateInvalid
 				/// </java-name>
 				[Dot42.DexImport("setStateInvalid", "()V", AccessFlags = 1)]
@@ -125,46 +80,46 @@ namespace Android.Telephony.Cdma
 				/// <java-name>
 				/// getBaseStationId
 				/// </java-name>
-				public int BaseStationId
+				public virtual int BaseStationId
 				{
-				[Dot42.DexImport("getBaseStationId", "()I", AccessFlags = 1)]
-						get{ return GetBaseStationId(); }
+						[Dot42.DexImport("getBaseStationId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getBaseStationLatitude
 				/// </java-name>
-				public int BaseStationLatitude
+				public virtual int BaseStationLatitude
 				{
-				[Dot42.DexImport("getBaseStationLatitude", "()I", AccessFlags = 1)]
-						get{ return GetBaseStationLatitude(); }
+						[Dot42.DexImport("getBaseStationLatitude", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getBaseStationLongitude
 				/// </java-name>
-				public int BaseStationLongitude
+				public virtual int BaseStationLongitude
 				{
-				[Dot42.DexImport("getBaseStationLongitude", "()I", AccessFlags = 1)]
-						get{ return GetBaseStationLongitude(); }
+						[Dot42.DexImport("getBaseStationLongitude", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getSystemId
 				/// </java-name>
-				public int SystemId
+				public virtual int SystemId
 				{
-				[Dot42.DexImport("getSystemId", "()I", AccessFlags = 1)]
-						get{ return GetSystemId(); }
+						[Dot42.DexImport("getSystemId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 				/// <java-name>
 				/// getNetworkId
 				/// </java-name>
-				public int NetworkId
+				public virtual int NetworkId
 				{
-				[Dot42.DexImport("getNetworkId", "()I", AccessFlags = 1)]
-						get{ return GetNetworkId(); }
+						[Dot42.DexImport("getNetworkId", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
