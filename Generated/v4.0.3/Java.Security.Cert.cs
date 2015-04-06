@@ -1703,14 +1703,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <java-name>
-				/// setAnyPolicyInhibited
-				/// </java-name>
-				[Dot42.DexImport("setAnyPolicyInhibited", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAnyPolicyInhibited(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// addCertPathChecker
 				/// </java-name>
 				[Dot42.DexImport("addCertPathChecker", "(Ljava/security/cert/PKIXCertPathChecker;)V", AccessFlags = 1)]
@@ -1723,30 +1715,6 @@ namespace Java.Security.Cert
 				/// </java-name>
 				[Dot42.DexImport("addCertStore", "(Ljava/security/cert/CertStore;)V", AccessFlags = 1)]
 				public virtual void AddCertStore(global::Java.Security.Cert.CertStore certStore) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setExplicitPolicyRequired
-				/// </java-name>
-				[Dot42.DexImport("setExplicitPolicyRequired", "(Z)V", AccessFlags = 1)]
-				public virtual void SetExplicitPolicyRequired(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPolicyMappingInhibited
-				/// </java-name>
-				[Dot42.DexImport("setPolicyMappingInhibited", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPolicyMappingInhibited(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setRevocationEnabled
-				/// </java-name>
-				[Dot42.DexImport("setRevocationEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetRevocationEnabled(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1791,6 +1759,8 @@ namespace Java.Security.Cert
 				{
 						[Dot42.DexImport("isAnyPolicyInhibited", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setAnyPolicyInhibited", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1833,6 +1803,8 @@ namespace Java.Security.Cert
 				{
 						[Dot42.DexImport("isExplicitPolicyRequired", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setExplicitPolicyRequired", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1853,6 +1825,8 @@ namespace Java.Security.Cert
 				{
 						[Dot42.DexImport("isPolicyMappingInhibited", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setPolicyMappingInhibited", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1873,6 +1847,8 @@ namespace Java.Security.Cert
 				{
 						[Dot42.DexImport("isRevocationEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setRevocationEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

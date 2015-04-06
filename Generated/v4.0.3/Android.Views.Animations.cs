@@ -253,14 +253,6 @@ namespace Android.Views.Animations
 				}
 
 				/// <java-name>
-				/// setFillEnabled
-				/// </java-name>
-				[Dot42.DexImport("setFillEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFillEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// willChangeTransformationMatrix
 				/// </java-name>
 				[Dot42.DexImport("willChangeTransformationMatrix", "()Z", AccessFlags = 1)]
@@ -360,6 +352,8 @@ namespace Android.Views.Animations
 				{
 						[Dot42.DexImport("isFillEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFillEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

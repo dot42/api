@@ -646,14 +646,6 @@ namespace Org.Xml.Sax.Helpers
 				}
 
 				/// <java-name>
-				/// setNamespaceDeclUris
-				/// </java-name>
-				[Dot42.DexImport("setNamespaceDeclUris", "(Z)V", AccessFlags = 1)]
-				public virtual void SetNamespaceDeclUris(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getPrefixes
 				/// </java-name>
 				public virtual global::Java.Util.IEnumeration<object> Prefixes
@@ -678,6 +670,8 @@ namespace Org.Xml.Sax.Helpers
 				{
 						[Dot42.DexImport("isNamespaceDeclUris", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setNamespaceDeclUris", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

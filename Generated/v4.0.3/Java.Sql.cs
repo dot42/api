@@ -1489,12 +1489,6 @@ namespace Java.Sql
 				void Rollback(global::Java.Sql.ISavepoint savepoint) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setReadOnly
-				/// </java-name>
-				[Dot42.DexImport("setReadOnly", "(Z)V", AccessFlags = 1025)]
-				void SetReadOnly(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setSavepoint
 				/// </java-name>
 				[Dot42.DexImport("setSavepoint", "()Ljava/sql/Savepoint;", AccessFlags = 1025)]
@@ -1649,6 +1643,8 @@ namespace Java.Sql
 				{
 						[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1025)]
 						get;
+						[Dot42.DexImport("setReadOnly", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 				/// <java-name>
@@ -5787,12 +5783,6 @@ namespace Java.Sql
 				void SetEscapeProcessing(bool boolean) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setPoolable
-				/// </java-name>
-				[Dot42.DexImport("setPoolable", "(Z)V", AccessFlags = 1025)]
-				void SetPoolable(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// getConnection
 				/// </java-name>
 				global::Java.Sql.IConnection Connection
@@ -5944,6 +5934,8 @@ namespace Java.Sql
 				{
 						[Dot42.DexImport("isPoolable", "()Z", AccessFlags = 1025)]
 						get;
+						[Dot42.DexImport("setPoolable", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 		}

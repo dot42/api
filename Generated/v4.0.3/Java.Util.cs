@@ -3346,14 +3346,6 @@ namespace Java.Util
 				}
 
 				/// <java-name>
-				/// setLenient
-				/// </java-name>
-				[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
-				public virtual void SetLenient(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]
@@ -3469,6 +3461,8 @@ namespace Java.Util
 				{
 						[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -5245,20 +5239,14 @@ namespace Java.Util
 				}
 
 				/// <java-name>
-				/// setGregorianChange
-				/// </java-name>
-				[Dot42.DexImport("setGregorianChange", "(Ljava/util/Date;)V", AccessFlags = 1)]
-				public virtual void SetGregorianChange(global::Java.Util.Date date) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getGregorianChange
 				/// </java-name>
-				public global::Java.Util.Date GregorianChange
+				public virtual global::Java.Util.Date GregorianChange
 				{
 						[Dot42.DexImport("getGregorianChange", "()Ljava/util/Date;", AccessFlags = 17)]
 						get{ return default(global::Java.Util.Date); }
+						[Dot42.DexImport("setGregorianChange", "(Ljava/util/Date;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

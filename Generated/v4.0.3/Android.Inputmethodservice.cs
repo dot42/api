@@ -105,14 +105,6 @@ namespace Android.Inputmethodservice
 						}
 
 						/// <java-name>
-						/// setEnabled
-						/// </java-name>
-						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-						public virtual void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <java-name>
 						/// revokeSelf
 						/// </java-name>
 						[Dot42.DexImport("revokeSelf", "()V", AccessFlags = 1)]
@@ -190,6 +182,8 @@ namespace Android.Inputmethodservice
 						{
 								[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
 								get{ return default(bool); }
+								[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+								set{ }
 						}
 
 						/// <java-name>
@@ -529,14 +523,6 @@ namespace Android.Inputmethodservice
 				public virtual bool OnEvaluateFullscreenMode() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// setExtractViewShown
-				/// </java-name>
-				[Dot42.DexImport("setExtractViewShown", "(Z)V", AccessFlags = 1)]
-				public virtual void SetExtractViewShown(bool boolean) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -1050,6 +1036,8 @@ namespace Android.Inputmethodservice
 				{
 						[Dot42.DexImport("isExtractViewShown", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setExtractViewShown", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1773,14 +1761,6 @@ namespace Android.Inputmethodservice
 				}
 
 				/// <java-name>
-				/// setPreviewEnabled
-				/// </java-name>
-				[Dot42.DexImport("setPreviewEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPreviewEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setVerticalCorrection
 				/// </java-name>
 				[Dot42.DexImport("setVerticalCorrection", "(I)V", AccessFlags = 1)]
@@ -1801,14 +1781,6 @@ namespace Android.Inputmethodservice
 				/// </java-name>
 				[Dot42.DexImport("setPopupOffset", "(II)V", AccessFlags = 1)]
 				public virtual void SetPopupOffset(int int32, int int321) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setProximityCorrectionEnabled
-				/// </java-name>
-				[Dot42.DexImport("setProximityCorrectionEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetProximityCorrectionEnabled(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1987,6 +1959,8 @@ namespace Android.Inputmethodservice
 				{
 						[Dot42.DexImport("isPreviewEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setPreviewEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1996,6 +1970,8 @@ namespace Android.Inputmethodservice
 				{
 						[Dot42.DexImport("isProximityCorrectionEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setProximityCorrectionEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

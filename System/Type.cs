@@ -17,6 +17,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Android.Util;
 using Dot42;
 using Dot42.Internal;
 using Dot42.Internal.Generics;
@@ -153,6 +154,24 @@ namespace System
         {
             return GenericsReflection.GetGenericTypeDefinition(this);
         }
+
+	    public Type GetNestedType(string name)
+	    {
+            // TODO: make this work for generic classes as well.
+	        var def = EnsureTypeDef();
+            int myNameLen = Name.Length;
+	        var nested = def.GetDeclaredClasses();
+            
+	        for (int i = 0; i < nested.Length; ++i)
+	        {
+	            Log.I("dot42", string.Format("GetNestedType on {0}: {1}", Name, nested[i].Name));
+	            string nestedName = nested[i].Name.Substring(myNameLen + 1);
+	            if (nestedName == name)
+	                return nested[i];
+	        }
+
+	        return null;
+	    }
 
         /// <summary>
         /// will return the correct count. For nullable types, 

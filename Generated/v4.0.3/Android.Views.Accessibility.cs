@@ -483,86 +483,6 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// setCheckable
-				/// </java-name>
-				[Dot42.DexImport("setCheckable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetCheckable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setChecked
-				/// </java-name>
-				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
-				public virtual void SetChecked(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFocusable
-				/// </java-name>
-				[Dot42.DexImport("setFocusable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFocusable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFocused
-				/// </java-name>
-				[Dot42.DexImport("setFocused", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFocused(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSelected
-				/// </java-name>
-				[Dot42.DexImport("setSelected", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSelected(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setClickable
-				/// </java-name>
-				[Dot42.DexImport("setClickable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetClickable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLongClickable
-				/// </java-name>
-				[Dot42.DexImport("setLongClickable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetLongClickable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPassword
-				/// </java-name>
-				[Dot42.DexImport("setPassword", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPassword(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setScrollable
-				/// </java-name>
-				[Dot42.DexImport("setScrollable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetScrollable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -685,6 +605,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isCheckable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setCheckable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -694,6 +616,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -703,6 +627,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isFocusable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFocusable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -712,6 +638,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isFocused", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFocused", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -721,6 +649,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isSelected", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSelected", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -730,6 +660,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isClickable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setClickable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -739,6 +671,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isLongClickable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setLongClickable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -748,6 +682,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -757,6 +693,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isPassword", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setPassword", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -766,6 +704,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isScrollable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setScrollable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -835,46 +775,6 @@ namespace Android.Views.Accessibility
 				}
 
 				/// <java-name>
-				/// setChecked
-				/// </java-name>
-				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
-				public virtual void SetChecked(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPassword
-				/// </java-name>
-				[Dot42.DexImport("setPassword", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPassword(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFullScreen
-				/// </java-name>
-				[Dot42.DexImport("setFullScreen", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFullScreen(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setScrollable
-				/// </java-name>
-				[Dot42.DexImport("setScrollable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetScrollable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// obtain
 				/// </java-name>
 				[Dot42.DexImport("obtain", "(Landroid/view/accessibility/AccessibilityRecord;)Landroid/view/accessibility/Acc" +
@@ -935,6 +835,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -944,6 +846,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -953,6 +857,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isPassword", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setPassword", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -962,6 +868,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isFullScreen", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFullScreen", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -971,6 +879,8 @@ namespace Android.Views.Accessibility
 				{
 						[Dot42.DexImport("isScrollable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setScrollable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

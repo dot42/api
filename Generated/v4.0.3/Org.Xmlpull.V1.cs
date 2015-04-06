@@ -663,22 +663,6 @@ namespace Org.Xmlpull.V1
 				}
 
 				/// <java-name>
-				/// setNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("setNamespaceAware", "(Z)V", AccessFlags = 1)]
-				public virtual void SetNamespaceAware(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setValidating
-				/// </java-name>
-				[Dot42.DexImport("setValidating", "(Z)V", AccessFlags = 1)]
-				public virtual void SetValidating(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// newPullParser
 				/// </java-name>
 				[Dot42.DexImport("newPullParser", "()Lorg/xmlpull/v1/XmlPullParser;", AccessFlags = 1)]
@@ -721,6 +705,8 @@ namespace Org.Xmlpull.V1
 				{
 						[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setNamespaceAware", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -730,6 +716,8 @@ namespace Org.Xmlpull.V1
 				{
 						[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setValidating", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

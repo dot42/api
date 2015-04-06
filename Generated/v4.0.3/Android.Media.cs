@@ -710,14 +710,6 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// setSpeakerphoneOn
-				/// </java-name>
-				[Dot42.DexImport("setSpeakerphoneOn", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSpeakerphoneOn(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// startBluetoothSco
 				/// </java-name>
 				[Dot42.DexImport("startBluetoothSco", "()V", AccessFlags = 1)]
@@ -730,38 +722,6 @@ namespace Android.Media
 				/// </java-name>
 				[Dot42.DexImport("stopBluetoothSco", "()V", AccessFlags = 1)]
 				public virtual void StopBluetoothSco() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setBluetoothScoOn
-				/// </java-name>
-				[Dot42.DexImport("setBluetoothScoOn", "(Z)V", AccessFlags = 1)]
-				public virtual void SetBluetoothScoOn(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setBluetoothA2dpOn
-				/// </java-name>
-				[Dot42.DexImport("setBluetoothA2dpOn", "(Z)V", AccessFlags = 1)]
-				public virtual void SetBluetoothA2dpOn(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setWiredHeadsetOn
-				/// </java-name>
-				[Dot42.DexImport("setWiredHeadsetOn", "(Z)V", AccessFlags = 1)]
-				public virtual void SetWiredHeadsetOn(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMicrophoneMute
-				/// </java-name>
-				[Dot42.DexImport("setMicrophoneMute", "(Z)V", AccessFlags = 1)]
-				public virtual void SetMicrophoneMute(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -899,6 +859,8 @@ namespace Android.Media
 				{
 						[Dot42.DexImport("isSpeakerphoneOn", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSpeakerphoneOn", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -917,6 +879,8 @@ namespace Android.Media
 				{
 						[Dot42.DexImport("isBluetoothScoOn", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setBluetoothScoOn", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -926,6 +890,8 @@ namespace Android.Media
 				{
 						[Dot42.DexImport("isBluetoothA2dpOn", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setBluetoothA2dpOn", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -935,6 +901,8 @@ namespace Android.Media
 				{
 						[Dot42.DexImport("isWiredHeadsetOn", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setWiredHeadsetOn", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -944,6 +912,8 @@ namespace Android.Media
 				{
 						[Dot42.DexImport("isMicrophoneMute", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setMicrophoneMute", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -3020,14 +2990,6 @@ namespace Android.Media
 				}
 
 				/// <java-name>
-				/// setLooping
-				/// </java-name>
-				[Dot42.DexImport("setLooping", "(Z)V", AccessFlags = 257)]
-				public virtual void SetLooping(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setVolume
 				/// </java-name>
 				[Dot42.DexImport("setVolume", "(FF)V", AccessFlags = 257)]
@@ -3165,6 +3127,8 @@ namespace Android.Media
 				{
 						[Dot42.DexImport("isLooping", "()Z", AccessFlags = 257)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setLooping", "(Z)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>

@@ -359,36 +359,12 @@ namespace Android.Gesture
 				}
 
 				/// <java-name>
-				/// setEventsInterceptionEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEventsInterceptionEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetEventsInterceptionEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFadeEnabled
-				/// </java-name>
-				[Dot42.DexImport("setFadeEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFadeEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getGesturePath
 				/// </java-name>
 				[Dot42.DexImport("getGesturePath", "(Landroid/graphics/Path;)Landroid/graphics/Path;", AccessFlags = 1)]
 				public virtual global::Android.Graphics.Path GetGesturePath(global::Android.Graphics.Path path) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Path);
-				}
-
-				/// <java-name>
-				/// setGestureVisible
-				/// </java-name>
-				[Dot42.DexImport("setGestureVisible", "(Z)V", AccessFlags = 1)]
-				public virtual void SetGestureVisible(bool boolean) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -621,6 +597,8 @@ namespace Android.Gesture
 				{
 						[Dot42.DexImport("isEventsInterceptionEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setEventsInterceptionEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -630,6 +608,8 @@ namespace Android.Gesture
 				{
 						[Dot42.DexImport("isFadeEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFadeEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -659,6 +639,8 @@ namespace Android.Gesture
 				{
 						[Dot42.DexImport("isGestureVisible", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setGestureVisible", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

@@ -20,7 +20,7 @@ namespace System.IO
     /// <summary>
     /// Wrapper for java OutputStream.
     /// </summary>
-	internal class JavaOutputStreamWrapper : Stream
+	public class JavaOutputStreamWrapper : Stream
     {
         private readonly JOutputStream stream;
         private long position;

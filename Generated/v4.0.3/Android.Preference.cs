@@ -763,22 +763,6 @@ namespace Android.Preference
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSelectable
-				/// </java-name>
-				[Dot42.DexImport("setSelectable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSelectable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onClick
 				/// </java-name>
 				[Dot42.DexImport("onClick", "()V", AccessFlags = 4)]
@@ -793,14 +777,6 @@ namespace Android.Preference
 				protected internal virtual bool ShouldPersist() /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// setPersistent
-				/// </java-name>
-				[Dot42.DexImport("setPersistent", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPersistent(bool boolean) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -1170,6 +1146,8 @@ namespace Android.Preference
 				{
 						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1179,6 +1157,8 @@ namespace Android.Preference
 				{
 						[Dot42.DexImport("isSelectable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSelectable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1219,6 +1199,8 @@ namespace Android.Preference
 				{
 						[Dot42.DexImport("isPersistent", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setPersistent", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -2079,14 +2061,6 @@ namespace Android.Preference
 				}
 
 				/// <java-name>
-				/// setOrderingAsAdded
-				/// </java-name>
-				[Dot42.DexImport("setOrderingAsAdded", "(Z)V", AccessFlags = 1)]
-				public virtual void SetOrderingAsAdded(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// addItemFromInflater
 				/// </java-name>
 				[Dot42.DexImport("addItemFromInflater", "(Landroid/preference/Preference;)V", AccessFlags = 1)]
@@ -2164,14 +2138,6 @@ namespace Android.Preference
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// dispatchSaveInstanceState
 				/// </java-name>
 				[Dot42.DexImport("dispatchSaveInstanceState", "(Landroid/os/Bundle;)V", AccessFlags = 4)]
@@ -2199,6 +2165,8 @@ namespace Android.Preference
 				{
 						[Dot42.DexImport("isOrderingAsAdded", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setOrderingAsAdded", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -2217,6 +2185,15 @@ namespace Android.Preference
 				{
 						[Dot42.DexImport("isOnSameScreenAsChildren", "()Z", AccessFlags = 4)]
 						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// setEnabled
+				/// </java-name>
+				public override bool IsEnabled
+				{
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -2698,14 +2675,6 @@ namespace Android.Preference
 				}
 
 				/// <java-name>
-				/// setChecked
-				/// </java-name>
-				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
-				public virtual void SetChecked(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// shouldDisableDependents
 				/// </java-name>
 				[Dot42.DexImport("shouldDisableDependents", "()Z", AccessFlags = 1)]
@@ -2776,6 +2745,8 @@ namespace Android.Preference
 				{
 						[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

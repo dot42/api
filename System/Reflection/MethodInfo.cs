@@ -92,7 +92,7 @@ namespace System.Reflection
         public override object Invoke(object instance, object[] args)
         {
             // .NET doesn't have accessibility semantics
-            if (!_method.IsAccessible) _method.SetAccessible(true);
+            if (!_method.IsAccessible) _method.IsAccessible = true;
 
             return _method.Invoke(instance, args);
         }

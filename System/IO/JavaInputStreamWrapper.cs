@@ -20,7 +20,7 @@ namespace System.IO
     /// <summary>
     /// Stream wrapper for java InputStream.
     /// </summary>
-	internal class JavaInputStreamWrapper : Stream
+	public class JavaInputStreamWrapper : Stream
 	{
 	    private readonly JInputStream stream;
         private long position;

@@ -1648,14 +1648,6 @@ namespace Android.App
 				}
 
 				/// <java-name>
-				/// setTitleColor
-				/// </java-name>
-				[Dot42.DexImport("setTitleColor", "(I)V", AccessFlags = 1)]
-				public virtual void SetTitleColor(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getTitle
 				/// </java-name>
 				[Dot42.DexImport("getTitle", "()Ljava/lang/CharSequence;", AccessFlags = 17)]
@@ -2014,10 +2006,12 @@ namespace Android.App
 				/// <java-name>
 				/// getTitleColor
 				/// </java-name>
-				public int TitleColor
+				public virtual int TitleColor
 				{
 						[Dot42.DexImport("getTitleColor", "()I", AccessFlags = 17)]
 						get{ return default(int); }
+						[Dot42.DexImport("setTitleColor", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -4996,14 +4990,6 @@ namespace Android.App
 				}
 
 				/// <java-name>
-				/// setCancelable
-				/// </java-name>
-				[Dot42.DexImport("setCancelable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetCancelable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onAttach
 				/// </java-name>
 				[Dot42.DexImport("onAttach", "(Landroid/app/Activity;)V", AccessFlags = 1)]
@@ -5126,6 +5112,8 @@ namespace Android.App
 				{
 						[Dot42.DexImport("isCancelable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setCancelable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -5803,14 +5791,6 @@ namespace Android.App
 				}
 
 				/// <java-name>
-				/// setArguments
-				/// </java-name>
-				[Dot42.DexImport("setArguments", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void SetArguments(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setInitialSavedState
 				/// </java-name>
 				[Dot42.DexImport("setInitialSavedState", "(Landroid/app/Fragment$SavedState;)V", AccessFlags = 1)]
@@ -5858,14 +5838,6 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onHiddenChanged", "(Z)V", AccessFlags = 1)]
 				public virtual void OnHiddenChanged(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setRetainInstance
-				/// </java-name>
-				[Dot42.DexImport("setRetainInstance", "(Z)V", AccessFlags = 1)]
-				public virtual void SetRetainInstance(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6169,10 +6141,12 @@ namespace Android.App
 				/// <java-name>
 				/// getArguments
 				/// </java-name>
-				public global::Android.OS.Bundle Arguments
+				public virtual global::Android.OS.Bundle Arguments
 				{
 						[Dot42.DexImport("getArguments", "()Landroid/os/Bundle;", AccessFlags = 17)]
 						get{ return default(global::Android.OS.Bundle); }
+						[Dot42.DexImport("setArguments", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -6286,10 +6260,12 @@ namespace Android.App
 				/// <java-name>
 				/// getRetainInstance
 				/// </java-name>
-				public bool IsRetainInstance
+				public virtual bool IsRetainInstance
 				{
 						[Dot42.DexImport("getRetainInstance", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setRetainInstance", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -9374,14 +9350,6 @@ namespace Android.App
 				}
 
 				/// <java-name>
-				/// setIndeterminate
-				/// </java-name>
-				[Dot42.DexImport("setIndeterminate", "(Z)V", AccessFlags = 1)]
-				public virtual void SetIndeterminate(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setMessage
 				/// </java-name>
 				[Dot42.DexImport("setMessage", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
@@ -9458,6 +9426,8 @@ namespace Android.App
 				{
 						[Dot42.DexImport("isIndeterminate", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setIndeterminate", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

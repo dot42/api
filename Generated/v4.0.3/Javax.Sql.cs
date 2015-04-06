@@ -622,12 +622,6 @@ namespace Javax.Sql
 				void SetObject(string @string, object @object, int int32, int int321) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setReadOnly
-				/// </java-name>
-				[Dot42.DexImport("setReadOnly", "(Z)V", AccessFlags = 1025)]
-				void SetReadOnly(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// setRef
 				/// </java-name>
 				[Dot42.DexImport("setRef", "(ILjava/sql/Ref;)V", AccessFlags = 1025)]
@@ -869,6 +863,8 @@ namespace Javax.Sql
 				{
 						[Dot42.DexImport("isReadOnly", "()Z", AccessFlags = 1025)]
 						get;
+						[Dot42.DexImport("setReadOnly", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 		}

@@ -181,14 +181,6 @@ namespace System.Threading
 				}
 
 				/// <java-name>
-				/// setDaemon
-				/// </java-name>
-				[Dot42.DexImport("setDaemon", "(Z)V", AccessFlags = 17)]
-				public void SetDaemon(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// sleep
 				/// </java-name>
 				[Dot42.DexImport("sleep", "(J)V", AccessFlags = 9)]
@@ -378,6 +370,8 @@ namespace System.Threading
 				{
 						[Dot42.DexImport("isDaemon", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setDaemon", "(Z)V", AccessFlags = 17)]
+						set{ }
 				}
 
 				/// <java-name>

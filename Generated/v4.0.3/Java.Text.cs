@@ -1255,14 +1255,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setLenient
-				/// </java-name>
-				[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
-				public virtual void SetLenient(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getAvailableLocales
 				/// </java-name>
 				public static global::Java.Util.Locale[] AvailableLocales
@@ -1347,6 +1339,8 @@ namespace Java.Text
 				{
 						[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1751,44 +1745,12 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setParseIntegerOnly
-				/// </java-name>
-				[Dot42.DexImport("setParseIntegerOnly", "(Z)V", AccessFlags = 1)]
-				public override void SetParseIntegerOnly(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/lang/Number;", AccessFlags = 1)]
 				public override global::Java.Lang.Number Parse(string @string, global::Java.Text.ParsePosition parsePosition) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.Number);
-				}
-
-				/// <java-name>
-				/// setDecimalSeparatorAlwaysShown
-				/// </java-name>
-				[Dot42.DexImport("setDecimalSeparatorAlwaysShown", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDecimalSeparatorAlwaysShown(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setGroupingUsed
-				/// </java-name>
-				[Dot42.DexImport("setGroupingUsed", "(Z)V", AccessFlags = 1)]
-				public override void SetGroupingUsed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setParseBigDecimal
-				/// </java-name>
-				[Dot42.DexImport("setParseBigDecimal", "(Z)V", AccessFlags = 1)]
-				public virtual void SetParseBigDecimal(bool boolean) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -1904,6 +1866,8 @@ namespace Java.Text
 				{
 						[Dot42.DexImport("isDecimalSeparatorAlwaysShown", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setDecimalSeparatorAlwaysShown", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1913,6 +1877,8 @@ namespace Java.Text
 				{
 						[Dot42.DexImport("isParseBigDecimal", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setParseBigDecimal", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1922,6 +1888,8 @@ namespace Java.Text
 				{
 						[Dot42.DexImport("isParseIntegerOnly", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setParseIntegerOnly", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1931,6 +1899,8 @@ namespace Java.Text
 				{
 						[Dot42.DexImport("isGroupingUsed", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setGroupingUsed", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -3102,22 +3072,6 @@ namespace Java.Text
 				}
 
 				/// <java-name>
-				/// setGroupingUsed
-				/// </java-name>
-				[Dot42.DexImport("setGroupingUsed", "(Z)V", AccessFlags = 1)]
-				public virtual void SetGroupingUsed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setParseIntegerOnly
-				/// </java-name>
-				[Dot42.DexImport("setParseIntegerOnly", "(Z)V", AccessFlags = 1)]
-				public virtual void SetParseIntegerOnly(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getAvailableLocales
 				/// </java-name>
 				public static global::Java.Util.Locale[] AvailableLocales
@@ -3233,6 +3187,8 @@ namespace Java.Text
 				{
 						[Dot42.DexImport("isGroupingUsed", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setGroupingUsed", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -3242,6 +3198,8 @@ namespace Java.Text
 				{
 						[Dot42.DexImport("isParseIntegerOnly", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setParseIntegerOnly", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

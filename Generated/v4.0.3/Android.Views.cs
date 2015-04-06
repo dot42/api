@@ -5528,22 +5528,6 @@ namespace Android.Views
 				public abstract global::Android.Views.LayoutInflater CloneInContext(global::Android.Content.Context context) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setFactory
-				/// </java-name>
-				[Dot42.DexImport("setFactory", "(Landroid/view/LayoutInflater$Factory;)V", AccessFlags = 1)]
-				public virtual void SetFactory(global::Android.Views.LayoutInflater.IFactory factory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFactory2
-				/// </java-name>
-				[Dot42.DexImport("setFactory2", "(Landroid/view/LayoutInflater$Factory2;)V", AccessFlags = 1)]
-				public virtual void SetFactory2(global::Android.Views.LayoutInflater.IFactory2 factory2) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// inflate
 				/// </java-name>
 				[Dot42.DexImport("inflate", "(ILandroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
@@ -5625,19 +5609,23 @@ namespace Android.Views
 				/// <java-name>
 				/// getFactory
 				/// </java-name>
-				public global::Android.Views.LayoutInflater.IFactory Factory
+				public virtual global::Android.Views.LayoutInflater.IFactory Factory
 				{
 						[Dot42.DexImport("getFactory", "()Landroid/view/LayoutInflater$Factory;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.LayoutInflater.IFactory); }
+						[Dot42.DexImport("setFactory", "(Landroid/view/LayoutInflater$Factory;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getFactory2
 				/// </java-name>
-				public global::Android.Views.LayoutInflater.IFactory2 Factory2
+				public virtual global::Android.Views.LayoutInflater.IFactory2 Factory2
 				{
 						[Dot42.DexImport("getFactory2", "()Landroid/view/LayoutInflater$Factory2;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.LayoutInflater.IFactory2); }
+						[Dot42.DexImport("setFactory2", "(Landroid/view/LayoutInflater$Factory2;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -8832,46 +8820,6 @@ namespace Android.Views
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFocusable
-				/// </java-name>
-				[Dot42.DexImport("setFocusable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFocusable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFocusableInTouchMode
-				/// </java-name>
-				[Dot42.DexImport("setFocusableInTouchMode", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFocusableInTouchMode(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSoundEffectsEnabled
-				/// </java-name>
-				[Dot42.DexImport("setSoundEffectsEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSoundEffectsEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setHapticFeedbackEnabled
-				/// </java-name>
-				[Dot42.DexImport("setHapticFeedbackEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetHapticFeedbackEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setWillNotDraw
 				/// </java-name>
 				[Dot42.DexImport("setWillNotDraw", "(Z)V", AccessFlags = 1)]
@@ -8906,50 +8854,10 @@ namespace Android.Views
 				}
 
 				/// <java-name>
-				/// setClickable
-				/// </java-name>
-				[Dot42.DexImport("setClickable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetClickable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLongClickable
-				/// </java-name>
-				[Dot42.DexImport("setLongClickable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetLongClickable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setPressed
-				/// </java-name>
-				[Dot42.DexImport("setPressed", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPressed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// dispatchSetPressed
 				/// </java-name>
 				[Dot42.DexImport("dispatchSetPressed", "(Z)V", AccessFlags = 4)]
 				protected internal virtual void DispatchSetPressed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSaveEnabled
-				/// </java-name>
-				[Dot42.DexImport("setSaveEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSaveEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSaveFromParentEnabled
-				/// </java-name>
-				[Dot42.DexImport("setSaveFromParentEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSaveFromParentEnabled(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9368,14 +9276,6 @@ namespace Android.Views
 				}
 
 				/// <java-name>
-				/// setHovered
-				/// </java-name>
-				[Dot42.DexImport("setHovered", "(Z)V", AccessFlags = 1)]
-				public virtual void SetHovered(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onHoverChanged
 				/// </java-name>
 				[Dot42.DexImport("onHoverChanged", "(Z)V", AccessFlags = 1)]
@@ -9429,22 +9329,6 @@ namespace Android.Views
 				/// </java-name>
 				[Dot42.DexImport("dispatchDraw", "(Landroid/graphics/Canvas;)V", AccessFlags = 4)]
 				protected internal virtual void DispatchDraw(global::Android.Graphics.Canvas canvas) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setScrollX
-				/// </java-name>
-				[Dot42.DexImport("setScrollX", "(I)V", AccessFlags = 1)]
-				public virtual void SetScrollX(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setScrollY
-				/// </java-name>
-				[Dot42.DexImport("setScrollY", "(I)V", AccessFlags = 1)]
-				public virtual void SetScrollY(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9658,46 +9542,6 @@ namespace Android.Views
 				}
 
 				/// <java-name>
-				/// setHorizontalFadingEdgeEnabled
-				/// </java-name>
-				[Dot42.DexImport("setHorizontalFadingEdgeEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetHorizontalFadingEdgeEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setVerticalFadingEdgeEnabled
-				/// </java-name>
-				[Dot42.DexImport("setVerticalFadingEdgeEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetVerticalFadingEdgeEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setHorizontalScrollBarEnabled
-				/// </java-name>
-				[Dot42.DexImport("setHorizontalScrollBarEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetHorizontalScrollBarEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setVerticalScrollBarEnabled
-				/// </java-name>
-				[Dot42.DexImport("setVerticalScrollBarEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetVerticalScrollBarEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setScrollbarFadingEnabled
-				/// </java-name>
-				[Dot42.DexImport("setScrollbarFadingEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetScrollbarFadingEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// computeHorizontalScrollRange
 				/// </java-name>
 				[Dot42.DexImport("computeHorizontalScrollRange", "()I", AccessFlags = 4)]
@@ -9851,14 +9695,6 @@ namespace Android.Views
 				}
 
 				/// <java-name>
-				/// setDuplicateParentStateEnabled
-				/// </java-name>
-				[Dot42.DexImport("setDuplicateParentStateEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDuplicateParentStateEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setLayerType
 				/// </java-name>
 				[Dot42.DexImport("setLayerType", "(ILandroid/graphics/Paint;)V", AccessFlags = 1)]
@@ -9871,14 +9707,6 @@ namespace Android.Views
 				/// </java-name>
 				[Dot42.DexImport("buildLayer", "()V", AccessFlags = 1)]
 				public virtual void BuildLayer() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDrawingCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("setDrawingCacheEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetDrawingCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10063,26 +9891,10 @@ namespace Android.Views
 				}
 
 				/// <java-name>
-				/// setSelected
-				/// </java-name>
-				[Dot42.DexImport("setSelected", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSelected(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// dispatchSetSelected
 				/// </java-name>
 				[Dot42.DexImport("dispatchSetSelected", "(Z)V", AccessFlags = 4)]
 				protected internal virtual void DispatchSetSelected(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setActivated
-				/// </java-name>
-				[Dot42.DexImport("setActivated", "(Z)V", AccessFlags = 1)]
-				public virtual void SetActivated(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10597,6 +10409,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10606,6 +10420,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isSoundEffectsEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSoundEffectsEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10615,6 +10431,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isHapticFeedbackEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setHapticFeedbackEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10624,6 +10442,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isClickable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setClickable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10633,6 +10453,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isLongClickable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setLongClickable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10642,6 +10464,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isPressed", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setPressed", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10651,6 +10475,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isSaveEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSaveEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10671,24 +10497,30 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isSaveFromParentEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSaveFromParentEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// isFocusable
 				/// </java-name>
-				public bool IsFocusable
+				public virtual bool IsFocusable
 				{
 						[Dot42.DexImport("isFocusable", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFocusable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// isFocusableInTouchMode
 				/// </java-name>
-				public bool IsFocusableInTouchMode
+				public virtual bool IsFocusableInTouchMode
 				{
 						[Dot42.DexImport("isFocusableInTouchMode", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFocusableInTouchMode", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10761,6 +10593,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isHovered", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setHovered", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10786,19 +10620,23 @@ namespace Android.Views
 				/// <java-name>
 				/// getScrollX
 				/// </java-name>
-				public int ScrollX
+				public virtual int ScrollX
 				{
 						[Dot42.DexImport("getScrollX", "()I", AccessFlags = 17)]
 						get{ return default(int); }
+						[Dot42.DexImport("setScrollX", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getScrollY
 				/// </java-name>
-				public int ScrollY
+				public virtual int ScrollY
 				{
 						[Dot42.DexImport("getScrollY", "()I", AccessFlags = 17)]
 						get{ return default(int); }
+						[Dot42.DexImport("setScrollY", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -11094,6 +10932,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isHorizontalFadingEdgeEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setHorizontalFadingEdgeEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -11103,6 +10943,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isVerticalFadingEdgeEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setVerticalFadingEdgeEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -11148,6 +10990,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isHorizontalScrollBarEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setHorizontalScrollBarEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -11157,6 +11001,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isVerticalScrollBarEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setVerticalScrollBarEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -11166,6 +11012,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isScrollbarFadingEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setScrollbarFadingEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -11222,6 +11070,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isDuplicateParentStateEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setDuplicateParentStateEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -11240,6 +11090,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isDrawingCacheEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setDrawingCacheEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -11413,6 +11265,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isSelected", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSelected", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -11422,6 +11276,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isActivated", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setActivated", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -12929,14 +12785,6 @@ namespace Android.Views
 				}
 
 				/// <java-name>
-				/// setMotionEventSplittingEnabled
-				/// </java-name>
-				[Dot42.DexImport("setMotionEventSplittingEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetMotionEventSplittingEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// requestDisallowInterceptTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("requestDisallowInterceptTouchEvent", "(Z)V", AccessFlags = 1)]
@@ -13396,38 +13244,6 @@ namespace Android.Views
 				}
 
 				/// <java-name>
-				/// setAnimationCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("setAnimationCacheEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAnimationCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setAlwaysDrawnWithCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("setAlwaysDrawnWithCacheEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAlwaysDrawnWithCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setChildrenDrawnWithCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("setChildrenDrawnWithCacheEnabled", "(Z)V", AccessFlags = 4)]
-				protected internal virtual void SetChildrenDrawnWithCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setChildrenDrawingOrderEnabled
-				/// </java-name>
-				[Dot42.DexImport("setChildrenDrawingOrderEnabled", "(Z)V", AccessFlags = 4)]
-				protected internal virtual void SetChildrenDrawingOrderEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// generateLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateLayoutParams", "(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 1)]
@@ -13698,6 +13514,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isMotionEventSplittingEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setMotionEventSplittingEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -13738,6 +13556,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isAnimationCacheEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setAnimationCacheEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -13747,6 +13567,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isAlwaysDrawnWithCacheEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setAlwaysDrawnWithCacheEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -13756,6 +13578,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isChildrenDrawnWithCacheEnabled", "()Z", AccessFlags = 4)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setChildrenDrawnWithCacheEnabled", "(Z)V", AccessFlags = 4)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -13765,6 +13589,8 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isChildrenDrawingOrderEnabled", "()Z", AccessFlags = 4)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setChildrenDrawingOrderEnabled", "(Z)V", AccessFlags = 4)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -14661,14 +14487,6 @@ namespace Android.Views
 				}
 
 				/// <java-name>
-				/// setContainer
-				/// </java-name>
-				[Dot42.DexImport("setContainer", "(Landroid/view/Window;)V", AccessFlags = 1)]
-				public virtual void SetContainer(global::Android.Views.Window window) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setWindowManager
 				/// </java-name>
 				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -14681,14 +14499,6 @@ namespace Android.Views
 				/// </java-name>
 				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;Z)V", AccessFlags = 1)]
 				public virtual void SetWindowManager(global::Android.Views.IWindowManager windowManager, global::Android.OS.IBinder binder, string @string, bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCallback
-				/// </java-name>
-				[Dot42.DexImport("setCallback", "(Landroid/view/Window$Callback;)V", AccessFlags = 1)]
-				public virtual void SetCallback(global::Android.Views.Window.ICallback callback) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -14781,14 +14591,6 @@ namespace Android.Views
 				/// </java-name>
 				[Dot42.DexImport("setDimAmount", "(F)V", AccessFlags = 1)]
 				public virtual void SetDimAmount(float single) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setAttributes
-				/// </java-name>
-				[Dot42.DexImport("setAttributes", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
-				public virtual void SetAttributes(global::Android.Views.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15089,10 +14891,12 @@ namespace Android.Views
 				/// <java-name>
 				/// getContainer
 				/// </java-name>
-				public global::Android.Views.Window Container
+				public virtual global::Android.Views.Window Container
 				{
 						[Dot42.DexImport("getContainer", "()Landroid/view/Window;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.Window); }
+						[Dot42.DexImport("setContainer", "(Landroid/view/Window;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -15116,10 +14920,12 @@ namespace Android.Views
 				/// <java-name>
 				/// getCallback
 				/// </java-name>
-				public global::Android.Views.Window.ICallback Callback
+				public virtual global::Android.Views.Window.ICallback Callback
 				{
 						[Dot42.DexImport("getCallback", "()Landroid/view/Window$Callback;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.Window.ICallback); }
+						[Dot42.DexImport("setCallback", "(Landroid/view/Window$Callback;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -15134,10 +14940,12 @@ namespace Android.Views
 				/// <java-name>
 				/// getAttributes
 				/// </java-name>
-				public global::Android.Views.IWindowManager_LayoutParams Attributes
+				public virtual global::Android.Views.IWindowManager_LayoutParams Attributes
 				{
 						[Dot42.DexImport("getAttributes", "()Landroid/view/WindowManager$LayoutParams;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.IWindowManager_LayoutParams); }
+						[Dot42.DexImport("setAttributes", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

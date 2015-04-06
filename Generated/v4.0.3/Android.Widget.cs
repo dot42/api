@@ -103,30 +103,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setFastScrollEnabled
-				/// </java-name>
-				[Dot42.DexImport("setFastScrollEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFastScrollEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFastScrollAlwaysVisible
-				/// </java-name>
-				[Dot42.DexImport("setFastScrollAlwaysVisible", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFastScrollAlwaysVisible(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSmoothScrollbarEnabled
-				/// </java-name>
-				[Dot42.DexImport("setSmoothScrollbarEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSmoothScrollbarEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setOnScrollListener
 				/// </java-name>
 				[Dot42.DexImport("setOnScrollListener", "(Landroid/widget/AbsListView$OnScrollListener;)V", AccessFlags = 1)]
@@ -143,34 +119,10 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setScrollingCacheEnabled
-				/// </java-name>
-				[Dot42.DexImport("setScrollingCacheEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetScrollingCacheEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTextFilterEnabled
-				/// </java-name>
-				[Dot42.DexImport("setTextFilterEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetTextFilterEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getFocusedRect
 				/// </java-name>
 				[Dot42.DexImport("getFocusedRect", "(Landroid/graphics/Rect;)V", AccessFlags = 1)]
 				public override void GetFocusedRect(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setStackFromBottom
-				/// </java-name>
-				[Dot42.DexImport("setStackFromBottom", "(Z)V", AccessFlags = 1)]
-				public virtual void SetStackFromBottom(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -766,6 +718,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isFastScrollAlwaysVisible", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFastScrollAlwaysVisible", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -784,6 +738,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isFastScrollEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFastScrollEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -793,6 +749,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isSmoothScrollbarEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSmoothScrollbarEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -802,6 +760,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isScrollingCacheEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setScrollingCacheEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -811,6 +771,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isTextFilterEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setTextFilterEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -820,6 +782,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isStackFromBottom", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setStackFromBottom", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1602,36 +1566,12 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setOnItemClickListener
-				/// </java-name>
-				[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
-				public virtual void SetOnItemClickListener(global::Android.Widget.AdapterView<T>.IOnItemClickListener onItemClickListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// performItemClick
 				/// </java-name>
 				[Dot42.DexImport("performItemClick", "(Landroid/view/View;IJ)Z", AccessFlags = 1)]
 				public virtual bool PerformItemClick(global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
-				}
-
-				/// <java-name>
-				/// setOnItemLongClickListener
-				/// </java-name>
-				[Dot42.DexImport("setOnItemLongClickListener", "(Landroid/widget/AdapterView$OnItemLongClickListener;)V", AccessFlags = 1)]
-				public virtual void SetOnItemLongClickListener(global::Android.Widget.AdapterView<T>.IOnItemLongClickListener onItemLongClickListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setOnItemSelectedListener
-				/// </java-name>
-				[Dot42.DexImport("setOnItemSelectedListener", "(Landroid/widget/AdapterView$OnItemSelectedListener;)V", AccessFlags = 1)]
-				public virtual void SetOnItemSelectedListener(global::Android.Widget.AdapterView<T>.IOnItemSelectedListener onItemSelectedListener) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -1712,22 +1652,6 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("setSelection", "(I)V", AccessFlags = 1025)]
 				public abstract void SetSelection(int int32) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// setFocusable
-				/// </java-name>
-				[Dot42.DexImport("setFocusable", "(Z)V", AccessFlags = 1)]
-				public override void SetFocusable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFocusableInTouchMode
-				/// </java-name>
-				[Dot42.DexImport("setFocusableInTouchMode", "(Z)V", AccessFlags = 1)]
-				public override void SetFocusableInTouchMode(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
 
 				/// <java-name>
 				/// getItemAtPosition
@@ -1821,28 +1745,34 @@ namespace Android.Widget
 				/// <java-name>
 				/// getOnItemClickListener
 				/// </java-name>
-				public global::Android.Widget.AdapterView<T>.IOnItemClickListener OnItemClickListener
+				public virtual global::Android.Widget.AdapterView<T>.IOnItemClickListener OnItemClickListener
 				{
 						[Dot42.DexImport("getOnItemClickListener", "()Landroid/widget/AdapterView$OnItemClickListener;", AccessFlags = 17)]
 						get{ return default(global::Android.Widget.AdapterView<T>.IOnItemClickListener); }
+						[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getOnItemLongClickListener
 				/// </java-name>
-				public global::Android.Widget.AdapterView<T>.IOnItemLongClickListener OnItemLongClickListener
+				public virtual global::Android.Widget.AdapterView<T>.IOnItemLongClickListener OnItemLongClickListener
 				{
 						[Dot42.DexImport("getOnItemLongClickListener", "()Landroid/widget/AdapterView$OnItemLongClickListener;", AccessFlags = 17)]
 						get{ return default(global::Android.Widget.AdapterView<T>.IOnItemLongClickListener); }
+						[Dot42.DexImport("setOnItemLongClickListener", "(Landroid/widget/AdapterView$OnItemLongClickListener;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getOnItemSelectedListener
 				/// </java-name>
-				public global::Android.Widget.AdapterView<T>.IOnItemSelectedListener OnItemSelectedListener
+				public virtual global::Android.Widget.AdapterView<T>.IOnItemSelectedListener OnItemSelectedListener
 				{
 						[Dot42.DexImport("getOnItemSelectedListener", "()Landroid/widget/AdapterView$OnItemSelectedListener;", AccessFlags = 17)]
 						get{ return default(global::Android.Widget.AdapterView<T>.IOnItemSelectedListener); }
+						[Dot42.DexImport("setOnItemSelectedListener", "(Landroid/widget/AdapterView$OnItemSelectedListener;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1937,6 +1867,24 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("canAnimate", "()Z", AccessFlags = 4)]
 						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// setFocusable
+				/// </java-name>
+				public override bool IsFocusable
+				{
+						[Dot42.DexImport("setFocusable", "(Z)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setFocusableInTouchMode
+				/// </java-name>
+				public override bool IsFocusableInTouchMode
+				{
+						[Dot42.DexImport("setFocusableInTouchMode", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -2347,14 +2295,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setAutoStart
-				/// </java-name>
-				[Dot42.DexImport("setAutoStart", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAutoStart(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// fyiWillBeAdvancedByHostKThx
 				/// </java-name>
 				[Dot42.DexImport("fyiWillBeAdvancedByHostKThx", "()V", AccessFlags = 1)]
@@ -2383,6 +2323,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isAutoStart", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setAutoStart", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -3573,14 +3515,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onConfigurationChanged
 				/// </java-name>
 				[Dot42.DexImport("onConfigurationChanged", "(Landroid/content/res/Configuration;)V", AccessFlags = 4)]
@@ -3616,6 +3550,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -3758,14 +3694,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setChecked
-				/// </java-name>
-				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
-				public virtual void SetChecked(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setCheckMarkDrawable
 				/// </java-name>
 				[Dot42.DexImport("setCheckMarkDrawable", "(I)V", AccessFlags = 1)]
@@ -3850,6 +3778,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -4003,14 +3933,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setChecked
-				/// </java-name>
-				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
-				public virtual void SetChecked(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setOnCheckedChangeListener
 				/// </java-name>
 				[Dot42.DexImport("setOnCheckedChangeListener", "(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V", AccessFlags = 1)]
@@ -4121,6 +4043,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -4608,14 +4532,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// dispatchPopulateAccessibilityEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchPopulateAccessibilityEvent", "(Landroid/view/accessibility/AccessibilityEvent;)Z", AccessFlags = 1)]
@@ -4715,6 +4631,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -5264,14 +5182,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setOnItemClickListener
-				/// </java-name>
-				[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
-				public override void SetOnItemClickListener(global::Android.Widget.AdapterView<global::Android.Widget.IListAdapter>.IOnItemClickListener onItemClickListener) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setAdapter
 				/// </java-name>
 				[Dot42.DexImport("setAdapter", "(Landroid/widget/ExpandableListAdapter;)V", AccessFlags = 1)]
@@ -5526,6 +5436,15 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getSelectedId", "()J", AccessFlags = 1)]
 						get{ return default(long); }
+				}
+
+				/// <java-name>
+				/// setOnItemClickListener
+				/// </java-name>
+				public override global::Android.Widget.AdapterView<global::Android.Widget.IListAdapter>.IOnItemClickListener OnItemClickListener
+				{
+						[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -6346,22 +6265,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setRowOrderPreserved
-				/// </java-name>
-				[Dot42.DexImport("setRowOrderPreserved", "(Z)V", AccessFlags = 1)]
-				public virtual void SetRowOrderPreserved(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setColumnOrderPreserved
-				/// </java-name>
-				[Dot42.DexImport("setColumnOrderPreserved", "(Z)V", AccessFlags = 1)]
-				public virtual void SetColumnOrderPreserved(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// generateDefaultLayoutParams
 				/// </java-name>
 				[Dot42.DexImport("generateDefaultLayoutParams", "()Landroid/widget/GridLayout$LayoutParams;", AccessFlags = 4)]
@@ -6523,6 +6426,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isRowOrderPreserved", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setRowOrderPreserved", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -6532,6 +6437,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isColumnOrderPreserved", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setColumnOrderPreserved", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -7119,22 +7026,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setFillViewport
-				/// </java-name>
-				[Dot42.DexImport("setFillViewport", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFillViewport(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSmoothScrollingEnabled
-				/// </java-name>
-				[Dot42.DexImport("setSmoothScrollingEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSmoothScrollingEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onMeasure
 				/// </java-name>
 				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 4)]
@@ -7435,6 +7326,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isFillViewport", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFillViewport", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -7444,6 +7337,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isSmoothScrollingEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSmoothScrollingEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -7565,12 +7460,6 @@ namespace Android.Widget
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// setChecked
-				/// </java-name>
-				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1025)]
-				void SetChecked(bool boolean) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
 				/// toggle
 				/// </java-name>
 				[Dot42.DexImport("toggle", "()V", AccessFlags = 1025)]
@@ -7583,6 +7472,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isChecked", "()Z", AccessFlags = 1025)]
 						get;
+						[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1025)]
+						set;
 				}
 
 		}
@@ -8021,14 +7912,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setSelected
-				/// </java-name>
-				[Dot42.DexImport("setSelected", "(Z)V", AccessFlags = 1)]
-				public override void SetSelected(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setImageLevel
 				/// </java-name>
 				[Dot42.DexImport("setImageLevel", "(I)V", AccessFlags = 1)]
@@ -8201,6 +8084,15 @@ namespace Android.Widget
 						[Dot42.DexImport("getBaselineAlignBottom", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
 						[Dot42.DexImport("setBaselineAlignBottom", "(Z)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setSelected
+				/// </java-name>
+				public override bool IsSelected
+				{
+						[Dot42.DexImport("setSelected", "(Z)V", AccessFlags = 1)]
 						set{ }
 				}
 
@@ -8427,22 +8319,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setBaselineAligned
-				/// </java-name>
-				[Dot42.DexImport("setBaselineAligned", "(Z)V", AccessFlags = 1)]
-				public virtual void SetBaselineAligned(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setMeasureWithLargestChildEnabled
-				/// </java-name>
-				[Dot42.DexImport("setMeasureWithLargestChildEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetMeasureWithLargestChildEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onMeasure
 				/// </java-name>
 				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 4)]
@@ -8553,6 +8429,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isBaselineAligned", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setBaselineAligned", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -8562,6 +8440,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isMeasureWithLargestChildEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setMeasureWithLargestChildEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -8737,14 +8617,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setModal
-				/// </java-name>
-				[Dot42.DexImport("setModal", "(Z)V", AccessFlags = 1)]
-				public virtual void SetModal(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setListSelector
 				/// </java-name>
 				[Dot42.DexImport("setListSelector", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
@@ -8899,6 +8771,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isModal", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setModal", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -9592,14 +9466,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setPrevNextListeners
 				/// </java-name>
 				[Dot42.DexImport("setPrevNextListeners", "(Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V", AccessFlags = 1)]
@@ -9619,6 +9485,15 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isShowing", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+				}
+
+				/// <java-name>
+				/// setEnabled
+				/// </java-name>
+				public override bool IsEnabled
+				{
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -9951,14 +9826,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// scrollBy
 				/// </java-name>
 				[Dot42.DexImport("scrollBy", "(II)V", AccessFlags = 1)]
@@ -10131,6 +9998,15 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getBottomFadingEdgeStrength", "()F", AccessFlags = 4)]
 						get{ return default(float); }
+				}
+
+				/// <java-name>
+				/// setEnabled
+				/// </java-name>
+				public override bool IsEnabled
+				{
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10608,46 +10484,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setFocusable
-				/// </java-name>
-				[Dot42.DexImport("setFocusable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFocusable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setTouchable
-				/// </java-name>
-				[Dot42.DexImport("setTouchable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetTouchable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setOutsideTouchable
-				/// </java-name>
-				[Dot42.DexImport("setOutsideTouchable", "(Z)V", AccessFlags = 1)]
-				public virtual void SetOutsideTouchable(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setClippingEnabled
-				/// </java-name>
-				[Dot42.DexImport("setClippingEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetClippingEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSplitTouchEnabled
-				/// </java-name>
-				[Dot42.DexImport("setSplitTouchEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSplitTouchEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setWindowLayoutMode
 				/// </java-name>
 				[Dot42.DexImport("setWindowLayoutMode", "(II)V", AccessFlags = 1)]
@@ -10799,6 +10635,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isFocusable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFocusable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10830,6 +10668,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isTouchable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setTouchable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10839,6 +10679,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isOutsideTouchable", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setOutsideTouchable", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10848,6 +10690,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isClippingEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setClippingEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10857,6 +10701,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isSplitTouchEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSplitTouchEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -10935,14 +10781,6 @@ namespace Android.Widget
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
 				public ProgressBar(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIndeterminate
-				/// </java-name>
-				[Dot42.DexImport("setIndeterminate", "(Z)V", AccessFlags = 33)]
-				public virtual void SetIndeterminate(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -11096,6 +10934,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isIndeterminate", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setIndeterminate", "(Z)V", AccessFlags = 33)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -12666,22 +12506,6 @@ namespace Android.Widget
 						return default(int);
 				}
 
-				/// <java-name>
-				/// setFinalX
-				/// </java-name>
-				[Dot42.DexImport("setFinalX", "(I)V", AccessFlags = 1)]
-				public virtual void SetFinalX(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFinalY
-				/// </java-name>
-				[Dot42.DexImport("setFinalY", "(I)V", AccessFlags = 1)]
-				public virtual void SetFinalY(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal Scroller() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -12753,19 +12577,23 @@ namespace Android.Widget
 				/// <java-name>
 				/// getFinalX
 				/// </java-name>
-				public int FinalX
+				public virtual int FinalX
 				{
 						[Dot42.DexImport("getFinalX", "()I", AccessFlags = 17)]
 						get{ return default(int); }
+						[Dot42.DexImport("setFinalX", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// getFinalY
 				/// </java-name>
-				public int FinalY
+				public virtual int FinalY
 				{
 						[Dot42.DexImport("getFinalY", "()I", AccessFlags = 17)]
 						get{ return default(int); }
+						[Dot42.DexImport("setFinalY", "(I)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -12830,22 +12658,6 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("addView", "(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
 				public override void AddView(global::Android.Views.View view, int int32, global::Android.Views.ViewGroup.LayoutParams layoutParams) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFillViewport
-				/// </java-name>
-				[Dot42.DexImport("setFillViewport", "(Z)V", AccessFlags = 1)]
-				public virtual void SetFillViewport(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSmoothScrollingEnabled
-				/// </java-name>
-				[Dot42.DexImport("setSmoothScrollingEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSmoothScrollingEnabled(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -13149,6 +12961,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isFillViewport", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFillViewport", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -13158,6 +12972,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isSmoothScrollingEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSmoothScrollingEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -13277,30 +13093,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setIconified
-				/// </java-name>
-				[Dot42.DexImport("setIconified", "(Z)V", AccessFlags = 1)]
-				public virtual void SetIconified(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSubmitButtonEnabled
-				/// </java-name>
-				[Dot42.DexImport("setSubmitButtonEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSubmitButtonEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setQueryRefinementEnabled
-				/// </java-name>
-				[Dot42.DexImport("setQueryRefinementEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetQueryRefinementEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setMaxWidth
 				/// </java-name>
 				[Dot42.DexImport("setMaxWidth", "(I)V", AccessFlags = 1)]
@@ -13387,6 +13179,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isIconified", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setIconified", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -13396,6 +13190,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isSubmitButtonEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSubmitButtonEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -13405,6 +13201,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isQueryRefinementEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setQueryRefinementEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -14482,14 +14280,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setGravity
 				/// </java-name>
 				[Dot42.DexImport("setGravity", "(I)V", AccessFlags = 1)]
@@ -14502,14 +14292,6 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 4)]
 				protected internal override void OnDetachedFromWindow() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setOnItemClickListener
-				/// </java-name>
-				[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
-				public override void SetOnItemClickListener(global::Android.Widget.AdapterView<global::Android.Widget.ISpinnerAdapter>.IOnItemClickListener onItemClickListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -14580,11 +14362,29 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
+				/// setEnabled
+				/// </java-name>
+				public override bool IsEnabled
+				{
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
 				/// setAdapter
 				/// </java-name>
 				public override global::Android.Widget.ISpinnerAdapter Adapter
 				{
 						[Dot42.DexImport("setAdapter", "(Landroid/widget/SpinnerAdapter;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setOnItemClickListener
+				/// </java-name>
+				public override global::Android.Widget.AdapterView<global::Android.Widget.ISpinnerAdapter>.IOnItemClickListener OnItemClickListener
+				{
+						[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
 						set{ }
 				}
 
@@ -14766,14 +14566,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setChecked
-				/// </java-name>
-				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
-				public override void SetChecked(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onLayout
 				/// </java-name>
 				[Dot42.DexImport("onLayout", "(ZIIII)V", AccessFlags = 4)]
@@ -14857,6 +14649,15 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getCompoundPaddingRight", "()I", AccessFlags = 1)]
 						get{ return default(int); }
+				}
+
+				/// <java-name>
+				/// setChecked
+				/// </java-name>
+				public override bool IsChecked
+				{
+						[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -15199,22 +15000,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setShrinkAllColumns
-				/// </java-name>
-				[Dot42.DexImport("setShrinkAllColumns", "(Z)V", AccessFlags = 1)]
-				public virtual void SetShrinkAllColumns(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setStretchAllColumns
-				/// </java-name>
-				[Dot42.DexImport("setStretchAllColumns", "(Z)V", AccessFlags = 1)]
-				public virtual void SetStretchAllColumns(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setColumnCollapsed
 				/// </java-name>
 				[Dot42.DexImport("setColumnCollapsed", "(IZ)V", AccessFlags = 1)]
@@ -15362,6 +15147,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isShrinkAllColumns", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setShrinkAllColumns", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -15371,6 +15158,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isStretchAllColumns", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setStretchAllColumns", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -15684,14 +15473,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setStripEnabled
-				/// </java-name>
-				[Dot42.DexImport("setStripEnabled", "(Z)V", AccessFlags = 1)]
-				public virtual void SetStripEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// childDrawableStateChanged
 				/// </java-name>
 				[Dot42.DexImport("childDrawableStateChanged", "(Landroid/view/View;)V", AccessFlags = 1)]
@@ -15737,14 +15518,6 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("focusCurrentTab", "(I)V", AccessFlags = 1)]
 				public virtual void FocusCurrentTab(int int32) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15801,6 +15574,17 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isStripEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setStripEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setEnabled
+				/// </java-name>
+				public override bool IsEnabled
+				{
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -15876,14 +15660,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setTypeface
 				/// </java-name>
 				[Dot42.DexImport("setTypeface", "(Landroid/graphics/Typeface;I)V", AccessFlags = 1)]
@@ -15898,14 +15674,6 @@ namespace Android.Widget
 				public virtual int Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
-				}
-
-				/// <java-name>
-				/// setKeyListener
-				/// </java-name>
-				[Dot42.DexImport("setKeyListener", "(Landroid/text/method/KeyListener;)V", AccessFlags = 1)]
-				public virtual void SetKeyListener(global::Android.Text.Method.IKeyListener keyListener) /* MethodBuilder.Create */ 
-				{
 				}
 
 				/// <java-name>
@@ -16192,14 +15960,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setText
-				/// </java-name>
-				[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
-				public void SetText(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setTextKeepState
 				/// </java-name>
 				[Dot42.DexImport("setTextKeepState", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
@@ -16244,14 +16004,6 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("setText", "(ILandroid/widget/TextView$BufferType;)V", AccessFlags = 17)]
 				public void SetText(int int32, global::Android.Widget.TextView.BufferType bufferType) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setHint
-				/// </java-name>
-				[Dot42.DexImport("setHint", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
-				public void SetHint(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -16747,14 +16499,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setSelected
-				/// </java-name>
-				[Dot42.DexImport("setSelected", "(Z)V", AccessFlags = 1)]
-				public override void SetSelected(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
@@ -16999,6 +16743,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
 						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -17031,10 +16777,12 @@ namespace Android.Widget
 				/// <java-name>
 				/// getKeyListener
 				/// </java-name>
-				public global::Android.Text.Method.IKeyListener KeyListener
+				public virtual global::Android.Text.Method.IKeyListener KeyListener
 				{
 						[Dot42.DexImport("getKeyListener", "()Landroid/text/method/KeyListener;", AccessFlags = 17)]
 						get{ return default(global::Android.Text.Method.IKeyListener); }
+						[Dot42.DexImport("setKeyListener", "(Landroid/text/method/KeyListener;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -17327,6 +17075,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getHint", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
 						get{ return default(global::Java.Lang.ICharSequence); }
+						[Dot42.DexImport("setHint", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -17560,6 +17310,24 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
+				/// setEnabled
+				/// </java-name>
+				public override bool IsEnabled
+				{
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setSelected
+				/// </java-name>
+				public override bool IsSelected
+				{
+						[Dot42.DexImport("setSelected", "(Z)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
 				/// android/widget/TextView$BufferType
 				/// </java-name>
 				[Dot42.DexImport("android/widget/TextView$BufferType", AccessFlags = 16409, Signature = "Ljava/lang/Enum<Landroid/widget/TextView$BufferType;>;")]
@@ -17681,14 +17449,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onConfigurationChanged
 				/// </java-name>
 				[Dot42.DexImport("onConfigurationChanged", "(Landroid/content/res/Configuration;)V", AccessFlags = 4)]
@@ -17758,6 +17518,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -18002,14 +17764,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setChecked
-				/// </java-name>
-				[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
-				public override void SetChecked(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onFinishInflate
 				/// </java-name>
 				[Dot42.DexImport("onFinishInflate", "()V", AccessFlags = 4)]
@@ -18065,6 +17819,15 @@ namespace Android.Widget
 						[Dot42.DexImport("getTextOff", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
 						get{ return default(global::Java.Lang.ICharSequence); }
 						[Dot42.DexImport("setTextOff", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setChecked
+				/// </java-name>
+				public override bool IsChecked
+				{
+						[Dot42.DexImport("setChecked", "(Z)V", AccessFlags = 1)]
 						set{ }
 				}
 
@@ -18593,14 +18356,6 @@ namespace Android.Widget
 				{
 				}
 
-				/// <java-name>
-				/// setAutoStart
-				/// </java-name>
-				[Dot42.DexImport("setAutoStart", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAutoStart(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ViewFlipper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -18622,6 +18377,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isAutoStart", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setAutoStart", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -18756,14 +18513,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setEnabled
-				/// </java-name>
-				[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
-				public override void SetEnabled(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// dispatchUnhandledMove
 				/// </java-name>
 				[Dot42.DexImport("dispatchUnhandledMove", "(Landroid/view/View;I)Z", AccessFlags = 1)]
@@ -18775,6 +18524,15 @@ namespace Android.Widget
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal ZoomButton() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// setEnabled
+				/// </java-name>
+				public override bool IsEnabled
+				{
+						[Dot42.DexImport("setEnabled", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -18832,22 +18590,6 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
-				/// setAutoDismissed
-				/// </java-name>
-				[Dot42.DexImport("setAutoDismissed", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAutoDismissed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setVisible
-				/// </java-name>
-				[Dot42.DexImport("setVisible", "(Z)V", AccessFlags = 1)]
-				public virtual void SetVisible(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// onTouch
 				/// </java-name>
 				[Dot42.DexImport("onTouch", "(Landroid/view/View;Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
@@ -18868,6 +18610,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isAutoDismissed", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setAutoDismissed", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -18877,6 +18621,8 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isVisible", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setVisible", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

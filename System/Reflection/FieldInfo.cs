@@ -90,7 +90,7 @@ namespace System.Reflection
         public void SetValue(object instance, object value)
         {
             // .NET doesn't have accessibility semantics
-            if (!_field.IsAccessible) _field.SetAccessible(true);
+            if (!_field.IsAccessible) _field.IsAccessible = true;
             
             _field.Set(instance, value);
         }
@@ -98,7 +98,7 @@ namespace System.Reflection
         public object GetValue(object instance)
         {
             // .NET doesn't have accessibility semantics
-            if (!_field.IsAccessible) _field.SetAccessible(true);
+            if (!_field.IsAccessible) _field.IsAccessible = true;
 
             return _field.Get(instance);
         }

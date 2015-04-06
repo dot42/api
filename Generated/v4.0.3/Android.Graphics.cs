@@ -1293,14 +1293,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// setMatrix
-				/// </java-name>
-				[Dot42.DexImport("setMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
-				public virtual void SetMatrix(global::Android.Graphics.Matrix matrix) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getMatrix
 				/// </java-name>
 				[Dot42.DexImport("getMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
@@ -1826,10 +1818,12 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getMatrix
 				/// </java-name>
-				public global::Android.Graphics.Matrix Matrix
+				public virtual global::Android.Graphics.Matrix Matrix
 				{
 						[Dot42.DexImport("getMatrix", "()Landroid/graphics/Matrix;", AccessFlags = 17)]
 						get{ return default(global::Android.Graphics.Matrix); }
+						[Dot42.DexImport("setMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -3576,70 +3570,6 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
-				/// setAntiAlias
-				/// </java-name>
-				[Dot42.DexImport("setAntiAlias", "(Z)V", AccessFlags = 257)]
-				public virtual void SetAntiAlias(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setDither
-				/// </java-name>
-				[Dot42.DexImport("setDither", "(Z)V", AccessFlags = 257)]
-				public virtual void SetDither(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLinearText
-				/// </java-name>
-				[Dot42.DexImport("setLinearText", "(Z)V", AccessFlags = 257)]
-				public virtual void SetLinearText(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSubpixelText
-				/// </java-name>
-				[Dot42.DexImport("setSubpixelText", "(Z)V", AccessFlags = 257)]
-				public virtual void SetSubpixelText(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setUnderlineText
-				/// </java-name>
-				[Dot42.DexImport("setUnderlineText", "(Z)V", AccessFlags = 257)]
-				public virtual void SetUnderlineText(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setStrikeThruText
-				/// </java-name>
-				[Dot42.DexImport("setStrikeThruText", "(Z)V", AccessFlags = 257)]
-				public virtual void SetStrikeThruText(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFakeBoldText
-				/// </java-name>
-				[Dot42.DexImport("setFakeBoldText", "(Z)V", AccessFlags = 257)]
-				public virtual void SetFakeBoldText(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFilterBitmap
-				/// </java-name>
-				[Dot42.DexImport("setFilterBitmap", "(Z)V", AccessFlags = 257)]
-				public virtual void SetFilterBitmap(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// getStyle
 				/// </java-name>
 				[Dot42.DexImport("getStyle", "()Landroid/graphics/Paint$Style;", AccessFlags = 1)]
@@ -3968,73 +3898,89 @@ namespace Android.Graphics
 				/// <java-name>
 				/// isAntiAlias
 				/// </java-name>
-				public bool IsAntiAlias
+				public virtual bool IsAntiAlias
 				{
 						[Dot42.DexImport("isAntiAlias", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setAntiAlias", "(Z)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// isDither
 				/// </java-name>
-				public bool IsDither
+				public virtual bool IsDither
 				{
 						[Dot42.DexImport("isDither", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setDither", "(Z)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// isLinearText
 				/// </java-name>
-				public bool IsLinearText
+				public virtual bool IsLinearText
 				{
 						[Dot42.DexImport("isLinearText", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setLinearText", "(Z)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// isSubpixelText
 				/// </java-name>
-				public bool IsSubpixelText
+				public virtual bool IsSubpixelText
 				{
 						[Dot42.DexImport("isSubpixelText", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSubpixelText", "(Z)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// isUnderlineText
 				/// </java-name>
-				public bool IsUnderlineText
+				public virtual bool IsUnderlineText
 				{
 						[Dot42.DexImport("isUnderlineText", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setUnderlineText", "(Z)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// isStrikeThruText
 				/// </java-name>
-				public bool IsStrikeThruText
+				public virtual bool IsStrikeThruText
 				{
 						[Dot42.DexImport("isStrikeThruText", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setStrikeThruText", "(Z)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// isFakeBoldText
 				/// </java-name>
-				public bool IsFakeBoldText
+				public virtual bool IsFakeBoldText
 				{
 						[Dot42.DexImport("isFakeBoldText", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFakeBoldText", "(Z)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>
 				/// isFilterBitmap
 				/// </java-name>
-				public bool IsFilterBitmap
+				public virtual bool IsFilterBitmap
 				{
 						[Dot42.DexImport("isFilterBitmap", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setFilterBitmap", "(Z)V", AccessFlags = 257)]
+						set{ }
 				}
 
 				/// <java-name>

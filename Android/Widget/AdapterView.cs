@@ -119,7 +119,7 @@ namespace Android.Widget
                 {
                     listener = new AdapterViewOnItemClickListener<T>();
                     SetTag(itemClickListenerKey, listener);
-                    SetOnItemClickListener(listener);
+                    OnItemClickListener = listener;
                 }
                 listener.Add(value);
             }
@@ -143,7 +143,7 @@ namespace Android.Widget
                 {
                     listener = new AdapterViewOnItemClickListener<T>();
                     SetTag(itemLongClickListenerKey, listener);
-                    SetOnItemLongClickListener(listener);
+                    OnItemLongClickListener = listener;
                 }
                 listener.Add(value);
             }
@@ -167,7 +167,7 @@ namespace Android.Widget
                 {
                     listener = new AdapterViewOnItemSelectedListener<T>();
                     SetTag(itemSelectedListenerKey, listener);
-                    SetOnItemSelectedListener(listener);
+                    OnItemSelectedListener = listener;
                 }
                 listener.ItemSelected.Add(value);
             }
@@ -191,7 +191,7 @@ namespace Android.Widget
                 {
                     listener = new AdapterViewOnItemSelectedListener<T>();
                     SetTag(itemSelectedListenerKey, listener);
-                    SetOnItemSelectedListener(listener);
+                    OnItemSelectedListener = listener;
                 }
                 listener.NothingSelected.Add(value);
             }

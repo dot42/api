@@ -364,38 +364,6 @@ namespace Android.Location
 				}
 
 				/// <java-name>
-				/// setCostAllowed
-				/// </java-name>
-				[Dot42.DexImport("setCostAllowed", "(Z)V", AccessFlags = 1)]
-				public virtual void SetCostAllowed(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setAltitudeRequired
-				/// </java-name>
-				[Dot42.DexImport("setAltitudeRequired", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAltitudeRequired(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setSpeedRequired
-				/// </java-name>
-				[Dot42.DexImport("setSpeedRequired", "(Z)V", AccessFlags = 1)]
-				public virtual void SetSpeedRequired(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setBearingRequired
-				/// </java-name>
-				[Dot42.DexImport("setBearingRequired", "(Z)V", AccessFlags = 1)]
-				public virtual void SetBearingRequired(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// describeContents
 				/// </java-name>
 				[Dot42.DexImport("describeContents", "()I", AccessFlags = 1)]
@@ -485,6 +453,8 @@ namespace Android.Location
 				{
 						[Dot42.DexImport("isCostAllowed", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setCostAllowed", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -494,6 +464,8 @@ namespace Android.Location
 				{
 						[Dot42.DexImport("isAltitudeRequired", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setAltitudeRequired", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -503,6 +475,8 @@ namespace Android.Location
 				{
 						[Dot42.DexImport("isSpeedRequired", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setSpeedRequired", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -512,6 +486,8 @@ namespace Android.Location
 				{
 						[Dot42.DexImport("isBearingRequired", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setBearingRequired", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

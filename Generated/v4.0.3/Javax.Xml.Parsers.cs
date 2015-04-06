@@ -166,54 +166,6 @@ namespace Javax.Xml.Parsers
 				public abstract global::Javax.Xml.Parsers.DocumentBuilder NewDocumentBuilder() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("setNamespaceAware", "(Z)V", AccessFlags = 1)]
-				public virtual void SetNamespaceAware(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setValidating
-				/// </java-name>
-				[Dot42.DexImport("setValidating", "(Z)V", AccessFlags = 1)]
-				public virtual void SetValidating(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIgnoringElementContentWhitespace
-				/// </java-name>
-				[Dot42.DexImport("setIgnoringElementContentWhitespace", "(Z)V", AccessFlags = 1)]
-				public virtual void SetIgnoringElementContentWhitespace(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setExpandEntityReferences
-				/// </java-name>
-				[Dot42.DexImport("setExpandEntityReferences", "(Z)V", AccessFlags = 1)]
-				public virtual void SetExpandEntityReferences(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setIgnoringComments
-				/// </java-name>
-				[Dot42.DexImport("setIgnoringComments", "(Z)V", AccessFlags = 1)]
-				public virtual void SetIgnoringComments(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setCoalescing
-				/// </java-name>
-				[Dot42.DexImport("setCoalescing", "(Z)V", AccessFlags = 1)]
-				public virtual void SetCoalescing(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setAttribute
 				/// </java-name>
 				[Dot42.DexImport("setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", AccessFlags = 1025)]
@@ -238,20 +190,14 @@ namespace Javax.Xml.Parsers
 				public abstract bool GetFeature(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setXIncludeAware
-				/// </java-name>
-				[Dot42.DexImport("setXIncludeAware", "(Z)V", AccessFlags = 1)]
-				public virtual void SetXIncludeAware(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// isNamespaceAware
 				/// </java-name>
 				public virtual bool IsNamespaceAware
 				{
 						[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setNamespaceAware", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -261,6 +207,8 @@ namespace Javax.Xml.Parsers
 				{
 						[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setValidating", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -270,6 +218,8 @@ namespace Javax.Xml.Parsers
 				{
 						[Dot42.DexImport("isIgnoringElementContentWhitespace", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setIgnoringElementContentWhitespace", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -279,6 +229,8 @@ namespace Javax.Xml.Parsers
 				{
 						[Dot42.DexImport("isExpandEntityReferences", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setExpandEntityReferences", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -288,6 +240,8 @@ namespace Javax.Xml.Parsers
 				{
 						[Dot42.DexImport("isIgnoringComments", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setIgnoringComments", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -297,6 +251,8 @@ namespace Javax.Xml.Parsers
 				{
 						[Dot42.DexImport("isCoalescing", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setCoalescing", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -317,6 +273,8 @@ namespace Javax.Xml.Parsers
 				{
 						[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setXIncludeAware", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}
@@ -592,22 +550,6 @@ namespace Javax.Xml.Parsers
 				public abstract global::Javax.Xml.Parsers.SAXParser NewSAXParser() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setNamespaceAware
-				/// </java-name>
-				[Dot42.DexImport("setNamespaceAware", "(Z)V", AccessFlags = 1)]
-				public virtual void SetNamespaceAware(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setValidating
-				/// </java-name>
-				[Dot42.DexImport("setValidating", "(Z)V", AccessFlags = 1)]
-				public virtual void SetValidating(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// setFeature
 				/// </java-name>
 				[Dot42.DexImport("setFeature", "(Ljava/lang/String;Z)V", AccessFlags = 1025)]
@@ -620,20 +562,14 @@ namespace Javax.Xml.Parsers
 				public abstract bool GetFeature(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// setXIncludeAware
-				/// </java-name>
-				[Dot42.DexImport("setXIncludeAware", "(Z)V", AccessFlags = 1)]
-				public virtual void SetXIncludeAware(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// isNamespaceAware
 				/// </java-name>
 				public virtual bool IsNamespaceAware
 				{
 						[Dot42.DexImport("isNamespaceAware", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setNamespaceAware", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -643,6 +579,8 @@ namespace Javax.Xml.Parsers
 				{
 						[Dot42.DexImport("isValidating", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setValidating", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -663,6 +601,8 @@ namespace Javax.Xml.Parsers
 				{
 						[Dot42.DexImport("isXIncludeAware", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setXIncludeAware", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

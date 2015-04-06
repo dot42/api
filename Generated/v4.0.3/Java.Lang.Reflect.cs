@@ -22,14 +22,6 @@ namespace Java.Lang.Reflect
 				}
 
 				/// <java-name>
-				/// setAccessible
-				/// </java-name>
-				[Dot42.DexImport("setAccessible", "(Z)V", AccessFlags = 1)]
-				public virtual void SetAccessible(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// isAnnotationPresent
 				/// </java-name>
 				[Dot42.DexImport("isAnnotationPresent", "(Ljava/lang/Class;)Z", AccessFlags = 1, Signature = "(Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;)Z")]
@@ -72,6 +64,8 @@ namespace Java.Lang.Reflect
 				{
 						[Dot42.DexImport("isAccessible", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setAccessible", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

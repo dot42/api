@@ -1001,14 +1001,6 @@ namespace Android.Util
 				}
 
 				/// <java-name>
-				/// setLenient
-				/// </java-name>
-				[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
-				public void SetLenient(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// beginArray
 				/// </java-name>
 				[Dot42.DexImport("beginArray", "()V", AccessFlags = 1)]
@@ -1148,6 +1140,8 @@ namespace Android.Util
 				{
 						[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>
@@ -1259,14 +1253,6 @@ namespace Android.Util
 				/// </java-name>
 				[Dot42.DexImport("setIndent", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public void SetIndent(string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setLenient
-				/// </java-name>
-				[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
-				public void SetLenient(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1397,6 +1383,8 @@ namespace Android.Util
 				{
 						[Dot42.DexImport("isLenient", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setLenient", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 		}

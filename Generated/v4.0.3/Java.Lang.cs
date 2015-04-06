@@ -4030,14 +4030,6 @@ namespace Java.Lang
 				}
 
 				/// <java-name>
-				/// setDaemon
-				/// </java-name>
-				[Dot42.DexImport("setDaemon", "(Z)V", AccessFlags = 17)]
-				public void SetDaemon(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// stop
 				/// </java-name>
 				[Dot42.DexImport("stop", "()V", AccessFlags = 17)]
@@ -4111,6 +4103,8 @@ namespace Java.Lang
 				{
 						[Dot42.DexImport("isDaemon", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
+						[Dot42.DexImport("setDaemon", "(Z)V", AccessFlags = 17)]
+						set{ }
 				}
 
 				/// <java-name>

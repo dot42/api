@@ -684,7 +684,7 @@ namespace System
                 try
                 {
                     DateFormat formatter = new SimpleDateFormat(javaFormat, useInvariant?invariantLocale:locale);
-                    formatter.SetLenient(false);
+                    formatter.IsLenient = false;
                     formatter.TimeZone = timeZone;
 
                     var result = FromParsedDate(formatter.Parse(s), s, style);
@@ -788,7 +788,7 @@ namespace System
 	        try
 	        {
 	            DateFormat formatter = new SimpleDateFormat(javaFormat, locale);
-	            formatter.SetLenient(false);
+	            formatter.IsLenient = false;
 
 	            if ((style & DateTimeStyles.AssumeUniversal) != 0)
                     formatter.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
