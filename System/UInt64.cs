@@ -43,7 +43,7 @@ namespace System
         {
             long value;
 
-            if ((style & NumberStyles.HexNumber) != 0)
+            if ((style & NumberStyles.AllowHexSpecifier) != 0)
                 value = long.Parse(s, 16);
             else
                 value = long.Parse(s);

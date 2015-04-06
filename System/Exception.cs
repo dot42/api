@@ -31,7 +31,7 @@ namespace System
         /// <summary>
         /// Gets a string representation of the immediate frames on the call stack.
         /// </summary>
-        public virtual string StackTrace 
+        public string StackTrace 
         { 
             get
             {
@@ -44,6 +44,7 @@ namespace System
 
         public virtual Exception InnerException
         {
+            [Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
             get { return Cause; }
         }
 

@@ -43,14 +43,14 @@ namespace System
 
         public static int Parse(string s, NumberStyles style)
         {
-            if ((style & NumberStyles.HexNumber) != 0)
+            if ((style & NumberStyles.AllowHexSpecifier) != 0)
                 return JavaParse(s, 16);
             return Parse(s);
         }
 
         public static int Parse(string s, NumberStyles style, IFormatProvider provider)
         {
-            if ((style & NumberStyles.HexNumber) != 0)
+            if ((style & NumberStyles.AllowHexSpecifier) != 0)
                 return JavaParse(s, 16);
             return Parse(s);
         }

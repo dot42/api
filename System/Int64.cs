@@ -66,7 +66,7 @@ namespace System
         {
             try
             {
-                if((style & NumberStyles.HexNumber) != 0)
+                if ((style & NumberStyles.AllowHexSpecifier) != 0)
                     result = Parse(s, 16);
                 else
                     result = Parse(s);
