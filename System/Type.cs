@@ -85,7 +85,8 @@ namespace System
             // java has some quirks regarding enums: http://stackoverflow.com/questions/4166488/checking-if-a-class-is-java-lang-enum
             get
             {
-                return !IsPrimitive && typeof(Java.Lang.Enum<object>).JavaIsAssignableFrom(this);
+                return !IsPrimitive && !NullableReflection.TreatAsSystemNullableT(this) 
+                                    && typeof(Java.Lang.Enum<object>).JavaIsAssignableFrom(this);
             }
         }
 

@@ -26,22 +26,22 @@ namespace Dot42.Internal
 	{
 	    internal static string Format(int value, IFormatProvider provider)
 	    {
-            return provider.ToJavaNumberFormat().Format((long)value);
+	        return Format(null, value, provider);
 	    }
 
 	    internal static string Format(long value, IFormatProvider provider)
         {
-            return provider.ToJavaNumberFormat().Format(value);
+            return Format(null, value, provider);
         }
 
 	    internal static string Format(float value, IFormatProvider provider)
-        {
-            return provider.ToJavaNumberFormat().Format((double)value);
-        }
+	    {
+	        return Format(null, value, provider);
+	    }
 
 	    internal static string Format(double value, IFormatProvider provider)
         {
-            return provider.ToJavaNumberFormat().Format(value);
+            return Format(null, value, provider);
         }
 
         internal static string Format(string format, int value, IFormatProvider provider)
@@ -61,7 +61,7 @@ namespace Dot42.Internal
         internal static string Format(string format, float value, IFormatProvider provider)
         {
             if (null == format)
-                return GetDecimalFormat("0.################", provider).Format((double)value);
+                return GetDecimalFormat("0.#########", provider).Format((double)value);
             return GetFormat(format, provider).Format((double)value);
         }
 

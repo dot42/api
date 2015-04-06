@@ -83,17 +83,20 @@ namespace System
 #endif
 
 
-        public Decimal (float value) 
-		{
-            _val = new BigDecimal(value.ToString(CultureInfo.InvariantCulture));
-		}
+        public Decimal (float value)
+        {
+            var str = value.ToString("R", CultureInfo.InvariantCulture);
+            _val = new BigDecimal(str);
+        }
 
-		public Decimal (double value) 
-		{
-            _val = new BigDecimal(value.ToString(CultureInfo.InvariantCulture));
-		}
+	    public Decimal (double value)
+	    {
+            var str = value.ToString("R", CultureInfo.InvariantCulture);
+            _val = new BigDecimal(str);
+            //_val = new BigDecimal(value);
+	    }
 
-        public Decimal(BigDecimal value)
+	    public Decimal(BigDecimal value)
         {
             _val = value;
         }
