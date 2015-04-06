@@ -30,7 +30,7 @@ namespace System.IO
         public static void Delete(string path)
         {
             var file = new JFile(path);
-            if (file.IsFile())
+            if (file.IsFile)
                 file.Delete();
         }
 
@@ -40,7 +40,7 @@ namespace System.IO
         public static bool Exists(string path)
         {
             var file = new JFile(path);
-            return file.IsFile() && file.Exists();
+            return file.IsFile && file.Exists();
         }
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace System.IO
             if (path == null)
                 throw new ArgumentNullException("path");
             var file = new JFile(path);
-            if (!file.Exists() || !file.IsFile())
+            if (!file.Exists() || !file.IsFile)
                 throw new FileNotFoundException(path);
-            if (!file.CanRead())
+            if (!file.CanRead)
                 throw new UnauthorizedAccessException(path);
             var stream = new FileInputStream(file);
             try
@@ -76,9 +76,9 @@ namespace System.IO
             if (path == null)
                 throw new ArgumentNullException("path");
             var file = new JFile(path);
-            if (!file.Exists() || !file.IsFile())
+            if (!file.Exists() || !file.IsFile)
                 throw new FileNotFoundException(path);
-            if (!file.CanRead())
+            if (!file.CanRead)
                 throw new UnauthorizedAccessException(path);
             var reader = new BufferedReader(new FileReader(file));
             try
@@ -105,9 +105,9 @@ namespace System.IO
             if (path == null)
                 throw new ArgumentNullException("path");
             var file = new JFile(path);
-            if (!file.Exists() || !file.IsFile())
+            if (!file.Exists() || !file.IsFile)
                 throw new FileNotFoundException(path);
-            if (!file.CanRead())
+            if (!file.CanRead)
                 throw new UnauthorizedAccessException(path);
             var reader = new FileReader(file);
             try

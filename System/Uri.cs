@@ -72,11 +72,11 @@ namespace System
             switch (uriKind)
             {
                 case UriKind.Absolute:
-                    if(!IsAbsolute()) throw new UriFormatException();
+                    if(!IsAbsolute) throw new UriFormatException();
                     break;
 
                 case UriKind.Relative:
-                    if (IsAbsolute()) throw new UriFormatException();
+                    if (IsAbsolute) throw new UriFormatException();
                     break;
             }
         }
@@ -89,11 +89,11 @@ namespace System
                 switch (uriKind)
                 {
                     case UriKind.Absolute:
-                        if (!result.IsAbsolute()) throw new UriFormatException();
+                        if (!result.IsAbsolute) throw new UriFormatException();
                         break;
 
                     case UriKind.Relative:
-                        if (result.IsAbsolute()) throw new UriFormatException();
+                        if (result.IsAbsolute) throw new UriFormatException();
                         break;
                 }
                 return true;

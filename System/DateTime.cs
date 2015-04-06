@@ -212,14 +212,14 @@ namespace System
         {
             var calender = GetCalendar();
             calender.Add(Calendar.YEAR, value);
-            return FromDate(calender.GetTime(), Kind);
+            return FromDate(calender.Time, Kind);
         }
 
         public DateTime AddMonths(int months)
         {
             var calender = GetCalendar();
             calender.Add(Calendar.MONTH, months);
-            return FromDate(calender.GetTime(), Kind);
+            return FromDate(calender.Time, Kind);
         }
 
 	    public static int DaysInMonth(int year, int month)
@@ -685,7 +685,7 @@ namespace System
                 {
                     DateFormat formatter = new SimpleDateFormat(javaFormat, useInvariant?invariantLocale:locale);
                     formatter.SetLenient(false);
-                    formatter.SetTimeZone(timeZone);
+                    formatter.TimeZone = timeZone;
 
                     var result = FromParsedDate(formatter.Parse(s), s, style);
                     return result;
@@ -1415,21 +1415,21 @@ namespace System
             if (kind != DateTimeKind.Utc)
             {
                 offsetInMs = JavaGetOffsetInMs(millis);
-                calender.SetTimeZone(Java.Util.TimeZone.Default);
+                calender.TimeZone = (Java.Util.TimeZone.Default);
             }
             else
             {
-                calender.SetTimeZone(Java.Util.TimeZone.GetTimeZone("UTC"));
+                calender.TimeZone = (Java.Util.TimeZone.GetTimeZone("UTC"));
             }
 
-            calender.SetTimeInMillis(millis - offsetInMs);
+            calender.TimeInMillis = (millis - offsetInMs);
 
             return calender;
         }
 
         private static long JavaGetOffsetInMs(long millies)
         {
-            return Java.Util.TimeZone.GetDefault().GetOffset(millies);
+            return Java.Util.TimeZone.Default.GetOffset(millies);
         }
 
         /// <summary>
@@ -1437,7 +1437,7 @@ namespace System
         /// </summary>
         public static DateTime FromDate(Date value, DateTimeKind kind)
         {
-            return FromDate(value.GetTime(), kind);
+            return FromDate(value.Time, kind);
         }
 
         /// <summary>
@@ -1465,7 +1465,7 @@ namespace System
             bool assumeUtc = (style & DateTimeStyles.AssumeUniversal) != 0;
             bool roundtripKind = (style & DateTimeStyles.RoundtripKind) != 0;
 
-            var millis = value.GetTime();
+            var millis = value.Time;
             var ticks = (millis + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
 
             DateTime result;

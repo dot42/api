@@ -590,22 +590,6 @@ namespace Android.Views.Animations
 				}
 
 				/// <java-name>
-				/// setFillAfter
-				/// </java-name>
-				[Dot42.DexImport("setFillAfter", "(Z)V", AccessFlags = 1)]
-				public override void SetFillAfter(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// setFillBefore
-				/// </java-name>
-				[Dot42.DexImport("setFillBefore", "(Z)V", AccessFlags = 1)]
-				public override void SetFillBefore(bool boolean) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// addAnimation
 				/// </java-name>
 				[Dot42.DexImport("addAnimation", "(Landroid/view/animation/Animation;)V", AccessFlags = 1)]
@@ -715,6 +699,24 @@ namespace Android.Views.Animations
 				{
 						[Dot42.DexImport("getAnimations", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/view/animation/Animation;>;")]
 						get{ return default(global::Java.Util.IList<global::Android.Views.Animations.Animation>); }
+				}
+
+				/// <java-name>
+				/// setFillAfter
+				/// </java-name>
+				public override bool IsFillAfter
+				{
+						[Dot42.DexImport("setFillAfter", "(Z)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <java-name>
+				/// setFillBefore
+				/// </java-name>
+				public override bool IsFillBefore
+				{
+						[Dot42.DexImport("setFillBefore", "(Z)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <java-name>

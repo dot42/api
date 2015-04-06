@@ -300,7 +300,7 @@ namespace Dot42.Internal.Generics
                 return null;
 
             return typeInfo.TypeDefinition.JavaGetDeclaredConstructors()
-                           .Where(x => TypeHelper.Matches(x.GetModifiers(), flags))
+                           .Where(x => TypeHelper.Matches(x.Modifiers, flags))
                            .Select(p => new GenericInstanceConstructorInfo(p, type, typeInfo.Arguments))
                            .ToArray();
         }
@@ -343,7 +343,7 @@ namespace Dot42.Internal.Generics
 
                 for (int i = 0; i < fields.Length; ++i)
                 {
-                    if (!TypeHelper.Matches(fields[i].GetModifiers(), flags))
+                    if (!TypeHelper.Matches(fields[i].Modifiers, flags))
                         continue;
 
                     ret.Add(new FieldInfo(fields[i], type));
@@ -400,7 +400,7 @@ namespace Dot42.Internal.Generics
                 for (int i = 0; i < fields.Length; ++i)
                 {
                     if (fields[i].Name != name) continue;
-                    if (!TypeHelper.Matches(fields[i].GetModifiers(), flags))
+                    if (!TypeHelper.Matches(fields[i].Modifiers, flags))
                         continue;
                     return new FieldInfo(fields[i], type);
                 }
@@ -429,7 +429,7 @@ namespace Dot42.Internal.Generics
 
                 for (int i = 0; i < methods.Length; ++i)
                 {
-                    if(!TypeHelper.Matches(methods[i].GetModifiers(), flags))
+                    if(!TypeHelper.Matches(methods[i].Modifiers, flags))
                         continue;
 
                     ret.Add(new MethodInfo(methods[i], type));
@@ -452,7 +452,7 @@ namespace Dot42.Internal.Generics
                 // NOTE: doesn't throw AmbiguousMatchException
                 try
                 {
-                    JavaMethod m = parameters == null ? typeDef.JavaGetDeclaredMethod(name) : typeDef.JavaGetDeclaredMethod(name, parameters);
+                    Method m = parameters == null ? typeDef.JavaGetDeclaredMethod(name) : typeDef.JavaGetDeclaredMethod(name, parameters);
                     return new MethodInfo(m, type);
                 }
                 catch (NoSuchMethodException)

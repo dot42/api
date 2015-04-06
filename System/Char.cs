@@ -73,7 +73,7 @@ namespace System
                 throw new ArgumentNullException("s");
             if (s.Length != 1)
                 throw new FormatException("Length not 1, but " + s.Length + " s=" + s);
-            return s.CharAt(0);
+            return s[0];
         }
 
         public static char ToLower(char ch)

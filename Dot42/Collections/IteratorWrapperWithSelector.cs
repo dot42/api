@@ -55,7 +55,7 @@ namespace Dot42.Collections
 	    /// <returns>True on success.</returns>
 	    public bool MoveNext()
 	    {
-            if (!iterator.HasNext())
+            if (!iterator.HasNext)
                 return false;
 	        
             current = selector(iterator.Next());

@@ -1025,7 +1025,7 @@ namespace Java.Lang
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 1025)]
-				int GetLength() /* MethodBuilder.Create */ ;
+				int Length() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// charAt
@@ -3580,7 +3580,7 @@ namespace Java.Lang
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public int GetLength() /* MethodBuilder.Create */ 
+				public int Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}

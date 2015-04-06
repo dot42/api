@@ -304,9 +304,9 @@ namespace Java.Lang.Reflect
 				/// getTypeParameters
 				/// </java-name>
 				[Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;", AccessFlags = 1, Signature = "()[Ljava/lang/reflect/TypeVariable<Ljava/lang/reflect/Constructor<TT;>;>;")]
-				public global::Java.Lang.Reflect.ITypeVariable<global::Java.Lang.Reflect.Constructor>[] GetTypeParameters() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.ITypeVariable[] GetTypeParameters() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Lang.Reflect.ITypeVariable<global::Java.Lang.Reflect.Constructor>[]);
+						return default(global::Java.Lang.Reflect.ITypeVariable[]);
 				}
 
 				/// <java-name>
@@ -859,7 +859,7 @@ namespace Java.Lang.Reflect
 				/// getTypeParameters
 				/// </java-name>
 				[Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;", AccessFlags = 1025, Signature = "()[Ljava/lang/reflect/TypeVariable<*>;")]
-				global::Java.Lang.Reflect.ITypeVariable<object>[] GetTypeParameters() /* MethodBuilder.Create */ ;
+				global::Java.Lang.Reflect.ITypeVariable[] GetTypeParameters() /* MethodBuilder.Create */ ;
 
 		}
 
@@ -993,7 +993,7 @@ namespace Java.Lang.Reflect
 		/// </java-name>
 		[Dot42.DexImport("java/lang/reflect/TypeVariable", AccessFlags = 1537, Signature = "<D::Ljava/lang/reflect/GenericDeclaration;>Ljava/lang/Object;Ljava/lang/reflect/T" +
     "ype;")]
-		public partial interface ITypeVariable<D> : global::Java.Lang.Reflect.IType
+		public partial interface ITypeVariable : global::Java.Lang.Reflect.IType
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1008,7 +1008,7 @@ namespace Java.Lang.Reflect
 				/// <java-name>
 				/// getGenericDeclaration
 				/// </java-name>
-				D GenericDeclaration
+				object GenericDeclaration
 				{
 						[Dot42.DexImport("getGenericDeclaration", "()Ljava/lang/reflect/GenericDeclaration;", AccessFlags = 1025, Signature = "()TD;")]
 						get;
@@ -1082,9 +1082,9 @@ namespace Java.Lang.Reflect
 				/// getTypeParameters
 				/// </java-name>
 				[Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;", AccessFlags = 1, Signature = "()[Ljava/lang/reflect/TypeVariable<Ljava/lang/reflect/Method;>;")]
-				public global::Java.Lang.Reflect.ITypeVariable<global::Java.Lang.Reflect.Method>[] GetTypeParameters() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.ITypeVariable[] GetTypeParameters() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Lang.Reflect.ITypeVariable<global::Java.Lang.Reflect.Method>[]);
+						return default(global::Java.Lang.Reflect.ITypeVariable[]);
 				}
 
 				/// <java-name>

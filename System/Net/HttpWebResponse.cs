@@ -47,7 +47,7 @@ namespace System.Net
 #if ANDROID_8P
             this.client = client;
 #endif
-            _entity = _response.GetEntity();
+            _entity = _response.Entity;
 
             ThrowExceptionIfProtocolError();
         }
@@ -92,8 +92,8 @@ namespace System.Net
             get
             {
                 if (_entity == null) return null;
-                var header = _entity.GetContentEncoding();
-                return header != null ? header.GetValue() : null;
+                var header = _entity.ContentEncoding;
+                return header != null ? header.Value : null;
             }
         }
 
@@ -105,7 +105,7 @@ namespace System.Net
             get
             {
                 if (_entity == null) return 0L;
-                return _entity.GetContentLength();
+                return _entity.ContentLength;
             }
         }
 
@@ -117,8 +117,8 @@ namespace System.Net
             get
             {
                 if (_entity == null) return null;
-                var header = _entity.GetContentType();
-                return header != null ? header.GetValue() : null;
+                var header = _entity.ContentType;
+                return header != null ? header.Value : null;
             }
         }
 
@@ -138,7 +138,7 @@ namespace System.Net
             {
                 if (_headers == null)
                 {
-                    _headers = new WebHeaderCollection(_response.GetAllHeaders());
+                    _headers = new WebHeaderCollection(_response.AllHeaders);
                 }
 
                 return _headers;
@@ -150,7 +150,7 @@ namespace System.Net
         /// </summary>
         public override bool IsMutuallyAuthenticated
         {
-            get { return _response.GetParams().GetBooleanParameter("IsMutuallyAuthenticated", false); }
+            get { return _response.Params.GetBooleanParameter("IsMutuallyAuthenticated", false); }
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace System.Net
             get
             {
                 var header = _response.GetFirstHeader(WebHeaderCollection.HeaderToString(HttpResponseHeader.LastModified));
-                return header != null ? DateTime.Parse(header.GetValue()) : DateTime.MinValue;
+                return header != null ? DateTime.Parse(header.Value) : DateTime.MinValue;
             }
         }
 
@@ -180,8 +180,8 @@ namespace System.Net
         {
             get
             {
-                var version = _response.GetProtocolVersion();
-                return new Version(version.GetMajor(), version.GetMinor());
+                var version = _response.ProtocolVersion;
+                return new Version(version.Major, version.Minor);
             }
         }
 
@@ -201,7 +201,7 @@ namespace System.Net
             get
             {
                 var header = _response.GetFirstHeader(WebHeaderCollection.HeaderToString(HttpResponseHeader.Server));
-                return header != null ? header.GetValue() : null;
+                return header != null ? header.Value : null;
             }
         }
 
@@ -212,8 +212,8 @@ namespace System.Net
         {
             get
             {
-                var statusLine = _response.GetStatusLine();
-                return (HttpStatusCode)statusLine.GetStatusCode();
+                var statusLine = _response.StatusLine;
+                return (HttpStatusCode)statusLine.StatusCode;
             }
         }
 
@@ -224,8 +224,8 @@ namespace System.Net
         {
             get
             {
-                var statusLine = _response.GetStatusLine();
-                return statusLine.GetReasonPhrase();
+                var statusLine = _response.StatusLine;
+                return statusLine.ReasonPhrase;
             }
         }
 
@@ -276,9 +276,9 @@ namespace System.Net
             /// Default ctor
             /// </summary>
             public ResponseStream(IHttpEntity entity)
-                : base(entity.GetContent())
+                : base(entity.Content)
             {
-                length = entity.GetContentLength();
+                length = entity.ContentLength;
             }
 
             /// <summary>

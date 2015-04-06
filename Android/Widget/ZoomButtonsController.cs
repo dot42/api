@@ -41,12 +41,12 @@ namespace Android.Widget
         {
             add
             {
-                var listener = GetZoomControls().GetOrCreate<ZoomButtonsControllerListener>(zoomListenerKey, true, SetOnZoomListener);
+                var listener = ZoomControls.GetOrCreate<ZoomButtonsControllerListener>(zoomListenerKey, true, SetOnZoomListener);
                 listener.VisibilityChanged.Add(value);
             }
             remove
             {
-                var listener = GetZoomControls().GetOrCreate<ZoomButtonsControllerListener>(zoomListenerKey, false, null);
+                var listener = ZoomControls.GetOrCreate<ZoomButtonsControllerListener>(zoomListenerKey, false, null);
                 if (listener != null) listener.VisibilityChanged.Remove(value);
             }
         }
@@ -59,12 +59,12 @@ namespace Android.Widget
         {
             add
             {
-                var listener = GetZoomControls().GetOrCreate<ZoomButtonsControllerListener>(zoomListenerKey, true, SetOnZoomListener);
+                var listener = ZoomControls.GetOrCreate<ZoomButtonsControllerListener>(zoomListenerKey, true, SetOnZoomListener);
                 listener.Zoom.Add(value);
             }
             remove
             {
-                var listener = GetZoomControls().GetOrCreate<ZoomButtonsControllerListener>(zoomListenerKey, false, null);
+                var listener = ZoomControls.GetOrCreate<ZoomButtonsControllerListener>(zoomListenerKey, false, null);
                 if (listener != null) listener.Zoom.Remove(value);
             }
         }

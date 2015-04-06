@@ -231,6 +231,14 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
+				/// setTileModeY
+				/// </java-name>
+				[Dot42.DexImport("setTileModeY", "(Landroid/graphics/Shader$TileMode;)V", AccessFlags = 17)]
+				public void SetTileModeY(global::Android.Graphics.Shader.TileMode tileMode) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// setTileModeXY
 				/// </java-name>
 				[Dot42.DexImport("setTileModeXY", "(Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V", AccessFlags = 1)]
@@ -344,8 +352,6 @@ namespace Android.Graphics.Drawables
 				{
 						[Dot42.DexImport("getTileModeY", "()Landroid/graphics/Shader$TileMode;", AccessFlags = 1)]
 						get{ return default(global::Android.Graphics.Shader.TileMode); }
-						[Dot42.DexImport("setTileModeY", "(Landroid/graphics/Shader$TileMode;)V", AccessFlags = 17)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -696,6 +702,14 @@ namespace Android.Graphics.Drawables
 				}
 
 				/// <java-name>
+				/// setBounds
+				/// </java-name>
+				[Dot42.DexImport("setBounds", "(Landroid/graphics/Rect;)V", AccessFlags = 1)]
+				public virtual void SetBounds(global::Android.Graphics.Rect rect) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// copyBounds
 				/// </java-name>
 				[Dot42.DexImport("copyBounds", "(Landroid/graphics/Rect;)V", AccessFlags = 17)]
@@ -725,6 +739,14 @@ namespace Android.Graphics.Drawables
 				/// </java-name>
 				[Dot42.DexImport("setFilterBitmap", "(Z)V", AccessFlags = 1)]
 				public virtual void SetFilterBitmap(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setCallback
+				/// </java-name>
+				[Dot42.DexImport("setCallback", "(Landroid/graphics/drawable/Drawable$Callback;)V", AccessFlags = 17)]
+				public void SetCallback(global::Android.Graphics.Drawables.Drawable.ICallback callback) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -952,8 +974,6 @@ namespace Android.Graphics.Drawables
 				{
 						[Dot42.DexImport("getBounds", "()Landroid/graphics/Rect;", AccessFlags = 17)]
 						get{ return default(global::Android.Graphics.Rect); }
-						[Dot42.DexImport("setBounds", "(Landroid/graphics/Rect;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -974,8 +994,6 @@ namespace Android.Graphics.Drawables
 				{
 						[Dot42.DexImport("getCallback", "()Landroid/graphics/drawable/Drawable$Callback;", AccessFlags = 1)]
 						get{ return default(global::Android.Graphics.Drawables.Drawable.ICallback); }
-						[Dot42.DexImport("setCallback", "(Landroid/graphics/drawable/Drawable$Callback;)V", AccessFlags = 17)]
-						set{ }
 				}
 
 				/// <java-name>

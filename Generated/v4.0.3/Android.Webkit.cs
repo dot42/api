@@ -3742,7 +3742,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// setLayoutParams
 				/// </java-name>
-				public override global::Android.Views.ViewGroup.LayoutParams LayoutParams
+				public override global::Android.Views.ViewGroup.LayoutParams LayoutParameters
 				{
 						[Dot42.DexImport("setLayoutParams", "(Landroid/view/ViewGroup$LayoutParams;)V", AccessFlags = 1)]
 						set{ }

@@ -643,6 +643,14 @@ namespace Android.Views
 				}
 
 				/// <java-name>
+				/// setIsLongpressEnabled
+				/// </java-name>
+				[Dot42.DexImport("setIsLongpressEnabled", "(Z)V", AccessFlags = 1)]
+				public virtual void SetIsLongpressEnabled(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// onTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("onTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
@@ -663,8 +671,6 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("isLongpressEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
-						[Dot42.DexImport("setIsLongpressEnabled", "(Z)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -5522,6 +5528,22 @@ namespace Android.Views
 				public abstract global::Android.Views.LayoutInflater CloneInContext(global::Android.Content.Context context) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
+				/// setFactory
+				/// </java-name>
+				[Dot42.DexImport("setFactory", "(Landroid/view/LayoutInflater$Factory;)V", AccessFlags = 1)]
+				public virtual void SetFactory(global::Android.Views.LayoutInflater.IFactory factory) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setFactory2
+				/// </java-name>
+				[Dot42.DexImport("setFactory2", "(Landroid/view/LayoutInflater$Factory2;)V", AccessFlags = 1)]
+				public virtual void SetFactory2(global::Android.Views.LayoutInflater.IFactory2 factory2) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// inflate
 				/// </java-name>
 				[Dot42.DexImport("inflate", "(ILandroid/view/ViewGroup;)Landroid/view/View;", AccessFlags = 1)]
@@ -5607,8 +5629,6 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("getFactory", "()Landroid/view/LayoutInflater$Factory;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.LayoutInflater.IFactory); }
-						[Dot42.DexImport("setFactory", "(Landroid/view/LayoutInflater$Factory;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -5618,8 +5638,6 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("getFactory2", "()Landroid/view/LayoutInflater$Factory2;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.LayoutInflater.IFactory2); }
-						[Dot42.DexImport("setFactory2", "(Landroid/view/LayoutInflater$Factory2;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -9415,6 +9433,22 @@ namespace Android.Views
 				}
 
 				/// <java-name>
+				/// setScrollX
+				/// </java-name>
+				[Dot42.DexImport("setScrollX", "(I)V", AccessFlags = 1)]
+				public virtual void SetScrollX(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setScrollY
+				/// </java-name>
+				[Dot42.DexImport("setScrollY", "(I)V", AccessFlags = 1)]
+				public virtual void SetScrollY(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// getDrawingRect
 				/// </java-name>
 				[Dot42.DexImport("getDrawingRect", "(Landroid/graphics/Rect;)V", AccessFlags = 1)]
@@ -10756,8 +10790,6 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("getScrollX", "()I", AccessFlags = 17)]
 						get{ return default(int); }
-						[Dot42.DexImport("setScrollX", "(I)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -10767,8 +10799,6 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("getScrollY", "()I", AccessFlags = 17)]
 						get{ return default(int); }
-						[Dot42.DexImport("setScrollY", "(I)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -11031,7 +11061,7 @@ namespace Android.Views
 				/// <java-name>
 				/// getLayoutParams
 				/// </java-name>
-				public virtual global::Android.Views.ViewGroup.LayoutParams LayoutParams
+				public virtual global::Android.Views.ViewGroup.LayoutParams LayoutParameters
 				{
 						[Dot42.DexImport("getLayoutParams", "()Landroid/view/ViewGroup$LayoutParams;", AccessFlags = 1)]
 						get{ return default(global::Android.Views.ViewGroup.LayoutParams); }
@@ -14631,6 +14661,14 @@ namespace Android.Views
 				}
 
 				/// <java-name>
+				/// setContainer
+				/// </java-name>
+				[Dot42.DexImport("setContainer", "(Landroid/view/Window;)V", AccessFlags = 1)]
+				public virtual void SetContainer(global::Android.Views.Window window) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// setWindowManager
 				/// </java-name>
 				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -14643,6 +14681,14 @@ namespace Android.Views
 				/// </java-name>
 				[Dot42.DexImport("setWindowManager", "(Landroid/view/WindowManager;Landroid/os/IBinder;Ljava/lang/String;Z)V", AccessFlags = 1)]
 				public virtual void SetWindowManager(global::Android.Views.IWindowManager windowManager, global::Android.OS.IBinder binder, string @string, bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setCallback
+				/// </java-name>
+				[Dot42.DexImport("setCallback", "(Landroid/view/Window$Callback;)V", AccessFlags = 1)]
+				public virtual void SetCallback(global::Android.Views.Window.ICallback callback) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -14735,6 +14781,14 @@ namespace Android.Views
 				/// </java-name>
 				[Dot42.DexImport("setDimAmount", "(F)V", AccessFlags = 1)]
 				public virtual void SetDimAmount(float single) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setAttributes
+				/// </java-name>
+				[Dot42.DexImport("setAttributes", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
+				public virtual void SetAttributes(global::Android.Views.IWindowManager_LayoutParams iWindowManager_LayoutParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -15039,8 +15093,6 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("getContainer", "()Landroid/view/Window;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.Window); }
-						[Dot42.DexImport("setContainer", "(Landroid/view/Window;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -15068,8 +15120,6 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("getCallback", "()Landroid/view/Window$Callback;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.Window.ICallback); }
-						[Dot42.DexImport("setCallback", "(Landroid/view/Window$Callback;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -15088,8 +15138,6 @@ namespace Android.Views
 				{
 						[Dot42.DexImport("getAttributes", "()Landroid/view/WindowManager$LayoutParams;", AccessFlags = 17)]
 						get{ return default(global::Android.Views.IWindowManager_LayoutParams); }
-						[Dot42.DexImport("setAttributes", "(Landroid/view/WindowManager$LayoutParams;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>

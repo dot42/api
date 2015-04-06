@@ -35,6 +35,26 @@ namespace System
         {
         }
 
+        /// <summary>
+        ///  Returns the char at index.
+        /// </summary>
+        [global::System.Runtime.CompilerServices.IndexerName("Chars")]
+        public char this[int index]
+        {
+            [Dot42.DexImport("charAt", "(I)C", AccessFlags = 257)]
+            get { return default(char); }
+        }
+       
+        /// <summary>
+        /// Returns the number of chars in this string. 
+        /// </summary>
+        public int Length
+        {
+            [Dot42.DexImport("length", "()I", AccessFlags = 257)]
+            get { return default(int); }
+        }
+
+
         private static char[] Constuct(char c, int count)
         {
             var result = new char[count];

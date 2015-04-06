@@ -249,11 +249,11 @@ namespace System.Collections
 
             public object Key
             {
-                get { return Current.GetKey(); }
+                get { return Current.Key; }
             }
             public object Value
             {
-                get { return Current.GetValue(); }
+                get { return Current.Value; }
             }
         }
     }

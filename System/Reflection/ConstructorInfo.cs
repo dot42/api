@@ -85,7 +85,7 @@ namespace System.Reflection
         public object Invoke(object[] args)
         {
             // .NET doesn't have accessibility semantics
-            if (!_ctor.IsAccessible()) _ctor.SetAccessible(true);
+            if (!_ctor.IsAccessible) _ctor.SetAccessible(true);
 
             return _ctor.NewInstance(args);
         }

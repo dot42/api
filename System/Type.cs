@@ -266,7 +266,7 @@ namespace System
             // GetConstructors never searches base classes.
             return GenericsReflection.GetConstructors(this, flags)
                    ?? JavaGetDeclaredConstructors()
-                        .Where(x => TypeHelper.Matches(x.GetModifiers(), flags))
+                        .Where(x => TypeHelper.Matches(x.Modifiers, flags))
                         .Select(p => new ConstructorInfo(p))
                         .ToArray();
         }

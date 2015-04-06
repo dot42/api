@@ -36,7 +36,7 @@ namespace Android.Widget
         {
             add
             {
-                var listener = this.GetOrCreate<RatingBarListener>(ratingChangedListenerKey, true, SetOnRatingBarChangeListener);
+                var listener = this.GetOrCreate<RatingBarListener>(ratingChangedListenerKey, true, a => OnRatingBarChangeListener = a);
                 listener.RatingChanged.Add(value);
             }
             remove

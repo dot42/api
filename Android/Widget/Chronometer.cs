@@ -41,7 +41,7 @@ namespace Android.Widget
         {
             add
             {
-                var listener = this.GetOrCreate<ChronometerOnChronometerTickListener>(chronometerTickListenerKey, true, SetOnChronometerTickListener);
+                var listener = this.GetOrCreate<ChronometerOnChronometerTickListener>(chronometerTickListenerKey, true, a=> OnChronometerTickListener = a);
                 listener.Tick.Add(value);
             }
             remove

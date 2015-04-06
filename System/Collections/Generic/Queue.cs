@@ -56,14 +56,14 @@ namespace System.Collections.Generic
 
         public T Dequeue()
         {
-            if(queue.IsEmpty())
+            if(queue.IsEmpty)
                 throw new InvalidOperationException("queue is empty");
             return queue.PollFirst();
         }
 
         public T Peek()
         {
-            if (queue.IsEmpty())
+            if (queue.IsEmpty)
                 throw new InvalidOperationException("queue is empty");
             return queue.PeekFirst();
         }

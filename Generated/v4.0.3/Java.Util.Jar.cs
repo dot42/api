@@ -438,7 +438,7 @@ namespace Java.Util.Jar
 				/// entries
 				/// </java-name>
 				[Dot42.DexImport("entries", "()Ljava/util/Enumeration;", AccessFlags = 1, Signature = "()Ljava/util/Enumeration<Ljava/util/jar/JarEntry;>;")]
-				public override global::Java.Util.IEnumeration<global::Java.Util.Jar.JarEntry> Entries() /* MethodBuilder.Create */ 
+				public new virtual global::Java.Util.IEnumeration<global::Java.Util.Jar.JarEntry> Entries() /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IEnumeration<global::Java.Util.Jar.JarEntry>);
 				}

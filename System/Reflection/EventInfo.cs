@@ -64,8 +64,8 @@ namespace System.Reflection
                 if (_eventHandlerType == null)
                 {
                     var method = _addMethod ?? _removeMethod;
-                    var paramType = method.JavaMethod.GetParameterTypes().Last();
-                    var genericInfo = (IGenericDefinition)method.JavaMethod.GetParameterAnnotations()
+                    var paramType = method.JavaMethod.ParameterTypes.Last();
+                    var genericInfo = (IGenericDefinition)method.JavaMethod.ParameterAnnotations
                                                                 .Last()
                                                                 .FirstOrDefault(x => x.AnnotationType() == typeof (IGenericDefinition));
                     if (genericInfo != null)

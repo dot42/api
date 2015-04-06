@@ -418,8 +418,20 @@ namespace Java.Nio
 				/// <java-name>
 				/// getChar
 				/// </java-name>
+				[Dot42.DexImport("getChar", "()C", AccessFlags = 1025)]
+				public abstract char GetChar() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getChar
+				/// </java-name>
 				[Dot42.DexImport("getChar", "(I)C", AccessFlags = 1025)]
 				public abstract char GetChar(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getDouble
+				/// </java-name>
+				[Dot42.DexImport("getDouble", "()D", AccessFlags = 1025)]
+				public abstract double GetDouble() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getDouble
@@ -430,8 +442,20 @@ namespace Java.Nio
 				/// <java-name>
 				/// getFloat
 				/// </java-name>
+				[Dot42.DexImport("getFloat", "()F", AccessFlags = 1025)]
+				public abstract float GetFloat() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getFloat
+				/// </java-name>
 				[Dot42.DexImport("getFloat", "(I)F", AccessFlags = 1025)]
 				public abstract float GetFloat(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getInt
+				/// </java-name>
+				[Dot42.DexImport("getInt", "()I", AccessFlags = 1025)]
+				public abstract int GetInt() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getInt
@@ -442,8 +466,20 @@ namespace Java.Nio
 				/// <java-name>
 				/// getLong
 				/// </java-name>
+				[Dot42.DexImport("getLong", "()J", AccessFlags = 1025)]
+				public abstract long GetLong() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getLong
+				/// </java-name>
 				[Dot42.DexImport("getLong", "(I)J", AccessFlags = 1025)]
 				public abstract long GetLong(int int32) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// getShort
+				/// </java-name>
+				[Dot42.DexImport("getShort", "()S", AccessFlags = 1025)]
+				public abstract short GetShort() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getShort
@@ -624,60 +660,6 @@ namespace Java.Nio
 				/// </java-name>
 				[Dot42.DexImport("slice", "()Ljava/nio/ByteBuffer;", AccessFlags = 1025)]
 				public abstract global::Java.Nio.ByteBuffer Slice() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// getChar
-				/// </java-name>
-				public abstract char Char
-				{
-						[Dot42.DexImport("getChar", "()C", AccessFlags = 1025)]
-						get;
-				}
-
-				/// <java-name>
-				/// getDouble
-				/// </java-name>
-				public abstract double Double
-				{
-						[Dot42.DexImport("getDouble", "()D", AccessFlags = 1025)]
-						get;
-				}
-
-				/// <java-name>
-				/// getFloat
-				/// </java-name>
-				public abstract float Float
-				{
-						[Dot42.DexImport("getFloat", "()F", AccessFlags = 1025)]
-						get;
-				}
-
-				/// <java-name>
-				/// getInt
-				/// </java-name>
-				public abstract int Int
-				{
-						[Dot42.DexImport("getInt", "()I", AccessFlags = 1025)]
-						get;
-				}
-
-				/// <java-name>
-				/// getLong
-				/// </java-name>
-				public abstract long Long
-				{
-						[Dot42.DexImport("getLong", "()J", AccessFlags = 1025)]
-						get;
-				}
-
-				/// <java-name>
-				/// getShort
-				/// </java-name>
-				public abstract short Short
-				{
-						[Dot42.DexImport("getShort", "()S", AccessFlags = 1025)]
-						get;
-				}
 
 				/// <java-name>
 				/// hasArray
@@ -905,7 +887,7 @@ namespace Java.Nio
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 17)]
-				public int GetLength() /* MethodBuilder.Create */ 
+				public int Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}

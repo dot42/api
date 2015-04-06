@@ -36,6 +36,15 @@ namespace Android.App
         public void RunOnUiThread(System.Action action)
         {
         }
+
+        /// <summary>
+        /// Change the title associated with this activity. If this is a top-level activity, the title for its window will change. If it is an embedded activity, the parent can do whatever it wants with it. 
+        /// </summary>
+        public string Title
+        {
+            get { return (string)JavaGetTitle(); }
+            set { SetTitle(value);}
+        }
     }
 }
 

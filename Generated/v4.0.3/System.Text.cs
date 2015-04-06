@@ -314,7 +314,7 @@ namespace System.Text
 				/// charAt
 				/// </java-name>
 				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 1)]
-				public char CharAt(int int32) /* MethodBuilder.Create */ 
+				char global::Java.Lang.ICharSequence.CharAt(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(char);
 				}
@@ -339,7 +339,7 @@ namespace System.Text
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public int GetLength() /* MethodBuilder.Create */ 
+				int global::Java.Lang.ICharSequence.Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -356,7 +356,8 @@ namespace System.Text
 				/// setLength
 				/// </java-name>
 				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
-				public void SetLength(int int32) /* MethodBuilder.Create */ 
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+				public void JavaSetLength(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 

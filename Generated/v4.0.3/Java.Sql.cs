@@ -6990,14 +6990,6 @@ namespace Java.Sql
 				}
 
 				/// <java-name>
-				/// setTime
-				/// </java-name>
-				[Dot42.DexImport("setTime", "(J)V", AccessFlags = 1)]
-				public override void SetTime(long int64) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 1)]

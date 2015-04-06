@@ -45,7 +45,7 @@ namespace System.Threading
 
         public void Wait(CancellationToken token)
         {
-            var thread = Thread.GetCurrentThread();
+            var thread = Thread.CurrentThread;
             try
             {
                 using (token.Register(thread.Interrupt))
@@ -59,7 +59,7 @@ namespace System.Threading
 
         public bool Wait(Int32 milliseconds,  CancellationToken token)
         {
-            var thread = Thread.GetCurrentThread();
+            var thread = Thread.CurrentThread;
             try
             {
                 using (token.Register(thread.Interrupt))

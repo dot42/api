@@ -61,8 +61,8 @@ namespace Dot42.Internal
         internal static string Format(string format, float value, IFormatProvider provider)
         {
             if (null == format)
-                return GetDecimalFormat("0.################", provider).Format(value);
-            return GetFormat(format, provider).Format(value);
+                return GetDecimalFormat("0.################", provider).Format((double)value);
+            return GetFormat(format, provider).Format((double)value);
         }
 
         internal static string Format(string format, double value, IFormatProvider provider)
@@ -106,10 +106,10 @@ namespace Dot42.Internal
                                 }
                             }
 
-                            if (nf.IsGroupingUsed())
+                            if (nf.IsGroupingUsed)
                                 javaFormat = "#,##" + javaFormat;
 
-                            javaFormat = nf.Currency.GetSymbol() + javaFormat;
+                            javaFormat = nf.Currency.Symbol + javaFormat;
 
                             DecimalFormat f = (DecimalFormat)NumberFormat.GetNumberInstance(locale);
                             f.ApplyPattern(javaFormat);

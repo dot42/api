@@ -1602,12 +1602,36 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
+				/// setOnItemClickListener
+				/// </java-name>
+				[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
+				public virtual void SetOnItemClickListener(global::Android.Widget.AdapterView<T>.IOnItemClickListener onItemClickListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// performItemClick
 				/// </java-name>
 				[Dot42.DexImport("performItemClick", "(Landroid/view/View;IJ)Z", AccessFlags = 1)]
 				public virtual bool PerformItemClick(global::Android.Views.View view, int int32, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
+				}
+
+				/// <java-name>
+				/// setOnItemLongClickListener
+				/// </java-name>
+				[Dot42.DexImport("setOnItemLongClickListener", "(Landroid/widget/AdapterView$OnItemLongClickListener;)V", AccessFlags = 1)]
+				public virtual void SetOnItemLongClickListener(global::Android.Widget.AdapterView<T>.IOnItemLongClickListener onItemLongClickListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setOnItemSelectedListener
+				/// </java-name>
+				[Dot42.DexImport("setOnItemSelectedListener", "(Landroid/widget/AdapterView$OnItemSelectedListener;)V", AccessFlags = 1)]
+				public virtual void SetOnItemSelectedListener(global::Android.Widget.AdapterView<T>.IOnItemSelectedListener onItemSelectedListener) /* MethodBuilder.Create */ 
+				{
 				}
 
 				/// <java-name>
@@ -1801,8 +1825,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getOnItemClickListener", "()Landroid/widget/AdapterView$OnItemClickListener;", AccessFlags = 17)]
 						get{ return default(global::Android.Widget.AdapterView<T>.IOnItemClickListener); }
-						[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -1812,8 +1834,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getOnItemLongClickListener", "()Landroid/widget/AdapterView$OnItemLongClickListener;", AccessFlags = 17)]
 						get{ return default(global::Android.Widget.AdapterView<T>.IOnItemLongClickListener); }
-						[Dot42.DexImport("setOnItemLongClickListener", "(Landroid/widget/AdapterView$OnItemLongClickListener;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -1823,8 +1843,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getOnItemSelectedListener", "()Landroid/widget/AdapterView$OnItemSelectedListener;", AccessFlags = 17)]
 						get{ return default(global::Android.Widget.AdapterView<T>.IOnItemSelectedListener); }
-						[Dot42.DexImport("setOnItemSelectedListener", "(Landroid/widget/AdapterView$OnItemSelectedListener;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -5246,6 +5264,14 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
+				/// setOnItemClickListener
+				/// </java-name>
+				[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
+				public override void SetOnItemClickListener(global::Android.Widget.AdapterView<global::Android.Widget.IListAdapter>.IOnItemClickListener onItemClickListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// setAdapter
 				/// </java-name>
 				[Dot42.DexImport("setAdapter", "(Landroid/widget/ExpandableListAdapter;)V", AccessFlags = 1)]
@@ -5500,15 +5526,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getSelectedId", "()J", AccessFlags = 1)]
 						get{ return default(long); }
-				}
-
-				/// <java-name>
-				/// setOnItemClickListener
-				/// </java-name>
-				public override global::Android.Widget.AdapterView<global::Android.Widget.IListAdapter>.IOnItemClickListener OnItemClickListener
-				{
-						[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -11502,6 +11519,14 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
+				/// setIsIndicator
+				/// </java-name>
+				[Dot42.DexImport("setIsIndicator", "(Z)V", AccessFlags = 1)]
+				public virtual void SetIsIndicator(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// onMeasure
 				/// </java-name>
 				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 36)]
@@ -11532,8 +11557,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("isIndicator", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
-						[Dot42.DexImport("setIsIndicator", "(Z)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -12643,6 +12666,22 @@ namespace Android.Widget
 						return default(int);
 				}
 
+				/// <java-name>
+				/// setFinalX
+				/// </java-name>
+				[Dot42.DexImport("setFinalX", "(I)V", AccessFlags = 1)]
+				public virtual void SetFinalX(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setFinalY
+				/// </java-name>
+				[Dot42.DexImport("setFinalY", "(I)V", AccessFlags = 1)]
+				public virtual void SetFinalY(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal Scroller() /* TypeBuilder.AddDefaultConstructor */ 
 				{
@@ -12718,8 +12757,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getFinalX", "()I", AccessFlags = 17)]
 						get{ return default(int); }
-						[Dot42.DexImport("setFinalX", "(I)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -12729,8 +12766,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getFinalY", "()I", AccessFlags = 17)]
 						get{ return default(int); }
-						[Dot42.DexImport("setFinalY", "(I)V", AccessFlags = 1)]
-						set{ }
 				}
 
 		}
@@ -14471,6 +14506,14 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
+				/// setOnItemClickListener
+				/// </java-name>
+				[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
+				public override void SetOnItemClickListener(global::Android.Widget.AdapterView<global::Android.Widget.ISpinnerAdapter>.IOnItemClickListener onItemClickListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// onMeasure
 				/// </java-name>
 				[Dot42.DexImport("onMeasure", "(II)V", AccessFlags = 4)]
@@ -14542,15 +14585,6 @@ namespace Android.Widget
 				public override global::Android.Widget.ISpinnerAdapter Adapter
 				{
 						[Dot42.DexImport("setAdapter", "(Landroid/widget/SpinnerAdapter;)V", AccessFlags = 1)]
-						set{ }
-				}
-
-				/// <java-name>
-				/// setOnItemClickListener
-				/// </java-name>
-				public override global::Android.Widget.AdapterView<global::Android.Widget.ISpinnerAdapter>.IOnItemClickListener OnItemClickListener
-				{
-						[Dot42.DexImport("setOnItemClickListener", "(Landroid/widget/AdapterView$OnItemClickListener;)V", AccessFlags = 1)]
 						set{ }
 				}
 
@@ -15867,6 +15901,14 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
+				/// setKeyListener
+				/// </java-name>
+				[Dot42.DexImport("setKeyListener", "(Landroid/text/method/KeyListener;)V", AccessFlags = 1)]
+				public virtual void SetKeyListener(global::Android.Text.Method.IKeyListener keyListener) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// setCompoundDrawables
 				/// </java-name>
 				[Dot42.DexImport("setCompoundDrawables", "(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid" +
@@ -16150,6 +16192,14 @@ namespace Android.Widget
 				}
 
 				/// <java-name>
+				/// setText
+				/// </java-name>
+				[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
+				public void SetText(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// setTextKeepState
 				/// </java-name>
 				[Dot42.DexImport("setTextKeepState", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
@@ -16194,6 +16244,14 @@ namespace Android.Widget
 				/// </java-name>
 				[Dot42.DexImport("setText", "(ILandroid/widget/TextView$BufferType;)V", AccessFlags = 17)]
 				public void SetText(int int32, global::Android.Widget.TextView.BufferType bufferType) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setHint
+				/// </java-name>
+				[Dot42.DexImport("setHint", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
+				public void SetHint(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -16941,8 +16999,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getText", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
 						get{ return default(global::Java.Lang.ICharSequence); }
-						[Dot42.DexImport("setText", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -16979,8 +17035,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getKeyListener", "()Landroid/text/method/KeyListener;", AccessFlags = 17)]
 						get{ return default(global::Android.Text.Method.IKeyListener); }
-						[Dot42.DexImport("setKeyListener", "(Landroid/text/method/KeyListener;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -17273,8 +17327,6 @@ namespace Android.Widget
 				{
 						[Dot42.DexImport("getHint", "()Ljava/lang/CharSequence;", AccessFlags = 1)]
 						get{ return default(global::Java.Lang.ICharSequence); }
-						[Dot42.DexImport("setHint", "(Ljava/lang/CharSequence;)V", AccessFlags = 17)]
-						set{ }
 				}
 
 				/// <java-name>

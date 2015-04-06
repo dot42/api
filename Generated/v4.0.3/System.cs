@@ -4749,7 +4749,7 @@ namespace System
 				/// charAt
 				/// </java-name>
 				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 257)]
-				public char CharAt(int int32) /* MethodBuilder.Create */ 
+				char global::Java.Lang.ICharSequence.CharAt(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(char);
 				}
@@ -4998,7 +4998,7 @@ namespace System
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 257)]
-				public int GetLength() /* MethodBuilder.Create */ 
+				int global::Java.Lang.ICharSequence.Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -5772,9 +5772,9 @@ namespace System
 				/// getTypeParameters
 				/// </java-name>
 				[Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;", AccessFlags = 33, Signature = "()[Ljava/lang/reflect/TypeVariable<Ljava/lang/Class<TT;>;>;")]
-				public global::Java.Lang.Reflect.ITypeVariable<global::System.Type>[] GetTypeParameters() /* MethodBuilder.Create */ 
+				public global::Java.Lang.Reflect.ITypeVariable[] GetTypeParameters() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Lang.Reflect.ITypeVariable<global::System.Type>[]);
+						return default(global::Java.Lang.Reflect.ITypeVariable[]);
 				}
 
 				/// <java-name>

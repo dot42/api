@@ -107,7 +107,7 @@ namespace Dot42.Test
                 catch (TargetInvocationException ex)
                 {
                     ex.FillInStackTrace();
-                    throw ex.GetTargetException();
+                    throw ex.TargetException;
                 }
             }
         }
@@ -125,7 +125,7 @@ namespace Dot42.Test
             catch (TargetInvocationException ex)
             {
                 ex.FillInStackTrace();
-                throw ex.GetTargetException();
+                throw ex.TargetException;
             }
         }
 
@@ -227,7 +227,7 @@ namespace Dot42.Test
             {
                 // Method has thrown an exception.
                 ex.FillInStackTrace();
-                var exception = ex.GetTargetException();
+                var exception = ex.TargetException;
 
                 // Is this an expected exception
                 if (expectedException != null)

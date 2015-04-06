@@ -33,7 +33,7 @@ namespace System.Threading
         /// </summary>
 	    public int ManagedThreadId
 	    {
-            get { return (int) this.GetId(); }
+            get { return (int) this.Id; }
 	    }
 
         /// <summary>

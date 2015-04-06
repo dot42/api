@@ -191,7 +191,7 @@ namespace System.Collections.Generic
         {
             foreach (var entry in new IterableWrapper<IMap_IEntry<TKey, TValue>>(map.EntrySet()))
             {
-                yield return new KeyValuePair<TKey, TValue>(entry.GetKey(), entry.GetValue());
+                yield return new KeyValuePair<TKey, TValue>(entry.Key, entry.Value);
             }
         }
 
@@ -434,7 +434,7 @@ namespace System.Collections.Generic
 
             private static DictionaryEntry Transform(IMap_IEntry<TKey, TValue> obj)
             {
-                return new DictionaryEntry(obj.GetKey(), obj.GetValue());
+                return new DictionaryEntry(obj.Key, obj.Value);
             }
 
             public DictionaryEntry Entry

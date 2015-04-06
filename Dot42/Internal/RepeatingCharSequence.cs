@@ -33,7 +33,7 @@ namespace Dot42.Internal
 	    }
 
 
-        int ICharSequence.GetLength()
+        int ICharSequence.Length()
         {
             return length;
         }

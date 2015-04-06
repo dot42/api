@@ -102,8 +102,8 @@ namespace System.Reflection
                     }
                     else if (setter != null)
                     {
-                        var paramType = setter.JavaMethod.GetParameterTypes().Last();
-                        var genericInfo = (IGenericDefinition)setter.JavaMethod.GetParameterAnnotations()
+                        var paramType = setter.JavaMethod.ParameterTypes.Last();
+                        var genericInfo = (IGenericDefinition)setter.JavaMethod.ParameterAnnotations
                                                                 .Last()
                                                                 .FirstOrDefault(x => x.AnnotationType() == typeof (IGenericDefinition));
                         

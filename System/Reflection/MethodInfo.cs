@@ -39,7 +39,7 @@ namespace System.Reflection
 
         public override ParameterInfo[] GetParameters()
         {
-            var types = _method.GetParameterTypes();
+            var types = _method.ParameterTypes;
             var length = types.Length;
 
             ParameterInfo[] ret = new ParameterInfo[length];
@@ -92,7 +92,7 @@ namespace System.Reflection
         public override object Invoke(object instance, object[] args)
         {
             // .NET doesn't have accessibility semantics
-            if (!_method.IsAccessible()) _method.SetAccessible(true);
+            if (!_method.IsAccessible) _method.SetAccessible(true);
 
             return _method.Invoke(instance, args);
         }

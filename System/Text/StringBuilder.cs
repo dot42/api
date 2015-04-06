@@ -139,7 +139,7 @@ namespace System.Text
             var length = Length;
             for (var i = 0; i < length; i++)
             {
-                if (CharAt(i) == oldChar)
+                if (this[i] == oldChar)
                 {
                     SetCharAt(i, newChar);
                 }
@@ -160,7 +160,7 @@ namespace System.Text
                 throw new ArgumentOutOfRangeException("overflow");
             for (var i = 0; i < count; i++)
             {
-                if (CharAt(startIndex + i) == oldChar)
+                if (this[startIndex + i] == oldChar)
                 {
                     SetCharAt(startIndex + i, newChar);
                 }
@@ -246,9 +246,21 @@ namespace System.Text
             return JavaSubstring(startIndex, startIndex + length);
         }
 
-        /// <java-name>
-        /// charAt
-        /// </java-name>
+        /// <summary>
+        /// Returns the number of chars in this string. 
+        /// </summary>
+        public int Length
+        {
+            [Dot42.DexImport("length", "()I", AccessFlags = 257)]
+            get { return default(int); }
+            [Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
+            set { }
+        }
+
+        /// <summary>
+        ///  Returns the char at index.
+        /// </summary>
+        [global::System.Runtime.CompilerServices.IndexerName("Chars")]
         public char this[int index]
         {
             [Dot42.DexImport("charAt", "(I)C", AccessFlags = 1)]

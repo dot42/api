@@ -109,7 +109,7 @@ namespace System.IO
                 ch = Read();
                 if (ch < 0)
                 {
-                    if (buffer.Length == 0)
+                    if (buffer.Length() == 0)
                         return null;
                     return buffer.ToString();
                 }

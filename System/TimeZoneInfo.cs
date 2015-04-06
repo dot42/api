@@ -15,7 +15,7 @@
         internal TimeSpan GetUtcOffset(long ticks)
         {
             var millis = (ticks / TimeSpan.TicksPerMillisecond) - DateTime.EraDifferenceInMs;
-            var offsetInMs = Java.Util.TimeZone.GetDefault().GetOffset(millis);
+            var offsetInMs = Java.Util.TimeZone.Default.GetOffset(millis);
             return new TimeSpan(offsetInMs * TimeSpan.TicksPerMillisecond);
         }
 
@@ -23,7 +23,7 @@
         {
             get
             {
-                var offsetInMs = Java.Util.TimeZone.GetDefault().GetRawOffset();
+                var offsetInMs = Java.Util.TimeZone.Default.RawOffset;
                 return new TimeSpan(offsetInMs * TimeSpan.TicksPerMillisecond);
             }
         }

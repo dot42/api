@@ -79,7 +79,7 @@ namespace System.Reflection
                 dex = new DexFile(_applicationContext.PackageCodePath);
 
                 var e = dex.Entries();
-                while (e.HasMoreElements())
+                while (e.HasMoreElements)
                 {
                     string className = e.NextElement();
                     Type type = _loader.LoadClass(className);

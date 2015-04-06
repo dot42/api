@@ -106,7 +106,7 @@ namespace System.Net
         {
             foreach (var header in headers)
             {
-                Add(header.GetName(), header.GetValue());
+                Add(header.Name, header.Value);
             }
         }
 

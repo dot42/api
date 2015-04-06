@@ -43,7 +43,7 @@ namespace System.Globalization
             _symbols = new DecimalFormatSymbols(locale) { Infinity = "Infinity" };
 	        
             _decimals = _numbers as DecimalFormat ?? new DecimalFormat();
-            _decimals.SetDecimalFormatSymbols(_symbols);
+            _decimals.DecimalFormatSymbols = _symbols;
 
             _currency =  NumberFormat.GetCurrencyInstance(locale) as DecimalFormat ?? _decimals;
             _percent = NumberFormat.GetPercentInstance(locale) as DecimalFormat ?? _decimals;

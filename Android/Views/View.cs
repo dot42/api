@@ -176,7 +176,7 @@ namespace Android.Views
         {
             add
             {
-                var listener = this.GetOrCreate<ViewOnFocusChangeListener>(focusChangeListenerKey, true, SetOnFocusChangeListener);
+                var listener = this.GetOrCreate<ViewOnFocusChangeListener>(focusChangeListenerKey, true, a=> OnFocusChangeListener = a);
                 listener.Add(value);
             }
             remove

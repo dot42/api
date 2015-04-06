@@ -5245,14 +5245,20 @@ namespace Java.Util
 				}
 
 				/// <java-name>
+				/// setGregorianChange
+				/// </java-name>
+				[Dot42.DexImport("setGregorianChange", "(Ljava/util/Date;)V", AccessFlags = 1)]
+				public virtual void SetGregorianChange(global::Java.Util.Date date) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// getGregorianChange
 				/// </java-name>
 				public global::Java.Util.Date GregorianChange
 				{
 						[Dot42.DexImport("getGregorianChange", "()Ljava/util/Date;", AccessFlags = 17)]
 						get{ return default(global::Java.Util.Date); }
-						[Dot42.DexImport("setGregorianChange", "(Ljava/util/Date;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -9404,17 +9410,8 @@ namespace Java.Util
 				/// <java-name>
 				/// hasNext
 				/// </java-name>
-				[Dot42.DexImport("hasNext", "()Z", AccessFlags = 1)]
-				public bool GetHasNext() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <java-name>
-				/// hasNext
-				/// </java-name>
 				[Dot42.DexImport("hasNext", "(Ljava/util/regex/Pattern;)Z", AccessFlags = 1)]
-				public bool HasNext(global::Java.Util.Regex.Pattern pattern) /* MethodBuilder.Create */ 
+				public bool InvokeHasNext(global::Java.Util.Regex.Pattern pattern) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -9423,7 +9420,7 @@ namespace Java.Util
 				/// hasNext
 				/// </java-name>
 				[Dot42.DexImport("hasNext", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public bool HasNext(string @string) /* MethodBuilder.Create */ 
+				public bool InvokeHasNext(string @string) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -9817,6 +9814,15 @@ namespace Java.Util
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal Scanner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
+				}
+
+				/// <java-name>
+				/// hasNext
+				/// </java-name>
+				public bool HasNext
+				{
+						[Dot42.DexImport("hasNext", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
 				}
 
 				/// <java-name>

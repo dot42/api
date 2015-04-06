@@ -43,7 +43,7 @@ namespace Android.Widget
                 {
                     listener = new DatePickerOnDateChangedListener();
                     SetTag(dateChangedListenerKey, listener);
-                    Init(GetYear(), GetMonth(), GetDayOfMonth(), listener);
+                    Init(Year, Month, DayOfMonth, listener);
                 }
                 listener.DateChanged.Add(value);
             }

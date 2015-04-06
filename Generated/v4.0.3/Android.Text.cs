@@ -35,7 +35,7 @@ namespace Android.Text
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public virtual int GetLength() /* MethodBuilder.Create */ 
+				public virtual int Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2322,7 +2322,7 @@ namespace Android.Text
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 17)]
-				public int GetLength() /* MethodBuilder.Create */ 
+				public int Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2449,7 +2449,7 @@ namespace Android.Text
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public virtual int GetLength() /* MethodBuilder.Create */ 
+				public virtual int Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2845,7 +2845,7 @@ namespace Android.Text
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 17)]
-				public int GetLength() /* MethodBuilder.Create */ 
+				public int Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -3579,6 +3579,14 @@ namespace Android.Text
 						}
 
 						/// <java-name>
+						/// setString
+						/// </java-name>
+						[Dot42.DexImport("setString", "(Ljava/lang/String;)V", AccessFlags = 1)]
+						public virtual void SetString(string @string) /* MethodBuilder.Create */ 
+						{
+						}
+
+						/// <java-name>
 						/// iterator
 						/// </java-name>
 						[Dot42.DexImport("iterator", "()Ljava/util/Iterator;", AccessFlags = 1, Signature = "()Ljava/util/Iterator<Ljava/lang/String;>;")]
@@ -3616,15 +3624,6 @@ namespace Android.Text
 						{
 								[Dot42.DexImport("hasNext", "()Z", AccessFlags = 1)]
 								get{ return default(bool); }
-						}
-
-						/// <java-name>
-						/// setString
-						/// </java-name>
-						public virtual string String
-						{
-								[Dot42.DexImport("setString", "(Ljava/lang/String;)V", AccessFlags = 1)]
-								set{ }
 						}
 
 				}

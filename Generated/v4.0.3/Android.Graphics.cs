@@ -262,6 +262,14 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
+				/// setHasAlpha
+				/// </java-name>
+				[Dot42.DexImport("setHasAlpha", "(Z)V", AccessFlags = 1)]
+				public void SetHasAlpha(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// eraseColor
 				/// </java-name>
 				[Dot42.DexImport("eraseColor", "(I)V", AccessFlags = 1)]
@@ -444,8 +452,6 @@ namespace Android.Graphics
 				{
 						[Dot42.DexImport("hasAlpha", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
-						[Dot42.DexImport("setHasAlpha", "(Z)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -1287,6 +1293,14 @@ namespace Android.Graphics
 				}
 
 				/// <java-name>
+				/// setMatrix
+				/// </java-name>
+				[Dot42.DexImport("setMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
+				public virtual void SetMatrix(global::Android.Graphics.Matrix matrix) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// getMatrix
 				/// </java-name>
 				[Dot42.DexImport("getMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
@@ -1816,8 +1830,6 @@ namespace Android.Graphics
 				{
 						[Dot42.DexImport("getMatrix", "()Landroid/graphics/Matrix;", AccessFlags = 17)]
 						get{ return default(global::Android.Graphics.Matrix); }
-						[Dot42.DexImport("setMatrix", "(Landroid/graphics/Matrix;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>

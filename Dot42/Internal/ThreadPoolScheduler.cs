@@ -52,7 +52,7 @@ namespace Dot42.Internal
             public bool Accept(File pathname)
             {
                 // Check if filename is "cpu", followed by a digit number
-                return Pattern.Matches("cpu[0-9]+", pathname.GetName());
+                return Pattern.Matches("cpu[0-9]+", pathname.Name);
             }
         }
 

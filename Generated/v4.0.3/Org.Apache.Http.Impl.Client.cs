@@ -184,6 +184,22 @@ namespace Org.Apache.Http.Impl.Client
 				}
 
 				/// <java-name>
+				/// setAuthSchemes
+				/// </java-name>
+				[Dot42.DexImport("setAuthSchemes", "(Lorg/apache/http/auth/AuthSchemeRegistry;)V", AccessFlags = 33)]
+				public virtual void SetAuthSchemes(global::Org.Apache.Http.Auth.AuthSchemeRegistry authSchemeRegistry) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setCookieSpecs
+				/// </java-name>
+				[Dot42.DexImport("setCookieSpecs", "(Lorg/apache/http/cookie/CookieSpecRegistry;)V", AccessFlags = 33)]
+				public virtual void SetCookieSpecs(global::Org.Apache.Http.Cookie.CookieSpecRegistry cookieSpecRegistry) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// setReuseStrategy
 				/// </java-name>
 				[Dot42.DexImport("setReuseStrategy", "(Lorg/apache/http/ConnectionReuseStrategy;)V", AccessFlags = 33)]
@@ -196,6 +212,70 @@ namespace Org.Apache.Http.Impl.Client
 				/// </java-name>
 				[Dot42.DexImport("setKeepAliveStrategy", "(Lorg/apache/http/conn/ConnectionKeepAliveStrategy;)V", AccessFlags = 33)]
 				public virtual void SetKeepAliveStrategy(global::Org.Apache.Http.Conn.IConnectionKeepAliveStrategy connectionKeepAliveStrategy) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setHttpRequestRetryHandler
+				/// </java-name>
+				[Dot42.DexImport("setHttpRequestRetryHandler", "(Lorg/apache/http/client/HttpRequestRetryHandler;)V", AccessFlags = 33)]
+				public virtual void SetHttpRequestRetryHandler(global::Org.Apache.Http.Client.IHttpRequestRetryHandler httpRequestRetryHandler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setRedirectHandler
+				/// </java-name>
+				[Dot42.DexImport("setRedirectHandler", "(Lorg/apache/http/client/RedirectHandler;)V", AccessFlags = 33)]
+				public virtual void SetRedirectHandler(global::Org.Apache.Http.Client.IRedirectHandler redirectHandler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setTargetAuthenticationHandler
+				/// </java-name>
+				[Dot42.DexImport("setTargetAuthenticationHandler", "(Lorg/apache/http/client/AuthenticationHandler;)V", AccessFlags = 33)]
+				public virtual void SetTargetAuthenticationHandler(global::Org.Apache.Http.Client.IAuthenticationHandler authenticationHandler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setProxyAuthenticationHandler
+				/// </java-name>
+				[Dot42.DexImport("setProxyAuthenticationHandler", "(Lorg/apache/http/client/AuthenticationHandler;)V", AccessFlags = 33)]
+				public virtual void SetProxyAuthenticationHandler(global::Org.Apache.Http.Client.IAuthenticationHandler authenticationHandler) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setCookieStore
+				/// </java-name>
+				[Dot42.DexImport("setCookieStore", "(Lorg/apache/http/client/CookieStore;)V", AccessFlags = 33)]
+				public virtual void SetCookieStore(global::Org.Apache.Http.Client.ICookieStore cookieStore) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setCredentialsProvider
+				/// </java-name>
+				[Dot42.DexImport("setCredentialsProvider", "(Lorg/apache/http/client/CredentialsProvider;)V", AccessFlags = 33)]
+				public virtual void SetCredentialsProvider(global::Org.Apache.Http.Client.ICredentialsProvider credentialsProvider) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setRoutePlanner
+				/// </java-name>
+				[Dot42.DexImport("setRoutePlanner", "(Lorg/apache/http/conn/routing/HttpRoutePlanner;)V", AccessFlags = 33)]
+				public virtual void SetRoutePlanner(global::Org.Apache.Http.Conn.Routing.IHttpRoutePlanner httpRoutePlanner) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setUserTokenHandler
+				/// </java-name>
+				[Dot42.DexImport("setUserTokenHandler", "(Lorg/apache/http/client/UserTokenHandler;)V", AccessFlags = 33)]
+				public virtual void SetUserTokenHandler(global::Org.Apache.Http.Client.IUserTokenHandler userTokenHandler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -422,8 +502,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getAuthSchemes", "()Lorg/apache/http/auth/AuthSchemeRegistry;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Auth.AuthSchemeRegistry); }
-						[Dot42.DexImport("setAuthSchemes", "(Lorg/apache/http/auth/AuthSchemeRegistry;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -433,8 +511,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getCookieSpecs", "()Lorg/apache/http/cookie/CookieSpecRegistry;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Cookie.CookieSpecRegistry); }
-						[Dot42.DexImport("setCookieSpecs", "(Lorg/apache/http/cookie/CookieSpecRegistry;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -462,8 +538,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getHttpRequestRetryHandler", "()Lorg/apache/http/client/HttpRequestRetryHandler;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Client.IHttpRequestRetryHandler); }
-						[Dot42.DexImport("setHttpRequestRetryHandler", "(Lorg/apache/http/client/HttpRequestRetryHandler;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -473,8 +547,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getRedirectHandler", "()Lorg/apache/http/client/RedirectHandler;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Client.IRedirectHandler); }
-						[Dot42.DexImport("setRedirectHandler", "(Lorg/apache/http/client/RedirectHandler;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -484,8 +556,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getTargetAuthenticationHandler", "()Lorg/apache/http/client/AuthenticationHandler;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Client.IAuthenticationHandler); }
-						[Dot42.DexImport("setTargetAuthenticationHandler", "(Lorg/apache/http/client/AuthenticationHandler;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -495,8 +565,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getProxyAuthenticationHandler", "()Lorg/apache/http/client/AuthenticationHandler;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Client.IAuthenticationHandler); }
-						[Dot42.DexImport("setProxyAuthenticationHandler", "(Lorg/apache/http/client/AuthenticationHandler;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -506,8 +574,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getCookieStore", "()Lorg/apache/http/client/CookieStore;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Client.ICookieStore); }
-						[Dot42.DexImport("setCookieStore", "(Lorg/apache/http/client/CookieStore;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -517,8 +583,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getCredentialsProvider", "()Lorg/apache/http/client/CredentialsProvider;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Client.ICredentialsProvider); }
-						[Dot42.DexImport("setCredentialsProvider", "(Lorg/apache/http/client/CredentialsProvider;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -528,8 +592,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getRoutePlanner", "()Lorg/apache/http/conn/routing/HttpRoutePlanner;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Conn.Routing.IHttpRoutePlanner); }
-						[Dot42.DexImport("setRoutePlanner", "(Lorg/apache/http/conn/routing/HttpRoutePlanner;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -539,8 +601,6 @@ namespace Org.Apache.Http.Impl.Client
 				{
 						[Dot42.DexImport("getUserTokenHandler", "()Lorg/apache/http/client/UserTokenHandler;", AccessFlags = 49)]
 						get{ return default(global::Org.Apache.Http.Client.IUserTokenHandler); }
-						[Dot42.DexImport("setUserTokenHandler", "(Lorg/apache/http/client/UserTokenHandler;)V", AccessFlags = 33)]
-						set{ }
 				}
 
 				/// <java-name>

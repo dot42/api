@@ -1634,9 +1634,34 @@ namespace Android.App
 				/// <java-name>
 				/// setTitle
 				/// </java-name>
+				[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public virtual void SetTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setTitle
+				/// </java-name>
 				[Dot42.DexImport("setTitle", "(I)V", AccessFlags = 1)]
 				public virtual void SetTitle(int int32) /* MethodBuilder.Create */ 
 				{
+				}
+
+				/// <java-name>
+				/// setTitleColor
+				/// </java-name>
+				[Dot42.DexImport("setTitleColor", "(I)V", AccessFlags = 1)]
+				public virtual void SetTitleColor(int int32) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// getTitle
+				/// </java-name>
+				[Dot42.DexImport("getTitle", "()Ljava/lang/CharSequence;", AccessFlags = 17)]
+				public global::Java.Lang.ICharSequence JavaGetTitle() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Lang.ICharSequence);
 				}
 
 				/// <java-name>
@@ -1987,25 +2012,12 @@ namespace Android.App
 				}
 
 				/// <java-name>
-				/// getTitle
-				/// </java-name>
-				public global::Java.Lang.ICharSequence Title
-				{
-						[Dot42.DexImport("getTitle", "()Ljava/lang/CharSequence;", AccessFlags = 17)]
-						get{ return default(global::Java.Lang.ICharSequence); }
-						[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ }
-				}
-
-				/// <java-name>
 				/// getTitleColor
 				/// </java-name>
 				public int TitleColor
 				{
 						[Dot42.DexImport("getTitleColor", "()I", AccessFlags = 17)]
 						get{ return default(int); }
-						[Dot42.DexImport("setTitleColor", "(I)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -5791,6 +5803,14 @@ namespace Android.App
 				}
 
 				/// <java-name>
+				/// setArguments
+				/// </java-name>
+				[Dot42.DexImport("setArguments", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
+				public virtual void SetArguments(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
 				/// setInitialSavedState
 				/// </java-name>
 				[Dot42.DexImport("setInitialSavedState", "(Landroid/app/Fragment$SavedState;)V", AccessFlags = 1)]
@@ -5838,6 +5858,14 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("onHiddenChanged", "(Z)V", AccessFlags = 1)]
 				public virtual void OnHiddenChanged(bool boolean) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setRetainInstance
+				/// </java-name>
+				[Dot42.DexImport("setRetainInstance", "(Z)V", AccessFlags = 1)]
+				public virtual void SetRetainInstance(bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6145,8 +6173,6 @@ namespace Android.App
 				{
 						[Dot42.DexImport("getArguments", "()Landroid/os/Bundle;", AccessFlags = 17)]
 						get{ return default(global::Android.OS.Bundle); }
-						[Dot42.DexImport("setArguments", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -6264,8 +6290,6 @@ namespace Android.App
 				{
 						[Dot42.DexImport("getRetainInstance", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
-						[Dot42.DexImport("setRetainInstance", "(Z)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>
@@ -7713,6 +7737,14 @@ namespace Android.App
 				/// <java-name>
 				/// setTitle
 				/// </java-name>
+				[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
+				public override void SetTitle(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// setTitle
+				/// </java-name>
 				[Dot42.DexImport("setTitle", "(I)V", AccessFlags = 1)]
 				public override void SetTitle(int int32) /* MethodBuilder.Create */ 
 				{
@@ -7777,15 +7809,6 @@ namespace Android.App
 				{
 						[Dot42.DexImport("getTargetIntent", "()Landroid/content/Intent;", AccessFlags = 4)]
 						get{ return default(global::Android.Content.Intent); }
-				}
-
-				/// <java-name>
-				/// setTitle
-				/// </java-name>
-				public override global::Java.Lang.ICharSequence Title
-				{
-						[Dot42.DexImport("setTitle", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <java-name>

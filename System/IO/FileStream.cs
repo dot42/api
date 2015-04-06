@@ -110,7 +110,7 @@ namespace System.IO
 	    /// </summary>
 	    public override long Position
 	    {
-            get { return file.GetFilePointer(); }
+            get { return file.FilePointer; }
             set { file.Seek(value); }
 	    }
 

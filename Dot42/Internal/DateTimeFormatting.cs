@@ -109,7 +109,7 @@ namespace Dot42.Internal
 
             for (int i = 0; true; ++i)
             {
-                char c = i >= format.Length ? '\0' : format.CharAt(i);
+                char c = i >= format.Length ? '\0' : format[i];
 
                 if (currentPart.Length > 0 && c != currentPart[0])
                 {

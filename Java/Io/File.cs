@@ -26,7 +26,7 @@ namespace Java.Io
         {
             if (ReferenceEquals(file, null))
                 return null;
-            return file.GetAbsolutePath();
+            return file.AbsolutePath;
         }
     }
 }
