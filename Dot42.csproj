@@ -74,6 +74,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Android\App\Application.cs" />
     <Compile Include="Android\Text\AfterTextChangedEventArgs.cs" />
     <Compile Include="Android\Views\LongClickEventArgs.cs" />
     <Compile Include="Generated\v4.0.3\Android.Accessibilityservice.cs" />
@@ -1060,6 +1061,9 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System, Version=4.0.3.0, Culture=neutral, PublicKeyToken=0a72796057571e65, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->
