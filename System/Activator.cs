@@ -15,9 +15,11 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using System.Linq;
 using Dot42.Internal;
 using Dot42.Internal.Generics;
 using Dot42;
+using Java.Lang.Reflect;
 
 namespace System
 {
@@ -50,15 +52,9 @@ namespace System
             if (genericInstance != null)
                 return genericInstance;
 
-            // collect the correct argument types, find constructor, create instance.
-            // TODO: typeof(object)=>null might not work as expected. maybe we need
-            //       our own matching logic.
-            var argumentTypes = args.Select(a => a == null 
-                                                ? typeof (object) 
-                                                : a.JavaGetClass());
-            var constructor = type.GetConstructor(argumentTypes);
+            var constructor = GetBestMatchingConstructor(type, args);
 
-            return constructor.Invoke(args);
+            return constructor.NewInstance(args);
         }
 
         /// <summary>
@@ -71,6 +67,63 @@ namespace System
 
             return (T)typeof(T).NewInstance();
         }
+
+        /// <summary>
+        /// throws MissingMethodsException atm, if a constructor could not be found.
+        /// </summary>
+	    internal static Constructor GetBestMatchingConstructor(Type type, object[] args)
+	    {
+            List<Tuple<Constructor, int>> matches = new List<Tuple<Constructor, int>>();
+        
+            // this code does not take into account nullable structs.
+            // this could be provided as well easily, if anybody ever cares...
+
+	        foreach (var c in type.JavaGetDeclaredConstructors())
+	        {
+	            var cargs = c.ParameterTypes;
+                if(cargs.Length != args.Length) 
+                    continue;
+
+	            int match = 0;
+	            for (int i = 0; i < args.Length; ++i)
+	            {
+	                if (args[i] == null)
+	                {
+	                    if (cargs[i].IsValueType)
+	                        goto nomatch;
+                        continue;
+	                }
+
+	                var argType = args[i].GetType();
+
+	                if (cargs[i] == argType)
+	                    match += 3;
+                    else if (cargs[i].IsAssignableFrom(argType))
+                        match += 1;
+                    else if (cargs[i].IsAssignableFrom(TypeHelper.EnsurePrimitiveType(type)))
+                        match += 2;
+                    else
+                        goto nomatch;
+	            }
+                
+                matches.Add(Tuple.Create(c, match));
+                
+            nomatch:;
+	        }
+
+	        var bestMatch =  matches.OrderByDescending(p => p.Item2)
+                                    .Select(p => p.Item1)
+                                    .FirstOrDefault();
+
+            if (bestMatch != null) 
+                return bestMatch;
+
+            var argumentTypes = args.Select(a => a == null 
+                                                ? "null"
+                                                : a.JavaGetClass().FullName);
+            string msg = string.Format("Could not find a matching constructor for type {0}({1})", type.FullName, string.Join(",", argumentTypes));
+            throw new MissingMethodException(msg);
+	    }
     }
 }
 

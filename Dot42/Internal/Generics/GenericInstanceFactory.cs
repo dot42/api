@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Java.Lang.Reflect;
+using Java.Nio.Channels;
 using Java.Util.Concurrent;
 
 namespace Dot42.Internal.Generics
@@ -56,24 +57,9 @@ namespace Dot42.Internal.Generics
             if (typeInfo == null) // return null if not a generic instance.
                 return null;
 
-            List<Type> argumentTypes = arguments.Select(a => a == null 
-                                                            ? typeof (object) 
-                                                            : a.JavaGetClass())
-                                                .ToList();
-            argumentTypes.Add(typeof(Type[])); // the generic instance parameter.
-
-            try
-            {
-                var constructor = typeInfo.TypeDefinition.GetConstructor(argumentTypes.ToArray());
-
-                List<object> args = new List<object>(arguments) {typeInfo.Arguments};
-
-                return constructor.Invoke(args.ToArray());
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException(string.Format("unable to create instance of " + proxyType.FullName, ex));
-            }
+            var args = new List<object>(arguments) {typeInfo.Arguments}.ToArray();
+            var constructor = Activator.GetBestMatchingConstructor(typeInfo.TypeDefinition, args);
+            return constructor.NewInstance(args);
         }
 
         /// <summary>
