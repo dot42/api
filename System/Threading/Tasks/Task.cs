@@ -52,7 +52,7 @@ namespace System.Threading.Tasks
 
         private TaskExceptionSlot exSlot;
 
-        private const TaskCreationOptions MaxTaskCreationOptions = TaskCreationOptions.PreferFairness | TaskCreationOptions.LongRunning | TaskCreationOptions.AttachedToParent;
+        private const TaskCreationOptions MaxTaskCreationOptions = TaskCreationOptions.PreferFairness | TaskCreationOptions.LongRunning | TaskCreationOptions.AttachedToParent | TaskCreationOptions.DenyChildAttach;
         internal const TaskCreationOptions WorkerTaskNotSupportedOptions = TaskCreationOptions.LongRunning | TaskCreationOptions.PreferFairness;
 
         #region Constuctors
@@ -124,7 +124,8 @@ namespace System.Threading.Tasks
 
             // Process creationOptions
 
-            //if (parent != null && HasFlag(creationOptions, TaskCreationOptions.AttachedToParent))
+            //if (parent != null && HasFlag(creationOptions, TaskCreationOptions.AttachedToParent)
+            //                   && !HasFlags(parent.creationOptions, TaskCreationOptions.DenyChildAttach))
             //    parent.AddChild();
 
             if (cancellationToken.CanBeCanceled && !ignoreCancellation)
@@ -773,7 +774,7 @@ namespace System.Threading.Tasks
         {
             if (cancellationToken.IsCancellationRequested)
                 return TaskConstants.Canceled;
-
+            // TODO: re-specify DenyChildAttach as soon as we support it.
             return Task.Factory.StartNew(action, cancellationToken, TaskCreationOptions.DenyChildAttach, TaskScheduler.Default);
         }
 
@@ -786,7 +787,6 @@ namespace System.Threading.Tasks
         {
             if (cancellationToken.IsCancellationRequested)
                 return TaskConstants<TResult>.Canceled;
-
             return Task.Factory.StartNew(function, cancellationToken, TaskCreationOptions.DenyChildAttach, TaskScheduler.Default);
         }
 
