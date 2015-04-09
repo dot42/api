@@ -191,11 +191,20 @@ namespace System
         public static object ToObject(Type enumType, object value)
         {
             var vals = GetValues(enumType);
+
+            if(!(value is int?) && !(value is long?))
+                throw new Exception("can only convert int and long values.");
+
             for(int i = 0; i < vals.Length; ++i)
             {
-                // TODO: use the underlaying value field.
+                // TODO: use the underlying value field.
                 int val = ((Java.Lang.Enum<object>)vals[i]).Ordinal();
-                if (val.Equals(value))
+
+                // allow both long and int's 
+
+                if(value is int? && val == (int)value)
+                    return vals[i];
+                if (value is long? && val == (long)value)
                     return vals[i];
             }
 

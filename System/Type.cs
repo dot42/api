@@ -454,7 +454,7 @@ namespace System
         public /*virtual*/ bool IsInstanceOfType(Object o)
         {
             if (o == null) return false;
-            return EnsureTypeDef().JavaIsAssignableFrom(o.GetType().EnsureTypeDef());
+            return EnsureTypeDef().JavaIsAssignableFrom(o.GetType());
         }
 
         public /*virtual*/ bool IsSubclassOf(Type other)
