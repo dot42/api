@@ -447,7 +447,7 @@ namespace System
 
         public /*virtual*/ bool IsAssignableFrom(Type other)
         {
-            return EnsureTypeDef().JavaIsAssignableFrom(other.EnsureTypeDef());
+            return GenericsReflection.IsAssignableFrom(this, other);
         }
 
         [Include,Inline] // used by "x is T" in generic methods.

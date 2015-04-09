@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -6,11 +7,17 @@ using System.Text;
 using Android.Util;
 using Java.Lang;
 using Java.Lang.Reflect;
+using Java.Util.Concurrent;
 
 namespace Dot42.Internal.Generics
 {
     internal class GenericsReflection
     {
+        private static readonly ConcurrentHashMap<Type, Type[]> TypeInterfaces = new ConcurrentHashMap<Type, Type[]>();
+        private static readonly ConcurrentHashMap<Type, Java.Util.ISet<Type>> TypeInterfacesSet = new ConcurrentHashMap<Type, Java.Util.ISet<Type>>();
+        private static readonly ConcurrentHashMap<Type, Java.Util.ISet<Type>> TypeBaseTypesSet = new ConcurrentHashMap<Type, Java.Util.ISet<Type>>();
+        
+
         public const char GenericTickChar = '\x2b9'; // (ʹ)
 
         public static int GetGenericArgumentCount(Type type)
@@ -71,6 +78,10 @@ namespace Dot42.Internal.Generics
         /// </summary>
         public static Type[] GetInterfaces(Type type)
         {
+            Type[] cached = TypeInterfaces.Get(type);
+            if (cached != null)
+                return cached;
+
             List<Type> ret = new List<Type>();
 
             // Note that JavaGetInterfaces will only return interfaces declared by the current type,
@@ -78,12 +89,12 @@ namespace Dot42.Internal.Generics
             // http://stackoverflow.com/questions/6616055/get-all-derived-interfaces-of-a-class
             // http://stackoverflow.com/questions/9793242/type-getinterfaces-for-declared-interfaces-only
 
-            for (;type != typeof (object) && type != null; type=type.BaseType)
+            for (Type currentType = type; currentType != typeof(object) && currentType != null; currentType = currentType.BaseType)
             {
-                var gti = GenericInstanceFactory.GetGenericTypeInfo(type);
+                var gti = GenericInstanceFactory.GetGenericTypeInfo(currentType);
                 if (gti == null)
                 {
-                    ret.AddRange(type.JavaGetInterfaces());
+                    ret.AddRange(currentType.JavaGetInterfaces());
                     continue;
                 }
 
@@ -107,12 +118,16 @@ namespace Dot42.Internal.Generics
 
                 for (int i = 0; i < interfaces.Length; ++i)
                 {
-                    ret.Add(ToMatchedGenericInstanceType(interfaces[i], type, def));
+                    ret.Add(ToMatchedGenericInstanceType(interfaces[i], currentType, def));
                 }
             }
 
-            return ret.Distinct().ToArray();
+            cached = ret.Distinct().ToArray();
+            TypeInterfaces.PutIfAbsent(type, cached);
+            return cached;
         }
+
+        
 
         public static Type[] GetGenericArguments(Type type)
         {
@@ -308,6 +323,25 @@ namespace Dot42.Internal.Generics
             
             var annotation = type.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
             return annotation != null && annotation.GenericArgumentCount() > 0;
+        }
+
+        public static bool IsAssignableFrom(Type type, Type other)
+        {
+            if(other == null) throw new ArgumentNullException("other");
+
+            if (ReferenceEquals(type, other))
+                return true;
+
+            if (type.IsInterface)
+            {
+                var interfaces = GetInterfacesSet(other);
+                return interfaces.Contains(type);
+            }
+            else
+            {
+                var baseTypes = GetBaseTypesSet(other);
+                return baseTypes.Contains(type);
+            }
         }
 
         /// <summary>
@@ -521,6 +555,34 @@ namespace Dot42.Internal.Generics
             return GenericInstanceFactory.GetGenericTypeDefinition(type) ?? type;
         }
 
-       
+        private static Java.Util.ISet<Type> GetInterfacesSet(Type type)
+        {
+            Java.Util.ISet<Type> ret = TypeInterfacesSet.Get(type);
+            if (ret != null)
+                return ret;
+
+            var interfaces = GetInterfaces(type);
+
+            ret = new Java.Util.HashSet<Type>(interfaces.Length);
+
+            for (int i = 0; i < interfaces.Length; ++i)
+                ret.Add(interfaces[i]);
+            
+            return TypeInterfacesSet.PutIfAbsent(type, ret) ?? ret;
+        }
+
+        private static Java.Util.ISet<Type> GetBaseTypesSet(Type type)
+        {
+            Java.Util.ISet<Type> ret = TypeBaseTypesSet.Get(type);
+            if (ret != null)
+                return ret;
+
+            ret = new Java.Util.HashSet<Type>();
+
+            for (Type baseType = type.BaseType; baseType != null; baseType = baseType.BaseType)
+                ret.Add(baseType);
+
+            return TypeBaseTypesSet.PutIfAbsent(type, ret) ?? ret;
+        }
     }
 }
