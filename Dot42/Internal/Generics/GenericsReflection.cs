@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Concurrent;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -331,6 +331,14 @@ namespace Dot42.Internal.Generics
 
             if (ReferenceEquals(type, other))
                 return true;
+
+            if (other.IsArray)
+            {
+                // special array handling code.
+                if (type == typeof (IEnumerable) || type == typeof (ICollection) || type == typeof (IList))
+                    return true;
+                // TODO: make this work with generic collections as well.
+            }
 
             if (type.IsInterface)
             {
