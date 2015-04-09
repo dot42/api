@@ -23,13 +23,17 @@ namespace Dot42.Internal.Generics
             return baseParameters.Take(baseParameters.Length - 1);
         }
 
-        public override object Invoke(object instance, object[] args)
+        public override object Invoke(object[] args)
         {
-            object[] transformedArgs = new object[args.Length + 1];
-            System.Array.Copy(args, transformedArgs, args.Length);
-            transformedArgs[args.Length] = _genericParameters;
+            var numArgs = args == null? 0: args.Length;
 
-            return base.Invoke(instance, args);
+            object[] transformedArgs = new object[numArgs + 1];
+            if(numArgs > 0)
+                System.Array.Copy(args, transformedArgs, numArgs);
+
+            transformedArgs[numArgs] = _genericParameters;
+
+            return base.Invoke(transformedArgs);
         }
     }
 }

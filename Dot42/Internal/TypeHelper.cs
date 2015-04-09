@@ -14,13 +14,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using System.Diagnostics;
 using System.Reflection;
 using Dot42.Internal.Generics;
 using Java.Lang.Reflect;
-using Java.Util;
 
 namespace Dot42.Internal
 {
+    [DebuggerStepThrough]
 	internal static class TypeHelper
 	{
         /// <summary>
@@ -100,7 +101,7 @@ namespace Dot42.Internal
         /// this is used by the compiler, to find out in a generic class to which 
         /// runtime class to map a primitive, a nullable marker type or a generic proxy.
         /// </summary>
-        [Include]
+        [Include][DebuggerHidden]
         internal static Type EnsureGenericRuntimeType(Type p)
         {
             Type t = EnsureBoxedType(p);
@@ -115,7 +116,7 @@ namespace Dot42.Internal
         /// this is used by the compiler, to find out in a generic class to which 
         /// runtime class to map a primitive, a nullable marker type or a generic proxy.
         /// </summary>
-        [Include]
+        [Include][DebuggerHidden]
         internal static Type GetGenericInstanceType(Type baseType, Type[] args)
         {
             return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, args);

@@ -82,7 +82,7 @@ namespace System.Reflection
             return _ctor.DeclaringClass.JavaGetName() + "::" + _ctor.Name;
         }
 
-        public object Invoke(object[] args)
+        public virtual object Invoke(object[] args)
         {
             // .NET doesn't have accessibility semantics
             if (!_ctor.IsAccessible) _ctor.IsAccessible = true;
