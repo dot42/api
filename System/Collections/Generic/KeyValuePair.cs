@@ -30,15 +30,17 @@ namespace System.Collections.Generic
 	        this.value = value;
 	    }
 
+        public TKey Key
+        {
+            get { return key; }
+        }
+
 	    public TValue Value
 	    {
 	        get { return value; }
 	    }
 
-	    public TKey Key
-	    {
-	        get { return key; }
-	    }
+	    
 	}
 }
 
