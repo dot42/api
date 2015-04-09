@@ -87,7 +87,7 @@ namespace System
             get
             {
                 return !IsPrimitive && !NullableReflection.TreatAsSystemNullableT(this) 
-                                    && typeof(Java.Lang.Enum<object>).JavaIsAssignableFrom(this);
+                                    && typeof(Java.Lang.Enum<>).JavaIsAssignableFrom(this);
             }
         }
 

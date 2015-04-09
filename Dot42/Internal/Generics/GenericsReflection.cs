@@ -71,27 +71,47 @@ namespace Dot42.Internal.Generics
         /// </summary>
         public static Type[] GetInterfaces(Type type)
         {
-            var ret = GenericInstanceFactory.GetGenericTypeInfo(type);
-            if (ret == null) return type.JavaGetInterfaces();
+            List<Type> ret = new List<Type>();
 
-            var typeDef = ret.TypeDefinition;
-            var interfaces = typeDef.GetInterfaces();
+            // Note that JavaGetInterfaces will only return interfaces declared by the current type,
+            // while .NET returns a flattened map of all interfaces.
+            // http://stackoverflow.com/questions/6616055/get-all-derived-interfaces-of-a-class
+            // http://stackoverflow.com/questions/9793242/type-getinterfaces-for-declared-interfaces-only
 
-            var genericInstanceClass = type.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
-            if (genericInstanceClass == null)
-                return interfaces;
-
-            var def = genericInstanceClass.GenericDefinitions();
-
-            if (def.Length == 0)
-                return interfaces;
-
-            for (int i = 0; i < interfaces.Length; ++i)
+            for (;type != typeof (object) && type != null; type=type.BaseType)
             {
-                interfaces[i] = ToMatchedGenericInstanceType(interfaces[i], type, def);
+                var gti = GenericInstanceFactory.GetGenericTypeInfo(type);
+                if (gti == null)
+                {
+                    ret.AddRange(type.JavaGetInterfaces());
+                    continue;
+                }
+
+                var typeDef = gti.TypeDefinition;
+                var interfaces = typeDef.JavaGetInterfaces();
+
+                var genericInstanceClass = typeDef.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
+                if (genericInstanceClass == null)
+                {
+                    ret.AddRange(interfaces);
+                    continue;
+                }
+
+                var def = genericInstanceClass.GenericDefinitions();
+
+                if (def.Length == 0)
+                {
+                    ret.AddRange(interfaces);
+                    continue;
+                }
+
+                for (int i = 0; i < interfaces.Length; ++i)
+                {
+                    ret.Add(ToMatchedGenericInstanceType(interfaces[i], type, def));
+                }
             }
 
-            return interfaces;
+            return ret.Distinct().ToArray();
         }
 
         public static Type[] GetGenericArguments(Type type)
@@ -332,7 +352,7 @@ namespace Dot42.Internal.Generics
         {
             List<FieldInfo> ret = new List<FieldInfo>();
 
-            while (type != null)
+            while (type != null && type != typeof(object))
             {
                 GenericTypeInfo typeInfo = GenericInstanceFactory.GetGenericTypeInfo(type);
 
@@ -358,38 +378,9 @@ namespace Dot42.Internal.Generics
             return ret.ToArray();
         }
 
-        private static void ReorderFields(Type typeDef, int startIndex, List<FieldInfo> ret)
-        {
-            var reflInfo = typeDef.GetAnnotation<ITypeReflectionInfo>(typeof (ITypeReflectionInfo));
-
-            // this is O(n^2), but don't bother: how many fields does a type have?
-            if (reflInfo == null) return;
-
-            string[] fieldOrder = reflInfo.Fields();
-
-            for (int order = 0; order < fieldOrder.Length; ++order)
-            {
-                int curIndex = startIndex + order;
-                for (; curIndex < ret.Count; ++curIndex)
-                {
-                    if (ret[curIndex].Name == fieldOrder[order])
-                    {
-                        if (curIndex - startIndex != order)
-                        {
-                            // just swap the two elements.
-                            var tmp = ret[curIndex];
-                            ret[curIndex] = ret[startIndex + order];
-                            ret[startIndex + order] = tmp;
-                        }
-                        break;
-                    }
-                }
-            }
-        }
-
         public static FieldInfo GetField(Type type, string name, BindingFlags flags)
         {
-            while (type != null)
+            while (type != null && type != typeof(object))
             {
                 var typeInfo = GenericInstanceFactory.GetGenericTypeInfo(type);
                 var typeDef = typeInfo != null ? typeInfo.TypeDefinition : type;
@@ -409,9 +400,6 @@ namespace Dot42.Internal.Generics
                     break;
 
                 type = type.BaseType;
-
-                if (type == null)
-                   break;
             }
             return null;
         }
@@ -464,6 +452,35 @@ namespace Dot42.Internal.Generics
                 }
             }
             return null;
+        }
+
+        private static void ReorderFields(Type typeDef, int startIndex, List<FieldInfo> ret)
+        {
+            var reflInfo = typeDef.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
+
+            // this is O(n^2), but don't bother: how many fields does a type have?
+            if (reflInfo == null) return;
+
+            string[] fieldOrder = reflInfo.Fields();
+
+            for (int order = 0; order < fieldOrder.Length; ++order)
+            {
+                int curIndex = startIndex + order;
+                for (; curIndex < ret.Count; ++curIndex)
+                {
+                    if (ret[curIndex].Name == fieldOrder[order])
+                    {
+                        if (curIndex - startIndex != order)
+                        {
+                            // just swap the two elements.
+                            var tmp = ret[curIndex];
+                            ret[curIndex] = ret[startIndex + order];
+                            ret[startIndex + order] = tmp;
+                        }
+                        break;
+                    }
+                }
+            }
         }
 
         /// <summary>
