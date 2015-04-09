@@ -83,9 +83,9 @@ namespace System
         /// </summary>
         public bool IsEnum
         {
-            // java has some quirks regarding enums: http://stackoverflow.com/questions/4166488/checking-if-a-class-is-java-lang-enum
             get
             {
+                // java has some quirks regarding enums: http://stackoverflow.com/questions/4166488/checking-if-a-class-is-java-lang-enum
                 return !IsPrimitive && !NullableReflection.TreatAsSystemNullableT(this) 
                                     && typeof(Java.Lang.Enum<>).JavaIsAssignableFrom(this);
             }
@@ -106,7 +106,6 @@ namespace System
 	            return !IsPrimitive && !IsInterface && !IsEnum;
 	        }
 	    }
-        
 
         public Type BaseType
         {
@@ -201,7 +200,6 @@ namespace System
             return GenericsReflection.MakeGenericType(this, types);
         }
 
-
         /// <summary>
         /// returns true is this is a generic type.
         /// [ should only return true for true GenericTypeDefinitions ]
@@ -235,8 +233,6 @@ namespace System
 	    {
             get { return Assembly.GetAssembly(this); }
 	    }
-
-	    
 
 	    /// <summary>
         /// Returns an array of all attributes defined on this member.
@@ -377,7 +373,7 @@ namespace System
 
             Type type = this;
             
-            // we have to walk all the ways up.
+            // we have to walk all the way up.
             while (type != null)
             {
                 foreach (var prop in type.GetDeclaredProperties())
@@ -407,6 +403,38 @@ namespace System
             return props.Length == 0 ? null : props[0];
         }
 
+        public EventInfo GetEvent(string name)
+        {
+            return GetEvents(BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance)
+                            .FirstOrDefault(p => p.Name == name);
+        }
+
+        public EventInfo[] GetEvents(BindingFlags flags)
+        {
+            List<EventInfo> ret = new List<EventInfo>();
+
+            Type type = this;
+
+            // we have to walk all the way up.
+            while (type != null)
+            {
+                foreach (var @event in type.GetDeclaredEvents())
+                    if (IsMatch(@event, flags))
+                        ret.Add(@event);
+
+                if ((flags & BindingFlags.DeclaredOnly) != 0)
+                    break;
+
+                type = type.BaseType;
+            }
+            return ret.ToArray();
+        }
+
+        public EventInfo[] GetDeclaredEvents()
+        {
+            return EventInfoProvider.GetEvents(EnsureTypeDef(), this);
+        }
+
         private static bool IsMatch(PropertyInfo propertyInfo, BindingFlags flags)
         {
             bool incPublic = (flags & BindingFlags.Public) == BindingFlags.Public;
@@ -423,6 +451,22 @@ namespace System
                     || (incInstance  && ((get != null && !get.IsStatic) || (set != null && !set.IsStatic))));
         }
 
+        private static bool IsMatch(EventInfo eventInfo, BindingFlags flags)
+        {
+            bool incPublic = (flags & BindingFlags.Public) == BindingFlags.Public;
+            bool incNonPublic = (flags & BindingFlags.NonPublic) == BindingFlags.NonPublic;
+            bool incStatic = (flags & BindingFlags.Static) == BindingFlags.Static;
+            bool incInstance = (flags & BindingFlags.Instance) == BindingFlags.Instance;
+
+            var add = eventInfo.GetAddMethod();
+            var rem = eventInfo.GetRemoveMethod();
+
+            return ((incPublic && ((add != null && add.IsPublic) || (rem != null && rem.IsPublic)))
+                    || (incNonPublic && ((add != null && !add.IsPublic) || (rem != null && !rem.IsPublic))))
+                && ((incStatic && ((add != null && add.IsStatic) || (rem != null && rem.IsStatic)))
+                    || (incInstance && ((add != null && !add.IsStatic) || (rem != null && !rem.IsStatic))));
+        }
+
         public MemberInfo[] GetMember(string memberName, BindingFlags flags)
         {
             List<MemberInfo> ret = new List<MemberInfo>();
@@ -431,7 +475,7 @@ namespace System
             ret.AddRange(GetFields(flags).Where(f => f.Name == memberName));
             ret.AddRange(GetMethods(flags).Where(f => f.Name == memberName));
             ret.AddRange(GetProperties(flags).Where(f => f.Name == memberName));
-            //ret.AddRange(GetEvents);
+            ret.AddRange(GetEvents(flags).Where(f => f.Name == memberName));
             return ret.ToArray();
         }
 
@@ -441,7 +485,7 @@ namespace System
             ret.AddRange(GetFields(flags));
             ret.AddRange(GetMethods(flags));
             ret.AddRange(GetProperties(flags));
-            //ret.AddRange(GetEvents);
+            ret.AddRange(GetEvents(flags));
             return ret.ToArray();
         }
 
@@ -536,6 +580,6 @@ namespace System
         {
             return GetType(typeName);
         }
-    }
+	}
 }
 

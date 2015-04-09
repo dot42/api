@@ -49,8 +49,7 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            throw new NotImplementedException();
-            //return type.GetEvent(name);
+            return type.GetEvent(name);
         }
 
         [NotImplemented]
@@ -59,8 +58,7 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            throw new NotImplementedException();
-            //return type.GetEvents(AllMembersBindingFlags);
+            return type.GetEvents(Type.AllMembersBindingFlags);
         }
 
         public static FieldInfo GetRuntimeField(this Type type, string name)

@@ -15,6 +15,7 @@
 // limitations under the License.
 
 using System.Reflection;
+using Dot42.Internal;
 
 namespace System
 {
@@ -68,8 +69,11 @@ namespace System
 	    {
 	        get
 	        {
-                throw new NotImplementedException();
-                //return GetType().GetMethod("Invoke");
+	            var annotation = GetType().GetAnnotation<IDelegateMethod>(typeof (IDelegateMethod));
+                if(annotation == null)
+                    throw new NotImplementedException("delegate annotation missing.");
+
+	            return annotation.Method();
 	        }
 	    }
 
