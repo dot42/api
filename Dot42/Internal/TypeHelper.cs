@@ -98,7 +98,7 @@ namespace Dot42.Internal
 
         /// <summary>
         /// this is used by the compiler, to find out in a generic class to which 
-        /// runtime class to map a primitive or nullable marker type.
+        /// runtime class to map a primitive, a nullable marker type or a generic proxy.
         /// </summary>
         [Include]
         internal static Type EnsureGenericRuntimeType(Type p)
@@ -106,9 +106,19 @@ namespace Dot42.Internal
             Type t = EnsureBoxedType(p);
             if (t != p) return t;
 
-            var underlying = NullableReflection.GetUnderlyingTypeForMarked(p);
+            return NullableReflection.GetUnderlyingTypeForMarked(p)
+                   ?? GenericInstanceFactory.GetGenericTypeDefinition(p)
+                   ?? p;
+        }
 
-            return underlying ?? p;
+        /// <summary>
+        /// this is used by the compiler, to find out in a generic class to which 
+        /// runtime class to map a primitive, a nullable marker type or a generic proxy.
+        /// </summary>
+        [Include]
+        internal static Type GetGenericInstanceType(Type baseType, Type[] args)
+        {
+            return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, args);
         }
 
         public static Type EnsurePrimitiveType(Type p)

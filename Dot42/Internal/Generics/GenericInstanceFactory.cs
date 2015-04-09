@@ -29,7 +29,7 @@ namespace Dot42.Internal.Generics
             InterfacePermutations = Permutation(perm).GetEnumerator();
         }
 
-        public static Type GetOrMakeGenericRuntimeType(Type baseType, Type[] genericParameters)
+        public static Type GetOrMakeGenericInstanceType(Type baseType, Type[] genericParameters)
         {
             var typeInfo = new GenericTypeInfo(baseType, genericParameters);
 

@@ -220,7 +220,7 @@ namespace Dot42.Internal.Generics
                     genericParameters[i] = arg;
                 }
 
-                return GenericInstanceFactory.GetOrMakeGenericRuntimeType(genericTypeDef, genericParameters);
+                return GenericInstanceFactory.GetOrMakeGenericInstanceType(genericTypeDef, genericParameters);
             }
 
             // return the type.
@@ -268,7 +268,7 @@ namespace Dot42.Internal.Generics
             if (types.Length != expected)
                 throw new ArgumentOutOfRangeException("types", string.Format("exected {0} generic arguments, got {1} for type {2}", expected, types.Length, baseType.FullName));
 
-            return GenericInstanceFactory.GetOrMakeGenericRuntimeType(baseType, types);
+            return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, types);
         }
 
         public static bool ContainsGenericParameters(Type type)
