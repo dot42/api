@@ -158,13 +158,13 @@ namespace System
 	    {
             // TODO: make this work for generic classes as well.
 	        var def = EnsureTypeDef();
-            int myNameLen = Name.Length;
 	        var nested = def.GetDeclaredClasses();
             
 	        for (int i = 0; i < nested.Length; ++i)
 	        {
-	            Log.I("dot42", string.Format("GetNestedType on {0}: {1}", Name, nested[i].Name));
-	            string nestedName = nested[i].Name.Substring(myNameLen + 1);
+                // TODO: emulate the visibility. here we should only return public classes.
+                //Log.I("dot42", string.Format("GetNestedType on {0}: {1}", Name, nested[i].Name));
+	            string nestedName = nested[i].Name;
 	            if (nestedName == name)
 	                return nested[i];
 	        }

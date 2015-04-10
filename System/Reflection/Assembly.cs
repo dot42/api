@@ -102,8 +102,8 @@ namespace System.Reflection
         /// </remarks>
         public static Assembly GetExecutingAssembly()
         {
-            foreach (var stack in new Exception().JavaStackTrace)
-                Console.WriteLine("{0} {1} {2}", stack.ClassName, stack.MethodName, stack.IsNativeMethod);
+            //foreach (var stack in new Exception().JavaStackTrace)
+            //    Console.WriteLine("{0} {1} {2}", stack.ClassName, stack.MethodName, stack.IsNativeMethod);
             string className = new Exception().JavaStackTrace[1].ClassName;
             return typeof(Assembly).GetClassLoader().LoadClass(className).Assembly;
         }
