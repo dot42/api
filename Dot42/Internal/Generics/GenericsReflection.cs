@@ -7,6 +7,7 @@ using System.Text;
 using Android.Util;
 using Java.Lang;
 using Java.Lang.Reflect;
+using Java.Util;
 using Java.Util.Concurrent;
 
 namespace Dot42.Internal.Generics
@@ -82,19 +83,31 @@ namespace Dot42.Internal.Generics
             if (cached != null)
                 return cached;
 
-            List<Type> ret = new List<Type>();
+            LinkedHashSet<Type> ret = new LinkedHashSet<Type>();
 
             // Note that JavaGetInterfaces will only return interfaces declared by the current type,
             // while .NET returns a flattened map of all interfaces.
             // http://stackoverflow.com/questions/6616055/get-all-derived-interfaces-of-a-class
             // http://stackoverflow.com/questions/9793242/type-getinterfaces-for-declared-interfaces-only
 
-            for (Type currentType = type; currentType != typeof(object) && currentType != null; currentType = currentType.BaseType)
+            Java.Util.IQueue<Type> toVisit = new Java.Util.LinkedList<Type>();
+            toVisit.Add(type);
+
+            while (toVisit.Peek() != null)
             {
+                var currentType = toVisit.Poll();
+
+                if (!currentType.IsInterface)
+                {
+                    var baseType = currentType.BaseType;
+                    if(baseType != null && baseType != typeof(object))
+                        toVisit.Add(baseType);
+                }
+
                 var gti = GenericInstanceFactory.GetGenericTypeInfo(currentType);
                 if (gti == null)
                 {
-                    ret.AddRange(currentType.JavaGetInterfaces());
+                    AddInterfaces(currentType.JavaGetInterfaces(), ret, toVisit);
                     continue;
                 }
 
@@ -104,7 +117,7 @@ namespace Dot42.Internal.Generics
                 var genericInstanceClass = typeDef.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
                 if (genericInstanceClass == null)
                 {
-                    ret.AddRange(interfaces);
+                    AddInterfaces(interfaces, ret, toVisit);
                     continue;
                 }
 
@@ -112,14 +125,14 @@ namespace Dot42.Internal.Generics
 
                 if (def.Length == 0)
                 {
-                    ret.AddRange(interfaces);
+                    AddInterfaces(interfaces, ret, toVisit);
                     continue;
                 }
 
                 for (int i = 0; i < interfaces.Length; ++i)
-                {
-                    ret.Add(ToMatchedGenericInstanceType(interfaces[i], currentType, def));
-                }
+                    interfaces[i] = ToMatchedGenericInstanceType(interfaces[i], currentType, def);
+                
+                AddInterfaces(interfaces, ret, toVisit);
             }
 
             cached = ret.Distinct().ToArray();
@@ -127,8 +140,18 @@ namespace Dot42.Internal.Generics
             return cached;
         }
 
+        private static void AddInterfaces(Type[] interfaces, Java.Util.ISet<Type> ret, Java.Util.IQueue<Type> toVisit)
+        {
+            foreach (var i in interfaces)
+            {
+                if (!ret.Contains(i))
+                {
+                    ret.Add(i);
+                    toVisit.Add(i);
+                }
+            }
+        }
         
-
         public static Type[] GetGenericArguments(Type type)
         {
             Type[] ret;
