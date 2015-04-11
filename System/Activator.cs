@@ -65,6 +65,10 @@ namespace System
             if (NullableReflection.TreatAsSystemNullableT(typeof(T)))
                 return default(T);
 
+            var genericInstance = GenericInstanceFactory.CreateGenericInstance(typeof(T));
+            if (genericInstance != null)
+                return (T)genericInstance;
+
             return (T)typeof(T).NewInstance();
         }
 
