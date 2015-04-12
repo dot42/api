@@ -59,7 +59,7 @@ namespace System
 	        get
 	        {
                 // don't care about performance 
-	            var field = GetType().GetField("instance");
+	            var field = GetType().GetField("instance", BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic);
 	            if (field == null) return null;
 	            return field.GetValue(this);
 	        }
@@ -73,7 +73,7 @@ namespace System
                 if(annotation == null)
                     throw new NotImplementedException("delegate annotation missing.");
 
-	            return annotation.Method();
+	            return new MethodInfo(annotation.Method(), this.GetType());
 	        }
 	    }
 

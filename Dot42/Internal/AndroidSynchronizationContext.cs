@@ -29,13 +29,13 @@ namespace Dot42.Internal
 
         public override void Post(SendOrPostCallback d, object state)
         {
-            var runner = new MySendOrPostRunner(d, state);
+            var runner = new SynchronizationContext.MySendOrPostRunner(d, state);
             handler.Post(runner);
         }
 
         public override void Send(SendOrPostCallback d, object state)
         {
-            var runner = new MySendOrPostRunner(d, state);
+            var runner = new SynchronizationContext.MySendOrPostRunner(d, state);
             var message = Message.Obtain(handler, runner);
             handler.SendMessage(message);
         }

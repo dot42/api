@@ -172,17 +172,11 @@ namespace System.Reflection
             return type.GetProperty(name, flags|BindingFlags.DeclaredOnly);
         }
 
-        /// <summary>
-        /// this is not supported atm, though should probably be possible to implement.
-        /// </summary>
-        /// <param name="del"></param>
-        /// <returns></returns>
-        [Obsolete("doesn't work atm")]
-        public static MethodInfo GetMethodInfo(this Delegate del)
+        public static MethodInfo GetMethodInfo(this Delegate @delegate)
         {
-            if (del == null)
-                throw new ArgumentNullException("del");
-            return del.Method;
+            if (@delegate == null)
+                throw new ArgumentNullException("delegate");
+            return @delegate.Method;
         }
 	}
 }

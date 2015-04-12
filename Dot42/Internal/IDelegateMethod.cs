@@ -1,10 +1,11 @@
-﻿using System.Reflection;
+﻿using Java.Lang.Annotation;
+using Java.Lang.Reflect;
 
 namespace Dot42.Internal
 {
     [IncludeType]
-    internal interface IDelegateMethod
+    internal interface IDelegateMethod : IAnnotation
     {
-        MethodInfo Method();
+        Method Method();
     }
 }
