@@ -6,7 +6,7 @@ namespace Org.Apache.Http.Cookie
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/cookie/CookieIdentityComparator", AccessFlags = 33, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/util/Comparator<Lorg/apache/http/co" +
     "okie/Cookie;>;")]
-		public partial class CookieIdentityComparator : global::Java.Io.ISerializable, global::Java.Util.IComparator<global::Org.Apache.Http.Cookie.ICookie>
+		public partial class CookieIdentityComparator : global::Java.IO.ISerializable, global::Java.Util.IComparator<global::Org.Apache.Http.Cookie.ICookie>
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -100,7 +100,7 @@ namespace Org.Apache.Http.Cookie
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/cookie/CookiePathComparator", AccessFlags = 33, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/util/Comparator<Lorg/apache/http/co" +
     "okie/Cookie;>;")]
-		public partial class CookiePathComparator : global::Java.Io.ISerializable, global::Java.Util.IComparator<global::Org.Apache.Http.Cookie.ICookie>
+		public partial class CookiePathComparator : global::Java.IO.ISerializable, global::Java.Util.IComparator<global::Org.Apache.Http.Cookie.ICookie>
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]

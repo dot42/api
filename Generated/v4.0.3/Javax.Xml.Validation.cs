@@ -111,7 +111,7 @@ namespace Javax.Xml.Validation
 				/// newSchema
 				/// </java-name>
 				[Dot42.DexImport("newSchema", "(Ljava/io/File;)Ljavax/xml/validation/Schema;", AccessFlags = 1)]
-				public virtual global::Javax.Xml.Validation.Schema NewSchema(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual global::Javax.Xml.Validation.Schema NewSchema(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 						return default(global::Javax.Xml.Validation.Schema);
 				}

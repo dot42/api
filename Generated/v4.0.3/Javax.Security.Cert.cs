@@ -189,7 +189,7 @@ namespace Javax.Security.Cert
 				/// getInstance
 				/// </java-name>
 				[Dot42.DexImport("getInstance", "(Ljava/io/InputStream;)Ljavax/security/cert/X509Certificate;", AccessFlags = 25)]
-				public static global::Javax.Security.Cert.X509Certificate GetInstance(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static global::Javax.Security.Cert.X509Certificate GetInstance(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Javax.Security.Cert.X509Certificate);
 				}

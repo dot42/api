@@ -347,7 +347,7 @@ namespace Android.Content
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/Strin" +
     "g;)V", AccessFlags = 1)]
-				public override void Dump(string @string, global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
+				public override void Dump(string @string, global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1332,7 +1332,7 @@ namespace Android.Content
 				/// attachInfo
 				/// </java-name>
 				[Dot42.DexImport("attachInfo", "(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V", AccessFlags = 1)]
-				public virtual void AttachInfo(global::Android.Content.Context context, global::Android.Content.Pm.ProviderInfo providerInfo) /* MethodBuilder.Create */ 
+				public virtual void AttachInfo(global::Android.Content.Context context, global::Android.Content.PM.ProviderInfo providerInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1397,10 +1397,10 @@ namespace Android.Content
 				/// <java-name>
 				/// getPathPermissions
 				/// </java-name>
-				public global::Android.Content.Pm.PathPermission[] PathPermissions
+				public global::Android.Content.PM.PathPermission[] PathPermissions
 				{
 						[Dot42.DexImport("getPathPermissions", "()[Landroid/content/pm/PathPermission;", AccessFlags = 17)]
-						get{ return default(global::Android.Content.Pm.PathPermission[]); }
+						get{ return default(global::Android.Content.PM.PathPermission[]); }
 						[Dot42.DexImport("setPathPermissions", "([Landroid/content/pm/PathPermission;)V", AccessFlags = 20)]
 						set{ }
 				}
@@ -2088,27 +2088,27 @@ namespace Android.Content
 				/// openInputStream
 				/// </java-name>
 				[Dot42.DexImport("openInputStream", "(Landroid/net/Uri;)Ljava/io/InputStream;", AccessFlags = 17)]
-				public global::Java.Io.InputStream OpenInputStream(global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
+				public global::Java.IO.InputStream OpenInputStream(global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
 				/// openOutputStream
 				/// </java-name>
 				[Dot42.DexImport("openOutputStream", "(Landroid/net/Uri;)Ljava/io/OutputStream;", AccessFlags = 17)]
-				public global::Java.Io.OutputStream OpenOutputStream(global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
+				public global::Java.IO.OutputStream OpenOutputStream(global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.OutputStream);
+						return default(global::Java.IO.OutputStream);
 				}
 
 				/// <java-name>
 				/// openOutputStream
 				/// </java-name>
 				[Dot42.DexImport("openOutputStream", "(Landroid/net/Uri;Ljava/lang/String;)Ljava/io/OutputStream;", AccessFlags = 17)]
-				public global::Java.Io.OutputStream OpenOutputStream(global::Android.Net.Uri uri, string @string) /* MethodBuilder.Create */ 
+				public global::Java.IO.OutputStream OpenOutputStream(global::Android.Net.Uri uri, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.OutputStream);
+						return default(global::Java.IO.OutputStream);
 				}
 
 				/// <java-name>
@@ -3125,13 +3125,13 @@ namespace Android.Content
 				/// openFileInput
 				/// </java-name>
 				[Dot42.DexImport("openFileInput", "(Ljava/lang/String;)Ljava/io/FileInputStream;", AccessFlags = 1025)]
-				public abstract global::Java.Io.FileInputStream OpenFileInput(string @string) /* MethodBuilder.Create */ ;
+				public abstract global::Java.IO.FileInputStream OpenFileInput(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// openFileOutput
 				/// </java-name>
 				[Dot42.DexImport("openFileOutput", "(Ljava/lang/String;I)Ljava/io/FileOutputStream;", AccessFlags = 1025)]
-				public abstract global::Java.Io.FileOutputStream OpenFileOutput(string @string, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.IO.FileOutputStream OpenFileOutput(string @string, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// deleteFile
@@ -3143,13 +3143,13 @@ namespace Android.Content
 				/// getFileStreamPath
 				/// </java-name>
 				[Dot42.DexImport("getFileStreamPath", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1025)]
-				public abstract global::Java.Io.File GetFileStreamPath(string @string) /* MethodBuilder.Create */ ;
+				public abstract global::Java.IO.File GetFileStreamPath(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getExternalFilesDir
 				/// </java-name>
 				[Dot42.DexImport("getExternalFilesDir", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1025)]
-				public abstract global::Java.Io.File GetExternalFilesDir(string @string) /* MethodBuilder.Create */ ;
+				public abstract global::Java.IO.File GetExternalFilesDir(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// fileList
@@ -3161,7 +3161,7 @@ namespace Android.Content
 				/// getDir
 				/// </java-name>
 				[Dot42.DexImport("getDir", "(Ljava/lang/String;I)Ljava/io/File;", AccessFlags = 1025)]
-				public abstract global::Java.Io.File GetDir(string @string, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.IO.File GetDir(string @string, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// openOrCreateDatabase
@@ -3187,7 +3187,7 @@ namespace Android.Content
 				/// getDatabasePath
 				/// </java-name>
 				[Dot42.DexImport("getDatabasePath", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1025)]
-				public abstract global::Java.Io.File GetDatabasePath(string @string) /* MethodBuilder.Create */ ;
+				public abstract global::Java.IO.File GetDatabasePath(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// databaseList
@@ -3211,7 +3211,7 @@ namespace Android.Content
 				/// setWallpaper
 				/// </java-name>
 				[Dot42.DexImport("setWallpaper", "(Ljava/io/InputStream;)V", AccessFlags = 1025)]
-				public abstract void SetWallpaper(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				public abstract void SetWallpaper(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// clearWallpaper
@@ -3460,7 +3460,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getPackageManager
 				/// </java-name>
-				public abstract global::Android.Content.Pm.PackageManager PackageManager
+				public abstract global::Android.Content.PM.PackageManager PackageManager
 				{
 						[Dot42.DexImport("getPackageManager", "()Landroid/content/pm/PackageManager;", AccessFlags = 1025)]
 						get;
@@ -3523,7 +3523,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getApplicationInfo
 				/// </java-name>
-				public abstract global::Android.Content.Pm.ApplicationInfo ApplicationInfo
+				public abstract global::Android.Content.PM.ApplicationInfo ApplicationInfo
 				{
 						[Dot42.DexImport("getApplicationInfo", "()Landroid/content/pm/ApplicationInfo;", AccessFlags = 1025)]
 						get;
@@ -3550,7 +3550,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getFilesDir
 				/// </java-name>
-				public abstract global::Java.Io.File FilesDir
+				public abstract global::Java.IO.File FilesDir
 				{
 						[Dot42.DexImport("getFilesDir", "()Ljava/io/File;", AccessFlags = 1025)]
 						get;
@@ -3559,7 +3559,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getObbDir
 				/// </java-name>
-				public abstract global::Java.Io.File ObbDir
+				public abstract global::Java.IO.File ObbDir
 				{
 						[Dot42.DexImport("getObbDir", "()Ljava/io/File;", AccessFlags = 1025)]
 						get;
@@ -3568,7 +3568,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getCacheDir
 				/// </java-name>
-				public abstract global::Java.Io.File CacheDir
+				public abstract global::Java.IO.File CacheDir
 				{
 						[Dot42.DexImport("getCacheDir", "()Ljava/io/File;", AccessFlags = 1025)]
 						get;
@@ -3577,7 +3577,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getExternalCacheDir
 				/// </java-name>
-				public abstract global::Java.Io.File ExternalCacheDir
+				public abstract global::Java.IO.File ExternalCacheDir
 				{
 						[Dot42.DexImport("getExternalCacheDir", "()Ljava/io/File;", AccessFlags = 1025)]
 						get;
@@ -3662,18 +3662,18 @@ namespace Android.Content
 				/// openFileInput
 				/// </java-name>
 				[Dot42.DexImport("openFileInput", "(Ljava/lang/String;)Ljava/io/FileInputStream;", AccessFlags = 1)]
-				public override global::Java.Io.FileInputStream OpenFileInput(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.FileInputStream OpenFileInput(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.FileInputStream);
+						return default(global::Java.IO.FileInputStream);
 				}
 
 				/// <java-name>
 				/// openFileOutput
 				/// </java-name>
 				[Dot42.DexImport("openFileOutput", "(Ljava/lang/String;I)Ljava/io/FileOutputStream;", AccessFlags = 1)]
-				public override global::Java.Io.FileOutputStream OpenFileOutput(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.IO.FileOutputStream OpenFileOutput(string @string, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.FileOutputStream);
+						return default(global::Java.IO.FileOutputStream);
 				}
 
 				/// <java-name>
@@ -3689,9 +3689,9 @@ namespace Android.Content
 				/// getFileStreamPath
 				/// </java-name>
 				[Dot42.DexImport("getFileStreamPath", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetFileStreamPath(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetFileStreamPath(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
+						return default(global::Java.IO.File);
 				}
 
 				/// <java-name>
@@ -3707,18 +3707,18 @@ namespace Android.Content
 				/// getExternalFilesDir
 				/// </java-name>
 				[Dot42.DexImport("getExternalFilesDir", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetExternalFilesDir(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetExternalFilesDir(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
+						return default(global::Java.IO.File);
 				}
 
 				/// <java-name>
 				/// getDir
 				/// </java-name>
 				[Dot42.DexImport("getDir", "(Ljava/lang/String;I)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetDir(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetDir(string @string, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
+						return default(global::Java.IO.File);
 				}
 
 				/// <java-name>
@@ -3754,9 +3754,9 @@ namespace Android.Content
 				/// getDatabasePath
 				/// </java-name>
 				[Dot42.DexImport("getDatabasePath", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetDatabasePath(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetDatabasePath(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
+						return default(global::Java.IO.File);
 				}
 
 				/// <java-name>
@@ -3789,7 +3789,7 @@ namespace Android.Content
 				/// setWallpaper
 				/// </java-name>
 				[Dot42.DexImport("setWallpaper", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public override void SetWallpaper(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public override void SetWallpaper(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4143,10 +4143,10 @@ namespace Android.Content
 				/// <java-name>
 				/// getPackageManager
 				/// </java-name>
-				public override global::Android.Content.Pm.PackageManager PackageManager
+				public override global::Android.Content.PM.PackageManager PackageManager
 				{
 						[Dot42.DexImport("getPackageManager", "()Landroid/content/pm/PackageManager;", AccessFlags = 1)]
-						get{ return default(global::Android.Content.Pm.PackageManager); }
+						get{ return default(global::Android.Content.PM.PackageManager); }
 				}
 
 				/// <java-name>
@@ -4206,10 +4206,10 @@ namespace Android.Content
 				/// <java-name>
 				/// getApplicationInfo
 				/// </java-name>
-				public override global::Android.Content.Pm.ApplicationInfo ApplicationInfo
+				public override global::Android.Content.PM.ApplicationInfo ApplicationInfo
 				{
 						[Dot42.DexImport("getApplicationInfo", "()Landroid/content/pm/ApplicationInfo;", AccessFlags = 1)]
-						get{ return default(global::Android.Content.Pm.ApplicationInfo); }
+						get{ return default(global::Android.Content.PM.ApplicationInfo); }
 				}
 
 				/// <java-name>
@@ -4233,37 +4233,37 @@ namespace Android.Content
 				/// <java-name>
 				/// getFilesDir
 				/// </java-name>
-				public override global::Java.Io.File FilesDir
+				public override global::Java.IO.File FilesDir
 				{
 						[Dot42.DexImport("getFilesDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 				/// <java-name>
 				/// getObbDir
 				/// </java-name>
-				public override global::Java.Io.File ObbDir
+				public override global::Java.IO.File ObbDir
 				{
 						[Dot42.DexImport("getObbDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 				/// <java-name>
 				/// getCacheDir
 				/// </java-name>
-				public override global::Java.Io.File CacheDir
+				public override global::Java.IO.File CacheDir
 				{
 						[Dot42.DexImport("getCacheDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 				/// <java-name>
 				/// getExternalCacheDir
 				/// </java-name>
-				public override global::Java.Io.File ExternalCacheDir
+				public override global::Java.IO.File ExternalCacheDir
 				{
 						[Dot42.DexImport("getExternalCacheDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 				/// <java-name>
@@ -4376,7 +4376,7 @@ namespace Android.Content
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/Strin" +
     "g;)V", AccessFlags = 1)]
-				public override void Dump(string @string, global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
+				public override void Dump(string @string, global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6073,9 +6073,9 @@ namespace Android.Content
 				/// getSerializableExtra
 				/// </java-name>
 				[Dot42.DexImport("getSerializableExtra", "(Ljava/lang/String;)Ljava/io/Serializable;", AccessFlags = 1)]
-				public virtual global::Java.Io.ISerializable GetSerializableExtra(string @string) /* MethodBuilder.Create */ 
+				public virtual global::Java.IO.ISerializable GetSerializableExtra(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.ISerializable);
+						return default(global::Java.IO.ISerializable);
 				}
 
 				/// <java-name>
@@ -6217,7 +6217,7 @@ namespace Android.Content
 				/// resolveActivity
 				/// </java-name>
 				[Dot42.DexImport("resolveActivity", "(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;", AccessFlags = 1)]
-				public virtual global::Android.Content.ComponentName ResolveActivity(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Android.Content.ComponentName ResolveActivity(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.ComponentName);
 				}
@@ -6226,9 +6226,9 @@ namespace Android.Content
 				/// resolveActivityInfo
 				/// </java-name>
 				[Dot42.DexImport("resolveActivityInfo", "(Landroid/content/pm/PackageManager;I)Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-				public virtual global::Android.Content.Pm.ActivityInfo ResolveActivityInfo(global::Android.Content.Pm.PackageManager packageManager, int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Content.PM.ActivityInfo ResolveActivityInfo(global::Android.Content.PM.PackageManager packageManager, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Content.Pm.ActivityInfo);
+						return default(global::Android.Content.PM.ActivityInfo);
 				}
 
 				/// <java-name>
@@ -6445,7 +6445,7 @@ namespace Android.Content
 				/// putExtra
 				/// </java-name>
 				[Dot42.DexImport("putExtra", "(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;", AccessFlags = 1)]
-				public virtual global::Android.Content.Intent PutExtra(string @string, global::Java.Io.ISerializable serializable) /* MethodBuilder.Create */ 
+				public virtual global::Android.Content.Intent PutExtra(string @string, global::Java.IO.ISerializable serializable) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
 				}
@@ -8045,7 +8045,7 @@ namespace Android.Content
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/Strin" +
     "g;)V", AccessFlags = 1)]
-				public virtual void Dump(string @string, global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
+				public virtual void Dump(string @string, global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
 				{
 				}
 

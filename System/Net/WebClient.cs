@@ -17,7 +17,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 using Dot42;
-using Java.Io;
+using Java.IO;
 using Java.Net;
 
 namespace System.Net

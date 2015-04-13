@@ -275,9 +275,9 @@ namespace Android.Views.Accessibility
 				/// getEnabledAccessibilityServiceList
 				/// </java-name>
 				[Dot42.DexImport("getEnabledAccessibilityServiceList", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
-				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> GetEnabledAccessibilityServiceList(int int32) /* MethodBuilder.Create */ 
+				public global::Java.Util.IList<global::Android.AccessibilityServices.AccessibilityServiceInfo> GetEnabledAccessibilityServiceList(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo>);
+						return default(global::Java.Util.IList<global::Android.AccessibilityServices.AccessibilityServiceInfo>);
 				}
 
 				/// <java-name>
@@ -321,19 +321,19 @@ namespace Android.Views.Accessibility
 				/// <java-name>
 				/// getAccessibilityServiceList
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo> AccessibilityServiceList
+				public global::Java.Util.IList<global::Android.Content.PM.ServiceInfo> AccessibilityServiceList
 				{
 						[Dot42.DexImport("getAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/content/pm/ServiceInfo;>;")]
-						get{ return default(global::Java.Util.IList<global::Android.Content.Pm.ServiceInfo>); }
+						get{ return default(global::Java.Util.IList<global::Android.Content.PM.ServiceInfo>); }
 				}
 
 				/// <java-name>
 				/// getInstalledAccessibilityServiceList
 				/// </java-name>
-				public global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo> InstalledAccessibilityServiceList
+				public global::Java.Util.IList<global::Android.AccessibilityServices.AccessibilityServiceInfo> InstalledAccessibilityServiceList
 				{
 						[Dot42.DexImport("getInstalledAccessibilityServiceList", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;")]
-						get{ return default(global::Java.Util.IList<global::Android.Accessibilityservice.AccessibilityServiceInfo>); }
+						get{ return default(global::Java.Util.IList<global::Android.AccessibilityServices.AccessibilityServiceInfo>); }
 				}
 
 				/// <java-name>

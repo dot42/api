@@ -224,7 +224,7 @@ namespace Javax.Xml.Xpath
 				/// printStackTrace
 				/// </java-name>
 				[Dot42.DexImport("printStackTrace", "(Ljava/io/PrintStream;)V", AccessFlags = 1)]
-				public override void PrintStackTrace(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				public override void PrintStackTrace(global::Java.IO.PrintStream printStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -240,7 +240,7 @@ namespace Javax.Xml.Xpath
 				/// printStackTrace
 				/// </java-name>
 				[Dot42.DexImport("printStackTrace", "(Ljava/io/PrintWriter;)V", AccessFlags = 1)]
-				public override void PrintStackTrace(global::Java.Io.PrintWriter printWriter) /* MethodBuilder.Create */ 
+				public override void PrintStackTrace(global::Java.IO.PrintWriter printWriter) /* MethodBuilder.Create */ 
 				{
 				}
 

@@ -1,11 +1,11 @@
 ﻿#pragma warning disable 1717
-namespace Android.Content.Pm
+namespace Android.Content.PM
 {
 		/// <java-name>
 		/// android/content/pm/ActivityInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ActivityInfo", AccessFlags = 33)]
-		public partial class ActivityInfo : global::Android.Content.Pm.ComponentInfo, global::Android.OS.IParcelable
+		public partial class ActivityInfo : global::Android.Content.PM.ComponentInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -262,14 +262,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ActivityInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.ActivityInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ActivityInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/ActivityInfo;)V", AccessFlags = 1)]
-				public ActivityInfo(global::Android.Content.Pm.ActivityInfo activityInfo) /* MethodBuilder.Create */ 
+				public ActivityInfo(global::Android.Content.PM.ActivityInfo activityInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -322,7 +322,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/ApplicationInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ApplicationInfo", AccessFlags = 33)]
-		public partial class ApplicationInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.OS.IParcelable
+		public partial class ApplicationInfo : global::Android.Content.PM.PackageItemInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -544,14 +544,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ApplicationInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.ApplicationInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ApplicationInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/ApplicationInfo;)V", AccessFlags = 1)]
-				public ApplicationInfo(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public ApplicationInfo(global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -593,7 +593,7 @@ namespace Android.Content.Pm
 				/// loadDescription
 				/// </java-name>
 				[Dot42.DexImport("loadDescription", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -602,11 +602,11 @@ namespace Android.Content.Pm
 				/// android/content/pm/ApplicationInfo$DisplayNameComparator
 				/// </java-name>
 				[Dot42.DexImport("android/content/pm/ApplicationInfo$DisplayNameComparator", AccessFlags = 9, Signature = "Ljava/lang/Object;Ljava/util/Comparator<Landroid/content/pm/ApplicationInfo;>;")]
-				public partial class DisplayNameComparator : global::Java.Util.IComparator<global::Android.Content.Pm.ApplicationInfo>
+				public partial class DisplayNameComparator : global::Java.Util.IComparator<global::Android.Content.PM.ApplicationInfo>
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Landroid/content/pm/PackageManager;)V", AccessFlags = 1)]
-						public DisplayNameComparator(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+						public DisplayNameComparator(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -614,7 +614,7 @@ namespace Android.Content.Pm
 						/// compare
 						/// </java-name>
 						[Dot42.DexImport("compare", "(Landroid/content/pm/ApplicationInfo;Landroid/content/pm/ApplicationInfo;)I", AccessFlags = 17)]
-						public int Compare(global::Android.Content.Pm.ApplicationInfo applicationInfo, global::Android.Content.Pm.ApplicationInfo applicationInfo1) /* MethodBuilder.Create */ 
+						public int Compare(global::Android.Content.PM.ApplicationInfo applicationInfo, global::Android.Content.PM.ApplicationInfo applicationInfo1) /* MethodBuilder.Create */ 
 						{
 								return default(int);
 						}
@@ -638,14 +638,14 @@ namespace Android.Content.Pm
 		/// android/content/pm/ComponentInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ComponentInfo", AccessFlags = 33)]
-		public partial class ComponentInfo : global::Android.Content.Pm.PackageItemInfo
+		public partial class ComponentInfo : global::Android.Content.PM.PackageItemInfo
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// applicationInfo
 				/// </java-name>
 				[Dot42.DexImport("applicationInfo", "Landroid/content/pm/ApplicationInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ApplicationInfo ApplicationInfo;
+				public global::Android.Content.PM.ApplicationInfo ApplicationInfo;
 				/// <java-name>
 				/// processName
 				/// </java-name>
@@ -672,7 +672,7 @@ namespace Android.Content.Pm
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/ComponentInfo;)V", AccessFlags = 1)]
-				public ComponentInfo(global::Android.Content.Pm.ComponentInfo componentInfo) /* MethodBuilder.Create */ 
+				public ComponentInfo(global::Android.Content.PM.ComponentInfo componentInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -685,7 +685,7 @@ namespace Android.Content.Pm
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public override global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -785,14 +785,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ConfigurationInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.ConfigurationInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ConfigurationInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/ConfigurationInfo;)V", AccessFlags = 1)]
-				public ConfigurationInfo(global::Android.Content.Pm.ConfigurationInfo configurationInfo) /* MethodBuilder.Create */ 
+				public ConfigurationInfo(global::Android.Content.PM.ConfigurationInfo configurationInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -869,14 +869,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.FeatureInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.FeatureInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public FeatureInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/FeatureInfo;)V", AccessFlags = 1)]
-				public FeatureInfo(global::Android.Content.Pm.FeatureInfo featureInfo) /* MethodBuilder.Create */ 
+				public FeatureInfo(global::Android.Content.PM.FeatureInfo featureInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -921,7 +921,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/InstrumentationInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/InstrumentationInfo", AccessFlags = 33)]
-		public partial class InstrumentationInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.OS.IParcelable
+		public partial class InstrumentationInfo : global::Android.Content.PM.PackageItemInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -958,14 +958,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.InstrumentationInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.InstrumentationInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public InstrumentationInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/InstrumentationInfo;)V", AccessFlags = 1)]
-				public InstrumentationInfo(global::Android.Content.Pm.InstrumentationInfo instrumentationInfo) /* MethodBuilder.Create */ 
+				public InstrumentationInfo(global::Android.Content.PM.InstrumentationInfo instrumentationInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1008,7 +1008,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.LabeledIntent> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.LabeledIntent> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/content/Intent;Ljava/lang/String;II)V", AccessFlags = 1)]
 				public LabeledIntent(global::Android.Content.Intent intent, string @string, int int32, int int321) /* MethodBuilder.Create */ 
 				{
@@ -1033,7 +1033,7 @@ namespace Android.Content.Pm
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1042,7 +1042,7 @@ namespace Android.Content.Pm
 				/// loadIcon
 				/// </java-name>
 				[Dot42.DexImport("loadIcon", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1142,7 +1142,7 @@ namespace Android.Content.Pm
 				/// applicationInfo
 				/// </java-name>
 				[Dot42.DexImport("applicationInfo", "Landroid/content/pm/ApplicationInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ApplicationInfo ApplicationInfo;
+				public global::Android.Content.PM.ApplicationInfo ApplicationInfo;
 				/// <java-name>
 				/// firstInstallTime
 				/// </java-name>
@@ -1162,32 +1162,32 @@ namespace Android.Content.Pm
 				/// activities
 				/// </java-name>
 				[Dot42.DexImport("activities", "[Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ActivityInfo[] Activities;
+				public global::Android.Content.PM.ActivityInfo[] Activities;
 				/// <java-name>
 				/// receivers
 				/// </java-name>
 				[Dot42.DexImport("receivers", "[Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ActivityInfo[] Receivers;
+				public global::Android.Content.PM.ActivityInfo[] Receivers;
 				/// <java-name>
 				/// services
 				/// </java-name>
 				[Dot42.DexImport("services", "[Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ServiceInfo[] Services;
+				public global::Android.Content.PM.ServiceInfo[] Services;
 				/// <java-name>
 				/// providers
 				/// </java-name>
 				[Dot42.DexImport("providers", "[Landroid/content/pm/ProviderInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ProviderInfo[] Providers;
+				public global::Android.Content.PM.ProviderInfo[] Providers;
 				/// <java-name>
 				/// instrumentation
 				/// </java-name>
 				[Dot42.DexImport("instrumentation", "[Landroid/content/pm/InstrumentationInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.InstrumentationInfo[] Instrumentation;
+				public global::Android.Content.PM.InstrumentationInfo[] Instrumentation;
 				/// <java-name>
 				/// permissions
 				/// </java-name>
 				[Dot42.DexImport("permissions", "[Landroid/content/pm/PermissionInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.PermissionInfo[] Permissions;
+				public global::Android.Content.PM.PermissionInfo[] Permissions;
 				/// <java-name>
 				/// requestedPermissions
 				/// </java-name>
@@ -1197,22 +1197,22 @@ namespace Android.Content.Pm
 				/// signatures
 				/// </java-name>
 				[Dot42.DexImport("signatures", "[Landroid/content/pm/Signature;", AccessFlags = 1)]
-				public global::Android.Content.Pm.Signature[] Signatures;
+				public global::Android.Content.PM.Signature[] Signatures;
 				/// <java-name>
 				/// configPreferences
 				/// </java-name>
 				[Dot42.DexImport("configPreferences", "[Landroid/content/pm/ConfigurationInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ConfigurationInfo[] ConfigPreferences;
+				public global::Android.Content.PM.ConfigurationInfo[] ConfigPreferences;
 				/// <java-name>
 				/// reqFeatures
 				/// </java-name>
 				[Dot42.DexImport("reqFeatures", "[Landroid/content/pm/FeatureInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.FeatureInfo[] ReqFeatures;
+				public global::Android.Content.PM.FeatureInfo[] ReqFeatures;
 				/// <java-name>
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PackageInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.PackageInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public PackageInfo() /* MethodBuilder.Create */ 
 				{
@@ -1294,7 +1294,7 @@ namespace Android.Content.Pm
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/PackageItemInfo;)V", AccessFlags = 1)]
-				public PackageItemInfo(global::Android.Content.Pm.PackageItemInfo packageItemInfo) /* MethodBuilder.Create */ 
+				public PackageItemInfo(global::Android.Content.PM.PackageItemInfo packageItemInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1307,7 +1307,7 @@ namespace Android.Content.Pm
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1316,7 +1316,7 @@ namespace Android.Content.Pm
 				/// loadIcon
 				/// </java-name>
 				[Dot42.DexImport("loadIcon", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1325,7 +1325,7 @@ namespace Android.Content.Pm
 				/// loadLogo
 				/// </java-name>
 				[Dot42.DexImport("loadLogo", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawables.Drawable LoadLogo(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable LoadLogo(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1335,7 +1335,7 @@ namespace Android.Content.Pm
 				/// </java-name>
 				[Dot42.DexImport("loadXmlMetaData", "(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/res/XmlRe" +
     "sourceParser;", AccessFlags = 1)]
-				public virtual global::Android.Content.Res.IXmlResourceParser LoadXmlMetaData(global::Android.Content.Pm.PackageManager packageManager, string @string) /* MethodBuilder.Create */ 
+				public virtual global::Android.Content.Res.IXmlResourceParser LoadXmlMetaData(global::Android.Content.PM.PackageManager packageManager, string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.IXmlResourceParser);
 				}
@@ -1368,11 +1368,11 @@ namespace Android.Content.Pm
 				/// android/content/pm/PackageItemInfo$DisplayNameComparator
 				/// </java-name>
 				[Dot42.DexImport("android/content/pm/PackageItemInfo$DisplayNameComparator", AccessFlags = 9, Signature = "Ljava/lang/Object;Ljava/util/Comparator<Landroid/content/pm/PackageItemInfo;>;")]
-				public partial class DisplayNameComparator : global::Java.Util.IComparator<global::Android.Content.Pm.PackageItemInfo>
+				public partial class DisplayNameComparator : global::Java.Util.IComparator<global::Android.Content.PM.PackageItemInfo>
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Landroid/content/pm/PackageManager;)V", AccessFlags = 1)]
-						public DisplayNameComparator(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+						public DisplayNameComparator(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1380,7 +1380,7 @@ namespace Android.Content.Pm
 						/// compare
 						/// </java-name>
 						[Dot42.DexImport("compare", "(Landroid/content/pm/PackageItemInfo;Landroid/content/pm/PackageItemInfo;)I", AccessFlags = 17)]
-						public int Compare(global::Android.Content.Pm.PackageItemInfo packageItemInfo, global::Android.Content.Pm.PackageItemInfo packageItemInfo1) /* MethodBuilder.Create */ 
+						public int Compare(global::Android.Content.PM.PackageItemInfo packageItemInfo, global::Android.Content.PM.PackageItemInfo packageItemInfo1) /* MethodBuilder.Create */ 
 						{
 								return default(int);
 						}
@@ -1761,7 +1761,7 @@ namespace Android.Content.Pm
 				/// getPackageInfo
 				/// </java-name>
 				[Dot42.DexImport("getPackageInfo", "(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.PackageInfo GetPackageInfo(string @string, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.PackageInfo GetPackageInfo(string @string, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// currentToCanonicalPackageNames
@@ -1791,61 +1791,61 @@ namespace Android.Content.Pm
 				/// getPermissionInfo
 				/// </java-name>
 				[Dot42.DexImport("getPermissionInfo", "(Ljava/lang/String;I)Landroid/content/pm/PermissionInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.PermissionInfo GetPermissionInfo(string @string, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.PermissionInfo GetPermissionInfo(string @string, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// queryPermissionsByGroup
 				/// </java-name>
 				[Dot42.DexImport("queryPermissionsByGroup", "(Ljava/lang/String;I)Ljava/util/List;", AccessFlags = 1025, Signature = "(Ljava/lang/String;I)Ljava/util/List<Landroid/content/pm/PermissionInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.PermissionInfo> QueryPermissionsByGroup(string @string, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.PermissionInfo> QueryPermissionsByGroup(string @string, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getPermissionGroupInfo
 				/// </java-name>
 				[Dot42.DexImport("getPermissionGroupInfo", "(Ljava/lang/String;I)Landroid/content/pm/PermissionGroupInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.PermissionGroupInfo GetPermissionGroupInfo(string @string, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.PermissionGroupInfo GetPermissionGroupInfo(string @string, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getAllPermissionGroups
 				/// </java-name>
 				[Dot42.DexImport("getAllPermissionGroups", "(I)Ljava/util/List;", AccessFlags = 1025, Signature = "(I)Ljava/util/List<Landroid/content/pm/PermissionGroupInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.PermissionGroupInfo> GetAllPermissionGroups(int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.PermissionGroupInfo> GetAllPermissionGroups(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getApplicationInfo
 				/// </java-name>
 				[Dot42.DexImport("getApplicationInfo", "(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.ApplicationInfo GetApplicationInfo(string @string, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.ApplicationInfo GetApplicationInfo(string @string, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getActivityInfo
 				/// </java-name>
 				[Dot42.DexImport("getActivityInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.ActivityInfo GetActivityInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.ActivityInfo GetActivityInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getReceiverInfo
 				/// </java-name>
 				[Dot42.DexImport("getReceiverInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.ActivityInfo GetReceiverInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.ActivityInfo GetReceiverInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getServiceInfo
 				/// </java-name>
 				[Dot42.DexImport("getServiceInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ServiceInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.ServiceInfo GetServiceInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.ServiceInfo GetServiceInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getProviderInfo
 				/// </java-name>
 				[Dot42.DexImport("getProviderInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ProviderInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.ProviderInfo GetProviderInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.ProviderInfo GetProviderInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getInstalledPackages
 				/// </java-name>
 				[Dot42.DexImport("getInstalledPackages", "(I)Ljava/util/List;", AccessFlags = 1025, Signature = "(I)Ljava/util/List<Landroid/content/pm/PackageInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.PackageInfo> GetInstalledPackages(int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.PackageInfo> GetInstalledPackages(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// checkPermission
@@ -1857,13 +1857,13 @@ namespace Android.Content.Pm
 				/// addPermission
 				/// </java-name>
 				[Dot42.DexImport("addPermission", "(Landroid/content/pm/PermissionInfo;)Z", AccessFlags = 1025)]
-				public abstract bool AddPermission(global::Android.Content.Pm.PermissionInfo permissionInfo) /* MethodBuilder.Create */ ;
+				public abstract bool AddPermission(global::Android.Content.PM.PermissionInfo permissionInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// addPermissionAsync
 				/// </java-name>
 				[Dot42.DexImport("addPermissionAsync", "(Landroid/content/pm/PermissionInfo;)Z", AccessFlags = 1025)]
-				public abstract bool AddPermissionAsync(global::Android.Content.Pm.PermissionInfo permissionInfo) /* MethodBuilder.Create */ ;
+				public abstract bool AddPermissionAsync(global::Android.Content.PM.PermissionInfo permissionInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// removePermission
@@ -1899,7 +1899,7 @@ namespace Android.Content.Pm
 				/// getInstalledApplications
 				/// </java-name>
 				[Dot42.DexImport("getInstalledApplications", "(I)Ljava/util/List;", AccessFlags = 1025, Signature = "(I)Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.ApplicationInfo> GetInstalledApplications(int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.ApplicationInfo> GetInstalledApplications(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// hasSystemFeature
@@ -1911,13 +1911,13 @@ namespace Android.Content.Pm
 				/// resolveActivity
 				/// </java-name>
 				[Dot42.DexImport("resolveActivity", "(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.ResolveInfo ResolveActivity(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.ResolveInfo ResolveActivity(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// queryIntentActivities
 				/// </java-name>
 				[Dot42.DexImport("queryIntentActivities", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1025, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryIntentActivities(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryIntentActivities(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// queryIntentActivityOptions
@@ -1925,56 +1925,56 @@ namespace Android.Content.Pm
 				[Dot42.DexImport("queryIntentActivityOptions", "(Landroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;" +
     "I)Ljava/util/List;", AccessFlags = 1025, Signature = "(Landroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;" +
     "I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryIntentActivityOptions(global::Android.Content.ComponentName componentName, global::Android.Content.Intent[] intent, global::Android.Content.Intent intent1, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryIntentActivityOptions(global::Android.Content.ComponentName componentName, global::Android.Content.Intent[] intent, global::Android.Content.Intent intent1, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// queryBroadcastReceivers
 				/// </java-name>
 				[Dot42.DexImport("queryBroadcastReceivers", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1025, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryBroadcastReceivers(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryBroadcastReceivers(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// resolveService
 				/// </java-name>
 				[Dot42.DexImport("resolveService", "(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.ResolveInfo ResolveService(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.ResolveInfo ResolveService(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// queryIntentServices
 				/// </java-name>
 				[Dot42.DexImport("queryIntentServices", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1025, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> QueryIntentServices(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryIntentServices(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// resolveContentProvider
 				/// </java-name>
 				[Dot42.DexImport("resolveContentProvider", "(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.ProviderInfo ResolveContentProvider(string @string, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.ProviderInfo ResolveContentProvider(string @string, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// queryContentProviders
 				/// </java-name>
 				[Dot42.DexImport("queryContentProviders", "(Ljava/lang/String;II)Ljava/util/List;", AccessFlags = 1025, Signature = "(Ljava/lang/String;II)Ljava/util/List<Landroid/content/pm/ProviderInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.ProviderInfo> QueryContentProviders(string @string, int int32, int int321) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.ProviderInfo> QueryContentProviders(string @string, int int32, int int321) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getInstrumentationInfo
 				/// </java-name>
 				[Dot42.DexImport("getInstrumentationInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/InstrumentationInfo;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Pm.InstrumentationInfo GetInstrumentationInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.PM.InstrumentationInfo GetInstrumentationInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// queryInstrumentation
 				/// </java-name>
 				[Dot42.DexImport("queryInstrumentation", "(Ljava/lang/String;I)Ljava/util/List;", AccessFlags = 1025, Signature = "(Ljava/lang/String;I)Ljava/util/List<Landroid/content/pm/InstrumentationInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.InstrumentationInfo> QueryInstrumentation(string @string, int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.InstrumentationInfo> QueryInstrumentation(string @string, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawab" +
     "le/Drawable;", AccessFlags = 1025)]
-				public abstract global::Android.Graphics.Drawables.Drawable GetDrawable(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Graphics.Drawables.Drawable GetDrawable(string @string, int int32, global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getActivityIcon
@@ -1992,7 +1992,7 @@ namespace Android.Content.Pm
 				/// getApplicationIcon
 				/// </java-name>
 				[Dot42.DexImport("getApplicationIcon", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-				public abstract global::Android.Graphics.Drawables.Drawable GetApplicationIcon(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Graphics.Drawables.Drawable GetApplicationIcon(global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getApplicationIcon
@@ -2016,7 +2016,7 @@ namespace Android.Content.Pm
 				/// getApplicationLogo
 				/// </java-name>
 				[Dot42.DexImport("getApplicationLogo", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1025)]
-				public abstract global::Android.Graphics.Drawables.Drawable GetApplicationLogo(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Graphics.Drawables.Drawable GetApplicationLogo(global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getApplicationLogo
@@ -2029,20 +2029,20 @@ namespace Android.Content.Pm
 				/// </java-name>
 				[Dot42.DexImport("getText", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;" +
     "", AccessFlags = 1025)]
-				public abstract global::Java.Lang.ICharSequence GetText(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Lang.ICharSequence GetText(string @string, int int32, global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getXml
 				/// </java-name>
 				[Dot42.DexImport("getXml", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/content/res/Xml" +
     "ResourceParser;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Res.IXmlResourceParser GetXml(string @string, int int32, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.Res.IXmlResourceParser GetXml(string @string, int int32, global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getApplicationLabel
 				/// </java-name>
 				[Dot42.DexImport("getApplicationLabel", "(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;", AccessFlags = 1025)]
-				public abstract global::Java.Lang.ICharSequence GetApplicationLabel(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Lang.ICharSequence GetApplicationLabel(global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getResourcesForActivity
@@ -2054,7 +2054,7 @@ namespace Android.Content.Pm
 				/// getResourcesForApplication
 				/// </java-name>
 				[Dot42.DexImport("getResourcesForApplication", "(Landroid/content/pm/ApplicationInfo;)Landroid/content/res/Resources;", AccessFlags = 1025)]
-				public abstract global::Android.Content.Res.Resources GetResourcesForApplication(global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
+				public abstract global::Android.Content.Res.Resources GetResourcesForApplication(global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getResourcesForApplication
@@ -2066,9 +2066,9 @@ namespace Android.Content.Pm
 				/// getPackageArchiveInfo
 				/// </java-name>
 				[Dot42.DexImport("getPackageArchiveInfo", "(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;", AccessFlags = 1)]
-				public virtual global::Android.Content.Pm.PackageInfo GetPackageArchiveInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Content.PM.PackageInfo GetPackageArchiveInfo(string @string, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Content.Pm.PackageInfo);
+						return default(global::Android.Content.PM.PackageInfo);
 				}
 
 				/// <java-name>
@@ -2105,7 +2105,7 @@ namespace Android.Content.Pm
 				/// getPreferredPackages
 				/// </java-name>
 				[Dot42.DexImport("getPreferredPackages", "(I)Ljava/util/List;", AccessFlags = 1025, Signature = "(I)Ljava/util/List<Landroid/content/pm/PackageInfo;>;")]
-				public abstract global::Java.Util.IList<global::Android.Content.Pm.PackageInfo> GetPreferredPackages(int int32) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.IList<global::Android.Content.PM.PackageInfo> GetPreferredPackages(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// addPreferredActivity
@@ -2163,7 +2163,7 @@ namespace Android.Content.Pm
 				/// <java-name>
 				/// getSystemAvailableFeatures
 				/// </java-name>
-				public abstract global::Android.Content.Pm.FeatureInfo[] SystemAvailableFeatures
+				public abstract global::Android.Content.PM.FeatureInfo[] SystemAvailableFeatures
 				{
 						[Dot42.DexImport("getSystemAvailableFeatures", "()[Landroid/content/pm/FeatureInfo;", AccessFlags = 1025)]
 						get;
@@ -2264,7 +2264,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PackageStats> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.PackageStats> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public PackageStats(string @string) /* MethodBuilder.Create */ 
 				{
@@ -2276,7 +2276,7 @@ namespace Android.Content.Pm
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/PackageStats;)V", AccessFlags = 1)]
-				public PackageStats(global::Android.Content.Pm.PackageStats packageStats) /* MethodBuilder.Create */ 
+				public PackageStats(global::Android.Content.PM.PackageStats packageStats) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2324,7 +2324,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PathPermission> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.PathPermission> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
 				public PathPermission(string @string, int int32, string string1, string string2) /* MethodBuilder.Create */ 
 				{
@@ -2372,7 +2372,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/PermissionGroupInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/PermissionGroupInfo", AccessFlags = 33)]
-		public partial class PermissionGroupInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.OS.IParcelable
+		public partial class PermissionGroupInfo : global::Android.Content.PM.PackageItemInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2389,14 +2389,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PermissionGroupInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.PermissionGroupInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public PermissionGroupInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/PermissionGroupInfo;)V", AccessFlags = 1)]
-				public PermissionGroupInfo(global::Android.Content.Pm.PermissionGroupInfo permissionGroupInfo) /* MethodBuilder.Create */ 
+				public PermissionGroupInfo(global::Android.Content.PM.PermissionGroupInfo permissionGroupInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2404,7 +2404,7 @@ namespace Android.Content.Pm
 				/// loadDescription
 				/// </java-name>
 				[Dot42.DexImport("loadDescription", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -2441,7 +2441,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/PermissionInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/PermissionInfo", AccessFlags = 33)]
-		public partial class PermissionInfo : global::Android.Content.Pm.PackageItemInfo, global::Android.OS.IParcelable
+		public partial class PermissionInfo : global::Android.Content.PM.PackageItemInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2488,14 +2488,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.PermissionInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.PermissionInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public PermissionInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/PermissionInfo;)V", AccessFlags = 1)]
-				public PermissionInfo(global::Android.Content.Pm.PermissionInfo permissionInfo) /* MethodBuilder.Create */ 
+				public PermissionInfo(global::Android.Content.PM.PermissionInfo permissionInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2503,7 +2503,7 @@ namespace Android.Content.Pm
 				/// loadDescription
 				/// </java-name>
 				[Dot42.DexImport("loadDescription", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -2540,7 +2540,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/ProviderInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ProviderInfo", AccessFlags = 49)]
-		public sealed partial class ProviderInfo : global::Android.Content.Pm.ComponentInfo, global::Android.OS.IParcelable
+		public sealed partial class ProviderInfo : global::Android.Content.PM.ComponentInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2572,7 +2572,7 @@ namespace Android.Content.Pm
 				/// pathPermissions
 				/// </java-name>
 				[Dot42.DexImport("pathPermissions", "[Landroid/content/pm/PathPermission;", AccessFlags = 1)]
-				public global::Android.Content.Pm.PathPermission[] PathPermissions;
+				public global::Android.Content.PM.PathPermission[] PathPermissions;
 				/// <java-name>
 				/// multiprocess
 				/// </java-name>
@@ -2592,14 +2592,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ProviderInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.ProviderInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ProviderInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/ProviderInfo;)V", AccessFlags = 1)]
-				public ProviderInfo(global::Android.Content.Pm.ProviderInfo providerInfo) /* MethodBuilder.Create */ 
+				public ProviderInfo(global::Android.Content.PM.ProviderInfo providerInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2642,12 +2642,12 @@ namespace Android.Content.Pm
 				/// activityInfo
 				/// </java-name>
 				[Dot42.DexImport("activityInfo", "Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ActivityInfo ActivityInfo;
+				public global::Android.Content.PM.ActivityInfo ActivityInfo;
 				/// <java-name>
 				/// serviceInfo
 				/// </java-name>
 				[Dot42.DexImport("serviceInfo", "Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-				public global::Android.Content.Pm.ServiceInfo ServiceInfo;
+				public global::Android.Content.PM.ServiceInfo ServiceInfo;
 				/// <java-name>
 				/// filter
 				/// </java-name>
@@ -2702,7 +2702,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ResolveInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.ResolveInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ResolveInfo() /* MethodBuilder.Create */ 
 				{
@@ -2712,7 +2712,7 @@ namespace Android.Content.Pm
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -2721,7 +2721,7 @@ namespace Android.Content.Pm
 				/// loadIcon
 				/// </java-name>
 				[Dot42.DexImport("loadIcon", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -2773,11 +2773,11 @@ namespace Android.Content.Pm
 				/// android/content/pm/ResolveInfo$DisplayNameComparator
 				/// </java-name>
 				[Dot42.DexImport("android/content/pm/ResolveInfo$DisplayNameComparator", AccessFlags = 9, Signature = "Ljava/lang/Object;Ljava/util/Comparator<Landroid/content/pm/ResolveInfo;>;")]
-				public partial class DisplayNameComparator : global::Java.Util.IComparator<global::Android.Content.Pm.ResolveInfo>
+				public partial class DisplayNameComparator : global::Java.Util.IComparator<global::Android.Content.PM.ResolveInfo>
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Landroid/content/pm/PackageManager;)V", AccessFlags = 1)]
-						public DisplayNameComparator(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+						public DisplayNameComparator(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -2785,7 +2785,7 @@ namespace Android.Content.Pm
 						/// compare
 						/// </java-name>
 						[Dot42.DexImport("compare", "(Landroid/content/pm/ResolveInfo;Landroid/content/pm/ResolveInfo;)I", AccessFlags = 17)]
-						public int Compare(global::Android.Content.Pm.ResolveInfo resolveInfo, global::Android.Content.Pm.ResolveInfo resolveInfo1) /* MethodBuilder.Create */ 
+						public int Compare(global::Android.Content.PM.ResolveInfo resolveInfo, global::Android.Content.PM.ResolveInfo resolveInfo1) /* MethodBuilder.Create */ 
 						{
 								return default(int);
 						}
@@ -2809,7 +2809,7 @@ namespace Android.Content.Pm
 		/// android/content/pm/ServiceInfo
 		/// </java-name>
 		[Dot42.DexImport("android/content/pm/ServiceInfo", AccessFlags = 33)]
-		public partial class ServiceInfo : global::Android.Content.Pm.ComponentInfo, global::Android.OS.IParcelable
+		public partial class ServiceInfo : global::Android.Content.PM.ComponentInfo, global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2831,14 +2831,14 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.ServiceInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.ServiceInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ServiceInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/pm/ServiceInfo;)V", AccessFlags = 1)]
-				public ServiceInfo(global::Android.Content.Pm.ServiceInfo serviceInfo) /* MethodBuilder.Create */ 
+				public ServiceInfo(global::Android.Content.PM.ServiceInfo serviceInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2889,7 +2889,7 @@ namespace Android.Content.Pm
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.Pm.Signature> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.Signature> CREATOR;
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public Signature(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{

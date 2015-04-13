@@ -35,18 +35,18 @@ namespace Android.Content.Res
 				/// createInputStream
 				/// </java-name>
 				[Dot42.DexImport("createInputStream", "()Ljava/io/FileInputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.FileInputStream CreateInputStream() /* MethodBuilder.Create */ 
+				public virtual global::Java.IO.FileInputStream CreateInputStream() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.FileInputStream);
+						return default(global::Java.IO.FileInputStream);
 				}
 
 				/// <java-name>
 				/// createOutputStream
 				/// </java-name>
 				[Dot42.DexImport("createOutputStream", "()Ljava/io/FileOutputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.FileOutputStream CreateOutputStream() /* MethodBuilder.Create */ 
+				public virtual global::Java.IO.FileOutputStream CreateOutputStream() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.FileOutputStream);
+						return default(global::Java.IO.FileOutputStream);
 				}
 
 				/// <java-name>
@@ -92,10 +92,10 @@ namespace Android.Content.Res
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				public virtual global::Java.Io.FileDescriptor FileDescriptor
+				public virtual global::Java.IO.FileDescriptor FileDescriptor
 				{
 						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.FileDescriptor); }
+						get{ return default(global::Java.IO.FileDescriptor); }
 				}
 
 				/// <java-name>
@@ -337,18 +337,18 @@ namespace Android.Content.Res
 				/// open
 				/// </java-name>
 				[Dot42.DexImport("open", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 17)]
-				public global::Java.Io.InputStream Open(string @string) /* MethodBuilder.Create */ 
+				public global::Java.IO.InputStream Open(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
 				/// open
 				/// </java-name>
 				[Dot42.DexImport("open", "(Ljava/lang/String;I)Ljava/io/InputStream;", AccessFlags = 17)]
-				public global::Java.Io.InputStream Open(string @string, int int32) /* MethodBuilder.Create */ 
+				public global::Java.IO.InputStream Open(string @string, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
@@ -424,7 +424,7 @@ namespace Android.Content.Res
 				/// android/content/res/AssetManager$AssetInputStream
 				/// </java-name>
 				[Dot42.DexImport("android/content/res/AssetManager$AssetInputStream", AccessFlags = 17)]
-				public sealed partial class AssetInputStream : global::Java.Io.InputStream
+				public sealed partial class AssetInputStream : global::Java.IO.InputStream
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -1484,18 +1484,18 @@ namespace Android.Content.Res
 				/// openRawResource
 				/// </java-name>
 				[Dot42.DexImport("openRawResource", "(I)Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream OpenRawResource(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Java.IO.InputStream OpenRawResource(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
 				/// openRawResource
 				/// </java-name>
 				[Dot42.DexImport("openRawResource", "(ILandroid/util/TypedValue;)Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream OpenRawResource(int int32, global::Android.Util.TypedValue typedValue) /* MethodBuilder.Create */ 
+				public virtual global::Java.IO.InputStream OpenRawResource(int int32, global::Android.Util.TypedValue typedValue) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>

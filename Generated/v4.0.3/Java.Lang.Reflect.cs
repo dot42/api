@@ -1476,7 +1476,7 @@ namespace Java.Lang.Reflect
 		/// java/lang/reflect/Proxy
 		/// </java-name>
 		[Dot42.DexImport("java/lang/reflect/Proxy", AccessFlags = 33)]
-		public partial class Proxy : global::Java.Io.ISerializable
+		public partial class Proxy : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

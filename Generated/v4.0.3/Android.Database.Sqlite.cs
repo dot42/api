@@ -558,7 +558,7 @@ namespace Android.Database.Sqlite
 				/// </java-name>
 				[Dot42.DexImport("openOrCreateDatabase", "(Ljava/io/File;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/da" +
     "tabase/sqlite/SQLiteDatabase;", AccessFlags = 9)]
-				public static global::Android.Database.Sqlite.SQLiteDatabase OpenOrCreateDatabase(global::Java.Io.File file, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory) /* MethodBuilder.Create */ 
+				public static global::Android.Database.Sqlite.SQLiteDatabase OpenOrCreateDatabase(global::Java.IO.File file, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Database.Sqlite.SQLiteDatabase);
 				}

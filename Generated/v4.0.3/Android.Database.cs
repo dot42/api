@@ -2082,7 +2082,7 @@ namespace Android.Database
 				/// dumpCursor
 				/// </java-name>
 				[Dot42.DexImport("dumpCursor", "(Landroid/database/Cursor;Ljava/io/PrintStream;)V", AccessFlags = 9)]
-				public static void DumpCursor(global::Android.Database.ICursor cursor, global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				public static void DumpCursor(global::Android.Database.ICursor cursor, global::Java.IO.PrintStream printStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2115,7 +2115,7 @@ namespace Android.Database
 				/// dumpCurrentRow
 				/// </java-name>
 				[Dot42.DexImport("dumpCurrentRow", "(Landroid/database/Cursor;Ljava/io/PrintStream;)V", AccessFlags = 9)]
-				public static void DumpCurrentRow(global::Android.Database.ICursor cursor, global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				public static void DumpCurrentRow(global::Android.Database.ICursor cursor, global::Java.IO.PrintStream printStream) /* MethodBuilder.Create */ 
 				{
 				}
 

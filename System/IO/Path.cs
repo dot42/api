@@ -15,7 +15,7 @@
 // limitations under the License.
 using System.Text;
 using Dot42;
-using JFile = Java.Io.File;
+using JFile = Java.IO.File;
 
 namespace System.IO
 {

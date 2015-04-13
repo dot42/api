@@ -5,7 +5,7 @@ namespace Java.Util.Concurrent.Atomic
 		/// java/util/concurrent/atomic/AtomicBoolean
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/atomic/AtomicBoolean", AccessFlags = 33)]
-		public partial class AtomicBoolean : global::Java.Io.ISerializable
+		public partial class AtomicBoolean : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Z)V", AccessFlags = 1)]
@@ -85,7 +85,7 @@ namespace Java.Util.Concurrent.Atomic
 		/// java/util/concurrent/atomic/AtomicInteger
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/atomic/AtomicInteger", AccessFlags = 33)]
-		public partial class AtomicInteger : global::Java.Lang.Number, global::Java.Io.ISerializable
+		public partial class AtomicInteger : global::Java.Lang.Number, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
@@ -255,7 +255,7 @@ namespace Java.Util.Concurrent.Atomic
 		/// java/util/concurrent/atomic/AtomicIntegerArray
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/atomic/AtomicIntegerArray", AccessFlags = 33)]
-		public partial class AtomicIntegerArray : global::Java.Io.ISerializable
+		public partial class AtomicIntegerArray : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
@@ -521,7 +521,7 @@ namespace Java.Util.Concurrent.Atomic
 		/// java/util/concurrent/atomic/AtomicLong
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/atomic/AtomicLong", AccessFlags = 33)]
-		public partial class AtomicLong : global::Java.Lang.Number, global::Java.Io.ISerializable
+		public partial class AtomicLong : global::Java.Lang.Number, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(J)V", AccessFlags = 1)]
@@ -691,7 +691,7 @@ namespace Java.Util.Concurrent.Atomic
 		/// java/util/concurrent/atomic/AtomicLongArray
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/atomic/AtomicLongArray", AccessFlags = 33)]
-		public partial class AtomicLongArray : global::Java.Io.ISerializable
+		public partial class AtomicLongArray : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
@@ -1038,7 +1038,7 @@ namespace Java.Util.Concurrent.Atomic
 		/// java/util/concurrent/atomic/AtomicReference
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/atomic/AtomicReference", AccessFlags = 33, Signature = "<V:Ljava/lang/Object;>Ljava/lang/Object;Ljava/io/Serializable;")]
-		public partial class AtomicReference<V> : global::Java.Io.ISerializable
+		public partial class AtomicReference<V> : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TV;)V")]
@@ -1118,7 +1118,7 @@ namespace Java.Util.Concurrent.Atomic
 		/// java/util/concurrent/atomic/AtomicReferenceArray
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/atomic/AtomicReferenceArray", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/lang/Object;Ljava/io/Serializable;")]
-		public partial class AtomicReferenceArray<E> : global::Java.Io.ISerializable
+		public partial class AtomicReferenceArray<E> : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]

@@ -61,10 +61,10 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getCacheFileBaseDir
 				/// </java-name>
-				public static global::Java.Io.File CacheFileBaseDir
+				public static global::Java.IO.File CacheFileBaseDir
 				{
 						[Dot42.DexImport("getCacheFileBaseDir", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 				/// <java-name>
@@ -183,10 +183,10 @@ namespace Android.Webkit
 						/// <java-name>
 						/// getInputStream
 						/// </java-name>
-						public virtual global::Java.Io.InputStream InputStream
+						public virtual global::Java.IO.InputStream InputStream
 						{
 								[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-								get{ return default(global::Java.Io.InputStream); }
+								get{ return default(global::Java.IO.InputStream); }
 								[Dot42.DexImport("setInputStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
 								set{ }
 						}
@@ -194,10 +194,10 @@ namespace Android.Webkit
 						/// <java-name>
 						/// getOutputStream
 						/// </java-name>
-						public virtual global::Java.Io.OutputStream OutputStream
+						public virtual global::Java.IO.OutputStream OutputStream
 						{
 								[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-								get{ return default(global::Java.Io.OutputStream); }
+								get{ return default(global::Java.IO.OutputStream); }
 						}
 
 				}
@@ -1082,7 +1082,7 @@ namespace Android.Webkit
 		/// android/webkit/WebBackForwardList
 		/// </java-name>
 		[Dot42.DexImport("android/webkit/WebBackForwardList", AccessFlags = 33)]
-		public partial class WebBackForwardList : global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class WebBackForwardList : global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -1534,7 +1534,7 @@ namespace Android.Webkit
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public WebResourceResponse(string @string, string string1, global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public WebResourceResponse(string @string, string string1, global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1568,10 +1568,10 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				public virtual global::Java.Io.InputStream Data
+				public virtual global::Java.IO.InputStream Data
 				{
 						[Dot42.DexImport("getData", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 						[Dot42.DexImport("setData", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -2822,7 +2822,7 @@ namespace Android.Webkit
 				/// savePicture
 				/// </java-name>
 				[Dot42.DexImport("savePicture", "(Landroid/os/Bundle;Ljava/io/File;)Z", AccessFlags = 1)]
-				public virtual bool SavePicture(global::Android.OS.Bundle bundle, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual bool SavePicture(global::Android.OS.Bundle bundle, global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2831,7 +2831,7 @@ namespace Android.Webkit
 				/// restorePicture
 				/// </java-name>
 				[Dot42.DexImport("restorePicture", "(Landroid/os/Bundle;Ljava/io/File;)Z", AccessFlags = 1)]
-				public virtual bool RestorePicture(global::Android.OS.Bundle bundle, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual bool RestorePicture(global::Android.OS.Bundle bundle, global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}

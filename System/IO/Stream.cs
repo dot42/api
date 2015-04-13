@@ -13,9 +13,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Java.Io;
-using JInputStream = Java.Io.InputStream;
-using JOutputStream = Java.Io.OutputStream;
+using Java.IO;
+using JInputStream = Java.IO.InputStream;
+using JOutputStream = Java.IO.OutputStream;
 
 namespace System.IO
 {

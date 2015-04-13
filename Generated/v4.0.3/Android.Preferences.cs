@@ -1,11 +1,11 @@
 ﻿#pragma warning disable 1717
-namespace Android.Preference
+namespace Android.Preferences
 {
 		/// <java-name>
 		/// android/preference/CheckBoxPreference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/CheckBoxPreference", AccessFlags = 33)]
-		public partial class CheckBoxPreference : global::Android.Preference.TwoStatePreference
+		public partial class CheckBoxPreference : global::Android.Preferences.TwoStatePreference
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
@@ -42,7 +42,7 @@ namespace Android.Preference
 		/// android/preference/DialogPreference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/DialogPreference", AccessFlags = 1057)]
-		public abstract partial class DialogPreference : global::Android.Preference.Preference, global::Android.Content.IDialogInterface_IOnClickListener, global::Android.Content.IDialogInterface_IOnDismissListener, global::Android.Preference.PreferenceManager.IOnActivityDestroyListener
+		public abstract partial class DialogPreference : global::Android.Preferences.Preference, global::Android.Content.IDialogInterface_IOnClickListener, global::Android.Content.IDialogInterface_IOnDismissListener, global::Android.Preferences.PreferenceManager.IOnActivityDestroyListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
@@ -271,7 +271,7 @@ namespace Android.Preference
 		/// android/preference/EditTextPreference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/EditTextPreference", AccessFlags = 33)]
-		public partial class EditTextPreference : global::Android.Preference.DialogPreference
+		public partial class EditTextPreference : global::Android.Preferences.DialogPreference
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
@@ -387,7 +387,7 @@ namespace Android.Preference
 		/// android/preference/ListPreference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/ListPreference", AccessFlags = 33)]
-		public partial class ListPreference : global::Android.Preference.DialogPreference
+		public partial class ListPreference : global::Android.Preferences.DialogPreference
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -547,7 +547,7 @@ namespace Android.Preference
 		/// android/preference/MultiSelectListPreference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/MultiSelectListPreference", AccessFlags = 33)]
-		public partial class MultiSelectListPreference : global::Android.Preference.DialogPreference
+		public partial class MultiSelectListPreference : global::Android.Preferences.DialogPreference
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
@@ -671,7 +671,7 @@ namespace Android.Preference
 		/// android/preference/Preference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/Preference", AccessFlags = 33, Signature = "Ljava/lang/Object;Ljava/lang/Comparable<Landroid/preference/Preference;>;")]
-		public partial class Preference : global::System.IComparable<global::Android.Preference.Preference>
+		public partial class Preference : global::System.IComparable<global::Android.Preferences.Preference>
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -801,7 +801,7 @@ namespace Android.Preference
 				/// compareTo
 				/// </java-name>
 				[Dot42.DexImport("compareTo", "(Landroid/preference/Preference;)I", AccessFlags = 1)]
-				public virtual int CompareTo(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				public virtual int CompareTo(global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -826,7 +826,7 @@ namespace Android.Preference
 				/// onAttachedToHierarchy
 				/// </java-name>
 				[Dot42.DexImport("onAttachedToHierarchy", "(Landroid/preference/PreferenceManager;)V", AccessFlags = 4)]
-				protected internal virtual void OnAttachedToHierarchy(global::Android.Preference.PreferenceManager preferenceManager) /* MethodBuilder.Create */ 
+				protected internal virtual void OnAttachedToHierarchy(global::Android.Preferences.PreferenceManager preferenceManager) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -842,9 +842,9 @@ namespace Android.Preference
 				/// findPreferenceInHierarchy
 				/// </java-name>
 				[Dot42.DexImport("findPreferenceInHierarchy", "(Ljava/lang/String;)Landroid/preference/Preference;", AccessFlags = 4)]
-				protected internal virtual global::Android.Preference.Preference FindPreferenceInHierarchy(string @string) /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.Preferences.Preference FindPreferenceInHierarchy(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Preference.Preference);
+						return default(global::Android.Preferences.Preference);
 				}
 
 				/// <java-name>
@@ -859,7 +859,7 @@ namespace Android.Preference
 				/// onDependencyChanged
 				/// </java-name>
 				[Dot42.DexImport("onDependencyChanged", "(Landroid/preference/Preference;Z)V", AccessFlags = 1)]
-				public virtual void OnDependencyChanged(global::Android.Preference.Preference preference, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void OnDependencyChanged(global::Android.Preferences.Preference preference, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1206,10 +1206,10 @@ namespace Android.Preference
 				/// <java-name>
 				/// getOnPreferenceChangeListener
 				/// </java-name>
-				public virtual global::Android.Preference.Preference.IOnPreferenceChangeListener OnPreferenceChangeListener
+				public virtual global::Android.Preferences.Preference.IOnPreferenceChangeListener OnPreferenceChangeListener
 				{
 						[Dot42.DexImport("getOnPreferenceChangeListener", "()Landroid/preference/Preference$OnPreferenceChangeListener;", AccessFlags = 1)]
-						get{ return default(global::Android.Preference.Preference.IOnPreferenceChangeListener); }
+						get{ return default(global::Android.Preferences.Preference.IOnPreferenceChangeListener); }
 						[Dot42.DexImport("setOnPreferenceChangeListener", "(Landroid/preference/Preference$OnPreferenceChangeListener;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -1217,10 +1217,10 @@ namespace Android.Preference
 				/// <java-name>
 				/// getOnPreferenceClickListener
 				/// </java-name>
-				public virtual global::Android.Preference.Preference.IOnPreferenceClickListener OnPreferenceClickListener
+				public virtual global::Android.Preferences.Preference.IOnPreferenceClickListener OnPreferenceClickListener
 				{
 						[Dot42.DexImport("getOnPreferenceClickListener", "()Landroid/preference/Preference$OnPreferenceClickListener;", AccessFlags = 1)]
-						get{ return default(global::Android.Preference.Preference.IOnPreferenceClickListener); }
+						get{ return default(global::Android.Preferences.Preference.IOnPreferenceClickListener); }
 						[Dot42.DexImport("setOnPreferenceClickListener", "(Landroid/preference/Preference$OnPreferenceClickListener;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -1255,10 +1255,10 @@ namespace Android.Preference
 				/// <java-name>
 				/// getPreferenceManager
 				/// </java-name>
-				public virtual global::Android.Preference.PreferenceManager PreferenceManager
+				public virtual global::Android.Preferences.PreferenceManager PreferenceManager
 				{
 						[Dot42.DexImport("getPreferenceManager", "()Landroid/preference/PreferenceManager;", AccessFlags = 1)]
-						get{ return default(global::Android.Preference.PreferenceManager); }
+						get{ return default(global::Android.Preferences.PreferenceManager); }
 				}
 
 				/// <java-name>
@@ -1312,7 +1312,7 @@ namespace Android.Preference
 						/// onPreferenceClick
 						/// </java-name>
 						[Dot42.DexImport("onPreferenceClick", "(Landroid/preference/Preference;)Z", AccessFlags = 1025)]
-						bool OnPreferenceClick(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ ;
+						bool OnPreferenceClick(global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -1327,7 +1327,7 @@ namespace Android.Preference
 						/// onPreferenceChange
 						/// </java-name>
 						[Dot42.DexImport("onPreferenceChange", "(Landroid/preference/Preference;Ljava/lang/Object;)Z", AccessFlags = 1025)]
-						bool OnPreferenceChange(global::Android.Preference.Preference preference, object @object) /* MethodBuilder.Create */ ;
+						bool OnPreferenceChange(global::Android.Preferences.Preference preference, object @object) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -1337,7 +1337,7 @@ namespace Android.Preference
 		/// android/preference/PreferenceActivity
 		/// </java-name>
 		[Dot42.DexImport("android/preference/PreferenceActivity", AccessFlags = 1057)]
-		public abstract partial class PreferenceActivity : global::Android.App.ListActivity, global::Android.Preference.PreferenceFragment.IOnPreferenceStartFragmentCallback
+		public abstract partial class PreferenceActivity : global::Android.App.ListActivity, global::Android.Preferences.PreferenceFragment.IOnPreferenceStartFragmentCallback
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1405,25 +1405,25 @@ namespace Android.Preference
 				/// onGetInitialHeader
 				/// </java-name>
 				[Dot42.DexImport("onGetInitialHeader", "()Landroid/preference/PreferenceActivity$Header;", AccessFlags = 1)]
-				public virtual global::Android.Preference.PreferenceActivity.Header OnGetInitialHeader() /* MethodBuilder.Create */ 
+				public virtual global::Android.Preferences.PreferenceActivity.Header OnGetInitialHeader() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Preference.PreferenceActivity.Header);
+						return default(global::Android.Preferences.PreferenceActivity.Header);
 				}
 
 				/// <java-name>
 				/// onGetNewHeader
 				/// </java-name>
 				[Dot42.DexImport("onGetNewHeader", "()Landroid/preference/PreferenceActivity$Header;", AccessFlags = 1)]
-				public virtual global::Android.Preference.PreferenceActivity.Header OnGetNewHeader() /* MethodBuilder.Create */ 
+				public virtual global::Android.Preferences.PreferenceActivity.Header OnGetNewHeader() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Preference.PreferenceActivity.Header);
+						return default(global::Android.Preferences.PreferenceActivity.Header);
 				}
 
 				/// <java-name>
 				/// onBuildHeaders
 				/// </java-name>
 				[Dot42.DexImport("onBuildHeaders", "(Ljava/util/List;)V", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/preference/PreferenceActivity$Header;>;)V")]
-				public virtual void OnBuildHeaders(global::Java.Util.IList<global::Android.Preference.PreferenceActivity.Header> list) /* MethodBuilder.Create */ 
+				public virtual void OnBuildHeaders(global::Java.Util.IList<global::Android.Preferences.PreferenceActivity.Header> list) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1439,7 +1439,7 @@ namespace Android.Preference
 				/// loadHeadersFromResource
 				/// </java-name>
 				[Dot42.DexImport("loadHeadersFromResource", "(ILjava/util/List;)V", AccessFlags = 1, Signature = "(ILjava/util/List<Landroid/preference/PreferenceActivity$Header;>;)V")]
-				public virtual void LoadHeadersFromResource(int int32, global::Java.Util.IList<global::Android.Preference.PreferenceActivity.Header> list) /* MethodBuilder.Create */ 
+				public virtual void LoadHeadersFromResource(int int32, global::Java.Util.IList<global::Android.Preferences.PreferenceActivity.Header> list) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1511,7 +1511,7 @@ namespace Android.Preference
 				/// onHeaderClick
 				/// </java-name>
 				[Dot42.DexImport("onHeaderClick", "(Landroid/preference/PreferenceActivity$Header;I)V", AccessFlags = 1)]
-				public virtual void OnHeaderClick(global::Android.Preference.PreferenceActivity.Header header, int int32) /* MethodBuilder.Create */ 
+				public virtual void OnHeaderClick(global::Android.Preferences.PreferenceActivity.Header header, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1569,7 +1569,7 @@ namespace Android.Preference
 				/// switchToHeader
 				/// </java-name>
 				[Dot42.DexImport("switchToHeader", "(Landroid/preference/PreferenceActivity$Header;)V", AccessFlags = 1)]
-				public virtual void SwitchToHeader(global::Android.Preference.PreferenceActivity.Header header) /* MethodBuilder.Create */ 
+				public virtual void SwitchToHeader(global::Android.Preferences.PreferenceActivity.Header header) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1602,7 +1602,7 @@ namespace Android.Preference
 				/// onPreferenceStartFragment
 				/// </java-name>
 				[Dot42.DexImport("onPreferenceStartFragment", "(Landroid/preference/PreferenceFragment;Landroid/preference/Preference;)Z", AccessFlags = 1)]
-				public virtual bool OnPreferenceStartFragment(global::Android.Preference.PreferenceFragment preferenceFragment, global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				public virtual bool OnPreferenceStartFragment(global::Android.Preferences.PreferenceFragment preferenceFragment, global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1627,7 +1627,7 @@ namespace Android.Preference
 				/// onPreferenceTreeClick
 				/// </java-name>
 				[Dot42.DexImport("onPreferenceTreeClick", "(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z", AccessFlags = 1)]
-				public virtual bool OnPreferenceTreeClick(global::Android.Preference.PreferenceScreen preferenceScreen, global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				public virtual bool OnPreferenceTreeClick(global::Android.Preferences.PreferenceScreen preferenceScreen, global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1636,9 +1636,9 @@ namespace Android.Preference
 				/// findPreference
 				/// </java-name>
 				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
-				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				public virtual global::Android.Preferences.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Preference.Preference);
+						return default(global::Android.Preferences.Preference);
 				}
 
 				/// <java-name>
@@ -1670,19 +1670,19 @@ namespace Android.Preference
 				/// <java-name>
 				/// getPreferenceManager
 				/// </java-name>
-				public virtual global::Android.Preference.PreferenceManager PreferenceManager
+				public virtual global::Android.Preferences.PreferenceManager PreferenceManager
 				{
 						[Dot42.DexImport("getPreferenceManager", "()Landroid/preference/PreferenceManager;", AccessFlags = 1)]
-						get{ return default(global::Android.Preference.PreferenceManager); }
+						get{ return default(global::Android.Preferences.PreferenceManager); }
 				}
 
 				/// <java-name>
 				/// getPreferenceScreen
 				/// </java-name>
-				public virtual global::Android.Preference.PreferenceScreen PreferenceScreen
+				public virtual global::Android.Preferences.PreferenceScreen PreferenceScreen
 				{
 						[Dot42.DexImport("getPreferenceScreen", "()Landroid/preference/PreferenceScreen;", AccessFlags = 1)]
-						get{ return default(global::Android.Preference.PreferenceScreen); }
+						get{ return default(global::Android.Preferences.PreferenceScreen); }
 						[Dot42.DexImport("setPreferenceScreen", "(Landroid/preference/PreferenceScreen;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -1843,7 +1843,7 @@ namespace Android.Preference
 		/// android/preference/PreferenceCategory
 		/// </java-name>
 		[Dot42.DexImport("android/preference/PreferenceCategory", AccessFlags = 33)]
-		public partial class PreferenceCategory : global::Android.Preference.PreferenceGroup
+		public partial class PreferenceCategory : global::Android.Preferences.PreferenceGroup
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
@@ -1865,7 +1865,7 @@ namespace Android.Preference
 				/// onPrepareAddPreference
 				/// </java-name>
 				[Dot42.DexImport("onPrepareAddPreference", "(Landroid/preference/Preference;)Z", AccessFlags = 4)]
-				protected internal override bool OnPrepareAddPreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				protected internal override bool OnPrepareAddPreference(global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1992,7 +1992,7 @@ namespace Android.Preference
 				/// onPreferenceTreeClick
 				/// </java-name>
 				[Dot42.DexImport("onPreferenceTreeClick", "(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z", AccessFlags = 1)]
-				public virtual bool OnPreferenceTreeClick(global::Android.Preference.PreferenceScreen preferenceScreen, global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				public virtual bool OnPreferenceTreeClick(global::Android.Preferences.PreferenceScreen preferenceScreen, global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2001,27 +2001,27 @@ namespace Android.Preference
 				/// findPreference
 				/// </java-name>
 				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
-				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				public virtual global::Android.Preferences.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Preference.Preference);
+						return default(global::Android.Preferences.Preference);
 				}
 
 				/// <java-name>
 				/// getPreferenceManager
 				/// </java-name>
-				public virtual global::Android.Preference.PreferenceManager PreferenceManager
+				public virtual global::Android.Preferences.PreferenceManager PreferenceManager
 				{
 						[Dot42.DexImport("getPreferenceManager", "()Landroid/preference/PreferenceManager;", AccessFlags = 1)]
-						get{ return default(global::Android.Preference.PreferenceManager); }
+						get{ return default(global::Android.Preferences.PreferenceManager); }
 				}
 
 				/// <java-name>
 				/// getPreferenceScreen
 				/// </java-name>
-				public virtual global::Android.Preference.PreferenceScreen PreferenceScreen
+				public virtual global::Android.Preferences.PreferenceScreen PreferenceScreen
 				{
 						[Dot42.DexImport("getPreferenceScreen", "()Landroid/preference/PreferenceScreen;", AccessFlags = 1)]
-						get{ return default(global::Android.Preference.PreferenceScreen); }
+						get{ return default(global::Android.Preferences.PreferenceScreen); }
 						[Dot42.DexImport("setPreferenceScreen", "(Landroid/preference/PreferenceScreen;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -2037,7 +2037,7 @@ namespace Android.Preference
 						/// onPreferenceStartFragment
 						/// </java-name>
 						[Dot42.DexImport("onPreferenceStartFragment", "(Landroid/preference/PreferenceFragment;Landroid/preference/Preference;)Z", AccessFlags = 1025)]
-						bool OnPreferenceStartFragment(global::Android.Preference.PreferenceFragment preferenceFragment, global::Android.Preference.Preference preference) /* MethodBuilder.Create */ ;
+						bool OnPreferenceStartFragment(global::Android.Preferences.PreferenceFragment preferenceFragment, global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -2047,7 +2047,7 @@ namespace Android.Preference
 		/// android/preference/PreferenceGroup
 		/// </java-name>
 		[Dot42.DexImport("android/preference/PreferenceGroup", AccessFlags = 1057)]
-		public abstract partial class PreferenceGroup : global::Android.Preference.Preference
+		public abstract partial class PreferenceGroup : global::Android.Preferences.Preference
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
@@ -2064,7 +2064,7 @@ namespace Android.Preference
 				/// addItemFromInflater
 				/// </java-name>
 				[Dot42.DexImport("addItemFromInflater", "(Landroid/preference/Preference;)V", AccessFlags = 1)]
-				public virtual void AddItemFromInflater(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				public virtual void AddItemFromInflater(global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2072,16 +2072,16 @@ namespace Android.Preference
 				/// getPreference
 				/// </java-name>
 				[Dot42.DexImport("getPreference", "(I)Landroid/preference/Preference;", AccessFlags = 1)]
-				public virtual global::Android.Preference.Preference GetPreference(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Preferences.Preference GetPreference(int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Preference.Preference);
+						return default(global::Android.Preferences.Preference);
 				}
 
 				/// <java-name>
 				/// addPreference
 				/// </java-name>
 				[Dot42.DexImport("addPreference", "(Landroid/preference/Preference;)Z", AccessFlags = 1)]
-				public virtual bool AddPreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				public virtual bool AddPreference(global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2090,7 +2090,7 @@ namespace Android.Preference
 				/// removePreference
 				/// </java-name>
 				[Dot42.DexImport("removePreference", "(Landroid/preference/Preference;)Z", AccessFlags = 1)]
-				public virtual bool RemovePreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				public virtual bool RemovePreference(global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2107,7 +2107,7 @@ namespace Android.Preference
 				/// onPrepareAddPreference
 				/// </java-name>
 				[Dot42.DexImport("onPrepareAddPreference", "(Landroid/preference/Preference;)Z", AccessFlags = 4)]
-				protected internal virtual bool OnPrepareAddPreference(global::Android.Preference.Preference preference) /* MethodBuilder.Create */ 
+				protected internal virtual bool OnPrepareAddPreference(global::Android.Preferences.Preference preference) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2116,9 +2116,9 @@ namespace Android.Preference
 				/// findPreference
 				/// </java-name>
 				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
-				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				public virtual global::Android.Preferences.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Preference.Preference);
+						return default(global::Android.Preferences.Preference);
 				}
 
 				/// <java-name>
@@ -2224,9 +2224,9 @@ namespace Android.Preference
 				/// createPreferenceScreen
 				/// </java-name>
 				[Dot42.DexImport("createPreferenceScreen", "(Landroid/content/Context;)Landroid/preference/PreferenceScreen;", AccessFlags = 1)]
-				public virtual global::Android.Preference.PreferenceScreen CreatePreferenceScreen(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				public virtual global::Android.Preferences.PreferenceScreen CreatePreferenceScreen(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Preference.PreferenceScreen);
+						return default(global::Android.Preferences.PreferenceScreen);
 				}
 
 				/// <java-name>
@@ -2242,9 +2242,9 @@ namespace Android.Preference
 				/// findPreference
 				/// </java-name>
 				[Dot42.DexImport("findPreference", "(Ljava/lang/CharSequence;)Landroid/preference/Preference;", AccessFlags = 1)]
-				public virtual global::Android.Preference.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				public virtual global::Android.Preferences.Preference FindPreference(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Preference.Preference);
+						return default(global::Android.Preferences.Preference);
 				}
 
 				/// <java-name>
@@ -2345,7 +2345,7 @@ namespace Android.Preference
 		/// android/preference/PreferenceScreen
 		/// </java-name>
 		[Dot42.DexImport("android/preference/PreferenceScreen", AccessFlags = 49)]
-		public sealed partial class PreferenceScreen : global::Android.Preference.PreferenceGroup, global::Android.Widget.AdapterView<object>.IOnItemClickListener, global::Android.Content.IDialogInterface_IOnDismissListener
+		public sealed partial class PreferenceScreen : global::Android.Preferences.PreferenceGroup, global::Android.Widget.AdapterView<object>.IOnItemClickListener, global::Android.Content.IDialogInterface_IOnDismissListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -2444,7 +2444,7 @@ namespace Android.Preference
 		/// android/preference/RingtonePreference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/RingtonePreference", AccessFlags = 33)]
-		public partial class RingtonePreference : global::Android.Preference.Preference, global::Android.Preference.PreferenceManager.IOnActivityResultListener
+		public partial class RingtonePreference : global::Android.Preferences.Preference, global::Android.Preferences.PreferenceManager.IOnActivityResultListener
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
@@ -2516,7 +2516,7 @@ namespace Android.Preference
 				/// onAttachedToHierarchy
 				/// </java-name>
 				[Dot42.DexImport("onAttachedToHierarchy", "(Landroid/preference/PreferenceManager;)V", AccessFlags = 4)]
-				protected internal override void OnAttachedToHierarchy(global::Android.Preference.PreferenceManager preferenceManager) /* MethodBuilder.Create */ 
+				protected internal override void OnAttachedToHierarchy(global::Android.Preferences.PreferenceManager preferenceManager) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2573,7 +2573,7 @@ namespace Android.Preference
 		/// android/preference/SwitchPreference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/SwitchPreference", AccessFlags = 33)]
-		public partial class SwitchPreference : global::Android.Preference.TwoStatePreference
+		public partial class SwitchPreference : global::Android.Preferences.TwoStatePreference
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
@@ -2648,7 +2648,7 @@ namespace Android.Preference
 		/// android/preference/TwoStatePreference
 		/// </java-name>
 		[Dot42.DexImport("android/preference/TwoStatePreference", AccessFlags = 1057)]
-		public abstract partial class TwoStatePreference : global::Android.Preference.Preference
+		public abstract partial class TwoStatePreference : global::Android.Preferences.Preference
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]

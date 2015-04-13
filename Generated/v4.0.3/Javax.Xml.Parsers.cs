@@ -25,7 +25,7 @@ namespace Javax.Xml.Parsers
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/InputStream;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Org.W3c.Dom.IDocument);
 				}
@@ -34,7 +34,7 @@ namespace Javax.Xml.Parsers
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/InputStream;Ljava/lang/String;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.IO.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Org.W3c.Dom.IDocument);
 				}
@@ -52,7 +52,7 @@ namespace Javax.Xml.Parsers
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/File;)Lorg/w3c/dom/Document;", AccessFlags = 1)]
-				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual global::Org.W3c.Dom.IDocument Parse(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 						return default(global::Org.W3c.Dom.IDocument);
 				}
@@ -369,7 +369,7 @@ namespace Javax.Xml.Parsers
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/InputStream;Lorg/xml/sax/HandlerBase;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Java.Io.InputStream inputStream, global::Org.Xml.Sax.HandlerBase handlerBase) /* MethodBuilder.Create */ 
+				public virtual void Parse(global::Java.IO.InputStream inputStream, global::Org.Xml.Sax.HandlerBase handlerBase) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -377,7 +377,7 @@ namespace Javax.Xml.Parsers
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/InputStream;Lorg/xml/sax/HandlerBase;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Java.Io.InputStream inputStream, global::Org.Xml.Sax.HandlerBase handlerBase, string @string) /* MethodBuilder.Create */ 
+				public virtual void Parse(global::Java.IO.InputStream inputStream, global::Org.Xml.Sax.HandlerBase handlerBase, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -385,7 +385,7 @@ namespace Javax.Xml.Parsers
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/InputStream;Lorg/xml/sax/helpers/DefaultHandler;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Java.Io.InputStream inputStream, global::Org.Xml.Sax.Helpers.DefaultHandler defaultHandler) /* MethodBuilder.Create */ 
+				public virtual void Parse(global::Java.IO.InputStream inputStream, global::Org.Xml.Sax.Helpers.DefaultHandler defaultHandler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -393,7 +393,7 @@ namespace Javax.Xml.Parsers
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/InputStream;Lorg/xml/sax/helpers/DefaultHandler;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Java.Io.InputStream inputStream, global::Org.Xml.Sax.Helpers.DefaultHandler defaultHandler, string @string) /* MethodBuilder.Create */ 
+				public virtual void Parse(global::Java.IO.InputStream inputStream, global::Org.Xml.Sax.Helpers.DefaultHandler defaultHandler, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -417,7 +417,7 @@ namespace Javax.Xml.Parsers
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/File;Lorg/xml/sax/HandlerBase;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Java.Io.File file, global::Org.Xml.Sax.HandlerBase handlerBase) /* MethodBuilder.Create */ 
+				public virtual void Parse(global::Java.IO.File file, global::Org.Xml.Sax.HandlerBase handlerBase) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -425,7 +425,7 @@ namespace Javax.Xml.Parsers
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/File;Lorg/xml/sax/helpers/DefaultHandler;)V", AccessFlags = 1)]
-				public virtual void Parse(global::Java.Io.File file, global::Org.Xml.Sax.Helpers.DefaultHandler defaultHandler) /* MethodBuilder.Create */ 
+				public virtual void Parse(global::Java.IO.File file, global::Org.Xml.Sax.Helpers.DefaultHandler defaultHandler) /* MethodBuilder.Create */ 
 				{
 				}
 

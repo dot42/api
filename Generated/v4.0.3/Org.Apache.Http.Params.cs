@@ -133,7 +133,7 @@ namespace Org.Apache.Http.Params
 		/// org/apache/http/params/BasicHttpParams
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/params/BasicHttpParams", AccessFlags = 49)]
-		public sealed partial class BasicHttpParams : global::Org.Apache.Http.Params.AbstractHttpParams, global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		public sealed partial class BasicHttpParams : global::Org.Apache.Http.Params.AbstractHttpParams, global::Java.IO.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]

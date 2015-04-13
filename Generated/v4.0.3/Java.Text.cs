@@ -1476,7 +1476,7 @@ namespace Java.Text
 		/// java/text/DateFormatSymbols
 		/// </java-name>
 		[Dot42.DexImport("java/text/DateFormatSymbols", AccessFlags = 33)]
-		public partial class DateFormatSymbols : global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		public partial class DateFormatSymbols : global::Java.IO.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1956,7 +1956,7 @@ namespace Java.Text
 		/// java/text/DecimalFormatSymbols
 		/// </java-name>
 		[Dot42.DexImport("java/text/DecimalFormatSymbols", AccessFlags = 33)]
-		public partial class DecimalFormatSymbols : global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class DecimalFormatSymbols : global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -2299,7 +2299,7 @@ namespace Java.Text
 		/// java/text/Format
 		/// </java-name>
 		[Dot42.DexImport("java/text/Format", AccessFlags = 1057)]
-		public abstract partial class Format : global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		public abstract partial class Format : global::Java.IO.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
@@ -2457,7 +2457,7 @@ namespace Java.Text
 		/// java/text/AttributedCharacterIterator$Attribute
 		/// </java-name>
 		[Dot42.DexImport("java/text/AttributedCharacterIterator$Attribute", AccessFlags = 9)]
-		public partial class IAttributedCharacterIterator_Attribute : global::Java.Io.ISerializable
+		public partial class IAttributedCharacterIterator_Attribute : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

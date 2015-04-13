@@ -3174,9 +3174,9 @@ namespace Android.Provider
 						/// openContactPhotoInputStream
 						/// </java-name>
 						[Dot42.DexImport("openContactPhotoInputStream", "(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/io/InputStream;", AccessFlags = 9)]
-						public static global::Java.Io.InputStream OpenContactPhotoInputStream(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
+						public static global::Java.IO.InputStream OpenContactPhotoInputStream(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
 						{
-								return default(global::Java.Io.InputStream);
+								return default(global::Java.IO.InputStream);
 						}
 
 						/// <java-name>
@@ -6293,18 +6293,18 @@ namespace Android.Provider
 						/// openContactPhotoInputStream
 						/// </java-name>
 						[Dot42.DexImport("openContactPhotoInputStream", "(Landroid/content/ContentResolver;Landroid/net/Uri;Z)Ljava/io/InputStream;", AccessFlags = 9)]
-						public static global::Java.Io.InputStream OpenContactPhotoInputStream(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri, bool boolean) /* MethodBuilder.Create */ 
+						public static global::Java.IO.InputStream OpenContactPhotoInputStream(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri, bool boolean) /* MethodBuilder.Create */ 
 						{
-								return default(global::Java.Io.InputStream);
+								return default(global::Java.IO.InputStream);
 						}
 
 						/// <java-name>
 						/// openContactPhotoInputStream
 						/// </java-name>
 						[Dot42.DexImport("openContactPhotoInputStream", "(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/io/InputStream;", AccessFlags = 9)]
-						public static global::Java.Io.InputStream OpenContactPhotoInputStream(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
+						public static global::Java.IO.InputStream OpenContactPhotoInputStream(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
 						{
-								return default(global::Java.Io.InputStream);
+								return default(global::Java.IO.InputStream);
 						}
 
 						/// <java-name>

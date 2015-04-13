@@ -6,7 +6,7 @@ namespace Java.Math
 		/// </java-name>
 		[Dot42.DexImport("java/math/BigDecimal", AccessFlags = 33, Signature = "Ljava/lang/Number;Ljava/lang/Comparable<Ljava/math/BigDecimal;>;Ljava/io/Serializ" +
     "able;")]
-		public partial class BigDecimal : global::Java.Lang.Number, global::System.IComparable<global::Java.Math.BigDecimal>, global::Java.Io.ISerializable
+		public partial class BigDecimal : global::Java.Lang.Number, global::System.IComparable<global::Java.Math.BigDecimal>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -705,7 +705,7 @@ namespace Java.Math
 		/// </java-name>
 		[Dot42.DexImport("java/math/BigInteger", AccessFlags = 33, Signature = "Ljava/lang/Number;Ljava/lang/Comparable<Ljava/math/BigInteger;>;Ljava/io/Serializ" +
     "able;")]
-		public partial class BigInteger : global::Java.Lang.Number, global::System.IComparable<global::Java.Math.BigInteger>, global::Java.Io.ISerializable
+		public partial class BigInteger : global::Java.Lang.Number, global::System.IComparable<global::Java.Math.BigInteger>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1179,7 +1179,7 @@ namespace Java.Math
 		/// java/math/MathContext
 		/// </java-name>
 		[Dot42.DexImport("java/math/MathContext", AccessFlags = 49)]
-		public sealed partial class MathContext : global::Java.Io.ISerializable
+		public sealed partial class MathContext : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

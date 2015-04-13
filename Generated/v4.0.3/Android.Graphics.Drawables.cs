@@ -167,12 +167,12 @@ namespace Android.Graphics.Drawables
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public BitmapDrawable(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public BitmapDrawable(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/res/Resources;Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public BitmapDrawable(global::Android.Content.Res.Resources resources, global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public BitmapDrawable(global::Android.Content.Res.Resources resources, global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -866,7 +866,7 @@ namespace Android.Graphics.Drawables
 				/// createFromStream
 				/// </java-name>
 				[Dot42.DexImport("createFromStream", "(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 9)]
-				public static global::Android.Graphics.Drawables.Drawable CreateFromStream(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Drawables.Drawable CreateFromStream(global::Java.IO.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -876,7 +876,7 @@ namespace Android.Graphics.Drawables
 				/// </java-name>
 				[Dot42.DexImport("createFromResourceStream", "(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Lja" +
     "va/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 9)]
-				public static global::Android.Graphics.Drawables.Drawable CreateFromResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Drawables.Drawable CreateFromResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.IO.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -887,7 +887,7 @@ namespace Android.Graphics.Drawables
 				[Dot42.DexImport("createFromResourceStream", "(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Lja" +
     "va/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/drawab" +
     "le/Drawable;", AccessFlags = 9)]
-				public static global::Android.Graphics.Drawables.Drawable CreateFromResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.Io.InputStream inputStream, string @string, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Drawables.Drawable CreateFromResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.IO.InputStream inputStream, string @string, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}

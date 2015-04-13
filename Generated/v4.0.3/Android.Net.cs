@@ -327,7 +327,7 @@ namespace Android.Net
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/FileDescriptor;)V", AccessFlags = 1)]
-				public LocalServerSocket(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public LocalServerSocket(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -365,10 +365,10 @@ namespace Android.Net
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				public virtual global::Java.Io.FileDescriptor FileDescriptor
+				public virtual global::Java.IO.FileDescriptor FileDescriptor
 				{
 						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.FileDescriptor); }
+						get{ return default(global::Java.IO.FileDescriptor); }
 				}
 
 		}
@@ -446,7 +446,7 @@ namespace Android.Net
 				/// setFileDescriptorsForSend
 				/// </java-name>
 				[Dot42.DexImport("setFileDescriptorsForSend", "([Ljava/io/FileDescriptor;)V", AccessFlags = 1)]
-				public virtual void SetFileDescriptorsForSend(global::Java.Io.FileDescriptor[] fileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void SetFileDescriptorsForSend(global::Java.IO.FileDescriptor[] fileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -462,19 +462,19 @@ namespace Android.Net
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public virtual global::Java.Io.InputStream InputStream
+				public virtual global::Java.IO.InputStream InputStream
 				{
 						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public virtual global::Java.Io.OutputStream OutputStream
+				public virtual global::Java.IO.OutputStream OutputStream
 				{
 						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.OutputStream); }
+						get{ return default(global::Java.IO.OutputStream); }
 				}
 
 				/// <java-name>
@@ -567,10 +567,10 @@ namespace Android.Net
 				/// <java-name>
 				/// getAncillaryFileDescriptors
 				/// </java-name>
-				public virtual global::Java.Io.FileDescriptor[] AncillaryFileDescriptors
+				public virtual global::Java.IO.FileDescriptor[] AncillaryFileDescriptors
 				{
 						[Dot42.DexImport("getAncillaryFileDescriptors", "()[Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.FileDescriptor[]); }
+						get{ return default(global::Java.IO.FileDescriptor[]); }
 				}
 
 				/// <java-name>
@@ -585,10 +585,10 @@ namespace Android.Net
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				public virtual global::Java.Io.FileDescriptor FileDescriptor
+				public virtual global::Java.IO.FileDescriptor FileDescriptor
 				{
 						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.FileDescriptor); }
+						get{ return default(global::Java.IO.FileDescriptor); }
 				}
 
 		}
@@ -1301,7 +1301,7 @@ namespace Android.Net
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public SSLSessionCache(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public SSLSessionCache(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1645,7 +1645,7 @@ namespace Android.Net
 				/// fromFile
 				/// </java-name>
 				[Dot42.DexImport("fromFile", "(Ljava/io/File;)Landroid/net/Uri;", AccessFlags = 9)]
-				public static global::Android.Net.Uri FromFile(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public static global::Android.Net.Uri FromFile(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Net.Uri);
 				}

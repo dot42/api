@@ -865,7 +865,7 @@ namespace Android.Drm
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;Ljava/lang/String;)V", AccessFlags = 1)]
-				public DrmRights(global::Java.Io.File file, string @string) /* MethodBuilder.Create */ 
+				public DrmRights(global::Java.IO.File file, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 

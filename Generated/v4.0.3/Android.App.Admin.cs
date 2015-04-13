@@ -54,7 +54,7 @@ namespace Android.App.Admin
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
 				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.App.Admin.DeviceAdminInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)V", AccessFlags = 1)]
-				public DeviceAdminInfo(global::Android.Content.Context context, global::Android.Content.Pm.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
+				public DeviceAdminInfo(global::Android.Content.Context context, global::Android.Content.PM.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -62,7 +62,7 @@ namespace Android.App.Admin
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -71,7 +71,7 @@ namespace Android.App.Admin
 				/// loadDescription
 				/// </java-name>
 				[Dot42.DexImport("loadDescription", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -80,7 +80,7 @@ namespace Android.App.Admin
 				/// loadIcon
 				/// </java-name>
 				[Dot42.DexImport("loadIcon", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -163,10 +163,10 @@ namespace Android.App.Admin
 				/// <java-name>
 				/// getActivityInfo
 				/// </java-name>
-				public global::Android.Content.Pm.ActivityInfo ActivityInfo
+				public global::Android.Content.PM.ActivityInfo ActivityInfo
 				{
 						[Dot42.DexImport("getActivityInfo", "()Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-						get{ return default(global::Android.Content.Pm.ActivityInfo); }
+						get{ return default(global::Android.Content.PM.ActivityInfo); }
 				}
 
 				/// <java-name>

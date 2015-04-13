@@ -5,7 +5,7 @@ namespace Javax.Security.Auth.X500
 		/// javax/security/auth/x500/X500Principal
 		/// </java-name>
 		[Dot42.DexImport("javax/security/auth/x500/X500Principal", AccessFlags = 49)]
-		public sealed partial class X500Principal : global::Java.Io.ISerializable, global::Java.Security.IPrincipal
+		public sealed partial class X500Principal : global::Java.IO.ISerializable, global::Java.Security.IPrincipal
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -34,7 +34,7 @@ namespace Javax.Security.Auth.X500
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public X500Principal(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public X500Principal(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 

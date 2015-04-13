@@ -1,5 +1,5 @@
 ﻿#pragma warning disable 1717
-namespace Android.Location
+namespace Android.Locations
 {
 		/// <java-name>
 		/// android/location/Address
@@ -12,7 +12,7 @@ namespace Android.Location
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Location.Address> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Locations.Address> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/util/Locale;)V", AccessFlags = 1)]
 				public Address(global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
 				{
@@ -352,14 +352,14 @@ namespace Android.Location
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Location.Criteria> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Locations.Criteria> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Criteria() /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/location/Criteria;)V", AccessFlags = 1)]
-				public Criteria(global::Android.Location.Criteria criteria) /* MethodBuilder.Create */ 
+				public Criteria(global::Android.Locations.Criteria criteria) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -513,27 +513,27 @@ namespace Android.Location
 				/// getFromLocation
 				/// </java-name>
 				[Dot42.DexImport("getFromLocation", "(DDI)Ljava/util/List;", AccessFlags = 1, Signature = "(DDI)Ljava/util/List<Landroid/location/Address;>;")]
-				public global::Java.Util.IList<global::Android.Location.Address> GetFromLocation(double @double, double double1, int int32) /* MethodBuilder.Create */ 
+				public global::Java.Util.IList<global::Android.Locations.Address> GetFromLocation(double @double, double double1, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.Location.Address>);
+						return default(global::Java.Util.IList<global::Android.Locations.Address>);
 				}
 
 				/// <java-name>
 				/// getFromLocationName
 				/// </java-name>
 				[Dot42.DexImport("getFromLocationName", "(Ljava/lang/String;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;I)Ljava/util/List<Landroid/location/Address;>;")]
-				public global::Java.Util.IList<global::Android.Location.Address> GetFromLocationName(string @string, int int32) /* MethodBuilder.Create */ 
+				public global::Java.Util.IList<global::Android.Locations.Address> GetFromLocationName(string @string, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.Location.Address>);
+						return default(global::Java.Util.IList<global::Android.Locations.Address>);
 				}
 
 				/// <java-name>
 				/// getFromLocationName
 				/// </java-name>
 				[Dot42.DexImport("getFromLocationName", "(Ljava/lang/String;IDDDD)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;IDDDD)Ljava/util/List<Landroid/location/Address;>;")]
-				public global::Java.Util.IList<global::Android.Location.Address> GetFromLocationName(string @string, int int32, double @double, double double1, double double2, double double3) /* MethodBuilder.Create */ 
+				public global::Java.Util.IList<global::Android.Locations.Address> GetFromLocationName(string @string, int int32, double @double, double double1, double double2, double double3) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.Location.Address>);
+						return default(global::Java.Util.IList<global::Android.Locations.Address>);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -673,10 +673,10 @@ namespace Android.Location
 				/// <java-name>
 				/// getSatellites
 				/// </java-name>
-				public global::Java.Lang.IIterable<global::Android.Location.GpsSatellite> Satellites
+				public global::Java.Lang.IIterable<global::Android.Locations.GpsSatellite> Satellites
 				{
 						[Dot42.DexImport("getSatellites", "()Ljava/lang/Iterable;", AccessFlags = 1, Signature = "()Ljava/lang/Iterable<Landroid/location/GpsSatellite;>;")]
-						get{ return default(global::Java.Lang.IIterable<global::Android.Location.GpsSatellite>); }
+						get{ return default(global::Java.Lang.IIterable<global::Android.Locations.GpsSatellite>); }
 				}
 
 				/// <java-name>
@@ -731,7 +731,7 @@ namespace Android.Location
 				/// onLocationChanged
 				/// </java-name>
 				[Dot42.DexImport("onLocationChanged", "(Landroid/location/Location;)V", AccessFlags = 1025)]
-				void OnLocationChanged(global::Android.Location.Location location) /* MethodBuilder.Create */ ;
+				void OnLocationChanged(global::Android.Locations.Location location) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onStatusChanged
@@ -779,14 +779,14 @@ namespace Android.Location
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Location.Location> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Locations.Location> CREATOR;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public Location(string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/location/Location;)V", AccessFlags = 1)]
-				public Location(global::Android.Location.Location location) /* MethodBuilder.Create */ 
+				public Location(global::Android.Locations.Location location) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -802,7 +802,7 @@ namespace Android.Location
 				/// set
 				/// </java-name>
 				[Dot42.DexImport("set", "(Landroid/location/Location;)V", AccessFlags = 1)]
-				public virtual void Set(global::Android.Location.Location location) /* MethodBuilder.Create */ 
+				public virtual void Set(global::Android.Locations.Location location) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -844,7 +844,7 @@ namespace Android.Location
 				/// distanceTo
 				/// </java-name>
 				[Dot42.DexImport("distanceTo", "(Landroid/location/Location;)F", AccessFlags = 1)]
-				public virtual float DistanceTo(global::Android.Location.Location location) /* MethodBuilder.Create */ 
+				public virtual float DistanceTo(global::Android.Locations.Location location) /* MethodBuilder.Create */ 
 				{
 						return default(float);
 				}
@@ -853,7 +853,7 @@ namespace Android.Location
 				/// bearingTo
 				/// </java-name>
 				[Dot42.DexImport("bearingTo", "(Landroid/location/Location;)F", AccessFlags = 1)]
-				public virtual float BearingTo(global::Android.Location.Location location) /* MethodBuilder.Create */ 
+				public virtual float BearingTo(global::Android.Locations.Location location) /* MethodBuilder.Create */ 
 				{
 						return default(float);
 				}
@@ -1123,16 +1123,16 @@ namespace Android.Location
 				/// getProvider
 				/// </java-name>
 				[Dot42.DexImport("getProvider", "(Ljava/lang/String;)Landroid/location/LocationProvider;", AccessFlags = 1)]
-				public virtual global::Android.Location.LocationProvider GetProvider(string @string) /* MethodBuilder.Create */ 
+				public virtual global::Android.Locations.LocationProvider GetProvider(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Location.LocationProvider);
+						return default(global::Android.Locations.LocationProvider);
 				}
 
 				/// <java-name>
 				/// getProviders
 				/// </java-name>
 				[Dot42.DexImport("getProviders", "(Landroid/location/Criteria;Z)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/location/Criteria;Z)Ljava/util/List<Ljava/lang/String;>;")]
-				public virtual global::Java.Util.IList<string> GetProviders(global::Android.Location.Criteria criteria, bool boolean) /* MethodBuilder.Create */ 
+				public virtual global::Java.Util.IList<string> GetProviders(global::Android.Locations.Criteria criteria, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<string>);
 				}
@@ -1141,7 +1141,7 @@ namespace Android.Location
 				/// getBestProvider
 				/// </java-name>
 				[Dot42.DexImport("getBestProvider", "(Landroid/location/Criteria;Z)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetBestProvider(global::Android.Location.Criteria criteria, bool boolean) /* MethodBuilder.Create */ 
+				public virtual string GetBestProvider(global::Android.Locations.Criteria criteria, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -1150,7 +1150,7 @@ namespace Android.Location
 				/// requestLocationUpdates
 				/// </java-name>
 				[Dot42.DexImport("requestLocationUpdates", "(Ljava/lang/String;JFLandroid/location/LocationListener;)V", AccessFlags = 1)]
-				public virtual void RequestLocationUpdates(string @string, long int64, float single, global::Android.Location.ILocationListener locationListener) /* MethodBuilder.Create */ 
+				public virtual void RequestLocationUpdates(string @string, long int64, float single, global::Android.Locations.ILocationListener locationListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1158,7 +1158,7 @@ namespace Android.Location
 				/// requestLocationUpdates
 				/// </java-name>
 				[Dot42.DexImport("requestLocationUpdates", "(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V", AccessFlags = 1)]
-				public virtual void RequestLocationUpdates(string @string, long int64, float single, global::Android.Location.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
+				public virtual void RequestLocationUpdates(string @string, long int64, float single, global::Android.Locations.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1167,7 +1167,7 @@ namespace Android.Location
 				/// </java-name>
 				[Dot42.DexImport("requestLocationUpdates", "(JFLandroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Loop" +
     "er;)V", AccessFlags = 1)]
-				public virtual void RequestLocationUpdates(long int64, float single, global::Android.Location.Criteria criteria, global::Android.Location.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
+				public virtual void RequestLocationUpdates(long int64, float single, global::Android.Locations.Criteria criteria, global::Android.Locations.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1183,7 +1183,7 @@ namespace Android.Location
 				/// requestLocationUpdates
 				/// </java-name>
 				[Dot42.DexImport("requestLocationUpdates", "(JFLandroid/location/Criteria;Landroid/app/PendingIntent;)V", AccessFlags = 1)]
-				public virtual void RequestLocationUpdates(long int64, float single, global::Android.Location.Criteria criteria, global::Android.App.PendingIntent pendingIntent) /* MethodBuilder.Create */ 
+				public virtual void RequestLocationUpdates(long int64, float single, global::Android.Locations.Criteria criteria, global::Android.App.PendingIntent pendingIntent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1191,7 +1191,7 @@ namespace Android.Location
 				/// requestSingleUpdate
 				/// </java-name>
 				[Dot42.DexImport("requestSingleUpdate", "(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V", AccessFlags = 1)]
-				public virtual void RequestSingleUpdate(string @string, global::Android.Location.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
+				public virtual void RequestSingleUpdate(string @string, global::Android.Locations.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1200,7 +1200,7 @@ namespace Android.Location
 				/// </java-name>
 				[Dot42.DexImport("requestSingleUpdate", "(Landroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper" +
     ";)V", AccessFlags = 1)]
-				public virtual void RequestSingleUpdate(global::Android.Location.Criteria criteria, global::Android.Location.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
+				public virtual void RequestSingleUpdate(global::Android.Locations.Criteria criteria, global::Android.Locations.ILocationListener locationListener, global::Android.OS.Looper looper) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1216,7 +1216,7 @@ namespace Android.Location
 				/// requestSingleUpdate
 				/// </java-name>
 				[Dot42.DexImport("requestSingleUpdate", "(Landroid/location/Criteria;Landroid/app/PendingIntent;)V", AccessFlags = 1)]
-				public virtual void RequestSingleUpdate(global::Android.Location.Criteria criteria, global::Android.App.PendingIntent pendingIntent) /* MethodBuilder.Create */ 
+				public virtual void RequestSingleUpdate(global::Android.Locations.Criteria criteria, global::Android.App.PendingIntent pendingIntent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1224,7 +1224,7 @@ namespace Android.Location
 				/// removeUpdates
 				/// </java-name>
 				[Dot42.DexImport("removeUpdates", "(Landroid/location/LocationListener;)V", AccessFlags = 1)]
-				public virtual void RemoveUpdates(global::Android.Location.ILocationListener locationListener) /* MethodBuilder.Create */ 
+				public virtual void RemoveUpdates(global::Android.Locations.ILocationListener locationListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1265,9 +1265,9 @@ namespace Android.Location
 				/// getLastKnownLocation
 				/// </java-name>
 				[Dot42.DexImport("getLastKnownLocation", "(Ljava/lang/String;)Landroid/location/Location;", AccessFlags = 1)]
-				public virtual global::Android.Location.Location GetLastKnownLocation(string @string) /* MethodBuilder.Create */ 
+				public virtual global::Android.Locations.Location GetLastKnownLocation(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Location.Location);
+						return default(global::Android.Locations.Location);
 				}
 
 				/// <java-name>
@@ -1290,7 +1290,7 @@ namespace Android.Location
 				/// setTestProviderLocation
 				/// </java-name>
 				[Dot42.DexImport("setTestProviderLocation", "(Ljava/lang/String;Landroid/location/Location;)V", AccessFlags = 1)]
-				public virtual void SetTestProviderLocation(string @string, global::Android.Location.Location location) /* MethodBuilder.Create */ 
+				public virtual void SetTestProviderLocation(string @string, global::Android.Locations.Location location) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1338,7 +1338,7 @@ namespace Android.Location
 				/// addGpsStatusListener
 				/// </java-name>
 				[Dot42.DexImport("addGpsStatusListener", "(Landroid/location/GpsStatus$Listener;)Z", AccessFlags = 1)]
-				public virtual bool AddGpsStatusListener(global::Android.Location.GpsStatus.IListener listener) /* MethodBuilder.Create */ 
+				public virtual bool AddGpsStatusListener(global::Android.Locations.GpsStatus.IListener listener) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1347,7 +1347,7 @@ namespace Android.Location
 				/// removeGpsStatusListener
 				/// </java-name>
 				[Dot42.DexImport("removeGpsStatusListener", "(Landroid/location/GpsStatus$Listener;)V", AccessFlags = 1)]
-				public virtual void RemoveGpsStatusListener(global::Android.Location.GpsStatus.IListener listener) /* MethodBuilder.Create */ 
+				public virtual void RemoveGpsStatusListener(global::Android.Locations.GpsStatus.IListener listener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1355,7 +1355,7 @@ namespace Android.Location
 				/// addNmeaListener
 				/// </java-name>
 				[Dot42.DexImport("addNmeaListener", "(Landroid/location/GpsStatus$NmeaListener;)Z", AccessFlags = 1)]
-				public virtual bool AddNmeaListener(global::Android.Location.GpsStatus.INmeaListener nmeaListener) /* MethodBuilder.Create */ 
+				public virtual bool AddNmeaListener(global::Android.Locations.GpsStatus.INmeaListener nmeaListener) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1364,7 +1364,7 @@ namespace Android.Location
 				/// removeNmeaListener
 				/// </java-name>
 				[Dot42.DexImport("removeNmeaListener", "(Landroid/location/GpsStatus$NmeaListener;)V", AccessFlags = 1)]
-				public virtual void RemoveNmeaListener(global::Android.Location.GpsStatus.INmeaListener nmeaListener) /* MethodBuilder.Create */ 
+				public virtual void RemoveNmeaListener(global::Android.Locations.GpsStatus.INmeaListener nmeaListener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1372,9 +1372,9 @@ namespace Android.Location
 				/// getGpsStatus
 				/// </java-name>
 				[Dot42.DexImport("getGpsStatus", "(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;", AccessFlags = 1)]
-				public virtual global::Android.Location.GpsStatus GetGpsStatus(global::Android.Location.GpsStatus gpsStatus) /* MethodBuilder.Create */ 
+				public virtual global::Android.Locations.GpsStatus GetGpsStatus(global::Android.Locations.GpsStatus gpsStatus) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Location.GpsStatus);
+						return default(global::Android.Locations.GpsStatus);
 				}
 
 				/// <java-name>
@@ -1428,7 +1428,7 @@ namespace Android.Location
 				/// meetsCriteria
 				/// </java-name>
 				[Dot42.DexImport("meetsCriteria", "(Landroid/location/Criteria;)Z", AccessFlags = 1)]
-				public virtual bool MeetsCriteria(global::Android.Location.Criteria criteria) /* MethodBuilder.Create */ 
+				public virtual bool MeetsCriteria(global::Android.Locations.Criteria criteria) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}

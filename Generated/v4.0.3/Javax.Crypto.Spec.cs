@@ -870,7 +870,7 @@ namespace Javax.Crypto.Spec
 		/// javax/crypto/spec/SecretKeySpec
 		/// </java-name>
 		[Dot42.DexImport("javax/crypto/spec/SecretKeySpec", AccessFlags = 33)]
-		public partial class SecretKeySpec : global::Javax.Crypto.ISecretKey, global::Java.Security.Spec.IKeySpec, global::Java.Io.ISerializable
+		public partial class SecretKeySpec : global::Javax.Crypto.ISecretKey, global::Java.Security.Spec.IKeySpec, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "([BLjava/lang/String;)V", AccessFlags = 1)]

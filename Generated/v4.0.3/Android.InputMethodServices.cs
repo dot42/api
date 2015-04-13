@@ -1,5 +1,5 @@
 ﻿#pragma warning disable 1717
-namespace Android.Inputmethodservice
+namespace Android.InputMethodServices
 {
 		/// <java-name>
 		/// android/inputmethodservice/AbstractInputMethodService
@@ -18,20 +18,20 @@ namespace Android.Inputmethodservice
 				/// </java-name>
 				[Dot42.DexImport("onCreateInputMethodInterface", "()Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl;" +
     "", AccessFlags = 1025)]
-				public abstract global::Android.Inputmethodservice.AbstractInputMethodService.AbstractInputMethodImpl OnCreateInputMethodInterface() /* MethodBuilder.Create */ ;
+				public abstract global::Android.InputMethodServices.AbstractInputMethodService.AbstractInputMethodImpl OnCreateInputMethodInterface() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// onCreateInputMethodSessionInterface
 				/// </java-name>
 				[Dot42.DexImport("onCreateInputMethodSessionInterface", "()Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessi" +
     "onImpl;", AccessFlags = 1025)]
-				public abstract global::Android.Inputmethodservice.AbstractInputMethodService.AbstractInputMethodSessionImpl OnCreateInputMethodSessionInterface() /* MethodBuilder.Create */ ;
+				public abstract global::Android.InputMethodServices.AbstractInputMethodService.AbstractInputMethodSessionImpl OnCreateInputMethodSessionInterface() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal override void Dump(global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
+				protected internal override void Dump(global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -98,9 +98,9 @@ namespace Android.Inputmethodservice
 						/// this$0
 						/// </java-name>
 						[Dot42.DexImport("this$0", "Landroid/inputmethodservice/AbstractInputMethodService;", AccessFlags = 4112)]
-						internal readonly global::Android.Inputmethodservice.AbstractInputMethodService This_0;
+						internal readonly global::Android.InputMethodServices.AbstractInputMethodService This_0;
 						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/AbstractInputMethodService;)V", AccessFlags = 1)]
-						public AbstractInputMethodSessionImpl(global::Android.Inputmethodservice.AbstractInputMethodService abstractInputMethodService) /* MethodBuilder.Create */ 
+						public AbstractInputMethodSessionImpl(global::Android.InputMethodServices.AbstractInputMethodService abstractInputMethodService) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -208,9 +208,9 @@ namespace Android.Inputmethodservice
 						/// this$0
 						/// </java-name>
 						[Dot42.DexImport("this$0", "Landroid/inputmethodservice/AbstractInputMethodService;", AccessFlags = 4112)]
-						internal readonly global::Android.Inputmethodservice.AbstractInputMethodService This_0;
+						internal readonly global::Android.InputMethodServices.AbstractInputMethodService This_0;
 						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/AbstractInputMethodService;)V", AccessFlags = 1)]
-						public AbstractInputMethodImpl(global::Android.Inputmethodservice.AbstractInputMethodService abstractInputMethodService) /* MethodBuilder.Create */ 
+						public AbstractInputMethodImpl(global::Android.InputMethodServices.AbstractInputMethodService abstractInputMethodService) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -417,7 +417,7 @@ namespace Android.Inputmethodservice
 		/// android/inputmethodservice/InputMethodService
 		/// </java-name>
 		[Dot42.DexImport("android/inputmethodservice/InputMethodService", AccessFlags = 33)]
-		public partial class InputMethodService : global::Android.Inputmethodservice.AbstractInputMethodService
+		public partial class InputMethodService : global::Android.InputMethodServices.AbstractInputMethodService
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -485,9 +485,9 @@ namespace Android.Inputmethodservice
 				/// </java-name>
 				[Dot42.DexImport("onCreateInputMethodInterface", "()Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl;" +
     "", AccessFlags = 1)]
-				public override global::Android.Inputmethodservice.AbstractInputMethodService.AbstractInputMethodImpl OnCreateInputMethodInterface() /* MethodBuilder.Create */ 
+				public override global::Android.InputMethodServices.AbstractInputMethodService.AbstractInputMethodImpl OnCreateInputMethodInterface() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Inputmethodservice.AbstractInputMethodService.AbstractInputMethodImpl);
+						return default(global::Android.InputMethodServices.AbstractInputMethodService.AbstractInputMethodImpl);
 				}
 
 				/// <java-name>
@@ -495,9 +495,9 @@ namespace Android.Inputmethodservice
 				/// </java-name>
 				[Dot42.DexImport("onCreateInputMethodSessionInterface", "()Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessi" +
     "onImpl;", AccessFlags = 1)]
-				public override global::Android.Inputmethodservice.AbstractInputMethodService.AbstractInputMethodSessionImpl OnCreateInputMethodSessionInterface() /* MethodBuilder.Create */ 
+				public override global::Android.InputMethodServices.AbstractInputMethodService.AbstractInputMethodSessionImpl OnCreateInputMethodSessionInterface() /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Inputmethodservice.AbstractInputMethodService.AbstractInputMethodSessionImpl);
+						return default(global::Android.InputMethodServices.AbstractInputMethodService.AbstractInputMethodSessionImpl);
 				}
 
 				/// <java-name>
@@ -529,7 +529,7 @@ namespace Android.Inputmethodservice
 				/// onComputeInsets
 				/// </java-name>
 				[Dot42.DexImport("onComputeInsets", "(Landroid/inputmethodservice/InputMethodService$Insets;)V", AccessFlags = 1)]
-				public virtual void OnComputeInsets(global::Android.Inputmethodservice.InputMethodService.Insets insets) /* MethodBuilder.Create */ 
+				public virtual void OnComputeInsets(global::Android.InputMethodServices.InputMethodService.Insets insets) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -942,7 +942,7 @@ namespace Android.Inputmethodservice
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal override void Dump(global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
+				protected internal override void Dump(global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1125,16 +1125,16 @@ namespace Android.Inputmethodservice
 				/// android/inputmethodservice/InputMethodService$InputMethodSessionImpl
 				/// </java-name>
 				[Dot42.DexImport("android/inputmethodservice/InputMethodService$InputMethodSessionImpl", AccessFlags = 1)]
-				public partial class InputMethodSessionImpl : global::Android.Inputmethodservice.AbstractInputMethodService.AbstractInputMethodSessionImpl
+				public partial class InputMethodSessionImpl : global::Android.InputMethodServices.AbstractInputMethodService.AbstractInputMethodSessionImpl
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
 						/// this$0
 						/// </java-name>
 						[Dot42.DexImport("this$0", "Landroid/inputmethodservice/InputMethodService;", AccessFlags = 4112)]
-						internal readonly global::Android.Inputmethodservice.InputMethodService This_0;
+						internal readonly global::Android.InputMethodServices.InputMethodService This_0;
 						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/InputMethodService;)V", AccessFlags = 1)]
-						public InputMethodSessionImpl(global::Android.Inputmethodservice.InputMethodService inputMethodService) /* MethodBuilder.Create */ 
+						public InputMethodSessionImpl(global::Android.InputMethodServices.InputMethodService inputMethodService) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1213,16 +1213,16 @@ namespace Android.Inputmethodservice
 				/// android/inputmethodservice/InputMethodService$InputMethodImpl
 				/// </java-name>
 				[Dot42.DexImport("android/inputmethodservice/InputMethodService$InputMethodImpl", AccessFlags = 1)]
-				public partial class InputMethodImpl : global::Android.Inputmethodservice.AbstractInputMethodService.AbstractInputMethodImpl
+				public partial class InputMethodImpl : global::Android.InputMethodServices.AbstractInputMethodService.AbstractInputMethodImpl
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
 						/// this$0
 						/// </java-name>
 						[Dot42.DexImport("this$0", "Landroid/inputmethodservice/InputMethodService;", AccessFlags = 4112)]
-						internal readonly global::Android.Inputmethodservice.InputMethodService This_0;
+						internal readonly global::Android.InputMethodServices.InputMethodService This_0;
 						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/InputMethodService;)V", AccessFlags = 1)]
-						public InputMethodImpl(global::Android.Inputmethodservice.InputMethodService inputMethodService) /* MethodBuilder.Create */ 
+						public InputMethodImpl(global::Android.InputMethodServices.InputMethodService inputMethodService) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1401,9 +1401,9 @@ namespace Android.Inputmethodservice
 				/// </java-name>
 				[Dot42.DexImport("createRowFromXml", "(Landroid/content/res/Resources;Landroid/content/res/XmlResourceParser;)Landroid/" +
     "inputmethodservice/Keyboard$Row;", AccessFlags = 4)]
-				protected internal virtual global::Android.Inputmethodservice.Keyboard.Row CreateRowFromXml(global::Android.Content.Res.Resources resources, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.InputMethodServices.Keyboard.Row CreateRowFromXml(global::Android.Content.Res.Resources resources, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Inputmethodservice.Keyboard.Row);
+						return default(global::Android.InputMethodServices.Keyboard.Row);
 				}
 
 				/// <java-name>
@@ -1411,9 +1411,9 @@ namespace Android.Inputmethodservice
 				/// </java-name>
 				[Dot42.DexImport("createKeyFromXml", "(Landroid/content/res/Resources;Landroid/inputmethodservice/Keyboard$Row;IILandro" +
     "id/content/res/XmlResourceParser;)Landroid/inputmethodservice/Keyboard$Key;", AccessFlags = 4)]
-				protected internal virtual global::Android.Inputmethodservice.Keyboard.Key CreateKeyFromXml(global::Android.Content.Res.Resources resources, global::Android.Inputmethodservice.Keyboard.Row row, int int32, int int321, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
+				protected internal virtual global::Android.InputMethodServices.Keyboard.Key CreateKeyFromXml(global::Android.Content.Res.Resources resources, global::Android.InputMethodServices.Keyboard.Row row, int int32, int int321, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Inputmethodservice.Keyboard.Key);
+						return default(global::Android.InputMethodServices.Keyboard.Key);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -1424,19 +1424,19 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getKeys
 				/// </java-name>
-				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> Keys
+				public virtual global::Java.Util.IList<global::Android.InputMethodServices.Keyboard.Key> Keys
 				{
 						[Dot42.DexImport("getKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-						get{ return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>); }
+						get{ return default(global::Java.Util.IList<global::Android.InputMethodServices.Keyboard.Key>); }
 				}
 
 				/// <java-name>
 				/// getModifierKeys
 				/// </java-name>
-				public virtual global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key> ModifierKeys
+				public virtual global::Java.Util.IList<global::Android.InputMethodServices.Keyboard.Key> ModifierKeys
 				{
 						[Dot42.DexImport("getModifierKeys", "()Ljava/util/List;", AccessFlags = 1, Signature = "()Ljava/util/List<Landroid/inputmethodservice/Keyboard$Key;>;")]
-						get{ return default(global::Java.Util.IList<global::Android.Inputmethodservice.Keyboard.Key>); }
+						get{ return default(global::Java.Util.IList<global::Android.InputMethodServices.Keyboard.Key>); }
 				}
 
 				/// <java-name>
@@ -1617,13 +1617,13 @@ namespace Android.Inputmethodservice
 						[Dot42.DexImport("repeatable", "Z", AccessFlags = 1)]
 						public bool Repeatable;
 						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/Keyboard$Row;)V", AccessFlags = 1)]
-						public Key(global::Android.Inputmethodservice.Keyboard.Row row) /* MethodBuilder.Create */ 
+						public Key(global::Android.InputMethodServices.Keyboard.Row row) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/content/res/Resources;Landroid/inputmethodservice/Keyboard$Row;IILandro" +
     "id/content/res/XmlResourceParser;)V", AccessFlags = 1)]
-						public Key(global::Android.Content.Res.Resources resources, global::Android.Inputmethodservice.Keyboard.Row row, int int32, int int321, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
+						public Key(global::Android.Content.Res.Resources resources, global::Android.InputMethodServices.Keyboard.Row row, int int32, int int321, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1715,13 +1715,13 @@ namespace Android.Inputmethodservice
 						[Dot42.DexImport("mode", "I", AccessFlags = 1)]
 						public int Mode;
 						[Dot42.DexImport("<init>", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
-						public Row(global::Android.Inputmethodservice.Keyboard keyboard) /* MethodBuilder.Create */ 
+						public Row(global::Android.InputMethodServices.Keyboard keyboard) /* MethodBuilder.Create */ 
 						{
 						}
 
 						[Dot42.DexImport("<init>", "(Landroid/content/res/Resources;Landroid/inputmethodservice/Keyboard;Landroid/con" +
     "tent/res/XmlResourceParser;)V", AccessFlags = 1)]
-						public Row(global::Android.Content.Res.Resources resources, global::Android.Inputmethodservice.Keyboard keyboard, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
+						public Row(global::Android.Content.Res.Resources resources, global::Android.InputMethodServices.Keyboard keyboard, global::Android.Content.Res.IXmlResourceParser xmlResourceParser) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -1828,7 +1828,7 @@ namespace Android.Inputmethodservice
 				/// onLongPress
 				/// </java-name>
 				[Dot42.DexImport("onLongPress", "(Landroid/inputmethodservice/Keyboard$Key;)Z", AccessFlags = 4)]
-				protected internal virtual bool OnLongPress(global::Android.Inputmethodservice.Keyboard.Key key) /* MethodBuilder.Create */ 
+				protected internal virtual bool OnLongPress(global::Android.InputMethodServices.Keyboard.Key key) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1924,10 +1924,10 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getOnKeyboardActionListener
 				/// </java-name>
-				protected internal virtual global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener OnKeyboardActionListener
+				protected internal virtual global::Android.InputMethodServices.KeyboardView.IOnKeyboardActionListener OnKeyboardActionListener
 				{
 						[Dot42.DexImport("getOnKeyboardActionListener", "()Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;", AccessFlags = 4)]
-						get{ return default(global::Android.Inputmethodservice.KeyboardView.IOnKeyboardActionListener); }
+						get{ return default(global::Android.InputMethodServices.KeyboardView.IOnKeyboardActionListener); }
 						[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -1935,10 +1935,10 @@ namespace Android.Inputmethodservice
 				/// <java-name>
 				/// getKeyboard
 				/// </java-name>
-				public virtual global::Android.Inputmethodservice.Keyboard Keyboard
+				public virtual global::Android.InputMethodServices.Keyboard Keyboard
 				{
 						[Dot42.DexImport("getKeyboard", "()Landroid/inputmethodservice/Keyboard;", AccessFlags = 1)]
-						get{ return default(global::Android.Inputmethodservice.Keyboard); }
+						get{ return default(global::Android.InputMethodServices.Keyboard); }
 						[Dot42.DexImport("setKeyboard", "(Landroid/inputmethodservice/Keyboard;)V", AccessFlags = 1)]
 						set{ }
 				}

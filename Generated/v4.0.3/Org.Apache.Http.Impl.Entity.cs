@@ -57,9 +57,9 @@ namespace Org.Apache.Http.Impl.Entity
 				/// </java-name>
 				[Dot42.DexImport("doSerialize", "(Lorg/apache/http/io/SessionOutputBuffer;Lorg/apache/http/HttpMessage;)Ljava/io/O" +
     "utputStream;", AccessFlags = 4)]
-				protected internal virtual global::Java.Io.OutputStream DoSerialize(global::Org.Apache.Http.Io.ISessionOutputBuffer sessionOutputBuffer, global::Org.Apache.Http.IHttpMessage httpMessage) /* MethodBuilder.Create */ 
+				protected internal virtual global::Java.IO.OutputStream DoSerialize(global::Org.Apache.Http.Io.ISessionOutputBuffer sessionOutputBuffer, global::Org.Apache.Http.IHttpMessage httpMessage) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.OutputStream);
+						return default(global::Java.IO.OutputStream);
 				}
 
 				/// <java-name>

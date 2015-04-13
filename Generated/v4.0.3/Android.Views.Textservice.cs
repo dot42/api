@@ -30,7 +30,7 @@ namespace Android.Views.Textservice
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -39,7 +39,7 @@ namespace Android.Views.Textservice
 				/// loadIcon
 				/// </java-name>
 				[Dot42.DexImport("loadIcon", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -92,10 +92,10 @@ namespace Android.Views.Textservice
 				/// <java-name>
 				/// getServiceInfo
 				/// </java-name>
-				public global::Android.Content.Pm.ServiceInfo ServiceInfo
+				public global::Android.Content.PM.ServiceInfo ServiceInfo
 				{
 						[Dot42.DexImport("getServiceInfo", "()Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-						get{ return default(global::Android.Content.Pm.ServiceInfo); }
+						get{ return default(global::Android.Content.PM.ServiceInfo); }
 				}
 
 				/// <java-name>
@@ -248,7 +248,7 @@ namespace Android.Views.Textservice
 				/// </java-name>
 				[Dot42.DexImport("getDisplayName", "(Landroid/content/Context;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)" +
     "Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence GetDisplayName(global::Android.Content.Context context, string @string, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ICharSequence GetDisplayName(global::Android.Content.Context context, string @string, global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}

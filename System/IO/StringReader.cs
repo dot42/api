@@ -18,14 +18,14 @@ namespace System.IO
 {
     public class StringReader : TextReader
     {
-        private Java.Io.StringReader _reader;
+        private Java.IO.StringReader _reader;
 
         /// <summary>
         /// Default constructor
         /// </summary>
         public StringReader(string s)
         {
-            _reader= new Java.Io.StringReader(s);
+            _reader= new Java.IO.StringReader(s);
         }
 
         public override int Peek()

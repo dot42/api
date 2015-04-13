@@ -495,16 +495,16 @@ namespace Javax.Crypto
 		/// javax/crypto/CipherInputStream
 		/// </java-name>
 		[Dot42.DexImport("javax/crypto/CipherInputStream", AccessFlags = 33)]
-		public partial class CipherInputStream : global::Java.Io.FilterInputStream
+		public partial class CipherInputStream : global::Java.IO.FilterInputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Ljavax/crypto/Cipher;)V", AccessFlags = 1)]
-				public CipherInputStream(global::Java.Io.InputStream inputStream, global::Javax.Crypto.Cipher cipher) /* MethodBuilder.Create */ 
+				public CipherInputStream(global::Java.IO.InputStream inputStream, global::Javax.Crypto.Cipher cipher) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 4)]
-				protected internal CipherInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				protected internal CipherInputStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -581,16 +581,16 @@ namespace Javax.Crypto
 		/// javax/crypto/CipherOutputStream
 		/// </java-name>
 		[Dot42.DexImport("javax/crypto/CipherOutputStream", AccessFlags = 33)]
-		public partial class CipherOutputStream : global::Java.Io.FilterOutputStream
+		public partial class CipherOutputStream : global::Java.IO.FilterOutputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljavax/crypto/Cipher;)V", AccessFlags = 1)]
-				public CipherOutputStream(global::Java.Io.OutputStream outputStream, global::Javax.Crypto.Cipher cipher) /* MethodBuilder.Create */ 
+				public CipherOutputStream(global::Java.IO.OutputStream outputStream, global::Javax.Crypto.Cipher cipher) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;)V", AccessFlags = 4)]
-				protected internal CipherOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				protected internal CipherOutputStream(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1954,7 +1954,7 @@ namespace Javax.Crypto
 		/// javax/crypto/SealedObject
 		/// </java-name>
 		[Dot42.DexImport("javax/crypto/SealedObject", AccessFlags = 33)]
-		public partial class SealedObject : global::Java.Io.ISerializable
+		public partial class SealedObject : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1963,7 +1963,7 @@ namespace Javax.Crypto
 				[Dot42.DexImport("encodedParams", "[B", AccessFlags = 4)]
 				protected internal sbyte[] EncodedParams;
 				[Dot42.DexImport("<init>", "(Ljava/io/Serializable;Ljavax/crypto/Cipher;)V", AccessFlags = 1)]
-				public SealedObject(global::Java.Io.ISerializable serializable, global::Javax.Crypto.Cipher cipher) /* MethodBuilder.Create */ 
+				public SealedObject(global::Java.IO.ISerializable serializable, global::Javax.Crypto.Cipher cipher) /* MethodBuilder.Create */ 
 				{
 				}
 

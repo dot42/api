@@ -32,7 +32,7 @@ namespace Javax.Xml.Namespace
 		/// javax/xml/namespace/QName
 		/// </java-name>
 		[Dot42.DexImport("javax/xml/namespace/QName", AccessFlags = 33)]
-		public partial class QName : global::Java.Io.ISerializable
+		public partial class QName : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]

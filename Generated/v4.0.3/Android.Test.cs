@@ -1107,10 +1107,10 @@ namespace Android.Test
 				/// <java-name>
 				/// getFilesDir
 				/// </java-name>
-				public override global::Java.Io.File FilesDir
+				public override global::Java.IO.File FilesDir
 				{
 						[Dot42.DexImport("getFilesDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 		}
@@ -1718,9 +1718,9 @@ namespace Android.Test
 				/// getDatabasePath
 				/// </java-name>
 				[Dot42.DexImport("getDatabasePath", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetDatabasePath(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetDatabasePath(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
+						return default(global::Java.IO.File);
 				}
 
 				/// <java-name>
@@ -1736,27 +1736,27 @@ namespace Android.Test
 				/// openFileInput
 				/// </java-name>
 				[Dot42.DexImport("openFileInput", "(Ljava/lang/String;)Ljava/io/FileInputStream;", AccessFlags = 1)]
-				public override global::Java.Io.FileInputStream OpenFileInput(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.FileInputStream OpenFileInput(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.FileInputStream);
+						return default(global::Java.IO.FileInputStream);
 				}
 
 				/// <java-name>
 				/// openFileOutput
 				/// </java-name>
 				[Dot42.DexImport("openFileOutput", "(Ljava/lang/String;I)Ljava/io/FileOutputStream;", AccessFlags = 1)]
-				public override global::Java.Io.FileOutputStream OpenFileOutput(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.IO.FileOutputStream OpenFileOutput(string @string, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.FileOutputStream);
+						return default(global::Java.IO.FileOutputStream);
 				}
 
 				/// <java-name>
 				/// getFileStreamPath
 				/// </java-name>
 				[Dot42.DexImport("getFileStreamPath", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.Io.File GetFileStreamPath(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetFileStreamPath(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
+						return default(global::Java.IO.File);
 				}
 
 				/// <java-name>
@@ -1794,10 +1794,10 @@ namespace Android.Test
 				/// <java-name>
 				/// getCacheDir
 				/// </java-name>
-				public override global::Java.Io.File CacheDir
+				public override global::Java.IO.File CacheDir
 				{
 						[Dot42.DexImport("getCacheDir", "()Ljava/io/File;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 		}

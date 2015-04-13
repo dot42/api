@@ -116,7 +116,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// init
 				/// </java-name>
 				[Dot42.DexImport("init", "(Ljava/io/InputStream;ILorg/apache/http/params/HttpParams;)V", AccessFlags = 4)]
-				protected internal virtual void Init(global::Java.Io.InputStream inputStream, int int32, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				protected internal virtual void Init(global::Java.IO.InputStream inputStream, int int32, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -234,7 +234,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// init
 				/// </java-name>
 				[Dot42.DexImport("init", "(Ljava/io/OutputStream;ILorg/apache/http/params/HttpParams;)V", AccessFlags = 4)]
-				protected internal virtual void Init(global::Java.Io.OutputStream outputStream, int int32, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
+				protected internal virtual void Init(global::Java.IO.OutputStream outputStream, int int32, global::Org.Apache.Http.Params.IHttpParams httpParams) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -325,7 +325,7 @@ namespace Org.Apache.Http.Impl.Io
 		/// org/apache/http/impl/io/ChunkedInputStream
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/io/ChunkedInputStream", AccessFlags = 33)]
-		public partial class ChunkedInputStream : global::Java.Io.InputStream
+		public partial class ChunkedInputStream : global::Java.IO.InputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/io/SessionInputBuffer;)V", AccessFlags = 1)]
@@ -406,7 +406,7 @@ namespace Org.Apache.Http.Impl.Io
 		/// org/apache/http/impl/io/ChunkedOutputStream
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/io/ChunkedOutputStream", AccessFlags = 33)]
-		public partial class ChunkedOutputStream : global::Java.Io.OutputStream
+		public partial class ChunkedOutputStream : global::Java.IO.OutputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/io/SessionOutputBuffer;I)V", AccessFlags = 1)]
@@ -526,7 +526,7 @@ namespace Org.Apache.Http.Impl.Io
 		/// org/apache/http/impl/io/ContentLengthInputStream
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/io/ContentLengthInputStream", AccessFlags = 33)]
-		public partial class ContentLengthInputStream : global::Java.Io.InputStream
+		public partial class ContentLengthInputStream : global::Java.IO.InputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/io/SessionInputBuffer;J)V", AccessFlags = 1)]
@@ -607,7 +607,7 @@ namespace Org.Apache.Http.Impl.Io
 		/// org/apache/http/impl/io/ContentLengthOutputStream
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/io/ContentLengthOutputStream", AccessFlags = 33)]
-		public partial class ContentLengthOutputStream : global::Java.Io.OutputStream
+		public partial class ContentLengthOutputStream : global::Java.IO.OutputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/io/SessionOutputBuffer;J)V", AccessFlags = 1)]
@@ -843,7 +843,7 @@ namespace Org.Apache.Http.Impl.Io
 		/// org/apache/http/impl/io/IdentityInputStream
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/io/IdentityInputStream", AccessFlags = 33)]
-		public partial class IdentityInputStream : global::Java.Io.InputStream
+		public partial class IdentityInputStream : global::Java.IO.InputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/io/SessionInputBuffer;)V", AccessFlags = 1)]
@@ -906,7 +906,7 @@ namespace Org.Apache.Http.Impl.Io
 		/// org/apache/http/impl/io/IdentityOutputStream
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/impl/io/IdentityOutputStream", AccessFlags = 33)]
-		public partial class IdentityOutputStream : global::Java.Io.OutputStream
+		public partial class IdentityOutputStream : global::Java.IO.OutputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/io/SessionOutputBuffer;)V", AccessFlags = 1)]

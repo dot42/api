@@ -2033,7 +2033,7 @@ namespace Android.Bluetooth
 		/// android/bluetooth/BluetoothServerSocket
 		/// </java-name>
 		[Dot42.DexImport("android/bluetooth/BluetoothServerSocket", AccessFlags = 49)]
-		public sealed partial class BluetoothServerSocket : global::Java.Io.ICloseable
+		public sealed partial class BluetoothServerSocket : global::Java.IO.ICloseable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -2073,7 +2073,7 @@ namespace Android.Bluetooth
 		/// android/bluetooth/BluetoothSocket
 		/// </java-name>
 		[Dot42.DexImport("android/bluetooth/BluetoothSocket", AccessFlags = 49)]
-		public sealed partial class BluetoothSocket : global::Java.Io.ICloseable
+		public sealed partial class BluetoothSocket : global::Java.IO.ICloseable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -2109,19 +2109,19 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public global::Java.Io.InputStream InputStream
+				public global::Java.IO.InputStream InputStream
 				{
 						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public global::Java.Io.OutputStream OutputStream
+				public global::Java.IO.OutputStream OutputStream
 				{
 						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.OutputStream); }
+						get{ return default(global::Java.IO.OutputStream); }
 				}
 
 				/// <java-name>

@@ -144,7 +144,7 @@ namespace Java.Util.Concurrent
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/ArrayBlockingQueue", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractQueue<TE;>;Ljava/util/concurrent/Blockin" +
     "gQueue<TE;>;Ljava/io/Serializable;")]
-		public partial class ArrayBlockingQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingQueue<E>, global::Java.Io.ISerializable
+		public partial class ArrayBlockingQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingQueue<E>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
@@ -435,7 +435,7 @@ namespace Java.Util.Concurrent
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/ConcurrentHashMap", AccessFlags = 33, Signature = "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/util/AbstractMap<TK;TV;>;Ljava/ut" +
     "il/concurrent/ConcurrentMap<TK;TV;>;Ljava/io/Serializable;")]
-		public partial class ConcurrentHashMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Util.Concurrent.IConcurrentMap<K, V>, global::Java.Io.ISerializable
+		public partial class ConcurrentHashMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Util.Concurrent.IConcurrentMap<K, V>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(IFI)V", AccessFlags = 1)]
@@ -651,7 +651,7 @@ namespace Java.Util.Concurrent
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/ConcurrentLinkedQueue", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractQueue<TE;>;Ljava/util/Queue<TE;>;Ljava/i" +
     "o/Serializable;")]
-		public partial class ConcurrentLinkedQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.IQueue<E>, global::Java.Io.ISerializable
+		public partial class ConcurrentLinkedQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.IQueue<E>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -827,7 +827,7 @@ namespace Java.Util.Concurrent
 		[Dot42.DexImport("java/util/concurrent/ConcurrentSkipListMap", AccessFlags = 33, Signature = "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/util/AbstractMap<TK;TV;>;Ljava/ut" +
     "il/concurrent/ConcurrentNavigableMap<TK;TV;>;Ljava/lang/Cloneable;Ljava/io/Seria" +
     "lizable;")]
-		public partial class ConcurrentSkipListMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Util.Concurrent.IConcurrentNavigableMap<K, V>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class ConcurrentSkipListMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Util.Concurrent.IConcurrentNavigableMap<K, V>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1286,7 +1286,7 @@ namespace Java.Util.Concurrent
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/ConcurrentSkipListSet", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractSet<TE;>;Ljava/util/NavigableSet<TE;>;Lj" +
     "ava/lang/Cloneable;Ljava/io/Serializable;")]
-		public partial class ConcurrentSkipListSet<E> : global::Java.Util.AbstractSet<E>, global::Java.Util.INavigableSet<E>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class ConcurrentSkipListSet<E> : global::Java.Util.AbstractSet<E>, global::Java.Util.INavigableSet<E>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1612,7 +1612,7 @@ namespace Java.Util.Concurrent
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/CopyOnWriteArrayList", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/List<TE;>;Ljava/util/RandomAcc" +
     "ess;Ljava/lang/Cloneable;Ljava/io/Serializable;")]
-		public partial class CopyOnWriteArrayList<E> : global::Java.Util.IList<E>, global::Java.Util.IRandomAccess, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class CopyOnWriteArrayList<E> : global::Java.Util.IList<E>, global::Java.Util.IRandomAccess, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1913,7 +1913,7 @@ namespace Java.Util.Concurrent
 		/// java/util/concurrent/CopyOnWriteArraySet
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/CopyOnWriteArraySet", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractSet<TE;>;Ljava/io/Serializable;")]
-		public partial class CopyOnWriteArraySet<E> : global::Java.Util.AbstractSet<E>, global::Java.Io.ISerializable
+		public partial class CopyOnWriteArraySet<E> : global::Java.Util.AbstractSet<E>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -3577,7 +3577,7 @@ namespace Java.Util.Concurrent
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/LinkedBlockingDeque", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractQueue<TE;>;Ljava/util/concurrent/Blockin" +
     "gDeque<TE;>;Ljava/io/Serializable;")]
-		public partial class LinkedBlockingDeque<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingDeque<E>, global::Java.Io.ISerializable
+		public partial class LinkedBlockingDeque<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingDeque<E>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4051,7 +4051,7 @@ namespace Java.Util.Concurrent
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/LinkedBlockingQueue", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractQueue<TE;>;Ljava/util/concurrent/Blockin" +
     "gQueue<TE;>;Ljava/io/Serializable;")]
-		public partial class LinkedBlockingQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingQueue<E>, global::Java.Io.ISerializable
+		public partial class LinkedBlockingQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingQueue<E>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4296,7 +4296,7 @@ namespace Java.Util.Concurrent
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/PriorityBlockingQueue", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractQueue<TE;>;Ljava/util/concurrent/Blockin" +
     "gQueue<TE;>;Ljava/io/Serializable;")]
-		public partial class PriorityBlockingQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingQueue<E>, global::Java.Io.ISerializable
+		public partial class PriorityBlockingQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingQueue<E>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4820,7 +4820,7 @@ namespace Java.Util.Concurrent
 		/// java/util/concurrent/Semaphore
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/Semaphore", AccessFlags = 33)]
-		public partial class Semaphore : global::Java.Io.ISerializable
+		public partial class Semaphore : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
@@ -5000,7 +5000,7 @@ namespace Java.Util.Concurrent
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/SynchronousQueue", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractQueue<TE;>;Ljava/util/concurrent/Blockin" +
     "gQueue<TE;>;Ljava/io/Serializable;")]
-		public partial class SynchronousQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingQueue<E>, global::Java.Io.ISerializable
+		public partial class SynchronousQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Util.Concurrent.IBlockingQueue<E>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]

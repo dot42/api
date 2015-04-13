@@ -27,7 +27,7 @@ namespace Org.Apache.Http.Conn
 				/// eofDetected
 				/// </java-name>
 				[Dot42.DexImport("eofDetected", "(Ljava/io/InputStream;)Z", AccessFlags = 1)]
-				public virtual bool EofDetected(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual bool EofDetected(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -36,7 +36,7 @@ namespace Org.Apache.Http.Conn
 				/// streamClosed
 				/// </java-name>
 				[Dot42.DexImport("streamClosed", "(Ljava/io/InputStream;)Z", AccessFlags = 1)]
-				public virtual bool StreamClosed(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual bool StreamClosed(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -45,7 +45,7 @@ namespace Org.Apache.Http.Conn
 				/// streamAbort
 				/// </java-name>
 				[Dot42.DexImport("streamAbort", "(Ljava/io/InputStream;)Z", AccessFlags = 1)]
-				public virtual bool StreamAbort(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual bool StreamAbort(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -91,7 +91,7 @@ namespace Org.Apache.Http.Conn
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -115,7 +115,7 @@ namespace Org.Apache.Http.Conn
 				/// eofDetected
 				/// </java-name>
 				[Dot42.DexImport("eofDetected", "(Ljava/io/InputStream;)Z", AccessFlags = 1)]
-				public virtual bool EofDetected(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual bool EofDetected(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -124,7 +124,7 @@ namespace Org.Apache.Http.Conn
 				/// streamClosed
 				/// </java-name>
 				[Dot42.DexImport("streamClosed", "(Ljava/io/InputStream;)Z", AccessFlags = 1)]
-				public virtual bool StreamClosed(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual bool StreamClosed(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -133,7 +133,7 @@ namespace Org.Apache.Http.Conn
 				/// streamAbort
 				/// </java-name>
 				[Dot42.DexImport("streamAbort", "(Ljava/io/InputStream;)Z", AccessFlags = 1)]
-				public virtual bool StreamAbort(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual bool StreamAbort(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -163,10 +163,10 @@ namespace Org.Apache.Http.Conn
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public override global::Java.Io.InputStream Content
+				public override global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 		}
@@ -194,7 +194,7 @@ namespace Org.Apache.Http.Conn
 		/// org/apache/http/conn/ConnectTimeoutException
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/conn/ConnectTimeoutException", AccessFlags = 33)]
-		public partial class ConnectTimeoutException : global::Java.Io.InterruptedIOException
+		public partial class ConnectTimeoutException : global::Java.IO.InterruptedIOException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -213,16 +213,16 @@ namespace Org.Apache.Http.Conn
 		/// org/apache/http/conn/EofSensorInputStream
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/conn/EofSensorInputStream", AccessFlags = 33)]
-		public partial class EofSensorInputStream : global::Java.Io.InputStream, global::Org.Apache.Http.Conn.IConnectionReleaseTrigger
+		public partial class EofSensorInputStream : global::Java.IO.InputStream, global::Org.Apache.Http.Conn.IConnectionReleaseTrigger
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
 				/// wrappedStream
 				/// </java-name>
 				[Dot42.DexImport("wrappedStream", "Ljava/io/InputStream;", AccessFlags = 4)]
-				protected internal global::Java.Io.InputStream WrappedStream;
+				protected internal global::Java.IO.InputStream WrappedStream;
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Lorg/apache/http/conn/EofSensorWatcher;)V", AccessFlags = 1)]
-				public EofSensorInputStream(global::Java.Io.InputStream inputStream, global::Org.Apache.Http.Conn.IEofSensorWatcher eofSensorWatcher) /* MethodBuilder.Create */ 
+				public EofSensorInputStream(global::Java.IO.InputStream inputStream, global::Org.Apache.Http.Conn.IEofSensorWatcher eofSensorWatcher) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -536,19 +536,19 @@ namespace Org.Apache.Http.Conn
 				/// eofDetected
 				/// </java-name>
 				[Dot42.DexImport("eofDetected", "(Ljava/io/InputStream;)Z", AccessFlags = 1025)]
-				bool EofDetected(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				bool EofDetected(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// streamClosed
 				/// </java-name>
 				[Dot42.DexImport("streamClosed", "(Ljava/io/InputStream;)Z", AccessFlags = 1025)]
-				bool StreamClosed(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				bool StreamClosed(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// streamAbort
 				/// </java-name>
 				[Dot42.DexImport("streamAbort", "(Ljava/io/InputStream;)Z", AccessFlags = 1025)]
-				bool StreamAbort(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				bool StreamAbort(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 		}
 

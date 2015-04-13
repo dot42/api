@@ -9,7 +9,7 @@ namespace Dalvik.System
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-				public BaseDexClassLoader(string @string, global::Java.Io.File file, string string1, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				public BaseDexClassLoader(string @string, global::Java.IO.File file, string string1, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -101,7 +101,7 @@ namespace Dalvik.System
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public DexFile(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public DexFile(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 

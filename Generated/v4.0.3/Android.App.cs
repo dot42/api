@@ -1745,7 +1745,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/Strin" +
     "g;)V", AccessFlags = 1)]
-				public virtual void Dump(string @string, global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
+				public virtual void Dump(string @string, global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2260,10 +2260,10 @@ namespace Android.App
 				/// <java-name>
 				/// getDeviceConfigurationInfo
 				/// </java-name>
-				public virtual global::Android.Content.Pm.ConfigurationInfo DeviceConfigurationInfo
+				public virtual global::Android.Content.PM.ConfigurationInfo DeviceConfigurationInfo
 				{
 						[Dot42.DexImport("getDeviceConfigurationInfo", "()Landroid/content/pm/ConfigurationInfo;", AccessFlags = 1)]
-						get{ return default(global::Android.Content.Pm.ConfigurationInfo); }
+						get{ return default(global::Android.Content.PM.ConfigurationInfo); }
 				}
 
 				/// <java-name>
@@ -5083,7 +5083,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/Strin" +
     "g;)V", AccessFlags = 1)]
-				public override void Dump(string @string, global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
+				public override void Dump(string @string, global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6116,7 +6116,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/Strin" +
     "g;)V", AccessFlags = 1)]
-				public virtual void Dump(string @string, global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
+				public virtual void Dump(string @string, global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -6581,7 +6581,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/Strin" +
     "g;)V", AccessFlags = 1025)]
-				public abstract void Dump(string @string, global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ ;
+				public abstract void Dump(string @string, global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// enableDebugLogging
@@ -7213,7 +7213,7 @@ namespace Android.App
     "plication;Landroid/content/Intent;Landroid/content/pm/ActivityInfo;Ljava/lang/Ch" +
     "arSequence;Landroid/app/Activity;Ljava/lang/String;Ljava/lang/Object;)Landroid/a" +
     "pp/Activity;")]
-				public virtual global::Android.App.Activity NewActivity(global::System.Type type, global::Android.Content.Context context, global::Android.OS.IBinder binder, global::Android.App.Application application, global::Android.Content.Intent intent, global::Android.Content.Pm.ActivityInfo activityInfo, global::Java.Lang.ICharSequence charSequence, global::Android.App.Activity activity, string @string, object @object) /* MethodBuilder.Create */ 
+				public virtual global::Android.App.Activity NewActivity(global::System.Type type, global::Android.Content.Context context, global::Android.OS.IBinder binder, global::Android.App.Application application, global::Android.Content.Intent intent, global::Android.Content.PM.ActivityInfo activityInfo, global::Java.Lang.ICharSequence charSequence, global::Android.App.Activity activity, string @string, object @object) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.App.Activity);
 				}
@@ -7764,9 +7764,9 @@ namespace Android.App
 				/// onQueryPackageManager
 				/// </java-name>
 				[Dot42.DexImport("onQueryPackageManager", "(Landroid/content/Intent;)Ljava/util/List;", AccessFlags = 4, Signature = "(Landroid/content/Intent;)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				protected internal virtual global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo> OnQueryPackageManager(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				protected internal virtual global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> OnQueryPackageManager(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Util.IList<global::Android.Content.Pm.ResolveInfo>);
+						return default(global::Java.Util.IList<global::Android.Content.PM.ResolveInfo>);
 				}
 
 				/// <java-name>
@@ -7831,7 +7831,7 @@ namespace Android.App
 						/// resolveInfo
 						/// </java-name>
 						[Dot42.DexImport("resolveInfo", "Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
-						public global::Android.Content.Pm.ResolveInfo ResolveInfo;
+						public global::Android.Content.PM.ResolveInfo ResolveInfo;
 						/// <java-name>
 						/// label
 						/// </java-name>
@@ -8121,7 +8121,7 @@ namespace Android.App
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/Strin" +
     "g;)V", AccessFlags = 1025)]
-				public abstract void Dump(string @string, global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ ;
+				public abstract void Dump(string @string, global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// enableDebugLogging
@@ -10177,7 +10177,7 @@ namespace Android.App
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal virtual void Dump(global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
+				protected internal virtual void Dump(global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10468,7 +10468,7 @@ namespace Android.App
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
 				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.App.WallpaperInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)V", AccessFlags = 1)]
-				public WallpaperInfo(global::Android.Content.Context context, global::Android.Content.Pm.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
+				public WallpaperInfo(global::Android.Content.Context context, global::Android.Content.PM.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10476,7 +10476,7 @@ namespace Android.App
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -10485,7 +10485,7 @@ namespace Android.App
 				/// loadIcon
 				/// </java-name>
 				[Dot42.DexImport("loadIcon", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -10494,7 +10494,7 @@ namespace Android.App
 				/// loadThumbnail
 				/// </java-name>
 				[Dot42.DexImport("loadThumbnail", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public global::Android.Graphics.Drawables.Drawable LoadThumbnail(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Android.Graphics.Drawables.Drawable LoadThumbnail(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -10503,7 +10503,7 @@ namespace Android.App
 				/// loadAuthor
 				/// </java-name>
 				[Dot42.DexImport("loadAuthor", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence LoadAuthor(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ICharSequence LoadAuthor(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -10512,7 +10512,7 @@ namespace Android.App
 				/// loadDescription
 				/// </java-name>
 				[Dot42.DexImport("loadDescription", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ICharSequence LoadDescription(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -10577,10 +10577,10 @@ namespace Android.App
 				/// <java-name>
 				/// getServiceInfo
 				/// </java-name>
-				public global::Android.Content.Pm.ServiceInfo ServiceInfo
+				public global::Android.Content.PM.ServiceInfo ServiceInfo
 				{
 						[Dot42.DexImport("getServiceInfo", "()Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-						get{ return default(global::Android.Content.Pm.ServiceInfo); }
+						get{ return default(global::Android.Content.PM.ServiceInfo); }
 				}
 
 				/// <java-name>
@@ -10695,7 +10695,7 @@ namespace Android.App
 				/// setStream
 				/// </java-name>
 				[Dot42.DexImport("setStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void SetStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual void SetStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 

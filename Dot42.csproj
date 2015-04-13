@@ -76,12 +76,14 @@
   <ItemGroup>
     <Compile Include="Android\App\Application.cs" />
     <Compile Include="Android\Text\AfterTextChangedEventArgs.cs" />
+    <Compile Include="Android\Util\Log.cs" />
     <Compile Include="Android\Views\LongClickEventArgs.cs" />
+    <Compile Include="AssemblyInfo\JetBrains.Annotations.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\IAssemblyType.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
     <Compile Include="Dot42\Internal\EventInfoProvider.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Accessibilityservice.cs" />
+    <Compile Include="Generated\v4.0.3\Android.AccessibilityServices.cs" />
     <Compile Include="Generated\v4.0.3\Android.Accounts.cs" />
     <Compile Include="Generated\v4.0.3\Android.Animation.cs" />
     <Compile Include="Generated\v4.0.3\Android.App.Admin.cs" />
@@ -90,20 +92,20 @@
     <Compile Include="Generated\v4.0.3\Android.Appwidget.cs" />
     <Compile Include="Generated\v4.0.3\Android.Bluetooth.cs" />
     <Compile Include="Generated\v4.0.3\Android.Content.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Content.Pm.cs" />
+    <Compile Include="Generated\v4.0.3\Android.Content.PM.cs" />
     <Compile Include="Generated\v4.0.3\Android.Content.Res.cs" />
     <Compile Include="Generated\v4.0.3\Android.cs" />
     <Compile Include="Generated\v4.0.3\Android.Database.cs" />
     <Compile Include="Generated\v4.0.3\Android.Database.Sqlite.cs" />
     <Compile Include="Generated\v4.0.3\Android.Drm.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Gesture.cs" />
+    <Compile Include="Generated\v4.0.3\Android.Gestures.cs" />
     <Compile Include="Generated\v4.0.3\Android.Graphics.cs" />
     <Compile Include="Generated\v4.0.3\Android.Graphics.Drawables.cs" />
     <Compile Include="Generated\v4.0.3\Android.Graphics.Drawables.Shapes.cs" />
     <Compile Include="Generated\v4.0.3\Android.Hardware.cs" />
     <Compile Include="Generated\v4.0.3\Android.Hardware.Usb.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Inputmethodservice.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Location.cs" />
+    <Compile Include="Generated\v4.0.3\Android.InputMethodServices.cs" />
+    <Compile Include="Generated\v4.0.3\Android.Locations.cs" />
     <Compile Include="Generated\v4.0.3\Android.Media.Audiofx.cs" />
     <Compile Include="Generated\v4.0.3\Android.Media.cs" />
     <Compile Include="Generated\v4.0.3\Android.Media.Effect.cs" />
@@ -119,9 +121,9 @@
     <Compile Include="Generated\v4.0.3\Android.Opengl.cs" />
     <Compile Include="Generated\v4.0.3\Android.OS.cs" />
     <Compile Include="Generated\v4.0.3\Android.OS.Storage.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Preference.cs" />
+    <Compile Include="Generated\v4.0.3\Android.Preferences.cs" />
     <Compile Include="Generated\v4.0.3\Android.Provider.cs" />
-    <Compile Include="Generated\v4.0.3\Android.Renderscript.cs" />
+    <Compile Include="Generated\v4.0.3\Android.Renderscripts.cs" />
     <Compile Include="Generated\v4.0.3\Android.Sax.cs" />
     <Compile Include="Generated\v4.0.3\Android.Security.cs" />
     <Compile Include="Generated\v4.0.3\Android.Service.Textservice.cs" />
@@ -154,7 +156,7 @@
     <Compile Include="Generated\v4.0.3\Dalvik.System.cs" />
     <Compile Include="Generated\v4.0.3\Java.Awt.Font.cs" />
     <Compile Include="Generated\v4.0.3\Java.Beans.cs" />
-    <Compile Include="Generated\v4.0.3\Java.Io.cs" />
+    <Compile Include="Generated\v4.0.3\Java.IO.cs" />
     <Compile Include="Generated\v4.0.3\Java.Lang.Annotation.cs" />
     <Compile Include="Generated\v4.0.3\Java.Lang.cs" />
     <Compile Include="Generated\v4.0.3\Java.Lang.Ref.cs" />
@@ -442,7 +444,7 @@
     <Compile Include="Dot42\Locale.cs" />
     <Compile Include="Dot42\Manifest\UIOptions.cs" />
     <Compile Include="Dot42\Manifest\UsesLibraryAttribute.cs" />
-    <Compile Include="Java\Io\File.cs" />
+    <Compile Include="Java\IO\File.cs" />
     <Compile Include="Java\Lang\Character.cs" />
     <Compile Include="Java\Lang\Boolean.cs" />
     <Compile Include="Java\Lang\Void.cs" />
@@ -1065,9 +1067,6 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System, Version=4.0.3.0, Culture=neutral, PublicKeyToken=0a72796057571e65, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->

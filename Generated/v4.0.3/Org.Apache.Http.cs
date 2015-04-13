@@ -188,7 +188,7 @@ namespace Org.Apache.Http
 		/// org/apache/http/HttpVersion
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/HttpVersion", AccessFlags = 49)]
-		public sealed partial class HttpVersion : global::Org.Apache.Http.ProtocolVersion, global::Java.Io.ISerializable
+		public sealed partial class HttpVersion : global::Org.Apache.Http.ProtocolVersion, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -587,7 +587,7 @@ namespace Org.Apache.Http
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-				void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
+				void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// consumeContent
@@ -643,7 +643,7 @@ namespace Org.Apache.Http
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				global::Java.Io.InputStream Content
+				global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1025)]
 						get;
@@ -1549,7 +1549,7 @@ namespace Org.Apache.Http
 		/// org/apache/http/ProtocolVersion
 		/// </java-name>
 		[Dot42.DexImport("org/apache/http/ProtocolVersion", AccessFlags = 33)]
-		public partial class ProtocolVersion : global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		public partial class ProtocolVersion : global::Java.IO.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

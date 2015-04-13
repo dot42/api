@@ -216,7 +216,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getBody
 				/// </java-name>
-				public abstract global::Java.Io.OutputStream Body
+				public abstract global::Java.IO.OutputStream Body
 				{
 						[Dot42.DexImport("getBody", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
 						get;
@@ -239,7 +239,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getBody
 				/// </java-name>
-				public abstract global::Java.Io.InputStream Body
+				public abstract global::Java.IO.InputStream Body
 				{
 						[Dot42.DexImport("getBody", "()Ljava/io/InputStream;", AccessFlags = 1025)]
 						get;
@@ -834,7 +834,7 @@ namespace Java.Net
 				/// fd
 				/// </java-name>
 				[Dot42.DexImport("fd", "Ljava/io/FileDescriptor;", AccessFlags = 4)]
-				protected internal global::Java.Io.FileDescriptor Fd;
+				protected internal global::Java.IO.FileDescriptor Fd;
 				/// <java-name>
 				/// localPort
 				/// </java-name>
@@ -953,10 +953,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				protected internal virtual global::Java.Io.FileDescriptor FileDescriptor
+				protected internal virtual global::Java.IO.FileDescriptor FileDescriptor
 				{
 						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 4)]
-						get{ return default(global::Java.Io.FileDescriptor); }
+						get{ return default(global::Java.IO.FileDescriptor); }
 				}
 
 				/// <java-name>
@@ -1511,10 +1511,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getErrorStream
 				/// </java-name>
-				public virtual global::Java.Io.InputStream ErrorStream
+				public virtual global::Java.IO.InputStream ErrorStream
 				{
 						[Dot42.DexImport("getErrorStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -2067,7 +2067,7 @@ namespace Java.Net
 		/// java/net/InetAddress
 		/// </java-name>
 		[Dot42.DexImport("java/net/InetAddress", AccessFlags = 33)]
-		public partial class InetAddress : global::Java.Io.ISerializable
+		public partial class InetAddress : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -3792,10 +3792,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public virtual global::Java.Io.InputStream InputStream
+				public virtual global::Java.IO.InputStream InputStream
 				{
 						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -3830,10 +3830,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public virtual global::Java.Io.OutputStream OutputStream
+				public virtual global::Java.IO.OutputStream OutputStream
 				{
 						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.OutputStream); }
+						get{ return default(global::Java.IO.OutputStream); }
 				}
 
 				/// <java-name>
@@ -4009,7 +4009,7 @@ namespace Java.Net
 		/// java/net/SocketAddress
 		/// </java-name>
 		[Dot42.DexImport("java/net/SocketAddress", AccessFlags = 1057)]
-		public abstract partial class SocketAddress : global::Java.Io.ISerializable
+		public abstract partial class SocketAddress : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4059,7 +4059,7 @@ namespace Java.Net
 				/// fd
 				/// </java-name>
 				[Dot42.DexImport("fd", "Ljava/io/FileDescriptor;", AccessFlags = 4)]
-				protected internal global::Java.Io.FileDescriptor Fd;
+				protected internal global::Java.IO.FileDescriptor Fd;
 				/// <java-name>
 				/// localport
 				/// </java-name>
@@ -4186,10 +4186,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				protected internal virtual global::Java.Io.FileDescriptor FileDescriptor
+				protected internal virtual global::Java.IO.FileDescriptor FileDescriptor
 				{
 						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 4)]
-						get{ return default(global::Java.Io.FileDescriptor); }
+						get{ return default(global::Java.IO.FileDescriptor); }
 				}
 
 				/// <java-name>
@@ -4204,7 +4204,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				protected internal abstract global::Java.Io.InputStream InputStream
+				protected internal abstract global::Java.IO.InputStream InputStream
 				{
 						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1028)]
 						get;
@@ -4222,7 +4222,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				protected internal abstract global::Java.Io.OutputStream OutputStream
+				protected internal abstract global::Java.IO.OutputStream OutputStream
 				{
 						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1028)]
 						get;
@@ -4243,7 +4243,7 @@ namespace Java.Net
 		/// java/net/SocketPermission
 		/// </java-name>
 		[Dot42.DexImport("java/net/SocketPermission", AccessFlags = 49)]
-		public sealed partial class SocketPermission : global::Java.Security.Permission, global::Java.Io.ISerializable
+		public sealed partial class SocketPermission : global::Java.Security.Permission, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -4280,7 +4280,7 @@ namespace Java.Net
 		/// java/net/SocketTimeoutException
 		/// </java-name>
 		[Dot42.DexImport("java/net/SocketTimeoutException", AccessFlags = 33)]
-		public partial class SocketTimeoutException : global::Java.Io.InterruptedIOException
+		public partial class SocketTimeoutException : global::Java.IO.InterruptedIOException
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4397,7 +4397,7 @@ namespace Java.Net
 		/// java/net/URL
 		/// </java-name>
 		[Dot42.DexImport("java/net/URL", AccessFlags = 49)]
-		public sealed partial class URL : global::Java.Io.ISerializable
+		public sealed partial class URL : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
@@ -4487,9 +4487,9 @@ namespace Java.Net
 				/// openStream
 				/// </java-name>
 				[Dot42.DexImport("openStream", "()Ljava/io/InputStream;", AccessFlags = 17)]
-				public global::Java.Io.InputStream OpenStream() /* MethodBuilder.Create */ 
+				public global::Java.IO.InputStream OpenStream() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
@@ -4907,7 +4907,7 @@ namespace Java.Net
 				/// guessContentTypeFromStream
 				/// </java-name>
 				[Dot42.DexImport("guessContentTypeFromStream", "(Ljava/io/InputStream;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GuessContentTypeFromStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static string GuessContentTypeFromStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -5102,10 +5102,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public virtual global::Java.Io.InputStream InputStream
+				public virtual global::Java.IO.InputStream InputStream
 				{
 						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -5120,10 +5120,10 @@ namespace Java.Net
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public virtual global::Java.Io.OutputStream OutputStream
+				public virtual global::Java.IO.OutputStream OutputStream
 				{
 						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.OutputStream); }
+						get{ return default(global::Java.IO.OutputStream); }
 				}
 
 				/// <java-name>

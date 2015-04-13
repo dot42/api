@@ -631,7 +631,7 @@ namespace Android.Net.Sip
 		/// android/net/sip/SipProfile
 		/// </java-name>
 		[Dot42.DexImport("android/net/sip/SipProfile", AccessFlags = 33)]
-		public partial class SipProfile : global::Android.OS.IParcelable, global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		public partial class SipProfile : global::Android.OS.IParcelable, global::Java.IO.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

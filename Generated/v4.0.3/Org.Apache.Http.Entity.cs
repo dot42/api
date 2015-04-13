@@ -77,7 +77,7 @@ namespace Org.Apache.Http.Entity
 				}
 
 				[Dot42.DexImport("org/apache/http/HttpEntity", "writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-				public virtual void WriteTo(global::Java.Io.OutputStream outputStream) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public virtual void WriteTo(global::Java.IO.OutputStream outputStream) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 				}
 
@@ -120,10 +120,10 @@ namespace Org.Apache.Http.Entity
 						get{ return default(long); }
 				}
 
-				public virtual global::Java.Io.InputStream Content
+				public virtual global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("org/apache/http/HttpEntity", "getContent", "()Ljava/io/InputStream;", AccessFlags = 1025)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				public virtual bool IsStreaming
@@ -158,7 +158,7 @@ namespace Org.Apache.Http.Entity
 				/// setContent
 				/// </java-name>
 				[Dot42.DexImport("setContent", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void SetContent(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual void SetContent(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -166,7 +166,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -190,10 +190,10 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public override global::Java.Io.InputStream Content
+				public override global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -232,7 +232,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -253,10 +253,10 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public override global::Java.Io.InputStream Content
+				public override global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -314,7 +314,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -353,10 +353,10 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public override global::Java.Io.InputStream Content
+				public override global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -386,7 +386,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -415,10 +415,10 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public override global::Java.Io.InputStream Content
+				public override global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -452,9 +452,9 @@ namespace Org.Apache.Http.Entity
 				/// file
 				/// </java-name>
 				[Dot42.DexImport("file", "Ljava/io/File;", AccessFlags = 20)]
-				protected internal readonly global::Java.Io.File File;
+				protected internal readonly global::Java.IO.File File;
 				[Dot42.DexImport("<init>", "(Ljava/io/File;Ljava/lang/String;)V", AccessFlags = 1)]
-				public FileEntity(global::Java.Io.File file, string @string) /* MethodBuilder.Create */ 
+				public FileEntity(global::Java.IO.File file, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -462,7 +462,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -501,10 +501,10 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public override global::Java.Io.InputStream Content
+				public override global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -539,7 +539,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public virtual void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public virtual void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -604,10 +604,10 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public virtual global::Java.Io.InputStream Content
+				public virtual global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -666,7 +666,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-				void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
+				void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -678,7 +678,7 @@ namespace Org.Apache.Http.Entity
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;J)V", AccessFlags = 1)]
-				public InputStreamEntity(global::Java.Io.InputStream inputStream, long int64) /* MethodBuilder.Create */ 
+				public InputStreamEntity(global::Java.IO.InputStream inputStream, long int64) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -686,7 +686,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -724,10 +724,10 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public override global::Java.Io.InputStream Content
+				public override global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -749,7 +749,7 @@ namespace Org.Apache.Http.Entity
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/Serializable;Z)V", AccessFlags = 1)]
-				public SerializableEntity(global::Java.Io.ISerializable serializable, bool boolean) /* MethodBuilder.Create */ 
+				public SerializableEntity(global::Java.IO.ISerializable serializable, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -757,7 +757,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -769,10 +769,10 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public override global::Java.Io.InputStream Content
+				public override global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
@@ -830,7 +830,7 @@ namespace Org.Apache.Http.Entity
 				/// writeTo
 				/// </java-name>
 				[Dot42.DexImport("writeTo", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void WriteTo(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void WriteTo(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -869,10 +869,10 @@ namespace Org.Apache.Http.Entity
 				/// <java-name>
 				/// getContent
 				/// </java-name>
-				public override global::Java.Io.InputStream Content
+				public override global::Java.IO.InputStream Content
 				{
 						[Dot42.DexImport("getContent", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>

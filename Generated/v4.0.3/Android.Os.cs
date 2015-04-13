@@ -440,7 +440,7 @@ namespace Android.OS
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Dump(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ 
+				public virtual void Dump(global::Java.IO.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -448,7 +448,7 @@ namespace Android.OS
 				/// dumpAsync
 				/// </java-name>
 				[Dot42.DexImport("dumpAsync", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void DumpAsync(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ 
+				public virtual void DumpAsync(global::Java.IO.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -456,7 +456,7 @@ namespace Android.OS
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal virtual void Dump(global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
+				protected internal virtual void Dump(global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1045,7 +1045,7 @@ namespace Android.OS
 				/// putSerializable
 				/// </java-name>
 				[Dot42.DexImport("putSerializable", "(Ljava/lang/String;Ljava/io/Serializable;)V", AccessFlags = 1)]
-				public void PutSerializable(string @string, global::Java.Io.ISerializable serializable) /* MethodBuilder.Create */ 
+				public void PutSerializable(string @string, global::Java.IO.ISerializable serializable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1392,9 +1392,9 @@ namespace Android.OS
 				/// getSerializable
 				/// </java-name>
 				[Dot42.DexImport("getSerializable", "(Ljava/lang/String;)Ljava/io/Serializable;", AccessFlags = 1)]
-				public global::Java.Io.ISerializable GetSerializable(string @string) /* MethodBuilder.Create */ 
+				public global::Java.IO.ISerializable GetSerializable(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.ISerializable);
+						return default(global::Java.IO.ISerializable);
 				}
 
 				/// <java-name>
@@ -2030,7 +2030,7 @@ namespace Android.OS
 				/// dumpService
 				/// </java-name>
 				[Dot42.DexImport("dumpService", "(Ljava/lang/String;Ljava/io/FileDescriptor;[Ljava/lang/String;)Z", AccessFlags = 9)]
-				public static bool DumpService(string @string, global::Java.Io.FileDescriptor fileDescriptor, string[] string1) /* MethodBuilder.Create */ 
+				public static bool DumpService(string @string, global::Java.IO.FileDescriptor fileDescriptor, string[] string1) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -2552,7 +2552,7 @@ namespace Android.OS
 				/// addFile
 				/// </java-name>
 				[Dot42.DexImport("addFile", "(Ljava/lang/String;Ljava/io/File;I)V", AccessFlags = 1)]
-				public virtual void AddFile(string @string, global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
+				public virtual void AddFile(string @string, global::Java.IO.File file, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2578,7 +2578,7 @@ namespace Android.OS
 				/// android/os/DropBoxManager$Entry
 				/// </java-name>
 				[Dot42.DexImport("android/os/DropBoxManager$Entry", AccessFlags = 9)]
-				public partial class Entry : global::Android.OS.IParcelable, global::Java.Io.ICloseable
+				public partial class Entry : global::Android.OS.IParcelable, global::Java.IO.ICloseable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -2612,7 +2612,7 @@ namespace Android.OS
 						}
 
 						[Dot42.DexImport("<init>", "(Ljava/lang/String;JLjava/io/File;I)V", AccessFlags = 1)]
-						public Entry(string @string, long int64, global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
+						public Entry(string @string, long int64, global::Java.IO.File file, int int32) /* MethodBuilder.Create */ 
 						{
 						}
 
@@ -2685,10 +2685,10 @@ namespace Android.OS
 						/// <java-name>
 						/// getInputStream
 						/// </java-name>
-						public virtual global::Java.Io.InputStream InputStream
+						public virtual global::Java.IO.InputStream InputStream
 						{
 								[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-								get{ return default(global::Java.Io.InputStream); }
+								get{ return default(global::Java.IO.InputStream); }
 						}
 
 				}
@@ -2801,45 +2801,45 @@ namespace Android.OS
 				/// getExternalStoragePublicDirectory
 				/// </java-name>
 				[Dot42.DexImport("getExternalStoragePublicDirectory", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 9)]
-				public static global::Java.Io.File GetExternalStoragePublicDirectory(string @string) /* MethodBuilder.Create */ 
+				public static global::Java.IO.File GetExternalStoragePublicDirectory(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
+						return default(global::Java.IO.File);
 				}
 
 				/// <java-name>
 				/// getRootDirectory
 				/// </java-name>
-				public static global::Java.Io.File RootDirectory
+				public static global::Java.IO.File RootDirectory
 				{
 						[Dot42.DexImport("getRootDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 				/// <java-name>
 				/// getDataDirectory
 				/// </java-name>
-				public static global::Java.Io.File DataDirectory
+				public static global::Java.IO.File DataDirectory
 				{
 						[Dot42.DexImport("getDataDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 				/// <java-name>
 				/// getExternalStorageDirectory
 				/// </java-name>
-				public static global::Java.Io.File ExternalStorageDirectory
+				public static global::Java.IO.File ExternalStorageDirectory
 				{
 						[Dot42.DexImport("getExternalStorageDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 				/// <java-name>
 				/// getDownloadCacheDirectory
 				/// </java-name>
-				public static global::Java.Io.File DownloadCacheDirectory
+				public static global::Java.IO.File DownloadCacheDirectory
 				{
 						[Dot42.DexImport("getDownloadCacheDirectory", "()Ljava/io/File;", AccessFlags = 9)]
-						get{ return default(global::Java.Io.File); }
+						get{ return default(global::Java.IO.File); }
 				}
 
 				/// <java-name>
@@ -3384,13 +3384,13 @@ namespace Android.OS
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1025)]
-				void Dump(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ ;
+				void Dump(global::Java.IO.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// dumpAsync
 				/// </java-name>
 				[Dot42.DexImport("dumpAsync", "(Ljava/io/FileDescriptor;[Ljava/lang/String;)V", AccessFlags = 1025)]
-				void DumpAsync(global::Java.Io.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ ;
+				void DumpAsync(global::Java.IO.FileDescriptor fileDescriptor, string[] @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// transact
@@ -3787,19 +3787,19 @@ namespace Android.OS
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public virtual global::Java.Io.InputStream InputStream
+				public virtual global::Java.IO.InputStream InputStream
 				{
 						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 				}
 
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public virtual global::Java.Io.OutputStream OutputStream
+				public virtual global::Java.IO.OutputStream OutputStream
 				{
 						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.OutputStream); }
+						get{ return default(global::Java.IO.OutputStream); }
 				}
 
 		}
@@ -4426,7 +4426,7 @@ namespace Android.OS
 				/// writeFileDescriptor
 				/// </java-name>
 				[Dot42.DexImport("writeFileDescriptor", "(Ljava/io/FileDescriptor;)V", AccessFlags = 273)]
-				public void WriteFileDescriptor(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public void WriteFileDescriptor(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4746,7 +4746,7 @@ namespace Android.OS
 				/// writeSerializable
 				/// </java-name>
 				[Dot42.DexImport("writeSerializable", "(Ljava/io/Serializable;)V", AccessFlags = 17)]
-				public void WriteSerializable(global::Java.Io.ISerializable serializable) /* MethodBuilder.Create */ 
+				public void WriteSerializable(global::Java.IO.ISerializable serializable) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5085,9 +5085,9 @@ namespace Android.OS
 				/// readSerializable
 				/// </java-name>
 				[Dot42.DexImport("readSerializable", "()Ljava/io/Serializable;", AccessFlags = 17)]
-				public global::Java.Io.ISerializable ReadSerializable() /* MethodBuilder.Create */ 
+				public global::Java.IO.ISerializable ReadSerializable() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.ISerializable);
+						return default(global::Java.IO.ISerializable);
 				}
 
 				/// <java-name>
@@ -5177,7 +5177,7 @@ namespace Android.OS
 				/// open
 				/// </java-name>
 				[Dot42.DexImport("open", "(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.OS.ParcelFileDescriptor Open(global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
+				public static global::Android.OS.ParcelFileDescriptor Open(global::Java.IO.File file, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.OS.ParcelFileDescriptor);
 				}
@@ -5186,7 +5186,7 @@ namespace Android.OS
 				/// dup
 				/// </java-name>
 				[Dot42.DexImport("dup", "(Ljava/io/FileDescriptor;)Landroid/os/ParcelFileDescriptor;", AccessFlags = 9)]
-				public static global::Android.OS.ParcelFileDescriptor Dup(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public static global::Android.OS.ParcelFileDescriptor Dup(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.OS.ParcelFileDescriptor);
 				}
@@ -5302,10 +5302,10 @@ namespace Android.OS
 				/// <java-name>
 				/// getFileDescriptor
 				/// </java-name>
-				public virtual global::Java.Io.FileDescriptor FileDescriptor
+				public virtual global::Java.IO.FileDescriptor FileDescriptor
 				{
 						[Dot42.DexImport("getFileDescriptor", "()Ljava/io/FileDescriptor;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.FileDescriptor); }
+						get{ return default(global::Java.IO.FileDescriptor); }
 				}
 
 				/// <java-name>
@@ -5330,7 +5330,7 @@ namespace Android.OS
 				/// android/os/ParcelFileDescriptor$AutoCloseOutputStream
 				/// </java-name>
 				[Dot42.DexImport("android/os/ParcelFileDescriptor$AutoCloseOutputStream", AccessFlags = 9)]
-				public partial class AutoCloseOutputStream : global::Java.Io.FileOutputStream
+				public partial class AutoCloseOutputStream : global::Java.IO.FileOutputStream
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
@@ -5357,7 +5357,7 @@ namespace Android.OS
 				/// android/os/ParcelFileDescriptor$AutoCloseInputStream
 				/// </java-name>
 				[Dot42.DexImport("android/os/ParcelFileDescriptor$AutoCloseInputStream", AccessFlags = 9)]
-				public partial class AutoCloseInputStream : global::Java.Io.FileInputStream
+				public partial class AutoCloseInputStream : global::Java.IO.FileInputStream
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Landroid/os/ParcelFileDescriptor;)V", AccessFlags = 1)]
@@ -5982,7 +5982,7 @@ namespace Android.OS
 				/// verifyPackage
 				/// </java-name>
 				[Dot42.DexImport("verifyPackage", "(Ljava/io/File;Landroid/os/RecoverySystem$ProgressListener;Ljava/io/File;)V", AccessFlags = 9)]
-				public static void VerifyPackage(global::Java.Io.File file, global::Android.OS.RecoverySystem.IProgressListener progressListener, global::Java.Io.File file1) /* MethodBuilder.Create */ 
+				public static void VerifyPackage(global::Java.IO.File file, global::Android.OS.RecoverySystem.IProgressListener progressListener, global::Java.IO.File file1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5990,7 +5990,7 @@ namespace Android.OS
 				/// installPackage
 				/// </java-name>
 				[Dot42.DexImport("installPackage", "(Landroid/content/Context;Ljava/io/File;)V", AccessFlags = 9)]
-				public static void InstallPackage(global::Android.Content.Context context, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public static void InstallPackage(global::Android.Content.Context context, global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 

@@ -17,7 +17,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Threading;
 using Android.Net.Http;
-using Java.Io;
+using Java.IO;
 using Org.Apache.Http;
 using Org.Apache.Http.Util;
 

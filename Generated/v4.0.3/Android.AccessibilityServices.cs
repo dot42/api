@@ -1,5 +1,5 @@
 ﻿#pragma warning disable 1717
-namespace Android.Accessibilityservice
+namespace Android.AccessibilityServices
 {
 		/// <java-name>
 		/// android/accessibilityservice/AccessibilityService
@@ -47,7 +47,7 @@ namespace Android.Accessibilityservice
 				/// setServiceInfo
 				/// </java-name>
 				[Dot42.DexImport("setServiceInfo", "(Landroid/accessibilityservice/AccessibilityServiceInfo;)V", AccessFlags = 17)]
-				public void SetServiceInfo(global::Android.Accessibilityservice.AccessibilityServiceInfo accessibilityServiceInfo) /* MethodBuilder.Create */ 
+				public void SetServiceInfo(global::Android.AccessibilityServices.AccessibilityServiceInfo accessibilityServiceInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -133,7 +133,7 @@ namespace Android.Accessibilityservice
 				/// CREATOR
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
-				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Accessibilityservice.AccessibilityServiceInfo> CREATOR;
+				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.AccessibilityServices.AccessibilityServiceInfo> CREATOR;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public AccessibilityServiceInfo() /* MethodBuilder.Create */ 
 				{
@@ -195,10 +195,10 @@ namespace Android.Accessibilityservice
 				/// <java-name>
 				/// getResolveInfo
 				/// </java-name>
-				public virtual global::Android.Content.Pm.ResolveInfo ResolveInfo
+				public virtual global::Android.Content.PM.ResolveInfo ResolveInfo
 				{
 						[Dot42.DexImport("getResolveInfo", "()Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
-						get{ return default(global::Android.Content.Pm.ResolveInfo); }
+						get{ return default(global::Android.Content.PM.ResolveInfo); }
 				}
 
 				/// <java-name>

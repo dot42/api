@@ -15,7 +15,7 @@
 // limitations under the License.
 using Java.Lang;
 
-namespace Java.Io
+namespace Java.IO
 {
 	partial class File
 	{

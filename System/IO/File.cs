@@ -14,10 +14,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Collections.Generic;
-using Java.Io;
+using Java.IO;
 using Java.Lang;
 using Java.Util;
-using JFile = Java.Io.File;
+using JFile = Java.IO.File;
 using JSystem = Java.Lang.System;
 
 namespace System.IO

@@ -29,7 +29,7 @@ namespace Javax.Security.Auth.Callback
 		/// javax/security/auth/callback/PasswordCallback
 		/// </java-name>
 		[Dot42.DexImport("javax/security/auth/callback/PasswordCallback", AccessFlags = 33)]
-		public partial class PasswordCallback : global::Javax.Security.Auth.Callback.ICallback, global::Java.Io.ISerializable
+		public partial class PasswordCallback : global::Javax.Security.Auth.Callback.ICallback, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Z)V", AccessFlags = 1)]

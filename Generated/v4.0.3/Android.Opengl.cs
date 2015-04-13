@@ -127,7 +127,7 @@ namespace Android.Opengl
 				/// loadTexture
 				/// </java-name>
 				[Dot42.DexImport("loadTexture", "(IIIIILjava/io/InputStream;)V", AccessFlags = 9)]
-				public static void LoadTexture(int int32, int int321, int int322, int int323, int int324, global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static void LoadTexture(int int32, int int321, int int322, int int323, int int324, global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -143,7 +143,7 @@ namespace Android.Opengl
 				/// createTexture
 				/// </java-name>
 				[Dot42.DexImport("createTexture", "(Ljava/io/InputStream;)Landroid/opengl/ETC1Util$ETC1Texture;", AccessFlags = 9)]
-				public static global::Android.Opengl.ETC1Util.ETC1Texture CreateTexture(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static global::Android.Opengl.ETC1Util.ETC1Texture CreateTexture(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Opengl.ETC1Util.ETC1Texture);
 				}
@@ -161,7 +161,7 @@ namespace Android.Opengl
 				/// writeTexture
 				/// </java-name>
 				[Dot42.DexImport("writeTexture", "(Landroid/opengl/ETC1Util$ETC1Texture;Ljava/io/OutputStream;)V", AccessFlags = 9)]
-				public static void WriteTexture(global::Android.Opengl.ETC1Util.ETC1Texture eTC1Texture, global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public static void WriteTexture(global::Android.Opengl.ETC1Util.ETC1Texture eTC1Texture, global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -259,7 +259,7 @@ namespace Android.Opengl
 				/// </java-name>
 				[Dot42.DexImport("wrap", "(Ljavax/microedition/khronos/opengles/GL;ILjava/io/Writer;)Ljavax/microedition/kh" +
     "ronos/opengles/GL;", AccessFlags = 9)]
-				public static global::Javax.Microedition.Khronos.Opengles.IGL Wrap(global::Javax.Microedition.Khronos.Opengles.IGL gL, int int32, global::Java.Io.Writer writer) /* MethodBuilder.Create */ 
+				public static global::Javax.Microedition.Khronos.Opengles.IGL Wrap(global::Javax.Microedition.Khronos.Opengles.IGL gL, int int32, global::Java.IO.Writer writer) /* MethodBuilder.Create */ 
 				{
 						return default(global::Javax.Microedition.Khronos.Opengles.IGL);
 				}
@@ -269,7 +269,7 @@ namespace Android.Opengl
 				/// </java-name>
 				[Dot42.DexImport("wrap", "(Ljavax/microedition/khronos/egl/EGL;ILjava/io/Writer;)Ljavax/microedition/khrono" +
     "s/egl/EGL;", AccessFlags = 9)]
-				public static global::Javax.Microedition.Khronos.Egl.IEGL Wrap(global::Javax.Microedition.Khronos.Egl.IEGL eGL, int int32, global::Java.Io.Writer writer) /* MethodBuilder.Create */ 
+				public static global::Javax.Microedition.Khronos.Egl.IEGL Wrap(global::Javax.Microedition.Khronos.Egl.IEGL eGL, int int32, global::Java.IO.Writer writer) /* MethodBuilder.Create */ 
 				{
 						return default(global::Javax.Microedition.Khronos.Egl.IEGL);
 				}

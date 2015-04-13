@@ -339,7 +339,7 @@ namespace Java.Util.Logging
 		/// java/util/logging/Level
 		/// </java-name>
 		[Dot42.DexImport("java/util/logging/Level", AccessFlags = 33)]
-		public partial class Level : global::Java.Io.ISerializable
+		public partial class Level : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -866,7 +866,7 @@ namespace Java.Util.Logging
 		/// java/util/logging/LoggingPermission
 		/// </java-name>
 		[Dot42.DexImport("java/util/logging/LoggingPermission", AccessFlags = 49)]
-		public sealed partial class LoggingPermission : global::Java.Security.BasicPermission, global::Java.Security.IGuard, global::Java.Io.ISerializable
+		public sealed partial class LoggingPermission : global::Java.Security.BasicPermission, global::Java.Security.IGuard, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -977,7 +977,7 @@ namespace Java.Util.Logging
 				/// readConfiguration
 				/// </java-name>
 				[Dot42.DexImport("readConfiguration", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void ReadConfiguration(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual void ReadConfiguration(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1029,7 +1029,7 @@ namespace Java.Util.Logging
 		/// java/util/logging/LogRecord
 		/// </java-name>
 		[Dot42.DexImport("java/util/logging/LogRecord", AccessFlags = 33)]
-		public partial class LogRecord : global::Java.Io.ISerializable
+		public partial class LogRecord : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/util/logging/Level;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -1318,7 +1318,7 @@ namespace Java.Util.Logging
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/util/logging/Formatter;)V", AccessFlags = 1)]
-				public StreamHandler(global::Java.Io.OutputStream outputStream, global::Java.Util.Logging.Formatter formatter) /* MethodBuilder.Create */ 
+				public StreamHandler(global::Java.IO.OutputStream outputStream, global::Java.Util.Logging.Formatter formatter) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1326,7 +1326,7 @@ namespace Java.Util.Logging
 				/// setOutputStream
 				/// </java-name>
 				[Dot42.DexImport("setOutputStream", "(Ljava/io/OutputStream;)V", AccessFlags = 4)]
-				protected internal virtual void SetOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				protected internal virtual void SetOutputStream(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 

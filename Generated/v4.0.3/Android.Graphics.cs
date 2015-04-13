@@ -193,7 +193,7 @@ namespace Android.Graphics
 				/// compress
 				/// </java-name>
 				[Dot42.DexImport("compress", "(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z", AccessFlags = 1)]
-				public bool Compress(global::Android.Graphics.Bitmap.CompressFormat compressFormat, int int32, global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public bool Compress(global::Android.Graphics.Bitmap.CompressFormat compressFormat, int int32, global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -590,7 +590,7 @@ namespace Android.Graphics
 				[Dot42.DexImport("decodeResourceStream", "(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Lan" +
     "droid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/B" +
     "itmap;", AccessFlags = 9)]
-				public static global::Android.Graphics.Bitmap DecodeResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.Io.InputStream inputStream, global::Android.Graphics.Rect rect, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Bitmap DecodeResourceStream(global::Android.Content.Res.Resources resources, global::Android.Util.TypedValue typedValue, global::Java.IO.InputStream inputStream, global::Android.Graphics.Rect rect, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
 				}
@@ -655,7 +655,7 @@ namespace Android.Graphics
 				/// </java-name>
 				[Dot42.DexImport("decodeStream", "(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Opti" +
     "ons;)Landroid/graphics/Bitmap;", AccessFlags = 9)]
-				public static global::Android.Graphics.Bitmap DecodeStream(global::Java.Io.InputStream inputStream, global::Android.Graphics.Rect rect, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Bitmap DecodeStream(global::Java.IO.InputStream inputStream, global::Android.Graphics.Rect rect, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
 				}
@@ -664,7 +664,7 @@ namespace Android.Graphics
 				/// decodeStream
 				/// </java-name>
 				[Dot42.DexImport("decodeStream", "(Ljava/io/InputStream;)Landroid/graphics/Bitmap;", AccessFlags = 9)]
-				public static global::Android.Graphics.Bitmap DecodeStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Bitmap DecodeStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
 				}
@@ -674,7 +674,7 @@ namespace Android.Graphics
 				/// </java-name>
 				[Dot42.DexImport("decodeFileDescriptor", "(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$O" +
     "ptions;)Landroid/graphics/Bitmap;", AccessFlags = 9)]
-				public static global::Android.Graphics.Bitmap DecodeFileDescriptor(global::Java.Io.FileDescriptor fileDescriptor, global::Android.Graphics.Rect rect, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Bitmap DecodeFileDescriptor(global::Java.IO.FileDescriptor fileDescriptor, global::Android.Graphics.Rect rect, global::Android.Graphics.BitmapFactory.Options options) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
 				}
@@ -683,7 +683,7 @@ namespace Android.Graphics
 				/// decodeFileDescriptor
 				/// </java-name>
 				[Dot42.DexImport("decodeFileDescriptor", "(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;", AccessFlags = 9)]
-				public static global::Android.Graphics.Bitmap DecodeFileDescriptor(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Bitmap DecodeFileDescriptor(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
 				}
@@ -836,7 +836,7 @@ namespace Android.Graphics
 				/// newInstance
 				/// </java-name>
 				[Dot42.DexImport("newInstance", "(Ljava/io/FileDescriptor;Z)Landroid/graphics/BitmapRegionDecoder;", AccessFlags = 9)]
-				public static global::Android.Graphics.BitmapRegionDecoder NewInstance(global::Java.Io.FileDescriptor fileDescriptor, bool boolean) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.BitmapRegionDecoder NewInstance(global::Java.IO.FileDescriptor fileDescriptor, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.BitmapRegionDecoder);
 				}
@@ -845,7 +845,7 @@ namespace Android.Graphics
 				/// newInstance
 				/// </java-name>
 				[Dot42.DexImport("newInstance", "(Ljava/io/InputStream;Z)Landroid/graphics/BitmapRegionDecoder;", AccessFlags = 9)]
-				public static global::Android.Graphics.BitmapRegionDecoder NewInstance(global::Java.Io.InputStream inputStream, bool boolean) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.BitmapRegionDecoder NewInstance(global::Java.IO.InputStream inputStream, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.BitmapRegionDecoder);
 				}
@@ -3308,7 +3308,7 @@ namespace Android.Graphics
 				/// decodeStream
 				/// </java-name>
 				[Dot42.DexImport("decodeStream", "(Ljava/io/InputStream;)Landroid/graphics/Movie;", AccessFlags = 265)]
-				public static global::Android.Graphics.Movie DecodeStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Movie DecodeStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Movie);
 				}
@@ -5102,7 +5102,7 @@ namespace Android.Graphics
 				/// createFromStream
 				/// </java-name>
 				[Dot42.DexImport("createFromStream", "(Ljava/io/InputStream;)Landroid/graphics/Picture;", AccessFlags = 9)]
-				public static global::Android.Graphics.Picture CreateFromStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Picture CreateFromStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Picture);
 				}
@@ -5111,7 +5111,7 @@ namespace Android.Graphics
 				/// writeToStream
 				/// </java-name>
 				[Dot42.DexImport("writeToStream", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public virtual void WriteToStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public virtual void WriteToStream(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -7141,7 +7141,7 @@ namespace Android.Graphics
 				/// createFromFile
 				/// </java-name>
 				[Dot42.DexImport("createFromFile", "(Ljava/io/File;)Landroid/graphics/Typeface;", AccessFlags = 9)]
-				public static global::Android.Graphics.Typeface CreateFromFile(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public static global::Android.Graphics.Typeface CreateFromFile(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Typeface);
 				}
@@ -7231,7 +7231,7 @@ namespace Android.Graphics
 				/// compressToJpeg
 				/// </java-name>
 				[Dot42.DexImport("compressToJpeg", "(Landroid/graphics/Rect;ILjava/io/OutputStream;)Z", AccessFlags = 1)]
-				public virtual bool CompressToJpeg(global::Android.Graphics.Rect rect, int int32, global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public virtual bool CompressToJpeg(global::Android.Graphics.Rect rect, int int32, global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}

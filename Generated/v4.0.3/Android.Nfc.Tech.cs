@@ -184,7 +184,7 @@ namespace Android.Nfc.Tech
 		/// android/nfc/tech/TagTechnology
 		/// </java-name>
 		[Dot42.DexImport("android/nfc/tech/TagTechnology", AccessFlags = 1537)]
-		public partial interface ITagTechnology : global::Java.Io.ICloseable
+		public partial interface ITagTechnology : global::Java.IO.ICloseable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

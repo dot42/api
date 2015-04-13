@@ -13,7 +13,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Java.Io;
+using Java.IO;
 
 namespace System.IO
 {
@@ -190,7 +190,7 @@ namespace System.IO
         /// </summary>
         private static RandomAccessFile Open(string path, FileMode mode, FileAccess access)
         {
-            var file = new Java.Io.File(path);
+            var file = new Java.IO.File(path);
             switch (mode)
             {
                 case FileMode.CreateNew:

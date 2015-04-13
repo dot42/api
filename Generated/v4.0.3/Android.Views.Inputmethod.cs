@@ -1444,7 +1444,7 @@ namespace Android.Views.Inputmethod
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
 				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Views.Inputmethod.InputMethodInfo> CREATOR;
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)V", AccessFlags = 1)]
-				public InputMethodInfo(global::Android.Content.Context context, global::Android.Content.Pm.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
+				public InputMethodInfo(global::Android.Content.Context context, global::Android.Content.PM.ResolveInfo resolveInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1458,7 +1458,7 @@ namespace Android.Views.Inputmethod
 				/// loadLabel
 				/// </java-name>
 				[Dot42.DexImport("loadLabel", "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ICharSequence LoadLabel(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1467,7 +1467,7 @@ namespace Android.Views.Inputmethod
 				/// loadIcon
 				/// </java-name>
 				[Dot42.DexImport("loadIcon", "(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.Pm.PackageManager packageManager) /* MethodBuilder.Create */ 
+				public global::Android.Graphics.Drawables.Drawable LoadIcon(global::Android.Content.PM.PackageManager packageManager) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1568,10 +1568,10 @@ namespace Android.Views.Inputmethod
 				/// <java-name>
 				/// getServiceInfo
 				/// </java-name>
-				public global::Android.Content.Pm.ServiceInfo ServiceInfo
+				public global::Android.Content.PM.ServiceInfo ServiceInfo
 				{
 						[Dot42.DexImport("getServiceInfo", "()Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-						get{ return default(global::Android.Content.Pm.ServiceInfo); }
+						get{ return default(global::Android.Content.PM.ServiceInfo); }
 				}
 
 				/// <java-name>
@@ -1997,7 +1997,7 @@ namespace Android.Views.Inputmethod
 				/// </java-name>
 				[Dot42.DexImport("getDisplayName", "(Landroid/content/Context;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)" +
     "Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public global::Java.Lang.ICharSequence GetDisplayName(global::Android.Content.Context context, string @string, global::Android.Content.Pm.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ICharSequence GetDisplayName(global::Android.Content.Context context, string @string, global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}

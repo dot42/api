@@ -359,9 +359,9 @@ namespace Java.Lang
 				/// getSystemResourceAsStream
 				/// </java-name>
 				[Dot42.DexImport("getSystemResourceAsStream", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 9)]
-				public static global::Java.Io.InputStream GetSystemResourceAsStream(string @string) /* MethodBuilder.Create */ 
+				public static global::Java.IO.InputStream GetSystemResourceAsStream(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
@@ -478,9 +478,9 @@ namespace Java.Lang
 				/// getResourceAsStream
 				/// </java-name>
 				[Dot42.DexImport("getResourceAsStream", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetResourceAsStream(string @string) /* MethodBuilder.Create */ 
+				public virtual global::Java.IO.InputStream GetResourceAsStream(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
@@ -748,7 +748,7 @@ namespace Java.Lang
 		/// </java-name>
 		[Dot42.DexImport("java/lang/Enum", AccessFlags = 1057, Signature = "<E:Ljava/lang/Enum<TE;>;>Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/Compa" +
     "rable<TE;>;")]
-		public abstract partial class Enum<E> : global::Java.Io.ISerializable, global::System.IComparable<E>
+		public abstract partial class Enum<E> : global::Java.IO.ISerializable, global::System.IComparable<E>
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 4)]
@@ -1456,7 +1456,7 @@ namespace Java.Lang
 		/// java/lang/Number
 		/// </java-name>
 		[Dot42.DexImport("java/lang/Number", AccessFlags = 1057)]
-		public abstract partial class Number : global::Java.Io.ISerializable
+		public abstract partial class Number : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1742,7 +1742,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// getErrorStream
 				/// </java-name>
-				public abstract global::Java.Io.InputStream ErrorStream
+				public abstract global::Java.IO.InputStream ErrorStream
 				{
 						[Dot42.DexImport("getErrorStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
 						get;
@@ -1751,7 +1751,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public abstract global::Java.Io.InputStream InputStream
+				public abstract global::Java.IO.InputStream InputStream
 				{
 						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
 						get;
@@ -1760,7 +1760,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public abstract global::Java.Io.OutputStream OutputStream
+				public abstract global::Java.IO.OutputStream OutputStream
 				{
 						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
 						get;
@@ -1816,16 +1816,16 @@ namespace Java.Lang
 				/// directory
 				/// </java-name>
 				[Dot42.DexImport("directory", "()Ljava/io/File;", AccessFlags = 1)]
-				public global::Java.Io.File Directory() /* MethodBuilder.Create */ 
+				public global::Java.IO.File Directory() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.File);
+						return default(global::Java.IO.File);
 				}
 
 				/// <java-name>
 				/// directory
 				/// </java-name>
 				[Dot42.DexImport("directory", "(Ljava/io/File;)Ljava/lang/ProcessBuilder;", AccessFlags = 1)]
-				public global::Java.Lang.ProcessBuilder Directory(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public global::Java.Lang.ProcessBuilder Directory(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ProcessBuilder);
 				}
@@ -1907,7 +1907,7 @@ namespace Java.Lang
 				/// exec
 				/// </java-name>
 				[Dot42.DexImport("exec", "([Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Process Exec(string[] @string, string[] string1, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.Process Exec(string[] @string, string[] string1, global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.Process);
 				}
@@ -1934,7 +1934,7 @@ namespace Java.Lang
 				/// exec
 				/// </java-name>
 				[Dot42.DexImport("exec", "(Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;", AccessFlags = 1)]
-				public virtual global::Java.Lang.Process Exec(string @string, string[] string1, global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.Process Exec(string @string, string[] string1, global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.Process);
 				}
@@ -2034,18 +2034,18 @@ namespace Java.Lang
 				/// getLocalizedInputStream
 				/// </java-name>
 				[Dot42.DexImport("getLocalizedInputStream", "(Ljava/io/InputStream;)Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetLocalizedInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual global::Java.IO.InputStream GetLocalizedInputStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
 				/// getLocalizedOutputStream
 				/// </java-name>
 				[Dot42.DexImport("getLocalizedOutputStream", "(Ljava/io/OutputStream;)Ljava/io/OutputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.OutputStream GetLocalizedOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public virtual global::Java.IO.OutputStream GetLocalizedOutputStream(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.OutputStream);
+						return default(global::Java.IO.OutputStream);
 				}
 
 				/// <java-name>
@@ -2337,7 +2337,7 @@ namespace Java.Lang
 				/// checkRead
 				/// </java-name>
 				[Dot42.DexImport("checkRead", "(Ljava/io/FileDescriptor;)V", AccessFlags = 1)]
-				public virtual void CheckRead(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void CheckRead(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2410,7 +2410,7 @@ namespace Java.Lang
 				/// checkWrite
 				/// </java-name>
 				[Dot42.DexImport("checkWrite", "(Ljava/io/FileDescriptor;)V", AccessFlags = 1)]
-				public virtual void CheckWrite(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void CheckWrite(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2534,7 +2534,7 @@ namespace Java.Lang
 		/// java/lang/StackTraceElement
 		/// </java-name>
 		[Dot42.DexImport("java/lang/StackTraceElement", AccessFlags = 49)]
-		public sealed partial class StackTraceElement : global::Java.Io.ISerializable
+		public sealed partial class StackTraceElement : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V", AccessFlags = 1)]
@@ -3135,7 +3135,7 @@ namespace Java.Lang
 		/// java/lang/StringBuffer
 		/// </java-name>
 		[Dot42.DexImport("java/lang/StringBuffer", AccessFlags = 49)]
-		public sealed partial class StringBuffer : global::Java.Lang.IAppendable, global::Java.Io.ISerializable, global::Java.Lang.ICharSequence
+		public sealed partial class StringBuffer : global::Java.Lang.IAppendable, global::Java.IO.ISerializable, global::Java.Lang.ICharSequence
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -3658,17 +3658,17 @@ namespace Java.Lang
 				/// in
 				/// </java-name>
 				[Dot42.DexImport("in", "Ljava/io/InputStream;", AccessFlags = 25)]
-				public static readonly global::Java.Io.InputStream In;
+				public static readonly global::Java.IO.InputStream In;
 				/// <java-name>
 				/// out
 				/// </java-name>
 				[Dot42.DexImport("out", "Ljava/io/PrintStream;", AccessFlags = 25)]
-				public static readonly global::Java.Io.PrintStream Out;
+				public static readonly global::Java.IO.PrintStream Out;
 				/// <java-name>
 				/// err
 				/// </java-name>
 				[Dot42.DexImport("err", "Ljava/io/PrintStream;", AccessFlags = 25)]
-				public static readonly global::Java.Io.PrintStream Err;
+				public static readonly global::Java.IO.PrintStream Err;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal System() /* MethodBuilder.Create */ 
 				{
@@ -3678,7 +3678,7 @@ namespace Java.Lang
 				/// setIn
 				/// </java-name>
 				[Dot42.DexImport("setIn", "(Ljava/io/InputStream;)V", AccessFlags = 9)]
-				public static void SetIn(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static void SetIn(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3686,7 +3686,7 @@ namespace Java.Lang
 				/// setOut
 				/// </java-name>
 				[Dot42.DexImport("setOut", "(Ljava/io/PrintStream;)V", AccessFlags = 9)]
-				public static void SetOut(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				public static void SetOut(global::Java.IO.PrintStream printStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3694,7 +3694,7 @@ namespace Java.Lang
 				/// setErr
 				/// </java-name>
 				[Dot42.DexImport("setErr", "(Ljava/io/PrintStream;)V", AccessFlags = 9)]
-				public static void SetErr(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				public static void SetErr(global::Java.IO.PrintStream printStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3798,9 +3798,9 @@ namespace Java.Lang
 				/// console
 				/// </java-name>
 				[Dot42.DexImport("console", "()Ljava/io/Console;", AccessFlags = 9)]
-				public static global::Java.Io.Console Console() /* MethodBuilder.Create */ 
+				public static global::Java.IO.Console Console() /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.Console);
+						return default(global::Java.IO.Console);
 				}
 
 				/// <java-name>

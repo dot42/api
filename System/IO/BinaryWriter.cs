@@ -34,7 +34,7 @@ using System;
 using System.Text;
 using System.Globalization;
 using System.Runtime.InteropServices;
-using Java.Io;
+using Java.IO;
 using Java.Util;
 
 namespace System.IO {

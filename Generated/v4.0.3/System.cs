@@ -73,7 +73,7 @@ namespace System
 		/// </java-name>
 		[Dot42.DexImport("java/lang/Boolean", AccessFlags = 49, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/Comparable<Ljava/lang/Boolean;" +
     ">;")]
-		public partial struct Boolean : global::Java.Io.ISerializable, global::System.IComparable<bool?>
+		public partial struct Boolean : global::Java.IO.ISerializable, global::System.IComparable<bool?>
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -203,7 +203,7 @@ namespace System
 		/// </java-name>
 		[Dot42.DexImport("java/lang/Character", AccessFlags = 49, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/Comparable<Ljava/lang/Characte" +
     "r;>;")]
-		public partial struct Char : global::Java.Io.ISerializable, global::System.IComparable<char?>
+		public partial struct Char : global::Java.IO.ISerializable, global::System.IComparable<char?>
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -2256,7 +2256,7 @@ namespace System
 		/// java/lang/Throwable
 		/// </java-name>
 		[Dot42.DexImport("java/lang/Throwable", AccessFlags = 33)]
-		public partial class Exception : global::Java.Io.ISerializable
+		public partial class Exception : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -2310,7 +2310,7 @@ namespace System
 				/// printStackTrace
 				/// </java-name>
 				[Dot42.DexImport("printStackTrace", "(Ljava/io/PrintStream;)V", AccessFlags = 1)]
-				public virtual void PrintStackTrace(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				public virtual void PrintStackTrace(global::Java.IO.PrintStream printStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2318,7 +2318,7 @@ namespace System
 				/// printStackTrace
 				/// </java-name>
 				[Dot42.DexImport("printStackTrace", "(Ljava/io/PrintWriter;)V", AccessFlags = 1)]
-				public virtual void PrintStackTrace(global::Java.Io.PrintWriter printWriter) /* MethodBuilder.Create */ 
+				public virtual void PrintStackTrace(global::Java.IO.PrintWriter printWriter) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3993,7 +3993,7 @@ namespace System
 		/// java/util/Random
 		/// </java-name>
 		[Dot42.DexImport("java/util/Random", AccessFlags = 33)]
-		public partial class Random : global::Java.Io.ISerializable
+		public partial class Random : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4622,7 +4622,7 @@ namespace System
 		/// </java-name>
 		[Dot42.DexImport("java/lang/String", AccessFlags = 49, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/Comparable<Ljava/lang/String;>" +
     ";Ljava/lang/CharSequence;")]
-		public sealed partial class String : global::Java.Io.ISerializable, global::System.IComparable<string>, global::Java.Lang.ICharSequence
+		public sealed partial class String : global::Java.IO.ISerializable, global::System.IComparable<string>, global::Java.Lang.ICharSequence
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -5403,7 +5403,7 @@ namespace System
 		/// </java-name>
 		[Dot42.DexImport("java/lang/Class", AccessFlags = 49, Signature = "<T:Ljava/lang/Object;>Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/reflect/" +
     "AnnotatedElement;Ljava/lang/reflect/GenericDeclaration;Ljava/lang/reflect/Type;")]
-		public sealed partial class Type : global::Java.Io.ISerializable, global::Java.Lang.Reflect.IAnnotatedElement, global::Java.Lang.Reflect.IGenericDeclaration, global::Java.Lang.Reflect.IType
+		public sealed partial class Type : global::Java.IO.ISerializable, global::Java.Lang.Reflect.IAnnotatedElement, global::Java.Lang.Reflect.IGenericDeclaration, global::Java.Lang.Reflect.IType
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -5745,9 +5745,9 @@ namespace System
 				/// getResourceAsStream
 				/// </java-name>
 				[Dot42.DexImport("getResourceAsStream", "(Ljava/lang/String;)Ljava/io/InputStream;", AccessFlags = 1)]
-				public global::Java.Io.InputStream GetResourceAsStream(string @string) /* MethodBuilder.Create */ 
+				public global::Java.IO.InputStream GetResourceAsStream(string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
@@ -5974,7 +5974,7 @@ namespace System
 		/// java/net/URI
 		/// </java-name>
 		[Dot42.DexImport("java/net/URI", AccessFlags = 49, Signature = "Ljava/lang/Object;Ljava/lang/Comparable<Ljava/net/URI;>;Ljava/io/Serializable;")]
-		public sealed partial class Uri : global::System.IComparable<global::System.Uri>, global::Java.Io.ISerializable
+		public sealed partial class Uri : global::System.IComparable<global::System.Uri>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]

@@ -36,13 +36,13 @@ namespace Org.Xmlpull.V1
 				/// setInput
 				/// </java-name>
 				[Dot42.DexImport("setInput", "(Ljava/io/Reader;)V", AccessFlags = 1025)]
-				void SetInput(global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
+				void SetInput(global::Java.IO.Reader reader) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setInput
 				/// </java-name>
 				[Dot42.DexImport("setInput", "(Ljava/io/InputStream;Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetInput(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ ;
+				void SetInput(global::Java.IO.InputStream inputStream, string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// defineEntityReplacementText
@@ -400,13 +400,13 @@ namespace Org.Xmlpull.V1
 				/// setOutput
 				/// </java-name>
 				[Dot42.DexImport("setOutput", "(Ljava/io/OutputStream;Ljava/lang/String;)V", AccessFlags = 1025)]
-				void SetOutput(global::Java.Io.OutputStream outputStream, string @string) /* MethodBuilder.Create */ ;
+				void SetOutput(global::Java.IO.OutputStream outputStream, string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setOutput
 				/// </java-name>
 				[Dot42.DexImport("setOutput", "(Ljava/io/Writer;)V", AccessFlags = 1025)]
-				void SetOutput(global::Java.Io.Writer writer) /* MethodBuilder.Create */ ;
+				void SetOutput(global::Java.IO.Writer writer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// startDocument

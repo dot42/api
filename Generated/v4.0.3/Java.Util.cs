@@ -532,7 +532,7 @@ namespace Java.Util
 				/// </java-name>
 				[Dot42.DexImport("java/util/AbstractMap$SimpleEntry", AccessFlags = 9, Signature = "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Map$Entry<" +
     "TK;TV;>;Ljava/io/Serializable;")]
-				public partial class SimpleEntry<K, V> : global::Java.Util.IMap_IEntry<K, V>, global::Java.Io.ISerializable
+				public partial class SimpleEntry<K, V> : global::Java.Util.IMap_IEntry<K, V>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Ljava/lang/Object;Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TK;TV;)V")]
@@ -611,7 +611,7 @@ namespace Java.Util
 				/// </java-name>
 				[Dot42.DexImport("java/util/AbstractMap$SimpleImmutableEntry", AccessFlags = 9, Signature = "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Map$Entry<" +
     "TK;TV;>;Ljava/io/Serializable;")]
-				public partial class SimpleImmutableEntry<K, V> : global::Java.Util.IMap_IEntry<K, V>, global::Java.Io.ISerializable
+				public partial class SimpleImmutableEntry<K, V> : global::Java.Util.IMap_IEntry<K, V>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Ljava/lang/Object;Ljava/lang/Object;)V", AccessFlags = 1, Signature = "(TK;TV;)V")]
@@ -1028,7 +1028,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/ArrayDeque", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractCollection<TE;>;Ljava/util/Deque<TE;>;Lj" +
     "ava/lang/Cloneable;Ljava/io/Serializable;")]
-		public partial class ArrayDeque<E> : global::Java.Util.AbstractCollection<E>, global::Java.Util.IDeque<E>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class ArrayDeque<E> : global::Java.Util.AbstractCollection<E>, global::Java.Util.IDeque<E>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1373,7 +1373,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/ArrayList", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractList<TE;>;Ljava/lang/Cloneable;Ljava/io/" +
     "Serializable;Ljava/util/RandomAccess;")]
-		public partial class ArrayList<E> : global::Java.Util.AbstractList<E>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable, global::Java.Util.IRandomAccess
+		public partial class ArrayList<E> : global::Java.Util.AbstractList<E>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable, global::Java.Util.IRandomAccess
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
@@ -2617,7 +2617,7 @@ namespace Java.Util
 		/// java/util/BitSet
 		/// </java-name>
 		[Dot42.DexImport("java/util/BitSet", AccessFlags = 33)]
-		public partial class BitSet : global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		public partial class BitSet : global::Java.IO.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -2858,7 +2858,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/Calendar", AccessFlags = 1057, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/Cloneable;Ljava/lang/Comparabl" +
     "e<Ljava/util/Calendar;>;")]
-		public abstract partial class Calendar : global::Java.Io.ISerializable, global::Java.Lang.ICloneable, global::System.IComparable<global::Java.Util.Calendar>
+		public abstract partial class Calendar : global::Java.IO.ISerializable, global::Java.Lang.ICloneable, global::System.IComparable<global::Java.Util.Calendar>
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -3993,7 +3993,7 @@ namespace Java.Util
 		/// java/util/Currency
 		/// </java-name>
 		[Dot42.DexImport("java/util/Currency", AccessFlags = 49)]
-		public sealed partial class Currency : global::Java.Io.ISerializable
+		public sealed partial class Currency : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -4071,7 +4071,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/Date", AccessFlags = 33, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/Cloneable;Ljava/lang/Comparabl" +
     "e<Ljava/util/Date;>;")]
-		public partial class Date : global::Java.Io.ISerializable, global::Java.Lang.ICloneable, global::System.IComparable<global::Java.Util.Date>
+		public partial class Date : global::Java.IO.ISerializable, global::Java.Lang.ICloneable, global::System.IComparable<global::Java.Util.Date>
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4421,7 +4421,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/EnumMap", AccessFlags = 33, Signature = "<K:Ljava/lang/Enum<TK;>;V:Ljava/lang/Object;>Ljava/util/AbstractMap<TK;TV;>;Ljava" +
     "/io/Serializable;Ljava/lang/Cloneable;Ljava/util/Map<TK;TV;>;")]
-		public partial class EnumMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Io.ISerializable, global::Java.Lang.ICloneable, global::Java.Util.IMap<K, V>
+		public partial class EnumMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.IO.ISerializable, global::Java.Lang.ICloneable, global::Java.Util.IMap<K, V>
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/Class;)V", AccessFlags = 1, Signature = "(Ljava/lang/Class<TK;>;)V")]
@@ -4578,7 +4578,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/EnumSet", AccessFlags = 1057, Signature = "<E:Ljava/lang/Enum<TE;>;>Ljava/util/AbstractSet<TE;>;Ljava/lang/Cloneable;Ljava/i" +
     "o/Serializable;")]
-		public abstract partial class EnumSet<E> : global::Java.Util.AbstractSet<E>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public abstract partial class EnumSet<E> : global::Java.Util.AbstractSet<E>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -4739,7 +4739,7 @@ namespace Java.Util
 		/// java/util/EventObject
 		/// </java-name>
 		[Dot42.DexImport("java/util/EventObject", AccessFlags = 33)]
-		public partial class EventObject : global::Java.Io.ISerializable
+		public partial class EventObject : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -4781,7 +4781,7 @@ namespace Java.Util
 		/// java/util/FormatFlagsConversionMismatchException
 		/// </java-name>
 		[Dot42.DexImport("java/util/FormatFlagsConversionMismatchException", AccessFlags = 33)]
-		public partial class FormatFlagsConversionMismatchException : global::Java.Util.IllegalFormatException, global::Java.Io.ISerializable
+		public partial class FormatFlagsConversionMismatchException : global::Java.Util.IllegalFormatException, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;C)V", AccessFlags = 1)]
@@ -4856,7 +4856,7 @@ namespace Java.Util
 		/// java/util/Formatter
 		/// </java-name>
 		[Dot42.DexImport("java/util/Formatter", AccessFlags = 49)]
-		public sealed partial class Formatter : global::Java.Io.ICloseable, global::Java.Io.IFlushable
+		public sealed partial class Formatter : global::Java.IO.ICloseable, global::Java.IO.IFlushable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4895,37 +4895,37 @@ namespace Java.Util
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public Formatter(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public Formatter(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;Ljava/lang/String;)V", AccessFlags = 1)]
-				public Formatter(global::Java.Io.File file, string @string) /* MethodBuilder.Create */ 
+				public Formatter(global::Java.IO.File file, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;Ljava/lang/String;Ljava/util/Locale;)V", AccessFlags = 1)]
-				public Formatter(global::Java.Io.File file, string @string, global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
+				public Formatter(global::Java.IO.File file, string @string, global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public Formatter(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public Formatter(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/lang/String;)V", AccessFlags = 1)]
-				public Formatter(global::Java.Io.OutputStream outputStream, string @string) /* MethodBuilder.Create */ 
+				public Formatter(global::Java.IO.OutputStream outputStream, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/lang/String;Ljava/util/Locale;)V", AccessFlags = 1)]
-				public Formatter(global::Java.Io.OutputStream outputStream, string @string, global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
+				public Formatter(global::Java.IO.OutputStream outputStream, string @string, global::Java.Util.Locale locale) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/PrintStream;)V", AccessFlags = 1)]
-				public Formatter(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				public Formatter(global::Java.IO.PrintStream printStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -5046,7 +5046,7 @@ namespace Java.Util
 		/// java/util/FormatterClosedException
 		/// </java-name>
 		[Dot42.DexImport("java/util/FormatterClosedException", AccessFlags = 33)]
-		public partial class FormatterClosedException : global::Java.Lang.IllegalStateException, global::Java.Io.ISerializable
+		public partial class FormatterClosedException : global::Java.Lang.IllegalStateException, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -5274,7 +5274,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/HashMap", AccessFlags = 33, Signature = "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/util/AbstractMap<TK;TV;>;Ljava/la" +
     "ng/Cloneable;Ljava/io/Serializable;")]
-		public partial class HashMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class HashMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -5419,7 +5419,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/HashSet", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractSet<TE;>;Ljava/util/Set<TE;>;Ljava/lang/" +
     "Cloneable;Ljava/io/Serializable;")]
-		public partial class HashSet<E> : global::Java.Util.AbstractSet<E>, global::Java.Util.ISet<E>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class HashSet<E> : global::Java.Util.AbstractSet<E>, global::Java.Util.ISet<E>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -5568,7 +5568,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/Hashtable", AccessFlags = 33, Signature = "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/util/Dictionary<TK;TV;>;Ljava/uti" +
     "l/Map<TK;TV;>;Ljava/lang/Cloneable;Ljava/io/Serializable;")]
-		public partial class Hashtable<K, V> : global::Java.Util.Dictionary<K, V>, global::Java.Util.IMap<K, V>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class Hashtable<K, V> : global::Java.Util.Dictionary<K, V>, global::Java.Util.IMap<K, V>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -5898,7 +5898,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/IdentityHashMap", AccessFlags = 33, Signature = "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/util/AbstractMap<TK;TV;>;Ljava/ut" +
     "il/Map<TK;TV;>;Ljava/io/Serializable;Ljava/lang/Cloneable;")]
-		public partial class IdentityHashMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Util.IMap<K, V>, global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		public partial class IdentityHashMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Util.IMap<K, V>, global::Java.IO.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -6538,7 +6538,7 @@ namespace Java.Util
 		/// java/util/IllegalFormatCodePointException
 		/// </java-name>
 		[Dot42.DexImport("java/util/IllegalFormatCodePointException", AccessFlags = 33)]
-		public partial class IllegalFormatCodePointException : global::Java.Util.IllegalFormatException, global::Java.Io.ISerializable
+		public partial class IllegalFormatCodePointException : global::Java.Util.IllegalFormatException, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
@@ -6575,7 +6575,7 @@ namespace Java.Util
 		/// java/util/IllegalFormatConversionException
 		/// </java-name>
 		[Dot42.DexImport("java/util/IllegalFormatConversionException", AccessFlags = 33)]
-		public partial class IllegalFormatConversionException : global::Java.Util.IllegalFormatException, global::Java.Io.ISerializable
+		public partial class IllegalFormatConversionException : global::Java.Util.IllegalFormatException, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(CLjava/lang/Class;)V", AccessFlags = 1, Signature = "(CLjava/lang/Class<*>;)V")]
@@ -6621,7 +6621,7 @@ namespace Java.Util
 		/// java/util/IllegalFormatException
 		/// </java-name>
 		[Dot42.DexImport("java/util/IllegalFormatException", AccessFlags = 33)]
-		public partial class IllegalFormatException : global::System.ArgumentException, global::Java.Io.ISerializable
+		public partial class IllegalFormatException : global::System.ArgumentException, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -6635,7 +6635,7 @@ namespace Java.Util
 		/// java/util/IllegalFormatFlagsException
 		/// </java-name>
 		[Dot42.DexImport("java/util/IllegalFormatFlagsException", AccessFlags = 33)]
-		public partial class IllegalFormatFlagsException : global::Java.Util.IllegalFormatException, global::Java.Io.ISerializable
+		public partial class IllegalFormatFlagsException : global::Java.Util.IllegalFormatException, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
@@ -7122,7 +7122,7 @@ namespace Java.Util
 		/// java/util/InputMismatchException
 		/// </java-name>
 		[Dot42.DexImport("java/util/InputMismatchException", AccessFlags = 33)]
-		public partial class InputMismatchException : global::Java.Util.NoSuchElementException, global::Java.Io.ISerializable
+		public partial class InputMismatchException : global::Java.Util.NoSuchElementException, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -7497,7 +7497,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/LinkedHashSet", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/HashSet<TE;>;Ljava/util/Set<TE;>;Ljava/lang/Clon" +
     "eable;Ljava/io/Serializable;")]
-		public partial class LinkedHashSet<E> : global::Java.Util.HashSet<E>, global::Java.Util.ISet<E>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class LinkedHashSet<E> : global::Java.Util.HashSet<E>, global::Java.Util.ISet<E>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -7617,7 +7617,7 @@ namespace Java.Util
 		[Dot42.DexImport("java/util/LinkedList", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractSequentialList<TE;>;Ljava/util/List<TE;>" +
     ";Ljava/util/Deque<TE;>;Ljava/util/Queue<TE;>;Ljava/lang/Cloneable;Ljava/io/Seria" +
     "lizable;")]
-		public partial class LinkedList<E> : global::Java.Util.AbstractSequentialList<E>, global::Java.Util.IList<E>, global::Java.Util.IDeque<E>, global::Java.Util.IQueue<E>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class LinkedList<E> : global::Java.Util.AbstractSequentialList<E>, global::Java.Util.IList<E>, global::Java.Util.IDeque<E>, global::Java.Util.IQueue<E>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -8086,7 +8086,7 @@ namespace Java.Util
 		/// java/util/Locale
 		/// </java-name>
 		[Dot42.DexImport("java/util/Locale", AccessFlags = 49)]
-		public sealed partial class Locale : global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public sealed partial class Locale : global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -8634,7 +8634,7 @@ namespace Java.Util
 		/// java/util/PriorityQueue
 		/// </java-name>
 		[Dot42.DexImport("java/util/PriorityQueue", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractQueue<TE;>;Ljava/io/Serializable;")]
-		public partial class PriorityQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.Io.ISerializable
+		public partial class PriorityQueue<E> : global::Java.Util.AbstractQueue<E>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -8793,7 +8793,7 @@ namespace Java.Util
 				/// list
 				/// </java-name>
 				[Dot42.DexImport("list", "(Ljava/io/PrintStream;)V", AccessFlags = 1)]
-				public virtual void List(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				public virtual void List(global::Java.IO.PrintStream printStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8801,7 +8801,7 @@ namespace Java.Util
 				/// list
 				/// </java-name>
 				[Dot42.DexImport("list", "(Ljava/io/PrintWriter;)V", AccessFlags = 1)]
-				public virtual void List(global::Java.Io.PrintWriter printWriter) /* MethodBuilder.Create */ 
+				public virtual void List(global::Java.IO.PrintWriter printWriter) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8809,7 +8809,7 @@ namespace Java.Util
 				/// load
 				/// </java-name>
 				[Dot42.DexImport("load", "(Ljava/io/InputStream;)V", AccessFlags = 33)]
-				public virtual void Load(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual void Load(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8817,7 +8817,7 @@ namespace Java.Util
 				/// load
 				/// </java-name>
 				[Dot42.DexImport("load", "(Ljava/io/Reader;)V", AccessFlags = 33)]
-				public virtual void Load(global::Java.Io.Reader reader) /* MethodBuilder.Create */ 
+				public virtual void Load(global::Java.IO.Reader reader) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8843,7 +8843,7 @@ namespace Java.Util
 				/// save
 				/// </java-name>
 				[Dot42.DexImport("save", "(Ljava/io/OutputStream;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void Save(global::Java.Io.OutputStream outputStream, string @string) /* MethodBuilder.Create */ 
+				public virtual void Save(global::Java.IO.OutputStream outputStream, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8860,7 +8860,7 @@ namespace Java.Util
 				/// store
 				/// </java-name>
 				[Dot42.DexImport("store", "(Ljava/io/OutputStream;Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void Store(global::Java.Io.OutputStream outputStream, string @string) /* MethodBuilder.Create */ 
+				public virtual void Store(global::Java.IO.OutputStream outputStream, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8868,7 +8868,7 @@ namespace Java.Util
 				/// store
 				/// </java-name>
 				[Dot42.DexImport("store", "(Ljava/io/Writer;Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void Store(global::Java.Io.Writer writer, string @string) /* MethodBuilder.Create */ 
+				public virtual void Store(global::Java.IO.Writer writer, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8876,7 +8876,7 @@ namespace Java.Util
 				/// loadFromXML
 				/// </java-name>
 				[Dot42.DexImport("loadFromXML", "(Ljava/io/InputStream;)V", AccessFlags = 33)]
-				public virtual void LoadFromXML(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual void LoadFromXML(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8884,7 +8884,7 @@ namespace Java.Util
 				/// storeToXML
 				/// </java-name>
 				[Dot42.DexImport("storeToXML", "(Ljava/io/OutputStream;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void StoreToXML(global::Java.Io.OutputStream outputStream, string @string) /* MethodBuilder.Create */ 
+				public virtual void StoreToXML(global::Java.IO.OutputStream outputStream, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8892,7 +8892,7 @@ namespace Java.Util
 				/// storeToXML
 				/// </java-name>
 				[Dot42.DexImport("storeToXML", "(Ljava/io/OutputStream;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 33)]
-				public virtual void StoreToXML(global::Java.Io.OutputStream outputStream, string @string, string string1) /* MethodBuilder.Create */ 
+				public virtual void StoreToXML(global::Java.IO.OutputStream outputStream, string @string, string string1) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -8943,12 +8943,12 @@ namespace Java.Util
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public PropertyResourceBundle(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public PropertyResourceBundle(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/Reader;)V", AccessFlags = 1)]
-				public PropertyResourceBundle(global::Java.Io.Reader reader) /* MethodBuilder.Create */ 
+				public PropertyResourceBundle(global::Java.IO.Reader reader) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9303,12 +9303,12 @@ namespace Java.Util
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public Scanner(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public Scanner(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;Ljava/lang/String;)V", AccessFlags = 1)]
-				public Scanner(global::Java.Io.File file, string @string) /* MethodBuilder.Create */ 
+				public Scanner(global::Java.IO.File file, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -9318,12 +9318,12 @@ namespace Java.Util
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public Scanner(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public Scanner(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Ljava/lang/String;)V", AccessFlags = 1)]
-				public Scanner(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				public Scanner(global::Java.IO.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -10446,7 +10446,7 @@ namespace Java.Util
 		/// java/util/TimeZone
 		/// </java-name>
 		[Dot42.DexImport("java/util/TimeZone", AccessFlags = 1057)]
-		public abstract partial class TimeZone : global::Java.Io.ISerializable, global::Java.Lang.ICloneable
+		public abstract partial class TimeZone : global::Java.IO.ISerializable, global::Java.Lang.ICloneable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -10641,7 +10641,7 @@ namespace Java.Util
 		[Dot42.DexImport("java/util/TreeMap", AccessFlags = 33, Signature = "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/util/AbstractMap<TK;TV;>;Ljava/ut" +
     "il/SortedMap<TK;TV;>;Ljava/util/NavigableMap<TK;TV;>;Ljava/lang/Cloneable;Ljava/" +
     "io/Serializable;")]
-		public partial class TreeMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Util.ISortedMap<K, V>, global::Java.Util.INavigableMap<K, V>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class TreeMap<K, V> : global::Java.Util.AbstractMap<K, V>, global::Java.Util.ISortedMap<K, V>, global::Java.Util.INavigableMap<K, V>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -11005,7 +11005,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/TreeSet", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractSet<TE;>;Ljava/util/NavigableSet<TE;>;Lj" +
     "ava/lang/Cloneable;Ljava/io/Serializable;")]
-		public partial class TreeSet<E> : global::Java.Util.AbstractSet<E>, global::Java.Util.INavigableSet<E>, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class TreeSet<E> : global::Java.Util.AbstractSet<E>, global::Java.Util.INavigableSet<E>, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -11383,7 +11383,7 @@ namespace Java.Util
 		/// java/util/UUID
 		/// </java-name>
 		[Dot42.DexImport("java/util/UUID", AccessFlags = 49, Signature = "Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/Comparable<Ljava/util/UUID;>;")]
-		public sealed partial class UUID : global::Java.Io.ISerializable, global::System.IComparable<global::Java.Util.UUID>
+		public sealed partial class UUID : global::Java.IO.ISerializable, global::System.IComparable<global::Java.Util.UUID>
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(JJ)V", AccessFlags = 1)]
@@ -11538,7 +11538,7 @@ namespace Java.Util
 		/// </java-name>
 		[Dot42.DexImport("java/util/Vector", AccessFlags = 33, Signature = "<E:Ljava/lang/Object;>Ljava/util/AbstractList<TE;>;Ljava/util/List<TE;>;Ljava/uti" +
     "l/RandomAccess;Ljava/lang/Cloneable;Ljava/io/Serializable;")]
-		public partial class Vector<E> : global::Java.Util.AbstractList<E>, global::Java.Util.IList<E>, global::Java.Util.IRandomAccess, global::Java.Lang.ICloneable, global::Java.Io.ISerializable
+		public partial class Vector<E> : global::Java.Util.AbstractList<E>, global::Java.Util.IList<E>, global::Java.Util.IRandomAccess, global::Java.Lang.ICloneable, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

@@ -55,9 +55,9 @@ namespace Android.Net.Http
 				/// getUngzippedContent
 				/// </java-name>
 				[Dot42.DexImport("getUngzippedContent", "(Lorg/apache/http/HttpEntity;)Ljava/io/InputStream;", AccessFlags = 9)]
-				public static global::Java.Io.InputStream GetUngzippedContent(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
+				public static global::Java.IO.InputStream GetUngzippedContent(global::Org.Apache.Http.IHttpEntity httpEntity) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
@@ -228,7 +228,7 @@ namespace Android.Net.Http
 		/// android/net/http/HttpResponseCache
 		/// </java-name>
 		[Dot42.DexImport("android/net/http/HttpResponseCache", AccessFlags = 49)]
-		public sealed partial class HttpResponseCache : global::Java.Net.ResponseCache, global::Java.Io.ICloseable
+		public sealed partial class HttpResponseCache : global::Java.Net.ResponseCache, global::Java.IO.ICloseable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
@@ -240,7 +240,7 @@ namespace Android.Net.Http
 				/// install
 				/// </java-name>
 				[Dot42.DexImport("install", "(Ljava/io/File;J)Landroid/net/http/HttpResponseCache;", AccessFlags = 9)]
-				public static global::Android.Net.Http.HttpResponseCache Install(global::Java.Io.File file, long int64) /* MethodBuilder.Create */ 
+				public static global::Android.Net.Http.HttpResponseCache Install(global::Java.IO.File file, long int64) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Net.Http.HttpResponseCache);
 				}

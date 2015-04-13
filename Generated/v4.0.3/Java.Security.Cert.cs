@@ -5,7 +5,7 @@ namespace Java.Security.Cert
 		/// java/security/cert/Certificate
 		/// </java-name>
 		[Dot42.DexImport("java/security/cert/Certificate", AccessFlags = 1057)]
-		public abstract partial class Certificate : global::Java.Io.ISerializable
+		public abstract partial class Certificate : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 4)]
@@ -103,7 +103,7 @@ namespace Java.Security.Cert
 				/// java/security/cert/Certificate$CertificateRep
 				/// </java-name>
 				[Dot42.DexImport("java/security/cert/Certificate$CertificateRep", AccessFlags = 12)]
-				protected internal partial class CertificateRep : global::Java.Io.ISerializable
+				protected internal partial class CertificateRep : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4)]
@@ -256,7 +256,7 @@ namespace Java.Security.Cert
 				/// generateCertificate
 				/// </java-name>
 				[Dot42.DexImport("generateCertificate", "(Ljava/io/InputStream;)Ljava/security/cert/Certificate;", AccessFlags = 17)]
-				public global::Java.Security.Cert.Certificate GenerateCertificate(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public global::Java.Security.Cert.Certificate GenerateCertificate(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.Cert.Certificate);
 				}
@@ -265,7 +265,7 @@ namespace Java.Security.Cert
 				/// generateCertPath
 				/// </java-name>
 				[Dot42.DexImport("generateCertPath", "(Ljava/io/InputStream;)Ljava/security/cert/CertPath;", AccessFlags = 17)]
-				public global::Java.Security.Cert.CertPath GenerateCertPath(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public global::Java.Security.Cert.CertPath GenerateCertPath(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.Cert.CertPath);
 				}
@@ -274,7 +274,7 @@ namespace Java.Security.Cert
 				/// generateCertPath
 				/// </java-name>
 				[Dot42.DexImport("generateCertPath", "(Ljava/io/InputStream;Ljava/lang/String;)Ljava/security/cert/CertPath;", AccessFlags = 17)]
-				public global::Java.Security.Cert.CertPath GenerateCertPath(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				public global::Java.Security.Cert.CertPath GenerateCertPath(global::Java.IO.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.Cert.CertPath);
 				}
@@ -293,7 +293,7 @@ namespace Java.Security.Cert
 				/// generateCertificates
 				/// </java-name>
 				[Dot42.DexImport("generateCertificates", "(Ljava/io/InputStream;)Ljava/util/Collection;", AccessFlags = 17, Signature = "(Ljava/io/InputStream;)Ljava/util/Collection<+Ljava/security/cert/Certificate;>;")]
-				public global::Java.Util.ICollection<global::Java.Security.Cert.Certificate> GenerateCertificates(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public global::Java.Util.ICollection<global::Java.Security.Cert.Certificate> GenerateCertificates(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.ICollection<global::Java.Security.Cert.Certificate>);
 				}
@@ -302,7 +302,7 @@ namespace Java.Security.Cert
 				/// generateCRL
 				/// </java-name>
 				[Dot42.DexImport("generateCRL", "(Ljava/io/InputStream;)Ljava/security/cert/CRL;", AccessFlags = 17)]
-				public global::Java.Security.Cert.CRL GenerateCRL(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public global::Java.Security.Cert.CRL GenerateCRL(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.Cert.CRL);
 				}
@@ -311,7 +311,7 @@ namespace Java.Security.Cert
 				/// generateCRLs
 				/// </java-name>
 				[Dot42.DexImport("generateCRLs", "(Ljava/io/InputStream;)Ljava/util/Collection;", AccessFlags = 17, Signature = "(Ljava/io/InputStream;)Ljava/util/Collection<+Ljava/security/cert/CRL;>;")]
-				public global::Java.Util.ICollection<global::Java.Security.Cert.CRL> GenerateCRLs(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public global::Java.Util.ICollection<global::Java.Security.Cert.CRL> GenerateCRLs(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.ICollection<global::Java.Security.Cert.CRL>);
 				}
@@ -366,31 +366,31 @@ namespace Java.Security.Cert
 				/// engineGenerateCertificate
 				/// </java-name>
 				[Dot42.DexImport("engineGenerateCertificate", "(Ljava/io/InputStream;)Ljava/security/cert/Certificate;", AccessFlags = 1025)]
-				public abstract global::Java.Security.Cert.Certificate EngineGenerateCertificate(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Security.Cert.Certificate EngineGenerateCertificate(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// engineGenerateCertificates
 				/// </java-name>
 				[Dot42.DexImport("engineGenerateCertificates", "(Ljava/io/InputStream;)Ljava/util/Collection;", AccessFlags = 1025, Signature = "(Ljava/io/InputStream;)Ljava/util/Collection<+Ljava/security/cert/Certificate;>;")]
-				public abstract global::Java.Util.ICollection<global::Java.Security.Cert.Certificate> EngineGenerateCertificates(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.ICollection<global::Java.Security.Cert.Certificate> EngineGenerateCertificates(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// engineGenerateCRL
 				/// </java-name>
 				[Dot42.DexImport("engineGenerateCRL", "(Ljava/io/InputStream;)Ljava/security/cert/CRL;", AccessFlags = 1025)]
-				public abstract global::Java.Security.Cert.CRL EngineGenerateCRL(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Security.Cert.CRL EngineGenerateCRL(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// engineGenerateCRLs
 				/// </java-name>
 				[Dot42.DexImport("engineGenerateCRLs", "(Ljava/io/InputStream;)Ljava/util/Collection;", AccessFlags = 1025, Signature = "(Ljava/io/InputStream;)Ljava/util/Collection<+Ljava/security/cert/CRL;>;")]
-				public abstract global::Java.Util.ICollection<global::Java.Security.Cert.CRL> EngineGenerateCRLs(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				public abstract global::Java.Util.ICollection<global::Java.Security.Cert.CRL> EngineGenerateCRLs(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// engineGenerateCertPath
 				/// </java-name>
 				[Dot42.DexImport("engineGenerateCertPath", "(Ljava/io/InputStream;)Ljava/security/cert/CertPath;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.CertPath EngineGenerateCertPath(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual global::Java.Security.Cert.CertPath EngineGenerateCertPath(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.Cert.CertPath);
 				}
@@ -399,7 +399,7 @@ namespace Java.Security.Cert
 				/// engineGenerateCertPath
 				/// </java-name>
 				[Dot42.DexImport("engineGenerateCertPath", "(Ljava/io/InputStream;Ljava/lang/String;)Ljava/security/cert/CertPath;", AccessFlags = 1)]
-				public virtual global::Java.Security.Cert.CertPath EngineGenerateCertPath(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				public virtual global::Java.Security.Cert.CertPath EngineGenerateCertPath(global::Java.IO.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.Cert.CertPath);
 				}
@@ -477,7 +477,7 @@ namespace Java.Security.Cert
 		/// java/security/cert/CertPath
 		/// </java-name>
 		[Dot42.DexImport("java/security/cert/CertPath", AccessFlags = 1057)]
-		public abstract partial class CertPath : global::Java.Io.ISerializable
+		public abstract partial class CertPath : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 4)]
@@ -584,7 +584,7 @@ namespace Java.Security.Cert
 				/// java/security/cert/CertPath$CertPathRep
 				/// </java-name>
 				[Dot42.DexImport("java/security/cert/CertPath$CertPathRep", AccessFlags = 12)]
-				protected internal partial class CertPathRep : global::Java.Io.ISerializable
+				protected internal partial class CertPathRep : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4)]

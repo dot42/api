@@ -59,25 +59,25 @@ namespace Java.Nio.Channels
 				/// newInputStream
 				/// </java-name>
 				[Dot42.DexImport("newInputStream", "(Ljava/nio/channels/ReadableByteChannel;)Ljava/io/InputStream;", AccessFlags = 9)]
-				public static global::Java.Io.InputStream NewInputStream(global::Java.Nio.Channels.IReadableByteChannel readableByteChannel) /* MethodBuilder.Create */ 
+				public static global::Java.IO.InputStream NewInputStream(global::Java.Nio.Channels.IReadableByteChannel readableByteChannel) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
 				/// newOutputStream
 				/// </java-name>
 				[Dot42.DexImport("newOutputStream", "(Ljava/nio/channels/WritableByteChannel;)Ljava/io/OutputStream;", AccessFlags = 9)]
-				public static global::Java.Io.OutputStream NewOutputStream(global::Java.Nio.Channels.IWritableByteChannel writableByteChannel) /* MethodBuilder.Create */ 
+				public static global::Java.IO.OutputStream NewOutputStream(global::Java.Nio.Channels.IWritableByteChannel writableByteChannel) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.OutputStream);
+						return default(global::Java.IO.OutputStream);
 				}
 
 				/// <java-name>
 				/// newChannel
 				/// </java-name>
 				[Dot42.DexImport("newChannel", "(Ljava/io/InputStream;)Ljava/nio/channels/ReadableByteChannel;", AccessFlags = 9)]
-				public static global::Java.Nio.Channels.IReadableByteChannel NewChannel(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static global::Java.Nio.Channels.IReadableByteChannel NewChannel(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.Channels.IReadableByteChannel);
 				}
@@ -86,7 +86,7 @@ namespace Java.Nio.Channels
 				/// newChannel
 				/// </java-name>
 				[Dot42.DexImport("newChannel", "(Ljava/io/OutputStream;)Ljava/nio/channels/WritableByteChannel;", AccessFlags = 9)]
-				public static global::Java.Nio.Channels.IWritableByteChannel NewChannel(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public static global::Java.Nio.Channels.IWritableByteChannel NewChannel(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.Channels.IWritableByteChannel);
 				}
@@ -96,18 +96,18 @@ namespace Java.Nio.Channels
 				/// </java-name>
 				[Dot42.DexImport("newReader", "(Ljava/nio/channels/ReadableByteChannel;Ljava/nio/charset/CharsetDecoder;I)Ljava/" +
     "io/Reader;", AccessFlags = 9)]
-				public static global::Java.Io.Reader NewReader(global::Java.Nio.Channels.IReadableByteChannel readableByteChannel, global::Java.Nio.Charset.CharsetDecoder charsetDecoder, int int32) /* MethodBuilder.Create */ 
+				public static global::Java.IO.Reader NewReader(global::Java.Nio.Channels.IReadableByteChannel readableByteChannel, global::Java.Nio.Charset.CharsetDecoder charsetDecoder, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.Reader);
+						return default(global::Java.IO.Reader);
 				}
 
 				/// <java-name>
 				/// newReader
 				/// </java-name>
 				[Dot42.DexImport("newReader", "(Ljava/nio/channels/ReadableByteChannel;Ljava/lang/String;)Ljava/io/Reader;", AccessFlags = 9)]
-				public static global::Java.Io.Reader NewReader(global::Java.Nio.Channels.IReadableByteChannel readableByteChannel, string @string) /* MethodBuilder.Create */ 
+				public static global::Java.IO.Reader NewReader(global::Java.Nio.Channels.IReadableByteChannel readableByteChannel, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.Reader);
+						return default(global::Java.IO.Reader);
 				}
 
 				/// <java-name>
@@ -115,18 +115,18 @@ namespace Java.Nio.Channels
 				/// </java-name>
 				[Dot42.DexImport("newWriter", "(Ljava/nio/channels/WritableByteChannel;Ljava/nio/charset/CharsetEncoder;I)Ljava/" +
     "io/Writer;", AccessFlags = 9)]
-				public static global::Java.Io.Writer NewWriter(global::Java.Nio.Channels.IWritableByteChannel writableByteChannel, global::Java.Nio.Charset.CharsetEncoder charsetEncoder, int int32) /* MethodBuilder.Create */ 
+				public static global::Java.IO.Writer NewWriter(global::Java.Nio.Channels.IWritableByteChannel writableByteChannel, global::Java.Nio.Charset.CharsetEncoder charsetEncoder, int int32) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.Writer);
+						return default(global::Java.IO.Writer);
 				}
 
 				/// <java-name>
 				/// newWriter
 				/// </java-name>
 				[Dot42.DexImport("newWriter", "(Ljava/nio/channels/WritableByteChannel;Ljava/lang/String;)Ljava/io/Writer;", AccessFlags = 9)]
-				public static global::Java.Io.Writer NewWriter(global::Java.Nio.Channels.IWritableByteChannel writableByteChannel, string @string) /* MethodBuilder.Create */ 
+				public static global::Java.IO.Writer NewWriter(global::Java.Nio.Channels.IWritableByteChannel writableByteChannel, string @string) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.Writer);
+						return default(global::Java.IO.Writer);
 				}
 
 		}
@@ -650,7 +650,7 @@ namespace Java.Nio.Channels
 		/// java/nio/channels/Channel
 		/// </java-name>
 		[Dot42.DexImport("java/nio/channels/Channel", AccessFlags = 1537)]
-		public partial interface IChannel : global::Java.Io.ICloseable
+		public partial interface IChannel : global::Java.IO.ICloseable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

@@ -19,12 +19,12 @@ namespace Javax.Xml.Transform.Stream
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public StreamResult(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public StreamResult(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/Writer;)V", AccessFlags = 1)]
-				public StreamResult(global::Java.Io.Writer writer) /* MethodBuilder.Create */ 
+				public StreamResult(global::Java.IO.Writer writer) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -34,7 +34,7 @@ namespace Javax.Xml.Transform.Stream
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public StreamResult(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public StreamResult(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -42,17 +42,17 @@ namespace Javax.Xml.Transform.Stream
 				/// setSystemId
 				/// </java-name>
 				[Dot42.DexImport("setSystemId", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public virtual void SetSystemId(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual void SetSystemId(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// getOutputStream
 				/// </java-name>
-				public virtual global::Java.Io.OutputStream OutputStream
+				public virtual global::Java.IO.OutputStream OutputStream
 				{
 						[Dot42.DexImport("getOutputStream", "()Ljava/io/OutputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.OutputStream); }
+						get{ return default(global::Java.IO.OutputStream); }
 						[Dot42.DexImport("setOutputStream", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -60,10 +60,10 @@ namespace Javax.Xml.Transform.Stream
 				/// <java-name>
 				/// getWriter
 				/// </java-name>
-				public virtual global::Java.Io.Writer Writer
+				public virtual global::Java.IO.Writer Writer
 				{
 						[Dot42.DexImport("getWriter", "()Ljava/io/Writer;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.Writer); }
+						get{ return default(global::Java.IO.Writer); }
 						[Dot42.DexImport("setWriter", "(Ljava/io/Writer;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -99,22 +99,22 @@ namespace Javax.Xml.Transform.Stream
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public StreamSource(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public StreamSource(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Ljava/lang/String;)V", AccessFlags = 1)]
-				public StreamSource(global::Java.Io.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
+				public StreamSource(global::Java.IO.InputStream inputStream, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/Reader;)V", AccessFlags = 1)]
-				public StreamSource(global::Java.Io.Reader reader) /* MethodBuilder.Create */ 
+				public StreamSource(global::Java.IO.Reader reader) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/Reader;Ljava/lang/String;)V", AccessFlags = 1)]
-				public StreamSource(global::Java.Io.Reader reader, string @string) /* MethodBuilder.Create */ 
+				public StreamSource(global::Java.IO.Reader reader, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -124,7 +124,7 @@ namespace Javax.Xml.Transform.Stream
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public StreamSource(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public StreamSource(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -132,17 +132,17 @@ namespace Javax.Xml.Transform.Stream
 				/// setSystemId
 				/// </java-name>
 				[Dot42.DexImport("setSystemId", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public virtual void SetSystemId(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public virtual void SetSystemId(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// getInputStream
 				/// </java-name>
-				public virtual global::Java.Io.InputStream InputStream
+				public virtual global::Java.IO.InputStream InputStream
 				{
 						[Dot42.DexImport("getInputStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 						[Dot42.DexImport("setInputStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -150,10 +150,10 @@ namespace Javax.Xml.Transform.Stream
 				/// <java-name>
 				/// getReader
 				/// </java-name>
-				public virtual global::Java.Io.Reader Reader
+				public virtual global::Java.IO.Reader Reader
 				{
 						[Dot42.DexImport("getReader", "()Ljava/io/Reader;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.Reader); }
+						get{ return default(global::Java.IO.Reader); }
 						[Dot42.DexImport("setReader", "(Ljava/io/Reader;)V", AccessFlags = 1)]
 						set{ }
 				}

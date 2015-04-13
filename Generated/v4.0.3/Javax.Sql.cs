@@ -5,7 +5,7 @@ namespace Javax.Sql
 		/// javax/sql/ConnectionEvent
 		/// </java-name>
 		[Dot42.DexImport("javax/sql/ConnectionEvent", AccessFlags = 33)]
-		public partial class ConnectionEvent : global::Java.Util.EventObject, global::Java.Io.ISerializable
+		public partial class ConnectionEvent : global::Java.Util.EventObject, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljavax/sql/PooledConnection;)V", AccessFlags = 1)]
@@ -55,7 +55,7 @@ namespace Javax.Sql
 				/// <java-name>
 				/// getLogWriter
 				/// </java-name>
-				global::Java.Io.PrintWriter LogWriter
+				global::Java.IO.PrintWriter LogWriter
 				{
 						[Dot42.DexImport("getLogWriter", "()Ljava/io/PrintWriter;", AccessFlags = 1025)]
 						get;
@@ -223,25 +223,25 @@ namespace Javax.Sql
 				/// setAsciiStream
 				/// </java-name>
 				[Dot42.DexImport("setAsciiStream", "(ILjava/io/InputStream;I)V", AccessFlags = 1025)]
-				void SetAsciiStream(int int32, global::Java.Io.InputStream inputStream, int int321) /* MethodBuilder.Create */ ;
+				void SetAsciiStream(int int32, global::Java.IO.InputStream inputStream, int int321) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setAsciiStream
 				/// </java-name>
 				[Dot42.DexImport("setAsciiStream", "(ILjava/io/InputStream;)V", AccessFlags = 1025)]
-				void SetAsciiStream(int int32, global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				void SetAsciiStream(int int32, global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setAsciiStream
 				/// </java-name>
 				[Dot42.DexImport("setAsciiStream", "(Ljava/lang/String;Ljava/io/InputStream;)V", AccessFlags = 1025)]
-				void SetAsciiStream(string @string, global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				void SetAsciiStream(string @string, global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setAsciiStream
 				/// </java-name>
 				[Dot42.DexImport("setAsciiStream", "(Ljava/lang/String;Ljava/io/InputStream;I)V", AccessFlags = 1025)]
-				void SetAsciiStream(string @string, global::Java.Io.InputStream inputStream, int int32) /* MethodBuilder.Create */ ;
+				void SetAsciiStream(string @string, global::Java.IO.InputStream inputStream, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBigDecimal
@@ -259,25 +259,25 @@ namespace Javax.Sql
 				/// setBinaryStream
 				/// </java-name>
 				[Dot42.DexImport("setBinaryStream", "(ILjava/io/InputStream;I)V", AccessFlags = 1025)]
-				void SetBinaryStream(int int32, global::Java.Io.InputStream inputStream, int int321) /* MethodBuilder.Create */ ;
+				void SetBinaryStream(int int32, global::Java.IO.InputStream inputStream, int int321) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBinaryStream
 				/// </java-name>
 				[Dot42.DexImport("setBinaryStream", "(ILjava/io/InputStream;)V", AccessFlags = 1025)]
-				void SetBinaryStream(int int32, global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				void SetBinaryStream(int int32, global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBinaryStream
 				/// </java-name>
 				[Dot42.DexImport("setBinaryStream", "(Ljava/lang/String;Ljava/io/InputStream;)V", AccessFlags = 1025)]
-				void SetBinaryStream(string @string, global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				void SetBinaryStream(string @string, global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBinaryStream
 				/// </java-name>
 				[Dot42.DexImport("setBinaryStream", "(Ljava/lang/String;Ljava/io/InputStream;I)V", AccessFlags = 1025)]
-				void SetBinaryStream(string @string, global::Java.Io.InputStream inputStream, int int32) /* MethodBuilder.Create */ ;
+				void SetBinaryStream(string @string, global::Java.IO.InputStream inputStream, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBlob
@@ -289,25 +289,25 @@ namespace Javax.Sql
 				/// setBlob
 				/// </java-name>
 				[Dot42.DexImport("setBlob", "(ILjava/io/InputStream;)V", AccessFlags = 1025)]
-				void SetBlob(int int32, global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				void SetBlob(int int32, global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBlob
 				/// </java-name>
 				[Dot42.DexImport("setBlob", "(ILjava/io/InputStream;J)V", AccessFlags = 1025)]
-				void SetBlob(int int32, global::Java.Io.InputStream inputStream, long int64) /* MethodBuilder.Create */ ;
+				void SetBlob(int int32, global::Java.IO.InputStream inputStream, long int64) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBlob
 				/// </java-name>
 				[Dot42.DexImport("setBlob", "(Ljava/lang/String;Ljava/io/InputStream;)V", AccessFlags = 1025)]
-				void SetBlob(string @string, global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				void SetBlob(string @string, global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBlob
 				/// </java-name>
 				[Dot42.DexImport("setBlob", "(Ljava/lang/String;Ljava/io/InputStream;J)V", AccessFlags = 1025)]
-				void SetBlob(string @string, global::Java.Io.InputStream inputStream, long int64) /* MethodBuilder.Create */ ;
+				void SetBlob(string @string, global::Java.IO.InputStream inputStream, long int64) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBlob
@@ -355,25 +355,25 @@ namespace Javax.Sql
 				/// setCharacterStream
 				/// </java-name>
 				[Dot42.DexImport("setCharacterStream", "(ILjava/io/Reader;I)V", AccessFlags = 1025)]
-				void SetCharacterStream(int int32, global::Java.Io.Reader reader, int int321) /* MethodBuilder.Create */ ;
+				void SetCharacterStream(int int32, global::Java.IO.Reader reader, int int321) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setCharacterStream
 				/// </java-name>
 				[Dot42.DexImport("setCharacterStream", "(ILjava/io/Reader;)V", AccessFlags = 1025)]
-				void SetCharacterStream(int int32, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
+				void SetCharacterStream(int int32, global::Java.IO.Reader reader) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setCharacterStream
 				/// </java-name>
 				[Dot42.DexImport("setCharacterStream", "(Ljava/lang/String;Ljava/io/Reader;)V", AccessFlags = 1025)]
-				void SetCharacterStream(string @string, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
+				void SetCharacterStream(string @string, global::Java.IO.Reader reader) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setCharacterStream
 				/// </java-name>
 				[Dot42.DexImport("setCharacterStream", "(Ljava/lang/String;Ljava/io/Reader;I)V", AccessFlags = 1025)]
-				void SetCharacterStream(string @string, global::Java.Io.Reader reader, int int32) /* MethodBuilder.Create */ ;
+				void SetCharacterStream(string @string, global::Java.IO.Reader reader, int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setClob
@@ -385,13 +385,13 @@ namespace Javax.Sql
 				/// setClob
 				/// </java-name>
 				[Dot42.DexImport("setClob", "(ILjava/io/Reader;)V", AccessFlags = 1025)]
-				void SetClob(int int32, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
+				void SetClob(int int32, global::Java.IO.Reader reader) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setClob
 				/// </java-name>
 				[Dot42.DexImport("setClob", "(ILjava/io/Reader;J)V", AccessFlags = 1025)]
-				void SetClob(int int32, global::Java.Io.Reader reader, long int64) /* MethodBuilder.Create */ ;
+				void SetClob(int int32, global::Java.IO.Reader reader, long int64) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setClob
@@ -403,13 +403,13 @@ namespace Javax.Sql
 				/// setClob
 				/// </java-name>
 				[Dot42.DexImport("setClob", "(Ljava/lang/String;Ljava/io/Reader;)V", AccessFlags = 1025)]
-				void SetClob(string @string, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
+				void SetClob(string @string, global::Java.IO.Reader reader) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setClob
 				/// </java-name>
 				[Dot42.DexImport("setClob", "(Ljava/lang/String;Ljava/io/Reader;J)V", AccessFlags = 1025)]
-				void SetClob(string @string, global::Java.Io.Reader reader, long int64) /* MethodBuilder.Create */ ;
+				void SetClob(string @string, global::Java.IO.Reader reader, long int64) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setConcurrency
@@ -493,25 +493,25 @@ namespace Javax.Sql
 				/// setNCharacterStream
 				/// </java-name>
 				[Dot42.DexImport("setNCharacterStream", "(ILjava/io/Reader;)V", AccessFlags = 1025)]
-				void SetNCharacterStream(int int32, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
+				void SetNCharacterStream(int int32, global::Java.IO.Reader reader) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setNCharacterStream
 				/// </java-name>
 				[Dot42.DexImport("setNCharacterStream", "(ILjava/io/Reader;J)V", AccessFlags = 1025)]
-				void SetNCharacterStream(int int32, global::Java.Io.Reader reader, long int64) /* MethodBuilder.Create */ ;
+				void SetNCharacterStream(int int32, global::Java.IO.Reader reader, long int64) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setNCharacterStream
 				/// </java-name>
 				[Dot42.DexImport("setNCharacterStream", "(Ljava/lang/String;Ljava/io/Reader;)V", AccessFlags = 1025)]
-				void SetNCharacterStream(string @string, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
+				void SetNCharacterStream(string @string, global::Java.IO.Reader reader) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setNCharacterStream
 				/// </java-name>
 				[Dot42.DexImport("setNCharacterStream", "(Ljava/lang/String;Ljava/io/Reader;J)V", AccessFlags = 1025)]
-				void SetNCharacterStream(string @string, global::Java.Io.Reader reader, long int64) /* MethodBuilder.Create */ ;
+				void SetNCharacterStream(string @string, global::Java.IO.Reader reader, long int64) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setNClob
@@ -523,13 +523,13 @@ namespace Javax.Sql
 				/// setNClob
 				/// </java-name>
 				[Dot42.DexImport("setNClob", "(ILjava/io/Reader;)V", AccessFlags = 1025)]
-				void SetNClob(int int32, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
+				void SetNClob(int int32, global::Java.IO.Reader reader) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setNClob
 				/// </java-name>
 				[Dot42.DexImport("setNClob", "(ILjava/io/Reader;J)V", AccessFlags = 1025)]
-				void SetNClob(int int32, global::Java.Io.Reader reader, long int64) /* MethodBuilder.Create */ ;
+				void SetNClob(int int32, global::Java.IO.Reader reader, long int64) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setNClob
@@ -541,13 +541,13 @@ namespace Javax.Sql
 				/// setNClob
 				/// </java-name>
 				[Dot42.DexImport("setNClob", "(Ljava/lang/String;Ljava/io/Reader;)V", AccessFlags = 1025)]
-				void SetNClob(string @string, global::Java.Io.Reader reader) /* MethodBuilder.Create */ ;
+				void SetNClob(string @string, global::Java.IO.Reader reader) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setNClob
 				/// </java-name>
 				[Dot42.DexImport("setNClob", "(Ljava/lang/String;Ljava/io/Reader;J)V", AccessFlags = 1025)]
-				void SetNClob(string @string, global::Java.Io.Reader reader, long int64) /* MethodBuilder.Create */ ;
+				void SetNClob(string @string, global::Java.IO.Reader reader, long int64) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setNString
@@ -1113,7 +1113,7 @@ namespace Javax.Sql
 		/// javax/sql/RowSetEvent
 		/// </java-name>
 		[Dot42.DexImport("javax/sql/RowSetEvent", AccessFlags = 33)]
-		public partial class RowSetEvent : global::Java.Util.EventObject, global::Java.Io.ISerializable
+		public partial class RowSetEvent : global::Java.Util.EventObject, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljavax/sql/RowSet;)V", AccessFlags = 1)]

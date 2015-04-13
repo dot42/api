@@ -5,7 +5,7 @@ namespace Java.Util.Concurrent.Locks
 		/// java/util/concurrent/locks/AbstractOwnableSynchronizer
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/locks/AbstractOwnableSynchronizer", AccessFlags = 1057)]
-		public abstract partial class AbstractOwnableSynchronizer : global::Java.Io.ISerializable
+		public abstract partial class AbstractOwnableSynchronizer : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
@@ -30,7 +30,7 @@ namespace Java.Util.Concurrent.Locks
 		/// java/util/concurrent/locks/AbstractQueuedLongSynchronizer
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/locks/AbstractQueuedLongSynchronizer", AccessFlags = 1057)]
-		public abstract partial class AbstractQueuedLongSynchronizer : global::Java.Util.Concurrent.Locks.AbstractOwnableSynchronizer, global::Java.Io.ISerializable
+		public abstract partial class AbstractQueuedLongSynchronizer : global::Java.Util.Concurrent.Locks.AbstractOwnableSynchronizer, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
@@ -294,7 +294,7 @@ namespace Java.Util.Concurrent.Locks
 				/// java/util/concurrent/locks/AbstractQueuedLongSynchronizer$ConditionObject
 				/// </java-name>
 				[Dot42.DexImport("java/util/concurrent/locks/AbstractQueuedLongSynchronizer$ConditionObject", AccessFlags = 1)]
-				public partial class ConditionObject : global::Java.Util.Concurrent.Locks.ICondition, global::Java.Io.ISerializable
+				public partial class ConditionObject : global::Java.Util.Concurrent.Locks.ICondition, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -406,7 +406,7 @@ namespace Java.Util.Concurrent.Locks
 		/// java/util/concurrent/locks/AbstractQueuedSynchronizer
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/locks/AbstractQueuedSynchronizer", AccessFlags = 1057)]
-		public abstract partial class AbstractQueuedSynchronizer : global::Java.Util.Concurrent.Locks.AbstractOwnableSynchronizer, global::Java.Io.ISerializable
+		public abstract partial class AbstractQueuedSynchronizer : global::Java.Util.Concurrent.Locks.AbstractOwnableSynchronizer, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
@@ -670,7 +670,7 @@ namespace Java.Util.Concurrent.Locks
 				/// java/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject
 				/// </java-name>
 				[Dot42.DexImport("java/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject", AccessFlags = 1)]
-				public partial class ConditionObject : global::Java.Util.Concurrent.Locks.ICondition, global::Java.Io.ISerializable
+				public partial class ConditionObject : global::Java.Util.Concurrent.Locks.ICondition, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
 						/// <java-name>
@@ -978,7 +978,7 @@ namespace Java.Util.Concurrent.Locks
 		/// java/util/concurrent/locks/ReentrantLock
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/locks/ReentrantLock", AccessFlags = 33)]
-		public partial class ReentrantLock : global::Java.Util.Concurrent.Locks.ILock, global::Java.Io.ISerializable
+		public partial class ReentrantLock : global::Java.Util.Concurrent.Locks.ILock, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1166,7 +1166,7 @@ namespace Java.Util.Concurrent.Locks
 		/// java/util/concurrent/locks/ReentrantReadWriteLock
 		/// </java-name>
 		[Dot42.DexImport("java/util/concurrent/locks/ReentrantReadWriteLock", AccessFlags = 33)]
-		public partial class ReentrantReadWriteLock : global::Java.Util.Concurrent.Locks.IReadWriteLock, global::Java.Io.ISerializable
+		public partial class ReentrantReadWriteLock : global::Java.Util.Concurrent.Locks.IReadWriteLock, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -1367,7 +1367,7 @@ namespace Java.Util.Concurrent.Locks
 				/// java/util/concurrent/locks/ReentrantReadWriteLock$WriteLock
 				/// </java-name>
 				[Dot42.DexImport("java/util/concurrent/locks/ReentrantReadWriteLock$WriteLock", AccessFlags = 9)]
-				public partial class JavaWriteLock : global::Java.Util.Concurrent.Locks.ILock, global::Java.Io.ISerializable
+				public partial class JavaWriteLock : global::Java.Util.Concurrent.Locks.ILock, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Ljava/util/concurrent/locks/ReentrantReadWriteLock;)V", AccessFlags = 4)]
@@ -1464,7 +1464,7 @@ namespace Java.Util.Concurrent.Locks
 				/// java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock
 				/// </java-name>
 				[Dot42.DexImport("java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock", AccessFlags = 9)]
-				public partial class JavaReadLock : global::Java.Util.Concurrent.Locks.ILock, global::Java.Io.ISerializable
+				public partial class JavaReadLock : global::Java.Util.Concurrent.Locks.ILock, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
 						[Dot42.DexImport("<init>", "(Ljava/util/concurrent/locks/ReentrantReadWriteLock;)V", AccessFlags = 4)]

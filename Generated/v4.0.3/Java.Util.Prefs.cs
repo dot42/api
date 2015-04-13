@@ -125,7 +125,7 @@ namespace Java.Util.Prefs
 				/// exportNode
 				/// </java-name>
 				[Dot42.DexImport("exportNode", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void ExportNode(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void ExportNode(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -133,7 +133,7 @@ namespace Java.Util.Prefs
 				/// exportSubtree
 				/// </java-name>
 				[Dot42.DexImport("exportSubtree", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public override void ExportSubtree(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public override void ExportSubtree(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -530,7 +530,7 @@ namespace Java.Util.Prefs
 		/// java/util/prefs/NodeChangeEvent
 		/// </java-name>
 		[Dot42.DexImport("java/util/prefs/NodeChangeEvent", AccessFlags = 33)]
-		public partial class NodeChangeEvent : global::Java.Util.EventObject, global::Java.Io.ISerializable
+		public partial class NodeChangeEvent : global::Java.Util.EventObject, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/util/prefs/Preferences;Ljava/util/prefs/Preferences;)V", AccessFlags = 1)]
@@ -567,7 +567,7 @@ namespace Java.Util.Prefs
 		/// java/util/prefs/PreferenceChangeEvent
 		/// </java-name>
 		[Dot42.DexImport("java/util/prefs/PreferenceChangeEvent", AccessFlags = 33)]
-		public partial class PreferenceChangeEvent : global::Java.Util.EventObject, global::Java.Io.ISerializable
+		public partial class PreferenceChangeEvent : global::Java.Util.EventObject, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/util/prefs/Preferences;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
@@ -658,13 +658,13 @@ namespace Java.Util.Prefs
 				/// exportNode
 				/// </java-name>
 				[Dot42.DexImport("exportNode", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-				public abstract void ExportNode(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
+				public abstract void ExportNode(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// exportSubtree
 				/// </java-name>
 				[Dot42.DexImport("exportSubtree", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-				public abstract void ExportSubtree(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
+				public abstract void ExportSubtree(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// flush
@@ -724,7 +724,7 @@ namespace Java.Util.Prefs
 				/// importPreferences
 				/// </java-name>
 				[Dot42.DexImport("importPreferences", "(Ljava/io/InputStream;)V", AccessFlags = 9)]
-				public static void ImportPreferences(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public static void ImportPreferences(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 

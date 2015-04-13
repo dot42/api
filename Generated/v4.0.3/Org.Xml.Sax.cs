@@ -519,12 +519,12 @@ namespace Org.Xml.Sax
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public InputSource(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public InputSource(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/Reader;)V", AccessFlags = 1)]
-				public InputSource(global::Java.Io.Reader reader) /* MethodBuilder.Create */ 
+				public InputSource(global::Java.IO.Reader reader) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -553,10 +553,10 @@ namespace Org.Xml.Sax
 				/// <java-name>
 				/// getByteStream
 				/// </java-name>
-				public virtual global::Java.Io.InputStream ByteStream
+				public virtual global::Java.IO.InputStream ByteStream
 				{
 						[Dot42.DexImport("getByteStream", "()Ljava/io/InputStream;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.InputStream); }
+						get{ return default(global::Java.IO.InputStream); }
 						[Dot42.DexImport("setByteStream", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
 						set{ }
 				}
@@ -575,10 +575,10 @@ namespace Org.Xml.Sax
 				/// <java-name>
 				/// getCharacterStream
 				/// </java-name>
-				public virtual global::Java.Io.Reader CharacterStream
+				public virtual global::Java.IO.Reader CharacterStream
 				{
 						[Dot42.DexImport("getCharacterStream", "()Ljava/io/Reader;", AccessFlags = 1)]
-						get{ return default(global::Java.Io.Reader); }
+						get{ return default(global::Java.IO.Reader); }
 						[Dot42.DexImport("setCharacterStream", "(Ljava/io/Reader;)V", AccessFlags = 1)]
 						set{ }
 				}

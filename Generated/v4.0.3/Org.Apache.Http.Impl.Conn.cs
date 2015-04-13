@@ -1407,7 +1407,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// output
 				/// </java-name>
 				[Dot42.DexImport("output", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void Output(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual void Output(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1415,7 +1415,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// input
 				/// </java-name>
 				[Dot42.DexImport("input", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void Input(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual void Input(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 

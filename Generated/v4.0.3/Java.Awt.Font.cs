@@ -5,7 +5,7 @@ namespace Java.Awt.Font
 		/// java/awt/font/NumericShaper
 		/// </java-name>
 		[Dot42.DexImport("java/awt/font/NumericShaper", AccessFlags = 49)]
-		public sealed partial class NumericShaper : global::Java.Io.ISerializable
+		public sealed partial class NumericShaper : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

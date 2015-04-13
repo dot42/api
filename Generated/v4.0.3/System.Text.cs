@@ -5,7 +5,7 @@ namespace System.Text
 		/// java/lang/StringBuilder
 		/// </java-name>
 		[Dot42.DexImport("java/lang/StringBuilder", AccessFlags = 49)]
-		public sealed partial class StringBuilder : global::Java.Lang.IAppendable, global::Java.Lang.ICharSequence, global::Java.Io.ISerializable
+		public sealed partial class StringBuilder : global::Java.Lang.IAppendable, global::Java.Lang.ICharSequence, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]

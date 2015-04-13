@@ -410,17 +410,17 @@ namespace Java.Util.Jar
 				[Dot42.DexImport("MANIFEST_NAME", "Ljava/lang/String;", AccessFlags = 25)]
 				public const string MANIFEST_NAME = "META-INF/MANIFEST.MF";
 				[Dot42.DexImport("<init>", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public JarFile(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public JarFile(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;Z)V", AccessFlags = 1)]
-				public JarFile(global::Java.Io.File file, bool boolean) /* MethodBuilder.Create */ 
+				public JarFile(global::Java.IO.File file, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;ZI)V", AccessFlags = 1)]
-				public JarFile(global::Java.Io.File file, bool boolean, int int32) /* MethodBuilder.Create */ 
+				public JarFile(global::Java.IO.File file, bool boolean, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -456,9 +456,9 @@ namespace Java.Util.Jar
 				/// getInputStream
 				/// </java-name>
 				[Dot42.DexImport("getInputStream", "(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.Io.InputStream GetInputStream(global::Java.Util.Zip.ZipEntry zipEntry) /* MethodBuilder.Create */ 
+				public override global::Java.IO.InputStream GetInputStream(global::Java.Util.Zip.ZipEntry zipEntry) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
@@ -502,12 +502,12 @@ namespace Java.Util.Jar
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Z)V", AccessFlags = 1)]
-				public JarInputStream(global::Java.Io.InputStream inputStream, bool boolean) /* MethodBuilder.Create */ 
+				public JarInputStream(global::Java.IO.InputStream inputStream, bool boolean) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public JarInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public JarInputStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -580,12 +580,12 @@ namespace Java.Util.Jar
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/util/jar/Manifest;)V", AccessFlags = 1)]
-				public JarOutputStream(global::Java.Io.OutputStream outputStream, global::Java.Util.Jar.Manifest manifest) /* MethodBuilder.Create */ 
+				public JarOutputStream(global::Java.IO.OutputStream outputStream, global::Java.Util.Jar.Manifest manifest) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public JarOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public JarOutputStream(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -617,7 +617,7 @@ namespace Java.Util.Jar
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public Manifest(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public Manifest(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -656,7 +656,7 @@ namespace Java.Util.Jar
 				/// write
 				/// </java-name>
 				[Dot42.DexImport("write", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public virtual void Write(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public virtual void Write(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -664,7 +664,7 @@ namespace Java.Util.Jar
 				/// read
 				/// </java-name>
 				[Dot42.DexImport("read", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void Read(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual void Read(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -787,13 +787,13 @@ namespace Java.Util.Jar
 						/// unpack
 						/// </java-name>
 						[Dot42.DexImport("unpack", "(Ljava/io/InputStream;Ljava/util/jar/JarOutputStream;)V", AccessFlags = 1025)]
-						void Unpack(global::Java.Io.InputStream inputStream, global::Java.Util.Jar.JarOutputStream jarOutputStream) /* MethodBuilder.Create */ ;
+						void Unpack(global::Java.IO.InputStream inputStream, global::Java.Util.Jar.JarOutputStream jarOutputStream) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// unpack
 						/// </java-name>
 						[Dot42.DexImport("unpack", "(Ljava/io/File;Ljava/util/jar/JarOutputStream;)V", AccessFlags = 1025)]
-						void Unpack(global::Java.Io.File file, global::Java.Util.Jar.JarOutputStream jarOutputStream) /* MethodBuilder.Create */ ;
+						void Unpack(global::Java.IO.File file, global::Java.Util.Jar.JarOutputStream jarOutputStream) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// addPropertyChangeListener
@@ -930,13 +930,13 @@ namespace Java.Util.Jar
 						/// pack
 						/// </java-name>
 						[Dot42.DexImport("pack", "(Ljava/util/jar/JarFile;Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-						void Pack(global::Java.Util.Jar.JarFile jarFile, global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
+						void Pack(global::Java.Util.Jar.JarFile jarFile, global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// pack
 						/// </java-name>
 						[Dot42.DexImport("pack", "(Ljava/util/jar/JarInputStream;Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-						void Pack(global::Java.Util.Jar.JarInputStream jarInputStream, global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
+						void Pack(global::Java.Util.Jar.JarInputStream jarInputStream, global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// addPropertyChangeListener

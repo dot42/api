@@ -252,11 +252,11 @@ namespace Android.Util
 		/// android/util/Base64InputStream
 		/// </java-name>
 		[Dot42.DexImport("android/util/Base64InputStream", AccessFlags = 33)]
-		public partial class Base64InputStream : global::Java.Io.FilterInputStream
+		public partial class Base64InputStream : global::Java.IO.FilterInputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;I)V", AccessFlags = 1)]
-				public Base64InputStream(global::Java.Io.InputStream inputStream, int int32) /* MethodBuilder.Create */ 
+				public Base64InputStream(global::Java.IO.InputStream inputStream, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -349,11 +349,11 @@ namespace Android.Util
 		/// android/util/Base64OutputStream
 		/// </java-name>
 		[Dot42.DexImport("android/util/Base64OutputStream", AccessFlags = 33)]
-		public partial class Base64OutputStream : global::Java.Io.FilterOutputStream
+		public partial class Base64OutputStream : global::Java.IO.FilterOutputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;I)V", AccessFlags = 1)]
-				public Base64OutputStream(global::Java.Io.OutputStream outputStream, int int32) /* MethodBuilder.Create */ 
+				public Base64OutputStream(global::Java.IO.OutputStream outputStream, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -710,7 +710,7 @@ namespace Android.Util
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/BufferedReader;)V", AccessFlags = 1)]
-				public EventLogTags(global::Java.Io.BufferedReader bufferedReader) /* MethodBuilder.Create */ 
+				public EventLogTags(global::Java.IO.BufferedReader bufferedReader) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -992,11 +992,11 @@ namespace Android.Util
 		/// android/util/JsonReader
 		/// </java-name>
 		[Dot42.DexImport("android/util/JsonReader", AccessFlags = 49)]
-		public sealed partial class JsonReader : global::Java.Io.ICloseable
+		public sealed partial class JsonReader : global::Java.IO.ICloseable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/Reader;)V", AccessFlags = 1)]
-				public JsonReader(global::Java.Io.Reader reader) /* MethodBuilder.Create */ 
+				public JsonReader(global::Java.IO.Reader reader) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1240,11 +1240,11 @@ namespace Android.Util
 		/// android/util/JsonWriter
 		/// </java-name>
 		[Dot42.DexImport("android/util/JsonWriter", AccessFlags = 49)]
-		public sealed partial class JsonWriter : global::Java.Io.ICloseable
+		public sealed partial class JsonWriter : global::Java.IO.ICloseable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/Writer;)V", AccessFlags = 1)]
-				public JsonWriter(global::Java.Io.Writer writer) /* MethodBuilder.Create */ 
+				public JsonWriter(global::Java.IO.Writer writer) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2092,7 +2092,7 @@ namespace Android.Util
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/PrintStream;)V", AccessFlags = 1)]
-				public PrintStreamPrinter(global::Java.Io.PrintStream printStream) /* MethodBuilder.Create */ 
+				public PrintStreamPrinter(global::Java.IO.PrintStream printStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2119,7 +2119,7 @@ namespace Android.Util
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/PrintWriter;)V", AccessFlags = 1)]
-				public PrintWriterPrinter(global::Java.Io.PrintWriter printWriter) /* MethodBuilder.Create */ 
+				public PrintWriterPrinter(global::Java.IO.PrintWriter printWriter) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3195,7 +3195,7 @@ namespace Android.Util
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/Reader;Lorg/xml/sax/ContentHandler;)V", AccessFlags = 9)]
-				public static void Parse(global::Java.Io.Reader reader, global::Org.Xml.Sax.IContentHandler contentHandler) /* MethodBuilder.Create */ 
+				public static void Parse(global::Java.IO.Reader reader, global::Org.Xml.Sax.IContentHandler contentHandler) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3203,7 +3203,7 @@ namespace Android.Util
 				/// parse
 				/// </java-name>
 				[Dot42.DexImport("parse", "(Ljava/io/InputStream;Landroid/util/Xml$Encoding;Lorg/xml/sax/ContentHandler;)V", AccessFlags = 9)]
-				public static void Parse(global::Java.Io.InputStream inputStream, global::Android.Util.Xml.Encoding encoding, global::Org.Xml.Sax.IContentHandler contentHandler) /* MethodBuilder.Create */ 
+				public static void Parse(global::Java.IO.InputStream inputStream, global::Android.Util.Xml.Encoding encoding, global::Org.Xml.Sax.IContentHandler contentHandler) /* MethodBuilder.Create */ 
 				{
 				}
 

@@ -2664,7 +2664,7 @@ namespace Android.Media
 				/// setDataSource
 				/// </java-name>
 				[Dot42.DexImport("setDataSource", "(Ljava/io/FileDescriptor;JJ)V", AccessFlags = 257)]
-				public virtual void SetDataSource(global::Java.Io.FileDescriptor fileDescriptor, long int64, long int641) /* MethodBuilder.Create */ 
+				public virtual void SetDataSource(global::Java.IO.FileDescriptor fileDescriptor, long int64, long int641) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2672,7 +2672,7 @@ namespace Android.Media
 				/// setDataSource
 				/// </java-name>
 				[Dot42.DexImport("setDataSource", "(Ljava/io/FileDescriptor;)V", AccessFlags = 1)]
-				public virtual void SetDataSource(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void SetDataSource(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2889,7 +2889,7 @@ namespace Android.Media
 				/// setDataSource
 				/// </java-name>
 				[Dot42.DexImport("setDataSource", "(Ljava/io/FileDescriptor;)V", AccessFlags = 1)]
-				public virtual void SetDataSource(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void SetDataSource(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2897,7 +2897,7 @@ namespace Android.Media
 				/// setDataSource
 				/// </java-name>
 				[Dot42.DexImport("setDataSource", "(Ljava/io/FileDescriptor;JJ)V", AccessFlags = 257)]
-				public virtual void SetDataSource(global::Java.Io.FileDescriptor fileDescriptor, long int64, long int641) /* MethodBuilder.Create */ 
+				public virtual void SetDataSource(global::Java.IO.FileDescriptor fileDescriptor, long int64, long int641) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3437,7 +3437,7 @@ namespace Android.Media
 				/// setAuxiliaryOutputFile
 				/// </java-name>
 				[Dot42.DexImport("setAuxiliaryOutputFile", "(Ljava/io/FileDescriptor;)V", AccessFlags = 1)]
-				public virtual void SetAuxiliaryOutputFile(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void SetAuxiliaryOutputFile(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -3453,7 +3453,7 @@ namespace Android.Media
 				/// setOutputFile
 				/// </java-name>
 				[Dot42.DexImport("setOutputFile", "(Ljava/io/FileDescriptor;)V", AccessFlags = 1)]
-				public virtual void SetOutputFile(global::Java.Io.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
+				public virtual void SetOutputFile(global::Java.IO.FileDescriptor fileDescriptor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4488,7 +4488,7 @@ namespace Android.Media
 				/// load
 				/// </java-name>
 				[Dot42.DexImport("load", "(Ljava/io/FileDescriptor;JJI)I", AccessFlags = 1)]
-				public virtual int Load(global::Java.Io.FileDescriptor fileDescriptor, long int64, long int641, int int32) /* MethodBuilder.Create */ 
+				public virtual int Load(global::Java.IO.FileDescriptor fileDescriptor, long int64, long int641, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}

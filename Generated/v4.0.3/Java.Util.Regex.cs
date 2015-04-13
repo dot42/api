@@ -346,7 +346,7 @@ namespace Java.Util.Regex
 		/// java/util/regex/Pattern
 		/// </java-name>
 		[Dot42.DexImport("java/util/regex/Pattern", AccessFlags = 49)]
-		public sealed partial class Pattern : global::Java.Io.ISerializable
+		public sealed partial class Pattern : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>

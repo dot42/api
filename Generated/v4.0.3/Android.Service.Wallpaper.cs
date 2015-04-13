@@ -58,7 +58,7 @@ namespace Android.Service.Wallpaper
 				/// dump
 				/// </java-name>
 				[Dot42.DexImport("dump", "(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V", AccessFlags = 4)]
-				protected internal override void Dump(global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
+				protected internal override void Dump(global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] @string) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -189,7 +189,7 @@ namespace Android.Service.Wallpaper
 						/// </java-name>
 						[Dot42.DexImport("dump", "(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/Strin" +
     "g;)V", AccessFlags = 4)]
-						protected internal virtual void Dump(string @string, global::Java.Io.FileDescriptor fileDescriptor, global::Java.Io.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
+						protected internal virtual void Dump(string @string, global::Java.IO.FileDescriptor fileDescriptor, global::Java.IO.PrintWriter printWriter, string[] string1) /* MethodBuilder.Create */ 
 						{
 						}
 

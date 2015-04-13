@@ -76,11 +76,11 @@ namespace Java.Util.Zip
 		/// java/util/zip/CheckedInputStream
 		/// </java-name>
 		[Dot42.DexImport("java/util/zip/CheckedInputStream", AccessFlags = 33)]
-		public partial class CheckedInputStream : global::Java.Io.FilterInputStream
+		public partial class CheckedInputStream : global::Java.IO.FilterInputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Ljava/util/zip/Checksum;)V", AccessFlags = 1)]
-				public CheckedInputStream(global::Java.Io.InputStream inputStream, global::Java.Util.Zip.IChecksum checksum) /* MethodBuilder.Create */ 
+				public CheckedInputStream(global::Java.IO.InputStream inputStream, global::Java.Util.Zip.IChecksum checksum) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -140,11 +140,11 @@ namespace Java.Util.Zip
 		/// java/util/zip/CheckedOutputStream
 		/// </java-name>
 		[Dot42.DexImport("java/util/zip/CheckedOutputStream", AccessFlags = 33)]
-		public partial class CheckedOutputStream : global::Java.Io.FilterOutputStream
+		public partial class CheckedOutputStream : global::Java.IO.FilterOutputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/util/zip/Checksum;)V", AccessFlags = 1)]
-				public CheckedOutputStream(global::Java.Io.OutputStream outputStream, global::Java.Util.Zip.IChecksum checksum) /* MethodBuilder.Create */ 
+				public CheckedOutputStream(global::Java.IO.OutputStream outputStream, global::Java.Util.Zip.IChecksum checksum) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -555,7 +555,7 @@ namespace Java.Util.Zip
 		/// java/util/zip/DeflaterInputStream
 		/// </java-name>
 		[Dot42.DexImport("java/util/zip/DeflaterInputStream", AccessFlags = 33)]
-		public partial class DeflaterInputStream : global::Java.Io.FilterInputStream
+		public partial class DeflaterInputStream : global::Java.IO.FilterInputStream
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -569,17 +569,17 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("buf", "[B", AccessFlags = 20)]
 				protected internal readonly sbyte[] Buf;
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public DeflaterInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public DeflaterInputStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Ljava/util/zip/Deflater;)V", AccessFlags = 1)]
-				public DeflaterInputStream(global::Java.Io.InputStream inputStream, global::Java.Util.Zip.Deflater deflater) /* MethodBuilder.Create */ 
+				public DeflaterInputStream(global::Java.IO.InputStream inputStream, global::Java.Util.Zip.Deflater deflater) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Ljava/util/zip/Deflater;I)V", AccessFlags = 1)]
-				public DeflaterInputStream(global::Java.Io.InputStream inputStream, global::Java.Util.Zip.Deflater deflater, int int32) /* MethodBuilder.Create */ 
+				public DeflaterInputStream(global::Java.IO.InputStream inputStream, global::Java.Util.Zip.Deflater deflater, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -672,7 +672,7 @@ namespace Java.Util.Zip
 		/// java/util/zip/DeflaterOutputStream
 		/// </java-name>
 		[Dot42.DexImport("java/util/zip/DeflaterOutputStream", AccessFlags = 33)]
-		public partial class DeflaterOutputStream : global::Java.Io.FilterOutputStream
+		public partial class DeflaterOutputStream : global::Java.IO.FilterOutputStream
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -686,17 +686,17 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("def", "Ljava/util/zip/Deflater;", AccessFlags = 4)]
 				protected internal global::Java.Util.Zip.Deflater Def;
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/util/zip/Deflater;)V", AccessFlags = 1)]
-				public DeflaterOutputStream(global::Java.Io.OutputStream outputStream, global::Java.Util.Zip.Deflater deflater) /* MethodBuilder.Create */ 
+				public DeflaterOutputStream(global::Java.IO.OutputStream outputStream, global::Java.Util.Zip.Deflater deflater) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public DeflaterOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public DeflaterOutputStream(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/util/zip/Deflater;I)V", AccessFlags = 1)]
-				public DeflaterOutputStream(global::Java.Io.OutputStream outputStream, global::Java.Util.Zip.Deflater deflater, int int32) /* MethodBuilder.Create */ 
+				public DeflaterOutputStream(global::Java.IO.OutputStream outputStream, global::Java.Util.Zip.Deflater deflater, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -786,12 +786,12 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("eos", "Z", AccessFlags = 4)]
 				protected internal bool Eos;
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public GZIPInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public GZIPInputStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;I)V", AccessFlags = 1)]
-				public GZIPInputStream(global::Java.Io.InputStream inputStream, int int32) /* MethodBuilder.Create */ 
+				public GZIPInputStream(global::Java.IO.InputStream inputStream, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -841,12 +841,12 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("crc", "Ljava/util/zip/CRC32;", AccessFlags = 4)]
 				protected internal global::Java.Util.Zip.CRC32 Crc;
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public GZIPOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public GZIPOutputStream(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;I)V", AccessFlags = 1)]
-				public GZIPOutputStream(global::Java.Io.OutputStream outputStream, int int32) /* MethodBuilder.Create */ 
+				public GZIPOutputStream(global::Java.IO.OutputStream outputStream, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1143,7 +1143,7 @@ namespace Java.Util.Zip
 		/// java/util/zip/InflaterInputStream
 		/// </java-name>
 		[Dot42.DexImport("java/util/zip/InflaterInputStream", AccessFlags = 33)]
-		public partial class InflaterInputStream : global::Java.Io.FilterInputStream
+		public partial class InflaterInputStream : global::Java.IO.FilterInputStream
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1162,17 +1162,17 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("len", "I", AccessFlags = 4)]
 				protected internal int Len;
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public InflaterInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public InflaterInputStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Ljava/util/zip/Inflater;)V", AccessFlags = 1)]
-				public InflaterInputStream(global::Java.Io.InputStream inputStream, global::Java.Util.Zip.Inflater inflater) /* MethodBuilder.Create */ 
+				public InflaterInputStream(global::Java.IO.InputStream inputStream, global::Java.Util.Zip.Inflater inflater) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Ljava/util/zip/Inflater;I)V", AccessFlags = 1)]
-				public InflaterInputStream(global::Java.Io.InputStream inputStream, global::Java.Util.Zip.Inflater inflater, int int32) /* MethodBuilder.Create */ 
+				public InflaterInputStream(global::Java.IO.InputStream inputStream, global::Java.Util.Zip.Inflater inflater, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1273,7 +1273,7 @@ namespace Java.Util.Zip
 		/// java/util/zip/InflaterOutputStream
 		/// </java-name>
 		[Dot42.DexImport("java/util/zip/InflaterOutputStream", AccessFlags = 33)]
-		public partial class InflaterOutputStream : global::Java.Io.FilterOutputStream
+		public partial class InflaterOutputStream : global::Java.IO.FilterOutputStream
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1287,17 +1287,17 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("buf", "[B", AccessFlags = 20)]
 				protected internal readonly sbyte[] Buf;
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public InflaterOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public InflaterOutputStream(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/util/zip/Inflater;)V", AccessFlags = 1)]
-				public InflaterOutputStream(global::Java.Io.OutputStream outputStream, global::Java.Util.Zip.Inflater inflater) /* MethodBuilder.Create */ 
+				public InflaterOutputStream(global::Java.IO.OutputStream outputStream, global::Java.Util.Zip.Inflater inflater) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/util/zip/Inflater;I)V", AccessFlags = 1)]
-				public InflaterOutputStream(global::Java.Io.OutputStream outputStream, global::Java.Util.Zip.Inflater inflater, int int32) /* MethodBuilder.Create */ 
+				public InflaterOutputStream(global::Java.IO.OutputStream outputStream, global::Java.Util.Zip.Inflater inflater, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1585,12 +1585,12 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("OPEN_DELETE", "I", AccessFlags = 25)]
 				public const int OPEN_DELETE = 4;
 				[Dot42.DexImport("<init>", "(Ljava/io/File;)V", AccessFlags = 1)]
-				public ZipFile(global::Java.Io.File file) /* MethodBuilder.Create */ 
+				public ZipFile(global::Java.IO.File file) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/io/File;I)V", AccessFlags = 1)]
-				public ZipFile(global::Java.Io.File file, int int32) /* MethodBuilder.Create */ 
+				public ZipFile(global::Java.IO.File file, int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1635,9 +1635,9 @@ namespace Java.Util.Zip
 				/// getInputStream
 				/// </java-name>
 				[Dot42.DexImport("getInputStream", "(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;", AccessFlags = 1)]
-				public virtual global::Java.Io.InputStream GetInputStream(global::Java.Util.Zip.ZipEntry zipEntry) /* MethodBuilder.Create */ 
+				public virtual global::Java.IO.InputStream GetInputStream(global::Java.Util.Zip.ZipEntry zipEntry) /* MethodBuilder.Create */ 
 				{
-						return default(global::Java.Io.InputStream);
+						return default(global::Java.IO.InputStream);
 				}
 
 				/// <java-name>
@@ -1673,7 +1673,7 @@ namespace Java.Util.Zip
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public ZipInputStream(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public ZipInputStream(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1763,7 +1763,7 @@ namespace Java.Util.Zip
 				[Dot42.DexImport("STORED", "I", AccessFlags = 25)]
 				public const int STORED = 0;
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public ZipOutputStream(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public ZipOutputStream(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
 				{
 				}
 

@@ -145,7 +145,7 @@ namespace Javax.Security.Auth
 		/// javax/security/auth/Subject
 		/// </java-name>
 		[Dot42.DexImport("javax/security/auth/Subject", AccessFlags = 49)]
-		public sealed partial class Subject : global::Java.Io.ISerializable
+		public sealed partial class Subject : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]

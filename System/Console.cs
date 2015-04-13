@@ -15,7 +15,7 @@
 // limitations under the License.
 using System.Diagnostics;
 using System.IO;
-using Java.Io;
+using Java.IO;
 using JSystem = Java.Lang.System;
 
 namespace System

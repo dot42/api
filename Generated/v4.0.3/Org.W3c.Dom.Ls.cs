@@ -63,7 +63,7 @@ namespace Org.W3c.Dom.Ls
 				/// <java-name>
 				/// getCharacterStream
 				/// </java-name>
-				global::Java.Io.Reader CharacterStream
+				global::Java.IO.Reader CharacterStream
 				{
 						[Dot42.DexImport("getCharacterStream", "()Ljava/io/Reader;", AccessFlags = 1025)]
 						get;
@@ -74,7 +74,7 @@ namespace Org.W3c.Dom.Ls
 				/// <java-name>
 				/// getByteStream
 				/// </java-name>
-				global::Java.Io.InputStream ByteStream
+				global::Java.IO.InputStream ByteStream
 				{
 						[Dot42.DexImport("getByteStream", "()Ljava/io/InputStream;", AccessFlags = 1025)]
 						get;
@@ -160,7 +160,7 @@ namespace Org.W3c.Dom.Ls
 				/// <java-name>
 				/// getCharacterStream
 				/// </java-name>
-				global::Java.Io.Writer CharacterStream
+				global::Java.IO.Writer CharacterStream
 				{
 						[Dot42.DexImport("getCharacterStream", "()Ljava/io/Writer;", AccessFlags = 1025)]
 						get;
@@ -171,7 +171,7 @@ namespace Org.W3c.Dom.Ls
 				/// <java-name>
 				/// getByteStream
 				/// </java-name>
-				global::Java.Io.OutputStream ByteStream
+				global::Java.IO.OutputStream ByteStream
 				{
 						[Dot42.DexImport("getByteStream", "()Ljava/io/OutputStream;", AccessFlags = 1025)]
 						get;

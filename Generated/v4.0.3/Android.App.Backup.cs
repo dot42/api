@@ -64,7 +64,7 @@ namespace Android.App.Backup
 				/// fullBackupFile
 				/// </java-name>
 				[Dot42.DexImport("fullBackupFile", "(Ljava/io/File;Landroid/app/backup/FullBackupDataOutput;)V", AccessFlags = 17)]
-				public void FullBackupFile(global::Java.Io.File file, global::Android.App.Backup.FullBackupDataOutput fullBackupDataOutput) /* MethodBuilder.Create */ 
+				public void FullBackupFile(global::Java.IO.File file, global::Android.App.Backup.FullBackupDataOutput fullBackupDataOutput) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -72,7 +72,7 @@ namespace Android.App.Backup
 				/// onRestoreFile
 				/// </java-name>
 				[Dot42.DexImport("onRestoreFile", "(Landroid/os/ParcelFileDescriptor;JLjava/io/File;IJJ)V", AccessFlags = 1)]
-				public virtual void OnRestoreFile(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, long int64, global::Java.Io.File file, int int32, long int641, long int642) /* MethodBuilder.Create */ 
+				public virtual void OnRestoreFile(global::Android.OS.ParcelFileDescriptor parcelFileDescriptor, long int64, global::Java.IO.File file, int int32, long int641, long int642) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -188,7 +188,7 @@ namespace Android.App.Backup
 		/// android/app/backup/BackupDataInputStream
 		/// </java-name>
 		[Dot42.DexImport("android/app/backup/BackupDataInputStream", AccessFlags = 33)]
-		public partial class BackupDataInputStream : global::Java.Io.InputStream
+		public partial class BackupDataInputStream : global::Java.IO.InputStream
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]

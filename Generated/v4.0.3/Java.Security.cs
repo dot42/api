@@ -621,7 +621,7 @@ namespace Java.Security
 		/// java/security/BasicPermission
 		/// </java-name>
 		[Dot42.DexImport("java/security/BasicPermission", AccessFlags = 1057)]
-		public abstract partial class BasicPermission : global::Java.Security.Permission, global::Java.Io.ISerializable
+		public abstract partial class BasicPermission : global::Java.Security.Permission, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
@@ -663,7 +663,7 @@ namespace Java.Security
 		/// java/security/CodeSigner
 		/// </java-name>
 		[Dot42.DexImport("java/security/CodeSigner", AccessFlags = 49)]
-		public sealed partial class CodeSigner : global::Java.Io.ISerializable
+		public sealed partial class CodeSigner : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/security/cert/CertPath;Ljava/security/Timestamp;)V", AccessFlags = 1)]
@@ -727,7 +727,7 @@ namespace Java.Security
 		/// java/security/CodeSource
 		/// </java-name>
 		[Dot42.DexImport("java/security/CodeSource", AccessFlags = 33)]
-		public partial class CodeSource : global::Java.Io.ISerializable
+		public partial class CodeSource : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/net/URL;[Ljava/security/cert/Certificate;)V", AccessFlags = 1)]
@@ -816,7 +816,7 @@ namespace Java.Security
 		/// java/security/DigestInputStream
 		/// </java-name>
 		[Dot42.DexImport("java/security/DigestInputStream", AccessFlags = 33)]
-		public partial class DigestInputStream : global::Java.Io.FilterInputStream
+		public partial class DigestInputStream : global::Java.IO.FilterInputStream
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -825,7 +825,7 @@ namespace Java.Security
 				[Dot42.DexImport("digest", "Ljava/security/MessageDigest;", AccessFlags = 4)]
 				protected internal global::Java.Security.MessageDigest Digest;
 				[Dot42.DexImport("<init>", "(Ljava/io/InputStream;Ljava/security/MessageDigest;)V", AccessFlags = 1)]
-				public DigestInputStream(global::Java.Io.InputStream inputStream, global::Java.Security.MessageDigest messageDigest) /* MethodBuilder.Create */ 
+				public DigestInputStream(global::Java.IO.InputStream inputStream, global::Java.Security.MessageDigest messageDigest) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -895,7 +895,7 @@ namespace Java.Security
 		/// java/security/DigestOutputStream
 		/// </java-name>
 		[Dot42.DexImport("java/security/DigestOutputStream", AccessFlags = 33)]
-		public partial class DigestOutputStream : global::Java.Io.FilterOutputStream
+		public partial class DigestOutputStream : global::Java.IO.FilterOutputStream
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -904,7 +904,7 @@ namespace Java.Security
 				[Dot42.DexImport("digest", "Ljava/security/MessageDigest;", AccessFlags = 4)]
 				protected internal global::Java.Security.MessageDigest Digest;
 				[Dot42.DexImport("<init>", "(Ljava/io/OutputStream;Ljava/security/MessageDigest;)V", AccessFlags = 1)]
-				public DigestOutputStream(global::Java.Io.OutputStream outputStream, global::Java.Security.MessageDigest messageDigest) /* MethodBuilder.Create */ 
+				public DigestOutputStream(global::Java.IO.OutputStream outputStream, global::Java.Security.MessageDigest messageDigest) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1000,7 +1000,7 @@ namespace Java.Security
 		/// java/security/GuardedObject
 		/// </java-name>
 		[Dot42.DexImport("java/security/GuardedObject", AccessFlags = 33)]
-		public partial class GuardedObject : global::Java.Io.ISerializable
+		public partial class GuardedObject : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/Object;Ljava/security/Guard;)V", AccessFlags = 1)]
@@ -1035,13 +1035,13 @@ namespace Java.Security
 				/// decode
 				/// </java-name>
 				[Dot42.DexImport("decode", "(Ljava/io/InputStream;)V", AccessFlags = 1025)]
-				void Decode(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ ;
+				void Decode(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// encode
 				/// </java-name>
 				[Dot42.DexImport("encode", "(Ljava/io/OutputStream;)V", AccessFlags = 1025)]
-				void Encode(global::Java.Io.OutputStream outputStream) /* MethodBuilder.Create */ ;
+				void Encode(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// toString
@@ -1091,7 +1091,7 @@ namespace Java.Security
 		/// java/security/Identity
 		/// </java-name>
 		[Dot42.DexImport("java/security/Identity", AccessFlags = 1057)]
-		public abstract partial class Identity : global::Java.Security.IPrincipal, global::Java.Io.ISerializable
+		public abstract partial class Identity : global::Java.Security.IPrincipal, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
@@ -1345,7 +1345,7 @@ namespace Java.Security
 		/// java/security/Key
 		/// </java-name>
 		[Dot42.DexImport("java/security/Key", AccessFlags = 1537)]
-		public partial interface IKey : global::Java.Io.ISerializable
+		public partial interface IKey : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
@@ -1780,7 +1780,7 @@ namespace Java.Security
 		/// java/security/KeyPair
 		/// </java-name>
 		[Dot42.DexImport("java/security/KeyPair", AccessFlags = 49)]
-		public sealed partial class KeyPair : global::Java.Io.ISerializable
+		public sealed partial class KeyPair : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/security/PublicKey;Ljava/security/PrivateKey;)V", AccessFlags = 1)]
@@ -1965,7 +1965,7 @@ namespace Java.Security
 		/// java/security/KeyRep
 		/// </java-name>
 		[Dot42.DexImport("java/security/KeyRep", AccessFlags = 33)]
-		public partial class KeyRep : global::Java.Io.ISerializable
+		public partial class KeyRep : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/security/KeyRep$Type;Ljava/lang/String;Ljava/lang/String;[B)V", AccessFlags = 1)]
@@ -2213,7 +2213,7 @@ namespace Java.Security
 				/// store
 				/// </java-name>
 				[Dot42.DexImport("store", "(Ljava/io/OutputStream;[C)V", AccessFlags = 17)]
-				public void Store(global::Java.Io.OutputStream outputStream, char[] @char) /* MethodBuilder.Create */ 
+				public void Store(global::Java.IO.OutputStream outputStream, char[] @char) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2229,7 +2229,7 @@ namespace Java.Security
 				/// load
 				/// </java-name>
 				[Dot42.DexImport("load", "(Ljava/io/InputStream;[C)V", AccessFlags = 17)]
-				public void Load(global::Java.Io.InputStream inputStream, char[] @char) /* MethodBuilder.Create */ 
+				public void Load(global::Java.IO.InputStream inputStream, char[] @char) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2572,7 +2572,7 @@ namespace Java.Security
 						/// </java-name>
 						[Dot42.DexImport("newInstance", "(Ljava/lang/String;Ljava/security/Provider;Ljava/io/File;Ljava/security/KeyStore$" +
     "ProtectionParameter;)Ljava/security/KeyStore$Builder;", AccessFlags = 9)]
-						public static Builder NewInstance(string @string, global::Java.Security.Provider provider, global::Java.Io.File file, global::Java.Security.KeyStore.IProtectionParameter protectionParameter) /* MethodBuilder.Create */ 
+						public static Builder NewInstance(string @string, global::Java.Security.Provider provider, global::Java.IO.File file, global::Java.Security.KeyStore.IProtectionParameter protectionParameter) /* MethodBuilder.Create */ 
 						{
 								return default(Builder);
 						}
@@ -2735,7 +2735,7 @@ namespace Java.Security
 				/// engineStore
 				/// </java-name>
 				[Dot42.DexImport("engineStore", "(Ljava/io/OutputStream;[C)V", AccessFlags = 1025)]
-				public abstract void EngineStore(global::Java.Io.OutputStream outputStream, char[] @char) /* MethodBuilder.Create */ ;
+				public abstract void EngineStore(global::Java.IO.OutputStream outputStream, char[] @char) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// engineStore
@@ -2749,7 +2749,7 @@ namespace Java.Security
 				/// engineLoad
 				/// </java-name>
 				[Dot42.DexImport("engineLoad", "(Ljava/io/InputStream;[C)V", AccessFlags = 1025)]
-				public abstract void EngineLoad(global::Java.Io.InputStream inputStream, char[] @char) /* MethodBuilder.Create */ ;
+				public abstract void EngineLoad(global::Java.IO.InputStream inputStream, char[] @char) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// engineLoad
@@ -3168,7 +3168,7 @@ namespace Java.Security
 		/// java/security/Permission
 		/// </java-name>
 		[Dot42.DexImport("java/security/Permission", AccessFlags = 1057)]
-		public abstract partial class Permission : global::Java.Security.IGuard, global::Java.Io.ISerializable
+		public abstract partial class Permission : global::Java.Security.IGuard, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
@@ -3228,7 +3228,7 @@ namespace Java.Security
 		/// java/security/PermissionCollection
 		/// </java-name>
 		[Dot42.DexImport("java/security/PermissionCollection", AccessFlags = 1057)]
-		public abstract partial class PermissionCollection : global::Java.Io.ISerializable
+		public abstract partial class PermissionCollection : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -3277,7 +3277,7 @@ namespace Java.Security
 		/// java/security/Permissions
 		/// </java-name>
 		[Dot42.DexImport("java/security/Permissions", AccessFlags = 49)]
-		public sealed partial class Permissions : global::Java.Security.PermissionCollection, global::Java.Io.ISerializable
+		public sealed partial class Permissions : global::Java.Security.PermissionCollection, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -3626,7 +3626,7 @@ namespace Java.Security
 				/// load
 				/// </java-name>
 				[Dot42.DexImport("load", "(Ljava/io/InputStream;)V", AccessFlags = 33)]
-				public override void Load(global::Java.Io.InputStream inputStream) /* MethodBuilder.Create */ 
+				public override void Load(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4094,7 +4094,7 @@ namespace Java.Security
 		/// java/security/SecureRandomSpi
 		/// </java-name>
 		[Dot42.DexImport("java/security/SecureRandomSpi", AccessFlags = 1057)]
-		public abstract partial class SecureRandomSpi : global::Java.Io.ISerializable
+		public abstract partial class SecureRandomSpi : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
@@ -4791,11 +4791,11 @@ namespace Java.Security
 		/// java/security/SignedObject
 		/// </java-name>
 		[Dot42.DexImport("java/security/SignedObject", AccessFlags = 49)]
-		public sealed partial class SignedObject : global::Java.Io.ISerializable
+		public sealed partial class SignedObject : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/io/Serializable;Ljava/security/PrivateKey;Ljava/security/Signature;)V", AccessFlags = 1)]
-				public SignedObject(global::Java.Io.ISerializable serializable, global::Java.Security.IPrivateKey privateKey, global::Java.Security.Signature signature) /* MethodBuilder.Create */ 
+				public SignedObject(global::Java.IO.ISerializable serializable, global::Java.Security.IPrivateKey privateKey, global::Java.Security.Signature signature) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -4905,7 +4905,7 @@ namespace Java.Security
 		/// java/security/Timestamp
 		/// </java-name>
 		[Dot42.DexImport("java/security/Timestamp", AccessFlags = 49)]
-		public sealed partial class Timestamp : global::Java.Io.ISerializable
+		public sealed partial class Timestamp : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/util/Date;Ljava/security/cert/CertPath;)V", AccessFlags = 1)]
@@ -5007,7 +5007,7 @@ namespace Java.Security
 		/// java/security/UnresolvedPermission
 		/// </java-name>
 		[Dot42.DexImport("java/security/UnresolvedPermission", AccessFlags = 49)]
-		public sealed partial class UnresolvedPermission : global::Java.Security.Permission, global::Java.Io.ISerializable
+		public sealed partial class UnresolvedPermission : global::Java.Security.Permission, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/security/cert/Certi" +

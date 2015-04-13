@@ -141,7 +141,7 @@ namespace Java.Beans
 		/// java/beans/PropertyChangeSupport
 		/// </java-name>
 		[Dot42.DexImport("java/beans/PropertyChangeSupport", AccessFlags = 33)]
-		public partial class PropertyChangeSupport : global::Java.Io.ISerializable
+		public partial class PropertyChangeSupport : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/Object;)V", AccessFlags = 1)]
