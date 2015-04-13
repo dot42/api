@@ -2,11 +2,17 @@
 {
     public static class Result
     {
-        //     Standard activity result: operation succeeded.
-        private const int Ok = Activity.RESULT_OK;
-        //     Standard activity result: operation canceled.
-        private const int Canceled = Activity.RESULT_CANCELED;
-        //     Start of user-defined activity results.
-        private const int FirstUser = Activity.RESULT_FIRST_USER;
+        /// <summary>
+        /// Standard activity result: operation succeeded.
+        /// </summary>
+        public const int Ok = Activity.RESULT_OK;
+        /// <summary>
+        /// Standard activity result: operation canceled.
+        /// </summary>
+        public const int Canceled = Activity.RESULT_CANCELED;
+        /// <summary>
+        /// Start of user-defined activity results.
+        /// </summary>
+        public const int FirstUser = Activity.RESULT_FIRST_USER;
     }
 }

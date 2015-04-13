@@ -6,7 +6,7 @@ namespace Android.Util
     public partial class Log
     {
         [StringFormatMethod("format")]
-        public static void Verbose(string tag, string format, object[] args)
+        public static void Verbose(string tag, string format, params object[] args)
         {
             V(tag, Format(format, args));
         }
@@ -17,7 +17,7 @@ namespace Android.Util
         }
 
         [StringFormatMethod("format")]
-        public static void Debug(string tag, string format, object[] args)
+        public static void Debug(string tag, string format, params object[] args)
         {
             D(tag, Format(format, args));
         }
@@ -28,7 +28,7 @@ namespace Android.Util
         }
 
         [StringFormatMethod("format")]
-        public static void Info(string tag, string format, object[] args)
+        public static void Info(string tag, string format, params object[] args)
         {
             I(tag, Format(format, args));
         }
@@ -39,7 +39,7 @@ namespace Android.Util
         }
 
         [StringFormatMethod("format")]
-        public static void Warn(string tag, string format, object[] args)
+        public static void Warn(string tag, string format, params object[] args)
         {
             W(tag, Format(format, args));
         }
@@ -50,7 +50,7 @@ namespace Android.Util
         }
 
         [StringFormatMethod("format")]
-        public static void Error(string tag, string format, object[] args)
+        public static void Error(string tag, string format, params object[] args)
         {
             E(tag, Format(format, args));
         }

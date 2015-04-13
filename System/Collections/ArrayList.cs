@@ -84,7 +84,7 @@ namespace System.Collections
         /// </summary>
         public int Count
         {
-            get { return list.Count; }
+            get { return list.Size(); }
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace System.Collections
         /// </summary>
         public virtual void CopyTo(Array array)
         {
-            CopyTo(0, array, 0, list.Count);
+            CopyTo(0, array, 0, list.Size());
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace System.Collections
         /// </summary>
         public virtual void CopyTo(Array array, int index)
         {
-            CopyTo(0, array, index, list.Count);
+            CopyTo(0, array, index, list.Size());
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace System.Collections
             if (isFixedSize || isReadOnly)
                 throw new NotSupportedException();
             list.Add(value);
-            return list.Count - 1;
+            return list.Size() - 1;
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace System.Collections
         /// <returns>-1 if not found</returns>
         public virtual int IndexOf(object element, int startIndex)
         {
-            return IndexOf(element, startIndex, list.Count - startIndex);
+            return IndexOf(element, startIndex, list.Size() - startIndex);
         }
 
         /// <summary>
@@ -532,7 +532,7 @@ namespace System.Collections
             if (elementType == null)
                 throw new ArgumentNullException();
 
-            var arr = (Array)Java.Lang.Reflect.Array.NewInstance(elementType, list.Count);
+            var arr = (Array)Java.Lang.Reflect.Array.NewInstance(elementType, list.Size());
             CopyTo(arr);
             return arr;
         }

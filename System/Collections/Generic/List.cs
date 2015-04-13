@@ -39,18 +39,20 @@ namespace System.Collections.Generic
         /// </summary>
         public List(IEnumerable<T> source)
         {
-            var colSource = source as Java.Util.ICollection<T>;
+            var colSource = source as Java.Util.ICollection<T>; // TODO: does this makes sense, or can we remove this case altogether?
             if (colSource != null)
             {
                 list = new ArrayList<T>(colSource);
             }
+            var colWrapper = source as JavaCollectionWrapper<T>;
+            if (colWrapper != null)
+            {
+                list = new ArrayList<T>(colWrapper.collection);
+            }
             else
             {
                 list = new ArrayList<T>();
-                foreach (var item in source)
-                {
-                    list.Add(item);
-                }
+                AddRange(source);
             }
         }
 
@@ -201,10 +203,19 @@ namespace System.Collections.Generic
         /// </summary>
         public void AddRange(IEnumerable<T> collection)
         {
-            foreach (var element in collection)
-            {
-                 list.Add(element);
-            }
+            var c = collection as ICollection<T>;
+
+	        if (c != null)
+	        {
+	            list.AddAll(new CollectionToJavaWrapper<T>(c));
+	        }
+	        else
+	        {
+	            foreach (var e in collection)
+	            {
+	                list.Add(e);
+	            }
+	        }
         }
 
 	    /// <summary>
@@ -238,7 +249,25 @@ namespace System.Collections.Generic
 	        list.Add(index, element);
 	    }
 
-	    public void Clear()
+        public void InsertRange(int index, IEnumerable<T> collection)
+        {
+            var c = collection as ICollection<T>;
+            
+            if (c != null)
+            {
+                list.AddAll(index, new CollectionToJavaWrapper<T>(c));
+            }
+            else
+            {
+                foreach (var e in collection)
+                {
+                    list.Add(index++, e);
+                }
+            }
+        }
+
+
+        public void Clear()
 	    {
 	        list.Clear();
 	    }
@@ -288,13 +317,13 @@ namespace System.Collections.Generic
         /// </summary>
         public T[] ToArray()
         {
-            var result = new T[list.Count];
+            var result = new T[list.Size()];
             return list.ToArray(result);
         }
 
         public int FindIndex(Predicate<T> predicate)
         {
-            for (int i = 0; i < list.Count; ++i)
+            for (int i = 0; i < list.Size(); ++i)
                 if (predicate(list.Get(i)))
                     return i;
             return -1;

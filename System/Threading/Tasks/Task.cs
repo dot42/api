@@ -14,10 +14,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 using Android.App;
 using Android.Util;
+using Java.Util;
 using Java.Util.Concurrent;
 using Java.Util.Concurrent.Atomic;
 
@@ -35,6 +37,8 @@ namespace System.Threading.Tasks
         // With this attribute each thread has its own value so that it's correct for our Schedule code and for Parent property.
         //[ThreadStatic]
         private static readonly	Java.Lang.ThreadLocal<Task> current = new Java.Lang.ThreadLocal<Task>();
+        
+        private static readonly Task CompletedTask = FromResult(0);
 
         private readonly int id;
         private readonly TaskCreationOptions creationOptions;
@@ -765,7 +769,54 @@ namespace System.Threading.Tasks
             return firstFinished;
         }
 
-        public static Task Run(Action action)
+        public static Task WhenAll(params Task[] tasks)
+        {
+            if (tasks.Length == 0)
+                return CompletedTask;
+            return WhenAll(tasks.ToList());
+        }
+
+        public static Task WhenAll(IEnumerable<Task> tasks)
+        {
+            return WhenAll(tasks.ToList());
+        }
+
+	    private static Task WhenAll(Collections.Generic.IList<Task> tasks)
+	    {
+            CheckForNullTasks(tasks);
+            if (tasks.Count == 0)
+	            return CompletedTask;
+
+	        var task = new TaskCompletionSource<VoidTaskResult>();
+	        new WhenAllContinuation(task, tasks);
+	        return task.Task;
+	    }
+
+        public static Task WhenAny(params Task[] tasks)
+        {
+            if (tasks.Length == 0)
+                return CompletedTask;
+            return WhenAny(tasks.ToList());
+        }
+
+        public static Task WhenAny(IEnumerable<Task> tasks)
+        {
+            return WhenAny(tasks.ToList());
+        }
+
+        private static Task<Task> WhenAny(Collections.Generic.IList<Task> tasks)
+        {
+            CheckForNullTasks(tasks);
+            if (tasks.Count == 0)
+                throw  new ArgumentException("tasks");
+
+            var task = new TaskCompletionSource<Task>();
+            new WhenAnyContinuation(task, tasks);
+            return task.Task;
+        }
+
+
+	    public static Task Run(Action action)
         {
             return Run(action, CancellationToken.None);
         }
@@ -774,7 +825,7 @@ namespace System.Threading.Tasks
         {
             if (cancellationToken.IsCancellationRequested)
                 return TaskConstants.Canceled;
-            // TODO: re-specify DenyChildAttach as soon as we support it.
+
             return Task.Factory.StartNew(action, cancellationToken, TaskCreationOptions.DenyChildAttach, TaskScheduler.Default);
         }
 
@@ -792,7 +843,9 @@ namespace System.Threading.Tasks
 
 	    public static Task<T> FromResult<T>(T value)
 	    {
-	        return new Task<T>(value);
+	        var task = new TaskCompletionSource<T>();
+            task.SetResult(value);
+	        return task.Task;
 	    }
 
         internal void ContinueWith(IContinuation continuation)
@@ -828,6 +881,12 @@ namespace System.Threading.Tasks
         }
 
         private static void CheckForNullTasks(Task[] tasks)
+        {
+            foreach (var t in tasks)
+                if (t == null)
+                    throw new ArgumentException("tasks", "the tasks argument contains a null element");
+        }
+        private static void CheckForNullTasks(System.Collections.Generic.IList<Task> tasks)
         {
             foreach (var t in tasks)
                 if (t == null)

@@ -180,7 +180,7 @@ namespace System.Linq
 
             var collection = source as Java.Util.ICollection<TSource>;
             if (collection != null)
-                return collection.Count > 0;
+                return collection.Size() > 0;
 
             return source.AsEnumerable().Any();
         }
@@ -774,7 +774,7 @@ namespace System.Linq
 
             var collection = source as Java.Util.ICollection<TSource>;
             if (collection != null)
-                return collection.Count;
+                return collection.Size();
 
             return source.AsEnumerable().Count();
         }
@@ -956,7 +956,7 @@ namespace System.Linq
 
             var list = source as Java.Util.IList<TSource>;
             if (list != null)
-                return index < list.Count ? list[index] : default(TSource);
+                return index < list.Size() ? list[index] : default(TSource);
 
             return source.AsEnumerable().ElementAt(index, Fallback.Default);
         }
@@ -3542,10 +3542,10 @@ namespace System.Linq
             var collection = source as Java.Util.ICollection<TSource>;
             if (collection != null)
             {
-                if (collection.Count == 0)
+                if (collection.Size() == 0)
                     return EmptyOf<TSource>.Instance();
 
-                array = new TSource[collection.Count];
+                array = new TSource[collection.Size()];
                 collection.ToArray(array);
                 return array;
             }
@@ -3555,7 +3555,7 @@ namespace System.Linq
             {
                 list.Add(element);
             }
-            return list.ToArray<TSource>(new TSource[list.Count]);
+            return list.ToArray<TSource>(new TSource[list.Size()]);
         }
 
         #endregion

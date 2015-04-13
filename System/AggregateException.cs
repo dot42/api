@@ -91,6 +91,33 @@ namespace System
                 return base.InnerException;
             }
         }
+
+        /// <summary>
+        /// Note that in this implementation, not all exception information
+        /// will be retained upon flattening. The StackTrace will be lost.
+        /// </summary>
+        public AggregateException Flatten()
+        {
+            var ret = new List<Exception>();
+            Flatten(this, ret);
+            return new AggregateException(ret);
+        }
+
+        private void Flatten(AggregateException ex, List<Exception> target)
+        {
+            foreach (var inner in ex.innerExceptions)
+            {
+                var agex = inner as AggregateException;
+                if (agex != null)
+                {
+                    Flatten(agex, target);
+                }
+                else
+                {
+                    target.Add(inner);
+                }
+            }
+        }
     }
 }
 

@@ -79,6 +79,8 @@
     <Compile Include="Android\Util\Log.cs" />
     <Compile Include="Android\Views\LongClickEventArgs.cs" />
     <Compile Include="AssemblyInfo\JetBrains.Annotations.cs" />
+    <Compile Include="Dot42\Collections\CollectionToJavaWrapper.cs" />
+    <Compile Include="Dot42\Collections\EnumeratorWrapper.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\IAssemblyType.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
@@ -653,6 +655,7 @@
     <Compile Include="System\Threading\CancellationToken.cs" />
     <Compile Include="System\Threading\CancellationTokenRegistration.cs" />
     <Compile Include="System\Threading\CancellationTokenSource.cs" />
+    <Compile Include="System\Threading\AutoResetEvent.cs" />
     <Compile Include="System\Threading\Interlocked.cs" />
     <Compile Include="System\Threading\ParameterizedThreadStartRunnable.cs" />
     <Compile Include="System\Threading\EventResetMode.cs" />
@@ -1067,6 +1070,9 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System, Version=4.0.3.0, Culture=neutral, PublicKeyToken=0a72796057571e65, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->

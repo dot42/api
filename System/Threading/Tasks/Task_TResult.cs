@@ -23,10 +23,11 @@ using Java.Util;
 
 namespace System.Threading.Tasks
 {
+    internal sealed class VoidTaskResult { }
+
 	public class Task<TResult> : Task
 	{
         private readonly static HashMap<Type, TaskFactory<TResult>> defaultFactory = new HashMap<Type, TaskFactory<TResult>>();
-
         /// <summary>
         /// Provides access to factory methods for creating Task&lt;TResult&gt; instances.
         /// </summary>
@@ -119,13 +120,6 @@ namespace System.Threading.Tasks
             : base(invoker, state, cancellationToken, creationOptions, parent, contAncestor, ignoreCancellation)
         {
         }
-
-        internal Task(TResult result)
-           :base(TaskActionInvoker.Empty, null, default (CancellationToken), TaskCreationOptions.None)
-        {
-            TrySetResult(result);
-        }
-
 
         #endregion
 

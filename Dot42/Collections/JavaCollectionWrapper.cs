@@ -25,7 +25,7 @@ namespace Dot42.Collections
     /// </summary>
     public class JavaCollectionWrapper<T> : System.Collections.Generic.ICollection<T>, System.Collections.ICollection
 	{
-	    private readonly Java.Util.ICollection<T> collection;
+	    internal readonly Java.Util.ICollection<T> collection;
 
         /// <summary>
         /// Default ctor
