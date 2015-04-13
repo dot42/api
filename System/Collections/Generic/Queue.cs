@@ -4,7 +4,7 @@ using Java.Util;
 
 namespace System.Collections.Generic
 {
-    public class Queue<T> : IEnumerable<T>, ICollection, ICollection<T>
+    public class Queue<T> : IEnumerable<T>, ICollection, ICollection<T>,IJavaCollectionWrapper<T>
     {
         private ArrayDeque<T> queue;
         public Queue()
@@ -89,6 +89,7 @@ namespace System.Collections.Generic
             Dot42.Collections.Collections.CopyTo(queue, array, index);
         }
 
+        Java.Util.ICollection<T> IJavaCollectionWrapper<T>.Collection { get { return queue; } }
 
         public class Enumerator<T> : IteratorWrapper<T>
         {
@@ -97,5 +98,6 @@ namespace System.Collections.Generic
             {
             }
         }
+        
     }
 }

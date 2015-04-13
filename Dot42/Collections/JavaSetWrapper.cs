@@ -23,8 +23,8 @@ namespace Dot42.Collections
     /// <summary>
     /// Wraps <see cref="Java.Util.ISet{T}"/> such that is can be used as <see cref="System.Collections.Generic.ISet{T}"/>.
     /// </summary>
-	public class JavaSetWrapper<T> : System.Collections.Generic.ISet<T>
-	{
+	public class JavaSetWrapper<T> : System.Collections.Generic.ISet<T>, IJavaCollectionWrapper<T>
+    {
 	    private readonly Java.Util.ISet<T> collection;
 
         /// <summary>
@@ -39,8 +39,26 @@ namespace Dot42.Collections
 
         public void UnionWith(IEnumerable<T> other)
         {
-            foreach (var e in other)
-                collection.Add(e);
+            var wrap = other as IJavaCollectionWrapper<T>;
+            if (wrap != null)
+                collection.AddAll(wrap.Collection);
+            else
+                foreach (var e in other)
+                    collection.Add(e);
+        }
+
+        public void IntersectWith(IEnumerable<T> other)
+        {
+            var wrap = other as IJavaCollectionWrapper<T>;
+            if (wrap != null)
+                collection.RetainAll((Java.Util.ICollection<object>)wrap.Collection);
+            else
+            {
+                var remove = new Java.Util.HashSet<T>(collection);
+                foreach (var e in other)
+                    remove.Remove(e);
+                collection.RemoveAll((Java.Util.ICollection<object>)remove);
+            }
         }
 
 
@@ -138,7 +156,7 @@ namespace Dot42.Collections
         /// <summary>
         /// Gets the wapped collection.
         /// </summary>
-        protected Java.Util.ICollection<T> Collection { get { return collection; } }
+        public Java.Util.ICollection<T> Collection { get { return collection; } }
     }
 }
 

@@ -19,7 +19,7 @@ using Java.Lang;
 
 namespace System.Collections.Generic
 {
-	public class HashSet<T> : ICollection<T>, ISet<T>, ICollection
+	public class HashSet<T> : ICollection<T>, ISet<T>, ICollection, IJavaCollectionWrapper<T>
 	{
 	    private readonly Java.Util.HashSet<T> hset;
 
@@ -48,18 +48,28 @@ namespace System.Collections.Generic
         /// </summary>
         public HashSet(IEqualityComparer<T> comparer)
         {
+            if(comparer != null && comparer != EqualityComparer<T>.Default)
+                throw new NotImplementedException("comparer not supported");
+
             hset = new Java.Util.HashSet<T>();
         }
 
-        /// <summary>
-        /// Default ctor
-        /// </summary>
+        ///// <summary>
+        ///// Default ctor
+        ///// </summary>
         public HashSet(IEnumerable<T> source, IEqualityComparer<T> comparer)
         {
-            hset = new Java.Util.HashSet<T>();
-            foreach (var item in source)
+            if (comparer != null && comparer != EqualityComparer<T>.Default)
+                throw new NotImplementedException("comparer not supported");
+
+            var wrap = source as IJavaCollectionWrapper<T>;
+            if (wrap != null)
+                hset = new Java.Util.HashSet<T>(wrap.Collection);
+            else
             {
-                hset.Add(item);
+                hset = new Java.Util.HashSet<T>();
+                foreach (var item in source)
+                    hset.Add(item);
             }
         }
 
@@ -117,8 +127,26 @@ namespace System.Collections.Generic
 
         public void UnionWith(IEnumerable<T> other)
         {
-            foreach (var e in other)
-                Add(e);
+            var wrap = other as IJavaCollectionWrapper<T>;
+            if (wrap != null)
+                hset.AddAll(wrap.Collection);
+            else
+                foreach (var e in other)
+                    hset.Add(e);
+        }
+
+        public void IntersectWith(IEnumerable<T> other)
+        {
+            var wrap = other as IJavaCollectionWrapper<T>;
+            if (wrap != null)
+                hset.RetainAll((Java.Util.ICollection<object>)wrap.Collection);
+            else
+            {
+                var remove = new Java.Util.HashSet<T>(hset);
+                foreach (var e in other)
+                    remove.Remove(e);
+                hset.RemoveAll((Java.Util.ICollection<object>)remove);
+            }
         }
 
 	    public IEnumerator<T> GetEnumerator()
@@ -138,6 +166,8 @@ namespace System.Collections.Generic
             {
             }
         }
+
+        Java.Util.ICollection<T> IJavaCollectionWrapper<T>.Collection { get { return hset; } }
 	}
 }
 

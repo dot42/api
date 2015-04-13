@@ -337,6 +337,26 @@ namespace System
         }
 
         /// <summary>
+        /// Reports the zero-based index of the first occurrence of the specified string in this instance. The search starts at a specified character position and examines a specified number of character positions.
+        /// </summary>
+        public int IndexOf(string value, int startIndex, StringComparison comparison)
+        {
+            bool isCultureSpecific = comparison == StringComparison.CurrentCulture || comparison == StringComparison.CurrentCultureIgnoreCase;
+
+            bool isNormal = comparison == StringComparison.Ordinal 
+                         || comparison == StringComparison.InvariantCulture
+                         || comparison == StringComparison.CurrentCulture;
+
+            if (isNormal)
+                return IndexOf(value, startIndex);
+
+            if(isCultureSpecific)
+                throw new NotImplementedException("IndexOf with local culture not supported");
+
+            return ToLowerInvariant().IndexOf(value.ToLowerInvariant(), startIndex);
+        }
+
+        /// <summary>
         /// Returns a new string that right-aligns the characters in this string by padding them with spaces on the left, for a specified total length.
         /// </summary>
         [Inline]

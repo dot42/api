@@ -985,14 +985,14 @@ namespace System.Linq
         }
 
         public static IEnumerable<TSource> Except<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource> comparer)
-		{
-			Check.FirstAndSecond (first, second);
+        {
+            Check.FirstAndSecond(first, second);
 
-			if (comparer == null)
-				comparer = EqualityComparer<TSource>.Default;
+            if (comparer == null)
+                comparer = EqualityComparer<TSource>.Default;
 
-			return CreateExceptIterator (first, second, comparer);
-		}
+            return CreateExceptIterator(first, second, comparer);
+        }
 
         public static IEnumerable<TSource> Except<TSource>(this IIterable<TSource> first, IIterable<TSource> second, IEqualityComparer<TSource> comparer)
         {
@@ -1005,13 +1005,14 @@ namespace System.Linq
         }
 
         static IEnumerable<TSource> CreateExceptIterator<TSource>(IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource> comparer)
-		{
-			var items = new Collections.Generic.HashSet<TSource> (second, comparer);
-			foreach (var element in first) {
-				if (items.Add (element))
-					yield return element;
-			}
-		}
+        {
+            var items = new Collections.Generic.HashSet<TSource>(second, comparer);
+            foreach (var element in first)
+            {
+                if (items.Add(element))
+                    yield return element;
+            }
+        }
 
 		#endregion
 

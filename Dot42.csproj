@@ -81,6 +81,7 @@
     <Compile Include="AssemblyInfo\JetBrains.Annotations.cs" />
     <Compile Include="Dot42\Collections\CollectionToJavaWrapper.cs" />
     <Compile Include="Dot42\Collections\EnumeratorWrapper.cs" />
+    <Compile Include="Dot42\Collections\IJavaCollectionWrapper.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\IAssemblyType.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />

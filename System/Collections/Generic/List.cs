@@ -22,7 +22,7 @@ using Java.Util;
 
 namespace System.Collections.Generic
 {
-	public class List<T> : IList<T>, IList
+	public class List<T> : IList<T>, IList, IJavaCollectionWrapper<T>
 	{
 	    private readonly ArrayList<T> list;
 
@@ -44,10 +44,10 @@ namespace System.Collections.Generic
             {
                 list = new ArrayList<T>(colSource);
             }
-            var colWrapper = source as JavaCollectionWrapper<T>;
+            var colWrapper = source as IJavaCollectionWrapper<T>;
             if (colWrapper != null)
             {
-                list = new ArrayList<T>(colWrapper.collection);
+                list = new ArrayList<T>(colWrapper.Collection);
             }
             else
             {
@@ -202,9 +202,16 @@ namespace System.Collections.Generic
         /// Adds the elements of the specified collection to the end of this List.
         /// </summary>
         public void AddRange(IEnumerable<T> collection)
-        {
-            var c = collection as ICollection<T>;
+	    {
+	        var cWrapper = collection as IJavaCollectionWrapper<T>;
 
+	        if (cWrapper != null)
+	        {
+	            list.AddAll(cWrapper.Collection);
+	            return;
+	        }
+
+	        var c = collection as ICollection<T>;
 	        if (c != null)
 	        {
 	            list.AddAll(new CollectionToJavaWrapper<T>(c));
@@ -251,6 +258,14 @@ namespace System.Collections.Generic
 
         public void InsertRange(int index, IEnumerable<T> collection)
         {
+            var cWrapper = collection as IJavaCollectionWrapper<T>;
+
+            if (cWrapper != null)
+            {
+                list.AddAll(index, cWrapper.Collection);
+                return;
+            }
+
             var c = collection as ICollection<T>;
             
             if (c != null)
@@ -345,6 +360,13 @@ namespace System.Collections.Generic
             {
             }
         }
-	}
+
+	    Java.Util.ICollection<T> IJavaCollectionWrapper<T>.Collection { get { return list; } }
+    
+        public static implicit operator ArrayList<T>(List<T> l)
+        {
+            return l.list;
+        }
+    }
 }
 

@@ -17,7 +17,7 @@ using Dot42.Collections;
 
 namespace Java.Util
 {
-    public class JavaListWrapper<T> : JavaCollectionWrapper<T>, System.Collections.Generic.IList<T>, System.Collections.IList
+    public class JavaListWrapper<T> : JavaCollectionWrapper<T>, System.Collections.Generic.IList<T>, System.Collections.IList, IJavaCollectionWrapper<T>
     {
         /// <summary>
         /// Default ctor

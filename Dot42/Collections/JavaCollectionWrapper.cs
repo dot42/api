@@ -23,8 +23,8 @@ namespace Dot42.Collections
     /// <summary>
     /// Wraps <see cref="Java.Util.ICollection{T}"/> such that is can be used as <see cref="System.Collections.Generic.ICollection{T}"/>.
     /// </summary>
-    public class JavaCollectionWrapper<T> : System.Collections.Generic.ICollection<T>, System.Collections.ICollection
-	{
+    public class JavaCollectionWrapper<T> : System.Collections.Generic.ICollection<T>, System.Collections.ICollection, IJavaCollectionWrapper<T>
+    {
 	    internal readonly Java.Util.ICollection<T> collection;
 
         /// <summary>
@@ -132,6 +132,8 @@ namespace Dot42.Collections
         /// Gets the wapped collection.
         /// </summary>
         protected Java.Util.ICollection<T> Collection { get { return collection; } }
+
+        Java.Util.ICollection<T> IJavaCollectionWrapper<T>.Collection { get { return collection; } }
     }
 }
 
