@@ -17,6 +17,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Android.OS;
 using Dot42.Internal;
 using Java.Util.Concurrent;
 
@@ -26,7 +27,6 @@ namespace System.Reflection
     {
         private readonly string _name;
         private readonly ConcurrentHashMap<string, Type> _types = new ConcurrentHashMap<string, Type>();
-	    private static Type _typeOfEntryAssembly;
 
 	    public string FullName { get { return _name ?? "classes.dex"; } }
 
@@ -111,36 +111,29 @@ namespace System.Reflection
         /// <summary>
         /// Gets the process executable.
         /// </summary>
-        /// <remarks>
-        /// This currently only works when called from 
-        /// the main thread, or when used with SetEntryAssemblyType()
-        /// </remarks>
         public static Assembly GetEntryAssembly()
         {
-            if (_typeOfEntryAssembly != null)
-                return _typeOfEntryAssembly.Assembly;
-
-            Console.WriteLine("Warning: Assembly.SetEntryAssemblyType not called. Fallback method may retrieve the wrong assembly.");
-
+            var mainStack = Looper.MainLooper.Thread.StackTrace;
             var classLoader = typeof(Assembly).GetClassLoader();
-            foreach (var trace in Thread.CurrentThread.StackTrace.Reverse())
+
+            const string androidAssembly = "android";
+            Assembly systemAssembly = AssemblyTypes.DefaultAssembly;
+
+            // find the deepest class belonging not to a system assembly.
+            foreach (var trace in mainStack.Reverse())
             {
                 string className = trace.ClassName;
                 var assembly =  classLoader.LoadClass(className).Assembly;
-                if (!ReferenceEquals(assembly, AssemblyTypes.DefaultAssembly))
+
+                bool isSystemAssembly = ReferenceEquals(assembly, systemAssembly)
+                                     || assembly.FullName == androidAssembly;
+                
+                if(!isSystemAssembly)
                     return assembly;
             }
             return AssemblyTypes.DefaultAssembly;
         }
-
-        /// <summary>
-        /// call this once with any type from your entry assembly to 
-        /// make sure later calls to GetEntryAssembly will succeed.
-        /// </summary>
-	    public static void SetEntryAssemblyType(Type anyTypeOfEntryAssembly)
-	    {
-	        _typeOfEntryAssembly = anyTypeOfEntryAssembly;
-	    }
+        
     }
 }
 
