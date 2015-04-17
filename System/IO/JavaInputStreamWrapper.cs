@@ -42,7 +42,11 @@ namespace System.IO
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-                stream.Close();
+            {
+                try{ stream.Close(); }
+                catch {}
+            }
+                
         }
 
         /// <summary>

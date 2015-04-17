@@ -248,6 +248,15 @@ namespace System.IO
                     return FileAccess.ReadWrite;
             }
         }
+
+	    protected override void Dispose(bool disposing)
+	    {
+	        if (disposing)
+	        {
+	            try { file.Close(); }
+	            catch {}       
+	        }
+	    }
 	}
 }
 
