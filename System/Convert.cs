@@ -1116,6 +1116,7 @@ namespace System
             if (value is double) return ToInt16((double)value);
             if (value is DateTime) return ToInt16((DateTime)value);
             if (value is string) return ToInt16((string)value, provider);
+            if (value is Dot42.Internal.Enum) return (short)((Dot42.Internal.Enum)value).IntValue();
 
             return ((IConvertible)value).ToInt16(provider);
         }
@@ -1252,6 +1253,7 @@ namespace System
             if (value is double) return ToInt32((double)value);
             if (value is DateTime) return ToInt32((DateTime)value);
             if (value is string) return ToInt32((string)value, provider);
+            if (value is Dot42.Internal.Enum) return ((Dot42.Internal.Enum)value).IntValue();
 
             return ((IConvertible)value).ToInt32(provider);
         }
@@ -1377,6 +1379,7 @@ namespace System
             if (value is double) return ToInt64((double)value);
             if (value is DateTime) return ToInt64((DateTime)value);
             if (value is string) return ToInt64((string)value, provider);
+            if (value is Dot42.Internal.Enum) return ((Dot42.Internal.Enum) value).LongValue();
 
             return ((IConvertible)value).ToInt64(provider);
         }

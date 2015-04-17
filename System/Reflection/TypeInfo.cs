@@ -44,6 +44,11 @@ namespace System.Reflection
             return _type.GetCustomAttributes(attributeType, inherit).Cast<Attribute>();
         }
 
+        public IEnumerable<Attribute> GetCustomAttributes<T>(bool inherit) where T: Attribute
+        {
+            return _type.GetCustomAttributes(typeof(T), inherit).Cast<T>();
+        }
+
 
         public bool IsValueType { get { return _type.IsValueType; } }
         public bool IsInterface { get { return _type.IsInterface; } }

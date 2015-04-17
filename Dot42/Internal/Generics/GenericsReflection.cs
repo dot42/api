@@ -18,7 +18,6 @@ namespace Dot42.Internal.Generics
         private static readonly ConcurrentHashMap<Type, Java.Util.ISet<Type>> TypeInterfacesSet = new ConcurrentHashMap<Type, Java.Util.ISet<Type>>();
         private static readonly ConcurrentHashMap<Type, Java.Util.ISet<Type>> TypeBaseTypesSet = new ConcurrentHashMap<Type, Java.Util.ISet<Type>>();
         
-
         public const char GenericTickChar = '\x2b9'; // (ʹ)
 
         public static int GetGenericArgumentCount(Type type)

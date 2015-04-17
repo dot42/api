@@ -27,6 +27,7 @@
 
 
 using System.Collections.Generic;
+using System.Linq;
 using Dot42;
 using Dot42.Internal.Generics;
 
@@ -178,6 +179,12 @@ namespace System.Reflection
                 throw new ArgumentNullException("delegate");
             return @delegate.Method;
         }
-	}
+
+        public static IEnumerable<T> GetCustomAttributes<T>(this MemberInfo member) where T : Attribute
+        {
+            return member.GetCustomAttributes(typeof(T), false)
+                         .Cast<T>();
+        }
+    }
 }
 
