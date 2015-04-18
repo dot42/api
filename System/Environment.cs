@@ -14,6 +14,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Collections;
+using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Dot42;
 using JRuntime = Java.Lang.Runtime;
@@ -134,6 +136,33 @@ namespace System
         {
             [Inline]
             get { return JRuntime.GetRuntime().TotalMemory(); }
+        }
+
+        /// <summary>
+        /// SpecialFolder.ApplicationData will return the 
+        /// '/data/data/your.package' folder.
+        /// </summary>
+        public static string GetFolderPath(SpecialFolder folder)
+        {
+            var context = Application.Context;
+            if (context == null)
+            {
+                throw new InvalidOperationException("Android.App.Application is not propertly initialized");
+            }
+
+            switch (folder)
+            {
+                case SpecialFolder.ApplicationData:
+                case SpecialFolder.CommonApplicationData:
+                case SpecialFolder.LocalApplicationData:
+                case SpecialFolder.UserProfile:
+                    var pm = context.PackageManager;
+                    String package = context.PackageName;
+                    PackageInfo p = pm.GetPackageInfo(package, 0);
+                    return p.ApplicationInfo.DataDir;
+                default:
+                    return "";
+            }
         }
 	}
 }

@@ -82,6 +82,7 @@
     <Compile Include="Dot42\Collections\CollectionToJavaWrapper.cs" />
     <Compile Include="Dot42\Collections\EnumeratorWrapper.cs" />
     <Compile Include="Dot42\Collections\IJavaCollectionWrapper.cs" />
+    <Compile Include="Dot42\Internal\Application.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\IAssemblyType.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
@@ -1071,9 +1072,6 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System, Version=4.0.3.0, Culture=neutral, PublicKeyToken=0a72796057571e65, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->
