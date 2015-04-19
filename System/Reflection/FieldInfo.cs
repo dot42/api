@@ -91,7 +91,9 @@ namespace System.Reflection
         {
             // .NET doesn't have accessibility semantics
             if (!_field.IsAccessible) _field.IsAccessible = true;
-            
+
+            value = ConvertParameterIfRequired(FieldType, value);
+
             _field.Set(instance, value);
         }
 

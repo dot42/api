@@ -75,7 +75,8 @@ namespace Dot42.Internal
         }
 
         /// <summary>
-        /// value should be java.lang.Integer oder java.lang.Long
+        /// value should be java.lang.Integer, java.lang.Long, java.lang.Short,
+        /// java.lang.Byte or another Enum type.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
         internal static Enum GetFromObject(System.Type enumType, object value)
@@ -88,6 +89,8 @@ namespace Dot42.Internal
                 return Get(enumType, (int)(short)value);
             if (value is byte)
                 return Get(enumType, (int)(byte)value);
+            if (value is Enum)
+                return Get(enumType, ((Enum)value).LongValue());
 
             throw new ArgumentException(string.Format("type: {0}; val: {1}", value.GetType(), value.ToString()), "value");
         }

@@ -89,6 +89,33 @@ namespace System.Reflection
         /// <param name="attributeType">The type of the custom attribute</param>
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
         public abstract bool IsDefined(Type attributeType, bool inherit);
+
+        /// <summary>
+        /// this methods performs required implicit conversion for parameters during 
+        /// reflection.
+        /// </summary>
+        protected static object ConvertParameterIfRequired(Type targetType, object value)
+        {
+            if (targetType.IsEnum)
+            {
+                var valueType = value.JavaGetClass();
+                if (valueType != targetType)
+                {
+                    value = Dot42.Internal.Enum.GetFromObject(targetType, value);
+                }
+            }
+            else if (value == null && targetType.IsValueType)
+            {
+                if (targetType.IsPrimitive)
+                {
+                    // TODO: check if wee need to instantiate the correct type here 
+                }
+                value = Activator.CreateInstance(targetType);
+            }
+
+            // TODO: if targetType is a primitive, we might have to do implicit conversion
+            return value;
+        }
     }
 }
 

@@ -154,6 +154,9 @@ namespace System.Reflection
                 throw new ArgumentException("index");
             if (setter == null)
                 throw new InvalidOperationException("property has no setter");
+
+            value = ConvertParameterIfRequired(PropertyType, value);
+
             setter.Invoke(instance, new [] {value});
         }
 
@@ -164,6 +167,8 @@ namespace System.Reflection
         {
             if (setter == null)
                 throw new ArgumentException("property has no setter");
+
+            value = ConvertParameterIfRequired(PropertyType, value);
             setter.Invoke(instance, new[] { value });
         }
 
