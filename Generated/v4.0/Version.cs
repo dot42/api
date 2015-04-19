@@ -14,8 +14,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 [assembly: System.Reflection.AssemblyVersion("4.0.0.0")]
-[assembly: System.Reflection.AssemblyFileVersion("4.0.0.81")]
-[assembly: System.Reflection.AssemblyInformationalVersion("4.0, Dot42 1.0.1.81")]
+[assembly: System.Reflection.AssemblyFileVersion("4.0.0.82")]
+[assembly: System.Reflection.AssemblyInformationalVersion("4.0, Dot42 1.0.1.82")]
 #if !BASELIB
 [assembly: System.Runtime.Versioning.TargetFramework("Dot42,Version=v4.0", FrameworkDisplayName = "Dot42")]
 #endif
