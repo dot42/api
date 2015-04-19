@@ -171,11 +171,11 @@ namespace System.Threading.Tasks
     
 	sealed class WhenAllContinuation : IContinuation
 	{
-        readonly TaskCompletionSource<VoidTaskResult> owner;
+        readonly TaskCompletionSource<object> owner;
 		readonly IList<Task> tasks;
 	    private readonly AtomicInteger counter;
 
-		public WhenAllContinuation (TaskCompletionSource<VoidTaskResult> owner, IList<Task> tasks)
+		public WhenAllContinuation (TaskCompletionSource<object> owner, IList<Task> tasks)
 		{
 			this.owner = owner;
 			this.counter = new AtomicInteger(tasks.Count);

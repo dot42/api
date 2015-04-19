@@ -23,8 +23,6 @@ using Java.Util;
 
 namespace System.Threading.Tasks
 {
-    internal sealed class VoidTaskResult { }
-
 	public class Task<TResult> : Task
 	{
         private readonly static HashMap<Type, TaskFactory<TResult>> defaultFactory = new HashMap<Type, TaskFactory<TResult>>();

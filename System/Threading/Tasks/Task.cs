@@ -787,7 +787,7 @@ namespace System.Threading.Tasks
             if (tasks.Count == 0)
 	            return CompletedTask;
 
-	        var task = new TaskCompletionSource<VoidTaskResult>();
+	        var task = new TaskCompletionSource<object>();
 	        new WhenAllContinuation(task, tasks);
 	        return task.Task;
 	    }
