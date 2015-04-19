@@ -54,9 +54,18 @@ namespace System.Collections.Generic {
 
 	    private static object CreateComparer(Type type)
 	    {
+            // Note that for primitive types, we can't create any unsigned comparers.
+
 	        return typeof (IComparable<T>).IsAssignableFrom (typeof (T)) 
                           ? Activator.CreateInstance (typeof (GenericComparer <>).MakeGenericType (typeof (T))) 
-                          : new DefaultComparer ();
+                          : type == typeof(byte) ? new ByteComparer()
+                          : type == typeof(short) ? new ShortComparer()
+                          : type == typeof(int) ? new IntComparer()
+                          : type == typeof(long) ? new LongComparer()
+                          : type == typeof(float) ? new FloatComparer()
+                          : type == typeof(double) ? new DoubleComparer()
+                          : type == typeof(bool) ? new BoolComparer()
+                          : (object) new DefaultComparer();
 	    }
 
 #if NET_4_5
@@ -116,9 +125,65 @@ namespace System.Collections.Generic {
 					throw new ArgumentException ("does not implement right interface");
 			}
 		}
+
+        internal sealed class ByteComparer : Comparer<byte>
+        {
+            public override int Compare(byte x, byte y)
+            {
+                return x < y ? -1 : x > y ? 1 : 0;
+            }
+        }
+
+        internal sealed class ShortComparer : Comparer<short>
+        {
+            public override int Compare(short x, short y)
+            {
+                return x < y ? -1 : x > y ? 1 : 0;
+            }
+        }
+
+        internal sealed class IntComparer : Comparer<int>
+        {
+            public override int Compare(int x, int y)
+            {
+                return x < y ? -1 : x > y ? 1 : 0;
+            }
+        }
+
+        internal sealed class LongComparer : Comparer<long>
+        {
+            public override int Compare(long x, long y)
+            {
+                return x < y ? -1 : x > y ? 1 : 0;
+            }
+        }
+
+        internal sealed class FloatComparer : Comparer<float>
+        {
+            public override int Compare(float x, float y)
+            {
+                return x < y ? -1 : x > y ? 1 : 0;
+            }
+        }
+
+        internal sealed class DoubleComparer : Comparer<double>
+        {
+            public override int Compare(double x, double y)
+            {
+                return x < y ? -1 : x > y ? 1 : 0;
+            }
+        }
+
+        internal sealed class BoolComparer : Comparer<bool>
+        {
+            public override int Compare(bool x, bool y)
+            {
+                return x == y ? 0 : y ? 1 : -1;
+            }
+        }
 	}
-	
-	[Serializable]
+
+    [Serializable]
 	sealed class GenericComparer<T> : Comparer<T> where T : IComparable<T>
 	{
 		public override int Compare (T x, T y)

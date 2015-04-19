@@ -2876,6 +2876,66 @@ namespace System
                         return convertValue.ToType(conversionType, provider);
                 }
             }
+
+            if (conversionType == conversionTable[0]) // 0 Empty
+                throw new ArgumentNullException();
+
+            else if (conversionType == conversionTable[1]) // 1 TypeCode.Object
+                return (object)value;
+
+            else if (conversionType == conversionTable[2]) // 2 TypeCode.DBNull
+                throw new InvalidCastException(
+                    "Cannot cast to DBNull, it's not IConvertible");
+
+            else if (conversionType == conversionTable[3]) // 3 TypeCode.Boolean
+                return ToBoolean(value, provider);
+
+            else if (conversionType == conversionTable[4]) // 4 TypeCode.Char
+                return ToChar(value, provider);
+
+            else if (conversionType == conversionTable[5]) // 5 TypeCode.SByte
+                return ToSByte(value, provider);
+
+            else if (conversionType == conversionTable[6]) // 6 TypeCode.Byte
+                return ToByte(value, provider);
+
+            else if (conversionType == conversionTable[7]) // 7 TypeCode.Int16
+                return ToInt16(value, provider);
+
+            else if (conversionType == conversionTable[8]) // 8 TypeCode.UInt16
+                return ToUInt16(value, provider);
+
+            else if (conversionType == conversionTable[9]) // 9 TypeCode.Int32
+                return ToInt32(value, provider);
+
+            else if (conversionType == conversionTable[10]) // 10 TypeCode.UInt32
+                return ToUInt32(value, provider);
+
+            else if (conversionType == conversionTable[11]) // 11 TypeCode.Int64
+                return ToInt64(value, provider);
+
+            else if (conversionType == conversionTable[12]) // 12 TypeCode.UInt64
+                return ToUInt64(value, provider);
+
+            else if (conversionType == conversionTable[13]) // 13 TypeCode.Single
+                return ToSingle(value, provider);
+
+            else if (conversionType == conversionTable[14]) // 14 TypeCode.Double
+                return ToDouble(value, provider);
+
+            else if (conversionType == conversionTable[15]) // 15 TypeCode.Decimal
+                return ToDecimal(value, provider);
+
+            else if (conversionType == conversionTable[16]) // 16 TypeCode.DateTime
+                return ToDateTime(value, provider);
+
+            else if (conversionType == conversionTable[18]) // 18 TypeCode.String
+                return ToString(value, provider);
+
+            else if (conversionType.IsEnum)
+                return Dot42.Internal.Enum.GetFromObject(conversionType, value);
+
+
             // Not in the conversion table
             throw new InvalidCastException((Locale.GetText(
                                  "Value is not a convertible object: " + value.GetType().ToString() + " to " + conversionType.FullName)));

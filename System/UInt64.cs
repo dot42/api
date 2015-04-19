@@ -94,6 +94,12 @@ namespace System
             return NumberFormatter.Format(format, LongValue(), provider);
         }
 
+        public int CompareTo(ulong o)
+        {
+            return this < o ? -1
+                 : this > o ? 1
+                 : 0;
+        }
     }
 }
 

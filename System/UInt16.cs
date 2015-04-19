@@ -77,6 +77,11 @@ namespace System
         {
             return NumberFormatter.Format(format, IntValue() & 0xFFFF, provider);
         }
+
+        public int CompareTo(ushort o)
+        {
+            return (IntValue() & 0xFFFF).CompareTo(o.IntValue() & 0xFFFF);
+        }
     }
 }
 

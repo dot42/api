@@ -114,6 +114,13 @@ namespace System
         {
             return NumberFormatter.Format(format, ((long)IntValue()) & 0xFFFFFFFFL, null);
         }
+
+        public int CompareTo(uint o)
+        {
+            return this < o ? -1
+                :  this > o ? 1
+                :  0;
+        }
     }
 }
 

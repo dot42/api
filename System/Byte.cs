@@ -47,17 +47,17 @@ namespace System
 
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format(_IntValue(), provider);
+            return NumberFormatter.Format(_IntValue() & 255, provider);
         }
 
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, _IntValue(), null);
+            return NumberFormatter.Format(format, _IntValue() & 255, null);
         }
 
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, _IntValue(), provider);
+            return NumberFormatter.Format(format, _IntValue() & 255, provider);
         }
 
         public static byte Parse(string s)
@@ -108,7 +108,7 @@ namespace System
 
         public int CompareTo(byte o)
         {
-            return _IntValue().CompareTo(o._IntValue());
+            return (_IntValue() & 255).CompareTo(o._IntValue() & 255);
         }
     }
 }

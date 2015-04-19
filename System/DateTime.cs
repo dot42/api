@@ -22,7 +22,7 @@ using Calendar = Java.Util.Calendar;
 
 namespace System
 {
-	public struct DateTime
+	public struct DateTime : IComparable<DateTime>
 	{
         /// <summary>
         /// The value of this constant is equivalent to 23:59:59.9999999, December 31, 9999, exactly one 100-nanosecond tick before 00:00:00, January 1, 10000.
