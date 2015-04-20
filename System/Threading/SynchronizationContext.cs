@@ -86,6 +86,7 @@ namespace System.Threading
 		
 		public virtual void Post (SendOrPostCallback d, object state)
 		{
+            // TODO: use a proper thread pool implementation.
             var thread = new Thread(new MySendOrPostRunner(d, state));
             thread.Name = "SynchronisationContext worker thread";
             thread.Start();

@@ -115,7 +115,8 @@ namespace System.Threading.Tasks
 	    internal Task(TaskActionInvoker invoker, object state, CancellationToken cancellationToken,
 	                  TaskCreationOptions creationOptions, Task parent = null, Task contAncestor = null, bool ignoreCancellation = false)
 	    {
-	        if (SynchronizationContext.Current == null) SynchronizationContext.SetSynchronizationContext(new AndroidSynchronizationContext());
+	        if (SynchronizationContext.Current == null) 
+                SynchronizationContext.SetSynchronizationContext(new SynchronizationContext());
 
             this.invoker = invoker;
             this.creationOptions = creationOptions;
