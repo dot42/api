@@ -22,7 +22,7 @@ using Calendar = Java.Util.Calendar;
 
 namespace System
 {
-	public struct DateTime : IComparable<DateTime>
+    public struct DateTime : System.IComparable<DateTime>
 	{
         /// <summary>
         /// The value of this constant is equivalent to 23:59:59.9999999, December 31, 9999, exactly one 100-nanosecond tick before 00:00:00, January 1, 10000.
@@ -296,16 +296,16 @@ namespace System
         // Exceptions:
         //   System.ArgumentException:
         //     value is not a System.DateTime.
-        public int CompareTo(object value)
-        {
-            if (value == null)
-                return 1;
+        //public int CompareTo(object value)
+        //{
+        //    if (value == null)
+        //        return 1;
 
-            if (!(value is System.DateTime))
-                throw new ArgumentException("Value is not a System.DateTime");
+        //    if (!(value is System.DateTime))
+        //        throw new ArgumentException("Value is not a System.DateTime");
 
-            return Compare(this, (DateTime)value);
-        }
+        //    return Compare(this, (DateTime)value);
+        //}
         //
         // Summary:
         //     Returns the number of days in the specified month and year.
