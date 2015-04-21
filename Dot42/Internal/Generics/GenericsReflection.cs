@@ -399,8 +399,11 @@ namespace Dot42.Internal.Generics
                 return null;
 
             Type[] trueParameters = new Type[parameters.Length+1];
-            System.Array.Copy(parameters, trueParameters, parameters.Length);
+            
+            for (int i = 0; i < parameters.Length; ++i)
+                trueParameters[i] = EnsureTypeDef(parameters[i]);
             trueParameters[parameters.Length] = typeof (Type[]);
+
             try
             {
                 var javaContructor = typeInfo.TypeDefinition.JavaGetConstructor(trueParameters);

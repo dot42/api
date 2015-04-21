@@ -293,9 +293,13 @@ namespace System
 
             if(ci != null) return ci;
 
+	        var typeDefParams = new Type[parameters.Length];
+	        for (int i = 0; i < parameters.Length; ++i)
+	            typeDefParams[i] = parameters[i].EnsureTypeDef();
+
             try
             {
-                return new ConstructorInfo(JavaGetConstructor(parameters));
+                return new ConstructorInfo(JavaGetConstructor(typeDefParams));
             }
             catch (NoSuchMethodException)
             {
