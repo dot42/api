@@ -17,13 +17,12 @@ using System;
 using System.Threading;
 
 using Java.Util.Concurrent;
-using Java.Util.Concurrent.Atomic;
 
 namespace Dot42.Test
 {
 	internal class AsyncSynchronizationContext : SynchronizationContext
-    {
-        private AtomicInteger _operationCount = new AtomicInteger();
+	{
+	    private int _operationCount;
 		private readonly AsyncOperationQueue _operations = new AsyncOperationQueue();
 
 		public override void Send(SendOrPostCallback d, object state)
@@ -38,14 +37,14 @@ namespace Dot42.Test
 
 		public override void OperationStarted()
 		{
-		    _operationCount.IncrementAndGet();
+		    Interlocked.Increment(ref _operationCount);
 
 			base.OperationStarted();
 		}
 
 		public override void OperationCompleted()
 		{
-			if (_operationCount.DecrementAndGet() == 0)
+			if (Interlocked.Decrement(ref _operationCount) == 0)
 				_operations.MarkAsComplete();
 
 			base.OperationCompleted();

@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Threading;
 using Java.Lang.Ref;
-using Java.Util.Concurrent.Atomic;
 
 namespace Dot42.Internal
 {
@@ -11,33 +11,42 @@ namespace Dot42.Internal
     public class LazyAndWeak<T> where T : class
     {
         private readonly Func<T> _initializor;
-        private readonly AtomicReference<SoftReference<T>> _instance = new AtomicReference<SoftReference<T>>();
+        private SoftReference<T> _instance;
 
         public T Value
         {
             get
             {
-                SoftReference<T> @ref = _instance.Get();
+                SoftReference<T> reference = _instance;
                 T value = null;
 
-                if (@ref != null) value = @ref.Get();
+                if (reference != null) 
+                    value = reference.Get();
 
                 if (value == null)
                 {
                     value = _initializor();
-                    if (!_instance.CompareAndSet(null, new SoftReference<T>(value)))
+                    var newReference = new SoftReference<T>(value);
+
+                    while (true)
                     {
+                        var oldReference = Interlocked.CompareExchange(ref _instance, newReference, reference);
+
+                        if (oldReference == reference)
+                            // we set our value.
+                            break;
+
                         // someone else was faster.
-                        @ref = _instance.Get();
-                        T otherValue = @ref.Get();
+                        T otherValue = oldReference.Get();
                         if (otherValue != null)
-                            value = otherValue;
-                        else
                         {
-                            // already collected again. 
-                            // just force our value.
-                            _instance.Set(new SoftReference<T>(value));
+                            value = otherValue;
+                            newReference.Clear();
+                            break;
                         }
+
+                        // the others value has already been collected. try again.
+                        reference = oldReference;
                     }
                 }
 

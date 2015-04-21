@@ -13,16 +13,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-
 using Android.App;
-using Android.Util;
-using Java.Util;
-using Java.Util.Concurrent;
 using Java.Util.Concurrent.Atomic;
-
 using Dot42.Internal;
 using Dot42.Threading.Tasks;
 
@@ -36,7 +32,7 @@ namespace System.Threading.Tasks
 
         // With this attribute each thread has its own value so that it's correct for our Schedule code and for Parent property.
         //[ThreadStatic]
-        private static readonly	Java.Lang.ThreadLocal<Task> current = new Java.Lang.ThreadLocal<Task>();
+        private static readonly Java.Lang.ThreadLocal<Task> current = new Java.Lang.ThreadLocal<Task>();
         
         private static readonly Task CompletedTask = FromResult(0);
 
@@ -45,7 +41,7 @@ namespace System.Threading.Tasks
         private TaskStatus status;
 	    private object state;
 	    private TaskActionInvoker invoker;
-        internal AtomicBoolean executing = new AtomicBoolean(false);
+	    internal int executing = 0;
 
 	    private readonly TaskCompletionQueue<IContinuation> continuations = new TaskCompletionQueue<IContinuation>();
 
@@ -356,7 +352,7 @@ namespace System.Threading.Tasks
              * breaking its semantic (the task can be executed twice but the
              * second time it will return immediately
              */
-            if (executing.GetAndSet(true))
+            if (Interlocked.Exchange(ref executing, 1) != 0)
                 return;
 
             // Disable CancellationToken direct cancellation

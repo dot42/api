@@ -32,7 +32,6 @@ using Java.Util.Concurrent;
 
 using Dot42.Internal;
 using Dot42.Threading.Tasks;
-using Java.Util.Concurrent.Atomic;
 
 namespace System.Threading.Tasks
 {
@@ -173,12 +172,12 @@ namespace System.Threading.Tasks
 	{
         readonly TaskCompletionSource<object> owner;
 		readonly IList<Task> tasks;
-	    private readonly AtomicInteger counter;
+	    private int counter;
 
 		public WhenAllContinuation (TaskCompletionSource<object> owner, IList<Task> tasks)
 		{
 			this.owner = owner;
-			this.counter = new AtomicInteger(tasks.Count);
+			this.counter = tasks.Count;
 			this.tasks = tasks;
 
             foreach (var t in tasks)
@@ -187,7 +186,7 @@ namespace System.Threading.Tasks
 
 		public void Execute ()
 		{
-			if (counter.DecrementAndGet() != 0)
+			if (Interlocked.Decrement(ref counter) != 0)
 				return;
 
 			bool canceled = false;

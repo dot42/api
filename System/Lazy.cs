@@ -1,21 +1,22 @@
 ﻿using System;
-using Java.Util.Concurrent.Atomic;
+using System.Threading;
 
 namespace System
 {
     public class Lazy<T> where T: class 
     {
         private readonly Func<T> _initializor;
-        private readonly AtomicReference<T> _instance = new AtomicReference<T>();
+        private T _instance;
 
         public T Value
         {
             get
             {
-                T foo = _instance.Get();
+                T foo = _instance;
                 if (foo != null) return foo;
-                _instance.CompareAndSet(null, _initializor());
-                return _instance.Get();
+
+                Interlocked.CompareExchange(ref _instance, _initializor(), null);
+                return _instance;
             }
         }
 

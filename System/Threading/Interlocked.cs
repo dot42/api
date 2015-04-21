@@ -1,46 +1,139 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace System.Threading
+﻿namespace System.Threading
 {
-    /// <summary>
-    /// This class is here mainly because Fody.PropertyChanged needs an implementation.
-    /// 
-    /// A proper implementation would let the dot42 compiler detect all accesses to 
-    /// Interlocked, and on-the-fly replace all usages of interlocked fields with their 
-    /// AtomicXXX counterparts.
-    /// </summary>
-    [Obsolete("please try not to use this class, since the implementation makes use of a lock, which of course defeats the whole purpose of a lighweight Interlocked. Use javas AtomicXXX instead. Please note that the compiler will make use of this class to implement events.")]
-    internal static class Interlocked
+    public static class Interlocked
     {
         // NOTE: all calls to this class are managed by the compiler,
         //       no explicit locking is needed here.
+        //       In almost all cases, these calls will be redirected 
+        //       to their AtomicXXXFieldUpdater counterparts.
 
-        public static T CompareExchange<T>(ref T location1, T value, T comparand) where T : class
+        public static T CompareExchange<T>(ref T location, T value, T comparand) where T : class
         {
-            T ret = location1;
-            if (location1 == comparand)
-                location1 = value;
+            T ret = location;
+            if (location == comparand)
+                location = value;
             return ret;
         }
 
-        public static int Increment(ref Int32 obj) 
+        public static object CompareExchange(ref object location, object value, object comparand)
         {
-                return obj++;
+            object ret = location;
+            if (location == comparand)
+                location = value;
+            return ret;
         }
 
-        public static int Decrement(ref Int32 obj)
+        public static int CompareExchange(ref int location, int value, int comparand) 
         {
-            return obj--;
+            int ret = location;
+            if (location == comparand)
+                location = value;
+            return ret;
         }
 
-        public static Int64 Increment(ref Int64 obj)
+        public static long CompareExchange(ref long location, long value, long comparand)
         {
-            return obj++;
+            long ret = location;
+            if (location == comparand)
+                location = value;
+            return ret;
         }
 
-        public static Int64 Decrement(ref Int64 obj)
+        [Obsolete("The integrity of this call will be achieved through locking. Consider using an AtomicFloat instead.")]
+        public static float CompareExchange(ref float location, float value, float comparand)
         {
-            return obj--;
+            float ret = location;
+            if (location == comparand)
+                location = value;
+            return ret;
+        }
+
+        [Obsolete("The integrity of this call will be achieved through locking. Consider using an AtomicDouble instead.")]
+        public static double CompareExchange(ref double location, double value, double comparand)
+        {
+            double ret = location;
+            if (location == comparand)
+                location = value;
+            return ret;
+        }
+
+        public static T Exchange<T>(ref T location, T value) where T : class
+        {
+            T ret = location;
+            location = value;
+            return ret;
+        }
+
+        public static object Exchange(ref object location, object value)
+        {
+            object ret = location;
+            location = value;
+            return ret;
+        }
+
+        public static int Exchange(ref int location, int value)
+        {
+            int ret = location;
+            location = value;
+            return ret;
+        }
+
+        public static long Exchange(ref long location, long value)
+        {
+            long ret = location;
+            location = value;
+            return ret;
+        }
+
+        [Obsolete("The integrity of this call will be achieved through locking. Consider using an AtomicFloat instead.")]
+        public static float Exchange(ref float location, float value)
+        {
+            float ret = location;
+            location = value;
+            return ret;
+        }
+
+        [Obsolete("The integrity of this call will be achieved through locking. Consider using an AtomicDouble instead.")]
+        public static double Exchange(ref double location, double value)
+        {
+            double ret = location;
+            location = value;
+            return ret;
+        }
+
+        public static int Increment(ref int location1) 
+        {
+            return unchecked(++location1);
+        }
+
+        public static long Increment(ref long location1)
+        {
+            return unchecked(++location1);
+        }
+
+        public static int Decrement(ref int location1)
+        {
+            return unchecked(--location1);
+        }
+
+        public static long Decrement(ref long location1)
+        {
+            return unchecked(--location1);
+        }
+
+        public static int Add(ref int location1, int add)
+        {
+            return unchecked(location1 += add);
+        }
+
+        public static long Add(ref long location1, long add)
+        {
+            return unchecked(location1 += add);
+        }
+
+        public static long Read(ref long location1)
+        {
+            return location1;
         }
     }
 }

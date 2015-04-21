@@ -454,6 +454,7 @@
     <Compile Include="Java\Lang\Boolean.cs" />
     <Compile Include="Java\Lang\Void.cs" />
     <Compile Include="Java\Util\Concurrent\AbstractExecutorService.cs" />
+    <Compile Include="Java\Util\Concurrent\Atomic.cs" />
     <Compile Include="Java\Util\Concurrent\CyclicBarrier.cs" />
     <Compile Include="Java\Util\Concurrent\ExecutorCompletionService.cs" />
     <Compile Include="Java\Util\Concurrent\Executors.cs" />
