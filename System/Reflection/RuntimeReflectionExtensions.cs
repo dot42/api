@@ -73,13 +73,13 @@ namespace System.Reflection
 		public static IEnumerable<FieldInfo> GetDeclaredFields (this Type type)
 		{
 			if (type == null) throw new ArgumentNullException ("type");
-            return type.GetFields(Type.AllDeclaredMembersBindingFlags);
+            return type.GetFields(Type.DeclaredMembersBindingFlags);
 		}
 
         public static FieldInfo GetDeclaredField(this Type type, string name)
         {
             if (type == null) throw new ArgumentNullException("type");
-            return type.GetField(name, Type.AllDeclaredMembersBindingFlags);
+            return type.GetField(name, Type.DeclaredMembersBindingFlags);
         }
 
         public static IEnumerable<FieldInfo> GetRuntimeFields(this Type type)
@@ -111,7 +111,7 @@ namespace System.Reflection
 			if (type == null)
 				throw new ArgumentNullException ("type");
 
-			return type.GetMethods(Type.AllMembersBindingFlags);
+			return GenericsReflection.GetMethods(type, Type.AllMembersBindingFlags);
 		}
 
 	    public static IEnumerable<PropertyInfo> GetRuntimeProperties (this Type type)
@@ -139,16 +139,14 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            var trueTrype = GenericsReflection.EnsureTypeDef(type);
-            var ret = trueTrype.JavaGetDeclaredMethod(name, parameters);
-            return ret == null ? null : new MethodInfo(ret, type);
+            return GenericsReflection.GetMethod(type, name, Type.DeclaredMembersBindingFlags, parameters);
         }
 
         public static IEnumerable<MethodInfo> GetDeclaredMethods(this Type type)
         {
             if (type == null) throw new ArgumentNullException("type");
 
-            return type.GetMethods(Type.AllDeclaredMembersBindingFlags);
+            return type.GetMethods(Type.DeclaredMembersBindingFlags);
         }
 
         public static IEnumerable<PropertyInfo> GetDeclaredProperties(this Type type)
@@ -156,7 +154,7 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return type.GetProperties(Type.AllDeclaredMembersBindingFlags);
+            return type.GetProperties(Type.DeclaredMembersBindingFlags);
         }
 
         public static PropertyInfo GetDeclaredProperty(this Type type, string name)

@@ -22,18 +22,43 @@ namespace System.Reflection
     {
         private readonly Method _method;
         private readonly Type _declaringType;
+        private readonly string _explicitInterfacePrefixIfAny;
+        private string _name;
         public Method JavaMethod { get { return _method; } }
 
-
-        public MethodInfo(Method method, Type declaringType) : base(method)
+        public MethodInfo(Method method, Type declaringType, string explicitInterfacePrefixIfAny=null) : base(method)
         {
             _method = method;
             _declaringType = declaringType;
+            _explicitInterfacePrefixIfAny = explicitInterfacePrefixIfAny;
         }
 
         public override MemberTypes MemberType { get {return MemberTypes.Method; } }
         public override Type DeclaringType { get { return _declaringType; } }
-        public override string Name { get { return _method.Name; } }
+
+        public override string Name
+        {
+            get
+            {
+                if (_name != null) return _name;
+                var name = _method.Name;
+                
+                // remove possible explicit interface implementation prefix.
+                if (_explicitInterfacePrefixIfAny != null && name.StartsWith(_explicitInterfacePrefixIfAny))
+                {
+                    name = name.Substring(_explicitInterfacePrefixIfAny.Length);
+                }
+
+                // remove any compiler generated parts of the name.
+                var compilerGenIdx = name.IndexOf("$");
+                if (compilerGenIdx != -1)
+                    name = name.Substring(0, compilerGenIdx);
+
+                //Console.WriteLine("{1}: {2}: {3}: {0}", DeclaringType.FullName, name, _explicitInterfacePrefixIfAny, _method.Name);
+
+                return _name = name;
+            }
+        }
 
         public override bool ContainsGenericParameters { get { return JavaMethod.GenericParameterTypes.Length > 0; } }
 

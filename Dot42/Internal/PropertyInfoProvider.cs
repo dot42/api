@@ -84,9 +84,9 @@ namespace Dot42.Internal
 
 
                 var getter = declaringType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.GetProperty)
-                                      .FirstOrDefault(m=>m.Name == getName && m.GetParameters().Length == 0);
+                                          .FirstOrDefault(m=>m.JavaMethod.Name == getName && m.JavaMethod.ParameterTypes.Length == 0);
                 var setter = declaringType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.SetProperty)
-                                      .FirstOrDefault(m => m.Name == setName && m.GetParameters().Length == 1);
+                                          .FirstOrDefault(m => m.JavaMethod.Name == setName && m.JavaMethod.ParameterTypes.Length == 1);
 
              
 

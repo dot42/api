@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Dot42.Internal.Generics;
 
 namespace System.Reflection
 {
@@ -26,17 +27,17 @@ namespace System.Reflection
 
         public IEnumerable<PropertyInfo> DeclaredProperties
         {
-            get { return _type.GetProperties(Type.AllDeclaredMembersBindingFlags); }
+            get { return _type.GetProperties(Type.DeclaredMembersBindingFlags); }
         }
 
         public IEnumerable<MethodInfo> DeclaredMethods
         {
-            get { return _type.GetMethods(Type.AllDeclaredMembersBindingFlags); }
+            get { return GenericsReflection.GetMethods(_type, Type.DeclaredMembersBindingFlags); }
         }
 
         public IEnumerable<FieldInfo> DeclaredFields
         {
-            get { return _type.GetFields(Type.AllDeclaredMembersBindingFlags); }
+            get { return _type.GetFields(Type.DeclaredMembersBindingFlags); }
         }
 
         public IEnumerable<Attribute> GetCustomAttributes(Type attributeType, bool inherit)

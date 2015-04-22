@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Runtime.CompilerServices;
+using Dot42;
 
 namespace System.Reflection
 {
@@ -50,10 +51,12 @@ namespace System.Reflection
         public virtual Type ParameterType { get { return _parameterType; } }
         public virtual String Name { get { return _name; } }
 
-        public virtual bool HasDefaultValue { get { throw new NotImplementedException(); } }
-
-        public virtual Object DefaultValue { get { throw new NotImplementedException(); } }
-        public virtual Object RawDefaultValue { get { throw new NotImplementedException(); } }
+        [NotImplemented]
+        public virtual bool HasDefaultValue { get { return false; } }
+        [NotImplemented]
+        public virtual Object DefaultValue { get { return null; } }
+        [NotImplemented]
+        public virtual Object RawDefaultValue { get { return null; } }
 
         public virtual int Position { get { return _position; } }
         public virtual ParameterAttributes Attributes { get { return ParameterAttributes.None; } }

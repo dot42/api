@@ -17,7 +17,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Android.Util;
 using Dot42;
 using Dot42.Internal;
 using Dot42.Internal.Generics;
@@ -29,7 +28,8 @@ namespace System
 	/*abstract*/ partial class Type : ICustomAttributeProvider
 	{
         internal const BindingFlags AllMembersBindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
-        internal const BindingFlags AllDeclaredMembersBindingFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
+        internal const BindingFlags PublicMembersBindingFlags = BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance;
+        internal const BindingFlags DeclaredMembersBindingFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
 
         /// <summary>
         /// Gets the assembly-qualified name of the Type, which includes the name of the assembly from which the Type was loaded.
@@ -317,12 +317,12 @@ namespace System
         /// </summary>
         public FieldInfo[] GetFields()
         {
-            return GenericsReflection.GetFields(this, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
+            return GenericsReflection.GetFields(this, PublicMembersBindingFlags);
         }
 
         public FieldInfo GetField(string name)
         {
-            return GenericsReflection.GetField(this, name, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
+            return GenericsReflection.GetField(this, name, PublicMembersBindingFlags);
         }
 
         public FieldInfo GetField(string name, BindingFlags flags)
@@ -343,7 +343,8 @@ namespace System
         /// </summary>
         public MethodInfo[] GetMethods()
 	    {
-            return GenericsReflection.GetMethods(this, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
+            return GenericsReflection.GetMethods(this, PublicMembersBindingFlags)
+                                     .ToArray();
         }
 
         /// <summary>
@@ -351,19 +352,19 @@ namespace System
         /// </summary>
         public MethodInfo[] GetMethods(BindingFlags flags)
         {
-            return GenericsReflection.GetMethods(this, flags);
+            return GenericsReflection.GetMethods(this, flags).ToArray();
 
         }
 
         public MethodInfo GetMethod(string name)
         {
-            return GenericsReflection.GetMethod(this, name, null);
+            return GenericsReflection.GetMethod(this, name, PublicMembersBindingFlags, null);
 
         }
 
 	    public MethodInfo GetMethod(string name, Type[] parameters)
 	    {
-            return GenericsReflection.GetMethod(this, name, parameters) ;
+            return GenericsReflection.GetMethod(this, name, PublicMembersBindingFlags, parameters);
 	    }
 
         public PropertyInfo[] GetDeclaredProperties()
@@ -373,7 +374,7 @@ namespace System
 
 	    public PropertyInfo[] GetProperties()
 	    {
-	        return GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
+	        return GetProperties(PublicMembersBindingFlags);
 	    }
 
         public PropertyInfo[] GetProperties(BindingFlags flags)
@@ -399,7 +400,7 @@ namespace System
 
         public PropertyInfo GetProperty(string name)
         {
-            return GetProperty(name, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
+            return GetProperty(name, PublicMembersBindingFlags);
         }
 
         public PropertyInfo GetProperty(string name, BindingFlags flags)
@@ -414,7 +415,7 @@ namespace System
 
         public EventInfo GetEvent(string name)
         {
-            return GetEvents(BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance)
+            return GetEvents(PublicMembersBindingFlags)
                             .FirstOrDefault(p => p.Name == name);
         }
 

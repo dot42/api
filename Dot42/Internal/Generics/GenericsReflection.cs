@@ -494,54 +494,84 @@ namespace Dot42.Internal.Generics
             return null;
         }
 
-        public static MethodInfo[] GetMethods(Type type, BindingFlags flags)
+        public static IEnumerable<MethodInfo> GetMethods(Type type, BindingFlags flags)
         {
-            List<MethodInfo> ret = new List<MethodInfo>();
-
             while (type != null)
             {
                 GenericTypeInfo typeInfo = GenericInstanceFactory.GetGenericTypeInfo(type);
 
-                var typeDef = typeInfo != null? typeInfo.TypeDefinition : type;
+                var typeDef = typeInfo != null ? typeInfo.TypeDefinition : type;
+                
+                string possibleExplicitInterfacePrefix = typeDef.JavaIsInterface() ? typeDef.GetSimpleName()  + "_" : null;
+                
                 var methods = typeDef.JavaGetDeclaredMethods();
-
                 for (int i = 0; i < methods.Length; ++i)
                 {
-                    if(!TypeHelper.Matches(methods[i].Modifiers, flags))
+                    if (!TypeHelper.Matches(methods[i].Modifiers, flags))
                         continue;
 
-                    ret.Add(new MethodInfo(methods[i], type));
+                    yield return new MethodInfo(methods[i], type, possibleExplicitInterfacePrefix);
                 }
 
                 if ((flags & BindingFlags.DeclaredOnly) != 0) break;
 
                 type = type.BaseType;
             }
-            return ret.ToArray();
         }
 
-        public static MethodInfo GetMethod(Type type, string name, Type[] parameters)
+        public static MethodInfo GetMethod(Type type, string name, BindingFlags flags, Type[] parameters)
         {
-            while (type != null)
+            // NOTE: doesn't throw AmbiguousMatchException,
+            //       but just returns the first match.
+            MethodInfo possibleGenericMatch = null;
+
+            var paramLen = parameters == null ? 0 : parameters.Length;
+
+            foreach (MethodInfo method in GetMethods(type, flags))
             {
-                var typeInfo = GenericInstanceFactory.GetGenericTypeInfo(type);
-                var typeDef = typeInfo != null ? typeInfo.TypeDefinition : type;
+                if(method.Name != name)
+                    continue;
 
-                // NOTE: doesn't throw AmbiguousMatchException
-                try
-                {
-                    Method m = parameters == null ? typeDef.JavaGetDeclaredMethod(name) : typeDef.JavaGetDeclaredMethod(name, parameters);
-                    return new MethodInfo(m, type);
-                }
-                catch (NoSuchMethodException)
-                {
-                    type = type.BaseType;
+                if (parameters == null)
+                    return method;
 
-                    if (type == null)
-                        break;
+                var args = method.GetParameters();
+                
+                if (args.Length != paramLen)
+                    continue;
+
+                bool couldBeGenericMatch = false;
+
+                for (int i = 0; i < paramLen; ++i)
+                {
+                    var methodParamType = args[i].ParameterType;
+                    if(methodParamType == parameters[i])
+                        continue;
+
+                    // alternatively, this could be improved to take the actual generic instance and 
+                    // type parameters into account; for this to work, GetMethods() would have to determine
+                    // the correct parameter types, similar to whats done with getters/setters.
+
+                    // Note that this will stop working when/if generic contrains are used to specialize
+                    // generic parameters.
+                    if (possibleGenericMatch == null && methodParamType == typeof (object))
+                    {
+                        couldBeGenericMatch = true;
+                        continue;
+                    }
+
+                    goto nomatch;
                 }
+                // method matches!
+                if (couldBeGenericMatch)
+                    possibleGenericMatch = method;
+                else
+                    return method;
+
+
+            nomatch:;
             }
-            return null;
+            return possibleGenericMatch;
         }
 
         private static void ReorderFields(Type typeDef, int startIndex, List<FieldInfo> ret)
