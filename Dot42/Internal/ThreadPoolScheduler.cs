@@ -17,11 +17,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Java.IO;
+using Dot42.Internal.Threading;
 using Java.Lang;
-using Java.Util.Concurrent;
-using Java.Util.Regex;
-using Exception = System.Exception;
 
 namespace Dot42.Internal
 {
@@ -30,49 +27,20 @@ namespace Dot42.Internal
     /// </summary>
     sealed class ThreadPoolScheduler : TaskScheduler
     {
-        private static readonly int numCores = getNumCores();
-        private readonly ThreadPoolExecutor threadPool;
-        private readonly int lowMaxPoolSize;
-        private readonly int highMaxPoolSize;
+        private readonly ThreadPoolImpl _threadPool;
 
         /// <summary>
         /// Default ctor
         /// </summary>
         internal ThreadPoolScheduler(bool isIOScheduler)
         {
-            lowMaxPoolSize = Math.Max(1, numCores - 1);
-            highMaxPoolSize = isIOScheduler ? lowMaxPoolSize * 2 : lowMaxPoolSize * 3;
-            var queue = new RunnableQueue();
-            threadPool = new ThreadPoolExecutor(lowMaxPoolSize, lowMaxPoolSize, 60L, TimeUnit.SECONDS, queue);
-            queue.Executor = threadPool;
-        }
-
-        private class CpuFilter : IFileFilter
-        {
-            public bool Accept(File pathname)
-            {
-                // Check if filename is "cpu", followed by a digit number
-                return Pattern.Matches("cpu[0-9]+", pathname.Name);
-            }
-        }
-
-        private static int getNumCores()
-        {
-            try
-            {
-                //Get directory containing CPU info
-                var dir = new File("/sys/devices/system/cpu/");
-
-                //Filter to only list the devices we care about
-                var files = dir.ListFiles(new CpuFilter());
-
-                //Return the number of cores (virtual CPU devices)
-                return files.Length;
-            }
-            catch (Exception)
-            {
-                return 1;
-            }
+            // TODO: Think about why the IO scheduler in the original code would only ever
+            //       have cores-1 threads. Does this makes sense? The current code has
+            //       at least 5 threads, but will increase in intervalls of 30 seconds 
+            //       under heavy load to up to max 10 IO or 100 non-IO threads. Does this
+            //       make more sense? I'm not sure what the intention of the IO scheduler 
+            //       is in the first place.
+            _threadPool = isIOScheduler ? new ThreadPoolImpl(2) : ThreadPool.Default;
         }
 
         /// <summary>
@@ -105,7 +73,7 @@ namespace Dot42.Internal
             }
             else
             {
-                threadPool.Execute(new TaskRunner(task));
+                _threadPool.QueueUserWorkItem(new TaskRunner(task));
             }
         }
 
@@ -134,19 +102,6 @@ namespace Dot42.Internal
                 return false;
 
             return TryExecuteTask(task);
-        }
-
-        private sealed class RunnableQueue : LinkedBlockingQueue<IRunnable>
-        {
-            internal ThreadPoolExecutor Executor;
-
-            public override bool Offer(IRunnable e)
-            {
-                /*var x = Executor;
-                if (x.GetActiveCount() < x.GetMaximumPoolSize())
-                    return false;*/
-                return base.Offer(e);
-            }
         }
     }
 }

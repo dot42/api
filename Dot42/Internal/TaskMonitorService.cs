@@ -13,16 +13,20 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Java.Lang;
 using Java.Util.Concurrent;
+using Java.Util.Concurrent.Atomic;
 
 namespace Dot42.Internal
 {
 	internal class TaskMonitorService
 	{
 	    private readonly ScheduledThreadPoolExecutor executor;
-	    private static TaskMonitorService service;
+	    private static readonly Lazy<TaskMonitorService> service = new Lazy<TaskMonitorService>(()=>new TaskMonitorService());
 
         /// <summary>
         /// Default ctor
@@ -37,7 +41,7 @@ namespace Dot42.Internal
         /// </summary>
         internal static TaskMonitorService GetService()
         {
-            return service ?? (service = new TaskMonitorService());
+            return service.Value;
         }
 
         /// <summary>
@@ -46,6 +50,16 @@ namespace Dot42.Internal
         internal IScheduledFuture<object> Delay(long millis, TaskCompletionSource<object> source)
         {
             var runnable = new DelayRunner(source);
+            return executor.Schedule(runnable, millis, TimeUnit.MILLISECONDS);
+        }
+
+        internal IScheduledFuture<object> Delay(long millis, IRunnable runnable)
+        {
+            return executor.Schedule(runnable, millis, TimeUnit.MILLISECONDS);
+        }
+
+        internal IScheduledFuture<object> Delay(long millis, Action runnable)
+        {
             return executor.Schedule(runnable, millis, TimeUnit.MILLISECONDS);
         }
 

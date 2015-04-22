@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System;
 using Dot42;
 
 namespace Java.Util.Concurrent
@@ -37,6 +39,14 @@ namespace Java.Util.Concurrent
 
         [ApiEnhancementIgnoreMethods("RejectedExecution")]
         partial class DiscardPolicy
+        {
+        }
+
+        /// <java-name>
+        /// execute
+        /// </java-name>
+        [Dot42.DexImport("execute", "(Ljava/lang/Runnable;)V", AccessFlags = 1)]
+        public void Execute(Action action) /* MethodBuilder.Create */
         {
         }
     }

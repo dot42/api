@@ -8,6 +8,11 @@ namespace System
         private readonly Func<T> _initializor;
         private T _instance;
 
+        public Lazy(Func<T> initializor)
+        {
+            _initializor = initializor;
+        }
+
         public T Value
         {
             get
@@ -20,9 +25,13 @@ namespace System
             }
         }
 
-        public Lazy(Func<T> initializor)
+        public bool IsValueCreated
         {
-            _initializor = initializor;
+            get
+            {
+                return _instance != null;    
+            }
         }
+
     }
 }

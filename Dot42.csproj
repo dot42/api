@@ -87,6 +87,7 @@
     <Compile Include="Dot42\Internal\IAssemblyType.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
     <Compile Include="Dot42\Internal\EventInfoProvider.cs" />
+    <Compile Include="Dot42\Internal\Threading\ThreadPoolImpl.cs" />
     <Compile Include="Dot42\SerializationMethodAttribute.cs" />
     <Compile Include="Generated\v4.0.3\Android.AccessibilityServices.cs" />
     <Compile Include="Generated\v4.0.3\Android.Accounts.cs" />
@@ -687,6 +688,7 @@
     <Compile Include="System\Threading\Tasks\Task_TResult.cs" />
     <Compile Include="Dot42\Internal\ThreadPoolScheduler.cs" />
     <Compile Include="System\Threading\Tasks\UnobservedTaskExceptionEventArgs.cs" />
+    <Compile Include="System\Threading\ThreadPool.cs" />
     <Compile Include="System\Threading\Timeout.cs" />
     <Compile Include="System\ThrowHelper.cs" />
     <Compile Include="System\TimeoutException.cs" />

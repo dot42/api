@@ -14,7 +14,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Runtime.ConstrainedExecution;
-
 using Android.App;
 using Dot42;
 using Java.Lang;
@@ -86,10 +85,7 @@ namespace System.Threading
 		
 		public virtual void Post (SendOrPostCallback d, object state)
 		{
-            // TODO: use a proper thread pool implementation.
-            var thread = new Thread(new MySendOrPostRunner(d, state));
-            thread.Name = "SynchronisationContext worker thread";
-            thread.Start();
+            ThreadPool.QueueUserWorkItem(new MySendOrPostRunner(d, state));
 		}
 		
 		public virtual void Send (SendOrPostCallback d, object state)
