@@ -16,6 +16,7 @@
 using System.Diagnostics;
 using System.IO;
 using Java.IO;
+using JetBrains.Annotations;
 using JSystem = Java.Lang.System;
 
 namespace System
@@ -36,6 +37,7 @@ namespace System
             WriteLine("" + obj);
         }
 
+        [StringFormatMethod("format")]
         public static void WriteLine(string format, params object[] parameter)
         {
             WriteLine(string.Format(format, parameter));

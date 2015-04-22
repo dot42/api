@@ -1,13 +1,15 @@
-﻿using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using System.Threading.Tasks;
+using Android.Util;
 using Java.Util.Concurrent;
-using Java.Util.Concurrent.Atomic;
+using JetBrains.Annotations;
 
 namespace System.Threading
 {
     public class SemaphoreSlim : IDisposable
     {
         private readonly Semaphore _sem;
-        private readonly AtomicBoolean _wasDisposed = new AtomicBoolean();
+        private volatile bool _wasDisposed;
         private volatile ConcurrentLinkedQueue<AsyncWaiter> _asyncWaiters;
         private static int idgen;
         private readonly int id;
@@ -30,14 +32,14 @@ namespace System.Threading
 
         public Task<bool> WaitAsync(Int32 duration, CancellationToken token)
         {
-            Console.WriteLine("{0:000}|{1}|async wait requested", Thread.CurrentThread.Id, id);
+           VerboseLog("{0:000}|{1}|async wait requested", Thread.CurrentThread.Id, id);
 
             CheckDisposed();
             token.ThrowIfCancellationRequested();
 
             if (_sem.TryAcquire())
             {
-                Console.WriteLine("{0:000}|{1}|async wait immediate success", Thread.CurrentThread.Id,id);
+                VerboseLog("{0:000}|{1}|async wait immediate success", Thread.CurrentThread.Id,id);
                 return Task.FromResult(true);
             }
                 
@@ -73,9 +75,9 @@ namespace System.Threading
          
             _asyncWaiters.Add(waiter);
 
-            Console.WriteLine("{0:000}|{1}|async wait enqued", Thread.CurrentThread.Id, id);
+            VerboseLog("{0:000}|{1}|async wait enqued: {2:X}; {3}", Thread.CurrentThread.Id, id, waiter.GetHashCode(), waiter.Task.Task.Id);
 
-            if (_wasDisposed.Get() || token.IsCancellationRequested || waiter.Delay != null && waiter.Delay.IsCompleted)
+            if (_wasDisposed || token.IsCancellationRequested || waiter.Delay != null && waiter.Delay.IsCompleted)
             {
                 // Mitigate the above race where a finishing condition occured
                 // before where able to add our waiter to the waiters list.
@@ -90,7 +92,7 @@ namespace System.Threading
 
         private void CancelAsync(AsyncWaiter waiter)
         {
-            Console.WriteLine("{0:000}|{1}|async wait cancelled", Thread.CurrentThread.Id, id);
+            VerboseLog("{0:000}|{1}|async wait cancelled", Thread.CurrentThread.Id, id);
 
             if (_asyncWaiters.Remove(waiter))
             {
@@ -103,7 +105,7 @@ namespace System.Threading
         {
             if (waiter.CancelDelay.IsCancellationRequested)
                 return;
-            Console.WriteLine("{0:000}|{1}|async wait timed out", Thread.CurrentThread.Id,id);
+            VerboseLog("{0:000}|{1}|async wait timed out", Thread.CurrentThread.Id,id);
 
             if (_asyncWaiters.Remove(waiter))
             {
@@ -140,7 +142,7 @@ namespace System.Threading
 
         public bool Wait(Int32 milliseconds,  CancellationToken token)
         {
-            Console.WriteLine("{0:000}|{1}|sync wait requested", Thread.CurrentThread.Id, id);
+            VerboseLog("{0:000}|{1}|sync wait requested", Thread.CurrentThread.Id, id);
             CheckDisposed();
             token.ThrowIfCancellationRequested();
 
@@ -180,7 +182,7 @@ namespace System.Threading
 
         public void Release(int count)
         {
-            Console.WriteLine("{0:000}|{1}|about to release {2}", Thread.CurrentThread.Id, id, count);
+            VerboseLog("{0:000}|{1}|about to release {2}; available permits {3}", Thread.CurrentThread.Id, id, count, _sem.AvailablePermits());
             if (count == 0) return;
 
 
@@ -194,25 +196,30 @@ namespace System.Threading
 
                     if (waiter.Task.Task.IsCompleted)
                     {
-                        Console.WriteLine("{0:000}|{1}|found completed async waiter", Thread.CurrentThread.Id, id);
+                        VerboseLog("{0:000}|{1}|found completed async waiter", Thread.CurrentThread.Id, id);
                         continue;
                     }
 
-                    Console.WriteLine("{0:000}|{1}|releasing async waiter", Thread.CurrentThread.Id, id);
+                    VerboseLog("{0:000}|{1}|releasing async waiter: {2:X}; {3}", Thread.CurrentThread.Id, id, waiter.GetHashCode(), waiter.Task.Task.Id);
                     waiter.Task.SetResult(true);
                     count -= 1;
+                    VerboseLog("{0:000}|{1}|async waiter released. remaining count: {2}; available permits: {3}", Thread.CurrentThread.Id, id, count, _sem.AvailablePermits());
                 }
             }
 
             if (count == 0) return;
 
             _sem.Release(count);
-            Console.WriteLine("{0:000}|{1}|released semaphore(s). Available: {2}", Thread.CurrentThread.Id, id, _sem.AvailablePermits());
+            VerboseLog("{0:000}|{1}|released semaphore(s). Available: {2}", Thread.CurrentThread.Id, id, _sem.AvailablePermits());
         }
 
         public void Dispose()
         {
-            _wasDisposed.Set(true);
+            if (_wasDisposed) return;
+
+            VerboseLog("{0:000}|{1}|disposing semaphore. available: {2}", Thread.CurrentThread.Id, id, _sem.AvailablePermits());
+
+            _wasDisposed = true;
             _sem.Release(Int32.MaxValue);
 
             if (_asyncWaiters != null)
@@ -236,13 +243,16 @@ namespace System.Threading
                 waiter.Delay.Dispose();
             }
 
-            if (_wasDisposed.Get())
+            if (_wasDisposed)
+            {
+                VerboseLog("{0:000}|{1}|disposing async waiter: {2}", Thread.CurrentThread.Id, id, waiter.Task.Task.Id);
                 waiter.Task.TrySetException(new ObjectDisposedException(GetType().Name));
+            }
         }
 
         private void CheckDisposed()
         {
-            if (_wasDisposed.Get())
+            if (_wasDisposed)
                 throw new ObjectDisposedException(GetType().Name);
         }
 
@@ -252,6 +262,13 @@ namespace System.Threading
             public CancellationTokenRegistration CancelRegistration;
             public CancellationTokenSource CancelDelay;
             public Task Delay;
+        }
+
+        [Conditional("DEBUG")]
+        [StringFormatMethod("format")]
+        private static void VerboseLog(string format, params object[] args)
+        {
+            Log.Verbose("dot42.threading", format, args);
         }
     }
 }

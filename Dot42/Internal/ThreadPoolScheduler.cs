@@ -35,12 +35,20 @@ namespace Dot42.Internal
         internal ThreadPoolScheduler(bool isIOScheduler)
         {
             // TODO: Think about why the IO scheduler in the original code would only ever
-            //       have cores-1 threads. Does this makes sense? The current code has
-            //       at least 5 threads, but will increase in intervalls of 30 seconds 
-            //       under heavy load to up to max 10 IO or 100 non-IO threads. Does this
-            //       make more sense? I'm not sure what the intention of the IO scheduler 
-            //       is in the first place.
-            _threadPool = isIOScheduler ? new ThreadPoolImpl(2) : ThreadPool.Default;
+            //       have cores-1 threads. Does this makes sense? The current code mimics this
+            //       behavoir. I'm not sure what the intention of the IO scheduler 
+            //       is in the first place, but it seems to be only used in WebClient when 
+            //       processing HTTP requests..
+            
+            if (!isIOScheduler)
+                _threadPool = ThreadPool.Default;
+            else
+            {
+                var numCores = ThreadPoolImpl.GetNumCores();
+                var coreThreads = Math.Max(1, numCores - 1);
+                _threadPool = new ThreadPoolImpl(coreThreads, coreThreads);    
+            }
+            
         }
 
         /// <summary>
