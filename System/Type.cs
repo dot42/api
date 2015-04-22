@@ -99,6 +99,11 @@ namespace System
 	        }
 	    }
 
+        public bool IsInterface
+        {
+            get { return EnsureTypeDef().JavaIsInterface(); }
+        }
+
 	    public bool IsClass
 	    {
 	        get

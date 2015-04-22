@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using Android.Util;
+using Dot42.Collections;
 using Java.Lang;
 using Java.Lang.Reflect;
 using Java.Util;
@@ -14,18 +16,27 @@ namespace Dot42.Internal.Generics
 {
     internal class GenericsReflection
     {
-        private static readonly ConcurrentHashMap<Type, Type[]> TypeInterfaces = new ConcurrentHashMap<Type, Type[]>();
-        private static readonly ConcurrentHashMap<Type, Java.Util.ISet<Type>> TypeInterfacesSet = new ConcurrentHashMap<Type, Java.Util.ISet<Type>>();
-        private static readonly ConcurrentHashMap<Type, Java.Util.ISet<Type>> TypeBaseTypesSet = new ConcurrentHashMap<Type, Java.Util.ISet<Type>>();
+        private class TypeInfo
+        {
+            public Type[] Interfaces;
+            public Java.Util.ISet<Type> InterfacesSet;
+            public Java.Util.ISet<Type> BaseTypes;
+            public Type BaseType;
+            public int GenericArgumentCount;
+            public Field GenericInstanceField;
+        }
+        private static readonly ConcurrentHashMap<Type, TypeInfo> TypeInfoCache = new ConcurrentHashMap<Type, TypeInfo>();
+        
         
         public const char GenericTickChar = '\x2b9'; // (ʹ)
 
         public static int GetGenericArgumentCount(Type type)
         {
-            var info = type.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
-            if (info == null)
+            var info = GetOrCreateGenericsInfo(type);
+
+            if (info.GenericArgumentCount == -1)
                 throw new InvalidOperationException("not a .NET generic type: " + type.FullName);
-            return info.GenericArgumentCount();
+            return info.GenericArgumentCount;
         }
 
         public static bool IsGenericType(Type type)
@@ -33,7 +44,7 @@ namespace Dot42.Internal.Generics
             // Java generic type?
             bool hasTypeParameters = type.GetTypeParameters().Length > 0;
             if (hasTypeParameters) return true;
-
+            
             // Nullable<T>?
             if (NullableReflection.TreatAsSystemNullableT(type))
                 return true;
@@ -42,9 +53,9 @@ namespace Dot42.Internal.Generics
             if (GenericInstanceFactory.IsGenericInstanceType(type))
                 return true;
 
-            // .NET generic type definition
-            var annotation = type.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
-            return annotation != null && annotation.GenericArgumentCount() > 0;
+            // .NET generic type definition?
+            var info = GetOrCreateGenericsInfo(type);
+            return info.GenericArgumentCount > 0;
         }
 
 
@@ -55,10 +66,21 @@ namespace Dot42.Internal.Generics
         /// <returns></returns>
         public static Type GetBaseType(Type type)
         {
-            var ret = GenericInstanceFactory.GetGenericTypeInfo(type);
-            if (ret == null) return type.GetSuperclass();
+            var genericTypeInfo = GenericInstanceFactory.GetGenericTypeInfo(type);
+            if (genericTypeInfo == null)
+            {
+                return type.GetSuperclass();
+            }
 
-            var typeDef = ret.TypeDefinition;
+            var info = GetOrCreateTypeInfo(type);
+
+            var ret = info.BaseType;
+            if (ret != null)
+            {
+                return ret;
+            }
+            
+            var typeDef = genericTypeInfo.TypeDefinition;
             var superclass = typeDef.GetSuperclass();
 
             var annotation = typeDef.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
@@ -70,7 +92,8 @@ namespace Dot42.Internal.Generics
             if (def.Length == 0)
                 return superclass;
 
-            return ToMatchedGenericInstanceType(superclass, type, def);
+            info.BaseType = ret = ToMatchedGenericInstanceType(superclass, type, def);
+            return ret;
         }
 
         /// <summary>
@@ -78,7 +101,10 @@ namespace Dot42.Internal.Generics
         /// </summary>
         public static Type[] GetInterfaces(Type type)
         {
-            Type[] cached = TypeInterfaces.Get(type);
+            var info = GetOrCreateTypeInfo(type);
+
+            Type[] cached = info.Interfaces;
+
             if (cached != null)
                 return cached;
 
@@ -96,14 +122,17 @@ namespace Dot42.Internal.Generics
             {
                 var currentType = toVisit.Poll();
 
-                if (!currentType.IsInterface)
+                var gti = GenericInstanceFactory.GetGenericTypeInfo(currentType);
+
+                bool isInterface = gti != null ? gti.TypeDefinition.JavaIsInterface() : currentType.JavaIsInterface();
+
+                if (!isInterface)
                 {
                     var baseType = currentType.BaseType;
                     if(baseType != null && baseType != typeof(object))
                         toVisit.Add(baseType);
                 }
 
-                var gti = GenericInstanceFactory.GetGenericTypeInfo(currentType);
                 if (gti == null)
                 {
                     AddInterfaces(currentType.JavaGetInterfaces(), ret, toVisit);
@@ -134,8 +163,8 @@ namespace Dot42.Internal.Generics
                 AddInterfaces(interfaces, ret, toVisit);
             }
 
-            cached = ret.Distinct().ToArray();
-            TypeInterfaces.PutIfAbsent(type, cached);
+            cached = new JavaCollectionWrapper<Type>(ret).ToArray();
+            info.Interfaces = cached;
             return cached;
         }
 
@@ -178,11 +207,11 @@ namespace Dot42.Internal.Generics
             if (ret != null)
                 return ret;
 
-            // generic definition? We can only return the number of objects.
-            var annotation = type.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
-            if (annotation != null)
+            var info = GetOrCreateGenericsInfo(type);
+            if (info.GenericArgumentCount > 0)
             {
-                ret = new Type[annotation.GenericArgumentCount()];
+                // generic definition? We can only return the number of objects.
+                ret = new Type[info.GenericArgumentCount];
                 for (int i = 0; i < ret.Length; ++i)
                     ret[i] = typeof(object);
                 return ret;
@@ -336,15 +365,9 @@ namespace Dot42.Internal.Generics
 
         public static bool IsGenericTypeDefinition(Type type)
         {
-            // TODO: think about caching the return value;
+            TypeInfo info = GetOrCreateGenericsInfo(type);
+            return info.GenericArgumentCount > 0;
 
-            if (NullableReflection.TreatAsSystemNullableT(type))
-                return false;
-            if (GenericInstanceFactory.IsGenericInstanceType(type))
-                return false;
-            
-            var annotation = type.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
-            return annotation != null && annotation.GenericArgumentCount() > 0;
         }
 
         public static bool IsAssignableFrom(Type type, Type other)
@@ -369,7 +392,7 @@ namespace Dot42.Internal.Generics
             }
             else
             {
-                var baseTypes = GetBaseTypesSet(other);
+                var baseTypes = GetBaseTypes(other);
                 return baseTypes.Contains(type);
             }
         }
@@ -590,7 +613,9 @@ namespace Dot42.Internal.Generics
 
         private static Java.Util.ISet<Type> GetInterfacesSet(Type type)
         {
-            Java.Util.ISet<Type> ret = TypeInterfacesSet.Get(type);
+            var info = GetOrCreateTypeInfo(type);
+
+            Java.Util.ISet<Type> ret = info.InterfacesSet;
             if (ret != null)
                 return ret;
 
@@ -601,12 +626,19 @@ namespace Dot42.Internal.Generics
             for (int i = 0; i < interfaces.Length; ++i)
                 ret.Add(interfaces[i]);
             
-            return TypeInterfacesSet.PutIfAbsent(type, ret) ?? ret;
+            // No harm if we overwrite an ealier race-calculated value. If we use
+            // Interlocked.CompareExchange the field would get implicit volatile.
+            //return Interlocked.CompareExchange(ref info.InterfacesSet, ret, null) ?? ret;
+            info.InterfacesSet = ret;
+            return ret;
         }
 
-        private static Java.Util.ISet<Type> GetBaseTypesSet(Type type)
+        private static Java.Util.ISet<Type> GetBaseTypes(Type type)
         {
-            Java.Util.ISet<Type> ret = TypeBaseTypesSet.Get(type);
+            var info = GetOrCreateTypeInfo(type);
+
+            Java.Util.ISet<Type> ret = info.BaseTypes;
+            
             if (ret != null)
                 return ret;
 
@@ -615,7 +647,66 @@ namespace Dot42.Internal.Generics
             for (Type baseType = type.BaseType; baseType != null; baseType = baseType.BaseType)
                 ret.Add(baseType);
 
-            return TypeBaseTypesSet.PutIfAbsent(type, ret) ?? ret;
+            //return Interlocked.CompareExchange(ref info.BaseTypes, ret, null) ?? ret;
+            info.BaseTypes = ret;
+            return ret;
+        }
+
+        private static TypeInfo GetOrCreateTypeInfo(Type type)
+        {
+            TypeInfo info = TypeInfoCache.Get(type);
+            if (info == null)
+            {
+                var newInfo = new TypeInfo();
+                info = TypeInfoCache.PutIfAbsent(type, newInfo) ?? newInfo;
+            }
+            return info;
+        }
+
+        private static TypeInfo GetOrCreateGenericsInfo(Type type)
+        {
+            var info = GetOrCreateTypeInfo(type);
+
+            if (info.GenericArgumentCount != 0)
+                return info;
+
+            if (NullableReflection.TreatAsSystemNullableT(type))
+                info.GenericArgumentCount = -1;
+            else if (GenericInstanceFactory.IsGenericInstanceType(type))
+                info.GenericArgumentCount = -1;
+            else
+            {
+                var annotation = type.GetAnnotation<ITypeReflectionInfo>(typeof(ITypeReflectionInfo));
+                var args = annotation != null ? annotation.GenericArgumentCount() : 0;
+                info.GenericArgumentCount = args == 0 ? -1 : args;
+                if (args > 0)
+                {
+                    var fieldName = annotation.GenericArgumentsField();
+                    info.GenericInstanceField = type.JavaGetDeclaredFields()
+                                                    .FirstOrDefault(f => f.Name == fieldName);
+                }
+            }
+
+            return info;
+        }
+
+        public static Type GetReflectionSafeType(Type type, object obj)
+        {
+            // Note: If java had ephemerons, we could cache the return value.
+            //       Without ephemerons, this doesn't seem to be a good idea.
+            var info = GetOrCreateGenericsInfo(type);
+            
+            Field genericsField = info.GenericInstanceField;
+            
+            if (genericsField == null)
+            {
+                return type;
+            }
+            
+            genericsField.IsAccessible = true;
+            Type[] genericParameters = (Type[]) genericsField.Get(obj);
+            
+            return GenericInstanceFactory.GetOrMakeGenericInstanceType(type, genericParameters);
         }
     }
 }

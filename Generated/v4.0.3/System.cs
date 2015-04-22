@@ -5817,6 +5817,16 @@ namespace System
 				}
 
 				/// <java-name>
+				/// isInterface
+				/// </java-name>
+				[Dot42.DexImport("isInterface", "()Z", AccessFlags = 257)]
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				public bool JavaIsInterface() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <java-name>
 				/// newInstance
 				/// </java-name>
 				[Dot42.DexImport("newInstance", "()Ljava/lang/Object;", AccessFlags = 1, Signature = "()TT;")]
@@ -5900,15 +5910,6 @@ namespace System
 				public bool IsArray
 				{
 						[Dot42.DexImport("isArray", "()Z", AccessFlags = 1)]
-						get{ return default(bool); }
-				}
-
-				/// <java-name>
-				/// isInterface
-				/// </java-name>
-				public bool IsInterface
-				{
-						[Dot42.DexImport("isInterface", "()Z", AccessFlags = 257)]
 						get{ return default(bool); }
 				}
 

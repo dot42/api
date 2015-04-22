@@ -18,6 +18,7 @@ using System;
 using System.ComponentModel;
 using Dot42;
 using Dot42.Internal;
+using Dot42.Internal.Generics;
 
 namespace System
 {
@@ -42,9 +43,31 @@ namespace System
         }
 
         /// <summary>
-        /// returns the <ref>System.Type</ref> of the object.
+        /// <para>Returns the unique instance of Class that represents this object's class. Note that <c> getClass() </c> is a special case in that it actually returns <c> Class&lt;? extends Foo&gt; </c> where <c> Foo </c> is the erasure of the type of the expression <c> getClass() </c> was called upon. </para><para>As an example, the following code actually compiles, although one might think it shouldn't: </para><para><pre>         List&lt;Integer&gt; l = new ArrayList&lt;Integer&gt;();
+        /// 
+        ///          Class&lt;? extends List&gt; c = l.getClass(); 
+        /// 
+        ///  </pre></para><para></para>        
         /// </summary>
+        /// <returns>
+        /// <para>this object's <c> Class </c> instance. </para>
+        /// </returns>
+        /// <java-name>
+        /// getClass
+        /// </java-name>
+        [Dot42.DexImport("getClass", "()Ljava/lang/Class;", AccessFlags = 273, Signature = "()Ljava/lang/Class<*>;")]
 	    public Type GetType()
+	    {
+	        return JavaGetClass();
+	    }
+
+        /// <summary>
+        /// In contrast to GetType(), which returns the Java-Runtime type, this method
+        /// returns a type tht can properly be used in reflection: Boxed types return their 
+        /// primitive counterparts, and generic instances have their proper generic 
+        /// information.
+        /// </summary>
+        public Type GetTypeReflectionSafe()
 	    {
             // We have to make sure we return the correct primitive type
             // if the object was boxed.
@@ -71,7 +94,8 @@ namespace System
                 return typeof(float);
             if (type == TypeHelper.DoubleType())
                 return typeof(double);
-	        return type;
+
+            return GenericsReflection.GetReflectionSafeType(type, this);
 	    }
 
 
