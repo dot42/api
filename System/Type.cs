@@ -247,7 +247,7 @@ namespace System
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
         public object[] GetCustomAttributes(bool inherit)
         {
-            return CustomAttributeProvider.GetCustomAttributes(this, inherit);
+            return CustomAttributeProvider.GetCustomAttributes(EnsureTypeDef(), inherit);
         }
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace System
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
         public object[] GetCustomAttributes(Type attributeType, bool inherit)
         {
-            return CustomAttributeProvider.GetCustomAttributes(this, attributeType, inherit);
+            return CustomAttributeProvider.GetCustomAttributes(EnsureTypeDef(), attributeType, inherit);
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace System
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
         public bool IsDefined(Type attributeType, bool inherit)
         {
-            return CustomAttributeProvider.IsDefined(this, attributeType, inherit);
+            return CustomAttributeProvider.IsDefined(EnsureTypeDef(), attributeType, inherit);
         }
 
         /// <summary>
