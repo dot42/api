@@ -22,6 +22,7 @@ using Dot42.Internal;
 using Dot42.Internal.Generics;
 using Java.Lang;
 using Java.Lang.Reflect;
+using Java.Util;
 
 namespace System
 {
@@ -382,18 +383,48 @@ namespace System
             List<PropertyInfo> ret = new List<PropertyInfo>();
 
             Type type = this;
+
+            var isDeclaredOnly = (flags & BindingFlags.DeclaredOnly) != 0;
+            bool isBase = false;
+            Java.Util.HashSet<string> lookedAt = isDeclaredOnly? null : new Java.Util.HashSet<string>();
+            
             
             // we have to walk all the way up.
             while (type != null)
             {
                 foreach (var prop in type.GetDeclaredProperties())
+                {
                     if (IsMatch(prop, flags))
-                        ret.Add(prop);
+                    {
+                        // make sure we don't return overriden properties.
+                        if (!isDeclaredOnly)
+                        {
+                            string getterName = prop.GetMethod != null ? prop.GetMethod.Name : null;
+                            string setterName = prop.SetMethod != null ? prop.SetMethod.Name : null;
+                            if (isBase)
+                            {
+                                if (getterName != null && lookedAt.Contains(getterName))
+                                    continue;
+                                if (setterName != null && lookedAt.Contains(setterName))
+                                    continue;
+                            }
 
-                if ((flags & BindingFlags.DeclaredOnly) != 0)
+                            if (getterName != null)
+                                lookedAt.Add(getterName);
+                            if (setterName != null)
+                                lookedAt.Add(setterName);
+                        }
+
+                        ret.Add(prop);
+                    }
+                }
+
+
+                if (isDeclaredOnly)
                     break;
 
                 type = type.BaseType;
+                isBase = true;
             }
             return ret.ToArray();
         }

@@ -31,11 +31,13 @@
 
 using System;
 using System.Runtime.InteropServices;
+using Dot42;
 
 namespace System.Diagnostics.CodeAnalysis
 {
 	[AttributeUsageAttribute(AttributeTargets.All, Inherited=false, AllowMultiple=true)] 
 	[ConditionalAttribute("CODE_ANALYSIS")]
+    [Ignore]
 	public sealed class SuppressMessageAttribute : Attribute
 	{
 		private String category;
