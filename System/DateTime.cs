@@ -38,12 +38,23 @@ namespace System
 
         // milliseconds between 01.01.0001,00:00:00.000 (Microsoft baseline) and 01.01.1970,00:00:00.000 (Java baseline)
 	    internal const long EraDifferenceInMs = 62135596800000L;
+        private const long MinValueJavaMillies = -62135769600000; // I have no idea why this is different from -EraDifferenceInMs. Who stole the two days?
+
 	    private const int MonthOffset = 1;
 	    private const int YearOffset = 1900;
 	    private const int MillisecondsPerMinute = 60000;
 
 	    private readonly long ticks;
 	    private readonly DateTimeKind kind;
+
+        // Implementation Note:
+        // Java's Date represents milliseconds from the epoch in GMT/UT time, it has no timezone attached.
+        // BLC's  DateTime represents (?) from the epoch either in UTC, localtime, or unspecified.
+        //
+        // A perfect emulation of BCL's DateTime with Java's pre-v8 Date/Calendar implementation 
+        // can not be achieved.
+
+
 
         public DateTime(long ticks)
             :this(ticks, DateTimeKind.Unspecified)
@@ -91,10 +102,20 @@ namespace System
 
         private DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, DateTimeKind kind, bool useSpecifiedKind)
         {
-            var dateTime = FromDate(new Java.Util.Date(year - YearOffset, month - MonthOffset, day, hour, minute, second), DateTimeKind.Unspecified);
-            this.ticks = dateTime.Ticks + TimeSpan.TicksPerMillisecond * millisecond;
-            CheckMinMaxTicks(ticks);
-            this.kind = useSpecifiedKind ? kind : dateTime.Kind;
+            //special handling for DateTime.MinValue, since it would produce an underflow (for some reason not entirely clear to me)
+            if (year == 1 && month == 1 && day == 1 && hour == 0 && minute == 0 && second == 0 && millisecond == 0)
+            {
+                this.ticks = 0L;
+                this.kind = kind;
+            }
+            else
+            {
+                // TODO: think about using Date.UTC when appropriate.
+                var dateTime = FromDate(new Java.Util.Date(year - YearOffset, month - MonthOffset, day, hour, minute, second), DateTimeKind.Unspecified);
+                this.ticks = dateTime.Ticks + TimeSpan.TicksPerMillisecond * millisecond;
+                CheckMinMaxTicks(ticks);
+                this.kind = useSpecifiedKind ? kind : dateTime.Kind;
+            }
         }
 
         //public DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, Calendar calendar, DateTimeKind kind) { }
@@ -661,14 +682,7 @@ namespace System
 
             var locale = provider.ToLocale();
             var invariantLocale = CultureInfo.InvariantCulture.Locale;
-
-            Java.Util.TimeZone timeZone = null;
-
-            if ((style & DateTimeStyles.AssumeLocal) != 0)
-                timeZone = Java.Util.TimeZone.Default;
-            else if ((style & DateTimeStyles.AssumeUniversal) != 0)
-                timeZone = Java.Util.TimeZone.GetTimeZone("UTC");
-
+            var timeZone =  Java.Util.TimeZone.GetTimeZone("UTC");
 
             // Note: this should be optimized in caching the old values, but I'm not 
             //       sure this whole approach is the best right anyway. Exception handling
@@ -683,9 +697,12 @@ namespace System
 
                 try
                 {
-                    DateFormat formatter = new SimpleDateFormat(javaFormat, useInvariant?invariantLocale:locale);
-                    formatter.IsLenient = false;
-                    formatter.TimeZone = timeZone;
+                    DateFormat formatter = new SimpleDateFormat(javaFormat, useInvariant ? invariantLocale : locale)
+                    {
+                        IsLenient = false,
+                        TimeZone = timeZone
+                    };
+                   
 
                     var result = FromParsedDate(formatter.Parse(s), s, style);
                     return result;
@@ -787,13 +804,11 @@ namespace System
 
 	        try
 	        {
-	            DateFormat formatter = new SimpleDateFormat(javaFormat, locale);
-	            formatter.IsLenient = false;
-
-	            if ((style & DateTimeStyles.AssumeUniversal) != 0)
-                    formatter.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
-	            else
-                    formatter.TimeZone = Java.Util.TimeZone.Default;
+	            DateFormat formatter = new SimpleDateFormat(javaFormat, locale)
+	            {
+	                IsLenient = false,
+                    TimeZone = Java.Util.TimeZone.GetTimeZone("UTC")
+	            };
 
 	            Java.Util.Date parsed = formatter.Parse(s);
 
@@ -809,6 +824,64 @@ namespace System
 	            throw new ArgumentException(ex.Message, "s");
 	        }
 	    }
+
+        /// <summary>
+        /// Convert from java based date to DateTime.
+        /// </summary>
+        private static DateTime FromParsedDate(Java.Util.Date value, string originalString, DateTimeStyles style)
+        {
+            bool assumeLocal = (style & DateTimeStyles.AssumeLocal) != 0;
+            bool assumeUtc = (style & DateTimeStyles.AssumeUniversal) != 0;
+            bool roundtripKind = (style & DateTimeStyles.RoundtripKind) != 0;
+
+            var millis = value.Time;
+            var ticks = (millis + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
+
+            //long offset = 0L;
+            DateTimeKind kind;
+
+            if (roundtripKind)
+            {
+                // TODO: this is a hack. find a better way.
+                bool isUtc = originalString.EndsWith("Z");
+                if (isUtc)
+                    kind = DateTimeKind.Utc;
+                else
+                {
+                    // don't kow how to preserve local.
+                    kind = DateTimeKind.Unspecified;
+                }
+            }
+            else if (assumeUtc)
+            {
+                kind = DateTimeKind.Utc;
+            }
+            else if (assumeLocal)
+            {
+                kind = DateTimeKind.Local;
+            }
+            else
+            {
+                kind = DateTimeKind.Unspecified;
+            }
+
+            DateTime result;
+
+            if (millis == MinValueJavaMillies)
+                result = new DateTime(0L, kind);
+            else
+            {
+                result = new DateTime(ticks, kind);
+            }
+
+
+            if ((style & DateTimeStyles.AdjustToUniversal) != 0)
+                result = result.ToUniversalTime();
+            else if (assumeUtc) // no typo, but bad naming/semantics in the BCL
+                result = result.ToLocalTime();
+
+            return result;
+        }
 
         //
         // Summary:
@@ -1023,7 +1096,7 @@ namespace System
                     return SpecifyKind(MinValue, DateTimeKind.Local);
             }
 
-            return SpecifyKind(Add(utcOffset), DateTimeKind.Local);
+            return new DateTime(ticks + utcOffset.Ticks, DateTimeKind.Local);
         }
 
         //
@@ -1196,7 +1269,7 @@ namespace System
                     return SpecifyKind(MinValue, DateTimeKind.Utc);
             }
 
-            return SpecifyKind(Subtract(offset), DateTimeKind.Utc);
+            return new DateTime(ticks - offset.Ticks, DateTimeKind.Utc);
         }
 
 
@@ -1395,11 +1468,23 @@ namespace System
         /// </summary>
         public Java.Util.Date ToDate()
         {
-            var millis = (ticks / TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
-            
+            long millis;
+
+            // special handling for DateTime.MinValue, to avoid incorrect calculations
+            // due to subtle differences in how dates are calculates in Java and C# (which
+            // I don't entirely understand)
+
+            if (ticks == 0)
+            {
+                millis = MinValueJavaMillies;
+            }
+            else
+            {
+                millis = (ticks/TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
+            }
             long offsetInMs = (long)0;
 
-            if(kind != DateTimeKind.Utc)
+            if (kind != DateTimeKind.Utc)
                 offsetInMs = JavaGetOffsetInMs(millis);
 
             return new Date(millis - offsetInMs);
@@ -1409,27 +1494,35 @@ namespace System
         {
             var calender = new Java.Util.GregorianCalendar();
 
-            var millis = (ticks / TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
-            long offsetInMs = (long)0;
-
-            if (kind != DateTimeKind.Utc)
+            if (ticks == 0)
             {
-                offsetInMs = JavaGetOffsetInMs(millis);
-                calender.TimeZone = (Java.Util.TimeZone.Default);
+                // always use UTC for DateTime.MinValue, is this correct?
+                calender.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
+                calender.TimeInMillis = MinValueJavaMillies;
             }
             else
             {
-                calender.TimeZone = (Java.Util.TimeZone.GetTimeZone("UTC"));
+                var millis = (ticks/TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
+                long offsetInMs = (long) 0;
+
+                if (kind != DateTimeKind.Utc)
+                {
+                    offsetInMs = JavaGetOffsetInMs(millis);
+                    calender.TimeZone = (Java.Util.TimeZone.Default);
+                }
+                else
+                {
+                    calender.TimeZone = (Java.Util.TimeZone.GetTimeZone("UTC"));
+                }
+
+                calender.TimeInMillis = (millis - offsetInMs);
             }
-
-            calender.TimeInMillis = (millis - offsetInMs);
-
             return calender;
         }
 
         private static long JavaGetOffsetInMs(long millies)
         {
-            return Java.Util.TimeZone.Default.GetOffset(millies);
+            return (long)Java.Util.TimeZone.Default.GetOffset(millies);
         }
 
         /// <summary>
@@ -1446,59 +1539,13 @@ namespace System
         /// <param name="millis">milliseconds since Jan 1, 1970, midnight GMT</param>
         public static DateTime FromDate(long millis, DateTimeKind kind)
         {
-            long offsetInMs = (long)0;
+            long offsetInMs = 0L;
 
             if (kind != DateTimeKind.Utc)
                 offsetInMs = JavaGetOffsetInMs(millis);
 
             var ticks = ((millis + offsetInMs) + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
             return new DateTime(ticks, kind);
-        }
-
-
-	    /// <summary>
-        /// Convert from java based date to DateTime.
-        /// </summary>
-        public static DateTime FromParsedDate(Java.Util.Date value, string originalString, DateTimeStyles style)
-        {
-            bool assumeLocal = (style & DateTimeStyles.AssumeLocal) != 0;
-            bool assumeUtc = (style & DateTimeStyles.AssumeUniversal) != 0;
-            bool roundtripKind = (style & DateTimeStyles.RoundtripKind) != 0;
-
-            var millis = value.Time;
-            var ticks = (millis + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
-
-            DateTime result;
-
-            if(roundtripKind)
-            {
-                // TODO: this is a hack. find a better way.
-                bool isUtc = originalString.EndsWith("Z");
-                if (isUtc)
-                    result = new DateTime(ticks, DateTimeKind.Utc);
-                else
-                {
-                    // don't kow how to preserve local.
-                    var offsetInTicks = JavaGetOffsetInMs(millis) * TimeSpan.TicksPerMillisecond;
-                    result = new DateTime(ticks + offsetInTicks, DateTimeKind.Unspecified);    
-                }
-            }
-            else if (!assumeUtc)
-            {
-                var offsetInTicks = JavaGetOffsetInMs(millis) * TimeSpan.TicksPerMillisecond;
-                result = new DateTime(ticks + offsetInTicks, assumeLocal?DateTimeKind.Local:DateTimeKind.Unspecified);
-            }
-            else 
-            {
-                result = new DateTime(ticks, DateTimeKind.Utc);
-            }
-            
-            if ((style & DateTimeStyles.AdjustToUniversal) != 0)
-                result = result.ToUniversalTime();
-            else if(assumeUtc)
-                result = result.ToLocalTime();
-
-            return result;
         }
     }
 }
