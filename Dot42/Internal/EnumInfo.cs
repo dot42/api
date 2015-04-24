@@ -47,7 +47,7 @@ namespace Dot42.Internal
         /// Gets a value with the given underlying value.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        internal Enum GetValue(int value)
+        public Enum GetValue(int value)
         {
             var result = customValues.Get(value);
             if (ReferenceEquals(result, null))
@@ -62,7 +62,7 @@ namespace Dot42.Internal
         /// Gets a value with the given underlying value.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        internal Enum GetValue(long value)
+        public Enum GetValue(long value)
         {
             var result = customValues.Get(value);
             if (ReferenceEquals(result, null))
@@ -78,7 +78,7 @@ namespace Dot42.Internal
         /// Add a given instance.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        internal void Add(int value, Enum instance)
+        public void Add(int value, Enum instance)
         {
             customValues.Put(value, instance);
                         
@@ -88,7 +88,7 @@ namespace Dot42.Internal
         /// Add a given instance.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        internal void Add(long value, Enum instance)
+        public void Add(long value, Enum instance)
         {
             customValues.Put(value, instance);
         }
