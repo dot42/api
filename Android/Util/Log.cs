@@ -77,7 +77,7 @@ namespace Android.Util
         }
     }
 
-    public class LogPriority
+    public static class LogPriority
     {
         public const int Verbose = Log.VERBOSE;
         public const int Debug   = Log.DEBUG;

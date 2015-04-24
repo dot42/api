@@ -149,12 +149,15 @@ namespace System.Threading
             if (milliseconds == -1 && token == CancellationToken.None)
             {
                 _sem.AcquireUninterruptibly();
+                CheckDisposed();
+                VerboseLog("{0:000}|{1}|sync wait complete.", Thread.CurrentThread.Id, id);
                 return true;
             }
             if (token == CancellationToken.None)
             {
                 var ret = _sem.TryAcquire(milliseconds, TimeUnit.MILLISECONDS);
                 CheckDisposed();
+                VerboseLog("{0:000}|{1}|sync wait complete: {2}", Thread.CurrentThread.Id, id, ret);
                 return ret;
             }
 
@@ -166,11 +169,13 @@ namespace System.Threading
                 {
                     var ret = _sem.TryAcquire(milliseconds, TimeUnit.MILLISECONDS);
                     CheckDisposed();
+                    VerboseLog("{0:000}|{1}|sync wait complete: {2}", Thread.CurrentThread.Id, id, ret);
                     return ret;
                 }
             }
             catch (Java.Lang.InterruptedException ex)
             {
+                VerboseLog("{0:000}|{1}|sync wait cancelled", Thread.CurrentThread.Id, id);
                 throw new OperationCanceledException("operation cancelled", ex, token);
             }
         }
@@ -253,7 +258,10 @@ namespace System.Threading
         private void CheckDisposed()
         {
             if (_wasDisposed)
+            {
+                VerboseLog("{0:000}|{1}|sync semaphore disposed.", Thread.CurrentThread.Id, id);
                 throw new ObjectDisposedException(GetType().Name);
+            }
         }
 
         private class AsyncWaiter

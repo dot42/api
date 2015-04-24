@@ -286,7 +286,7 @@
     <Compile Include="Android\Opengl\GLSurfaceView.cs" />
     <Compile Include="Android\OS\AsyncTask.cs" />
     <Compile Include="Android\OS\Handler.cs" />
-    <Compile Include="Android\OS\HandlerFuncCallback.cs" />
+    <Compile Include="Dot42\Internal\Threading\HandlerFuncCallback.cs" />
     <Compile Include="Android\OS\Message.cs" />
     <Compile Include="Android\Test\InstrumentationTestCase.cs" />
     <Compile Include="Android\Views\ViewGroup.cs" />

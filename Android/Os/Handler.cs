@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using Dot42.Internal.Threading;
 
 namespace Android.OS
 {
