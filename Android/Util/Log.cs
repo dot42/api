@@ -5,15 +5,17 @@ namespace Android.Util
 {
     public partial class Log
     {
+        private const string Null = @"(null)";
+
         [StringFormatMethod("format")]
         public static void Verbose(string tag, string format, params object[] args)
         {
             V(tag, Format(format, args));
         }
 
-        public static void Verbose(string tag, string format)
+        public static void Verbose(string tag, object obj)
         {
-            V(tag, format);
+            V(tag, (obj ?? Null).ToString());
         }
 
         [StringFormatMethod("format")]
@@ -22,9 +24,9 @@ namespace Android.Util
             D(tag, Format(format, args));
         }
 
-        public static void Debug(string tag, string format)
+        public static void Debug(string tag, object obj)
         {
-            D(tag, format);
+            D(tag, (obj ?? Null).ToString());
         }
 
         [StringFormatMethod("format")]
@@ -33,9 +35,9 @@ namespace Android.Util
             I(tag, Format(format, args));
         }
 
-        public static void Info(string tag, string format)
+        public static void Info(string tag, object obj)
         {
-            I(tag, format);
+            I(tag, (obj??Null).ToString());
         }
 
         [StringFormatMethod("format")]
@@ -44,9 +46,9 @@ namespace Android.Util
             W(tag, Format(format, args));
         }
 
-        public static void Warn(string tag, string format)
+        public static void Warn(string tag, object obj)
         {
-            W(tag, format);
+            W(tag, (obj ?? Null).ToString());
         }
 
         [StringFormatMethod("format")]
@@ -55,9 +57,9 @@ namespace Android.Util
             E(tag, Format(format, args));
         }
 
-        public static void Error(string tag, string format)
+        public static void Error(string tag, object obj)
         {
-            E(tag, format);
+            E(tag, (obj ?? Null).ToString());
         }
 
         // ignore formatting errors; this is logging!
