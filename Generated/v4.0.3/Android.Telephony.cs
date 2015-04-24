@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Android.Telephony
 {
+		/// <summary>
+		///  <para>Abstract class that represents the location of the device. {} </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/CellLocation
 		/// </java-name>
@@ -13,6 +16,9 @@ namespace Android.Telephony
 				{
 				}
 
+				/// <summary>
+				///  <para>Request an update of the current location. If the location has changed, a broadcast will be sent to everyone registered with PhoneStateListener#LISTEN_CELL_LOCATION. </para>        
+				/// </summary>
 				/// <java-name>
 				/// requestLocationUpdate
 				/// </java-name>
@@ -21,6 +27,9 @@ namespace Android.Telephony
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a new CellLocation object representing an unknown location, or null for unknown/none phone radio types. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getEmpty
 				/// </java-name>
@@ -32,6 +41,9 @@ namespace Android.Telephony
 
 		}
 
+		/// <summary>
+		///  <para>Represents the neighboring cell information, including Received Signal Strength and Cell ID location. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/NeighboringCellInfo
 		/// </java-name>
@@ -39,11 +51,17 @@ namespace Android.Telephony
 		public partial class NeighboringCellInfo : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Signal strength is not available </para>        
+				/// </summary>
 				/// <java-name>
 				/// UNKNOWN_RSSI
 				/// </java-name>
 				[Dot42.DexImport("UNKNOWN_RSSI", "I", AccessFlags = 25)]
 				public const int UNKNOWN_RSSI = 99;
+				/// <summary>
+				///  <para>Cell location is not available </para>        
+				/// </summary>
 				/// <java-name>
 				/// UNKNOWN_CID
 				/// </java-name>
@@ -54,23 +72,35 @@ namespace Android.Telephony
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
 				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Telephony.NeighboringCellInfo> CREATOR;
+				/// <summary>
+				///  <para>Empty constructor. Initializes the RSSI and CID.</para> <para>NeighboringCellInfo is one time shot for the neighboring cells based on the radio network type at that moment. Its constructor needs radio network type.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>by NeighboringCellInfo(int, String, int) </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public NeighboringCellInfo() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Initialize the object from rssi and cid.</para> <para>NeighboringCellInfo is one time shot for the neighboring cells based on the radio network type at that moment. Its constructor needs radio network type.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>by NeighboringCellInfo(int, String, int) </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
-				public NeighboringCellInfo(int int32, int int321) /* MethodBuilder.Create */ 
+				public NeighboringCellInfo(int rssi, int cid) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Initialize the object from rssi, location string, and radioType radioType is one of following TelephonyManager.NETWORK_TYPE_GPRS, TelephonyManager.NETWORK_TYPE_EDGE, TelephonyManager.NETWORK_TYPE_UMTS, TelephonyManager.NETWORK_TYPE_HSDPA, TelephonyManager.NETWORK_TYPE_HSUPA, and TelephonyManager.NETWORK_TYPE_HSPA. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(ILjava/lang/String;I)V", AccessFlags = 1)]
-				public NeighboringCellInfo(int int32, string @string, int int321) /* MethodBuilder.Create */ 
+				public NeighboringCellInfo(int rssi, string location, int radioType) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Initialize the object from a parcel. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public NeighboringCellInfo(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public NeighboringCellInfo(global::Android.OS.Parcel @in) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -83,6 +113,12 @@ namespace Android.Telephony
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -92,14 +128,23 @@ namespace Android.Telephony
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>For GSM, it is in "asu" ranging from 0 to 31 (dBm = -113 + 2*asu) 0 means "-113 dBm or less" and 31 means "-51 dBm or greater" For UMTS, it is the Level index of CPICH RSCP defined in TS 25.125 </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>received signal strength or UNKNOWN_RSSI if unknown</para>
+				/// </returns>
 				/// <java-name>
 				/// getRssi
 				/// </java-name>
@@ -111,6 +156,12 @@ namespace Android.Telephony
 						set{ }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>LAC in GSM, 0xffff max legal value UNKNOWN_CID if in UMTS or CMDA or unknown </para>
+				/// </returns>
 				/// <java-name>
 				/// getLac
 				/// </java-name>
@@ -120,6 +171,12 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>cell id in GSM, 0xffff max legal value UNKNOWN_CID if in UMTS or CDMA or unknown </para>
+				/// </returns>
 				/// <java-name>
 				/// getCid
 				/// </java-name>
@@ -131,6 +188,12 @@ namespace Android.Telephony
 						set{ }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>Primary Scrambling Code in 9 bits format in UMTS, 0x1ff max value UNKNOWN_CID if in GSM or CMDA or unknown </para>
+				/// </returns>
 				/// <java-name>
 				/// getPsc
 				/// </java-name>
@@ -140,6 +203,12 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Return TelephonyManager.NETWORK_TYPE_UNKNOWN means that the location information is unavailable.</para> <para>Return TelephonyManager.NETWORK_TYPE_GPRS or TelephonyManager.NETWORK_TYPE_EDGE means that Neighboring Cell information is stored for GSM network, in which NeighboringCellInfo.getLac and NeighboringCellInfo.getCid should be called to access location.</para> <para>Return TelephonyManager.NETWORK_TYPE_UMTS, TelephonyManager.NETWORK_TYPE_HSDPA, TelephonyManager.NETWORK_TYPE_HSUPA, or TelephonyManager.NETWORK_TYPE_HSPA means that Neighboring Cell information is stored for UMTS network, in which NeighboringCellInfo.getPsc should be called to access location. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>Radio network type while neighboring cell location is stored.</para>
+				/// </returns>
 				/// <java-name>
 				/// getNetworkType
 				/// </java-name>
@@ -151,6 +220,9 @@ namespace Android.Telephony
 
 		}
 
+		/// <summary>
+		///  <para>Watches a android.widget.TextView and if a phone number is entered will format it. </para> <para>Stop formatting when the user  <ul> <li> <para>Inputs non-dialable characters </para></li> <li> <para>Removes the separator in the middle of string. </para></li></ul></para> <para>The formatting will be restarted once the text is cleared. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/PhoneNumberFormattingTextWatcher
 		/// </java-name>
@@ -158,37 +230,52 @@ namespace Android.Telephony
 		public partial class PhoneNumberFormattingTextWatcher : global::Android.Text.ITextWatcher
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The formatting is based on the current system locale and future locale changes may not take effect on this instance. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public PhoneNumberFormattingTextWatcher() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>This method is called to notify you that, within  <code>s</code>, the  <code>count</code> characters beginning at  <code>start</code> are about to be replaced by new text with length  <code>after</code>. It is an error to attempt to make changes to  <code>s</code> from this callback. </para>        
+				/// </summary>
 				/// <java-name>
 				/// beforeTextChanged
 				/// </java-name>
 				[Dot42.DexImport("beforeTextChanged", "(Ljava/lang/CharSequence;III)V", AccessFlags = 1)]
-				public virtual void BeforeTextChanged(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public virtual void BeforeTextChanged(global::Java.Lang.ICharSequence s, int start, int count, int after) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>This method is called to notify you that, within  <code>s</code>, the  <code>count</code> characters beginning at  <code>start</code> have just replaced old text that had length  <code>before</code>. It is an error to attempt to make changes to  <code>s</code> from this callback. </para>        
+				/// </summary>
 				/// <java-name>
 				/// onTextChanged
 				/// </java-name>
 				[Dot42.DexImport("onTextChanged", "(Ljava/lang/CharSequence;III)V", AccessFlags = 1)]
-				public virtual void OnTextChanged(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public virtual void OnTextChanged(global::Java.Lang.ICharSequence s, int start, int before, int count) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>This method is called to notify you that, somewhere within  <code>s</code>, the text has been changed. It is legitimate to make further changes to  <code>s</code> from this callback, but be careful not to get yourself into an infinite loop, because any changes you make will cause this method to be called again recursively. (You are not told where the change took place because other afterTextChanged() methods may already have made other changes and invalidated the offsets. But if you need to know here, you can use Spannable#setSpan in onTextChanged to mark your place and then look up from here where the span ended up. </para>        
+				/// </summary>
 				/// <java-name>
 				/// afterTextChanged
 				/// </java-name>
 				[Dot42.DexImport("afterTextChanged", "(Landroid/text/Editable;)V", AccessFlags = 33)]
-				public virtual void AfterTextChanged(global::Android.Text.IEditable editable) /* MethodBuilder.Create */ 
+				public virtual void AfterTextChanged(global::Android.Text.IEditable s) /* MethodBuilder.Create */ 
 				{
 				}
 
 		}
 
+		/// <summary>
+		///  <para>Various utilities for dealing with phone number strings. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/PhoneNumberUtils
 		/// </java-name>
@@ -221,16 +308,25 @@ namespace Android.Telephony
 				/// </java-name>
 				[Dot42.DexImport("TOA_Unknown", "I", AccessFlags = 25)]
 				public const int TOA_Unknown = 129;
+				/// <summary>
+				///  <para>The current locale is unknown, look for a country code or don't format </para>        
+				/// </summary>
 				/// <java-name>
 				/// FORMAT_UNKNOWN
 				/// </java-name>
 				[Dot42.DexImport("FORMAT_UNKNOWN", "I", AccessFlags = 25)]
 				public const int FORMAT_UNKNOWN = 0;
+				/// <summary>
+				///  <para>NANP formatting </para>        
+				/// </summary>
 				/// <java-name>
 				/// FORMAT_NANP
 				/// </java-name>
 				[Dot42.DexImport("FORMAT_NANP", "I", AccessFlags = 25)]
 				public const int FORMAT_NANP = 1;
+				/// <summary>
+				///  <para>Japanese formatting </para>        
+				/// </summary>
 				/// <java-name>
 				/// FORMAT_JAPAN
 				/// </java-name>
@@ -241,20 +337,26 @@ namespace Android.Telephony
 				{
 				}
 
+				/// <summary>
+				///  <para>True if c is ISO-LATIN characters 0-9 </para>        
+				/// </summary>
 				/// <java-name>
 				/// isISODigit
 				/// </java-name>
 				[Dot42.DexImport("isISODigit", "(C)Z", AccessFlags = 9)]
-				public static bool IsISODigit(char @char) /* MethodBuilder.Create */ 
+				public static bool IsISODigit(char c) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>True if c is ISO-LATIN characters 0-9, *, # </para>        
+				/// </summary>
 				/// <java-name>
 				/// is12Key
 				/// </java-name>
 				[Dot42.DexImport("is12Key", "(C)Z", AccessFlags = 25)]
-				public static bool Is12Key(char @char) /* MethodBuilder.Create */ 
+				public static bool Is12Key(char c) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -268,11 +370,14 @@ namespace Android.Telephony
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>True if c is ISO-LATIN characters 0-9, *, # , + (no WILD) </para>        
+				/// </summary>
 				/// <java-name>
 				/// isReallyDialable
 				/// </java-name>
 				[Dot42.DexImport("isReallyDialable", "(C)Z", AccessFlags = 25)]
-				public static bool IsReallyDialable(char @char) /* MethodBuilder.Create */ 
+				public static bool IsReallyDialable(char c) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -286,15 +391,24 @@ namespace Android.Telephony
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>This any anything to the right of this char is part of the post-dial string (eg this is PAUSE or WAIT) </para>        
+				/// </summary>
 				/// <java-name>
 				/// isStartsPostDial
 				/// </java-name>
 				[Dot42.DexImport("isStartsPostDial", "(C)Z", AccessFlags = 25)]
-				public static bool IsStartsPostDial(char @char) /* MethodBuilder.Create */ 
+				public static bool IsStartsPostDial(char c) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Extracts the phone number from an Intent.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the phone number that would be called by the intent, or  <code>null</code> if the number cannot be found. </para>
+				/// </returns>
 				/// <java-name>
 				/// getNumberFromIntent
 				/// </java-name>
@@ -304,38 +418,53 @@ namespace Android.Telephony
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Extracts the network address portion and canonicalizes (filters out separators.) Network address portion is everything up to DTMF control digit separators (pause or wait), but without non-dialable characters.</para> <para>Please note that the GSM wild character is allowed in the result. This must be resolved before dialing.</para> <para>Returns null if phoneNumber == null </para>        
+				/// </summary>
 				/// <java-name>
 				/// extractNetworkPortion
 				/// </java-name>
 				[Dot42.DexImport("extractNetworkPortion", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string ExtractNetworkPortion(string @string) /* MethodBuilder.Create */ 
+				public static string ExtractNetworkPortion(string phoneNumber) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Strips separators from a phone number string. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>phone string stripped of separators. </para>
+				/// </returns>
 				/// <java-name>
 				/// stripSeparators
 				/// </java-name>
 				[Dot42.DexImport("stripSeparators", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string StripSeparators(string @string) /* MethodBuilder.Create */ 
+				public static string StripSeparators(string phoneNumber) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Extracts the post-dial sequence of DTMF control digits, pauses, and waits. Strips separators. This string may be empty, but will not be null unless phoneNumber == null.</para> <para>Returns null if phoneNumber == null </para>        
+				/// </summary>
 				/// <java-name>
 				/// extractPostDialPortion
 				/// </java-name>
 				[Dot42.DexImport("extractPostDialPortion", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string ExtractPostDialPortion(string @string) /* MethodBuilder.Create */ 
+				public static string ExtractPostDialPortion(string phoneNumber) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Compare phone numbers a and b, return true if they're identical enough for caller ID purposes. </para>        
+				/// </summary>
 				/// <java-name>
 				/// compare
 				/// </java-name>
 				[Dot42.DexImport("compare", "(Ljava/lang/String;Ljava/lang/String;)Z", AccessFlags = 9)]
-				public static bool Compare(string @string, string string1) /* MethodBuilder.Create */ 
+				public static bool Compare(string a, string b) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -349,83 +478,116 @@ namespace Android.Telephony
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns the rightmost MIN_MATCH (5) characters in the network portion in *reversed* order</para> <para>This can be used to do a database lookup against the column that stores getStrippedReversed()</para> <para>Returns null if phoneNumber == null </para>        
+				/// </summary>
 				/// <java-name>
 				/// toCallerIDMinMatch
 				/// </java-name>
 				[Dot42.DexImport("toCallerIDMinMatch", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string ToCallerIDMinMatch(string @string) /* MethodBuilder.Create */ 
+				public static string ToCallerIDMinMatch(string phoneNumber) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Returns the network portion reversed. This string is intended to go into an index column for a database lookup.</para> <para>Returns null if phoneNumber == null </para>        
+				/// </summary>
 				/// <java-name>
 				/// getStrippedReversed
 				/// </java-name>
 				[Dot42.DexImport("getStrippedReversed", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetStrippedReversed(string @string) /* MethodBuilder.Create */ 
+				public static string GetStrippedReversed(string phoneNumber) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Basically: makes sure there's a + in front of a TOA_International number</para> <para>Returns null if s == null </para>        
+				/// </summary>
 				/// <java-name>
 				/// stringFromStringAndTOA
 				/// </java-name>
 				[Dot42.DexImport("stringFromStringAndTOA", "(Ljava/lang/String;I)Ljava/lang/String;", AccessFlags = 9)]
-				public static string StringFromStringAndTOA(string @string, int int32) /* MethodBuilder.Create */ 
+				public static string StringFromStringAndTOA(string s, int TOA) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Returns the TOA for the given dial string Basically, returns TOA_International if there's a + prefix </para>        
+				/// </summary>
 				/// <java-name>
 				/// toaFromString
 				/// </java-name>
 				[Dot42.DexImport("toaFromString", "(Ljava/lang/String;)I", AccessFlags = 9)]
-				public static int ToaFromString(string @string) /* MethodBuilder.Create */ 
+				public static int ToaFromString(string s) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>3GPP TS 24.008 10.5.4.7 Called Party BCD Number</para> <para>See Also TS 51.011 10.5.1 "dialing number/ssc string" and TS 11.11 "10.3.1 EF adn (Abbreviated dialing numbers)"</para> <para>FIXME(mkf) support alphanumeric address type currently implemented in SMSMessage.getAddress() </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>partial string on invalid decode</para>
+				/// </returns>
 				/// <java-name>
 				/// calledPartyBCDToString
 				/// </java-name>
 				[Dot42.DexImport("calledPartyBCDToString", "([BII)Ljava/lang/String;", AccessFlags = 9)]
-				public static string CalledPartyBCDToString(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+				public static string CalledPartyBCDToString(sbyte[] bytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>3GPP TS 24.008 10.5.4.7 Called Party BCD Number</para> <para>See Also TS 51.011 10.5.1 "dialing number/ssc string" and TS 11.11 "10.3.1 EF adn (Abbreviated dialing numbers)"</para> <para>FIXME(mkf) support alphanumeric address type currently implemented in SMSMessage.getAddress() </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>partial string on invalid decode</para>
+				/// </returns>
 				/// <java-name>
 				/// calledPartyBCDToString
 				/// </java-name>
 				[Dot42.DexImport("calledPartyBCDToString", "([BII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
-				public static string CalledPartyBCDToString(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+				public static string CalledPartyBCDToString(byte[] bytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Like calledPartyBCDToString, but field does not start with a TOA byte. For example: SIM ADN extension fields </para>        
+				/// </summary>
 				/// <java-name>
 				/// calledPartyBCDFragmentToString
 				/// </java-name>
 				[Dot42.DexImport("calledPartyBCDFragmentToString", "([BII)Ljava/lang/String;", AccessFlags = 9)]
-				public static string CalledPartyBCDFragmentToString(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
+				public static string CalledPartyBCDFragmentToString(sbyte[] bytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Like calledPartyBCDToString, but field does not start with a TOA byte. For example: SIM ADN extension fields </para>        
+				/// </summary>
 				/// <java-name>
 				/// calledPartyBCDFragmentToString
 				/// </java-name>
 				[Dot42.DexImport("calledPartyBCDFragmentToString", "([BII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
-				public static string CalledPartyBCDFragmentToString(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
+				public static string CalledPartyBCDFragmentToString(byte[] bytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Return true iff the network portion of  <code>address</code> is, as far as we can tell on the device, suitable for use as an SMS destination address. </para>        
+				/// </summary>
 				/// <java-name>
 				/// isWellFormedSmsAddress
 				/// </java-name>
 				[Dot42.DexImport("isWellFormedSmsAddress", "(Ljava/lang/String;)Z", AccessFlags = 9)]
-				public static bool IsWellFormedSmsAddress(string @string) /* MethodBuilder.Create */ 
+				public static bool IsWellFormedSmsAddress(string address) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -434,74 +596,110 @@ namespace Android.Telephony
 				/// isGlobalPhoneNumber
 				/// </java-name>
 				[Dot42.DexImport("isGlobalPhoneNumber", "(Ljava/lang/String;)Z", AccessFlags = 9)]
-				public static bool IsGlobalPhoneNumber(string @string) /* MethodBuilder.Create */ 
+				public static bool IsGlobalPhoneNumber(string phoneNumber) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Note: calls extractNetworkPortion(), so do not use for SIM EF[ADN] style records</para> <para>Returns null if network portion is empty. </para>        
+				/// </summary>
 				/// <java-name>
 				/// networkPortionToCalledPartyBCD
 				/// </java-name>
 				[Dot42.DexImport("networkPortionToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9)]
-				public static sbyte[] JavaNetworkPortionToCalledPartyBCD(string @string) /* MethodBuilder.Create */ 
+				public static sbyte[] JavaNetworkPortionToCalledPartyBCD(string s) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Note: calls extractNetworkPortion(), so do not use for SIM EF[ADN] style records</para> <para>Returns null if network portion is empty. </para>        
+				/// </summary>
 				/// <java-name>
 				/// networkPortionToCalledPartyBCD
 				/// </java-name>
 				[Dot42.DexImport("networkPortionToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
-				public static byte[] NetworkPortionToCalledPartyBCD(string @string) /* MethodBuilder.Create */ 
+				public static byte[] NetworkPortionToCalledPartyBCD(string s) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
 				}
 
+				/// <summary>
+				///  <para>Same as networkPortionToCalledPartyBCD, but includes a one-byte length prefix. </para>        
+				/// </summary>
 				/// <java-name>
 				/// networkPortionToCalledPartyBCDWithLength
 				/// </java-name>
 				[Dot42.DexImport("networkPortionToCalledPartyBCDWithLength", "(Ljava/lang/String;)[B", AccessFlags = 9)]
-				public static sbyte[] JavaNetworkPortionToCalledPartyBCDWithLength(string @string) /* MethodBuilder.Create */ 
+				public static sbyte[] JavaNetworkPortionToCalledPartyBCDWithLength(string s) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Same as networkPortionToCalledPartyBCD, but includes a one-byte length prefix. </para>        
+				/// </summary>
 				/// <java-name>
 				/// networkPortionToCalledPartyBCDWithLength
 				/// </java-name>
 				[Dot42.DexImport("networkPortionToCalledPartyBCDWithLength", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
-				public static byte[] NetworkPortionToCalledPartyBCDWithLength(string @string) /* MethodBuilder.Create */ 
+				public static byte[] NetworkPortionToCalledPartyBCDWithLength(string s) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
 				}
 
+				/// <summary>
+				///  <para>Convert a dialing number to BCD byte array</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>BCD byte array </para>
+				/// </returns>
 				/// <java-name>
 				/// numberToCalledPartyBCD
 				/// </java-name>
 				[Dot42.DexImport("numberToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9)]
-				public static sbyte[] JavaNumberToCalledPartyBCD(string @string) /* MethodBuilder.Create */ 
+				public static sbyte[] JavaNumberToCalledPartyBCD(string number) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Convert a dialing number to BCD byte array</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>BCD byte array </para>
+				/// </returns>
 				/// <java-name>
 				/// numberToCalledPartyBCD
 				/// </java-name>
 				[Dot42.DexImport("numberToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
-				public static byte[] NumberToCalledPartyBCD(string @string) /* MethodBuilder.Create */ 
+				public static byte[] NumberToCalledPartyBCD(string number) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
 				}
 
+				/// <summary>
+				///  <para>Breaks the given number down and formats it according to the rules for the country the number is from.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>A locally acceptable formatting of the input, or the raw input if formatting rules aren't known for the number </para>
+				/// </returns>
 				/// <java-name>
 				/// formatNumber
 				/// </java-name>
 				[Dot42.DexImport("formatNumber", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string FormatNumber(string @string) /* MethodBuilder.Create */ 
+				public static string FormatNumber(string source) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Returns the phone number formatting type for the given locale.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>The formatting type for the given locale, or FORMAT_UNKNOWN if the formatting rules are not known for the given locale </para>
+				/// </returns>
 				/// <java-name>
 				/// getFormatTypeForLocale
 				/// </java-name>
@@ -511,50 +709,74 @@ namespace Android.Telephony
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Formats a phone number in-place. Currently FORMAT_JAPAN and FORMAT_NANP is supported as a second argument.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// formatNumber
 				/// </java-name>
 				[Dot42.DexImport("formatNumber", "(Landroid/text/Editable;I)V", AccessFlags = 9)]
-				public static void FormatNumber(global::Android.Text.IEditable editable, int int32) /* MethodBuilder.Create */ 
+				public static void FormatNumber(global::Android.Text.IEditable text, int defaultFormattingType) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Formats a phone number in-place using the NANP formatting rules. Numbers will be formatted as:</para> <para> <code> xxxxx xxx-xxxx xxx-xxx-xxxx 1-xxx-xxx-xxxx +1-xxx-xxx-xxxx </code></para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// formatNanpNumber
 				/// </java-name>
 				[Dot42.DexImport("formatNanpNumber", "(Landroid/text/Editable;)V", AccessFlags = 9)]
-				public static void FormatNanpNumber(global::Android.Text.IEditable editable) /* MethodBuilder.Create */ 
+				public static void FormatNanpNumber(global::Android.Text.IEditable text) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Formats a phone number in-place using the Japanese formatting rules. Numbers will be formatted as:</para> <para> <code> 03-xxxx-xxxx 090-xxxx-xxxx 0120-xxx-xxx +81-3-xxxx-xxxx +81-90-xxxx-xxxx </code></para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// formatJapaneseNumber
 				/// </java-name>
 				[Dot42.DexImport("formatJapaneseNumber", "(Landroid/text/Editable;)V", AccessFlags = 9)]
-				public static void FormatJapaneseNumber(global::Android.Text.IEditable editable) /* MethodBuilder.Create */ 
+				public static void FormatJapaneseNumber(global::Android.Text.IEditable text) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Checks a given number against the list of emergency numbers provided by the RIL and SIM card.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if the number is in the list of emergency numbers listed in the RIL / SIM, otherwise return false. </para>
+				/// </returns>
 				/// <java-name>
 				/// isEmergencyNumber
 				/// </java-name>
 				[Dot42.DexImport("isEmergencyNumber", "(Ljava/lang/String;)Z", AccessFlags = 9)]
-				public static bool IsEmergencyNumber(string @string) /* MethodBuilder.Create */ 
+				public static bool IsEmergencyNumber(string number) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Translates any alphabetic letters (i.e. [A-Za-z]) in the specified phone number into the equivalent numeric digits, according to the phone keypad letter mapping described in ITU E.161 and ISO/IEC 9995-8.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the input string, with alpha letters converted to numeric digits using the phone keypad letter mapping. For example, an input of "1-800-GOOG-411" will return "1-800-4664-411". </para>
+				/// </returns>
 				/// <java-name>
 				/// convertKeypadLettersToDigits
 				/// </java-name>
 				[Dot42.DexImport("convertKeypadLettersToDigits", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string ConvertKeypadLettersToDigits(string @string) /* MethodBuilder.Create */ 
+				public static string ConvertKeypadLettersToDigits(string input) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
 		}
 
+		/// <summary>
+		///  <para>A listener class for monitoring changes in specific telephony states on the device, including service state, signal strength, message waiting indicator (voicemail), and others. </para> <para>Override the methods for the state that you wish to receive updates for, and pass your PhoneStateListener object, along with bitwise-or of the LISTEN_ flags to TelephonyManager.listen(). </para> <para>Note that access to some telephony information is permission-protected. Your application won't receive updates for protected information unless it has the appropriate permissions declared in its manifest file. Where permissions apply, they are noted in the appropriate LISTEN_ flags. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/PhoneStateListener
 		/// </java-name>
@@ -562,51 +784,81 @@ namespace Android.Telephony
 		public partial class PhoneStateListener
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Stop listening for updates. </para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_NONE
 				/// </java-name>
 				[Dot42.DexImport("LISTEN_NONE", "I", AccessFlags = 25)]
 				public const int LISTEN_NONE = 0;
+				/// <summary>
+				///  <para>Listen for changes to the network service state (cellular).</para> <para> <para>onServiceStateChanged </para> <para>ServiceState </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_SERVICE_STATE
 				/// </java-name>
 				[Dot42.DexImport("LISTEN_SERVICE_STATE", "I", AccessFlags = 25)]
 				public const int LISTEN_SERVICE_STATE = 1;
+				/// <summary>
+				///  <para>Listen for changes to the network signal strength (cellular). {} Requires Permission: READ_PHONE_STATE </para> <para> <para>onSignalStrengthChanged</para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>by LISTEN_SIGNAL_STRENGTHS </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_SIGNAL_STRENGTH
 				/// </java-name>
 				[Dot42.DexImport("LISTEN_SIGNAL_STRENGTH", "I", AccessFlags = 25)]
 				public const int LISTEN_SIGNAL_STRENGTH = 2;
+				/// <summary>
+				///  <para>Listen for changes to the message-waiting indicator. {} Requires Permission: READ_PHONE_STATE </para> <para>Example: The status bar uses this to determine when to display the voicemail icon.</para> <para> <para>onMessageWaitingIndicatorChanged </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_MESSAGE_WAITING_INDICATOR
 				/// </java-name>
 				[Dot42.DexImport("LISTEN_MESSAGE_WAITING_INDICATOR", "I", AccessFlags = 25)]
 				public const int LISTEN_MESSAGE_WAITING_INDICATOR = 4;
+				/// <summary>
+				///  <para>Listen for changes to the call-forwarding indicator. {} Requires Permission: READ_PHONE_STATE  <para>onCallForwardingIndicatorChanged </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_CALL_FORWARDING_INDICATOR
 				/// </java-name>
 				[Dot42.DexImport("LISTEN_CALL_FORWARDING_INDICATOR", "I", AccessFlags = 25)]
 				public const int LISTEN_CALL_FORWARDING_INDICATOR = 8;
+				/// <summary>
+				///  <para>Listen for changes to the device's cell location. Note that this will result in frequent callbacks to the listener. {} Requires Permission: ACCESS_COARSE_LOCATION </para> <para>If you need regular location updates but want more control over the update interval or location precision, you can set up a listener through the location manager instead.</para> <para> <para>onCellLocationChanged </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_CELL_LOCATION
 				/// </java-name>
 				[Dot42.DexImport("LISTEN_CELL_LOCATION", "I", AccessFlags = 25)]
 				public const int LISTEN_CELL_LOCATION = 16;
+				/// <summary>
+				///  <para>Listen for changes to the device call state. {} Requires Permission: READ_PHONE_STATE  <para>onCallStateChanged </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_CALL_STATE
 				/// </java-name>
 				[Dot42.DexImport("LISTEN_CALL_STATE", "I", AccessFlags = 25)]
 				public const int LISTEN_CALL_STATE = 32;
+				/// <summary>
+				///  <para>Listen for changes to the data connection state (cellular).</para> <para> <para>onDataConnectionStateChanged </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_DATA_CONNECTION_STATE
 				/// </java-name>
 				[Dot42.DexImport("LISTEN_DATA_CONNECTION_STATE", "I", AccessFlags = 25)]
 				public const int LISTEN_DATA_CONNECTION_STATE = 64;
+				/// <summary>
+				///  <para>Listen for changes to the direction of data traffic on the data connection (cellular). {} Requires Permission: READ_PHONE_STATE Example: The status bar uses this to display the appropriate data-traffic icon.</para> <para> <para>onDataActivity </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_DATA_ACTIVITY
 				/// </java-name>
 				[Dot42.DexImport("LISTEN_DATA_ACTIVITY", "I", AccessFlags = 25)]
 				public const int LISTEN_DATA_ACTIVITY = 128;
+				/// <summary>
+				///  <para>Listen for changes to the network signal strengths (cellular). </para> <para>Example: The status bar uses this to control the signal-strength icon.</para> <para> <para>onSignalStrengthsChanged </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// LISTEN_SIGNAL_STRENGTHS
 				/// </java-name>
@@ -617,6 +869,9 @@ namespace Android.Telephony
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback invoked when device service state changes.</para> <para> <para>ServiceState::STATE_EMERGENCY_ONLY </para> <para>ServiceState::STATE_IN_SERVICE </para> <para>ServiceState::STATE_OUT_OF_SERVICE </para> <para>ServiceState::STATE_POWER_OFF </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// onServiceStateChanged
 				/// </java-name>
@@ -625,70 +880,97 @@ namespace Android.Telephony
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback invoked when network signal strength changes.</para> <para> <para>ServiceState::STATE_EMERGENCY_ONLY </para> <para>ServiceState::STATE_IN_SERVICE </para> <para>ServiceState::STATE_OUT_OF_SERVICE </para> <para>ServiceState::STATE_POWER_OFF </para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use onSignalStrengthsChanged(SignalStrength) </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// onSignalStrengthChanged
 				/// </java-name>
 				[Dot42.DexImport("onSignalStrengthChanged", "(I)V", AccessFlags = 1)]
-				public virtual void OnSignalStrengthChanged(int int32) /* MethodBuilder.Create */ 
+				public virtual void OnSignalStrengthChanged(int asu) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback invoked when the message-waiting indicator changes. </para>        
+				/// </summary>
 				/// <java-name>
 				/// onMessageWaitingIndicatorChanged
 				/// </java-name>
 				[Dot42.DexImport("onMessageWaitingIndicatorChanged", "(Z)V", AccessFlags = 1)]
-				public virtual void OnMessageWaitingIndicatorChanged(bool boolean) /* MethodBuilder.Create */ 
+				public virtual void OnMessageWaitingIndicatorChanged(bool mwi) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback invoked when the call-forwarding indicator changes. </para>        
+				/// </summary>
 				/// <java-name>
 				/// onCallForwardingIndicatorChanged
 				/// </java-name>
 				[Dot42.DexImport("onCallForwardingIndicatorChanged", "(Z)V", AccessFlags = 1)]
-				public virtual void OnCallForwardingIndicatorChanged(bool boolean) /* MethodBuilder.Create */ 
+				public virtual void OnCallForwardingIndicatorChanged(bool cfi) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback invoked when device cell location changes. </para>        
+				/// </summary>
 				/// <java-name>
 				/// onCellLocationChanged
 				/// </java-name>
 				[Dot42.DexImport("onCellLocationChanged", "(Landroid/telephony/CellLocation;)V", AccessFlags = 1)]
-				public virtual void OnCellLocationChanged(global::Android.Telephony.CellLocation cellLocation) /* MethodBuilder.Create */ 
+				public virtual void OnCellLocationChanged(global::Android.Telephony.CellLocation location) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback invoked when device call state changes.</para> <para> <para>TelephonyManager::CALL_STATE_IDLE </para> <para>TelephonyManager::CALL_STATE_RINGING </para> <para>TelephonyManager::CALL_STATE_OFFHOOK </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// onCallStateChanged
 				/// </java-name>
 				[Dot42.DexImport("onCallStateChanged", "(ILjava/lang/String;)V", AccessFlags = 1)]
-				public virtual void OnCallStateChanged(int int32, string @string) /* MethodBuilder.Create */ 
+				public virtual void OnCallStateChanged(int state, string incomingNumber) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback invoked when connection state changes.</para> <para> <para>TelephonyManager::DATA_DISCONNECTED </para> <para>TelephonyManager::DATA_CONNECTING </para> <para>TelephonyManager::DATA_CONNECTED </para> <para>TelephonyManager::DATA_SUSPENDED </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// onDataConnectionStateChanged
 				/// </java-name>
 				[Dot42.DexImport("onDataConnectionStateChanged", "(I)V", AccessFlags = 1)]
-				public virtual void OnDataConnectionStateChanged(int int32) /* MethodBuilder.Create */ 
+				public virtual void OnDataConnectionStateChanged(int state) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>same as above, but with the network type. Both called. </para>        
+				/// </summary>
 				/// <java-name>
 				/// onDataConnectionStateChanged
 				/// </java-name>
 				[Dot42.DexImport("onDataConnectionStateChanged", "(II)V", AccessFlags = 1)]
-				public virtual void OnDataConnectionStateChanged(int int32, int int321) /* MethodBuilder.Create */ 
+				public virtual void OnDataConnectionStateChanged(int state, int networkType) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback invoked when data activity state changes.</para> <para> <para>TelephonyManager::DATA_ACTIVITY_NONE </para> <para>TelephonyManager::DATA_ACTIVITY_IN </para> <para>TelephonyManager::DATA_ACTIVITY_OUT </para> <para>TelephonyManager::DATA_ACTIVITY_INOUT </para> <para>TelephonyManager::DATA_ACTIVITY_DORMANT </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// onDataActivity
 				/// </java-name>
 				[Dot42.DexImport("onDataActivity", "(I)V", AccessFlags = 1)]
-				public virtual void OnDataActivity(int int32) /* MethodBuilder.Create */ 
+				public virtual void OnDataActivity(int direction) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback invoked when network signal strengths changes.</para> <para> <para>ServiceState::STATE_EMERGENCY_ONLY </para> <para>ServiceState::STATE_IN_SERVICE </para> <para>ServiceState::STATE_OUT_OF_SERVICE </para> <para>ServiceState::STATE_POWER_OFF </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// onSignalStrengthsChanged
 				/// </java-name>
@@ -699,6 +981,9 @@ namespace Android.Telephony
 
 		}
 
+		/// <summary>
+		///  <para>Contains phone state and service related information.</para> <para>The following phone information is included in returned ServiceState:</para> <para> <ul> <li> <para>Service state: IN_SERVICE, OUT_OF_SERVICE, EMERGENCY_ONLY, POWER_OFF </para></li> <li> <para>Roaming indicator </para></li> <li> <para>Operator name, short name and numeric id </para></li> <li> <para>Network selection mode </para></li></ul></para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/ServiceState
 		/// </java-name>
@@ -706,21 +991,33 @@ namespace Android.Telephony
 		public partial class ServiceState : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Normal operation condition, the phone is registered with an operator either in home network or in roaming. </para>        
+				/// </summary>
 				/// <java-name>
 				/// STATE_IN_SERVICE
 				/// </java-name>
 				[Dot42.DexImport("STATE_IN_SERVICE", "I", AccessFlags = 25)]
 				public const int STATE_IN_SERVICE = 0;
+				/// <summary>
+				///  <para>Phone is not registered with any operator, the phone can be currently searching a new operator to register to, or not searching to registration at all, or registration is denied, or radio signal is not available. </para>        
+				/// </summary>
 				/// <java-name>
 				/// STATE_OUT_OF_SERVICE
 				/// </java-name>
 				[Dot42.DexImport("STATE_OUT_OF_SERVICE", "I", AccessFlags = 25)]
 				public const int STATE_OUT_OF_SERVICE = 1;
+				/// <summary>
+				///  <para>The phone is registered and locked. Only emergency numbers are allowed. {} </para>        
+				/// </summary>
 				/// <java-name>
 				/// STATE_EMERGENCY_ONLY
 				/// </java-name>
 				[Dot42.DexImport("STATE_EMERGENCY_ONLY", "I", AccessFlags = 25)]
 				public const int STATE_EMERGENCY_ONLY = 2;
+				/// <summary>
+				///  <para>Radio of telephony is explicitly powered off. </para>        
+				/// </summary>
 				/// <java-name>
 				/// STATE_POWER_OFF
 				/// </java-name>
@@ -731,18 +1028,27 @@ namespace Android.Telephony
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
 				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Telephony.ServiceState> CREATOR;
+				/// <summary>
+				///  <para>Empty constructor </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public ServiceState() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Copy constructors</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/telephony/ServiceState;)V", AccessFlags = 1)]
-				public ServiceState(global::Android.Telephony.ServiceState serviceState) /* MethodBuilder.Create */ 
+				public ServiceState(global::Android.Telephony.ServiceState s) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Copy constructors</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public ServiceState(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public ServiceState(global::Android.OS.Parcel s) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -750,18 +1056,27 @@ namespace Android.Telephony
 				/// copyFrom
 				/// </java-name>
 				[Dot42.DexImport("copyFrom", "(Landroid/telephony/ServiceState;)V", AccessFlags = 4)]
-				protected internal virtual void CopyFrom(global::Android.Telephony.ServiceState serviceState) /* MethodBuilder.Create */ 
+				protected internal virtual void CopyFrom(global::Android.Telephony.ServiceState s) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -784,7 +1099,7 @@ namespace Android.Telephony
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object o) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -818,10 +1133,13 @@ namespace Android.Telephony
 				/// setOperatorName
 				/// </java-name>
 				[Dot42.DexImport("setOperatorName", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void SetOperatorName(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				public virtual void SetOperatorName(string longName, string shortName, string numeric) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Get current voice service state </para>        
+				/// </summary>
 				/// <java-name>
 				/// getState
 				/// </java-name>
@@ -833,6 +1151,12 @@ namespace Android.Telephony
 						set{ }
 				}
 
+				/// <summary>
+				///  <para>Get current roaming indicator of phone (note: not just decoding from TS 27.007 7.2)</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if TS 27.007 7.2 roaming is true and ONS is different from SPN </para>
+				/// </returns>
 				/// <java-name>
 				/// getRoaming
 				/// </java-name>
@@ -844,6 +1168,12 @@ namespace Android.Telephony
 						set{ }
 				}
 
+				/// <summary>
+				///  <para>Get current registered operator name in long alphanumeric format.</para> <para>In GSM/UMTS, long format can be up to 16 characters long. In CDMA, returns the ERI text, if set. Otherwise, returns the ONS.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>long name of operator, null if unregistered or unknown </para>
+				/// </returns>
 				/// <java-name>
 				/// getOperatorAlphaLong
 				/// </java-name>
@@ -853,6 +1183,12 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Get current registered operator name in short alphanumeric format.</para> <para>In GSM/UMTS, short format can be up to 8 characters long.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>short name of operator, null if unregistered or unknown </para>
+				/// </returns>
 				/// <java-name>
 				/// getOperatorAlphaShort
 				/// </java-name>
@@ -862,6 +1198,12 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Get current registered operator numeric id.</para> <para>In GSM/UMTS, numeric format is 3 digit country code plus 2 or 3 digit network code.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>numeric format of operator, null if unregistered or unknown </para>
+				/// </returns>
 				/// <java-name>
 				/// getOperatorNumeric
 				/// </java-name>
@@ -871,6 +1213,12 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Get current network selection mode.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if manual mode, false if automatic mode </para>
+				/// </returns>
 				/// <java-name>
 				/// getIsManualSelection
 				/// </java-name>
@@ -884,6 +1232,9 @@ namespace Android.Telephony
 
 		}
 
+		/// <summary>
+		///  <para>Contains phone signal strength related information. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/SignalStrength
 		/// </java-name>
@@ -891,19 +1242,28 @@ namespace Android.Telephony
 		public partial class SignalStrength : global::Android.OS.IParcelable
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Empty constructor</para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
 				internal SignalStrength() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Parcelable#writeToParcel </para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel @out, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Parcelable#describeContents </para>        
+				/// </summary>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -913,6 +1273,12 @@ namespace Android.Telephony
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>hash code </para>
+				/// </returns>
 				/// <java-name>
 				/// hashCode
 				/// </java-name>
@@ -922,15 +1288,27 @@ namespace Android.Telephony
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if the signal strengths are the same </para>
+				/// </returns>
 				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object o) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>string representation. </para>
+				/// </returns>
 				/// <java-name>
 				/// toString
 				/// </java-name>
@@ -940,6 +1318,9 @@ namespace Android.Telephony
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Get the GSM Signal Strength, valid values are (0-31, 99) as defined in TS 27.007 8.5 </para>        
+				/// </summary>
 				/// <java-name>
 				/// getGsmSignalStrength
 				/// </java-name>
@@ -949,6 +1330,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Get the GSM bit error rate (0-7, 99) as defined in TS 27.007 8.5 </para>        
+				/// </summary>
 				/// <java-name>
 				/// getGsmBitErrorRate
 				/// </java-name>
@@ -958,6 +1342,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Get the CDMA RSSI value in dBm </para>        
+				/// </summary>
 				/// <java-name>
 				/// getCdmaDbm
 				/// </java-name>
@@ -967,6 +1354,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Get the CDMA Ec/Io value in dB*10 </para>        
+				/// </summary>
 				/// <java-name>
 				/// getCdmaEcio
 				/// </java-name>
@@ -976,6 +1366,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Get the EVDO RSSI value in dBm </para>        
+				/// </summary>
 				/// <java-name>
 				/// getEvdoDbm
 				/// </java-name>
@@ -985,6 +1378,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Get the EVDO Ec/Io value in dB*10 </para>        
+				/// </summary>
 				/// <java-name>
 				/// getEvdoEcio
 				/// </java-name>
@@ -994,6 +1390,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Get the signal to noise ratio. Valid values are 0-8. 8 is the highest. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getEvdoSnr
 				/// </java-name>
@@ -1003,6 +1402,12 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if this is for GSM </para>
+				/// </returns>
 				/// <java-name>
 				/// isGsm
 				/// </java-name>
@@ -1014,6 +1419,9 @@ namespace Android.Telephony
 
 		}
 
+		/// <summary>
+		///  <para>Manages SMS operations such as sending data, text, and pdu SMS messages. Get this object by calling the static method getDefault().</para> <para>For information about how to behave as the default SMS app on Android 4.4 (API level 19) and higher, see android.provider.Telephony. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/SmsManager
 		/// </java-name>
@@ -1021,46 +1429,73 @@ namespace Android.Telephony
 		public sealed partial class SmsManager
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Free space (TS 51.011 10.5.3 / 3GPP2 C.S0023 3.4.27). </para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_ICC_FREE
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_ICC_FREE", "I", AccessFlags = 25)]
 				public const int STATUS_ON_ICC_FREE = 0;
+				/// <summary>
+				///  <para>Received and read (TS 51.011 10.5.3 / 3GPP2 C.S0023 3.4.27). </para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_ICC_READ
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_ICC_READ", "I", AccessFlags = 25)]
 				public const int STATUS_ON_ICC_READ = 1;
+				/// <summary>
+				///  <para>Received and unread (TS 51.011 10.5.3 / 3GPP2 C.S0023 3.4.27). </para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_ICC_UNREAD
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_ICC_UNREAD", "I", AccessFlags = 25)]
 				public const int STATUS_ON_ICC_UNREAD = 3;
+				/// <summary>
+				///  <para>Stored and sent (TS 51.011 10.5.3 / 3GPP2 C.S0023 3.4.27). </para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_ICC_SENT
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_ICC_SENT", "I", AccessFlags = 25)]
 				public const int STATUS_ON_ICC_SENT = 5;
+				/// <summary>
+				///  <para>Stored and unsent (TS 51.011 10.5.3 / 3GPP2 C.S0023 3.4.27). </para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_ICC_UNSENT
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_ICC_UNSENT", "I", AccessFlags = 25)]
 				public const int STATUS_ON_ICC_UNSENT = 7;
+				/// <summary>
+				///  <para>Generic failure cause </para>        
+				/// </summary>
 				/// <java-name>
 				/// RESULT_ERROR_GENERIC_FAILURE
 				/// </java-name>
 				[Dot42.DexImport("RESULT_ERROR_GENERIC_FAILURE", "I", AccessFlags = 25)]
 				public const int RESULT_ERROR_GENERIC_FAILURE = 1;
+				/// <summary>
+				///  <para>Failed because radio was explicitly turned off </para>        
+				/// </summary>
 				/// <java-name>
 				/// RESULT_ERROR_RADIO_OFF
 				/// </java-name>
 				[Dot42.DexImport("RESULT_ERROR_RADIO_OFF", "I", AccessFlags = 25)]
 				public const int RESULT_ERROR_RADIO_OFF = 2;
+				/// <summary>
+				///  <para>Failed because no pdu provided </para>        
+				/// </summary>
 				/// <java-name>
 				/// RESULT_ERROR_NULL_PDU
 				/// </java-name>
 				[Dot42.DexImport("RESULT_ERROR_NULL_PDU", "I", AccessFlags = 25)]
 				public const int RESULT_ERROR_NULL_PDU = 3;
+				/// <summary>
+				///  <para>Failed because service is currently unavailable </para>        
+				/// </summary>
 				/// <java-name>
 				/// RESULT_ERROR_NO_SERVICE
 				/// </java-name>
@@ -1071,24 +1506,36 @@ namespace Android.Telephony
 				{
 				}
 
+				/// <summary>
+				///  <para>Send a text based SMS.</para> <para> <b>Note:</b> Using this method requires that your app has the android.Manifest.permission#SEND_SMS permission.</para> <para> <b>Note:</b> Beginning with Android 4.4 (API level 19), if  <b>and only if</b> an app is not selected as the default SMS app, the system automatically writes messages sent using this method to the SMS Provider (the default SMS app is always responsible for writing its sent messages to the SMS Provider). For information about how to behave as the default SMS app, see android.provider.Telephony.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// sendTextMessage
 				/// </java-name>
 				[Dot42.DexImport("sendTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent" +
     ";Landroid/app/PendingIntent;)V", AccessFlags = 1)]
-				public void SendTextMessage(string @string, string string1, string string2, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				public void SendTextMessage(string destinationAddress, string scAddress, string text, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Divide a message text into several fragments, none bigger than the maximum SMS message size.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>an  <code>ArrayList</code> of strings that, in order, comprise the original message</para>
+				/// </returns>
 				/// <java-name>
 				/// divideMessage
 				/// </java-name>
 				[Dot42.DexImport("divideMessage", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;")]
-				public global::Java.Util.ArrayList<string> DivideMessage(string @string) /* MethodBuilder.Create */ 
+				public global::Java.Util.ArrayList<string> DivideMessage(string text) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.ArrayList<string>);
 				}
 
+				/// <summary>
+				///  <para>Send a multi-part text based SMS. The callee should have already divided the message into correctly sized parts by calling  <code>divideMessage</code>.</para> <para> <b>Note:</b> Using this method requires that your app has the android.Manifest.permission#SEND_SMS permission.</para> <para> <b>Note:</b> Beginning with Android 4.4 (API level 19), if  <b>and only if</b> an app is not selected as the default SMS app, the system automatically writes messages sent using this method to the SMS Provider (the default SMS app is always responsible for writing its sent messages to the SMS Provider). For information about how to behave as the default SMS app, see android.provider.Telephony.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// sendMultipartTextMessage
 				/// </java-name>
@@ -1096,28 +1543,40 @@ namespace Android.Telephony
     "ava/util/ArrayList;)V", AccessFlags = 1, Signature = "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;Lja" +
     "va/util/ArrayList<Landroid/app/PendingIntent;>;Ljava/util/ArrayList<Landroid/app" +
     "/PendingIntent;>;)V")]
-				public void SendMultipartTextMessage(string @string, string string1, global::Java.Util.ArrayList<string> arrayList, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList1, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList2) /* MethodBuilder.Create */ 
+				public void SendMultipartTextMessage(string destinationAddress, string scAddress, global::Java.Util.ArrayList<string> parts, global::Java.Util.ArrayList<global::Android.App.PendingIntent> sentIntents, global::Java.Util.ArrayList<global::Android.App.PendingIntent> deliveryIntents) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Send a data based SMS to a specific application port.</para> <para> <b>Note:</b> Using this method requires that your app has the android.Manifest.permission#SEND_SMS permission.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// sendDataMessage
 				/// </java-name>
 				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
     "endingIntent;)V", AccessFlags = 1)]
-				public void SendDataMessage(string @string, string string1, short int16, sbyte[] sByte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				public void SendDataMessage(string destinationAddress, string scAddress, short destinationPort, sbyte[] data, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Send a data based SMS to a specific application port.</para> <para> <b>Note:</b> Using this method requires that your app has the android.Manifest.permission#SEND_SMS permission.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// sendDataMessage
 				/// </java-name>
 				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
     "endingIntent;)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public void SendDataMessage(string @string, string string1, short int16, byte[] @byte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				public void SendDataMessage(string destinationAddress, string scAddress, short destinationPort, byte[] data, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Get the default instance of the SmsManager</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the default instance of the SmsManager </para>
+				/// </returns>
 				/// <java-name>
 				/// getDefault
 				/// </java-name>
@@ -1129,6 +1588,9 @@ namespace Android.Telephony
 
 		}
 
+		/// <summary>
+		///  <para>A Short Message Service message.  <para>android.provider.Telephony.Sms.Intents::getMessagesFromIntent </para></para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/SmsMessage
 		/// </java-name>
@@ -1136,6 +1598,9 @@ namespace Android.Telephony
 		public partial class SmsMessage
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>User data text encoding code unit size </para>        
+				/// </summary>
 				/// <java-name>
 				/// ENCODING_UNKNOWN
 				/// </java-name>
@@ -1156,21 +1621,33 @@ namespace Android.Telephony
 				/// </java-name>
 				[Dot42.DexImport("ENCODING_16BIT", "I", AccessFlags = 25)]
 				public const int ENCODING_16BIT = 3;
+				/// <summary>
+				///  <para>The maximum number of payload bytes per message </para>        
+				/// </summary>
 				/// <java-name>
 				/// MAX_USER_DATA_BYTES
 				/// </java-name>
 				[Dot42.DexImport("MAX_USER_DATA_BYTES", "I", AccessFlags = 25)]
 				public const int MAX_USER_DATA_BYTES = 140;
+				/// <summary>
+				///  <para>The maximum number of payload bytes per message if a user data header is present. This assumes the header only contains the CONCATENATED_8_BIT_REFERENCE element. </para>        
+				/// </summary>
 				/// <java-name>
 				/// MAX_USER_DATA_BYTES_WITH_HEADER
 				/// </java-name>
 				[Dot42.DexImport("MAX_USER_DATA_BYTES_WITH_HEADER", "I", AccessFlags = 25)]
 				public const int MAX_USER_DATA_BYTES_WITH_HEADER = 134;
+				/// <summary>
+				///  <para>The maximum number of payload septets per message </para>        
+				/// </summary>
 				/// <java-name>
 				/// MAX_USER_DATA_SEPTETS
 				/// </java-name>
 				[Dot42.DexImport("MAX_USER_DATA_SEPTETS", "I", AccessFlags = 25)]
 				public const int MAX_USER_DATA_SEPTETS = 160;
+				/// <summary>
+				///  <para>The maximum number of payload septets per message if a user data header is present. This assumes the header only contains the CONCATENATED_8_BIT_REFERENCE element. </para>        
+				/// </summary>
 				/// <java-name>
 				/// MAX_USER_DATA_SEPTETS_WITH_HEADER
 				/// </java-name>
@@ -1181,29 +1658,38 @@ namespace Android.Telephony
 				{
 				}
 
+				/// <summary>
+				///  <para>Create an SmsMessage from a raw PDU.</para> <para> <b>This method will soon be deprecated</b> and all applications which handle incoming SMS messages by processing the <c>SMS_RECEIVED_ACTION </c> broadcast intent  <b>must</b> now pass the new <c>format </c> String extra from the intent into the new method <c>createFromPdu(byte[], String) </c> which takes an extra format parameter. This is required in order to correctly decode the PDU on devices that require support for both 3GPP and 3GPP2 formats at the same time, such as dual-mode GSM/CDMA and CDMA/LTE phones. Guess format based on Voice technology first, if it fails use other format. </para>        
+				/// </summary>
 				/// <java-name>
 				/// createFromPdu
 				/// </java-name>
 				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9)]
-				public static global::Android.Telephony.SmsMessage CreateFromPdu(sbyte[] sByte) /* MethodBuilder.Create */ 
+				public static global::Android.Telephony.SmsMessage CreateFromPdu(sbyte[] pdu) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.SmsMessage);
 				}
 
+				/// <summary>
+				///  <para>Create an SmsMessage from a raw PDU.</para> <para> <b>This method will soon be deprecated</b> and all applications which handle incoming SMS messages by processing the <c>SMS_RECEIVED_ACTION </c> broadcast intent  <b>must</b> now pass the new <c>format </c> String extra from the intent into the new method <c>createFromPdu(byte[], String) </c> which takes an extra format parameter. This is required in order to correctly decode the PDU on devices that require support for both 3GPP and 3GPP2 formats at the same time, such as dual-mode GSM/CDMA and CDMA/LTE phones. Guess format based on Voice technology first, if it fails use other format. </para>        
+				/// </summary>
 				/// <java-name>
 				/// createFromPdu
 				/// </java-name>
 				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9, IgnoreFromJava = true)]
-				public static global::Android.Telephony.SmsMessage CreateFromPdu(byte[] @byte) /* MethodBuilder.Create */ 
+				public static global::Android.Telephony.SmsMessage CreateFromPdu(byte[] pdu) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.SmsMessage);
 				}
 
+				/// <summary>
+				///  <para>Get the TP-Layer-Length for the given SMS-SUBMIT PDU Basically, the length in bytes (not hex chars) less the SMSC header</para> <para>FIXME: This method is only used by a CTS test case that isn't run on CDMA devices. We should probably deprecate it and remove the obsolete test case. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getTPLayerLengthForPDU
 				/// </java-name>
 				[Dot42.DexImport("getTPLayerLengthForPDU", "(Ljava/lang/String;)I", AccessFlags = 9)]
-				public static int GetTPLayerLengthForPDU(string @string) /* MethodBuilder.Create */ 
+				public static int GetTPLayerLengthForPDU(string pdu) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1226,36 +1712,57 @@ namespace Android.Telephony
 						return default(int[]);
 				}
 
+				/// <summary>
+				///  <para>Get an SMS-SUBMIT PDU for a destination address and a message. This method will not attempt to use any GSM national language 7 bit encodings.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a  <code>SubmitPdu</code> containing the encoded SC address, if applicable, and the encoded message. Returns null on encode error. </para>
+				/// </returns>
 				/// <java-name>
 				/// getSubmitPdu
 				/// </java-name>
 				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Landroid/telephony/SmsMe" +
     "ssage$SubmitPdu;", AccessFlags = 9)]
-				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, string string2, bool boolean) /* MethodBuilder.Create */ 
+				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string scAddress, string destinationAddress, string message, bool statusReportRequested) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
 				}
 
+				/// <summary>
+				///  <para>Get an SMS-SUBMIT PDU for a data message to a destination address &amp; port. This method will not attempt to use any GSM national language 7 bit encodings.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a  <code>SubmitPdu</code> containing the encoded SC address, if applicable, and the encoded message. Returns null on encode error. </para>
+				/// </returns>
 				/// <java-name>
 				/// getSubmitPdu
 				/// </java-name>
 				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/SmsMessage$SubmitPdu" +
     ";", AccessFlags = 9)]
-				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, short int16, sbyte[] sByte, bool boolean) /* MethodBuilder.Create */ 
+				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string scAddress, string destinationAddress, short destinationPort, sbyte[] data, bool statusReportRequested) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
 				}
 
+				/// <summary>
+				///  <para>Get an SMS-SUBMIT PDU for a data message to a destination address &amp; port. This method will not attempt to use any GSM national language 7 bit encodings.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a  <code>SubmitPdu</code> containing the encoded SC address, if applicable, and the encoded message. Returns null on encode error. </para>
+				/// </returns>
 				/// <java-name>
 				/// getSubmitPdu
 				/// </java-name>
 				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/SmsMessage$SubmitPdu" +
     ";", AccessFlags = 9, IgnoreFromJava = true)]
-				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, short int16, byte[] @byte, bool boolean) /* MethodBuilder.Create */ 
+				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string scAddress, string destinationAddress, short destinationPort, byte[] data, bool statusReportRequested) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
 				}
 
+				/// <summary>
+				///  <para>Returns the class of this message. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getMessageClass
 				/// </java-name>
@@ -1265,6 +1772,9 @@ namespace Android.Telephony
 						return default(global::Android.Telephony.SmsMessage.MessageClass);
 				}
 
+				/// <summary>
+				///  <para>returns the user data section minus the user data header if one was present. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getUserData
 				/// </java-name>
@@ -1274,6 +1784,12 @@ namespace Android.Telephony
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Returns the raw PDU for the message.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the raw PDU for the message. </para>
+				/// </returns>
 				/// <java-name>
 				/// getPdu
 				/// </java-name>
@@ -1283,6 +1799,9 @@ namespace Android.Telephony
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Returns the address of the SMS service center that relayed this message or null if there is none. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getServiceCenterAddress
 				/// </java-name>
@@ -1292,6 +1811,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the originating address (sender) of this SMS message in String form or null if unavailable </para>        
+				/// </summary>
 				/// <java-name>
 				/// getOriginatingAddress
 				/// </java-name>
@@ -1301,6 +1823,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the originating address, or email from address if this message was from an email gateway. Returns null if originating address unavailable. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getDisplayOriginatingAddress
 				/// </java-name>
@@ -1310,6 +1835,12 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the message body as a String, if it exists and is text based. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>message body is there is one, otherwise null </para>
+				/// </returns>
 				/// <java-name>
 				/// getMessageBody
 				/// </java-name>
@@ -1319,6 +1850,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the message body, or email message body if this message was from an email gateway. Returns null if message body unavailable. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getDisplayMessageBody
 				/// </java-name>
@@ -1328,6 +1862,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Unofficial convention of a subject line enclosed in parens empty string if not present </para>        
+				/// </summary>
 				/// <java-name>
 				/// getPseudoSubject
 				/// </java-name>
@@ -1337,6 +1874,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the service centre timestamp in currentTimeMillis() format </para>        
+				/// </summary>
 				/// <java-name>
 				/// getTimestampMillis
 				/// </java-name>
@@ -1346,6 +1886,12 @@ namespace Android.Telephony
 						get{ return default(long); }
 				}
 
+				/// <summary>
+				///  <para>Returns true if message is an email.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if this message came through an email gateway and email sender / subject / parsed body are available </para>
+				/// </returns>
 				/// <java-name>
 				/// isEmail
 				/// </java-name>
@@ -1355,6 +1901,12 @@ namespace Android.Telephony
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>if isEmail() is true, body of the email sent through the gateway. null otherwise </para>
+				/// </returns>
 				/// <java-name>
 				/// getEmailBody
 				/// </java-name>
@@ -1364,6 +1916,12 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>if isEmail() is true, email from address of email sent through the gateway. null otherwise </para>
+				/// </returns>
 				/// <java-name>
 				/// getEmailFrom
 				/// </java-name>
@@ -1373,6 +1931,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Get protocol identifier. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getProtocolIdentifier
 				/// </java-name>
@@ -1382,6 +1943,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>See TS 23.040 9.2.3.9 returns true if this is a "replace short message" SMS </para>        
+				/// </summary>
 				/// <java-name>
 				/// isReplace
 				/// </java-name>
@@ -1391,6 +1955,12 @@ namespace Android.Telephony
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>Returns true for CPHS MWI toggle message.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if this is a CPHS MWI toggle message See CPHS 4.2 section B.4.2 </para>
+				/// </returns>
 				/// <java-name>
 				/// isCphsMwiMessage
 				/// </java-name>
@@ -1400,6 +1970,9 @@ namespace Android.Telephony
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>returns true if this message is a CPHS voicemail / message waiting indicator (MWI) clear message </para>        
+				/// </summary>
 				/// <java-name>
 				/// isMWIClearMessage
 				/// </java-name>
@@ -1409,6 +1982,9 @@ namespace Android.Telephony
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>returns true if this message is a CPHS voicemail / message waiting indicator (MWI) set message </para>        
+				/// </summary>
 				/// <java-name>
 				/// isMWISetMessage
 				/// </java-name>
@@ -1418,6 +1994,9 @@ namespace Android.Telephony
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>returns true if this message is a "Message Waiting Indication Group:Discard Message" notification and should not be stored. </para>        
+				/// </summary>
 				/// <java-name>
 				/// isMwiDontStore
 				/// </java-name>
@@ -1427,6 +2006,9 @@ namespace Android.Telephony
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>returns the user data section minus the user data header if one was present. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getUserData
 				/// </java-name>
@@ -1436,6 +2018,12 @@ namespace Android.Telephony
 						get{ return default(byte[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the raw PDU for the message.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the raw PDU for the message. </para>
+				/// </returns>
 				/// <java-name>
 				/// getPdu
 				/// </java-name>
@@ -1445,6 +2033,12 @@ namespace Android.Telephony
 						get{ return default(byte[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the status of the message on the SIM (read, unread, sent, unsent).</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use getStatusOnIcc instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the status of the message on the SIM. These are: SmsManager.STATUS_ON_SIM_FREE SmsManager.STATUS_ON_SIM_READ SmsManager.STATUS_ON_SIM_UNREAD SmsManager.STATUS_ON_SIM_SEND SmsManager.STATUS_ON_SIM_UNSENT </para>
+				/// </returns>
 				/// <java-name>
 				/// getStatusOnSim
 				/// </java-name>
@@ -1454,6 +2048,12 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the status of the message on the ICC (read, unread, sent, unsent).</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the status of the message on the ICC. These are: SmsManager.STATUS_ON_ICC_FREE SmsManager.STATUS_ON_ICC_READ SmsManager.STATUS_ON_ICC_UNREAD SmsManager.STATUS_ON_ICC_SEND SmsManager.STATUS_ON_ICC_UNSENT </para>
+				/// </returns>
 				/// <java-name>
 				/// getStatusOnIcc
 				/// </java-name>
@@ -1463,6 +2063,12 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the record index of the message on the SIM (1-based index).  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use getIndexOnIcc instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the record index of the message on the SIM, or -1 if this SmsMessage was not created from a SIM SMS EF record. </para>
+				/// </returns>
 				/// <java-name>
 				/// getIndexOnSim
 				/// </java-name>
@@ -1472,6 +2078,12 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the record index of the message on the ICC (1-based index). </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the record index of the message on the ICC, or -1 if this SmsMessage was not created from a ICC SMS EF record. </para>
+				/// </returns>
 				/// <java-name>
 				/// getIndexOnIcc
 				/// </java-name>
@@ -1481,6 +2093,12 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>GSM: For an SMS-STATUS-REPORT message, this returns the status field from the status report. This field indicates the status of a previously submitted SMS, if requested. See TS 23.040, 9.2.3.15 TP-Status for a description of values. CDMA: For not interfering with status codes from GSM, the value is shifted to the bits 31-16. The value is composed of an error class (bits 25-24) and a status code (bits 23-16). Possible codes are described in C.S0015-B, v2.0, 4.5.21.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>0 indicates the previously sent message was received. See TS 23.040, 9.9.2.3.15 and C.S0015-B, v2.0, 4.5.21 for a description of other possible values. </para>
+				/// </returns>
 				/// <java-name>
 				/// getStatus
 				/// </java-name>
@@ -1490,6 +2108,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Return true iff the message is a SMS-STATUS-REPORT message. </para>        
+				/// </summary>
 				/// <java-name>
 				/// isStatusReportMessage
 				/// </java-name>
@@ -1499,6 +2120,9 @@ namespace Android.Telephony
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>Returns true iff the  <code>TP-Reply-Path</code> bit is set in this message. </para>        
+				/// </summary>
 				/// <java-name>
 				/// isReplyPathPresent
 				/// </java-name>
@@ -1599,6 +2223,9 @@ namespace Android.Telephony
 
 		}
 
+		/// <summary>
+		///  <para>Provides access to information about the telephony services on the device. Applications can use the methods in this class to determine telephony services and states, as well as to access some types of subscriber information. Applications can also register a listener to receive notification of telephony state changes. </para> <para>You do not instantiate this class directly; instead, you retrieve a reference to an instance through Context.getSystemService(Context.TELEPHONY_SERVICE). </para> <para>Note that access to some telephony information is permission-protected. Your application cannot access the protected information unless it has the appropriate permissions declared in its manifest file. Where permissions apply, they are noted in the the methods through which you access the protected information. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/TelephonyManager
 		/// </java-name>
@@ -1606,221 +2233,353 @@ namespace Android.Telephony
 		public partial class TelephonyManager
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Broadcast intent action indicating that the call state (cellular) on the device has changed.</para> <para>The EXTRA_STATE extra indicates the new call state. If the new state is RINGING, a second extra EXTRA_INCOMING_NUMBER provides the incoming phone number as a String.</para> <para>Requires the READ_PHONE_STATE permission.</para> <para>This was a sticky broadcast in version 1.0, but it is no longer sticky. Instead, use getCallState to synchronously query the current call state.</para> <para> <para>EXTRA_STATE </para> <para>EXTRA_INCOMING_NUMBER </para> <para>getCallState </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// ACTION_PHONE_STATE_CHANGED
 				/// </java-name>
 				[Dot42.DexImport("ACTION_PHONE_STATE_CHANGED", "Ljava/lang/String;", AccessFlags = 25)]
 				public const string ACTION_PHONE_STATE_CHANGED = "android.intent.action.PHONE_STATE";
+				/// <summary>
+				///  <para>The lookup key used with the ACTION_PHONE_STATE_CHANGED broadcast for a String containing the new call state.</para> <para> <para>EXTRA_STATE_IDLE </para> <para>EXTRA_STATE_RINGING </para> <para>EXTRA_STATE_OFFHOOK</para></para> <para>Retrieve with android.content.Intent#getStringExtra(String). </para>        
+				/// </summary>
 				/// <java-name>
 				/// EXTRA_STATE
 				/// </java-name>
 				[Dot42.DexImport("EXTRA_STATE", "Ljava/lang/String;", AccessFlags = 25)]
 				public const string EXTRA_STATE = "state";
+				/// <summary>
+				///  <para>Value used with EXTRA_STATE corresponding to CALL_STATE_IDLE. </para>        
+				/// </summary>
 				/// <java-name>
 				/// EXTRA_STATE_IDLE
 				/// </java-name>
 				[Dot42.DexImport("EXTRA_STATE_IDLE", "Ljava/lang/String;", AccessFlags = 25)]
 				public static readonly string EXTRA_STATE_IDLE;
+				/// <summary>
+				///  <para>Value used with EXTRA_STATE corresponding to CALL_STATE_RINGING. </para>        
+				/// </summary>
 				/// <java-name>
 				/// EXTRA_STATE_RINGING
 				/// </java-name>
 				[Dot42.DexImport("EXTRA_STATE_RINGING", "Ljava/lang/String;", AccessFlags = 25)]
 				public static readonly string EXTRA_STATE_RINGING;
+				/// <summary>
+				///  <para>Value used with EXTRA_STATE corresponding to CALL_STATE_OFFHOOK. </para>        
+				/// </summary>
 				/// <java-name>
 				/// EXTRA_STATE_OFFHOOK
 				/// </java-name>
 				[Dot42.DexImport("EXTRA_STATE_OFFHOOK", "Ljava/lang/String;", AccessFlags = 25)]
 				public static readonly string EXTRA_STATE_OFFHOOK;
+				/// <summary>
+				///  <para>The lookup key used with the ACTION_PHONE_STATE_CHANGED broadcast for a String containing the incoming phone number. Only valid when the new call state is RINGING.</para> <para>Retrieve with android.content.Intent#getStringExtra(String). </para>        
+				/// </summary>
 				/// <java-name>
 				/// EXTRA_INCOMING_NUMBER
 				/// </java-name>
 				[Dot42.DexImport("EXTRA_INCOMING_NUMBER", "Ljava/lang/String;", AccessFlags = 25)]
 				public const string EXTRA_INCOMING_NUMBER = "incoming_number";
+				/// <summary>
+				///  <para>No phone radio. </para>        
+				/// </summary>
 				/// <java-name>
 				/// PHONE_TYPE_NONE
 				/// </java-name>
 				[Dot42.DexImport("PHONE_TYPE_NONE", "I", AccessFlags = 25)]
 				public const int PHONE_TYPE_NONE = 0;
+				/// <summary>
+				///  <para>Phone radio is GSM. </para>        
+				/// </summary>
 				/// <java-name>
 				/// PHONE_TYPE_GSM
 				/// </java-name>
 				[Dot42.DexImport("PHONE_TYPE_GSM", "I", AccessFlags = 25)]
 				public const int PHONE_TYPE_GSM = 1;
+				/// <summary>
+				///  <para>Phone radio is CDMA. </para>        
+				/// </summary>
 				/// <java-name>
 				/// PHONE_TYPE_CDMA
 				/// </java-name>
 				[Dot42.DexImport("PHONE_TYPE_CDMA", "I", AccessFlags = 25)]
 				public const int PHONE_TYPE_CDMA = 2;
+				/// <summary>
+				///  <para>Phone is via SIP. </para>        
+				/// </summary>
 				/// <java-name>
 				/// PHONE_TYPE_SIP
 				/// </java-name>
 				[Dot42.DexImport("PHONE_TYPE_SIP", "I", AccessFlags = 25)]
 				public const int PHONE_TYPE_SIP = 3;
+				/// <summary>
+				///  <para>Network type is unknown </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_UNKNOWN
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_UNKNOWN", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_UNKNOWN = 0;
+				/// <summary>
+				///  <para>Current network is GPRS </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_GPRS
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_GPRS", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_GPRS = 1;
+				/// <summary>
+				///  <para>Current network is EDGE </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_EDGE
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_EDGE", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_EDGE = 2;
+				/// <summary>
+				///  <para>Current network is UMTS </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_UMTS
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_UMTS", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_UMTS = 3;
+				/// <summary>
+				///  <para>Current network is CDMA: Either IS95A or IS95B </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_CDMA
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_CDMA", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_CDMA = 4;
+				/// <summary>
+				///  <para>Current network is EVDO revision 0 </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_EVDO_0
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_EVDO_0", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_EVDO_0 = 5;
+				/// <summary>
+				///  <para>Current network is EVDO revision A </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_EVDO_A
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_EVDO_A", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_EVDO_A = 6;
+				/// <summary>
+				///  <para>Current network is 1xRTT </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_1xRTT
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_1xRTT", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_1xRTT = 7;
+				/// <summary>
+				///  <para>Current network is HSDPA </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_HSDPA
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_HSDPA", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_HSDPA = 8;
+				/// <summary>
+				///  <para>Current network is HSUPA </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_HSUPA
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_HSUPA", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_HSUPA = 9;
+				/// <summary>
+				///  <para>Current network is HSPA </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_HSPA
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_HSPA", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_HSPA = 10;
+				/// <summary>
+				///  <para>Current network is iDen </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_IDEN
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_IDEN", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_IDEN = 11;
+				/// <summary>
+				///  <para>Current network is EVDO revision B </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_EVDO_B
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_EVDO_B", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_EVDO_B = 12;
+				/// <summary>
+				///  <para>Current network is LTE </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_LTE
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_LTE", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_LTE = 13;
+				/// <summary>
+				///  <para>Current network is eHRPD </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_EHRPD
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_EHRPD", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_EHRPD = 14;
+				/// <summary>
+				///  <para>Current network is HSPA+ </para>        
+				/// </summary>
 				/// <java-name>
 				/// NETWORK_TYPE_HSPAP
 				/// </java-name>
 				[Dot42.DexImport("NETWORK_TYPE_HSPAP", "I", AccessFlags = 25)]
 				public const int NETWORK_TYPE_HSPAP = 15;
+				/// <summary>
+				///  <para>SIM card state: Unknown. Signifies that the SIM is in transition between states. For example, when the user inputs the SIM pin under PIN_REQUIRED state, a query for sim status returns this state before turning to SIM_STATE_READY. </para>        
+				/// </summary>
 				/// <java-name>
 				/// SIM_STATE_UNKNOWN
 				/// </java-name>
 				[Dot42.DexImport("SIM_STATE_UNKNOWN", "I", AccessFlags = 25)]
 				public const int SIM_STATE_UNKNOWN = 0;
+				/// <summary>
+				///  <para>SIM card state: no SIM card is available in the device </para>        
+				/// </summary>
 				/// <java-name>
 				/// SIM_STATE_ABSENT
 				/// </java-name>
 				[Dot42.DexImport("SIM_STATE_ABSENT", "I", AccessFlags = 25)]
 				public const int SIM_STATE_ABSENT = 1;
+				/// <summary>
+				///  <para>SIM card state: Locked: requires the user's SIM PIN to unlock </para>        
+				/// </summary>
 				/// <java-name>
 				/// SIM_STATE_PIN_REQUIRED
 				/// </java-name>
 				[Dot42.DexImport("SIM_STATE_PIN_REQUIRED", "I", AccessFlags = 25)]
 				public const int SIM_STATE_PIN_REQUIRED = 2;
+				/// <summary>
+				///  <para>SIM card state: Locked: requires the user's SIM PUK to unlock </para>        
+				/// </summary>
 				/// <java-name>
 				/// SIM_STATE_PUK_REQUIRED
 				/// </java-name>
 				[Dot42.DexImport("SIM_STATE_PUK_REQUIRED", "I", AccessFlags = 25)]
 				public const int SIM_STATE_PUK_REQUIRED = 3;
+				/// <summary>
+				///  <para>SIM card state: Locked: requries a network PIN to unlock </para>        
+				/// </summary>
 				/// <java-name>
 				/// SIM_STATE_NETWORK_LOCKED
 				/// </java-name>
 				[Dot42.DexImport("SIM_STATE_NETWORK_LOCKED", "I", AccessFlags = 25)]
 				public const int SIM_STATE_NETWORK_LOCKED = 4;
+				/// <summary>
+				///  <para>SIM card state: Ready </para>        
+				/// </summary>
 				/// <java-name>
 				/// SIM_STATE_READY
 				/// </java-name>
 				[Dot42.DexImport("SIM_STATE_READY", "I", AccessFlags = 25)]
 				public const int SIM_STATE_READY = 5;
+				/// <summary>
+				///  <para>Device call state: No activity. </para>        
+				/// </summary>
 				/// <java-name>
 				/// CALL_STATE_IDLE
 				/// </java-name>
 				[Dot42.DexImport("CALL_STATE_IDLE", "I", AccessFlags = 25)]
 				public const int CALL_STATE_IDLE = 0;
+				/// <summary>
+				///  <para>Device call state: Ringing. A new call arrived and is ringing or waiting. In the latter case, another call is already active. </para>        
+				/// </summary>
 				/// <java-name>
 				/// CALL_STATE_RINGING
 				/// </java-name>
 				[Dot42.DexImport("CALL_STATE_RINGING", "I", AccessFlags = 25)]
 				public const int CALL_STATE_RINGING = 1;
+				/// <summary>
+				///  <para>Device call state: Off-hook. At least one call exists that is dialing, active, or on hold, and no calls are ringing or waiting. </para>        
+				/// </summary>
 				/// <java-name>
 				/// CALL_STATE_OFFHOOK
 				/// </java-name>
 				[Dot42.DexImport("CALL_STATE_OFFHOOK", "I", AccessFlags = 25)]
 				public const int CALL_STATE_OFFHOOK = 2;
+				/// <summary>
+				///  <para>Data connection activity: No traffic. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DATA_ACTIVITY_NONE
 				/// </java-name>
 				[Dot42.DexImport("DATA_ACTIVITY_NONE", "I", AccessFlags = 25)]
 				public const int DATA_ACTIVITY_NONE = 0;
+				/// <summary>
+				///  <para>Data connection activity: Currently receiving IP PPP traffic. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DATA_ACTIVITY_IN
 				/// </java-name>
 				[Dot42.DexImport("DATA_ACTIVITY_IN", "I", AccessFlags = 25)]
 				public const int DATA_ACTIVITY_IN = 1;
+				/// <summary>
+				///  <para>Data connection activity: Currently sending IP PPP traffic. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DATA_ACTIVITY_OUT
 				/// </java-name>
 				[Dot42.DexImport("DATA_ACTIVITY_OUT", "I", AccessFlags = 25)]
 				public const int DATA_ACTIVITY_OUT = 2;
+				/// <summary>
+				///  <para>Data connection activity: Currently both sending and receiving IP PPP traffic. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DATA_ACTIVITY_INOUT
 				/// </java-name>
 				[Dot42.DexImport("DATA_ACTIVITY_INOUT", "I", AccessFlags = 25)]
 				public const int DATA_ACTIVITY_INOUT = 3;
+				/// <summary>
+				///  <para>Data connection is active, but physical link is down </para>        
+				/// </summary>
 				/// <java-name>
 				/// DATA_ACTIVITY_DORMANT
 				/// </java-name>
 				[Dot42.DexImport("DATA_ACTIVITY_DORMANT", "I", AccessFlags = 25)]
 				public const int DATA_ACTIVITY_DORMANT = 4;
+				/// <summary>
+				///  <para>Data connection state: Disconnected. IP traffic not available. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DATA_DISCONNECTED
 				/// </java-name>
 				[Dot42.DexImport("DATA_DISCONNECTED", "I", AccessFlags = 25)]
 				public const int DATA_DISCONNECTED = 0;
+				/// <summary>
+				///  <para>Data connection state: Currently setting up a data connection. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DATA_CONNECTING
 				/// </java-name>
 				[Dot42.DexImport("DATA_CONNECTING", "I", AccessFlags = 25)]
 				public const int DATA_CONNECTING = 1;
+				/// <summary>
+				///  <para>Data connection state: Connected. IP traffic should be available. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DATA_CONNECTED
 				/// </java-name>
 				[Dot42.DexImport("DATA_CONNECTED", "I", AccessFlags = 25)]
 				public const int DATA_CONNECTED = 2;
+				/// <summary>
+				///  <para>Data connection state: Suspended. The connection is up, but IP traffic is temporarily unavailable. For example, in a 2G network, data activity may be suspended when a voice call arrives. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DATA_SUSPENDED
 				/// </java-name>
@@ -1831,14 +2590,20 @@ namespace Android.Telephony
 				{
 				}
 
+				/// <summary>
+				///  <para>Registers a listener object to receive notification of changes in specified telephony states. </para> <para>To register a listener, pass a PhoneStateListener and specify at least one telephony state of interest in the events argument.</para> <para>At registration, and when a specified telephony state changes, the telephony manager invokes the appropriate callback method on the listener object and passes the current (udpated) values. </para> <para>To unregister a listener, pass the listener object and set the events argument to LISTEN_NONE (0).</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// listen
 				/// </java-name>
 				[Dot42.DexImport("listen", "(Landroid/telephony/PhoneStateListener;I)V", AccessFlags = 1)]
-				public virtual void Listen(global::Android.Telephony.PhoneStateListener phoneStateListener, int int32) /* MethodBuilder.Create */ 
+				public virtual void Listen(global::Android.Telephony.PhoneStateListener listener, int events) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the software version number for the device, for example, the IMEI/SV for GSM phones. Return null if the software version is not available.</para> <para>Requires Permission: READ_PHONE_STATE </para>        
+				/// </summary>
 				/// <java-name>
 				/// getDeviceSoftwareVersion
 				/// </java-name>
@@ -1848,6 +2613,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the unique device ID, for example, the IMEI for GSM and the MEID or ESN for CDMA phones. Return null if device ID is not available.</para> <para>Requires Permission: READ_PHONE_STATE </para>        
+				/// </summary>
 				/// <java-name>
 				/// getDeviceId
 				/// </java-name>
@@ -1857,6 +2625,12 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the current location of the device. </para> <para>If there is only one radio in the device and that radio has an LTE connection, this method will return null. The implementation must not to try add LTE identifiers into the existing cdma/gsm classes. </para> <para>In the future this call will be deprecated. </para> <para></para> <para>Requires Permission: ACCESS_COARSE_LOCATION or ACCESS_FINE_LOCATION. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>Current location of the device or null if not available.</para>
+				/// </returns>
 				/// <java-name>
 				/// getCellLocation
 				/// </java-name>
@@ -1866,6 +2640,12 @@ namespace Android.Telephony
 						get{ return default(global::Android.Telephony.CellLocation); }
 				}
 
+				/// <summary>
+				///  <para>Returns the neighboring cell information of the device. The getAllCellInfo is preferred and use this only if getAllCellInfo return nulls or an empty list. </para> <para>In the future this call will be deprecated. </para> <para></para> <para>Requires Permission: (} </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>List of NeighboringCellInfo or null if info unavailable.</para>
+				/// </returns>
 				/// <java-name>
 				/// getNeighboringCellInfo
 				/// </java-name>
@@ -1875,6 +2655,9 @@ namespace Android.Telephony
 						get{ return default(global::Java.Util.IList<global::Android.Telephony.NeighboringCellInfo>); }
 				}
 
+				/// <summary>
+				///  <para>Returns a constant indicating the device phone type. This indicates the type of radio used to transmit voice calls.</para> <para> <para>PHONE_TYPE_NONE </para> <para>PHONE_TYPE_GSM </para> <para>PHONE_TYPE_CDMA </para> <para>PHONE_TYPE_SIP </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// getPhoneType
 				/// </java-name>
@@ -1884,6 +2667,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the alphabetic name of current registered operator. </para> <para>Availability: Only when user is registered to a network. Result may be unreliable on CDMA networks (use getPhoneType() to determine if on a CDMA network). </para>        
+				/// </summary>
 				/// <java-name>
 				/// getNetworkOperatorName
 				/// </java-name>
@@ -1893,6 +2679,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the numeric name (MCC+MNC) of current registered operator. </para> <para>Availability: Only when user is registered to a network. Result may be unreliable on CDMA networks (use getPhoneType() to determine if on a CDMA network). </para>        
+				/// </summary>
 				/// <java-name>
 				/// getNetworkOperator
 				/// </java-name>
@@ -1902,6 +2691,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns true if the device is considered roaming on the current network, for GSM purposes. </para> <para>Availability: Only when user registered to a network. </para>        
+				/// </summary>
 				/// <java-name>
 				/// isNetworkRoaming
 				/// </java-name>
@@ -1911,6 +2703,9 @@ namespace Android.Telephony
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>Returns the ISO country code equivalent of the current registered operator's MCC (Mobile Country Code). </para> <para>Availability: Only when user is registered to a network. Result may be unreliable on CDMA networks (use getPhoneType() to determine if on a CDMA network). </para>        
+				/// </summary>
 				/// <java-name>
 				/// getNetworkCountryIso
 				/// </java-name>
@@ -1920,6 +2715,12 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the NETWORK_TYPE_xxxx for current data connection. </para>
+				/// </returns>
 				/// <java-name>
 				/// getNetworkType
 				/// </java-name>
@@ -1929,6 +2730,12 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if a ICC card is present </para>
+				/// </returns>
 				/// <java-name>
 				/// hasIccCard
 				/// </java-name>
@@ -1938,6 +2745,9 @@ namespace Android.Telephony
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>Returns a constant indicating the state of the device SIM card.</para> <para> <para>SIM_STATE_UNKNOWN </para> <para>SIM_STATE_ABSENT </para> <para>SIM_STATE_PIN_REQUIRED </para> <para>SIM_STATE_PUK_REQUIRED </para> <para>SIM_STATE_NETWORK_LOCKED </para> <para>SIM_STATE_READY </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// getSimState
 				/// </java-name>
@@ -1947,6 +2757,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the MCC+MNC (mobile country code + mobile network code) of the provider of the SIM. 5 or 6 decimal digits. </para> <para>Availability: SIM state must be SIM_STATE_READY</para> <para> <para>getSimState </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// getSimOperator
 				/// </java-name>
@@ -1956,6 +2769,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the Service Provider Name (SPN). </para> <para>Availability: SIM state must be SIM_STATE_READY</para> <para> <para>getSimState </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// getSimOperatorName
 				/// </java-name>
@@ -1965,6 +2781,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the ISO country code equivalent for the SIM provider's country code. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSimCountryIso
 				/// </java-name>
@@ -1974,6 +2793,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the serial number of the SIM, if applicable. Return null if it is unavailable. </para> <para>Requires Permission: READ_PHONE_STATE </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSimSerialNumber
 				/// </java-name>
@@ -1983,6 +2805,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the unique subscriber ID, for example, the IMSI for a GSM phone. Return null if it is unavailable. </para> <para>Requires Permission: READ_PHONE_STATE </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSubscriberId
 				/// </java-name>
@@ -1992,6 +2817,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the phone number string for line 1, for example, the MSISDN for a GSM phone. Return null if it is unavailable. </para> <para>Requires Permission: READ_PHONE_STATE </para>        
+				/// </summary>
 				/// <java-name>
 				/// getLine1Number
 				/// </java-name>
@@ -2001,6 +2829,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the voice mail number. Return null if it is unavailable. </para> <para>Requires Permission: READ_PHONE_STATE </para>        
+				/// </summary>
 				/// <java-name>
 				/// getVoiceMailNumber
 				/// </java-name>
@@ -2010,6 +2841,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Retrieves the alphabetic identifier associated with the voice mail number. </para> <para>Requires Permission: READ_PHONE_STATE </para>        
+				/// </summary>
 				/// <java-name>
 				/// getVoiceMailAlphaTag
 				/// </java-name>
@@ -2019,6 +2853,9 @@ namespace Android.Telephony
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns a constant indicating the call state (cellular) on the device. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getCallState
 				/// </java-name>
@@ -2028,6 +2865,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns a constant indicating the type of activity on a data connection (cellular).</para> <para> <para>DATA_ACTIVITY_NONE </para> <para>DATA_ACTIVITY_IN </para> <para>DATA_ACTIVITY_OUT </para> <para>DATA_ACTIVITY_INOUT </para> <para>DATA_ACTIVITY_DORMANT </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// getDataActivity
 				/// </java-name>
@@ -2037,6 +2877,9 @@ namespace Android.Telephony
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns a constant indicating the current data connection state (cellular).</para> <para> <para>DATA_DISCONNECTED </para> <para>DATA_CONNECTING </para> <para>DATA_CONNECTED </para> <para>DATA_SUSPENDED </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// getDataState
 				/// </java-name>

@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Android.Test.Suitebuilder
 {
+		/// <summary>
+		///  <para>Represents a test to be run. Can be constructed without instantiating the TestCase or even loading the class. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/suitebuilder/TestMethod
 		/// </java-name>
@@ -27,7 +30,7 @@ namespace Android.Test.Suitebuilder
 				/// getAnnotation
 				/// </java-name>
 				[Dot42.DexImport("getAnnotation", "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", AccessFlags = 1, Signature = "<T::Ljava/lang/annotation/Annotation;>(Ljava/lang/Class<TT;>;)TT;")]
-				public virtual T GetAnnotation<T>(global::System.Type type) /* MethodBuilder.Create */ 
+				public virtual T GetAnnotation<T>(global::System.Type annotationClass) /* MethodBuilder.Create */ 
 				{
 						return default(T);
 				}
@@ -45,7 +48,7 @@ namespace Android.Test.Suitebuilder
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object o) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -102,6 +105,9 @@ namespace Android.Test.Suitebuilder
 
 		}
 
+		/// <summary>
+		///  <para>Build suites based on a combination of included packages, excluded packages, and predicates that must be satisfied. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/suitebuilder/TestSuiteBuilder
 		/// </java-name>
@@ -109,44 +115,71 @@ namespace Android.Test.Suitebuilder
 		public partial class TestSuiteBuilder
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The given name is automatically prefixed with the package containing the tests to be run. If more than one package is specified, the first is used.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/Class;)V", AccessFlags = 1)]
-				public TestSuiteBuilder(global::System.Type type) /* MethodBuilder.Create */ 
+				public TestSuiteBuilder(global::System.Type clazz) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-				public TestSuiteBuilder(string @string, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
+				public TestSuiteBuilder(string name, global::Java.Lang.ClassLoader classLoader) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Include all tests that satisfy the requirements in the given packages and all sub-packages, unless otherwise specified.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>The builder for method chaining. </para>
+				/// </returns>
 				/// <java-name>
 				/// includePackages
 				/// </java-name>
 				[Dot42.DexImport("includePackages", "([Ljava/lang/String;)Landroid/test/suitebuilder/TestSuiteBuilder;", AccessFlags = 129)]
-				public virtual global::Android.Test.Suitebuilder.TestSuiteBuilder IncludePackages(params string[] @string) /* MethodBuilder.Create */ 
+				public virtual global::Android.Test.Suitebuilder.TestSuiteBuilder IncludePackages(params string[] packageNames) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Test.Suitebuilder.TestSuiteBuilder);
 				}
 
+				/// <summary>
+				///  <para>Exclude all tests in the given packages and all sub-packages, unless otherwise specified.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>The builder for method chaining. </para>
+				/// </returns>
 				/// <java-name>
 				/// excludePackages
 				/// </java-name>
 				[Dot42.DexImport("excludePackages", "([Ljava/lang/String;)Landroid/test/suitebuilder/TestSuiteBuilder;", AccessFlags = 129)]
-				public virtual global::Android.Test.Suitebuilder.TestSuiteBuilder ExcludePackages(params string[] @string) /* MethodBuilder.Create */ 
+				public virtual global::Android.Test.Suitebuilder.TestSuiteBuilder ExcludePackages(params string[] packageNames) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Test.Suitebuilder.TestSuiteBuilder);
 				}
 
+				/// <summary>
+				///  <para>Exclude tests that fail to satisfy all of the given predicates.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>The builder for method chaining. </para>
+				/// </returns>
 				/// <java-name>
 				/// addRequirements
 				/// </java-name>
 				[Dot42.DexImport("addRequirements", "(Ljava/util/List;)Landroid/test/suitebuilder/TestSuiteBuilder;", AccessFlags = 1, Signature = "(Ljava/util/List<Lcom/android/internal/util/Predicate<Landroid/test/suitebuilder/" +
     "TestMethod;>;>;)Landroid/test/suitebuilder/TestSuiteBuilder;")]
-				public virtual global::Android.Test.Suitebuilder.TestSuiteBuilder AddRequirements(global::Java.Util.IList<global::Com.Android.Internal.Util.IPredicate<global::Android.Test.Suitebuilder.TestMethod>> list) /* MethodBuilder.Create */ 
+				public virtual global::Android.Test.Suitebuilder.TestSuiteBuilder AddRequirements(global::Java.Util.IList<global::Com.Android.Internal.Util.IPredicate<global::Android.Test.Suitebuilder.TestMethod>> predicates) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Test.Suitebuilder.TestSuiteBuilder);
 				}
 
+				/// <summary>
+				///  <para>Include all junit tests that satisfy the requirements in the calling class' package and all sub-packages.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>The builder for method chaining. </para>
+				/// </returns>
 				/// <java-name>
 				/// includeAllPackagesUnderHere
 				/// </java-name>
@@ -156,15 +189,27 @@ namespace Android.Test.Suitebuilder
 						return default(global::Android.Test.Suitebuilder.TestSuiteBuilder);
 				}
 
+				/// <summary>
+				///  <para>Override the default name for the suite being built. This should generally be called if you call addRequirements(com.android.internal.util.Predicate[]) to make it clear which tests will be included. The name you specify is automatically prefixed with the package containing the tests to be run. If more than one package is specified, the first is used.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>The builder for method chaining. </para>
+				/// </returns>
 				/// <java-name>
 				/// named
 				/// </java-name>
 				[Dot42.DexImport("named", "(Ljava/lang/String;)Landroid/test/suitebuilder/TestSuiteBuilder;", AccessFlags = 1)]
-				public virtual global::Android.Test.Suitebuilder.TestSuiteBuilder Named(string @string) /* MethodBuilder.Create */ 
+				public virtual global::Android.Test.Suitebuilder.TestSuiteBuilder Named(string newSuiteName) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Test.Suitebuilder.TestSuiteBuilder);
 				}
 
+				/// <summary>
+				///  <para>Call this method once you've configured your builder as desired.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>The suite containing the requested tests. </para>
+				/// </returns>
 				/// <java-name>
 				/// build
 				/// </java-name>
@@ -174,13 +219,19 @@ namespace Android.Test.Suitebuilder
 						return default(global::Junit.Framework.TestSuite);
 				}
 
+				/// <summary>
+				///  <para>Exclude tests that fail to satisfy all of the given predicates.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>The builder for method chaining. </para>
+				/// </returns>
 				/// <java-name>
 				/// addRequirements
 				/// </java-name>
 				[Dot42.DexImport("addRequirements", "([Lcom/android/internal/util/Predicate;)Landroid/test/suitebuilder/TestSuiteBuild" +
     "er;", AccessFlags = 145, Signature = "([Lcom/android/internal/util/Predicate<Landroid/test/suitebuilder/TestMethod;>;)L" +
     "android/test/suitebuilder/TestSuiteBuilder;")]
-				public global::Android.Test.Suitebuilder.TestSuiteBuilder AddRequirements(params global::Com.Android.Internal.Util.IPredicate<global::Android.Test.Suitebuilder.TestMethod>[] predicate) /* MethodBuilder.Create */ 
+				public global::Android.Test.Suitebuilder.TestSuiteBuilder AddRequirements(params global::Com.Android.Internal.Util.IPredicate<global::Android.Test.Suitebuilder.TestMethod>[] predicates) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Test.Suitebuilder.TestSuiteBuilder);
 				}
@@ -190,6 +241,12 @@ namespace Android.Test.Suitebuilder
 				{
 				}
 
+				/// <summary>
+				///  <para>Subclasses use this method to determine the name of the suite.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>The package and suite name combined. </para>
+				/// </returns>
 				/// <java-name>
 				/// getSuiteName
 				/// </java-name>
@@ -199,6 +256,9 @@ namespace Android.Test.Suitebuilder
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>A special junit.framework.TestCase used to indicate a failure during the build() step. </para>    
+				/// </summary>
 				/// <java-name>
 				/// android/test/suitebuilder/TestSuiteBuilder$FailedToCreateTests
 				/// </java-name>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layout>
+  <viewgroup name="FragmentBreadCrumbs" super="ViewGroup" />
+  <viewgroup name="GestureOverlayView" super="FrameLayout" />
+  <view name="GLSurfaceView" super="SurfaceView" />
+  <viewgroup name="AppWidgetHostView" super="FrameLayout" />
+  <viewgroup name="GridLayout" super="ViewGroup" />
+  <view name="EditText" super="TextView" />
+  <viewgroup name="FrameLayout" super="ViewGroup" />
+  <viewgroup name="TableRow" super="LinearLayout" />
+  <viewgroup name="TabHost" super="FrameLayout" />
+  <viewgroup name="ExpandableListView" super="ListView" />
+  <viewgroup name="ListView" super="AbsListView" />
+  <viewgroup name="ViewFlipper" super="ViewAnimator" />
+  <viewgroup name="TimePicker" super="FrameLayout" />
+  <viewgroup name="TableLayout" super="LinearLayout" />
+  <view name="QuickContactBadge" super="ImageView" />
+  <view name="RadioButton" super="CompoundButton" />
+  <view name="DigitalClock" super="TextView" />
+  <view name="Space" super="View" />
+  <viewgroup name="ViewSwitcher" super="ViewAnimator" />
+  <view name="CheckBox" super="CompoundButton" />
+  <view name="CheckedTextView" super="TextView" />
+  <view name="TextView" super="View" />
+  <viewgroup name="AdapterViewAnimator" abstract="true" super="AdapterView" />
+  <viewgroup name="ImageSwitcher" super="ViewSwitcher" />
+  <viewgroup name="MediaController" super="FrameLayout" />
+  <view name="ProgressBar" super="View" />
+  <viewgroup name="DatePicker" super="FrameLayout" />
+  <viewgroup name="AbsoluteLayout" super="ViewGroup" />
+  <viewgroup name="SlidingDrawer" super="ViewGroup" />
+  <view name="ZoomButton" super="ImageButton" />
+  <view name="AutoCompleteTextView" super="EditText" />
+  <view name="ImageButton" super="ImageView" />
+  <viewgroup name="GridView" super="AbsListView" />
+  <view name="AnalogClock" super="View" />
+  <viewgroup name="TabWidget" super="LinearLayout" />
+  <view name="MultiAutoCompleteTextView" super="AutoCompleteTextView" />
+  <viewgroup name="TextSwitcher" super="ViewSwitcher" />
+  <view name="CompoundButton" abstract="true" super="Button" />
+  <view name="Button" super="TextView" />
+  <viewgroup name="RelativeLayout" super="ViewGroup" />
+  <viewgroup name="Spinner" super="AbsSpinner" />
+  <view name="SeekBar" super="AbsSeekBar" />
+  <view name="RatingBar" super="AbsSeekBar" />
+  <viewgroup name="Gallery" super="AbsSpinner" />
+  <view name="Switch" super="CompoundButton" />
+  <viewgroup name="LinearLayout" super="ViewGroup" />
+  <viewgroup name="AbsSpinner" abstract="true" super="AdapterView" />
+  <viewgroup name="AdapterView" abstract="true" super="ViewGroup" />
+  <viewgroup name="CalendarView" super="FrameLayout" />
+  <viewgroup name="AdapterViewFlipper" super="AdapterViewAnimator" />
+  <viewgroup name="StackView" super="AdapterViewAnimator" />
+  <viewgroup name="DialerFilter" super="RelativeLayout" />
+  <viewgroup name="AbsListView" abstract="true" super="AdapterView" />
+  <viewgroup name="SearchView" super="LinearLayout" />
+  <viewgroup name="TwoLineListItem" super="RelativeLayout" />
+  <view name="VideoView" super="SurfaceView" />
+  <viewgroup name="HorizontalScrollView" super="FrameLayout" />
+  <viewgroup name="ViewAnimator" super="FrameLayout" />
+  <viewgroup name="RadioGroup" super="LinearLayout" />
+  <viewgroup name="NumberPicker" super="LinearLayout" />
+  <view name="Chronometer" super="TextView" />
+  <viewgroup name="ZoomControls" super="LinearLayout" />
+  <view name="ToggleButton" super="CompoundButton" />
+  <view name="ImageView" super="View" />
+  <viewgroup name="ScrollView" super="FrameLayout" />
+  <view name="AbsSeekBar" abstract="true" super="ProgressBar" />
+  <viewgroup name="WebView" super="AbsoluteLayout" />
+  <view name="RSTextureView" super="TextureView" />
+  <view name="RSSurfaceView" super="SurfaceView" />
+  <view name="View" />
+  <view name="ViewStub" super="View" />
+  <view name="TextureView" super="View" />
+  <view name="SurfaceView" super="View" />
+  <viewgroup name="ViewGroup" abstract="true" super="View" />
+  <view name="ExtractEditText" super="EditText" />
+  <view name="KeyboardView" super="View" />
+</layout>

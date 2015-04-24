@@ -700,6 +700,9 @@ namespace Java.Math
 
 		}
 
+		/// <summary>
+		///  <para>An immutable arbitrary-precision signed integer.</para> <para> <h3>Fast Cryptography</h3></para> <para>This implementation is efficient for operations traditionally used in cryptography, such as the generation of large prime numbers and computation of the modular inverse.</para> <para> <h3>Slow Two's Complement Bitwise Operations</h3></para> <para>This API includes operations for bitwise operations in two's complement representation. Two's complement is not the internal representation used by this implementation, so such methods may be inefficient. Use java.util.BitSet for high-performance bitwise operations on arbitrarily-large sequences of bits. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/math/BigInteger
 		/// </java-name>
@@ -708,70 +711,100 @@ namespace Java.Math
 		public partial class BigInteger : global::Java.Lang.Number, global::System.IComparable<global::Java.Math.BigInteger>, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The <c>BigInteger </c> constant 0. </para>        
+				/// </summary>
 				/// <java-name>
 				/// ZERO
 				/// </java-name>
 				[Dot42.DexImport("ZERO", "Ljava/math/BigInteger;", AccessFlags = 25)]
 				public static readonly global::Java.Math.BigInteger ZERO;
+				/// <summary>
+				///  <para>The <c>BigInteger </c> constant 1. </para>        
+				/// </summary>
 				/// <java-name>
 				/// ONE
 				/// </java-name>
 				[Dot42.DexImport("ONE", "Ljava/math/BigInteger;", AccessFlags = 25)]
 				public static readonly global::Java.Math.BigInteger ONE;
+				/// <summary>
+				///  <para>The <c>BigInteger </c> constant 10. </para>        
+				/// </summary>
 				/// <java-name>
 				/// TEN
 				/// </java-name>
 				[Dot42.DexImport("TEN", "Ljava/math/BigInteger;", AccessFlags = 25)]
 				public static readonly global::Java.Math.BigInteger TEN;
+				/// <summary>
+				///  <para>Constructs a random non-negative <c>BigInteger </c> instance in the range  <c>[0, pow(2, numBits)-1] </c> .</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(ILjava/util/Random;)V", AccessFlags = 1)]
-				public BigInteger(int int32, global::System.Random random) /* MethodBuilder.Create */ 
+				public BigInteger(int numBits, global::System.Random random) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Constructs a random <c>BigInteger </c> instance in the range <c> [0,pow(2, bitLength)-1] </c> which is probably prime. The probability that the returned <c>BigInteger </c> is prime is greater than  <c>1 - 1/2&lt;sup&gt;certainty&lt;/sup&gt;) </c> .</para> <para> <b>Note:</b> the <c>Random </c> argument is ignored if  <c>bitLength &gt;= 16 </c> , where this implementation will use OpenSSL's  <c>BN_generate_prime_ex </c> as a source of cryptographically strong pseudo-random numbers.</para> <para> <para> </para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(IILjava/util/Random;)V", AccessFlags = 1)]
-				public BigInteger(int int32, int int321, global::System.Random random) /* MethodBuilder.Create */ 
+				public BigInteger(int bitLength, int certainty, global::System.Random random) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public BigInteger(string @string) /* MethodBuilder.Create */ 
+				public BigInteger(string bigInt) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Constructs a random non-negative <c>BigInteger </c> instance in the range  <c>[0, pow(2, numBits)-1] </c> .</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;I)V", AccessFlags = 1)]
-				public BigInteger(string @string, int int32) /* MethodBuilder.Create */ 
+				public BigInteger(string numBits, int random) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Constructs a random non-negative <c>BigInteger </c> instance in the range  <c>[0, pow(2, numBits)-1] </c> .</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
-				public BigInteger(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
+				public BigInteger(int numBits, sbyte[] random) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Constructs a random non-negative <c>BigInteger </c> instance in the range  <c>[0, pow(2, numBits)-1] </c> .</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public BigInteger(int int32, byte[] @byte) /* MethodBuilder.Create */ 
+				public BigInteger(int numBits, byte[] random) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
-				public BigInteger(sbyte[] sByte) /* MethodBuilder.Create */ 
+				public BigInteger(sbyte[] bigInt) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public BigInteger(byte[] @byte) /* MethodBuilder.Create */ 
+				public BigInteger(byte[] bigInt) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is equal to <c>value </c> . </para>        
+				/// </summary>
 				/// <java-name>
 				/// valueOf
 				/// </java-name>
 				[Dot42.DexImport("valueOf", "(J)Ljava/math/BigInteger;", AccessFlags = 9)]
-				public static global::Java.Math.BigInteger ValueOf(long int64) /* MethodBuilder.Create */ 
+				public static global::Java.Math.BigInteger ValueOf(long value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns the two's complement representation of this <c>BigInteger </c> in a byte array. </para>        
+				/// </summary>
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
@@ -781,6 +814,9 @@ namespace Java.Math
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Returns the two's complement representation of this <c>BigInteger </c> in a byte array. </para>        
+				/// </summary>
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
@@ -790,6 +826,9 @@ namespace Java.Math
 						return default(byte[]);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is the absolute value of <c>this </c> . </para>        
+				/// </summary>
 				/// <java-name>
 				/// abs
 				/// </java-name>
@@ -799,6 +838,9 @@ namespace Java.Math
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is the <c>-this </c> . </para>        
+				/// </summary>
 				/// <java-name>
 				/// negate
 				/// </java-name>
@@ -808,24 +850,36 @@ namespace Java.Math
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this + value </c> . </para>        
+				/// </summary>
 				/// <java-name>
 				/// add
 				/// </java-name>
 				[Dot42.DexImport("add", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Add(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Add(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this - value </c> . </para>        
+				/// </summary>
 				/// <java-name>
 				/// subtract
 				/// </java-name>
 				[Dot42.DexImport("subtract", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Subtract(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Subtract(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns the sign of this <c>BigInteger </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>-1 </c> if <c>this &lt; 0 </c> , <c>0 </c> if <c>this == 0 </c> ,  <c>1 </c> if <c>this &gt; 0 </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// signum
 				/// </java-name>
@@ -835,24 +889,42 @@ namespace Java.Math
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this &gt;&gt; n </c> . For negative arguments, the result is also negative. The shift distance may be negative which means that <c>this </c> is shifted left.</para> <para> <b>Implementation Note:</b> Usage of this method on negative values is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>this &gt;&gt; n </c> if <c>n &gt;= 0 </c> ; <c>this &lt;&lt; (-n) </c> otherwise </para>
+				/// </returns>
 				/// <java-name>
 				/// shiftRight
 				/// </java-name>
 				[Dot42.DexImport("shiftRight", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ShiftRight(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger ShiftRight(int n) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this &lt;&lt; n </c> . The result is equivalent to <c>this * pow(2, n) </c> if n &gt;= 0. The shift distance may be negative which means that <c>this </c> is shifted right. The result then corresponds to <c>floor(this / pow(2, -n)) </c> .</para> <para> <b>Implementation Note:</b> Usage of this method on negative values is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>this &lt;&lt; n </c> if <c>n &gt;= 0 </c> ; <c>this &gt;&gt; (-n) </c> . otherwise </para>
+				/// </returns>
 				/// <java-name>
 				/// shiftLeft
 				/// </java-name>
 				[Dot42.DexImport("shiftLeft", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ShiftLeft(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger ShiftLeft(int n) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns the length of the value's two's complement representation without leading zeros for positive numbers / without leading ones for negative values.</para> <para>The two's complement representation of <c>this </c> will be at least  <c>bitLength() + 1 </c> bits long.</para> <para>The value will fit into an <c>int </c> if <c>bitLength() &lt; 32 </c> or into a <c>long </c> if <c>bitLength() &lt; 64 </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the length of the minimal two's complement representation for  <c>this </c> without the sign bit. </para>
+				/// </returns>
 				/// <java-name>
 				/// bitLength
 				/// </java-name>
@@ -862,42 +934,57 @@ namespace Java.Math
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Tests whether the bit at position n in <c>this </c> is set. The result is equivalent to <c>this &amp; pow(2, n) != 0 </c> .</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// testBit
 				/// </java-name>
 				[Dot42.DexImport("testBit", "(I)Z", AccessFlags = 1)]
-				public virtual bool TestBit(int int32) /* MethodBuilder.Create */ 
+				public virtual bool TestBit(int n) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> which has the same binary representation as <c>this </c> but with the bit at position n set. The result is equivalent to <c>this | pow(2, n) </c> .</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// setBit
 				/// </java-name>
 				[Dot42.DexImport("setBit", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger SetBit(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger SetBit(int n) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> which has the same binary representation as <c>this </c> but with the bit at position n cleared. The result is equivalent to <c>this &amp; ~pow(2, n) </c> .</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// clearBit
 				/// </java-name>
 				[Dot42.DexImport("clearBit", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ClearBit(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger ClearBit(int n) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> which has the same binary representation as <c>this </c> but with the bit at position n flipped. The result is equivalent to <c>this ^ pow(2, n) </c> .</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// flipBit
 				/// </java-name>
 				[Dot42.DexImport("flipBit", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger FlipBit(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger FlipBit(int n) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns the number of bits in the two's complement representation of  <c>this </c> which differ from the sign bit. If <c>this </c> is negative, the result is equivalent to the number of bits set in the two's complement representation of <c>-this - 1 </c> .</para> <para>Use <c>bitLength(0) </c> to find the length of the binary value in bits.</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient. </para>        
+				/// </summary>
 				/// <java-name>
 				/// bitCount
 				/// </java-name>
@@ -907,6 +994,9 @@ namespace Java.Math
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>~this </c> . The result of this operation is <c>-this-1 </c> .</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient. </para>        
+				/// </summary>
 				/// <java-name>
 				/// not
 				/// </java-name>
@@ -916,42 +1006,57 @@ namespace Java.Math
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this &amp; value </c> .</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// and
 				/// </java-name>
 				[Dot42.DexImport("and", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger And(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger And(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this | value </c> .</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// or
 				/// </java-name>
 				[Dot42.DexImport("or", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Or(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Or(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this ^ value </c> .</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// xor
 				/// </java-name>
 				[Dot42.DexImport("xor", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Xor(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Xor(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this &amp; ~value </c> . Evaluating <c>x.andNot(value) </c> returns the same result as <c>x.and(value.not()) </c> .</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// andNot
 				/// </java-name>
 				[Dot42.DexImport("andNot", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger AndNot(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger AndNot(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns this <c>BigInteger </c> as an int value. If <c>this </c> is too big to be represented as an int, then <c>this % (1 &lt;&lt; 32) </c> is returned. </para>        
+				/// </summary>
 				/// <java-name>
 				/// intValue
 				/// </java-name>
@@ -961,6 +1066,9 @@ namespace Java.Math
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Returns this <c>BigInteger </c> as a long value. If <c>this </c> is too big to be represented as a long, then <c>this % pow(2, 64) </c> is returned. </para>        
+				/// </summary>
 				/// <java-name>
 				/// longValue
 				/// </java-name>
@@ -970,6 +1078,9 @@ namespace Java.Math
 						return default(long);
 				}
 
+				/// <summary>
+				///  <para>Returns this <c>BigInteger </c> as a float. If <c>this </c> is too big to be represented as a float, then <c>Float.POSITIVE_INFINITY </c> or  <c>Float.NEGATIVE_INFINITY </c> is returned. Note that not all integers in the range <c>[-Float.MAX_VALUE, Float.MAX_VALUE] </c> can be exactly represented as a float. </para>        
+				/// </summary>
 				/// <java-name>
 				/// floatValue
 				/// </java-name>
@@ -979,6 +1090,9 @@ namespace Java.Math
 						return default(float);
 				}
 
+				/// <summary>
+				///  <para>Returns this <c>BigInteger </c> as a double. If <c>this </c> is too big to be represented as a double, then <c>Double.POSITIVE_INFINITY </c> or  <c>Double.NEGATIVE_INFINITY </c> is returned. Note that not all integers in the range <c>[-Double.MAX_VALUE, Double.MAX_VALUE] </c> can be exactly represented as a double. </para>        
+				/// </summary>
 				/// <java-name>
 				/// doubleValue
 				/// </java-name>
@@ -988,29 +1102,38 @@ namespace Java.Math
 						return default(double);
 				}
 
+				/// <summary>
+				///  <para>Compares this <c>BigInteger </c> with <c>value </c> . Returns <c>-1 </c> if <c>this &lt; value </c> , <c>0 </c> if <c>this == value </c> and <c>1 </c> if <c>this &gt; value </c> , .</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// compareTo
 				/// </java-name>
 				[Dot42.DexImport("compareTo", "(Ljava/math/BigInteger;)I", AccessFlags = 1)]
-				public virtual int CompareTo(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual int CompareTo(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Returns the minimum of this <c>BigInteger </c> and <c>value </c> .</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// min
 				/// </java-name>
 				[Dot42.DexImport("min", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Min(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Min(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns the maximum of this <c>BigInteger </c> and <c>value </c> .</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// max
 				/// </java-name>
 				[Dot42.DexImport("max", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Max(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Max(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
@@ -1028,11 +1151,14 @@ namespace Java.Math
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object x) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns a string representation of this <c>BigInteger </c> in decimal form. </para>        
+				/// </summary>
 				/// <java-name>
 				/// toString
 				/// </java-name>
@@ -1042,105 +1168,153 @@ namespace Java.Math
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Returns a string containing a string representation of this <c>BigInteger </c> with base radix. If <c>radix &lt; Character.MIN_RADIX </c> or  <c>radix &gt; Character.MAX_RADIX </c> then a decimal representation is returned. The characters of the string representation are generated with method <c>Character.forDigit </c> .</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string ToString(int int32) /* MethodBuilder.Create */ 
+				public virtual string ToString(int radix) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is greatest common divisor of <c>this </c> and <c>value </c> . If <c>this == 0 </c> and <c>value == 0 </c> then zero is returned, otherwise the result is positive.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// gcd
 				/// </java-name>
 				[Dot42.DexImport("gcd", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Gcd(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Gcd(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this * value </c> .</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// multiply
 				/// </java-name>
 				[Dot42.DexImport("multiply", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Multiply(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Multiply(global::Java.Math.BigInteger value) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>pow(this, exp) </c> .</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// pow
 				/// </java-name>
 				[Dot42.DexImport("pow", "(I)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Pow(int int32) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Pow(int exp) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a two element <c>BigInteger </c> array containing  <c>this / divisor </c> at index 0 and <c>this % divisor </c> at index 1.</para> <para> <para>divide </para> <para>remainder </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// divideAndRemainder
 				/// </java-name>
 				[Dot42.DexImport("divideAndRemainder", "(Ljava/math/BigInteger;)[Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger[] DivideAndRemainder(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger[] DivideAndRemainder(global::Java.Math.BigInteger divisor) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger[]);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this / divisor </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>this / divisor </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// divide
 				/// </java-name>
 				[Dot42.DexImport("divide", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Divide(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Divide(global::Java.Math.BigInteger divisor) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this % divisor </c> . Regarding signs this methods has the same behavior as the % operator on ints: the sign of the remainder is the same as the sign of this.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// remainder
 				/// </java-name>
 				[Dot42.DexImport("remainder", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Remainder(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Remainder(global::Java.Math.BigInteger divisor) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>1/this mod m </c> . The modulus <c>m </c> must be positive. The result is guaranteed to be in the interval <c>[0, m) </c> (0 inclusive, m exclusive). If <c>this </c> is not relatively prime to m, then an exception is thrown.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// modInverse
 				/// </java-name>
 				[Dot42.DexImport("modInverse", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ModInverse(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger ModInverse(global::Java.Math.BigInteger m) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>pow(this, exponent) mod modulus </c> . The modulus must be positive. The result is guaranteed to be in the interval <c>[0, modulus) </c> . If the exponent is negative, then  <c>pow(this.modInverse(modulus), -exponent) mod modulus </c> is computed. The inverse of this only exists if <c>this </c> is relatively prime to the modulus, otherwise an exception is thrown.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// modPow
 				/// </java-name>
 				[Dot42.DexImport("modPow", "(Ljava/math/BigInteger;Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger ModPow(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger ModPow(global::Java.Math.BigInteger exponent, global::Java.Math.BigInteger modulus) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a <c>BigInteger </c> whose value is <c>this mod m </c> . The modulus <c>m </c> must be positive. The result is guaranteed to be in the interval <c>[0, m) </c> (0 inclusive, m exclusive). The behavior of this function is not equivalent to the behavior of the % operator defined for the built-in <c>int </c> 's.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>this mod m </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// mod
 				/// </java-name>
 				[Dot42.DexImport("mod", "(Ljava/math/BigInteger;)Ljava/math/BigInteger;", AccessFlags = 1)]
-				public virtual global::Java.Math.BigInteger Mod(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public virtual global::Java.Math.BigInteger Mod(global::Java.Math.BigInteger m) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Tests whether this <c>BigInteger </c> is probably prime. If <c>true </c> is returned, then this is prime with a probability greater than  <c>1 - 1/2&lt;sup&gt;certainty&lt;/sup&gt;) </c> . If <c>false </c> is returned, then this is definitely composite. If the argument <c>certainty </c> &lt;= 0, then this method returns true.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>true </c> , if <c>this </c> is probably prime, <c>false </c> otherwise. </para>
+				/// </returns>
 				/// <java-name>
 				/// isProbablePrime
 				/// </java-name>
 				[Dot42.DexImport("isProbablePrime", "(I)Z", AccessFlags = 1)]
-				public virtual bool IsProbablePrime(int int32) /* MethodBuilder.Create */ 
+				public virtual bool IsProbablePrime(int certainty) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns the smallest integer x &gt; <c>this </c> which is probably prime as a <c>BigInteger </c> instance. The probability that the returned <c>BigInteger </c> is prime is greater than <c>1 - 1/2&lt;sup&gt;100&lt;/sup&gt; </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>smallest integer &gt; <c>this </c> which is probably prime. </para>
+				/// </returns>
 				/// <java-name>
 				/// nextProbablePrime
 				/// </java-name>
@@ -1150,11 +1324,17 @@ namespace Java.Math
 						return default(global::Java.Math.BigInteger);
 				}
 
+				/// <summary>
+				///  <para>Returns a random positive <c>BigInteger </c> instance in the range <c>[0, pow(2, bitLength)-1] </c> which is probably prime. The probability that the returned <c>BigInteger </c> is prime is greater than <c>1 - 1/2&lt;sup&gt;100&lt;/sup&gt;) </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>probably prime random <c>BigInteger </c> instance. </para>
+				/// </returns>
 				/// <java-name>
 				/// probablePrime
 				/// </java-name>
 				[Dot42.DexImport("probablePrime", "(ILjava/util/Random;)Ljava/math/BigInteger;", AccessFlags = 9)]
-				public static global::Java.Math.BigInteger ProbablePrime(int int32, global::System.Random random) /* MethodBuilder.Create */ 
+				public static global::Java.Math.BigInteger ProbablePrime(int bitLength, global::System.Random random) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Math.BigInteger);
 				}
@@ -1164,6 +1344,9 @@ namespace Java.Math
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the position of the lowest set bit in the two's complement representation of this <c>BigInteger </c> . If all bits are zero (this==0) then -1 is returned as result.</para> <para> <b>Implementation Note:</b> Usage of this method is not recommended as the current implementation is not efficient. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getLowestSetBit
 				/// </java-name>
@@ -1175,6 +1358,9 @@ namespace Java.Math
 
 		}
 
+		/// <summary>
+		///  <para>Immutable objects describing settings such as rounding mode and digit precision for the numerical operations provided by class BigDecimal. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/math/MathContext
 		/// </java-name>
@@ -1182,50 +1368,83 @@ namespace Java.Math
 		public sealed partial class MathContext : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>A <c>MathContext </c> which corresponds to the  quadruple decimal precision format: 34 digit precision and RoundingMode#HALF_EVEN rounding. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DECIMAL128
 				/// </java-name>
 				[Dot42.DexImport("DECIMAL128", "Ljava/math/MathContext;", AccessFlags = 25)]
 				public static readonly global::Java.Math.MathContext DECIMAL128;
+				/// <summary>
+				///  <para>A <c>MathContext </c> which corresponds to the  single decimal precision format: 7 digit precision and RoundingMode#HALF_EVEN rounding. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DECIMAL32
 				/// </java-name>
 				[Dot42.DexImport("DECIMAL32", "Ljava/math/MathContext;", AccessFlags = 25)]
 				public static readonly global::Java.Math.MathContext DECIMAL32;
+				/// <summary>
+				///  <para>A <c>MathContext </c> which corresponds to the  double decimal precision format: 16 digit precision and RoundingMode#HALF_EVEN rounding. </para>        
+				/// </summary>
 				/// <java-name>
 				/// DECIMAL64
 				/// </java-name>
 				[Dot42.DexImport("DECIMAL64", "Ljava/math/MathContext;", AccessFlags = 25)]
 				public static readonly global::Java.Math.MathContext DECIMAL64;
+				/// <summary>
+				///  <para>A <c>MathContext </c> for unlimited precision with RoundingMode#HALF_UP rounding. </para>        
+				/// </summary>
 				/// <java-name>
 				/// UNLIMITED
 				/// </java-name>
 				[Dot42.DexImport("UNLIMITED", "Ljava/math/MathContext;", AccessFlags = 25)]
 				public static readonly global::Java.Math.MathContext UNLIMITED;
+				/// <summary>
+				///  <para>Constructs a new <c>MathContext </c> with the specified precision and with the rounding mode HALF_UP. If the precision passed is zero, then this implies that the computations have to be performed exact, the rounding mode in this case is irrelevant.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public MathContext(int int32) /* MethodBuilder.Create */ 
+				public MathContext(int precision) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Constructs a new <c>MathContext </c> with the specified precision and with the specified rounding mode. If the precision passed is zero, then this implies that the computations have to be performed exact, the rounding mode in this case is irrelevant.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(ILjava/math/RoundingMode;)V", AccessFlags = 1)]
-				public MathContext(int int32, global::Java.Math.RoundingMode roundingMode) /* MethodBuilder.Create */ 
+				public MathContext(int precision, global::Java.Math.RoundingMode roundingMode) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Constructs a new <c>MathContext </c> with the specified precision and with the rounding mode HALF_UP. If the precision passed is zero, then this implies that the computations have to be performed exact, the rounding mode in this case is irrelevant.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public MathContext(string @string) /* MethodBuilder.Create */ 
+				public MathContext(string precision) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns true if x is a <c>MathContext </c> with the same precision setting and the same rounding mode as this <c>MathContext </c> instance.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>true </c> if this <c>MathContext </c> instance is equal to the  <c>x </c> argument; <c>false </c> otherwise. </para>
+				/// </returns>
 				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object x) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns the hash code for this <c>MathContext </c> instance.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the hash code for this <c>MathContext </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// hashCode
 				/// </java-name>
@@ -1235,6 +1454,12 @@ namespace Java.Math
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Returns the string representation for this <c>MathContext </c> instance. The string has the form  <c>"precision=&lt;precision&gt; roundingMode=&lt;roundingMode&gt;"</c> where <c>&lt;precision&gt; </c> is an integer describing the number of digits used for operations and <c>&lt;roundingMode&gt; </c> is the string representation of the rounding mode.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a string representation for this <c>MathContext </c> instance </para>
+				/// </returns>
 				/// <java-name>
 				/// toString
 				/// </java-name>
@@ -1249,6 +1474,12 @@ namespace Java.Math
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the precision. The precision is the number of digits used for an operation. Results are rounded to this precision. The precision is guaranteed to be non negative. If the precision is zero, then the computations have to be performed exact, results are not rounded in this case.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the precision. </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrecision
 				/// </java-name>
@@ -1258,6 +1489,12 @@ namespace Java.Math
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the rounding mode. The rounding mode is the strategy to be used to round results. </para> <para>The rounding mode is one of RoundingMode#UP, RoundingMode#DOWN, RoundingMode#CEILING, RoundingMode#FLOOR, RoundingMode#HALF_UP, RoundingMode#HALF_DOWN, RoundingMode#HALF_EVEN, or RoundingMode#UNNECESSARY.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the rounding mode. </para>
+				/// </returns>
 				/// <java-name>
 				/// getRoundingMode
 				/// </java-name>

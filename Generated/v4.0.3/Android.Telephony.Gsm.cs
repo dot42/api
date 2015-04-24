@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Android.Telephony.Gsm
 {
+		/// <summary>
+		///  <para>Represents the cell location on a GSM phone. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/gsm/GsmCellLocation
 		/// </java-name>
@@ -8,16 +11,25 @@ namespace Android.Telephony.Gsm
 		public partial class GsmCellLocation : global::Android.Telephony.CellLocation
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Empty constructor. Initializes the LAC and CID to -1. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public GsmCellLocation() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Initialize the object from a bundle. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
 				public GsmCellLocation(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Invalidate this object. The location area code and the cell id are set to -1. </para>        
+				/// </summary>
 				/// <java-name>
 				/// setStateInvalid
 				/// </java-name>
@@ -26,11 +38,14 @@ namespace Android.Telephony.Gsm
 				{
 				}
 
+				/// <summary>
+				///  <para>Set the location area code and the cell id. </para>        
+				/// </summary>
 				/// <java-name>
 				/// setLacAndCid
 				/// </java-name>
 				[Dot42.DexImport("setLacAndCid", "(II)V", AccessFlags = 1)]
-				public virtual void SetLacAndCid(int int32, int int321) /* MethodBuilder.Create */ 
+				public virtual void SetLacAndCid(int lac, int cid) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -47,7 +62,7 @@ namespace Android.Telephony.Gsm
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object o) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -61,14 +76,23 @@ namespace Android.Telephony.Gsm
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Set intent notifier Bundle based on service state</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// fillInNotifierBundle
 				/// </java-name>
 				[Dot42.DexImport("fillInNotifierBundle", "(Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public virtual void FillInNotifierBundle(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual void FillInNotifierBundle(global::Android.OS.Bundle m) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>gsm location area code, -1 if unknown, 0xffff max legal value </para>
+				/// </returns>
 				/// <java-name>
 				/// getLac
 				/// </java-name>
@@ -78,6 +102,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>gsm cell id, -1 if unknown, 0xffff max legal value </para>
+				/// </returns>
 				/// <java-name>
 				/// getCid
 				/// </java-name>
@@ -87,6 +117,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>On a UMTS network, returns the primary scrambling code of the serving cell.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>primary scrambling code for UMTS, -1 if unknown or GSM </para>
+				/// </returns>
 				/// <java-name>
 				/// getPsc
 				/// </java-name>
@@ -98,6 +134,9 @@ namespace Android.Telephony.Gsm
 
 		}
 
+		/// <summary>
+		///  <para>Manages SMS operations such as sending data, text, and pdu SMS messages. Get this object by calling the static method SmsManager.getDefault().  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Replaced by android.telephony.SmsManager that supports both GSM and CDMA. </para></xrefdescription></xrefsect></para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/gsm/SmsManager
 		/// </java-name>
@@ -105,46 +144,73 @@ namespace Android.Telephony.Gsm
 		public sealed partial class SmsManager
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Free space (TS 51.011 10.5.3).  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_SIM_FREE
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_SIM_FREE", "I", AccessFlags = 25)]
 				public const int STATUS_ON_SIM_FREE = 0;
+				/// <summary>
+				///  <para>Received and read (TS 51.011 10.5.3).  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_SIM_READ
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_SIM_READ", "I", AccessFlags = 25)]
 				public const int STATUS_ON_SIM_READ = 1;
+				/// <summary>
+				///  <para>Received and unread (TS 51.011 10.5.3).  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_SIM_UNREAD
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_SIM_UNREAD", "I", AccessFlags = 25)]
 				public const int STATUS_ON_SIM_UNREAD = 3;
+				/// <summary>
+				///  <para>Stored and sent (TS 51.011 10.5.3).  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_SIM_SENT
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_SIM_SENT", "I", AccessFlags = 25)]
 				public const int STATUS_ON_SIM_SENT = 5;
+				/// <summary>
+				///  <para>Stored and unsent (TS 51.011 10.5.3).  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// STATUS_ON_SIM_UNSENT
 				/// </java-name>
 				[Dot42.DexImport("STATUS_ON_SIM_UNSENT", "I", AccessFlags = 25)]
 				public const int STATUS_ON_SIM_UNSENT = 7;
+				/// <summary>
+				///  <para>Generic failure cause  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// RESULT_ERROR_GENERIC_FAILURE
 				/// </java-name>
 				[Dot42.DexImport("RESULT_ERROR_GENERIC_FAILURE", "I", AccessFlags = 25)]
 				public const int RESULT_ERROR_GENERIC_FAILURE = 1;
+				/// <summary>
+				///  <para>Failed because radio was explicitly turned off  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// RESULT_ERROR_RADIO_OFF
 				/// </java-name>
 				[Dot42.DexImport("RESULT_ERROR_RADIO_OFF", "I", AccessFlags = 25)]
 				public const int RESULT_ERROR_RADIO_OFF = 2;
+				/// <summary>
+				///  <para>Failed because no pdu provided  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// RESULT_ERROR_NULL_PDU
 				/// </java-name>
 				[Dot42.DexImport("RESULT_ERROR_NULL_PDU", "I", AccessFlags = 25)]
 				public const int RESULT_ERROR_NULL_PDU = 3;
+				/// <summary>
+				///  <para>Failed because service is currently unavailable  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// RESULT_ERROR_NO_SERVICE
 				/// </java-name>
@@ -155,24 +221,36 @@ namespace Android.Telephony.Gsm
 				{
 				}
 
+				/// <summary>
+				///  <para>Send a text based SMS.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para> <code>Use android.telephony.SmsManager. </code></para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// sendTextMessage
 				/// </java-name>
 				[Dot42.DexImport("sendTextMessage", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent" +
     ";Landroid/app/PendingIntent;)V", AccessFlags = 17)]
-				public void SendTextMessage(string @string, string string1, string string2, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				public void SendTextMessage(string destinationAddress, string scAddress, string text, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Divide a text message into several messages, none bigger than the maximum SMS message size.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>an  <code>ArrayList</code> of strings that, in order, comprise the original message </para>
+				/// </returns>
 				/// <java-name>
 				/// divideMessage
 				/// </java-name>
 				[Dot42.DexImport("divideMessage", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 17, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;")]
-				public global::Java.Util.ArrayList<string> DivideMessage(string @string) /* MethodBuilder.Create */ 
+				public global::Java.Util.ArrayList<string> DivideMessage(string text) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.ArrayList<string>);
 				}
 
+				/// <summary>
+				///  <para>Send a multi-part text based SMS. The callee should have already divided the message into correctly sized parts by calling  <code>divideMessage</code>.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para> <code>Use android.telephony.SmsManager. </code></para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// sendMultipartTextMessage
 				/// </java-name>
@@ -180,28 +258,40 @@ namespace Android.Telephony.Gsm
     "ava/util/ArrayList;)V", AccessFlags = 17, Signature = "(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;Lja" +
     "va/util/ArrayList<Landroid/app/PendingIntent;>;Ljava/util/ArrayList<Landroid/app" +
     "/PendingIntent;>;)V")]
-				public void SendMultipartTextMessage(string @string, string string1, global::Java.Util.ArrayList<string> arrayList, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList1, global::Java.Util.ArrayList<global::Android.App.PendingIntent> arrayList2) /* MethodBuilder.Create */ 
+				public void SendMultipartTextMessage(string destinationAddress, string scAddress, global::Java.Util.ArrayList<string> parts, global::Java.Util.ArrayList<global::Android.App.PendingIntent> sentIntents, global::Java.Util.ArrayList<global::Android.App.PendingIntent> deliveryIntents) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Send a data based SMS to a specific application port.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para> <code>Use android.telephony.SmsManager. </code></para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// sendDataMessage
 				/// </java-name>
 				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
     "endingIntent;)V", AccessFlags = 17)]
-				public void SendDataMessage(string @string, string string1, short int16, sbyte[] sByte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				public void SendDataMessage(string destinationAddress, string scAddress, short destinationPort, sbyte[] data, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Send a data based SMS to a specific application port.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para> <code>Use android.telephony.SmsManager. </code></para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// sendDataMessage
 				/// </java-name>
 				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
     "endingIntent;)V", AccessFlags = 17, IgnoreFromJava = true)]
-				public void SendDataMessage(string @string, string string1, short int16, byte[] @byte, global::Android.App.PendingIntent pendingIntent, global::Android.App.PendingIntent pendingIntent1) /* MethodBuilder.Create */ 
+				public void SendDataMessage(string destinationAddress, string scAddress, short destinationPort, byte[] data, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Get the default instance of the SmsManager</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsManager. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the default instance of the SmsManager </para>
+				/// </returns>
 				/// <java-name>
 				/// getDefault
 				/// </java-name>
@@ -213,6 +303,9 @@ namespace Android.Telephony.Gsm
 
 		}
 
+		/// <summary>
+		///  <para>A Short Message Service message.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Replaced by android.telephony.SmsMessage that supports both GSM and CDMA. </para></xrefdescription></xrefsect></para>    
+		/// </summary>
 		/// <java-name>
 		/// android/telephony/gsm/SmsMessage
 		/// </java-name>
@@ -220,69 +313,102 @@ namespace Android.Telephony.Gsm
 		public partial class SmsMessage
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Unknown encoding scheme (see TS 23.038)  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// ENCODING_UNKNOWN
 				/// </java-name>
 				[Dot42.DexImport("ENCODING_UNKNOWN", "I", AccessFlags = 25)]
 				public const int ENCODING_UNKNOWN = 0;
+				/// <summary>
+				///  <para>7-bit encoding scheme (see TS 23.038)  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// ENCODING_7BIT
 				/// </java-name>
 				[Dot42.DexImport("ENCODING_7BIT", "I", AccessFlags = 25)]
 				public const int ENCODING_7BIT = 1;
+				/// <summary>
+				///  <para>8-bit encoding scheme (see TS 23.038)  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// ENCODING_8BIT
 				/// </java-name>
 				[Dot42.DexImport("ENCODING_8BIT", "I", AccessFlags = 25)]
 				public const int ENCODING_8BIT = 2;
+				/// <summary>
+				///  <para>16-bit encoding scheme (see TS 23.038)  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// ENCODING_16BIT
 				/// </java-name>
 				[Dot42.DexImport("ENCODING_16BIT", "I", AccessFlags = 25)]
 				public const int ENCODING_16BIT = 3;
+				/// <summary>
+				///  <para>The maximum number of payload bytes per message  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// MAX_USER_DATA_BYTES
 				/// </java-name>
 				[Dot42.DexImport("MAX_USER_DATA_BYTES", "I", AccessFlags = 25)]
 				public const int MAX_USER_DATA_BYTES = 140;
+				/// <summary>
+				///  <para>The maximum number of payload septets per message  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// MAX_USER_DATA_SEPTETS
 				/// </java-name>
 				[Dot42.DexImport("MAX_USER_DATA_SEPTETS", "I", AccessFlags = 25)]
 				public const int MAX_USER_DATA_SEPTETS = 160;
+				/// <summary>
+				///  <para>The maximum number of payload septets per message if a user data header is present. This assumes the header only contains the CONCATENATED_8_BIT_REFERENCE element.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// MAX_USER_DATA_SEPTETS_WITH_HEADER
 				/// </java-name>
 				[Dot42.DexImport("MAX_USER_DATA_SEPTETS_WITH_HEADER", "I", AccessFlags = 25)]
 				public const int MAX_USER_DATA_SEPTETS_WITH_HEADER = 153;
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public SmsMessage() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Create an SmsMessage from a raw PDU.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// createFromPdu
 				/// </java-name>
 				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/gsm/SmsMessage;", AccessFlags = 9)]
-				public static global::Android.Telephony.Gsm.SmsMessage CreateFromPdu(sbyte[] sByte) /* MethodBuilder.Create */ 
+				public static global::Android.Telephony.Gsm.SmsMessage CreateFromPdu(sbyte[] pdu) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.Gsm.SmsMessage);
 				}
 
+				/// <summary>
+				///  <para>Create an SmsMessage from a raw PDU.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// createFromPdu
 				/// </java-name>
 				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/gsm/SmsMessage;", AccessFlags = 9, IgnoreFromJava = true)]
-				public static global::Android.Telephony.Gsm.SmsMessage CreateFromPdu(byte[] @byte) /* MethodBuilder.Create */ 
+				public static global::Android.Telephony.Gsm.SmsMessage CreateFromPdu(byte[] pdu) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.Gsm.SmsMessage);
 				}
 
+				/// <summary>
+				///  <para>Get the TP-Layer-Length for the given SMS-SUBMIT PDU Basically, the length in bytes (not hex chars) less the SMSC header  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getTPLayerLengthForPDU
 				/// </java-name>
 				[Dot42.DexImport("getTPLayerLengthForPDU", "(Ljava/lang/String;)I", AccessFlags = 9)]
-				public static int GetTPLayerLengthForPDU(string @string) /* MethodBuilder.Create */ 
+				public static int GetTPLayerLengthForPDU(string pdu) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -305,12 +431,18 @@ namespace Android.Telephony.Gsm
 						return default(int[]);
 				}
 
+				/// <summary>
+				///  <para>Get an SMS-SUBMIT PDU for a destination address and a message</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a  <code>SubmitPdu</code> containing the encoded SC address, if applicable, and the encoded message. Returns null on encode error. </para>
+				/// </returns>
 				/// <java-name>
 				/// getSubmitPdu
 				/// </java-name>
 				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Landroid/telephony/gsm/S" +
     "msMessage$SubmitPdu;", AccessFlags = 9)]
-				public static global::Android.Telephony.Gsm.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, string string2, bool boolean) /* MethodBuilder.Create */ 
+				public static global::Android.Telephony.Gsm.SmsMessage.SubmitPdu GetSubmitPdu(string scAddress, string destinationAddress, string message, bool statusReportRequested) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.Gsm.SmsMessage.SubmitPdu);
 				}
@@ -335,6 +467,9 @@ namespace Android.Telephony.Gsm
 						return default(global::Android.Telephony.Gsm.SmsMessage.SubmitPdu);
 				}
 
+				/// <summary>
+				///  <para>Returns the class of this message.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getMessageClass
 				/// </java-name>
@@ -344,6 +479,9 @@ namespace Android.Telephony.Gsm
 						return default(global::Android.Telephony.Gsm.SmsMessage.MessageClass);
 				}
 
+				/// <summary>
+				///  <para>returns the user data section minus the user data header if one was present.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getUserData
 				/// </java-name>
@@ -353,6 +491,12 @@ namespace Android.Telephony.Gsm
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Returns the raw PDU for the message.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the raw PDU for the message. </para>
+				/// </returns>
 				/// <java-name>
 				/// getPdu
 				/// </java-name>
@@ -362,6 +506,9 @@ namespace Android.Telephony.Gsm
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Returns the address of the SMS service center that relayed this message or null if there is none.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getServiceCenterAddress
 				/// </java-name>
@@ -371,6 +518,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the originating address (sender) of this SMS message in String form or null if unavailable  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getOriginatingAddress
 				/// </java-name>
@@ -380,6 +530,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the originating address, or email from address if this message was from an email gateway. Returns null if originating address unavailable.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getDisplayOriginatingAddress
 				/// </java-name>
@@ -389,6 +542,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the message body as a String, if it exists and is text based.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>message body is there is one, otherwise null </para>
+				/// </returns>
 				/// <java-name>
 				/// getMessageBody
 				/// </java-name>
@@ -398,6 +557,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the message body, or email message body if this message was from an email gateway. Returns null if message body unavailable.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getDisplayMessageBody
 				/// </java-name>
@@ -407,6 +569,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Unofficial convention of a subject line enclosed in parens empty string if not present  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getPseudoSubject
 				/// </java-name>
@@ -416,6 +581,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the service centre timestamp in currentTimeMillis() format  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getTimestampMillis
 				/// </java-name>
@@ -425,6 +593,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(long); }
 				}
 
+				/// <summary>
+				///  <para>Returns true if message is an email.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if this message came through an email gateway and email sender / subject / parsed body are available </para>
+				/// </returns>
 				/// <java-name>
 				/// isEmail
 				/// </java-name>
@@ -434,6 +608,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>if isEmail() is true, body of the email sent through the gateway. null otherwise </para>
+				/// </returns>
 				/// <java-name>
 				/// getEmailBody
 				/// </java-name>
@@ -443,6 +623,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>if isEmail() is true, email from address of email sent through the gateway. null otherwise </para>
+				/// </returns>
 				/// <java-name>
 				/// getEmailFrom
 				/// </java-name>
@@ -452,6 +638,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Get protocol identifier.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getProtocolIdentifier
 				/// </java-name>
@@ -461,6 +650,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>See TS 23.040 9.2.3.9 returns true if this is a "replace short message" SMS  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// isReplace
 				/// </java-name>
@@ -470,6 +662,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>Returns true for CPHS MWI toggle message.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if this is a CPHS MWI toggle message See CPHS 4.2 section B.4.2 </para>
+				/// </returns>
 				/// <java-name>
 				/// isCphsMwiMessage
 				/// </java-name>
@@ -479,6 +677,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>returns true if this message is a CPHS voicemail / message waiting indicator (MWI) clear message  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// isMWIClearMessage
 				/// </java-name>
@@ -488,6 +689,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>returns true if this message is a CPHS voicemail / message waiting indicator (MWI) set message  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// isMWISetMessage
 				/// </java-name>
@@ -497,6 +701,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>returns true if this message is a "Message Waiting Indication Group:Discard Message" notification and should not be stored.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// isMwiDontStore
 				/// </java-name>
@@ -506,6 +713,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>returns the user data section minus the user data header if one was present.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// getUserData
 				/// </java-name>
@@ -515,6 +725,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(byte[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the raw PDU for the message.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the raw PDU for the message. </para>
+				/// </returns>
 				/// <java-name>
 				/// getPdu
 				/// </java-name>
@@ -524,6 +740,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(byte[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the status of the message on the SIM (read, unread, sent, unsent).</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage and getStatusOnIcc instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the status of the message on the SIM. These are: SmsManager.STATUS_ON_SIM_FREE SmsManager.STATUS_ON_SIM_READ SmsManager.STATUS_ON_SIM_UNREAD SmsManager.STATUS_ON_SIM_SEND SmsManager.STATUS_ON_SIM_UNSENT </para>
+				/// </returns>
 				/// <java-name>
 				/// getStatusOnSim
 				/// </java-name>
@@ -533,6 +755,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the record index of the message on the SIM (1-based index).  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage and getIndexOnIcc instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the record index of the message on the SIM, or -1 if this SmsMessage was not created from a SIM SMS EF record. </para>
+				/// </returns>
 				/// <java-name>
 				/// getIndexOnSim
 				/// </java-name>
@@ -542,6 +770,12 @@ namespace Android.Telephony.Gsm
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>GSM: For an SMS-STATUS-REPORT message, this returns the status field from the status report. This field indicates the status of a previously submitted SMS, if requested. See TS 23.040, 9.2.3.15 TP-Status for a description of values. CDMA: For not interfering with status codes from GSM, the value is shifted to the bits 31-16. The value is composed of an error class (bits 25-24) and a status code (bits 23-16). Possible codes are described in C.S0015-B, v2.0, 4.5.21.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>0 indicates the previously sent message was received. See TS 23.040, 9.9.2.3.15 and C.S0015-B, v2.0, 4.5.21 for a description of other possible values. </para>
+				/// </returns>
 				/// <java-name>
 				/// getStatus
 				/// </java-name>
@@ -551,6 +785,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Return true iff the message is a SMS-STATUS-REPORT message.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// isStatusReportMessage
 				/// </java-name>
@@ -560,6 +797,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>Returns true iff the  <code>TP-Reply-Path</code> bit is set in this message.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// isReplyPathPresent
 				/// </java-name>
@@ -569,6 +809,9 @@ namespace Android.Telephony.Gsm
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>    
+				/// </summary>
 				/// <java-name>
 				/// android/telephony/gsm/SmsMessage$SubmitPdu
 				/// </java-name>
@@ -576,11 +819,17 @@ namespace Android.Telephony.Gsm
 				public partial class SubmitPdu
  /* scope: __dot42__ */ 
 				{
+						/// <summary>
+						///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+						/// </summary>
 						/// <java-name>
 						/// encodedScAddress
 						/// </java-name>
 						[Dot42.DexImport("encodedScAddress", "[B", AccessFlags = 1)]
 						public sbyte[] EncodedScAddress;
+						/// <summary>
+						///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+						/// </summary>
 						/// <java-name>
 						/// encodedMessage
 						/// </java-name>
@@ -591,6 +840,9 @@ namespace Android.Telephony.Gsm
 						{
 						}
 
+						/// <summary>
+						///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use android.telephony.SmsMessage. </para></xrefdescription></xrefsect></para>        
+						/// </summary>
 						/// <java-name>
 						/// toString
 						/// </java-name>

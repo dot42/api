@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Android.Test.Mock
 {
+		/// <summary>
+		///  <para>A mock android.app.Application class. All methods are non-functional and throw java.lang.UnsupportedOperationException. Override it as necessary to provide the operations that you need. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/mock/MockApplication
 		/// </java-name>
@@ -29,16 +32,22 @@ namespace Android.Test.Mock
 				{
 				}
 
+				/// <summary>
+				///  <para>Called by the system when the device configuration changes while your component is running. Note that, unlike activities, other components are never restarted when a configuration changes: they must always deal with the results of the change, such as by re-retrieving resources.</para> <para>At the time that this function has been called, your Resources object will have been updated to return resource values matching the new configuration.</para> <para>For more information, read .</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// onConfigurationChanged
 				/// </java-name>
 				[Dot42.DexImport("onConfigurationChanged", "(Landroid/content/res/Configuration;)V", AccessFlags = 1)]
-				public override void OnConfigurationChanged(global::Android.Content.Res.Configuration configuration) /* MethodBuilder.Create */ 
+				public override void OnConfigurationChanged(global::Android.Content.Res.Configuration newConfig) /* MethodBuilder.Create */ 
 				{
 				}
 
 		}
 
+		/// <summary>
+		///  <para>Mock implementation of ContentProvider. All methods are non-functional and throw java.lang.UnsupportedOperationException. Tests can extend this class to implement behavior needed for tests. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/mock/MockContentProvider
 		/// </java-name>
@@ -46,19 +55,28 @@ namespace Android.Test.Mock
 		public partial class MockContentProvider : global::Android.Content.ContentProvider
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>A constructor using MockContext instance as a Context in it. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 4)]
 				protected internal MockContentProvider() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>A constructor accepting a Context instance, which is supposed to be the subclasss of MockContext. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
 				public MockContentProvider(global::Android.Content.Context context) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>A constructor which initialize four member variables which android.content.ContentProvider have internally.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Landroid/content/p" +
     "m/PathPermission;)V", AccessFlags = 1)]
-				public MockContentProvider(global::Android.Content.Context context, string @string, string string1, global::Android.Content.PM.PathPermission[] pathPermission) /* MethodBuilder.Create */ 
+				public MockContentProvider(global::Android.Content.Context context, string readPermission, string writePermission, global::Android.Content.PM.PathPermission[] pathPermissions) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -66,7 +84,7 @@ namespace Android.Test.Mock
 				/// delete
 				/// </java-name>
 				[Dot42.DexImport("delete", "(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int Delete(global::Android.Net.Uri uri, string @string, string[] string1) /* MethodBuilder.Create */ 
+				public override int Delete(global::Android.Net.Uri uri, string selection, string[] selectionArgs) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -84,7 +102,7 @@ namespace Android.Test.Mock
 				/// insert
 				/// </java-name>
 				[Dot42.DexImport("insert", "(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;", AccessFlags = 1)]
-				public override global::Android.Net.Uri Insert(global::Android.Net.Uri uri, global::Android.Content.ContentValues contentValues) /* MethodBuilder.Create */ 
+				public override global::Android.Net.Uri Insert(global::Android.Net.Uri uri, global::Android.Content.ContentValues values) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Net.Uri);
 				}
@@ -103,7 +121,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("query", "(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/l" +
     "ang/String;)Landroid/database/Cursor;", AccessFlags = 1)]
-				public override global::Android.Database.ICursor Query(global::Android.Net.Uri uri, string[] @string, string string1, string[] string2, string string3) /* MethodBuilder.Create */ 
+				public override global::Android.Database.ICursor Query(global::Android.Net.Uri uri, string[] projection, string selection, string[] selectionArgs, string sortOrder) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Database.ICursor);
 				}
@@ -113,16 +131,19 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("update", "(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/St" +
     "ring;)I", AccessFlags = 1)]
-				public override int Update(global::Android.Net.Uri uri, global::Android.Content.ContentValues contentValues, string @string, string[] string1) /* MethodBuilder.Create */ 
+				public override int Update(global::Android.Net.Uri uri, global::Android.Content.ContentValues values, string selection, string[] selectionArgs) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>If you're reluctant to implement this manually, please just call super.bulkInsert(). </para>        
+				/// </summary>
 				/// <java-name>
 				/// bulkInsert
 				/// </java-name>
 				[Dot42.DexImport("bulkInsert", "(Landroid/net/Uri;[Landroid/content/ContentValues;)I", AccessFlags = 1)]
-				public override int BulkInsert(global::Android.Net.Uri uri, global::Android.Content.ContentValues[] contentValues) /* MethodBuilder.Create */ 
+				public override int BulkInsert(global::Android.Net.Uri uri, global::Android.Content.ContentValues[] values) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -131,7 +152,7 @@ namespace Android.Test.Mock
 				/// attachInfo
 				/// </java-name>
 				[Dot42.DexImport("attachInfo", "(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V", AccessFlags = 1)]
-				public override void AttachInfo(global::Android.Content.Context context, global::Android.Content.PM.ProviderInfo providerInfo) /* MethodBuilder.Create */ 
+				public override void AttachInfo(global::Android.Content.Context context, global::Android.Content.PM.ProviderInfo info) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -140,7 +161,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("applyBatch", "(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;)[Landroid/cont" +
     "ent/ContentProviderResult;")]
-				public override global::Android.Content.ContentProviderResult[] ApplyBatch(global::Java.Util.ArrayList<global::Android.Content.ContentProviderOperation> arrayList) /* MethodBuilder.Create */ 
+				public override global::Android.Content.ContentProviderResult[] ApplyBatch(global::Java.Util.ArrayList<global::Android.Content.ContentProviderOperation> operations) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.ContentProviderResult[]);
 				}
@@ -149,7 +170,7 @@ namespace Android.Test.Mock
 				/// getStreamTypes
 				/// </java-name>
 				[Dot42.DexImport("getStreamTypes", "(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetStreamTypes(global::Android.Net.Uri uri, string @string) /* MethodBuilder.Create */ 
+				public override string[] GetStreamTypes(global::Android.Net.Uri url, string mimeTypeFilter) /* MethodBuilder.Create */ 
 				{
 						return default(string[]);
 				}
@@ -159,13 +180,16 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("openTypedAssetFile", "(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/Asse" +
     "tFileDescriptor;", AccessFlags = 1)]
-				public override global::Android.Content.Res.AssetFileDescriptor OpenTypedAssetFile(global::Android.Net.Uri uri, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.AssetFileDescriptor OpenTypedAssetFile(global::Android.Net.Uri url, string mimeType, global::Android.OS.Bundle opts) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.AssetFileDescriptor);
 				}
 
 		}
 
+		/// <summary>
+		///  <para>An extension of android.content.ContentResolver that is designed for testing. </para> <para>MockContentResolver overrides Android's normal way of resolving providers by authority. To have access to a provider based on its authority, users of MockContentResolver first instantiate the provider and use MockContentResolver#addProvider(String, ContentProvider). Resolution of an authority occurs entirely within MockContentResolver. </para> <para>Users can also set an authority's entry in the map to null, so that a provider is completely mocked out. </para> <para>  <h3>Developer Guides</h3></para> <para> </para> <para>For more information about application testing, read the  developer guide.</para> <para>  </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/mock/MockContentResolver
 		/// </java-name>
@@ -173,29 +197,41 @@ namespace Android.Test.Mock
 		public partial class MockContentResolver : global::Android.Content.ContentResolver
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a local map of providers. This map is used instead of the global map when an API call tries to acquire a provider. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public MockContentResolver() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Adds access to a provider based on its authority</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// addProvider
 				/// </java-name>
 				[Dot42.DexImport("addProvider", "(Ljava/lang/String;Landroid/content/ContentProvider;)V", AccessFlags = 1)]
-				public virtual void AddProvider(string @string, global::Android.Content.ContentProvider contentProvider) /* MethodBuilder.Create */ 
+				public virtual void AddProvider(string name, global::Android.Content.ContentProvider provider) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Overrides ContentResolver.notifChange(Uri, ContentObserver, boolean). All parameters are ignored. The method hides providers linked to MockContentResolver from other observers in the system.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// notifyChange
 				/// </java-name>
 				[Dot42.DexImport("notifyChange", "(Landroid/net/Uri;Landroid/database/ContentObserver;Z)V", AccessFlags = 1)]
-				public override void NotifyChange(global::Android.Net.Uri uri, global::Android.Database.ContentObserver contentObserver, bool boolean) /* MethodBuilder.Create */ 
+				public override void NotifyChange(global::Android.Net.Uri uri, global::Android.Database.ContentObserver observer, bool syncToNetwork) /* MethodBuilder.Create */ 
 				{
 				}
 
 		}
 
+		/// <summary>
+		///  <para>A mock android.content.Context class. All methods are non-functional and throw java.lang.UnsupportedOperationException. You can use this to inject other dependencies, mocks, or monitors into the classes you are testing. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/mock/MockContext
 		/// </java-name>
@@ -212,7 +248,7 @@ namespace Android.Test.Mock
 				/// setTheme
 				/// </java-name>
 				[Dot42.DexImport("setTheme", "(I)V", AccessFlags = 1)]
-				public override void SetTheme(int int32) /* MethodBuilder.Create */ 
+				public override void SetTheme(int resid) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -220,7 +256,7 @@ namespace Android.Test.Mock
 				/// getSharedPreferences
 				/// </java-name>
 				[Dot42.DexImport("getSharedPreferences", "(Ljava/lang/String;I)Landroid/content/SharedPreferences;", AccessFlags = 1)]
-				public override global::Android.Content.ISharedPreferences GetSharedPreferences(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.ISharedPreferences GetSharedPreferences(string name, int mode) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.ISharedPreferences);
 				}
@@ -229,7 +265,7 @@ namespace Android.Test.Mock
 				/// openFileInput
 				/// </java-name>
 				[Dot42.DexImport("openFileInput", "(Ljava/lang/String;)Ljava/io/FileInputStream;", AccessFlags = 1)]
-				public override global::Java.IO.FileInputStream OpenFileInput(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.FileInputStream OpenFileInput(string name) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.IO.FileInputStream);
 				}
@@ -238,7 +274,7 @@ namespace Android.Test.Mock
 				/// openFileOutput
 				/// </java-name>
 				[Dot42.DexImport("openFileOutput", "(Ljava/lang/String;I)Ljava/io/FileOutputStream;", AccessFlags = 1)]
-				public override global::Java.IO.FileOutputStream OpenFileOutput(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.IO.FileOutputStream OpenFileOutput(string name, int mode) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.IO.FileOutputStream);
 				}
@@ -247,7 +283,7 @@ namespace Android.Test.Mock
 				/// deleteFile
 				/// </java-name>
 				[Dot42.DexImport("deleteFile", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public override bool DeleteFile(string @string) /* MethodBuilder.Create */ 
+				public override bool DeleteFile(string name) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -256,7 +292,7 @@ namespace Android.Test.Mock
 				/// getFileStreamPath
 				/// </java-name>
 				[Dot42.DexImport("getFileStreamPath", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.IO.File GetFileStreamPath(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetFileStreamPath(string name) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.IO.File);
 				}
@@ -274,7 +310,7 @@ namespace Android.Test.Mock
 				/// getExternalFilesDir
 				/// </java-name>
 				[Dot42.DexImport("getExternalFilesDir", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.IO.File GetExternalFilesDir(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetExternalFilesDir(string type) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.IO.File);
 				}
@@ -283,7 +319,7 @@ namespace Android.Test.Mock
 				/// getDir
 				/// </java-name>
 				[Dot42.DexImport("getDir", "(Ljava/lang/String;I)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.IO.File GetDir(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetDir(string name, int mode) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.IO.File);
 				}
@@ -293,7 +329,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("openOrCreateDatabase", "(Ljava/lang/String;ILandroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landro" +
     "id/database/sqlite/SQLiteDatabase;", AccessFlags = 1)]
-				public override global::Android.Database.Sqlite.SQLiteDatabase OpenOrCreateDatabase(string @string, int int32, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory) /* MethodBuilder.Create */ 
+				public override global::Android.Database.Sqlite.SQLiteDatabase OpenOrCreateDatabase(string file, int mode, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory factory) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Database.Sqlite.SQLiteDatabase);
 				}
@@ -303,7 +339,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("openOrCreateDatabase", "(Ljava/lang/String;ILandroid/database/sqlite/SQLiteDatabase$CursorFactory;Landroi" +
     "d/database/DatabaseErrorHandler;)Landroid/database/sqlite/SQLiteDatabase;", AccessFlags = 1)]
-				public override global::Android.Database.Sqlite.SQLiteDatabase OpenOrCreateDatabase(string @string, int int32, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory cursorFactory, global::Android.Database.IDatabaseErrorHandler databaseErrorHandler) /* MethodBuilder.Create */ 
+				public override global::Android.Database.Sqlite.SQLiteDatabase OpenOrCreateDatabase(string file, int mode, global::Android.Database.Sqlite.SQLiteDatabase.ICursorFactory factory, global::Android.Database.IDatabaseErrorHandler errorHandler) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Database.Sqlite.SQLiteDatabase);
 				}
@@ -312,7 +348,7 @@ namespace Android.Test.Mock
 				/// getDatabasePath
 				/// </java-name>
 				[Dot42.DexImport("getDatabasePath", "(Ljava/lang/String;)Ljava/io/File;", AccessFlags = 1)]
-				public override global::Java.IO.File GetDatabasePath(string @string) /* MethodBuilder.Create */ 
+				public override global::Java.IO.File GetDatabasePath(string name) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.IO.File);
 				}
@@ -330,7 +366,7 @@ namespace Android.Test.Mock
 				/// deleteDatabase
 				/// </java-name>
 				[Dot42.DexImport("deleteDatabase", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public override bool DeleteDatabase(string @string) /* MethodBuilder.Create */ 
+				public override bool DeleteDatabase(string name) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -356,7 +392,7 @@ namespace Android.Test.Mock
 				/// setWallpaper
 				/// </java-name>
 				[Dot42.DexImport("setWallpaper", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public override void SetWallpaper(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
+				public override void SetWallpaper(global::Java.IO.InputStream bitmap) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -380,7 +416,7 @@ namespace Android.Test.Mock
 				/// startActivities
 				/// </java-name>
 				[Dot42.DexImport("startActivities", "([Landroid/content/Intent;)V", AccessFlags = 1)]
-				public override void StartActivities(global::Android.Content.Intent[] intent) /* MethodBuilder.Create */ 
+				public override void StartActivities(global::Android.Content.Intent[] intents) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -388,7 +424,7 @@ namespace Android.Test.Mock
 				/// startIntentSender
 				/// </java-name>
 				[Dot42.DexImport("startIntentSender", "(Landroid/content/IntentSender;Landroid/content/Intent;III)V", AccessFlags = 1)]
-				public override void StartIntentSender(global::Android.Content.IntentSender intentSender, global::Android.Content.Intent intent, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public override void StartIntentSender(global::Android.Content.IntentSender intent, global::Android.Content.Intent fillInIntent, int flagsMask, int flagsValues, int extraFlags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -404,7 +440,7 @@ namespace Android.Test.Mock
 				/// sendBroadcast
 				/// </java-name>
 				[Dot42.DexImport("sendBroadcast", "(Landroid/content/Intent;Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void SendBroadcast(global::Android.Content.Intent intent, string @string) /* MethodBuilder.Create */ 
+				public override void SendBroadcast(global::Android.Content.Intent intent, string receiverPermission) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -412,7 +448,7 @@ namespace Android.Test.Mock
 				/// sendOrderedBroadcast
 				/// </java-name>
 				[Dot42.DexImport("sendOrderedBroadcast", "(Landroid/content/Intent;Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void SendOrderedBroadcast(global::Android.Content.Intent intent, string @string) /* MethodBuilder.Create */ 
+				public override void SendOrderedBroadcast(global::Android.Content.Intent intent, string receiverPermission) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -421,7 +457,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("sendOrderedBroadcast", "(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Lan" +
     "droid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void SendOrderedBroadcast(global::Android.Content.Intent intent, string @string, global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.OS.Handler handler, int int32, string string1, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void SendOrderedBroadcast(global::Android.Content.Intent intent, string receiverPermission, global::Android.Content.BroadcastReceiver resultReceiver, global::Android.OS.Handler scheduler, int initialCode, string initialData, global::Android.OS.Bundle initialExtras) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -438,7 +474,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("sendStickyOrderedBroadcast", "(Landroid/content/Intent;Landroid/content/BroadcastReceiver;Landroid/os/Handler;I" +
     "Ljava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 1)]
-				public override void SendStickyOrderedBroadcast(global::Android.Content.Intent intent, global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.OS.Handler handler, int int32, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public override void SendStickyOrderedBroadcast(global::Android.Content.Intent intent, global::Android.Content.BroadcastReceiver resultReceiver, global::Android.OS.Handler scheduler, int initialCode, string initialData, global::Android.OS.Bundle initialExtras) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -455,7 +491,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("registerReceiver", "(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/conte" +
     "nt/Intent;", AccessFlags = 1)]
-				public override global::Android.Content.Intent RegisterReceiver(global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.Content.IntentFilter intentFilter) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Intent RegisterReceiver(global::Android.Content.BroadcastReceiver receiver, global::Android.Content.IntentFilter filter) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
 				}
@@ -465,7 +501,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("registerReceiver", "(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/Stri" +
     "ng;Landroid/os/Handler;)Landroid/content/Intent;", AccessFlags = 1)]
-				public override global::Android.Content.Intent RegisterReceiver(global::Android.Content.BroadcastReceiver broadcastReceiver, global::Android.Content.IntentFilter intentFilter, string @string, global::Android.OS.Handler handler) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Intent RegisterReceiver(global::Android.Content.BroadcastReceiver receiver, global::Android.Content.IntentFilter filter, string broadcastPermission, global::Android.OS.Handler scheduler) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
 				}
@@ -474,7 +510,7 @@ namespace Android.Test.Mock
 				/// unregisterReceiver
 				/// </java-name>
 				[Dot42.DexImport("unregisterReceiver", "(Landroid/content/BroadcastReceiver;)V", AccessFlags = 1)]
-				public override void UnregisterReceiver(global::Android.Content.BroadcastReceiver broadcastReceiver) /* MethodBuilder.Create */ 
+				public override void UnregisterReceiver(global::Android.Content.BroadcastReceiver receiver) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -482,7 +518,7 @@ namespace Android.Test.Mock
 				/// startService
 				/// </java-name>
 				[Dot42.DexImport("startService", "(Landroid/content/Intent;)Landroid/content/ComponentName;", AccessFlags = 1)]
-				public override global::Android.Content.ComponentName StartService(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.Content.ComponentName StartService(global::Android.Content.Intent service) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.ComponentName);
 				}
@@ -491,7 +527,7 @@ namespace Android.Test.Mock
 				/// stopService
 				/// </java-name>
 				[Dot42.DexImport("stopService", "(Landroid/content/Intent;)Z", AccessFlags = 1)]
-				public override bool StopService(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override bool StopService(global::Android.Content.Intent service) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -500,7 +536,7 @@ namespace Android.Test.Mock
 				/// bindService
 				/// </java-name>
 				[Dot42.DexImport("bindService", "(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z", AccessFlags = 1)]
-				public override bool BindService(global::Android.Content.Intent intent, global::Android.Content.IServiceConnection serviceConnection, int int32) /* MethodBuilder.Create */ 
+				public override bool BindService(global::Android.Content.Intent service, global::Android.Content.IServiceConnection conn, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -509,7 +545,7 @@ namespace Android.Test.Mock
 				/// unbindService
 				/// </java-name>
 				[Dot42.DexImport("unbindService", "(Landroid/content/ServiceConnection;)V", AccessFlags = 1)]
-				public override void UnbindService(global::Android.Content.IServiceConnection serviceConnection) /* MethodBuilder.Create */ 
+				public override void UnbindService(global::Android.Content.IServiceConnection conn) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -517,7 +553,7 @@ namespace Android.Test.Mock
 				/// startInstrumentation
 				/// </java-name>
 				[Dot42.DexImport("startInstrumentation", "(Landroid/content/ComponentName;Ljava/lang/String;Landroid/os/Bundle;)Z", AccessFlags = 1)]
-				public override bool StartInstrumentation(global::Android.Content.ComponentName componentName, string @string, global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public override bool StartInstrumentation(global::Android.Content.ComponentName className, string profileFile, global::Android.OS.Bundle arguments) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -526,7 +562,7 @@ namespace Android.Test.Mock
 				/// getSystemService
 				/// </java-name>
 				[Dot42.DexImport("getSystemService", "(Ljava/lang/String;)Ljava/lang/Object;", AccessFlags = 1)]
-				public override object GetSystemService(string @string) /* MethodBuilder.Create */ 
+				public override object GetSystemService(string name) /* MethodBuilder.Create */ 
 				{
 						return default(object);
 				}
@@ -535,7 +571,7 @@ namespace Android.Test.Mock
 				/// checkPermission
 				/// </java-name>
 				[Dot42.DexImport("checkPermission", "(Ljava/lang/String;II)I", AccessFlags = 1)]
-				public override int CheckPermission(string @string, int int32, int int321) /* MethodBuilder.Create */ 
+				public override int CheckPermission(string permission, int pid, int uid) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -544,7 +580,7 @@ namespace Android.Test.Mock
 				/// checkCallingPermission
 				/// </java-name>
 				[Dot42.DexImport("checkCallingPermission", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int CheckCallingPermission(string @string) /* MethodBuilder.Create */ 
+				public override int CheckCallingPermission(string permission) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -553,7 +589,7 @@ namespace Android.Test.Mock
 				/// checkCallingOrSelfPermission
 				/// </java-name>
 				[Dot42.DexImport("checkCallingOrSelfPermission", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int CheckCallingOrSelfPermission(string @string) /* MethodBuilder.Create */ 
+				public override int CheckCallingOrSelfPermission(string permission) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -562,7 +598,7 @@ namespace Android.Test.Mock
 				/// enforcePermission
 				/// </java-name>
 				[Dot42.DexImport("enforcePermission", "(Ljava/lang/String;IILjava/lang/String;)V", AccessFlags = 1)]
-				public override void EnforcePermission(string @string, int int32, int int321, string string1) /* MethodBuilder.Create */ 
+				public override void EnforcePermission(string permission, int pid, int uid, string message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -570,7 +606,7 @@ namespace Android.Test.Mock
 				/// enforceCallingPermission
 				/// </java-name>
 				[Dot42.DexImport("enforceCallingPermission", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void EnforceCallingPermission(string @string, string string1) /* MethodBuilder.Create */ 
+				public override void EnforceCallingPermission(string permission, string message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -578,7 +614,7 @@ namespace Android.Test.Mock
 				/// enforceCallingOrSelfPermission
 				/// </java-name>
 				[Dot42.DexImport("enforceCallingOrSelfPermission", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void EnforceCallingOrSelfPermission(string @string, string string1) /* MethodBuilder.Create */ 
+				public override void EnforceCallingOrSelfPermission(string permission, string message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -586,7 +622,7 @@ namespace Android.Test.Mock
 				/// grantUriPermission
 				/// </java-name>
 				[Dot42.DexImport("grantUriPermission", "(Ljava/lang/String;Landroid/net/Uri;I)V", AccessFlags = 1)]
-				public override void GrantUriPermission(string @string, global::Android.Net.Uri uri, int int32) /* MethodBuilder.Create */ 
+				public override void GrantUriPermission(string toPackage, global::Android.Net.Uri uri, int modeFlags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -594,7 +630,7 @@ namespace Android.Test.Mock
 				/// revokeUriPermission
 				/// </java-name>
 				[Dot42.DexImport("revokeUriPermission", "(Landroid/net/Uri;I)V", AccessFlags = 1)]
-				public override void RevokeUriPermission(global::Android.Net.Uri uri, int int32) /* MethodBuilder.Create */ 
+				public override void RevokeUriPermission(global::Android.Net.Uri uri, int modeFlags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -602,7 +638,7 @@ namespace Android.Test.Mock
 				/// checkUriPermission
 				/// </java-name>
 				[Dot42.DexImport("checkUriPermission", "(Landroid/net/Uri;III)I", AccessFlags = 1)]
-				public override int CheckUriPermission(global::Android.Net.Uri uri, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public override int CheckUriPermission(global::Android.Net.Uri uri, int pid, int uid, int modeFlags) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -611,7 +647,7 @@ namespace Android.Test.Mock
 				/// checkCallingUriPermission
 				/// </java-name>
 				[Dot42.DexImport("checkCallingUriPermission", "(Landroid/net/Uri;I)I", AccessFlags = 1)]
-				public override int CheckCallingUriPermission(global::Android.Net.Uri uri, int int32) /* MethodBuilder.Create */ 
+				public override int CheckCallingUriPermission(global::Android.Net.Uri uri, int modeFlags) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -620,7 +656,7 @@ namespace Android.Test.Mock
 				/// checkCallingOrSelfUriPermission
 				/// </java-name>
 				[Dot42.DexImport("checkCallingOrSelfUriPermission", "(Landroid/net/Uri;I)I", AccessFlags = 1)]
-				public override int CheckCallingOrSelfUriPermission(global::Android.Net.Uri uri, int int32) /* MethodBuilder.Create */ 
+				public override int CheckCallingOrSelfUriPermission(global::Android.Net.Uri uri, int modeFlags) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -629,7 +665,7 @@ namespace Android.Test.Mock
 				/// checkUriPermission
 				/// </java-name>
 				[Dot42.DexImport("checkUriPermission", "(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;III)I", AccessFlags = 1)]
-				public override int CheckUriPermission(global::Android.Net.Uri uri, string @string, string string1, int int32, int int321, int int322) /* MethodBuilder.Create */ 
+				public override int CheckUriPermission(global::Android.Net.Uri uri, string readPermission, string writePermission, int pid, int uid, int modeFlags) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -638,7 +674,7 @@ namespace Android.Test.Mock
 				/// enforceUriPermission
 				/// </java-name>
 				[Dot42.DexImport("enforceUriPermission", "(Landroid/net/Uri;IIILjava/lang/String;)V", AccessFlags = 1)]
-				public override void EnforceUriPermission(global::Android.Net.Uri uri, int int32, int int321, int int322, string @string) /* MethodBuilder.Create */ 
+				public override void EnforceUriPermission(global::Android.Net.Uri uri, int pid, int uid, int modeFlags, string message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -646,7 +682,7 @@ namespace Android.Test.Mock
 				/// enforceCallingUriPermission
 				/// </java-name>
 				[Dot42.DexImport("enforceCallingUriPermission", "(Landroid/net/Uri;ILjava/lang/String;)V", AccessFlags = 1)]
-				public override void EnforceCallingUriPermission(global::Android.Net.Uri uri, int int32, string @string) /* MethodBuilder.Create */ 
+				public override void EnforceCallingUriPermission(global::Android.Net.Uri uri, int modeFlags, string message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -654,7 +690,7 @@ namespace Android.Test.Mock
 				/// enforceCallingOrSelfUriPermission
 				/// </java-name>
 				[Dot42.DexImport("enforceCallingOrSelfUriPermission", "(Landroid/net/Uri;ILjava/lang/String;)V", AccessFlags = 1)]
-				public override void EnforceCallingOrSelfUriPermission(global::Android.Net.Uri uri, int int32, string @string) /* MethodBuilder.Create */ 
+				public override void EnforceCallingOrSelfUriPermission(global::Android.Net.Uri uri, int modeFlags, string message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -662,7 +698,7 @@ namespace Android.Test.Mock
 				/// enforceUriPermission
 				/// </java-name>
 				[Dot42.DexImport("enforceUriPermission", "(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;)V", AccessFlags = 1)]
-				public override void EnforceUriPermission(global::Android.Net.Uri uri, string @string, string string1, int int32, int int321, int int322, string string2) /* MethodBuilder.Create */ 
+				public override void EnforceUriPermission(global::Android.Net.Uri uri, string readPermission, string writePermission, int pid, int uid, int modeFlags, string message) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -670,7 +706,7 @@ namespace Android.Test.Mock
 				/// createPackageContext
 				/// </java-name>
 				[Dot42.DexImport("createPackageContext", "(Ljava/lang/String;I)Landroid/content/Context;", AccessFlags = 1)]
-				public override global::Android.Content.Context CreatePackageContext(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Context CreatePackageContext(string packageName, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Context);
 				}
@@ -857,6 +893,9 @@ namespace Android.Test.Mock
 
 		}
 
+		/// <summary>
+		///  <para>A mock android.database.Cursor class that isolates the test code from real Cursor implementation. </para> <para>All methods including ones related to querying the state of the cursor are are non-functional and throw java.lang.UnsupportedOperationException. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/mock/MockCursor
 		/// </java-name>
@@ -869,123 +908,207 @@ namespace Android.Test.Mock
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the zero-based index for the given column name, or -1 if the column doesn't exist. If you expect the column to exist use getColumnIndexOrThrow(String) instead, which will make the error more clear.</para> <para> <para>getColumnIndexOrThrow(String) </para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the zero-based column index for the given column name, or -1 if the column name does not exist. </para>
+				/// </returns>
 				/// <java-name>
 				/// getColumnIndex
 				/// </java-name>
 				[Dot42.DexImport("getColumnIndex", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public virtual int GetColumnIndex(string @string) /* MethodBuilder.Create */ 
+				public virtual int GetColumnIndex(string columnName) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Returns the zero-based index for the given column name, or throws IllegalArgumentException if the column doesn't exist. If you're not sure if a column will exist or not use getColumnIndex(String) and check for -1, which is more efficient than catching the exceptions.</para> <para> <para>getColumnIndex(String) </para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the zero-based column index for the given column name </para>
+				/// </returns>
 				/// <java-name>
 				/// getColumnIndexOrThrow
 				/// </java-name>
 				[Dot42.DexImport("getColumnIndexOrThrow", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public virtual int GetColumnIndexOrThrow(string @string) /* MethodBuilder.Create */ 
+				public virtual int GetColumnIndexOrThrow(string columnName) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Returns the column name at the given zero-based column index.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the column name for the given column index. </para>
+				/// </returns>
 				/// <java-name>
 				/// getColumnName
 				/// </java-name>
 				[Dot42.DexImport("getColumnName", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetColumnName(int int32) /* MethodBuilder.Create */ 
+				public virtual string GetColumnName(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Returns  <code>true</code> if the value in the indicated column is null.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the column value is null. </para>
+				/// </returns>
 				/// <java-name>
 				/// isNull
 				/// </java-name>
 				[Dot42.DexImport("isNull", "(I)Z", AccessFlags = 1)]
-				public virtual bool IsNull(int int32) /* MethodBuilder.Create */ 
+				public virtual bool IsNull(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns the value of the requested column as an int.</para> <para>The result and whether this method throws an exception when the column value is null, the column type is not an integral type, or the integer value is outside the range [ <code>Integer.MIN_VALUE</code>,  <code>Integer.MAX_VALUE</code>] is implementation-defined.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the value of that column as an int. </para>
+				/// </returns>
 				/// <java-name>
 				/// getInt
 				/// </java-name>
 				[Dot42.DexImport("getInt", "(I)I", AccessFlags = 1)]
-				public virtual int GetInt(int int32) /* MethodBuilder.Create */ 
+				public virtual int GetInt(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Returns the value of the requested column as a long.</para> <para>The result and whether this method throws an exception when the column value is null, the column type is not an integral type, or the integer value is outside the range [ <code>Long.MIN_VALUE</code>,  <code>Long.MAX_VALUE</code>] is implementation-defined.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the value of that column as a long. </para>
+				/// </returns>
 				/// <java-name>
 				/// getLong
 				/// </java-name>
 				[Dot42.DexImport("getLong", "(I)J", AccessFlags = 1)]
-				public virtual long GetLong(int int32) /* MethodBuilder.Create */ 
+				public virtual long GetLong(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
 
+				/// <summary>
+				///  <para>Returns the value of the requested column as a short.</para> <para>The result and whether this method throws an exception when the column value is null, the column type is not an integral type, or the integer value is outside the range [ <code>Short.MIN_VALUE</code>,  <code>Short.MAX_VALUE</code>] is implementation-defined.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the value of that column as a short. </para>
+				/// </returns>
 				/// <java-name>
 				/// getShort
 				/// </java-name>
 				[Dot42.DexImport("getShort", "(I)S", AccessFlags = 1)]
-				public virtual short GetShort(int int32) /* MethodBuilder.Create */ 
+				public virtual short GetShort(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(short);
 				}
 
+				/// <summary>
+				///  <para>Returns the value of the requested column as a float.</para> <para>The result and whether this method throws an exception when the column value is null, the column type is not a floating-point type, or the floating-point value is not representable as a  <code>float</code> value is implementation-defined.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the value of that column as a float. </para>
+				/// </returns>
 				/// <java-name>
 				/// getFloat
 				/// </java-name>
 				[Dot42.DexImport("getFloat", "(I)F", AccessFlags = 1)]
-				public virtual float GetFloat(int int32) /* MethodBuilder.Create */ 
+				public virtual float GetFloat(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(float);
 				}
 
+				/// <summary>
+				///  <para>Returns the value of the requested column as a double.</para> <para>The result and whether this method throws an exception when the column value is null, the column type is not a floating-point type, or the floating-point value is not representable as a  <code>double</code> value is implementation-defined.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the value of that column as a double. </para>
+				/// </returns>
 				/// <java-name>
 				/// getDouble
 				/// </java-name>
 				[Dot42.DexImport("getDouble", "(I)D", AccessFlags = 1)]
-				public virtual double GetDouble(int int32) /* MethodBuilder.Create */ 
+				public virtual double GetDouble(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(double);
 				}
 
+				/// <summary>
+				///  <para>Returns the value of the requested column as a byte array.</para> <para>The result and whether this method throws an exception when the column value is null or the column type is not a blob type is implementation-defined.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the value of that column as a byte array. </para>
+				/// </returns>
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
 				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
-				public virtual sbyte[] JavaGetBlob(int int32) /* MethodBuilder.Create */ 
+				public virtual sbyte[] JavaGetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Returns the value of the requested column as a byte array.</para> <para>The result and whether this method throws an exception when the column value is null or the column type is not a blob type is implementation-defined.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the value of that column as a byte array. </para>
+				/// </returns>
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
 				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
-				public virtual byte[] GetBlob(int int32) /* MethodBuilder.Create */ 
+				public virtual byte[] GetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
 				}
 
+				/// <summary>
+				///  <para>Returns the value of the requested column as a String.</para> <para>The result and whether this method throws an exception when the column value is null or the column type is not a string type is implementation-defined.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the value of that column as a String. </para>
+				/// </returns>
 				/// <java-name>
 				/// getString
 				/// </java-name>
 				[Dot42.DexImport("getString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetString(int int32) /* MethodBuilder.Create */ 
+				public virtual string GetString(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Move the cursor by a relative amount, forward or backward, from the current position. Positive offsets move forwards, negative offsets move backwards. If the final position is outside of the bounds of the result set then the resultant position will be pinned to -1 or count() depending on whether the value is off the front or end of the set, respectively.</para> <para>This method will return true if the requested destination was reachable, otherwise, it returns false. For example, if the cursor is at currently on the second entry in the result set and move(-5) is called, the position will be pinned at -1, and false will be returned.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the requested move fully succeeded. </para>
+				/// </returns>
 				/// <java-name>
 				/// move
 				/// </java-name>
 				[Dot42.DexImport("move", "(I)Z", AccessFlags = 1)]
-				public virtual bool Move(int int32) /* MethodBuilder.Create */ 
+				public virtual bool Move(int offset) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Move the cursor to the first row.</para> <para>This method will return false if the cursor is empty.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the move succeeded. </para>
+				/// </returns>
 				/// <java-name>
 				/// moveToFirst
 				/// </java-name>
@@ -995,6 +1118,12 @@ namespace Android.Test.Mock
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Move the cursor to the last row.</para> <para>This method will return false if the cursor is empty.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the move succeeded. </para>
+				/// </returns>
 				/// <java-name>
 				/// moveToLast
 				/// </java-name>
@@ -1004,6 +1133,12 @@ namespace Android.Test.Mock
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Move the cursor to the next row.</para> <para>This method will return false if the cursor is already past the last entry in the result set.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the move succeeded. </para>
+				/// </returns>
 				/// <java-name>
 				/// moveToNext
 				/// </java-name>
@@ -1013,6 +1148,12 @@ namespace Android.Test.Mock
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Move the cursor to the previous row.</para> <para>This method will return false if the cursor is already before the first entry in the result set.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the move succeeded. </para>
+				/// </returns>
 				/// <java-name>
 				/// moveToPrevious
 				/// </java-name>
@@ -1022,23 +1163,35 @@ namespace Android.Test.Mock
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Move the cursor to an absolute position. The valid range of values is -1 &lt;= position &lt;= count.</para> <para>This method will return true if the request destination was reachable, otherwise, it returns false.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the requested move fully succeeded. </para>
+				/// </returns>
 				/// <java-name>
 				/// moveToPosition
 				/// </java-name>
 				[Dot42.DexImport("moveToPosition", "(I)Z", AccessFlags = 1)]
-				public virtual bool MoveToPosition(int int32) /* MethodBuilder.Create */ 
+				public virtual bool MoveToPosition(int position) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Retrieves the requested column text and stores it in the buffer provided. If the buffer size is not sufficient, a new char buffer will be allocated and assigned to CharArrayBuffer.data </para>        
+				/// </summary>
 				/// <java-name>
 				/// copyStringToBuffer
 				/// </java-name>
 				[Dot42.DexImport("copyStringToBuffer", "(ILandroid/database/CharArrayBuffer;)V", AccessFlags = 1)]
-				public virtual void CopyStringToBuffer(int int32, global::Android.Database.CharArrayBuffer charArrayBuffer) /* MethodBuilder.Create */ 
+				public virtual void CopyStringToBuffer(int columnIndex, global::Android.Database.CharArrayBuffer buffer) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Deactivates the Cursor, making all calls on it fail until requery is called. Inactive Cursors use fewer resources than active Cursors. Calling requery will make the cursor active again.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Since requery() is deprecated, so too is this. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				/// <java-name>
 				/// deactivate
 				/// </java-name>
@@ -1047,6 +1200,9 @@ namespace Android.Test.Mock
 				{
 				}
 
+				/// <summary>
+				///  <para>Closes the Cursor, releasing all of its resources and making it completely invalid. Unlike deactivate() a call to requery() will not make the Cursor valid again. </para>        
+				/// </summary>
 				/// <java-name>
 				/// close
 				/// </java-name>
@@ -1055,6 +1211,12 @@ namespace Android.Test.Mock
 				{
 				}
 
+				/// <summary>
+				///  <para>Performs the query that created the cursor again, refreshing its contents. This may be done at any time, including after a call to deactivate.</para> <para>Since this method could execute a query on the database and potentially take a while, it could cause ANR if it is called on Main (UI) thread. A warning is printed if this method is being executed on Main thread.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Don't use this. Just request a new cursor, so you can do this asynchronously and update your list view once the new cursor comes back. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if the requery succeeded, false if not, in which case the cursor becomes invalid. </para>
+				/// </returns>
 				/// <java-name>
 				/// requery
 				/// </java-name>
@@ -1064,64 +1226,97 @@ namespace Android.Test.Mock
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Register an observer that is called when changes happen to the content backing this cursor. Typically the data set won't change until requery() is called.</para> <para> <para>unregisterContentObserver(ContentObserver) </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// registerContentObserver
 				/// </java-name>
 				[Dot42.DexImport("registerContentObserver", "(Landroid/database/ContentObserver;)V", AccessFlags = 1)]
-				public virtual void RegisterContentObserver(global::Android.Database.ContentObserver contentObserver) /* MethodBuilder.Create */ 
+				public virtual void RegisterContentObserver(global::Android.Database.ContentObserver observer) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Register an observer that is called when changes happen to the contents of the this cursors data set, for example, when the data set is changed via requery(), deactivate(), or close().</para> <para> <para>unregisterDataSetObserver(DataSetObserver) </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// registerDataSetObserver
 				/// </java-name>
 				[Dot42.DexImport("registerDataSetObserver", "(Landroid/database/DataSetObserver;)V", AccessFlags = 1)]
-				public virtual void RegisterDataSetObserver(global::Android.Database.DataSetObserver dataSetObserver) /* MethodBuilder.Create */ 
+				public virtual void RegisterDataSetObserver(global::Android.Database.DataSetObserver observer) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>This is an out-of-band way for the the user of a cursor to communicate with the cursor. The structure of each bundle is entirely defined by the cursor.</para> <para>One use of this is to tell a cursor that it should retry its network request after it reported an error. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>extra values, or Bundle.EMPTY. Never  <code>null</code>. </para>
+				/// </returns>
 				/// <java-name>
 				/// respond
 				/// </java-name>
 				[Dot42.DexImport("respond", "(Landroid/os/Bundle;)Landroid/os/Bundle;", AccessFlags = 1)]
-				public virtual global::Android.OS.Bundle Respond(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
+				public virtual global::Android.OS.Bundle Respond(global::Android.OS.Bundle extras) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.OS.Bundle);
 				}
 
+				/// <summary>
+				///  <para>Register to watch a content URI for changes. This can be the URI of a specific data row (for example, "content://my_provider_type/23"), or a a generic URI for a content type.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// setNotificationUri
 				/// </java-name>
 				[Dot42.DexImport("setNotificationUri", "(Landroid/content/ContentResolver;Landroid/net/Uri;)V", AccessFlags = 1)]
-				public virtual void SetNotificationUri(global::Android.Content.ContentResolver contentResolver, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
+				public virtual void SetNotificationUri(global::Android.Content.ContentResolver cr, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Unregister an observer that has previously been registered with this cursor via registerContentObserver.</para> <para> <para>registerContentObserver(ContentObserver) </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// unregisterContentObserver
 				/// </java-name>
 				[Dot42.DexImport("unregisterContentObserver", "(Landroid/database/ContentObserver;)V", AccessFlags = 1)]
-				public virtual void UnregisterContentObserver(global::Android.Database.ContentObserver contentObserver) /* MethodBuilder.Create */ 
+				public virtual void UnregisterContentObserver(global::Android.Database.ContentObserver observer) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Unregister an observer that has previously been registered with this cursor via registerContentObserver.</para> <para> <para>registerDataSetObserver(DataSetObserver) </para></para>        
+				/// </summary>
 				/// <java-name>
 				/// unregisterDataSetObserver
 				/// </java-name>
 				[Dot42.DexImport("unregisterDataSetObserver", "(Landroid/database/DataSetObserver;)V", AccessFlags = 1)]
-				public virtual void UnregisterDataSetObserver(global::Android.Database.DataSetObserver dataSetObserver) /* MethodBuilder.Create */ 
+				public virtual void UnregisterDataSetObserver(global::Android.Database.DataSetObserver observer) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns data type of the given column's value. The preferred type of the column is returned but the data may be converted to other types as documented in the get-type methods such as getInt(int), getFloat(int) etc. </para> <para>Returned column types are  <ul> <li> <para>FIELD_TYPE_NULL </para></li> <li> <para>FIELD_TYPE_INTEGER </para></li> <li> <para>FIELD_TYPE_FLOAT </para></li> <li> <para>FIELD_TYPE_STRING </para></li> <li> <para>FIELD_TYPE_BLOB </para></li></ul></para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>column value type </para>
+				/// </returns>
 				/// <java-name>
 				/// getType
 				/// </java-name>
 				[Dot42.DexImport("getType", "(I)I", AccessFlags = 1)]
-				public virtual int GetType(int int32) /* MethodBuilder.Create */ 
+				public virtual int GetType(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Return total number of columns </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>number of columns </para>
+				/// </returns>
 				/// <java-name>
 				/// getColumnCount
 				/// </java-name>
@@ -1131,6 +1326,12 @@ namespace Android.Test.Mock
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns a string array holding the names of all of the columns in the result set in the order in which they were listed in the result.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the names of the columns returned in this query. </para>
+				/// </returns>
 				/// <java-name>
 				/// getColumnNames
 				/// </java-name>
@@ -1140,6 +1341,12 @@ namespace Android.Test.Mock
 						get{ return default(string[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the numbers of rows in the cursor.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the number of rows in the cursor. </para>
+				/// </returns>
 				/// <java-name>
 				/// getCount
 				/// </java-name>
@@ -1149,6 +1356,12 @@ namespace Android.Test.Mock
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns a bundle of extra values. This is an optional way for cursors to provide out-of-band metadata to their users. One use of this is for reporting on the progress of network requests that are required to fetch data for the cursor.</para> <para>These values may only change when requery is called. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>cursor-defined values, or Bundle.EMPTY if there are no values. Never  <code>null</code>. </para>
+				/// </returns>
 				/// <java-name>
 				/// getExtras
 				/// </java-name>
@@ -1158,6 +1371,12 @@ namespace Android.Test.Mock
 						get{ return default(global::Android.OS.Bundle); }
 				}
 
+				/// <summary>
+				///  <para>Returns the current position of the cursor in the row set. The value is zero-based. When the row set is first returned the cursor will be at positon -1, which is before the first row. After the last row is returned another call to next() will leave the cursor past the last entry, at a position of count().</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the current cursor position. </para>
+				/// </returns>
 				/// <java-name>
 				/// getPosition
 				/// </java-name>
@@ -1167,6 +1386,12 @@ namespace Android.Test.Mock
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns whether the cursor is pointing to the position after the last row.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the cursor is after the last result. </para>
+				/// </returns>
 				/// <java-name>
 				/// isAfterLast
 				/// </java-name>
@@ -1176,6 +1401,12 @@ namespace Android.Test.Mock
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>Returns whether the cursor is pointing to the position before the first row.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the cursor is before the first result. </para>
+				/// </returns>
 				/// <java-name>
 				/// isBeforeFirst
 				/// </java-name>
@@ -1185,6 +1416,12 @@ namespace Android.Test.Mock
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>Returns whether the cursor is pointing to the first row.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the cursor is pointing at the first entry. </para>
+				/// </returns>
 				/// <java-name>
 				/// isFirst
 				/// </java-name>
@@ -1194,6 +1431,12 @@ namespace Android.Test.Mock
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>Returns whether the cursor is pointing to the last row.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether the cursor is pointing at the last entry. </para>
+				/// </returns>
 				/// <java-name>
 				/// isLast
 				/// </java-name>
@@ -1203,6 +1446,12 @@ namespace Android.Test.Mock
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>return true if the cursor is closed </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if the cursor is closed. </para>
+				/// </returns>
 				/// <java-name>
 				/// isClosed
 				/// </java-name>
@@ -1212,6 +1461,12 @@ namespace Android.Test.Mock
 						get{ return default(bool); }
 				}
 
+				/// <summary>
+				///  <para>onMove() will only be called across processes if this method returns true. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>whether all cursor movement should result in a call to onMove(). </para>
+				/// </returns>
 				/// <java-name>
 				/// getWantsAllOnMoveCalls
 				/// </java-name>
@@ -1223,6 +1478,9 @@ namespace Android.Test.Mock
 
 		}
 
+		/// <summary>
+		///  <para>A mock android.content.DialogInterface class. All methods are non-functional and throw java.lang.UnsupportedOperationException. Override it to provide the operations that you need. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/mock/MockDialogInterface
 		/// </java-name>
@@ -1253,6 +1511,9 @@ namespace Android.Test.Mock
 
 		}
 
+		/// <summary>
+		///  <para>A mock android.content.pm.PackageManager class. All methods are non-functional and throw java.lang.UnsupportedOperationException. Override it to provide the operations that you need. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/mock/MockPackageManager
 		/// </java-name>
@@ -1269,7 +1530,7 @@ namespace Android.Test.Mock
 				/// getPackageInfo
 				/// </java-name>
 				[Dot42.DexImport("getPackageInfo", "(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.PackageInfo GetPackageInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.PackageInfo GetPackageInfo(string packageName, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.PackageInfo);
 				}
@@ -1278,7 +1539,7 @@ namespace Android.Test.Mock
 				/// currentToCanonicalPackageNames
 				/// </java-name>
 				[Dot42.DexImport("currentToCanonicalPackageNames", "([Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] CurrentToCanonicalPackageNames(string[] @string) /* MethodBuilder.Create */ 
+				public override string[] CurrentToCanonicalPackageNames(string[] names) /* MethodBuilder.Create */ 
 				{
 						return default(string[]);
 				}
@@ -1287,7 +1548,7 @@ namespace Android.Test.Mock
 				/// canonicalToCurrentPackageNames
 				/// </java-name>
 				[Dot42.DexImport("canonicalToCurrentPackageNames", "([Ljava/lang/String;)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] CanonicalToCurrentPackageNames(string[] @string) /* MethodBuilder.Create */ 
+				public override string[] CanonicalToCurrentPackageNames(string[] names) /* MethodBuilder.Create */ 
 				{
 						return default(string[]);
 				}
@@ -1296,7 +1557,7 @@ namespace Android.Test.Mock
 				/// getLaunchIntentForPackage
 				/// </java-name>
 				[Dot42.DexImport("getLaunchIntentForPackage", "(Ljava/lang/String;)Landroid/content/Intent;", AccessFlags = 1)]
-				public override global::Android.Content.Intent GetLaunchIntentForPackage(string @string) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Intent GetLaunchIntentForPackage(string packageName) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
 				}
@@ -1305,7 +1566,7 @@ namespace Android.Test.Mock
 				/// getPackageGids
 				/// </java-name>
 				[Dot42.DexImport("getPackageGids", "(Ljava/lang/String;)[I", AccessFlags = 1)]
-				public override int[] GetPackageGids(string @string) /* MethodBuilder.Create */ 
+				public override int[] GetPackageGids(string packageName) /* MethodBuilder.Create */ 
 				{
 						return default(int[]);
 				}
@@ -1314,7 +1575,7 @@ namespace Android.Test.Mock
 				/// getPermissionInfo
 				/// </java-name>
 				[Dot42.DexImport("getPermissionInfo", "(Ljava/lang/String;I)Landroid/content/pm/PermissionInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.PermissionInfo GetPermissionInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.PermissionInfo GetPermissionInfo(string name, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.PermissionInfo);
 				}
@@ -1323,7 +1584,7 @@ namespace Android.Test.Mock
 				/// queryPermissionsByGroup
 				/// </java-name>
 				[Dot42.DexImport("queryPermissionsByGroup", "(Ljava/lang/String;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;I)Ljava/util/List<Landroid/content/pm/PermissionInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.PermissionInfo> QueryPermissionsByGroup(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.PermissionInfo> QueryPermissionsByGroup(string group, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.PermissionInfo>);
 				}
@@ -1332,7 +1593,7 @@ namespace Android.Test.Mock
 				/// getPermissionGroupInfo
 				/// </java-name>
 				[Dot42.DexImport("getPermissionGroupInfo", "(Ljava/lang/String;I)Landroid/content/pm/PermissionGroupInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.PermissionGroupInfo GetPermissionGroupInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.PermissionGroupInfo GetPermissionGroupInfo(string name, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.PermissionGroupInfo);
 				}
@@ -1341,7 +1602,7 @@ namespace Android.Test.Mock
 				/// getAllPermissionGroups
 				/// </java-name>
 				[Dot42.DexImport("getAllPermissionGroups", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/PermissionGroupInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.PermissionGroupInfo> GetAllPermissionGroups(int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.PermissionGroupInfo> GetAllPermissionGroups(int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.PermissionGroupInfo>);
 				}
@@ -1350,7 +1611,7 @@ namespace Android.Test.Mock
 				/// getApplicationInfo
 				/// </java-name>
 				[Dot42.DexImport("getApplicationInfo", "(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.ApplicationInfo GetApplicationInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.ApplicationInfo GetApplicationInfo(string packageName, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.ApplicationInfo);
 				}
@@ -1359,7 +1620,7 @@ namespace Android.Test.Mock
 				/// getActivityInfo
 				/// </java-name>
 				[Dot42.DexImport("getActivityInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.ActivityInfo GetActivityInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.ActivityInfo GetActivityInfo(global::Android.Content.ComponentName className, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.ActivityInfo);
 				}
@@ -1368,7 +1629,7 @@ namespace Android.Test.Mock
 				/// getReceiverInfo
 				/// </java-name>
 				[Dot42.DexImport("getReceiverInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.ActivityInfo GetReceiverInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.ActivityInfo GetReceiverInfo(global::Android.Content.ComponentName className, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.ActivityInfo);
 				}
@@ -1377,7 +1638,7 @@ namespace Android.Test.Mock
 				/// getServiceInfo
 				/// </java-name>
 				[Dot42.DexImport("getServiceInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ServiceInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.ServiceInfo GetServiceInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.ServiceInfo GetServiceInfo(global::Android.Content.ComponentName className, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.ServiceInfo);
 				}
@@ -1386,7 +1647,7 @@ namespace Android.Test.Mock
 				/// getProviderInfo
 				/// </java-name>
 				[Dot42.DexImport("getProviderInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/ProviderInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.ProviderInfo GetProviderInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.ProviderInfo GetProviderInfo(global::Android.Content.ComponentName className, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.ProviderInfo);
 				}
@@ -1395,7 +1656,7 @@ namespace Android.Test.Mock
 				/// getInstalledPackages
 				/// </java-name>
 				[Dot42.DexImport("getInstalledPackages", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/PackageInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.PackageInfo> GetInstalledPackages(int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.PackageInfo> GetInstalledPackages(int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.PackageInfo>);
 				}
@@ -1404,7 +1665,7 @@ namespace Android.Test.Mock
 				/// checkPermission
 				/// </java-name>
 				[Dot42.DexImport("checkPermission", "(Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int CheckPermission(string @string, string string1) /* MethodBuilder.Create */ 
+				public override int CheckPermission(string permName, string pkgName) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1413,7 +1674,7 @@ namespace Android.Test.Mock
 				/// addPermission
 				/// </java-name>
 				[Dot42.DexImport("addPermission", "(Landroid/content/pm/PermissionInfo;)Z", AccessFlags = 1)]
-				public override bool AddPermission(global::Android.Content.PM.PermissionInfo permissionInfo) /* MethodBuilder.Create */ 
+				public override bool AddPermission(global::Android.Content.PM.PermissionInfo info) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1422,7 +1683,7 @@ namespace Android.Test.Mock
 				/// addPermissionAsync
 				/// </java-name>
 				[Dot42.DexImport("addPermissionAsync", "(Landroid/content/pm/PermissionInfo;)Z", AccessFlags = 1)]
-				public override bool AddPermissionAsync(global::Android.Content.PM.PermissionInfo permissionInfo) /* MethodBuilder.Create */ 
+				public override bool AddPermissionAsync(global::Android.Content.PM.PermissionInfo info) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1431,7 +1692,7 @@ namespace Android.Test.Mock
 				/// removePermission
 				/// </java-name>
 				[Dot42.DexImport("removePermission", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void RemovePermission(string @string) /* MethodBuilder.Create */ 
+				public override void RemovePermission(string name) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1439,7 +1700,7 @@ namespace Android.Test.Mock
 				/// checkSignatures
 				/// </java-name>
 				[Dot42.DexImport("checkSignatures", "(Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int CheckSignatures(string @string, string string1) /* MethodBuilder.Create */ 
+				public override int CheckSignatures(string uid1, string uid2) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1448,7 +1709,7 @@ namespace Android.Test.Mock
 				/// checkSignatures
 				/// </java-name>
 				[Dot42.DexImport("checkSignatures", "(II)I", AccessFlags = 1)]
-				public override int CheckSignatures(int int32, int int321) /* MethodBuilder.Create */ 
+				public override int CheckSignatures(int uid1, int uid2) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1457,7 +1718,7 @@ namespace Android.Test.Mock
 				/// getPackagesForUid
 				/// </java-name>
 				[Dot42.DexImport("getPackagesForUid", "(I)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetPackagesForUid(int int32) /* MethodBuilder.Create */ 
+				public override string[] GetPackagesForUid(int uid) /* MethodBuilder.Create */ 
 				{
 						return default(string[]);
 				}
@@ -1466,7 +1727,7 @@ namespace Android.Test.Mock
 				/// getNameForUid
 				/// </java-name>
 				[Dot42.DexImport("getNameForUid", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetNameForUid(int int32) /* MethodBuilder.Create */ 
+				public override string GetNameForUid(int uid) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -1475,7 +1736,7 @@ namespace Android.Test.Mock
 				/// getInstalledApplications
 				/// </java-name>
 				[Dot42.DexImport("getInstalledApplications", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.ApplicationInfo> GetInstalledApplications(int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.ApplicationInfo> GetInstalledApplications(int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.ApplicationInfo>);
 				}
@@ -1484,7 +1745,7 @@ namespace Android.Test.Mock
 				/// resolveActivity
 				/// </java-name>
 				[Dot42.DexImport("resolveActivity", "(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.ResolveInfo ResolveActivity(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.ResolveInfo ResolveActivity(global::Android.Content.Intent intent, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.ResolveInfo);
 				}
@@ -1493,7 +1754,7 @@ namespace Android.Test.Mock
 				/// queryIntentActivities
 				/// </java-name>
 				[Dot42.DexImport("queryIntentActivities", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryIntentActivities(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryIntentActivities(global::Android.Content.Intent intent, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.ResolveInfo>);
 				}
@@ -1504,7 +1765,7 @@ namespace Android.Test.Mock
 				[Dot42.DexImport("queryIntentActivityOptions", "(Landroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;" +
     "I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;" +
     "I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryIntentActivityOptions(global::Android.Content.ComponentName componentName, global::Android.Content.Intent[] intent, global::Android.Content.Intent intent1, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryIntentActivityOptions(global::Android.Content.ComponentName caller, global::Android.Content.Intent[] specifics, global::Android.Content.Intent intent, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.ResolveInfo>);
 				}
@@ -1513,7 +1774,7 @@ namespace Android.Test.Mock
 				/// queryBroadcastReceivers
 				/// </java-name>
 				[Dot42.DexImport("queryBroadcastReceivers", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryBroadcastReceivers(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryBroadcastReceivers(global::Android.Content.Intent intent, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.ResolveInfo>);
 				}
@@ -1522,7 +1783,7 @@ namespace Android.Test.Mock
 				/// resolveService
 				/// </java-name>
 				[Dot42.DexImport("resolveService", "(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.ResolveInfo ResolveService(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.ResolveInfo ResolveService(global::Android.Content.Intent intent, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.ResolveInfo);
 				}
@@ -1531,7 +1792,7 @@ namespace Android.Test.Mock
 				/// queryIntentServices
 				/// </java-name>
 				[Dot42.DexImport("queryIntentServices", "(Landroid/content/Intent;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Landroid/content/Intent;I)Ljava/util/List<Landroid/content/pm/ResolveInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryIntentServices(global::Android.Content.Intent intent, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.ResolveInfo> QueryIntentServices(global::Android.Content.Intent intent, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.ResolveInfo>);
 				}
@@ -1540,7 +1801,7 @@ namespace Android.Test.Mock
 				/// resolveContentProvider
 				/// </java-name>
 				[Dot42.DexImport("resolveContentProvider", "(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.ProviderInfo ResolveContentProvider(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.ProviderInfo ResolveContentProvider(string name, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.ProviderInfo);
 				}
@@ -1549,7 +1810,7 @@ namespace Android.Test.Mock
 				/// queryContentProviders
 				/// </java-name>
 				[Dot42.DexImport("queryContentProviders", "(Ljava/lang/String;II)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;II)Ljava/util/List<Landroid/content/pm/ProviderInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.ProviderInfo> QueryContentProviders(string @string, int int32, int int321) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.ProviderInfo> QueryContentProviders(string processName, int uid, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.ProviderInfo>);
 				}
@@ -1558,7 +1819,7 @@ namespace Android.Test.Mock
 				/// getInstrumentationInfo
 				/// </java-name>
 				[Dot42.DexImport("getInstrumentationInfo", "(Landroid/content/ComponentName;I)Landroid/content/pm/InstrumentationInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.InstrumentationInfo GetInstrumentationInfo(global::Android.Content.ComponentName componentName, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.InstrumentationInfo GetInstrumentationInfo(global::Android.Content.ComponentName className, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.InstrumentationInfo);
 				}
@@ -1567,7 +1828,7 @@ namespace Android.Test.Mock
 				/// queryInstrumentation
 				/// </java-name>
 				[Dot42.DexImport("queryInstrumentation", "(Ljava/lang/String;I)Ljava/util/List;", AccessFlags = 1, Signature = "(Ljava/lang/String;I)Ljava/util/List<Landroid/content/pm/InstrumentationInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.InstrumentationInfo> QueryInstrumentation(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.InstrumentationInfo> QueryInstrumentation(string targetPackage, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.InstrumentationInfo>);
 				}
@@ -1577,7 +1838,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawab" +
     "le/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetDrawable(string @string, int int32, global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetDrawable(string packageName, int resid, global::Android.Content.PM.ApplicationInfo appInfo) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1586,7 +1847,7 @@ namespace Android.Test.Mock
 				/// getActivityIcon
 				/// </java-name>
 				[Dot42.DexImport("getActivityIcon", "(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetActivityIcon(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetActivityIcon(global::Android.Content.ComponentName activityName) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1595,7 +1856,7 @@ namespace Android.Test.Mock
 				/// getActivityIcon
 				/// </java-name>
 				[Dot42.DexImport("getActivityIcon", "(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetActivityIcon(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetActivityIcon(global::Android.Content.Intent activityName) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1604,7 +1865,7 @@ namespace Android.Test.Mock
 				/// getApplicationIcon
 				/// </java-name>
 				[Dot42.DexImport("getApplicationIcon", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetApplicationIcon(global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetApplicationIcon(global::Android.Content.PM.ApplicationInfo info) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1613,7 +1874,7 @@ namespace Android.Test.Mock
 				/// getApplicationIcon
 				/// </java-name>
 				[Dot42.DexImport("getApplicationIcon", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetApplicationIcon(string @string) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetApplicationIcon(string info) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1622,7 +1883,7 @@ namespace Android.Test.Mock
 				/// getActivityLogo
 				/// </java-name>
 				[Dot42.DexImport("getActivityLogo", "(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetActivityLogo(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetActivityLogo(global::Android.Content.ComponentName activityName) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1631,7 +1892,7 @@ namespace Android.Test.Mock
 				/// getActivityLogo
 				/// </java-name>
 				[Dot42.DexImport("getActivityLogo", "(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetActivityLogo(global::Android.Content.Intent intent) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetActivityLogo(global::Android.Content.Intent activityName) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1640,7 +1901,7 @@ namespace Android.Test.Mock
 				/// getApplicationLogo
 				/// </java-name>
 				[Dot42.DexImport("getApplicationLogo", "(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetApplicationLogo(global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetApplicationLogo(global::Android.Content.PM.ApplicationInfo info) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1649,7 +1910,7 @@ namespace Android.Test.Mock
 				/// getApplicationLogo
 				/// </java-name>
 				[Dot42.DexImport("getApplicationLogo", "(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetApplicationLogo(string @string) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetApplicationLogo(string info) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -1659,7 +1920,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("getText", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;" +
     "", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetText(string @string, int int32, global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Java.Lang.ICharSequence GetText(string packageName, int resid, global::Android.Content.PM.ApplicationInfo appInfo) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1669,7 +1930,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("getXml", "(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/content/res/Xml" +
     "ResourceParser;", AccessFlags = 1)]
-				public override global::Android.Content.Res.IXmlResourceParser GetXml(string @string, int int32, global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.IXmlResourceParser GetXml(string packageName, int resid, global::Android.Content.PM.ApplicationInfo appInfo) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.IXmlResourceParser);
 				}
@@ -1678,7 +1939,7 @@ namespace Android.Test.Mock
 				/// getApplicationLabel
 				/// </java-name>
 				[Dot42.DexImport("getApplicationLabel", "(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetApplicationLabel(global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Java.Lang.ICharSequence GetApplicationLabel(global::Android.Content.PM.ApplicationInfo info) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1687,7 +1948,7 @@ namespace Android.Test.Mock
 				/// getResourcesForActivity
 				/// </java-name>
 				[Dot42.DexImport("getResourcesForActivity", "(Landroid/content/ComponentName;)Landroid/content/res/Resources;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Resources GetResourcesForActivity(global::Android.Content.ComponentName componentName) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.Resources GetResourcesForActivity(global::Android.Content.ComponentName activityName) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.Resources);
 				}
@@ -1696,7 +1957,7 @@ namespace Android.Test.Mock
 				/// getResourcesForApplication
 				/// </java-name>
 				[Dot42.DexImport("getResourcesForApplication", "(Landroid/content/pm/ApplicationInfo;)Landroid/content/res/Resources;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Resources GetResourcesForApplication(global::Android.Content.PM.ApplicationInfo applicationInfo) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.Resources GetResourcesForApplication(global::Android.Content.PM.ApplicationInfo app) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.Resources);
 				}
@@ -1705,7 +1966,7 @@ namespace Android.Test.Mock
 				/// getResourcesForApplication
 				/// </java-name>
 				[Dot42.DexImport("getResourcesForApplication", "(Ljava/lang/String;)Landroid/content/res/Resources;", AccessFlags = 1)]
-				public override global::Android.Content.Res.Resources GetResourcesForApplication(string @string) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.Resources GetResourcesForApplication(string app) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.Resources);
 				}
@@ -1714,7 +1975,7 @@ namespace Android.Test.Mock
 				/// getPackageArchiveInfo
 				/// </java-name>
 				[Dot42.DexImport("getPackageArchiveInfo", "(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;", AccessFlags = 1)]
-				public override global::Android.Content.PM.PackageInfo GetPackageArchiveInfo(string @string, int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.PM.PackageInfo GetPackageArchiveInfo(string archiveFilePath, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.PM.PackageInfo);
 				}
@@ -1723,7 +1984,7 @@ namespace Android.Test.Mock
 				/// setInstallerPackageName
 				/// </java-name>
 				[Dot42.DexImport("setInstallerPackageName", "(Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void SetInstallerPackageName(string @string, string string1) /* MethodBuilder.Create */ 
+				public override void SetInstallerPackageName(string targetPackage, string installerPackageName) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1731,7 +1992,7 @@ namespace Android.Test.Mock
 				/// getInstallerPackageName
 				/// </java-name>
 				[Dot42.DexImport("getInstallerPackageName", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetInstallerPackageName(string @string) /* MethodBuilder.Create */ 
+				public override string GetInstallerPackageName(string packageName) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -1740,7 +2001,7 @@ namespace Android.Test.Mock
 				/// addPackageToPreferred
 				/// </java-name>
 				[Dot42.DexImport("addPackageToPreferred", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void AddPackageToPreferred(string @string) /* MethodBuilder.Create */ 
+				public override void AddPackageToPreferred(string packageName) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1748,7 +2009,7 @@ namespace Android.Test.Mock
 				/// removePackageFromPreferred
 				/// </java-name>
 				[Dot42.DexImport("removePackageFromPreferred", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void RemovePackageFromPreferred(string @string) /* MethodBuilder.Create */ 
+				public override void RemovePackageFromPreferred(string packageName) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1756,7 +2017,7 @@ namespace Android.Test.Mock
 				/// getPreferredPackages
 				/// </java-name>
 				[Dot42.DexImport("getPreferredPackages", "(I)Ljava/util/List;", AccessFlags = 1, Signature = "(I)Ljava/util/List<Landroid/content/pm/PackageInfo;>;")]
-				public override global::Java.Util.IList<global::Android.Content.PM.PackageInfo> GetPreferredPackages(int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Util.IList<global::Android.Content.PM.PackageInfo> GetPreferredPackages(int flags) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.IList<global::Android.Content.PM.PackageInfo>);
 				}
@@ -1765,7 +2026,7 @@ namespace Android.Test.Mock
 				/// setComponentEnabledSetting
 				/// </java-name>
 				[Dot42.DexImport("setComponentEnabledSetting", "(Landroid/content/ComponentName;II)V", AccessFlags = 1)]
-				public override void SetComponentEnabledSetting(global::Android.Content.ComponentName componentName, int int32, int int321) /* MethodBuilder.Create */ 
+				public override void SetComponentEnabledSetting(global::Android.Content.ComponentName componentName, int newState, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1782,7 +2043,7 @@ namespace Android.Test.Mock
 				/// setApplicationEnabledSetting
 				/// </java-name>
 				[Dot42.DexImport("setApplicationEnabledSetting", "(Ljava/lang/String;II)V", AccessFlags = 1)]
-				public override void SetApplicationEnabledSetting(string @string, int int32, int int321) /* MethodBuilder.Create */ 
+				public override void SetApplicationEnabledSetting(string packageName, int newState, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1790,7 +2051,7 @@ namespace Android.Test.Mock
 				/// getApplicationEnabledSetting
 				/// </java-name>
 				[Dot42.DexImport("getApplicationEnabledSetting", "(Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int GetApplicationEnabledSetting(string @string) /* MethodBuilder.Create */ 
+				public override int GetApplicationEnabledSetting(string packageName) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1800,7 +2061,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("addPreferredActivity", "(Landroid/content/IntentFilter;I[Landroid/content/ComponentName;Landroid/content/" +
     "ComponentName;)V", AccessFlags = 1)]
-				public override void AddPreferredActivity(global::Android.Content.IntentFilter intentFilter, int int32, global::Android.Content.ComponentName[] componentName, global::Android.Content.ComponentName componentName1) /* MethodBuilder.Create */ 
+				public override void AddPreferredActivity(global::Android.Content.IntentFilter filter, int match, global::Android.Content.ComponentName[] set, global::Android.Content.ComponentName activity) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1808,7 +2069,7 @@ namespace Android.Test.Mock
 				/// clearPackagePreferredActivities
 				/// </java-name>
 				[Dot42.DexImport("clearPackagePreferredActivities", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public override void ClearPackagePreferredActivities(string @string) /* MethodBuilder.Create */ 
+				public override void ClearPackagePreferredActivities(string packageName) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1817,7 +2078,7 @@ namespace Android.Test.Mock
 				/// </java-name>
 				[Dot42.DexImport("getPreferredActivities", "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)I", AccessFlags = 1, Signature = "(Ljava/util/List<Landroid/content/IntentFilter;>;Ljava/util/List<Landroid/content" +
     "/ComponentName;>;Ljava/lang/String;)I")]
-				public override int GetPreferredActivities(global::Java.Util.IList<global::Android.Content.IntentFilter> list, global::Java.Util.IList<global::Android.Content.ComponentName> list1, string @string) /* MethodBuilder.Create */ 
+				public override int GetPreferredActivities(global::Java.Util.IList<global::Android.Content.IntentFilter> outFilters, global::Java.Util.IList<global::Android.Content.ComponentName> outActivities, string packageName) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -1826,7 +2087,7 @@ namespace Android.Test.Mock
 				/// hasSystemFeature
 				/// </java-name>
 				[Dot42.DexImport("hasSystemFeature", "(Ljava/lang/String;)Z", AccessFlags = 1)]
-				public override bool HasSystemFeature(string @string) /* MethodBuilder.Create */ 
+				public override bool HasSystemFeature(string name) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1835,7 +2096,7 @@ namespace Android.Test.Mock
 				/// verifyPendingInstall
 				/// </java-name>
 				[Dot42.DexImport("verifyPendingInstall", "(II)V", AccessFlags = 1)]
-				public override void VerifyPendingInstall(int int32, int int321) /* MethodBuilder.Create */ 
+				public override void VerifyPendingInstall(int id, int verificationCode) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1877,6 +2138,9 @@ namespace Android.Test.Mock
 
 		}
 
+		/// <summary>
+		///  <para>A mock android.content.res.Resources class. All methods are non-functional and throw java.lang.UnsupportedOperationException. Override it to provide the operations that you need. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/mock/MockResources
 		/// </java-name>
@@ -1893,7 +2157,7 @@ namespace Android.Test.Mock
 				/// updateConfiguration
 				/// </java-name>
 				[Dot42.DexImport("updateConfiguration", "(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V", AccessFlags = 1)]
-				public override void UpdateConfiguration(global::Android.Content.Res.Configuration configuration, global::Android.Util.DisplayMetrics displayMetrics) /* MethodBuilder.Create */ 
+				public override void UpdateConfiguration(global::Android.Content.Res.Configuration config, global::Android.Util.DisplayMetrics metrics) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1901,7 +2165,7 @@ namespace Android.Test.Mock
 				/// getText
 				/// </java-name>
 				[Dot42.DexImport("getText", "(I)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetText(int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Lang.ICharSequence GetText(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1910,7 +2174,7 @@ namespace Android.Test.Mock
 				/// getQuantityText
 				/// </java-name>
 				[Dot42.DexImport("getQuantityText", "(II)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetQuantityText(int int32, int int321) /* MethodBuilder.Create */ 
+				public override global::Java.Lang.ICharSequence GetQuantityText(int id, int quantity) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1919,7 +2183,7 @@ namespace Android.Test.Mock
 				/// getString
 				/// </java-name>
 				[Dot42.DexImport("getString", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetString(int int32) /* MethodBuilder.Create */ 
+				public override string GetString(int id) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -1928,7 +2192,7 @@ namespace Android.Test.Mock
 				/// getString
 				/// </java-name>
 				[Dot42.DexImport("getString", "(I[Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 129)]
-				public override string GetString(int int32, params object[] @object) /* MethodBuilder.Create */ 
+				public override string GetString(int id, params object[] formatArgs) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -1937,7 +2201,7 @@ namespace Android.Test.Mock
 				/// getQuantityString
 				/// </java-name>
 				[Dot42.DexImport("getQuantityString", "(II[Ljava/lang/Object;)Ljava/lang/String;", AccessFlags = 129)]
-				public override string GetQuantityString(int int32, int int321, params object[] @object) /* MethodBuilder.Create */ 
+				public override string GetQuantityString(int id, int quantity, params object[] formatArgs) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -1946,7 +2210,7 @@ namespace Android.Test.Mock
 				/// getQuantityString
 				/// </java-name>
 				[Dot42.DexImport("getQuantityString", "(II)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetQuantityString(int int32, int int321) /* MethodBuilder.Create */ 
+				public override string GetQuantityString(int id, int quantity) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -1955,7 +2219,7 @@ namespace Android.Test.Mock
 				/// getText
 				/// </java-name>
 				[Dot42.DexImport("getText", "(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence GetText(int int32, global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				public override global::Java.Lang.ICharSequence GetText(int id, global::Java.Lang.ICharSequence def) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}
@@ -1964,7 +2228,7 @@ namespace Android.Test.Mock
 				/// getTextArray
 				/// </java-name>
 				[Dot42.DexImport("getTextArray", "(I)[Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public override global::Java.Lang.ICharSequence[] GetTextArray(int int32) /* MethodBuilder.Create */ 
+				public override global::Java.Lang.ICharSequence[] GetTextArray(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence[]);
 				}
@@ -1973,7 +2237,7 @@ namespace Android.Test.Mock
 				/// getStringArray
 				/// </java-name>
 				[Dot42.DexImport("getStringArray", "(I)[Ljava/lang/String;", AccessFlags = 1)]
-				public override string[] GetStringArray(int int32) /* MethodBuilder.Create */ 
+				public override string[] GetStringArray(int id) /* MethodBuilder.Create */ 
 				{
 						return default(string[]);
 				}
@@ -1982,7 +2246,7 @@ namespace Android.Test.Mock
 				/// getIntArray
 				/// </java-name>
 				[Dot42.DexImport("getIntArray", "(I)[I", AccessFlags = 1)]
-				public override int[] GetIntArray(int int32) /* MethodBuilder.Create */ 
+				public override int[] GetIntArray(int id) /* MethodBuilder.Create */ 
 				{
 						return default(int[]);
 				}
@@ -1991,7 +2255,7 @@ namespace Android.Test.Mock
 				/// obtainTypedArray
 				/// </java-name>
 				[Dot42.DexImport("obtainTypedArray", "(I)Landroid/content/res/TypedArray;", AccessFlags = 1)]
-				public override global::Android.Content.Res.TypedArray ObtainTypedArray(int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.TypedArray ObtainTypedArray(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.TypedArray);
 				}
@@ -2000,7 +2264,7 @@ namespace Android.Test.Mock
 				/// getDimension
 				/// </java-name>
 				[Dot42.DexImport("getDimension", "(I)F", AccessFlags = 1)]
-				public override float GetDimension(int int32) /* MethodBuilder.Create */ 
+				public override float GetDimension(int id) /* MethodBuilder.Create */ 
 				{
 						return default(float);
 				}
@@ -2009,7 +2273,7 @@ namespace Android.Test.Mock
 				/// getDimensionPixelOffset
 				/// </java-name>
 				[Dot42.DexImport("getDimensionPixelOffset", "(I)I", AccessFlags = 1)]
-				public override int GetDimensionPixelOffset(int int32) /* MethodBuilder.Create */ 
+				public override int GetDimensionPixelOffset(int id) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2018,7 +2282,7 @@ namespace Android.Test.Mock
 				/// getDimensionPixelSize
 				/// </java-name>
 				[Dot42.DexImport("getDimensionPixelSize", "(I)I", AccessFlags = 1)]
-				public override int GetDimensionPixelSize(int int32) /* MethodBuilder.Create */ 
+				public override int GetDimensionPixelSize(int id) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2027,7 +2291,7 @@ namespace Android.Test.Mock
 				/// getDrawable
 				/// </java-name>
 				[Dot42.DexImport("getDrawable", "(I)Landroid/graphics/drawable/Drawable;", AccessFlags = 1)]
-				public override global::Android.Graphics.Drawables.Drawable GetDrawable(int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Drawables.Drawable GetDrawable(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Drawables.Drawable);
 				}
@@ -2036,7 +2300,7 @@ namespace Android.Test.Mock
 				/// getMovie
 				/// </java-name>
 				[Dot42.DexImport("getMovie", "(I)Landroid/graphics/Movie;", AccessFlags = 1)]
-				public override global::Android.Graphics.Movie GetMovie(int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Graphics.Movie GetMovie(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Movie);
 				}
@@ -2045,7 +2309,7 @@ namespace Android.Test.Mock
 				/// getColor
 				/// </java-name>
 				[Dot42.DexImport("getColor", "(I)I", AccessFlags = 1)]
-				public override int GetColor(int int32) /* MethodBuilder.Create */ 
+				public override int GetColor(int id) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2054,7 +2318,7 @@ namespace Android.Test.Mock
 				/// getColorStateList
 				/// </java-name>
 				[Dot42.DexImport("getColorStateList", "(I)Landroid/content/res/ColorStateList;", AccessFlags = 1)]
-				public override global::Android.Content.Res.ColorStateList GetColorStateList(int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.ColorStateList GetColorStateList(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.ColorStateList);
 				}
@@ -2063,7 +2327,7 @@ namespace Android.Test.Mock
 				/// getInteger
 				/// </java-name>
 				[Dot42.DexImport("getInteger", "(I)I", AccessFlags = 1)]
-				public override int GetInteger(int int32) /* MethodBuilder.Create */ 
+				public override int GetInteger(int id) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2072,7 +2336,7 @@ namespace Android.Test.Mock
 				/// getLayout
 				/// </java-name>
 				[Dot42.DexImport("getLayout", "(I)Landroid/content/res/XmlResourceParser;", AccessFlags = 1)]
-				public override global::Android.Content.Res.IXmlResourceParser GetLayout(int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.IXmlResourceParser GetLayout(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.IXmlResourceParser);
 				}
@@ -2081,7 +2345,7 @@ namespace Android.Test.Mock
 				/// getAnimation
 				/// </java-name>
 				[Dot42.DexImport("getAnimation", "(I)Landroid/content/res/XmlResourceParser;", AccessFlags = 1)]
-				public override global::Android.Content.Res.IXmlResourceParser GetAnimation(int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.IXmlResourceParser GetAnimation(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.IXmlResourceParser);
 				}
@@ -2090,7 +2354,7 @@ namespace Android.Test.Mock
 				/// getXml
 				/// </java-name>
 				[Dot42.DexImport("getXml", "(I)Landroid/content/res/XmlResourceParser;", AccessFlags = 1)]
-				public override global::Android.Content.Res.IXmlResourceParser GetXml(int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.IXmlResourceParser GetXml(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.IXmlResourceParser);
 				}
@@ -2099,7 +2363,7 @@ namespace Android.Test.Mock
 				/// openRawResource
 				/// </java-name>
 				[Dot42.DexImport("openRawResource", "(I)Ljava/io/InputStream;", AccessFlags = 1)]
-				public override global::Java.IO.InputStream OpenRawResource(int int32) /* MethodBuilder.Create */ 
+				public override global::Java.IO.InputStream OpenRawResource(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.IO.InputStream);
 				}
@@ -2108,7 +2372,7 @@ namespace Android.Test.Mock
 				/// openRawResourceFd
 				/// </java-name>
 				[Dot42.DexImport("openRawResourceFd", "(I)Landroid/content/res/AssetFileDescriptor;", AccessFlags = 1)]
-				public override global::Android.Content.Res.AssetFileDescriptor OpenRawResourceFd(int int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.AssetFileDescriptor OpenRawResourceFd(int id) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.AssetFileDescriptor);
 				}
@@ -2133,7 +2397,7 @@ namespace Android.Test.Mock
 				/// obtainAttributes
 				/// </java-name>
 				[Dot42.DexImport("obtainAttributes", "(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;", AccessFlags = 1)]
-				public override global::Android.Content.Res.TypedArray ObtainAttributes(global::Android.Util.IAttributeSet attributeSet, int[] int32) /* MethodBuilder.Create */ 
+				public override global::Android.Content.Res.TypedArray ObtainAttributes(global::Android.Util.IAttributeSet set, int[] attrs) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Res.TypedArray);
 				}
@@ -2142,7 +2406,7 @@ namespace Android.Test.Mock
 				/// getIdentifier
 				/// </java-name>
 				[Dot42.DexImport("getIdentifier", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I", AccessFlags = 1)]
-				public override int GetIdentifier(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				public override int GetIdentifier(string name, string defType, string defPackage) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -2151,7 +2415,7 @@ namespace Android.Test.Mock
 				/// getResourceName
 				/// </java-name>
 				[Dot42.DexImport("getResourceName", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetResourceName(int int32) /* MethodBuilder.Create */ 
+				public override string GetResourceName(int resid) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -2160,7 +2424,7 @@ namespace Android.Test.Mock
 				/// getResourcePackageName
 				/// </java-name>
 				[Dot42.DexImport("getResourcePackageName", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetResourcePackageName(int int32) /* MethodBuilder.Create */ 
+				public override string GetResourcePackageName(int resid) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -2169,7 +2433,7 @@ namespace Android.Test.Mock
 				/// getResourceTypeName
 				/// </java-name>
 				[Dot42.DexImport("getResourceTypeName", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetResourceTypeName(int int32) /* MethodBuilder.Create */ 
+				public override string GetResourceTypeName(int resid) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -2178,7 +2442,7 @@ namespace Android.Test.Mock
 				/// getResourceEntryName
 				/// </java-name>
 				[Dot42.DexImport("getResourceEntryName", "(I)Ljava/lang/String;", AccessFlags = 1)]
-				public override string GetResourceEntryName(int int32) /* MethodBuilder.Create */ 
+				public override string GetResourceEntryName(int resid) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}

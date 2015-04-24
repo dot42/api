@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Android.Text.Util
 {
+		/// <summary>
+		///  <para>Linkify take a piece of text and a regular expression and turns all of the regex matches in the text into clickable links. This is particularly useful for matching things like email addresses, web urls, etc. and making them actionable.</para> <para>Alone with the pattern that is to be matched, a url scheme prefix is also required. Any pattern match that does not begin with the supplied scheme will have the scheme prepended to the matched text when the clickable url is created. For instance, if you are matching web urls you would supply the scheme  <code></code>. If the pattern matches example.com, which does not have a url scheme prefix, the supplied scheme will be prepended to create  <code></code> when the clickable url link is created. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/util/Linkify
 		/// </java-name>
@@ -8,41 +11,65 @@ namespace Android.Text.Util
 		public partial class Linkify
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Bit field indicating that web URLs should be matched in methods that take an options mask </para>        
+				/// </summary>
 				/// <java-name>
 				/// WEB_URLS
 				/// </java-name>
 				[Dot42.DexImport("WEB_URLS", "I", AccessFlags = 25)]
 				public const int WEB_URLS = 1;
+				/// <summary>
+				///  <para>Bit field indicating that email addresses should be matched in methods that take an options mask </para>        
+				/// </summary>
 				/// <java-name>
 				/// EMAIL_ADDRESSES
 				/// </java-name>
 				[Dot42.DexImport("EMAIL_ADDRESSES", "I", AccessFlags = 25)]
 				public const int EMAIL_ADDRESSES = 2;
+				/// <summary>
+				///  <para>Bit field indicating that phone numbers should be matched in methods that take an options mask </para>        
+				/// </summary>
 				/// <java-name>
 				/// PHONE_NUMBERS
 				/// </java-name>
 				[Dot42.DexImport("PHONE_NUMBERS", "I", AccessFlags = 25)]
 				public const int PHONE_NUMBERS = 4;
+				/// <summary>
+				///  <para>Bit field indicating that street addresses should be matched in methods that take an options mask </para>        
+				/// </summary>
 				/// <java-name>
 				/// MAP_ADDRESSES
 				/// </java-name>
 				[Dot42.DexImport("MAP_ADDRESSES", "I", AccessFlags = 25)]
 				public const int MAP_ADDRESSES = 8;
+				/// <summary>
+				///  <para>Bit mask indicating that all available patterns should be matched in methods that take an options mask </para>        
+				/// </summary>
 				/// <java-name>
 				/// ALL
 				/// </java-name>
 				[Dot42.DexImport("ALL", "I", AccessFlags = 25)]
 				public const int ALL = 15;
+				/// <summary>
+				///  <para>Filters out web URL matches that occur after an at-sign (@). This is to prevent turning the domain name in an email address into a web link. </para>        
+				/// </summary>
 				/// <java-name>
 				/// sUrlMatchFilter
 				/// </java-name>
 				[Dot42.DexImport("sUrlMatchFilter", "Landroid/text/util/Linkify$MatchFilter;", AccessFlags = 25)]
 				public static readonly global::Android.Text.Util.Linkify.IMatchFilter SUrlMatchFilter;
+				/// <summary>
+				///  <para>Filters out URL matches that don't have enough digits to be a phone number. </para>        
+				/// </summary>
 				/// <java-name>
 				/// sPhoneNumberMatchFilter
 				/// </java-name>
 				[Dot42.DexImport("sPhoneNumberMatchFilter", "Landroid/text/util/Linkify$MatchFilter;", AccessFlags = 25)]
 				public static readonly global::Android.Text.Util.Linkify.IMatchFilter SPhoneNumberMatchFilter;
+				/// <summary>
+				///  <para>Transforms matched phone number text into something suitable to be used in a tel: URL. It does this by removing everything but the digits and plus signs. For instance: '+1 (919) 555-1212' becomes '+19195551212' </para>        
+				/// </summary>
 				/// <java-name>
 				/// sPhoneNumberTransformFilter
 				/// </java-name>
@@ -53,20 +80,26 @@ namespace Android.Text.Util
 				{
 				}
 
+				/// <summary>
+				///  <para>Scans the text of the provided Spannable and turns all occurrences of the link types indicated in the mask into clickable links. If the mask is nonzero, it also removes any existing URLSpans attached to the Spannable, to avoid problems if you call it repeatedly on the same text. </para>        
+				/// </summary>
 				/// <java-name>
 				/// addLinks
 				/// </java-name>
 				[Dot42.DexImport("addLinks", "(Landroid/text/Spannable;I)Z", AccessFlags = 25)]
-				public static bool AddLinks(global::Android.Text.ISpannable spannable, int int32) /* MethodBuilder.Create */ 
+				public static bool AddLinks(global::Android.Text.ISpannable text, int mask) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Scans the text of the provided Spannable and turns all occurrences of the link types indicated in the mask into clickable links. If the mask is nonzero, it also removes any existing URLSpans attached to the Spannable, to avoid problems if you call it repeatedly on the same text. </para>        
+				/// </summary>
 				/// <java-name>
 				/// addLinks
 				/// </java-name>
 				[Dot42.DexImport("addLinks", "(Landroid/widget/TextView;I)Z", AccessFlags = 25)]
-				public static bool AddLinks(global::Android.Widget.TextView textView, int int32) /* MethodBuilder.Create */ 
+				public static bool AddLinks(global::Android.Widget.TextView text, int mask) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -107,6 +140,9 @@ namespace Android.Text.Util
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>TransformFilter enables client code to have more control over how matched patterns are represented as URLs.</para> <para>For example: when converting a phone number such as (919) 555-1212 into a tel: URL the parentheses, white space, and hyphen need to be removed to produce tel:9195551212. </para>    
+				/// </summary>
 				/// <java-name>
 				/// android/text/util/Linkify$TransformFilter
 				/// </java-name>
@@ -114,14 +150,23 @@ namespace Android.Text.Util
 				public partial interface ITransformFilter
  /* scope: __dot42__ */ 
 				{
+						/// <summary>
+						///  <para>Examines the matched text and either passes it through or uses the data in the Matcher state to produce a replacement.</para> <para></para>        
+						/// </summary>
+						/// <returns>
+						///  <para>The transformed form of the URL </para>
+						/// </returns>
 						/// <java-name>
 						/// transformUrl
 						/// </java-name>
 						[Dot42.DexImport("transformUrl", "(Ljava/util/regex/Matcher;Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 1025)]
-						string TransformUrl(global::Java.Util.Regex.Matcher matcher, string @string) /* MethodBuilder.Create */ ;
+						string TransformUrl(global::Java.Util.Regex.Matcher match, string url) /* MethodBuilder.Create */ ;
 
 				}
 
+				/// <summary>
+				///  <para>MatchFilter enables client code to have more control over what is allowed to match and become a link, and what is not.</para> <para>For example: when matching web urls you would like things like  to match, as well as just example.com itelf. However, you would not want to match against the domain in . So, when matching against a web url pattern you might also include a MatchFilter that disallows the match if it is immediately preceded by an at-sign (@). </para>    
+				/// </summary>
 				/// <java-name>
 				/// android/text/util/Linkify$MatchFilter
 				/// </java-name>
@@ -129,16 +174,25 @@ namespace Android.Text.Util
 				public partial interface IMatchFilter
  /* scope: __dot42__ */ 
 				{
+						/// <summary>
+						///  <para>Examines the character span matched by the pattern and determines if the match should be turned into an actionable link.</para> <para></para>        
+						/// </summary>
+						/// <returns>
+						///  <para>Whether this match should be turned into a link </para>
+						/// </returns>
 						/// <java-name>
 						/// acceptMatch
 						/// </java-name>
 						[Dot42.DexImport("acceptMatch", "(Ljava/lang/CharSequence;II)Z", AccessFlags = 1025)]
-						bool AcceptMatch(global::Java.Lang.ICharSequence charSequence, int int32, int int321) /* MethodBuilder.Create */ ;
+						bool AcceptMatch(global::Java.Lang.ICharSequence s, int start, int end) /* MethodBuilder.Create */ ;
 
 				}
 
 		}
 
+		/// <summary>
+		///  <para>This class stores an RFC 822-like name, address, and comment, and provides methods to convert them to quoted strings. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/util/Rfc822Token
 		/// </java-name>
@@ -146,11 +200,17 @@ namespace Android.Text.Util
 		public partial class Rfc822Token
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new Rfc822Token with the specified name, address, and comment. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", AccessFlags = 1)]
-				public Rfc822Token(string @string, string string1, string string2) /* MethodBuilder.Create */ 
+				public Rfc822Token(string name, string address, string comment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the name (with quoting added if necessary), the comment (in parentheses), and the address (in angle brackets). This should be suitable for inclusion in an RFC 822 address list. </para>        
+				/// </summary>
 				/// <java-name>
 				/// toString
 				/// </java-name>
@@ -160,29 +220,38 @@ namespace Android.Text.Util
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Returns the name, conservatively quoting it if there are any characters that are likely to cause trouble outside of a quoted string, or returning it literally if it seems safe. </para>        
+				/// </summary>
 				/// <java-name>
 				/// quoteNameIfNecessary
 				/// </java-name>
 				[Dot42.DexImport("quoteNameIfNecessary", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string QuoteNameIfNecessary(string @string) /* MethodBuilder.Create */ 
+				public static string QuoteNameIfNecessary(string name) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Returns the name, with internal backslashes and quotation marks preceded by backslashes. The outer quote marks themselves are not added by this method. </para>        
+				/// </summary>
 				/// <java-name>
 				/// quoteName
 				/// </java-name>
 				[Dot42.DexImport("quoteName", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string QuoteName(string @string) /* MethodBuilder.Create */ 
+				public static string QuoteName(string name) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
 
+				/// <summary>
+				///  <para>Returns the comment, with internal backslashes and parentheses preceded by backslashes. The outer parentheses themselves are not added by this method. </para>        
+				/// </summary>
 				/// <java-name>
 				/// quoteComment
 				/// </java-name>
 				[Dot42.DexImport("quoteComment", "(Ljava/lang/String;)Ljava/lang/String;", AccessFlags = 9)]
-				public static string QuoteComment(string @string) /* MethodBuilder.Create */ 
+				public static string QuoteComment(string comment) /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -200,7 +269,7 @@ namespace Android.Text.Util
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object o) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -210,6 +279,9 @@ namespace Android.Text.Util
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the name part. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getName
 				/// </java-name>
@@ -221,6 +293,9 @@ namespace Android.Text.Util
 						set{ }
 				}
 
+				/// <summary>
+				///  <para>Returns the address part. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getAddress
 				/// </java-name>
@@ -232,6 +307,9 @@ namespace Android.Text.Util
 						set{ }
 				}
 
+				/// <summary>
+				///  <para>Returns the comment part. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getComment
 				/// </java-name>
@@ -245,6 +323,9 @@ namespace Android.Text.Util
 
 		}
 
+		/// <summary>
+		///  <para>This class works as a Tokenizer for MultiAutoCompleteTextView for address list fields, and also provides a method for converting a string of addresses (such as might be typed into such a field) into a series of Rfc822Tokens. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/util/Rfc822Tokenizer
 		/// </java-name>
@@ -257,47 +338,62 @@ namespace Android.Text.Util
 				{
 				}
 
+				/// <summary>
+				///  <para>This constructor will try to take a string like "Foo Bar (something) &amp;lt;foo\@google.com&amp;gt;,blah\@google.com (something)" and convert it into one or more Rfc822Tokens, output into the supplied collection.</para> <para>It does *not* decode MIME encoded-words; charset conversion must already have taken place if necessary. It will try to be tolerant of broken syntax instead of returning an error. </para>        
+				/// </summary>
 				/// <java-name>
 				/// tokenize
 				/// </java-name>
 				[Dot42.DexImport("tokenize", "(Ljava/lang/CharSequence;Ljava/util/Collection;)V", AccessFlags = 9, Signature = "(Ljava/lang/CharSequence;Ljava/util/Collection<Landroid/text/util/Rfc822Token;>;)" +
     "V")]
-				public static void Tokenize(global::Java.Lang.ICharSequence charSequence, global::Java.Util.ICollection<global::Android.Text.Util.Rfc822Token> collection) /* MethodBuilder.Create */ 
+				public static void Tokenize(global::Java.Lang.ICharSequence text, global::Java.Util.ICollection<global::Android.Text.Util.Rfc822Token> @out) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>This method will try to take a string like "Foo Bar (something) &amp;lt;foo\@google.com&amp;gt;,blah\@google.com (something)" and convert it into one or more Rfc822Tokens. It does *not* decode MIME encoded-words; charset conversion must already have taken place if necessary. It will try to be tolerant of broken syntax instead of returning an error. </para>        
+				/// </summary>
 				/// <java-name>
 				/// tokenize
 				/// </java-name>
 				[Dot42.DexImport("tokenize", "(Ljava/lang/CharSequence;)[Landroid/text/util/Rfc822Token;", AccessFlags = 9)]
-				public static global::Android.Text.Util.Rfc822Token[] Tokenize(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				public static global::Android.Text.Util.Rfc822Token[] Tokenize(global::Java.Lang.ICharSequence text) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Text.Util.Rfc822Token[]);
 				}
 
+				/// <summary>
+				///  <para> <para>Returns the start of the token that ends at offset  <code>cursor</code> within  <code>text</code>.</para> </para>        
+				/// </summary>
 				/// <java-name>
 				/// findTokenStart
 				/// </java-name>
 				[Dot42.DexImport("findTokenStart", "(Ljava/lang/CharSequence;I)I", AccessFlags = 1)]
-				public virtual int FindTokenStart(global::Java.Lang.ICharSequence charSequence, int int32) /* MethodBuilder.Create */ 
+				public virtual int FindTokenStart(global::Java.Lang.ICharSequence text, int cursor) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para> <para>Returns the end of the token (minus trailing punctuation) that begins at offset  <code>cursor</code> within  <code>text</code>.</para> </para>        
+				/// </summary>
 				/// <java-name>
 				/// findTokenEnd
 				/// </java-name>
 				[Dot42.DexImport("findTokenEnd", "(Ljava/lang/CharSequence;I)I", AccessFlags = 1)]
-				public virtual int FindTokenEnd(global::Java.Lang.ICharSequence charSequence, int int32) /* MethodBuilder.Create */ 
+				public virtual int FindTokenEnd(global::Java.Lang.ICharSequence text, int cursor) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Terminates the specified address with a comma and space. This assumes that the specified text already has valid syntax. The Adapter subclass's convertToString() method must make that guarantee. </para>        
+				/// </summary>
 				/// <java-name>
 				/// terminateToken
 				/// </java-name>
 				[Dot42.DexImport("terminateToken", "(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ICharSequence TerminateToken(global::Java.Lang.ICharSequence charSequence) /* MethodBuilder.Create */ 
+				public virtual global::Java.Lang.ICharSequence TerminateToken(global::Java.Lang.ICharSequence text) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Lang.ICharSequence);
 				}

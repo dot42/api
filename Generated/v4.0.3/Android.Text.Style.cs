@@ -8,21 +8,36 @@ namespace Android.Text.Style
 		public partial class AbsoluteSizeSpan : global::Android.Text.Style.MetricAffectingSpan, global::Android.Text.IParcelableSpan
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Set the text size to  <code>size</code> physical pixels. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public AbsoluteSizeSpan(int int32) /* MethodBuilder.Create */ 
+				public AbsoluteSizeSpan(int size) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Set the text size to  <code>size</code> physical pixels, or to  <code>size</code> device-independent pixels if  <code>dip</code> is true. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(IZ)V", AccessFlags = 1)]
-				public AbsoluteSizeSpan(int int32, bool boolean) /* MethodBuilder.Create */ 
+				public AbsoluteSizeSpan(int size, bool dip) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Set the text size to  <code>size</code> physical pixels. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public AbsoluteSizeSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public AbsoluteSizeSpan(global::Android.OS.Parcel size) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -32,11 +47,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -44,7 +62,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -52,7 +70,7 @@ namespace Android.Text.Style
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateMeasureState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -61,6 +79,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -98,15 +119,21 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public BackgroundColorSpan(int int32) /* MethodBuilder.Create */ 
+				public BackgroundColorSpan(int color) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public BackgroundColorSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public BackgroundColorSpan(global::Android.OS.Parcel color) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -116,11 +143,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -128,7 +158,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -137,6 +167,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -175,20 +208,26 @@ namespace Android.Text.Style
 				}
 
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public BulletSpan(int int32) /* MethodBuilder.Create */ 
+				public BulletSpan(int gapWidth) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(II)V", AccessFlags = 1)]
-				public BulletSpan(int int32, int int321) /* MethodBuilder.Create */ 
+				public BulletSpan(int gapWidth, int color) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public BulletSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public BulletSpan(global::Android.OS.Parcel gapWidth) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -198,32 +237,47 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the amount by which to adjust the leading margin. Positive values move away from the leading edge of the paragraph, negative values move towards it.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the offset for the margin. </para>
+				/// </returns>
 				/// <java-name>
 				/// getLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("getLeadingMargin", "(Z)I", AccessFlags = 1)]
-				public virtual int GetLeadingMargin(bool boolean) /* MethodBuilder.Create */ 
+				public virtual int GetLeadingMargin(bool first) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Renders the leading margin. This is called before the margin has been adjusted by the value returned by getLeadingMargin(boolean).</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// drawLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("drawLeadingMargin", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;IIIIILjava/lang/CharSequence;II" +
     "ZLandroid/text/Layout;)V", AccessFlags = 1)]
-				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint, int int32, int int321, int int322, int int323, int int324, global::Java.Lang.ICharSequence charSequence, int int325, int int326, bool boolean, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
+				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas c, global::Android.Graphics.Paint p, int x, int dir, int top, int baseline, int bottom, global::Java.Lang.ICharSequence text, int start, int end, bool first, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -235,6 +289,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>The classes that affect character-level text formatting extend this class. Most extend its subclass MetricAffectingSpan, but simple ones may just implement UpdateAppearance. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/CharacterStyle
 		/// </java-name>
@@ -251,17 +308,23 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1025)]
-				public abstract void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ ;
+				public abstract void UpdateDrawState(global::Android.Text.TextPaint tp) /* MethodBuilder.Create */ ;
 
+				/// <summary>
+				///  <para>A given CharacterStyle can only applied to a single region of a given Spanned. If you need to attach the same CharacterStyle to multiple regions, you can use this method to wrap it with a new object that will have the same effect but be a distinct object so that it can also be attached without conflict. </para>        
+				/// </summary>
 				/// <java-name>
 				/// wrap
 				/// </java-name>
 				[Dot42.DexImport("wrap", "(Landroid/text/style/CharacterStyle;)Landroid/text/style/CharacterStyle;", AccessFlags = 9)]
-				public static global::Android.Text.Style.CharacterStyle Wrap(global::Android.Text.Style.CharacterStyle characterStyle) /* MethodBuilder.Create */ 
+				public static global::Android.Text.Style.CharacterStyle Wrap(global::Android.Text.Style.CharacterStyle cs) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Text.Style.CharacterStyle);
 				}
 
+				/// <summary>
+				///  <para>Returns "this" for most CharacterStyles, but for CharacterStyles that were generated by wrap, returns the underlying CharacterStyle. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getUnderlying
 				/// </java-name>
@@ -273,6 +336,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>If an object of this type is attached to the text of a TextView with a movement method of LinkMovementMethod, the affected spans of text can be selected. If clicked, the onClick method will be called. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/ClickableSpan
 		/// </java-name>
@@ -285,17 +351,23 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Performs the click action associated with this span. </para>        
+				/// </summary>
 				/// <java-name>
 				/// onClick
 				/// </java-name>
 				[Dot42.DexImport("onClick", "(Landroid/view/View;)V", AccessFlags = 1025)]
-				public abstract void OnClick(global::Android.Views.View view) /* MethodBuilder.Create */ ;
+				public abstract void OnClick(global::Android.Views.View widget) /* MethodBuilder.Create */ ;
 
+				/// <summary>
+				///  <para>Makes the text underlined and in the link color. </para>        
+				/// </summary>
 				/// <java-name>
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -309,30 +381,39 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public DrawableMarginSpan(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
+				public DrawableMarginSpan(global::Android.Graphics.Drawables.Drawable b) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;I)V", AccessFlags = 1)]
-				public DrawableMarginSpan(global::Android.Graphics.Drawables.Drawable drawable, int int32) /* MethodBuilder.Create */ 
+				public DrawableMarginSpan(global::Android.Graphics.Drawables.Drawable b, int pad) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the amount by which to adjust the leading margin. Positive values move away from the leading edge of the paragraph, negative values move towards it.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the offset for the margin. </para>
+				/// </returns>
 				/// <java-name>
 				/// getLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("getLeadingMargin", "(Z)I", AccessFlags = 1)]
-				public virtual int GetLeadingMargin(bool boolean) /* MethodBuilder.Create */ 
+				public virtual int GetLeadingMargin(bool first) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Renders the leading margin. This is called before the margin has been adjusted by the value returned by getLeadingMargin(boolean).</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// drawLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("drawLeadingMargin", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;IIIIILjava/lang/CharSequence;II" +
     "ZLandroid/text/Layout;)V", AccessFlags = 1)]
-				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint, int int32, int int321, int int322, int int323, int int324, global::Java.Lang.ICharSequence charSequence, int int325, int int326, bool boolean, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
+				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas c, global::Android.Graphics.Paint p, int x, int dir, int top, int baseline, int bottom, global::Java.Lang.ICharSequence text, int start, int end, bool first, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -340,7 +421,7 @@ namespace Android.Text.Style
 				/// chooseHeight
 				/// </java-name>
 				[Dot42.DexImport("chooseHeight", "(Ljava/lang/CharSequence;IIIILandroid/graphics/Paint$FontMetricsInt;)V", AccessFlags = 1)]
-				public virtual void ChooseHeight(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322, int int323, global::Android.Graphics.Paint.FontMetricsInt fontMetricsInt) /* MethodBuilder.Create */ 
+				public virtual void ChooseHeight(global::Java.Lang.ICharSequence text, int start, int end, int istartv, int v, global::Android.Graphics.Paint.FontMetricsInt fm) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -358,11 +439,17 @@ namespace Android.Text.Style
 		public abstract partial class DynamicDrawableSpan : global::Android.Text.Style.ReplacementSpan
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>A constant indicating that the bottom of this span should be aligned with the bottom of the surrounding text, i.e., at the same level as the lowest descender in the text. </para>        
+				/// </summary>
 				/// <java-name>
 				/// ALIGN_BOTTOM
 				/// </java-name>
 				[Dot42.DexImport("ALIGN_BOTTOM", "I", AccessFlags = 25)]
 				public const int ALIGN_BOTTOM = 0;
+				/// <summary>
+				///  <para>A constant indicating that the bottom of this span should be aligned with the baseline of the surrounding text. </para>        
+				/// </summary>
 				/// <java-name>
 				/// ALIGN_BASELINE
 				/// </java-name>
@@ -378,8 +465,11 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 4)]
-				protected internal DynamicDrawableSpan(int int32) /* MethodBuilder.Create */ 
+				protected internal DynamicDrawableSpan(int verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -388,7 +478,7 @@ namespace Android.Text.Style
 				/// </java-name>
 				[Dot42.DexImport("getSize", "(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMe" +
     "tricsInt;)I", AccessFlags = 1)]
-				public override int GetSize(global::Android.Graphics.Paint paint, global::Java.Lang.ICharSequence charSequence, int int32, int int321, global::Android.Graphics.Paint.FontMetricsInt fontMetricsInt) /* MethodBuilder.Create */ 
+				public override int GetSize(global::Android.Graphics.Paint paint, global::Java.Lang.ICharSequence text, int start, int end, global::Android.Graphics.Paint.FontMetricsInt fm) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -398,10 +488,13 @@ namespace Android.Text.Style
 				/// </java-name>
 				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)" +
     "V", AccessFlags = 1)]
-				public override void Draw(global::Android.Graphics.Canvas canvas, global::Java.Lang.ICharSequence charSequence, int int32, int int321, float single, int int322, int int323, int int324, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
+				public override void Draw(global::Android.Graphics.Canvas canvas, global::Java.Lang.ICharSequence text, int start, int end, float x, int top, int y, int bottom, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the vertical alignment of this span, one of ALIGN_BOTTOM or ALIGN_BASELINE. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getVerticalAlignment
 				/// </java-name>
@@ -411,6 +504,9 @@ namespace Android.Text.Style
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Your subclass must implement this method to provide the bitmap to be drawn. The dimensions of the bitmap must be the same from each call to the next. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getDrawable
 				/// </java-name>
@@ -422,6 +518,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>Provides an easy way to edit a portion of text. </para> <para>The TextView uses this span to allow the user to delete a chuck of text in one click. </para> <para>TextView removes the span when the user deletes the whole text or modifies it. </para> <para>This span can be also used to receive notification when the user deletes or modifies the text; </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/EasyEditSpan
 		/// </java-name>
@@ -429,11 +528,20 @@ namespace Android.Text.Style
 		public partial class EasyEditSpan : global::Android.Text.IParcelableSpan
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates the span. No intent is sent when the wrapped text is modified or deleted. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public EasyEditSpan() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -443,14 +551,20 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -470,15 +584,21 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public ForegroundColorSpan(int int32) /* MethodBuilder.Create */ 
+				public ForegroundColorSpan(int color) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public ForegroundColorSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public ForegroundColorSpan(global::Android.OS.Parcel color) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -488,11 +608,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -500,7 +623,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -509,6 +632,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -564,6 +690,12 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -573,11 +705,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -586,6 +721,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -614,30 +752,39 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;)V", AccessFlags = 1)]
-				public IconMarginSpan(global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
+				public IconMarginSpan(global::Android.Graphics.Bitmap b) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;I)V", AccessFlags = 1)]
-				public IconMarginSpan(global::Android.Graphics.Bitmap bitmap, int int32) /* MethodBuilder.Create */ 
+				public IconMarginSpan(global::Android.Graphics.Bitmap b, int pad) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the amount by which to adjust the leading margin. Positive values move away from the leading edge of the paragraph, negative values move towards it.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the offset for the margin. </para>
+				/// </returns>
 				/// <java-name>
 				/// getLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("getLeadingMargin", "(Z)I", AccessFlags = 1)]
-				public virtual int GetLeadingMargin(bool boolean) /* MethodBuilder.Create */ 
+				public virtual int GetLeadingMargin(bool first) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Renders the leading margin. This is called before the margin has been adjusted by the value returned by getLeadingMargin(boolean).</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// drawLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("drawLeadingMargin", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;IIIIILjava/lang/CharSequence;II" +
     "ZLandroid/text/Layout;)V", AccessFlags = 1)]
-				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint, int int32, int int321, int int322, int int323, int int324, global::Java.Lang.ICharSequence charSequence, int int325, int int326, bool boolean, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
+				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas c, global::Android.Graphics.Paint p, int x, int dir, int top, int baseline, int bottom, global::Java.Lang.ICharSequence text, int start, int end, bool first, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -645,7 +792,7 @@ namespace Android.Text.Style
 				/// chooseHeight
 				/// </java-name>
 				[Dot42.DexImport("chooseHeight", "(Ljava/lang/CharSequence;IIIILandroid/graphics/Paint$FontMetricsInt;)V", AccessFlags = 1)]
-				public virtual void ChooseHeight(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322, int int323, global::Android.Graphics.Paint.FontMetricsInt fontMetricsInt) /* MethodBuilder.Create */ 
+				public virtual void ChooseHeight(global::Java.Lang.ICharSequence text, int start, int end, int istartv, int v, global::Android.Graphics.Paint.FontMetricsInt fm) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -656,6 +803,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>A paragraph style affecting the leading margin. There can be multiple leading margin spans on a single paragraph; they will be rendered in order, each adding its margin to the ones before it. The leading margin is on the right for lines in a right-to-left paragraph. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/LeadingMarginSpan
 		/// </java-name>
@@ -663,21 +813,33 @@ namespace Android.Text.Style
 		public partial interface ILeadingMarginSpan : global::Android.Text.Style.IParagraphStyle
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the amount by which to adjust the leading margin. Positive values move away from the leading edge of the paragraph, negative values move towards it.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the offset for the margin. </para>
+				/// </returns>
 				/// <java-name>
 				/// getLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("getLeadingMargin", "(Z)I", AccessFlags = 1025)]
-				int GetLeadingMargin(bool boolean) /* MethodBuilder.Create */ ;
+				int GetLeadingMargin(bool first) /* MethodBuilder.Create */ ;
 
+				/// <summary>
+				///  <para>Renders the leading margin. This is called before the margin has been adjusted by the value returned by getLeadingMargin(boolean).</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// drawLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("drawLeadingMargin", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;IIIIILjava/lang/CharSequence;II" +
     "ZLandroid/text/Layout;)V", AccessFlags = 1025)]
-				void DrawLeadingMargin(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint, int int32, int int321, int int322, int int323, int int324, global::Java.Lang.ICharSequence charSequence, int int325, int int326, bool boolean, global::Android.Text.Layout layout) /* MethodBuilder.Create */ ;
+				void DrawLeadingMargin(global::Android.Graphics.Canvas c, global::Android.Graphics.Paint p, int x, int dir, int top, int baseline, int bottom, global::Java.Lang.ICharSequence text, int start, int end, bool first, global::Android.Text.Layout layout) /* MethodBuilder.Create */ ;
 
 		}
 
+		/// <summary>
+		///  <para>An extended version of LeadingMarginSpan, which allows the implementor to specify the number of lines of text to which this object is attached that the "first line of paragraph" margin width will be applied to. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/LeadingMarginSpan$LeadingMarginSpan2
 		/// </java-name>
@@ -685,6 +847,9 @@ namespace Android.Text.Style
 		public partial interface ILeadingMarginSpan_ILeadingMarginSpan2 : global::Android.Text.Style.ILeadingMarginSpan, global::Android.Text.Style.IWrapTogetherSpan
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the number of lines of text to which this object is attached that the "first line" margin will apply to. Note that if this returns N, the first N lines of the region, not the first N lines of each paragraph, will be given the special margin width. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getLeadingMarginLineCount
 				/// </java-name>
@@ -696,6 +861,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>The standard implementation of LeadingMarginSpan, which adjusts the margin but does not do any rendering. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/LeadingMarginSpan$Standard
 		/// </java-name>
@@ -718,6 +886,12 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -727,29 +901,41 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the amount by which to adjust the leading margin. Positive values move away from the leading edge of the paragraph, negative values move towards it.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the offset for the margin. </para>
+				/// </returns>
 				/// <java-name>
 				/// getLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("getLeadingMargin", "(Z)I", AccessFlags = 1)]
-				public virtual int GetLeadingMargin(bool boolean) /* MethodBuilder.Create */ 
+				public virtual int GetLeadingMargin(bool first) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Renders the leading margin. This is called before the margin has been adjusted by the value returned by getLeadingMargin(boolean).</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// drawLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("drawLeadingMargin", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;IIIIILjava/lang/CharSequence;II" +
     "ZLandroid/text/Layout;)V", AccessFlags = 1)]
-				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint, int int32, int int321, int int322, int int323, int int324, global::Java.Lang.ICharSequence charSequence, int int325, int int326, bool boolean, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
+				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas c, global::Android.Graphics.Paint p, int x, int dir, int top, int baseline, int bottom, global::Java.Lang.ICharSequence text, int start, int end, bool first, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -758,6 +944,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -781,7 +970,7 @@ namespace Android.Text.Style
 				/// </java-name>
 				[Dot42.DexImport("drawBackground", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;IIIIILjava/lang/CharSequence;II" +
     "I)V", AccessFlags = 1025)]
-				void DrawBackground(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint, int int32, int int321, int int322, int int323, int int324, global::Java.Lang.ICharSequence charSequence, int int325, int int326, int int327) /* MethodBuilder.Create */ ;
+				void DrawBackground(global::Android.Graphics.Canvas c, global::Android.Graphics.Paint p, int left, int right, int top, int baseline, int bottom, global::Java.Lang.ICharSequence text, int start, int end, int lnum) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -796,7 +985,7 @@ namespace Android.Text.Style
 				/// chooseHeight
 				/// </java-name>
 				[Dot42.DexImport("chooseHeight", "(Ljava/lang/CharSequence;IIIILandroid/graphics/Paint$FontMetricsInt;)V", AccessFlags = 1025)]
-				void ChooseHeight(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322, int int323, global::Android.Graphics.Paint.FontMetricsInt fontMetricsInt) /* MethodBuilder.Create */ ;
+				void ChooseHeight(global::Java.Lang.ICharSequence text, int start, int end, int spanstartv, int v, global::Android.Graphics.Paint.FontMetricsInt fm) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -812,7 +1001,7 @@ namespace Android.Text.Style
 				/// </java-name>
 				[Dot42.DexImport("chooseHeight", "(Ljava/lang/CharSequence;IIIILandroid/graphics/Paint$FontMetricsInt;Landroid/text" +
     "/TextPaint;)V", AccessFlags = 1025)]
-				void ChooseHeight(global::Java.Lang.ICharSequence charSequence, int int32, int int321, int int322, int int323, global::Android.Graphics.Paint.FontMetricsInt fontMetricsInt, global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ ;
+				void ChooseHeight(global::Java.Lang.ICharSequence text, int start, int end, int spanstartv, int v, global::Android.Graphics.Paint.FontMetricsInt fm, global::Android.Text.TextPaint paint) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -823,63 +1012,99 @@ namespace Android.Text.Style
 		public partial class ImageSpan : global::Android.Text.Style.DynamicDrawableSpan
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use ImageSpan(Context, Bitmap) instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Bitmap b) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;I)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Bitmap bitmap, int int32) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Bitmap b, int verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/graphics/Bitmap;)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Content.Context context, global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Content.Context b, global::Android.Graphics.Bitmap verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/graphics/Bitmap;I)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Content.Context context, global::Android.Graphics.Bitmap bitmap, int int32) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Content.Context context, global::Android.Graphics.Bitmap b, int verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use ImageSpan(Context, Bitmap) instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Drawables.Drawable drawable) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Drawables.Drawable b) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;I)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Drawables.Drawable drawable, int int32) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Drawables.Drawable b, int verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Drawables.Drawable drawable, string @string) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Drawables.Drawable b, string verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Graphics.Drawables.Drawable drawable, string @string, int int32) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Graphics.Drawables.Drawable context, string b, int verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/net/Uri;)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Content.Context context, global::Android.Net.Uri uri) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Content.Context b, global::Android.Net.Uri verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/net/Uri;I)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Content.Context context, global::Android.Net.Uri uri, int int32) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Content.Context context, global::Android.Net.Uri b, int verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use instead. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Content.Context b, int verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;II)V", AccessFlags = 1)]
-				public ImageSpan(global::Android.Content.Context context, int int32, int int321) /* MethodBuilder.Create */ 
+				public ImageSpan(global::Android.Content.Context context, int b, int verticalAlignment) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -897,6 +1122,9 @@ namespace Android.Text.Style
 						get{ return default(global::Android.Graphics.Drawables.Drawable); }
 				}
 
+				/// <summary>
+				///  <para>Returns the source string that was saved during construction. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSource
 				/// </java-name>
@@ -908,6 +1136,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>The classes that affect paragraph-level text formatting implement this interface. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/ParagraphStyle
 		/// </java-name>
@@ -917,6 +1148,9 @@ namespace Android.Text.Style
 		{
 		}
 
+		/// <summary>
+		///  <para>Represents a single tab stop on a line. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/TabStopSpan
 		/// </java-name>
@@ -924,6 +1158,12 @@ namespace Android.Text.Style
 		public partial interface ITabStopSpan : global::Android.Text.Style.IParagraphStyle
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the offset of the tab stop from the leading margin of the line. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the offset </para>
+				/// </returns>
 				/// <java-name>
 				/// getTabStop
 				/// </java-name>
@@ -935,6 +1175,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>The default implementation of TabStopSpan. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/TabStopSpan$Standard
 		/// </java-name>
@@ -952,6 +1195,12 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the offset of the tab stop from the leading margin of the line. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the offset </para>
+				/// </returns>
 				/// <java-name>
 				/// getTabStop
 				/// </java-name>
@@ -963,6 +1212,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>The classes that affect character-level text in a way that modifies their appearance when one is added or removed must implement this interface. Note that if the class also impacts size or other metrics, it should instead implement UpdateLayout. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/UpdateAppearance
 		/// </java-name>
@@ -972,6 +1224,9 @@ namespace Android.Text.Style
 		{
 		}
 
+		/// <summary>
+		///  <para>The classes that affect character-level text formatting in a way that triggers a text layout update when one is added or removed must implement this interface. This interface also includes UpdateAppearance since such a change implicitly also impacts the appearance. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/UpdateLayout
 		/// </java-name>
@@ -998,7 +1253,7 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/MaskFilter;)V", AccessFlags = 1)]
-				public MaskFilterSpan(global::Android.Graphics.MaskFilter maskFilter) /* MethodBuilder.Create */ 
+				public MaskFilterSpan(global::Android.Graphics.MaskFilter filter) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1006,7 +1261,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1026,6 +1281,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>The classes that affect character-level text formatting in a way that changes the width or height of characters extend this class. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/MetricAffectingSpan
 		/// </java-name>
@@ -1042,8 +1300,11 @@ namespace Android.Text.Style
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1025)]
-				public abstract void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ ;
+				public abstract void UpdateMeasureState(global::Android.Text.TextPaint p) /* MethodBuilder.Create */ ;
 
+				/// <summary>
+				///  <para>Returns "this" for most MetricAffectingSpans, but for MetricAffectingSpans that were generated by wrap, returns the underlying MetricAffectingSpan. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getUnderlying
 				/// </java-name>
@@ -1068,15 +1329,21 @@ namespace Android.Text.Style
 				}
 
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public QuoteSpan(int int32) /* MethodBuilder.Create */ 
+				public QuoteSpan(int color) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public QuoteSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public QuoteSpan(global::Android.OS.Parcel color) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1086,32 +1353,47 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the amount by which to adjust the leading margin. Positive values move away from the leading edge of the paragraph, negative values move towards it.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the offset for the margin. </para>
+				/// </returns>
 				/// <java-name>
 				/// getLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("getLeadingMargin", "(Z)I", AccessFlags = 1)]
-				public virtual int GetLeadingMargin(bool boolean) /* MethodBuilder.Create */ 
+				public virtual int GetLeadingMargin(bool first) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Renders the leading margin. This is called before the margin has been adjusted by the value returned by getLeadingMargin(boolean).</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// drawLeadingMargin
 				/// </java-name>
 				[Dot42.DexImport("drawLeadingMargin", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;IIIIILjava/lang/CharSequence;II" +
     "ZLandroid/text/Layout;)V", AccessFlags = 1)]
-				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint, int int32, int int321, int int322, int int323, int int324, global::Java.Lang.ICharSequence charSequence, int int325, int int326, bool boolean, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
+				public virtual void DrawLeadingMargin(global::Android.Graphics.Canvas c, global::Android.Graphics.Paint p, int x, int dir, int top, int baseline, int bottom, global::Java.Lang.ICharSequence text, int start, int end, bool first, global::Android.Text.Layout layout) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1140,7 +1422,7 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Rasterizer;)V", AccessFlags = 1)]
-				public RasterizerSpan(global::Android.Graphics.Rasterizer rasterizer) /* MethodBuilder.Create */ 
+				public RasterizerSpan(global::Android.Graphics.Rasterizer r) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1148,7 +1430,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1176,15 +1458,21 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(F)V", AccessFlags = 1)]
-				public RelativeSizeSpan(float single) /* MethodBuilder.Create */ 
+				public RelativeSizeSpan(float src) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public RelativeSizeSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public RelativeSizeSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1194,11 +1482,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1206,7 +1497,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1214,7 +1505,7 @@ namespace Android.Text.Style
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateMeasureState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1223,6 +1514,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1260,28 +1554,34 @@ namespace Android.Text.Style
 				/// </java-name>
 				[Dot42.DexImport("getSize", "(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMe" +
     "tricsInt;)I", AccessFlags = 1025)]
-				public abstract int GetSize(global::Android.Graphics.Paint paint, global::Java.Lang.ICharSequence charSequence, int int32, int int321, global::Android.Graphics.Paint.FontMetricsInt fontMetricsInt) /* MethodBuilder.Create */ ;
+				public abstract int GetSize(global::Android.Graphics.Paint paint, global::Java.Lang.ICharSequence text, int start, int end, global::Android.Graphics.Paint.FontMetricsInt fm) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// draw
 				/// </java-name>
 				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)" +
     "V", AccessFlags = 1025)]
-				public abstract void Draw(global::Android.Graphics.Canvas canvas, global::Java.Lang.ICharSequence charSequence, int int32, int int321, float single, int int322, int int323, int int324, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ ;
+				public abstract void Draw(global::Android.Graphics.Canvas canvas, global::Java.Lang.ICharSequence text, int start, int end, float x, int top, int y, int bottom, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ ;
 
+				/// <summary>
+				///  <para>This method does nothing, since ReplacementSpans are measured explicitly instead of affecting Paint properties. </para>        
+				/// </summary>
 				/// <java-name>
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateMeasureState(global::Android.Text.TextPaint p) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>This method does nothing, since ReplacementSpans are drawn explicitly instead of affecting Paint properties. </para>        
+				/// </summary>
 				/// <java-name>
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1295,15 +1595,21 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(F)V", AccessFlags = 1)]
-				public ScaleXSpan(float single) /* MethodBuilder.Create */ 
+				public ScaleXSpan(float src) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public ScaleXSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public ScaleXSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1313,11 +1619,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1325,7 +1634,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1333,7 +1642,7 @@ namespace Android.Text.Style
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateMeasureState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1342,6 +1651,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1375,10 +1687,16 @@ namespace Android.Text.Style
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public StrikethroughSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public StrikethroughSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1388,11 +1706,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1400,10 +1721,13 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1415,6 +1739,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>Describes a style in a span. Note that styles are cumulative  if both bold and italic are set in separate spans, or if the base style is bold and a span calls for italic, you get bold italic. You can't turn off a style from the base style. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/StyleSpan
 		/// </java-name>
@@ -1422,16 +1749,28 @@ namespace Android.Text.Style
 		public partial class StyleSpan : global::Android.Text.Style.MetricAffectingSpan, global::Android.Text.IParcelableSpan
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public StyleSpan(int int32) /* MethodBuilder.Create */ 
+				public StyleSpan(int style) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public StyleSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public StyleSpan(global::Android.OS.Parcel style) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1441,11 +1780,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1453,7 +1795,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1461,7 +1803,7 @@ namespace Android.Text.Style
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateMeasureState(global::Android.Text.TextPaint paint) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1470,6 +1812,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1479,6 +1824,9 @@ namespace Android.Text.Style
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the style constant defined in android.graphics.Typeface. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getStyle
 				/// </java-name>
@@ -1503,10 +1851,16 @@ namespace Android.Text.Style
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public SubscriptSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public SubscriptSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1516,11 +1870,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1528,7 +1885,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint tp) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1536,10 +1893,13 @@ namespace Android.Text.Style
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateMeasureState(global::Android.Text.TextPaint tp) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1551,6 +1911,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>Holds suggestion candidates for the text enclosed in this span.</para> <para>When such a span is edited in an EditText, double tapping on the text enclosed in this span will display a popup dialog listing suggestion replacement for that text. The user can then replace the original text by one of the suggestions.</para> <para>These spans should typically be created by the input method to provide correction and alternates for the text.</para> <para> <para>TextView::isSuggestionsEnabled() </para></para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/SuggestionSpan
 		/// </java-name>
@@ -1558,16 +1921,25 @@ namespace Android.Text.Style
 		public partial class SuggestionSpan : global::Android.Text.Style.CharacterStyle, global::Android.Text.IParcelableSpan
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Sets this flag if the suggestions should be easily accessible with few interactions. This flag should be set for every suggestions that the user is likely to use. </para>        
+				/// </summary>
 				/// <java-name>
 				/// FLAG_EASY_CORRECT
 				/// </java-name>
 				[Dot42.DexImport("FLAG_EASY_CORRECT", "I", AccessFlags = 25)]
 				public const int FLAG_EASY_CORRECT = 1;
+				/// <summary>
+				///  <para>Sets this flag if the suggestions apply to a misspelled word/text. This type of suggestion is rendered differently to highlight the error. </para>        
+				/// </summary>
 				/// <java-name>
 				/// FLAG_MISSPELLED
 				/// </java-name>
 				[Dot42.DexImport("FLAG_MISSPELLED", "I", AccessFlags = 25)]
 				public const int FLAG_MISSPELLED = 2;
+				/// <summary>
+				///  <para>Sets this flag if the auto correction is about to be applied to a word/text that the user is typing/composing. This type of suggestion is rendered differently to indicate the auto correction is happening. </para>        
+				/// </summary>
 				/// <java-name>
 				/// FLAG_AUTO_CORRECTION
 				/// </java-name>
@@ -1613,18 +1985,27 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Ljava/util/Locale;[Ljava/lang/String;ILjava/lang/Class;" +
     ")V", AccessFlags = 1, Signature = "(Landroid/content/Context;Ljava/util/Locale;[Ljava/lang/String;ILjava/lang/Class<" +
     "*>;)V")]
-				public SuggestionSpan(global::Android.Content.Context context, global::Java.Util.Locale locale, string[] @string, int int32, global::System.Type type) /* MethodBuilder.Create */ 
+				public SuggestionSpan(global::Android.Content.Context context, global::Java.Util.Locale locale, string[] suggestions, int flags, global::System.Type notificationTargetClass) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public SuggestionSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public SuggestionSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1634,11 +2015,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1646,7 +2030,7 @@ namespace Android.Text.Style
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object o) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -1664,7 +2048,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint tp) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1673,6 +2057,12 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>an array of suggestion texts for this span </para>
+				/// </returns>
 				/// <java-name>
 				/// getSuggestions
 				/// </java-name>
@@ -1682,6 +2072,12 @@ namespace Android.Text.Style
 						get{ return default(string[]); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the locale of the suggestions </para>
+				/// </returns>
 				/// <java-name>
 				/// getLocale
 				/// </java-name>
@@ -1702,6 +2098,9 @@ namespace Android.Text.Style
 						set{ }
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1726,10 +2125,16 @@ namespace Android.Text.Style
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public SuperscriptSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public SuperscriptSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1739,11 +2144,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1751,7 +2159,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint tp) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1759,10 +2167,13 @@ namespace Android.Text.Style
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateMeasureState(global::Android.Text.TextPaint tp) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1774,6 +2185,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>Sets the text color, size, style, and typeface to match a TextAppearance resource. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/TextAppearanceSpan
 		/// </java-name>
@@ -1781,27 +2195,42 @@ namespace Android.Text.Style
 		public partial class TextAppearanceSpan : global::Android.Text.Style.MetricAffectingSpan, global::Android.Text.IParcelableSpan
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Uses the specified TextAppearance resource to determine the text appearance. The  <code>appearance</code> should be, for example,  <code>android.R.style.TextAppearance_Small</code>. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;I)V", AccessFlags = 1)]
-				public TextAppearanceSpan(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				public TextAppearanceSpan(global::Android.Content.Context context, int appearance) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Uses the specified TextAppearance resource to determine the text appearance, and the specified text color resource to determine the color. The  <code>appearance</code> should be, for example,  <code>android.R.style.TextAppearance_Small</code>, and the  <code>colorList</code> should be, for example,  <code>android.R.styleable.Theme_textColorPrimary</code>. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;II)V", AccessFlags = 1)]
-				public TextAppearanceSpan(global::Android.Content.Context context, int int32, int int321) /* MethodBuilder.Create */ 
+				public TextAppearanceSpan(global::Android.Content.Context context, int appearance, int colorList) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Makes text be drawn with the specified typeface, size, style, and colors. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;IILandroid/content/res/ColorStateList;Landroid/content/res/Col" +
     "orStateList;)V", AccessFlags = 1)]
-				public TextAppearanceSpan(string @string, int int32, int int321, global::Android.Content.Res.ColorStateList colorStateList, global::Android.Content.Res.ColorStateList colorStateList1) /* MethodBuilder.Create */ 
+				public TextAppearanceSpan(string family, int style, int size, global::Android.Content.Res.ColorStateList color, global::Android.Content.Res.ColorStateList linkColor) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public TextAppearanceSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public TextAppearanceSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1811,11 +2240,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1823,7 +2255,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1831,7 +2263,7 @@ namespace Android.Text.Style
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateMeasureState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1840,6 +2272,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1849,6 +2284,9 @@ namespace Android.Text.Style
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the typeface family specified by this span, or  <code>null</code> if it does not specify one. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getFamily
 				/// </java-name>
@@ -1858,6 +2296,9 @@ namespace Android.Text.Style
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the text color specified by this span, or  <code>null</code> if it does not specify one. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getTextColor
 				/// </java-name>
@@ -1867,6 +2308,9 @@ namespace Android.Text.Style
 						get{ return default(global::Android.Content.Res.ColorStateList); }
 				}
 
+				/// <summary>
+				///  <para>Returns the link color specified by this span, or  <code>null</code> if it does not specify one. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getLinkTextColor
 				/// </java-name>
@@ -1876,6 +2320,9 @@ namespace Android.Text.Style
 						get{ return default(global::Android.Content.Res.ColorStateList); }
 				}
 
+				/// <summary>
+				///  <para>Returns the text size specified by this span, or  <code>-1</code> if it does not specify one. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getTextSize
 				/// </java-name>
@@ -1885,6 +2332,9 @@ namespace Android.Text.Style
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the text style specified by this span, or  <code>0</code> if it does not specify one. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getTextStyle
 				/// </java-name>
@@ -1896,6 +2346,9 @@ namespace Android.Text.Style
 
 		}
 
+		/// <summary>
+		///  <para>Changes the typeface family of the text to which the span is attached. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/text/style/TypefaceSpan
 		/// </java-name>
@@ -1904,15 +2357,21 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public TypefaceSpan(string @string) /* MethodBuilder.Create */ 
+				public TypefaceSpan(string src) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public TypefaceSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public TypefaceSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1922,11 +2381,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1934,7 +2396,7 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1942,7 +2404,7 @@ namespace Android.Text.Style
 				/// updateMeasureState
 				/// </java-name>
 				[Dot42.DexImport("updateMeasureState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateMeasureState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateMeasureState(global::Android.Text.TextPaint paint) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1951,6 +2413,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -1960,6 +2425,9 @@ namespace Android.Text.Style
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the font family name. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getFamily
 				/// </java-name>
@@ -1984,10 +2452,16 @@ namespace Android.Text.Style
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public UnderlineSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public UnderlineSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -1997,11 +2471,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2009,10 +2486,13 @@ namespace Android.Text.Style
 				/// updateDrawState
 				/// </java-name>
 				[Dot42.DexImport("updateDrawState", "(Landroid/text/TextPaint;)V", AccessFlags = 1)]
-				public override void UpdateDrawState(global::Android.Text.TextPaint textPaint) /* MethodBuilder.Create */ 
+				public override void UpdateDrawState(global::Android.Text.TextPaint ds) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>
@@ -2032,15 +2512,21 @@ namespace Android.Text.Style
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public URLSpan(string @string) /* MethodBuilder.Create */ 
+				public URLSpan(string src) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/os/Parcel;)V", AccessFlags = 1)]
-				public URLSpan(global::Android.OS.Parcel parcel) /* MethodBuilder.Create */ 
+				public URLSpan(global::Android.OS.Parcel src) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -2050,11 +2536,14 @@ namespace Android.Text.Style
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2062,7 +2551,7 @@ namespace Android.Text.Style
 				/// onClick
 				/// </java-name>
 				[Dot42.DexImport("onClick", "(Landroid/view/View;)V", AccessFlags = 1)]
-				public override void OnClick(global::Android.Views.View view) /* MethodBuilder.Create */ 
+				public override void OnClick(global::Android.Views.View widget) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -2071,6 +2560,9 @@ namespace Android.Text.Style
 				{
 				}
 
+				/// <summary>
+				///  <para>Return a special type identifier for this span class. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getSpanTypeId
 				/// </java-name>

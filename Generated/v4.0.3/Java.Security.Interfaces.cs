@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Java.Security.Interfaces
 {
+		/// <summary>
+		///  <para>The base interface for Digital Signature Algorithm (DSA) public or private keys. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/DSAKey
 		/// </java-name>
@@ -8,6 +11,12 @@ namespace Java.Security.Interfaces
 		public partial interface IDSAKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the DSA key parameters.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the DSA key parameters. </para>
+				/// </returns>
 				/// <java-name>
 				/// getParams
 				/// </java-name>
@@ -19,6 +28,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for key generators that can generate DSA key pairs. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/DSAKeyPairGenerator
 		/// </java-name>
@@ -26,20 +38,29 @@ namespace Java.Security.Interfaces
 		public partial interface IDSAKeyPairGenerator
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Initializes this generator with the prime ( <c>p </c> ), subprime ( <c>q </c> ), and base ( <c>g </c> ) values from the specified parameters.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// initialize
 				/// </java-name>
 				[Dot42.DexImport("initialize", "(Ljava/security/interfaces/DSAParams;Ljava/security/SecureRandom;)V", AccessFlags = 1025)]
-				void Initialize(global::Java.Security.Interfaces.IDSAParams dSAParams, global::Java.Security.SecureRandom secureRandom) /* MethodBuilder.Create */ ;
+				void Initialize(global::Java.Security.Interfaces.IDSAParams @params, global::Java.Security.SecureRandom random) /* MethodBuilder.Create */ ;
 
+				/// <summary>
+				///  <para>Initializes this generator for the specified modulus length. Valid values for the modulus length are the multiples of 8 between 512 and 1024. </para> <para>The parameter <c>genParams </c> specifies whether this method should generate new prime ( <c>p </c> ), subprime ( <c>q </c> ), and base ( <c>g </c> ) values or whether it will use the pre-calculated values for the specified modulus length. Default parameters are available for modulus lengths of 512 and 1024 bits.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// initialize
 				/// </java-name>
 				[Dot42.DexImport("initialize", "(IZLjava/security/SecureRandom;)V", AccessFlags = 1025)]
-				void Initialize(int int32, bool boolean, global::Java.Security.SecureRandom secureRandom) /* MethodBuilder.Create */ ;
+				void Initialize(int modlen, bool genParams, global::Java.Security.SecureRandom random) /* MethodBuilder.Create */ ;
 
 		}
 
+		/// <summary>
+		///  <para>The interface for Digital Signature Algorithm (DSA) specific parameters. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/DSAParams
 		/// </java-name>
@@ -47,6 +68,12 @@ namespace Java.Security.Interfaces
 		public partial interface IDSAParams
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the base ( <c>g </c> ) value.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the base ( <c>g </c> ) value. </para>
+				/// </returns>
 				/// <java-name>
 				/// getG
 				/// </java-name>
@@ -56,6 +83,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the prime ( <c>p </c> ) value.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime ( <c>p </c> ) value. </para>
+				/// </returns>
 				/// <java-name>
 				/// getP
 				/// </java-name>
@@ -65,6 +98,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the subprime ( <c>q </c> value.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the subprime ( <c>q </c> value. </para>
+				/// </returns>
 				/// <java-name>
 				/// getQ
 				/// </java-name>
@@ -76,6 +115,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for a Digital Signature Algorithm (DSA) private key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/DSAPrivateKey
 		/// </java-name>
@@ -83,6 +125,12 @@ namespace Java.Security.Interfaces
 		public partial interface IDSAPrivateKey : global::Java.Security.Interfaces.IDSAKey, global::Java.Security.IPrivateKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the private key value <c>x </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the private key value <c>x </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getX
 				/// </java-name>
@@ -94,6 +142,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for a Digital Signature Algorithm (DSA) private key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/DSAPrivateKey
 		/// </java-name>
@@ -101,6 +152,9 @@ namespace Java.Security.Interfaces
 		public static partial class IDSAPrivateKeyConstants
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The serial version identifier. </para>        
+				/// </summary>
 				/// <java-name>
 				/// serialVersionUID
 				/// </java-name>
@@ -108,6 +162,9 @@ namespace Java.Security.Interfaces
 				public const long SerialVersionUID = 7776497482533790279;
 		}
 
+		/// <summary>
+		///  <para>The interface for a Digital Signature Algorithm (DSA) public key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/DSAPublicKey
 		/// </java-name>
@@ -115,6 +172,12 @@ namespace Java.Security.Interfaces
 		public partial interface IDSAPublicKey : global::Java.Security.Interfaces.IDSAKey, global::Java.Security.IPublicKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the public key value <c>y </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public key value <c>y </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getY
 				/// </java-name>
@@ -126,6 +189,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for a Digital Signature Algorithm (DSA) public key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/DSAPublicKey
 		/// </java-name>
@@ -133,6 +199,9 @@ namespace Java.Security.Interfaces
 		public static partial class IDSAPublicKeyConstants
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The serial version identifier. </para>        
+				/// </summary>
 				/// <java-name>
 				/// serialVersionUID
 				/// </java-name>
@@ -140,6 +209,9 @@ namespace Java.Security.Interfaces
 				public const long SerialVersionUID = 1234526332779022332;
 		}
 
+		/// <summary>
+		///  <para>The base interface for Elliptic Curve (EC) public or private keys. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/ECKey
 		/// </java-name>
@@ -147,6 +219,12 @@ namespace Java.Security.Interfaces
 		public partial interface IECKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the EC key parameters.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the EC key parameters. </para>
+				/// </returns>
 				/// <java-name>
 				/// getParams
 				/// </java-name>
@@ -158,6 +236,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for an Elliptic Curve (EC) private key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/ECPrivateKey
 		/// </java-name>
@@ -165,6 +246,12 @@ namespace Java.Security.Interfaces
 		public partial interface IECPrivateKey : global::Java.Security.IPrivateKey, global::Java.Security.Interfaces.IECKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the private value <c>S </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the private value <c>S </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getS
 				/// </java-name>
@@ -176,6 +263,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for an Elliptic Curve (EC) private key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/ECPrivateKey
 		/// </java-name>
@@ -183,6 +273,9 @@ namespace Java.Security.Interfaces
 		public static partial class IECPrivateKeyConstants
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The serial version identifier. </para>        
+				/// </summary>
 				/// <java-name>
 				/// serialVersionUID
 				/// </java-name>
@@ -190,6 +283,9 @@ namespace Java.Security.Interfaces
 				public const long SerialVersionUID = -7896394956925609184;
 		}
 
+		/// <summary>
+		///  <para>The interface for an Elliptic Curve (EC) public key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/ECPublicKey
 		/// </java-name>
@@ -197,6 +293,12 @@ namespace Java.Security.Interfaces
 		public partial interface IECPublicKey : global::Java.Security.IPublicKey, global::Java.Security.Interfaces.IECKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the public point <c>W </c> on an elliptic curve (EC).</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public point <c>W </c> on an elliptic curve (EC). </para>
+				/// </returns>
 				/// <java-name>
 				/// getW
 				/// </java-name>
@@ -208,6 +310,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for an Elliptic Curve (EC) public key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/ECPublicKey
 		/// </java-name>
@@ -215,6 +320,9 @@ namespace Java.Security.Interfaces
 		public static partial class IECPublicKeyConstants
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The serial version identifier. </para>        
+				/// </summary>
 				/// <java-name>
 				/// serialVersionUID
 				/// </java-name>
@@ -222,6 +330,9 @@ namespace Java.Security.Interfaces
 				public const long SerialVersionUID = -3314988629879632826;
 		}
 
+		/// <summary>
+		///  <para>The base interface for PKCS#1 RSA public and private keys. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/RSAKey
 		/// </java-name>
@@ -229,6 +340,12 @@ namespace Java.Security.Interfaces
 		public partial interface IRSAKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the modulus.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the modulus. </para>
+				/// </returns>
 				/// <java-name>
 				/// getModulus
 				/// </java-name>
@@ -240,6 +357,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for a Multi-Prime RSA private key. Specified by . </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/RSAMultiPrimePrivateCrtKey
 		/// </java-name>
@@ -247,6 +367,12 @@ namespace Java.Security.Interfaces
 		public partial interface IRSAMultiPrimePrivateCrtKey : global::Java.Security.Interfaces.IRSAPrivateKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the CRT coefficient, <c>q^-1 mod p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the CRT coefficient. </para>
+				/// </returns>
 				/// <java-name>
 				/// getCrtCoefficient
 				/// </java-name>
@@ -256,6 +382,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the information for the additional primes.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the information for the additional primes, or <c>null </c> if there are only the two primes ( <c>p, q </c> ), </para>
+				/// </returns>
 				/// <java-name>
 				/// getOtherPrimeInfo
 				/// </java-name>
@@ -265,6 +397,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the prime factor <c>p </c> of <c>n </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime factor <c>p </c> of <c>n </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeP
 				/// </java-name>
@@ -274,6 +412,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the prime factor <c>q </c> of <c>n </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime factor <c>q </c> of <c>n </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeQ
 				/// </java-name>
@@ -283,6 +427,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the CRT exponent of the prime <c>p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the CRT exponent of the prime <c>p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeExponentP
 				/// </java-name>
@@ -292,6 +442,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the CRT exponent of the prime <c>q </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the CRT exponent of the prime <c>q </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeExponentQ
 				/// </java-name>
@@ -301,6 +457,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the public exponent <c>e </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public exponent <c>e </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
@@ -312,6 +474,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for a Multi-Prime RSA private key. Specified by . </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/RSAMultiPrimePrivateCrtKey
 		/// </java-name>
@@ -319,6 +484,9 @@ namespace Java.Security.Interfaces
 		public static partial class IRSAMultiPrimePrivateCrtKeyConstants
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>the serial version identifier. </para>        
+				/// </summary>
 				/// <java-name>
 				/// serialVersionUID
 				/// </java-name>
@@ -326,6 +494,9 @@ namespace Java.Security.Interfaces
 				public const long SerialVersionUID = 618058533534628008;
 		}
 
+		/// <summary>
+		///  <para>The interface for a PKCS#1 RSA private key using CRT information values. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/RSAPrivateCrtKey
 		/// </java-name>
@@ -333,6 +504,12 @@ namespace Java.Security.Interfaces
 		public partial interface IRSAPrivateCrtKey : global::Java.Security.Interfaces.IRSAPrivateKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the CRT coefficient, <c>q^-1 mod p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the CRT coefficient. </para>
+				/// </returns>
 				/// <java-name>
 				/// getCrtCoefficient
 				/// </java-name>
@@ -342,6 +519,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the prime factor <c>p </c> of <c>n </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime factor <c>p </c> of <c>n </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeP
 				/// </java-name>
@@ -351,6 +534,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the prime factor <c>q </c> of <c>n </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime factor <c>q </c> of <c>n </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeQ
 				/// </java-name>
@@ -360,6 +549,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the CRT exponent of the primet <c>p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the CRT exponent of the prime <c>p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeExponentP
 				/// </java-name>
@@ -369,6 +564,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the CRT exponent of the prime <c>q </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the CRT exponent of the prime <c>q </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeExponentQ
 				/// </java-name>
@@ -378,6 +579,12 @@ namespace Java.Security.Interfaces
 						get;
 				}
 
+				/// <summary>
+				///  <para>Returns the public exponent <c>e </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public exponent <c>e </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
@@ -389,6 +596,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for a PKCS#1 RSA private key using CRT information values. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/RSAPrivateCrtKey
 		/// </java-name>
@@ -396,6 +606,9 @@ namespace Java.Security.Interfaces
 		public static partial class IRSAPrivateCrtKeyConstants
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The serial version identifier. </para>        
+				/// </summary>
 				/// <java-name>
 				/// serialVersionUID
 				/// </java-name>
@@ -403,6 +616,9 @@ namespace Java.Security.Interfaces
 				public const long SerialVersionUID = -5682214253527700368;
 		}
 
+		/// <summary>
+		///  <para>The interface for an PKCS#1 RSA private key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/RSAPrivateKey
 		/// </java-name>
@@ -410,6 +626,12 @@ namespace Java.Security.Interfaces
 		public partial interface IRSAPrivateKey : global::Java.Security.IPrivateKey, global::Java.Security.Interfaces.IRSAKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the private exponent <c>d </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the private exponent <c>d </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrivateExponent
 				/// </java-name>
@@ -421,6 +643,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for an PKCS#1 RSA private key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/RSAPrivateKey
 		/// </java-name>
@@ -428,6 +653,9 @@ namespace Java.Security.Interfaces
 		public static partial class IRSAPrivateKeyConstants
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The serial version identifier. </para>        
+				/// </summary>
 				/// <java-name>
 				/// serialVersionUID
 				/// </java-name>
@@ -435,6 +663,9 @@ namespace Java.Security.Interfaces
 				public const long SerialVersionUID = 5187144804936595022;
 		}
 
+		/// <summary>
+		///  <para>The interface for a PKCS#1 RSA public key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/RSAPublicKey
 		/// </java-name>
@@ -442,6 +673,12 @@ namespace Java.Security.Interfaces
 		public partial interface IRSAPublicKey : global::Java.Security.IPublicKey, global::Java.Security.Interfaces.IRSAKey
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the public exponent <c>e </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public exponent <c>e </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
@@ -453,6 +690,9 @@ namespace Java.Security.Interfaces
 
 		}
 
+		/// <summary>
+		///  <para>The interface for a PKCS#1 RSA public key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/interfaces/RSAPublicKey
 		/// </java-name>
@@ -460,6 +700,9 @@ namespace Java.Security.Interfaces
 		public static partial class IRSAPublicKeyConstants
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The serial version identifier. </para>        
+				/// </summary>
 				/// <java-name>
 				/// serialVersionUID
 				/// </java-name>

@@ -21,199 +21,199 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glActiveTexture
 				/// </java-name>
 				[Dot42.DexImport("glActiveTexture", "(I)V", AccessFlags = 1025)]
-				void GlActiveTexture(int int32) /* MethodBuilder.Create */ ;
+				void GlActiveTexture(int texture) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glAlphaFunc
 				/// </java-name>
 				[Dot42.DexImport("glAlphaFunc", "(IF)V", AccessFlags = 1025)]
-				void GlAlphaFunc(int int32, float single) /* MethodBuilder.Create */ ;
+				void GlAlphaFunc(int func, float @ref) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glAlphaFuncx
 				/// </java-name>
 				[Dot42.DexImport("glAlphaFuncx", "(II)V", AccessFlags = 1025)]
-				void GlAlphaFuncx(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlAlphaFuncx(int func, int @ref) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBindTexture
 				/// </java-name>
 				[Dot42.DexImport("glBindTexture", "(II)V", AccessFlags = 1025)]
-				void GlBindTexture(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlBindTexture(int target, int texture) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBlendFunc
 				/// </java-name>
 				[Dot42.DexImport("glBlendFunc", "(II)V", AccessFlags = 1025)]
-				void GlBlendFunc(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlBlendFunc(int sfactor, int dfactor) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClear
 				/// </java-name>
 				[Dot42.DexImport("glClear", "(I)V", AccessFlags = 1025)]
-				void GlClear(int int32) /* MethodBuilder.Create */ ;
+				void GlClear(int mask) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClearColor
 				/// </java-name>
 				[Dot42.DexImport("glClearColor", "(FFFF)V", AccessFlags = 1025)]
-				void GlClearColor(float single, float single1, float single2, float single3) /* MethodBuilder.Create */ ;
+				void GlClearColor(float red, float green, float blue, float alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClearColorx
 				/// </java-name>
 				[Dot42.DexImport("glClearColorx", "(IIII)V", AccessFlags = 1025)]
-				void GlClearColorx(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlClearColorx(int red, int green, int blue, int alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClearDepthf
 				/// </java-name>
 				[Dot42.DexImport("glClearDepthf", "(F)V", AccessFlags = 1025)]
-				void GlClearDepthf(float single) /* MethodBuilder.Create */ ;
+				void GlClearDepthf(float depth) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClearDepthx
 				/// </java-name>
 				[Dot42.DexImport("glClearDepthx", "(I)V", AccessFlags = 1025)]
-				void GlClearDepthx(int int32) /* MethodBuilder.Create */ ;
+				void GlClearDepthx(int depth) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClearStencil
 				/// </java-name>
 				[Dot42.DexImport("glClearStencil", "(I)V", AccessFlags = 1025)]
-				void GlClearStencil(int int32) /* MethodBuilder.Create */ ;
+				void GlClearStencil(int s) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClientActiveTexture
 				/// </java-name>
 				[Dot42.DexImport("glClientActiveTexture", "(I)V", AccessFlags = 1025)]
-				void GlClientActiveTexture(int int32) /* MethodBuilder.Create */ ;
+				void GlClientActiveTexture(int texture) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glColor4f
 				/// </java-name>
 				[Dot42.DexImport("glColor4f", "(FFFF)V", AccessFlags = 1025)]
-				void GlColor4f(float single, float single1, float single2, float single3) /* MethodBuilder.Create */ ;
+				void GlColor4f(float red, float green, float blue, float alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glColor4x
 				/// </java-name>
 				[Dot42.DexImport("glColor4x", "(IIII)V", AccessFlags = 1025)]
-				void GlColor4x(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlColor4x(int red, int green, int blue, int alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glColorMask
 				/// </java-name>
 				[Dot42.DexImport("glColorMask", "(ZZZZ)V", AccessFlags = 1025)]
-				void GlColorMask(bool boolean, bool boolean1, bool boolean2, bool boolean3) /* MethodBuilder.Create */ ;
+				void GlColorMask(bool red, bool green, bool blue, bool alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glColorPointer
 				/// </java-name>
 				[Dot42.DexImport("glColorPointer", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlColorPointer(int int32, int int321, int int322, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlColorPointer(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glCompressedTexImage2D
 				/// </java-name>
 				[Dot42.DexImport("glCompressedTexImage2D", "(IIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlCompressedTexImage2D(int int32, int int321, int int322, int int323, int int324, int int325, int int326, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlCompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, int imageSize, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glCompressedTexSubImage2D
 				/// </java-name>
 				[Dot42.DexImport("glCompressedTexSubImage2D", "(IIIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlCompressedTexSubImage2D(int int32, int int321, int int322, int int323, int int324, int int325, int int326, int int327, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlCompressedTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int imageSize, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glCopyTexImage2D
 				/// </java-name>
 				[Dot42.DexImport("glCopyTexImage2D", "(IIIIIIII)V", AccessFlags = 1025)]
-				void GlCopyTexImage2D(int int32, int int321, int int322, int int323, int int324, int int325, int int326, int int327) /* MethodBuilder.Create */ ;
+				void GlCopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glCopyTexSubImage2D
 				/// </java-name>
 				[Dot42.DexImport("glCopyTexSubImage2D", "(IIIIIIII)V", AccessFlags = 1025)]
-				void GlCopyTexSubImage2D(int int32, int int321, int int322, int int323, int int324, int int325, int int326, int int327) /* MethodBuilder.Create */ ;
+				void GlCopyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x, int y, int width, int height) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glCullFace
 				/// </java-name>
 				[Dot42.DexImport("glCullFace", "(I)V", AccessFlags = 1025)]
-				void GlCullFace(int int32) /* MethodBuilder.Create */ ;
+				void GlCullFace(int mode) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDeleteTextures
 				/// </java-name>
 				[Dot42.DexImport("glDeleteTextures", "(I[II)V", AccessFlags = 1025)]
-				void GlDeleteTextures(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlDeleteTextures(int n, int[] textures, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDeleteTextures
 				/// </java-name>
 				[Dot42.DexImport("glDeleteTextures", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDeleteTextures(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlDeleteTextures(int n, global::Java.Nio.IntBuffer textures) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDepthFunc
 				/// </java-name>
 				[Dot42.DexImport("glDepthFunc", "(I)V", AccessFlags = 1025)]
-				void GlDepthFunc(int int32) /* MethodBuilder.Create */ ;
+				void GlDepthFunc(int func) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDepthMask
 				/// </java-name>
 				[Dot42.DexImport("glDepthMask", "(Z)V", AccessFlags = 1025)]
-				void GlDepthMask(bool boolean) /* MethodBuilder.Create */ ;
+				void GlDepthMask(bool flag) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDepthRangef
 				/// </java-name>
 				[Dot42.DexImport("glDepthRangef", "(FF)V", AccessFlags = 1025)]
-				void GlDepthRangef(float single, float single1) /* MethodBuilder.Create */ ;
+				void GlDepthRangef(float zNear, float zFar) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDepthRangex
 				/// </java-name>
 				[Dot42.DexImport("glDepthRangex", "(II)V", AccessFlags = 1025)]
-				void GlDepthRangex(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlDepthRangex(int zNear, int zFar) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDisable
 				/// </java-name>
 				[Dot42.DexImport("glDisable", "(I)V", AccessFlags = 1025)]
-				void GlDisable(int int32) /* MethodBuilder.Create */ ;
+				void GlDisable(int cap) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDisableClientState
 				/// </java-name>
 				[Dot42.DexImport("glDisableClientState", "(I)V", AccessFlags = 1025)]
-				void GlDisableClientState(int int32) /* MethodBuilder.Create */ ;
+				void GlDisableClientState(int array) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawArrays
 				/// </java-name>
 				[Dot42.DexImport("glDrawArrays", "(III)V", AccessFlags = 1025)]
-				void GlDrawArrays(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlDrawArrays(int mode, int first, int count) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawElements
 				/// </java-name>
 				[Dot42.DexImport("glDrawElements", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlDrawElements(int int32, int int321, int int322, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlDrawElements(int mode, int count, int type, global::Java.Nio.Buffer indices) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glEnable
 				/// </java-name>
 				[Dot42.DexImport("glEnable", "(I)V", AccessFlags = 1025)]
-				void GlEnable(int int32) /* MethodBuilder.Create */ ;
+				void GlEnable(int cap) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glEnableClientState
 				/// </java-name>
 				[Dot42.DexImport("glEnableClientState", "(I)V", AccessFlags = 1025)]
-				void GlEnableClientState(int int32) /* MethodBuilder.Create */ ;
+				void GlEnableClientState(int array) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFinish
@@ -231,67 +231,67 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glFogf
 				/// </java-name>
 				[Dot42.DexImport("glFogf", "(IF)V", AccessFlags = 1025)]
-				void GlFogf(int int32, float single) /* MethodBuilder.Create */ ;
+				void GlFogf(int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFogfv
 				/// </java-name>
 				[Dot42.DexImport("glFogfv", "(I[FI)V", AccessFlags = 1025)]
-				void GlFogfv(int int32, float[] single, int int321) /* MethodBuilder.Create */ ;
+				void GlFogfv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFogfv
 				/// </java-name>
 				[Dot42.DexImport("glFogfv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlFogfv(int int32, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlFogfv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFogx
 				/// </java-name>
 				[Dot42.DexImport("glFogx", "(II)V", AccessFlags = 1025)]
-				void GlFogx(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlFogx(int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFogxv
 				/// </java-name>
 				[Dot42.DexImport("glFogxv", "(I[II)V", AccessFlags = 1025)]
-				void GlFogxv(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlFogxv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFogxv
 				/// </java-name>
 				[Dot42.DexImport("glFogxv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlFogxv(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlFogxv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFrontFace
 				/// </java-name>
 				[Dot42.DexImport("glFrontFace", "(I)V", AccessFlags = 1025)]
-				void GlFrontFace(int int32) /* MethodBuilder.Create */ ;
+				void GlFrontFace(int mode) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFrustumf
 				/// </java-name>
 				[Dot42.DexImport("glFrustumf", "(FFFFFF)V", AccessFlags = 1025)]
-				void GlFrustumf(float single, float single1, float single2, float single3, float single4, float single5) /* MethodBuilder.Create */ ;
+				void GlFrustumf(float left, float right, float bottom, float top, float zNear, float zFar) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFrustumx
 				/// </java-name>
 				[Dot42.DexImport("glFrustumx", "(IIIIII)V", AccessFlags = 1025)]
-				void GlFrustumx(int int32, int int321, int int322, int int323, int int324, int int325) /* MethodBuilder.Create */ ;
+				void GlFrustumx(int left, int right, int bottom, int top, int zNear, int zFar) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGenTextures
 				/// </java-name>
 				[Dot42.DexImport("glGenTextures", "(I[II)V", AccessFlags = 1025)]
-				void GlGenTextures(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlGenTextures(int n, int[] textures, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGenTextures
 				/// </java-name>
 				[Dot42.DexImport("glGenTextures", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGenTextures(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGenTextures(int n, global::Java.Nio.IntBuffer textures) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetError
@@ -303,109 +303,109 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glGetIntegerv
 				/// </java-name>
 				[Dot42.DexImport("glGetIntegerv", "(I[II)V", AccessFlags = 1025)]
-				void GlGetIntegerv(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlGetIntegerv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetIntegerv
 				/// </java-name>
 				[Dot42.DexImport("glGetIntegerv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetIntegerv(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetIntegerv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetString
 				/// </java-name>
 				[Dot42.DexImport("glGetString", "(I)Ljava/lang/String;", AccessFlags = 1025)]
-				string GlGetString(int int32) /* MethodBuilder.Create */ ;
+				string GlGetString(int name) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glHint
 				/// </java-name>
 				[Dot42.DexImport("glHint", "(II)V", AccessFlags = 1025)]
-				void GlHint(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlHint(int target, int mode) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightModelf
 				/// </java-name>
 				[Dot42.DexImport("glLightModelf", "(IF)V", AccessFlags = 1025)]
-				void GlLightModelf(int int32, float single) /* MethodBuilder.Create */ ;
+				void GlLightModelf(int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightModelfv
 				/// </java-name>
 				[Dot42.DexImport("glLightModelfv", "(I[FI)V", AccessFlags = 1025)]
-				void GlLightModelfv(int int32, float[] single, int int321) /* MethodBuilder.Create */ ;
+				void GlLightModelfv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightModelfv
 				/// </java-name>
 				[Dot42.DexImport("glLightModelfv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlLightModelfv(int int32, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlLightModelfv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightModelx
 				/// </java-name>
 				[Dot42.DexImport("glLightModelx", "(II)V", AccessFlags = 1025)]
-				void GlLightModelx(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlLightModelx(int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightModelxv
 				/// </java-name>
 				[Dot42.DexImport("glLightModelxv", "(I[II)V", AccessFlags = 1025)]
-				void GlLightModelxv(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlLightModelxv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightModelxv
 				/// </java-name>
 				[Dot42.DexImport("glLightModelxv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlLightModelxv(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlLightModelxv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightf
 				/// </java-name>
 				[Dot42.DexImport("glLightf", "(IIF)V", AccessFlags = 1025)]
-				void GlLightf(int int32, int int321, float single) /* MethodBuilder.Create */ ;
+				void GlLightf(int light, int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightfv
 				/// </java-name>
 				[Dot42.DexImport("glLightfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlLightfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlLightfv(int light, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightfv
 				/// </java-name>
 				[Dot42.DexImport("glLightfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlLightfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlLightfv(int light, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightx
 				/// </java-name>
 				[Dot42.DexImport("glLightx", "(III)V", AccessFlags = 1025)]
-				void GlLightx(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlLightx(int light, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightxv
 				/// </java-name>
 				[Dot42.DexImport("glLightxv", "(II[II)V", AccessFlags = 1025)]
-				void GlLightxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlLightxv(int light, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLightxv
 				/// </java-name>
 				[Dot42.DexImport("glLightxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlLightxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlLightxv(int light, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLineWidth
 				/// </java-name>
 				[Dot42.DexImport("glLineWidth", "(F)V", AccessFlags = 1025)]
-				void GlLineWidth(float single) /* MethodBuilder.Create */ ;
+				void GlLineWidth(float width) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLineWidthx
 				/// </java-name>
 				[Dot42.DexImport("glLineWidthx", "(I)V", AccessFlags = 1025)]
-				void GlLineWidthx(int int32) /* MethodBuilder.Create */ ;
+				void GlLineWidthx(int width) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLoadIdentity
@@ -417,169 +417,169 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glLoadMatrixf
 				/// </java-name>
 				[Dot42.DexImport("glLoadMatrixf", "([FI)V", AccessFlags = 1025)]
-				void GlLoadMatrixf(float[] single, int int32) /* MethodBuilder.Create */ ;
+				void GlLoadMatrixf(float[] m, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLoadMatrixf
 				/// </java-name>
 				[Dot42.DexImport("glLoadMatrixf", "(Ljava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlLoadMatrixf(global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlLoadMatrixf(global::Java.Nio.FloatBuffer m) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLoadMatrixx
 				/// </java-name>
 				[Dot42.DexImport("glLoadMatrixx", "([II)V", AccessFlags = 1025)]
-				void GlLoadMatrixx(int[] int32, int int321) /* MethodBuilder.Create */ ;
+				void GlLoadMatrixx(int[] m, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLoadMatrixx
 				/// </java-name>
 				[Dot42.DexImport("glLoadMatrixx", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlLoadMatrixx(global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlLoadMatrixx(global::Java.Nio.IntBuffer m) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLogicOp
 				/// </java-name>
 				[Dot42.DexImport("glLogicOp", "(I)V", AccessFlags = 1025)]
-				void GlLogicOp(int int32) /* MethodBuilder.Create */ ;
+				void GlLogicOp(int opcode) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMaterialf
 				/// </java-name>
 				[Dot42.DexImport("glMaterialf", "(IIF)V", AccessFlags = 1025)]
-				void GlMaterialf(int int32, int int321, float single) /* MethodBuilder.Create */ ;
+				void GlMaterialf(int face, int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMaterialfv
 				/// </java-name>
 				[Dot42.DexImport("glMaterialfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlMaterialfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlMaterialfv(int face, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMaterialfv
 				/// </java-name>
 				[Dot42.DexImport("glMaterialfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlMaterialfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlMaterialfv(int face, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMaterialx
 				/// </java-name>
 				[Dot42.DexImport("glMaterialx", "(III)V", AccessFlags = 1025)]
-				void GlMaterialx(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlMaterialx(int face, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMaterialxv
 				/// </java-name>
 				[Dot42.DexImport("glMaterialxv", "(II[II)V", AccessFlags = 1025)]
-				void GlMaterialxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlMaterialxv(int face, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMaterialxv
 				/// </java-name>
 				[Dot42.DexImport("glMaterialxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlMaterialxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlMaterialxv(int face, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMatrixMode
 				/// </java-name>
 				[Dot42.DexImport("glMatrixMode", "(I)V", AccessFlags = 1025)]
-				void GlMatrixMode(int int32) /* MethodBuilder.Create */ ;
+				void GlMatrixMode(int mode) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMultMatrixf
 				/// </java-name>
 				[Dot42.DexImport("glMultMatrixf", "([FI)V", AccessFlags = 1025)]
-				void GlMultMatrixf(float[] single, int int32) /* MethodBuilder.Create */ ;
+				void GlMultMatrixf(float[] m, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMultMatrixf
 				/// </java-name>
 				[Dot42.DexImport("glMultMatrixf", "(Ljava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlMultMatrixf(global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlMultMatrixf(global::Java.Nio.FloatBuffer m) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMultMatrixx
 				/// </java-name>
 				[Dot42.DexImport("glMultMatrixx", "([II)V", AccessFlags = 1025)]
-				void GlMultMatrixx(int[] int32, int int321) /* MethodBuilder.Create */ ;
+				void GlMultMatrixx(int[] m, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMultMatrixx
 				/// </java-name>
 				[Dot42.DexImport("glMultMatrixx", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlMultMatrixx(global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlMultMatrixx(global::Java.Nio.IntBuffer m) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMultiTexCoord4f
 				/// </java-name>
 				[Dot42.DexImport("glMultiTexCoord4f", "(IFFFF)V", AccessFlags = 1025)]
-				void GlMultiTexCoord4f(int int32, float single, float single1, float single2, float single3) /* MethodBuilder.Create */ ;
+				void GlMultiTexCoord4f(int target, float s, float t, float r, float q) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMultiTexCoord4x
 				/// </java-name>
 				[Dot42.DexImport("glMultiTexCoord4x", "(IIIII)V", AccessFlags = 1025)]
-				void GlMultiTexCoord4x(int int32, int int321, int int322, int int323, int int324) /* MethodBuilder.Create */ ;
+				void GlMultiTexCoord4x(int target, int s, int t, int r, int q) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glNormal3f
 				/// </java-name>
 				[Dot42.DexImport("glNormal3f", "(FFF)V", AccessFlags = 1025)]
-				void GlNormal3f(float single, float single1, float single2) /* MethodBuilder.Create */ ;
+				void GlNormal3f(float nx, float ny, float nz) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glNormal3x
 				/// </java-name>
 				[Dot42.DexImport("glNormal3x", "(III)V", AccessFlags = 1025)]
-				void GlNormal3x(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlNormal3x(int nx, int ny, int nz) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glNormalPointer
 				/// </java-name>
 				[Dot42.DexImport("glNormalPointer", "(IILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlNormalPointer(int int32, int int321, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlNormalPointer(int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glOrthof
 				/// </java-name>
 				[Dot42.DexImport("glOrthof", "(FFFFFF)V", AccessFlags = 1025)]
-				void GlOrthof(float single, float single1, float single2, float single3, float single4, float single5) /* MethodBuilder.Create */ ;
+				void GlOrthof(float left, float right, float bottom, float top, float zNear, float zFar) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glOrthox
 				/// </java-name>
 				[Dot42.DexImport("glOrthox", "(IIIIII)V", AccessFlags = 1025)]
-				void GlOrthox(int int32, int int321, int int322, int int323, int int324, int int325) /* MethodBuilder.Create */ ;
+				void GlOrthox(int left, int right, int bottom, int top, int zNear, int zFar) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPixelStorei
 				/// </java-name>
 				[Dot42.DexImport("glPixelStorei", "(II)V", AccessFlags = 1025)]
-				void GlPixelStorei(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlPixelStorei(int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPointSize
 				/// </java-name>
 				[Dot42.DexImport("glPointSize", "(F)V", AccessFlags = 1025)]
-				void GlPointSize(float single) /* MethodBuilder.Create */ ;
+				void GlPointSize(float size) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPointSizex
 				/// </java-name>
 				[Dot42.DexImport("glPointSizex", "(I)V", AccessFlags = 1025)]
-				void GlPointSizex(int int32) /* MethodBuilder.Create */ ;
+				void GlPointSizex(int size) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPolygonOffset
 				/// </java-name>
 				[Dot42.DexImport("glPolygonOffset", "(FF)V", AccessFlags = 1025)]
-				void GlPolygonOffset(float single, float single1) /* MethodBuilder.Create */ ;
+				void GlPolygonOffset(float factor, float units) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPolygonOffsetx
 				/// </java-name>
 				[Dot42.DexImport("glPolygonOffsetx", "(II)V", AccessFlags = 1025)]
-				void GlPolygonOffsetx(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlPolygonOffsetx(int factor, int units) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPopMatrix
@@ -597,163 +597,163 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glReadPixels
 				/// </java-name>
 				[Dot42.DexImport("glReadPixels", "(IIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlReadPixels(int int32, int int321, int int322, int int323, int int324, int int325, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlReadPixels(int x, int y, int width, int height, int format, int type, global::Java.Nio.Buffer pixels) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glRotatef
 				/// </java-name>
 				[Dot42.DexImport("glRotatef", "(FFFF)V", AccessFlags = 1025)]
-				void GlRotatef(float single, float single1, float single2, float single3) /* MethodBuilder.Create */ ;
+				void GlRotatef(float angle, float x, float y, float z) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glRotatex
 				/// </java-name>
 				[Dot42.DexImport("glRotatex", "(IIII)V", AccessFlags = 1025)]
-				void GlRotatex(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlRotatex(int angle, int x, int y, int z) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glSampleCoverage
 				/// </java-name>
 				[Dot42.DexImport("glSampleCoverage", "(FZ)V", AccessFlags = 1025)]
-				void GlSampleCoverage(float single, bool boolean) /* MethodBuilder.Create */ ;
+				void GlSampleCoverage(float value, bool invert) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glSampleCoveragex
 				/// </java-name>
 				[Dot42.DexImport("glSampleCoveragex", "(IZ)V", AccessFlags = 1025)]
-				void GlSampleCoveragex(int int32, bool boolean) /* MethodBuilder.Create */ ;
+				void GlSampleCoveragex(int value, bool invert) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glScalef
 				/// </java-name>
 				[Dot42.DexImport("glScalef", "(FFF)V", AccessFlags = 1025)]
-				void GlScalef(float single, float single1, float single2) /* MethodBuilder.Create */ ;
+				void GlScalef(float x, float y, float z) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glScalex
 				/// </java-name>
 				[Dot42.DexImport("glScalex", "(III)V", AccessFlags = 1025)]
-				void GlScalex(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlScalex(int x, int y, int z) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glScissor
 				/// </java-name>
 				[Dot42.DexImport("glScissor", "(IIII)V", AccessFlags = 1025)]
-				void GlScissor(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlScissor(int x, int y, int width, int height) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glShadeModel
 				/// </java-name>
 				[Dot42.DexImport("glShadeModel", "(I)V", AccessFlags = 1025)]
-				void GlShadeModel(int int32) /* MethodBuilder.Create */ ;
+				void GlShadeModel(int mode) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glStencilFunc
 				/// </java-name>
 				[Dot42.DexImport("glStencilFunc", "(III)V", AccessFlags = 1025)]
-				void GlStencilFunc(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlStencilFunc(int func, int @ref, int mask) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glStencilMask
 				/// </java-name>
 				[Dot42.DexImport("glStencilMask", "(I)V", AccessFlags = 1025)]
-				void GlStencilMask(int int32) /* MethodBuilder.Create */ ;
+				void GlStencilMask(int mask) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glStencilOp
 				/// </java-name>
 				[Dot42.DexImport("glStencilOp", "(III)V", AccessFlags = 1025)]
-				void GlStencilOp(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlStencilOp(int fail, int zfail, int zpass) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexCoordPointer
 				/// </java-name>
 				[Dot42.DexImport("glTexCoordPointer", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlTexCoordPointer(int int32, int int321, int int322, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlTexCoordPointer(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvf
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexEnvf(int int32, int int321, float single) /* MethodBuilder.Create */ ;
+				void GlTexEnvf(int target, int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvfv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexEnvfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlTexEnvfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvfv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnvfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlTexEnvfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvx
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvx", "(III)V", AccessFlags = 1025)]
-				void GlTexEnvx(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlTexEnvx(int target, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvxv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvxv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexEnvxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlTexEnvxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvxv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnvxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlTexEnvxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexImage2D
 				/// </java-name>
 				[Dot42.DexImport("glTexImage2D", "(IIIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlTexImage2D(int int32, int int321, int int322, int int323, int int324, int int325, int int326, int int327, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, global::Java.Nio.Buffer pixels) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameterf
 				/// </java-name>
 				[Dot42.DexImport("glTexParameterf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexParameterf(int int32, int int321, float single) /* MethodBuilder.Create */ ;
+				void GlTexParameterf(int target, int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameterx
 				/// </java-name>
 				[Dot42.DexImport("glTexParameterx", "(III)V", AccessFlags = 1025)]
-				void GlTexParameterx(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlTexParameterx(int target, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexSubImage2D
 				/// </java-name>
 				[Dot42.DexImport("glTexSubImage2D", "(IIIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlTexSubImage2D(int int32, int int321, int int322, int int323, int int324, int int325, int int326, int int327, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, global::Java.Nio.Buffer pixels) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTranslatef
 				/// </java-name>
 				[Dot42.DexImport("glTranslatef", "(FFF)V", AccessFlags = 1025)]
-				void GlTranslatef(float single, float single1, float single2) /* MethodBuilder.Create */ ;
+				void GlTranslatef(float x, float y, float z) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTranslatex
 				/// </java-name>
 				[Dot42.DexImport("glTranslatex", "(III)V", AccessFlags = 1025)]
-				void GlTranslatex(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlTranslatex(int x, int y, int z) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glVertexPointer
 				/// </java-name>
 				[Dot42.DexImport("glVertexPointer", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlVertexPointer(int int32, int int321, int int322, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlVertexPointer(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glViewport
 				/// </java-name>
 				[Dot42.DexImport("glViewport", "(IIII)V", AccessFlags = 1025)]
-				void GlViewport(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlViewport(int x, int y, int width, int height) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -1962,13 +1962,13 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glQueryMatrixxOES
 				/// </java-name>
 				[Dot42.DexImport("glQueryMatrixxOES", "([II[II)I", AccessFlags = 1025)]
-				int GlQueryMatrixxOES(int[] int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				int GlQueryMatrixxOES(int[] mantissa, int mantissaOffset, int[] exponent, int exponentOffset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glQueryMatrixxOES
 				/// </java-name>
 				[Dot42.DexImport("glQueryMatrixxOES", "(Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)I", AccessFlags = 1025)]
-				int GlQueryMatrixxOES(global::Java.Nio.IntBuffer intBuffer, global::Java.Nio.IntBuffer intBuffer1) /* MethodBuilder.Create */ ;
+				int GlQueryMatrixxOES(global::Java.Nio.IntBuffer mantissa, global::Java.Nio.IntBuffer exponent) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -1983,409 +1983,409 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glGetPointerv
 				/// </java-name>
 				[Dot42.DexImport("glGetPointerv", "(I[Ljava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlGetPointerv(int int32, global::Java.Nio.Buffer[] buffer) /* MethodBuilder.Create */ ;
+				void GlGetPointerv(int pname, global::Java.Nio.Buffer[] @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBindBuffer
 				/// </java-name>
 				[Dot42.DexImport("glBindBuffer", "(II)V", AccessFlags = 1025)]
-				void GlBindBuffer(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlBindBuffer(int target, int buffer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBufferData
 				/// </java-name>
 				[Dot42.DexImport("glBufferData", "(IILjava/nio/Buffer;I)V", AccessFlags = 1025)]
-				void GlBufferData(int int32, int int321, global::Java.Nio.Buffer buffer, int int322) /* MethodBuilder.Create */ ;
+				void GlBufferData(int target, int size, global::Java.Nio.Buffer data, int usage) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBufferSubData
 				/// </java-name>
 				[Dot42.DexImport("glBufferSubData", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlBufferSubData(int int32, int int321, int int322, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlBufferSubData(int target, int offset, int size, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClipPlanef
 				/// </java-name>
 				[Dot42.DexImport("glClipPlanef", "(I[FI)V", AccessFlags = 1025)]
-				void GlClipPlanef(int int32, float[] single, int int321) /* MethodBuilder.Create */ ;
+				void GlClipPlanef(int plane, float[] equation, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClipPlanef
 				/// </java-name>
 				[Dot42.DexImport("glClipPlanef", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlClipPlanef(int int32, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlClipPlanef(int plane, global::Java.Nio.FloatBuffer equation) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClipPlanex
 				/// </java-name>
 				[Dot42.DexImport("glClipPlanex", "(I[II)V", AccessFlags = 1025)]
-				void GlClipPlanex(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlClipPlanex(int plane, int[] equation, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glClipPlanex
 				/// </java-name>
 				[Dot42.DexImport("glClipPlanex", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlClipPlanex(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlClipPlanex(int plane, global::Java.Nio.IntBuffer equation) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glColor4ub
 				/// </java-name>
 				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 1025)]
-				void GlColor4ub(sbyte sByte, sbyte sByte1, sbyte sByte2, sbyte sByte3) /* MethodBuilder.Create */ ;
+				void GlColor4ub(sbyte red, sbyte green, sbyte blue, sbyte alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glColorPointer
 				/// </java-name>
 				[Dot42.DexImport("glColorPointer", "(IIII)V", AccessFlags = 1025)]
-				void GlColorPointer(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlColorPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDeleteBuffers
 				/// </java-name>
 				[Dot42.DexImport("glDeleteBuffers", "(I[II)V", AccessFlags = 1025)]
-				void GlDeleteBuffers(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlDeleteBuffers(int n, int[] buffers, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDeleteBuffers
 				/// </java-name>
 				[Dot42.DexImport("glDeleteBuffers", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDeleteBuffers(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlDeleteBuffers(int n, global::Java.Nio.IntBuffer buffers) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawElements
 				/// </java-name>
 				[Dot42.DexImport("glDrawElements", "(IIII)V", AccessFlags = 1025)]
-				void GlDrawElements(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlDrawElements(int mode, int count, int type, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGenBuffers
 				/// </java-name>
 				[Dot42.DexImport("glGenBuffers", "(I[II)V", AccessFlags = 1025)]
-				void GlGenBuffers(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlGenBuffers(int n, int[] buffers, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGenBuffers
 				/// </java-name>
 				[Dot42.DexImport("glGenBuffers", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGenBuffers(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGenBuffers(int n, global::Java.Nio.IntBuffer buffers) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetBooleanv
 				/// </java-name>
 				[Dot42.DexImport("glGetBooleanv", "(I[ZI)V", AccessFlags = 1025)]
-				void GlGetBooleanv(int int32, bool[] boolean, int int321) /* MethodBuilder.Create */ ;
+				void GlGetBooleanv(int pname, bool[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetBooleanv
 				/// </java-name>
 				[Dot42.DexImport("glGetBooleanv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetBooleanv(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetBooleanv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetBufferParameteriv
 				/// </java-name>
 				[Dot42.DexImport("glGetBufferParameteriv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetBufferParameteriv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetBufferParameteriv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetBufferParameteriv
 				/// </java-name>
 				[Dot42.DexImport("glGetBufferParameteriv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetBufferParameteriv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetBufferParameteriv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetClipPlanef
 				/// </java-name>
 				[Dot42.DexImport("glGetClipPlanef", "(I[FI)V", AccessFlags = 1025)]
-				void GlGetClipPlanef(int int32, float[] single, int int321) /* MethodBuilder.Create */ ;
+				void GlGetClipPlanef(int pname, float[] eqn, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetClipPlanef
 				/// </java-name>
 				[Dot42.DexImport("glGetClipPlanef", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetClipPlanef(int int32, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlGetClipPlanef(int pname, global::Java.Nio.FloatBuffer eqn) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetClipPlanex
 				/// </java-name>
 				[Dot42.DexImport("glGetClipPlanex", "(I[II)V", AccessFlags = 1025)]
-				void GlGetClipPlanex(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlGetClipPlanex(int pname, int[] eqn, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetClipPlanex
 				/// </java-name>
 				[Dot42.DexImport("glGetClipPlanex", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetClipPlanex(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetClipPlanex(int pname, global::Java.Nio.IntBuffer eqn) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetFixedv
 				/// </java-name>
 				[Dot42.DexImport("glGetFixedv", "(I[II)V", AccessFlags = 1025)]
-				void GlGetFixedv(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlGetFixedv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetFixedv
 				/// </java-name>
 				[Dot42.DexImport("glGetFixedv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetFixedv(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetFixedv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetFloatv
 				/// </java-name>
 				[Dot42.DexImport("glGetFloatv", "(I[FI)V", AccessFlags = 1025)]
-				void GlGetFloatv(int int32, float[] single, int int321) /* MethodBuilder.Create */ ;
+				void GlGetFloatv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetFloatv
 				/// </java-name>
 				[Dot42.DexImport("glGetFloatv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetFloatv(int int32, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlGetFloatv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetLightfv
 				/// </java-name>
 				[Dot42.DexImport("glGetLightfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlGetLightfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlGetLightfv(int light, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetLightfv
 				/// </java-name>
 				[Dot42.DexImport("glGetLightfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetLightfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlGetLightfv(int light, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetLightxv
 				/// </java-name>
 				[Dot42.DexImport("glGetLightxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetLightxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetLightxv(int light, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetLightxv
 				/// </java-name>
 				[Dot42.DexImport("glGetLightxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetLightxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetLightxv(int light, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetMaterialfv
 				/// </java-name>
 				[Dot42.DexImport("glGetMaterialfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlGetMaterialfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlGetMaterialfv(int face, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetMaterialfv
 				/// </java-name>
 				[Dot42.DexImport("glGetMaterialfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetMaterialfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlGetMaterialfv(int face, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetMaterialxv
 				/// </java-name>
 				[Dot42.DexImport("glGetMaterialxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetMaterialxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetMaterialxv(int face, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetMaterialxv
 				/// </java-name>
 				[Dot42.DexImport("glGetMaterialxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetMaterialxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetMaterialxv(int face, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexEnviv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexEnviv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexEnviv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetTexEnviv(int env, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexEnviv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexEnviv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexEnviv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetTexEnviv(int env, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexEnvxv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexEnvxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexEnvxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetTexEnvxv(int env, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexEnvxv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexEnvxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexEnvxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetTexEnvxv(int env, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexParameterfv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexParameterfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlGetTexParameterfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlGetTexParameterfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexParameterfv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexParameterfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexParameterfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlGetTexParameterfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexParameteriv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexParameteriv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexParameteriv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetTexParameteriv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexParameteriv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexParameteriv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexParameteriv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetTexParameteriv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexParameterxv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexParameterxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexParameterxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetTexParameterxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexParameterxv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexParameterxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexParameterxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetTexParameterxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glIsBuffer
 				/// </java-name>
 				[Dot42.DexImport("glIsBuffer", "(I)Z", AccessFlags = 1025)]
-				bool GlIsBuffer(int int32) /* MethodBuilder.Create */ ;
+				bool GlIsBuffer(int buffer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glIsEnabled
 				/// </java-name>
 				[Dot42.DexImport("glIsEnabled", "(I)Z", AccessFlags = 1025)]
-				bool GlIsEnabled(int int32) /* MethodBuilder.Create */ ;
+				bool GlIsEnabled(int cap) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glIsTexture
 				/// </java-name>
 				[Dot42.DexImport("glIsTexture", "(I)Z", AccessFlags = 1025)]
-				bool GlIsTexture(int int32) /* MethodBuilder.Create */ ;
+				bool GlIsTexture(int texture) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glNormalPointer
 				/// </java-name>
 				[Dot42.DexImport("glNormalPointer", "(III)V", AccessFlags = 1025)]
-				void GlNormalPointer(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlNormalPointer(int type, int stride, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPointParameterf
 				/// </java-name>
 				[Dot42.DexImport("glPointParameterf", "(IF)V", AccessFlags = 1025)]
-				void GlPointParameterf(int int32, float single) /* MethodBuilder.Create */ ;
+				void GlPointParameterf(int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPointParameterfv
 				/// </java-name>
 				[Dot42.DexImport("glPointParameterfv", "(I[FI)V", AccessFlags = 1025)]
-				void GlPointParameterfv(int int32, float[] single, int int321) /* MethodBuilder.Create */ ;
+				void GlPointParameterfv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPointParameterfv
 				/// </java-name>
 				[Dot42.DexImport("glPointParameterfv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlPointParameterfv(int int32, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlPointParameterfv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPointParameterx
 				/// </java-name>
 				[Dot42.DexImport("glPointParameterx", "(II)V", AccessFlags = 1025)]
-				void GlPointParameterx(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlPointParameterx(int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPointParameterxv
 				/// </java-name>
 				[Dot42.DexImport("glPointParameterxv", "(I[II)V", AccessFlags = 1025)]
-				void GlPointParameterxv(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlPointParameterxv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPointParameterxv
 				/// </java-name>
 				[Dot42.DexImport("glPointParameterxv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlPointParameterxv(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlPointParameterxv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glPointSizePointerOES
 				/// </java-name>
 				[Dot42.DexImport("glPointSizePointerOES", "(IILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlPointSizePointerOES(int int32, int int321, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlPointSizePointerOES(int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexCoordPointer
 				/// </java-name>
 				[Dot42.DexImport("glTexCoordPointer", "(IIII)V", AccessFlags = 1025)]
-				void GlTexCoordPointer(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlTexCoordPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvi
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvi", "(III)V", AccessFlags = 1025)]
-				void GlTexEnvi(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlTexEnvi(int target, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnviv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnviv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexEnviv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlTexEnviv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnviv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnviv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnviv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlTexEnviv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameterfv
 				/// </java-name>
 				[Dot42.DexImport("glTexParameterfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexParameterfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlTexParameterfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameterfv
 				/// </java-name>
 				[Dot42.DexImport("glTexParameterfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlTexParameterfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlTexParameterfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameteri
 				/// </java-name>
 				[Dot42.DexImport("glTexParameteri", "(III)V", AccessFlags = 1025)]
-				void GlTexParameteri(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlTexParameteri(int target, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameteriv
 				/// </java-name>
 				[Dot42.DexImport("glTexParameteriv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexParameteriv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlTexParameteriv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameteriv
 				/// </java-name>
 				[Dot42.DexImport("glTexParameteriv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexParameteriv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlTexParameteriv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameterxv
 				/// </java-name>
 				[Dot42.DexImport("glTexParameterxv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexParameterxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlTexParameterxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameterxv
 				/// </java-name>
 				[Dot42.DexImport("glTexParameterxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexParameterxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlTexParameterxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glVertexPointer
 				/// </java-name>
 				[Dot42.DexImport("glVertexPointer", "(IIII)V", AccessFlags = 1025)]
-				void GlVertexPointer(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlVertexPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -3019,97 +3019,97 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glTexParameterfv
 				/// </java-name>
 				[Dot42.DexImport("glTexParameterfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexParameterfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlTexParameterfv(int target, int pname, float[] param, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glCurrentPaletteMatrixOES
 				/// </java-name>
 				[Dot42.DexImport("glCurrentPaletteMatrixOES", "(I)V", AccessFlags = 1025)]
-				void GlCurrentPaletteMatrixOES(int int32) /* MethodBuilder.Create */ ;
+				void GlCurrentPaletteMatrixOES(int matrixpaletteindex) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexfOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexfOES", "(FFFFF)V", AccessFlags = 1025)]
-				void GlDrawTexfOES(float single, float single1, float single2, float single3, float single4) /* MethodBuilder.Create */ ;
+				void GlDrawTexfOES(float x, float y, float z, float width, float height) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexfvOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexfvOES", "([FI)V", AccessFlags = 1025)]
-				void GlDrawTexfvOES(float[] single, int int32) /* MethodBuilder.Create */ ;
+				void GlDrawTexfvOES(float[] coords, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexfvOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexfvOES", "(Ljava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlDrawTexfvOES(global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlDrawTexfvOES(global::Java.Nio.FloatBuffer coords) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexiOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexiOES", "(IIIII)V", AccessFlags = 1025)]
-				void GlDrawTexiOES(int int32, int int321, int int322, int int323, int int324) /* MethodBuilder.Create */ ;
+				void GlDrawTexiOES(int x, int y, int z, int width, int height) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexivOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexivOES", "([II)V", AccessFlags = 1025)]
-				void GlDrawTexivOES(int[] int32, int int321) /* MethodBuilder.Create */ ;
+				void GlDrawTexivOES(int[] coords, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexivOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexivOES", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDrawTexivOES(global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlDrawTexivOES(global::Java.Nio.IntBuffer coords) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexsOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexsOES", "(SSSSS)V", AccessFlags = 1025)]
-				void GlDrawTexsOES(short int16, short int161, short int162, short int163, short int164) /* MethodBuilder.Create */ ;
+				void GlDrawTexsOES(short x, short y, short z, short width, short height) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexsvOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexsvOES", "([SI)V", AccessFlags = 1025)]
-				void GlDrawTexsvOES(short[] int16, int int32) /* MethodBuilder.Create */ ;
+				void GlDrawTexsvOES(short[] coords, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexsvOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexsvOES", "(Ljava/nio/ShortBuffer;)V", AccessFlags = 1025)]
-				void GlDrawTexsvOES(global::Java.Nio.ShortBuffer shortBuffer) /* MethodBuilder.Create */ ;
+				void GlDrawTexsvOES(global::Java.Nio.ShortBuffer coords) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexxOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexxOES", "(IIIII)V", AccessFlags = 1025)]
-				void GlDrawTexxOES(int int32, int int321, int int322, int int323, int int324) /* MethodBuilder.Create */ ;
+				void GlDrawTexxOES(int x, int y, int z, int width, int height) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexxvOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexxvOES", "([II)V", AccessFlags = 1025)]
-				void GlDrawTexxvOES(int[] int32, int int321) /* MethodBuilder.Create */ ;
+				void GlDrawTexxvOES(int[] coords, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawTexxvOES
 				/// </java-name>
 				[Dot42.DexImport("glDrawTexxvOES", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDrawTexxvOES(global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlDrawTexxvOES(global::Java.Nio.IntBuffer coords) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glEnable
 				/// </java-name>
 				[Dot42.DexImport("glEnable", "(I)V", AccessFlags = 1025)]
-				void GlEnable(int int32) /* MethodBuilder.Create */ ;
+				void GlEnable(int cap) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glEnableClientState
 				/// </java-name>
 				[Dot42.DexImport("glEnableClientState", "(I)V", AccessFlags = 1025)]
-				void GlEnableClientState(int int32) /* MethodBuilder.Create */ ;
+				void GlEnableClientState(int array) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glLoadPaletteFromModelViewMatrixOES
@@ -3121,25 +3121,25 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glMatrixIndexPointerOES
 				/// </java-name>
 				[Dot42.DexImport("glMatrixIndexPointerOES", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlMatrixIndexPointerOES(int int32, int int321, int int322, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlMatrixIndexPointerOES(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glMatrixIndexPointerOES
 				/// </java-name>
 				[Dot42.DexImport("glMatrixIndexPointerOES", "(IIII)V", AccessFlags = 1025)]
-				void GlMatrixIndexPointerOES(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlMatrixIndexPointerOES(int size, int type, int stride, int pointer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glWeightPointerOES
 				/// </java-name>
 				[Dot42.DexImport("glWeightPointerOES", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlWeightPointerOES(int int32, int int321, int int322, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlWeightPointerOES(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glWeightPointerOES
 				/// </java-name>
 				[Dot42.DexImport("glWeightPointerOES", "(IIII)V", AccessFlags = 1025)]
-				void GlWeightPointerOES(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlWeightPointerOES(int size, int type, int stride, int pointer) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -3243,319 +3243,319 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glBindFramebufferOES
 				/// </java-name>
 				[Dot42.DexImport("glBindFramebufferOES", "(II)V", AccessFlags = 1025)]
-				void GlBindFramebufferOES(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlBindFramebufferOES(int target, int framebuffer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBindRenderbufferOES
 				/// </java-name>
 				[Dot42.DexImport("glBindRenderbufferOES", "(II)V", AccessFlags = 1025)]
-				void GlBindRenderbufferOES(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlBindRenderbufferOES(int target, int renderbuffer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBindTexture
 				/// </java-name>
 				[Dot42.DexImport("glBindTexture", "(II)V", AccessFlags = 1025)]
-				void GlBindTexture(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlBindTexture(int target, int texture) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBlendEquation
 				/// </java-name>
 				[Dot42.DexImport("glBlendEquation", "(I)V", AccessFlags = 1025)]
-				void GlBlendEquation(int int32) /* MethodBuilder.Create */ ;
+				void GlBlendEquation(int mode) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBlendEquationSeparate
 				/// </java-name>
 				[Dot42.DexImport("glBlendEquationSeparate", "(II)V", AccessFlags = 1025)]
-				void GlBlendEquationSeparate(int int32, int int321) /* MethodBuilder.Create */ ;
+				void GlBlendEquationSeparate(int modeRGB, int modeAlpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glBlendFuncSeparate
 				/// </java-name>
 				[Dot42.DexImport("glBlendFuncSeparate", "(IIII)V", AccessFlags = 1025)]
-				void GlBlendFuncSeparate(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlBlendFuncSeparate(int srcRGB, int dstRGB, int srcAlpha, int dstAlpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glCheckFramebufferStatusOES
 				/// </java-name>
 				[Dot42.DexImport("glCheckFramebufferStatusOES", "(I)I", AccessFlags = 1025)]
-				int GlCheckFramebufferStatusOES(int int32) /* MethodBuilder.Create */ ;
+				int GlCheckFramebufferStatusOES(int target) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glCompressedTexImage2D
 				/// </java-name>
 				[Dot42.DexImport("glCompressedTexImage2D", "(IIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlCompressedTexImage2D(int int32, int int321, int int322, int int323, int int324, int int325, int int326, global::Java.Nio.Buffer buffer) /* MethodBuilder.Create */ ;
+				void GlCompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, int imageSize, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glCopyTexImage2D
 				/// </java-name>
 				[Dot42.DexImport("glCopyTexImage2D", "(IIIIIIII)V", AccessFlags = 1025)]
-				void GlCopyTexImage2D(int int32, int int321, int int322, int int323, int int324, int int325, int int326, int int327) /* MethodBuilder.Create */ ;
+				void GlCopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDeleteFramebuffersOES
 				/// </java-name>
 				[Dot42.DexImport("glDeleteFramebuffersOES", "(I[II)V", AccessFlags = 1025)]
-				void GlDeleteFramebuffersOES(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlDeleteFramebuffersOES(int n, int[] framebuffers, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDeleteFramebuffersOES
 				/// </java-name>
 				[Dot42.DexImport("glDeleteFramebuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDeleteFramebuffersOES(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlDeleteFramebuffersOES(int n, global::Java.Nio.IntBuffer framebuffers) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDeleteRenderbuffersOES
 				/// </java-name>
 				[Dot42.DexImport("glDeleteRenderbuffersOES", "(I[II)V", AccessFlags = 1025)]
-				void GlDeleteRenderbuffersOES(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlDeleteRenderbuffersOES(int n, int[] renderbuffers, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDeleteRenderbuffersOES
 				/// </java-name>
 				[Dot42.DexImport("glDeleteRenderbuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDeleteRenderbuffersOES(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlDeleteRenderbuffersOES(int n, global::Java.Nio.IntBuffer renderbuffers) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glEnable
 				/// </java-name>
 				[Dot42.DexImport("glEnable", "(I)V", AccessFlags = 1025)]
-				void GlEnable(int int32) /* MethodBuilder.Create */ ;
+				void GlEnable(int cap) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFramebufferRenderbufferOES
 				/// </java-name>
 				[Dot42.DexImport("glFramebufferRenderbufferOES", "(IIII)V", AccessFlags = 1025)]
-				void GlFramebufferRenderbufferOES(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlFramebufferRenderbufferOES(int target, int attachment, int renderbuffertarget, int renderbuffer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glFramebufferTexture2DOES
 				/// </java-name>
 				[Dot42.DexImport("glFramebufferTexture2DOES", "(IIIII)V", AccessFlags = 1025)]
-				void GlFramebufferTexture2DOES(int int32, int int321, int int322, int int323, int int324) /* MethodBuilder.Create */ ;
+				void GlFramebufferTexture2DOES(int target, int attachment, int textarget, int texture, int level) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGenerateMipmapOES
 				/// </java-name>
 				[Dot42.DexImport("glGenerateMipmapOES", "(I)V", AccessFlags = 1025)]
-				void GlGenerateMipmapOES(int int32) /* MethodBuilder.Create */ ;
+				void GlGenerateMipmapOES(int target) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGenFramebuffersOES
 				/// </java-name>
 				[Dot42.DexImport("glGenFramebuffersOES", "(I[II)V", AccessFlags = 1025)]
-				void GlGenFramebuffersOES(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlGenFramebuffersOES(int n, int[] framebuffers, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGenFramebuffersOES
 				/// </java-name>
 				[Dot42.DexImport("glGenFramebuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGenFramebuffersOES(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGenFramebuffersOES(int n, global::Java.Nio.IntBuffer framebuffers) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGenRenderbuffersOES
 				/// </java-name>
 				[Dot42.DexImport("glGenRenderbuffersOES", "(I[II)V", AccessFlags = 1025)]
-				void GlGenRenderbuffersOES(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlGenRenderbuffersOES(int n, int[] renderbuffers, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGenRenderbuffersOES
 				/// </java-name>
 				[Dot42.DexImport("glGenRenderbuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGenRenderbuffersOES(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGenRenderbuffersOES(int n, global::Java.Nio.IntBuffer renderbuffers) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetFramebufferAttachmentParameterivOES
 				/// </java-name>
 				[Dot42.DexImport("glGetFramebufferAttachmentParameterivOES", "(III[II)V", AccessFlags = 1025)]
-				void GlGetFramebufferAttachmentParameterivOES(int int32, int int321, int int322, int[] int323, int int324) /* MethodBuilder.Create */ ;
+				void GlGetFramebufferAttachmentParameterivOES(int target, int attachment, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetFramebufferAttachmentParameterivOES
 				/// </java-name>
 				[Dot42.DexImport("glGetFramebufferAttachmentParameterivOES", "(IIILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetFramebufferAttachmentParameterivOES(int int32, int int321, int int322, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetFramebufferAttachmentParameterivOES(int target, int attachment, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetIntegerv
 				/// </java-name>
 				[Dot42.DexImport("glGetIntegerv", "(I[II)V", AccessFlags = 1025)]
-				void GlGetIntegerv(int int32, int[] int321, int int322) /* MethodBuilder.Create */ ;
+				void GlGetIntegerv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetIntegerv
 				/// </java-name>
 				[Dot42.DexImport("glGetIntegerv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetIntegerv(int int32, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetIntegerv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetRenderbufferParameterivOES
 				/// </java-name>
 				[Dot42.DexImport("glGetRenderbufferParameterivOES", "(II[II)V", AccessFlags = 1025)]
-				void GlGetRenderbufferParameterivOES(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetRenderbufferParameterivOES(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetRenderbufferParameterivOES
 				/// </java-name>
 				[Dot42.DexImport("glGetRenderbufferParameterivOES", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetRenderbufferParameterivOES(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetRenderbufferParameterivOES(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexGenfv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexGenfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlGetTexGenfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlGetTexGenfv(int coord, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexGenfv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexGenfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexGenfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlGetTexGenfv(int coord, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexGeniv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexGeniv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexGeniv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetTexGeniv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexGeniv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexGeniv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexGeniv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetTexGeniv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexGenxv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexGenxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexGenxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlGetTexGenxv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glGetTexGenxv
 				/// </java-name>
 				[Dot42.DexImport("glGetTexGenxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexGenxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlGetTexGenxv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glIsFramebufferOES
 				/// </java-name>
 				[Dot42.DexImport("glIsFramebufferOES", "(I)Z", AccessFlags = 1025)]
-				bool GlIsFramebufferOES(int int32) /* MethodBuilder.Create */ ;
+				bool GlIsFramebufferOES(int framebuffer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glIsRenderbufferOES
 				/// </java-name>
 				[Dot42.DexImport("glIsRenderbufferOES", "(I)Z", AccessFlags = 1025)]
-				bool GlIsRenderbufferOES(int int32) /* MethodBuilder.Create */ ;
+				bool GlIsRenderbufferOES(int renderbuffer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glRenderbufferStorageOES
 				/// </java-name>
 				[Dot42.DexImport("glRenderbufferStorageOES", "(IIII)V", AccessFlags = 1025)]
-				void GlRenderbufferStorageOES(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ ;
+				void GlRenderbufferStorageOES(int target, int internalformat, int width, int height) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glStencilOp
 				/// </java-name>
 				[Dot42.DexImport("glStencilOp", "(III)V", AccessFlags = 1025)]
-				void GlStencilOp(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlStencilOp(int fail, int zfail, int zpass) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvf
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexEnvf(int int32, int int321, float single) /* MethodBuilder.Create */ ;
+				void GlTexEnvf(int target, int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvfv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexEnvfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlTexEnvfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvfv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnvfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlTexEnvfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvx
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvx", "(III)V", AccessFlags = 1025)]
-				void GlTexEnvx(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlTexEnvx(int target, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvxv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvxv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexEnvxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlTexEnvxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexEnvxv
 				/// </java-name>
 				[Dot42.DexImport("glTexEnvxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnvxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlTexEnvxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexGenf
 				/// </java-name>
 				[Dot42.DexImport("glTexGenf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexGenf(int int32, int int321, float single) /* MethodBuilder.Create */ ;
+				void GlTexGenf(int coord, int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexGenfv
 				/// </java-name>
 				[Dot42.DexImport("glTexGenfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexGenfv(int int32, int int321, float[] single, int int322) /* MethodBuilder.Create */ ;
+				void GlTexGenfv(int coord, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexGenfv
 				/// </java-name>
 				[Dot42.DexImport("glTexGenfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlTexGenfv(int int32, int int321, global::Java.Nio.FloatBuffer floatBuffer) /* MethodBuilder.Create */ ;
+				void GlTexGenfv(int coord, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexGeni
 				/// </java-name>
 				[Dot42.DexImport("glTexGeni", "(III)V", AccessFlags = 1025)]
-				void GlTexGeni(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlTexGeni(int coord, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexGeniv
 				/// </java-name>
 				[Dot42.DexImport("glTexGeniv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexGeniv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlTexGeniv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexGeniv
 				/// </java-name>
 				[Dot42.DexImport("glTexGeniv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexGeniv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlTexGeniv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexGenx
 				/// </java-name>
 				[Dot42.DexImport("glTexGenx", "(III)V", AccessFlags = 1025)]
-				void GlTexGenx(int int32, int int321, int int322) /* MethodBuilder.Create */ ;
+				void GlTexGenx(int coord, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexGenxv
 				/// </java-name>
 				[Dot42.DexImport("glTexGenxv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexGenxv(int int32, int int321, int[] int322, int int323) /* MethodBuilder.Create */ ;
+				void GlTexGenxv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexGenxv
 				/// </java-name>
 				[Dot42.DexImport("glTexGenxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexGenxv(int int32, int int321, global::Java.Nio.IntBuffer intBuffer) /* MethodBuilder.Create */ ;
+				void GlTexGenxv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexParameterf
 				/// </java-name>
 				[Dot42.DexImport("glTexParameterf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexParameterf(int int32, int int321, float single) /* MethodBuilder.Create */ ;
+				void GlTexParameterf(int target, int pname, float param) /* MethodBuilder.Create */ ;
 
 		}
 

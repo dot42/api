@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Android.Graphics.Drawables.Shapes
 {
+		/// <summary>
+		///  <para>Creates an arc shape. The arc shape starts at a specified angle and sweeps clockwise, drawing slices of pie. The arc can be drawn to a Canvas with its own draw() method, but more graphical control is available if you instead pass the ArcShape to a android.graphics.drawable.ShapeDrawable. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/graphics/drawable/shapes/ArcShape
 		/// </java-name>
@@ -8,8 +11,11 @@ namespace Android.Graphics.Drawables.Shapes
 		public partial class ArcShape : global::Android.Graphics.Drawables.Shapes.RectShape
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>ArcShape constructor.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(FF)V", AccessFlags = 1)]
-				public ArcShape(float single, float single1) /* MethodBuilder.Create */ 
+				public ArcShape(float startAngle, float sweepAngle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -28,6 +34,9 @@ namespace Android.Graphics.Drawables.Shapes
 
 		}
 
+		/// <summary>
+		///  <para>Defines an oval shape. The oval can be drawn to a Canvas with its own draw() method, but more graphical control is available if you instead pass the OvalShape to a android.graphics.drawable.ShapeDrawable. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/graphics/drawable/shapes/OvalShape
 		/// </java-name>
@@ -35,6 +44,9 @@ namespace Android.Graphics.Drawables.Shapes
 		public partial class OvalShape : global::Android.Graphics.Drawables.Shapes.RectShape
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>OvalShape constructor. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public OvalShape() /* MethodBuilder.Create */ 
 				{
@@ -50,6 +62,9 @@ namespace Android.Graphics.Drawables.Shapes
 
 		}
 
+		/// <summary>
+		///  <para>Creates geometric paths, utilizing the android.graphics.Path class. The path can be drawn to a Canvas with its own draw() method, but more graphical control is available if you instead pass the PathShape to a android.graphics.drawable.ShapeDrawable. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/graphics/drawable/shapes/PathShape
 		/// </java-name>
@@ -57,8 +72,11 @@ namespace Android.Graphics.Drawables.Shapes
 		public partial class PathShape : global::Android.Graphics.Drawables.Shapes.Shape
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>PathShape constructor.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/graphics/Path;FF)V", AccessFlags = 1)]
-				public PathShape(global::Android.Graphics.Path path, float single, float single1) /* MethodBuilder.Create */ 
+				public PathShape(global::Android.Graphics.Path path, float stdWidth, float stdHeight) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -74,7 +92,7 @@ namespace Android.Graphics.Drawables.Shapes
 				/// onResize
 				/// </java-name>
 				[Dot42.DexImport("onResize", "(FF)V", AccessFlags = 4)]
-				protected internal override void OnResize(float single, float single1) /* MethodBuilder.Create */ 
+				protected internal override void OnResize(float width, float height) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -94,6 +112,9 @@ namespace Android.Graphics.Drawables.Shapes
 
 		}
 
+		/// <summary>
+		///  <para>Defines a rectangle shape. The rectangle can be drawn to a Canvas with its own draw() method, but more graphical control is available if you instead pass the RectShape to a android.graphics.drawable.ShapeDrawable. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/graphics/drawable/shapes/RectShape
 		/// </java-name>
@@ -101,6 +122,9 @@ namespace Android.Graphics.Drawables.Shapes
 		public partial class RectShape : global::Android.Graphics.Drawables.Shapes.Shape
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>RectShape constructor. </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public RectShape() /* MethodBuilder.Create */ 
 				{
@@ -118,10 +142,13 @@ namespace Android.Graphics.Drawables.Shapes
 				/// onResize
 				/// </java-name>
 				[Dot42.DexImport("onResize", "(FF)V", AccessFlags = 4)]
-				protected internal override void OnResize(float single, float single1) /* MethodBuilder.Create */ 
+				protected internal override void OnResize(float width, float height) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the RectF that defines this rectangle's bounds. </para>        
+				/// </summary>
 				/// <java-name>
 				/// rect
 				/// </java-name>
@@ -142,6 +169,9 @@ namespace Android.Graphics.Drawables.Shapes
 
 		}
 
+		/// <summary>
+		///  <para>Creates a rounded-corner rectangle. Optionally, an inset (rounded) rectangle can be included (to make a sort of "O" shape). The rounded rectangle can be drawn to a Canvas with its own draw() method, but more graphical control is available if you instead pass the RoundRectShape to a android.graphics.drawable.ShapeDrawable. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/graphics/drawable/shapes/RoundRectShape
 		/// </java-name>
@@ -149,8 +179,11 @@ namespace Android.Graphics.Drawables.Shapes
 		public partial class RoundRectShape : global::Android.Graphics.Drawables.Shapes.RectShape
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>RoundRectShape constructor. Specifies an outer (round)rect and an optional inner (round)rect.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "([FLandroid/graphics/RectF;[F)V", AccessFlags = 1)]
-				public RoundRectShape(float[] single, global::Android.Graphics.RectF rectF, float[] single1) /* MethodBuilder.Create */ 
+				public RoundRectShape(float[] outerRadii, global::Android.Graphics.RectF inset, float[] innerRadii) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -166,7 +199,7 @@ namespace Android.Graphics.Drawables.Shapes
 				/// onResize
 				/// </java-name>
 				[Dot42.DexImport("onResize", "(FF)V", AccessFlags = 4)]
-				protected internal override void OnResize(float single, float single1) /* MethodBuilder.Create */ 
+				protected internal override void OnResize(float w, float h) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -186,6 +219,9 @@ namespace Android.Graphics.Drawables.Shapes
 
 		}
 
+		/// <summary>
+		///  <para>Defines a generic graphical "shape." Any Shape can be drawn to a Canvas with its own draw() method, but more graphical control is available if you instead pass it to a android.graphics.drawable.ShapeDrawable. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/graphics/drawable/shapes/Shape
 		/// </java-name>
@@ -198,25 +234,34 @@ namespace Android.Graphics.Drawables.Shapes
 				{
 				}
 
+				/// <summary>
+				///  <para>Draw this shape into the provided Canvas, with the provided Paint. Before calling this, you must call resize(float,float).</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// draw
 				/// </java-name>
 				[Dot42.DexImport("draw", "(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V", AccessFlags = 1025)]
 				public abstract void Draw(global::Android.Graphics.Canvas canvas, global::Android.Graphics.Paint paint) /* MethodBuilder.Create */ ;
 
+				/// <summary>
+				///  <para>Resizes the dimensions of this shape. Must be called before draw(Canvas,Paint).</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// resize
 				/// </java-name>
 				[Dot42.DexImport("resize", "(FF)V", AccessFlags = 17)]
-				public void Resize(float single, float single1) /* MethodBuilder.Create */ 
+				public void Resize(float width, float height) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Callback method called when resize(float,float) is executed.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// onResize
 				/// </java-name>
 				[Dot42.DexImport("onResize", "(FF)V", AccessFlags = 4)]
-				protected internal virtual void OnResize(float single, float single1) /* MethodBuilder.Create */ 
+				protected internal virtual void OnResize(float width, float height) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -229,6 +274,9 @@ namespace Android.Graphics.Drawables.Shapes
 						return default(global::Android.Graphics.Drawables.Shapes.Shape);
 				}
 
+				/// <summary>
+				///  <para>Returns the width of the Shape. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getWidth
 				/// </java-name>
@@ -238,6 +286,9 @@ namespace Android.Graphics.Drawables.Shapes
 						get{ return default(float); }
 				}
 
+				/// <summary>
+				///  <para>Returns the height of the Shape. </para>        
+				/// </summary>
 				/// <java-name>
 				/// getHeight
 				/// </java-name>
@@ -247,6 +298,12 @@ namespace Android.Graphics.Drawables.Shapes
 						get{ return default(float); }
 				}
 
+				/// <summary>
+				///  <para>Checks whether the Shape is opaque. Default impl returns true. Override if your subclass can be opaque.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if any part of the drawable is  <b>not</b> opaque. </para>
+				/// </returns>
 				/// <java-name>
 				/// hasAlpha
 				/// </java-name>

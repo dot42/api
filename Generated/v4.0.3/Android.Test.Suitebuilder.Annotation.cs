@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Android.Test.Suitebuilder.Annotation
 {
+		/// <summary>
+		///  <para>Marks a test that should run as part of the large tests. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/suitebuilder/annotation/LargeTest
 		/// </java-name>
@@ -10,6 +13,9 @@ namespace Android.Test.Suitebuilder.Annotation
 		{
 		}
 
+		/// <summary>
+		///  <para>Marks a test that should run as part of the medium tests. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/suitebuilder/annotation/MediumTest
 		/// </java-name>
@@ -19,6 +25,9 @@ namespace Android.Test.Suitebuilder.Annotation
 		{
 		}
 
+		/// <summary>
+		///  <para>Marks a test that should run as part of the small tests. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/suitebuilder/annotation/SmallTest
 		/// </java-name>
@@ -28,6 +37,9 @@ namespace Android.Test.Suitebuilder.Annotation
 		{
 		}
 
+		/// <summary>
+		///  <para>Marks a test that should run as part of the smoke tests. The  <code>android.test.suitebuilder.SmokeTestSuiteBuilder</code> will run all tests with this annotation.</para> <para> <para>android.test.suitebuilder.SmokeTestSuiteBuilder </para></para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/suitebuilder/annotation/Smoke
 		/// </java-name>
@@ -37,6 +49,9 @@ namespace Android.Test.Suitebuilder.Annotation
 		{
 		}
 
+		/// <summary>
+		///  <para>Use this annotation on test classes or test methods that should not be included in a test suite. If the annotation appears on the class then no tests in that class will be included. If the annotation appears only on a test method then only that method will be excluded. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/test/suitebuilder/annotation/Suppress
 		/// </java-name>

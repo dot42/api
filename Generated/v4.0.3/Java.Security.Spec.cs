@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Java.Security.Spec
 {
+		/// <summary>
+		///  <para>The parameter specification used with the Digital Signature Algorithm (DSA). </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/DSAParameterSpec
 		/// </java-name>
@@ -8,8 +11,11 @@ namespace Java.Security.Spec
 		public partial class DSAParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec, global::Java.Security.Interfaces.IDSAParams
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>DSAParameterSpec </c> with the specified prime <c>p </c> , sub-prime <c>q </c> and the base <c>g </c> .</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;)V", AccessFlags = 1)]
-				public DSAParameterSpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, global::Java.Math.BigInteger bigInteger2) /* MethodBuilder.Create */ 
+				public DSAParameterSpec(global::Java.Math.BigInteger p, global::Java.Math.BigInteger q, global::Java.Math.BigInteger g) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -18,6 +24,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the base <c>g </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the base <c>g </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getG
 				/// </java-name>
@@ -27,6 +39,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the prime <c>p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime <c>p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getP
 				/// </java-name>
@@ -36,6 +54,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the sub-prime <c>q </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the sub-prime <c>q </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getQ
 				/// </java-name>
@@ -47,6 +71,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameters specifying a DSA private key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/DSAPrivateKeySpec
 		/// </java-name>
@@ -54,9 +81,12 @@ namespace Java.Security.Spec
 		public partial class DSAPrivateKeySpec : global::Java.Security.Spec.IKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>DSAPrivateKeySpec </c> with the specified private key, prime, sub-prime and base.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/Big" +
     "Integer;)V", AccessFlags = 1)]
-				public DSAPrivateKeySpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, global::Java.Math.BigInteger bigInteger2, global::Java.Math.BigInteger bigInteger3) /* MethodBuilder.Create */ 
+				public DSAPrivateKeySpec(global::Java.Math.BigInteger x, global::Java.Math.BigInteger p, global::Java.Math.BigInteger q, global::Java.Math.BigInteger g) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -65,6 +95,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the base <c>g </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the base <c>g </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getG
 				/// </java-name>
@@ -74,6 +110,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the prime <c>p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime <c>p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getP
 				/// </java-name>
@@ -83,6 +125,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the sub-prime <c>q </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the sub-prime <c>q </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getQ
 				/// </java-name>
@@ -92,6 +140,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the private key <c>x </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the private key <c>x </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getX
 				/// </java-name>
@@ -103,6 +157,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameters specifying a DSA public key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/DSAPublicKeySpec
 		/// </java-name>
@@ -110,9 +167,12 @@ namespace Java.Security.Spec
 		public partial class DSAPublicKeySpec : global::Java.Security.Spec.IKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>DSAPublicKeySpec </c> with the specified public key, prime, sub-prime and base.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/Big" +
     "Integer;)V", AccessFlags = 1)]
-				public DSAPublicKeySpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, global::Java.Math.BigInteger bigInteger2, global::Java.Math.BigInteger bigInteger3) /* MethodBuilder.Create */ 
+				public DSAPublicKeySpec(global::Java.Math.BigInteger y, global::Java.Math.BigInteger p, global::Java.Math.BigInteger q, global::Java.Math.BigInteger g) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -121,6 +181,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the base <c>g </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the base <c>g </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getG
 				/// </java-name>
@@ -130,6 +196,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the prime <c>p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime <c>p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getP
 				/// </java-name>
@@ -139,6 +211,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the sub-prime <c>q </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the sub-prime <c>q </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getQ
 				/// </java-name>
@@ -148,6 +226,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the public key value <c>y </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public key value <c>y </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getY
 				/// </java-name>
@@ -159,6 +243,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameters specifying a  <b>characteristic 2 finite field</b> of an elliptic curve. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/ECFieldF2m
 		/// </java-name>
@@ -166,30 +253,51 @@ namespace Java.Security.Spec
 		public partial class ECFieldF2m : global::Java.Security.Spec.IECField
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>ECFieldF2m </c> with <c>2^m </c> elements with a normal basis.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public ECFieldF2m(int int32) /* MethodBuilder.Create */ 
+				public ECFieldF2m(int m) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>ECFieldF2m </c> with <c>2^m </c> elements with a polynomial basis and the reduction polynomial based on <c>rp </c> . </para> <para>The reduction polynomial must be either  <b>trinomial</b> or  <b>pentanomial</b>.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(ILjava/math/BigInteger;)V", AccessFlags = 1)]
-				public ECFieldF2m(int int32, global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public ECFieldF2m(int m, global::Java.Math.BigInteger rp) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>ECFieldF2m </c> with <c>2^m </c> elements with a polynomial basis and the reduction polynomial based on <c>rp </c> . </para> <para>The reduction polynomial must be either  <b>trinomial</b> or  <b>pentanomial</b>.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(I[I)V", AccessFlags = 1)]
-				public ECFieldF2m(int int32, int[] int321) /* MethodBuilder.Create */ 
+				public ECFieldF2m(int m, int[] rp) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns whether the specified object equals to this finite field.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>true </c> if the specified object is equal to this finite field, otherwise <c>false </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object obj) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns the hashcode value for this finite field.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the hashcode value for this finite field. </para>
+				/// </returns>
 				/// <java-name>
 				/// hashCode
 				/// </java-name>
@@ -204,6 +312,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the size of this finite field (in bits).</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the size of this finite field (in bits). </para>
+				/// </returns>
 				/// <java-name>
 				/// getFieldSize
 				/// </java-name>
@@ -213,6 +327,12 @@ namespace Java.Security.Spec
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the exponent <c>m </c> for this finite field, with <c>2^m </c> as the number of elements.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the exponent <c>m </c> for this finite field </para>
+				/// </returns>
 				/// <java-name>
 				/// getM
 				/// </java-name>
@@ -222,6 +342,12 @@ namespace Java.Security.Spec
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns a copy of the integer array containing the order of the middle term(s) of the reduction polynomial for a polynomial basis.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a copy of the integer array containing the order of the middle term(s) of the reduction polynomial for a polynomial basis or  <c>null </c> for a normal basis. </para>
+				/// </returns>
 				/// <java-name>
 				/// getMidTermsOfReductionPolynomial
 				/// </java-name>
@@ -231,6 +357,12 @@ namespace Java.Security.Spec
 						get{ return default(int[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the base of the reduction polynomial with the n-th bit corresponding to the n-th coefficient of the reduction polynomial for a polynomial basis.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the base of the reduction polynomial with the n-th bit corresponding to the n-th coefficient of the reduction polynomial for a polynomial basis or <c>null </c> for a normal basis. </para>
+				/// </returns>
 				/// <java-name>
 				/// getReductionPolynomial
 				/// </java-name>
@@ -242,6 +374,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameters specifying a  <b>prime finite field</b> of an elliptic curve. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/ECFieldFp
 		/// </java-name>
@@ -249,20 +384,35 @@ namespace Java.Security.Spec
 		public partial class ECFieldFp : global::Java.Security.Spec.IECField
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new prime finite field of an elliptic curve with the specified prime <c>p </c> .</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;)V", AccessFlags = 1)]
-				public ECFieldFp(global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public ECFieldFp(global::Java.Math.BigInteger p) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns whether the specified object is equal to this finite field.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>true </c> if the specified object is equal to this finite field, otherwise <c>false </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object obj) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns the hashcode value for this finite field.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the hashcode value for this finite field. </para>
+				/// </returns>
 				/// <java-name>
 				/// hashCode
 				/// </java-name>
@@ -277,6 +427,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the size of the finite field (in bits).</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the size of the finite field (in bits). </para>
+				/// </returns>
 				/// <java-name>
 				/// getFieldSize
 				/// </java-name>
@@ -286,6 +442,12 @@ namespace Java.Security.Spec
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the prime value <c>p </c> for this finite field.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime value <c>p </c> for this finite field. </para>
+				/// </returns>
 				/// <java-name>
 				/// getP
 				/// </java-name>
@@ -297,6 +459,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameter specification used to generate elliptic curve domain parameters. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/ECGenParameterSpec
 		/// </java-name>
@@ -304,8 +469,11 @@ namespace Java.Security.Spec
 		public partial class ECGenParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>ECGenParameterSpec </c> with the specified standard or predefined name of the to-be-generated domain parameter.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public ECGenParameterSpec(string @string) /* MethodBuilder.Create */ 
+				public ECGenParameterSpec(string name) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -314,6 +482,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the name (standard or predefined) of the to-be-generated elliptic curve domain parameter.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the name </para>
+				/// </returns>
 				/// <java-name>
 				/// getName
 				/// </java-name>
@@ -325,6 +499,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameter specification used with Elliptic Curve Cryptography (ECC). </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/ECParameterSpec
 		/// </java-name>
@@ -332,9 +509,12 @@ namespace Java.Security.Spec
 		public partial class ECParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>ECParameterSpec </c> with the specified elliptic curve, the base point, the order of the generator (or base point) and the co-factor.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/security/spec/EllipticCurve;Ljava/security/spec/ECPoint;Ljava/math/BigInte" +
     "ger;I)V", AccessFlags = 1)]
-				public ECParameterSpec(global::Java.Security.Spec.EllipticCurve ellipticCurve, global::Java.Security.Spec.ECPoint eCPoint, global::Java.Math.BigInteger bigInteger, int int32) /* MethodBuilder.Create */ 
+				public ECParameterSpec(global::Java.Security.Spec.EllipticCurve curve, global::Java.Security.Spec.ECPoint generator, global::Java.Math.BigInteger order, int cofactor) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -343,6 +523,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the <c>cofactor </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the <c>cofactor </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getCofactor
 				/// </java-name>
@@ -352,6 +538,12 @@ namespace Java.Security.Spec
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the elliptic curve.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the elliptic curve. </para>
+				/// </returns>
 				/// <java-name>
 				/// getCurve
 				/// </java-name>
@@ -361,6 +553,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Security.Spec.EllipticCurve); }
 				}
 
+				/// <summary>
+				///  <para>Returns the generator (or base point).</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the generator (or base point). </para>
+				/// </returns>
 				/// <java-name>
 				/// getGenerator
 				/// </java-name>
@@ -370,6 +568,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Security.Spec.ECPoint); }
 				}
 
+				/// <summary>
+				///  <para>Returns the order of the generator.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the order of the generator. </para>
+				/// </returns>
 				/// <java-name>
 				/// getOrder
 				/// </java-name>
@@ -381,6 +585,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>A Point on an Elliptic Curve in barycentric (or affine) coordinates. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/ECPoint
 		/// </java-name>
@@ -388,25 +595,43 @@ namespace Java.Security.Spec
 		public partial class ECPoint
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The point on an Elliptic Curve at infinity. </para>        
+				/// </summary>
 				/// <java-name>
 				/// POINT_INFINITY
 				/// </java-name>
 				[Dot42.DexImport("POINT_INFINITY", "Ljava/security/spec/ECPoint;", AccessFlags = 25)]
 				public static readonly global::Java.Security.Spec.ECPoint POINT_INFINITY;
+				/// <summary>
+				///  <para>Creates a new point at the specified coordinates.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;)V", AccessFlags = 1)]
-				public ECPoint(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
+				public ECPoint(global::Java.Math.BigInteger affineX, global::Java.Math.BigInteger affineY) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns whether the specified object and this elliptic curve point are equal.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>true </c> if the specified object and this elliptic curve point are equal, otherwise <c>false </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object other) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns the hashcode of this elliptic curve point.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the hashcode of this elliptic curve point. </para>
+				/// </returns>
 				/// <java-name>
 				/// hashCode
 				/// </java-name>
@@ -421,6 +646,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the x-coordinate.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the x-coordinate, or <c>null </c> for the infinite point. </para>
+				/// </returns>
 				/// <java-name>
 				/// getAffineX
 				/// </java-name>
@@ -430,6 +661,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the y-coordinate.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the y-coordinate, or <c>null </c> fot the infinite point. </para>
+				/// </returns>
 				/// <java-name>
 				/// getAffineY
 				/// </java-name>
@@ -441,6 +678,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameters specifying an Elliptic Curve (EC) private key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/ECPrivateKeySpec
 		/// </java-name>
@@ -448,8 +688,11 @@ namespace Java.Security.Spec
 		public partial class ECPrivateKeySpec : global::Java.Security.Spec.IKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>ECPrivateKeySpec </c> with the specified private value  <c>S </c> and parameter specification.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/security/spec/ECParameterSpec;)V", AccessFlags = 1)]
-				public ECPrivateKeySpec(global::Java.Math.BigInteger bigInteger, global::Java.Security.Spec.ECParameterSpec eCParameterSpec) /* MethodBuilder.Create */ 
+				public ECPrivateKeySpec(global::Java.Math.BigInteger s, global::Java.Security.Spec.ECParameterSpec @params) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -458,6 +701,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the domain parameter specification.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the domain parameter specification. </para>
+				/// </returns>
 				/// <java-name>
 				/// getParams
 				/// </java-name>
@@ -467,6 +716,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Security.Spec.ECParameterSpec); }
 				}
 
+				/// <summary>
+				///  <para>Returns the private value <c>S </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the private value <c>S </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getS
 				/// </java-name>
@@ -478,6 +733,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameters specifying an Elliptic Curve (EC) public key. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/ECPublicKeySpec
 		/// </java-name>
@@ -485,8 +743,11 @@ namespace Java.Security.Spec
 		public partial class ECPublicKeySpec : global::Java.Security.Spec.IKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>ECPublicKey </c> with the specified public elliptic curve point and parameter specification.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/security/spec/ECPoint;Ljava/security/spec/ECParameterSpec;)V", AccessFlags = 1)]
-				public ECPublicKeySpec(global::Java.Security.Spec.ECPoint eCPoint, global::Java.Security.Spec.ECParameterSpec eCParameterSpec) /* MethodBuilder.Create */ 
+				public ECPublicKeySpec(global::Java.Security.Spec.ECPoint w, global::Java.Security.Spec.ECParameterSpec @params) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -495,6 +756,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the domain parameter specification.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the domain parameter specification. </para>
+				/// </returns>
 				/// <java-name>
 				/// getParams
 				/// </java-name>
@@ -504,6 +771,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Security.Spec.ECParameterSpec); }
 				}
 
+				/// <summary>
+				///  <para>Returns the public elliptic curve point <c>W </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public elliptic curve point <c>W </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getW
 				/// </java-name>
@@ -515,6 +788,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>An Elliptic Curve with its necessary values. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/EllipticCurve
 		/// </java-name>
@@ -522,21 +798,36 @@ namespace Java.Security.Spec
 		public partial class EllipticCurve
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>EllipticCurve </c> with the specified field, coefficients and seed.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/security/spec/ECField;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V", AccessFlags = 1)]
-				public EllipticCurve(global::Java.Security.Spec.IECField eCField, global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, sbyte[] sByte) /* MethodBuilder.Create */ 
+				public EllipticCurve(global::Java.Security.Spec.IECField field, global::Java.Math.BigInteger a, global::Java.Math.BigInteger b, sbyte[] seed) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>EllipticCurve </c> with the specified field, coefficients and seed.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/security/spec/ECField;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public EllipticCurve(global::Java.Security.Spec.IECField eCField, global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, byte[] @byte) /* MethodBuilder.Create */ 
+				public EllipticCurve(global::Java.Security.Spec.IECField field, global::Java.Math.BigInteger a, global::Java.Math.BigInteger b, byte[] seed) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>EllipticCurve </c> with the specified field and coefficients.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/security/spec/ECField;Ljava/math/BigInteger;Ljava/math/BigInteger;)V", AccessFlags = 1)]
-				public EllipticCurve(global::Java.Security.Spec.IECField eCField, global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
+				public EllipticCurve(global::Java.Security.Spec.IECField field, global::Java.Math.BigInteger a, global::Java.Math.BigInteger b) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns a copy of the seed that was used to generate this elliptic curve.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a copy of the seed that was used to generate this elliptic curve, or <c>null </c> if none specified. </para>
+				/// </returns>
 				/// <java-name>
 				/// getSeed
 				/// </java-name>
@@ -546,15 +837,27 @@ namespace Java.Security.Spec
 						return default(sbyte[]);
 				}
 
+				/// <summary>
+				///  <para>Returns whether the specified object equals to this elliptic curve.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>true </c> if the specified object is equal to this elliptic curve, otherwise <c>false </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public override bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object other) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
+				/// <summary>
+				///  <para>Returns the hashcode of this elliptic curve.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the hashcode of this elliptic curve. </para>
+				/// </returns>
 				/// <java-name>
 				/// hashCode
 				/// </java-name>
@@ -569,6 +872,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the coefficient <c>a </c> of this elliptic curve.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the coefficient <c>a </c> of this elliptic curve. </para>
+				/// </returns>
 				/// <java-name>
 				/// getA
 				/// </java-name>
@@ -578,6 +887,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the coefficient <c>b </c> of this elliptic curve.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the coefficient <c>b </c> of this elliptic curve. </para>
+				/// </returns>
 				/// <java-name>
 				/// getB
 				/// </java-name>
@@ -587,6 +902,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the finite field of this elliptic curve.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the finite field of this elliptic curve. </para>
+				/// </returns>
 				/// <java-name>
 				/// getField
 				/// </java-name>
@@ -596,6 +917,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Security.Spec.IECField); }
 				}
 
+				/// <summary>
+				///  <para>Returns a copy of the seed that was used to generate this elliptic curve.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a copy of the seed that was used to generate this elliptic curve, or <c>null </c> if none specified. </para>
+				/// </returns>
 				/// <java-name>
 				/// getSeed
 				/// </java-name>
@@ -607,6 +934,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The abstract key specification for a public or a private key in encoded format. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/EncodedKeySpec
 		/// </java-name>
@@ -614,16 +944,28 @@ namespace Java.Security.Spec
 		public abstract partial class EncodedKeySpec : global::Java.Security.Spec.IKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
-				public EncodedKeySpec(sbyte[] sByte) /* MethodBuilder.Create */ 
+				public EncodedKeySpec(sbyte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public EncodedKeySpec(byte[] @byte) /* MethodBuilder.Create */ 
+				public EncodedKeySpec(byte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the encoded key bytes.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the encoded key bytes. </para>
+				/// </returns>
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
@@ -638,6 +980,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the encoded key bytes.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the encoded key bytes. </para>
+				/// </returns>
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
@@ -647,6 +995,12 @@ namespace Java.Security.Spec
 						get{ return default(byte[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the name of the encoding format of this encoded key specification.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the name of the encoding format of this encoded key specification. </para>
+				/// </returns>
 				/// <java-name>
 				/// getFormat
 				/// </java-name>
@@ -658,6 +1012,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The marker interface for algorithm parameter specifications. The purpose is to group parameter specifications for algorithms. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/AlgorithmParameterSpec
 		/// </java-name>
@@ -667,6 +1024,9 @@ namespace Java.Security.Spec
 		{
 		}
 
+		/// <summary>
+		///  <para>The base interface for a Finite Field of an Elliptic Curve. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/ECField
 		/// </java-name>
@@ -674,6 +1034,12 @@ namespace Java.Security.Spec
 		public partial interface IECField
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Returns the size of the field (in bits).</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the size of the field (in bits). </para>
+				/// </returns>
 				/// <java-name>
 				/// getFieldSize
 				/// </java-name>
@@ -685,6 +1051,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The marker interface for key specifications. The purpose is to group key specifications for cryptographic keys. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/KeySpec
 		/// </java-name>
@@ -694,6 +1063,9 @@ namespace Java.Security.Spec
 		{
 		}
 
+		/// <summary>
+		///  <para>The exception that is thrown when an invalid key specification is encountered. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/InvalidKeySpecException
 		/// </java-name>
@@ -706,13 +1078,19 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>InvalidKeySpecException </c> . </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public InvalidKeySpecException() /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>InvalidKeySpecException </c> with the specified message and cause.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", AccessFlags = 1)]
-				public InvalidKeySpecException(string @string, global::System.Exception exception) /* MethodBuilder.Create */ 
+				public InvalidKeySpecException(string message, global::System.Exception cause) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -723,6 +1101,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The exception that is thrown when an invalid parameter specification is encountered. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/InvalidParameterSpecException
 		/// </java-name>
@@ -730,11 +1111,17 @@ namespace Java.Security.Spec
 		public partial class InvalidParameterSpecException : global::Java.Security.GeneralSecurityException
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>InvalidParameterSpecException </c> with the specified message.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public InvalidParameterSpecException(string @string) /* MethodBuilder.Create */ 
+				public InvalidParameterSpecException(string msg) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>InvalidParameterSpecException </c> . </para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public InvalidParameterSpecException() /* MethodBuilder.Create */ 
 				{
@@ -742,6 +1129,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameter specification for the Mask Generation Function (MGF1) in the RSA-PSS Signature and OAEP Padding scheme. </para> <para>Defined in the  standard </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/MGF1ParameterSpec
 		/// </java-name>
@@ -749,28 +1139,43 @@ namespace Java.Security.Spec
 		public partial class MGF1ParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The predefined MGF1 parameter specification with an "SHA-1" message digest. </para>        
+				/// </summary>
 				/// <java-name>
 				/// SHA1
 				/// </java-name>
 				[Dot42.DexImport("SHA1", "Ljava/security/spec/MGF1ParameterSpec;", AccessFlags = 25)]
 				public static readonly global::Java.Security.Spec.MGF1ParameterSpec SHA1;
+				/// <summary>
+				///  <para>The predefined MGF1 parameter specification with an "SHA-256" message digest. </para>        
+				/// </summary>
 				/// <java-name>
 				/// SHA256
 				/// </java-name>
 				[Dot42.DexImport("SHA256", "Ljava/security/spec/MGF1ParameterSpec;", AccessFlags = 25)]
 				public static readonly global::Java.Security.Spec.MGF1ParameterSpec SHA256;
+				/// <summary>
+				///  <para>The predefined MGF1 parameter specification with an "SHA-384" message digest. </para>        
+				/// </summary>
 				/// <java-name>
 				/// SHA384
 				/// </java-name>
 				[Dot42.DexImport("SHA384", "Ljava/security/spec/MGF1ParameterSpec;", AccessFlags = 25)]
 				public static readonly global::Java.Security.Spec.MGF1ParameterSpec SHA384;
+				/// <summary>
+				///  <para>The predefined MGF1 parameter specification with an "SHA-512" message digest. </para>        
+				/// </summary>
 				/// <java-name>
 				/// SHA512
 				/// </java-name>
 				[Dot42.DexImport("SHA512", "Ljava/security/spec/MGF1ParameterSpec;", AccessFlags = 25)]
 				public static readonly global::Java.Security.Spec.MGF1ParameterSpec SHA512;
+				/// <summary>
+				///  <para>Creates a new <c>MGF1ParameterSpec </c> with the specified message digest algorithm name.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public MGF1ParameterSpec(string @string) /* MethodBuilder.Create */ 
+				public MGF1ParameterSpec(string mdName) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -779,6 +1184,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the name of the message digest algorithm.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the name of the message digest algorithm. </para>
+				/// </returns>
 				/// <java-name>
 				/// getDigestAlgorithm
 				/// </java-name>
@@ -790,6 +1201,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The key specification for an encoded private key in ASN.1 format as defined in the PKCS#8 standard. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/PKCS8EncodedKeySpec
 		/// </java-name>
@@ -797,16 +1211,28 @@ namespace Java.Security.Spec
 		public partial class PKCS8EncodedKeySpec : global::Java.Security.Spec.EncodedKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>PKCS8EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
-				public PKCS8EncodedKeySpec(sbyte[] sByte) /* MethodBuilder.Create */ 
+				public PKCS8EncodedKeySpec(sbyte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>PKCS8EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public PKCS8EncodedKeySpec(byte[] @byte) /* MethodBuilder.Create */ 
+				public PKCS8EncodedKeySpec(byte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns a copy of the encoded key bytes.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a copy of the encoded key bytes. </para>
+				/// </returns>
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
@@ -821,6 +1247,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns a copy of the encoded key bytes.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a copy of the encoded key bytes. </para>
+				/// </returns>
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
@@ -830,6 +1262,12 @@ namespace Java.Security.Spec
 						get{ return default(byte[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the name of the encoding format of this encoded key specification.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the string "PKCS#8". </para>
+				/// </returns>
 				/// <java-name>
 				/// getFormat
 				/// </java-name>
@@ -841,6 +1279,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameter specification for the RSA-PSS Signature scheme. </para> <para>Defined in the  standard. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/PSSParameterSpec
 		/// </java-name>
@@ -848,19 +1289,28 @@ namespace Java.Security.Spec
 		public partial class PSSParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The default parameter specification. It specifies the following parameters:  <ul> <li> <para>message digest: <c>"SHA-1" </c>  </para></li> <li> <para>mask generation function ( <b>mgf</b>): <c>"MGF1" </c>  </para></li> <li> <para>parameters for the  <b>mgf</b>: MGF1ParameterSpec#SHA1 </para></li> <li> <para>salt length: <c>20 </c>  </para></li> <li> <para>trailer field: <c>-1 </c>  </para></li></ul></para>        
+				/// </summary>
 				/// <java-name>
 				/// DEFAULT
 				/// </java-name>
 				[Dot42.DexImport("DEFAULT", "Ljava/security/spec/PSSParameterSpec;", AccessFlags = 25)]
 				public static readonly global::Java.Security.Spec.PSSParameterSpec DEFAULT;
+				/// <summary>
+				///  <para>Creates a new <c>PSSParameterSpec </c> with the specified salt length and the default values.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public PSSParameterSpec(int int32) /* MethodBuilder.Create */ 
+				public PSSParameterSpec(int saltLen) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>PSSParameterSpec </c> with the specified message digest name, mask generation function name, mask generation function parameters, salt length, and trailer field value.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;I" +
     "I)V", AccessFlags = 1)]
-				public PSSParameterSpec(string @string, string string1, global::Java.Security.Spec.IAlgorithmParameterSpec algorithmParameterSpec, int int32, int int321) /* MethodBuilder.Create */ 
+				public PSSParameterSpec(string mdName, string mgfName, global::Java.Security.Spec.IAlgorithmParameterSpec mgfSpec, int saltLen, int trailerField) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -869,6 +1319,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the length of the salt (in bits).</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the length of the salt (in bits). </para>
+				/// </returns>
 				/// <java-name>
 				/// getSaltLength
 				/// </java-name>
@@ -878,6 +1334,12 @@ namespace Java.Security.Spec
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the name of the message digest algorithm.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the name of the message digest algorithm. </para>
+				/// </returns>
 				/// <java-name>
 				/// getDigestAlgorithm
 				/// </java-name>
@@ -887,6 +1349,12 @@ namespace Java.Security.Spec
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the name of the mask generation function algorithm.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the name of the mask generation function algorithm. </para>
+				/// </returns>
 				/// <java-name>
 				/// getMGFAlgorithm
 				/// </java-name>
@@ -896,6 +1364,12 @@ namespace Java.Security.Spec
 						get{ return default(string); }
 				}
 
+				/// <summary>
+				///  <para>Returns the parameter for the mask generation function algorithm.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the parameter for the mask generation function algorithm, or  <c>null </c> if none specified. </para>
+				/// </returns>
 				/// <java-name>
 				/// getMGFParameters
 				/// </java-name>
@@ -905,6 +1379,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Security.Spec.IAlgorithmParameterSpec); }
 				}
 
+				/// <summary>
+				///  <para>Returns the trailer field value.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the trailer field value. </para>
+				/// </returns>
 				/// <java-name>
 				/// getTrailerField
 				/// </java-name>
@@ -916,6 +1396,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The parameter specification for generating an RSA key pair. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/RSAKeyGenParameterSpec
 		/// </java-name>
@@ -923,18 +1406,27 @@ namespace Java.Security.Spec
 		public partial class RSAKeyGenParameterSpec : global::Java.Security.Spec.IAlgorithmParameterSpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>The value of the public exponent <c>F0 </c> = 3. </para>        
+				/// </summary>
 				/// <java-name>
 				/// F0
 				/// </java-name>
 				[Dot42.DexImport("F0", "Ljava/math/BigInteger;", AccessFlags = 25)]
 				public static readonly global::Java.Math.BigInteger F0;
+				/// <summary>
+				///  <para>The value of the public exponent <c>F4 </c> = 65537. </para>        
+				/// </summary>
 				/// <java-name>
 				/// F4
 				/// </java-name>
 				[Dot42.DexImport("F4", "Ljava/math/BigInteger;", AccessFlags = 25)]
 				public static readonly global::Java.Math.BigInteger F4;
+				/// <summary>
+				///  <para>Creates a new <c>RSAKeyGenParameterSpec </c> with the specified key size and public exponent.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(ILjava/math/BigInteger;)V", AccessFlags = 1)]
-				public RSAKeyGenParameterSpec(int int32, global::Java.Math.BigInteger bigInteger) /* MethodBuilder.Create */ 
+				public RSAKeyGenParameterSpec(int keysize, global::Java.Math.BigInteger publicExponent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -943,6 +1435,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the size of the modulus (number of bits).</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the size of the modulus (number of bits). </para>
+				/// </returns>
 				/// <java-name>
 				/// getKeysize
 				/// </java-name>
@@ -952,6 +1450,12 @@ namespace Java.Security.Spec
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Returns the value of the public exponent.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the value of the public exponent. </para>
+				/// </returns>
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
@@ -963,6 +1467,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The key specification of a RSA multi-prime private key with the Chinese Remainder Theorem (CRT) information values used. </para> <para>Defined in the  standard. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/RSAMultiPrimePrivateCrtKeySpec
 		/// </java-name>
@@ -970,10 +1477,13 @@ namespace Java.Security.Spec
 		public partial class RSAMultiPrimePrivateCrtKeySpec : global::Java.Security.Spec.RSAPrivateKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>RSAMultiPrimePrivateCrtKeySpec </c> with the specified modulus, public exponent, private exponent, prime factors, prime exponents, crt coefficient, and additional primes.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/Big" +
     "Integer;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/" +
     "math/BigInteger;[Ljava/security/spec/RSAOtherPrimeInfo;)V", AccessFlags = 1)]
-				public RSAMultiPrimePrivateCrtKeySpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, global::Java.Math.BigInteger bigInteger2, global::Java.Math.BigInteger bigInteger3, global::Java.Math.BigInteger bigInteger4, global::Java.Math.BigInteger bigInteger5, global::Java.Math.BigInteger bigInteger6, global::Java.Math.BigInteger bigInteger7, global::Java.Security.Spec.RSAOtherPrimeInfo[] rSAOtherPrimeInfo) /* MethodBuilder.Create */ 
+				public RSAMultiPrimePrivateCrtKeySpec(global::Java.Math.BigInteger modulus, global::Java.Math.BigInteger publicExponent, global::Java.Math.BigInteger privateExponent, global::Java.Math.BigInteger primeP, global::Java.Math.BigInteger primeQ, global::Java.Math.BigInteger primeExponentP, global::Java.Math.BigInteger primeExponentQ, global::Java.Math.BigInteger crtCoefficient, global::Java.Security.Spec.RSAOtherPrimeInfo[] otherPrimeInfo) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -982,6 +1492,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the CRT coefficient, <c>q^-1 mod p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the CRT coefficient, <c>q^-1 mod p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getCrtCoefficient
 				/// </java-name>
@@ -991,6 +1507,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the information for the additional primes.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the information for the additional primes, or <c>null </c> if there are only the two primes ( <c>p, q </c> ). </para>
+				/// </returns>
 				/// <java-name>
 				/// getOtherPrimeInfo
 				/// </java-name>
@@ -1000,6 +1522,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Security.Spec.RSAOtherPrimeInfo[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the exponent of the prime <c>p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the exponent of the prime <c>p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeExponentP
 				/// </java-name>
@@ -1009,6 +1537,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the exponent of the prime <c>q </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the exponent of the prime <c>q </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeExponentQ
 				/// </java-name>
@@ -1018,6 +1552,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the prime factor <c>p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime factor <c>p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeP
 				/// </java-name>
@@ -1027,6 +1567,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the prime factor <c>q </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime factor <c>q </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeQ
 				/// </java-name>
@@ -1036,6 +1582,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the public exponent <c>e </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public exponent <c>e </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
@@ -1047,6 +1599,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The additional prime information specified as triplet of primes, a prime exponent, and a Chinese Remainder Theorem (CRT) coefficient. </para> <para>Defined in the  standard. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/RSAOtherPrimeInfo
 		/// </java-name>
@@ -1054,8 +1609,11 @@ namespace Java.Security.Spec
 		public partial class RSAOtherPrimeInfo
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>RSAOtherPrimeInfo </c> with the specified prime, exponent, and CRT coefficient.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;)V", AccessFlags = 1)]
-				public RSAOtherPrimeInfo(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, global::Java.Math.BigInteger bigInteger2) /* MethodBuilder.Create */ 
+				public RSAOtherPrimeInfo(global::Java.Math.BigInteger prime, global::Java.Math.BigInteger primeExponent, global::Java.Math.BigInteger crtCoefficient) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1064,6 +1622,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the CRT coefficient.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the CRT coefficient. </para>
+				/// </returns>
 				/// <java-name>
 				/// getCrtCoefficient
 				/// </java-name>
@@ -1073,6 +1637,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the prime factor.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime factor. </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrime
 				/// </java-name>
@@ -1082,6 +1652,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the exponent.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the exponent. </para>
+				/// </returns>
 				/// <java-name>
 				/// getExponent
 				/// </java-name>
@@ -1093,6 +1669,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The key specification of a RSA private key using Chinese Remainder Theorem (CRT) values. </para> <para>Defined in the  standard. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/RSAPrivateCrtKeySpec
 		/// </java-name>
@@ -1100,10 +1679,13 @@ namespace Java.Security.Spec
 		public partial class RSAPrivateCrtKeySpec : global::Java.Security.Spec.RSAPrivateKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>RSAMultiPrimePrivateCrtKeySpec </c> with the specified modulus, public exponent, private exponent, prime factors, prime exponents, crt coefficient, and additional primes.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/Big" +
     "Integer;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/" +
     "math/BigInteger;)V", AccessFlags = 1)]
-				public RSAPrivateCrtKeySpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1, global::Java.Math.BigInteger bigInteger2, global::Java.Math.BigInteger bigInteger3, global::Java.Math.BigInteger bigInteger4, global::Java.Math.BigInteger bigInteger5, global::Java.Math.BigInteger bigInteger6, global::Java.Math.BigInteger bigInteger7) /* MethodBuilder.Create */ 
+				public RSAPrivateCrtKeySpec(global::Java.Math.BigInteger modulus, global::Java.Math.BigInteger publicExponent, global::Java.Math.BigInteger privateExponent, global::Java.Math.BigInteger primeP, global::Java.Math.BigInteger primeQ, global::Java.Math.BigInteger primeExponentP, global::Java.Math.BigInteger primeExponentQ, global::Java.Math.BigInteger crtCoefficient) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1112,6 +1694,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the CRT coefficient, <c>q^-1 mod p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the CRT coefficient, <c>q^-1 mod p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getCrtCoefficient
 				/// </java-name>
@@ -1121,6 +1709,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the exponent of the prime <c>p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the exponent of the prime <c>p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeExponentP
 				/// </java-name>
@@ -1130,6 +1724,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the exponent of the prime <c>q </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the exponent of the prime <c>q </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeExponentQ
 				/// </java-name>
@@ -1139,6 +1739,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the prime factor <c>p </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime factor <c>p </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeP
 				/// </java-name>
@@ -1148,6 +1754,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the prime factor <c>q </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the prime factor <c>q </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrimeQ
 				/// </java-name>
@@ -1157,6 +1769,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the public exponent <c>e </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public exponent <c>e </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
@@ -1168,6 +1786,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The key specification of a RSA private key. </para> <para>Defined in the  standard </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/RSAPrivateKeySpec
 		/// </java-name>
@@ -1175,8 +1796,11 @@ namespace Java.Security.Spec
 		public partial class RSAPrivateKeySpec : global::Java.Security.Spec.IKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>RSAPrivateKeySpec </c> with the specified modulus and private exponent.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;)V", AccessFlags = 1)]
-				public RSAPrivateKeySpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
+				public RSAPrivateKeySpec(global::Java.Math.BigInteger modulus, global::Java.Math.BigInteger privateExponent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1185,6 +1809,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the modulus <c>n </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the modulus <c>n </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getModulus
 				/// </java-name>
@@ -1194,6 +1824,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the private exponent <c>e </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the private exponent <c>e </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPrivateExponent
 				/// </java-name>
@@ -1205,6 +1841,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The key specification of a RSA public key. </para> <para>Defined in the  standard. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/RSAPublicKeySpec
 		/// </java-name>
@@ -1212,8 +1851,11 @@ namespace Java.Security.Spec
 		public partial class RSAPublicKeySpec : global::Java.Security.Spec.IKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>RSAPublicKeySpec </c> with the specified modulus and public exponent.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/math/BigInteger;Ljava/math/BigInteger;)V", AccessFlags = 1)]
-				public RSAPublicKeySpec(global::Java.Math.BigInteger bigInteger, global::Java.Math.BigInteger bigInteger1) /* MethodBuilder.Create */ 
+				public RSAPublicKeySpec(global::Java.Math.BigInteger modulus, global::Java.Math.BigInteger publicExponent) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -1222,6 +1864,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the modulus <c>n </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the modulus <c>n </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getModulus
 				/// </java-name>
@@ -1231,6 +1879,12 @@ namespace Java.Security.Spec
 						get{ return default(global::Java.Math.BigInteger); }
 				}
 
+				/// <summary>
+				///  <para>Returns the public exponent <c>d </c> .</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the public exponent <c>d </c> . </para>
+				/// </returns>
 				/// <java-name>
 				/// getPublicExponent
 				/// </java-name>
@@ -1242,6 +1896,9 @@ namespace Java.Security.Spec
 
 		}
 
+		/// <summary>
+		///  <para>The key specification of an X.509 encoded key in ASN.1 format. </para>    
+		/// </summary>
 		/// <java-name>
 		/// java/security/spec/X509EncodedKeySpec
 		/// </java-name>
@@ -1249,16 +1906,28 @@ namespace Java.Security.Spec
 		public partial class X509EncodedKeySpec : global::Java.Security.Spec.EncodedKeySpec
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Creates a new <c>X509EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
-				public X509EncodedKeySpec(sbyte[] sByte) /* MethodBuilder.Create */ 
+				public X509EncodedKeySpec(sbyte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Creates a new <c>X509EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
-				public X509EncodedKeySpec(byte[] @byte) /* MethodBuilder.Create */ 
+				public X509EncodedKeySpec(byte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the encoded key bytes.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the encoded key bytes. </para>
+				/// </returns>
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
@@ -1273,6 +1942,12 @@ namespace Java.Security.Spec
 				{
 				}
 
+				/// <summary>
+				///  <para>Returns the encoded key bytes.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the encoded key bytes. </para>
+				/// </returns>
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
@@ -1282,6 +1957,12 @@ namespace Java.Security.Spec
 						get{ return default(byte[]); }
 				}
 
+				/// <summary>
+				///  <para>Returns the name of the encoding format of this encoded key specification.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the string "X.509". </para>
+				/// </returns>
 				/// <java-name>
 				/// getFormat
 				/// </java-name>

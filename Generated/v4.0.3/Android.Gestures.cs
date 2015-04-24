@@ -1,6 +1,9 @@
 ﻿#pragma warning disable 1717
 namespace Android.Gestures
 {
+		/// <summary>
+		///  <para>A gesture is a hand-drawn shape on a touch screen. It can have one or multiple strokes. Each stroke is a sequence of timed points. A user-defined gesture can be recognized by a GestureLibrary. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/gesture/Gesture
 		/// </java-name>
@@ -27,11 +30,14 @@ namespace Android.Gestures
 						return default(object);
 				}
 
+				/// <summary>
+				///  <para>Adds a stroke to the gesture.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// addStroke
 				/// </java-name>
 				[Dot42.DexImport("addStroke", "(Landroid/gesture/GestureStroke;)V", AccessFlags = 1)]
-				public virtual void AddStroke(global::Android.Gestures.GestureStroke gestureStroke) /* MethodBuilder.Create */ 
+				public virtual void AddStroke(global::Android.Gestures.GestureStroke stroke) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -57,7 +63,7 @@ namespace Android.Gestures
 				/// toPath
 				/// </java-name>
 				[Dot42.DexImport("toPath", "(IIII)Landroid/graphics/Path;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Path ToPath(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Path ToPath(int width, int height, int edge, int numSample) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Path);
 				}
@@ -66,37 +72,58 @@ namespace Android.Gestures
 				/// toPath
 				/// </java-name>
 				[Dot42.DexImport("toPath", "(Landroid/graphics/Path;IIII)Landroid/graphics/Path;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Path ToPath(global::Android.Graphics.Path path, int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Path ToPath(global::Android.Graphics.Path path, int width, int height, int edge, int numSample) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Path);
 				}
 
+				/// <summary>
+				///  <para>Creates a bitmap of the gesture with a transparent background.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the bitmap </para>
+				/// </returns>
 				/// <java-name>
 				/// toBitmap
 				/// </java-name>
 				[Dot42.DexImport("toBitmap", "(IIIII)Landroid/graphics/Bitmap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Bitmap ToBitmap(int int32, int int321, int int322, int int323, int int324) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Bitmap ToBitmap(int width, int height, int edge, int numSample, int color) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
 				}
 
+				/// <summary>
+				///  <para>Creates a bitmap of the gesture with a transparent background.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the bitmap </para>
+				/// </returns>
 				/// <java-name>
 				/// toBitmap
 				/// </java-name>
 				[Dot42.DexImport("toBitmap", "(IIII)Landroid/graphics/Bitmap;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Bitmap ToBitmap(int int32, int int321, int int322, int int323) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Bitmap ToBitmap(int width, int height, int inset, int color) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
 				}
 
+				/// <summary>
+				///  <para>Flatten this object in to a Parcel.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// writeToParcel
 				/// </java-name>
 				[Dot42.DexImport("writeToParcel", "(Landroid/os/Parcel;I)V", AccessFlags = 1)]
-				public virtual void WriteToParcel(global::Android.OS.Parcel parcel, int int32) /* MethodBuilder.Create */ 
+				public virtual void WriteToParcel(global::Android.OS.Parcel dest, int flags) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Describe the kinds of special objects contained in this Parcelable's marshalled representation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmask indicating the set of special object types marshalled by the Parcelable. </para>
+				/// </returns>
 				/// <java-name>
 				/// describeContents
 				/// </java-name>
@@ -106,6 +133,12 @@ namespace Android.Gestures
 						return default(int);
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>all the strokes of the gesture </para>
+				/// </returns>
 				/// <java-name>
 				/// getStrokes
 				/// </java-name>
@@ -115,6 +148,12 @@ namespace Android.Gestures
 						get{ return default(global::Java.Util.ArrayList<global::Android.Gestures.GestureStroke>); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the number of strokes included by this gesture </para>
+				/// </returns>
 				/// <java-name>
 				/// getStrokesCount
 				/// </java-name>
@@ -124,6 +163,12 @@ namespace Android.Gestures
 						get{ return default(int); }
 				}
 
+				/// <summary>
+				///  <para>Calculates the total length of the gesture. When there are multiple strokes in the gesture, this returns the sum of the lengths of all the strokes.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the length of the gesture </para>
+				/// </returns>
 				/// <java-name>
 				/// getLength
 				/// </java-name>
@@ -133,6 +178,12 @@ namespace Android.Gestures
 						get{ return default(float); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the bounding box of the gesture </para>
+				/// </returns>
 				/// <java-name>
 				/// getBoundingBox
 				/// </java-name>
@@ -142,6 +193,12 @@ namespace Android.Gestures
 						get{ return default(global::Android.Graphics.RectF); }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the id of the gesture </para>
+				/// </returns>
 				/// <java-name>
 				/// getID
 				/// </java-name>
@@ -169,7 +226,7 @@ namespace Android.Gestures
 				/// fromFile
 				/// </java-name>
 				[Dot42.DexImport("fromFile", "(Ljava/lang/String;)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
-				public static global::Android.Gestures.GestureLibrary FromFile(string @string) /* MethodBuilder.Create */ 
+				public static global::Android.Gestures.GestureLibrary FromFile(string path) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Gestures.GestureLibrary);
 				}
@@ -178,7 +235,7 @@ namespace Android.Gestures
 				/// fromFile
 				/// </java-name>
 				[Dot42.DexImport("fromFile", "(Ljava/io/File;)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
-				public static global::Android.Gestures.GestureLibrary FromFile(global::Java.IO.File file) /* MethodBuilder.Create */ 
+				public static global::Android.Gestures.GestureLibrary FromFile(global::Java.IO.File path) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Gestures.GestureLibrary);
 				}
@@ -187,7 +244,7 @@ namespace Android.Gestures
 				/// fromPrivateFile
 				/// </java-name>
 				[Dot42.DexImport("fromPrivateFile", "(Landroid/content/Context;Ljava/lang/String;)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
-				public static global::Android.Gestures.GestureLibrary FromPrivateFile(global::Android.Content.Context context, string @string) /* MethodBuilder.Create */ 
+				public static global::Android.Gestures.GestureLibrary FromPrivateFile(global::Android.Content.Context context, string name) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Gestures.GestureLibrary);
 				}
@@ -196,7 +253,7 @@ namespace Android.Gestures
 				/// fromRawResource
 				/// </java-name>
 				[Dot42.DexImport("fromRawResource", "(Landroid/content/Context;I)Landroid/gesture/GestureLibrary;", AccessFlags = 9)]
-				public static global::Android.Gestures.GestureLibrary FromRawResource(global::Android.Content.Context context, int int32) /* MethodBuilder.Create */ 
+				public static global::Android.Gestures.GestureLibrary FromRawResource(global::Android.Content.Context context, int resourceId) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Gestures.GestureLibrary);
 				}
@@ -245,7 +302,7 @@ namespace Android.Gestures
 				/// addGesture
 				/// </java-name>
 				[Dot42.DexImport("addGesture", "(Ljava/lang/String;Landroid/gesture/Gesture;)V", AccessFlags = 1)]
-				public virtual void AddGesture(string @string, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ 
+				public virtual void AddGesture(string entryName, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -253,7 +310,7 @@ namespace Android.Gestures
 				/// removeGesture
 				/// </java-name>
 				[Dot42.DexImport("removeGesture", "(Ljava/lang/String;Landroid/gesture/Gesture;)V", AccessFlags = 1)]
-				public virtual void RemoveGesture(string @string, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ 
+				public virtual void RemoveGesture(string entryName, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -261,7 +318,7 @@ namespace Android.Gestures
 				/// removeEntry
 				/// </java-name>
 				[Dot42.DexImport("removeEntry", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void RemoveEntry(string @string) /* MethodBuilder.Create */ 
+				public virtual void RemoveEntry(string entryName) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -269,7 +326,7 @@ namespace Android.Gestures
 				/// getGestures
 				/// </java-name>
 				[Dot42.DexImport("getGestures", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Landroid/gesture/Gesture;>;")]
-				public virtual global::Java.Util.ArrayList<global::Android.Gestures.Gesture> GetGestures(string @string) /* MethodBuilder.Create */ 
+				public virtual global::Java.Util.ArrayList<global::Android.Gestures.Gesture> GetGestures(string entryName) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.ArrayList<global::Android.Gestures.Gesture>);
 				}
@@ -316,6 +373,9 @@ namespace Android.Gestures
 
 		}
 
+		/// <summary>
+		///  <para>A transparent overlay for gesture input that can be placed on top of other widgets or contain other widgets.</para> <para>ref android.R.styleable::GestureOverlayView_eventsInterceptionEnabled  ref android.R.styleable::GestureOverlayView_fadeDuration  ref android.R.styleable::GestureOverlayView_fadeOffset  ref android.R.styleable::GestureOverlayView_fadeEnabled  ref android.R.styleable::GestureOverlayView_gestureStrokeWidth  ref android.R.styleable::GestureOverlayView_gestureStrokeAngleThreshold  ref android.R.styleable::GestureOverlayView_gestureStrokeLengthThreshold  ref android.R.styleable::GestureOverlayView_gestureStrokeSquarenessThreshold  ref android.R.styleable::GestureOverlayView_gestureStrokeType  ref android.R.styleable::GestureOverlayView_gestureColor  ref android.R.styleable::GestureOverlayView_orientation  ref android.R.styleable::GestureOverlayView_uncertainGestureColor </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/gesture/GestureOverlayView
 		/// </java-name>
@@ -349,12 +409,12 @@ namespace Android.Gestures
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public GestureOverlayView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet) /* MethodBuilder.Create */ 
+				public GestureOverlayView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attrs) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", AccessFlags = 1)]
-				public GestureOverlayView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attributeSet, int int32) /* MethodBuilder.Create */ 
+				public GestureOverlayView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attrs, int defStyle) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -371,7 +431,7 @@ namespace Android.Gestures
 				/// addOnGestureListener
 				/// </java-name>
 				[Dot42.DexImport("addOnGestureListener", "(Landroid/gesture/GestureOverlayView$OnGestureListener;)V", AccessFlags = 1)]
-				public virtual void AddOnGestureListener(global::Android.Gestures.GestureOverlayView.IOnGestureListener onGestureListener) /* MethodBuilder.Create */ 
+				public virtual void AddOnGestureListener(global::Android.Gestures.GestureOverlayView.IOnGestureListener listener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -379,7 +439,7 @@ namespace Android.Gestures
 				/// removeOnGestureListener
 				/// </java-name>
 				[Dot42.DexImport("removeOnGestureListener", "(Landroid/gesture/GestureOverlayView$OnGestureListener;)V", AccessFlags = 1)]
-				public virtual void RemoveOnGestureListener(global::Android.Gestures.GestureOverlayView.IOnGestureListener onGestureListener) /* MethodBuilder.Create */ 
+				public virtual void RemoveOnGestureListener(global::Android.Gestures.GestureOverlayView.IOnGestureListener listener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -395,7 +455,7 @@ namespace Android.Gestures
 				/// addOnGesturePerformedListener
 				/// </java-name>
 				[Dot42.DexImport("addOnGesturePerformedListener", "(Landroid/gesture/GestureOverlayView$OnGesturePerformedListener;)V", AccessFlags = 1)]
-				public virtual void AddOnGesturePerformedListener(global::Android.Gestures.GestureOverlayView.IOnGesturePerformedListener onGesturePerformedListener) /* MethodBuilder.Create */ 
+				public virtual void AddOnGesturePerformedListener(global::Android.Gestures.GestureOverlayView.IOnGesturePerformedListener listener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -403,7 +463,7 @@ namespace Android.Gestures
 				/// removeOnGesturePerformedListener
 				/// </java-name>
 				[Dot42.DexImport("removeOnGesturePerformedListener", "(Landroid/gesture/GestureOverlayView$OnGesturePerformedListener;)V", AccessFlags = 1)]
-				public virtual void RemoveOnGesturePerformedListener(global::Android.Gestures.GestureOverlayView.IOnGesturePerformedListener onGesturePerformedListener) /* MethodBuilder.Create */ 
+				public virtual void RemoveOnGesturePerformedListener(global::Android.Gestures.GestureOverlayView.IOnGesturePerformedListener listener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -419,7 +479,7 @@ namespace Android.Gestures
 				/// addOnGesturingListener
 				/// </java-name>
 				[Dot42.DexImport("addOnGesturingListener", "(Landroid/gesture/GestureOverlayView$OnGesturingListener;)V", AccessFlags = 1)]
-				public virtual void AddOnGesturingListener(global::Android.Gestures.GestureOverlayView.IOnGesturingListener onGesturingListener) /* MethodBuilder.Create */ 
+				public virtual void AddOnGesturingListener(global::Android.Gestures.GestureOverlayView.IOnGesturingListener listener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -427,7 +487,7 @@ namespace Android.Gestures
 				/// removeOnGesturingListener
 				/// </java-name>
 				[Dot42.DexImport("removeOnGesturingListener", "(Landroid/gesture/GestureOverlayView$OnGesturingListener;)V", AccessFlags = 1)]
-				public virtual void RemoveOnGesturingListener(global::Android.Gestures.GestureOverlayView.IOnGesturingListener onGesturingListener) /* MethodBuilder.Create */ 
+				public virtual void RemoveOnGesturingListener(global::Android.Gestures.GestureOverlayView.IOnGesturingListener listener) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -451,7 +511,7 @@ namespace Android.Gestures
 				/// clear
 				/// </java-name>
 				[Dot42.DexImport("clear", "(Z)V", AccessFlags = 1)]
-				public virtual void Clear(bool boolean) /* MethodBuilder.Create */ 
+				public virtual void Clear(bool animated) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -483,7 +543,7 @@ namespace Android.Gestures
 				/// dispatchTouchEvent
 				/// </java-name>
 				[Dot42.DexImport("dispatchTouchEvent", "(Landroid/view/MotionEvent;)Z", AccessFlags = 1)]
-				public override bool DispatchTouchEvent(global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ 
+				public override bool DispatchTouchEvent(global::Android.Views.MotionEvent @event) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -674,7 +734,7 @@ namespace Android.Gestures
 						/// onGesturePerformed
 						/// </java-name>
 						[Dot42.DexImport("onGesturePerformed", "(Landroid/gesture/GestureOverlayView;Landroid/gesture/Gesture;)V", AccessFlags = 1025)]
-						void OnGesturePerformed(global::Android.Gestures.GestureOverlayView gestureOverlayView, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ ;
+						void OnGesturePerformed(global::Android.Gestures.GestureOverlayView overlay, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -689,25 +749,25 @@ namespace Android.Gestures
 						/// onGestureStarted
 						/// </java-name>
 						[Dot42.DexImport("onGestureStarted", "(Landroid/gesture/GestureOverlayView;Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnGestureStarted(global::Android.Gestures.GestureOverlayView gestureOverlayView, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+						void OnGestureStarted(global::Android.Gestures.GestureOverlayView overlay, global::Android.Views.MotionEvent @event) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onGesture
 						/// </java-name>
 						[Dot42.DexImport("onGesture", "(Landroid/gesture/GestureOverlayView;Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnGesture(global::Android.Gestures.GestureOverlayView gestureOverlayView, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+						void OnGesture(global::Android.Gestures.GestureOverlayView overlay, global::Android.Views.MotionEvent @event) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onGestureEnded
 						/// </java-name>
 						[Dot42.DexImport("onGestureEnded", "(Landroid/gesture/GestureOverlayView;Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnGestureEnded(global::Android.Gestures.GestureOverlayView gestureOverlayView, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+						void OnGestureEnded(global::Android.Gestures.GestureOverlayView overlay, global::Android.Views.MotionEvent @event) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onGestureCancelled
 						/// </java-name>
 						[Dot42.DexImport("onGestureCancelled", "(Landroid/gesture/GestureOverlayView;Landroid/view/MotionEvent;)V", AccessFlags = 1025)]
-						void OnGestureCancelled(global::Android.Gestures.GestureOverlayView gestureOverlayView, global::Android.Views.MotionEvent motionEvent) /* MethodBuilder.Create */ ;
+						void OnGestureCancelled(global::Android.Gestures.GestureOverlayView overlay, global::Android.Views.MotionEvent @event) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -722,18 +782,21 @@ namespace Android.Gestures
 						/// onGesturingStarted
 						/// </java-name>
 						[Dot42.DexImport("onGesturingStarted", "(Landroid/gesture/GestureOverlayView;)V", AccessFlags = 1025)]
-						void OnGesturingStarted(global::Android.Gestures.GestureOverlayView gestureOverlayView) /* MethodBuilder.Create */ ;
+						void OnGesturingStarted(global::Android.Gestures.GestureOverlayView overlay) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
 						/// onGesturingEnded
 						/// </java-name>
 						[Dot42.DexImport("onGesturingEnded", "(Landroid/gesture/GestureOverlayView;)V", AccessFlags = 1025)]
-						void OnGesturingEnded(global::Android.Gestures.GestureOverlayView gestureOverlayView) /* MethodBuilder.Create */ ;
+						void OnGesturingEnded(global::Android.Gestures.GestureOverlayView overlay) /* MethodBuilder.Create */ ;
 
 				}
 
 		}
 
+		/// <summary>
+		///  <para>A timed point of a gesture stroke. Multiple points form a stroke. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/gesture/GesturePoint
 		/// </java-name>
@@ -757,7 +820,7 @@ namespace Android.Gestures
 				[Dot42.DexImport("timestamp", "J", AccessFlags = 17)]
 				public readonly long Timestamp;
 				[Dot42.DexImport("<init>", "(FFJ)V", AccessFlags = 1)]
-				public GesturePoint(float single, float single1, long int64) /* MethodBuilder.Create */ 
+				public GesturePoint(float x, float y, long t) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -777,6 +840,9 @@ namespace Android.Gestures
 
 		}
 
+		/// <summary>
+		///  <para>GestureLibrary maintains gesture examples and makes predictions on a new gesture </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/gesture/GestureStore
 		/// </java-name>
@@ -809,6 +875,12 @@ namespace Android.Gestures
 				{
 				}
 
+				/// <summary>
+				///  <para>Recognize a gesture</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a list of predictions of possible entries for a given gesture </para>
+				/// </returns>
 				/// <java-name>
 				/// recognize
 				/// </java-name>
@@ -818,44 +890,62 @@ namespace Android.Gestures
 						return default(global::Java.Util.ArrayList<global::Android.Gestures.Prediction>);
 				}
 
+				/// <summary>
+				///  <para>Add a gesture for the entry</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// addGesture
 				/// </java-name>
 				[Dot42.DexImport("addGesture", "(Ljava/lang/String;Landroid/gesture/Gesture;)V", AccessFlags = 1)]
-				public virtual void AddGesture(string @string, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ 
+				public virtual void AddGesture(string entryName, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Remove a gesture from the library. If there are no more gestures for the given entry, the gesture entry will be removed.</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// removeGesture
 				/// </java-name>
 				[Dot42.DexImport("removeGesture", "(Ljava/lang/String;Landroid/gesture/Gesture;)V", AccessFlags = 1)]
-				public virtual void RemoveGesture(string @string, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ 
+				public virtual void RemoveGesture(string entryName, global::Android.Gestures.Gesture gesture) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Remove a entry of gestures</para> <para></para>        
+				/// </summary>
 				/// <java-name>
 				/// removeEntry
 				/// </java-name>
 				[Dot42.DexImport("removeEntry", "(Ljava/lang/String;)V", AccessFlags = 1)]
-				public virtual void RemoveEntry(string @string) /* MethodBuilder.Create */ 
+				public virtual void RemoveEntry(string entryName) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Get all the gestures of an entry</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the list of gestures that is under this name </para>
+				/// </returns>
 				/// <java-name>
 				/// getGestures
 				/// </java-name>
 				[Dot42.DexImport("getGestures", "(Ljava/lang/String;)Ljava/util/ArrayList;", AccessFlags = 1, Signature = "(Ljava/lang/String;)Ljava/util/ArrayList<Landroid/gesture/Gesture;>;")]
-				public virtual global::Java.Util.ArrayList<global::Android.Gestures.Gesture> GetGestures(string @string) /* MethodBuilder.Create */ 
+				public virtual global::Java.Util.ArrayList<global::Android.Gestures.Gesture> GetGestures(string entryName) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.ArrayList<global::Android.Gestures.Gesture>);
 				}
 
+				/// <summary>
+				///  <para>Save the gesture library </para>        
+				/// </summary>
 				/// <java-name>
 				/// save
 				/// </java-name>
 				[Dot42.DexImport("save", "(Ljava/io/OutputStream;)V", AccessFlags = 1)]
-				public virtual void Save(global::Java.IO.OutputStream outputStream) /* MethodBuilder.Create */ 
+				public virtual void Save(global::Java.IO.OutputStream stream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -863,15 +953,18 @@ namespace Android.Gestures
 				/// save
 				/// </java-name>
 				[Dot42.DexImport("save", "(Ljava/io/OutputStream;Z)V", AccessFlags = 1)]
-				public virtual void Save(global::Java.IO.OutputStream outputStream, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void Save(global::Java.IO.OutputStream stream, bool closeStream) /* MethodBuilder.Create */ 
 				{
 				}
 
+				/// <summary>
+				///  <para>Load the gesture library </para>        
+				/// </summary>
 				/// <java-name>
 				/// load
 				/// </java-name>
 				[Dot42.DexImport("load", "(Ljava/io/InputStream;)V", AccessFlags = 1)]
-				public virtual void Load(global::Java.IO.InputStream inputStream) /* MethodBuilder.Create */ 
+				public virtual void Load(global::Java.IO.InputStream stream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -879,7 +972,7 @@ namespace Android.Gestures
 				/// load
 				/// </java-name>
 				[Dot42.DexImport("load", "(Ljava/io/InputStream;Z)V", AccessFlags = 1)]
-				public virtual void Load(global::Java.IO.InputStream inputStream, bool boolean) /* MethodBuilder.Create */ 
+				public virtual void Load(global::Java.IO.InputStream stream, bool closeStream) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -894,6 +987,12 @@ namespace Android.Gestures
 						set{ }
 				}
 
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>SEQUENCE_INVARIANT or SEQUENCE_SENSITIVE </para>
+				/// </returns>
 				/// <java-name>
 				/// getSequenceType
 				/// </java-name>
@@ -905,6 +1004,12 @@ namespace Android.Gestures
 						set{ }
 				}
 
+				/// <summary>
+				///  <para>Get all the gesture entry names in the library</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a set of strings </para>
+				/// </returns>
 				/// <java-name>
 				/// getGestureEntries
 				/// </java-name>
@@ -925,6 +1030,9 @@ namespace Android.Gestures
 
 		}
 
+		/// <summary>
+		///  <para>A gesture stroke started on a touch down and ended on a touch up. A stroke consists of a sequence of timed points. One or multiple strokes form a gesture. </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/gesture/GestureStroke
 		/// </java-name>
@@ -947,8 +1055,11 @@ namespace Android.Gestures
 				/// </java-name>
 				[Dot42.DexImport("points", "[F", AccessFlags = 17)]
 				public readonly float[] Points;
+				/// <summary>
+				///  <para>A constructor that constructs a gesture stroke from a list of gesture points.</para> <para></para>        
+				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/util/ArrayList;)V", AccessFlags = 1, Signature = "(Ljava/util/ArrayList<Landroid/gesture/GesturePoint;>;)V")]
-				public GestureStroke(global::Java.Util.ArrayList<global::Android.Gestures.GesturePoint> arrayList) /* MethodBuilder.Create */ 
+				public GestureStroke(global::Java.Util.ArrayList<global::Android.Gestures.GesturePoint> points) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -961,15 +1072,24 @@ namespace Android.Gestures
 						return default(object);
 				}
 
+				/// <summary>
+				///  <para>Converts the stroke to a Path of a given number of points.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the path </para>
+				/// </returns>
 				/// <java-name>
 				/// toPath
 				/// </java-name>
 				[Dot42.DexImport("toPath", "(FFI)Landroid/graphics/Path;", AccessFlags = 1)]
-				public virtual global::Android.Graphics.Path ToPath(float single, float single1, int int32) /* MethodBuilder.Create */ 
+				public virtual global::Android.Graphics.Path ToPath(float width, float height, int numSample) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Path);
 				}
 
+				/// <summary>
+				///  <para>Invalidates the cached path that is used to render the stroke. </para>        
+				/// </summary>
 				/// <java-name>
 				/// clearPath
 				/// </java-name>
@@ -978,6 +1098,12 @@ namespace Android.Gestures
 				{
 				}
 
+				/// <summary>
+				///  <para>Computes an oriented bounding box of the stroke.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>OrientedBoundingBox </para>
+				/// </returns>
 				/// <java-name>
 				/// computeOrientedBoundingBox
 				/// </java-name>
@@ -1003,6 +1129,9 @@ namespace Android.Gestures
 
 		}
 
+		/// <summary>
+		///  <para>Utility functions for gesture processing &amp; analysis, including methods for:  <ul> <li> <para>feature extraction (e.g., samplers and those for calculating bounding boxes and gesture path lengths); </para></li> <li> <para>geometric transformation (e.g., translation, rotation and scaling); </para></li> <li> <para>gesture similarity comparison (e.g., calculating Euclidean or Cosine distances between two gestures). </para></li></ul></para>    
+		/// </summary>
 		/// <java-name>
 		/// android/gesture/GestureUtils
 		/// </java-name>
@@ -1015,54 +1144,87 @@ namespace Android.Gestures
 				{
 				}
 
+				/// <summary>
+				///  <para>Samples the gesture spatially by rendering the gesture into a 2D grayscale bitmap. Scales the gesture to fit the size of the bitmap. The scaling does not necessarily keep the aspect ratio of the gesture.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmapSize x bitmapSize grayscale bitmap that is represented as a 1D array. The float at index i represents the grayscale value at pixel [ibitmapSize, i/bitmapSize] </para>
+				/// </returns>
 				/// <java-name>
 				/// spatialSampling
 				/// </java-name>
 				[Dot42.DexImport("spatialSampling", "(Landroid/gesture/Gesture;I)[F", AccessFlags = 9)]
-				public static float[] SpatialSampling(global::Android.Gestures.Gesture gesture, int int32) /* MethodBuilder.Create */ 
+				public static float[] SpatialSampling(global::Android.Gestures.Gesture gesture, int bitmapSize) /* MethodBuilder.Create */ 
 				{
 						return default(float[]);
 				}
 
+				/// <summary>
+				///  <para>Samples the gesture spatially by rendering the gesture into a 2D grayscale bitmap. Scales the gesture to fit the size of the bitmap.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a bitmapSize x bitmapSize grayscale bitmap that is represented as a 1D array. The float at index i represents the grayscale value at pixel [ibitmapSize, i/bitmapSize] </para>
+				/// </returns>
 				/// <java-name>
 				/// spatialSampling
 				/// </java-name>
 				[Dot42.DexImport("spatialSampling", "(Landroid/gesture/Gesture;IZ)[F", AccessFlags = 9)]
-				public static float[] SpatialSampling(global::Android.Gestures.Gesture gesture, int int32, bool boolean) /* MethodBuilder.Create */ 
+				public static float[] SpatialSampling(global::Android.Gestures.Gesture gesture, int bitmapSize, bool keepAspectRatio) /* MethodBuilder.Create */ 
 				{
 						return default(float[]);
 				}
 
+				/// <summary>
+				///  <para>Samples a stroke temporally into a given number of evenly-distributed points.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the sampled points in the form of [x1, y1, x2, y2, ..., xn, yn] </para>
+				/// </returns>
 				/// <java-name>
 				/// temporalSampling
 				/// </java-name>
 				[Dot42.DexImport("temporalSampling", "(Landroid/gesture/GestureStroke;I)[F", AccessFlags = 9)]
-				public static float[] TemporalSampling(global::Android.Gestures.GestureStroke gestureStroke, int int32) /* MethodBuilder.Create */ 
+				public static float[] TemporalSampling(global::Android.Gestures.GestureStroke stroke, int numPoints) /* MethodBuilder.Create */ 
 				{
 						return default(float[]);
 				}
 
+				/// <summary>
+				///  <para>Computes an oriented, minimum bounding box of a set of points.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>an oriented bounding box </para>
+				/// </returns>
 				/// <java-name>
 				/// computeOrientedBoundingBox
 				/// </java-name>
 				[Dot42.DexImport("computeOrientedBoundingBox", "(Ljava/util/ArrayList;)Landroid/gesture/OrientedBoundingBox;", AccessFlags = 9, Signature = "(Ljava/util/ArrayList<Landroid/gesture/GesturePoint;>;)Landroid/gesture/OrientedB" +
     "oundingBox;")]
-				public static global::Android.Gestures.OrientedBoundingBox ComputeOrientedBoundingBox(global::Java.Util.ArrayList<global::Android.Gestures.GesturePoint> arrayList) /* MethodBuilder.Create */ 
+				public static global::Android.Gestures.OrientedBoundingBox ComputeOrientedBoundingBox(global::Java.Util.ArrayList<global::Android.Gestures.GesturePoint> originalPoints) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Gestures.OrientedBoundingBox);
 				}
 
+				/// <summary>
+				///  <para>Computes an oriented, minimum bounding box of a set of points.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>an oriented bounding box </para>
+				/// </returns>
 				/// <java-name>
 				/// computeOrientedBoundingBox
 				/// </java-name>
 				[Dot42.DexImport("computeOrientedBoundingBox", "([F)Landroid/gesture/OrientedBoundingBox;", AccessFlags = 9)]
-				public static global::Android.Gestures.OrientedBoundingBox ComputeOrientedBoundingBox(float[] single) /* MethodBuilder.Create */ 
+				public static global::Android.Gestures.OrientedBoundingBox ComputeOrientedBoundingBox(float[] originalPoints) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Gestures.OrientedBoundingBox);
 				}
 
 		}
 
+		/// <summary>
+		///  <para>An oriented bounding box </para>    
+		/// </summary>
 		/// <java-name>
 		/// android/gesture/OrientedBoundingBox
 		/// </java-name>
