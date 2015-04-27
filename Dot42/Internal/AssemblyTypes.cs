@@ -11,7 +11,15 @@ namespace Dot42.Internal
     internal static class AssemblyTypes
     {
         private static ConcurrentHashMap<Type, Assembly> _typesPerAssembly = null;
-        public static readonly Assembly DefaultAssembly = new Assembly(null);
+        private static Assembly _entryAssembly;
+        public static readonly Assembly DefaultAssembly = Assembly.DefaultAssembly;
+
+        public static Assembly GetEntryAssembly()
+        {
+            // load assembly data
+            GetAssemblyFromType(typeof (AssemblyTypes));
+            return _entryAssembly;
+        }
 
         public static Assembly GetAssemblyFromType(Type type)
         {
@@ -28,21 +36,31 @@ namespace Dot42.Internal
                 HashMap<string, Assembly> assemblies = new HashMap<string, Assembly>();
 
                 var annos = typeof (AssemblyTypes).GetAnnotation<IAssemblyTypes>(typeof (IAssemblyTypes));
+                
                 if (annos != null)
                 {
+                    string entryAssemblyName = annos.EntryAssemblyName();
+
                     foreach (var anno in annos.Types())
                     {
                         var assemblyName = anno.AssemblyName();
                         var assembly = assemblies.Get(assemblyName);
-                        
+
                         if (assembly == null)
+                        {
                             assemblies.Put(assemblyName, assembly = new Assembly(assemblyName));
+                            if (assemblyName == entryAssemblyName)
+                                _entryAssembly = assembly;
+                        }
 
                         assembly.AddType(anno.Type());
                         _typesPerAssembly.Put(anno.Type(), assembly);
                     }
                 }
             }
+
+            if (_entryAssembly == null)
+                _entryAssembly = DefaultAssembly;
 
             return _typesPerAssembly.Get(type) ?? DefaultAssembly;
         }

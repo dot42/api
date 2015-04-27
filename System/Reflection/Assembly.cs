@@ -16,8 +16,6 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using Android.OS;
 using Dot42.Internal;
 using Java.Util.Concurrent;
 
@@ -25,6 +23,8 @@ namespace System.Reflection
 {
 	public class Assembly
     {
+        internal static Assembly DefaultAssembly = new Assembly(null);
+
         private readonly string _name;
         private readonly ConcurrentHashMap<string, Type> _types = new ConcurrentHashMap<string, Type>();
 
@@ -53,24 +53,19 @@ namespace System.Reflection
         }
 
         public IEnumerable<TypeInfo> DefinedTypes { get { return _types.Values().Select(t=>new TypeInfo(t)); } }
-
-
+	    
 	    public override string ToString()
 	    {
 	        return "Assembly: " + FullName;
 	    }
 
 	    /// <summary>
-        /// this is not implemented, and will always return the classloader of 
-        /// the AssemblyClass
+        /// This is not implemented, and will always return the DefaultAssembly.
         /// </summary>
-        /// <param name="load"></param>
-        /// <returns></returns>
         public static Assembly Load(string load)
         {
-            return AssemblyTypes.DefaultAssembly;
+            return DefaultAssembly;
         }
-
 
         /// <summary>
         /// Gets the currently loaded assembly in which the specified class is defined.
@@ -83,10 +78,6 @@ namespace System.Reflection
         /// <summary>
         /// Gets the Assembly of the method that invoked the currently executing method.
         /// </summary>
-        /// <remarks>
-        /// This method always returns the assembly corresponding 
-        /// to the sytem class loader
-        /// </remarks>
         public static Assembly GetCallingAssembly()
         {
             string className = new Exception().JavaStackTrace[2].ClassName;
@@ -96,14 +87,8 @@ namespace System.Reflection
         /// <summary>
         /// Gets the assembly that contains the code that is currently executing.
         /// </summary>
-        /// <remarks>
-        /// This method always returns the assembly corresponding 
-        /// to the sytem class loader
-        /// </remarks>
         public static Assembly GetExecutingAssembly()
         {
-            //foreach (var stack in new Exception().JavaStackTrace)
-            //    Console.WriteLine("{0} {1} {2}", stack.ClassName, stack.MethodName, stack.IsNativeMethod);
             string className = new Exception().JavaStackTrace[1].ClassName;
             return typeof(Assembly).GetClassLoader().LoadClass(className).Assembly;
         }
@@ -113,25 +98,7 @@ namespace System.Reflection
         /// </summary>
         public static Assembly GetEntryAssembly()
         {
-            var mainStack = Looper.MainLooper.Thread.StackTrace;
-            var classLoader = typeof(Assembly).GetClassLoader();
-
-            const string androidAssembly = "android";
-            Assembly systemAssembly = AssemblyTypes.DefaultAssembly;
-
-            // find the deepest class belonging not to a system assembly.
-            foreach (var trace in mainStack.Reverse())
-            {
-                string className = trace.ClassName;
-                var assembly =  classLoader.LoadClass(className).Assembly;
-
-                bool isSystemAssembly = ReferenceEquals(assembly, systemAssembly)
-                                     || assembly.FullName == androidAssembly;
-                
-                if(!isSystemAssembly)
-                    return assembly;
-            }
-            return AssemblyTypes.DefaultAssembly;
+            return AssemblyTypes.GetEntryAssembly();
         }
         
     }

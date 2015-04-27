@@ -21,7 +21,7 @@ using Java.Lang.Annotation;
 namespace Dot42.Internal
 {
     /// <summary>
-    /// Annotation interface for property metadata.
+    /// Annotation interface specifying the assembly nme of a single type.
     /// </summary>
     [Include(TypeCondition = typeof(AssemblyTypes), ApplyToMembers = true)]
     internal interface IAssemblyType : IAnnotation
@@ -38,12 +38,14 @@ namespace Dot42.Internal
     }
 
     /// <summary>
-    /// Annotation interface for property metadata.
+    /// Annotation interface for assembly reflection
     /// </summary>
     [Include(TypeCondition = typeof(AssemblyTypes), ApplyToMembers = true)]
     internal interface IAssemblyTypes : IAnnotation
     {
         IAssemblyType[] Types();
+        
+        string EntryAssemblyName();
     }
 }
 
