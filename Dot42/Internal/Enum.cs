@@ -38,7 +38,7 @@ namespace Dot42.Internal
         /// Gets the underlying value as int.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        internal virtual int IntValue()
+        public virtual int IntValue()
         {
             return (int)LongValue();
         }
@@ -47,13 +47,13 @@ namespace Dot42.Internal
         /// Gets the underlying value as long.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        internal virtual long LongValue()
+        public virtual long LongValue()
         {
             return (long)IntValue();
         }
 
         [Include(TypeCondition = typeof(System.Enum))]
-        internal static Enum Get(System.Type enumType, int value)
+        public static Enum Get(System.Type enumType, int value)
         {
             var infoField = enumType.JavaGetDeclaredField("info__");
             var infoInstance = (EnumInfo)infoField.Get(null);
@@ -64,7 +64,7 @@ namespace Dot42.Internal
         }
 
         [Include(TypeCondition = typeof(System.Enum))]
-        internal static Enum Get(System.Type enumType, long value)
+        public static Enum Get(System.Type enumType, long value)
         {
             var infoField = enumType.JavaGetDeclaredField("info__");
             var infoInstance = (EnumInfo)infoField.Get(null);
@@ -79,7 +79,7 @@ namespace Dot42.Internal
         /// java.lang.Byte or another Enum type.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        internal static Enum GetFromObject(System.Type enumType, object value)
+        public static Enum GetFromObject(System.Type enumType, object value)
         {
             if (value is long)
                 return Get(enumType, (long)value);

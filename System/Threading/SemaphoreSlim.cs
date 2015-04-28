@@ -276,7 +276,7 @@ namespace System.Threading
         [StringFormatMethod("format")]
         private static void VerboseLog(string format, params object[] args)
         {
-            Log.Verbose("dot42.threading", format, args);
+            //Log.Verbose("dot42.threading", format, args);
         }
     }
 }

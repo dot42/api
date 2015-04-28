@@ -15,11 +15,9 @@
 // limitations under the License.
 
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 using Java.Lang;
 using Java.Util.Concurrent;
-using Java.Util.Concurrent.Atomic;
 
 namespace Dot42.Internal
 {
