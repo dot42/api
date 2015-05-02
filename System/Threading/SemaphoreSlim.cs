@@ -11,13 +11,13 @@ namespace System.Threading
         private readonly Semaphore _sem;
         private volatile bool _wasDisposed;
         private volatile ConcurrentLinkedQueue<AsyncWaiter> _asyncWaiters;
-        private static int idgen;
+        //private static int idgen;
         private readonly int id;
         
         public SemaphoreSlim(int initialCount)
         {
             _sem = new Semaphore(initialCount);
-            id = Interlocked.Increment(ref idgen);
+            //id = Interlocked.Increment(ref idgen);
         }
 
         public Task WaitAsync(CancellationToken token)
