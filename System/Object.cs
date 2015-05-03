@@ -116,7 +116,7 @@ namespace Java.Lang
     /// <summary>
     /// This is the same as System.Object.
     /// </summary>
-    [Dot42.DexImport("java/lang/Object", AccessFlags = 33)]
+    [Dot42.DexImport("java/lang/Object", IgnoreFromJava = true, Priority = 1)]
     [Obsolete("use System.Object")]
     public partial class Object : global::System.Object
     {

@@ -24,7 +24,7 @@ namespace System
     /// Base class for array.
     /// This will always map to java/lang/Object because there is no special base class for java array's.
     /// </summary>
-    [Dot42.DexImport("java/lang/Object", IgnoreFromJava = true)]
+    [Dot42.DexImport("java/lang/Object", IgnoreFromJava = true, Priority = 1)]
     public abstract class Array : IEnumerable, ICollection, IList
     {
         /// <summary>
