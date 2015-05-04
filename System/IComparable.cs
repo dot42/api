@@ -21,7 +21,7 @@ namespace System
     /// Defines a generalized type-specific comparison method that a value type or class implements to order or sort its instances.
     /// </summary>
     [ComVisible(true)]
-    [Dot42.DexImport("java/lang/Comparable", IgnoreFromJava = true)]
+    [Dot42.DexImport("java/lang/Comparable", IgnoreFromJava = true, Priority = 1)]
     public interface IComparable
     {
         [Dot42.DexImport("compareTo", "(Ljava/lang/Object;)I")]

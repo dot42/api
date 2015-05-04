@@ -19,7 +19,7 @@ using Dot42;
 
 namespace Android.Widget
 {
-    [Dot42.DexImport("android/widget/AdapterView", AccessFlags = 1057, Signature = "<T::Landroid/widget/Adapter;>Landroid/view/ViewGroup;")]
+    [Dot42.DexImport("android/widget/AdapterView", Priority=1, IgnoreFromJava=true, AccessFlags = 1057, Signature = "<T::Landroid/widget/Adapter;>Landroid/view/ViewGroup;")]
     public abstract class AdapterView : AdapterView<object>
     {
         /// <summary>
