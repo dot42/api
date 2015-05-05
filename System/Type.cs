@@ -22,11 +22,10 @@ using Dot42.Internal;
 using Dot42.Internal.Generics;
 using Java.Lang;
 using Java.Lang.Reflect;
-using Java.Util;
 
 namespace System
 {
-	/*abstract*/ partial class Type : ICustomAttributeProvider
+	/*abstract*/ partial class Type // : ICustomAttributeProvider // can't implement an new interface on a DexImport class, as long as this is not specially handled by the compiler. This one is not.
 	{
         internal const BindingFlags AllMembersBindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
         internal const BindingFlags PublicMembersBindingFlags = BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance;

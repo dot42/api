@@ -477,7 +477,7 @@ namespace System
             return (Array)Java.Lang.Reflect.Array.NewInstance(type, length);
         }
         /// <summary>
-        /// multidimensional arras are not really supported.
+        /// multidimensional arrays are not really supported.
         /// </summary>
         [Obsolete("Java does not support true multidimensional arrays (i believe)")]
         public static Array CreateInstance(Type type, int[] lengths)

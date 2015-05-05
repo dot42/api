@@ -16,6 +16,7 @@
 using System.Runtime.CompilerServices;
 
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using Android.App;
 
 using Dot42.Threading.Tasks;
@@ -25,7 +26,9 @@ namespace System.Threading.Tasks
 {
 	public class Task<TResult> : Task
 	{
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
         private readonly static HashMap<Type, TaskFactory<TResult>> defaultFactory = new HashMap<Type, TaskFactory<TResult>>();
+
         /// <summary>
         /// Provides access to factory methods for creating Task&lt;TResult&gt; instances.
         /// </summary>

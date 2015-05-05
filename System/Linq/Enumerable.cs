@@ -38,6 +38,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics.CodeAnalysis;
 using Dot42;
 using Java.Lang;
 using Java.Util;
@@ -51,10 +52,12 @@ namespace System.Linq
 			Throw
 		}
 
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
 		static class PredicateOf<T> {
 			public static readonly Func<T, bool> Always = (t) => true;
 		}
 
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
 		static class Function<T> {
 			public static readonly Func<T, T> Identity = (t) => t;
 		}

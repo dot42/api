@@ -27,6 +27,7 @@
 //
 
 
+using System.Diagnostics.CodeAnalysis;
 using Java.Util;
 using Java.Util.Concurrent;
 
@@ -34,6 +35,7 @@ namespace System.Collections.Generic {
 	[Serializable]
 	public abstract class EqualityComparer <T> : IEqualityComparer, IEqualityComparer <T> 
     {
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
         private static readonly ConcurrentHashMap<Type, object> _comparers = new ConcurrentHashMap<Type, object>();
 		
 	    public abstract int GetHashCode (T obj);

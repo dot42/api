@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 
 namespace System
 {
+    [SuppressMessage("dot42", "StaticConstructorUsesGenericParameter")]
     public class Lazy<T> where T: class 
     {
         private readonly Func<T> _initializor;

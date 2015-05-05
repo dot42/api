@@ -28,12 +28,14 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+using System.Diagnostics.CodeAnalysis;
 using Java.Util.Concurrent;
 
 namespace System.Collections.Generic {
 	[Serializable]
 	public abstract class Comparer<T> : IComparer<T>, IComparer
 	{
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
         private static readonly ConcurrentHashMap<Type, object> _comparers = new ConcurrentHashMap<Type, object>();
 
 		public abstract int Compare (T x, T y);
