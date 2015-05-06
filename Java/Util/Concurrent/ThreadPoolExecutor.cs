@@ -45,7 +45,7 @@ namespace Java.Util.Concurrent
         /// <java-name>
         /// execute
         /// </java-name>
-        [Dot42.DexImport("execute", "(Ljava/lang/Runnable;)V", AccessFlags = 1)]
+        [Dot42.DexImport("execute", "(Ljava/lang/Runnable;)V", AccessFlags = 1, IgnoreFromJava = true)]
         public void Execute(Action action) /* MethodBuilder.Create */
         {
         }
