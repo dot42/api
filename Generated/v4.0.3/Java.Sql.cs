@@ -205,7 +205,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// getParameter
 				/// </java-name>
-				public virtual bool IsParameter
+				public virtual bool Parameter
 				{
 						[Dot42.DexImport("getParameter", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -220,7 +220,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// getRead
 				/// </java-name>
-				public virtual bool IsRead
+				public virtual bool Read
 				{
 						[Dot42.DexImport("getRead", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2481,7 +2481,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// getAutoCommit
 				/// </java-name>
-				bool IsAutoCommit
+				bool AutoCommit
 				{
 						[Dot42.DexImport("getAutoCommit", "()Z", AccessFlags = 1025)]
 						get;
@@ -8934,7 +8934,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// getMoreResults
 				/// </java-name>
-				bool IsMoreResults
+				bool MoreResults
 				{
 						[Dot42.DexImport("getMoreResults", "()Z", AccessFlags = 1025)]
 						get;

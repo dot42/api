@@ -8724,7 +8724,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// getPreserveEGLContextOnPause
 				/// </java-name>
-				public virtual bool IsPreserveEGLContextOnPause
+				public virtual bool PreserveEGLContextOnPause
 				{
 						[Dot42.DexImport("getPreserveEGLContextOnPause", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

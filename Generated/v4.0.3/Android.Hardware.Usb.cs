@@ -1425,6 +1425,21 @@ namespace Android.Hardware.Usb
 				}
 
 				/// <summary>
+				///  <para>Cancels a pending queue operation.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if cancelling succeeded </para>
+				/// </returns>
+				/// <java-name>
+				/// cancel
+				/// </java-name>
+				[Dot42.DexImport("cancel", "()Z", AccessFlags = 1)]
+				public virtual bool Cancel() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <summary>
 				///  <para>Returns the endpoint for the request, or null if the request is not opened.</para> <para></para>        
 				/// </summary>
 				/// <returns>
@@ -1454,21 +1469,6 @@ namespace Android.Hardware.Usb
 						get{ return default(object); }
 						[Dot42.DexImport("setClientData", "(Ljava/lang/Object;)V", AccessFlags = 1)]
 						set{ }
-				}
-
-				/// <summary>
-				///  <para>Cancels a pending queue operation.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>true if cancelling succeeded </para>
-				/// </returns>
-				/// <java-name>
-				/// cancel
-				/// </java-name>
-				public virtual bool Cancel
-				{
-						[Dot42.DexImport("cancel", "()Z", AccessFlags = 1)]
-						get{ return default(bool); }
 				}
 
 		}

@@ -416,6 +416,21 @@ namespace Android.Bluetooth
 				}
 
 				/// <summary>
+				///  <para>Cancel the current device discovery process. </para> <para>Requires android.Manifest.permission#BLUETOOTH_ADMIN. </para> <para>Because discovery is a heavyweight procedure for the Bluetooth adapter, this method should always be called before attempting to connect to a remote device with android.bluetooth.BluetoothSocket#connect(). Discovery is not managed by the Activity, but is run as a system service, so an application should always call cancel discovery even if it did not directly request a discovery, just to be sure. </para> <para>If Bluetooth state is not STATE_ON, this API will return false. After turning on Bluetooth, wait for ACTION_STATE_CHANGED with STATE_ON to get the updated value.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true on success, false on error </para>
+				/// </returns>
+				/// <java-name>
+				/// cancelDiscovery
+				/// </java-name>
+				[Dot42.DexImport("cancelDiscovery", "()Z", AccessFlags = 1)]
+				public bool CancelDiscovery() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <summary>
 				///  <para>Get the current connection state of a profile. This function can be used to check whether the local Bluetooth adapter is connected to any remote device for a specific profile. Profile can be one of BluetoothProfile#HEALTH, BluetoothProfile#HEADSET, BluetoothProfile#A2DP.</para> <para>Requires android.Manifest.permission#BLUETOOTH.</para> <para>Return value can be one of BluetoothProfile#STATE_DISCONNECTED, BluetoothProfile#STATE_CONNECTING, BluetoothProfile#STATE_CONNECTED, BluetoothProfile#STATE_DISCONNECTING </para>        
 				/// </summary>
 				/// <java-name>
@@ -587,21 +602,6 @@ namespace Android.Bluetooth
 				{
 						[Dot42.DexImport("getScanMode", "()I", AccessFlags = 1)]
 						get{ return default(int); }
-				}
-
-				/// <summary>
-				///  <para>Cancel the current device discovery process. </para> <para>Requires android.Manifest.permission#BLUETOOTH_ADMIN. </para> <para>Because discovery is a heavyweight procedure for the Bluetooth adapter, this method should always be called before attempting to connect to a remote device with android.bluetooth.BluetoothSocket#connect(). Discovery is not managed by the Activity, but is run as a system service, so an application should always call cancel discovery even if it did not directly request a discovery, just to be sure. </para> <para>If Bluetooth state is not STATE_ON, this API will return false. After turning on Bluetooth, wait for ACTION_STATE_CHANGED with STATE_ON to get the updated value.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>true on success, false on error </para>
-				/// </returns>
-				/// <java-name>
-				/// cancelDiscovery
-				/// </java-name>
-				public bool CancelDiscovery
-				{
-						[Dot42.DexImport("cancelDiscovery", "()Z", AccessFlags = 1)]
-						get{ return default(bool); }
 				}
 
 				/// <summary>

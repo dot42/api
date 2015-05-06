@@ -1649,7 +1649,7 @@ namespace Android.Hardware
 						/// <java-name>
 						/// getAutoExposureLock
 						/// </java-name>
-						public virtual bool IsAutoExposureLock
+						public virtual bool AutoExposureLock
 						{
 								[Dot42.DexImport("getAutoExposureLock", "()Z", AccessFlags = 1)]
 								get{ return default(bool); }
@@ -1681,7 +1681,7 @@ namespace Android.Hardware
 						/// <java-name>
 						/// getAutoWhiteBalanceLock
 						/// </java-name>
-						public virtual bool IsAutoWhiteBalanceLock
+						public virtual bool AutoWhiteBalanceLock
 						{
 								[Dot42.DexImport("getAutoWhiteBalanceLock", "()Z", AccessFlags = 1)]
 								get{ return default(bool); }
@@ -1884,7 +1884,7 @@ namespace Android.Hardware
 						/// <java-name>
 						/// getVideoStabilization
 						/// </java-name>
-						public virtual bool IsVideoStabilization
+						public virtual bool VideoStabilization
 						{
 								[Dot42.DexImport("getVideoStabilization", "()Z", AccessFlags = 1)]
 								get{ return default(bool); }

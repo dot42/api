@@ -1748,6 +1748,17 @@ namespace Java.Security
 				}
 
 				/// <summary>
+				///  <para>Sets the system's scope.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setSystemScope
+				/// </java-name>
+				[Dot42.DexImport("setSystemScope", "(Ljava/security/IdentityScope;)V", AccessFlags = 12)]
+				protected internal static void SetSystemScope(global::Java.Security.IdentityScope scope) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
 				///  <para>Returns the number of <c>Identity </c> objects in this scope.</para> <para></para>        
 				/// </summary>
 				/// <returns>
@@ -1856,8 +1867,6 @@ namespace Java.Security
 				{
 						[Dot42.DexImport("getSystemScope", "()Ljava/security/IdentityScope;", AccessFlags = 9)]
 						get{ return default(global::Java.Security.IdentityScope); }
-						[Dot42.DexImport("setSystemScope", "(Ljava/security/IdentityScope;)V", AccessFlags = 12)]
-						set{ }
 				}
 
 		}

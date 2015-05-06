@@ -278,7 +278,7 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getEnabled
 				/// </java-name>
-				public virtual bool IsEnabled
+				public virtual bool Enabled
 				{
 						[Dot42.DexImport("getEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -476,7 +476,7 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getStrengthSupported
 				/// </java-name>
-				public virtual bool IsStrengthSupported
+				public virtual bool StrengthSupported
 				{
 						[Dot42.DexImport("getStrengthSupported", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -1596,7 +1596,7 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getStrengthSupported
 				/// </java-name>
-				public virtual bool IsStrengthSupported
+				public virtual bool StrengthSupported
 				{
 						[Dot42.DexImport("getStrengthSupported", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -1935,7 +1935,7 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getEnabled
 				/// </java-name>
-				public virtual bool IsEnabled
+				public virtual bool Enabled
 				{
 						[Dot42.DexImport("getEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

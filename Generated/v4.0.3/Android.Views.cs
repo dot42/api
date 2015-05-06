@@ -793,7 +793,7 @@ namespace Android.Views
 				/// <java-name>
 				/// getResult
 				/// </java-name>
-				public virtual bool IsResult
+				public virtual bool Result
 				{
 						[Dot42.DexImport("getResult", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -15653,7 +15653,7 @@ namespace Android.Views
 				/// <java-name>
 				/// getKeepScreenOn
 				/// </java-name>
-				public virtual bool IsKeepScreenOn
+				public virtual bool KeepScreenOn
 				{
 						[Dot42.DexImport("getKeepScreenOn", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -15906,7 +15906,7 @@ namespace Android.Views
 				/// <java-name>
 				/// getFilterTouchesWhenObscured
 				/// </java-name>
-				public virtual bool IsFilterTouchesWhenObscured
+				public virtual bool FilterTouchesWhenObscured
 				{
 						[Dot42.DexImport("getFilterTouchesWhenObscured", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

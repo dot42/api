@@ -1195,7 +1195,7 @@ namespace Java.Util.Logging
 				/// <java-name>
 				/// getUseParentHandlers
 				/// </java-name>
-				public virtual bool IsUseParentHandlers
+				public virtual bool UseParentHandlers
 				{
 						[Dot42.DexImport("getUseParentHandlers", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

@@ -326,6 +326,18 @@ namespace Java.Nio.Channels.Spi
 				}
 
 				/// <summary>
+				///  <para>Returns this channel's set of canceled selection keys. </para>        
+				/// </summary>
+				/// <java-name>
+				/// cancelledKeys
+				/// </java-name>
+				[Dot42.DexImport("cancelledKeys", "()Ljava/util/Set;", AccessFlags = 20, Signature = "()Ljava/util/Set<Ljava/nio/channels/SelectionKey;>;")]
+				protected internal global::Java.Util.ISet<global::Java.Nio.Channels.SelectionKey> CancelledKeys() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.ISet<global::Java.Nio.Channels.SelectionKey>);
+				}
+
+				/// <summary>
 				///  <para>Registers <c>channel </c> with this selector.</para> <para></para>        
 				/// </summary>
 				/// <returns>
@@ -386,18 +398,6 @@ namespace Java.Nio.Channels.Spi
 				{
 						[Dot42.DexImport("isOpen", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
-				}
-
-				/// <summary>
-				///  <para>Returns this channel's set of canceled selection keys. </para>        
-				/// </summary>
-				/// <java-name>
-				/// cancelledKeys
-				/// </java-name>
-				protected internal global::Java.Util.ISet<global::Java.Nio.Channels.SelectionKey> CancelledKeys
-				{
-						[Dot42.DexImport("cancelledKeys", "()Ljava/util/Set;", AccessFlags = 20, Signature = "()Ljava/util/Set<Ljava/nio/channels/SelectionKey;>;")]
-						get{ return default(global::Java.Util.ISet<global::Java.Nio.Channels.SelectionKey>); }
 				}
 
 		}

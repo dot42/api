@@ -719,22 +719,22 @@ namespace Org.Apache.Http.Impl.Client
 				/// applicationParams
 				/// </java-name>
 				[Dot42.DexImport("applicationParams", "Lorg/apache/http/params/HttpParams;", AccessFlags = 20)]
-				protected internal readonly global::Org.Apache.Http.Params.IHttpParams @applicationparams;
+				protected internal readonly global::Org.Apache.Http.Params.IHttpParams @applicationParams;
 				/// <java-name>
 				/// clientParams
 				/// </java-name>
 				[Dot42.DexImport("clientParams", "Lorg/apache/http/params/HttpParams;", AccessFlags = 20)]
-				protected internal readonly global::Org.Apache.Http.Params.IHttpParams @clientparams;
+				protected internal readonly global::Org.Apache.Http.Params.IHttpParams @clientParams;
 				/// <java-name>
 				/// requestParams
 				/// </java-name>
 				[Dot42.DexImport("requestParams", "Lorg/apache/http/params/HttpParams;", AccessFlags = 20)]
-				protected internal readonly global::Org.Apache.Http.Params.IHttpParams @requestparams;
+				protected internal readonly global::Org.Apache.Http.Params.IHttpParams @requestParams;
 				/// <java-name>
 				/// overrideParams
 				/// </java-name>
 				[Dot42.DexImport("overrideParams", "Lorg/apache/http/params/HttpParams;", AccessFlags = 20)]
-				protected internal readonly global::Org.Apache.Http.Params.IHttpParams @overrideparams;
+				protected internal readonly global::Org.Apache.Http.Params.IHttpParams @overrideParams;
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/params/HttpParams;Lorg/apache/http/params/HttpParams;Lorg/apach" +
     "e/http/params/HttpParams;Lorg/apache/http/params/HttpParams;)V", AccessFlags = 1)]
 				public ClientParamsStack(global::Org.Apache.Http.Params.IHttpParams httpParams, global::Org.Apache.Http.Params.IHttpParams httpParams1, global::Org.Apache.Http.Params.IHttpParams httpParams2, global::Org.Apache.Http.Params.IHttpParams httpParams3) /* MethodBuilder.Create */ 

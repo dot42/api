@@ -1096,7 +1096,7 @@ namespace Android.Net.Sip
 				/// <java-name>
 				/// getSendKeepAlive
 				/// </java-name>
-				public virtual bool IsSendKeepAlive
+				public virtual bool SendKeepAlive
 				{
 						[Dot42.DexImport("getSendKeepAlive", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -1111,7 +1111,7 @@ namespace Android.Net.Sip
 				/// <java-name>
 				/// getAutoRegistration
 				/// </java-name>
-				public virtual bool IsAutoRegistration
+				public virtual bool AutoRegistration
 				{
 						[Dot42.DexImport("getAutoRegistration", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

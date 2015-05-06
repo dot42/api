@@ -195,7 +195,7 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getSpecified
 				/// </java-name>
-				bool IsSpecified
+				bool Specified
 				{
 						[Dot42.DexImport("getSpecified", "()Z", AccessFlags = 1025)]
 						get;
@@ -644,7 +644,7 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getXmlStandalone
 				/// </java-name>
-				bool IsXmlStandalone
+				bool XmlStandalone
 				{
 						[Dot42.DexImport("getXmlStandalone", "()Z", AccessFlags = 1025)]
 						get;
@@ -672,7 +672,7 @@ namespace Org.W3c.Dom
 				/// <java-name>
 				/// getStrictErrorChecking
 				/// </java-name>
-				bool IsStrictErrorChecking
+				bool StrictErrorChecking
 				{
 						[Dot42.DexImport("getStrictErrorChecking", "()Z", AccessFlags = 1025)]
 						get;

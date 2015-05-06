@@ -2540,7 +2540,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getNavDump
 				/// </java-name>
-				public virtual bool IsNavDump
+				public virtual bool NavDump
 				{
 						[Dot42.DexImport("getNavDump", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2557,7 +2557,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getBuiltInZoomControls
 				/// </java-name>
-				public virtual bool IsBuiltInZoomControls
+				public virtual bool BuiltInZoomControls
 				{
 						[Dot42.DexImport("getBuiltInZoomControls", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2574,7 +2574,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getDisplayZoomControls
 				/// </java-name>
-				public virtual bool IsDisplayZoomControls
+				public virtual bool DisplayZoomControls
 				{
 						[Dot42.DexImport("getDisplayZoomControls", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2588,7 +2588,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getAllowFileAccess
 				/// </java-name>
-				public virtual bool IsAllowFileAccess
+				public virtual bool AllowFileAccess
 				{
 						[Dot42.DexImport("getAllowFileAccess", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2602,7 +2602,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getAllowContentAccess
 				/// </java-name>
-				public virtual bool IsAllowContentAccess
+				public virtual bool AllowContentAccess
 				{
 						[Dot42.DexImport("getAllowContentAccess", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2619,7 +2619,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getLoadWithOverviewMode
 				/// </java-name>
-				public virtual bool IsLoadWithOverviewMode
+				public virtual bool LoadWithOverviewMode
 				{
 						[Dot42.DexImport("getLoadWithOverviewMode", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2633,7 +2633,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getUseWebViewBackgroundForOverscrollBackground
 				/// </java-name>
-				public virtual bool IsUseWebViewBackgroundForOverscrollBackground
+				public virtual bool UseWebViewBackgroundForOverscrollBackground
 				{
 						[Dot42.DexImport("getUseWebViewBackgroundForOverscrollBackground", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2650,7 +2650,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getSaveFormData
 				/// </java-name>
-				public virtual bool IsSaveFormData
+				public virtual bool SaveFormData
 				{
 						[Dot42.DexImport("getSaveFormData", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2667,7 +2667,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getSavePassword
 				/// </java-name>
-				public virtual bool IsSavePassword
+				public virtual bool SavePassword
 				{
 						[Dot42.DexImport("getSavePassword", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2715,7 +2715,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getLightTouchEnabled
 				/// </java-name>
-				public virtual bool IsLightTouchEnabled
+				public virtual bool LightTouchEnabled
 				{
 						[Dot42.DexImport("getLightTouchEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2729,7 +2729,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getUseDoubleTree
 				/// </java-name>
-				public virtual bool IsUseDoubleTree
+				public virtual bool UseDoubleTree
 				{
 						[Dot42.DexImport("getUseDoubleTree", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
@@ -2763,7 +2763,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getUseWideViewPort
 				/// </java-name>
-				public virtual bool IsUseWideViewPort
+				public virtual bool UseWideViewPort
 				{
 						[Dot42.DexImport("getUseWideViewPort", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
@@ -2950,7 +2950,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getLoadsImagesAutomatically
 				/// </java-name>
-				public virtual bool IsLoadsImagesAutomatically
+				public virtual bool LoadsImagesAutomatically
 				{
 						[Dot42.DexImport("getLoadsImagesAutomatically", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
@@ -2967,7 +2967,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getBlockNetworkImage
 				/// </java-name>
-				public virtual bool IsBlockNetworkImage
+				public virtual bool BlockNetworkImage
 				{
 						[Dot42.DexImport("getBlockNetworkImage", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
@@ -2984,7 +2984,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getBlockNetworkLoads
 				/// </java-name>
-				public virtual bool IsBlockNetworkLoads
+				public virtual bool BlockNetworkLoads
 				{
 						[Dot42.DexImport("getBlockNetworkLoads", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
@@ -3001,7 +3001,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getDomStorageEnabled
 				/// </java-name>
-				public virtual bool IsDomStorageEnabled
+				public virtual bool DomStorageEnabled
 				{
 						[Dot42.DexImport("getDomStorageEnabled", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
@@ -3035,7 +3035,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getDatabaseEnabled
 				/// </java-name>
-				public virtual bool IsDatabaseEnabled
+				public virtual bool DatabaseEnabled
 				{
 						[Dot42.DexImport("getDatabaseEnabled", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
@@ -3052,7 +3052,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getJavaScriptEnabled
 				/// </java-name>
-				public virtual bool IsJavaScriptEnabled
+				public virtual bool JavaScriptEnabled
 				{
 						[Dot42.DexImport("getJavaScriptEnabled", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
@@ -3069,7 +3069,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getPluginsEnabled
 				/// </java-name>
-				public virtual bool IsPluginsEnabled
+				public virtual bool PluginsEnabled
 				{
 						[Dot42.DexImport("getPluginsEnabled", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }
@@ -3103,7 +3103,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// getJavaScriptCanOpenWindowsAutomatically
 				/// </java-name>
-				public virtual bool IsJavaScriptCanOpenWindowsAutomatically
+				public virtual bool JavaScriptCanOpenWindowsAutomatically
 				{
 						[Dot42.DexImport("getJavaScriptCanOpenWindowsAutomatically", "()Z", AccessFlags = 33)]
 						get{ return default(bool); }

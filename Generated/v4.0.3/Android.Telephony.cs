@@ -1160,7 +1160,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// getRoaming
 				/// </java-name>
-				public virtual bool IsRoaming
+				public virtual bool Roaming
 				{
 						[Dot42.DexImport("getRoaming", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

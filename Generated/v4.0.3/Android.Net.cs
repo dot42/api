@@ -275,7 +275,7 @@ namespace Android.Net
 				/// <java-name>
 				/// getBackgroundDataSetting
 				/// </java-name>
-				public virtual bool IsBackgroundDataSetting
+				public virtual bool BackgroundDataSetting
 				{
 						[Dot42.DexImport("getBackgroundDataSetting", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -3284,7 +3284,7 @@ namespace Android.Net
 				/// <java-name>
 				/// getAllowUnregisteredParamaters
 				/// </java-name>
-				public virtual bool IsAllowUnregisteredParamaters
+				public virtual bool AllowUnregisteredParamaters
 				{
 						[Dot42.DexImport("getAllowUnregisteredParamaters", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -3301,7 +3301,7 @@ namespace Android.Net
 				/// <java-name>
 				/// getPreferFirstRepeatedParameter
 				/// </java-name>
-				public virtual bool IsPreferFirstRepeatedParameter
+				public virtual bool PreferFirstRepeatedParameter
 				{
 						[Dot42.DexImport("getPreferFirstRepeatedParameter", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

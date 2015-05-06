@@ -1470,7 +1470,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getWantsAllOnMoveCalls
 				/// </java-name>
-				public virtual bool IsWantsAllOnMoveCalls
+				public virtual bool WantsAllOnMoveCalls
 				{
 						[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

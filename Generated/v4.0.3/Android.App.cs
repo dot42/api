@@ -7321,7 +7321,7 @@ namespace Android.App
 				/// <java-name>
 				/// getShowsDialog
 				/// </java-name>
-				public virtual bool IsShowsDialog
+				public virtual bool ShowsDialog
 				{
 						[Dot42.DexImport("getShowsDialog", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -9022,7 +9022,7 @@ namespace Android.App
 				/// <java-name>
 				/// getRetainInstance
 				/// </java-name>
-				public virtual bool IsRetainInstance
+				public virtual bool RetainInstance
 				{
 						[Dot42.DexImport("getRetainInstance", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
@@ -9039,7 +9039,7 @@ namespace Android.App
 				/// <java-name>
 				/// getUserVisibleHint
 				/// </java-name>
-				public virtual bool IsUserVisibleHint
+				public virtual bool UserVisibleHint
 				{
 						[Dot42.DexImport("getUserVisibleHint", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -13700,7 +13700,7 @@ namespace Android.App
 				/// <java-name>
 				/// getVoiceSearchEnabled
 				/// </java-name>
-				public bool IsVoiceSearchEnabled
+				public bool VoiceSearchEnabled
 				{
 						[Dot42.DexImport("getVoiceSearchEnabled", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -13712,7 +13712,7 @@ namespace Android.App
 				/// <java-name>
 				/// getVoiceSearchLaunchWebSearch
 				/// </java-name>
-				public bool IsVoiceSearchLaunchWebSearch
+				public bool VoiceSearchLaunchWebSearch
 				{
 						[Dot42.DexImport("getVoiceSearchLaunchWebSearch", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -13724,7 +13724,7 @@ namespace Android.App
 				/// <java-name>
 				/// getVoiceSearchLaunchRecognizer
 				/// </java-name>
-				public bool IsVoiceSearchLaunchRecognizer
+				public bool VoiceSearchLaunchRecognizer
 				{
 						[Dot42.DexImport("getVoiceSearchLaunchRecognizer", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

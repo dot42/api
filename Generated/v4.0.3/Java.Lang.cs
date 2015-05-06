@@ -3359,7 +3359,7 @@ namespace Java.Lang
 				/// inCheck
 				/// </java-name>
 				[Dot42.DexImport("inCheck", "Z", AccessFlags = 4)]
-				protected internal bool InCheck;
+				protected internal bool @inCheck;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public SecurityManager() /* MethodBuilder.Create */ 
 				{
@@ -3706,7 +3706,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// getInCheck
 				/// </java-name>
-				public virtual bool IsInCheck
+				public virtual bool InCheck
 				{
 						[Dot42.DexImport("getInCheck", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -5537,6 +5537,18 @@ namespace Java.Lang
 				}
 
 				/// <summary>
+				///  <para>Returns an unmodifiable map of all environment variables to their values. </para>        
+				/// </summary>
+				/// <java-name>
+				/// getenv
+				/// </java-name>
+				[Dot42.DexImport("getenv", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
+				public static global::Java.Util.IMap<string, string> Getenv() /* MethodBuilder.Create */ 
+				{
+						return default(global::Java.Util.IMap<string, string>);
+				}
+
+				/// <summary>
 				///  <para>Returns the inherited channel from the creator of the current virtual machine.</para> <para> <para>SelectorProvider </para> <para>SelectorProvider::inheritedChannel() </para></para>        
 				/// </summary>
 				/// <returns>
@@ -5692,18 +5704,6 @@ namespace Java.Lang
 				public static string MapLibraryName(string userLibName) /* MethodBuilder.Create */ 
 				{
 						return default(string);
-				}
-
-				/// <summary>
-				///  <para>Returns an unmodifiable map of all environment variables to their values. </para>        
-				/// </summary>
-				/// <java-name>
-				/// getenv
-				/// </java-name>
-				public static global::Java.Util.IMap<string, string> env
-				{
-						[Dot42.DexImport("getenv", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;")]
-						get{ return default(global::Java.Util.IMap<string, string>); }
 				}
 
 				/// <summary>

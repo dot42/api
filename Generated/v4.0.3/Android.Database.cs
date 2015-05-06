@@ -710,7 +710,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getWantsAllOnMoveCalls
 				/// </java-name>
-				public virtual bool IsWantsAllOnMoveCalls
+				public virtual bool WantsAllOnMoveCalls
 				{
 						[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -1479,7 +1479,7 @@ namespace Android.Database
 						get{ return default(bool); }
 				}
 
-				public override bool IsWantsAllOnMoveCalls
+				public override bool WantsAllOnMoveCalls
 				{
 						[Dot42.DexImport("android/database/Cursor", "getWantsAllOnMoveCalls", "()Z", AccessFlags = 1025)]
 						get{ return default(bool); }
@@ -2676,7 +2676,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getWantsAllOnMoveCalls
 				/// </java-name>
-				public virtual bool IsWantsAllOnMoveCalls
+				public virtual bool WantsAllOnMoveCalls
 				{
 						[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -4265,7 +4265,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getWantsAllOnMoveCalls
 				/// </java-name>
-				bool IsWantsAllOnMoveCalls
+				bool WantsAllOnMoveCalls
 				{
 						[Dot42.DexImport("getWantsAllOnMoveCalls", "()Z", AccessFlags = 1025)]
 						get;

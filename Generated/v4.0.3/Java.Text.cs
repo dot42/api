@@ -1682,7 +1682,7 @@ namespace Java.Text
 				/// numberFormat
 				/// </java-name>
 				[Dot42.DexImport("numberFormat", "Ljava/text/NumberFormat;", AccessFlags = 4)]
-				protected internal global::Java.Text.NumberFormat @numberformat;
+				protected internal global::Java.Text.NumberFormat @numberFormat;
 				/// <summary>
 				///  <para>The format style constant defining the default format style. The default is MEDIUM. </para>        
 				/// </summary>

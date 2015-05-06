@@ -12,12 +12,12 @@ namespace Org.Apache.Http.Entity
 				/// contentType
 				/// </java-name>
 				[Dot42.DexImport("contentType", "Lorg/apache/http/Header;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.IHeader @contenttype;
+				protected internal global::Org.Apache.Http.IHeader @contentType;
 				/// <java-name>
 				/// contentEncoding
 				/// </java-name>
 				[Dot42.DexImport("contentEncoding", "Lorg/apache/http/Header;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.IHeader @contentencoding;
+				protected internal global::Org.Apache.Http.IHeader @contentEncoding;
 				/// <java-name>
 				/// chunked
 				/// </java-name>

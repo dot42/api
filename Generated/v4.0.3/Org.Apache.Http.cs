@@ -75,7 +75,7 @@ namespace Org.Apache.Http
 				/// schemeName
 				/// </java-name>
 				[Dot42.DexImport("schemeName", "Ljava/lang/String;", AccessFlags = 20)]
-				internal readonly string @schemename;
+				internal readonly string @schemeName;
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;ILjava/lang/String;)V", AccessFlags = 1)]
 				public HttpHost(string @string, int int32, string string1) /* MethodBuilder.Create */ 
 				{

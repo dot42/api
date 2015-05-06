@@ -203,7 +203,7 @@ namespace Org.W3c.Dom.Ls
 				/// <java-name>
 				/// getCertifiedText
 				/// </java-name>
-				bool IsCertifiedText
+				bool CertifiedText
 				{
 						[Dot42.DexImport("getCertifiedText", "()Z", AccessFlags = 1025)]
 						get;
@@ -368,7 +368,7 @@ namespace Org.W3c.Dom.Ls
 				/// <java-name>
 				/// getAsync
 				/// </java-name>
-				bool IsAsync
+				bool Async
 				{
 						[Dot42.DexImport("getAsync", "()Z", AccessFlags = 1025)]
 						get;
@@ -380,7 +380,7 @@ namespace Org.W3c.Dom.Ls
 				/// <java-name>
 				/// getBusy
 				/// </java-name>
-				bool IsBusy
+				bool Busy
 				{
 						[Dot42.DexImport("getBusy", "()Z", AccessFlags = 1025)]
 						get;

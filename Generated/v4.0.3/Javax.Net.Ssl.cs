@@ -251,7 +251,7 @@ namespace Javax.Net.Ssl
 				/// hostnameVerifier
 				/// </java-name>
 				[Dot42.DexImport("hostnameVerifier", "Ljavax/net/ssl/HostnameVerifier;", AccessFlags = 4)]
-				protected internal global::Javax.Net.Ssl.IHostnameVerifier @hostnameverifier;
+				protected internal global::Javax.Net.Ssl.IHostnameVerifier @hostnameVerifier;
 				/// <summary>
 				///  <para>Creates a new <c>HttpsURLConnection </c> with the specified <c>URL </c> .</para> <para></para>        
 				/// </summary>
@@ -1846,7 +1846,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getEnableSessionCreation
 				/// </java-name>
-				public abstract bool IsEnableSessionCreation
+				public abstract bool EnableSessionCreation
 				{
 						[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
 						get;
@@ -1878,7 +1878,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getNeedClientAuth
 				/// </java-name>
-				public abstract bool IsNeedClientAuth
+				public abstract bool NeedClientAuth
 				{
 						[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
 						get;
@@ -1940,7 +1940,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getUseClientMode
 				/// </java-name>
-				public abstract bool IsUseClientMode
+				public abstract bool UseClientMode
 				{
 						[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
 						get;
@@ -1957,7 +1957,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getWantClientAuth
 				/// </java-name>
-				public abstract bool IsWantClientAuth
+				public abstract bool WantClientAuth
 				{
 						[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
 						get;
@@ -2363,7 +2363,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getNeedClientAuth
 				/// </java-name>
-				public virtual bool IsNeedClientAuth
+				public virtual bool NeedClientAuth
 				{
 						[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2377,7 +2377,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getWantClientAuth
 				/// </java-name>
-				public virtual bool IsWantClientAuth
+				public virtual bool WantClientAuth
 				{
 						[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2597,7 +2597,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getNeedClientAuth
 				/// </java-name>
-				public abstract bool IsNeedClientAuth
+				public abstract bool NeedClientAuth
 				{
 						[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
 						get;
@@ -2614,7 +2614,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getWantClientAuth
 				/// </java-name>
-				public abstract bool IsWantClientAuth
+				public abstract bool WantClientAuth
 				{
 						[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
 						get;
@@ -2631,7 +2631,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getUseClientMode
 				/// </java-name>
-				public abstract bool IsUseClientMode
+				public abstract bool UseClientMode
 				{
 						[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
 						get;
@@ -2648,7 +2648,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getEnableSessionCreation
 				/// </java-name>
-				public abstract bool IsEnableSessionCreation
+				public abstract bool EnableSessionCreation
 				{
 						[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
 						get;
@@ -2950,7 +2950,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getUseClientMode
 				/// </java-name>
-				public abstract bool IsUseClientMode
+				public abstract bool UseClientMode
 				{
 						[Dot42.DexImport("getUseClientMode", "()Z", AccessFlags = 1025)]
 						get;
@@ -2964,7 +2964,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getNeedClientAuth
 				/// </java-name>
-				public abstract bool IsNeedClientAuth
+				public abstract bool NeedClientAuth
 				{
 						[Dot42.DexImport("getNeedClientAuth", "()Z", AccessFlags = 1025)]
 						get;
@@ -2978,7 +2978,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getWantClientAuth
 				/// </java-name>
-				public abstract bool IsWantClientAuth
+				public abstract bool WantClientAuth
 				{
 						[Dot42.DexImport("getWantClientAuth", "()Z", AccessFlags = 1025)]
 						get;
@@ -2995,7 +2995,7 @@ namespace Javax.Net.Ssl
 				/// <java-name>
 				/// getEnableSessionCreation
 				/// </java-name>
-				public abstract bool IsEnableSessionCreation
+				public abstract bool EnableSessionCreation
 				{
 						[Dot42.DexImport("getEnableSessionCreation", "()Z", AccessFlags = 1025)]
 						get;

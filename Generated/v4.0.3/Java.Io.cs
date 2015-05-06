@@ -6667,6 +6667,17 @@ namespace Java.IO
 				}
 
 				/// <summary>
+				///  <para>Sets this field's offset in the object.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setOffset
+				/// </java-name>
+				[Dot42.DexImport("setOffset", "(I)V", AccessFlags = 4)]
+				protected internal virtual void SetOffset(int newValue) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
 				///  <para>Returns a string containing a concise, human-readable description of this field descriptor.</para> <para></para>        
 				/// </summary>
 				/// <returns>
@@ -6714,8 +6725,6 @@ namespace Java.IO
 				{
 						[Dot42.DexImport("getOffset", "()I", AccessFlags = 1)]
 						get{ return default(int); }
-						[Dot42.DexImport("setOffset", "(I)V", AccessFlags = 4)]
-						set{ }
 				}
 
 				/// <summary>

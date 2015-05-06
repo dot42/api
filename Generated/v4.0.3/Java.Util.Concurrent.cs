@@ -8009,7 +8009,7 @@ namespace Java.Util.Concurrent
 				/// <java-name>
 				/// getContinueExistingPeriodicTasksAfterShutdownPolicy
 				/// </java-name>
-				public virtual bool IsContinueExistingPeriodicTasksAfterShutdownPolicy
+				public virtual bool ContinueExistingPeriodicTasksAfterShutdownPolicy
 				{
 						[Dot42.DexImport("getContinueExistingPeriodicTasksAfterShutdownPolicy", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -8026,7 +8026,7 @@ namespace Java.Util.Concurrent
 				/// <java-name>
 				/// getExecuteExistingDelayedTasksAfterShutdownPolicy
 				/// </java-name>
-				public virtual bool IsExecuteExistingDelayedTasksAfterShutdownPolicy
+				public virtual bool ExecuteExistingDelayedTasksAfterShutdownPolicy
 				{
 						[Dot42.DexImport("getExecuteExistingDelayedTasksAfterShutdownPolicy", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

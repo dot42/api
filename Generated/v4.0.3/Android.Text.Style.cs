@@ -103,7 +103,7 @@ namespace Android.Text.Style
 				/// <java-name>
 				/// getDip
 				/// </java-name>
-				public virtual bool IsDip
+				public virtual bool Dip
 				{
 						[Dot42.DexImport("getDip", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

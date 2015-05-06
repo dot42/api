@@ -1093,7 +1093,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// proxySelector
 				/// </java-name>
 				[Dot42.DexImport("proxySelector", "Ljava/net/ProxySelector;", AccessFlags = 4)]
-				protected internal global::Java.Net.ProxySelector @proxyselector;
+				protected internal global::Java.Net.ProxySelector @proxySelector;
 				[Dot42.DexImport("<init>", "(Lorg/apache/http/conn/scheme/SchemeRegistry;Ljava/net/ProxySelector;)V", AccessFlags = 1)]
 				public ProxySelectorRoutePlanner(global::Org.Apache.Http.Conn.Scheme.SchemeRegistry schemeRegistry, global::Java.Net.ProxySelector proxySelector) /* MethodBuilder.Create */ 
 				{
@@ -1174,7 +1174,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// schemeRegistry
 				/// </java-name>
 				[Dot42.DexImport("schemeRegistry", "Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry @schemeregistry;
+				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry @schemeRegistry;
 				/// <java-name>
 				/// connOperator
 				/// </java-name>

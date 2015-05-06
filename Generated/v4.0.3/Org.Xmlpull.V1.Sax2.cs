@@ -50,17 +50,17 @@ namespace Org.Xmlpull.V1.Sax2
 				/// contentHandler
 				/// </java-name>
 				[Dot42.DexImport("contentHandler", "Lorg/xml/sax/ContentHandler;", AccessFlags = 4)]
-				protected internal global::Org.Xml.Sax.IContentHandler @contenthandler;
+				protected internal global::Org.Xml.Sax.IContentHandler @contentHandler;
 				/// <java-name>
 				/// errorHandler
 				/// </java-name>
 				[Dot42.DexImport("errorHandler", "Lorg/xml/sax/ErrorHandler;", AccessFlags = 4)]
-				protected internal global::Org.Xml.Sax.IErrorHandler @errorhandler;
+				protected internal global::Org.Xml.Sax.IErrorHandler @errorHandler;
 				/// <java-name>
 				/// systemId
 				/// </java-name>
 				[Dot42.DexImport("systemId", "Ljava/lang/String;", AccessFlags = 4)]
-				protected internal string @systemid;
+				protected internal string @systemId;
 				/// <java-name>
 				/// pp
 				/// </java-name>

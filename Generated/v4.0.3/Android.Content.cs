@@ -401,6 +401,15 @@ namespace Android.Content
 				{
 				}
 
+				/// <java-name>
+				/// cancelLoad
+				/// </java-name>
+				[Dot42.DexImport("cancelLoad", "()Z", AccessFlags = 1)]
+				public virtual bool CancelLoad() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
 				/// <summary>
 				///  <para>Called if the task was canceled before it was completed. Gives the class a chance to clean up post-cancellation and to properly dispose of the result.</para> <para></para>        
 				/// </summary>
@@ -451,15 +460,6 @@ namespace Android.Content
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 				internal AsyncTaskLoader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
-				}
-
-				/// <java-name>
-				/// cancelLoad
-				/// </java-name>
-				public virtual bool CancelLoad
-				{
-						[Dot42.DexImport("cancelLoad", "()Z", AccessFlags = 1)]
-						get{ return default(bool); }
 				}
 
 		}
@@ -553,6 +553,21 @@ namespace Android.Content
 				}
 
 				/// <summary>
+				///  <para>Returns the flag indicating whether or not this receiver should abort the current broadcast.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>True if the broadcast should be aborted. </para>
+				/// </returns>
+				/// <java-name>
+				/// getAbortBroadcast
+				/// </java-name>
+				[Dot42.DexImport("getAbortBroadcast", "()Z", AccessFlags = 17)]
+				public bool GetAbortBroadcast() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <summary>
 				///  <para>Sets the flag indicating that this receiver should abort the current broadcast; only works with broadcasts sent through Context.sendOrderedBroadcast. This will prevent any other broadcast receivers from receiving the broadcast. It will still call onReceive of the BroadcastReceiver that the caller of Context.sendOrderedBroadcast passed in.</para> <para> <b>This method does not work with non-ordered broadcasts such as those sent with Context.sendBroadcast</b></para>        
 				/// </summary>
 				/// <java-name>
@@ -620,21 +635,6 @@ namespace Android.Content
 				}
 
 				/// <summary>
-				///  <para>Returns the flag indicating whether or not this receiver should abort the current broadcast.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>True if the broadcast should be aborted. </para>
-				/// </returns>
-				/// <java-name>
-				/// getAbortBroadcast
-				/// </java-name>
-				public bool IsAbortBroadcast
-				{
-						[Dot42.DexImport("getAbortBroadcast", "()Z", AccessFlags = 17)]
-						get{ return default(bool); }
-				}
-
-				/// <summary>
 				///  <para>Returns true if the receiver is currently processing an ordered broadcast. </para>        
 				/// </summary>
 				/// <java-name>
@@ -664,7 +664,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getDebugUnregister
 				/// </java-name>
-				public bool IsDebugUnregister
+				public bool DebugUnregister
 				{
 						[Dot42.DexImport("getDebugUnregister", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
@@ -719,6 +719,18 @@ namespace Android.Content
 						[Dot42.DexImport("setResult", "(ILjava/lang/String;Landroid/os/Bundle;)V", AccessFlags = 17)]
 						public void SetResult(int code, string data, global::Android.OS.Bundle extras) /* MethodBuilder.Create */ 
 						{
+						}
+
+						/// <summary>
+						///  <para>Version of BroadcastReceiver.getAbortBroadcast() for asynchronous broadcast handling. </para>        
+						/// </summary>
+						/// <java-name>
+						/// getAbortBroadcast
+						/// </java-name>
+						[Dot42.DexImport("getAbortBroadcast", "()Z", AccessFlags = 17)]
+						public bool GetAbortBroadcast() /* MethodBuilder.Create */ 
+						{
+								return default(bool);
 						}
 
 						/// <summary>
@@ -780,18 +792,6 @@ namespace Android.Content
 								get{ return default(string); }
 								[Dot42.DexImport("setResultData", "(Ljava/lang/String;)V", AccessFlags = 17)]
 								set{ }
-						}
-
-						/// <summary>
-						///  <para>Version of BroadcastReceiver.getAbortBroadcast() for asynchronous broadcast handling. </para>        
-						/// </summary>
-						/// <java-name>
-						/// getAbortBroadcast
-						/// </java-name>
-						public bool IsAbortBroadcast
-						{
-								[Dot42.DexImport("getAbortBroadcast", "()Z", AccessFlags = 17)]
-								get{ return default(bool); }
 						}
 
 				}
@@ -1600,6 +1600,39 @@ namespace Android.Content
 				}
 
 				/// <summary>
+				///  <para>Change the permission required to read data from the content provider. This is normally set for you from its manifest information when the provider is first created.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setReadPermission
+				/// </java-name>
+				[Dot42.DexImport("setReadPermission", "(Ljava/lang/String;)V", AccessFlags = 20)]
+				protected internal void SetReadPermission(string permission) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Change the permission required to read and write data in the content provider. This is normally set for you from its manifest information when the provider is first created.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setWritePermission
+				/// </java-name>
+				[Dot42.DexImport("setWritePermission", "(Ljava/lang/String;)V", AccessFlags = 20)]
+				protected internal void SetWritePermission(string permission) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Change the path-based permission required to read and/or write data in the content provider. This is normally set for you from its manifest information when the provider is first created.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setPathPermissions
+				/// </java-name>
+				[Dot42.DexImport("setPathPermissions", "([Landroid/content/pm/PathPermission;)V", AccessFlags = 20)]
+				protected internal void SetPathPermissions(global::Android.Content.PM.PathPermission[] permissions) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
 				///  <para>Implement this to initialize your content provider on startup. This method is called for all registered content providers on the application main thread at application launch time. It must not perform lengthy operations, or application startup will be delayed.</para> <para>You should defer nontrivial initialization (such as opening, upgrading, and scanning databases) until the content provider is used (via query, insert, etc). Deferred initialization keeps application startup fast, avoids unnecessary work if the provider turns out not to be needed, and stops database errors (such as a full disk) from halting application launch.</para> <para>If you use SQLite, android.database.sqlite.SQLiteOpenHelper is a helpful utility class that makes it easy to manage databases, and will automatically defer opening until first use. If you do use SQLiteOpenHelper, make sure to avoid calling android.database.sqlite.SQLiteOpenHelper#getReadableDatabase or android.database.sqlite.SQLiteOpenHelper#getWritableDatabase from this method. (Instead, override android.database.sqlite.SQLiteOpenHelper#onOpen to initialize the database when it is first opened.)</para> <para></para>        
 				/// </summary>
 				/// <returns>
@@ -1913,8 +1946,6 @@ namespace Android.Content
 				{
 						[Dot42.DexImport("getReadPermission", "()Ljava/lang/String;", AccessFlags = 17)]
 						get{ return default(string); }
-						[Dot42.DexImport("setReadPermission", "(Ljava/lang/String;)V", AccessFlags = 20)]
-						set{ }
 				}
 
 				/// <summary>
@@ -1927,8 +1958,6 @@ namespace Android.Content
 				{
 						[Dot42.DexImport("getWritePermission", "()Ljava/lang/String;", AccessFlags = 17)]
 						get{ return default(string); }
-						[Dot42.DexImport("setWritePermission", "(Ljava/lang/String;)V", AccessFlags = 20)]
-						set{ }
 				}
 
 				/// <summary>
@@ -1941,8 +1970,6 @@ namespace Android.Content
 				{
 						[Dot42.DexImport("getPathPermissions", "()[Landroid/content/pm/PathPermission;", AccessFlags = 17)]
 						get{ return default(global::Android.Content.PM.PathPermission[]); }
-						[Dot42.DexImport("setPathPermissions", "([Landroid/content/pm/PathPermission;)V", AccessFlags = 20)]
-						set{ }
 				}
 
 				/// <summary>
@@ -3356,7 +3383,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getMasterSyncAutomatically
 				/// </java-name>
-				public static bool IsMasterSyncAutomatically
+				public static bool MasterSyncAutomatically
 				{
 						[Dot42.DexImport("getMasterSyncAutomatically", "()Z", AccessFlags = 9)]
 						get{ return default(bool); }

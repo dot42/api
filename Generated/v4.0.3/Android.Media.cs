@@ -2029,6 +2029,17 @@ namespace Android.Media
 				}
 
 				/// <summary>
+				///  <para>Sets the initialization state of the instance. This method was originally intended to be used in an AudioTrack subclass constructor to set a subclass-specific post-initialization state. However, subclasses of AudioTrack are no longer recommended, so this method is obsolete.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Only accessible by subclasses, which are not recommended for AudioTrack. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				/// <java-name>
+				/// setState
+				/// </java-name>
+				[Dot42.DexImport("setState", "(I)V", AccessFlags = 4)]
+				protected internal virtual void SetState(int state) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
 				///  <para>Starts playing an AudioTrack. If track's creation mode is MODE_STATIC, you must have called write() prior.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
@@ -2261,8 +2272,6 @@ namespace Android.Media
 				{
 						[Dot42.DexImport("getState", "()I", AccessFlags = 1)]
 						get{ return default(int); }
-						[Dot42.DexImport("setState", "(I)V", AccessFlags = 4)]
-						set{ }
 				}
 
 				/// <summary>
@@ -6221,6 +6230,29 @@ namespace Android.Media
 				}
 
 				/// <summary>
+				///  <para>Whether retrieving another Ringtone will stop playing the previously retrieved Ringtone. </para> <para>If this is false, make sure to Ringtone#stop() any previous ringtones to free resources.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setStopPreviousRingtone
+				/// </java-name>
+				[Dot42.DexImport("setStopPreviousRingtone", "(Z)V", AccessFlags = 1)]
+				public virtual void SetStopPreviousRingtone(bool stopPreviousRingtone) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para> <para>setStopPreviousRingtone(boolean) </para></para>        
+				/// </summary>
+				/// <java-name>
+				/// getStopPreviousRingtone
+				/// </java-name>
+				[Dot42.DexImport("getStopPreviousRingtone", "()Z", AccessFlags = 1)]
+				public virtual bool GetStopPreviousRingtone() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <summary>
 				///  <para>Stops playing the last Ringtone retrieved from this. </para>        
 				/// </summary>
 				/// <java-name>
@@ -6383,20 +6415,6 @@ namespace Android.Media
 				}
 
 				/// <summary>
-				///  <para> <para>setStopPreviousRingtone(boolean) </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// getStopPreviousRingtone
-				/// </java-name>
-				public virtual bool IsStopPreviousRingtone
-				{
-						[Dot42.DexImport("getStopPreviousRingtone", "()Z", AccessFlags = 1)]
-						get{ return default(bool); }
-						[Dot42.DexImport("setStopPreviousRingtone", "(Z)V", AccessFlags = 1)]
-						set{ }
-				}
-
-				/// <summary>
 				///  <para>Returns whether DRM ringtones will be included.</para> <para> <para>setIncludeDrm(boolean) Obsolete - always returns false </para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>DRM ringtones are no longer supported </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <returns>
@@ -6405,7 +6423,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getIncludeDrm
 				/// </java-name>
-				public virtual bool IsIncludeDrm
+				public virtual bool IncludeDrm
 				{
 						[Dot42.DexImport("getIncludeDrm", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

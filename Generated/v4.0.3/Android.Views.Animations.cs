@@ -632,7 +632,7 @@ namespace Android.Views.Animations
 				/// <java-name>
 				/// getFillBefore
 				/// </java-name>
-				public virtual bool IsFillBefore
+				public virtual bool FillBefore
 				{
 						[Dot42.DexImport("getFillBefore", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -649,7 +649,7 @@ namespace Android.Views.Animations
 				/// <java-name>
 				/// getFillAfter
 				/// </java-name>
-				public virtual bool IsFillAfter
+				public virtual bool FillAfter
 				{
 						[Dot42.DexImport("getFillAfter", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -694,7 +694,7 @@ namespace Android.Views.Animations
 				/// <java-name>
 				/// getDetachWallpaper
 				/// </java-name>
-				public virtual bool IsDetachWallpaper
+				public virtual bool DetachWallpaper
 				{
 						[Dot42.DexImport("getDetachWallpaper", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -980,7 +980,7 @@ namespace Android.Views.Animations
 				/// <java-name>
 				/// setFillAfter
 				/// </java-name>
-				public override bool IsFillAfter
+				public override bool FillAfter
 				{
 						[Dot42.DexImport("setFillAfter", "(Z)V", AccessFlags = 1)]
 						set{ }
@@ -989,7 +989,7 @@ namespace Android.Views.Animations
 				/// <java-name>
 				/// setFillBefore
 				/// </java-name>
-				public override bool IsFillBefore
+				public override bool FillBefore
 				{
 						[Dot42.DexImport("setFillBefore", "(Z)V", AccessFlags = 1)]
 						set{ }

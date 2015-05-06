@@ -577,7 +577,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// maxEntries
 				/// </java-name>
 				[Dot42.DexImport("maxEntries", "I", AccessFlags = 20)]
-				protected internal readonly int @maxentries;
+				protected internal readonly int @maxEntries;
 				/// <java-name>
 				/// freeEntries
 				/// </java-name>
@@ -737,7 +737,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				/// schemeRegistry
 				/// </java-name>
 				[Dot42.DexImport("schemeRegistry", "Lorg/apache/http/conn/scheme/SchemeRegistry;", AccessFlags = 4)]
-				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry @schemeregistry;
+				protected internal global::Org.Apache.Http.Conn.Scheme.SchemeRegistry @schemeRegistry;
 				/// <java-name>
 				/// connectionPool
 				/// </java-name>

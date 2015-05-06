@@ -1614,7 +1614,7 @@ namespace Android.Preferences
 				/// <java-name>
 				/// getShouldDisableView
 				/// </java-name>
-				public virtual bool IsShouldDisableView
+				public virtual bool ShouldDisableView
 				{
 						[Dot42.DexImport("getShouldDisableView", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -3493,7 +3493,7 @@ namespace Android.Preferences
 				/// <java-name>
 				/// getShowDefault
 				/// </java-name>
-				public virtual bool IsShowDefault
+				public virtual bool ShowDefault
 				{
 						[Dot42.DexImport("getShowDefault", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -3510,7 +3510,7 @@ namespace Android.Preferences
 				/// <java-name>
 				/// getShowSilent
 				/// </java-name>
-				public virtual bool IsShowSilent
+				public virtual bool ShowSilent
 				{
 						[Dot42.DexImport("getShowSilent", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -3788,7 +3788,7 @@ namespace Android.Preferences
 				/// <java-name>
 				/// getDisableDependentsState
 				/// </java-name>
-				public virtual bool IsDisableDependentsState
+				public virtual bool DisableDependentsState
 				{
 						[Dot42.DexImport("getDisableDependentsState", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

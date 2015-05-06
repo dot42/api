@@ -1112,7 +1112,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getReuseAddress
 				/// </java-name>
-				public virtual bool IsReuseAddress
+				public virtual bool ReuseAddress
 				{
 						[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -1129,7 +1129,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getBroadcast
 				/// </java-name>
-				public virtual bool IsBroadcast
+				public virtual bool Broadcast
 				{
 						[Dot42.DexImport("getBroadcast", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -1205,7 +1205,7 @@ namespace Java.Net
 				/// localPort
 				/// </java-name>
 				[Dot42.DexImport("localPort", "I", AccessFlags = 4)]
-				protected internal int @localport;
+				protected internal int @localPort;
 				/// <summary>
 				///  <para>Constructs an unbound datagram socket implementation. </para>        
 				/// </summary>
@@ -1571,7 +1571,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getDiscard
 				/// </java-name>
-				public bool IsDiscard
+				public bool Discard
 				{
 						[Dot42.DexImport("getDiscard", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -1653,7 +1653,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getSecure
 				/// </java-name>
-				public bool IsSecure
+				public bool Secure
 				{
 						[Dot42.DexImport("getSecure", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -1906,7 +1906,7 @@ namespace Java.Net
 				/// responseCode
 				/// </java-name>
 				[Dot42.DexImport("responseCode", "I", AccessFlags = 4)]
-				protected internal int @responsecode;
+				protected internal int @responseCode;
 				/// <summary>
 				///  <para>The HTTP response message which corresponds to the response code. </para>        
 				/// </summary>
@@ -1914,7 +1914,7 @@ namespace Java.Net
 				/// responseMessage
 				/// </java-name>
 				[Dot42.DexImport("responseMessage", "Ljava/lang/String;", AccessFlags = 4)]
-				protected internal string @responsemessage;
+				protected internal string @responseMessage;
 				/// <summary>
 				///  <para>Flag to define whether the protocol will automatically follow redirects or not. The default value is <c>true </c> . </para>        
 				/// </summary>
@@ -1922,7 +1922,7 @@ namespace Java.Net
 				/// instanceFollowRedirects
 				/// </java-name>
 				[Dot42.DexImport("instanceFollowRedirects", "Z", AccessFlags = 4)]
-				protected internal bool InstanceFollowRedirects;
+				protected internal bool @instanceFollowRedirects;
 				/// <summary>
 				///  <para>If the HTTP chunked encoding is enabled this parameter defines the chunk-length. Default value is <c>-1 </c> that means the chunked encoding mode is disabled. </para>        
 				/// </summary>
@@ -2322,7 +2322,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getFollowRedirects
 				/// </java-name>
-				public static bool IsFollowRedirects
+				public static bool FollowRedirects
 				{
 						[Dot42.DexImport("getFollowRedirects", "()Z", AccessFlags = 9)]
 						get{ return default(bool); }
@@ -2413,7 +2413,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getInstanceFollowRedirects
 				/// </java-name>
-				public virtual bool IsInstanceFollowRedirects
+				public virtual bool InstanceFollowRedirects
 				{
 						[Dot42.DexImport("getInstanceFollowRedirects", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -4209,7 +4209,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getLoopbackMode
 				/// </java-name>
-				public virtual bool IsLoopbackMode
+				public virtual bool LoopbackMode
 				{
 						[Dot42.DexImport("getLoopbackMode", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -5277,7 +5277,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getReuseAddress
 				/// </java-name>
-				public virtual bool IsReuseAddress
+				public virtual bool ReuseAddress
 				{
 						[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -5547,7 +5547,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getKeepAlive
 				/// </java-name>
-				public virtual bool IsKeepAlive
+				public virtual bool KeepAlive
 				{
 						[Dot42.DexImport("getKeepAlive", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -5666,7 +5666,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getTcpNoDelay
 				/// </java-name>
-				public virtual bool IsTcpNoDelay
+				public virtual bool TcpNoDelay
 				{
 						[Dot42.DexImport("getTcpNoDelay", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -5782,7 +5782,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getReuseAddress
 				/// </java-name>
-				public virtual bool IsReuseAddress
+				public virtual bool ReuseAddress
 				{
 						[Dot42.DexImport("getReuseAddress", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -5796,7 +5796,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getOOBInline
 				/// </java-name>
-				public virtual bool IsOOBInline
+				public virtual bool OOBInline
 				{
 						[Dot42.DexImport("getOOBInline", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -6950,7 +6950,7 @@ namespace Java.Net
 				/// ifModifiedSince
 				/// </java-name>
 				[Dot42.DexImport("ifModifiedSince", "J", AccessFlags = 4)]
-				protected internal long @ifmodifiedsince;
+				protected internal long @ifModifiedSince;
 				/// <summary>
 				///  <para>Specifies whether the using of caches is enabled or the data has to be recent for every request. </para>        
 				/// </summary>
@@ -6958,7 +6958,7 @@ namespace Java.Net
 				/// useCaches
 				/// </java-name>
 				[Dot42.DexImport("useCaches", "Z", AccessFlags = 4)]
-				protected internal bool UseCaches;
+				protected internal bool @useCaches;
 				/// <summary>
 				///  <para>Specifies whether this <c>URLConnection </c> is already connected to the remote resource. If this field is set to <c>true </c> the flags for setting up the connection are not changeable anymore. </para>        
 				/// </summary>
@@ -6974,7 +6974,7 @@ namespace Java.Net
 				/// doOutput
 				/// </java-name>
 				[Dot42.DexImport("doOutput", "Z", AccessFlags = 4)]
-				protected internal bool DoOutput;
+				protected internal bool @doOutput;
 				/// <summary>
 				///  <para>Specifies whether this <c>URLConnection </c> allows receiving data. </para>        
 				/// </summary>
@@ -6982,7 +6982,7 @@ namespace Java.Net
 				/// doInput
 				/// </java-name>
 				[Dot42.DexImport("doInput", "Z", AccessFlags = 4)]
-				protected internal bool DoInput;
+				protected internal bool @doInput;
 				/// <summary>
 				///  <para>Unused by Android. This field can be accessed via getAllowUserInteraction and setAllowUserInteraction. </para>        
 				/// </summary>
@@ -6990,7 +6990,7 @@ namespace Java.Net
 				/// allowUserInteraction
 				/// </java-name>
 				[Dot42.DexImport("allowUserInteraction", "Z", AccessFlags = 4)]
-				protected internal bool AllowUserInteraction;
+				protected internal bool @allowUserInteraction;
 				/// <summary>
 				///  <para>Creates a new <c>URLConnection </c> instance pointing to the resource specified by the given URL.</para> <para></para>        
 				/// </summary>
@@ -7225,7 +7225,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getAllowUserInteraction
 				/// </java-name>
-				public virtual bool IsAllowUserInteraction
+				public virtual bool AllowUserInteraction
 				{
 						[Dot42.DexImport("getAllowUserInteraction", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -7314,7 +7314,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getDefaultAllowUserInteraction
 				/// </java-name>
-				public static bool IsDefaultAllowUserInteraction
+				public static bool DefaultAllowUserInteraction
 				{
 						[Dot42.DexImport("getDefaultAllowUserInteraction", "()Z", AccessFlags = 9)]
 						get{ return default(bool); }
@@ -7331,7 +7331,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getDefaultUseCaches
 				/// </java-name>
-				public virtual bool IsDefaultUseCaches
+				public virtual bool DefaultUseCaches
 				{
 						[Dot42.DexImport("getDefaultUseCaches", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -7348,7 +7348,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getDoInput
 				/// </java-name>
-				public virtual bool IsDoInput
+				public virtual bool DoInput
 				{
 						[Dot42.DexImport("getDoInput", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -7365,7 +7365,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getDoOutput
 				/// </java-name>
-				public virtual bool IsDoOutput
+				public virtual bool DoOutput
 				{
 						[Dot42.DexImport("getDoOutput", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -7536,7 +7536,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getUseCaches
 				/// </java-name>
-				public virtual bool IsUseCaches
+				public virtual bool UseCaches
 				{
 						[Dot42.DexImport("getUseCaches", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

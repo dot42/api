@@ -874,7 +874,7 @@ namespace Android.Net.Wifi
 				/// <java-name>
 				/// getHiddenSSID
 				/// </java-name>
-				public virtual bool IsHiddenSSID
+				public virtual bool HiddenSSID
 				{
 						[Dot42.DexImport("getHiddenSSID", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

@@ -1039,7 +1039,7 @@ namespace Javax.Sql
 				/// <java-name>
 				/// getEscapeProcessing
 				/// </java-name>
-				bool IsEscapeProcessing
+				bool EscapeProcessing
 				{
 						[Dot42.DexImport("getEscapeProcessing", "()Z", AccessFlags = 1025)]
 						get;

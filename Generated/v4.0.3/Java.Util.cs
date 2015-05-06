@@ -15981,6 +15981,21 @@ namespace Java.Util
 				}
 
 				/// <summary>
+				///  <para>Cancels the <c>TimerTask </c> and removes it from the <c>Timer </c> 's queue. Generally, it returns <c>false </c> if the call did not prevent a <c>TimerTask </c> from running at least once. Subsequent calls have no effect.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para> <c>true </c> if the call prevented a scheduled execution from taking place, <c>false </c> otherwise. </para>
+				/// </returns>
+				/// <java-name>
+				/// cancel
+				/// </java-name>
+				[Dot42.DexImport("cancel", "()Z", AccessFlags = 1)]
+				public virtual bool Cancel() /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <summary>
 				///  <para>Returns the scheduled execution time. If the task execution is in progress it returns the execution time of the ongoing task. Tasks which have not yet run return an undefined value.</para> <para></para>        
 				/// </summary>
 				/// <returns>
@@ -16004,21 +16019,6 @@ namespace Java.Util
 				[Dot42.DexImport("run", "()V", AccessFlags = 1025)]
 				public virtual void Run() /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <summary>
-				///  <para>Cancels the <c>TimerTask </c> and removes it from the <c>Timer </c> 's queue. Generally, it returns <c>false </c> if the call did not prevent a <c>TimerTask </c> from running at least once. Subsequent calls have no effect.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para> <c>true </c> if the call prevented a scheduled execution from taking place, <c>false </c> otherwise. </para>
-				/// </returns>
-				/// <java-name>
-				/// cancel
-				/// </java-name>
-				public virtual bool Cancel
-				{
-						[Dot42.DexImport("cancel", "()Z", AccessFlags = 1)]
-						get{ return default(bool); }
 				}
 
 		}

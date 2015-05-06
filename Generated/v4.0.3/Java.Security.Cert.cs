@@ -2777,7 +2777,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getPolicyQualifiersRejected
 				/// </java-name>
-				public virtual bool IsPolicyQualifiersRejected
+				public virtual bool PolicyQualifiersRejected
 				{
 						[Dot42.DexImport("getPolicyQualifiersRejected", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -4178,7 +4178,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getMatchAllSubjectAltNames
 				/// </java-name>
-				public virtual bool IsMatchAllSubjectAltNames
+				public virtual bool MatchAllSubjectAltNames
 				{
 						[Dot42.DexImport("getMatchAllSubjectAltNames", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

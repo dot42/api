@@ -4660,7 +4660,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getShowWeekNumber
 				/// </java-name>
-				public virtual bool IsShowWeekNumber
+				public virtual bool ShowWeekNumber
 				{
 						[Dot42.DexImport("getShowWeekNumber", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -6082,7 +6082,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getCalendarViewShown
 				/// </java-name>
-				public virtual bool IsCalendarViewShown
+				public virtual bool CalendarViewShown
 				{
 						[Dot42.DexImport("getCalendarViewShown", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -6114,7 +6114,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getSpinnersShown
 				/// </java-name>
-				public virtual bool IsSpinnersShown
+				public virtual bool SpinnersShown
 				{
 						[Dot42.DexImport("getSpinnersShown", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -6659,7 +6659,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getDefaultEditable
 				/// </java-name>
-				protected internal override bool IsDefaultEditable
+				protected internal override bool DefaultEditable
 				{
 						[Dot42.DexImport("getDefaultEditable", "()Z", AccessFlags = 4)]
 						get{ return default(bool); }
@@ -7600,7 +7600,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getConsiderGoneChildrenWhenMeasuring
 				/// </java-name>
-				public virtual bool IsConsiderGoneChildrenWhenMeasuring
+				public virtual bool ConsiderGoneChildrenWhenMeasuring
 				{
 						[Dot42.DexImport("getConsiderGoneChildrenWhenMeasuring", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -7615,7 +7615,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getMeasureAllChildren
 				/// </java-name>
-				public virtual bool IsMeasureAllChildren
+				public virtual bool MeasureAllChildren
 				{
 						[Dot42.DexImport("getMeasureAllChildren", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -8348,7 +8348,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getUseDefaultMargins
 				/// </java-name>
-				public virtual bool IsUseDefaultMargins
+				public virtual bool UseDefaultMargins
 				{
 						[Dot42.DexImport("getUseDefaultMargins", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -10584,7 +10584,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getBaselineAlignBottom
 				/// </java-name>
-				public virtual bool IsBaselineAlignBottom
+				public virtual bool BaselineAlignBottom
 				{
 						[Dot42.DexImport("getBaselineAlignBottom", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -12134,7 +12134,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getItemsCanFocus
 				/// </java-name>
-				public virtual bool IsItemsCanFocus
+				public virtual bool ItemsCanFocus
 				{
 						[Dot42.DexImport("getItemsCanFocus", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -12957,7 +12957,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getWrapSelectorWheel
 				/// </java-name>
-				public virtual bool IsWrapSelectorWheel
+				public virtual bool WrapSelectorWheel
 				{
 						[Dot42.DexImport("getWrapSelectorWheel", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -21960,7 +21960,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getDefaultEditable
 				/// </java-name>
-				protected internal virtual bool IsDefaultEditable
+				protected internal virtual bool DefaultEditable
 				{
 						[Dot42.DexImport("getDefaultEditable", "()Z", AccessFlags = 4)]
 						get{ return default(bool); }
@@ -22344,7 +22344,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getLinksClickable
 				/// </java-name>
-				public bool IsLinksClickable
+				public bool LinksClickable
 				{
 						[Dot42.DexImport("getLinksClickable", "()Z", AccessFlags = 17)]
 						get{ return default(bool); }
@@ -22449,7 +22449,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// getFreezesText
 				/// </java-name>
-				public virtual bool IsFreezesText
+				public virtual bool FreezesText
 				{
 						[Dot42.DexImport("getFreezesText", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }

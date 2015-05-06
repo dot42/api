@@ -1272,7 +1272,7 @@ namespace Android.InputMethodServices
 				/// <java-name>
 				/// getCurrentInputStarted
 				/// </java-name>
-				public virtual bool IsCurrentInputStarted
+				public virtual bool CurrentInputStarted
 				{
 						[Dot42.DexImport("getCurrentInputStarted", "()Z", AccessFlags = 1)]
 						get{ return default(bool); }
@@ -2249,6 +2249,14 @@ namespace Android.InputMethodServices
 				{
 				}
 
+				/// <java-name>
+				/// setOnKeyboardActionListener
+				/// </java-name>
+				[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
+				public virtual void SetOnKeyboardActionListener(global::Android.InputMethodServices.KeyboardView.IOnKeyboardActionListener listener) /* MethodBuilder.Create */ 
+				{
+				}
+
 				/// <summary>
 				///  <para>Sets the state of the shift key of the keyboard, if any.  <para>KeyboardView::isShifted() </para></para>        
 				/// </summary>
@@ -2453,8 +2461,6 @@ namespace Android.InputMethodServices
 				{
 						[Dot42.DexImport("getOnKeyboardActionListener", "()Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;", AccessFlags = 4)]
 						get{ return default(global::Android.InputMethodServices.KeyboardView.IOnKeyboardActionListener); }
-						[Dot42.DexImport("setOnKeyboardActionListener", "(Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;)V", AccessFlags = 1)]
-						set{ }
 				}
 
 				/// <summary>
