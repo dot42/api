@@ -5269,7 +5269,7 @@ namespace Java.Lang
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 33)]
-				public string ToString() /* MethodBuilder.Create */ 
+				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}

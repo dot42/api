@@ -3263,7 +3263,7 @@ namespace Android.Text
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string ToString() /* MethodBuilder.Create */ 
+				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -3325,7 +3325,7 @@ namespace Android.Text
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public virtual bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3334,7 +3334,7 @@ namespace Android.Text
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public virtual int GetHashCode() /* MethodBuilder.Create */ 
+				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -3918,7 +3918,7 @@ namespace Android.Text
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string ToString() /* MethodBuilder.Create */ 
+				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -3980,7 +3980,7 @@ namespace Android.Text
 				/// equals
 				/// </java-name>
 				[Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
-				public bool Equals(object @object) /* MethodBuilder.Create */ 
+				public override bool Equals(object @object) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
@@ -3989,7 +3989,7 @@ namespace Android.Text
 				/// hashCode
 				/// </java-name>
 				[Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
-				public int GetHashCode() /* MethodBuilder.Create */ 
+				public override int GetHashCode() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}

@@ -3024,7 +3024,7 @@ namespace Android.Text
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string ToString() /* MethodBuilder.Create */ 
+				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
@@ -3625,7 +3625,7 @@ namespace Android.Text
 				/// toString
 				/// </java-name>
 				[Dot42.DexImport("toString", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string ToString() /* MethodBuilder.Create */ 
+				public override string ToString() /* MethodBuilder.Create */ 
 				{
 						return default(string);
 				}
