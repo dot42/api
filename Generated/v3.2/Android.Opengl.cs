@@ -1,23 +1,8 @@
-// Copyright (C) 2014 dot42
-//
-// Original filename: Android.Opengl.cs
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-#pragma warning disable 1717
+﻿#pragma warning disable 1717
 namespace Android.Opengl
 {
 		/// <summary>
-		/// <para>Methods for encoding and decoding ETC1 textures. </para><para>The standard for the ETC1 texture format can be found at  </para><para>The PKM file format is of a 16-byte header that describes the image bounds followed by the encoded ETC1 texture data. </para><para><para>ETC1Util </para></para>    
+		///  <para>Methods for encoding and decoding ETC1 textures. </para> <para>The standard for the ETC1 texture format can be found at  </para> <para>The PKM file format is of a 16-byte header that describes the image bounds followed by the encoded ETC1 texture data. </para> <para> <para>ETC1Util </para></para>    
 		/// </summary>
 		/// <java-name>
 		/// android/opengl/ETC1
@@ -27,7 +12,7 @@ namespace Android.Opengl
  /* scope: __dot42__ */ 
 		{
 				/// <summary>
-				/// <para>Size in bytes of an encoded block. </para>        
+				///  <para>Size in bytes of an encoded block. </para>        
 				/// </summary>
 				/// <java-name>
 				/// ENCODED_BLOCK_SIZE
@@ -35,7 +20,7 @@ namespace Android.Opengl
 				[Dot42.DexImport("ENCODED_BLOCK_SIZE", "I", AccessFlags = 25)]
 				public const int ENCODED_BLOCK_SIZE = 8;
 				/// <summary>
-				/// <para>Size in bytes of a decoded block. </para>        
+				///  <para>Size in bytes of a decoded block. </para>        
 				/// </summary>
 				/// <java-name>
 				/// DECODED_BLOCK_SIZE
@@ -43,7 +28,7 @@ namespace Android.Opengl
 				[Dot42.DexImport("DECODED_BLOCK_SIZE", "I", AccessFlags = 25)]
 				public const int DECODED_BLOCK_SIZE = 48;
 				/// <summary>
-				/// <para>Size of a PKM file header, in bytes. </para>        
+				///  <para>Size of a PKM file header, in bytes. </para>        
 				/// </summary>
 				/// <java-name>
 				/// ETC_PKM_HEADER_SIZE
@@ -51,7 +36,7 @@ namespace Android.Opengl
 				[Dot42.DexImport("ETC_PKM_HEADER_SIZE", "I", AccessFlags = 25)]
 				public const int ETC_PKM_HEADER_SIZE = 16;
 				/// <summary>
-				/// <para>Accepted by the internalformat parameter of glCompressedTexImage2D. </para>        
+				///  <para>Accepted by the internalformat parameter of glCompressedTexImage2D. </para>        
 				/// </summary>
 				/// <java-name>
 				/// ETC1_RGB8_OES
@@ -64,7 +49,7 @@ namespace Android.Opengl
 				}
 
 				/// <summary>
-				/// <para>Encode a block of pixels.</para><para></para>        
+				///  <para>Encode a block of pixels.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
 				/// encodeBlock
@@ -75,7 +60,7 @@ namespace Android.Opengl
 				}
 
 				/// <summary>
-				/// <para>Decode a block of pixels.</para><para></para>        
+				///  <para>Decode a block of pixels.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
 				/// decodeBlock
@@ -86,7 +71,7 @@ namespace Android.Opengl
 				}
 
 				/// <summary>
-				/// <para>Return the size of the encoded image data (does not include size of PKM header). </para>        
+				///  <para>Return the size of the encoded image data (does not include size of PKM header). </para>        
 				/// </summary>
 				/// <java-name>
 				/// getEncodedDataSize
@@ -98,7 +83,7 @@ namespace Android.Opengl
 				}
 
 				/// <summary>
-				/// <para>Encode an entire image. </para>        
+				///  <para>Encode an entire image. </para>        
 				/// </summary>
 				/// <java-name>
 				/// encodeImage
@@ -109,7 +94,7 @@ namespace Android.Opengl
 				}
 
 				/// <summary>
-				/// <para>Decode an entire image. </para>        
+				///  <para>Decode an entire image. </para>        
 				/// </summary>
 				/// <java-name>
 				/// decodeImage
@@ -120,7 +105,7 @@ namespace Android.Opengl
 				}
 
 				/// <summary>
-				/// <para>Format a PKM header </para>        
+				///  <para>Format a PKM header </para>        
 				/// </summary>
 				/// <java-name>
 				/// formatHeader
@@ -131,7 +116,7 @@ namespace Android.Opengl
 				}
 
 				/// <summary>
-				/// <para>Check if a PKM header is correctly formatted. </para>        
+				///  <para>Check if a PKM header is correctly formatted. </para>        
 				/// </summary>
 				/// <java-name>
 				/// isValid
@@ -143,7 +128,7 @@ namespace Android.Opengl
 				}
 
 				/// <summary>
-				/// <para>Read the image width from a PKM header </para>        
+				///  <para>Read the image width from a PKM header </para>        
 				/// </summary>
 				/// <java-name>
 				/// getWidth
@@ -155,7 +140,7 @@ namespace Android.Opengl
 				}
 
 				/// <summary>
-				/// <para>Read the image height from a PKM header </para>        
+				///  <para>Read the image height from a PKM header </para>        
 				/// </summary>
 				/// <java-name>
 				/// getHeight
@@ -169,966 +154,235 @@ namespace Android.Opengl
 		}
 
 		/// <summary>
-		/// <para>A collection of utility methods for computing the visibility of triangle meshes. </para>    
+		///  <para>Utility methods for using ETC1 compressed textures. </para>    
 		/// </summary>
 		/// <java-name>
-		/// android/opengl/Visibility
+		/// android/opengl/ETC1Util
 		/// </java-name>
-		[Dot42.DexImport("android/opengl/Visibility", AccessFlags = 33)]
-		public partial class Visibility
+		[Dot42.DexImport("android/opengl/ETC1Util", AccessFlags = 33)]
+		public partial class ETC1Util
  /* scope: __dot42__ */ 
 		{
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Visibility() /* MethodBuilder.Create */ 
+				public ETC1Util() /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <summary>
-				/// <para>Test whether a given triangle mesh is visible on the screen. The mesh is specified as an indexed triangle list.</para><para></para>        
+				///  <para>Convenience method to load an ETC1 texture whether or not the active OpenGL context supports the ETC1 texture compression format. </para>        
+				/// </summary>
+				/// <java-name>
+				/// loadTexture
+				/// </java-name>
+				[Dot42.DexImport("loadTexture", "(IIIIILjava/io/InputStream;)V", AccessFlags = 9)]
+				public static void LoadTexture(int target, int level, int border, int fallbackFormat, int fallbackType, global::Java.IO.InputStream input) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Convenience method to load an ETC1 texture whether or not the active OpenGL context supports the ETC1 texture compression format. </para>        
+				/// </summary>
+				/// <java-name>
+				/// loadTexture
+				/// </java-name>
+				[Dot42.DexImport("loadTexture", "(IIIIILandroid/opengl/ETC1Util$ETC1Texture;)V", AccessFlags = 9)]
+				public static void LoadTexture(int target, int level, int border, int fallbackFormat, int fallbackType, global::Android.Opengl.ETC1Util.ETC1Texture input) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Create a new ETC1Texture from an input stream containing a PKM formatted compressed texture. </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>2 if all of the mesh is visible, 1 if some part of the mesh is visible, 0 if no part is visible.</para>
+				///  <para>an ETC1Texture read from the input stream. </para>
 				/// </returns>
 				/// <java-name>
-				/// visibilityTest
+				/// createTexture
 				/// </java-name>
-				[Dot42.DexImport("visibilityTest", "([FI[FI[CII)I", AccessFlags = 265)]
-				public static int VisibilityTest(float[] ws, int wsOffset, float[] positions, int positionsOffset, char[] indices, int indicesOffset, int indexCount) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("createTexture", "(Ljava/io/InputStream;)Landroid/opengl/ETC1Util$ETC1Texture;", AccessFlags = 9)]
+				public static global::Android.Opengl.ETC1Util.ETC1Texture CreateTexture(global::Java.IO.InputStream input) /* MethodBuilder.Create */ 
 				{
-						return default(int);
+						return default(global::Android.Opengl.ETC1Util.ETC1Texture);
 				}
 
 				/// <summary>
-				/// <para>Given an OpenGL ES ModelView-Projection matrix (which implicitly describes a frustum) and a list of spheres, determine which spheres intersect the frustum. </para><para>A ModelView-Projection matrix can be computed by multiplying the a Projection matrix by the a ModelView matrix (in that order.). There are several possible ways to obtain the current ModelView and Projection matrices. The most generally applicable way is to keep track of the current matrices in application code. If that is not convenient, there are two optional OpenGL ES extensions which may be used to read the current matrices from OpenGL ES: <ul><li><para>GL10Ext.glQueryMatrixxOES </para></li><li><para>GL11.GL_MODELVIEW_MATRIX_FLOAT_AS_INT_BITS_OES and GL_PROJECTION_MATRIX_FLOAT_AS_INT_BITS_OES </para></li></ul>The problem with reading back the matrices is that your application will only work with devices that support the extension(s) that it uses. </para><para>A frustum is a six-sided truncated pyramid that defines the portion of world space that is visible in the view. </para><para>Spheres are described as four floating point values: x, y, z, and r, in world-space coordinates. R is the radius of the sphere. </para><para></para>        
+				///  <para>Helper function that compresses an image into an ETC1Texture. </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the number of spheres that intersected the frustum. Can be larger than resultsCapacity, in which case only the first resultsCapacity results are written into the results array.</para>
+				///  <para>the ETC1 texture. </para>
 				/// </returns>
 				/// <java-name>
-				/// frustumCullSpheres
+				/// compressTexture
 				/// </java-name>
-				[Dot42.DexImport("frustumCullSpheres", "([FI[FII[III)I", AccessFlags = 265)]
-				public static int FrustumCullSpheres(float[] mvp, int mvpOffset, float[] spheres, int spheresOffset, int spheresCount, int[] results, int resultsOffset, int resultsCapacity) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("compressTexture", "(Ljava/nio/Buffer;IIII)Landroid/opengl/ETC1Util$ETC1Texture;", AccessFlags = 9)]
+				public static global::Android.Opengl.ETC1Util.ETC1Texture CompressTexture(global::Java.Nio.Buffer input, int width, int height, int pixelSize, int stride) /* MethodBuilder.Create */ 
 				{
-						return default(int);
+						return default(global::Android.Opengl.ETC1Util.ETC1Texture);
 				}
 
 				/// <summary>
-				/// <para>Compute a bounding sphere for a set of points. It is approximately the minimal bounding sphere of an axis-aligned box that bounds the points.</para><para></para>        
+				///  <para>Helper function that writes an ETC1Texture to an output stream formatted as a PKM file. </para>        
 				/// </summary>
 				/// <java-name>
-				/// computeBoundingSphere
+				/// writeTexture
 				/// </java-name>
-				[Dot42.DexImport("computeBoundingSphere", "([FII[FI)V", AccessFlags = 265)]
-				public static void ComputeBoundingSphere(float[] positions, int positionsOffset, int positionsCount, float[] sphere, int sphereOffset) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("writeTexture", "(Landroid/opengl/ETC1Util$ETC1Texture;Ljava/io/OutputStream;)V", AccessFlags = 9)]
+				public static void WriteTexture(global::Android.Opengl.ETC1Util.ETC1Texture texture, global::Java.IO.OutputStream output) /* MethodBuilder.Create */ 
 				{
+				}
+
+				/// <summary>
+				///  <para>Check if ETC1 texture compression is supported by the active OpenGL ES context. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if the active OpenGL ES context supports ETC1 texture compression. </para>
+				/// </returns>
+				/// <java-name>
+				/// isETC1Supported
+				/// </java-name>
+				public static bool IsETC1Supported
+				{
+						[Dot42.DexImport("isETC1Supported", "()Z", AccessFlags = 9)]
+						get{ return default(bool); }
+				}
+
+				/// <summary>
+				///  <para>A utility class encapsulating a compressed ETC1 texture. </para>    
+				/// </summary>
+				/// <java-name>
+				/// android/opengl/ETC1Util$ETC1Texture
+				/// </java-name>
+				[Dot42.DexImport("android/opengl/ETC1Util$ETC1Texture", AccessFlags = 9)]
+				public partial class ETC1Texture
+ /* scope: __dot42__ */ 
+				{
+						[Dot42.DexImport("<init>", "(IILjava/nio/ByteBuffer;)V", AccessFlags = 1)]
+						public ETC1Texture(int int32, int int321, global::Java.Nio.ByteBuffer byteBuffer) /* MethodBuilder.Create */ 
+						{
+						}
+
+						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+						internal ETC1Texture() /* TypeBuilder.AddDefaultConstructor */ 
+						{
+						}
+
+						/// <summary>
+						///  <para>Get the width of the texture in pixels. </para>        
+						/// </summary>
+						/// <returns>
+						///  <para>the width of the texture in pixels. </para>
+						/// </returns>
+						/// <java-name>
+						/// getWidth
+						/// </java-name>
+						public virtual int Width
+						{
+								[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+						}
+
+						/// <summary>
+						///  <para>Get the height of the texture in pixels. </para>        
+						/// </summary>
+						/// <returns>
+						///  <para>the width of the texture in pixels. </para>
+						/// </returns>
+						/// <java-name>
+						/// getHeight
+						/// </java-name>
+						public virtual int Height
+						{
+								[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
+								get{ return default(int); }
+						}
+
+						/// <summary>
+						///  <para>Get the compressed data of the texture. </para>        
+						/// </summary>
+						/// <returns>
+						///  <para>the texture data. </para>
+						/// </returns>
+						/// <java-name>
+						/// getData
+						/// </java-name>
+						public virtual global::Java.Nio.ByteBuffer Data
+						{
+								[Dot42.DexImport("getData", "()Ljava/nio/ByteBuffer;", AccessFlags = 1)]
+								get{ return default(global::Java.Nio.ByteBuffer); }
+						}
+
 				}
 
 		}
 
 		/// <summary>
-		/// <para>Matrix math utilities. These methods operate on OpenGL ES format matrices and vectors stored in float arrays.</para><para>Matrices are 4 x 4 column-vector matrices stored in column-major order: <pre>
-		///     m[offset +  0] m[offset +  4] m[offset +  8] m[offset + 12]
-		///     m[offset +  1] m[offset +  5] m[offset +  9] m[offset + 13]
-		///     m[offset +  2] m[offset +  6] m[offset + 10] m[offset + 14]
-		///     m[offset +  3] m[offset +  7] m[offset + 11] m[offset + 15]
-		///    </pre></para><para>Vectors are 4 row x 1 column column-vectors stored in order: <pre>
-		///    v[offset + 0]
-		///    v[offset + 1]
-		///    v[offset + 2]
-		///    v[offset + 3]
-		///    </pre> </para>    
+		///  <para>A helper class for debugging OpenGL ES applications.</para> <para>Wraps the supplied GL interface with a new GL interface that adds support for error checking and logging. </para>    
 		/// </summary>
 		/// <java-name>
-		/// android/opengl/Matrix
+		/// android/opengl/GLDebugHelper
 		/// </java-name>
-		[Dot42.DexImport("android/opengl/Matrix", AccessFlags = 33)]
-		public partial class Matrix
+		[Dot42.DexImport("android/opengl/GLDebugHelper", AccessFlags = 33)]
+		public partial class GLDebugHelper
  /* scope: __dot42__ */ 
 		{
+				/// <summary>
+				///  <para>Wrap an existing GL interface in a new GL interface that adds support for error checking and/or logging. </para> <para>Wrapping means that the GL instance that is passed in to this method is wrapped inside a new GL instance that optionally performs additional operations before and after calling the wrapped GL instance. </para> <para>Error checking means that the wrapper will automatically call glError after each GL operation, and throw a GLException if an error occurs. (By design, calling glError itself will not cause an exception to be thrown.) Enabling error checking is an alternative to manually calling glError after every GL operation. </para> <para>Logging means writing a text representation of each GL method call to a log. </para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the wrapped GL instance. Check glError() after every call. </para>
+				/// </returns>
+				/// <java-name>
+				/// CONFIG_CHECK_GL_ERROR
+				/// </java-name>
+				[Dot42.DexImport("CONFIG_CHECK_GL_ERROR", "I", AccessFlags = 25)]
+				public const int CONFIG_CHECK_GL_ERROR = 1;
+				/// <summary>
+				///  <para>Check if all calls are on the same thread. </para>        
+				/// </summary>
+				/// <java-name>
+				/// CONFIG_CHECK_THREAD
+				/// </java-name>
+				[Dot42.DexImport("CONFIG_CHECK_THREAD", "I", AccessFlags = 25)]
+				public const int CONFIG_CHECK_THREAD = 2;
+				/// <summary>
+				///  <para>Print argument names when logging GL Calls. </para>        
+				/// </summary>
+				/// <java-name>
+				/// CONFIG_LOG_ARGUMENT_NAMES
+				/// </java-name>
+				[Dot42.DexImport("CONFIG_LOG_ARGUMENT_NAMES", "I", AccessFlags = 25)]
+				public const int CONFIG_LOG_ARGUMENT_NAMES = 4;
+				/// <summary>
+				///  <para>The Error number used in the GLException that is thrown if CONFIG_CHECK_THREAD is enabled and you call OpenGL ES on the a different thread. </para>        
+				/// </summary>
+				/// <java-name>
+				/// ERROR_WRONG_THREAD
+				/// </java-name>
+				[Dot42.DexImport("ERROR_WRONG_THREAD", "I", AccessFlags = 25)]
+				public const int ERROR_WRONG_THREAD = 28672;
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Matrix() /* MethodBuilder.Create */ 
+				public GLDebugHelper() /* MethodBuilder.Create */ 
 				{
 				}
 
-				/// <summary>
-				/// <para>Multiply two 4x4 matrices together and store the result in a third 4x4 matrix. In matrix notation: result = lhs x rhs. Due to the way matrix multiplication works, the result matrix will have the same effect as first multiplying by the rhs matrix, then multiplying by the lhs matrix. This is the opposite of what you might expect.</para><para>The same float array may be passed for result, lhs, and/or rhs. However, the result element values are undefined if the result elements overlap either the lhs or rhs elements.</para><para></para>        
-				/// </summary>
 				/// <java-name>
-				/// multiplyMM
+				/// wrap
 				/// </java-name>
-				[Dot42.DexImport("multiplyMM", "([FI[FI[FI)V", AccessFlags = 265)]
-				public static void MultiplyMM(float[] result, int resultOffset, float[] lhs, int lhsOffset, float[] rhs, int rhsOffset) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("wrap", "(Ljavax/microedition/khronos/opengles/GL;ILjava/io/Writer;)Ljavax/microedition/kh" +
+    "ronos/opengles/GL;", AccessFlags = 9)]
+				public static global::Javax.Microedition.Khronos.Opengles.IGL Wrap(global::Javax.Microedition.Khronos.Opengles.IGL gl, int configFlags, global::Java.IO.Writer log) /* MethodBuilder.Create */ 
 				{
+						return default(global::Javax.Microedition.Khronos.Opengles.IGL);
 				}
 
-				/// <summary>
-				/// <para>Multiply a 4 element vector by a 4x4 matrix and store the result in a 4 element column vector. In matrix notation: result = lhs x rhs</para><para>The same float array may be passed for resultVec, lhsMat, and/or rhsVec. However, the resultVec element values are undefined if the resultVec elements overlap either the lhsMat or rhsVec elements.</para><para></para>        
-				/// </summary>
 				/// <java-name>
-				/// multiplyMV
+				/// wrap
 				/// </java-name>
-				[Dot42.DexImport("multiplyMV", "([FI[FI[FI)V", AccessFlags = 265)]
-				public static void MultiplyMV(float[] resultVec, int resultVecOffset, float[] lhsMat, int lhsMatOffset, float[] rhsVec, int rhsVecOffset) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("wrap", "(Ljavax/microedition/khronos/egl/EGL;ILjava/io/Writer;)Ljavax/microedition/khrono" +
+    "s/egl/EGL;", AccessFlags = 9)]
+				public static global::Javax.Microedition.Khronos.Egl.IEGL Wrap(global::Javax.Microedition.Khronos.Egl.IEGL gl, int configFlags, global::Java.IO.Writer log) /* MethodBuilder.Create */ 
 				{
-				}
-
-				/// <summary>
-				/// <para>Transposes a 4 x 4 matrix.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// transposeM
-				/// </java-name>
-				[Dot42.DexImport("transposeM", "([FI[FI)V", AccessFlags = 9)]
-				public static void TransposeM(float[] mTrans, int mTransOffset, float[] m, int mOffset) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Inverts a 4 x 4 matrix.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>true if the matrix could be inverted, false if it could not. </para>
-				/// </returns>
-				/// <java-name>
-				/// invertM
-				/// </java-name>
-				[Dot42.DexImport("invertM", "([FI[FI)Z", AccessFlags = 9)]
-				public static bool InvertM(float[] mInv, int mInvOffset, float[] m, int mOffset) /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <summary>
-				/// <para>Computes an orthographic projection matrix.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// orthoM
-				/// </java-name>
-				[Dot42.DexImport("orthoM", "([FIFFFFFF)V", AccessFlags = 9)]
-				public static void OrthoM(float[] m, int mOffset, float left, float right, float bottom, float top, float near, float far) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Define a projection matrix in terms of six clip planes </para>        
-				/// </summary>
-				/// <java-name>
-				/// frustumM
-				/// </java-name>
-				[Dot42.DexImport("frustumM", "([FIFFFFFF)V", AccessFlags = 9)]
-				public static void FrustumM(float[] m, int offset, float left, float right, float bottom, float top, float near, float far) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Computes the length of a vector</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the length of a vector </para>
-				/// </returns>
-				/// <java-name>
-				/// length
-				/// </java-name>
-				[Dot42.DexImport("length", "(FFF)F", AccessFlags = 9)]
-				public static float Length(float x, float y, float z) /* MethodBuilder.Create */ 
-				{
-						return default(float);
-				}
-
-				/// <summary>
-				/// <para>Sets matrix m to the identity matrix. </para>        
-				/// </summary>
-				/// <java-name>
-				/// setIdentityM
-				/// </java-name>
-				[Dot42.DexImport("setIdentityM", "([FI)V", AccessFlags = 9)]
-				public static void SetIdentityM(float[] sm, int smOffset) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Scales matrix m by x, y, and z, putting the result in sm </para>        
-				/// </summary>
-				/// <java-name>
-				/// scaleM
-				/// </java-name>
-				[Dot42.DexImport("scaleM", "([FI[FIFFF)V", AccessFlags = 9)]
-				public static void ScaleM(float[] sm, int smOffset, float[] m, int mOffset, float x, float y, float z) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Scales matrix m in place by sx, sy, and sz </para>        
-				/// </summary>
-				/// <java-name>
-				/// scaleM
-				/// </java-name>
-				[Dot42.DexImport("scaleM", "([FIFFF)V", AccessFlags = 9)]
-				public static void ScaleM(float[] m, int mOffset, float x, float y, float z) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Translates matrix m by x, y, and z, putting the result in tm </para>        
-				/// </summary>
-				/// <java-name>
-				/// translateM
-				/// </java-name>
-				[Dot42.DexImport("translateM", "([FI[FIFFF)V", AccessFlags = 9)]
-				public static void TranslateM(float[] tm, int tmOffset, float[] m, int mOffset, float x, float y, float z) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Translates matrix m by x, y, and z in place. </para>        
-				/// </summary>
-				/// <java-name>
-				/// translateM
-				/// </java-name>
-				[Dot42.DexImport("translateM", "([FIFFF)V", AccessFlags = 9)]
-				public static void TranslateM(float[] m, int mOffset, float x, float y, float z) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Rotates matrix m by angle a (in degrees) around the axis (x, y, z) </para>        
-				/// </summary>
-				/// <java-name>
-				/// rotateM
-				/// </java-name>
-				[Dot42.DexImport("rotateM", "([FI[FIFFFF)V", AccessFlags = 9)]
-				public static void RotateM(float[] rm, int rmOffset, float[] m, int mOffset, float a, float x, float y, float z) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Rotates matrix m in place by angle a (in degrees) around the axis (x, y, z) </para>        
-				/// </summary>
-				/// <java-name>
-				/// rotateM
-				/// </java-name>
-				[Dot42.DexImport("rotateM", "([FIFFFF)V", AccessFlags = 9)]
-				public static void RotateM(float[] m, int mOffset, float a, float x, float y, float z) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Rotates matrix m by angle a (in degrees) around the axis (x, y, z) </para>        
-				/// </summary>
-				/// <java-name>
-				/// setRotateM
-				/// </java-name>
-				[Dot42.DexImport("setRotateM", "([FIFFFF)V", AccessFlags = 9)]
-				public static void SetRotateM(float[] rm, int rmOffset, float a, float x, float y, float z) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Converts Euler angles to a rotation matrix </para>        
-				/// </summary>
-				/// <java-name>
-				/// setRotateEulerM
-				/// </java-name>
-				[Dot42.DexImport("setRotateEulerM", "([FIFFF)V", AccessFlags = 9)]
-				public static void SetRotateEulerM(float[] rm, int rmOffset, float x, float y, float z) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Define a viewing transformation in terms of an eye point, a center of view, and an up vector.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setLookAtM
-				/// </java-name>
-				[Dot42.DexImport("setLookAtM", "([FIFFFFFFFFF)V", AccessFlags = 9)]
-				public static void SetLookAtM(float[] rm, int rmOffset, float eyeX, float eyeY, float eyeZ, float centerX, float centerY, float centerZ, float upX, float upY, float upZ) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <summary>
-		/// <para>Utility class to help bridging OpenGL ES and Android APIs. </para>    
-		/// </summary>
-		/// <java-name>
-		/// android/opengl/GLUtils
-		/// </java-name>
-		[Dot42.DexImport("android/opengl/GLUtils", AccessFlags = 49)]
-		public sealed partial class GLUtils
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal GLUtils() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>return the internal format as defined by OpenGL ES of the supplied bitmap. </para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the internal format of the bitmap. </para>
-				/// </returns>
-				/// <java-name>
-				/// getInternalFormat
-				/// </java-name>
-				[Dot42.DexImport("getInternalFormat", "(Landroid/graphics/Bitmap;)I", AccessFlags = 9)]
-				public static int GetInternalFormat(global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <summary>
-				/// <para>Return the type as defined by OpenGL ES of the supplied bitmap, if there is one. If the bitmap is stored in a compressed format, it may not have a valid OpenGL ES type. </para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the OpenGL ES type of the bitmap. </para>
-				/// </returns>
-				/// <java-name>
-				/// getType
-				/// </java-name>
-				[Dot42.DexImport("getType", "(Landroid/graphics/Bitmap;)I", AccessFlags = 9)]
-				public static int GetType(global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <summary>
-				/// <para>Calls glTexImage2D() on the current OpenGL context. If no context is current the behavior is the same as calling glTexImage2D() with no current context, that is, eglGetError() will return the appropriate error. Unlike glTexImage2D() bitmap cannot be null and will raise an exception in that case. All other parameters are identical to those used for glTexImage2D().</para><para>NOTE: this method doesn't change GL_UNPACK_ALIGNMENT, you must make sure to set it properly according to the supplied bitmap.</para><para>Whether or not bitmap can have non power of two dimensions depends on the current OpenGL context. Always check glGetError() some time after calling this method, just like when using OpenGL directly.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// texImage2D
-				/// </java-name>
-				[Dot42.DexImport("texImage2D", "(IIILandroid/graphics/Bitmap;I)V", AccessFlags = 9)]
-				public static void TexImage2D(int target, int level, int internalformat, global::Android.Graphics.Bitmap bitmap, int border) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>A version of texImage2D() that takes an explicit type parameter as defined by the OpenGL ES specification. The actual type and internalformat of the bitmap must be compatible with the specified type and internalformat parameters.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// texImage2D
-				/// </java-name>
-				[Dot42.DexImport("texImage2D", "(IIILandroid/graphics/Bitmap;II)V", AccessFlags = 9)]
-				public static void TexImage2D(int target, int level, int internalformat, global::Android.Graphics.Bitmap bitmap, int type, int border) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>A version of texImage2D that determines the internalFormat and type automatically.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// texImage2D
-				/// </java-name>
-				[Dot42.DexImport("texImage2D", "(IILandroid/graphics/Bitmap;I)V", AccessFlags = 9)]
-				public static void TexImage2D(int target, int level, global::Android.Graphics.Bitmap bitmap, int border) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Calls glTexSubImage2D() on the current OpenGL context. If no context is current the behavior is the same as calling glTexSubImage2D() with no current context, that is, eglGetError() will return the appropriate error. Unlike glTexSubImage2D() bitmap cannot be null and will raise an exception in that case. All other parameters are identical to those used for glTexSubImage2D().</para><para>NOTE: this method doesn't change GL_UNPACK_ALIGNMENT, you must make sure to set it properly according to the supplied bitmap.</para><para>Whether or not bitmap can have non power of two dimensions depends on the current OpenGL context. Always check glGetError() some time after calling this method, just like when using OpenGL directly.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// texSubImage2D
-				/// </java-name>
-				[Dot42.DexImport("texSubImage2D", "(IIIILandroid/graphics/Bitmap;)V", AccessFlags = 9)]
-				public static void TexSubImage2D(int target, int level, int xoffset, int yoffset, global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>A version of texSubImage2D() that takes an explicit type parameter as defined by the OpenGL ES specification.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// texSubImage2D
-				/// </java-name>
-				[Dot42.DexImport("texSubImage2D", "(IIIILandroid/graphics/Bitmap;II)V", AccessFlags = 9)]
-				public static void TexSubImage2D(int target, int level, int xoffset, int yoffset, global::Android.Graphics.Bitmap bitmap, int format, int type) /* MethodBuilder.Create */ 
-				{
-				}
-
-		}
-
-		/// <summary>
-		/// <para>An implementation of SurfaceView that uses the dedicated surface for displaying OpenGL rendering. </para><para>A GLSurfaceView provides the following features: </para><para><ul><li><para>Manages a surface, which is a special piece of memory that can be composited into the Android view system. </para></li><li><para>Manages an EGL display, which enables OpenGL to render into a surface. </para></li><li><para>Accepts a user-provided Renderer object that does the actual rendering. </para></li><li><para>Renders on a dedicated thread to decouple rendering performance from the UI thread. </para></li><li><para>Supports both on-demand and continuous rendering. </para></li><li><para>Optionally wraps, traces, and/or error-checks the renderer's OpenGL calls. </para></li></ul></para><para> <h3>Developer Guides</h3></para><para> </para><para>For more information about how to use OpenGL, read the  developer guide.</para><para> </para><para><h3>Using GLSurfaceView</h3></para><para>Typically you use GLSurfaceView by subclassing it and overriding one or more of the View system input event methods. If your application does not need to override event methods then GLSurfaceView can be used as-is. For the most part GLSurfaceView behavior is customized by calling "set" methods rather than by subclassing. For example, unlike a regular View, drawing is delegated to a separate Renderer object which is registered with the GLSurfaceView using the setRenderer(Renderer) call. </para><para><h3>Initializing GLSurfaceView</h3></para><para>All you have to do to initialize a GLSurfaceView is call setRenderer(Renderer). However, if desired, you can modify the default behavior of GLSurfaceView by calling one or more of these methods before calling setRenderer: <ul><li><para>setDebugFlags(int) </para></li><li><para>setEGLConfigChooser(boolean) </para></li><li><para>setEGLConfigChooser(EGLConfigChooser) </para></li><li><para>setEGLConfigChooser(int, int, int, int, int, int) </para></li><li><para>setGLWrapper(GLWrapper) </para></li></ul></para><para><h4>Specifying the android.view.Surface</h4></para><para>By default GLSurfaceView will create a PixelFormat.RGB_888 format surface. If a translucent surface is required, call getHolder().setFormat(PixelFormat.TRANSLUCENT). The exact format of a TRANSLUCENT surface is device dependent, but it will be a 32-bit-per-pixel surface with 8 bits per component. </para><para><h4>Choosing an EGL Configuration</h4></para><para>A given Android device may support multiple EGLConfig rendering configurations. The available configurations may differ in how may channels of data are present, as well as how many bits are allocated to each channel. Therefore, the first thing GLSurfaceView has to do when starting to render is choose what EGLConfig to use. </para><para>By default GLSurfaceView chooses a EGLConfig that has an RGB_888 pixel format, with at least a 16-bit depth buffer and no stencil. </para><para>If you would prefer a different EGLConfig you can override the default behavior by calling one of the setEGLConfigChooser methods. </para><para><h4>Debug Behavior</h4></para><para>You can optionally modify the behavior of GLSurfaceView by calling one or more of the debugging methods setDebugFlags(int), and setGLWrapper. These methods may be called before and/or after setRenderer, but typically they are called before setRenderer so that they take effect immediately. </para><para><h4>Setting a Renderer</h4></para><para>Finally, you must call setRenderer to register a Renderer. The renderer is responsible for doing the actual OpenGL rendering. </para><para><h3>Rendering Mode</h3></para><para>Once the renderer is set, you can control whether the renderer draws continuously or on-demand by calling setRenderMode. The default is continuous rendering. </para><para><h3>Activity Life-cycle</h3></para><para>A GLSurfaceView must be notified when the activity is paused and resumed. GLSurfaceView clients are required to call onPause() when the activity pauses and onResume() when the activity resumes. These calls allow GLSurfaceView to pause and resume the rendering thread, and also allow GLSurfaceView to release and recreate the OpenGL display. </para><para><h3>Handling events</h3></para><para>To handle an event you will typically subclass GLSurfaceView and override the appropriate method, just as you would with any other View. However, when handling the event, you may need to communicate with the Renderer object that's running in the rendering thread. You can do this using any standard Java cross-thread communication mechanism. In addition, one relatively easy way to communicate with your renderer is to call queueEvent(Runnable). For example: <pre>
-		///    class MyGLSurfaceView extends GLSurfaceView {
-		/// <span>private MyRenderer mMyRenderer;
-		/// 
-		/// public void start() {
-		///     mMyRenderer = ...;
-		///     setRenderer(mMyRenderer);
-		/// }
-		/// 
-		/// public boolean onKeyDown(int keyCode, KeyEvent event) {
-		///     if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
-		///         queueEvent(new Runnable() {
-		///             // This method will be called on the rendering
-		///             // thread:
-		///             public void run() {
-		///                 mMyRenderer.handleDpadCenter();
-		///             }});
-		///         return true;
-		///     }
-		///     return super.onKeyDown(keyCode, event);
-		/// }
-		/// </span>
-		///    }
-		///    </pre> </para>    
-		/// </summary>
-		/// <java-name>
-		/// android/opengl/GLSurfaceView
-		/// </java-name>
-		[Dot42.DexImport("android/opengl/GLSurfaceView", AccessFlags = 33)]
-		public partial class GLSurfaceView : global::Android.View.SurfaceView, global::Android.View.ISurfaceHolder_ICallback
- /* scope: __dot42__ */ 
-		{
-				/// <summary>
-				/// <para>The renderer only renders when the surface is created, or when requestRender is called.</para><para><para>getRenderMode() </para><simplesectsep></simplesectsep><para>setRenderMode(int) </para><simplesectsep></simplesectsep><para>requestRender() </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// RENDERMODE_WHEN_DIRTY
-				/// </java-name>
-				[Dot42.DexImport("RENDERMODE_WHEN_DIRTY", "I", AccessFlags = 25)]
-				public const int RENDERMODE_WHEN_DIRTY = 0;
-				/// <summary>
-				/// <para>The renderer is called continuously to re-render the scene.</para><para><para>getRenderMode() </para><simplesectsep></simplesectsep><para>setRenderMode(int) </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// RENDERMODE_CONTINUOUSLY
-				/// </java-name>
-				[Dot42.DexImport("RENDERMODE_CONTINUOUSLY", "I", AccessFlags = 25)]
-				public const int RENDERMODE_CONTINUOUSLY = 1;
-				/// <summary>
-				/// <para>Check glError() after every GL call and throw an exception if glError indicates that an error has occurred. This can be used to help track down which OpenGL ES call is causing an error.</para><para><para>getDebugFlags </para><simplesectsep></simplesectsep><para>setDebugFlags </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// DEBUG_CHECK_GL_ERROR
-				/// </java-name>
-				[Dot42.DexImport("DEBUG_CHECK_GL_ERROR", "I", AccessFlags = 25)]
-				public const int DEBUG_CHECK_GL_ERROR = 1;
-				/// <summary>
-				/// <para>Log GL calls to the system log at "verbose" level with tag "GLSurfaceView".</para><para><para>getDebugFlags </para><simplesectsep></simplesectsep><para>setDebugFlags </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// DEBUG_LOG_GL_CALLS
-				/// </java-name>
-				[Dot42.DexImport("DEBUG_LOG_GL_CALLS", "I", AccessFlags = 25)]
-				public const int DEBUG_LOG_GL_CALLS = 2;
-				/// <summary>
-				/// <para>Standard View constructor. In order to render something, you must call setRenderer to register a renderer. </para>        
-				/// </summary>
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
-				public GLSurfaceView(global::Android.Content.Context context) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Standard View constructor. In order to render something, you must call setRenderer to register a renderer. </para>        
-				/// </summary>
-				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
-				public GLSurfaceView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attrs) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Set the glWrapper. If the glWrapper is not null, its GLWrapper#wrap(GL) method is called whenever a surface is created. A GLWrapper can be used to wrap the GL object that's passed to the renderer. Wrapping a GL object enables examining and modifying the behavior of the GL calls made by the renderer. </para><para>Wrapping is typically used for debugging purposes. </para><para>The default value is null. </para>        
-				/// </summary>
-				/// <java-name>
-				/// setGLWrapper
-				/// </java-name>
-				[Dot42.DexImport("setGLWrapper", "(Landroid/opengl/GLSurfaceView$GLWrapper;)V", AccessFlags = 1)]
-				public virtual void SetGLWrapper(global::Android.Opengl.GLSurfaceView.IGLWrapper glWrapper) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Set the debug flags to a new value. The value is constructed by OR-together zero or more of the DEBUG_CHECK_* constants. The debug flags take effect whenever a surface is created. The default value is zero. <para>DEBUG_CHECK_GL_ERROR </para><simplesectsep></simplesectsep><para>DEBUG_LOG_GL_CALLS </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setDebugFlags
-				/// </java-name>
-				[Dot42.DexImport("setDebugFlags", "(I)V", AccessFlags = 1)]
-				public virtual void SetDebugFlags(int debugFlags) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Get the current value of the debug flags. </para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the current value of the debug flags. </para>
-				/// </returns>
-				/// <java-name>
-				/// getDebugFlags
-				/// </java-name>
-				[Dot42.DexImport("getDebugFlags", "()I", AccessFlags = 1)]
-				public virtual int GetDebugFlags() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <summary>
-				/// <para>Control whether the EGL context is preserved when the GLSurfaceView is paused and resumed. </para><para>If set to true, then the EGL context may be preserved when the GLSurfaceView is paused. Whether the EGL context is actually preserved or not depends upon whether the Android device that the program is running on can support an arbitrary number of EGL contexts or not. Devices that can only support a limited number of EGL contexts must release the EGL context in order to allow multiple applications to share the GPU. </para><para>If set to false, the EGL context will be released when the GLSurfaceView is paused, and recreated when the GLSurfaceView is resumed. </para><para>The default is false.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setPreserveEGLContextOnPause
-				/// </java-name>
-				[Dot42.DexImport("setPreserveEGLContextOnPause", "(Z)V", AccessFlags = 1)]
-				public virtual void SetPreserveEGLContextOnPause(bool preserveOnPause) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>true if the EGL context will be preserved when paused </para>
-				/// </returns>
-				/// <java-name>
-				/// getPreserveEGLContextOnPause
-				/// </java-name>
-				[Dot42.DexImport("getPreserveEGLContextOnPause", "()Z", AccessFlags = 1)]
-				public virtual bool GetPreserveEGLContextOnPause() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <summary>
-				/// <para>Set the renderer associated with this view. Also starts the thread that will call the renderer, which in turn causes the rendering to start. </para><para>This method should be called once and only once in the life-cycle of a GLSurfaceView. </para><para>The following GLSurfaceView methods can only be called <b>before</b> setRenderer is called: <ul><li><para>setEGLConfigChooser(boolean) </para></li><li><para>setEGLConfigChooser(EGLConfigChooser) </para></li><li><para>setEGLConfigChooser(int, int, int, int, int, int) </para></li></ul></para><para>The following GLSurfaceView methods can only be called <b>after</b> setRenderer is called: <ul><li><para>getRenderMode() </para></li><li><para>onPause() </para></li><li><para>onResume() </para></li><li><para>queueEvent(Runnable) </para></li><li><para>requestRender() </para></li><li><para>setRenderMode(int) </para></li></ul></para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setRenderer
-				/// </java-name>
-				[Dot42.DexImport("setRenderer", "(Landroid/opengl/GLSurfaceView$Renderer;)V", AccessFlags = 1)]
-				public virtual void SetRenderer(global::Android.Opengl.GLSurfaceView.IRenderer renderer) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Install a custom EGLContextFactory. </para><para>If this method is called, it must be called before setRenderer(Renderer) is called. </para><para>If this method is not called, then by default a context will be created with no shared context and with a null attribute list. </para>        
-				/// </summary>
-				/// <java-name>
-				/// setEGLContextFactory
-				/// </java-name>
-				[Dot42.DexImport("setEGLContextFactory", "(Landroid/opengl/GLSurfaceView$EGLContextFactory;)V", AccessFlags = 1)]
-				public virtual void SetEGLContextFactory(global::Android.Opengl.GLSurfaceView.IEGLContextFactory factory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Install a custom EGLWindowSurfaceFactory. </para><para>If this method is called, it must be called before setRenderer(Renderer) is called. </para><para>If this method is not called, then by default a window surface will be created with a null attribute list. </para>        
-				/// </summary>
-				/// <java-name>
-				/// setEGLWindowSurfaceFactory
-				/// </java-name>
-				[Dot42.DexImport("setEGLWindowSurfaceFactory", "(Landroid/opengl/GLSurfaceView$EGLWindowSurfaceFactory;)V", AccessFlags = 1)]
-				public virtual void SetEGLWindowSurfaceFactory(global::Android.Opengl.GLSurfaceView.IEGLWindowSurfaceFactory factory) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Install a custom EGLConfigChooser. </para><para>If this method is called, it must be called before setRenderer(Renderer) is called. </para><para>If no setEGLConfigChooser method is called, then by default the view will choose an EGLConfig that is compatible with the current android.view.Surface, with a depth buffer depth of at least 16 bits. </para>        
-				/// </summary>
-				/// <java-name>
-				/// setEGLConfigChooser
-				/// </java-name>
-				[Dot42.DexImport("setEGLConfigChooser", "(Landroid/opengl/GLSurfaceView$EGLConfigChooser;)V", AccessFlags = 1)]
-				public virtual void SetEGLConfigChooser(global::Android.Opengl.GLSurfaceView.IEGLConfigChooser configChooser) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Install a custom EGLConfigChooser. </para><para>If this method is called, it must be called before setRenderer(Renderer) is called. </para><para>If no setEGLConfigChooser method is called, then by default the view will choose an EGLConfig that is compatible with the current android.view.Surface, with a depth buffer depth of at least 16 bits. </para>        
-				/// </summary>
-				/// <java-name>
-				/// setEGLConfigChooser
-				/// </java-name>
-				[Dot42.DexImport("setEGLConfigChooser", "(Z)V", AccessFlags = 1)]
-				public virtual void SetEGLConfigChooser(bool configChooser) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Install a config chooser which will choose a config with at least the specified depthSize and stencilSize, and exactly the specified redSize, greenSize, blueSize and alphaSize. </para><para>If this method is called, it must be called before setRenderer(Renderer) is called. </para><para>If no setEGLConfigChooser method is called, then by default the view will choose an RGB_888 surface with a depth buffer depth of at least 16 bits. </para>        
-				/// </summary>
-				/// <java-name>
-				/// setEGLConfigChooser
-				/// </java-name>
-				[Dot42.DexImport("setEGLConfigChooser", "(IIIIII)V", AccessFlags = 1)]
-				public virtual void SetEGLConfigChooser(int redSize, int greenSize, int blueSize, int alphaSize, int depthSize, int stencilSize) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Inform the default EGLContextFactory and default EGLConfigChooser which EGLContext client version to pick. </para><para>Use this method to create an OpenGL ES 2.0-compatible context. Example: <pre>
-				///            public MyView(Context context) {
-				///                super(context);
-				///                setEGLContextClientVersion(2); // Pick an OpenGL ES 2.0 context.
-				///                setRenderer(new MyRenderer());
-				///            }
-				///        </pre> </para><para>Note: Activities which require OpenGL ES 2.0 should indicate this by setting ;uses-feature android:glEsVersion="0x00020000" /&gt; in the activity's AndroidManifest.xml file. </para><para>If this method is called, it must be called before setRenderer(Renderer) is called. </para><para>This method only affects the behavior of the default EGLContexFactory and the default EGLConfigChooser. If setEGLContextFactory(EGLContextFactory) has been called, then the supplied EGLContextFactory is responsible for creating an OpenGL ES 2.0-compatible context. If setEGLConfigChooser(EGLConfigChooser) has been called, then the supplied EGLConfigChooser is responsible for choosing an OpenGL ES 2.0-compatible config. </para>        
-				/// </summary>
-				/// <java-name>
-				/// setEGLContextClientVersion
-				/// </java-name>
-				[Dot42.DexImport("setEGLContextClientVersion", "(I)V", AccessFlags = 1)]
-				public virtual void SetEGLContextClientVersion(int version) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Set the rendering mode. When renderMode is RENDERMODE_CONTINUOUSLY, the renderer is called repeatedly to re-render the scene. When renderMode is RENDERMODE_WHEN_DIRTY, the renderer only rendered when the surface is created, or when requestRender is called. Defaults to RENDERMODE_CONTINUOUSLY. </para><para>Using RENDERMODE_WHEN_DIRTY can improve battery life and overall system performance by allowing the GPU and CPU to idle when the view does not need to be updated. </para><para>This method can only be called after setRenderer(Renderer)</para><para><para>RENDERMODE_CONTINUOUSLY </para><simplesectsep></simplesectsep><para>RENDERMODE_WHEN_DIRTY </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setRenderMode
-				/// </java-name>
-				[Dot42.DexImport("setRenderMode", "(I)V", AccessFlags = 1)]
-				public virtual void SetRenderMode(int renderMode) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Get the current rendering mode. May be called from any thread. Must not be called before a renderer has been set. <para>RENDERMODE_CONTINUOUSLY </para><simplesectsep></simplesectsep><para>RENDERMODE_WHEN_DIRTY </para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the current rendering mode. </para>
-				/// </returns>
-				/// <java-name>
-				/// getRenderMode
-				/// </java-name>
-				[Dot42.DexImport("getRenderMode", "()I", AccessFlags = 1)]
-				public virtual int GetRenderMode() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <summary>
-				/// <para>Request that the renderer render a frame. This method is typically used when the render mode has been set to RENDERMODE_WHEN_DIRTY, so that frames are only rendered on demand. May be called from any thread. Must not be called before a renderer has been set. </para>        
-				/// </summary>
-				/// <java-name>
-				/// requestRender
-				/// </java-name>
-				[Dot42.DexImport("requestRender", "()V", AccessFlags = 1)]
-				public virtual void RequestRender() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>This method is part of the SurfaceHolder.Callback interface, and is not normally called or subclassed by clients of GLSurfaceView. </para>        
-				/// </summary>
-				/// <java-name>
-				/// surfaceCreated
-				/// </java-name>
-				[Dot42.DexImport("surfaceCreated", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SurfaceCreated(global::Android.View.ISurfaceHolder holder) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>This method is part of the SurfaceHolder.Callback interface, and is not normally called or subclassed by clients of GLSurfaceView. </para>        
-				/// </summary>
-				/// <java-name>
-				/// surfaceDestroyed
-				/// </java-name>
-				[Dot42.DexImport("surfaceDestroyed", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
-				public virtual void SurfaceDestroyed(global::Android.View.ISurfaceHolder holder) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>This method is part of the SurfaceHolder.Callback interface, and is not normally called or subclassed by clients of GLSurfaceView. </para>        
-				/// </summary>
-				/// <java-name>
-				/// surfaceChanged
-				/// </java-name>
-				[Dot42.DexImport("surfaceChanged", "(Landroid/view/SurfaceHolder;III)V", AccessFlags = 1)]
-				public virtual void SurfaceChanged(global::Android.View.ISurfaceHolder holder, int format, int w, int h) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Inform the view that the activity is paused. The owner of this view must call this method when the activity is paused. Calling this method will pause the rendering thread. Must not be called before a renderer has been set. </para>        
-				/// </summary>
-				/// <java-name>
-				/// onPause
-				/// </java-name>
-				[Dot42.DexImport("onPause", "()V", AccessFlags = 1)]
-				public virtual void OnPause() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Inform the view that the activity is resumed. The owner of this view must call this method when the activity is resumed. Calling this method will recreate the OpenGL display and resume the rendering thread. Must not be called before a renderer has been set. </para>        
-				/// </summary>
-				/// <java-name>
-				/// onResume
-				/// </java-name>
-				[Dot42.DexImport("onResume", "()V", AccessFlags = 1)]
-				public virtual void OnResume() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Queue a runnable to be run on the GL rendering thread. This can be used to communicate with the Renderer on the rendering thread. Must not be called before a renderer has been set. </para>        
-				/// </summary>
-				/// <java-name>
-				/// queueEvent
-				/// </java-name>
-				[Dot42.DexImport("queueEvent", "(Ljava/lang/Runnable;)V", AccessFlags = 1)]
-				public virtual void QueueEvent(global::Java.Lang.IRunnable r) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>This method is used as part of the View class and is not normally called or subclassed by clients of GLSurfaceView. </para>        
-				/// </summary>
-				/// <java-name>
-				/// onAttachedToWindow
-				/// </java-name>
-				[Dot42.DexImport("onAttachedToWindow", "()V", AccessFlags = 4)]
-				protected internal override void OnAttachedToWindow() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>This method is used as part of the View class and is not normally called or subclassed by clients of GLSurfaceView. Must not be called before a renderer has been set. </para>        
-				/// </summary>
-				/// <java-name>
-				/// onDetachedFromWindow
-				/// </java-name>
-				[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 4)]
-				protected internal override void OnDetachedFromWindow() /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GLSurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Get the current value of the debug flags. </para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the current value of the debug flags. </para>
-				/// </returns>
-				/// <java-name>
-				/// getDebugFlags
-				/// </java-name>
-				public int DebugFlags
-				{
-				[Dot42.DexImport("getDebugFlags", "()I", AccessFlags = 1)]
-						get{ return GetDebugFlags(); }
-				[Dot42.DexImport("setDebugFlags", "(I)V", AccessFlags = 1)]
-						set{ SetDebugFlags(value); }
-				}
-
-				/// <summary>
-				/// <para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>true if the EGL context will be preserved when paused </para>
-				/// </returns>
-				/// <java-name>
-				/// getPreserveEGLContextOnPause
-				/// </java-name>
-				public bool IsPreserveEGLContextOnPause
-				{
-				[Dot42.DexImport("getPreserveEGLContextOnPause", "()Z", AccessFlags = 1)]
-						get{ return GetPreserveEGLContextOnPause(); }
-				[Dot42.DexImport("setPreserveEGLContextOnPause", "(Z)V", AccessFlags = 1)]
-						set{ SetPreserveEGLContextOnPause(value); }
-				}
-
-				/// <summary>
-				/// <para>Get the current rendering mode. May be called from any thread. Must not be called before a renderer has been set. <para>RENDERMODE_CONTINUOUSLY </para><simplesectsep></simplesectsep><para>RENDERMODE_WHEN_DIRTY </para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the current rendering mode. </para>
-				/// </returns>
-				/// <java-name>
-				/// getRenderMode
-				/// </java-name>
-				public int RenderMode
-				{
-				[Dot42.DexImport("getRenderMode", "()I", AccessFlags = 1)]
-						get{ return GetRenderMode(); }
-				[Dot42.DexImport("setRenderMode", "(I)V", AccessFlags = 1)]
-						set{ SetRenderMode(value); }
-				}
-
-				/// <summary>
-				/// <para>An interface for choosing an EGLConfig configuration from a list of potential configurations. </para><para>This interface must be implemented by clients wishing to call GLSurfaceView#setEGLConfigChooser(EGLConfigChooser) </para>    
-				/// </summary>
-				/// <java-name>
-				/// android/opengl/GLSurfaceView$EGLConfigChooser
-				/// </java-name>
-				[Dot42.DexImport("android/opengl/GLSurfaceView$EGLConfigChooser", AccessFlags = 1545)]
-				public partial interface IEGLConfigChooser
- /* scope: __dot42__ */ 
-				{
-						/// <summary>
-						/// <para>Choose a configuration from the list. Implementors typically implement this method by calling EGL10#eglChooseConfig and iterating through the results. Please consult the EGL specification available from The Khronos Group to learn how to call eglChooseConfig. </para>        
-						/// </summary>
-						/// <returns>
-						/// <para>the chosen configuration. </para>
-						/// </returns>
-						/// <java-name>
-						/// chooseConfig
-						/// </java-name>
-						[Dot42.DexImport("chooseConfig", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
-    ";)Ljavax/microedition/khronos/egl/EGLConfig;", AccessFlags = 1025)]
-						global::Javax.Microedition.Khronos.Egl.EGLConfig ChooseConfig(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display) /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <summary>
-				/// <para>An interface for customizing the eglCreateWindowSurface and eglDestroySurface calls. </para><para>This interface must be implemented by clients wishing to call GLSurfaceView#setEGLWindowSurfaceFactory(EGLWindowSurfaceFactory) </para>    
-				/// </summary>
-				/// <java-name>
-				/// android/opengl/GLSurfaceView$EGLWindowSurfaceFactory
-				/// </java-name>
-				[Dot42.DexImport("android/opengl/GLSurfaceView$EGLWindowSurfaceFactory", AccessFlags = 1545)]
-				public partial interface IEGLWindowSurfaceFactory
- /* scope: __dot42__ */ 
-				{
-						/// <summary>
-						/// <para></para>        
-						/// </summary>
-						/// <returns>
-						/// <para>null if the surface cannot be constructed. </para>
-						/// </returns>
-						/// <java-name>
-						/// createWindowSurface
-						/// </java-name>
-						[Dot42.DexImport("createWindowSurface", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
-    ";Ljavax/microedition/khronos/egl/EGLConfig;Ljava/lang/Object;)Ljavax/microeditio" +
-    "n/khronos/egl/EGLSurface;", AccessFlags = 1025)]
-						global::Javax.Microedition.Khronos.Egl.EGLSurface CreateWindowSurface(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig config, object nativeWindow) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// destroySurface
-						/// </java-name>
-						[Dot42.DexImport("destroySurface", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
-    ";Ljavax/microedition/khronos/egl/EGLSurface;)V", AccessFlags = 1025)]
-						void DestroySurface(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLSurface surface) /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <summary>
-				/// <para>An interface for customizing the eglCreateContext and eglDestroyContext calls. </para><para>This interface must be implemented by clients wishing to call GLSurfaceView#setEGLContextFactory(EGLContextFactory) </para>    
-				/// </summary>
-				/// <java-name>
-				/// android/opengl/GLSurfaceView$EGLContextFactory
-				/// </java-name>
-				[Dot42.DexImport("android/opengl/GLSurfaceView$EGLContextFactory", AccessFlags = 1545)]
-				public partial interface IEGLContextFactory
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// createContext
-						/// </java-name>
-						[Dot42.DexImport("createContext", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
-    ";Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLC" +
-    "ontext;", AccessFlags = 1025)]
-						global::Javax.Microedition.Khronos.Egl.EGLContext CreateContext(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig eglConfig) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// destroyContext
-						/// </java-name>
-						[Dot42.DexImport("destroyContext", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
-    ";Ljavax/microedition/khronos/egl/EGLContext;)V", AccessFlags = 1025)]
-						void DestroyContext(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLContext context) /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <summary>
-				/// <para>A generic renderer interface. </para><para>The renderer is responsible for making OpenGL calls to render a frame. </para><para>GLSurfaceView clients typically create their own classes that implement this interface, and then call GLSurfaceView#setRenderer to register the renderer with the GLSurfaceView. </para><para> <h3>Developer Guides</h3></para><para> </para><para>For more information about how to use OpenGL, read the  developer guide.</para><para> </para><para><h3>Threading</h3></para><para>The renderer will be called on a separate thread, so that rendering performance is decoupled from the UI thread. Clients typically need to communicate with the renderer from the UI thread, because that's where input events are received. Clients can communicate using any of the standard Java techniques for cross-thread communication, or they can use the GLSurfaceView#queueEvent(Runnable) convenience method. </para><para><h3>EGL Context Lost</h3></para><para>There are situations where the EGL rendering context will be lost. This typically happens when device wakes up after going to sleep. When the EGL context is lost, all OpenGL resources (such as textures) that are associated with that context will be automatically deleted. In order to keep rendering correctly, a renderer must recreate any lost resources that it still needs. The onSurfaceCreated(GL10, EGLConfig) method is a convenient place to do this.</para><para><para>setRenderer(Renderer) </para></para>    
-				/// </summary>
-				/// <java-name>
-				/// android/opengl/GLSurfaceView$Renderer
-				/// </java-name>
-				[Dot42.DexImport("android/opengl/GLSurfaceView$Renderer", AccessFlags = 1545)]
-				public partial interface IRenderer
- /* scope: __dot42__ */ 
-				{
-						/// <summary>
-						/// <para>Called when the surface is created or recreated. </para><para>Called when the rendering thread starts and whenever the EGL context is lost. The EGL context will typically be lost when the Android device awakes after going to sleep. </para><para>Since this method is called at the beginning of rendering, as well as every time the EGL context is lost, this method is a convenient place to put code to create resources that need to be created when the rendering starts, and that need to be recreated when the EGL context is lost. Textures are an example of a resource that you might want to create here. </para><para>Note that when the EGL context is lost, all OpenGL resources associated with that context will be automatically deleted. You do not need to call the corresponding "glDelete" methods such as glDeleteTextures to manually delete these lost resources. </para><para></para>        
-						/// </summary>
-						/// <java-name>
-						/// onSurfaceCreated
-						/// </java-name>
-						[Dot42.DexImport("onSurfaceCreated", "(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLCon" +
-    "fig;)V", AccessFlags = 1025)]
-						void OnSurfaceCreated(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, global::Javax.Microedition.Khronos.Egl.EGLConfig config) /* MethodBuilder.Create */ ;
-
-						/// <summary>
-						/// <para>Called when the surface changed size. </para><para>Called after the surface is created and whenever the OpenGL ES surface size changes. </para><para>Typically you will set your viewport here. If your camera is fixed then you could also set your projection matrix here: <pre>
-						///            void onSurfaceChanged(GL10 gl, int width, int height) {
-						///                gl.glViewport(0, 0, width, height);
-						///                // for a fixed camera, set the projection too
-						///                float ratio = (float) width / height;
-						///                gl.glMatrixMode(GL10.GL_PROJECTION);
-						///                gl.glLoadIdentity();
-						///                gl.glFrustumf(-ratio, ratio, -1, 1, 1, 10);
-						///            }
-						///            </pre> </para>        
-						/// </summary>
-						/// <java-name>
-						/// onSurfaceChanged
-						/// </java-name>
-						[Dot42.DexImport("onSurfaceChanged", "(Ljavax/microedition/khronos/opengles/GL10;II)V", AccessFlags = 1025)]
-						void OnSurfaceChanged(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, int width, int height) /* MethodBuilder.Create */ ;
-
-						/// <summary>
-						/// <para>Called to draw the current frame. </para><para>This method is responsible for drawing the current frame. </para><para>The implementation of this method typically looks like this: <pre>
-						///            void onDrawFrame(GL10 gl) {
-						///                gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
-						///                //... other gl calls to render the scene ...
-						///            }
-						///            </pre> </para>        
-						/// </summary>
-						/// <java-name>
-						/// onDrawFrame
-						/// </java-name>
-						[Dot42.DexImport("onDrawFrame", "(Ljavax/microedition/khronos/opengles/GL10;)V", AccessFlags = 1025)]
-						void OnDrawFrame(global::Javax.Microedition.Khronos.Opengles.IGL10 gl) /* MethodBuilder.Create */ ;
-
-				}
-
-				/// <summary>
-				/// <para>An interface used to wrap a GL interface. </para><para>Typically used for implementing debugging and tracing on top of the default GL interface. You would typically use this by creating your own class that implemented all the GL methods by delegating to another GL instance. Then you could add your own behavior before or after calling the delegate. All the GLWrapper would do was instantiate and return the wrapper GL instance: <pre>
-				///        class MyGLWrapper implements GLWrapper {
-				///            GL wrap(GL gl) {
-				///                return new MyGLImplementation(gl);
-				///            }
-				///            static class MyGLImplementation implements GL,GL10,GL11,... {
-				///                ...
-				///            }
-				///        }
-				///        </pre> <para>setGLWrapper(GLWrapper) </para></para>    
-				/// </summary>
-				/// <java-name>
-				/// android/opengl/GLSurfaceView$GLWrapper
-				/// </java-name>
-				[Dot42.DexImport("android/opengl/GLSurfaceView$GLWrapper", AccessFlags = 1545)]
-				public partial interface IGLWrapper
- /* scope: __dot42__ */ 
-				{
-						/// <summary>
-						/// <para>Wraps a gl interface in another gl interface. </para>        
-						/// </summary>
-						/// <returns>
-						/// <para>either the input argument or another GL object that wraps the input argument. </para>
-						/// </returns>
-						/// <java-name>
-						/// wrap
-						/// </java-name>
-						[Dot42.DexImport("wrap", "(Ljavax/microedition/khronos/opengles/GL;)Ljavax/microedition/khronos/opengles/GL" +
-    ";", AccessFlags = 1025)]
-						global::Javax.Microedition.Khronos.Opengles.IGL Wrap(global::Javax.Microedition.Khronos.Opengles.IGL gl) /* MethodBuilder.Create */ ;
-
+						return default(global::Javax.Microedition.Khronos.Egl.IEGL);
 				}
 
 		}
@@ -3319,6 +2573,38 @@ namespace Android.Opengl
 		}
 
 		/// <java-name>
+		/// android/opengl/GLES10Ext
+		/// </java-name>
+		[Dot42.DexImport("android/opengl/GLES10Ext", AccessFlags = 33)]
+		public partial class GLES10Ext
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public GLES10Ext() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// glQueryMatrixxOES
+				/// </java-name>
+				[Dot42.DexImport("glQueryMatrixxOES", "([II[II)I", AccessFlags = 265)]
+				public static int GlQueryMatrixxOES(int[] mantissa, int mantissaOffset, int[] exponent, int exponentOffset) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <java-name>
+				/// glQueryMatrixxOES
+				/// </java-name>
+				[Dot42.DexImport("glQueryMatrixxOES", "(Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)I", AccessFlags = 265)]
+				public static int GlQueryMatrixxOES(global::Java.Nio.IntBuffer mantissa, global::Java.Nio.IntBuffer exponent) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+		}
+
+		/// <java-name>
 		/// android/opengl/GLES11
 		/// </java-name>
 		[Dot42.DexImport("android/opengl/GLES11", AccessFlags = 33)]
@@ -4501,312 +3787,6 @@ namespace Android.Opengl
 				[Dot42.DexImport("glVertexPointer", "(IIII)V", AccessFlags = 265)]
 				public static void GlVertexPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ 
 				{
-				}
-
-		}
-
-		/// <summary>
-		/// <para>An exception class for OpenGL errors. </para>    
-		/// </summary>
-		/// <java-name>
-		/// android/opengl/GLException
-		/// </java-name>
-		[Dot42.DexImport("android/opengl/GLException", AccessFlags = 33)]
-		public partial class GLException : global::System.SystemException
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
-				public GLException(int error) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[Dot42.DexImport("<init>", "(ILjava/lang/String;)V", AccessFlags = 1)]
-				public GLException(int error, string @string) /* MethodBuilder.Create */ 
-				{
-				}
-
-				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GLException() /* TypeBuilder.AddDefaultConstructor */ 
-				{
-				}
-
-		}
-
-		/// <summary>
-		/// <para>Utility methods for using ETC1 compressed textures. </para>    
-		/// </summary>
-		/// <java-name>
-		/// android/opengl/ETC1Util
-		/// </java-name>
-		[Dot42.DexImport("android/opengl/ETC1Util", AccessFlags = 33)]
-		public partial class ETC1Util
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public ETC1Util() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Convenience method to load an ETC1 texture whether or not the active OpenGL context supports the ETC1 texture compression format. </para>        
-				/// </summary>
-				/// <java-name>
-				/// loadTexture
-				/// </java-name>
-				[Dot42.DexImport("loadTexture", "(IIIIILjava/io/InputStream;)V", AccessFlags = 9)]
-				public static void LoadTexture(int target, int level, int border, int fallbackFormat, int fallbackType, global::Java.Io.InputStream input) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Convenience method to load an ETC1 texture whether or not the active OpenGL context supports the ETC1 texture compression format. </para>        
-				/// </summary>
-				/// <java-name>
-				/// loadTexture
-				/// </java-name>
-				[Dot42.DexImport("loadTexture", "(IIIIILandroid/opengl/ETC1Util$ETC1Texture;)V", AccessFlags = 9)]
-				public static void LoadTexture(int target, int level, int border, int fallbackFormat, int fallbackType, global::Android.Opengl.ETC1Util.ETC1Texture input) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Check if ETC1 texture compression is supported by the active OpenGL ES context. </para>        
-				/// </summary>
-				/// <returns>
-				/// <para>true if the active OpenGL ES context supports ETC1 texture compression. </para>
-				/// </returns>
-				/// <java-name>
-				/// isETC1Supported
-				/// </java-name>
-				[Dot42.DexImport("isETC1Supported", "()Z", AccessFlags = 9)]
-				public static bool IsETC1Supported() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <summary>
-				/// <para>Create a new ETC1Texture from an input stream containing a PKM formatted compressed texture. </para>        
-				/// </summary>
-				/// <returns>
-				/// <para>an ETC1Texture read from the input stream. </para>
-				/// </returns>
-				/// <java-name>
-				/// createTexture
-				/// </java-name>
-				[Dot42.DexImport("createTexture", "(Ljava/io/InputStream;)Landroid/opengl/ETC1Util$ETC1Texture;", AccessFlags = 9)]
-				public static global::Android.Opengl.ETC1Util.ETC1Texture CreateTexture(global::Java.Io.InputStream input) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Opengl.ETC1Util.ETC1Texture);
-				}
-
-				/// <summary>
-				/// <para>Helper function that compresses an image into an ETC1Texture. </para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the ETC1 texture. </para>
-				/// </returns>
-				/// <java-name>
-				/// compressTexture
-				/// </java-name>
-				[Dot42.DexImport("compressTexture", "(Ljava/nio/Buffer;IIII)Landroid/opengl/ETC1Util$ETC1Texture;", AccessFlags = 9)]
-				public static global::Android.Opengl.ETC1Util.ETC1Texture CompressTexture(global::Java.Nio.Buffer input, int width, int height, int pixelSize, int stride) /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Opengl.ETC1Util.ETC1Texture);
-				}
-
-				/// <summary>
-				/// <para>Helper function that writes an ETC1Texture to an output stream formatted as a PKM file. </para>        
-				/// </summary>
-				/// <java-name>
-				/// writeTexture
-				/// </java-name>
-				[Dot42.DexImport("writeTexture", "(Landroid/opengl/ETC1Util$ETC1Texture;Ljava/io/OutputStream;)V", AccessFlags = 9)]
-				public static void WriteTexture(global::Android.Opengl.ETC1Util.ETC1Texture texture, global::Java.Io.OutputStream output) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>A utility class encapsulating a compressed ETC1 texture. </para>    
-				/// </summary>
-				/// <java-name>
-				/// android/opengl/ETC1Util$ETC1Texture
-				/// </java-name>
-				[Dot42.DexImport("android/opengl/ETC1Util$ETC1Texture", AccessFlags = 9)]
-				public partial class ETC1Texture
- /* scope: __dot42__ */ 
-				{
-						[Dot42.DexImport("<init>", "(IILjava/nio/ByteBuffer;)V", AccessFlags = 1)]
-						public ETC1Texture(int int32, int int321, global::Java.Nio.ByteBuffer byteBuffer) /* MethodBuilder.Create */ 
-						{
-						}
-
-						/// <summary>
-						/// <para>Get the width of the texture in pixels. </para>        
-						/// </summary>
-						/// <returns>
-						/// <para>the width of the texture in pixels. </para>
-						/// </returns>
-						/// <java-name>
-						/// getWidth
-						/// </java-name>
-						[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-						public virtual int GetWidth() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <summary>
-						/// <para>Get the height of the texture in pixels. </para>        
-						/// </summary>
-						/// <returns>
-						/// <para>the width of the texture in pixels. </para>
-						/// </returns>
-						/// <java-name>
-						/// getHeight
-						/// </java-name>
-						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-						public virtual int GetHeight() /* MethodBuilder.Create */ 
-						{
-								return default(int);
-						}
-
-						/// <summary>
-						/// <para>Get the compressed data of the texture. </para>        
-						/// </summary>
-						/// <returns>
-						/// <para>the texture data. </para>
-						/// </returns>
-						/// <java-name>
-						/// getData
-						/// </java-name>
-						[Dot42.DexImport("getData", "()Ljava/nio/ByteBuffer;", AccessFlags = 1)]
-						public virtual global::Java.Nio.ByteBuffer GetData() /* MethodBuilder.Create */ 
-						{
-								return default(global::Java.Nio.ByteBuffer);
-						}
-
-						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ETC1Texture() /* TypeBuilder.AddDefaultConstructor */ 
-						{
-						}
-
-						/// <summary>
-						/// <para>Get the width of the texture in pixels. </para>        
-						/// </summary>
-						/// <returns>
-						/// <para>the width of the texture in pixels. </para>
-						/// </returns>
-						/// <java-name>
-						/// getWidth
-						/// </java-name>
-						public int Width
-						{
-						[Dot42.DexImport("getWidth", "()I", AccessFlags = 1)]
-								get{ return GetWidth(); }
-						}
-
-						/// <summary>
-						/// <para>Get the height of the texture in pixels. </para>        
-						/// </summary>
-						/// <returns>
-						/// <para>the width of the texture in pixels. </para>
-						/// </returns>
-						/// <java-name>
-						/// getHeight
-						/// </java-name>
-						public int Height
-						{
-						[Dot42.DexImport("getHeight", "()I", AccessFlags = 1)]
-								get{ return GetHeight(); }
-						}
-
-						/// <summary>
-						/// <para>Get the compressed data of the texture. </para>        
-						/// </summary>
-						/// <returns>
-						/// <para>the texture data. </para>
-						/// </returns>
-						/// <java-name>
-						/// getData
-						/// </java-name>
-						public global::Java.Nio.ByteBuffer Data
-						{
-						[Dot42.DexImport("getData", "()Ljava/nio/ByteBuffer;", AccessFlags = 1)]
-								get{ return GetData(); }
-						}
-
-				}
-
-		}
-
-		/// <summary>
-		/// <para>A helper class for debugging OpenGL ES applications.</para><para>Wraps the supplied GL interface with a new GL interface that adds support for error checking and logging. </para>    
-		/// </summary>
-		/// <java-name>
-		/// android/opengl/GLDebugHelper
-		/// </java-name>
-		[Dot42.DexImport("android/opengl/GLDebugHelper", AccessFlags = 33)]
-		public partial class GLDebugHelper
- /* scope: __dot42__ */ 
-		{
-				/// <summary>
-				/// <para>Wrap an existing GL interface in a new GL interface that adds support for error checking and/or logging. </para><para>Wrapping means that the GL instance that is passed in to this method is wrapped inside a new GL instance that optionally performs additional operations before and after calling the wrapped GL instance. </para><para>Error checking means that the wrapper will automatically call glError after each GL operation, and throw a GLException if an error occurs. (By design, calling glError itself will not cause an exception to be thrown.) Enabling error checking is an alternative to manually calling glError after every GL operation. </para><para>Logging means writing a text representation of each GL method call to a log. </para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the wrapped GL instance. Check glError() after every call. </para>
-				/// </returns>
-				/// <java-name>
-				/// CONFIG_CHECK_GL_ERROR
-				/// </java-name>
-				[Dot42.DexImport("CONFIG_CHECK_GL_ERROR", "I", AccessFlags = 25)]
-				public const int CONFIG_CHECK_GL_ERROR = 1;
-				/// <summary>
-				/// <para>Check if all calls are on the same thread. </para>        
-				/// </summary>
-				/// <java-name>
-				/// CONFIG_CHECK_THREAD
-				/// </java-name>
-				[Dot42.DexImport("CONFIG_CHECK_THREAD", "I", AccessFlags = 25)]
-				public const int CONFIG_CHECK_THREAD = 2;
-				/// <summary>
-				/// <para>Print argument names when logging GL Calls. </para>        
-				/// </summary>
-				/// <java-name>
-				/// CONFIG_LOG_ARGUMENT_NAMES
-				/// </java-name>
-				[Dot42.DexImport("CONFIG_LOG_ARGUMENT_NAMES", "I", AccessFlags = 25)]
-				public const int CONFIG_LOG_ARGUMENT_NAMES = 4;
-				/// <summary>
-				/// <para>The Error number used in the GLException that is thrown if CONFIG_CHECK_THREAD is enabled and you call OpenGL ES on the a different thread. </para>        
-				/// </summary>
-				/// <java-name>
-				/// ERROR_WRONG_THREAD
-				/// </java-name>
-				[Dot42.DexImport("ERROR_WRONG_THREAD", "I", AccessFlags = 25)]
-				public const int ERROR_WRONG_THREAD = 28672;
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public GLDebugHelper() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// wrap
-				/// </java-name>
-				[Dot42.DexImport("wrap", "(Ljavax/microedition/khronos/opengles/GL;ILjava/io/Writer;)Ljavax/microedition/kh" +
-    "ronos/opengles/GL;", AccessFlags = 9)]
-				public static global::Javax.Microedition.Khronos.Opengles.IGL Wrap(global::Javax.Microedition.Khronos.Opengles.IGL gl, int configFlags, global::Java.Io.Writer log) /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Microedition.Khronos.Opengles.IGL);
-				}
-
-				/// <java-name>
-				/// wrap
-				/// </java-name>
-				[Dot42.DexImport("wrap", "(Ljavax/microedition/khronos/egl/EGL;ILjava/io/Writer;)Ljavax/microedition/khrono" +
-    "s/egl/EGL;", AccessFlags = 9)]
-				public static global::Javax.Microedition.Khronos.Egl.IEGL Wrap(global::Javax.Microedition.Khronos.Egl.IEGL gl, int configFlags, global::Java.Io.Writer log) /* MethodBuilder.Create */ 
-				{
-						return default(global::Javax.Microedition.Khronos.Egl.IEGL);
 				}
 
 		}
@@ -6303,135 +5283,8 @@ namespace Android.Opengl
 
 		}
 
-		/// <java-name>
-		/// android/opengl/GLES10Ext
-		/// </java-name>
-		[Dot42.DexImport("android/opengl/GLES10Ext", AccessFlags = 33)]
-		public partial class GLES10Ext
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public GLES10Ext() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// glQueryMatrixxOES
-				/// </java-name>
-				[Dot42.DexImport("glQueryMatrixxOES", "([II[II)I", AccessFlags = 265)]
-				public static int GlQueryMatrixxOES(int[] mantissa, int mantissaOffset, int[] exponent, int exponentOffset) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
-				/// glQueryMatrixxOES
-				/// </java-name>
-				[Dot42.DexImport("glQueryMatrixxOES", "(Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)I", AccessFlags = 265)]
-				public static int GlQueryMatrixxOES(global::Java.Nio.IntBuffer mantissa, global::Java.Nio.IntBuffer exponent) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-		}
-
 		/// <summary>
-		/// <para>A set of GL utilities inspired by the OpenGL Utility Toolkit. </para>    
-		/// </summary>
-		/// <java-name>
-		/// android/opengl/GLU
-		/// </java-name>
-		[Dot42.DexImport("android/opengl/GLU", AccessFlags = 33)]
-		public partial class GLU
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public GLU() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Return an error string from a GL or GLU error code.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the error string for the input error code, or NULL if the input was not a valid GL or GLU error code. </para>
-				/// </returns>
-				/// <java-name>
-				/// gluErrorString
-				/// </java-name>
-				[Dot42.DexImport("gluErrorString", "(I)Ljava/lang/String;", AccessFlags = 9)]
-				public static string GluErrorString(int error) /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <summary>
-				/// <para>Define a viewing transformation in terms of an eye point, a center of view, and an up vector.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// gluLookAt
-				/// </java-name>
-				[Dot42.DexImport("gluLookAt", "(Ljavax/microedition/khronos/opengles/GL10;FFFFFFFFF)V", AccessFlags = 9)]
-				public static void GluLookAt(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, float eyeX, float eyeY, float eyeZ, float centerX, float centerY, float centerZ, float upX, float upY, float upZ) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Set up a 2D orthographic projection matrix</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// gluOrtho2D
-				/// </java-name>
-				[Dot42.DexImport("gluOrtho2D", "(Ljavax/microedition/khronos/opengles/GL10;FFFF)V", AccessFlags = 9)]
-				public static void GluOrtho2D(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, float left, float right, float bottom, float top) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Set up a perspective projection matrix</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// gluPerspective
-				/// </java-name>
-				[Dot42.DexImport("gluPerspective", "(Ljavax/microedition/khronos/opengles/GL10;FFFF)V", AccessFlags = 9)]
-				public static void GluPerspective(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, float fovy, float aspect, float zNear, float zFar) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Map object coordinates into window coordinates. gluProject transforms the specified object coordinates into window coordinates using model, proj, and view. The result is stored in win. </para><para>Note that you can use the OES_matrix_get extension, if present, to get the current modelView and projection matrices.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>A return value of GL_TRUE indicates success, a return value of GL_FALSE indicates failure. </para>
-				/// </returns>
-				/// <java-name>
-				/// gluProject
-				/// </java-name>
-				[Dot42.DexImport("gluProject", "(FFF[FI[FI[II[FI)I", AccessFlags = 9)]
-				public static int GluProject(float objX, float objY, float objZ, float[] model, int modelOffset, float[] project, int projectOffset, int[] view, int viewOffset, float[] win, int winOffset) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <summary>
-				/// <para>Map window coordinates to object coordinates. gluUnProject maps the specified window coordinates into object coordinates using model, proj, and view. The result is stored in obj. </para><para>Note that you can use the OES_matrix_get extension, if present, to get the current modelView and projection matrices.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>A return value of GL10.GL_TRUE indicates success, a return value of GL10.GL_FALSE indicates failure. </para>
-				/// </returns>
-				/// <java-name>
-				/// gluUnProject
-				/// </java-name>
-				[Dot42.DexImport("gluUnProject", "(FFF[FI[FI[II[FI)I", AccessFlags = 9)]
-				public static int GluUnProject(float winX, float winY, float winZ, float[] model, int modelOffset, float[] project, int projectOffset, int[] view, int viewOffset, float[] obj, int objOffset) /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-		}
-
-		/// <summary>
-		/// <para>OpenGL ES 2.0 </para>    
+		///  <para>OpenGL ES 2.0 </para>    
 		/// </summary>
 		/// <java-name>
 		/// android/opengl/GLES20
@@ -9525,6 +8378,1009 @@ namespace Android.Opengl
 
 		}
 
-}
+		/// <summary>
+		///  <para>An exception class for OpenGL errors. </para>    
+		/// </summary>
+		/// <java-name>
+		/// android/opengl/GLException
+		/// </java-name>
+		[Dot42.DexImport("android/opengl/GLException", AccessFlags = 33)]
+		public partial class GLException : global::System.SystemException
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
+				public GLException(int error) /* MethodBuilder.Create */ 
+				{
+				}
 
+				[Dot42.DexImport("<init>", "(ILjava/lang/String;)V", AccessFlags = 1)]
+				public GLException(int error, string @string) /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal GLException() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+		}
+
+		/// <summary>
+		///  <para>An implementation of SurfaceView that uses the dedicated surface for displaying OpenGL rendering. </para> <para>A GLSurfaceView provides the following features: </para> <para> <ul> <li> <para>Manages a surface, which is a special piece of memory that can be composited into the Android view system. </para></li> <li> <para>Manages an EGL display, which enables OpenGL to render into a surface. </para></li> <li> <para>Accepts a user-provided Renderer object that does the actual rendering. </para></li> <li> <para>Renders on a dedicated thread to decouple rendering performance from the UI thread. </para></li> <li> <para>Supports both on-demand and continuous rendering. </para></li> <li> <para>Optionally wraps, traces, and/or error-checks the renderer's OpenGL calls. </para></li></ul></para> <para>  <h3>Developer Guides</h3></para> <para> </para> <para>For more information about how to use OpenGL, read the  developer guide.</para> <para> </para> <para> <h3>Using GLSurfaceView</h3></para> <para>Typically you use GLSurfaceView by subclassing it and overriding one or more of the View system input event methods. If your application does not need to override event methods then GLSurfaceView can be used as-is. For the most part GLSurfaceView behavior is customized by calling "set" methods rather than by subclassing. For example, unlike a regular View, drawing is delegated to a separate Renderer object which is registered with the GLSurfaceView using the setRenderer(Renderer) call. </para> <para> <h3>Initializing GLSurfaceView</h3></para> <para>All you have to do to initialize a GLSurfaceView is call setRenderer(Renderer). However, if desired, you can modify the default behavior of GLSurfaceView by calling one or more of these methods before calling setRenderer:  <ul> <li> <para>setDebugFlags(int) </para></li> <li> <para>setEGLConfigChooser(boolean) </para></li> <li> <para>setEGLConfigChooser(EGLConfigChooser) </para></li> <li> <para>setEGLConfigChooser(int, int, int, int, int, int) </para></li> <li> <para>setGLWrapper(GLWrapper) </para></li></ul></para> <para> <h4>Specifying the android.view.Surface</h4></para> <para>By default GLSurfaceView will create a PixelFormat.RGB_888 format surface. If a translucent surface is required, call getHolder().setFormat(PixelFormat.TRANSLUCENT). The exact format of a TRANSLUCENT surface is device dependent, but it will be a 32-bit-per-pixel surface with 8 bits per component. </para> <para> <h4>Choosing an EGL Configuration</h4></para> <para>A given Android device may support multiple EGLConfig rendering configurations. The available configurations may differ in how may channels of data are present, as well as how many bits are allocated to each channel. Therefore, the first thing GLSurfaceView has to do when starting to render is choose what EGLConfig to use. </para> <para>By default GLSurfaceView chooses a EGLConfig that has an RGB_888 pixel format, with at least a 16-bit depth buffer and no stencil. </para> <para>If you would prefer a different EGLConfig you can override the default behavior by calling one of the setEGLConfigChooser methods. </para> <para> <h4>Debug Behavior</h4></para> <para>You can optionally modify the behavior of GLSurfaceView by calling one or more of the debugging methods setDebugFlags(int), and setGLWrapper. These methods may be called before and/or after setRenderer, but typically they are called before setRenderer so that they take effect immediately. </para> <para> <h4>Setting a Renderer</h4></para> <para>Finally, you must call setRenderer to register a Renderer. The renderer is responsible for doing the actual OpenGL rendering. </para> <para> <h3>Rendering Mode</h3></para> <para>Once the renderer is set, you can control whether the renderer draws continuously or on-demand by calling setRenderMode. The default is continuous rendering. </para> <para> <h3>Activity Life-cycle</h3></para> <para>A GLSurfaceView must be notified when the activity is paused and resumed. GLSurfaceView clients are required to call onPause() when the activity pauses and onResume() when the activity resumes. These calls allow GLSurfaceView to pause and resume the rendering thread, and also allow GLSurfaceView to release and recreate the OpenGL display. </para> <para> <h3>Handling events</h3></para> <para>To handle an event you will typically subclass GLSurfaceView and override the appropriate method, just as you would with any other View. However, when handling the event, you may need to communicate with the Renderer object that's running in the rendering thread. You can do this using any standard Java cross-thread communication mechanism. In addition, one relatively easy way to communicate with your renderer is to call queueEvent(Runnable). For example:  <pre>
+		/// class MyGLSurfaceView extends GLSurfaceView {</pre></para> <para> <pre>    private MyRenderer mMyRenderer;</pre></para> <para> <pre>    public void start() {
+		///         mMyRenderer = ...;
+		///         setRenderer(mMyRenderer);
+		///     }</pre></para> <para> <pre>    public boolean onKeyDown(int keyCode, KeyEvent event) {
+		///         if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
+		///             queueEvent(new Runnable() {
+		///                 // This method will be called on the rendering
+		///                 // thread:
+		///                 public void run() {
+		///                     mMyRenderer.handleDpadCenter();
+		///                 }});
+		///             return true;
+		///         }
+		///         return super.onKeyDown(keyCode, event);
+		///     }
+		/// }
+		/// </pre> </para>    
+		/// </summary>
+		/// <java-name>
+		/// android/opengl/GLSurfaceView
+		/// </java-name>
+		[Dot42.DexImport("android/opengl/GLSurfaceView", AccessFlags = 33)]
+		public partial class GLSurfaceView : global::Android.Views.SurfaceView, global::Android.Views.ISurfaceHolder_ICallback
+ /* scope: __dot42__ */ 
+		{
+				/// <summary>
+				///  <para>The renderer only renders when the surface is created, or when requestRender is called.</para> <para> <para>getRenderMode() </para> <para>setRenderMode(int) </para> <para>requestRender() </para></para>        
+				/// </summary>
+				/// <java-name>
+				/// RENDERMODE_WHEN_DIRTY
+				/// </java-name>
+				[Dot42.DexImport("RENDERMODE_WHEN_DIRTY", "I", AccessFlags = 25)]
+				public const int RENDERMODE_WHEN_DIRTY = 0;
+				/// <summary>
+				///  <para>The renderer is called continuously to re-render the scene.</para> <para> <para>getRenderMode() </para> <para>setRenderMode(int) </para></para>        
+				/// </summary>
+				/// <java-name>
+				/// RENDERMODE_CONTINUOUSLY
+				/// </java-name>
+				[Dot42.DexImport("RENDERMODE_CONTINUOUSLY", "I", AccessFlags = 25)]
+				public const int RENDERMODE_CONTINUOUSLY = 1;
+				/// <summary>
+				///  <para>Check glError() after every GL call and throw an exception if glError indicates that an error has occurred. This can be used to help track down which OpenGL ES call is causing an error.</para> <para> <para>getDebugFlags </para> <para>setDebugFlags </para></para>        
+				/// </summary>
+				/// <java-name>
+				/// DEBUG_CHECK_GL_ERROR
+				/// </java-name>
+				[Dot42.DexImport("DEBUG_CHECK_GL_ERROR", "I", AccessFlags = 25)]
+				public const int DEBUG_CHECK_GL_ERROR = 1;
+				/// <summary>
+				///  <para>Log GL calls to the system log at "verbose" level with tag "GLSurfaceView".</para> <para> <para>getDebugFlags </para> <para>setDebugFlags </para></para>        
+				/// </summary>
+				/// <java-name>
+				/// DEBUG_LOG_GL_CALLS
+				/// </java-name>
+				[Dot42.DexImport("DEBUG_LOG_GL_CALLS", "I", AccessFlags = 25)]
+				public const int DEBUG_LOG_GL_CALLS = 2;
+				/// <summary>
+				///  <para>Standard View constructor. In order to render something, you must call setRenderer to register a renderer. </para>        
+				/// </summary>
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;)V", AccessFlags = 1)]
+				public GLSurfaceView(global::Android.Content.Context context) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Standard View constructor. In order to render something, you must call setRenderer to register a renderer. </para>        
+				/// </summary>
+				[Dot42.DexImport("<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", AccessFlags = 1)]
+				public GLSurfaceView(global::Android.Content.Context context, global::Android.Util.IAttributeSet attrs) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Set the glWrapper. If the glWrapper is not null, its GLWrapper#wrap(GL) method is called whenever a surface is created. A GLWrapper can be used to wrap the GL object that's passed to the renderer. Wrapping a GL object enables examining and modifying the behavior of the GL calls made by the renderer. </para> <para>Wrapping is typically used for debugging purposes. </para> <para>The default value is null. </para>        
+				/// </summary>
+				/// <java-name>
+				/// setGLWrapper
+				/// </java-name>
+				[Dot42.DexImport("setGLWrapper", "(Landroid/opengl/GLSurfaceView$GLWrapper;)V", AccessFlags = 1)]
+				public virtual void SetGLWrapper(global::Android.Opengl.GLSurfaceView.IGLWrapper glWrapper) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Set the renderer associated with this view. Also starts the thread that will call the renderer, which in turn causes the rendering to start. </para> <para>This method should be called once and only once in the life-cycle of a GLSurfaceView. </para> <para>The following GLSurfaceView methods can only be called  <b>before</b> setRenderer is called:  <ul> <li> <para>setEGLConfigChooser(boolean) </para></li> <li> <para>setEGLConfigChooser(EGLConfigChooser) </para></li> <li> <para>setEGLConfigChooser(int, int, int, int, int, int) </para></li></ul></para> <para>The following GLSurfaceView methods can only be called  <b>after</b> setRenderer is called:  <ul> <li> <para>getRenderMode() </para></li> <li> <para>onPause() </para></li> <li> <para>onResume() </para></li> <li> <para>queueEvent(Runnable) </para></li> <li> <para>requestRender() </para></li> <li> <para>setRenderMode(int) </para></li></ul></para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setRenderer
+				/// </java-name>
+				[Dot42.DexImport("setRenderer", "(Landroid/opengl/GLSurfaceView$Renderer;)V", AccessFlags = 1)]
+				public virtual void SetRenderer(global::Android.Opengl.GLSurfaceView.IRenderer renderer) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Install a custom EGLContextFactory. </para> <para>If this method is called, it must be called before setRenderer(Renderer) is called. </para> <para>If this method is not called, then by default a context will be created with no shared context and with a null attribute list. </para>        
+				/// </summary>
+				/// <java-name>
+				/// setEGLContextFactory
+				/// </java-name>
+				[Dot42.DexImport("setEGLContextFactory", "(Landroid/opengl/GLSurfaceView$EGLContextFactory;)V", AccessFlags = 1)]
+				public virtual void SetEGLContextFactory(global::Android.Opengl.GLSurfaceView.IEGLContextFactory factory) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Install a custom EGLWindowSurfaceFactory. </para> <para>If this method is called, it must be called before setRenderer(Renderer) is called. </para> <para>If this method is not called, then by default a window surface will be created with a null attribute list. </para>        
+				/// </summary>
+				/// <java-name>
+				/// setEGLWindowSurfaceFactory
+				/// </java-name>
+				[Dot42.DexImport("setEGLWindowSurfaceFactory", "(Landroid/opengl/GLSurfaceView$EGLWindowSurfaceFactory;)V", AccessFlags = 1)]
+				public virtual void SetEGLWindowSurfaceFactory(global::Android.Opengl.GLSurfaceView.IEGLWindowSurfaceFactory factory) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Install a custom EGLConfigChooser. </para> <para>If this method is called, it must be called before setRenderer(Renderer) is called. </para> <para>If no setEGLConfigChooser method is called, then by default the view will choose an EGLConfig that is compatible with the current android.view.Surface, with a depth buffer depth of at least 16 bits. </para>        
+				/// </summary>
+				/// <java-name>
+				/// setEGLConfigChooser
+				/// </java-name>
+				[Dot42.DexImport("setEGLConfigChooser", "(Landroid/opengl/GLSurfaceView$EGLConfigChooser;)V", AccessFlags = 1)]
+				public virtual void SetEGLConfigChooser(global::Android.Opengl.GLSurfaceView.IEGLConfigChooser configChooser) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Install a custom EGLConfigChooser. </para> <para>If this method is called, it must be called before setRenderer(Renderer) is called. </para> <para>If no setEGLConfigChooser method is called, then by default the view will choose an EGLConfig that is compatible with the current android.view.Surface, with a depth buffer depth of at least 16 bits. </para>        
+				/// </summary>
+				/// <java-name>
+				/// setEGLConfigChooser
+				/// </java-name>
+				[Dot42.DexImport("setEGLConfigChooser", "(Z)V", AccessFlags = 1)]
+				public virtual void SetEGLConfigChooser(bool configChooser) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Install a config chooser which will choose a config with at least the specified depthSize and stencilSize, and exactly the specified redSize, greenSize, blueSize and alphaSize. </para> <para>If this method is called, it must be called before setRenderer(Renderer) is called. </para> <para>If no setEGLConfigChooser method is called, then by default the view will choose an RGB_888 surface with a depth buffer depth of at least 16 bits. </para>        
+				/// </summary>
+				/// <java-name>
+				/// setEGLConfigChooser
+				/// </java-name>
+				[Dot42.DexImport("setEGLConfigChooser", "(IIIIII)V", AccessFlags = 1)]
+				public virtual void SetEGLConfigChooser(int redSize, int greenSize, int blueSize, int alphaSize, int depthSize, int stencilSize) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Inform the default EGLContextFactory and default EGLConfigChooser which EGLContext client version to pick. </para> <para>Use this method to create an OpenGL ES 2.0-compatible context. Example:  <pre>
+				///     public MyView(Context context) {
+				///         super(context);
+				///         setEGLContextClientVersion(2); // Pick an OpenGL ES 2.0 context.
+				///         setRenderer(new MyRenderer());
+				///     }
+				/// </pre> </para> <para>Note: Activities which require OpenGL ES 2.0 should indicate this by setting ;uses-feature android:glEsVersion="0x00020000" /&gt; in the activity's AndroidManifest.xml file. </para> <para>If this method is called, it must be called before setRenderer(Renderer) is called. </para> <para>This method only affects the behavior of the default EGLContexFactory and the default EGLConfigChooser. If setEGLContextFactory(EGLContextFactory) has been called, then the supplied EGLContextFactory is responsible for creating an OpenGL ES 2.0-compatible context. If setEGLConfigChooser(EGLConfigChooser) has been called, then the supplied EGLConfigChooser is responsible for choosing an OpenGL ES 2.0-compatible config. </para>        
+				/// </summary>
+				/// <java-name>
+				/// setEGLContextClientVersion
+				/// </java-name>
+				[Dot42.DexImport("setEGLContextClientVersion", "(I)V", AccessFlags = 1)]
+				public virtual void SetEGLContextClientVersion(int version) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Request that the renderer render a frame. This method is typically used when the render mode has been set to RENDERMODE_WHEN_DIRTY, so that frames are only rendered on demand. May be called from any thread. Must not be called before a renderer has been set. </para>        
+				/// </summary>
+				/// <java-name>
+				/// requestRender
+				/// </java-name>
+				[Dot42.DexImport("requestRender", "()V", AccessFlags = 1)]
+				public virtual void RequestRender() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>This method is part of the SurfaceHolder.Callback interface, and is not normally called or subclassed by clients of GLSurfaceView. </para>        
+				/// </summary>
+				/// <java-name>
+				/// surfaceCreated
+				/// </java-name>
+				[Dot42.DexImport("surfaceCreated", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
+				public virtual void SurfaceCreated(global::Android.Views.ISurfaceHolder holder) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>This method is part of the SurfaceHolder.Callback interface, and is not normally called or subclassed by clients of GLSurfaceView. </para>        
+				/// </summary>
+				/// <java-name>
+				/// surfaceDestroyed
+				/// </java-name>
+				[Dot42.DexImport("surfaceDestroyed", "(Landroid/view/SurfaceHolder;)V", AccessFlags = 1)]
+				public virtual void SurfaceDestroyed(global::Android.Views.ISurfaceHolder holder) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>This method is part of the SurfaceHolder.Callback interface, and is not normally called or subclassed by clients of GLSurfaceView. </para>        
+				/// </summary>
+				/// <java-name>
+				/// surfaceChanged
+				/// </java-name>
+				[Dot42.DexImport("surfaceChanged", "(Landroid/view/SurfaceHolder;III)V", AccessFlags = 1)]
+				public virtual void SurfaceChanged(global::Android.Views.ISurfaceHolder holder, int format, int w, int h) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Inform the view that the activity is paused. The owner of this view must call this method when the activity is paused. Calling this method will pause the rendering thread. Must not be called before a renderer has been set. </para>        
+				/// </summary>
+				/// <java-name>
+				/// onPause
+				/// </java-name>
+				[Dot42.DexImport("onPause", "()V", AccessFlags = 1)]
+				public virtual void OnPause() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Inform the view that the activity is resumed. The owner of this view must call this method when the activity is resumed. Calling this method will recreate the OpenGL display and resume the rendering thread. Must not be called before a renderer has been set. </para>        
+				/// </summary>
+				/// <java-name>
+				/// onResume
+				/// </java-name>
+				[Dot42.DexImport("onResume", "()V", AccessFlags = 1)]
+				public virtual void OnResume() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Queue a runnable to be run on the GL rendering thread. This can be used to communicate with the Renderer on the rendering thread. Must not be called before a renderer has been set. </para>        
+				/// </summary>
+				/// <java-name>
+				/// queueEvent
+				/// </java-name>
+				[Dot42.DexImport("queueEvent", "(Ljava/lang/Runnable;)V", AccessFlags = 1)]
+				public virtual void QueueEvent(global::Java.Lang.IRunnable r) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>This method is used as part of the View class and is not normally called or subclassed by clients of GLSurfaceView. </para>        
+				/// </summary>
+				/// <java-name>
+				/// onAttachedToWindow
+				/// </java-name>
+				[Dot42.DexImport("onAttachedToWindow", "()V", AccessFlags = 4)]
+				protected internal override void OnAttachedToWindow() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>This method is used as part of the View class and is not normally called or subclassed by clients of GLSurfaceView. Must not be called before a renderer has been set. </para>        
+				/// </summary>
+				/// <java-name>
+				/// onDetachedFromWindow
+				/// </java-name>
+				[Dot42.DexImport("onDetachedFromWindow", "()V", AccessFlags = 4)]
+				protected internal override void OnDetachedFromWindow() /* MethodBuilder.Create */ 
+				{
+				}
+
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+				internal GLSurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Get the current value of the debug flags. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the current value of the debug flags. </para>
+				/// </returns>
+				/// <java-name>
+				/// getDebugFlags
+				/// </java-name>
+				public virtual int DebugFlags
+				{
+						[Dot42.DexImport("getDebugFlags", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setDebugFlags", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <summary>
+				///  <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if the EGL context will be preserved when paused </para>
+				/// </returns>
+				/// <java-name>
+				/// getPreserveEGLContextOnPause
+				/// </java-name>
+				public virtual bool PreserveEGLContextOnPause
+				{
+						[Dot42.DexImport("getPreserveEGLContextOnPause", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setPreserveEGLContextOnPause", "(Z)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <summary>
+				///  <para>Get the current rendering mode. May be called from any thread. Must not be called before a renderer has been set.  <para>RENDERMODE_CONTINUOUSLY </para> <para>RENDERMODE_WHEN_DIRTY </para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the current rendering mode. </para>
+				/// </returns>
+				/// <java-name>
+				/// getRenderMode
+				/// </java-name>
+				public virtual int RenderMode
+				{
+						[Dot42.DexImport("getRenderMode", "()I", AccessFlags = 1)]
+						get{ return default(int); }
+						[Dot42.DexImport("setRenderMode", "(I)V", AccessFlags = 1)]
+						set{ }
+				}
+
+				/// <summary>
+				///  <para>An interface for choosing an EGLConfig configuration from a list of potential configurations. </para> <para>This interface must be implemented by clients wishing to call GLSurfaceView#setEGLConfigChooser(EGLConfigChooser) </para>    
+				/// </summary>
+				/// <java-name>
+				/// android/opengl/GLSurfaceView$EGLConfigChooser
+				/// </java-name>
+				[Dot42.DexImport("android/opengl/GLSurfaceView$EGLConfigChooser", AccessFlags = 1545)]
+				public partial interface IEGLConfigChooser
+ /* scope: __dot42__ */ 
+				{
+						/// <summary>
+						///  <para>Choose a configuration from the list. Implementors typically implement this method by calling EGL10#eglChooseConfig and iterating through the results. Please consult the EGL specification available from The Khronos Group to learn how to call eglChooseConfig. </para>        
+						/// </summary>
+						/// <returns>
+						///  <para>the chosen configuration. </para>
+						/// </returns>
+						/// <java-name>
+						/// chooseConfig
+						/// </java-name>
+						[Dot42.DexImport("chooseConfig", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
+    ";)Ljavax/microedition/khronos/egl/EGLConfig;", AccessFlags = 1025)]
+						global::Javax.Microedition.Khronos.Egl.EGLConfig ChooseConfig(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display) /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <summary>
+				///  <para>An interface for customizing the eglCreateWindowSurface and eglDestroySurface calls. </para> <para>This interface must be implemented by clients wishing to call GLSurfaceView#setEGLWindowSurfaceFactory(EGLWindowSurfaceFactory) </para>    
+				/// </summary>
+				/// <java-name>
+				/// android/opengl/GLSurfaceView$EGLWindowSurfaceFactory
+				/// </java-name>
+				[Dot42.DexImport("android/opengl/GLSurfaceView$EGLWindowSurfaceFactory", AccessFlags = 1545)]
+				public partial interface IEGLWindowSurfaceFactory
+ /* scope: __dot42__ */ 
+				{
+						/// <summary>
+						///  <para></para>        
+						/// </summary>
+						/// <returns>
+						///  <para>null if the surface cannot be constructed. </para>
+						/// </returns>
+						/// <java-name>
+						/// createWindowSurface
+						/// </java-name>
+						[Dot42.DexImport("createWindowSurface", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
+    ";Ljavax/microedition/khronos/egl/EGLConfig;Ljava/lang/Object;)Ljavax/microeditio" +
+    "n/khronos/egl/EGLSurface;", AccessFlags = 1025)]
+						global::Javax.Microedition.Khronos.Egl.EGLSurface CreateWindowSurface(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig config, object nativeWindow) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// destroySurface
+						/// </java-name>
+						[Dot42.DexImport("destroySurface", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
+    ";Ljavax/microedition/khronos/egl/EGLSurface;)V", AccessFlags = 1025)]
+						void DestroySurface(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLSurface surface) /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <summary>
+				///  <para>An interface for customizing the eglCreateContext and eglDestroyContext calls. </para> <para>This interface must be implemented by clients wishing to call GLSurfaceView#setEGLContextFactory(EGLContextFactory) </para>    
+				/// </summary>
+				/// <java-name>
+				/// android/opengl/GLSurfaceView$EGLContextFactory
+				/// </java-name>
+				[Dot42.DexImport("android/opengl/GLSurfaceView$EGLContextFactory", AccessFlags = 1545)]
+				public partial interface IEGLContextFactory
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// createContext
+						/// </java-name>
+						[Dot42.DexImport("createContext", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
+    ";Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLC" +
+    "ontext;", AccessFlags = 1025)]
+						global::Javax.Microedition.Khronos.Egl.EGLContext CreateContext(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLConfig eglConfig) /* MethodBuilder.Create */ ;
+
+						/// <java-name>
+						/// destroyContext
+						/// </java-name>
+						[Dot42.DexImport("destroyContext", "(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay" +
+    ";Ljavax/microedition/khronos/egl/EGLContext;)V", AccessFlags = 1025)]
+						void DestroyContext(global::Javax.Microedition.Khronos.Egl.IEGL10 egl, global::Javax.Microedition.Khronos.Egl.EGLDisplay display, global::Javax.Microedition.Khronos.Egl.EGLContext context) /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <summary>
+				///  <para>A generic renderer interface. </para> <para>The renderer is responsible for making OpenGL calls to render a frame. </para> <para>GLSurfaceView clients typically create their own classes that implement this interface, and then call GLSurfaceView#setRenderer to register the renderer with the GLSurfaceView. </para> <para>  <h3>Developer Guides</h3></para> <para> </para> <para>For more information about how to use OpenGL, read the  developer guide.</para> <para> </para> <para> <h3>Threading</h3></para> <para>The renderer will be called on a separate thread, so that rendering performance is decoupled from the UI thread. Clients typically need to communicate with the renderer from the UI thread, because that's where input events are received. Clients can communicate using any of the standard Java techniques for cross-thread communication, or they can use the GLSurfaceView#queueEvent(Runnable) convenience method. </para> <para> <h3>EGL Context Lost</h3></para> <para>There are situations where the EGL rendering context will be lost. This typically happens when device wakes up after going to sleep. When the EGL context is lost, all OpenGL resources (such as textures) that are associated with that context will be automatically deleted. In order to keep rendering correctly, a renderer must recreate any lost resources that it still needs. The onSurfaceCreated(GL10, EGLConfig) method is a convenient place to do this.</para> <para> <para>setRenderer(Renderer) </para></para>    
+				/// </summary>
+				/// <java-name>
+				/// android/opengl/GLSurfaceView$Renderer
+				/// </java-name>
+				[Dot42.DexImport("android/opengl/GLSurfaceView$Renderer", AccessFlags = 1545)]
+				public partial interface IRenderer
+ /* scope: __dot42__ */ 
+				{
+						/// <summary>
+						///  <para>Called when the surface is created or recreated. </para> <para>Called when the rendering thread starts and whenever the EGL context is lost. The EGL context will typically be lost when the Android device awakes after going to sleep. </para> <para>Since this method is called at the beginning of rendering, as well as every time the EGL context is lost, this method is a convenient place to put code to create resources that need to be created when the rendering starts, and that need to be recreated when the EGL context is lost. Textures are an example of a resource that you might want to create here. </para> <para>Note that when the EGL context is lost, all OpenGL resources associated with that context will be automatically deleted. You do not need to call the corresponding "glDelete" methods such as glDeleteTextures to manually delete these lost resources. </para> <para></para>        
+						/// </summary>
+						/// <java-name>
+						/// onSurfaceCreated
+						/// </java-name>
+						[Dot42.DexImport("onSurfaceCreated", "(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLCon" +
+    "fig;)V", AccessFlags = 1025)]
+						void OnSurfaceCreated(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, global::Javax.Microedition.Khronos.Egl.EGLConfig config) /* MethodBuilder.Create */ ;
+
+						/// <summary>
+						///  <para>Called when the surface changed size. </para> <para>Called after the surface is created and whenever the OpenGL ES surface size changes. </para> <para>Typically you will set your viewport here. If your camera is fixed then you could also set your projection matrix here:  <pre>
+						/// void onSurfaceChanged(GL10 gl, int width, int height) {
+						///     gl.glViewport(0, 0, width, height);
+						///     // for a fixed camera, set the projection too
+						///     float ratio = (float) width / height;
+						///     gl.glMatrixMode(GL10.GL_PROJECTION);
+						///     gl.glLoadIdentity();
+						///     gl.glFrustumf(-ratio, ratio, -1, 1, 1, 10);
+						/// }
+						/// </pre> </para>        
+						/// </summary>
+						/// <java-name>
+						/// onSurfaceChanged
+						/// </java-name>
+						[Dot42.DexImport("onSurfaceChanged", "(Ljavax/microedition/khronos/opengles/GL10;II)V", AccessFlags = 1025)]
+						void OnSurfaceChanged(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, int width, int height) /* MethodBuilder.Create */ ;
+
+						/// <summary>
+						///  <para>Called to draw the current frame. </para> <para>This method is responsible for drawing the current frame. </para> <para>The implementation of this method typically looks like this:  <pre>
+						/// void onDrawFrame(GL10 gl) {
+						///     gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
+						///     //... other gl calls to render the scene ...
+						/// }
+						/// </pre> </para>        
+						/// </summary>
+						/// <java-name>
+						/// onDrawFrame
+						/// </java-name>
+						[Dot42.DexImport("onDrawFrame", "(Ljavax/microedition/khronos/opengles/GL10;)V", AccessFlags = 1025)]
+						void OnDrawFrame(global::Javax.Microedition.Khronos.Opengles.IGL10 gl) /* MethodBuilder.Create */ ;
+
+				}
+
+				/// <summary>
+				///  <para>An interface used to wrap a GL interface. </para> <para>Typically used for implementing debugging and tracing on top of the default GL interface. You would typically use this by creating your own class that implemented all the GL methods by delegating to another GL instance. Then you could add your own behavior before or after calling the delegate. All the GLWrapper would do was instantiate and return the wrapper GL instance:  <pre>
+				/// class MyGLWrapper implements GLWrapper {
+				///     GL wrap(GL gl) {
+				///         return new MyGLImplementation(gl);
+				///     }
+				///     static class MyGLImplementation implements GL,GL10,GL11,... {
+				///         ...
+				///     }
+				/// }
+				/// </pre>  <para>setGLWrapper(GLWrapper) </para></para>    
+				/// </summary>
+				/// <java-name>
+				/// android/opengl/GLSurfaceView$GLWrapper
+				/// </java-name>
+				[Dot42.DexImport("android/opengl/GLSurfaceView$GLWrapper", AccessFlags = 1545)]
+				public partial interface IGLWrapper
+ /* scope: __dot42__ */ 
+				{
+						/// <summary>
+						///  <para>Wraps a gl interface in another gl interface. </para>        
+						/// </summary>
+						/// <returns>
+						///  <para>either the input argument or another GL object that wraps the input argument. </para>
+						/// </returns>
+						/// <java-name>
+						/// wrap
+						/// </java-name>
+						[Dot42.DexImport("wrap", "(Ljavax/microedition/khronos/opengles/GL;)Ljavax/microedition/khronos/opengles/GL" +
+    ";", AccessFlags = 1025)]
+						global::Javax.Microedition.Khronos.Opengles.IGL Wrap(global::Javax.Microedition.Khronos.Opengles.IGL gl) /* MethodBuilder.Create */ ;
+
+				}
+
+		}
+
+		/// <summary>
+		///  <para>A set of GL utilities inspired by the OpenGL Utility Toolkit. </para>    
+		/// </summary>
+		/// <java-name>
+		/// android/opengl/GLU
+		/// </java-name>
+		[Dot42.DexImport("android/opengl/GLU", AccessFlags = 33)]
+		public partial class GLU
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public GLU() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Return an error string from a GL or GLU error code.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the error string for the input error code, or NULL if the input was not a valid GL or GLU error code. </para>
+				/// </returns>
+				/// <java-name>
+				/// gluErrorString
+				/// </java-name>
+				[Dot42.DexImport("gluErrorString", "(I)Ljava/lang/String;", AccessFlags = 9)]
+				public static string GluErrorString(int error) /* MethodBuilder.Create */ 
+				{
+						return default(string);
+				}
+
+				/// <summary>
+				///  <para>Define a viewing transformation in terms of an eye point, a center of view, and an up vector.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// gluLookAt
+				/// </java-name>
+				[Dot42.DexImport("gluLookAt", "(Ljavax/microedition/khronos/opengles/GL10;FFFFFFFFF)V", AccessFlags = 9)]
+				public static void GluLookAt(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, float eyeX, float eyeY, float eyeZ, float centerX, float centerY, float centerZ, float upX, float upY, float upZ) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Set up a 2D orthographic projection matrix</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// gluOrtho2D
+				/// </java-name>
+				[Dot42.DexImport("gluOrtho2D", "(Ljavax/microedition/khronos/opengles/GL10;FFFF)V", AccessFlags = 9)]
+				public static void GluOrtho2D(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, float left, float right, float bottom, float top) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Set up a perspective projection matrix</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// gluPerspective
+				/// </java-name>
+				[Dot42.DexImport("gluPerspective", "(Ljavax/microedition/khronos/opengles/GL10;FFFF)V", AccessFlags = 9)]
+				public static void GluPerspective(global::Javax.Microedition.Khronos.Opengles.IGL10 gl, float fovy, float aspect, float zNear, float zFar) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Map object coordinates into window coordinates. gluProject transforms the specified object coordinates into window coordinates using model, proj, and view. The result is stored in win. </para> <para>Note that you can use the OES_matrix_get extension, if present, to get the current modelView and projection matrices.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>A return value of GL_TRUE indicates success, a return value of GL_FALSE indicates failure. </para>
+				/// </returns>
+				/// <java-name>
+				/// gluProject
+				/// </java-name>
+				[Dot42.DexImport("gluProject", "(FFF[FI[FI[II[FI)I", AccessFlags = 9)]
+				public static int GluProject(float objX, float objY, float objZ, float[] model, int modelOffset, float[] project, int projectOffset, int[] view, int viewOffset, float[] win, int winOffset) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <summary>
+				///  <para>Map window coordinates to object coordinates. gluUnProject maps the specified window coordinates into object coordinates using model, proj, and view. The result is stored in obj. </para> <para>Note that you can use the OES_matrix_get extension, if present, to get the current modelView and projection matrices.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>A return value of GL10.GL_TRUE indicates success, a return value of GL10.GL_FALSE indicates failure. </para>
+				/// </returns>
+				/// <java-name>
+				/// gluUnProject
+				/// </java-name>
+				[Dot42.DexImport("gluUnProject", "(FFF[FI[FI[II[FI)I", AccessFlags = 9)]
+				public static int GluUnProject(float winX, float winY, float winZ, float[] model, int modelOffset, float[] project, int projectOffset, int[] view, int viewOffset, float[] obj, int objOffset) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+		}
+
+		/// <summary>
+		///  <para>Utility class to help bridging OpenGL ES and Android APIs. </para>    
+		/// </summary>
+		/// <java-name>
+		/// android/opengl/GLUtils
+		/// </java-name>
+		[Dot42.DexImport("android/opengl/GLUtils", AccessFlags = 49)]
+		public sealed partial class GLUtils
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal GLUtils() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>return the internal format as defined by OpenGL ES of the supplied bitmap. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the internal format of the bitmap. </para>
+				/// </returns>
+				/// <java-name>
+				/// getInternalFormat
+				/// </java-name>
+				[Dot42.DexImport("getInternalFormat", "(Landroid/graphics/Bitmap;)I", AccessFlags = 9)]
+				public static int GetInternalFormat(global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <summary>
+				///  <para>Return the type as defined by OpenGL ES of the supplied bitmap, if there is one. If the bitmap is stored in a compressed format, it may not have a valid OpenGL ES type. </para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the OpenGL ES type of the bitmap. </para>
+				/// </returns>
+				/// <java-name>
+				/// getType
+				/// </java-name>
+				[Dot42.DexImport("getType", "(Landroid/graphics/Bitmap;)I", AccessFlags = 9)]
+				public static int GetType(global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <summary>
+				///  <para>Calls glTexImage2D() on the current OpenGL context. If no context is current the behavior is the same as calling glTexImage2D() with no current context, that is, eglGetError() will return the appropriate error. Unlike glTexImage2D() bitmap cannot be null and will raise an exception in that case. All other parameters are identical to those used for glTexImage2D().</para> <para>NOTE: this method doesn't change GL_UNPACK_ALIGNMENT, you must make sure to set it properly according to the supplied bitmap.</para> <para>Whether or not bitmap can have non power of two dimensions depends on the current OpenGL context. Always check glGetError() some time after calling this method, just like when using OpenGL directly.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// texImage2D
+				/// </java-name>
+				[Dot42.DexImport("texImage2D", "(IIILandroid/graphics/Bitmap;I)V", AccessFlags = 9)]
+				public static void TexImage2D(int target, int level, int internalformat, global::Android.Graphics.Bitmap bitmap, int border) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>A version of texImage2D() that takes an explicit type parameter as defined by the OpenGL ES specification. The actual type and internalformat of the bitmap must be compatible with the specified type and internalformat parameters.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// texImage2D
+				/// </java-name>
+				[Dot42.DexImport("texImage2D", "(IIILandroid/graphics/Bitmap;II)V", AccessFlags = 9)]
+				public static void TexImage2D(int target, int level, int internalformat, global::Android.Graphics.Bitmap bitmap, int type, int border) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>A version of texImage2D that determines the internalFormat and type automatically.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// texImage2D
+				/// </java-name>
+				[Dot42.DexImport("texImage2D", "(IILandroid/graphics/Bitmap;I)V", AccessFlags = 9)]
+				public static void TexImage2D(int target, int level, global::Android.Graphics.Bitmap bitmap, int border) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Calls glTexSubImage2D() on the current OpenGL context. If no context is current the behavior is the same as calling glTexSubImage2D() with no current context, that is, eglGetError() will return the appropriate error. Unlike glTexSubImage2D() bitmap cannot be null and will raise an exception in that case. All other parameters are identical to those used for glTexSubImage2D().</para> <para>NOTE: this method doesn't change GL_UNPACK_ALIGNMENT, you must make sure to set it properly according to the supplied bitmap.</para> <para>Whether or not bitmap can have non power of two dimensions depends on the current OpenGL context. Always check glGetError() some time after calling this method, just like when using OpenGL directly.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// texSubImage2D
+				/// </java-name>
+				[Dot42.DexImport("texSubImage2D", "(IIIILandroid/graphics/Bitmap;)V", AccessFlags = 9)]
+				public static void TexSubImage2D(int target, int level, int xoffset, int yoffset, global::Android.Graphics.Bitmap bitmap) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>A version of texSubImage2D() that takes an explicit type parameter as defined by the OpenGL ES specification.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// texSubImage2D
+				/// </java-name>
+				[Dot42.DexImport("texSubImage2D", "(IIIILandroid/graphics/Bitmap;II)V", AccessFlags = 9)]
+				public static void TexSubImage2D(int target, int level, int xoffset, int yoffset, global::Android.Graphics.Bitmap bitmap, int format, int type) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <summary>
+		///  <para>Matrix math utilities. These methods operate on OpenGL ES format matrices and vectors stored in float arrays. </para> <para>Matrices are 4 x 4 column-vector matrices stored in column-major order:  <pre>
+		///  m[offset +  0] m[offset +  4] m[offset +  8] m[offset + 12]
+		///  m[offset +  1] m[offset +  5] m[offset +  9] m[offset + 13]
+		///  m[offset +  2] m[offset +  6] m[offset + 10] m[offset + 14]
+		///  m[offset +  3] m[offset +  7] m[offset + 11] m[offset + 15]</pre></para> <para>Vectors are 4 x 1 column vectors stored in order:  <pre>
+		/// v[offset + 0]
+		/// v[offset + 1]
+		/// v[offset + 2]
+		/// v[offset + 3]</pre> </para>    
+		/// </summary>
+		/// <java-name>
+		/// android/opengl/Matrix
+		/// </java-name>
+		[Dot42.DexImport("android/opengl/Matrix", AccessFlags = 33)]
+		public partial class Matrix
+ /* scope: __dot42__ */ 
+		{
+				/// <summary>
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>All methods are static, do not instantiate this class. </para></xrefdescription></xrefsect></para>        
+				/// </summary>
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Matrix() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Multiplies two 4x4 matrices together and stores the result in a third 4x4 matrix. In matrix notation: result = lhs x rhs. Due to the way matrix multiplication works, the result matrix will have the same effect as first multiplying by the rhs matrix, then multiplying by the lhs matrix. This is the opposite of what you might expect. </para> <para>The same float array may be passed for result, lhs, and/or rhs. However, the result element values are undefined if the result elements overlap either the lhs or rhs elements.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// multiplyMM
+				/// </java-name>
+				[Dot42.DexImport("multiplyMM", "([FI[FI[FI)V", AccessFlags = 265)]
+				public static void MultiplyMM(float[] result, int resultOffset, float[] lhs, int lhsOffset, float[] rhs, int rhsOffset) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Multiplies a 4 element vector by a 4x4 matrix and stores the result in a 4-element column vector. In matrix notation: result = lhs x rhs </para> <para>The same float array may be passed for resultVec, lhsMat, and/or rhsVec. However, the resultVec element values are undefined if the resultVec elements overlap either the lhsMat or rhsVec elements.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// multiplyMV
+				/// </java-name>
+				[Dot42.DexImport("multiplyMV", "([FI[FI[FI)V", AccessFlags = 265)]
+				public static void MultiplyMV(float[] resultVec, int resultVecOffset, float[] lhsMat, int lhsMatOffset, float[] rhsVec, int rhsVecOffset) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Transposes a 4 x 4 matrix. </para> <para>mTrans and m must not overlap.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// transposeM
+				/// </java-name>
+				[Dot42.DexImport("transposeM", "([FI[FI)V", AccessFlags = 9)]
+				public static void TransposeM(float[] mTrans, int mTransOffset, float[] m, int mOffset) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Inverts a 4 x 4 matrix. </para> <para>mInv and m must not overlap.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>true if the matrix could be inverted, false if it could not. </para>
+				/// </returns>
+				/// <java-name>
+				/// invertM
+				/// </java-name>
+				[Dot42.DexImport("invertM", "([FI[FI)Z", AccessFlags = 9)]
+				public static bool InvertM(float[] mInv, int mInvOffset, float[] m, int mOffset) /* MethodBuilder.Create */ 
+				{
+						return default(bool);
+				}
+
+				/// <summary>
+				///  <para>Computes an orthographic projection matrix.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// orthoM
+				/// </java-name>
+				[Dot42.DexImport("orthoM", "([FIFFFFFF)V", AccessFlags = 9)]
+				public static void OrthoM(float[] m, int mOffset, float left, float right, float bottom, float top, float near, float far) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Defines a projection matrix in terms of six clip planes.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// frustumM
+				/// </java-name>
+				[Dot42.DexImport("frustumM", "([FIFFFFFF)V", AccessFlags = 9)]
+				public static void FrustumM(float[] m, int offset, float left, float right, float bottom, float top, float near, float far) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Computes the length of a vector.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the length of a vector </para>
+				/// </returns>
+				/// <java-name>
+				/// length
+				/// </java-name>
+				[Dot42.DexImport("length", "(FFF)F", AccessFlags = 9)]
+				public static float Length(float x, float y, float z) /* MethodBuilder.Create */ 
+				{
+						return default(float);
+				}
+
+				/// <summary>
+				///  <para>Sets matrix m to the identity matrix.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setIdentityM
+				/// </java-name>
+				[Dot42.DexImport("setIdentityM", "([FI)V", AccessFlags = 9)]
+				public static void SetIdentityM(float[] sm, int smOffset) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Scales matrix m by x, y, and z, putting the result in sm. </para> <para>m and sm must not overlap.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// scaleM
+				/// </java-name>
+				[Dot42.DexImport("scaleM", "([FI[FIFFF)V", AccessFlags = 9)]
+				public static void ScaleM(float[] sm, int smOffset, float[] m, int mOffset, float x, float y, float z) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Scales matrix m in place by sx, sy, and sz.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// scaleM
+				/// </java-name>
+				[Dot42.DexImport("scaleM", "([FIFFF)V", AccessFlags = 9)]
+				public static void ScaleM(float[] m, int mOffset, float x, float y, float z) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Translates matrix m by x, y, and z, putting the result in tm. </para> <para>m and tm must not overlap.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// translateM
+				/// </java-name>
+				[Dot42.DexImport("translateM", "([FI[FIFFF)V", AccessFlags = 9)]
+				public static void TranslateM(float[] tm, int tmOffset, float[] m, int mOffset, float x, float y, float z) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Translates matrix m by x, y, and z in place.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// translateM
+				/// </java-name>
+				[Dot42.DexImport("translateM", "([FIFFF)V", AccessFlags = 9)]
+				public static void TranslateM(float[] m, int mOffset, float x, float y, float z) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Rotates matrix m by angle a (in degrees) around the axis (x, y, z). </para> <para>m and rm must not overlap.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// rotateM
+				/// </java-name>
+				[Dot42.DexImport("rotateM", "([FI[FIFFFF)V", AccessFlags = 9)]
+				public static void RotateM(float[] rm, int rmOffset, float[] m, int mOffset, float a, float x, float y, float z) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Rotates matrix m in place by angle a (in degrees) around the axis (x, y, z).</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// rotateM
+				/// </java-name>
+				[Dot42.DexImport("rotateM", "([FIFFFF)V", AccessFlags = 9)]
+				public static void RotateM(float[] m, int mOffset, float a, float x, float y, float z) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Creates a matrix for rotation by angle a (in degrees) around the axis (x, y, z). </para> <para>An optimized path will be used for rotation about a major axis (e.g. x=1.0f y=0.0f z=0.0f).</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setRotateM
+				/// </java-name>
+				[Dot42.DexImport("setRotateM", "([FIFFFF)V", AccessFlags = 9)]
+				public static void SetRotateM(float[] rm, int rmOffset, float a, float x, float y, float z) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Converts Euler angles to a rotation matrix.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setRotateEulerM
+				/// </java-name>
+				[Dot42.DexImport("setRotateEulerM", "([FIFFF)V", AccessFlags = 9)]
+				public static void SetRotateEulerM(float[] rm, int rmOffset, float x, float y, float z) /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Defines a viewing transformation in terms of an eye point, a center of view, and an up vector.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// setLookAtM
+				/// </java-name>
+				[Dot42.DexImport("setLookAtM", "([FIFFFFFFFFF)V", AccessFlags = 9)]
+				public static void SetLookAtM(float[] rm, int rmOffset, float eyeX, float eyeY, float eyeZ, float centerX, float centerY, float centerZ, float upX, float upY, float upZ) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+		/// <summary>
+		///  <para>A collection of utility methods for computing the visibility of triangle meshes. </para>    
+		/// </summary>
+		/// <java-name>
+		/// android/opengl/Visibility
+		/// </java-name>
+		[Dot42.DexImport("android/opengl/Visibility", AccessFlags = 33)]
+		public partial class Visibility
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Visibility() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <summary>
+				///  <para>Test whether a given triangle mesh is visible on the screen. The mesh is specified as an indexed triangle list.</para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>2 if all of the mesh is visible, 1 if some part of the mesh is visible, 0 if no part is visible.</para>
+				/// </returns>
+				/// <java-name>
+				/// visibilityTest
+				/// </java-name>
+				[Dot42.DexImport("visibilityTest", "([FI[FI[CII)I", AccessFlags = 265)]
+				public static int VisibilityTest(float[] ws, int wsOffset, float[] positions, int positionsOffset, char[] indices, int indicesOffset, int indexCount) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <summary>
+				///  <para>Given an OpenGL ES ModelView-Projection matrix (which implicitly describes a frustum) and a list of spheres, determine which spheres intersect the frustum. </para> <para>A ModelView-Projection matrix can be computed by multiplying the a Projection matrix by the a ModelView matrix (in that order.). There are several possible ways to obtain the current ModelView and Projection matrices. The most generally applicable way is to keep track of the current matrices in application code. If that is not convenient, there are two optional OpenGL ES extensions which may be used to read the current matrices from OpenGL ES:  <ul> <li> <para>GL10Ext.glQueryMatrixxOES </para></li> <li> <para>GL11.GL_MODELVIEW_MATRIX_FLOAT_AS_INT_BITS_OES and GL_PROJECTION_MATRIX_FLOAT_AS_INT_BITS_OES </para></li></ul>The problem with reading back the matrices is that your application will only work with devices that support the extension(s) that it uses. </para> <para>A frustum is a six-sided truncated pyramid that defines the portion of world space that is visible in the view. </para> <para>Spheres are described as four floating point values: x, y, z, and r, in world-space coordinates. R is the radius of the sphere. </para> <para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>the number of spheres that intersected the frustum. Can be larger than resultsCapacity, in which case only the first resultsCapacity results are written into the results array.</para>
+				/// </returns>
+				/// <java-name>
+				/// frustumCullSpheres
+				/// </java-name>
+				[Dot42.DexImport("frustumCullSpheres", "([FI[FII[III)I", AccessFlags = 265)]
+				public static int FrustumCullSpheres(float[] mvp, int mvpOffset, float[] spheres, int spheresOffset, int spheresCount, int[] results, int resultsOffset, int resultsCapacity) /* MethodBuilder.Create */ 
+				{
+						return default(int);
+				}
+
+				/// <summary>
+				///  <para>Compute a bounding sphere for a set of points. It is approximately the minimal bounding sphere of an axis-aligned box that bounds the points.</para> <para></para>        
+				/// </summary>
+				/// <java-name>
+				/// computeBoundingSphere
+				/// </java-name>
+				[Dot42.DexImport("computeBoundingSphere", "([FII[FI)V", AccessFlags = 265)]
+				public static void ComputeBoundingSphere(float[] positions, int positionsOffset, int positionsCount, float[] sphere, int sphereOffset) /* MethodBuilder.Create */ 
+				{
+				}
+
+		}
+
+}
 

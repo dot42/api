@@ -1,24 +1,15 @@
-// Copyright (C) 2014 dot42
-//
-// Original filename: Dalvik.Bytecode.cs
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-#pragma warning disable 1717
+﻿#pragma warning disable 1717
 namespace Dalvik.Bytecode
 {
-		/// <summary>
-		/// <para>A list of all normal (not implementation-specific) Dalvik opcodes. </para>    
-		/// </summary>
+		/// <java-name>
+		/// dalvik/bytecode/Opcodes
+		/// </java-name>
+		[Dot42.DexImport("dalvik/bytecode/Opcodes", AccessFlags = 1537)]
+		public partial interface IOpcodes
+ /* scope: __dot42__ */ 
+		{
+		}
+
 		/// <java-name>
 		/// dalvik/bytecode/Opcodes
 		/// </java-name>
@@ -1216,9 +1207,6 @@ namespace Dalvik.Bytecode
 				/// </java-name>
 				[Dot42.DexImport("OP_UNUSED_ED", "I", AccessFlags = 25)]
 				public const int OP_UNUSED_ED = 237;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_EXECUTE_INLINE
 				/// </java-name>
@@ -1229,9 +1217,6 @@ namespace Dalvik.Bytecode
 				/// </java-name>
 				[Dot42.DexImport("OP_UNUSED_EF", "I", AccessFlags = 25)]
 				public const int OP_UNUSED_EF = 239;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_DIRECT_EMPTY
 				/// </java-name>
@@ -1242,81 +1227,51 @@ namespace Dalvik.Bytecode
 				/// </java-name>
 				[Dot42.DexImport("OP_UNUSED_F1", "I", AccessFlags = 25)]
 				public const int OP_UNUSED_F1 = 241;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IGET_QUICK = 242;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_WIDE_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_WIDE_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IGET_WIDE_QUICK = 243;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_OBJECT_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_OBJECT_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IGET_OBJECT_QUICK = 244;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IPUT_QUICK = 245;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_WIDE_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_WIDE_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IPUT_WIDE_QUICK = 246;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_OBJECT_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_OBJECT_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IPUT_OBJECT_QUICK = 247;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_VIRTUAL_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_VIRTUAL_QUICK", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_VIRTUAL_QUICK = 248;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_VIRTUAL_QUICK_RANGE
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_VIRTUAL_QUICK_RANGE", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_VIRTUAL_QUICK_RANGE = 249;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_SUPER_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_SUPER_QUICK", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_SUPER_QUICK = 250;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_SUPER_QUICK_RANGE
 				/// </java-name>
@@ -1344,18 +1299,5 @@ namespace Dalvik.Bytecode
 				public const int OP_UNUSED_FF = 255;
 		}
 
-		/// <summary>
-		/// <para>A list of all normal (not implementation-specific) Dalvik opcodes. </para>    
-		/// </summary>
-		/// <java-name>
-		/// dalvik/bytecode/Opcodes
-		/// </java-name>
-		[Dot42.DexImport("dalvik/bytecode/Opcodes", AccessFlags = 1537)]
-		public partial interface IOpcodes
- /* scope: __dot42__ */ 
-		{
-		}
-
 }
-
 

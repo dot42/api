@@ -28,9 +28,9 @@ namespace Android.Views
         /// withStartAction
         /// </java-name>
         [Dot42.DexImport("withStartAction", "(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1, IgnoreFromJava = true)]
-        public global::Android.View.ViewPropertyAnimator WithStartAction(global::System.Action runnable) 
+        public global::Android.Views.ViewPropertyAnimator WithStartAction(global::System.Action runnable) 
         {
-            return default(global::Android.View.ViewPropertyAnimator);
+            return default(global::Android.Views.ViewPropertyAnimator);
         }
 
         /// <summary>
@@ -50,9 +50,9 @@ namespace Android.Views
         /// withEndAction
         /// </java-name>
         [Dot42.DexImport("withEndAction", "(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;", AccessFlags = 1, IgnoreFromJava = true)]
-        public global::Android.View.ViewPropertyAnimator WithEndAction(global::System.Action runnable) 
+        public global::Android.Views.ViewPropertyAnimator WithEndAction(global::System.Action runnable) 
         {
-            return default(global::Android.View.ViewPropertyAnimator);
+            return default(global::Android.Views.ViewPropertyAnimator);
         }
 #endif
 	}

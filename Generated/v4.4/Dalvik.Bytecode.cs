@@ -1,60 +1,15 @@
-// Copyright (C) 2014 dot42
-//
-// Original filename: Dalvik.Bytecode.cs
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-#pragma warning disable 1717
+﻿#pragma warning disable 1717
 namespace Dalvik.Bytecode
 {
-		/// <summary>
-		/// <para>Information about Dalvik opcodes. </para>    
-		/// </summary>
 		/// <java-name>
-		/// dalvik/bytecode/OpcodeInfo
+		/// dalvik/bytecode/Opcodes
 		/// </java-name>
-		[Dot42.DexImport("dalvik/bytecode/OpcodeInfo", AccessFlags = 49)]
-		public sealed partial class OpcodeInfo
+		[Dot42.DexImport("dalvik/bytecode/Opcodes", AccessFlags = 1537)]
+		public partial interface IOpcodes
  /* scope: __dot42__ */ 
 		{
-				/// <summary>
-				/// <para>The maximum possible value of a Dalvik opcode.</para><para><b>Note:</b>: This is constant in any given VM incarnation, but it is subject to change over time, so it is not appropriate to represent as a compile-time constant value.</para>        
-				/// </summary>
-				/// <java-name>
-				/// MAXIMUM_VALUE
-				/// </java-name>
-				[Dot42.DexImport("MAXIMUM_VALUE", "I", AccessFlags = 25)]
-				public static readonly int MAXIMUM_VALUE;
-				/// <summary>
-				/// <para>The maximum possible "packed value" of a Dalvik opcode. The packed value of an opcode is a denser representation that is only used when reporting usage statistics. The mapping between packed opcode values and regular opcode values is implementation-specific and may vary over time.</para><para><b>Note:</b>: This is constant in any given VM incarnation, but it is subject to change over time, so it is not appropriate to represent as a compile-time constant value.</para><para><para>dalvik.system.VMDebug.getInstructionCount() </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// MAXIMUM_PACKED_VALUE
-				/// </java-name>
-				[Dot42.DexImport("MAXIMUM_PACKED_VALUE", "I", AccessFlags = 25)]
-				public static readonly int MAXIMUM_PACKED_VALUE;
-				/// <summary>
-				/// <para>This class is not instantiable. </para>        
-				/// </summary>
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
-				internal OpcodeInfo() /* MethodBuilder.Create */ 
-				{
-				}
-
 		}
 
-		/// <summary>
-		/// <para>A list of all normal (not implementation-specific) Dalvik opcodes. </para>    
-		/// </summary>
 		/// <java-name>
 		/// dalvik/bytecode/Opcodes
 		/// </java-name>
@@ -1152,465 +1107,291 @@ namespace Dalvik.Bytecode
 				/// </java-name>
 				[Dot42.DexImport("OP_USHR_INT_LIT8", "I", AccessFlags = 25)]
 				public const int OP_USHR_INT_LIT8 = 226;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_CONST_CLASS_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_CONST_CLASS_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_CONST_CLASS_JUMBO = 255;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_CHECK_CAST_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_CHECK_CAST_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_CHECK_CAST_JUMBO = 511;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INSTANCE_OF_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_INSTANCE_OF_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_INSTANCE_OF_JUMBO = 767;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_NEW_INSTANCE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_NEW_INSTANCE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_NEW_INSTANCE_JUMBO = 1023;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_NEW_ARRAY_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_NEW_ARRAY_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_NEW_ARRAY_JUMBO = 1279;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_FILLED_NEW_ARRAY_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_FILLED_NEW_ARRAY_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_FILLED_NEW_ARRAY_JUMBO = 1535;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IGET_JUMBO = 1791;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_WIDE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_WIDE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IGET_WIDE_JUMBO = 2047;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_OBJECT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_OBJECT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IGET_OBJECT_JUMBO = 2303;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_BOOLEAN_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_BOOLEAN_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IGET_BOOLEAN_JUMBO = 2559;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_BYTE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_BYTE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IGET_BYTE_JUMBO = 2815;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_CHAR_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_CHAR_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IGET_CHAR_JUMBO = 3071;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_SHORT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_SHORT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IGET_SHORT_JUMBO = 3327;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IPUT_JUMBO = 3583;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_WIDE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_WIDE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IPUT_WIDE_JUMBO = 3839;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_OBJECT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_OBJECT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IPUT_OBJECT_JUMBO = 4095;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_BOOLEAN_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_BOOLEAN_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IPUT_BOOLEAN_JUMBO = 4351;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_BYTE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_BYTE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IPUT_BYTE_JUMBO = 4607;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_CHAR_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_CHAR_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IPUT_CHAR_JUMBO = 4863;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_SHORT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_SHORT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_IPUT_SHORT_JUMBO = 5119;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SGET_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SGET_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SGET_JUMBO = 5375;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SGET_WIDE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SGET_WIDE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SGET_WIDE_JUMBO = 5631;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SGET_OBJECT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SGET_OBJECT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SGET_OBJECT_JUMBO = 5887;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SGET_BOOLEAN_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SGET_BOOLEAN_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SGET_BOOLEAN_JUMBO = 6143;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SGET_BYTE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SGET_BYTE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SGET_BYTE_JUMBO = 6399;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SGET_CHAR_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SGET_CHAR_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SGET_CHAR_JUMBO = 6655;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SGET_SHORT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SGET_SHORT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SGET_SHORT_JUMBO = 6911;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SPUT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SPUT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SPUT_JUMBO = 7167;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SPUT_WIDE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SPUT_WIDE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SPUT_WIDE_JUMBO = 7423;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SPUT_OBJECT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SPUT_OBJECT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SPUT_OBJECT_JUMBO = 7679;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SPUT_BOOLEAN_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SPUT_BOOLEAN_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SPUT_BOOLEAN_JUMBO = 7935;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SPUT_BYTE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SPUT_BYTE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SPUT_BYTE_JUMBO = 8191;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SPUT_CHAR_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SPUT_CHAR_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SPUT_CHAR_JUMBO = 8447;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SPUT_SHORT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_SPUT_SHORT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_SPUT_SHORT_JUMBO = 8703;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_VIRTUAL_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_VIRTUAL_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_VIRTUAL_JUMBO = 8959;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_SUPER_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_SUPER_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_SUPER_JUMBO = 9215;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_DIRECT_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_DIRECT_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_DIRECT_JUMBO = 9471;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_STATIC_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_STATIC_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_STATIC_JUMBO = 9727;
-				/// <summary>
-				/// <para>Never implemented; do not use. </para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_INTERFACE_JUMBO
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_INTERFACE_JUMBO", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_INTERFACE_JUMBO = 9983;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_WIDE_VOLATILE
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_WIDE_VOLATILE", "I", AccessFlags = 25)]
 				public const int OP_IGET_WIDE_VOLATILE = 232;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_WIDE_VOLATILE
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_WIDE_VOLATILE", "I", AccessFlags = 25)]
 				public const int OP_IPUT_WIDE_VOLATILE = 233;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SGET_WIDE_VOLATILE
 				/// </java-name>
 				[Dot42.DexImport("OP_SGET_WIDE_VOLATILE", "I", AccessFlags = 25)]
 				public const int OP_SGET_WIDE_VOLATILE = 234;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_SPUT_WIDE_VOLATILE
 				/// </java-name>
 				[Dot42.DexImport("OP_SPUT_WIDE_VOLATILE", "I", AccessFlags = 25)]
 				public const int OP_SPUT_WIDE_VOLATILE = 235;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_BREAKPOINT
 				/// </java-name>
 				[Dot42.DexImport("OP_BREAKPOINT", "I", AccessFlags = 25)]
 				public const int OP_BREAKPOINT = 236;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_THROW_VERIFICATION_ERROR
 				/// </java-name>
 				[Dot42.DexImport("OP_THROW_VERIFICATION_ERROR", "I", AccessFlags = 25)]
 				public const int OP_THROW_VERIFICATION_ERROR = 237;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_EXECUTE_INLINE
 				/// </java-name>
 				[Dot42.DexImport("OP_EXECUTE_INLINE", "I", AccessFlags = 25)]
 				public const int OP_EXECUTE_INLINE = 238;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_EXECUTE_INLINE_RANGE
 				/// </java-name>
 				[Dot42.DexImport("OP_EXECUTE_INLINE_RANGE", "I", AccessFlags = 25)]
 				public const int OP_EXECUTE_INLINE_RANGE = 239;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_DIRECT_EMPTY
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_DIRECT_EMPTY", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_DIRECT_EMPTY = 240;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IGET_QUICK = 242;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_WIDE_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_WIDE_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IGET_WIDE_QUICK = 243;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IGET_OBJECT_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IGET_OBJECT_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IGET_OBJECT_QUICK = 244;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IPUT_QUICK = 245;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_WIDE_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_WIDE_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IPUT_WIDE_QUICK = 246;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_IPUT_OBJECT_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_IPUT_OBJECT_QUICK", "I", AccessFlags = 25)]
 				public const int OP_IPUT_OBJECT_QUICK = 247;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_VIRTUAL_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_VIRTUAL_QUICK", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_VIRTUAL_QUICK = 248;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_VIRTUAL_QUICK_RANGE
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_VIRTUAL_QUICK_RANGE", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_VIRTUAL_QUICK_RANGE = 249;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_SUPER_QUICK
 				/// </java-name>
 				[Dot42.DexImport("OP_INVOKE_SUPER_QUICK", "I", AccessFlags = 25)]
 				public const int OP_INVOKE_SUPER_QUICK = 250;
-				/// <summary>
-				/// <para>Implementation detail. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Implementation detail. </para></xrefdescription></xrefsect></para>        
-				/// </summary>
 				/// <java-name>
 				/// OP_INVOKE_SUPER_QUICK_RANGE
 				/// </java-name>
@@ -1618,18 +1399,29 @@ namespace Dalvik.Bytecode
 				public const int OP_INVOKE_SUPER_QUICK_RANGE = 251;
 		}
 
-		/// <summary>
-		/// <para>A list of all normal (not implementation-specific) Dalvik opcodes. </para>    
-		/// </summary>
 		/// <java-name>
-		/// dalvik/bytecode/Opcodes
+		/// dalvik/bytecode/OpcodeInfo
 		/// </java-name>
-		[Dot42.DexImport("dalvik/bytecode/Opcodes", AccessFlags = 1537)]
-		public partial interface IOpcodes
+		[Dot42.DexImport("dalvik/bytecode/OpcodeInfo", AccessFlags = 49)]
+		public sealed partial class OpcodeInfo
  /* scope: __dot42__ */ 
 		{
+				/// <java-name>
+				/// MAXIMUM_VALUE
+				/// </java-name>
+				[Dot42.DexImport("MAXIMUM_VALUE", "I", AccessFlags = 25)]
+				public static readonly int MAXIMUM_VALUE;
+				/// <java-name>
+				/// MAXIMUM_PACKED_VALUE
+				/// </java-name>
+				[Dot42.DexImport("MAXIMUM_PACKED_VALUE", "I", AccessFlags = 25)]
+				public static readonly int MAXIMUM_PACKED_VALUE;
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 0)]
+				internal OpcodeInfo() /* MethodBuilder.Create */ 
+				{
+				}
+
 		}
 
 }
-
 

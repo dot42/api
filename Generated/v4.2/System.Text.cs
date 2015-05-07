@@ -1,33 +1,18 @@
-// Copyright (C) 2014 dot42
-//
-// Original filename: System.Text.cs
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-#pragma warning disable 1717
+﻿#pragma warning disable 1717
 namespace System.Text
 {
 		/// <summary>
-		/// <para>A modifiable sequence of characters for use in creating strings. This class is intended as a direct replacement of StringBuffer for non-concurrent use; unlike <c> StringBuffer </c> this class is not synchronized.</para><para>For particularly complex string-building needs, consider java.util.Formatter.</para><para>The majority of the modification methods on this class return <c>   this </c> so that method calls can be chained together. For example: <c> new StringBuilder("a").append("b").append("c").toString() </c> .</para><para><para>CharSequence </para><simplesectsep></simplesectsep><para>Appendable </para><simplesectsep></simplesectsep><para>StringBuffer </para><simplesectsep></simplesectsep><para>String </para><simplesectsep></simplesectsep><para>String::format </para><para>1.5 </para></para>    
+		///  <para>A modifiable sequence of characters for use in creating strings. This class is intended as a direct replacement of StringBuffer for non-concurrent use; unlike <c>StringBuffer </c> this class is not synchronized.</para> <para>For particularly complex string-building needs, consider java.util.Formatter.</para> <para>The majority of the modification methods on this class return <c>this </c> so that method calls can be chained together. For example:  <c>new StringBuilder("a").append("b").append("c").toString() </c> .</para> <para> <para>CharSequence </para> <para>Appendable </para> <para>StringBuffer </para> <para>String </para> <para>String::format </para> <para>1.5 </para></para>    
 		/// </summary>
 		/// <java-name>
 		/// java/lang/StringBuilder
 		/// </java-name>
 		[Dot42.DexImport("java/lang/StringBuilder", AccessFlags = 49)]
-		public sealed partial class StringBuilder : global::Java.Lang.IAppendable, global::Java.Lang.ICharSequence, global::Java.Io.ISerializable
+		public sealed partial class StringBuilder : global::Java.Lang.IAppendable, global::Java.Lang.ICharSequence, global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 		{
 				/// <summary>
-				/// <para>Constructs an instance with an initial capacity of <c> 16 </c> .</para><para><para>#capacity() </para></para>        
+				///  <para>Constructs an instance with an initial capacity of <c>16 </c> .</para> <para> <para>#capacity() </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public StringBuilder() /* MethodBuilder.Create */ 
@@ -35,7 +20,7 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Constructs an instance with the specified capacity.</para><para><para>#capacity() </para></para>        
+				///  <para>Constructs an instance with the specified capacity.</para> <para> <para>#capacity() </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(I)V", AccessFlags = 1)]
 				public StringBuilder(int capacity) /* MethodBuilder.Create */ 
@@ -43,7 +28,7 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Constructs an instance with the specified capacity.</para><para><para>#capacity() </para></para>        
+				///  <para>Constructs an instance with the specified capacity.</para> <para> <para>#capacity() </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/CharSequence;)V", AccessFlags = 1)]
 				public StringBuilder(global::Java.Lang.ICharSequence capacity) /* MethodBuilder.Create */ 
@@ -51,7 +36,7 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Constructs an instance with the specified capacity.</para><para><para>#capacity() </para></para>        
+				///  <para>Constructs an instance with the specified capacity.</para> <para> <para>#capacity() </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public StringBuilder(string capacity) /* MethodBuilder.Create */ 
@@ -59,10 +44,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -74,10 +59,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -89,10 +74,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -104,10 +89,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -119,10 +104,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -134,10 +119,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -149,10 +134,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -164,10 +149,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -179,10 +164,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -194,10 +179,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -209,10 +194,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified subset of the <c>       char[] </c> . The <c> char[] </c> value is converted to a String according to the rule defined by String#valueOf(char[],int,int).</para><para><para>String::valueOf(char[],int,int) </para></para>        
+				///  <para>Appends the string representation of the specified subset of the <c>char[] </c> . The <c>char[] </c> value is converted to a String according to the rule defined by String#valueOf(char[],int,int).</para> <para> <para>String::valueOf(char[],int,int) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -224,10 +209,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified <c> boolean </c> value. The <c> boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Appends the string representation of the specified <c>boolean </c> value. The <c>boolean </c> value is converted to a String according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -239,10 +224,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the string representation of the specified subset of the <c>       char[] </c> . The <c> char[] </c> value is converted to a String according to the rule defined by String#valueOf(char[],int,int).</para><para><para>String::valueOf(char[],int,int) </para></para>        
+				///  <para>Appends the string representation of the specified subset of the <c>char[] </c> . The <c>char[] </c> value is converted to a String according to the rule defined by String#valueOf(char[],int,int).</para> <para> <para>String::valueOf(char[],int,int) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// append
@@ -255,10 +240,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Appends the encoded Unicode code point. The code point is converted to a <c> char[] </c> as defined by Character#toChars(int).</para><para><para>Character::toChars(int) </para></para>        
+				///  <para>Appends the encoded Unicode code point. The code point is converted to a  <c>char[] </c> as defined by Character#toChars(int).</para> <para> <para>Character::toChars(int) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// appendCodePoint
@@ -270,10 +255,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Deletes a sequence of characters specified by <c> start </c> and <c>       end </c> . Shifts any remaining characters to the left.</para><para></para>        
+				///  <para>Deletes a sequence of characters specified by <c>start </c> and <c>end </c> . Shifts any remaining characters to the left.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// delete
@@ -286,10 +271,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Deletes the character at the specified index. shifts any remaining characters to the left.</para><para></para>        
+				///  <para>Deletes the character at the specified index. shifts any remaining characters to the left.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// deleteCharAt
@@ -301,10 +286,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -316,10 +301,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -331,10 +316,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -346,10 +331,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -361,10 +346,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -376,10 +361,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -391,10 +376,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -406,10 +391,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -421,10 +406,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -436,10 +421,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified subsequence of the <c> char[] </c> at the specified <c> offset </c> . The <c> char[] </c> value is converted to a String according to the rule defined by String#valueOf(char[],int,int).</para><para><para>String::valueOf(char[],int,int) </para></para>        
+				///  <para>Inserts the string representation of the specified subsequence of the  <c>char[] </c> at the specified <c>offset </c> . The <c>char[] </c> value is converted to a String according to the rule defined by String#valueOf(char[],int,int).</para> <para> <para>String::valueOf(char[],int,int) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -451,10 +436,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified <c> boolean </c> value at the specified <c> offset </c> . The <c> boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para><para><para>String::valueOf(boolean) </para></para>        
+				///  <para>Inserts the string representation of the specified <c>boolean </c> value at the specified <c>offset </c> . The <c>boolean </c> value is converted to a string according to the rule defined by String#valueOf(boolean).</para> <para> <para>String::valueOf(boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -466,10 +451,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Inserts the string representation of the specified subsequence of the <c> char[] </c> at the specified <c> offset </c> . The <c> char[] </c> value is converted to a String according to the rule defined by String#valueOf(char[],int,int).</para><para><para>String::valueOf(char[],int,int) </para></para>        
+				///  <para>Inserts the string representation of the specified subsequence of the  <c>char[] </c> at the specified <c>offset </c> . The <c>char[] </c> value is converted to a String according to the rule defined by String#valueOf(char[],int,int).</para> <para> <para>String::valueOf(char[],int,int) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// insert
@@ -482,10 +467,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Replaces the specified subsequence in this builder with the specified string.</para><para></para>        
+				///  <para>Replaces the specified subsequence in this builder with the specified string.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this builder. </para>
+				///  <para>this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// replace
@@ -497,10 +482,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Reverses the order of characters in this builder.</para><para></para>        
+				///  <para>Reverses the order of characters in this builder.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>this buffer. </para>
+				///  <para>this buffer. </para>
 				/// </returns>
 				/// <java-name>
 				/// reverse
@@ -512,10 +497,10 @@ namespace System.Text
 				}
 
 				/// <summary>
-				/// <para>Returns the contents of this builder.</para><para></para>        
+				///  <para>Returns the contents of this builder.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the string representation of the data in this builder. </para>
+				///  <para>the string representation of the data in this builder. </para>
 				/// </returns>
 				/// <java-name>
 				/// toString
@@ -527,19 +512,10 @@ namespace System.Text
 				}
 
 				/// <java-name>
-				/// capacity
-				/// </java-name>
-				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
-				public int GetCapacity() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <java-name>
 				/// charAt
 				/// </java-name>
 				[Dot42.DexImport("charAt", "(I)C", AccessFlags = 1)]
-				public char CharAt(int int32) /* MethodBuilder.Create */ 
+				char global::Java.Lang.ICharSequence.CharAt(int int32) /* MethodBuilder.Create */ 
 				{
 						return default(char);
 				}
@@ -564,7 +540,7 @@ namespace System.Text
 				/// length
 				/// </java-name>
 				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-				public int GetLength() /* MethodBuilder.Create */ 
+				int global::Java.Lang.ICharSequence.Length() /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -581,7 +557,8 @@ namespace System.Text
 				/// setLength
 				/// </java-name>
 				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
-				public void SetLength(int int32) /* MethodBuilder.Create */ 
+				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+				public void JavaSetLength(int int32) /* MethodBuilder.Create */ 
 				{
 				}
 
@@ -716,23 +693,11 @@ namespace System.Text
 				/// </java-name>
 				public int Capacity
 				{
-				[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
-						get{ return GetCapacity(); }
-				}
-
-				/// <java-name>
-				/// length
-				/// </java-name>
-				public int Length
-				{
-				[Dot42.DexImport("length", "()I", AccessFlags = 1)]
-						get{ return GetLength(); }
-				[Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
-						set{ SetLength(value); }
+						[Dot42.DexImport("capacity", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
 
 }
-
 

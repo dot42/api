@@ -1,23 +1,8 @@
-// Copyright (C) 2014 dot42
-//
-// Original filename: System.Threading.cs
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-#pragma warning disable 1717
+﻿#pragma warning disable 1717
 namespace System.Threading
 {
 		/// <summary>
-		/// <para>A <c> Thread </c> is a concurrent unit of execution. It has its own call stack for methods being invoked, their arguments and local variables. Each application has at least one thread running when it is started, the main thread, in the main ThreadGroup. The runtime keeps its own threads in the system thread group.</para><para>There are two ways to execute code in a new thread. You can either subclass <c> Thread </c> and overriding its run() method, or construct a new <c> Thread </c> and pass a Runnable to the constructor. In either case, the start() method must be called to actually execute the new <c> Thread </c> .</para><para>Each <c> Thread </c> has an integer priority that affect how the thread is scheduled by the OS. A new thread inherits the priority of its parent. A thread's priority can be set using the setPriority(int) method. </para>    
+		///  <para>A <c>Thread </c> is a concurrent unit of execution. It has its own call stack for methods being invoked, their arguments and local variables. Each application has at least one thread running when it is started, the main thread, in the main ThreadGroup. The runtime keeps its own threads in the system thread group.</para> <para>There are two ways to execute code in a new thread. You can either subclass <c>Thread </c> and overriding its run() method, or construct a new <c>Thread </c> and pass a Runnable to the constructor. In either case, the start() method must be called to actually execute the new <c>Thread </c> .</para> <para>Each <c>Thread </c> has an integer priority that affect how the thread is scheduled by the OS. A new thread inherits the priority of its parent. A thread's priority can be set using the setPriority(int) method. </para>    
 		/// </summary>
 		/// <java-name>
 		/// java/lang/Thread
@@ -27,7 +12,7 @@ namespace System.Threading
  /* scope: __dot42__ */ 
 		{
 				/// <summary>
-				/// <para>The maximum priority value allowed for a thread. This corresponds to (but does not have the same value as) <c> android.os.Process.THREAD_PRIORITY_URGENT_DISPLAY </c> . </para>        
+				///  <para>The maximum priority value allowed for a thread. This corresponds to (but does not have the same value as)  <c>android.os.Process.THREAD_PRIORITY_URGENT_DISPLAY </c> . </para>        
 				/// </summary>
 				/// <java-name>
 				/// MAX_PRIORITY
@@ -35,7 +20,7 @@ namespace System.Threading
 				[Dot42.DexImport("MAX_PRIORITY", "I", AccessFlags = 25)]
 				public const int MAX_PRIORITY = 10;
 				/// <summary>
-				/// <para>The minimum priority value allowed for a thread. This corresponds to (but does not have the same value as) <c> android.os.Process.THREAD_PRIORITY_LOWEST </c> . </para>        
+				///  <para>The minimum priority value allowed for a thread. This corresponds to (but does not have the same value as)  <c>android.os.Process.THREAD_PRIORITY_LOWEST </c> . </para>        
 				/// </summary>
 				/// <java-name>
 				/// MIN_PRIORITY
@@ -43,7 +28,7 @@ namespace System.Threading
 				[Dot42.DexImport("MIN_PRIORITY", "I", AccessFlags = 25)]
 				public const int MIN_PRIORITY = 1;
 				/// <summary>
-				/// <para>The normal (default) priority value assigned to the main thread. This corresponds to (but does not have the same value as) <c> android.os.Process.THREAD_PRIORITY_DEFAULT </c> . </para>        
+				///  <para>The normal (default) priority value assigned to the main thread. This corresponds to (but does not have the same value as)  <c>android.os.Process.THREAD_PRIORITY_DEFAULT </c> . </para>        
 				/// </summary>
 				/// <java-name>
 				/// NORM_PRIORITY
@@ -51,7 +36,7 @@ namespace System.Threading
 				[Dot42.DexImport("NORM_PRIORITY", "I", AccessFlags = 25)]
 				public const int NORM_PRIORITY = 5;
 				/// <summary>
-				/// <para>Constructs a new <c> Thread </c> with no <c> Runnable </c> object and a newly generated name. The new <c> Thread </c> will belong to the same <c> ThreadGroup </c> as the <c> Thread </c> calling this constructor.</para><para><para>java.lang.ThreadGroup </para><simplesectsep></simplesectsep><para>java.lang.Runnable </para></para>        
+				///  <para>Constructs a new <c>Thread </c> with no <c>Runnable </c> object and a newly generated name. The new <c>Thread </c> will belong to the same  <c>ThreadGroup </c> as the <c>Thread </c> calling this constructor.</para> <para> <para>java.lang.ThreadGroup </para> <para>java.lang.Runnable </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Thread() /* MethodBuilder.Create */ 
@@ -59,7 +44,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Constructs a new <c> Thread </c> with a <c> Runnable </c> object and a newly generated name. The new <c> Thread </c> will belong to the same <c> ThreadGroup </c> as the <c> Thread </c> calling this constructor.</para><para><para>java.lang.ThreadGroup </para><simplesectsep></simplesectsep><para>java.lang.Runnable </para></para>        
+				///  <para>Constructs a new <c>Thread </c> with a <c>Runnable </c> object and a newly generated name. The new <c>Thread </c> will belong to the same  <c>ThreadGroup </c> as the <c>Thread </c> calling this constructor.</para> <para> <para>java.lang.ThreadGroup </para> <para>java.lang.Runnable </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/Runnable;)V", AccessFlags = 1)]
 				public Thread(global::Java.Lang.IRunnable runnable) /* MethodBuilder.Create */ 
@@ -67,7 +52,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Constructs a new <c> Thread </c> with a <c> Runnable </c> object and name provided. The new <c> Thread </c> will belong to the same <c>       ThreadGroup </c> as the <c> Thread </c> calling this constructor.</para><para><para>java.lang.ThreadGroup </para><simplesectsep></simplesectsep><para>java.lang.Runnable </para></para>        
+				///  <para>Constructs a new <c>Thread </c> with a <c>Runnable </c> object and name provided. The new <c>Thread </c> will belong to the same <c>ThreadGroup </c> as the <c>Thread </c> calling this constructor.</para> <para> <para>java.lang.ThreadGroup </para> <para>java.lang.Runnable </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/Runnable;Ljava/lang/String;)V", AccessFlags = 1)]
 				public Thread(global::Java.Lang.IRunnable runnable, string threadName) /* MethodBuilder.Create */ 
@@ -75,7 +60,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Constructs a new <c> Thread </c> with a <c> Runnable </c> object and a newly generated name. The new <c> Thread </c> will belong to the same <c> ThreadGroup </c> as the <c> Thread </c> calling this constructor.</para><para><para>java.lang.ThreadGroup </para><simplesectsep></simplesectsep><para>java.lang.Runnable </para></para>        
+				///  <para>Constructs a new <c>Thread </c> with a <c>Runnable </c> object and a newly generated name. The new <c>Thread </c> will belong to the same  <c>ThreadGroup </c> as the <c>Thread </c> calling this constructor.</para> <para> <para>java.lang.ThreadGroup </para> <para>java.lang.Runnable </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public Thread(string runnable) /* MethodBuilder.Create */ 
@@ -83,7 +68,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Constructs a new <c> Thread </c> with a <c> Runnable </c> object and name provided. The new <c> Thread </c> will belong to the same <c>       ThreadGroup </c> as the <c> Thread </c> calling this constructor.</para><para><para>java.lang.ThreadGroup </para><simplesectsep></simplesectsep><para>java.lang.Runnable </para></para>        
+				///  <para>Constructs a new <c>Thread </c> with a <c>Runnable </c> object and name provided. The new <c>Thread </c> will belong to the same <c>ThreadGroup </c> as the <c>Thread </c> calling this constructor.</para> <para> <para>java.lang.ThreadGroup </para> <para>java.lang.Runnable </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;)V", AccessFlags = 1)]
 				public Thread(global::Java.Lang.ThreadGroup runnable, global::Java.Lang.IRunnable threadName) /* MethodBuilder.Create */ 
@@ -91,7 +76,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Constructs a new <c> Thread </c> with a <c> Runnable </c> object, the given name and belonging to the <c> ThreadGroup </c> passed as parameter.</para><para><para>java.lang.ThreadGroup </para><simplesectsep></simplesectsep><para>java.lang.Runnable </para></para>        
+				///  <para>Constructs a new <c>Thread </c> with a <c>Runnable </c> object, the given name and belonging to the <c>ThreadGroup </c> passed as parameter.</para> <para> <para>java.lang.ThreadGroup </para> <para>java.lang.Runnable </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;)V", AccessFlags = 1)]
 				public Thread(global::Java.Lang.ThreadGroup group, global::Java.Lang.IRunnable runnable, string threadName) /* MethodBuilder.Create */ 
@@ -99,7 +84,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Constructs a new <c> Thread </c> with a <c> Runnable </c> object and name provided. The new <c> Thread </c> will belong to the same <c>       ThreadGroup </c> as the <c> Thread </c> calling this constructor.</para><para><para>java.lang.ThreadGroup </para><simplesectsep></simplesectsep><para>java.lang.Runnable </para></para>        
+				///  <para>Constructs a new <c>Thread </c> with a <c>Runnable </c> object and name provided. The new <c>Thread </c> will belong to the same <c>ThreadGroup </c> as the <c>Thread </c> calling this constructor.</para> <para> <para>java.lang.ThreadGroup </para> <para>java.lang.Runnable </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/ThreadGroup;Ljava/lang/String;)V", AccessFlags = 1)]
 				public Thread(global::Java.Lang.ThreadGroup runnable, string threadName) /* MethodBuilder.Create */ 
@@ -107,7 +92,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Constructs a new <c> Thread </c> with a <c> Runnable </c> object, the given name and belonging to the <c> ThreadGroup </c> passed as parameter.</para><para><para>java.lang.ThreadGroup </para><simplesectsep></simplesectsep><para>java.lang.Runnable </para></para>        
+				///  <para>Constructs a new <c>Thread </c> with a <c>Runnable </c> object, the given name and belonging to the <c>ThreadGroup </c> passed as parameter.</para> <para> <para>java.lang.ThreadGroup </para> <para>java.lang.Runnable </para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;J)V", AccessFlags = 1)]
 				public Thread(global::Java.Lang.ThreadGroup group, global::Java.Lang.IRunnable runnable, string threadName, long stackSize) /* MethodBuilder.Create */ 
@@ -115,10 +100,10 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Returns the number of active <c> Thread </c> s in the running <c>       Thread </c> 's group and its subgroups.</para><para></para>        
+				///  <para>Returns the number of active <c>Thread </c> s in the running <c>Thread </c> 's group and its subgroups.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the number of <c> Thread </c> s </para>
+				///  <para>the number of <c>Thread </c> s </para>
 				/// </returns>
 				/// <java-name>
 				/// activeCount
@@ -130,7 +115,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Does nothing. </para>        
+				///  <para>Does nothing. </para>        
 				/// </summary>
 				/// <java-name>
 				/// checkAccess
@@ -141,10 +126,10 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Returns the number of stack frames in this thread.</para><para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>The results of this call were never well defined. To make things worse, it would depend on whether the Thread was suspended or not, and suspend was deprecated too. </para></xrefdescription></xrefsect></para>        
+				///  <para>Returns the number of stack frames in this thread.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>The results of this call were never well defined. To make things worse, it would depend on whether the Thread was suspended or not, and suspend was deprecated too. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>Number of stack frames </para>
+				///  <para>Number of stack frames </para>
 				/// </returns>
 				/// <java-name>
 				/// countStackFrames
@@ -156,22 +141,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Returns the Thread of the caller, that is, the current Thread.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the current Thread. </para>
-				/// </returns>
-				/// <java-name>
-				/// currentThread
-				/// </java-name>
-				[Dot42.DexImport("currentThread", "()Ljava/lang/Thread;", AccessFlags = 9)]
-				public static global::System.Threading.Thread GetCurrentThread() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread);
-				}
-
-				/// <summary>
-				/// <para>Throws <c> UnsupportedOperationException </c> . <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Not implemented. </para></xrefdescription></xrefsect></para>        
+				///  <para>Throws <c>UnsupportedOperationException </c> .  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Not implemented. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// destroy
@@ -182,7 +152,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Prints to the standard error stream a text representation of the current stack for this Thread.</para><para><para>Throwable::printStackTrace() </para></para>        
+				///  <para>Prints to the standard error stream a text representation of the current stack for this Thread.</para> <para> <para>Throwable::printStackTrace() </para></para>        
 				/// </summary>
 				/// <java-name>
 				/// dumpStack
@@ -193,10 +163,10 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Copies an array with all Threads which are in the same ThreadGroup as the receiver - and subgroups - into the array <code>threads</code> passed as parameter. If the array passed as parameter is too small no exception is thrown - the extra elements are simply not copied.</para><para></para>        
+				///  <para>Copies an array with all Threads which are in the same ThreadGroup as the receiver - and subgroups - into the array  <code>threads</code> passed as parameter. If the array passed as parameter is too small no exception is thrown - the extra elements are simply not copied.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>How many Threads were copied over </para>
+				///  <para>How many Threads were copied over </para>
 				/// </returns>
 				/// <java-name>
 				/// enumerate
@@ -208,103 +178,10 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Returns a map of all the currently live threads to their stack traces. </para>        
-				/// </summary>
-				/// <java-name>
-				/// getAllStackTraces
-				/// </java-name>
-				[Dot42.DexImport("getAllStackTraces", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/Thread;[Ljava/lang/StackTraceElement;>;")]
-				public static global::Java.Util.IMap<global::System.Threading.Thread, global::Java.Lang.StackTraceElement[]> GetAllStackTraces() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Util.IMap<global::System.Threading.Thread, global::Java.Lang.StackTraceElement[]>);
-				}
-
-				/// <summary>
-				/// <para>Returns the context ClassLoader for this Thread.</para><para><para>java.lang.ClassLoader </para><simplesectsep></simplesectsep><para>getContextClassLoader() </para></para>        
+				///  <para>Returns the current state of the Thread. This method is useful for monitoring purposes.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>ClassLoader The context ClassLoader </para>
-				/// </returns>
-				/// <java-name>
-				/// getContextClassLoader
-				/// </java-name>
-				[Dot42.DexImport("getContextClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-				public virtual global::Java.Lang.ClassLoader GetContextClassLoader() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ClassLoader);
-				}
-
-				/// <summary>
-				/// <para>Returns the default exception handler that's executed when uncaught exception terminates a thread.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>an UncaughtExceptionHandler or <code>null</code> if none exists. </para>
-				/// </returns>
-				/// <java-name>
-				/// getDefaultUncaughtExceptionHandler
-				/// </java-name>
-				[Dot42.DexImport("getDefaultUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 9)]
-				public static global::System.Threading.Thread.IUncaughtExceptionHandler GetDefaultUncaughtExceptionHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread.IUncaughtExceptionHandler);
-				}
-
-				/// <summary>
-				/// <para>Returns the thread's identifier. The ID is a positive <code>long</code> generated on thread creation, is unique to the thread, and doesn't change during the lifetime of the thread; the ID may be reused after the thread has been terminated.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the thread's ID. </para>
-				/// </returns>
-				/// <java-name>
-				/// getId
-				/// </java-name>
-				[Dot42.DexImport("getId", "()J", AccessFlags = 1)]
-				public virtual long GetId() /* MethodBuilder.Create */ 
-				{
-						return default(long);
-				}
-
-				/// <summary>
-				/// <para>Returns the name of the Thread. </para>        
-				/// </summary>
-				/// <java-name>
-				/// getName
-				/// </java-name>
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-				public string GetName() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <summary>
-				/// <para>Returns the priority of the Thread. </para>        
-				/// </summary>
-				/// <java-name>
-				/// getPriority
-				/// </java-name>
-				[Dot42.DexImport("getPriority", "()I", AccessFlags = 17)]
-				public int GetPriority() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <summary>
-				/// <para>Returns an array of StackTraceElement representing the current thread's stack. </para>        
-				/// </summary>
-				/// <java-name>
-				/// getStackTrace
-				/// </java-name>
-				[Dot42.DexImport("getStackTrace", "()[Ljava/lang/StackTraceElement;", AccessFlags = 1)]
-				public virtual global::Java.Lang.StackTraceElement[] GetStackTrace() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.StackTraceElement[]);
-				}
-
-				/// <summary>
-				/// <para>Returns the current state of the Thread. This method is useful for monitoring purposes.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>a State value. </para>
+				///  <para>a State value. </para>
 				/// </returns>
 				/// <java-name>
 				/// getState
@@ -316,37 +193,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Returns the ThreadGroup to which this Thread belongs.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>the Thread's ThreadGroup </para>
-				/// </returns>
-				/// <java-name>
-				/// getThreadGroup
-				/// </java-name>
-				[Dot42.DexImport("getThreadGroup", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
-				public global::Java.Lang.ThreadGroup GetThreadGroup() /* MethodBuilder.Create */ 
-				{
-						return default(global::Java.Lang.ThreadGroup);
-				}
-
-				/// <summary>
-				/// <para>Returns the thread's uncaught exception handler. If not explicitly set, then the ThreadGroup's handler is returned. If the thread is terminated, then <code>null</code> is returned.</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>an UncaughtExceptionHandler instance or <c> null </c> . </para>
-				/// </returns>
-				/// <java-name>
-				/// getUncaughtExceptionHandler
-				/// </java-name>
-				[Dot42.DexImport("getUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 1)]
-				public virtual global::System.Threading.Thread.IUncaughtExceptionHandler GetUncaughtExceptionHandler() /* MethodBuilder.Create */ 
-				{
-						return default(global::System.Threading.Thread.IUncaughtExceptionHandler);
-				}
-
-				/// <summary>
-				/// <para>Posts an interrupt request to this <c> Thread </c> . The behavior depends on the state of this <c> Thread </c> : <ul><li><para><c> Thread </c> s blocked in one of <c> Object </c> 's <c> wait() </c> methods or one of <c> Thread </c> 's <c> join() </c> or <c> sleep() </c> methods will be woken up, their interrupt status will be cleared, and they receive an InterruptedException. </para></li><li><para><c> Thread </c> s blocked in an I/O operation of an java.nio.channels.InterruptibleChannel will have their interrupt status set and receive an java.nio.channels.ClosedByInterruptException. Also, the channel will be closed. </para></li><li><para><c> Thread </c> s blocked in a java.nio.channels.Selector will have their interrupt status set and return immediately. They don't receive an exception in this case. <ul><li></li></ul>Thread::interrupted <para>Thread::isInterrupted </para></para></li></ul></para>        
+				///  <para>Posts an interrupt request to this <c>Thread </c> . The behavior depends on the state of this <c>Thread </c> :  <ul> <li> <para> <c>Thread </c> s blocked in one of <c>Object </c> 's <c>wait() </c> methods or one of <c>Thread </c> 's <c>join() </c> or <c>sleep() </c> methods will be woken up, their interrupt status will be cleared, and they receive an InterruptedException. </para></li> <li> <para> <c>Thread </c> s blocked in an I/O operation of an java.nio.channels.InterruptibleChannel will have their interrupt status set and receive an java.nio.channels.ClosedByInterruptException. Also, the channel will be closed. </para></li> <li> <para> <c>Thread </c> s blocked in a java.nio.channels.Selector will have their interrupt status set and return immediately. They don't receive an exception in this case.  <ul> <li></li></ul>Thread::interrupted  <para>Thread::isInterrupted </para></para></li></ul></para>        
 				/// </summary>
 				/// <java-name>
 				/// interrupt
@@ -357,10 +204,10 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Returns a <code>boolean</code> indicating whether the current Thread ( <code>currentThread()</code>) has a pending interrupt request (<code> true</code>) or not (<code>false</code>). It also has the side-effect of clearing the flag.</para><para><para>Thread::currentThread </para><simplesectsep></simplesectsep><para>Thread::interrupt </para><simplesectsep></simplesectsep><para>Thread::isInterrupted </para></para>        
+				///  <para>Returns a  <code>boolean</code> indicating whether the current Thread (  <code>currentThread()</code>) has a pending interrupt request ( <code> true</code>) or not ( <code>false</code>). It also has the side-effect of clearing the flag.</para> <para> <para>Thread::currentThread </para> <para>Thread::interrupt </para> <para>Thread::isInterrupted </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>a <code>boolean</code> indicating the interrupt status </para>
+				///  <para>a  <code>boolean</code> indicating the interrupt status </para>
 				/// </returns>
 				/// <java-name>
 				/// interrupted
@@ -372,49 +219,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Returns <code>true</code> if the receiver has already been started and still runs code (hasn't died yet). Returns <code>false</code> either if the receiver hasn't been started yet or if it has already started and run to completion and died.</para><para><para>Thread::start </para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>a <code>boolean</code> indicating the liveness of the Thread </para>
-				/// </returns>
-				/// <java-name>
-				/// isAlive
-				/// </java-name>
-				[Dot42.DexImport("isAlive", "()Z", AccessFlags = 17)]
-				public bool IsAlive() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <summary>
-				/// <para>Tests whether this is a daemon thread. A daemon thread only runs as long as there are non-daemon threads running. When the last non-daemon thread ends, the runtime will exit. This is not normally relevant to applications with a UI. </para>        
-				/// </summary>
-				/// <java-name>
-				/// isDaemon
-				/// </java-name>
-				[Dot42.DexImport("isDaemon", "()Z", AccessFlags = 17)]
-				public bool IsDaemon() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <summary>
-				/// <para>Returns a <code>boolean</code> indicating whether the receiver has a pending interrupt request (<code>true</code>) or not ( <code>false</code>)</para><para><para>Thread::interrupt </para><simplesectsep></simplesectsep><para>Thread::interrupted </para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>a <code>boolean</code> indicating the interrupt status </para>
-				/// </returns>
-				/// <java-name>
-				/// isInterrupted
-				/// </java-name>
-				[Dot42.DexImport("isInterrupted", "()Z", AccessFlags = 1)]
-				public virtual bool IsInterrupted() /* MethodBuilder.Create */ 
-				{
-						return default(bool);
-				}
-
-				/// <summary>
-				/// <para>Blocks the current Thread (<code>Thread.currentThread()</code>) until the receiver finishes its execution and dies.</para><para><para>Object::notifyAll </para><simplesectsep></simplesectsep><para>java.lang.ThreadDeath </para></para>        
+				///  <para>Blocks the current Thread ( <code>Thread.currentThread()</code>) until the receiver finishes its execution and dies.</para> <para> <para>Object::notifyAll </para> <para>java.lang.ThreadDeath </para></para>        
 				/// </summary>
 				/// <java-name>
 				/// join
@@ -425,7 +230,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Blocks the current Thread (<code>Thread.currentThread()</code>) until the receiver finishes its execution and dies or the specified timeout expires, whatever happens first.</para><para><para>Object::notifyAll </para><simplesectsep></simplesectsep><para>java.lang.ThreadDeath </para></para>        
+				///  <para>Blocks the current Thread ( <code>Thread.currentThread()</code>) until the receiver finishes its execution and dies or the specified timeout expires, whatever happens first.</para> <para> <para>Object::notifyAll </para> <para>java.lang.ThreadDeath </para></para>        
 				/// </summary>
 				/// <java-name>
 				/// join
@@ -436,7 +241,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Blocks the current Thread (<code>Thread.currentThread()</code>) until the receiver finishes its execution and dies or the specified timeout expires, whatever happens first.</para><para><para>Object::notifyAll </para><simplesectsep></simplesectsep><para>java.lang.ThreadDeath </para></para>        
+				///  <para>Blocks the current Thread ( <code>Thread.currentThread()</code>) until the receiver finishes its execution and dies or the specified timeout expires, whatever happens first.</para> <para> <para>Object::notifyAll </para> <para>java.lang.ThreadDeath </para></para>        
 				/// </summary>
 				/// <java-name>
 				/// join
@@ -447,7 +252,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Throws <c> UnsupportedOperationException </c> . <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Only useful in conjunction with deprecated method Thread#suspend. </para></xrefdescription></xrefsect></para>        
+				///  <para>Throws <c>UnsupportedOperationException </c> .  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Only useful in conjunction with deprecated method Thread#suspend. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// resume
@@ -458,7 +263,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Calls the <code>run()</code> method of the Runnable object the receiver holds. If no Runnable is set, does nothing.</para><para><para>Thread::start </para></para>        
+				///  <para>Calls the  <code>run()</code> method of the Runnable object the receiver holds. If no Runnable is set, does nothing.</para> <para> <para>Thread::start </para></para>        
 				/// </summary>
 				/// <java-name>
 				/// run
@@ -469,73 +274,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Set the context ClassLoader for the receiver.</para><para><para>getContextClassLoader() </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setContextClassLoader
-				/// </java-name>
-				[Dot42.DexImport("setContextClassLoader", "(Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-				public virtual void SetContextClassLoader(global::Java.Lang.ClassLoader cl) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Marks this thread as a daemon thread. A daemon thread only runs as long as there are non-daemon threads running. When the last non-daemon thread ends, the runtime will exit. This is not normally relevant to applications with a UI. </para>        
-				/// </summary>
-				/// <java-name>
-				/// setDaemon
-				/// </java-name>
-				[Dot42.DexImport("setDaemon", "(Z)V", AccessFlags = 17)]
-				public void SetDaemon(bool isDaemon) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Sets the default uncaught exception handler. This handler is invoked in case any Thread dies due to an unhandled exception.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setDefaultUncaughtExceptionHandler
-				/// </java-name>
-				[Dot42.DexImport("setDefaultUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 9)]
-				public static void SetDefaultUncaughtExceptionHandler(global::System.Threading.Thread.IUncaughtExceptionHandler handler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Sets the name of the Thread.</para><para><para>Thread::getName </para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setName
-				/// </java-name>
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 17)]
-				public void SetName(string threadName) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Sets the priority of this thread. If the requested priority is greater than the parent thread group's java.lang.ThreadGroup#getMaxPriority, the group's maximum priority will be used instead.</para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setPriority
-				/// </java-name>
-				[Dot42.DexImport("setPriority", "(I)V", AccessFlags = 17)]
-				public void SetPriority(int priority) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Sets the uncaught exception handler. This handler is invoked in case this Thread dies due to an unhandled exception. </para><para></para>        
-				/// </summary>
-				/// <java-name>
-				/// setUncaughtExceptionHandler
-				/// </java-name>
-				[Dot42.DexImport("setUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 1)]
-				public virtual void SetUncaughtExceptionHandler(global::System.Threading.Thread.IUncaughtExceptionHandler handler) /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <summary>
-				/// <para>Causes the thread which sent this message to sleep for the given interval of time (given in milliseconds). The precision is not guaranteed - the Thread may sleep more or less than requested.</para><para><para>Thread::interrupt() </para></para>        
+				///  <para>Causes the thread which sent this message to sleep for the given interval of time (given in milliseconds). The precision is not guaranteed - the Thread may sleep more or less than requested.</para> <para> <para>Thread::interrupt() </para></para>        
 				/// </summary>
 				/// <java-name>
 				/// sleep
@@ -546,7 +285,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Causes the thread which sent this message to sleep for the given interval of time (given in milliseconds and nanoseconds). The precision is not guaranteed - the Thread may sleep more or less than requested.</para><para><para>Thread::interrupt() </para></para>        
+				///  <para>Causes the thread which sent this message to sleep for the given interval of time (given in milliseconds and nanoseconds). The precision is not guaranteed - the Thread may sleep more or less than requested.</para> <para> <para>Thread::interrupt() </para></para>        
 				/// </summary>
 				/// <java-name>
 				/// sleep
@@ -557,7 +296,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Starts the new Thread of execution. The <code>run()</code> method of the receiver will be called by the receiver Thread itself (and not the Thread calling <code>start()</code>).</para><para><para>Thread::run </para></para>        
+				///  <para>Starts the new Thread of execution. The  <code>run()</code> method of the receiver will be called by the receiver Thread itself (and not the Thread calling  <code>start()</code>).</para> <para> <para>Thread::run </para></para>        
 				/// </summary>
 				/// <java-name>
 				/// start
@@ -568,7 +307,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Requests the receiver Thread to stop and throw ThreadDeath. The Thread is resumed if it was suspended and awakened if it was sleeping, so that it can proceed to throw ThreadDeath.</para><para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>because stopping a thread in this manner is unsafe and can leave your application and the VM in an unpredictable state. </para></xrefdescription></xrefsect></para>        
+				///  <para>Requests the receiver Thread to stop and throw ThreadDeath. The Thread is resumed if it was suspended and awakened if it was sleeping, so that it can proceed to throw ThreadDeath.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Stopping a thread in this manner is unsafe and can leave your application and the VM in an unpredictable state. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// stop
@@ -579,7 +318,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Throws <c> UnsupportedOperationException </c> . <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>because stopping a thread in this manner is unsafe and can leave your application and the VM in an unpredictable state. </para></xrefdescription></xrefsect></para>        
+				///  <para>Throws <c>UnsupportedOperationException </c> .  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Stopping a thread in this manner is unsafe and can leave your application and the VM in an unpredictable state. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// stop
@@ -590,7 +329,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Throws <c> UnsupportedOperationException </c> . <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>May cause deadlocks. </para></xrefdescription></xrefsect></para>        
+				///  <para>Throws <c>UnsupportedOperationException </c> .  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>May cause deadlocks. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// suspend
@@ -601,10 +340,10 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Returns a string containing a concise, human-readable description of the Thread. It includes the Thread's name, priority, and group name.</para><para></para>        
+				///  <para>Returns a string containing a concise, human-readable description of the Thread. It includes the Thread's name, priority, and group name.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>a printable representation for the receiver. </para>
+				///  <para>a printable representation for the receiver. </para>
 				/// </returns>
 				/// <java-name>
 				/// toString
@@ -616,7 +355,7 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Causes the calling Thread to yield execution time to another Thread that is ready to run. The actual scheduling is implementation-dependent. </para>        
+				///  <para>Causes the calling Thread to yield execution time to another Thread that is ready to run. The actual scheduling is implementation-dependent. </para>        
 				/// </summary>
 				/// <java-name>
 				/// yield
@@ -627,10 +366,10 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Indicates whether the current Thread has a monitor lock on the specified object.</para><para></para>        
+				///  <para>Indicates whether the current Thread has a monitor lock on the specified object.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>true if the current thread has a monitor lock on the specified object; false otherwise </para>
+				///  <para>true if the current thread has a monitor lock on the specified object; false otherwise </para>
 				/// </returns>
 				/// <java-name>
 				/// holdsLock
@@ -642,155 +381,199 @@ namespace System.Threading
 				}
 
 				/// <summary>
-				/// <para>Returns the Thread of the caller, that is, the current Thread.</para><para></para>        
+				///  <para>Returns the Thread of the caller, that is, the current Thread.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the current Thread. </para>
+				///  <para>the current Thread. </para>
 				/// </returns>
 				/// <java-name>
 				/// currentThread
 				/// </java-name>
 				public static global::System.Threading.Thread CurrentThread
 				{
-				[Dot42.DexImport("currentThread", "()Ljava/lang/Thread;", AccessFlags = 9)]
-						get{ return GetCurrentThread(); }
+						[Dot42.DexImport("currentThread", "()Ljava/lang/Thread;", AccessFlags = 9)]
+						get{ return default(global::System.Threading.Thread); }
 				}
 
 				/// <summary>
-				/// <para>Returns a map of all the currently live threads to their stack traces. </para>        
+				///  <para>Returns a map of all the currently live threads to their stack traces. </para>        
 				/// </summary>
 				/// <java-name>
 				/// getAllStackTraces
 				/// </java-name>
 				public static global::Java.Util.IMap<global::System.Threading.Thread, global::Java.Lang.StackTraceElement[]> AllStackTraces
 				{
-				[Dot42.DexImport("getAllStackTraces", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/Thread;[Ljava/lang/StackTraceElement;>;")]
-						get{ return GetAllStackTraces(); }
+						[Dot42.DexImport("getAllStackTraces", "()Ljava/util/Map;", AccessFlags = 9, Signature = "()Ljava/util/Map<Ljava/lang/Thread;[Ljava/lang/StackTraceElement;>;")]
+						get{ return default(global::Java.Util.IMap<global::System.Threading.Thread, global::Java.Lang.StackTraceElement[]>); }
 				}
 
 				/// <summary>
-				/// <para>Returns the context ClassLoader for this Thread.</para><para><para>java.lang.ClassLoader </para><simplesectsep></simplesectsep><para>getContextClassLoader() </para></para>        
+				///  <para>Returns the context ClassLoader for this Thread.</para> <para> <para>java.lang.ClassLoader </para> <para>getContextClassLoader() </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>ClassLoader The context ClassLoader </para>
+				///  <para>ClassLoader The context ClassLoader </para>
 				/// </returns>
 				/// <java-name>
 				/// getContextClassLoader
 				/// </java-name>
-				public global::Java.Lang.ClassLoader ContextClassLoader
+				public virtual global::Java.Lang.ClassLoader ContextClassLoader
 				{
-				[Dot42.DexImport("getContextClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
-						get{ return GetContextClassLoader(); }
-				[Dot42.DexImport("setContextClassLoader", "(Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
-						set{ SetContextClassLoader(value); }
+						[Dot42.DexImport("getContextClassLoader", "()Ljava/lang/ClassLoader;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.ClassLoader); }
+						[Dot42.DexImport("setContextClassLoader", "(Ljava/lang/ClassLoader;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <summary>
-				/// <para>Returns the default exception handler that's executed when uncaught exception terminates a thread.</para><para></para>        
+				///  <para>Returns the default exception handler that's executed when uncaught exception terminates a thread.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>an UncaughtExceptionHandler or <code>null</code> if none exists. </para>
+				///  <para>an UncaughtExceptionHandler or  <code>null</code> if none exists. </para>
 				/// </returns>
 				/// <java-name>
 				/// getDefaultUncaughtExceptionHandler
 				/// </java-name>
 				public static global::System.Threading.Thread.IUncaughtExceptionHandler DefaultUncaughtExceptionHandler
 				{
-				[Dot42.DexImport("getDefaultUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 9)]
-						get{ return GetDefaultUncaughtExceptionHandler(); }
-				[Dot42.DexImport("setDefaultUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 9)]
-						set{ SetDefaultUncaughtExceptionHandler(value); }
+						[Dot42.DexImport("getDefaultUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 9)]
+						get{ return default(global::System.Threading.Thread.IUncaughtExceptionHandler); }
+						[Dot42.DexImport("setDefaultUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 9)]
+						set{ }
 				}
 
 				/// <summary>
-				/// <para>Returns the thread's identifier. The ID is a positive <code>long</code> generated on thread creation, is unique to the thread, and doesn't change during the lifetime of the thread; the ID may be reused after the thread has been terminated.</para><para></para>        
+				///  <para>Returns the thread's identifier. The ID is a positive  <code>long</code> generated on thread creation, is unique to the thread, and doesn't change during the lifetime of the thread; the ID may be reused after the thread has been terminated.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the thread's ID. </para>
+				///  <para>the thread's ID. </para>
 				/// </returns>
 				/// <java-name>
 				/// getId
 				/// </java-name>
-				public long Id
+				public virtual long Id
 				{
-				[Dot42.DexImport("getId", "()J", AccessFlags = 1)]
-						get{ return GetId(); }
+						[Dot42.DexImport("getId", "()J", AccessFlags = 1)]
+						get{ return default(long); }
 				}
 
 				/// <summary>
-				/// <para>Returns the name of the Thread. </para>        
+				///  <para>Returns the name of the Thread. </para>        
 				/// </summary>
 				/// <java-name>
 				/// getName
 				/// </java-name>
 				public string Name
 				{
-				[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
-						get{ return GetName(); }
-				[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 17)]
-						set{ SetName(value); }
+						[Dot42.DexImport("getName", "()Ljava/lang/String;", AccessFlags = 17)]
+						get{ return default(string); }
+						[Dot42.DexImport("setName", "(Ljava/lang/String;)V", AccessFlags = 17)]
+						set{ }
 				}
 
 				/// <summary>
-				/// <para>Returns the priority of the Thread. </para>        
+				///  <para>Returns the priority of the Thread. </para>        
 				/// </summary>
 				/// <java-name>
 				/// getPriority
 				/// </java-name>
 				public int Priority
 				{
-				[Dot42.DexImport("getPriority", "()I", AccessFlags = 17)]
-						get{ return GetPriority(); }
-				[Dot42.DexImport("setPriority", "(I)V", AccessFlags = 17)]
-						set{ SetPriority(value); }
+						[Dot42.DexImport("getPriority", "()I", AccessFlags = 17)]
+						get{ return default(int); }
+						[Dot42.DexImport("setPriority", "(I)V", AccessFlags = 17)]
+						set{ }
 				}
 
 				/// <summary>
-				/// <para>Returns an array of StackTraceElement representing the current thread's stack. </para>        
+				///  <para>Returns an array of StackTraceElement representing the current thread's stack. </para>        
 				/// </summary>
 				/// <java-name>
 				/// getStackTrace
 				/// </java-name>
-				public global::Java.Lang.StackTraceElement[] StackTrace
+				public virtual global::Java.Lang.StackTraceElement[] StackTrace
 				{
-				[Dot42.DexImport("getStackTrace", "()[Ljava/lang/StackTraceElement;", AccessFlags = 1)]
-						get{ return GetStackTrace(); }
+						[Dot42.DexImport("getStackTrace", "()[Ljava/lang/StackTraceElement;", AccessFlags = 1)]
+						get{ return default(global::Java.Lang.StackTraceElement[]); }
 				}
 
 				/// <summary>
-				/// <para>Returns the ThreadGroup to which this Thread belongs.</para><para></para>        
+				///  <para>Returns the ThreadGroup to which this Thread belongs.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the Thread's ThreadGroup </para>
+				///  <para>the Thread's ThreadGroup </para>
 				/// </returns>
 				/// <java-name>
 				/// getThreadGroup
 				/// </java-name>
 				public global::Java.Lang.ThreadGroup ThreadGroup
 				{
-				[Dot42.DexImport("getThreadGroup", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
-						get{ return GetThreadGroup(); }
+						[Dot42.DexImport("getThreadGroup", "()Ljava/lang/ThreadGroup;", AccessFlags = 17)]
+						get{ return default(global::Java.Lang.ThreadGroup); }
 				}
 
 				/// <summary>
-				/// <para>Returns the thread's uncaught exception handler. If not explicitly set, then the ThreadGroup's handler is returned. If the thread is terminated, then <code>null</code> is returned.</para><para></para>        
+				///  <para>Returns the thread's uncaught exception handler. If not explicitly set, then the ThreadGroup's handler is returned. If the thread is terminated, then  <code>null</code> is returned.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>an UncaughtExceptionHandler instance or <c> null </c> . </para>
+				///  <para>an UncaughtExceptionHandler instance or <c>null </c> . </para>
 				/// </returns>
 				/// <java-name>
 				/// getUncaughtExceptionHandler
 				/// </java-name>
-				public global::System.Threading.Thread.IUncaughtExceptionHandler UncaughtExceptionHandler
+				public virtual global::System.Threading.Thread.IUncaughtExceptionHandler UncaughtExceptionHandler
 				{
-				[Dot42.DexImport("getUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 1)]
-						get{ return GetUncaughtExceptionHandler(); }
-				[Dot42.DexImport("setUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 1)]
-						set{ SetUncaughtExceptionHandler(value); }
+						[Dot42.DexImport("getUncaughtExceptionHandler", "()Ljava/lang/Thread$UncaughtExceptionHandler;", AccessFlags = 1)]
+						get{ return default(global::System.Threading.Thread.IUncaughtExceptionHandler); }
+						[Dot42.DexImport("setUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", AccessFlags = 1)]
+						set{ }
 				}
 
 				/// <summary>
-				/// <para>Implemented by objects that want to handle cases where a thread is being terminated by an uncaught exception. Upon such termination, the handler is notified of the terminating thread and causal exception. If there is no explicit handler set then the thread's group is the default handler. </para>    
+				///  <para>Returns  <code>true</code> if the receiver has already been started and still runs code (hasn't died yet). Returns  <code>false</code> either if the receiver hasn't been started yet or if it has already started and run to completion and died.</para> <para> <para>Thread::start </para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a  <code>boolean</code> indicating the liveness of the Thread </para>
+				/// </returns>
+				/// <java-name>
+				/// isAlive
+				/// </java-name>
+				public bool IsAlive
+				{
+						[Dot42.DexImport("isAlive", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+				}
+
+				/// <summary>
+				///  <para>Tests whether this is a daemon thread. A daemon thread only runs as long as there are non-daemon threads running. When the last non-daemon thread ends, the runtime will exit. This is not normally relevant to applications with a UI. </para>        
+				/// </summary>
+				/// <java-name>
+				/// isDaemon
+				/// </java-name>
+				public bool IsDaemon
+				{
+						[Dot42.DexImport("isDaemon", "()Z", AccessFlags = 17)]
+						get{ return default(bool); }
+						[Dot42.DexImport("setDaemon", "(Z)V", AccessFlags = 17)]
+						set{ }
+				}
+
+				/// <summary>
+				///  <para>Returns a  <code>boolean</code> indicating whether the receiver has a pending interrupt request ( <code>true</code>) or not (  <code>false</code>)</para> <para> <para>Thread::interrupt </para> <para>Thread::interrupted </para></para>        
+				/// </summary>
+				/// <returns>
+				///  <para>a  <code>boolean</code> indicating the interrupt status </para>
+				/// </returns>
+				/// <java-name>
+				/// isInterrupted
+				/// </java-name>
+				public virtual bool IsInterrupted
+				{
+						[Dot42.DexImport("isInterrupted", "()Z", AccessFlags = 1)]
+						get{ return default(bool); }
+				}
+
+				/// <summary>
+				///  <para>Implemented by objects that want to handle cases where a thread is being terminated by an uncaught exception. Upon such termination, the handler is notified of the terminating thread and causal exception. If there is no explicit handler set then the thread's group is the default handler. </para>    
 				/// </summary>
 				/// <java-name>
 				/// java/lang/Thread$UncaughtExceptionHandler
@@ -800,7 +583,7 @@ namespace System.Threading
  /* scope: __dot42__ */ 
 				{
 						/// <summary>
-						/// <para>The thread is being terminated by an uncaught exception. Further exceptions thrown in this method are prevent the remainder of the method from executing, but are otherwise ignored.</para><para></para>        
+						///  <para>The thread is being terminated by an uncaught exception. Further exceptions thrown in this method are prevent the remainder of the method from executing, but are otherwise ignored.</para> <para></para>        
 						/// </summary>
 						/// <java-name>
 						/// uncaughtException
@@ -851,10 +634,27 @@ namespace System.Threading
 						{
 						}
 
+						/// <java-name>
+						/// values
+						/// </java-name>
+						[Dot42.DexImport("values", "()[Ljava/lang/Thread$State;", AccessFlags = 25)]
+						public static State[] Values() /* MethodBuilder.Create */ 
+						{
+								return default(State[]);
+						}
+
+						/// <java-name>
+						/// valueOf
+						/// </java-name>
+						[Dot42.DexImport("valueOf", "(Ljava/lang/String;)Ljava/lang/Thread$State;", AccessFlags = 9)]
+						public static State ValueOf(string @string) /* MethodBuilder.Create */ 
+						{
+								return default(State);
+						}
+
 				}
 
 		}
 
 }
-
 

@@ -2,11 +2,14 @@
 using Java.Lang;
 using Java.Util;
 
+#if ANDROID_10P
 namespace System.Collections.Generic
 {
+
     public class Queue<T> : IEnumerable<T>, ICollection, ICollection<T>,IJavaCollectionWrapper<T>
     {
-        private ArrayDeque<T> queue;
+        private readonly ArrayDeque<T> queue;
+
         public Queue()
         {
             queue = new ArrayDeque<T>();
@@ -101,3 +104,4 @@ namespace System.Collections.Generic
         
     }
 }
+#endif
