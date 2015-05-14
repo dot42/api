@@ -25,7 +25,7 @@ using Java.Lang.Reflect;
 
 namespace System
 {
-	/*abstract*/ partial class Type // : ICustomAttributeProvider // can't implement an new interface on a DexImport class, as long as this is not specially handled by the compiler. This one is not.
+	/*abstract*/ partial class Type // : ICustomAttributeProvider // can't implement a new interface on a DexImport class, as long as this is not specially handled by the compiler. This one is not.
 	{
         internal const BindingFlags AllMembersBindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
         internal const BindingFlags PublicMembersBindingFlags = BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance;
@@ -218,8 +218,7 @@ namespace System
         }
 
 	    /// <summary>
-	    /// returns true is this is a generic type.
-	    /// [ should only return true for true GenericTypeDefinitions ]
+	    /// Returns true if this is a generic type definition
 	    /// </summary>
 	    public bool IsGenericTypeDefinition
 	    {
@@ -228,6 +227,12 @@ namespace System
 	            return GenericsReflection.IsGenericTypeDefinition(this);
 	        }
 	    }
+
+        public bool IsConstructedGenericType
+        {
+            get { return IsGenericType && !IsGenericTypeDefinition; }
+        }
+
 
         /// <summary>
         /// returns always false
