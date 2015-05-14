@@ -36,7 +36,7 @@ namespace Java.Util
         }
 
         /// <summary>
-        /// Add ths given element to the end of this list.
+        /// Add the given element to the end of this list.
         /// </summary>
         /// <returns>The index at which the element was added or -1 if the element was not added.</returns>
         int System.Collections.IList.Add(object item)
@@ -130,14 +130,6 @@ namespace Java.Util
         public int IndexOf(T element)
         {
             return List.IndexOf(element);
-        }
-
-        /// <summary>
-        /// Is the given element contained in this list?
-        /// </summary>
-        bool System.Collections.Generic.ICollection<T>.Contains(T element)
-        {
-            return base.Contains(element);
         }
 
         /// <summary>

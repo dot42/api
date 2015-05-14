@@ -21,7 +21,7 @@ using Java.Util;
 namespace System.Collections.Generic
 {
     // TODO: find a shorter name
-    public class DictionaryImplHashMapWithComparerWrapper<TKey, TValue> : IDictionaryImpl<TKey, TValue>, IDictionary
+    internal class DictionaryImplHashMapWithComparerWrapper<TKey, TValue> : IDictionaryImpl<TKey, TValue>, IDictionary
     {
         internal readonly HashMap<KeyWrapper<TKey>, TValue> map;
         private readonly IEqualityComparer<TKey> comparer;

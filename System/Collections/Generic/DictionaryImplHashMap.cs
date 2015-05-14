@@ -20,7 +20,7 @@ using Java.Util;
 
 namespace System.Collections.Generic
 {
-    public class DictionaryImplHashMap<TKey, TValue> : IDictionaryImpl<TKey, TValue>, IDictionary
+    internal class DictionaryImplHashMap<TKey, TValue> : IDictionaryImpl<TKey, TValue>, IDictionary
     {
         internal readonly HashMap<TKey, TValue> map;
 
