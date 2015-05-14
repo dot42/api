@@ -12,12 +12,17 @@ namespace System.Threading
         private volatile bool _wasDisposed;
         private volatile ConcurrentLinkedQueue<AsyncWaiter> _asyncWaiters;
         //private static int idgen;
-        private readonly int id;
+        private readonly int _id;
         
         public SemaphoreSlim(int initialCount)
         {
             _sem = new Semaphore(initialCount);
             //id = Interlocked.Increment(ref idgen);
+        }
+
+        public int CurrentCount
+        {
+            get { return _sem.AvailablePermits(); }
         }
 
         public Task WaitAsync(CancellationToken token)
@@ -32,14 +37,14 @@ namespace System.Threading
 
         public Task<bool> WaitAsync(Int32 duration, CancellationToken token)
         {
-           VerboseLog("{0:000}|{1}|async wait requested", Thread.CurrentThread.Id, id);
+           VerboseLog("{0:000}|{1}|async wait requested", Thread.CurrentThread.Id, _id);
 
             CheckDisposed();
             token.ThrowIfCancellationRequested();
 
             if (_sem.TryAcquire())
             {
-                VerboseLog("{0:000}|{1}|async wait immediate success", Thread.CurrentThread.Id,id);
+                VerboseLog("{0:000}|{1}|async wait immediate success", Thread.CurrentThread.Id,_id);
                 return Task.FromResult(true);
             }
                 
@@ -75,7 +80,7 @@ namespace System.Threading
          
             _asyncWaiters.Add(waiter);
 
-            VerboseLog("{0:000}|{1}|async wait enqued: {2:X}; {3}", Thread.CurrentThread.Id, id, waiter.GetHashCode(), waiter.Task.Task.Id);
+            VerboseLog("{0:000}|{1}|async wait enqued: {2:X}; {3}", Thread.CurrentThread.Id, _id, waiter.GetHashCode(), waiter.Task.Task.Id);
 
             if (_wasDisposed || token.IsCancellationRequested || waiter.Delay != null && waiter.Delay.IsCompleted)
             {
@@ -92,7 +97,7 @@ namespace System.Threading
 
         private void CancelAsync(AsyncWaiter waiter)
         {
-            VerboseLog("{0:000}|{1}|async wait cancelled", Thread.CurrentThread.Id, id);
+            VerboseLog("{0:000}|{1}|async wait cancelled", Thread.CurrentThread.Id, _id);
 
             if (_asyncWaiters.Remove(waiter))
             {
@@ -105,7 +110,7 @@ namespace System.Threading
         {
             if (waiter.CancelDelay.IsCancellationRequested)
                 return;
-            VerboseLog("{0:000}|{1}|async wait timed out", Thread.CurrentThread.Id,id);
+            VerboseLog("{0:000}|{1}|async wait timed out", Thread.CurrentThread.Id,_id);
 
             if (_asyncWaiters.Remove(waiter))
             {
@@ -142,7 +147,7 @@ namespace System.Threading
 
         public bool Wait(Int32 milliseconds,  CancellationToken token)
         {
-            VerboseLog("{0:000}|{1}|sync wait requested", Thread.CurrentThread.Id, id);
+            VerboseLog("{0:000}|{1}|sync wait requested", Thread.CurrentThread.Id, _id);
             CheckDisposed();
             token.ThrowIfCancellationRequested();
 
@@ -150,14 +155,14 @@ namespace System.Threading
             {
                 _sem.AcquireUninterruptibly();
                 CheckDisposed();
-                VerboseLog("{0:000}|{1}|sync wait complete.", Thread.CurrentThread.Id, id);
+                VerboseLog("{0:000}|{1}|sync wait complete.", Thread.CurrentThread.Id, _id);
                 return true;
             }
             if (token == CancellationToken.None)
             {
                 var ret = _sem.TryAcquire(milliseconds, TimeUnit.MILLISECONDS);
                 CheckDisposed();
-                VerboseLog("{0:000}|{1}|sync wait complete: {2}", Thread.CurrentThread.Id, id, ret);
+                VerboseLog("{0:000}|{1}|sync wait complete: {2}", Thread.CurrentThread.Id, _id, ret);
                 return ret;
             }
 
@@ -169,13 +174,13 @@ namespace System.Threading
                 {
                     var ret = _sem.TryAcquire(milliseconds, TimeUnit.MILLISECONDS);
                     CheckDisposed();
-                    VerboseLog("{0:000}|{1}|sync wait complete: {2}", Thread.CurrentThread.Id, id, ret);
+                    VerboseLog("{0:000}|{1}|sync wait complete: {2}", Thread.CurrentThread.Id, _id, ret);
                     return ret;
                 }
             }
             catch (Java.Lang.InterruptedException ex)
             {
-                VerboseLog("{0:000}|{1}|sync wait cancelled", Thread.CurrentThread.Id, id);
+                VerboseLog("{0:000}|{1}|sync wait cancelled", Thread.CurrentThread.Id, _id);
                 throw new OperationCanceledException("operation cancelled", ex, token);
             }
         }
@@ -187,7 +192,7 @@ namespace System.Threading
 
         public void Release(int count)
         {
-            VerboseLog("{0:000}|{1}|about to release {2}; available permits {3}", Thread.CurrentThread.Id, id, count, _sem.AvailablePermits());
+            VerboseLog("{0:000}|{1}|about to release {2}; available permits {3}", Thread.CurrentThread.Id, _id, count, _sem.AvailablePermits());
             if (count == 0) return;
 
 
@@ -201,28 +206,28 @@ namespace System.Threading
 
                     if (waiter.Task.Task.IsCompleted)
                     {
-                        VerboseLog("{0:000}|{1}|found completed async waiter", Thread.CurrentThread.Id, id);
+                        VerboseLog("{0:000}|{1}|found completed async waiter", Thread.CurrentThread.Id, _id);
                         continue;
                     }
 
-                    VerboseLog("{0:000}|{1}|releasing async waiter: {2:X}; {3}", Thread.CurrentThread.Id, id, waiter.GetHashCode(), waiter.Task.Task.Id);
+                    VerboseLog("{0:000}|{1}|releasing async waiter: {2:X}; {3}", Thread.CurrentThread.Id, _id, waiter.GetHashCode(), waiter.Task.Task.Id);
                     waiter.Task.SetResult(true);
                     count -= 1;
-                    VerboseLog("{0:000}|{1}|async waiter released. remaining count: {2}; available permits: {3}", Thread.CurrentThread.Id, id, count, _sem.AvailablePermits());
+                    VerboseLog("{0:000}|{1}|async waiter released. remaining count: {2}; available permits: {3}", Thread.CurrentThread.Id, _id, count, _sem.AvailablePermits());
                 }
             }
 
             if (count == 0) return;
 
             _sem.Release(count);
-            VerboseLog("{0:000}|{1}|released semaphore(s). Available: {2}", Thread.CurrentThread.Id, id, _sem.AvailablePermits());
+            VerboseLog("{0:000}|{1}|released semaphore(s). Available: {2}", Thread.CurrentThread.Id, _id, _sem.AvailablePermits());
         }
 
         public void Dispose()
         {
             if (_wasDisposed) return;
 
-            VerboseLog("{0:000}|{1}|disposing semaphore. available: {2}", Thread.CurrentThread.Id, id, _sem.AvailablePermits());
+            VerboseLog("{0:000}|{1}|disposing semaphore. available: {2}", Thread.CurrentThread.Id, _id, _sem.AvailablePermits());
 
             _wasDisposed = true;
             _sem.Release(Int32.MaxValue);
@@ -250,7 +255,7 @@ namespace System.Threading
 
             if (_wasDisposed)
             {
-                VerboseLog("{0:000}|{1}|disposing async waiter: {2}", Thread.CurrentThread.Id, id, waiter.Task.Task.Id);
+                VerboseLog("{0:000}|{1}|disposing async waiter: {2}", Thread.CurrentThread.Id, _id, waiter.Task.Task.Id);
                 waiter.Task.TrySetException(new ObjectDisposedException(GetType().Name));
             }
         }
@@ -259,7 +264,7 @@ namespace System.Threading
         {
             if (_wasDisposed)
             {
-                VerboseLog("{0:000}|{1}|sync semaphore disposed.", Thread.CurrentThread.Id, id);
+                VerboseLog("{0:000}|{1}|sync semaphore disposed.", Thread.CurrentThread.Id, _id);
                 throw new ObjectDisposedException(GetType().Name);
             }
         }

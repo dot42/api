@@ -860,6 +860,20 @@ namespace System.Threading.Tasks
                 continuation.Execute();
         }
 
+        public Task ContinueWith(Action<Task> continuation)
+        {
+            var task = new Task(() => continuation(this));
+            ContinueWith(new TaskContinuation(task, TaskContinuationOptions.None));
+            return task;
+        }
+
+        public Task ContinueWith(Action<Task> continuation, TaskContinuationOptions options)
+        {
+            var task = new Task(() => continuation(this));
+            ContinueWith(new TaskContinuation(task, options));
+            return task;
+        }
+
         internal void RemoveContinuation(IContinuation continuation)
         {
             continuations.Remove(continuation);
