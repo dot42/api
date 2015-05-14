@@ -7,7 +7,7 @@ using Java.Util;
 
 namespace Dot42.Internal
 {
-    internal class DateTimeFormatting
+    internal static class DateTimeFormatting
     {
         private static readonly HashMap<string, string> Conversion;
 

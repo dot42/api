@@ -5,7 +5,14 @@
     /// </summary>
     public class TimeZoneInfo
     {
-        public static TimeZoneInfo Local = new TimeZoneInfo();
+        public static TimeZoneInfo Local = new TimeZoneInfo(Java.Util.TimeZone.Default);
+
+        private readonly Java.Util.TimeZone _timeZone;
+
+        internal TimeZoneInfo(Java.Util.TimeZone timeZone)
+        {
+            _timeZone = timeZone;
+        }
 
         public TimeSpan GetUtcOffset(DateTime d)
         {
@@ -15,7 +22,7 @@
         internal TimeSpan GetUtcOffset(long ticks)
         {
             var millis = (ticks / TimeSpan.TicksPerMillisecond) - DateTime.EraDifferenceInMs;
-            var offsetInMs = Java.Util.TimeZone.Default.GetOffset(millis);
+            var offsetInMs = _timeZone.GetOffset(millis);
             return new TimeSpan(offsetInMs * TimeSpan.TicksPerMillisecond);
         }
 
@@ -26,6 +33,11 @@
                 var offsetInMs = Java.Util.TimeZone.Default.RawOffset;
                 return new TimeSpan(offsetInMs * TimeSpan.TicksPerMillisecond);
             }
+        }
+
+        internal static TimeSpan GetLocalUtcOffset(DateTime dateTime)
+        {
+            return Local.GetUtcOffset(dateTime);
         }
     }
 }

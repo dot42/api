@@ -33,12 +33,12 @@ namespace System
         /// </summary>
         public static readonly DateTime MinValue = new DateTime(MinTicks);
 
-        private const long MinTicks = 0L;
-        private const long MaxTicks = 3155378975999999999L;
+        internal const long MinTicks = 0L;
+        internal const long MaxTicks = 3155378975999999999L;
 
         // milliseconds between 01.01.0001,00:00:00.000 (Microsoft baseline) and 01.01.1970,00:00:00.000 (Java baseline)
 	    internal const long EraDifferenceInMs = 62135596800000L;
-        private const long MinValueJavaMillies = -62135769600000; // I have no idea why this is different from -EraDifferenceInMs. Who stole the two days?
+        internal const long MinValueJavaMillies = -62135769600000; // I have no idea why this is different from -EraDifferenceInMs. Who stole the two days?
 
 	    private const int MonthOffset = 1;
 	    private const int YearOffset = 1900;
@@ -658,60 +658,7 @@ namespace System
         /// </summary>
         public static DateTime Parse(string s, IFormatProvider provider, DateTimeStyles style)
         {
-            if (s == null)
-                throw new ArgumentNullException("s");
-
-            s = s.Trim();
-            
-            // try all .NET date time formats
-            // Note: the Date/Time handling in java is just broken, and putting a 
-            //       .NET compatibility layer on top of it will probalby not fix much
-            var ci = provider.ToCultureInfo();
-
-            string[] formats = 
-            {
-                ci.DateTimeFormat.UniversalSortableDateTimePattern,
-                ci.DateTimeFormat.SortableDateTimePattern,
-                ci.DateTimeFormat.FullDateTimePattern,
-                ci.DateTimeFormat.RFC1123Pattern,
-                ci.DateTimeFormat.LongDatePattern,
-                ci.DateTimeFormat.LongTimePattern,
-                ci.DateTimeFormat.ShortDatePattern,
-                ci.DateTimeFormat.ShortTimePattern
-            };
-
-            var locale = provider.ToLocale();
-            var invariantLocale = CultureInfo.InvariantCulture.Locale;
-            var timeZone =  Java.Util.TimeZone.GetTimeZone("UTC");
-
-            // Note: this should be optimized in caching the old values, but I'm not 
-            //       sure this whole approach is the best right anyway. Exception handling
-            //       for control flow, a loop to tests all formats and such.
-            //       Probably better to use jodatime or nodatime or something else.
-            foreach(var pattern in formats)
-            {
-                bool useInvariant, foundK;
-                var javaFormat = DateTimeFormatting.ToJavaFormatString(pattern, provider, 
-                                                DateTimeKind.Unspecified, out useInvariant, out foundK);
-                if (foundK) style |= DateTimeStyles.RoundtripKind;
-
-                try
-                {
-                    DateFormat formatter = new SimpleDateFormat(javaFormat, useInvariant ? invariantLocale : locale)
-                    {
-                        IsLenient = false,
-                        TimeZone = timeZone
-                    };
-                   
-
-                    var result = FromParsedDate(formatter.Parse(s), s, style);
-                    return result;
-                }
-                catch (ParseException ex)
-                {
-                }
-            }
-            throw new ArgumentException("unable to parse " + s);
+            return DateTimeParsing.Parse(s, provider, style);
         }
 
         //
@@ -784,104 +731,8 @@ namespace System
 
 	    public static DateTime ParseExact(string s, string format, IFormatProvider provider, DateTimeStyles style)
 	    {
-            // Note: the Date/Time handling in java is just broken, and putting a 
-            //       .NET compatibility layer on top of it will probalby not fix much
-            if (s == null || format == null)
-                throw new ArgumentNullException();
-
-	        if ((style & DateTimeStyles.AllowLeadingWhite) != 0)
-	            s = s.TrimStart();
-            if ((style & DateTimeStyles.AllowTrailingWhite) != 0)
-                s = s.TrimEnd();
-            if ((style & DateTimeStyles.AllowWhiteSpaces) != 0)
-                s = s.Trim();
-
-	        bool useInvariant, foundK;
-            var javaFormat = DateTimeFormatting.ToJavaFormatString(format, provider, DateTimeKind.Unspecified, out useInvariant, out foundK);
-            if(foundK) style |= DateTimeStyles.RoundtripKind;
-
-            Locale locale = useInvariant ? CultureInfo.InvariantCulture.Locale : provider.ToLocale();
-
-	        try
-	        {
-	            DateFormat formatter = new SimpleDateFormat(javaFormat, locale)
-	            {
-	                IsLenient = false,
-                    TimeZone = Java.Util.TimeZone.GetTimeZone("UTC")
-	            };
-
-	            Java.Util.Date parsed = formatter.Parse(s);
-
-	            var result = FromParsedDate(parsed, s, style);
-	            return result;
-	        }
-	        catch (ArgumentException ex)
-	        {
-	            throw new FormatException(ex.Message);
-	        }
-	        catch (ParseException ex)
-	        {
-	            throw new ArgumentException(ex.Message, "s");
-	        }
+	        return DateTimeParsing.ParseExact(s, format, provider, style);
 	    }
-
-        /// <summary>
-        /// Convert from java based date to DateTime.
-        /// </summary>
-        private static DateTime FromParsedDate(Java.Util.Date value, string originalString, DateTimeStyles style)
-        {
-            bool assumeLocal = (style & DateTimeStyles.AssumeLocal) != 0;
-            bool assumeUtc = (style & DateTimeStyles.AssumeUniversal) != 0;
-            bool roundtripKind = (style & DateTimeStyles.RoundtripKind) != 0;
-
-            var millis = value.Time;
-            var ticks = (millis + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
-
-            //long offset = 0L;
-            DateTimeKind kind;
-
-            if (roundtripKind)
-            {
-                // TODO: this is a hack. find a better way.
-                bool isUtc = originalString.EndsWith("Z");
-                if (isUtc)
-                    kind = DateTimeKind.Utc;
-                else
-                {
-                    // don't kow how to preserve local.
-                    kind = DateTimeKind.Unspecified;
-                }
-            }
-            else if (assumeUtc)
-            {
-                kind = DateTimeKind.Utc;
-            }
-            else if (assumeLocal)
-            {
-                kind = DateTimeKind.Local;
-            }
-            else
-            {
-                kind = DateTimeKind.Unspecified;
-            }
-
-            DateTime result;
-
-            if (millis == MinValueJavaMillies)
-                result = new DateTime(0L, kind);
-            else
-            {
-                result = new DateTime(ticks, kind);
-            }
-
-
-            if ((style & DateTimeStyles.AdjustToUniversal) != 0)
-                result = result.ToUniversalTime();
-            else if (assumeUtc) // no typo, but bad naming/semantics in the BCL
-                result = result.ToLocalTime();
-
-            return result;
-        }
 
         //
         // Summary:
@@ -1237,7 +1088,7 @@ namespace System
 
         public string ToString(IFormatProvider provider)
         {
-            return ToString();
+            return ToString("G", provider);
         }
 
         //

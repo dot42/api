@@ -85,11 +85,12 @@
     <Compile Include="Dot42\Collections\IJavaCollectionWrapper.cs" />
     <Compile Include="Dot42\Internal\Application.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
+    <Compile Include="Dot42\Internal\DateTimeParsing.cs" />
     <Compile Include="Dot42\Internal\IAssemblyType.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
     <Compile Include="Dot42\Internal\EventInfoProvider.cs" />
     <Compile Include="Dot42\Internal\Threading\ThreadPoolImpl.cs" />
-    <Compile Include="Dot42\SerializationMethodAttribute.cs" />    
+    <Compile Include="Dot42\SerializationMethodAttribute.cs" />
     <Compile Include="Android\Appwidget\AppWidgetProvider.cs" />
     <Compile Include="Android\App\Activity.cs" />
     <Compile Include="Android\App\AlertDialog.Builder.cs" />
@@ -329,6 +330,7 @@
     <Compile Include="System\ApplicationException.cs" />
     <Compile Include="System\Boolean.cs" />
     <Compile Include="System\Console.cs" />
+    <Compile Include="System\DateTimeOffset.cs" />
     <Compile Include="System\DayOfWeek.cs" />
     <Compile Include="System\Decimal_BigInteger.cs" />
     <Compile Include="System\Diagnostics\Contracts\Contracts.cs" />
