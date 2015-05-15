@@ -100,7 +100,6 @@ namespace System.Collections.ObjectModel
         {
             base.ClearItems();
             dict.Clear();
-            
         }
 
         protected abstract TKey GetKeyForItem(TItem item);
@@ -116,8 +115,6 @@ namespace System.Collections.ObjectModel
                 AddKey(key, item);
 
             base.InsertItem(index, item);
-
-            
         }
         
         protected override void RemoveItem(int index)

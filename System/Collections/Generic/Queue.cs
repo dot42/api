@@ -6,7 +6,7 @@ using Java.Util;
 namespace System.Collections.Generic
 {
 
-    public class Queue<T> : IEnumerable<T>, ICollection, ICollection<T>,IJavaCollectionWrapper<T>
+    public class Queue<T> : IEnumerable<T>, ICollection, ICollection<T>, IJavaCollectionWrapper<T>
     {
         private readonly ArrayDeque<T> queue;
 

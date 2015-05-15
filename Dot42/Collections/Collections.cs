@@ -55,6 +55,34 @@ namespace Dot42.Collections
                 array[index + i] = all[i];
             }
         }
+
+        /// <summary>
+        /// Copy all my elements to the given array starting at the given index.
+        /// </summary>
+        /// <param name="collection">Source to copy from</param>
+        /// <param name="array">Array to copy my elements into.</param>
+        /// <param name="index">Position in <see cref="array"/> where the first element will be copied to.</param>
+        public static void CopyTo<E>(System.Collections.Generic.ICollection<E> collection, Array array, int index)
+        {
+            foreach (var elem in collection)
+            {
+                array[index++] = elem;
+            }
+        }
+
+        /// <summary>
+        /// Copy all my elements to the given array starting at the given index.
+        /// </summary>
+        /// <param name="collection">Source to copy from</param>
+        /// <param name="array">Array to copy my elements into.</param>
+        /// <param name="index">Position in <see cref="array"/> where the first element will be copied to.</param>
+        public static void CopyTo<E>(System.Collections.Generic.ICollection<E> collection, E[] array, int index)
+        {
+            foreach (var elem in collection)
+            {
+                array[index++] = elem;
+            }
+        }
 	}
 }
 

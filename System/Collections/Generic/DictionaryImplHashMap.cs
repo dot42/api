@@ -67,7 +67,7 @@ namespace System.Collections.Generic
 
         public void CopyTo(Array array, int index)
         {
-            throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.CopyTo");
+            Dot42.Collections.Collections.CopyTo(this, array, index);
         }
         
         public bool IsReadOnly { get; private set; }
@@ -143,8 +143,8 @@ namespace System.Collections.Generic
 
         public void CopyTo(KeyValuePair<TKey, TValue>[] array, int index)
         {
-            throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.CopyTo");
-        }
+            Dot42.Collections.Collections.CopyTo(this, array, index);
+       }
 
         ICollection<TValue> IDictionary<TKey, TValue>.Values
         {
@@ -256,7 +256,7 @@ namespace System.Collections.Generic
             get { return new ValueCollection(this); }
         }
 
-        public sealed class KeyCollection: ICollection<TKey>, ICollection
+        public sealed class KeyCollection: ICollection<TKey>, ICollection, IJavaCollectionWrapper<TKey>
         {
             private readonly Java.Util.ICollection<TKey> keys;
 
@@ -318,11 +318,7 @@ namespace System.Collections.Generic
 
             public void CopyTo(TKey[] array, int index)
             {
-                var i = 0;
-                foreach (var key in this)
-                {
-                    array[index + i++] = key;
-                }
+                Dot42.Collections.Collections.CopyTo(keys, array, index);
             }
 
 
@@ -338,11 +334,13 @@ namespace System.Collections.Generic
 
             public void CopyTo(Array array, int index)
             {
-                throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.KeyCollection.CopyTo");
+                Dot42.Collections.Collections.CopyTo(keys, array, index);
             }
+
+            public Java.Util.ICollection<TKey> Collection { get { return keys; } }
         }
 
-        public sealed class ValueCollection : ICollection<TValue>, ICollection
+        public sealed class ValueCollection : ICollection<TValue>, ICollection, IJavaCollectionWrapper<TValue>
         {
             private readonly Java.Util.ICollection<TValue> values;
 
@@ -404,7 +402,7 @@ namespace System.Collections.Generic
 
             public void CopyTo(TValue[] array, int index)
             {
-                throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.ValueCollection.CopyTo");
+                Dot42.Collections.Collections.CopyTo(values, array, index);
             }
 
 
@@ -420,8 +418,10 @@ namespace System.Collections.Generic
 
             public void CopyTo(Array array, int index)
             {
-                throw new NotImplementedException("System.Collections.Generic.Dictionary<,>.ValueCollection.CopyTo");
+                Dot42.Collections.Collections.CopyTo(values, array, index);
             }
+
+            public Java.Util.ICollection<TValue> Collection { get { return values; } }
         }
 
         internal class HashMapIterator : IteratorWrapperWithSelector<IMap_IEntry<TKey, TValue>, DictionaryEntry>, IDictionaryEnumerator
