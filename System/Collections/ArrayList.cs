@@ -13,15 +13,18 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 using Dot42;
 using Dot42.Collections;
+using Dot42.Internal;
+using Java.Lang;
 using Java.Util;
 
 namespace System.Collections
 {
     public class ArrayList : IList
     {
-        private readonly IList<object> list;
+        private readonly Java.Util.IList<object> list;
         private readonly bool isFixedSize;
         private readonly bool isReadOnly;
         private readonly bool isSynchronized;
@@ -30,7 +33,7 @@ namespace System.Collections
         /// Default ctor
         /// </summary>
         public ArrayList() :
-            this(new ArrayList<object>(), false, false, false)
+            this(new Java.Util.ArrayList<object>(), false, false, false)
         {
         }
 
@@ -38,7 +41,7 @@ namespace System.Collections
         /// Clone ctor
         /// </summary>
         public ArrayList(ICollection source)
-            : this(new ArrayList<object>((source != null) ? source.Count : 0), false, false, false)
+            : this(new Java.Util.ArrayList<object>((source != null) ? source.Count : 0), false, false, false)
         {
             if (source == null)
                 throw new ArgumentNullException();
@@ -52,14 +55,14 @@ namespace System.Collections
         /// Default ctor with specified initial capacity.
         /// </summary>
         public ArrayList(int capacity) :
-            this(new ArrayList<object>(capacity), false, false, false)
+            this(new Java.Util.ArrayList<object>(capacity), false, false, false)
         {            
         }
 
         /// <summary>
         /// Private ctor
         /// </summary>
-        private ArrayList(IList<object> list, bool isFixedSize, bool isReadOnly, bool isSynchronized)
+        private ArrayList(Java.Util.IList<object> list, bool isFixedSize, bool isReadOnly, bool isSynchronized)
         {
             this.list = list;
             this.isFixedSize = isFixedSize;
@@ -554,6 +557,11 @@ namespace System.Collections
         {
             if (list == null)
                 throw new ArgumentNullException();
+
+            var wrappedList = UnwrapListOrArray(list);
+            if (wrappedList != null)
+                return new ArrayList(wrappedList, list.IsFixedSize, list.IsReadOnly, list.IsSynchronized);
+            
             throw new NotImplementedException("System.Collections.ArrayList.Adapter");
         }
 
@@ -575,6 +583,11 @@ namespace System.Collections
         {
             if (list == null)
                 throw new ArgumentNullException();
+
+            var wrappedList = UnwrapListOrArray(list);
+            if (wrappedList != null)
+                return new ArrayList(wrappedList, true, list.IsReadOnly, list.IsSynchronized);
+
             throw new NotImplementedException("System.Collections.ArrayList.FixedSize");
         }
 
@@ -596,6 +609,11 @@ namespace System.Collections
         {
             if (list == null)
                 throw new ArgumentNullException();
+
+            var wrappedList = UnwrapListOrArray(list);
+            if (wrappedList != null)
+                return new ArrayList(wrappedList, list.IsFixedSize, true, list.IsSynchronized);
+
             throw new NotImplementedException("System.Collections.ArrayList.ReadOnly");
         }
 
@@ -633,7 +651,46 @@ namespace System.Collections
         {
             if (list == null)
                 throw new ArgumentNullException();
+
+            var wrappedList = UnwrapListOrArray(list);
+            if (wrappedList != null)
+                return new ArrayList(wrappedList, list.IsFixedSize, list.IsReadOnly, true);
+
             throw new NotImplementedException("System.Collections.ArrayList.Synchronized");
+        }
+
+        private static Java.Util.IList<object> UnwrapListOrArray(IList list)
+        {
+            var wrapper = list as IJavaCollectionWrapper<object>;
+            if (wrapper != null)
+            {
+                return wrapper.Collection as Java.Util.IList<object>;
+            }
+
+            var wrapper1 = list as CompilerHelper.ArrayCollectionWrapper;
+            if (wrapper1 != null)
+            {
+                if(wrapper1.array is object[])
+                    return Arrays.AsList((object[])wrapper1.array);
+                if (wrapper1.array is int[])
+                    return (Java.Util.IList<object>)Arrays.AsList((int[])wrapper1.array);
+                if (wrapper1.array is sbyte[])
+                    return (Java.Util.IList<object>)Arrays.AsList((sbyte[])wrapper1.array);
+                if (wrapper1.array is short[])
+                    return (Java.Util.IList<object>)Arrays.AsList((short[])wrapper1.array);
+                if (wrapper1.array is char[])
+                    return (Java.Util.IList<object>)Arrays.AsList((char[])wrapper1.array);
+                if (wrapper1.array is long[])
+                    return (Java.Util.IList<object>)Arrays.AsList((long[])wrapper1.array);
+                if (wrapper1.array is float[])
+                    return (Java.Util.IList<object>)Arrays.AsList((float[])wrapper1.array);
+                if (wrapper1.array is double[])
+                    return (Java.Util.IList<object>)Arrays.AsList((double[])wrapper1.array);
+
+                return null;
+            }
+
+            return null;
         }
     }
 }

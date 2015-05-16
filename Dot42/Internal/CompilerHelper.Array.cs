@@ -311,9 +311,9 @@ namespace Dot42.Internal
         /// </summary>
         [Include(TypeCondition = typeof(ICollection))]
         [Include(TypeCondition = typeof(System.Collections.Generic.ICollection<>))]
-        private class ArrayCollectionWrapper : ICollection, ICollection<object>
+        internal class ArrayCollectionWrapper : ICollection, ICollection<object>
         {
-            protected readonly Array array;
+            internal protected readonly Array array;
 
             /// <summary>
             /// Default ctor
@@ -345,6 +345,7 @@ namespace Dot42.Internal
             }
 
             public bool IsReadOnly { get; private set; }
+
             public void Add(object item)
             {
                 throw new NotImplementedException();
