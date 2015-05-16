@@ -137,7 +137,7 @@ namespace System.Reflection
         /// </summary>
         public object GetValue(object instance, object[] index)
         {
-            if (index != null)
+            if (index != null && index.Length > 0)
                 throw new ArgumentException("index");
             if (getter == null)
                 throw new InvalidOperationException("property has no getter");
@@ -150,7 +150,7 @@ namespace System.Reflection
         /// </summary>
         public void SetValue(object instance, object value, object[] index)
         {
-            if(index != null)
+            if(index != null && index.Length > 0)
                 throw new ArgumentException("index");
             if (setter == null)
                 throw new InvalidOperationException("property has no setter");
