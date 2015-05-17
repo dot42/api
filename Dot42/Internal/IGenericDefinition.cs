@@ -22,14 +22,13 @@ namespace Dot42.Internal
     /// <summary>
     /// Interface for annotation that stores which parameters make up
     /// a generic field, generic method (return) parameter, or a generic
-    /// a generic field, generic method (return) parameter, or a generic
     /// inheritance.
-    /// 
-    /// - if <ref>GenericInstanceType</ref> is set, all other fields must be unset.
+    /// <para>
+    /// - if <see cref="GenericInstanceType"/> is set, all other fields must be unset.
+    /// </para><para>
     /// - if this represents an inheritance, GenericTypeDefinition must be set, 
     ///   otherwise it will be inferred from the member/parameter type, if possible
-    /// - 
-    /// for 
+    /// </para>
     /// </summary>
     [Include]
 	internal interface IGenericDefinition : IAnnotation

@@ -21,11 +21,51 @@ namespace System.Reflection
     public abstract class JavaMemberInfo : MemberInfo
     {
         protected readonly AccessibleObject Member;
+        private int originalAccessFlags = -1;
 
         public JavaMemberInfo(AccessibleObject member)
         {
             Member = member;
         }
+
+        protected abstract int Modifiers { get; }
+
+        /// <summary>
+        /// Is this a final method/field?
+        /// </summary>
+        public bool IsFinal { get { return Modifier.IsFinal(Modifiers); } }
+
+        /// <summary>
+        /// Is this a private method/field?
+        /// </summary>
+        public bool IsPrivate
+        {
+            get
+            {
+                EnsureOriginalAccessFlags();
+                return originalAccessFlags == 0 ? Modifier.IsPrivate(Modifiers) 
+                                                : originalAccessFlags == 0x04;
+            }
+        }
+
+        /// <summary>
+        /// Is this a public method/field?
+        /// </summary>
+        public bool IsPublic
+        {
+            get
+            {
+                EnsureOriginalAccessFlags();
+                return originalAccessFlags == 0 ? Modifier.IsPublic(Modifiers)
+                                                : originalAccessFlags == 0x01;
+            }
+        }
+
+        /// <summary>
+        /// Is this a static method/field?
+        /// </summary>
+        public bool IsStatic { get { return Modifier.IsStatic(Modifiers); } }
+
 
         public override object[] GetCustomAttributes(bool inherit)
         {
@@ -58,6 +98,15 @@ namespace System.Reflection
         public override int GetHashCode()
         {
             return (Member != null ? Member.GetHashCode() : 0);
+        }
+
+        private void EnsureOriginalAccessFlags()
+        {
+            if (originalAccessFlags == -1)
+            {
+                var reflInfo = Member.GetAnnotation<IReflectionInfo>(typeof(IReflectionInfo));
+                originalAccessFlags = reflInfo == null ? 0 : reflInfo.AccessFlags();
+            }
         }
     }
 

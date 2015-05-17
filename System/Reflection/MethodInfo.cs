@@ -36,6 +36,13 @@ namespace System.Reflection
         public override MemberTypes MemberType { get {return MemberTypes.Method; } }
         public override Type DeclaringType { get { return _declaringType; } }
 
+        protected override int Modifiers { get { return _method.Modifiers; } }
+
+        protected override Type[] JavaGetParameterTypes()
+        {
+            return _method.ParameterTypes;
+        }
+
         public override string Name
         {
             get
@@ -61,49 +68,6 @@ namespace System.Reflection
         }
 
         public override bool ContainsGenericParameters { get { return JavaMethod.GenericParameterTypes.Length > 0; } }
-
-        public override ParameterInfo[] GetParameters()
-        {
-            var types = _method.ParameterTypes;
-            var length = types.Length;
-
-            ParameterInfo[] ret = new ParameterInfo[length];
-
-            // java doesn't support argument names.
-            for (int idx = 0; idx < length; ++idx)
-                ret[idx] = new ParameterInfo(this, "arg" + idx, types[idx], idx);
-            return ret;
-        }
-
-        /// <summary>
-        /// Is this an abstract method?
-        /// </summary>
-        public override bool IsAbstract { get { return Modifier.IsAbstract(_method.Modifiers); } }
-
-        /// <summary>
-        /// Is this an final method?
-        /// </summary>
-        public override bool IsFinal { get { return Modifier.IsFinal(_method.Modifiers); } }
-
-        /// <summary>
-        /// Is this an private method?
-        /// </summary>
-        public override bool IsPrivate { get { return Modifier.IsPrivate(_method.Modifiers); } }
-
-        /// <summary>
-        /// Is this an public method?
-        /// </summary>
-        public override bool IsPublic { get { return Modifier.IsPublic(_method.Modifiers); } }
-
-        /// <summary>
-        /// Is this a static method?
-        /// </summary>
-        public override bool IsStatic { get { return Modifier.IsStatic(_method.Modifiers); } }
-
-        /// <summary>
-        /// Is this an virtual method?
-        /// </summary>
-        public override bool IsVirtual { get { return !Modifier.IsFinal(_method.Modifiers); } }
 
         public Type ReturnType { get { return _method.ReturnType; } }
 

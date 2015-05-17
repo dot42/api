@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42.Internal;
 using Java.Lang.Reflect;
 
 namespace System.Reflection
@@ -32,49 +34,13 @@ namespace System.Reflection
         public override string Name { get { return _ctor.Name; } }
         public override MemberTypes MemberType { get { return MemberTypes.Constructor; } }
 
-        /// <summary>
-        /// Is this an abstract method?
-        /// </summary>
-        public override bool IsAbstract { get { return Modifier.IsAbstract(_ctor.Modifiers); } }
-
-        /// <summary>
-        /// Is this an final method?
-        /// </summary>
-        public override bool IsFinal { get { return Modifier.IsFinal(_ctor.Modifiers); } }
-
-        /// <summary>
-        /// Is this an private method?
-        /// </summary>
-        public override bool IsPrivate { get { return Modifier.IsPrivate(_ctor.Modifiers); } }
-
-        /// <summary>
-        /// Is this an public method?
-        /// </summary>
-        public override bool IsPublic { get { return Modifier.IsPublic(_ctor.Modifiers); } }
-
-        /// <summary>
-        /// Is this a static method?
-        /// </summary>
-        public override bool IsStatic { get { return Modifier.IsStatic(_ctor.Modifiers); } }
-
-        /// <summary>
-        /// Is this an virtual method?
-        /// </summary>
-        public override bool IsVirtual { get { return !Modifier.IsFinal(_ctor.Modifiers); } }
-
         public override bool ContainsGenericParameters { get { return _ctor.GenericParameterTypes.Length > 0; } }
 
-        public override ParameterInfo[] GetParameters()
+        protected override int Modifiers { get { return _ctor.Modifiers; } }
+
+        protected override Type[] JavaGetParameterTypes()
         {
-            var types = _ctor.ParameterTypes;
-            var length = types.Length;
-
-            ParameterInfo[] ret = new ParameterInfo[length];
-
-            // java doesn't support argument names.
-            for (int idx = 0; idx < length; ++idx)
-                ret[idx] = new ParameterInfo(this, "arg" + idx, types[idx], idx);
-            return ret;
+            return _ctor.ParameterTypes;
         }
 
         public override string ToString()
@@ -96,7 +62,6 @@ namespace System.Reflection
                 throw new InvalidOperationException("instance must be null");
             return Invoke(args);
         }
-
     }
 }
 

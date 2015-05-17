@@ -407,8 +407,8 @@ namespace Dot42.Internal.Generics
                 return null;
 
             return typeInfo.TypeDefinition.JavaGetDeclaredConstructors()
-                           .Where(x => TypeHelper.Matches(x.Modifiers, flags))
                            .Select(p => new GenericInstanceConstructorInfo(p, type, typeInfo.Arguments))
+                           .Where(ctor=>Type.IsMatch(ctor, flags))
                            .ToArray();
         }
 

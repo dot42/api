@@ -5,8 +5,7 @@ using Dot42.Internal.Generics;
 namespace System.Reflection
 {
     /// <summary>
-    /// events through reflection are not supported, and will 
-    /// never be returned by the framework
+    /// Event reflection info.
     /// </summary>
     public class EventInfo : MemberInfo, IAttributesProvider
     {

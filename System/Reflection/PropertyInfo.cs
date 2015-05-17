@@ -81,7 +81,7 @@ namespace System.Reflection
         /// <summary>
         /// this is not supported and always returns an empty array.
         /// </summary>
-        /// <returns></returns>
+        [NotImplemented]
         public ParameterInfo[] GetIndexParameters()
         {
             return new ParameterInfo[0];

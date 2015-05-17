@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 using Java.Lang.Reflect;
 
@@ -17,10 +18,10 @@ namespace Dot42.Internal.Generics
 
         public override Type DeclaringType { get { return _declaringType; } }
 
-        public override ParameterInfo[] GetParameters()
+        protected override Type[] JavaGetParameterTypes()
         {
-            var baseParameters = base.GetParameters();
-            return baseParameters.Take(baseParameters.Length - 1);
+            var baseParameters = JavaConstructor.ParameterTypes;
+            return baseParameters.Take(baseParameters.Length - 1).ToArray();
         }
 
         public override object Invoke(object[] args)

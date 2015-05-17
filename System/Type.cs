@@ -292,8 +292,8 @@ namespace System
             // GetConstructors never searches base classes.
             return GenericsReflection.GetConstructors(this, flags)
                    ?? JavaGetDeclaredConstructors()
-                        .Where(x => TypeHelper.Matches(x.Modifiers, flags))
-                        .Select(p => new ConstructorInfo(p))
+                        .Select(ctor => new ConstructorInfo(ctor))
+                        .Where(ctor => IsMatch(ctor, flags))
                         .ToArray();
         }
 
@@ -464,8 +464,10 @@ namespace System
             while (type != null)
             {
                 foreach (var @event in type.GetDeclaredEvents())
+                {
                     if (IsMatch(@event, flags))
                         ret.Add(@event);
+                }
 
                 if ((flags & BindingFlags.DeclaredOnly) != 0)
                     break;
@@ -478,6 +480,19 @@ namespace System
         public EventInfo[] GetDeclaredEvents()
         {
             return EventInfoProvider.GetEvents(EnsureTypeDef(), this);
+        }
+
+        public static bool IsMatch(JavaMemberInfo memberInfo, BindingFlags flags)
+        {
+            bool incPublic =    (flags & BindingFlags.Public) == BindingFlags.Public;
+            bool incNonPublic = (flags & BindingFlags.NonPublic) == BindingFlags.NonPublic;
+            bool incStatic =    (flags & BindingFlags.Static) == BindingFlags.Static;
+            bool incInstance =  (flags & BindingFlags.Instance) == BindingFlags.Instance;
+
+            return ((incPublic    && memberInfo.IsPublic)
+                 || (incNonPublic && !memberInfo.IsPublic))
+                && ((incStatic    && memberInfo.IsStatic)
+                 || (incInstance  && !memberInfo.IsStatic));
         }
 
         private static bool IsMatch(PropertyInfo propertyInfo, BindingFlags flags)

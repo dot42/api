@@ -89,6 +89,7 @@
     <Compile Include="Dot42\Internal\IAssemblyType.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
     <Compile Include="Dot42\Internal\EventInfoProvider.cs" />
+    <Compile Include="Dot42\Internal\IReflectionInfo.cs" />
     <Compile Include="Dot42\Internal\Threading\ThreadPoolImpl.cs" />
     <Compile Include="Dot42\SerializationMethodAttribute.cs" />
     <Compile Include="Android\Appwidget\AppWidgetProvider.cs" />
