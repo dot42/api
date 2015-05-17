@@ -53,6 +53,7 @@ namespace System.Linq
 		}
 
         [SuppressMessage("dot42", "StaticFieldInGenericType")]
+        [SuppressMessage("dot42", "StaticConstructorUsesGenericParameter")]
 		static class PredicateOf<T> {
 			public static readonly Func<T, bool> Always = (t) => true;
 		}
