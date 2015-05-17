@@ -490,10 +490,15 @@ namespace System
                     {
                         list.Add(JavaSubstring(start, index));
                     }
+
                     index++;
                     start = index;
+
                     if (list.Count + 1 >= count)
+                    {
+                        index = length;
                         break;
+                    }
                 }
                 else
                 {

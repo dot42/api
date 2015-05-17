@@ -15,6 +15,7 @@
 // limitations under the License.
 namespace System
 {
+    [Flags]
 	public enum StringSplitOptions
 	{
         None,
