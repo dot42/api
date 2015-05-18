@@ -242,6 +242,13 @@ namespace Dot42.Internal
             return null;
         }
 
+        [Include(TypeCondition = typeof(IEnumerable<>))]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+	    public static IEnumerable<object> AsEnumerableOfObject(object value)
+	    {
+	        return (IEnumerable<object>)AsEnumerable(value);
+	    }
+
         /// <summary>
         /// Convert an array to an ICollection instance.
         /// </summary>
@@ -254,6 +261,14 @@ namespace Dot42.Internal
             return (array != null) ? new ArrayCollectionWrapper(array) : null;
         }
 
+        [Include(TypeCondition = typeof(System.Collections.Generic.ICollection<>))]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public static ICollection<object> AsCollectionOfObject(object value)
+        {
+            var array = value as Array;
+            return (array != null) ? new ArrayCollectionWrapper(array) : null;
+        }
+
         /// <summary>
         /// Convert an array to an IList instance.
         /// </summary>
@@ -261,6 +276,14 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(IList<>))]
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public static IList AsList(object value)
+        {
+            var array = value as Array;
+            return (array != null) ? new ArrayListWrapper(array) : null;
+        }
+
+        [Include(TypeCondition = typeof(IList<>))]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public static IList<object> AsListOfObject(object value)
         {
             var array = value as Array;
             return (array != null) ? new ArrayListWrapper(array) : null;
@@ -353,6 +376,7 @@ namespace Dot42.Internal
 
             public void Clear()
             {
+                // shouldn't this throw a NotImplementedException?
                 Array.Clear(array, 0, Java.Lang.Reflect.Array.GetLength(array));
             }
 
