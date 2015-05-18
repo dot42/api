@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Diagnostics.CodeAnalysis;
 using Dot42.Collections;
 using Java.Lang;
 using Java.Util;
@@ -256,6 +257,7 @@ namespace System.Collections.Generic
 
         #endregion
 
+        [SuppressMessage("dot42", "StaticFieldInGenericType:anonymous delegate in GetEnumerator()")]
         public sealed class KeyCollection : ICollection<TKey>, ICollection
         {
             private readonly Java.Util.ICollection<KeyWrapper<TKey>> keys;
