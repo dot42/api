@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Runtime.InteropServices;
+using Dot42;
 
 namespace System.Diagnostics
 {
@@ -23,6 +24,7 @@ namespace System.Diagnostics
     [SerializableAttribute]
     [ComVisible(true)]
     [AttributeUsageAttribute(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property, Inherited = false)]
+    [Ignore("Not used by Dot42 debugger.")]
 	public sealed class DebuggerNonUserCodeAttribute : Attribute
 	{
 	}
