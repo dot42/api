@@ -13,18 +13,18 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using System.Security.Principal;
 using Dot42.Collections;
 using Java.Util;
 using Java.Util.Concurrent;
 
-namespace Dot42.Internal
+namespace Dot42.Internal.ReflectionInfo
 {
     /// <summary>
-    /// Helper for obtaining custom attributes.
+    /// Helper for obtaining event info. Convention based.
     /// </summary>
 	internal static class EventInfoProvider
 	{
@@ -32,9 +32,7 @@ namespace Dot42.Internal
 
         internal static EventInfo[] GetEvents(Type definingType, Type declaringType)
         {
-            EventInfo[] result;
-
-            result = loadedEvents.Get(declaringType);
+            var result = loadedEvents.Get(declaringType);
             if (result != null) return result;
 
             // Not found, build it

@@ -86,9 +86,11 @@
     <Compile Include="Dot42\Internal\Application.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\DateTimeParsing.cs" />
+    <Compile Include="Dot42\Internal\ReflectionInfo\FrameworkPropertyInfoProvider.cs" />
     <Compile Include="Dot42\Internal\IAssemblyType.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
-    <Compile Include="Dot42\Internal\EventInfoProvider.cs" />
+    <Compile Include="Dot42\Internal\ReflectionInfo\EventInfoProvider.cs" />
+    <Compile Include="Dot42\IncludeFrameworkProperties.cs" />
     <Compile Include="Dot42\Internal\IReflectionInfo.cs" />
     <Compile Include="Dot42\Internal\Threading\ThreadPoolImpl.cs" />
     <Compile Include="Dot42\SerializationMethodAttribute.cs" />
@@ -193,7 +195,7 @@
     <Compile Include="Dot42\Internal\IProperty.cs" />
     <Compile Include="Dot42\Internal\LazyAndWeak.cs" />
     <Compile Include="Dot42\Internal\Generics\NullableReflection.cs" />
-    <Compile Include="Dot42\Internal\PropertyInfoProvider.cs" />
+    <Compile Include="Dot42\Internal\ReflectionInfo\PropertyInfoProvider.cs" />
     <Compile Include="Dot42\Internal\TaskMonitorService.cs" />
     <Compile Include="Dot42\ReferenceSources\SR.cs" />
     <Compile Include="Dot42\SR.cs" />
@@ -908,6 +910,9 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->

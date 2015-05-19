@@ -20,6 +20,7 @@ using System.Reflection;
 using Dot42;
 using Dot42.Internal;
 using Dot42.Internal.Generics;
+using Dot42.Internal.ReflectionInfo;
 using Java.Lang;
 using Java.Lang.Reflect;
 
@@ -391,7 +392,6 @@ namespace System
             var isDeclaredOnly = (flags & BindingFlags.DeclaredOnly) != 0;
             bool isBase = false;
             Java.Util.HashSet<string> lookedAt = isDeclaredOnly? null : new Java.Util.HashSet<string>();
-            
             
             // we have to walk all the way up.
             while (type != null)

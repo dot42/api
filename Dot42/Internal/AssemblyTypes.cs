@@ -6,7 +6,7 @@ using Java.Util.Concurrent;
 namespace Dot42.Internal
 {
     /// <summary>
-    /// this class retrieves and caches type per assembly.
+    /// This class retrieves and caches types per assembly.
     /// </summary>
     internal static class AssemblyTypes
     {

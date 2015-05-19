@@ -49,6 +49,17 @@ namespace Dot42.Internal
         /// </summary>
         [Include(TypeCondition = typeof(PropertyInfo))]
         IAttribute[] Attributes();
+
+        /// <summary>
+        /// Specifies the declaring type for framework properties.
+        /// <para/>
+        /// We use the decriptor, so that the type does not 
+        /// need to be loaded by the ClassLoader when accessing
+        /// the attribute.
+        /// </summary>
+        [Include(TypeCondition = typeof(IncludeFrameworkProperties))]
+        string DeclaringTypeDescriptor();
+
     }
 }
 
