@@ -8,7 +8,7 @@ namespace Dot42
     /// preserved and not pruned.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = false)]
-    [Ignore]
+    [Ignore][Obsolete("use [SerializedParameter]", true)]
     public class SerializationMethodAttribute : Attribute
     {
     }

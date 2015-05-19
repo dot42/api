@@ -93,6 +93,7 @@
     <Compile Include="Dot42\IncludeFrameworkProperties.cs" />
     <Compile Include="Dot42\Internal\IReflectionInfo.cs" />
     <Compile Include="Dot42\Internal\Threading\ThreadPoolImpl.cs" />
+    <Compile Include="Dot42\SerializedParameterAttribute.cs" />
     <Compile Include="Dot42\SerializationMethodAttribute.cs" />
     <Compile Include="Android\Appwidget\AppWidgetProvider.cs" />
     <Compile Include="Android\App\Activity.cs" />
