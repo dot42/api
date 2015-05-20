@@ -37,6 +37,9 @@ namespace System
             if (genericInstance != null) 
                 return genericInstance;
 
+            if (type.IsPrimitive)
+                return TypeHelper.GetPrimitiveDefault(type);
+
             return  type.NewInstance();
         }
 

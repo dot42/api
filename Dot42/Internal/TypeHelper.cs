@@ -72,6 +72,15 @@ namespace Dot42.Internal
         [DexNative]
         internal static extern Type DoubleType();
 
+        private static bool?   DefaultBool  = false;
+        private static char?   DefaultChar  = (char)0;
+        private static byte?   DefaultByte  = (byte)0;
+        private static short?  DefaultShort = (short)0;
+        private static int?    DefaultInt   = (int)0;
+        private static long?   DefaultLong  = (long)0;
+        private static float?  DefaultFloat = (float)0;
+        private static double? DefaultDouble= (double)0;
+
         /// <summary>
         /// Create an array type with the given component type with dimension 1.
         /// </summary>
@@ -147,6 +156,19 @@ namespace Dot42.Internal
                  : p == typeof(double)? DoubleType()
                  : p;
 	    }
+
+        internal static object GetPrimitiveDefault(Type p)
+        {
+            return p == typeof(bool)   ? DefaultBool
+                 : p == typeof(char)   ? DefaultChar
+                 : p == typeof(byte)   ? DefaultByte
+                 : p == typeof(short)  ? DefaultShort
+                 : p == typeof(int)    ? DefaultInt
+                 : p == typeof(long)   ? DefaultLong
+                 : p == typeof(float)  ? DefaultFloat
+                 : p == typeof(double) ? DefaultDouble
+                 : (object) null;
+        }
 
         public static bool IsBoxedType(Type type)
         {

@@ -140,7 +140,7 @@ namespace System.Reflection
         public abstract bool IsDefined(Type attributeType, bool inherit);
 
         /// <summary>
-        /// this methods performs required implicit conversion for parameters during 
+        /// This methods performs required implicit conversion for parameters during 
         /// reflection.
         /// </summary>
         protected static object ConvertParameterIfRequired(Type targetType, object value)
@@ -152,14 +152,17 @@ namespace System.Reflection
                 {
                     value = Dot42.Internal.Enum.GetFromObject(targetType, value);
                 }
+                return value;
             }
             else if (value == null && targetType.IsValueType)
             {
                 if (targetType.IsPrimitive)
-                {
-                    // TODO: check if wee need to instantiate the correct type here 
-                }
-                value = Activator.CreateInstance(targetType);
+                    return TypeHelper.GetPrimitiveDefault(targetType);
+
+               // for immutable non-generic structs, we might as well
+               // search the default$ field and return that for a small
+               // reduction in memory usage
+               return Activator.CreateInstance(targetType);
             }
 
             // TODO: if targetType is a primitive, we might have to do implicit conversion
