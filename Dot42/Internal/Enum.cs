@@ -14,8 +14,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using System.Globalization;
-using System.Reflection;
 
 namespace Dot42.Internal
 {
@@ -55,58 +53,83 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Enum))]
         public static Enum Get(System.Type enumType, int value)
         {
-            var infoField = enumType.JavaGetDeclaredField("info__");
-            var infoInstance = (EnumInfo)infoField.Get(null);
-            var result = infoInstance.GetValue(value);
+            var info = EnumInfo.GetEnumInfo(enumType);
+
+            var result = info.GetValue(value);
             if (result == null)
                 throw new ArgumentException();
+
             return result;
         }
 
         [Include(TypeCondition = typeof(System.Enum))]
         public static Enum Get(System.Type enumType, long value)
         {
-            var infoField = enumType.JavaGetDeclaredField("info__");
-            var infoInstance = (EnumInfo)infoField.Get(null);
-            var result = infoInstance.GetValue(value);
+            var info = EnumInfo.GetEnumInfo(enumType);
+
+            var result = info.GetValue(value);
+
             if (result == null)
                 throw new ArgumentException();
+            
             return result;
         }
 
         /// <summary>
-        /// value should be java.lang.Integer, java.lang.Long, java.lang.Short,
+        /// Value should be java.lang.Integer, java.lang.Long, java.lang.Short,
         /// java.lang.Byte or another Enum type.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
         public static Enum GetFromObject(System.Type enumType, object value)
         {
-            if (value is long)
-                return Get(enumType, (long)value);
-            if (value is int)
-                return Get(enumType, (int) value);
-            if (value is short)
-                return Get(enumType, (int)(short)value);
-            if (value is byte)
-                return Get(enumType, (int)(byte)value);
-            if (value is Enum)
-                return Get(enumType, ((Enum)value).LongValue());
+            var info = EnumInfo.GetEnumInfo(enumType);
+
+            bool isLong = info.Underlying == typeof(long);
+
+            if (isLong)
+            {
+                if (value is long)
+                    return Get(enumType, (long)value);
+                if (value is int)
+                    return Get(enumType, (long)(int)value);
+                if (value is short)
+                    return Get(enumType, (long)(short)value);
+                if (value is char)
+                    return Get(enumType, (long)(char)value);
+                if (value is byte)
+                    return Get(enumType, (long)(byte)value);
+                if (value is Enum)
+                    return Get(enumType, ((Enum)value).LongValue());
+            }
+            else
+            {
+                if (value is long)
+                    return Get(enumType, (int)(long)value);
+                if (value is int)
+                    return Get(enumType, (int)value);
+                if (value is short)
+                    return Get(enumType, (int)(short)value);
+                if (value is char)
+                    return Get(enumType, (int)(char)value);
+                if (value is byte)
+                    return Get(enumType, (int)(byte)value);
+                if (value is Enum)
+                    return Get(enumType, ((Enum)value).IntValue());
+            }
 
             throw new ArgumentException(string.Format("type: {0}; val: {1}", value.GetType(), value.ToString()), "value");
         }
 
         public string ToString(string format)
         {
-            // TODO: check if these casts can some how be removed.
             return CompilerHelper.EnumToString((Java.Lang.Enum<object>)(object)this, format);
         }
 
 
         public string ToString(string format, IFormatProvider formatProvider)
         {
-            // TODO: check if these casts can some how be removed.
             return CompilerHelper.EnumToString((Java.Lang.Enum<object>)(object)this, format);
         }
-    }
+	}
 }
 
