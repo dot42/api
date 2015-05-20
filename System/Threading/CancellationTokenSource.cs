@@ -36,8 +36,8 @@ namespace System.Threading
 #endif
 	public class CancellationTokenSource : IDisposable
 	{
-		bool canceled;
-		bool disposed;
+		volatile bool canceled;
+		volatile bool disposed;
 
 	    private int currId = int.MinValue;
 		ConcurrentDictionary<CancellationTokenRegistration, Action> callbacks;
