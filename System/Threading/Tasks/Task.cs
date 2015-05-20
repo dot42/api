@@ -15,6 +15,7 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Android.App;
@@ -296,6 +297,9 @@ namespace System.Threading.Tasks
 
         internal void SetupScheduler(TaskScheduler scheduler)
         {
+            if(scheduler == null)
+                throw new ArgumentNullException();
+
             this.scheduler = scheduler;
             status = TaskStatus.WaitingForActivation;
         }
@@ -863,6 +867,7 @@ namespace System.Threading.Tasks
         public Task ContinueWith(Action<Task> continuation)
         {
             var task = new Task(() => continuation(this));
+            task.SetupScheduler(TaskScheduler.Default);
             ContinueWith(new TaskContinuation(task, TaskContinuationOptions.None));
             return task;
         }
@@ -870,6 +875,7 @@ namespace System.Threading.Tasks
         public Task ContinueWith(Action<Task> continuation, TaskContinuationOptions options)
         {
             var task = new Task(() => continuation(this));
+            task.SetupScheduler(TaskScheduler.Default);
             ContinueWith(new TaskContinuation(task, options));
             return task;
         }
