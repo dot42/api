@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="$(TargetFrameworkDirectory)\*.cs" />
     <Compile Include="Android\App\Application.cs" />
+    <Compile Include="Android\Content\Context.cs" />
     <Compile Include="Android\Text\AfterTextChangedEventArgs.cs" />
     <Compile Include="Android\Util\Log.cs" />
     <Compile Include="Android\Views\LongClickEventArgs.cs" />
