@@ -92,7 +92,7 @@ namespace Dot42.Internal
 
             foreach (var attr in attributes.Attributes())
             {
-                if (attributeType.IsAssignableFrom(attr.AttributeType()))
+                if (attributeType.JavaIsAssignableFrom(attr.AttributeType()))
                 {
                     list.Add(GetAttribute(attr));
                 }
@@ -129,7 +129,7 @@ namespace Dot42.Internal
 
             foreach (var attr in attributes.Attributes())
             {
-                if (attributeType.IsAssignableFrom(attr.AttributeType()))
+                if (attributeType.JavaIsAssignableFrom(attr.AttributeType()))
                 {
                     return true;
                 }

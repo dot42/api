@@ -8,7 +8,7 @@ namespace System.Reflection
         {
             var ret = element.GetCustomAttributes(typeof (T), inherit);
             
-            if(ret.Length > 0) 
+            if(ret.Length > 1) 
                 throw new System.AmbiguousMatchException();
 
             return (T)ret.FirstOrDefault();
