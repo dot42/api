@@ -273,9 +273,10 @@ namespace Dot42.Internal.Generics
 
                 if (parentGenericArguments == null)
                 {
-                    // not so nice, but happens if we did'nt propagte the types correctly. 
-                    // should be fixed... but bail out for now.
-                    Log.W("dot42", string.Format("unable to reconstruct generic type definition for type {0}, parent type {1}", perceivedType.FullName, parentType.FullName));
+                    // Can either happen when the generics reflection annotations 
+                    // where not preserved, or when the user did not call GetTypeReflectionSafe()
+                    // on an object.
+                    Log.W("dot42", string.Format("Unable to reconstruct generic type definition for type {0}, parent type {1}. Did you use obj.GetTypeReflectionSafe()?", perceivedType.FullName, parentType.FullName));
                     return genericTypeDef;
                 }
             }
