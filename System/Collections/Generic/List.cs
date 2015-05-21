@@ -329,7 +329,7 @@ namespace System.Collections.Generic
 
         public void RemoveRange(int index, int count)
         {
-            list.RemoveRange(index, index + count);
+            list.SubList(index, index + count).Clear();
         }
 
 	    public void Sort()

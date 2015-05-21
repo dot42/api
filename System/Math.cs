@@ -106,8 +106,7 @@ namespace System
         {
             if (newBase == E) return Log(a);
             if (newBase == 10) return Log10(a);
-
-            throw new NotImplementedException("System.Math.Log");
+            return Log(a) / Log(newBase);
         }
 
         [Inline]
