@@ -44,24 +44,51 @@ namespace System
             return Java.Lang.Reflect.Array.Get(this, index);
         }
 
+        public object GetValue(int index1, int index2)
+        {
+            var a = (Array) Java.Lang.Reflect.Array.Get(this, index1);
+            return Java.Lang.Reflect.Array.Get(a, index2);
+        }
+
+        public object GetValue(int[] indices)
+        {
+            int i;
+            var a = this;
+            for (i = 0; i < indices.Length - 1; ++i)
+            {
+                a = (Array) Java.Lang.Reflect.Array.Get(a, indices[i]);
+            }
+            return Java.Lang.Reflect.Array.Get(a, indices[i]);
+        }
+
+
         /// <summary>
-        /// Gets the value of the array at the given index.
+        /// Sets the value of the array at the given index.
         /// </summary>
         public void SetValue(object value, int index)
         {
             Java.Lang.Reflect.Array.Set(this, index, value);
         }
 
+        public void SetValue(object value, int index1, int index2)
+        {
+            var a = (Array)Java.Lang.Reflect.Array.Get(this, index1);
+            Java.Lang.Reflect.Array.Set(a, index2, value);
+
+        }
+
         /// <summary>
-        /// Gets the value of the array at the given indices.
+        /// Sets the value of the array at the given indices.
         /// </summary>
-        [Obsolete("this is not implememented for ranks > 0")]
         public void SetValue(object value, int[] indices)
         {
-            if(indices.Length != 1)
-                throw new NotImplementedException("indices");
-
-            Java.Lang.Reflect.Array.Set(this, indices[0], value);
+            int i = 0;
+            var a = this;
+            for (; i < indices.Length - 1; ++ i)
+            {
+                a = (Array) Java.Lang.Reflect.Array.Get(a, indices[i]);
+            }
+            Java.Lang.Reflect.Array.Set(a, indices[i], value);
         }
 
         /// <summary>
@@ -130,6 +157,7 @@ namespace System
         /// </summary>
         public static int IndexOf(Array array, object value)
         {
+            // TODO: i don't think we can assume that the array is in order.
             var byteArr = array as sbyte[];
             if (byteArr != null) return Arrays.BinarySearch(byteArr, (sbyte) value);
             var boolArr = array as bool[];
@@ -379,7 +407,7 @@ namespace System
         /// <summary>
         /// Sort the elements in the entire array.
         /// </summary>
-        private void Sort(int index,int length, IComparer comparer)
+        private void Sort(int index, int length, IComparer comparer)
         {
             comparer = comparer ?? Comparer.Default;
             Java.Util.Arrays.Sort((object[])this, index, index + length, comparer);
@@ -453,7 +481,7 @@ namespace System
         {
             if (dimension == 0) return Length;
 
-            if (dimension >=1)
+            if (dimension >= 1)
             {
                 var array = GetValue(0) as Array;
                 if (array != null) return array.GetLength(dimension-1);
@@ -463,13 +491,29 @@ namespace System
         }
        
         // <summary>
-        // Rank is missing, Java doesn't support multiple dimension arrays as far as I know like 
-        //  var i = new int[1,2,3], however it does support
-        //  var i = new int[1][2][3]
+        // Tries to reconstruct the array rank.
         // </summary>
         public int Rank
         {
-            get { return 1; }
+            get
+            {
+                int rank = 1;
+                var type = this.GetType();
+                while ((type = type.JavaGetComponentType()).IsArray)
+                    rank += 1;
+
+                return rank;
+            }
+        }
+
+        public int GetLowerBound(int dimension)
+        {
+            return 0;
+        }
+
+        public int GetUpperBound(int dimension)
+        {
+            return GetLength(dimension) - 1;
         }
 
         public static Array CreateInstance(Type type, int length)
@@ -479,7 +523,6 @@ namespace System
         /// <summary>
         /// multidimensional arrays are not really supported.
         /// </summary>
-        [Obsolete("Java does not support true multidimensional arrays (i believe)")]
         public static Array CreateInstance(Type type, int[] lengths)
         {
             return (Array)Java.Lang.Reflect.Array.NewInstance(type, lengths);

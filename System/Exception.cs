@@ -48,6 +48,15 @@ namespace System
             get { return Cause; }
         }
 
+        public Exception GetBaseException()
+        {
+            // Not sure is this is the real thing...
+            var ex = this;
+            while (ex.InnerException != null)
+                ex = ex.InnerException;
+            return ex;
+        }
+
 	}
 }
 

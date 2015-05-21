@@ -65,14 +65,19 @@ namespace System
         /// </summary>
         public static T CreateInstance<T>()
         {
-            if (NullableReflection.TreatAsSystemNullableT(typeof(T)))
+            var type = typeof(T);
+
+            if (NullableReflection.TreatAsSystemNullableT(type))
                 return default(T);
 
-            var genericInstance = GenericInstanceFactory.CreateGenericInstance(typeof(T));
+            var genericInstance = GenericInstanceFactory.CreateGenericInstance(type);
             if (genericInstance != null)
                 return (T)genericInstance;
 
-            return (T)typeof(T).NewInstance();
+            if (type.IsPrimitive)
+                return (T)TypeHelper.GetPrimitiveDefault(type);
+
+            return (T)type.NewInstance();
         }
 
         /// <summary>

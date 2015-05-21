@@ -988,7 +988,7 @@ namespace System.Threading.Tasks
                 cancellationToken.Register(() =>
                     {
                         if(delayed.Cancel(false))
-                            source.SetCanceled();
+                            source.TrySetCanceled();
                     });
             }
              

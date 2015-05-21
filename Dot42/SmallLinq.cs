@@ -41,7 +41,7 @@ namespace Dot42
                     list.Add(item);
                 }
             }
-            var elementType = array.GetType().GetElementType();
+            var elementType = array.GetType().JavaGetComponentType();
             if (list == null) return (T[])Array.NewInstance(elementType, 0);
             return list.ToArray((T[])Array.NewInstance(elementType, list.Count));
         }

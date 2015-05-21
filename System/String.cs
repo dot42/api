@@ -16,6 +16,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using System.Text.RegularExpressions;
 using Dot42;
 using Dot42.Internal;
 using Java.Lang;
@@ -456,6 +457,24 @@ namespace System
         public string[] Split(char[] separator, StringSplitOptions options)
         {
             return Split(separator, int.MaxValue, options);
+        }
+
+        /// <summary>
+        /// Split this string into parts delimited by the given separators.
+        /// </summary>
+        [Inline]
+        public string[] Split(string[] separator, StringSplitOptions options)
+        {
+            // TODO: check if this a correct implementation.
+            if ((options != StringSplitOptions.None) && (options != StringSplitOptions.RemoveEmptyEntries))
+                throw new ArgumentException("Illegal enum value: " + options + ".");
+
+            string splitPattern = string.Join("|", separator.Select(Java.Util.Regex.Pattern.Quote));
+
+            if(options == StringSplitOptions.None)
+                return Split(splitPattern);
+            else
+                return Split(splitPattern).Where(s=>s.Length != 0);
         }
 
         /// <summary>

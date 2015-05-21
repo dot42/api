@@ -46,19 +46,24 @@ namespace System
             return Parse(s);
         }
 
-        public static uint Parse(string s, NumberStyles style)
+        public static uint Parse(string s, NumberStyles style, IFormatProvider provider)
         {
             long value;
 
             if ((style & NumberStyles.AllowHexSpecifier) != 0)
                 value = long.Parse(s, 16);
-            else 
+            else
                 value = long.Parse(s);
 
             if ((value < MinValue) || (value > maxValue))
                 throw new OverflowException(string.Format("Value {0} should not be less than {1} and not larger than {2}.", value.ToString(), MinValue, maxValue));
-            return (uint)value;
 
+            return (uint)value;
+        }
+
+        public static uint Parse(string s, NumberStyles style)
+        {
+            return Parse(s, style, null);
         }
 
         public static bool TryParse(string s, out uint result)

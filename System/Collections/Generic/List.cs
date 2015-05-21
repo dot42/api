@@ -327,6 +327,16 @@ namespace System.Collections.Generic
             }
         }
 
+        public void RemoveRange(int index, int count)
+        {
+            list.RemoveRange(index, index + count);
+        }
+
+	    public void Sort()
+	    {
+	        Java.Util.Collections.Sort(list);
+	    }
+
         /// <summary>
         /// Copy all elements into a new array.
         /// </summary>

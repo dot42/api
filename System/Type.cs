@@ -575,8 +575,10 @@ namespace System
 
         // We have to make sure we never return 
         // the boxed types to .NET callers.
+        // TODO: check if this still holds true.
         public Type GetElementType()
         {
+            
             var type = JavaGetComponentType();
             if (type == null) return null;
             if (type == TypeHelper.BooleanType())
