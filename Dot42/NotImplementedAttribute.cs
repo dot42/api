@@ -24,7 +24,11 @@ namespace Dot42
     [Ignore]
     public sealed class NotImplementedAttribute : ObsoleteAttribute
 	{
-        public NotImplementedAttribute() : base("this method has not yet been implemented in dot42")
+        public NotImplementedAttribute() : base("this method has not yet been implemented in Dot42")
+        {
+        }
+        public NotImplementedAttribute(string message)
+            : base(message)
         {
         }
 	}
