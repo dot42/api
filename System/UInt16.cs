@@ -82,6 +82,19 @@ namespace System
         {
             return (IntValue() & 0xFFFF).CompareTo(o.IntValue() & 0xFFFF);
         }
+
+        [Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+        public bool Equals(object @object) /* MethodBuilder.Create */
+        {
+            return default(bool);
+        }
+
+        [Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+        public int GetHashCode() /* MethodBuilder.Create */
+        {
+            return default(int);
+        }
+
     }
 }
 
