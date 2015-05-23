@@ -117,6 +117,11 @@ namespace Dot42.Internal
                             str = arg.ToString();
                     }
 
+                    if (str == null)
+                    {
+                        str = String.Empty;
+                    }
+
                     // pad formatted string and append to result
                     if (width > str.Length)
                     {
